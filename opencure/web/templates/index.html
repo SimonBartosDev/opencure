@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenCure - AI Drug Repurposing</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: #0a0e17;
+            color: #e2e8f0;
+            min-height: 100vh;
+        }
+
+        .header {
+            padding: 2rem 2rem 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #f8fafc;
+            letter-spacing: -0.02em;
+        }
+
+        .header h1 span { color: #3b82f6; }
+
+        .header p {
+            color: #94a3b8;
+            margin-top: 0.5rem;
+            font-size: 1.05rem;
+        }
+
+        .search-section {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 0.75rem;
+            align-items: stretch;
+        }
+
+        .search-input-wrapper {
+            flex: 1;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            font-size: 1.1rem;
+            border: 1px solid #1e293b;
+            border-radius: 12px;
+            background: #111827;
+            color: #f1f5f9;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .search-input:focus { border-color: #3b82f6; }
+
+        .search-input::placeholder { color: #475569; }
+
+        .search-btn {
+            padding: 1rem 2rem;
+            font-size: 1.05rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 12px;
+            background: #3b82f6;
+            color: white;
+            cursor: pointer;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+
+        .search-btn:hover { background: #2563eb; }
+        .search-btn:disabled { background: #1e3a5f; cursor: not-allowed; }
+
+        .autocomplete-list {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            margin-top: 4px;
+            max-height: 300px;
+            overflow-y: auto;
+            z-index: 100;
+            display: none;
+        }
+
+        .autocomplete-list.show { display: block; }
+
+        .autocomplete-item {
+            padding: 0.75rem 1.25rem;
+            cursor: pointer;
+            font-size: 0.95rem;
+            border-bottom: 1px solid #293548;
+        }
+
+        .autocomplete-item:hover { background: #334155; }
+        .autocomplete-item:last-child { border-bottom: none; }
+
+        .examples {
+            margin-top: 1rem;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .examples a {
+            color: #60a5fa;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .examples a:hover { text-decoration: underline; }
+
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            display: none;
+        }
+
+        .loading.show { display: block; }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid #1e293b;
+            border-top-color: #3b82f6;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .results-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+            display: none;
+        }
+
+        .results-section.show { display: block; }
+
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1.5rem;
+        }
+
+        .results-header h2 {
+            font-size: 1.3rem;
+            color: #f1f5f9;
+        }
+
+        .results-meta {
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+
+        .result-card {
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 0.75rem;
+            transition: border-color 0.2s;
+            cursor: pointer;
+        }
+
+        .result-card:hover { border-color: #334155; }
+        .result-card.expanded { border-color: #3b82f6; }
+
+        .result-main {
+            display: grid;
+            grid-template-columns: 3rem 1fr auto;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .result-rank {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #475569;
+            text-align: center;
+        }
+
+        .result-rank.top3 { color: #3b82f6; }
+
+        .result-info h3 {
+            font-size: 1.05rem;
+            color: #f1f5f9;
+            margin-bottom: 0.3rem;
+        }
+
+        .result-info .drug-id {
+            font-size: 0.8rem;
+            color: #64748b;
+            font-family: monospace;
+        }
+
+        .result-scores {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .score-badge {
+            padding: 0.35rem 0.75rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .score-combined {
+            background: #172554;
+            color: #60a5fa;
+        }
+
+        .score-pillars {
+            background: #14532d;
+            color: #4ade80;
+            font-size: 0.75rem;
+        }
+
+        .score-relation {
+            background: #1e293b;
+            color: #94a3b8;
+            font-size: 0.75rem;
+        }
+
+        .result-evidence {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #1e293b;
+            display: none;
+        }
+
+        .result-card.expanded .result-evidence { display: block; }
+
+        .evidence-item {
+            padding: 0.4rem 0;
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+
+        .evidence-item::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #3b82f6;
+            border-radius: 50%;
+            margin-right: 0.6rem;
+            vertical-align: middle;
+        }
+
+        .evidence-mol {
+            color: #a78bfa;
+        }
+
+        .disclaimer {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem 2rem;
+            color: #475569;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .pill-kg { background: #172554; color: #60a5fa; }
+        .pill-mol { background: #3b0764; color: #c084fc; }
+
+        .deep-dive-btn {
+            margin-top: 0.75rem;
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            background: transparent;
+            color: #60a5fa;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .deep-dive-btn:hover { background: #1e293b; }
+        .deep-dive-btn:disabled { color: #475569; cursor: wait; }
+
+        .report-panel {
+            margin-top: 1rem;
+            padding: 1.25rem;
+            background: #0d1117;
+            border-radius: 8px;
+            border: 1px solid #1e293b;
+            display: none;
+        }
+
+        .report-panel.show { display: block; }
+
+        .report-section {
+            margin-bottom: 1.25rem;
+        }
+
+        .report-section h4 {
+            font-size: 0.85rem;
+            color: #60a5fa;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .confidence-badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .confidence-HIGH { background: #14532d; color: #4ade80; }
+        .confidence-MEDIUM { background: #422006; color: #fb923c; }
+        .confidence-LOW { background: #1e293b; color: #94a3b8; }
+        .confidence-NOVEL { background: #4c1d95; color: #c084fc; }
+
+        .hypothesis-text {
+            font-size: 0.9rem;
+            color: #e2e8f0;
+            line-height: 1.6;
+            padding: 0.75rem;
+            background: #111827;
+            border-left: 3px solid #3b82f6;
+            border-radius: 0 6px 6px 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .paper-item {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .paper-item:last-child { border-bottom: none; }
+
+        .paper-title { font-size: 0.85rem; color: #e2e8f0; }
+
+        .paper-meta {
+            font-size: 0.75rem;
+            color: #64748b;
+            margin-top: 0.2rem;
+        }
+
+        .paper-citations {
+            display: inline-block;
+            padding: 0.1rem 0.4rem;
+            background: #172554;
+            color: #60a5fa;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .reason-item {
+            padding: 0.3rem 0;
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+
+        .reason-item::before {
+            content: '+';
+            color: #4ade80;
+            font-weight: 700;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1><span>Open</span>Cure</h1>
+        <p>AI-powered drug repurposing - find new cures in existing drugs</p>
+    </div>
+
+    <div class="search-section">
+        <div class="search-box">
+            <div class="search-input-wrapper">
+                <input type="text" class="search-input" id="diseaseInput"
+                       placeholder="Enter a disease (e.g. Alzheimer's disease, Malaria, Breast cancer...)"
+                       autocomplete="off">
+                <div class="autocomplete-list" id="autocompleteList"></div>
+            </div>
+            <button class="search-btn" id="searchBtn" onclick="doSearch()">Search</button>
+        </div>
+        <div class="examples">
+            Try:
+            <a onclick="searchFor('Alzheimer\'s disease')">Alzheimer's</a> &middot;
+            <a onclick="searchFor('Malaria')">Malaria</a> &middot;
+            <a onclick="searchFor('Multiple myeloma')">Multiple myeloma</a> &middot;
+            <a onclick="searchFor('Breast cancer')">Breast cancer</a> &middot;
+            <a onclick="searchFor('Parkinson\'s disease')">Parkinson's</a> &middot;
+            <a onclick="searchFor('Epilepsy')">Epilepsy</a> &middot;
+            <a onclick="searchFor('Chagas disease')">Chagas disease</a> &middot;
+            <a onclick="searchFor('Tuberculosis')">Tuberculosis</a>
+        </div>
+    </div>
+
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <p>Searching 10,551 approved drugs across 5.87M biological relationships...</p>
+    </div>
+
+    <div class="results-section" id="resultsSection">
+        <div class="results-header">
+            <h2 id="resultsTitle"></h2>
+            <span class="results-meta" id="resultsMeta"></span>
+        </div>
+        <div id="resultsContainer"></div>
+    </div>
+
+    <div class="disclaimer">
+        These are computational predictions, not medical advice. All candidates require experimental and clinical validation.
+        <br>OpenCure is an open-science initiative. All code, models, and predictions are published openly.
+    </div>
+
+    <script>
+        let diseases = [];
+
+        // Load disease list for autocomplete
+        fetch('/api/diseases').then(r => r.json()).then(data => {
+            diseases = data.diseases;
+        });
+
+        const input = document.getElementById('diseaseInput');
+        const acList = document.getElementById('autocompleteList');
+
+        input.addEventListener('input', () => {
+            const val = input.value.toLowerCase();
+            if (val.length < 2) { acList.classList.remove('show'); return; }
+
+            const matches = diseases.filter(d => d.toLowerCase().includes(val)).slice(0, 10);
+            if (matches.length === 0) { acList.classList.remove('show'); return; }
+
+            acList.innerHTML = matches.map(d =>
+                `<div class="autocomplete-item" onclick="searchFor('${d.replace(/'/g, "\\'")}')">${d}</div>`
+            ).join('');
+            acList.classList.add('show');
+        });
+
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') { doSearch(); acList.classList.remove('show'); }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.search-input-wrapper')) acList.classList.remove('show');
+        });
+
+        function searchFor(disease) {
+            input.value = disease;
+            acList.classList.remove('show');
+            doSearch();
+        }
+
+        async function doSearch() {
+            const disease = input.value.trim();
+            if (!disease) return;
+
+            const btn = document.getElementById('searchBtn');
+            const loading = document.getElementById('loading');
+            const results = document.getElementById('resultsSection');
+
+            btn.disabled = true;
+            loading.classList.add('show');
+            results.classList.remove('show');
+
+            try {
+                const resp = await fetch(`/api/search?disease=${encodeURIComponent(disease)}&top_k=25`);
+                const data = await resp.json();
+                renderResults(data);
+            } catch (err) {
+                document.getElementById('resultsContainer').innerHTML =
+                    `<p style="color: #ef4444;">Error: ${err.message}</p>`;
+                results.classList.add('show');
+            }
+
+            btn.disabled = false;
+            loading.classList.remove('show');
+        }
+
+        function renderResults(data) {
+            const section = document.getElementById('resultsSection');
+            const container = document.getElementById('resultsContainer');
+            const title = document.getElementById('resultsTitle');
+            const meta = document.getElementById('resultsMeta');
+
+            if (!data.results || data.results.length === 0) {
+                title.textContent = `No results for "${data.disease}"`;
+                meta.textContent = '';
+                container.innerHTML = '<p style="color: #94a3b8; padding: 2rem 0;">No matching disease found. Try a different name or use a MESH ID.</p>';
+                section.classList.add('show');
+                return;
+            }
+
+            title.textContent = `Drug repurposing candidates for ${data.disease}`;
+            meta.textContent = `${data.count} results in ${data.elapsed_seconds}s`;
+
+            container.innerHTML = data.results.map(r => {
+                const rankClass = r.rank <= 3 ? 'top3' : '';
+                const pillars = [];
+                pillars.push('<span class="pill pill-kg">Knowledge Graph</span>');
+                if (r.mol_similarity) pillars.push('<span class="pill pill-mol">Molecular Similarity</span>');
+
+                let evidenceHtml = '';
+                if (r.evidence && r.evidence.length > 0) {
+                    evidenceHtml = r.evidence.map(e =>
+                        `<div class="evidence-item">${e}</div>`
+                    ).join('');
+                }
+                if (r.mol_similarity) {
+                    evidenceHtml += `<div class="evidence-item evidence-mol">Molecular similarity: ${r.mol_similarity.toFixed(3)} to ${r.similar_to || 'known treatment'}</div>`;
+                }
+
+                return `
+                <div class="result-card" id="card-${r.drug_id}" onclick="this.classList.toggle('expanded')">
+                    <div class="result-main">
+                        <div class="result-rank ${rankClass}">${r.rank}</div>
+                        <div class="result-info">
+                            <h3>${r.drug_name}</h3>
+                            <span class="drug-id">${r.drug_id}</span>
+                            &nbsp; ${pillars.join(' ')}
+                        </div>
+                        <div class="result-scores">
+                            <span class="score-badge score-combined">${r.combined_score.toFixed(3)}</span>
+                            <span class="score-badge score-relation">${r.relation_type}</span>
+                        </div>
+                    </div>
+                    <div class="result-evidence">
+                        ${evidenceHtml}
+                        <button class="deep-dive-btn" onclick="event.stopPropagation(); fetchReport('${data.disease.replace(/'/g, "\\'")}', '${r.drug_id}', this)">
+                            Deep Dive — AI Evidence Analysis
+                        </button>
+                        <div class="report-panel" id="report-${r.drug_id}"></div>
+                    </div>
+                </div>`;
+            }).join('');
+
+            section.classList.add('show');
+        }
+
+        let currentDisease = '';
+
+        async function fetchReport(disease, drugId, btn) {
+            currentDisease = disease;
+            const panel = document.getElementById(`report-${drugId}`);
+
+            if (panel.classList.contains('show')) {
+                panel.classList.remove('show');
+                return;
+            }
+
+            btn.disabled = true;
+            btn.textContent = 'Analyzing with BioGPT + PubMed + ClinicalTrials.gov...';
+
+            try {
+                const resp = await fetch(`/api/report?disease=${encodeURIComponent(disease)}&drug_id=${encodeURIComponent(drugId)}`);
+                const data = await resp.json();
+                if (data.error) {
+                    panel.innerHTML = `<p style="color: #ef4444;">${data.error}</p>`;
+                } else {
+                    renderReport(panel, data.report);
+                }
+                panel.classList.add('show');
+            } catch (err) {
+                panel.innerHTML = `<p style="color: #ef4444;">Error: ${err.message}</p>`;
+                panel.classList.add('show');
+            }
+
+            btn.disabled = false;
+            btn.textContent = 'Deep Dive — AI Evidence Analysis';
+        }
+
+        function renderReport(panel, r) {
+            let html = '';
+
+            // Confidence badge
+            html += `<span class="confidence-badge confidence-${r.confidence}">${r.confidence}${r.confidence === 'NOVEL' ? ' — Potential New Discovery' : ' CONFIDENCE'}</span>`;
+
+            // AI Hypothesis
+            if (r.ai_hypothesis) {
+                html += `<div class="report-section">
+                    <h4>AI-Generated Hypothesis (BioGPT)</h4>
+                    <div class="hypothesis-text">${r.drug_name} may treat ${r.disease_name} because ${r.ai_hypothesis}</div>
+                </div>`;
+            }
+
+            // Confidence reasons
+            if (r.confidence_reasons && r.confidence_reasons.length > 0) {
+                html += `<div class="report-section"><h4>Evidence Summary</h4>`;
+                r.confidence_reasons.forEach(reason => {
+                    html += `<div class="reason-item">${reason}</div>`;
+                });
+                html += `</div>`;
+            }
+
+            // Semantic Scholar papers
+            const allPapers = [...(r.semantic_scholar_papers || []), ...(r.key_papers || [])];
+            if (allPapers.length > 0) {
+                html += `<div class="report-section"><h4>Key Publications (${r.pubmed_total || 0} in PubMed)</h4>`;
+                allPapers.slice(0, 5).forEach(p => {
+                    const title = p.title || '';
+                    const year = p.year ? ` (${p.year})` : '';
+                    const citations = p.citations ? `<span class="paper-citations">${p.citations} citations</span> ` : '';
+                    const url = p.url || '';
+                    html += `<div class="paper-item">
+                        <div class="paper-title">${citations}${url ? `<a href="${url}" target="_blank" style="color: #e2e8f0; text-decoration: none;">${title}</a>` : title}</div>
+                        <div class="paper-meta">${p.authors || ''}${year}</div>
+                    </div>`;
+                });
+                html += `</div>`;
+            }
+
+            // Clinical trials
+            if (r.clinical_trials_total > 0) {
+                html += `<div class="report-section"><h4>Clinical Trials (${r.clinical_trials_total} total)</h4>`;
+                (r.clinical_trials || []).slice(0, 3).forEach(t => {
+                    const statusColor = t.status === 'COMPLETED' ? '#4ade80' : t.status === 'RECRUITING' ? '#60a5fa' : '#94a3b8';
+                    html += `<div class="paper-item">
+                        <div class="paper-title"><a href="${t.url}" target="_blank" style="color: #e2e8f0; text-decoration: none;">${t.title}</a></div>
+                        <div class="paper-meta">Phase: ${t.phase} | <span style="color: ${statusColor}">${t.status}</span> | ${t.enrollment ? t.enrollment + ' participants' : ''}</div>
+                    </div>`;
+                });
+                html += `</div>`;
+            }
+
+            // Graph evidence
+            if (r.shared_target_count > 0 || (r.direct_relations && r.direct_relations.length > 0)) {
+                html += `<div class="report-section"><h4>Knowledge Graph Evidence</h4>`;
+                if (r.direct_relations) {
+                    r.direct_relations.forEach(rel => {
+                        html += `<div class="reason-item">${rel}</div>`;
+                    });
+                }
+                if (r.shared_target_count > 0) {
+                    html += `<div class="reason-item">${r.shared_target_count} shared gene targets with disease</div>`;
+                }
+                html += `</div>`;
+            }
+
+            panel.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
