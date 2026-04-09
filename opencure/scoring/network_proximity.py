@@ -200,31 +200,25 @@ def compute_network_proximity(
     }
 
 
-def _precompute_sparse_distances():
+def _build_sparse_graph():
     """
-    Pre-compute distance matrix using scipy sparse BFS (100x faster than NetworkX).
+    Build scipy sparse adjacency matrix from PPI network. Cached.
 
-    Converts the NetworkX PPI graph to a scipy sparse matrix and computes
-    all-pairs shortest paths with cutoff. Cached after first computation.
-
-    Returns: (distance_matrix, node_list, node_to_idx) or (None, None, None)
+    Returns: (adj_matrix, node_list, node_to_idx) or (None, None, None)
     """
-    if "dist_matrix" in _ppi_cache:
-        return _ppi_cache["dist_matrix"], _ppi_cache["node_list"], _ppi_cache["node_to_idx"]
+    if "adj_matrix" in _ppi_cache:
+        return _ppi_cache["adj_matrix"], _ppi_cache["node_list"], _ppi_cache["node_to_idx"]
 
     ppi = load_ppi_network()
     if ppi.number_of_nodes() == 0:
         return None, None, None
 
     from scipy.sparse import csr_matrix
-    from scipy.sparse.csgraph import shortest_path
 
-    print("  Pre-computing distance matrix (scipy sparse)...")
     node_list = list(ppi.nodes())
     node_to_idx = {n: i for i, n in enumerate(node_list)}
     n = len(node_list)
 
-    # Build sparse adjacency matrix
     rows, cols = [], []
     for u, v in ppi.edges():
         i, j = node_to_idx[u], node_to_idx[v]
@@ -234,17 +228,61 @@ def _precompute_sparse_distances():
     data = np.ones(len(rows), dtype=np.float32)
     adj = csr_matrix((data, (rows, cols)), shape=(n, n))
 
-    # All-pairs shortest paths (unweighted BFS, limit=4)
-    # Returns (n, n) matrix with inf for unreachable pairs
-    dist_matrix = shortest_path(adj, method='D', directed=False, unweighted=True, limit=4)
-    dist_matrix = dist_matrix.astype(np.float32)
-
-    print(f"  Distance matrix: {n}x{n} ({dist_matrix.nbytes / 1e9:.1f} GB)")
-
-    _ppi_cache["dist_matrix"] = dist_matrix
+    _ppi_cache["adj_matrix"] = adj
     _ppi_cache["node_list"] = node_list
     _ppi_cache["node_to_idx"] = node_to_idx
-    return dist_matrix, node_list, node_to_idx
+    return adj, node_list, node_to_idx
+
+
+def _bfs_distances(adj, source_indices, node_to_idx, cutoff=4):
+    """
+    Compute shortest-path distances from a set of source nodes using BFS.
+
+    Uses pure BFS (collections.deque) with cutoff for speed on unweighted graphs.
+    Much faster than scipy shortest_path for many source nodes with small cutoff.
+
+    Returns: numpy array of shape (n,) with min distance from any source
+    """
+    from collections import deque
+
+    if not source_indices:
+        return np.full(adj.shape[0], np.inf, dtype=np.float32)
+
+    n = adj.shape[0]
+    min_distances = np.full(n, np.inf, dtype=np.float32)
+
+    # Convert sparse matrix to adjacency list for fast BFS
+    if "adj_list" not in _ppi_cache:
+        adj_list = [[] for _ in range(n)]
+        rows, cols = adj.nonzero()
+        for r, c in zip(rows, cols):
+            adj_list[r].append(c)
+        _ppi_cache["adj_list"] = adj_list
+    adj_list = _ppi_cache["adj_list"]
+
+    # BFS from each source with cutoff
+    for src_idx in source_indices:
+        visited = np.full(n, -1, dtype=np.int32)
+        visited[src_idx] = 0
+        queue = deque([src_idx])
+
+        while queue:
+            node = queue.popleft()
+            d = visited[node]
+            if d >= cutoff:
+                continue
+            for neighbor in adj_list[node]:
+                if visited[neighbor] == -1:
+                    visited[neighbor] = d + 1
+                    queue.append(neighbor)
+
+        # Update minimum distances
+        mask = visited >= 0
+        dists = visited.astype(np.float32)
+        dists[~mask] = np.inf
+        min_distances = np.minimum(min_distances, dists)
+
+    return min_distances
 
 
 def score_drugs_by_proximity(
@@ -265,10 +303,10 @@ def score_drugs_by_proximity(
     if not gene_map:
         return {}
 
-    # Try fast scipy path first
-    dist_matrix, node_list, node_to_idx = _precompute_sparse_distances()
+    # Build sparse graph (fast, cached)
+    adj, node_list, node_to_idx = _build_sparse_graph()
 
-    if dist_matrix is None:
+    if adj is None:
         # Fallback to old NetworkX BFS
         return _score_drugs_by_proximity_slow(
             disease_entity, compound_entities, triplets, top_k or 200
@@ -287,7 +325,9 @@ def score_drugs_by_proximity(
     if not disease_protein_idxs:
         return {}
 
-    disease_idxs = np.array(disease_protein_idxs)
+    # Compute distances from disease genes to all nodes (single-source BFS per gene)
+    # This is fast: O(|disease_genes| * (V + E)) instead of O(V^3)
+    min_dists_from_disease = _bfs_distances(adj, disease_protein_idxs, node_to_idx, cutoff=4)
 
     # Pre-build drug → gene targets map (vectorized)
     compound_set = set(compound_entities)
@@ -300,7 +340,6 @@ def score_drugs_by_proximity(
     drug_to_protein_idxs = {}
     for compound, gene_entity in drug_gene_pairs:
         gene_id = gene_entity.split("::")[1]
-        # Handle composite IDs
         for sub_id in gene_id.split(";"):
             sub_id = sub_id.strip()
             if sub_id in gene_map and gene_map[sub_id] in node_to_idx:
@@ -310,26 +349,22 @@ def score_drugs_by_proximity(
 
     results = {}
     for compound, protein_idxs in drug_to_protein_idxs.items():
-        # Get distances from all drug targets to all disease genes
-        drug_idxs = np.array(protein_idxs[:20])  # Max 20 targets
+        drug_idxs = protein_idxs[:20]  # Max 20 targets
 
-        # Sub-matrix: (n_drug_targets, n_disease_genes)
-        sub_dists = dist_matrix[np.ix_(drug_idxs, disease_idxs)]
+        # Get min distance from any disease gene to each drug target
+        target_dists = [min_dists_from_disease[idx] for idx in drug_idxs]
+        reachable = [d for d in target_dists if d < np.inf]
 
-        # For each drug target: minimum distance to any disease gene
-        min_per_target = np.min(sub_dists, axis=1)
-
-        # Filter out inf (unreachable)
-        reachable = min_per_target[min_per_target < np.inf]
-        if len(reachable) == 0:
+        if not reachable:
             continue
 
-        avg_distance = float(np.mean(reachable))
+        avg_distance = sum(reachable) / len(reachable)
         proximity_score = max(0.0, 1.0 - avg_distance / 4.0)
 
         if proximity_score > 0:
             results[compound] = (round(proximity_score, 3), round(avg_distance, 2))
 
+    print(f"  Scored {len(results)} drugs by PPI proximity")
     return results
 
 

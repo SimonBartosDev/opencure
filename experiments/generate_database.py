@@ -61,15 +61,16 @@ def generate_database():
 
             # Compute novelty score for this candidate
             novelty = compute_novelty_score({
-                "pubmed_articles": candidate.get("pubmed_total", 0),
-                "clinical_trials": candidate.get("clinical_trials_total", 0),
-                "pubmed_repurposing": candidate.get("pubmed_repurposing_total", 0),
+                "pubmed_total": candidate.get("pubmed_total", 0),
+                "clinical_trials_total": candidate.get("clinical_trials_total", 0),
+                "pubmed_repurposing_total": candidate.get("pubmed_repurposing_total", 0),
                 "max_citations": candidate.get("max_citations", 0),
                 "faers_cooccurrences": candidate.get("faers_cooccurrences", 0),
                 "combined_score": candidate.get("combined_score", 0),
                 "pillars_hit": candidate.get("pillars_hit", 0),
-                "shared_targets": candidate.get("shared_target_count", 0),
+                "shared_target_count": candidate.get("shared_target_count", 0),
                 "direct_relations": len(candidate.get("direct_relations", [])),
+                "mr_score": candidate.get("mr_score", 0),
             })
 
             entry = {
@@ -97,6 +98,9 @@ def generate_database():
                 "mol_similarity": candidate.get("mol_similarity", 0),
                 "similar_to": candidate.get("similar_to", ""),
                 "transe_rank": candidate.get("transe_rank", 0),
+                "mr_score": candidate.get("mr_score", 0),
+                "mr_genetic_targets": candidate.get("mr_genetic_targets", 0),
+                "mechanistic_hypothesis": candidate.get("mechanistic_hypothesis", ""),
                 "ai_hypothesis": candidate.get("ai_hypothesis", ""),
                 "novelty_interpretation": novelty["interpretation"],
                 "confidence_reasons": "; ".join(candidate.get("confidence_reasons", [])),

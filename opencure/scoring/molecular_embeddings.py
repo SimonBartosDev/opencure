@@ -6,6 +6,7 @@ fingerprints miss: functional group interactions, 3D conformational effects,
 and subtle structure-activity relationships learned from millions of molecules.
 """
 
+import warnings
 import numpy as np
 from pathlib import Path
 from typing import Optional
@@ -112,10 +113,17 @@ def compute_cosine_similarity(query_embs: np.ndarray, candidate_embs: np.ndarray
     Returns:
         (N, M) similarity matrix
     """
-    # Normalize
-    query_norm = query_embs / (np.linalg.norm(query_embs, axis=1, keepdims=True) + 1e-8)
-    cand_norm = candidate_embs / (np.linalg.norm(candidate_embs, axis=1, keepdims=True) + 1e-8)
-    return query_norm @ cand_norm.T
+    # Normalize and compute cosine similarity safely
+    q = np.nan_to_num(query_embs.astype(np.float64), nan=0.0, posinf=0.0, neginf=0.0)
+    c = np.nan_to_num(candidate_embs.astype(np.float64), nan=0.0, posinf=0.0, neginf=0.0)
+    q_norms = np.linalg.norm(q, axis=1, keepdims=True)
+    c_norms = np.linalg.norm(c, axis=1, keepdims=True)
+    q_norms[q_norms == 0] = 1.0
+    c_norms[c_norms == 0] = 1.0
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore", RuntimeWarning)
+        sim = (q / q_norms) @ (c / c_norms).T
+    return np.clip(np.nan_to_num(sim, nan=0.0), -1.0, 1.0).astype(np.float32)
 
 
 def load_cached_embeddings(model_type: str = "chemberta") -> tuple[Optional[np.ndarray], Optional[list[str]]]:
