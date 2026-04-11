@@ -51,9 +51,9 @@ python experiments/systematic_screening.py
 ## Results
 
 Screening across 25 neglected/rare diseases identified:
-- **39 BREAKTHROUGH candidates** (zero published literature)
-- **179 total novel candidates**
-- **217 total candidates** with confidence assessments
+- **78 BREAKTHROUGH candidates** (zero published literature)
+- **151 total novel candidates**
+- **245 total candidates** with confidence assessments (84 HIGH, 40 MEDIUM)
 
 ## Architecture
 
@@ -68,14 +68,25 @@ Disease name → 8 AI pillars (parallel scoring) → Per-drug dynamic weighting
 - `OPENCURE_STUDY_GUIDE.md` — Technical architecture (formulas, parameters, algorithms)
 - `OPENCURE_FOUNDATIONS.md` — Everything explained from scratch (biology, ML, chemistry)
 
+## Deployment
+
+```bash
+# Docker
+docker build -t opencure .
+docker run -p 8000:8000 opencure
+
+# Or directly
+python -m opencure.web.run
+```
+
 ## License
 
-MIT License. Open source, nonprofit mission.
+Apache License 2.0. Open source, nonprofit mission.
 
 ## Citation
 
 If you use OpenCure in your research, please cite:
 ```
 OpenCure: Multi-pillar AI platform for drug repurposing in neglected and rare diseases.
-https://github.com/opencure-ai/opencure
+https://github.com/SimonBartosDev/opencure
 ```

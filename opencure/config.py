@@ -1,12 +1,14 @@
 """Configuration and paths for OpenCure."""
 
+import os
 from pathlib import Path
 
 # Project root
 PROJECT_ROOT = Path(__file__).parent.parent
 
-# Data directories
-DATA_DIR = PROJECT_ROOT / "data" / "drkg"
+# Data directories (configurable via env var for cloud deployment)
+_data_root = Path(os.environ.get("OPENCURE_DATA_DIR", str(PROJECT_ROOT / "data")))
+DATA_DIR = _data_root / "drkg"
 EMBED_DIR = DATA_DIR / "embed"
 
 # DRKG files
