@@ -1,10 +1,9 @@
-# Data files (too large for git, download separately)
+# Data files (too large for git, download via setup_data.sh)
 data/drkg/drkg.tsv
 data/drkg/embed/*.npy
 data/drkg/entity2src.tsv
 data/drkg/embeddings/
-data/models/pykeen/
-data/models/ensemble_model.pkl
+data/models/
 data/string/
 data/txgnn_data/
 data/txgnn_model/
@@ -12,6 +11,7 @@ data/txgnn_env/
 data/txgnn_embeddings/
 data/alphafold/
 data/ncbi_gene_info.gz
+*.log
 
 # Python
 __pycache__/
@@ -34,14 +34,29 @@ venv/
 
 # OS
 .DS_Store
-
-# Old results backup
-experiments/results_v1_backup/
+Thumbs.db
 
 # Outreach (contains researcher emails — keep private)
 scripts/find_researchers.py
 scripts/send_outreach.py
 researchers_outreach.csv
 
-# Temporary
+# Internal docs (not part of the software)
+OPENCURE_FOUNDATIONS.md
+OPENCURE_STUDY_GUIDE.md
+FEASIBILITY_STUDY.md
+.Rhistory
+
+# Temporary / generated
 *.tmp
+.claude/
+.playwright-mcp/
+
+# Development artifacts
+experiments/results_v1_backup/
+experiments/hunt_chagas.py
+experiments/chagas_report.json
+experiments/validation_before.txt
+experiments/validation_after.txt
+experiments/screening.log
+experiments/screening_v2.log

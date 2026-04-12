@@ -30,7 +30,7 @@
 - Result: Public URL researchers can search from browser
 
 ### 1C. Monitor Researcher Responses
-- Check opencure.research@gmail.com daily
+- Check project email daily
 - Prioritize replies from: Harvard, Johns Hopkins, CDC, Fiocruz, NIH
 - Any researcher willing to run a cell assay = highest priority
 

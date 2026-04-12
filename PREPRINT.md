@@ -6,7 +6,7 @@ Simon Bartos^1*
 
 ^1 Independent Researcher
 
-*Corresponding author: opencure.research@gmail.com
+*Corresponding author: contact@opencure.org
 
 ## Abstract
 
@@ -159,7 +159,7 @@ OpenCure is available at https://github.com/SimonBartosDev/opencure under Apache
 - Trained ensemble model
 - Data download and setup scripts
 
-Contact: opencure.research@gmail.com
+Contact: contact@opencure.org
 
 ## Declaration of AI Use
 
