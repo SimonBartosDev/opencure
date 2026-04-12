@@ -709,7 +709,7 @@ def _methodology_pages(pdf: Report):
     )
     pdf._text(
         "Researchers interested in validating these predictions are encouraged to contact us at "
-        "contact@opencure.org or visit github.com/SimonBartosDev/opencure."
+        "opencure.research@gmail.com or visit github.com/SimonBartosDev/opencure."
     )
 
 
