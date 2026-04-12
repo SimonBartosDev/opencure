@@ -24,6 +24,22 @@ from opencure.evidence.novelty import compute_novelty_score
 
 RESULTS_DIR = Path("experiments/results")
 
+# Compounds that are not viable therapeutic drugs — exclude from public database.
+# Toxic chemicals, pesticides, industrial metals, endogenous metabolites with no
+# therapeutic formulation, and withdrawn/illicit substances.
+EXCLUDED_COMPOUNDS = {
+    "Mercuric Chloride",                    # Toxic heavy metal salt
+    "Malonaldehyde",                        # Toxic aldehyde / lipid peroxidation marker
+    "Methamidophos",                        # Organophosphate pesticide (banned)
+    "2,5-Dimethoxy-4-ethylamphetamine",     # Schedule I hallucinogen (DOE)
+    "Chlorphentermine",                     # Withdrawn anorectic (cardiotoxic)
+    "Gadolinium",                           # MRI contrast metal, not a therapeutic
+    "Vanadium",                             # Industrial metal
+    "Ethanol",                              # Solvent, not a therapeutic drug
+    "Sulfate Ion",                          # Inorganic ion, not a drug
+    "Magnesium Chloride",                   # Salt, not a drug entity
+}
+
 
 def load_all_results() -> list[dict]:
     """Load all per-disease result files."""
@@ -57,6 +73,10 @@ def generate_database():
         disease = disease_result["disease"]
         for candidate in disease_result.get("candidates", []):
             if candidate.get("evidence_skipped") or candidate.get("confidence") in ("UNRESOLVED", "ERROR"):
+                continue
+
+            # Filter out non-drug compounds
+            if candidate.get("drug_name", "") in EXCLUDED_COMPOUNDS:
                 continue
 
             # Compute novelty score for this candidate

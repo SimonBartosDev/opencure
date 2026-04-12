@@ -1,7 +1,7 @@
 <p align="center">
   <h1 align="center">OpenCure</h1>
   <p align="center">
-    <strong>Open-source AI drug repurposing platform for neglected and rare diseases</strong>
+    <strong>Open-source AI drug repurposing platform for neglected, rare, and underserved diseases</strong>
   </p>
   <p align="center">
     <a href="https://github.com/SimonBartosDev/opencure/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="License"></a>
@@ -12,9 +12,9 @@
 
 ---
 
-OpenCure combines **8 independent AI scoring methods** and **8 evidence sources** to identify new therapeutic uses for existing FDA-approved drugs. All predictions, code, and data are freely available.
+OpenCure combines **8 independent AI scoring methods** and **6 evidence sources** to identify new therapeutic uses for existing FDA-approved drugs. All predictions, code, and data are freely available.
 
-> **245 candidates** across 25 diseases | **78 breakthrough predictions** with zero published literature | **AUC-ROC 0.998** ensemble validation
+> **342 candidates** across 36 diseases | **34 breakthrough predictions** with zero published literature | **AUC-ROC 0.998** ensemble validation
 
 ## Scoring Pillars
 
@@ -33,15 +33,17 @@ Each drug receives a **dynamic weighted score** across applicable pillars, with 
 
 ## Results
 
-Screening 10,551 FDA-approved drugs across 25 neglected and rare diseases:
+Screening ~10,500 FDA-approved drugs (active screening expanding to 61 diseases):
 
 | Category | Count |
 |----------|-------|
-| Total candidates | 245 |
-| BREAKTHROUGH (no literature) | 78 |
-| NOVEL (minimal literature) | 73 |
-| HIGH confidence | 84 |
-| Diseases screened | 25 |
+| Total candidates | 342 |
+| BREAKTHROUGH (no literature) | 34 |
+| NOVEL (minimal literature) | 119 |
+| HIGH confidence | 168 |
+| Diseases screened | 36+ |
+
+Novelty scoring uses **synonym-expanded PubMed search** (55 disease synonym mappings) to avoid false positives. Non-therapeutic compounds (toxic chemicals, pesticides, solvents) are filtered from results.
 
 **Cross-disease discovery**: 19 drugs are predicted across multiple diseases, suggesting shared mechanisms. Doxorubicin appears in 8 diseases.
 
@@ -62,7 +64,7 @@ python -m opencure.web.run
 # Command line
 python -m opencure.cli "Alzheimer's disease"
 
-# Full screening (25 diseases)
+# Full screening (61 diseases)
 python experiments/systematic_screening.py
 ```
 
@@ -75,7 +77,7 @@ Disease name
   -> MR causal bonus
   -> Ranked candidates
   -> Evidence reports (PubMed, ClinicalTrials.gov, FAERS, Semantic Scholar)
-  -> Confidence + Novelty scoring
+  -> Confidence + Novelty scoring (synonym-expanded)
 ```
 
 ## Repository Structure
@@ -86,10 +88,11 @@ opencure/               Core library
   evidence/             Evidence gathering (PubMed, FAERS, etc.)
   web/                  FastAPI web application
 experiments/            Screening scripts and results
-  results/              JSON/CSV outputs for all 25 diseases
+  results/              JSON/CSV outputs for all diseases
 scripts/                Data preparation and report generation
 reports/                PDF reports per disease (researcher-ready)
-docs/                   Interactive Explorer dashboard
+docs/                   Interactive Explorer dashboard (GitHub Pages)
+agents/                 Autonomous agent system (literature monitoring, outreach, etc.)
 ```
 
 ## Deployment
@@ -105,7 +108,13 @@ python -m opencure.web.run
 
 ## Diseases Screened
 
-Alzheimer's, ALS, Chagas, Cystic Fibrosis, Dengue, Duchenne Muscular Dystrophy, Ehlers-Danlos Syndrome, Fabry Disease, Fragile X Syndrome, Gaucher Disease, Hepatitis C, HIV, Huntington's, Idiopathic Pulmonary Fibrosis, Leishmaniasis, Malaria, Marfan Syndrome, Multiple Sclerosis, Neurofibromatosis, Parkinson's, Pulmonary Hypertension, Schistosomiasis, Sepsis, Sickle Cell Disease, Tuberculosis
+Alzheimer's, ALS, Breast Cancer, Chagas, Colorectal Cancer, Cystic Fibrosis, Dengue, Duchenne Muscular Dystrophy, Ehlers-Danlos Syndrome, Fabry Disease, Fragile X Syndrome, Gaucher Disease, Glioblastoma, Hepatitis C, HIV, Huntington's, Idiopathic Pulmonary Fibrosis, Leishmaniasis, Leukemia, Lung Cancer, Lymphoma, Malaria, Marfan Syndrome, Melanoma, Multiple Myeloma, Multiple Sclerosis, Neurofibromatosis, Ovarian Cancer, Pancreatic Cancer, Parkinson's, Prostate Cancer, Pulmonary Hypertension, Schistosomiasis, Sepsis, Sickle Cell Disease, Tuberculosis
+
+*Screening actively expanding to 61 diseases including cardiovascular, autoimmune, metabolic, respiratory, and neuropsychiatric conditions.*
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for how to contribute predictions, code, or validation data.
 
 ## License
 
