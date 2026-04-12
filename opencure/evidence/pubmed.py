@@ -151,6 +151,76 @@ def _parse_article(elem) -> dict | None:
         return None
 
 
+DISEASE_SYNONYMS = {
+    "Idiopathic pulmonary fibrosis": ["pulmonary fibrosis", "lung fibrosis", "IPF"],
+    "Alzheimer's disease": ["Alzheimers disease", "Alzheimer disease", "AD dementia"],
+    "Parkinson's disease": ["Parkinsons disease", "Parkinson disease"],
+    "Huntington's disease": ["Huntingtons disease", "Huntington disease"],
+    "Amyotrophic lateral sclerosis": ["ALS", "motor neuron disease", "Lou Gehrig disease"],
+    "Multiple sclerosis": ["MS", "demyelinating disease"],
+    "Duchenne muscular dystrophy": ["DMD", "muscular dystrophy Duchenne"],
+    "Cystic fibrosis": ["CF", "mucoviscidosis"],
+    "Sickle cell disease": ["sickle cell anemia", "SCD"],
+    "Chagas disease": ["American trypanosomiasis", "Trypanosoma cruzi infection"],
+    "Pulmonary hypertension": ["pulmonary arterial hypertension", "PAH"],
+    "Gaucher disease": ["Gauchers disease", "glucocerebrosidase deficiency"],
+    "Fabry disease": ["Fabrys disease", "alpha-galactosidase A deficiency"],
+    "Ehlers-Danlos syndrome": ["EDS", "Ehlers Danlos"],
+    "Fragile X syndrome": ["FXS", "Martin-Bell syndrome"],
+    "Marfan syndrome": ["Marfan's syndrome"],
+    "Neurofibromatosis": ["NF1", "neurofibromatosis type 1", "von Recklinghausen disease"],
+    "Hepatitis C": ["HCV", "hepatitis C virus infection"],
+    "HIV": ["HIV/AIDS", "human immunodeficiency virus", "HIV infection"],
+    "Sepsis": ["septicemia", "systemic inflammatory response"],
+    "Breast cancer": ["breast carcinoma", "breast neoplasm"],
+    "Lung cancer": ["lung carcinoma", "non-small cell lung cancer", "NSCLC"],
+    "Colorectal cancer": ["colon cancer", "rectal cancer", "CRC"],
+    "Pancreatic cancer": ["pancreatic carcinoma", "pancreatic adenocarcinoma"],
+    "Prostate cancer": ["prostate carcinoma", "prostate neoplasm"],
+    "Ovarian cancer": ["ovarian carcinoma", "ovarian neoplasm"],
+    "Glioblastoma": ["GBM", "glioblastoma multiforme"],
+    "Leukemia": ["leukaemia", "acute myeloid leukemia", "AML"],
+    "Lymphoma": ["non-Hodgkin lymphoma", "NHL"],
+    "Multiple myeloma": ["myeloma", "plasma cell myeloma"],
+    "Heart failure": ["cardiac failure", "congestive heart failure", "CHF"],
+    "Coronary artery disease": ["CAD", "coronary heart disease", "ischemic heart disease"],
+    "Atrial fibrillation": ["AFib", "AF", "atrial flutter"],
+    "Hypertension": ["high blood pressure", "arterial hypertension"],
+    "Atherosclerosis": ["arterial plaque", "arteriosclerosis"],
+    "Type 2 diabetes": ["T2DM", "type 2 diabetes mellitus", "diabetes mellitus type 2"],
+    "Diabetes mellitus": ["diabetes", "T2DM", "type 2 diabetes"],
+    "Chronic kidney disease": ["CKD", "chronic renal failure", "chronic renal disease"],
+    "Liver cirrhosis": ["hepatic cirrhosis", "cirrhosis of the liver"],
+    "Rheumatoid arthritis": ["RA", "rheumatoid disease"],
+    "Crohn's disease": ["Crohns disease", "Crohn disease", "regional enteritis"],
+    "Ulcerative colitis": ["UC", "ulcerative proctitis"],
+    "Psoriasis": ["plaque psoriasis", "psoriatic disease"],
+    "Lupus": ["systemic lupus erythematosus", "SLE"],
+    "Inflammatory bowel disease": ["IBD", "Crohn's disease", "ulcerative colitis"],
+    "Asthma": ["bronchial asthma", "allergic asthma"],
+    "COPD": ["chronic obstructive pulmonary disease", "emphysema", "chronic bronchitis"],
+    "COVID-19": ["SARS-CoV-2", "coronavirus disease 2019"],
+    "Osteoporosis": ["bone loss", "osteopenia"],
+    "Endometriosis": ["endometriotic disease"],
+    "Depression": ["major depressive disorder", "MDD", "clinical depression"],
+    "Schizophrenia": ["schizophrenic disorder"],
+    "Bipolar disorder": ["manic depression", "bipolar affective disorder"],
+    "Epilepsy": ["seizure disorder", "epileptic disorder"],
+    "Anxiety": ["anxiety disorder", "generalized anxiety disorder", "GAD"],
+    "Obesity": ["morbid obesity", "adiposity"],
+    "Melanoma": ["malignant melanoma", "cutaneous melanoma"],
+}
+
+
+def _build_disease_query(disease_name: str) -> str:
+    """Build a PubMed disease query with synonym expansion."""
+    clean = disease_name.replace("'", "").strip()
+    terms = [f'"{clean}"']
+    for synonym in DISEASE_SYNONYMS.get(disease_name, []):
+        terms.append(f'"{synonym}"')
+    return "(" + " OR ".join(terms) + ")"
+
+
 def search_drug_disease_evidence(
     drug_name: str,
     disease_name: str,
@@ -159,8 +229,8 @@ def search_drug_disease_evidence(
     """
     Search PubMed for evidence of a drug-disease relationship.
 
-    Performs multiple targeted searches:
-    1. Direct drug + disease
+    Performs multiple targeted searches with disease synonym expansion:
+    1. Direct drug + disease (with synonyms)
     2. Drug + disease + "repurpos*"
     3. Drug + disease + "treatment" or "therapy"
 
@@ -168,24 +238,24 @@ def search_drug_disease_evidence(
     """
     # Clean names for search
     drug_clean = drug_name.replace("'", "").strip()
-    disease_clean = disease_name.replace("'", "").strip()
+    disease_query = _build_disease_query(disease_name)
 
-    # Search 1: Direct association
-    query1 = f'"{drug_clean}" AND "{disease_clean}"'
+    # Search 1: Direct association (with synonyms)
+    query1 = f'"{drug_clean}" AND {disease_query}'
     articles1 = search_pubmed(query1, max_results=max_results)
     total1 = articles1[0].get("total_results", 0) if articles1 else 0
 
     time.sleep(0.4)
 
     # Search 2: Repurposing context
-    query2 = f'"{drug_clean}" AND "{disease_clean}" AND (repurpos* OR repositioning)'
+    query2 = f'"{drug_clean}" AND {disease_query} AND (repurpos* OR repositioning)'
     articles2 = search_pubmed(query2, max_results=3)
     total2 = articles2[0].get("total_results", 0) if articles2 else 0
 
     time.sleep(0.4)
 
     # Search 3: Treatment/therapy context
-    query3 = f'"{drug_clean}" AND "{disease_clean}" AND (treatment OR therapy OR therapeutic)'
+    query3 = f'"{drug_clean}" AND {disease_query} AND (treatment OR therapy OR therapeutic)'
     articles3 = search_pubmed(query3, max_results=3)
     total3 = articles3[0].get("total_results", 0) if articles3 else 0
 
