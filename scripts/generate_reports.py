@@ -23,6 +23,7 @@ from fpdf import FPDF
 
 RESULTS_DIR = Path("experiments/results")
 REPORTS_DIR = Path("reports")
+SKIP_FILES = {"screening_summary.json", "opencure_database.json", "novel_candidates.json", "chagas_report.json"}
 
 # Color palette
 NAVY = (15, 30, 60)
@@ -422,7 +423,6 @@ def _candidate_page(pdf: Report, c: dict, rank: int):
     pdf.cell(50, 5, _s(f"Repurposing mentions: {repurp}"))
     pdf.cell(0, 5, _s(f"Max citations: {c.get('max_citations', 0)}"), new_x="LMARGIN", new_y="NEXT")
     pdf.set_xy(14, y0 + 8)
-    faers_interp = c.get("faers_interpretation", "")
     pdf.cell(0, 5, _s(f"FAERS: {c.get('faers_signal', 'none')} ({c.get('faers_cooccurrences', 0)} co-occ / {c.get('faers_total_reports', 0)} total reports)"), new_x="LMARGIN", new_y="NEXT")
     pdf.ln(4)
 
@@ -542,7 +542,7 @@ def _candidate_page(pdf: Report, c: dict, rank: int):
 
     # ---- Shared Targets ----
     shared = c.get("shared_targets", [])
-    if shared and len(shared) > 0:
+    if shared:
         pdf._subsection(f"Shared Gene Targets ({c.get('shared_target_count', len(shared))} genes)")
         targets_str = ", ".join(shared[:20])
         if len(shared) > 20:
@@ -746,7 +746,7 @@ def main():
 
     REPORTS_DIR.mkdir(exist_ok=True)
 
-    skip = {"screening_summary.json", "opencure_database.json", "novel_candidates.json", "chagas_report.json"}
+    skip = SKIP_FILES
 
     print("=" * 60)
     print("  OpenCure PDF Report Generator v2")
@@ -767,7 +767,6 @@ def main():
         try:
             generate_report(disease, data, out)
             generated += 1
-            pages = Report(disease)
             print(f"OK -> {out}")
         except Exception as e:
             print(f"ERROR: {e}")

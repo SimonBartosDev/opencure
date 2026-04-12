@@ -6,6 +6,8 @@ import re
 from pathlib import Path
 from fpdf import FPDF
 
+_BOLD_RE = re.compile(r"\*\*(.*?)\*\*")
+
 
 def _s(text) -> str:
     if text is None:
@@ -17,7 +19,6 @@ class PreprintPDF(FPDF):
     def __init__(self):
         super().__init__()
         self.set_auto_page_break(auto=True, margin=25)
-        self._line_num = 0
 
     def header(self):
         if self.page_no() == 1:
@@ -204,7 +205,7 @@ def render_pdf(sections: list[dict], output: Path):
             if item["type"] == "text":
                 text = item["text"]
                 # Handle inline bold with **text**
-                clean = re.sub(r"\*\*(.*?)\*\*", r"\1", text)
+                clean = _BOLD_RE.sub(r"\1",text)
 
                 if in_references:
                     pdf.set_font("Times", "", 8)
@@ -227,7 +228,7 @@ def render_pdf(sections: list[dict], output: Path):
                 pdf.ln(1)
 
             elif item["type"] == "list":
-                text = re.sub(r"\*\*(.*?)\*\*", r"\1", item["text"])
+                text = _BOLD_RE.sub(r"\1",item["text"])
                 pdf.set_font("Times", "", 9.5)
                 pdf.set_text_color(30, 30, 30)
                 pdf.set_x(15)
@@ -235,7 +236,7 @@ def render_pdf(sections: list[dict], output: Path):
                 pdf.ln(0.5)
 
             elif item["type"] == "olist":
-                text = re.sub(r"\*\*(.*?)\*\*", r"\1", item["text"])
+                text = _BOLD_RE.sub(r"\1",item["text"])
                 pdf.set_font("Times", "", 9.5)
                 pdf.set_text_color(30, 30, 30)
                 pdf.set_x(15)
