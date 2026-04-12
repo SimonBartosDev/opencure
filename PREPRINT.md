@@ -161,6 +161,14 @@ OpenCure is available at https://github.com/SimonBartosDev/opencure under Apache
 
 Contact: opencure.research@gmail.com
 
+## Declaration of AI Use
+
+AI tools (Anthropic Claude) were used to assist with code development, data analysis pipeline construction, and manuscript drafting. All scientific decisions, methodology design, disease selection, and result interpretation were made by the authors. The AI tool was not involved in the conceptualization, experimental design, or scientific conclusions of this work.
+
+## Competing Interests
+
+The authors declare no competing interests. OpenCure is a nonprofit, open-source project with no commercial affiliations.
+
 ## References
 
 Ali, M., Berrendorf, M., Hoyt, C. T., et al. (2021). PyKEEN 1.0: A Python library for training and evaluating knowledge graph embeddings. *Journal of Machine Learning Research*, 22(82), 1-6.
