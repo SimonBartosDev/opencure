@@ -1,0 +1,37 @@
+{
+  "project_root": "/Users/simonbartos/Ideas/Drug_reuse",
+  "dashboard_url": "https://simonbartosdev.github.io/opencure/",
+  "github_url": "https://github.com/SimonBartosDev/opencure",
+  "contact_email": "opencure.research@gmail.com",
+  "agents": {
+    "literature_scout": {
+      "enabled": true,
+      "schedule": "daily",
+      "top_predictions": 50,
+      "lookback_days": 7
+    },
+    "outreach_agent": {
+      "enabled": true,
+      "schedule": "weekly",
+      "max_researchers_per_run": 20,
+      "target_subreddits": ["r/labrats", "r/bioinformatics", "r/drugdevelopment"]
+    },
+    "social_media_agent": {
+      "enabled": true,
+      "schedule": "weekly",
+      "platforms": ["twitter", "reddit", "linkedin"]
+    },
+    "validation_monitor": {
+      "enabled": true,
+      "schedule": "weekly"
+    },
+    "grant_scout": {
+      "enabled": true,
+      "schedule": "weekly"
+    },
+    "report_updater": {
+      "enabled": true,
+      "schedule": "on_new_data"
+    }
+  }
+}
