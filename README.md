@@ -14,7 +14,7 @@
 
 OpenCure combines **8 independent AI scoring methods** and **6 evidence sources** to identify new therapeutic uses for existing FDA-approved drugs. All predictions, code, and data are freely available.
 
-> **342 candidates** across 36 diseases | **34 breakthrough predictions** with zero published literature | **AUC-ROC 0.998** ensemble validation
+> **587 candidates** across 61 diseases | **44 breakthrough predictions** with zero published literature | **AUC-ROC 0.998** ensemble validation
 
 ## Scoring Pillars
 
@@ -33,19 +33,19 @@ Each drug receives a **dynamic weighted score** across applicable pillars, with 
 
 ## Results
 
-Screening ~10,500 FDA-approved drugs (active screening expanding to 61 diseases):
+Screening ~10,500 FDA-approved drugs across 61 diseases:
 
 | Category | Count |
 |----------|-------|
-| Total candidates | 342 |
-| BREAKTHROUGH (no literature) | 34 |
-| NOVEL (minimal literature) | 119 |
-| HIGH confidence | 168 |
-| Diseases screened | 36+ |
+| Total candidates | 587 |
+| BREAKTHROUGH (no literature) | 44 |
+| NOVEL (minimal literature) | 177 |
+| HIGH confidence | 363 |
+| Diseases screened | 61 |
 
 Novelty scoring uses **synonym-expanded PubMed search** (55 disease synonym mappings) to avoid false positives. Non-therapeutic compounds (toxic chemicals, pesticides, solvents) are filtered from results.
 
-**Cross-disease discovery**: 19 drugs are predicted across multiple diseases, suggesting shared mechanisms. Doxorubicin appears in 8 diseases.
+**Cross-disease discovery**: 32 drugs are predicted across multiple diseases, suggesting shared mechanisms. Doxorubicin appears in 8 diseases.
 
 Browse all predictions interactively: **[OpenCure Explorer](https://simonbartosdev.github.io/opencure/)**
 
@@ -108,9 +108,7 @@ python -m opencure.web.run
 
 ## Diseases Screened
 
-Alzheimer's, ALS, Breast Cancer, Chagas, Colorectal Cancer, Cystic Fibrosis, Dengue, Duchenne Muscular Dystrophy, Ehlers-Danlos Syndrome, Fabry Disease, Fragile X Syndrome, Gaucher Disease, Glioblastoma, Hepatitis C, HIV, Huntington's, Idiopathic Pulmonary Fibrosis, Leishmaniasis, Leukemia, Lung Cancer, Lymphoma, Malaria, Marfan Syndrome, Melanoma, Multiple Myeloma, Multiple Sclerosis, Neurofibromatosis, Ovarian Cancer, Pancreatic Cancer, Parkinson's, Prostate Cancer, Pulmonary Hypertension, Schistosomiasis, Sepsis, Sickle Cell Disease, Tuberculosis
-
-*Screening actively expanding to 61 diseases including cardiovascular, autoimmune, metabolic, respiratory, and neuropsychiatric conditions.*
+Alzheimer's, ALS, Anxiety, Asthma, Atherosclerosis, Atrial Fibrillation, Bipolar Disorder, Breast Cancer, COPD, COVID-19, Chagas, Chronic Kidney Disease, Colorectal Cancer, Coronary Artery Disease, Crohn's, Cystic Fibrosis, Dengue, Depression, Duchenne Muscular Dystrophy, Ehlers-Danlos Syndrome, Endometriosis, Epilepsy, Fabry Disease, Fragile X Syndrome, Gaucher Disease, Glioblastoma, Heart Failure, Hepatitis C, HIV, Huntington's, Hypertension, Idiopathic Pulmonary Fibrosis, IBD, Leishmaniasis, Leukemia, Liver Cirrhosis, Lung Cancer, Lupus, Lymphoma, Malaria, Marfan Syndrome, Melanoma, Multiple Myeloma, Multiple Sclerosis, Neurofibromatosis, Obesity, Osteoporosis, Ovarian Cancer, Pancreatic Cancer, Parkinson's, Prostate Cancer, Psoriasis, Pulmonary Hypertension, Rheumatoid Arthritis, Schistosomiasis, Schizophrenia, Sepsis, Sickle Cell Disease, Tuberculosis, Type 2 Diabetes, Ulcerative Colitis
 
 ## Contributing
 
