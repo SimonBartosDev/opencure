@@ -32,30 +32,60 @@ PRIMEKG_PATH = Path("data/primekg/kg.csv")
 MODEL_DIR = Path("data/models/primekg")
 
 
-def load_triplets():
-    """Load PrimeKG and convert to (head, relation, tail) triplets."""
-    print("Loading PrimeKG...")
+# Relations most relevant for drug repurposing — skip anatomy/bioprocess bulk
+KEEP_RELATIONS = {
+    "indication",          # drug treats disease (18K)
+    "contraindication",    # drug contraindicated for disease (61K)
+    "drug_protein",        # drug targets protein (51K)
+    "disease_protein",     # disease involves protein (161K)
+    "drug_effect",         # drug has effect (130K)
+    "drug_drug",           # drug-drug interactions (2.7M) — keep subset
+    "protein_protein",     # PPI network (642K)
+    "off-label use",       # off-label drug-disease (5K)
+    "exposure_disease",    # exposure-disease link (5K)
+    "disease_disease",     # disease similarity (64K)
+}
+
+
+def load_triplets(max_per_relation: int = 500_000):
+    """Load PrimeKG and convert to (head, relation, tail) triplets.
+
+    Filters to drug-repurposing-relevant relations and caps large
+    relation types to keep memory manageable.
+    """
+    print("Loading PrimeKG (filtered to repurposing-relevant relations)...")
     triplets = []
     entity_set = set()
     relation_set = set()
+    relation_counts = {}
 
     with open(PRIMEKG_PATH) as f:
         reader = csv.DictReader(f)
         for i, row in enumerate(reader):
-            # Create entity keys: type_id (e.g., drug_DB00001, disease_12345)
+            relation = row["relation"]
+            if relation not in KEEP_RELATIONS:
+                continue
+
+            # Cap large relations
+            relation_counts[relation] = relation_counts.get(relation, 0) + 1
+            if relation_counts[relation] > max_per_relation:
+                continue
+
             head = f"{row['x_type']}_{row['x_id']}"
             tail = f"{row['y_type']}_{row['y_id']}"
-            relation = row["relation"]
 
             triplets.append((head, relation, tail))
             entity_set.add(head)
             entity_set.add(tail)
             relation_set.add(relation)
 
-            if (i + 1) % 1_000_000 == 0:
-                print(f"  Loaded {(i+1)/1e6:.0f}M triplets...")
+            if len(triplets) % 500_000 == 0:
+                print(f"  Loaded {len(triplets)/1e6:.1f}M triplets...")
 
     print(f"  Total: {len(triplets)} triplets, {len(entity_set)} entities, {len(relation_set)} relations")
+    for rel, count in sorted(relation_counts.items(), key=lambda x: -x[1]):
+        actual = min(count, max_per_relation)
+        print(f"    {rel}: {actual:,}")
     return triplets, sorted(entity_set), sorted(relation_set)
 
 
