@@ -120,8 +120,12 @@ def train_transe(triplets, entities, relations, embedding_dim=200, epochs=100, b
     print(f"  This will take several hours on CPU...")
     start = time.time()
 
+    # Split for PyKEEN (needs train/test)
+    training_tf, testing_tf = tf.split([0.95, 0.05], random_state=42)
+
     result = pipeline(
-        training=tf,
+        training=training_tf,
+        testing=testing_tf,
         model="TransE",
         model_kwargs={"embedding_dim": embedding_dim},
         training_kwargs={
