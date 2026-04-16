@@ -368,8 +368,29 @@ def search(
         except Exception as e:
             print(f"  [WARN] Network proximity failed: {e}")
 
+    # ADMET/Toxicity filtering and drug-likeness scoring
+    admet_scores = {}
+    admet_toxic = set()
+    try:
+        from opencure.scoring.admet_filter import score_drugs_for_disease_admet
+        print("[Pillar 9] ADMET/Toxicity filtering...")
+        smiles_map = data.get("smiles_map", {})
+        if smiles_map:
+            admet_scores, admet_toxic = score_drugs_for_disease_admet(
+                data["compounds"], smiles_map
+            )
+            if admet_toxic:
+                print(f"  Filtered {len(admet_toxic)} toxic compounds")
+            if admet_scores:
+                active_pillars.append("ADMET")
+                print(f"  Scored {len(admet_scores)} compounds by drug-likeness")
+    except ImportError:
+        pass
+    except Exception as e:
+        print(f"  [WARN] ADMET filtering failed: {e}")
+
     print(f"\nCombining {len(active_pillars)} active pillars: {', '.join(active_pillars)}")
-    combined = _combine_scores_v2(transe_scores, pykeen_scores, mol_sim_scores, mol_emb_scores, data["compounds"], gene_sig_scores, proximity_scores, txgnn_scores, mr_scores)
+    combined = _combine_scores_v2(transe_scores, pykeen_scores, mol_sim_scores, mol_emb_scores, data["compounds"], gene_sig_scores, proximity_scores, txgnn_scores, mr_scores, admet_scores, admet_toxic)
 
     # Step 5: Build results with evidence
     ranked = sorted(combined.items(), key=lambda x: -x[1]["combined_score"])[:top_k]
@@ -424,6 +445,8 @@ def _combine_scores_v2(
     proximity_scores: dict | None = None,
     txgnn_scores: dict | None = None,
     mr_scores: dict | None = None,
+    admet_scores: dict | None = None,
+    toxic_compounds: set | None = None,
 ) -> dict:
     """
     Combine scores from multiple pillars into a unified ranking.
@@ -443,6 +466,10 @@ def _combine_scores_v2(
         txgnn_scores = {}
     if mr_scores is None:
         mr_scores = {}
+    if admet_scores is None:
+        admet_scores = {}
+    if toxic_compounds is None:
+        toxic_compounds = set()
 
     # Helper: compute percentile ranks for a score dict
     def percentile_rank(score_dict):
@@ -471,6 +498,7 @@ def _combine_scores_v2(
         "proximity": 0.15,  # Validated approach (Barabási lab)
         "mr": 0.15,         # Mendelian randomization (CAUSAL evidence)
         "docking": 0.05,    # Structure-based docking (future)
+        "admet": 0.04,      # ADMET drug-likeness
     }
 
     # Determine which pillars are active
@@ -489,6 +517,8 @@ def _combine_scores_v2(
         active["gene_sig"] = base_weights["gene_sig"]
     if proximity_scores:
         active["proximity"] = base_weights["proximity"]
+    if admet_scores:
+        active["admet"] = base_weights["admet"]
     # MR is handled as a bonus, not a weighted pillar
 
     # Redistribute: normalize active weights to sum to 1.0
@@ -503,8 +533,12 @@ def _combine_scores_v2(
         set(transe_scores.keys()) | set(pykeen_scores.keys()) |
         set(txgnn_scores.keys()) | set(mol_sim_scores.keys()) |
         set(mol_emb_scores.keys()) | set(gene_sig_scores.keys()) |
-        set(proximity_scores.keys())
+        set(proximity_scores.keys()) | set(admet_scores.keys())
     )
+
+    # Filter out toxic compounds
+    if toxic_compounds:
+        all_scored -= toxic_compounds
 
     for compound in all_scored:
         scores = {}
@@ -580,6 +614,14 @@ def _combine_scores_v2(
             scores["proximity_score"] = prox_score
             scores["proximity_distance"] = prox_dist
             drug_pillars.append((base_weights["proximity"], prox_score))
+            pillars_hit += 1
+
+        # Pillar 9: ADMET drug-likeness
+        if compound in admet_scores:
+            admet_score, admet_flags, _ = admet_scores[compound]
+            scores["admet_score"] = admet_score
+            scores["admet_flags"] = admet_flags
+            drug_pillars.append((base_weights["admet"], admet_score))
             pillars_hit += 1
 
         # Pillar 7: Mendelian Randomization (causal evidence)
