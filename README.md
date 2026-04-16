@@ -20,7 +20,7 @@ The challenge: there are ~10,500 approved drugs and thousands of diseases. Testi
 
 ## What OpenCure Does
 
-OpenCure screens all ~10,500 FDA-approved drugs against any disease using **8 independent AI methods**, each capturing a different biological signal. When multiple methods independently agree that a drug should work for a disease, the prediction is likely real.
+OpenCure screens all ~10,500 FDA-approved drugs against any disease using **11 independent AI methods**, each capturing a different biological signal. When multiple methods independently agree that a drug should work for a disease, the prediction is likely real.
 
 After scoring, the platform gathers real-world evidence from 6 biomedical databases to assess how confident and how novel each prediction is — separating genuine new discoveries from drugs that are already known to work.
 
@@ -32,7 +32,7 @@ After scoring, the platform gathers real-world evidence from 6 biomedical databa
 
 ### Step 1: Multi-Pillar AI Scoring
 
-Each drug-disease pair is scored by 8 independent methods. No single method is reliable alone — but when 5 out of 8 agree, the signal is strong.
+Each drug-disease pair is scored by 11 independent methods. No single method is reliable alone — but when 5+ agree, the signal is strong.
 
 | # | Pillar | What It Does | Why It Matters |
 |---|--------|-------------|----------------|
@@ -44,6 +44,9 @@ Each drug-disease pair is scored by 8 independent methods. No single method is r
 | 6 | **Gene Signatures** | Queries L1000CDS2 for drugs that reverse the disease's gene expression signature. If a disease upregulates gene X, finds drugs that downregulate it. | Directly addresses the molecular root cause |
 | 7 | **Network Proximity** | Measures shortest path distance between drug targets and disease genes in the STRING protein-protein interaction network (16,201 proteins, 236,930 interactions). | Closer in the network = more likely to have therapeutic effect |
 | 8 | **Mendelian Randomization** | Uses human genetic data (GWAS) as natural experiments. If a genetic variant that mimics a drug's effect also reduces disease risk, that's causal evidence the drug should work. | The strongest form of drug target validation — causal, not just correlational |
+| 9 | **ADMET Filtering** | Predicts 77 ADMET endpoints (toxicity, drug-likeness, pharmacokinetics) for each compound using Chemprop models. Filters toxic compounds and scores drug-likeness. | Removes non-viable candidates before expensive downstream analysis |
+| 10 | **PrimeKG** | Independent knowledge graph from Harvard with 8.1M relationships across 17,080 diseases. Scored with TransE embeddings, providing orthogonal evidence to DRKG. | Two independent KGs agreeing = much higher confidence |
+| 11 | **DeepPurpose DTI** | Deep learning drug-target interaction prediction using molecular graphs + protein sequences. Pre-trained on BindingDB binding affinity data. | Predicts physical drug-protein binding without 3D structures |
 
 Each drug receives a **dynamic weighted score** — pillars with stronger signal for a given drug get higher weight. When multiple pillars converge on the same prediction, a **convergence bonus** increases the score further.
 
