@@ -207,6 +207,22 @@ def search(
             pykeen_scores = {**in_transe, **supplementary}
             print(f"  Scored {len(pykeen_scores)} compounds with RotatE ({len(supplementary)} supplementary)")
 
+    # Step 2c: Pillar 10 - PrimeKG knowledge graph scoring
+    primekg_scores = {}
+    try:
+        from opencure.scoring.primekg_scorer import score_drugs_for_disease_primekg
+        print("[Pillar 10] PrimeKG knowledge graph scoring...")
+        primekg_scores = score_drugs_for_disease_primekg(
+            disease_name, data["compounds"]
+        )
+        if primekg_scores:
+            active_pillars.append("PrimeKG")
+            print(f"  Scored {len(primekg_scores)} compounds with PrimeKG")
+    except ImportError:
+        pass
+    except Exception as e:
+        print(f"  [WARN] PrimeKG scoring failed: {e}")
+
     # Step 3a: Pillar 1a - Fingerprint molecular similarity
     mol_sim_scores = {}
     if use_molecular_similarity and data["smiles_map"]:
@@ -390,7 +406,7 @@ def search(
         print(f"  [WARN] ADMET filtering failed: {e}")
 
     print(f"\nCombining {len(active_pillars)} active pillars: {', '.join(active_pillars)}")
-    combined = _combine_scores_v2(transe_scores, pykeen_scores, mol_sim_scores, mol_emb_scores, data["compounds"], gene_sig_scores, proximity_scores, txgnn_scores, mr_scores, admet_scores, admet_toxic)
+    combined = _combine_scores_v2(transe_scores, pykeen_scores, mol_sim_scores, mol_emb_scores, data["compounds"], gene_sig_scores, proximity_scores, txgnn_scores, mr_scores, admet_scores, admet_toxic, primekg_scores)
 
     # Step 5: Build results with evidence
     ranked = sorted(combined.items(), key=lambda x: -x[1]["combined_score"])[:top_k]
@@ -447,6 +463,7 @@ def _combine_scores_v2(
     mr_scores: dict | None = None,
     admet_scores: dict | None = None,
     toxic_compounds: set | None = None,
+    primekg_scores: dict | None = None,
 ) -> dict:
     """
     Combine scores from multiple pillars into a unified ranking.
@@ -470,6 +487,8 @@ def _combine_scores_v2(
         admet_scores = {}
     if toxic_compounds is None:
         toxic_compounds = set()
+    if primekg_scores is None:
+        primekg_scores = {}
 
     # Helper: compute percentile ranks for a score dict
     def percentile_rank(score_dict):
@@ -499,6 +518,7 @@ def _combine_scores_v2(
         "mr": 0.15,         # Mendelian randomization (CAUSAL evidence)
         "docking": 0.05,    # Structure-based docking (future)
         "admet": 0.04,      # ADMET drug-likeness
+        "primekg": 0.10,    # PrimeKG knowledge graph (independent from DRKG)
     }
 
     # Determine which pillars are active
@@ -519,6 +539,8 @@ def _combine_scores_v2(
         active["proximity"] = base_weights["proximity"]
     if admet_scores:
         active["admet"] = base_weights["admet"]
+    if primekg_scores:
+        active["primekg"] = base_weights["primekg"]
     # MR is handled as a bonus, not a weighted pillar
 
     # Redistribute: normalize active weights to sum to 1.0
@@ -533,7 +555,8 @@ def _combine_scores_v2(
         set(transe_scores.keys()) | set(pykeen_scores.keys()) |
         set(txgnn_scores.keys()) | set(mol_sim_scores.keys()) |
         set(mol_emb_scores.keys()) | set(gene_sig_scores.keys()) |
-        set(proximity_scores.keys()) | set(admet_scores.keys())
+        set(proximity_scores.keys()) | set(admet_scores.keys()) |
+        set(primekg_scores.keys())
     )
 
     # Filter out toxic compounds
@@ -614,6 +637,14 @@ def _combine_scores_v2(
             scores["proximity_score"] = prox_score
             scores["proximity_distance"] = prox_dist
             drug_pillars.append((base_weights["proximity"], prox_score))
+            pillars_hit += 1
+
+        # Pillar 10: PrimeKG knowledge graph
+        if compound in primekg_scores:
+            primekg_score, primekg_rel, primekg_disease = primekg_scores[compound]
+            scores["primekg_score"] = primekg_score
+            scores["primekg_relation"] = primekg_rel
+            drug_pillars.append((base_weights["primekg"], primekg_score))
             pillars_hit += 1
 
         # Pillar 9: ADMET drug-likeness
