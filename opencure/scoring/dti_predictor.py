@@ -157,3 +157,186 @@ def predict_interactions(
             scores[i] = pred
 
     return scores
+
+
+# ---- DeepPurpose Integration ----
+
+_deeppurpose_model = None
+
+
+def _load_deeppurpose_model():
+    """Load a pre-trained DeepPurpose DTI model."""
+    global _deeppurpose_model
+    if _deeppurpose_model is not None:
+        return _deeppurpose_model
+
+    try:
+        from DeepPurpose import utils as dp_utils
+        from DeepPurpose import DTI as dp_models
+
+        # Use pre-trained model (Morgan fingerprint drug encoder + CNN protein encoder)
+        _deeppurpose_model = dp_models.model_pretrained(model="MPNN_CNN_BindingDB")
+        return _deeppurpose_model
+    except (ImportError, Exception):
+        return None
+
+
+def predict_dti_deeppurpose(
+    drug_smiles: list[str],
+    target_sequences: list[str],
+    target_names: list[str] | None = None,
+) -> np.ndarray:
+    """Predict binding affinity using DeepPurpose for all drug-target pairs.
+
+    Returns (N_drugs, N_targets) matrix of predicted binding scores (0-1).
+    """
+    model = _load_deeppurpose_model()
+    if model is None:
+        return np.zeros((len(drug_smiles), len(target_sequences)))
+
+    try:
+        from DeepPurpose import utils as dp_utils
+
+        scores = np.zeros((len(drug_smiles), len(target_sequences)))
+
+        for j, (seq, name) in enumerate(zip(target_sequences, target_names or [""] * len(target_sequences))):
+            # Create drug-target pairs for this target
+            X_drug = drug_smiles
+            X_target = [seq] * len(drug_smiles)
+            drug_names = [f"drug_{i}" for i in range(len(drug_smiles))]
+            target_names_list = [name] * len(drug_smiles)
+
+            try:
+                X_pred = dp_utils.data_process(
+                    X_drug=X_drug,
+                    X_target=X_target,
+                    y=[0] * len(drug_smiles),  # Dummy labels
+                    drug_encoding="MPNN",
+                    target_encoding="CNN",
+                )
+                preds = model.predict(X_pred)
+                # DeepPurpose returns Kd predictions; lower = stronger binding
+                # Convert to 0-1 score: score = 1 / (1 + Kd_nM / 1000)
+                for i, kd in enumerate(preds):
+                    scores[i, j] = 1.0 / (1.0 + max(0, kd) / 1000.0)
+            except Exception:
+                pass
+
+        return scores
+
+    except Exception:
+        return np.zeros((len(drug_smiles), len(target_sequences)))
+
+
+def get_disease_target_sequences(
+    disease_name: str,
+    triplets,
+) -> list[tuple[str, str, str]]:
+    """Get protein sequences for disease-relevant targets.
+
+    Returns list of (gene_symbol, uniprot_id, sequence) tuples.
+    """
+    import requests
+    import time as _time
+
+    # Get disease genes from DRKG
+    disease_genes = set()
+    disease_lower = disease_name.lower()
+
+    for _, row in triplets[triplets["tail"].str.startswith("Gene::")].head(5000).iterrows():
+        if disease_lower in str(row["head"]).lower():
+            gene_id = row["tail"].split("::")[1].split(";")[0]
+            disease_genes.add(gene_id)
+
+    for _, row in triplets[triplets["head"].str.startswith("Gene::")].head(5000).iterrows():
+        if disease_lower in str(row["tail"]).lower():
+            gene_id = row["head"].split("::")[1].split(";")[0]
+            disease_genes.add(gene_id)
+
+    # Map to UniProt sequences (top 10 targets)
+    targets = []
+    try:
+        from opencure.scoring.mendelian_randomization import _load_entrez_to_symbol
+        entrez_map = _load_entrez_to_symbol()
+    except Exception:
+        entrez_map = {}
+
+    for gene_id in list(disease_genes)[:15]:
+        symbol = entrez_map.get(gene_id, gene_id)
+        try:
+            resp = requests.get(
+                "https://rest.uniprot.org/uniprotkb/search",
+                params={
+                    "query": f"gene_exact:{symbol} AND organism_id:9606 AND reviewed:true",
+                    "format": "fasta",
+                    "size": 1,
+                },
+                timeout=10,
+            )
+            if resp.status_code == 200 and ">" in resp.text:
+                lines = resp.text.strip().split("\n")
+                header = lines[0]
+                sequence = "".join(lines[1:])
+                if len(sequence) > 50:
+                    uniprot_id = header.split("|")[1] if "|" in header else ""
+                    targets.append((symbol, uniprot_id, sequence))
+                    if len(targets) >= 10:
+                        break
+            _time.sleep(0.3)
+        except Exception:
+            pass
+
+    return targets
+
+
+def score_drugs_for_disease_dti(
+    disease_name: str,
+    compound_entities: list[str],
+    smiles_map: dict,
+    triplets,
+) -> dict:
+    """Score compounds by predicted drug-target interaction affinity.
+
+    Uses DeepPurpose (if available) to predict binding affinity between
+    each candidate drug and the disease's protein targets.
+
+    Returns dict[compound_entity] -> (max_dti_score, best_target, "dti")
+    """
+    # Get disease target sequences
+    targets = get_disease_target_sequences(disease_name, triplets)
+    if not targets:
+        return {}
+
+    # Collect SMILES for candidates
+    compounds_with_smiles = []
+    smiles_list = []
+    for compound in compound_entities:
+        db_id = compound.split("::")[1] if "::" in compound else compound
+        smiles = smiles_map.get(db_id)
+        if smiles:
+            compounds_with_smiles.append(compound)
+            smiles_list.append(smiles)
+
+    if not smiles_list:
+        return {}
+
+    target_sequences = [t[2] for t in targets]
+    target_names = [t[0] for t in targets]
+
+    # Predict DTI
+    import warnings
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        scores_matrix = predict_dti_deeppurpose(smiles_list, target_sequences, target_names)
+
+    # Aggregate: max score across targets for each drug
+    results = {}
+    for i, compound in enumerate(compounds_with_smiles):
+        max_score = float(scores_matrix[i].max())
+        best_target_idx = int(scores_matrix[i].argmax())
+        best_target = target_names[best_target_idx] if best_target_idx < len(target_names) else ""
+
+        if max_score > 0.1:  # Minimum threshold
+            results[compound] = (max_score, best_target, "dti")
+
+    return results

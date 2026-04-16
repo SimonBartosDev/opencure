@@ -384,6 +384,24 @@ def search(
         except Exception as e:
             print(f"  [WARN] Network proximity failed: {e}")
 
+    # DTI prediction (DeepPurpose)
+    dti_scores = {}
+    try:
+        from opencure.scoring.dti_predictor import score_drugs_for_disease_dti
+        print("[Pillar 11] DeepPurpose DTI prediction...")
+        smiles_map = data.get("smiles_map", {})
+        if smiles_map:
+            dti_scores = score_drugs_for_disease_dti(
+                disease_name, data["compounds"], smiles_map, data["triplets"]
+            )
+            if dti_scores:
+                active_pillars.append("DTI")
+                print(f"  Scored {len(dti_scores)} compounds by DTI")
+    except ImportError:
+        pass
+    except Exception as e:
+        print(f"  [WARN] DTI prediction failed: {e}")
+
     # ADMET/Toxicity filtering and drug-likeness scoring
     admet_scores = {}
     admet_toxic = set()
@@ -406,7 +424,7 @@ def search(
         print(f"  [WARN] ADMET filtering failed: {e}")
 
     print(f"\nCombining {len(active_pillars)} active pillars: {', '.join(active_pillars)}")
-    combined = _combine_scores_v2(transe_scores, pykeen_scores, mol_sim_scores, mol_emb_scores, data["compounds"], gene_sig_scores, proximity_scores, txgnn_scores, mr_scores, admet_scores, admet_toxic, primekg_scores)
+    combined = _combine_scores_v2(transe_scores, pykeen_scores, mol_sim_scores, mol_emb_scores, data["compounds"], gene_sig_scores, proximity_scores, txgnn_scores, mr_scores, admet_scores, admet_toxic, primekg_scores, dti_scores)
 
     # Step 5: Build results with evidence
     ranked = sorted(combined.items(), key=lambda x: -x[1]["combined_score"])[:top_k]
@@ -464,6 +482,7 @@ def _combine_scores_v2(
     admet_scores: dict | None = None,
     toxic_compounds: set | None = None,
     primekg_scores: dict | None = None,
+    dti_scores: dict | None = None,
 ) -> dict:
     """
     Combine scores from multiple pillars into a unified ranking.
@@ -489,6 +508,8 @@ def _combine_scores_v2(
         toxic_compounds = set()
     if primekg_scores is None:
         primekg_scores = {}
+    if dti_scores is None:
+        dti_scores = {}
 
     # Helper: compute percentile ranks for a score dict
     def percentile_rank(score_dict):
@@ -519,6 +540,7 @@ def _combine_scores_v2(
         "docking": 0.05,    # Structure-based docking (future)
         "admet": 0.04,      # ADMET drug-likeness
         "primekg": 0.10,    # PrimeKG knowledge graph (independent from DRKG)
+        "dti": 0.08,        # DeepPurpose drug-target interaction
     }
 
     # Determine which pillars are active
@@ -541,6 +563,8 @@ def _combine_scores_v2(
         active["admet"] = base_weights["admet"]
     if primekg_scores:
         active["primekg"] = base_weights["primekg"]
+    if dti_scores:
+        active["dti"] = base_weights["dti"]
     # MR is handled as a bonus, not a weighted pillar
 
     # Redistribute: normalize active weights to sum to 1.0
@@ -556,7 +580,7 @@ def _combine_scores_v2(
         set(txgnn_scores.keys()) | set(mol_sim_scores.keys()) |
         set(mol_emb_scores.keys()) | set(gene_sig_scores.keys()) |
         set(proximity_scores.keys()) | set(admet_scores.keys()) |
-        set(primekg_scores.keys())
+        set(primekg_scores.keys()) | set(dti_scores.keys())
     )
 
     # Filter out toxic compounds
@@ -637,6 +661,14 @@ def _combine_scores_v2(
             scores["proximity_score"] = prox_score
             scores["proximity_distance"] = prox_dist
             drug_pillars.append((base_weights["proximity"], prox_score))
+            pillars_hit += 1
+
+        # Pillar 11: DeepPurpose DTI
+        if compound in dti_scores:
+            dti_score, dti_target, _ = dti_scores[compound]
+            scores["dti_score"] = dti_score
+            scores["dti_best_target"] = dti_target
+            drug_pillars.append((base_weights["dti"], dti_score))
             pillars_hit += 1
 
         # Pillar 10: PrimeKG knowledge graph

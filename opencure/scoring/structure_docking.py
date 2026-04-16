@@ -1,22 +1,19 @@
 """
 Structure-based docking scoring pillar for drug repurposing.
 
-Uses AlphaFold predicted protein structures + RDKit shape/pharmacophore scoring
-to estimate whether a drug can physically bind to a disease-relevant target.
+Uses AlphaFold predicted protein structures to estimate binding potential.
+Supports two modes:
 
-This is completely orthogonal to all other pillars — it checks PHYSICAL BINDING
-rather than statistical associations or gene expression patterns.
+1. **Real docking** (if AutoDock Vina is installed): Generates 3D drug
+   conformers, fetches AlphaFold structures, runs Vina docking to get
+   actual binding energies. Slow but accurate (~1-5 min per compound).
 
-Architecture:
-1. Get disease-relevant protein targets (from DRKG + Open Targets)
-2. Map targets to UniProt IDs
-3. Fetch AlphaFold predicted structures
-4. Generate 3D drug conformer from SMILES
-5. Score binding potential using RDKit shape/pharmacophore matching
+2. **RDKit proxy** (fallback): Uses molecular properties (Lipinski,
+   LogP, TPSA, rotatable bonds) as a drug-likeness proxy for binding
+   compatibility. Fast but approximate.
 
-Note: This is a PROXY for real molecular docking (which requires GPU + Vina/GNINA).
-Real docking would be more accurate but 100x slower. The proxy scoring captures
-the general principle: does the drug's shape complement the target's binding site?
+The proxy is always used for initial filtering; real docking (when
+available) is applied to top candidates only.
 """
 from __future__ import annotations
 
@@ -194,6 +191,135 @@ def compute_binding_score(smiles: str, target_gene: str) -> Optional[float]:
         return None
 
 
+DOCKING_CACHE_DIR = Path("data/docking_cache")
+
+_vina_available = None
+
+
+def is_vina_available() -> bool:
+    """Check if AutoDock Vina is available (binary or Python package)."""
+    global _vina_available
+    if _vina_available is not None:
+        return _vina_available
+
+    # Try Python package
+    try:
+        from vina import Vina
+        _vina_available = True
+        return True
+    except ImportError:
+        pass
+
+    # Try binary
+    import shutil
+    if shutil.which("vina"):
+        _vina_available = True
+        return True
+
+    _vina_available = False
+    return False
+
+
+def prepare_ligand_pdbqt(smiles: str) -> Optional[str]:
+    """Convert SMILES to 3D conformer and write as PDBQT for Vina.
+
+    Returns path to temporary PDBQT file, or None on failure.
+    """
+    try:
+        from rdkit import Chem
+        from rdkit.Chem import AllChem
+        import tempfile
+
+        mol = Chem.MolFromSmiles(smiles)
+        if mol is None:
+            return None
+
+        mol = Chem.AddHs(mol)
+        result = AllChem.EmbedMolecule(mol, AllChem.ETKDGv3())
+        if result != 0:
+            result = AllChem.EmbedMolecule(mol, randomSeed=42)
+            if result != 0:
+                return None
+
+        AllChem.MMFFOptimizeMolecule(mol, maxIters=200)
+
+        # Write as PDB first, then convert to PDBQT via meeko
+        pdb_path = tempfile.NamedTemporaryFile(suffix=".pdb", delete=False).name
+        Chem.MolToPDBFile(mol, pdb_path)
+
+        try:
+            from meeko import MoleculePreparation, PDBQTWriterLegacy
+            preparator = MoleculePreparation()
+            mol_setup = preparator.prepare(mol)[0]
+            pdbqt_string, _, _ = PDBQTWriterLegacy.write_string(mol_setup)
+            pdbqt_path = pdb_path.replace(".pdb", ".pdbqt")
+            with open(pdbqt_path, "w") as f:
+                f.write(pdbqt_string)
+            return pdbqt_path
+        except ImportError:
+            return pdb_path  # Return PDB as fallback
+
+    except Exception:
+        return None
+
+
+def dock_with_vina(
+    ligand_path: str,
+    receptor_path: str,
+    center: tuple = (0, 0, 0),
+    box_size: tuple = (30, 30, 30),
+) -> Optional[float]:
+    """Run AutoDock Vina docking. Returns binding energy (kcal/mol) or None."""
+    try:
+        from vina import Vina
+        v = Vina(sf_name="vina")
+        v.set_receptor(receptor_path)
+        v.set_ligand_from_file(ligand_path)
+        v.compute_vina_maps(center=list(center), box_size=list(box_size))
+        v.dock(exhaustiveness=8, n_poses=1)
+        energies = v.energies()
+        if energies is not None and len(energies) > 0:
+            return float(energies[0][0])  # Best pose energy
+    except ImportError:
+        pass
+    except Exception:
+        pass
+    return None
+
+
+def dock_compound_cached(
+    drug_id: str,
+    smiles: str,
+    uniprot_id: str,
+    structure_path: str,
+) -> Optional[float]:
+    """Dock a compound against a target, with caching."""
+    DOCKING_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    cache_key = f"{drug_id}_{uniprot_id}"
+    cache_file = DOCKING_CACHE_DIR / f"{cache_key}.json"
+
+    if cache_file.exists():
+        import json
+        data = json.loads(cache_file.read_text())
+        return data.get("binding_energy")
+
+    ligand_path = prepare_ligand_pdbqt(smiles)
+    if ligand_path is None:
+        return None
+
+    energy = dock_with_vina(ligand_path, structure_path)
+
+    # Cache result
+    import json
+    cache_file.write_text(json.dumps({
+        "drug_id": drug_id,
+        "uniprot_id": uniprot_id,
+        "binding_energy": energy,
+    }))
+
+    return energy
+
+
 def score_drugs_for_disease_docking(
     disease_name: str,
     compound_entities: list[str],
@@ -272,11 +398,23 @@ def score_drugs_for_disease_docking(
         # Check if drug targets overlap with disease targets
         target_overlap = drug_genes & disease_gene_symbols
         if target_overlap:
-            # Drug directly targets disease-relevant proteins
-            # Boost binding score based on overlap
             overlap_bonus = min(0.3, 0.1 * len(target_overlap))
             final_score = min(1.0, binding_score + overlap_bonus)
             best_target = next(iter(target_overlap))
+
+            # Try real Vina docking for high-scoring candidates
+            if is_vina_available() and final_score > 0.5:
+                uniprot_id = gene_to_uniprot(best_target)
+                if uniprot_id:
+                    structure_path = fetch_alphafold_structure(uniprot_id)
+                    if structure_path:
+                        energy = dock_compound_cached(db_id, smiles, uniprot_id, structure_path)
+                        if energy is not None:
+                            # Convert Vina energy to 0-1 score
+                            # Typical range: -12 (very good) to 0 (no binding)
+                            vina_score = min(1.0, max(0.0, -energy / 12.0))
+                            # Blend proxy and Vina (Vina dominates when available)
+                            final_score = 0.3 * final_score + 0.7 * vina_score
 
             docking_scores[compound] = (final_score, best_target, True)
 
