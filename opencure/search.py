@@ -216,7 +216,6 @@ def search(
             disease_name, data["compounds"]
         )
         if primekg_scores:
-            active_pillars.append("PrimeKG")
             print(f"  Scored {len(primekg_scores)} compounds with PrimeKG")
     except ImportError:
         pass
@@ -299,6 +298,8 @@ def search(
     active_pillars = ["TransE"]
     if pykeen_scores:
         active_pillars.append("RotatE")
+    if primekg_scores:
+        active_pillars.append("PrimeKG")
     if txgnn_scores:
         active_pillars.append("TxGNN")
     if mol_sim_scores:
