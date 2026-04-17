@@ -67,11 +67,21 @@ def score_drugs_for_disease_txgnn(
     if not predictions:
         return {}
 
-    # Find matching disease in TxGNN predictions (fuzzy match)
-    disease_lower = disease_name.lower()
+    # Find matching disease in TxGNN predictions (fuzzy match, apostrophe-normalized)
+    def _norm(s: str) -> str:
+        import re
+        s = s.lower()
+        # Remove possessive 's (with apostrophe or curly quote)
+        s = re.sub(r"['\u2019]s\b", "", s)
+        # Remove any remaining apostrophes
+        s = s.replace("'", "").replace("\u2019", "")
+        return s.strip()
+
+    disease_norm = _norm(disease_name)
     matched_disease = None
     for txgnn_disease in predictions:
-        if disease_lower in txgnn_disease.lower() or txgnn_disease.lower() in disease_lower:
+        tx_norm = _norm(txgnn_disease)
+        if disease_norm == tx_norm or disease_norm in tx_norm or tx_norm in disease_norm:
             matched_disease = txgnn_disease
             break
 

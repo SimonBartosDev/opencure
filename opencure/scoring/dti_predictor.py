@@ -210,15 +210,17 @@ def predict_dti_deeppurpose(
                 X_pred = dp_utils.data_process(
                     X_drug=X_drug,
                     X_target=X_target,
-                    y=[0] * len(drug_smiles),  # Dummy labels
+                    y=[0] * len(drug_smiles),
                     drug_encoding="MPNN",
                     target_encoding="CNN",
+                    split_method='no_split',  # Don't split for inference
                 )
                 preds = model.predict(X_pred)
-                # DeepPurpose returns Kd predictions; lower = stronger binding
-                # Convert to 0-1 score: score = 1 / (1 + Kd_nM / 1000)
-                for i, kd in enumerate(preds):
-                    scores[i, j] = 1.0 / (1.0 + max(0, kd) / 1000.0)
+                # DeepPurpose returns pKd predictions (higher = stronger binding)
+                # Range typically 2-10. Convert to 0-1: (pKd - 3) / 7 clipped
+                import numpy as _np
+                for i, pkd in enumerate(preds):
+                    scores[i, j] = _np.clip((pkd - 3.0) / 7.0, 0.0, 1.0)
             except Exception:
                 pass
 
@@ -239,19 +241,29 @@ def get_disease_target_sequences(
     import requests
     import time as _time
 
-    # Get disease genes from DRKG
+    # Resolve disease name to DRKG entity IDs (uses name-to-MESH/DOID map)
+    try:
+        from opencure.data.drkg import find_disease_entities, load_embeddings
+        _, _, entity_to_id, _, _ = load_embeddings()
+        disease_matches = find_disease_entities(entity_to_id, disease_name)
+        disease_entities = {m[0] for m in disease_matches}
+    except Exception:
+        disease_entities = set()
+
+    if not disease_entities:
+        return []
+
+    # Get disease genes from DRKG by querying triplets where head or tail IS a disease entity
     disease_genes = set()
-    disease_lower = disease_name.lower()
+    mask1 = triplets["head"].isin(disease_entities) & triplets["tail"].str.startswith("Gene::")
+    mask2 = triplets["tail"].isin(disease_entities) & triplets["head"].str.startswith("Gene::")
 
-    for _, row in triplets[triplets["tail"].str.startswith("Gene::")].head(5000).iterrows():
-        if disease_lower in str(row["head"]).lower():
-            gene_id = row["tail"].split("::")[1].split(";")[0]
-            disease_genes.add(gene_id)
-
-    for _, row in triplets[triplets["head"].str.startswith("Gene::")].head(5000).iterrows():
-        if disease_lower in str(row["tail"]).lower():
-            gene_id = row["head"].split("::")[1].split(";")[0]
-            disease_genes.add(gene_id)
+    for gene_entity in triplets[mask1]["tail"].unique():
+        gene_id = str(gene_entity).split("::")[1].split(";")[0]
+        disease_genes.add(gene_id)
+    for gene_entity in triplets[mask2]["head"].unique():
+        gene_id = str(gene_entity).split("::")[1].split(";")[0]
+        disease_genes.add(gene_id)
 
     # Map to UniProt sequences (top 10 targets)
     targets = []
@@ -307,12 +319,15 @@ def score_drugs_for_disease_dti(
     if not targets:
         return {}
 
-    # Collect SMILES for candidates
+    # Collect SMILES for candidates (smiles_map is keyed by full entity "Compound::DB00001")
     compounds_with_smiles = []
     smiles_list = []
     for compound in compound_entities:
-        db_id = compound.split("::")[1] if "::" in compound else compound
-        smiles = smiles_map.get(db_id)
+        # Try entity key first, then DB id as fallback
+        smiles = smiles_map.get(compound)
+        if smiles is None:
+            db_id = compound.split("::")[1] if "::" in compound else compound
+            smiles = smiles_map.get(db_id)
         if smiles:
             compounds_with_smiles.append(compound)
             smiles_list.append(smiles)

@@ -385,15 +385,17 @@ def search(
         except Exception as e:
             print(f"  [WARN] Network proximity failed: {e}")
 
-    # DTI prediction (DeepPurpose)
+    # DTI prediction (DeepPurpose) — only top TransE candidates for speed
     dti_scores = {}
     try:
         from opencure.scoring.dti_predictor import score_drugs_for_disease_dti
-        print("[Pillar 11] DeepPurpose DTI prediction...")
+        print("[Pillar 11] DeepPurpose DTI prediction (top 200 only)...")
         smiles_map = data.get("smiles_map", {})
-        if smiles_map:
+        if smiles_map and transe_scores:
+            # Score only top 200 TransE candidates to keep runtime manageable
+            top_compounds = sorted(transe_scores.keys(), key=lambda c: -transe_scores[c][0])[:200]
             dti_scores = score_drugs_for_disease_dti(
-                disease_name, data["compounds"], smiles_map, data["triplets"]
+                disease_name, top_compounds, smiles_map, data["triplets"]
             )
             if dti_scores:
                 active_pillars.append("DTI")
@@ -449,16 +451,56 @@ def search(
             "pillars_hit": scores.get("pillars_hit", 1),
         }
 
-        # Add molecular similarity info if available
+        # Pillar 1a: Molecular fingerprint similarity
         if "mol_similarity" in scores:
             result["mol_similarity"] = round(scores["mol_similarity"], 4)
             similar_to = scores.get("similar_to", "")
             result["similar_to"] = data["drug_names"].get(similar_to, similar_to)
 
-        # Add MR (genetic/causal) evidence if available
+        # Pillar 1b: ChemBERTa learned similarity
+        if "mol_emb_similarity" in scores:
+            result["mol_emb_similarity"] = round(scores["mol_emb_similarity"], 4)
+            emb_sim_to = scores.get("mol_emb_similar_to", "")
+            result["mol_emb_similar_to"] = data["drug_names"].get(emb_sim_to, emb_sim_to)
+
+        # Pillar 3b: PyKEEN RotatE
+        if "pykeen_score" in scores:
+            result["pykeen_score"] = round(scores["pykeen_score"], 4)
+            result["pykeen_rank"] = scores.get("pykeen_rank", 0)
+
+        # Pillar 6: TxGNN
+        if "txgnn_score" in scores:
+            result["txgnn_score"] = round(scores["txgnn_score"], 4)
+            result["txgnn_rank"] = scores.get("txgnn_rank", 0)
+
+        # Pillar 4: Gene signature reversal
+        if "gene_sig_score" in scores:
+            result["gene_sig_score"] = round(scores["gene_sig_score"], 4)
+            result["gene_sig_rank"] = scores.get("gene_sig_rank", 0)
+
+        # Pillar 5: Network proximity
+        if "proximity_score" in scores:
+            result["proximity_score"] = round(scores["proximity_score"], 4)
+            result["proximity_distance"] = scores.get("proximity_distance", 0)
+
+        # Pillar 7: Mendelian Randomization (causal genetic evidence)
         if "mr_score" in scores:
             result["mr_score"] = round(scores["mr_score"], 4)
             result["mr_genetic_targets"] = scores.get("mr_genetic_targets", 0)
+
+        # Pillar 9: ADMET drug-likeness
+        if "admet_score" in scores:
+            result["admet_score"] = round(scores["admet_score"], 4)
+            result["admet_flags"] = scores.get("admet_flags", "")
+
+        # Pillar 10: PrimeKG knowledge graph
+        if "primekg_score" in scores:
+            result["primekg_score"] = round(scores["primekg_score"], 4)
+
+        # Pillar 11: DeepPurpose DTI
+        if "dti_score" in scores:
+            result["dti_score"] = round(scores["dti_score"], 4)
+            result["dti_best_target"] = scores.get("dti_best_target", "")
 
         # Add graph evidence if requested
         if use_evidence:
