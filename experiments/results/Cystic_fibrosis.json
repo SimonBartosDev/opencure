@@ -1,22 +1,24 @@
 {
   "disease": "Cystic fibrosis",
   "status": "completed",
-  "timestamp": "2026-04-08T13:22:44.661482",
-  "elapsed_seconds": 7664.4,
+  "timestamp": "2026-04-17T15:14:36.585769",
+  "elapsed_seconds": 861.0,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
-    "LOW": 10
+    "MEDIUM": 1,
+    "HIGH": 8,
+    "LOW": 1
   },
   "candidates": [
     {
-      "drug_name": "Loteprednol",
-      "drug_id": "DB00873",
+      "drug_name": "Hydrocortisone",
+      "drug_id": "DB00741",
       "disease_name": "Cystic fibrosis",
-      "combined_score": 1.073699951171875,
-      "transe_rank": 1485,
-      "pillars_hit": 4,
-      "mol_similarity": 0.7377,
+      "combined_score": 1.1157,
+      "transe_rank": 5,
+      "pillars_hit": 7,
+      "mol_similarity": 0.6833,
       "similar_to": "Prednisolone",
       "direct_relations": [],
       "shared_target_count": 0,
@@ -26,121 +28,101 @@
       "pubmed_repurposing_total": 0,
       "key_papers": [],
       "repurposing_papers": [],
-      "semantic_scholar_papers": [],
-      "most_cited_paper": {},
-      "max_citations": 0,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Loteprednol",
+      "semantic_scholar_papers": [
+        {
+          "title": "Lower respiratory illness in infants and young children with cystic fibrosis",
+          "year": 1997,
+          "citations": 30,
+          "url": "https://www.semanticscholar.org/paper/411ec2b1d428edb9b512e4ad223d7ffe4b831fb3",
+          "authors": "R. Tepper, H. Eigen, J. Stevens"
+        },
+        {
+          "title": "Acute anaphylaxis following midline catheterisation in a patient with cystic fibrosis",
+          "year": 1999,
+          "citations": 6,
+          "url": "https://www.semanticscholar.org/paper/574c80f904cdf88382a729a4bac4e39011882547",
+          "authors": "C. Haworth, R. Niven, A. Moorcroft"
+        },
+        {
+          "title": "Differentiation of immortalized epithelial cells derived from cystic fibrosis airway submucosal glands.",
+          "year": 1994,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/2841db5383d091ce13053207b957e8af1e3ec360",
+          "authors": "D. Chopra, L. Reddy, S. Gupta"
+        },
+        {
+          "title": "Effect of misoprostol on fat malabsorption in cystic fibrosis.",
+          "year": 1989,
+          "citations": 9,
+          "url": "https://www.semanticscholar.org/paper/87b8ffa089e174a8c10626215248781e71cfa545",
+          "authors": "J M Littlewood, J. Kelleher"
+        },
+        {
+          "title": "Differentiation of immortalized epithelial cells derived from cystic fibrosis airway submucosal glands",
+          "year": 1994,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/06a5f6f3a6bcf9e77ad39a518ca4d95107cad230",
+          "authors": "D. Chora, L. Reddy, S. Gupta"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Toward Repositioning Niclosamide for Antivirulence Therapy of Pseudomonas aeruginosa Lung Infections: Development of Inhalable Formulations through Nanosuspension Technology.",
+        "year": 2015,
+        "citations": 72,
+        "url": "https://www.semanticscholar.org/paper/ca2844276449cd055704a9aeb59ef3f79f206615",
+        "authors": "G. Costabile, I. d\u2019Angelo, G. Rampioni"
+      },
+      "max_citations": 72,
+      "faers_signal": "moderate",
+      "faers_total_reports": 79272,
+      "faers_cooccurrences": 55,
+      "faers_interpretation": "55 FAERS reports mention both Hydrocortisone and Cystic fibrosis-related terms. Limited but notable real-world signal.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
-      "signature_top_reversers": [],
-      "signature_interpretation": "Insufficient disease gene signature (0 up, 0 down genes)",
-      "ai_hypothesis": "",
+      "signature_top_reversers": [
+        "ST4066738 (1.480)",
+        "TENIPOSIDE (1.448)",
+        "cardene (1.422)",
+        "S1455 (1.419)",
+        "spironolactone (1.417)"
+      ],
+      "signature_interpretation": "Hydrocortisone was not found among the top 33 drugs that reverse the Cystic fibrosis gene signature. Top reversers: ST4066738 (1.480), TENIPOSIDE (1.448), cardene (1.422)",
+      "ai_hypothesis": "it increases the rate of chloride secretion in the sweat duct.",
       "abstract_analyses": [],
       "has_failed_trial": false,
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
+      "mr_score": 0.5909,
+      "mr_genetic_targets": 2,
       "mechanistic_hypothesis": "",
       "kg_paths_text": "",
       "validation_experiments": [],
       "novelty_score": 1.0,
-      "novelty_level": "BREAKTHROUGH",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "Supported by 4 independent AI pillars",
-        "High molecular similarity (0.74) to Prednisolone"
-      ],
-      "novelty_interpretation": "No published evidence found for this drug-disease pair. Strong computational prediction suggests a potential new discovery. Requires experimental validation."
-    },
-    {
-      "drug_name": "Natamycin",
-      "drug_id": "DB00826",
-      "disease_name": "Cystic fibrosis",
-      "combined_score": 1.052899956703186,
-      "transe_rank": 1122,
-      "pillars_hit": 4,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 2,
-      "pubmed_treatment_total": 1,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "24809846",
-          "title": "Antifungal treatment in allergic bronchopulmonary aspergillosis with and without cystic fibrosis: a systematic review.",
-          "authors": "Moreira AS, Silva D, Ferreira AR, et al.",
-          "journal": "Clinical and experimental allergy : journal of the British Society for Allergy and Clinical Immunology",
-          "year": "2014",
-          "abstract_snippet": "Allergic bronchopulmonary aspergillosis (ABPA) is a rare disease that affects patients with asthma or cystic fibrosis. Its debilitating course has led to the search for new treatments, including antifungals and monoclonal antibodies. To evaluate the efficacy and safety of antifungal treatments in pa...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/24809846/",
-          "total_results": 2
-        },
-        {
-          "pmid": "18183497",
-          "title": "Control and possible applications of a novel carrot-spoilage basidiomycete, Fibulorhizoctonia psychrophila.",
-          "authors": "de Vries RP, de Lange ES, W\u00f6sten HA, et al.",
-          "journal": "Antonie van Leeuwenhoek",
-          "year": "2008",
-          "abstract_snippet": "A novel cold-tolerant fungus, Fibulorhizoctonia psychrophila, was isolated from a refrigerated carrot storage facility and identified as an anamorph of Athelia, often classified in Rhizoctonia s.l. Growth of this fungus was observed between 0 and 20 degrees C with an optimum at 9-12 degrees C, while...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/18183497/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [],
-      "most_cited_paper": {},
-      "max_citations": 0,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Natamycin",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [],
-      "signature_interpretation": "Insufficient disease gene signature (0 up, 0 down genes)",
-      "ai_hypothesis": "",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.95,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
       "clinical_trials": [],
       "trial_phases": {},
-      "confidence": "LOW",
+      "confidence": "MEDIUM",
       "confidence_reasons": [
-        "Supported by 4 independent AI pillars"
-      ],
-      "novelty_interpretation": "Novel prediction with minimal existing evidence (2 articles). Computational support suggests this warrants investigation."
+        "Supported by 7 independent AI pillars",
+        "High molecular similarity (0.68) to Prednisolone",
+        "Moderate FAERS signal: 55 adverse event reports mention drug-disease co-occurrence",
+        "Supporting paper with 72 citations",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.59)"
+      ]
     },
     {
-      "drug_name": "(2S,4R)-Pentane-1,2,3,4,5-Pentol",
-      "drug_id": "DB11195",
+      "drug_name": "Cadmium",
+      "drug_id": "DB14085",
       "disease_name": "Cystic fibrosis",
-      "combined_score": 1.0505000352859497,
-      "transe_rank": 689,
-      "pillars_hit": 3,
-      "mol_similarity": 0.8333,
-      "similar_to": "Mannitol",
+      "combined_score": 1.0953999757766724,
+      "transe_rank": 177,
+      "pillars_hit": 4,
+      "mol_similarity": 0,
+      "similar_to": "",
       "direct_relations": [],
       "shared_target_count": 0,
       "shared_targets": [],
@@ -149,646 +131,605 @@
       "pubmed_repurposing_total": 0,
       "key_papers": [],
       "repurposing_papers": [],
-      "semantic_scholar_papers": [],
-      "most_cited_paper": {},
-      "max_citations": 0,
+      "semantic_scholar_papers": [
+        {
+          "title": "Chemistry 2019 : Direct electrochemical stripping detection of cystic-fibrosis-related DNA linked through cadmium sulfide-Arben Merkoci-YKA University",
+          "year": 2020,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/899f88529550756583b69e034c7e7b96c1b52257",
+          "authors": "A. Merko\u00e7i"
+        },
+        {
+          "title": "Analytical Chemistry 2019 : Direct electrochemical stripping detection of cystic-fibrosis-relatedDNA linked through cadmium sulfide-Arben Merkoci-YKA University",
+          "year": 2020,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/2e2c1974717e6bcd1e018e4fb007a179f8b4cce5",
+          "authors": "A. Merko\u00e7i"
+        },
+        {
+          "title": "Direct electrochemical stripping detection of cystic-fibrosis-related DNA linked through cadmium sulfide quantum dots",
+          "year": 2009,
+          "citations": 58,
+          "url": "https://www.semanticscholar.org/paper/83e5e620b94b4899a691a51f6fa46b5984cd11f7",
+          "authors": "S. Mar\u00edn, A. Merko\u00e7i"
+        },
+        {
+          "title": "Cadmium transport by mammalian ATP-binding cassette transporters",
+          "year": 2024,
+          "citations": 25,
+          "url": "https://www.semanticscholar.org/paper/0cd26da3af393144c5d7cd029f5c51287309f1f0",
+          "authors": "F. Th\u00e9venod, Wing-Kee Lee"
+        },
+        {
+          "title": "Long\u2010range coupling between the extracellular gates and the intracellular ATP binding domains of multidrug resistance protein pumps and cystic fibrosis transmembrane conductance regulator channels",
+          "year": 2016,
+          "citations": 14,
+          "url": "https://www.semanticscholar.org/paper/9bb67cdf6f4d00c1a6b32944ba089950fb23769d",
+          "authors": "Shipeng Wei, Bryan C. Roessler, M. Icyuz"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Toward Repositioning Niclosamide for Antivirulence Therapy of Pseudomonas aeruginosa Lung Infections: Development of Inhalable Formulations through Nanosuspension Technology.",
+        "year": 2015,
+        "citations": 72,
+        "url": "https://www.semanticscholar.org/paper/ca2844276449cd055704a9aeb59ef3f79f206615",
+        "authors": "G. Costabile, I. d\u2019Angelo, G. Rampioni"
+      },
+      "max_citations": 72,
       "faers_signal": "none",
-      "faers_total_reports": 0,
+      "faers_total_reports": 5,
       "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for (2S,4R)-Pentane-1,2,3,4,5-Pentol",
+      "faers_interpretation": "No FAERS reports found linking Cadmium to Cystic fibrosis terms. Drug has 5 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
-      "signature_top_reversers": [],
-      "signature_interpretation": "Insufficient disease gene signature (0 up, 0 down genes)",
-      "ai_hypothesis": "",
+      "signature_top_reversers": [
+        "ST4066738 (1.480)",
+        "TENIPOSIDE (1.448)",
+        "cardene (1.422)",
+        "S1455 (1.419)",
+        "spironolactone (1.417)"
+      ],
+      "signature_interpretation": "Cadmium was not found among the top 33 drugs that reverse the Cystic fibrosis gene signature. Top reversers: ST4066738 (1.480), TENIPOSIDE (1.448), cardene (1.422)",
+      "ai_hypothesis": "it is a potent inhibitor of the cystic fibrosis transmembrane conductance regulator (CFTR).",
       "abstract_analyses": [],
       "has_failed_trial": false,
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
+      "mr_score": 0.6079,
+      "mr_genetic_targets": 1,
       "mechanistic_hypothesis": "",
       "kg_paths_text": "",
       "validation_experiments": [],
       "novelty_score": 1.0,
-      "novelty_level": "BREAKTHROUGH",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "Supported by 3 independent AI pillars",
-        "High molecular similarity (0.83) to Mannitol"
-      ],
-      "novelty_interpretation": "No published evidence found for this drug-disease pair. Strong computational prediction suggests a potential new discovery. Requires experimental validation."
-    },
-    {
-      "drug_name": "Betamethasone",
-      "drug_id": "DB00443",
-      "disease_name": "Cystic fibrosis",
-      "combined_score": 1.0454000234603882,
-      "transe_rank": 302,
-      "pillars_hit": 5,
-      "mol_similarity": 1.0,
-      "similar_to": "Dexamethasone",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 14,
-      "pubmed_treatment_total": 14,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "26151838",
-          "title": "Glucocorticoids can affect Pseudomonas aeruginosa (ATCC 27853) internalization and intracellular calcium concentration in cystic fibrosis bronchial epithelial cells.",
-          "authors": "Hussain R, Shahror R, Karpati F, et al.",
-          "journal": "Experimental lung research",
-          "year": "2015",
-          "abstract_snippet": "BACKGROUND AND OBJECTIVE: Glucocorticoids (GCs) are anti-inflammatory agents, but their use in cystic fibrosis (CF) is controversial. In CF, the early colonization with Pseudomonas aeruginosa is mainly due to nonmucoid strains that can internalize, and induce apoptosis in the epithelial cells. Uptak...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/26151838/",
-          "total_results": 14
-        },
-        {
-          "pmid": "24338982",
-          "title": "Medical management of chronic rhinosinusitis in cystic fibrosis: a systematic review.",
-          "authors": "Liang J, Higgins T, Ishman SL, et al.",
-          "journal": "The Laryngoscope",
-          "year": "2014",
-          "abstract_snippet": "OBJECTIVES/HYPOTHESIS: To systematically review existing literature on the effectiveness of medical management of chronic rhinosinusitis (CRS) in cystic fibrosis (CF) patients. STUDY DESIGN: Systematic review. METHODS: We performed a literature search of PubMed, Embase, and Cochrane CENTRAL from 198...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/24338982/"
-        },
-        {
-          "pmid": "26098667",
-          "title": "Topical nasal steroids for treating nasal polyposis in people with cystic fibrosis.",
-          "authors": "Beer H, Southern KW, Swift AC",
-          "journal": "The Cochrane database of systematic reviews",
-          "year": "2015",
-          "abstract_snippet": "BACKGROUND: Nasal polyps frequently occur in people with cystic fibrosis. Sinus infections have been shown to be a factor in the development of serious chest complications in these people. Nasal polyps have been linked to a higher risk of lower respiratory tract infections with Pseudomonas aeruginos...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/26098667/"
-        },
-        {
-          "pmid": "27329094",
-          "title": "Paediatric nasal polyps in cystic fibrosis.",
-          "authors": "Mohd Slim MA, Dick D, Trimble K, et al.",
-          "journal": "BMJ case reports",
-          "year": "2016",
-          "abstract_snippet": "Patients with cystic fibrosis (CF) are at increased risk of nasal polyps. We present the case of a 17-month-old Caucasian patient with CF who presented with hypertelorism causing cycloplegic astigmatism, right-sided mucoid discharge, snoring and noisy breathing. Imaging suggested bilateral mucoceles...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/27329094/"
-        },
-        {
-          "pmid": "21563167",
-          "title": "Topical nasal steroids for treating nasal polyposis in people with cystic fibrosis.",
-          "authors": "Beer H, Southern KW, Swift AC",
-          "journal": "The Cochrane database of systematic reviews",
-          "year": "2011",
-          "abstract_snippet": "BACKGROUND: Nasal polyps frequently occur in people with cystic fibrosis. Sinus infections have been shown to be a factor in the development of serious chest complications in these people. Nasal polyps have been linked to a higher risk of lower respiratory tract infections with Pseudomonas aeruginos...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/21563167/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [],
-      "most_cited_paper": {},
-      "max_citations": 0,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Betamethasone",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [],
-      "signature_interpretation": "Insufficient disease gene signature (0 up, 0 down genes)",
-      "ai_hypothesis": "",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.85,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "Supported by 5 independent AI pillars",
-        "High molecular similarity (1.00) to Dexamethasone"
-      ],
-      "novelty_interpretation": "Novel prediction with minimal existing evidence (14 articles). Computational support suggests this warrants investigation."
-    },
-    {
-      "drug_name": "Nystatin",
-      "drug_id": "DB00646",
-      "disease_name": "Cystic fibrosis",
-      "combined_score": 1.0358,
-      "transe_rank": 390,
-      "pillars_hit": 3,
-      "mol_similarity": 0.8706,
-      "similar_to": "Amphotericin B",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 64,
-      "pubmed_treatment_total": 26,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
+      "clinical_trials_total": 1,
+      "clinical_trials": [
         {
-          "pmid": "20890834",
-          "title": "Biofilms in lab and nature: a molecular geneticist's voyage to microbial ecology.",
-          "authors": "Kolter R",
-          "journal": "International microbiology : the official journal of the Spanish Society for Microbiology",
-          "year": "2010",
-          "abstract_snippet": "This article reviews the latest findings on how extracellular signaling controls cell fate determination during the process of biofilm formation by Bacillus subtilis in the artificial setting of the laboratory. To complement molecular genetic approaches, surface-associated communities in settings as...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/20890834/",
-          "total_results": 64
-        },
-        {
-          "pmid": "24809846",
-          "title": "Antifungal treatment in allergic bronchopulmonary aspergillosis with and without cystic fibrosis: a systematic review.",
-          "authors": "Moreira AS, Silva D, Ferreira AR, et al.",
-          "journal": "Clinical and experimental allergy : journal of the British Society for Allergy and Clinical Immunology",
-          "year": "2014",
-          "abstract_snippet": "Allergic bronchopulmonary aspergillosis (ABPA) is a rare disease that affects patients with asthma or cystic fibrosis. Its debilitating course has led to the search for new treatments, including antifungals and monoclonal antibodies. To evaluate the efficacy and safety of antifungal treatments in pa...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/24809846/"
-        },
-        {
-          "pmid": "1371239",
-          "title": "Purification and functional reconstitution of the cystic fibrosis transmembrane conductance regulator (CFTR).",
-          "authors": "Bear CE, Li CH, Kartner N, et al.",
-          "journal": "Cell",
-          "year": "1992",
-          "abstract_snippet": "Circumstantial evidence has accumulated suggesting that CFTR is a regulated low-conductance Cl- channel. To test this postulate directly, we have purified to homogeneity a recombinant CFTR protein from a high-level baculovirus-infected insect cell line. Evidence of purity included one- and two-dimen...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/1371239/"
-        },
-        {
-          "pmid": "8584404",
-          "title": "Na+ and Cl- conductances in airway epithelial cells: increased Na+ conductance in cystic fibrosis.",
-          "authors": "Kunzelmann K, Kath\u00f6fer S, Greger R",
-          "journal": "Pflugers Archiv : European journal of physiology",
-          "year": "1995",
-          "abstract_snippet": "Na+ and Cl- conductances in the apical membrane of respiratory epithelial cells are essential for electrolyte and water transport in the airways. Apart from the well described defect in adenosine 3' : 5' cyclic monophosphate-(cAMP-) dependent activation of Cl- conductances in cystic fibrosis (CF), a...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/8584404/"
-        },
-        {
-          "pmid": "41452581",
-          "title": "The secondary bile acid, lithocholic acid, inhibits cystic fibrosis transmembrane conductance regulator expression and activity in colonic epithelial cells.",
-          "authors": "Curley CE, Mobbs CL, Mroz MS, et al.",
-          "journal": "American journal of physiology. Gastrointestinal and liver physiology",
-          "year": "2026",
-          "abstract_snippet": "Classically known for their roles in facilitating lipid digestion and absorption, bile acids are now also appreciated as enterocrine hormones that modulate many aspects of intestinal physiology. We have previously shown lithocholic acid (LCA), a secondary bile acid, to be protective against colonic ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41452581/"
+          "nct_id": "NCT00591864",
+          "title": "Comparison of MRI and Molecular Breast Imaging in Breast Diagnostic Evaluation",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "89",
+          "url": "https://clinicaltrials.gov/study/NCT00591864"
         }
       ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [],
-      "most_cited_paper": {},
-      "max_citations": 0,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Nystatin",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [],
-      "signature_interpretation": "Insufficient disease gene signature (0 up, 0 down genes)",
-      "ai_hypothesis": "",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.85,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
+      "trial_phases": {
+        "NA": 1
+      },
+      "confidence": "HIGH",
       "confidence_reasons": [
-        "Supported by 3 independent AI pillars",
-        "High molecular similarity (0.87) to Amphotericin B"
-      ],
-      "novelty_interpretation": "Novel prediction with minimal existing evidence (64 articles). Computational support suggests this warrants investigation."
-    },
-    {
-      "drug_name": "Desonide",
-      "drug_id": "DB01260",
-      "disease_name": "Cystic fibrosis",
-      "combined_score": 1.0217000246047974,
-      "transe_rank": 2296,
-      "pillars_hit": 4,
-      "mol_similarity": 0.7286,
-      "similar_to": "Budesonide",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [],
-      "most_cited_paper": {},
-      "max_citations": 0,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Desonide",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [],
-      "signature_interpretation": "Insufficient disease gene signature (0 up, 0 down genes)",
-      "ai_hypothesis": "",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 1.0,
-      "novelty_level": "BREAKTHROUGH",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
+        "1 clinical trial(s) found on ClinicalTrials.gov",
         "Supported by 4 independent AI pillars",
-        "High molecular similarity (0.73) to Budesonide"
-      ],
-      "novelty_interpretation": "No published evidence found for this drug-disease pair. Strong computational prediction suggests a potential new discovery. Requires experimental validation."
+        "Supporting paper with 72 citations",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.61)"
+      ]
     },
     {
-      "drug_name": "D-Sorbitol",
-      "drug_id": "DB01638",
+      "drug_name": "Dexamethasone",
+      "drug_id": "DB01234",
       "disease_name": "Cystic fibrosis",
-      "combined_score": 1.0188000202178955,
-      "transe_rank": 510,
-      "pillars_hit": 4,
-      "mol_similarity": 1.0,
-      "similar_to": "Mannitol",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 2,
-      "pubmed_treatment_total": 1,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "29593709",
-          "title": "Hypertonic Saline Suppresses NADPH Oxidase-Dependent Neutrophil Extracellular Trap Formation and Promotes Apoptosis.",
-          "authors": "Nadesalingam A, Chen JHK, Farahvash A, et al.",
-          "journal": "Frontiers in immunology",
-          "year": "2018",
-          "abstract_snippet": "Tonicity of saline (NaCl) is important in regulating cellular functions and homeostasis. Hypertonic saline is administered to treat many inflammatory diseases, including cystic fibrosis. Excess neutrophil extracellular trap (NET) formation, or NETosis, is associated with many pathological conditions...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29593709/",
-          "total_results": 2
-        },
-        {
-          "pmid": "16647268",
-          "title": "Increased NaCl-induced interleukin-8 production by human bronchial epithelial cells is enhanced by the DeltaF508/W1282X mutation of the cystic fibrosis transmembrane conductance regulator gene.",
-          "authors": "Chan MM, Chmura K, Chan ED",
-          "journal": "Cytokine",
-          "year": "2006",
-          "abstract_snippet": "A satisfactory model describing the airway surface fluid (ASF) in the airways of persons with cystic fibrosis (CF) remains to be established due to theoretical challenges to both the \"Hydration Hypothesis\" and the \"Salt Hypothesis.\" Irrespective of these models, inhaled hypertonic saline is often us...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/16647268/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [],
-      "most_cited_paper": {},
-      "max_citations": 0,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for D-Sorbitol",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [],
-      "signature_interpretation": "Insufficient disease gene signature (0 up, 0 down genes)",
-      "ai_hypothesis": "",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.95,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "Supported by 4 independent AI pillars",
-        "High molecular similarity (1.00) to Mannitol"
-      ],
-      "novelty_interpretation": "Novel prediction with minimal existing evidence (2 articles). Computational support suggests this warrants investigation."
-    },
-    {
-      "drug_name": "Amphotericin B",
-      "drug_id": "DB00681",
-      "disease_name": "Cystic fibrosis",
-      "combined_score": 1.017799973487854,
-      "transe_rank": 99,
-      "pillars_hit": 3,
+      "combined_score": 1.0904,
+      "transe_rank": 13,
+      "pillars_hit": 6,
       "mol_similarity": 0,
       "similar_to": "",
       "direct_relations": [],
       "shared_target_count": 0,
       "shared_targets": [],
-      "pubmed_total": 146,
-      "pubmed_treatment_total": 110,
-      "pubmed_repurposing_total": 0,
+      "pubmed_total": 193,
+      "pubmed_treatment_total": 134,
+      "pubmed_repurposing_total": 1,
       "key_papers": [
         {
-          "pmid": "20720494",
-          "title": "Allergic bronchopulmonary aspergillosis and Aspergillus infection in cystic fibrosis.",
-          "authors": "Moss RB",
-          "journal": "Current opinion in pulmonary medicine",
-          "year": "2010",
-          "abstract_snippet": "PURPOSE OF REVIEW: Recent literature on Aspergillus fumigatus infection and allergy in cystic fibrosis have expanded our understanding of many aspects of allergic bronchopulmonary aspergillosis, and bring new attention to A. fumigatus airways infection and A. fumigatus allergy without allergic bronc...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/20720494/",
-          "total_results": 146
+          "pmid": "38828933",
+          "title": "Belantamab Mafodotin, Bortezomib, and Dexamethasone for Multiple Myeloma.",
+          "authors": "Hungria V, Robak P, Hus M, et al.",
+          "journal": "The New England journal of medicine",
+          "year": "2024",
+          "abstract_snippet": "BACKGROUND: Belantamab mafodotin had single-agent activity in patients with relapsed or refractory multiple myeloma, a finding that supports further evaluation of the agent in combination with standard-care therapies. METHODS: In this phase 3, open-label, randomized trial, we evaluated belantamab ma...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38828933/",
+          "total_results": 193
         },
         {
-          "pmid": "33309058",
-          "title": "Amphotericin B induces epithelial voltage responses in people with cystic fibrosis.",
-          "authors": "Chorghade RS, Kim BR, Launspach JL, et al.",
-          "journal": "Journal of cystic fibrosis : official journal of the European Cystic Fibrosis Society",
+          "pmid": "32678530",
+          "title": "Dexamethasone in Hospitalized Patients with Covid-19.",
+          "authors": "Horby P, Lim WS, et al.",
+          "journal": "The New England journal of medicine",
           "year": "2021",
-          "abstract_snippet": "BACKGROUND: Approximately 10% of people with cystic fibrosis (CF) have mutations that result in little to no CFTR production and thus cannot benefit from CFTR modulators. We previously found that Amphotericin B (AmB), a small molecule that forms anion channels, restored HCO METHODS: To determine whe...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33309058/"
+          "abstract_snippet": "BACKGROUND: Coronavirus disease 2019 (Covid-19) is associated with diffuse lung damage. Glucocorticoids may modulate inflammation-mediated lung injury and thereby reduce progression to respiratory failure and death. METHODS: In this controlled, open-label trial comparing a range of possible treatmen...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32678530/"
         },
         {
-          "pmid": "32474212",
-          "title": "Oral prevalence and antifungal susceptibility of Candida species in cystic fibrosis patients.",
-          "authors": "Lepesqueur LSS, Tanaka MH, Lima GMG, et al.",
-          "journal": "Archives of oral biology",
-          "year": "2020",
-          "abstract_snippet": "OBJECTIVE: This study aimed at assessing the oral prevalence ofCandida species in cystic fibrosis patients and the antifungal susceptibility of the isolates. DESIGN: One hundred patients aged 3-20 years old were included in the study and were divided into three groups: G1 (low severity disease): 25 ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/32474212/"
+          "pmid": "40680754",
+          "title": "Belantamab mafodotin plus bortezomib and dexamethasone in patients with relapsed or refractory multiple myeloma (DREAMM-7): updated overall survival analysis from a global, randomised, open-label, phase 3 trial.",
+          "authors": "Hungria V, Robak P, Hus M, et al.",
+          "journal": "The Lancet. Oncology",
+          "year": "2025",
+          "abstract_snippet": "BACKGROUND: In the primary (first interim) analysis of the DREAMM-7 trial (median follow-up 28\u00b72 months), belantamab mafodotin, bortezomib, and dexamethasone (BVd) showed a statistically significant and clinically meaningful progression-free survival benefit versus daratumumab, bortezomib, and dexam...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40680754/"
         },
         {
-          "pmid": "36053129",
-          "title": "Antifungal therapies for allergic bronchopulmonary aspergillosis in people with cystic fibrosis.",
-          "authors": "Francis NZ, Southern KW",
-          "journal": "The Cochrane database of systematic reviews",
-          "year": "2022",
-          "abstract_snippet": "BACKGROUND: Allergic bronchopulmonary aspergillosis (ABPA) is an allergic reaction to colonisation of the lungs with the fungus Aspergillus fumigatus, and affects around 10% of people with cystic fibrosis. ABPA is associated with an accelerated decline in lung function. High doses of corticosteroids...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36053129/"
+          "pmid": "38497513",
+          "title": "ANGPTL7 and Its Role in IOP and Glaucoma.",
+          "authors": "Brown SF, Nguyen H, Mzyk P, et al.",
+          "journal": "Investigative ophthalmology & visual science",
+          "year": "2024",
+          "abstract_snippet": "PURPOSE: Loss-of-function variants in the ANGPTL7 gene are associated with protection from glaucoma and reduced intraocular pressure (IOP). We investigated the role of ANGPTL7 in IOP homeostasis and its potential as a target for glaucoma therapeutics. METHODS: IOP, outflow facility, and outflow tiss...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38497513/"
         },
         {
-          "pmid": "24809846",
-          "title": "Antifungal treatment in allergic bronchopulmonary aspergillosis with and without cystic fibrosis: a systematic review.",
-          "authors": "Moreira AS, Silva D, Ferreira AR, et al.",
-          "journal": "Clinical and experimental allergy : journal of the British Society for Allergy and Clinical Immunology",
-          "year": "2014",
-          "abstract_snippet": "Allergic bronchopulmonary aspergillosis (ABPA) is a rare disease that affects patients with asthma or cystic fibrosis. Its debilitating course has led to the search for new treatments, including antifungals and monoclonal antibodies. To evaluate the efficacy and safety of antifungal treatments in pa...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/24809846/"
+          "pmid": "30793539",
+          "title": "Myricanol rescues dexamethasone-induced muscle dysfunction via a sirtuin 1-dependent mechanism.",
+          "authors": "Shen S, Liao Q, Liu J, et al.",
+          "journal": "Journal of cachexia, sarcopenia and muscle",
+          "year": "2019",
+          "abstract_snippet": "BACKGROUND: Muscle atrophy and weakness are adverse effects of high dose or the sustained usage of glucocorticoids. Loss of mitochondria and degradation of protein are highly correlated with muscle dysfunction. The deacetylase sirtuin 1 (SIRT1) plays a vital role in muscle remodelling. The current s...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30793539/"
         }
       ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [],
-      "most_cited_paper": {},
-      "max_citations": 0,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Amphotericin B",
+      "repurposing_papers": [
+        {
+          "pmid": "38941956",
+          "title": "Advancing drug development for atrial fibrillation by prioritising findings from human genetic association studies.",
+          "authors": "Kukendrarajah K, Farmaki AE, Lambiase PD, et al.",
+          "journal": "EBioMedicine",
+          "year": "2024",
+          "abstract_snippet": "BACKGROUND: Drug development for atrial fibrillation (AF) has failed to yield new approved compounds. We sought to identify and prioritise potential druggable targets with support from human genetics, by integrating the available evidence with bioinformatics sources relevant for AF drug development....",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38941956/",
+          "total_results": 1
+        }
+      ],
+      "semantic_scholar_papers": [
+        {
+          "title": "Use of encapsulated dexamethasone sodium phosphate (eDSP) in chronic obstructive pulmonary disease, cystic fibrosis, and inflammatory bowel disorders",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/4194215870d5d9ee141284656e3feac7711f4766",
+          "authors": "Biljana Horn, Giovanni Mambrini, Maureen Roden"
+        },
+        {
+          "title": "Endobronchial Therapy With Gentamicin and Dexamethasone After Airway Clearance by Bronchoscopy in Exacerbation of Non-Cystic Fibrosis Bronchiectasis: A Real-World Observational Study",
+          "year": 2021,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/e1be534c4d79c1f5c72fc641078c933c6ec5635b",
+          "authors": "Qiuhong Li, Bei-mei Huang, Hongyan Gu"
+        },
+        {
+          "title": "Signaling Cascade Involved in Rapid Stimulation of Cystic Fibrosis Transmembrane Conductance Regulator (CFTR) by Dexamethasone",
+          "year": 2017,
+          "citations": 8,
+          "url": "https://www.semanticscholar.org/paper/6bbc405cb438f47753007fa9de979053d3a5ed56",
+          "authors": "Miriam Bossmann, B. Ackermann, U. Thome"
+        },
+        {
+          "title": "Burkholderia cepacia in cystic fibrosis children and adolescents: overall survival and immune alterations",
+          "year": 2024,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/e9c1cf52e5849e6486562f5baf0b59dd7adb15c1",
+          "authors": "G. Shmarina, D. Pukhalskaya, V. Shmarin"
+        },
+        {
+          "title": "Ethmoidal mucocele causing proptosis in a pediatric patient with cystic fibrosis: A case report.",
+          "year": 2022,
+          "citations": 2,
+          "url": "https://www.semanticscholar.org/paper/f199e2ef2f61058165ebdd92fbb3e6fe76e5ad4c",
+          "authors": "C. G\u00f3mez, Ana Cecilia Morales Palacios, O. D. L. S. Bl\u00e1zquez"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Toward Repositioning Niclosamide for Antivirulence Therapy of Pseudomonas aeruginosa Lung Infections: Development of Inhalable Formulations through Nanosuspension Technology.",
+        "year": 2015,
+        "citations": 72,
+        "url": "https://www.semanticscholar.org/paper/ca2844276449cd055704a9aeb59ef3f79f206615",
+        "authors": "G. Costabile, I. d\u2019Angelo, G. Rampioni"
+      },
+      "max_citations": 72,
+      "faers_signal": "moderate",
+      "faers_total_reports": 312747,
+      "faers_cooccurrences": 35,
+      "faers_interpretation": "35 FAERS reports mention both Dexamethasone and Cystic fibrosis-related terms. Limited but notable real-world signal.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
-      "signature_top_reversers": [],
-      "signature_interpretation": "Insufficient disease gene signature (0 up, 0 down genes)",
-      "ai_hypothesis": "",
-      "abstract_analyses": [],
+      "signature_top_reversers": [
+        "ST4066738 (1.480)",
+        "TENIPOSIDE (1.448)",
+        "cardene (1.422)",
+        "S1455 (1.419)",
+        "spironolactone (1.417)"
+      ],
+      "signature_interpretation": "Dexamethasone was not found among the top 33 drugs that reverse the Cystic fibrosis gene signature. Top reversers: ST4066738 (1.480), TENIPOSIDE (1.448), cardene (1.422)",
+      "ai_hypothesis": "of its anti-inflammatory properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
       "has_failed_trial": false,
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
+      "mr_score": 0.8196,
+      "mr_genetic_targets": 5,
       "mechanistic_hypothesis": "",
       "kg_paths_text": "",
       "validation_experiments": [],
-      "novelty_score": 0.7,
+      "novelty_score": 0.78,
       "novelty_level": "KNOWN",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
       "clinical_trials": [],
       "trial_phases": {},
-      "confidence": "LOW",
+      "confidence": "HIGH",
       "confidence_reasons": [
-        "Supported by 3 independent AI pillars"
-      ],
-      "novelty_interpretation": "Known association with moderate evidence (146 articles, 0 trials). Already being studied."
+        "193 PubMed articles on this drug-disease pair",
+        "1 article(s) specifically mention repurposing/repositioning",
+        "Supported by 6 independent AI pillars",
+        "Moderate FAERS signal: 35 adverse event reports mention drug-disease co-occurrence",
+        "Supporting paper with 72 citations",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.82, 5 genetic targets)"
+      ]
     },
     {
-      "drug_name": "Fosfomycin",
-      "drug_id": "DB00828",
+      "drug_name": "Tretinoin",
+      "drug_id": "DB00755",
       "disease_name": "Cystic fibrosis",
-      "combined_score": 1.016700029373169,
-      "transe_rank": 122,
-      "pillars_hit": 3,
-      "mol_similarity": 0,
-      "similar_to": "",
+      "combined_score": 1.0904,
+      "transe_rank": 150,
+      "pillars_hit": 7,
+      "mol_similarity": 1.0,
+      "similar_to": "Isotretinoin",
       "direct_relations": [],
       "shared_target_count": 0,
       "shared_targets": [],
-      "pubmed_total": 52,
-      "pubmed_treatment_total": 44,
-      "pubmed_repurposing_total": 0,
+      "pubmed_total": 23,
+      "pubmed_treatment_total": 13,
+      "pubmed_repurposing_total": 1,
       "key_papers": [
         {
-          "pmid": "28854668",
-          "title": "Current and future therapies for Pseudomonas aeruginosa infection in patients with cystic fibrosis.",
-          "authors": "Smith WD, Bardin E, Cameron L, et al.",
-          "journal": "FEMS microbiology letters",
-          "year": "2017",
-          "abstract_snippet": "Pseudomonas aeruginosa opportunistically infects the airways of patients with cystic fibrosis and causes significant morbidity and mortality. Initial infection can often be eradicated though requires prompt detection and adequate treatment. Intermittent and then chronic infection occurs in the major...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/28854668/",
-          "total_results": 52
+          "pmid": "35978039",
+          "title": "Directed differentiation of human pluripotent stem cells into diverse organ-specific mesenchyme of the digestive and respiratory systems.",
+          "authors": "Kishimoto K, Iwasawa K, Sorel A, et al.",
+          "journal": "Nature protocols",
+          "year": "2022",
+          "abstract_snippet": "Development of visceral organs such as the esophagus, lung, liver and stomach are coordinated by reciprocal signaling interactions between the endoderm and adjacent mesoderm cells in the fetal foregut. Although the recent successes in recapitulating developmental signaling in vitro has enabled the d...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35978039/",
+          "total_results": 23
         },
         {
-          "pmid": "23765686",
-          "title": "Antimicrobial susceptibility and molecular typing of MRSA in cystic fibrosis.",
-          "authors": "Champion EA, Miller MB, Popowitch EB, et al.",
-          "journal": "Pediatric pulmonology",
-          "year": "2014",
-          "abstract_snippet": "OBJECTIVES: The prevalence of methicillin-resistant Staphylococcus aureus (MRSA) in cystic fibrosis (CF) patients in the United States is approximately 25%. Little is known about the relative proportion of hospital- versus community-associated strains or the antimicrobial susceptibility of MRSA in d...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/23765686/"
+          "pmid": "19438287",
+          "title": "Proteomic analysis of naphthalene-induced airway epithelial injury and repair in a cystic fibrosis mouse model.",
+          "authors": "Carvalho-Oliveira IM, Charro N, Aarbiou J, et al.",
+          "journal": "Journal of proteome research",
+          "year": "2009",
+          "abstract_snippet": "Combined results from laser capture microdissection of mouse airway epithelial cells followed by high power (MALDI-FTICR) MS, and fluorescent two-dimensional gel elctrophoresis (2D-DIGE) of the whole lung, allowed us to identify proteins differentially expressed after naphthalene induced airway inju...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19438287/"
         },
         {
-          "pmid": "22095545",
-          "title": "Fosfomycin/tobramycin for inhalation in patients with cystic fibrosis with pseudomonas airway infection.",
-          "authors": "Trapnell BC, McColley SA, Kissner DG, et al.",
-          "journal": "American journal of respiratory and critical care medicine",
+          "pmid": "38254678",
+          "title": "Synergistic Effect of Retinoic Acid and Lactoferrin in the Maintenance of Gut Homeostasis.",
+          "authors": "Pe\u00f1a-Ju\u00e1rez MC, Guadarrama-Escobar OR, Serrano-Casta\u00f1eda P, et al.",
+          "journal": "Biomolecules",
+          "year": "2024",
+          "abstract_snippet": "Lactoferrin (LF) is a glycoprotein that binds to iron ions (Fe",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38254678/"
+        },
+        {
+          "pmid": "29326073",
+          "title": "Retinoic acid promotes stem cell differentiation and embryonic development by transcriptionally activating CFTR.",
+          "authors": "Li X, Fok KL, Guo J, et al.",
+          "journal": "Biochimica et biophysica acta. Molecular cell research",
+          "year": "2018",
+          "abstract_snippet": "Retinoic acid (RA) plays a pivotal role in many cellular processes; however, the signaling mechanisms mediating the effect of RA are not fully understood. Here, we show that RA transcriptionally upregulates cystic fibrosis transmembrane conductance regulator (Cftr) by promoting the direct binding of...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29326073/"
+        },
+        {
+          "pmid": "16957442",
+          "title": "Improvement of cystic fibrosis during treatment with isotretinoin.",
+          "authors": "Buckley JL, Chastain MA, Rietschel RL",
+          "journal": "Skinmed",
+          "year": "2006",
+          "abstract_snippet": "A 15-year-old boy with a history significant for multiple respiratory infections since birth presented for evaluation of acne vulgaris. He was initially prescribed doxycycline, topical tretinoin, and topical clindamycin solution, with the later addition of a benzoyl peroxide preparation to his regim...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16957442/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "22174294",
+          "title": "Linking PharmGKB to phenotype studies and animal models of disease for drug repurposing.",
+          "authors": "Hoehndorf R, Oellrich A, Rebholz-Schuhmann D, et al.",
+          "journal": "Pacific Symposium on Biocomputing. Pacific Symposium on Biocomputing",
           "year": "2012",
-          "abstract_snippet": "RATIONALE: Fosfomycin/tobramycin for inhalation (FTI), a unique, broad-spectrum antibiotic combination, may have therapeutic potential for patients with cystic fibrosis (CF). OBJECTIVES: To evaluate safety and efficacy of FTI (160/40 mg or 80/20 mg), administered twice daily for 28 days versus place...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/22095545/"
-        },
-        {
-          "pmid": "15463841",
-          "title": "Fosfomycin therapy for multiresistant Pseudomonas aeruginosa in cystic fibrosis.",
-          "authors": "Mirakhur A, Gallagher MJ, Ledson MJ, et al.",
-          "journal": "Journal of cystic fibrosis : official journal of the European Cystic Fibrosis Society",
-          "year": "2003",
-          "abstract_snippet": "BACKGROUND: Increasing resistance to standard antibiotics has been demonstrated in CF patients colonised by Pseudomonas aeruginosa. The antibiotic Fosfomycin has a unique mode of action against this organism, and may protect against aminoglycoside mediated renal and ototoxic effects. However, there ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/15463841/"
-        },
-        {
-          "pmid": "31583092",
-          "title": "The renoprotective effect of concomitant fosfomycin in the treatment of pulmonary exacerbations in cystic fibrosis.",
-          "authors": "Al-Aloul M, Nazareth D, Walshaw M",
-          "journal": "Clinical kidney journal",
-          "year": "2019",
-          "abstract_snippet": "BACKGROUND: Fosfomycin, effective in Cystic Fibrosis (CF), competes with aminoglycosides at renal binding sites and may therefore afford a renoprotective effect when used in combination therapy. We explored this by using markers of acute renal tubular damage [ METHODS: Using a prospective randomized...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/31583092/"
+          "abstract_snippet": "The investigation of phenotypes in model organisms has the potential to reveal the molecular mechanisms underlying disease. The large-scale comparative analysis of phenotypes across species can reveal novel associations between genotypes and diseases. We use the PhenomeNET network of phenotypic simi...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22174294/",
+          "total_results": 1
         }
       ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [],
-      "most_cited_paper": {},
-      "max_citations": 0,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Fosfomycin",
+      "semantic_scholar_papers": [
+        {
+          "title": "Improvement of cystic fibrosis during treatment with isotretinoin.",
+          "year": 2006,
+          "citations": 10,
+          "url": "https://www.semanticscholar.org/paper/6b7b8dc89dab3ac54b724c05928841162d4130e6",
+          "authors": "J. Buckley, M. A. Chastain, R. Rietschel"
+        },
+        {
+          "title": "Erythematous plaques on a tattoo.",
+          "year": 2020,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/ef89786806ab3c7876780ee5f13029ff94ef0721",
+          "authors": "A. Jibbe, Vusala Snyder, G. Fraga"
+        },
+        {
+          "title": "Linking PharmGKB to Phenotype Studies and Animal Models of Disease for Drug Repurposing",
+          "year": 2011,
+          "citations": 23,
+          "url": "https://www.semanticscholar.org/paper/7eecfec08d44c346eb4bf1e6fbd7f0fde843c8ce",
+          "authors": "R. Hoehndorf, A. Oellrich, Dietrich Rebholz-Schuhmann"
+        },
+        {
+          "title": "Standards for the care of people with cystic fibrosis (CF); recognising and addressing CF health issues.",
+          "year": 2024,
+          "citations": 66,
+          "url": "https://www.semanticscholar.org/paper/a09f22fcbfacaeb86685e431c598a4f3dffa8904",
+          "authors": "Pierre-R\u00e9gis Burgel, K. W. Southern, C. Addy"
+        },
+        {
+          "title": "In vitro modulator responsiveness of 655 CFTR variants found in people with cystic fibrosis.",
+          "year": 2024,
+          "citations": 59,
+          "url": "https://www.semanticscholar.org/paper/a935f0e1b532c38fbaa981a1c98021704adaa9ea",
+          "authors": "H. Bihler, A. Sivachenko, L. Millen"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Toward Repositioning Niclosamide for Antivirulence Therapy of Pseudomonas aeruginosa Lung Infections: Development of Inhalable Formulations through Nanosuspension Technology.",
+        "year": 2015,
+        "citations": 72,
+        "url": "https://www.semanticscholar.org/paper/ca2844276449cd055704a9aeb59ef3f79f206615",
+        "authors": "G. Costabile, I. d\u2019Angelo, G. Rampioni"
+      },
+      "max_citations": 72,
+      "faers_signal": "moderate",
+      "faers_total_reports": 6607,
+      "faers_cooccurrences": 3,
+      "faers_interpretation": "3 FAERS reports mention both Tretinoin and Cystic fibrosis-related terms. Limited but notable real-world signal.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
-      "signature_top_reversers": [],
-      "signature_interpretation": "Insufficient disease gene signature (0 up, 0 down genes)",
-      "ai_hypothesis": "",
-      "abstract_analyses": [],
+      "signature_top_reversers": [
+        "ST4066738 (1.480)",
+        "TENIPOSIDE (1.448)",
+        "cardene (1.422)",
+        "S1455 (1.419)",
+        "spironolactone (1.417)"
+      ],
+      "signature_interpretation": "Tretinoin was not found among the top 33 drugs that reverse the Cystic fibrosis gene signature. Top reversers: ST4066738 (1.480), TENIPOSIDE (1.448), cardene (1.422)",
+      "ai_hypothesis": "of its anti-inflammatory and anti-oxidant properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
       "has_failed_trial": false,
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
+      "mr_score": 0.5795,
+      "mr_genetic_targets": 4,
       "mechanistic_hypothesis": "",
       "kg_paths_text": "",
       "validation_experiments": [],
-      "novelty_score": 0.85,
-      "novelty_level": "NOVEL",
+      "novelty_score": 1.0,
+      "novelty_level": "EMERGING",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
       "clinical_trials": [],
       "trial_phases": {},
-      "confidence": "LOW",
+      "confidence": "HIGH",
       "confidence_reasons": [
-        "Supported by 3 independent AI pillars"
-      ],
-      "novelty_interpretation": "Novel prediction with minimal existing evidence (52 articles). Computational support suggests this warrants investigation."
+        "23 PubMed articles found",
+        "1 article(s) specifically mention repurposing/repositioning",
+        "Supported by 7 independent AI pillars",
+        "High molecular similarity (1.00) to Isotretinoin",
+        "Moderate FAERS signal: 3 adverse event reports mention drug-disease co-occurrence",
+        "Supporting paper with 72 citations",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.58)"
+      ]
     },
     {
-      "drug_name": "Lactulose",
-      "drug_id": "DB00581",
+      "drug_name": "Dihydroxyacetone",
+      "drug_id": "DB01775",
       "disease_name": "Cystic fibrosis",
-      "combined_score": 1.016,
-      "transe_rank": 130,
-      "pillars_hit": 2,
+      "combined_score": 1.0812000036239624,
+      "transe_rank": 133,
+      "pillars_hit": 4,
       "mol_similarity": 0,
       "similar_to": "",
       "direct_relations": [],
       "shared_target_count": 0,
       "shared_targets": [],
-      "pubmed_total": 37,
-      "pubmed_treatment_total": 19,
+      "pubmed_total": 6,
+      "pubmed_treatment_total": 0,
       "pubmed_repurposing_total": 0,
       "key_papers": [
         {
-          "pmid": "37389240",
-          "title": "Epidemiology of small intestinal bacterial overgrowth.",
-          "authors": "Efremova I, Maslennikov R, Poluektova E, et al.",
-          "journal": "World journal of gastroenterology",
-          "year": "2023",
-          "abstract_snippet": "Small intestinal bacterial overgrowth (SIBO) is defined as an increase in the bacterial content of the small intestine above normal values. The presence of SIBO is detected in 33.8% of patients with gastroenterological complaints who underwent a breath test, and is significantly associated with smok...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37389240/",
-          "total_results": 37
+          "pmid": "7812436",
+          "title": "The effect of nutrient limitation on glycerol uptake and metabolism in continuous cultures of Pseudomonas aeruginosa.",
+          "authors": "Williams SG, Greenwood JA, Jones CW",
+          "journal": "Microbiology (Reading, England)",
+          "year": "1994",
+          "abstract_snippet": "Pseudomonas aeruginosa NM48, a non-mucoid derivative of an alginate-producing strain isolated from a cystic fibrosis patient, was grown in batch culture with glycerol, glucose or succinate as carbon source, and in continuous culture (D 0.05 h-1) under glycerol or glucose limitation. Glycerol uptake,...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/7812436/",
+          "total_results": 6
         },
         {
-          "pmid": "35559625",
-          "title": "Constipation in Children and Adolescents: Evaluation and Treatment.",
-          "authors": "Mulhem E, Khondoker F, Kandiah S",
-          "journal": "American family physician",
-          "year": "2022",
-          "abstract_snippet": "Constipation in children is usually functional constipation without an organic cause. Organic causes of constipation in children, which include Hirschsprung disease, cystic fibrosis, and spinal cord abnormalities, commonly present with red flag signs and symptoms. A history and physical examination ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35559625/"
+          "pmid": "33195031",
+          "title": "Iron-Catalyzed Oxidation of 1-Phenylethanol and Glycerol With Hydrogen Peroxide in Water Medium: Effect of the Nitrogen Ligand on Catalytic Activity and Selectivity.",
+          "authors": "Ros D, Gianferrara T, Crotti C, et al.",
+          "journal": "Frontiers in chemistry",
+          "year": "2020",
+          "abstract_snippet": "The iron(II) complexes [Fe(bpy)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33195031/"
         },
         {
-          "pmid": "3794935",
-          "title": "Lactulose-rhamnose intestinal permeability in children with cystic fibrosis.",
-          "authors": "Leclercq-Foucart J, Forget PP, Van Cutsem JL",
-          "journal": "Journal of pediatric gastroenterology and nutrition",
-          "year": "1987",
-          "abstract_snippet": "The lactulose-rhamnose intestinal permeability test was performed in 10 cystic fibrosis (CF) children. Urine was collected for 5 h after oral intake of the test solution. A single thin-layer chromatography followed by densitometry was used for the measurement of lactulose and rhamnose concentrations...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/3794935/"
+          "pmid": "833139",
+          "title": "Specificity of fructose-1, 6-P2 aldolase (muscle) and partition of the enzyme among catalytic intermediates in the steady state.",
+          "authors": "Rose IA, O'Connell EL",
+          "journal": "The Journal of biological chemistry",
+          "year": "1977",
+          "abstract_snippet": "Others have concluded that beta-fructose 1, 6-bisphosphate is a substrate for muscle aldolase on the basis of rapid kinetic measurements. In view of new data showing excellent aldol cleavage of an analog of the keto form and a very high rate of spontaneous ring opening, Midelfort et al. (Midelfort, ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/833139/"
         },
         {
-          "pmid": "36500913",
-          "title": "Co-Immobilization of Lactase and Glucose Isomerase on the Novel g-C",
-          "authors": "Wang L, Jiao B, Shen Y, et al.",
-          "journal": "Nanomaterials (Basel, Switzerland)",
-          "year": "2022",
-          "abstract_snippet": "The g-C",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36500913/"
+          "pmid": "32918852",
+          "title": "Genomics-Driven Discovery of a Novel Glutarimide Antibiotic from Burkholderia gladioli Reveals an Unusual Polyketide Synthase Chain Release Mechanism.",
+          "authors": "Nakou IT, Jenner M, Dashti Y, et al.",
+          "journal": "Angewandte Chemie (International ed. in English)",
+          "year": "2020",
+          "abstract_snippet": "A gene cluster encoding a cryptic trans-acyl transferase polyketide synthase (PKS) was identified in the genomes of Burkholderia gladioli BCC0238 and BCC1622, both isolated from the lungs of cystic fibrosis patients. Bioinfomatics analyses indicated the PKS assembles a novel member of the glutarimid...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32918852/"
         },
         {
-          "pmid": "1735334",
-          "title": "Gut hormones and gastrointestinal motility in children with cystic fibrosis.",
-          "authors": "Murphy MS, Brunetto AL, Pearson AD, et al.",
-          "journal": "Digestive diseases and sciences",
-          "year": "1992",
-          "abstract_snippet": "Intestinal dysmotility may be an important factor contributing to various gastrointestinal complications associated with cystic fibrosis. Motilin, enteroglucagon, neurotensin, and peptide YY may each play a role as endocrine hormones influencing gastrointestinal motor activity. Fasting children with...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/1735334/"
+          "pmid": "33528344",
+          "title": "",
+          "authors": "Guzman J, Sombolestani AS, Poehlein A, et al.",
+          "journal": "International journal of systematic and evolutionary microbiology",
+          "year": "2019",
+          "abstract_snippet": "A novel bacterium designated G55GP",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33528344/"
         }
       ],
       "repurposing_papers": [],
-      "semantic_scholar_papers": [],
-      "most_cited_paper": {},
-      "max_citations": 0,
+      "semantic_scholar_papers": [
+        {
+          "title": "Genomics\u2010Driven Discovery of a Novel Glutarimide Antibiotic from Burkholderia gladioli Reveals an Unusual Polyketide Synthase Chain Release Mechanism",
+          "year": 2020,
+          "citations": 24,
+          "url": "https://www.semanticscholar.org/paper/d64c1268f443acfd9f0a85a6332ef133b83b2780",
+          "authors": "I. Nakou, M. Jenner, Y. Dashti"
+        },
+        {
+          "title": "The effect of nutrient limitation on glycerol uptake and metabolism in continuous cultures of Pseudomonas aeruginosa.",
+          "year": 1994,
+          "citations": 33,
+          "url": "https://www.semanticscholar.org/paper/ab350a5a81d29a922828eacdb2eba129363efdcb",
+          "authors": "Steven G. Williams, J. Greenwood, Colin W. Jones"
+        },
+        {
+          "title": "Standards for the care of people with cystic fibrosis (CF); recognising and addressing CF health issues.",
+          "year": 2024,
+          "citations": 66,
+          "url": "https://www.semanticscholar.org/paper/a09f22fcbfacaeb86685e431c598a4f3dffa8904",
+          "authors": "Pierre-R\u00e9gis Burgel, K. W. Southern, C. Addy"
+        },
+        {
+          "title": "In vitro modulator responsiveness of 655 CFTR variants found in people with cystic fibrosis.",
+          "year": 2024,
+          "citations": 59,
+          "url": "https://www.semanticscholar.org/paper/a935f0e1b532c38fbaa981a1c98021704adaa9ea",
+          "authors": "H. Bihler, A. Sivachenko, L. Millen"
+        },
+        {
+          "title": "Cystic fibrosis foundation position paper: Redefining the CF care model.",
+          "year": 2024,
+          "citations": 38,
+          "url": "https://www.semanticscholar.org/paper/ba09405e727b7fcc4010497820c66f03994dbe03",
+          "authors": "D. Goetz, R.F. Brown, S. Filigno"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Toward Repositioning Niclosamide for Antivirulence Therapy of Pseudomonas aeruginosa Lung Infections: Development of Inhalable Formulations through Nanosuspension Technology.",
+        "year": 2015,
+        "citations": 72,
+        "url": "https://www.semanticscholar.org/paper/ca2844276449cd055704a9aeb59ef3f79f206615",
+        "authors": "G. Costabile, I. d\u2019Angelo, G. Rampioni"
+      },
+      "max_citations": 72,
       "faers_signal": "none",
-      "faers_total_reports": 0,
+      "faers_total_reports": 13,
       "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Lactulose",
+      "faers_interpretation": "No FAERS reports found linking Dihydroxyacetone to Cystic fibrosis terms. Drug has 13 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
-      "signature_top_reversers": [],
-      "signature_interpretation": "Insufficient disease gene signature (0 up, 0 down genes)",
-      "ai_hypothesis": "",
-      "abstract_analyses": [],
+      "signature_top_reversers": [
+        "ST4066738 (1.480)",
+        "TENIPOSIDE (1.448)",
+        "cardene (1.422)",
+        "S1455 (1.419)",
+        "spironolactone (1.417)"
+      ],
+      "signature_interpretation": "Dihydroxyacetone was not found among the top 33 drugs that reverse the Cystic fibrosis gene signature. Top reversers: ST4066738 (1.480), TENIPOSIDE (1.448), cardene (1.422)",
+      "ai_hypothesis": "of its ability to increase CFTR expression and function.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
       "has_failed_trial": false,
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
+      "mr_score": 0.6079,
+      "mr_genetic_targets": 1,
       "mechanistic_hypothesis": "",
       "kg_paths_text": "",
       "validation_experiments": [],
-      "novelty_score": 0.85,
+      "novelty_score": 1.0,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -796,9 +737,1049 @@
       "trial_phases": {},
       "confidence": "LOW",
       "confidence_reasons": [
-        "Supported by 2 independent AI pillars"
+        "6 PubMed article(s) - limited literature",
+        "Supported by 4 independent AI pillars",
+        "Supporting paper with 72 citations",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.61)"
+      ]
+    },
+    {
+      "drug_name": "Dinoprostone",
+      "drug_id": "DB00917",
+      "disease_name": "Cystic fibrosis",
+      "combined_score": 1.0672,
+      "transe_rank": 4,
+      "pillars_hit": 7,
+      "mol_similarity": 0.7273,
+      "similar_to": "Alprostadil",
+      "direct_relations": [],
+      "shared_target_count": 0,
+      "shared_targets": [],
+      "pubmed_total": 121,
+      "pubmed_treatment_total": 42,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "33250436",
+          "title": "Prostaglandin E",
+          "authors": "Liu NM, Miyashita L, Sanak M, et al.",
+          "journal": "Journal of cystic fibrosis : official journal of the European Cystic Fibrosis Society",
+          "year": "2021",
+          "abstract_snippet": "BACKGROUND: Exposure to particulate matter (PM) air pollution is associated with adverse health outcomes in children with cystic fibrosis (CF). Airway macrophages (AM) phagocytose and retain inhaled PM in vivo, and the area of carbon in AM reflects both inhaled PM dose and phagocytic function. Since...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33250436/",
+          "total_results": 121
+        },
+        {
+          "pmid": "29281691",
+          "title": "Impaired PGE2-stimulated Cl- and HCO3- secretion contributes to cystic fibrosis airway disease.",
+          "authors": "Sellers ZM, Illek B, Figueira MF, et al.",
+          "journal": "PloS one",
+          "year": "2017",
+          "abstract_snippet": "BACKGROUND: Airway mucociliary clearance (MCC) is an important defense mechanism against pulmonary infections and is compromised in cystic fibrosis (CF). Cl- and HCO3- epithelial transport are integral to MCC. During pulmonary infections prostaglandin E2 (PGE2) production is abundant. AIM: To determ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29281691/"
+        },
+        {
+          "pmid": "35393448",
+          "title": "Oxylipin profile in saliva from patients with cystic fibrosis reveals a balance between pro-resolving and pro-inflammatory molecules.",
+          "authors": "Carnovale V, Castaldo A, Di Minno A, et al.",
+          "journal": "Scientific reports",
+          "year": "2022",
+          "abstract_snippet": "Oxylipins are signaling molecules originated by fatty acids that modulate vascular and bronchial tone, bronchial secretion, cytokine production and immune cell activity. The unbalanced production of pro-inflammatory and pro-resolving (i.e., anti-inflammatory) oxylipins has a relevant role in the pat...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35393448/"
+        },
+        {
+          "pmid": "16043018",
+          "title": "Inhaled glutathione decreases PGE2 and increases lymphocytes in cystic fibrosis lungs.",
+          "authors": "Hartl D, Starosta V, Maier K, et al.",
+          "journal": "Free radical biology & medicine",
+          "year": "2005",
+          "abstract_snippet": "Reduced glutathione (GSH), a major antioxidant and modulator of cell proliferation, is decreased in the bronchoalveolar lavage fluid (BALF) of cystic fibrosis (CF) patients. We previously have shown that GSH inhalation in CF patients significantly increased GSH levels in BALF and improved lung funct...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16043018/"
+        },
+        {
+          "pmid": "2240198",
+          "title": "Regulation of Cl- permeability in normal and cystic fibrosis sweat duct cells.",
+          "authors": "Ram SJ, Weaver ML, Kirk KL",
+          "journal": "The American journal of physiology",
+          "year": "1990",
+          "abstract_snippet": "Reabsorptive cells of the human sweat gland normally exhibit a high basal Cl- permeability but are markedly impermeable to Cl- in cystic fibrosis (CF). We examined the possibility that the reduced basal Cl- permeability of CF sweat duct cells in primary culture is due to a defective regulation of pl...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/2240198/"
+        }
       ],
-      "novelty_interpretation": "Novel prediction with minimal existing evidence (37 articles). Computational support suggests this warrants investigation."
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Standards for the care of people with cystic fibrosis (CF); recognising and addressing CF health issues.",
+          "year": 2024,
+          "citations": 66,
+          "url": "https://www.semanticscholar.org/paper/a09f22fcbfacaeb86685e431c598a4f3dffa8904",
+          "authors": "Pierre-R\u00e9gis Burgel, K. W. Southern, C. Addy"
+        },
+        {
+          "title": "In vitro modulator responsiveness of 655 CFTR variants found in people with cystic fibrosis.",
+          "year": 2024,
+          "citations": 59,
+          "url": "https://www.semanticscholar.org/paper/a935f0e1b532c38fbaa981a1c98021704adaa9ea",
+          "authors": "H. Bihler, A. Sivachenko, L. Millen"
+        },
+        {
+          "title": "Cystic fibrosis foundation position paper: Redefining the CF care model.",
+          "year": 2024,
+          "citations": 38,
+          "url": "https://www.semanticscholar.org/paper/ba09405e727b7fcc4010497820c66f03994dbe03",
+          "authors": "D. Goetz, R.F. Brown, S. Filigno"
+        },
+        {
+          "title": "Cystic fibrosis foundation position paper: Redefining the cystic fibrosis care team.",
+          "year": 2024,
+          "citations": 29,
+          "url": "https://www.semanticscholar.org/paper/8453fc59978ba1a556210101f81b08195c7430bf",
+          "authors": "Rebekah F. Brown, Charlotte Close, Molly G. Mailes"
+        },
+        {
+          "title": "Elexacaftor/tezacaftor/ivacaftor projected survival and long-term health outcomes in people with cystic fibrosis homozygous for F508del.",
+          "year": 2023,
+          "citations": 116,
+          "url": "https://www.semanticscholar.org/paper/f254157ec95fcb1dcf907a48c3f902d0592b36b9",
+          "authors": "A. Lopez, Conor Daly, G. Vega-Hernandez"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Elexacaftor/tezacaftor/ivacaftor projected survival and long-term health outcomes in people with cystic fibrosis homozygous for F508del.",
+        "year": 2023,
+        "citations": 116,
+        "url": "https://www.semanticscholar.org/paper/f254157ec95fcb1dcf907a48c3f902d0592b36b9",
+        "authors": "A. Lopez, Conor Daly, G. Vega-Hernandez"
+      },
+      "max_citations": 116,
+      "faers_signal": "none",
+      "faers_total_reports": 591,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Dinoprostone to Cystic fibrosis terms. Drug has 591 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "ST4066738 (1.480)",
+        "TENIPOSIDE (1.448)",
+        "cardene (1.422)",
+        "S1455 (1.419)",
+        "spironolactone (1.417)"
+      ],
+      "signature_interpretation": "Dinoprostone was not found among the top 33 drugs that reverse the Cystic fibrosis gene signature. Top reversers: ST4066738 (1.480), TENIPOSIDE (1.448), cardene (1.422)",
+      "ai_hypothesis": "of its anti-inflammatory and anti-fibrotic properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.5909,
+      "mr_genetic_targets": 2,
+      "mechanistic_hypothesis": "",
+      "kg_paths_text": "",
+      "validation_experiments": [],
+      "novelty_score": 0.72,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "121 PubMed articles on this drug-disease pair",
+        "Supported by 7 independent AI pillars",
+        "High molecular similarity (0.73) to Alprostadil",
+        "Highly cited paper (116 citations): \"Elexacaftor/tezacaftor/ivacaftor projected survival and long...\"",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.59)"
+      ]
+    },
+    {
+      "drug_name": "Carbon Monoxide",
+      "drug_id": "DB11588",
+      "disease_name": "Cystic fibrosis",
+      "combined_score": 1.06659996509552,
+      "transe_rank": 26,
+      "pillars_hit": 6,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "direct_relations": [],
+      "shared_target_count": 0,
+      "shared_targets": [],
+      "pubmed_total": 212,
+      "pubmed_treatment_total": 64,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "23446063",
+          "title": "Carbon monoxide in exhaled breath testing and therapeutics.",
+          "authors": "Ryter SW, Choi AM",
+          "journal": "Journal of breath research",
+          "year": "2013",
+          "abstract_snippet": "Carbon monoxide (CO), a low molecular weight gas, is a ubiquitous environmental product of organic combustion, which is also produced endogenously in the body, as the byproduct of heme metabolism. CO binds to hemoglobin, resulting in decreased oxygen delivery to bodily tissues at toxicological conce...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23446063/",
+          "total_results": 212
+        },
+        {
+          "pmid": "32936026",
+          "title": "Carbon monoxide-releasing molecules inhibit the cystic fibrosis transmembrane conductance regulator Cl",
+          "authors": "Rodrat M, Jantarajit W, Ng DRS, et al.",
+          "journal": "American journal of physiology. Lung cellular and molecular physiology",
+          "year": "2020",
+          "abstract_snippet": "The gasotransmitter carbon monoxide (CO) regulates fluid and electrolyte movements across epithelial tissues. However, its action on anion channels is incompletely understood. Here, we investigate the direct action of CO on the cystic fibrosis transmembrane conductance regulator (CFTR) by applying C...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32936026/"
+        },
+        {
+          "pmid": "32760278",
+          "title": "Targeting the Heme Oxygenase 1/Carbon Monoxide Pathway to Resolve Lung Hyper-Inflammation and Restore a Regulated Immune Response in Cystic Fibrosis.",
+          "authors": "Di Pietro C, \u00d6z HH, Murray TS, et al.",
+          "journal": "Frontiers in pharmacology",
+          "year": "2020",
+          "abstract_snippet": "In individuals with cystic fibrosis (CF), lung hyper-inflammation starts early in life and is perpetuated by mucus obstruction and persistent bacterial infections. The continuous tissue damage and scarring caused by non-resolving inflammation leads to bronchiectasis and, ultimately, respiratory fail...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32760278/"
+        },
+        {
+          "pmid": "19218629",
+          "title": "Exhaled carbon monoxide as a new marker of respiratory diseases in children.",
+          "authors": "Babusikova E, Jesenak M, Durdik P, et al.",
+          "journal": "Journal of physiology and pharmacology : an official journal of the Polish Physiological Society",
+          "year": "2008",
+          "abstract_snippet": "Among modern methods included in diagnostic algorithms for various diseases, analyses of expired breath and its condensate acquire increasing importance. Various markers can be determined in the exhaled air, especially volatile gaseous compounds: nitrogen oxide (NO), carbon monoxide (CO), hydrocarbo...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19218629/"
+        },
+        {
+          "pmid": "473091",
+          "title": "Teratogenic potential of inhaled carbon monoxide in mice and rabbits.",
+          "authors": "Schwetz BA, Smith FA, Leong BK, et al.",
+          "journal": "Teratology",
+          "year": "1979",
+          "abstract_snippet": "Pregnant CF-1 mice and New Zealand rabbits were exposed to carbon monoxide at a concentration of 250 ppm for 7 or 24 hours daily during the period of major organogenesis, days 6 through 15 of gestation in mice and 6 through 18 of gestation in rabbits. Carboxyhemoglobin levels in the range of 10--15%...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/473091/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Single-breath diffusion capacity of the lungs for carbon monoxide in children with cystic fibrosis: methods of interpreting results",
+          "year": 2023,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/ff982fffd693d7d76052cf7351a4b9fb0a0fb430",
+          "authors": "S. Bystrova, O. Simonova, E. Akhmedova"
+        },
+        {
+          "title": "Targeting the Heme Oxygenase 1/Carbon Monoxide Pathway to Resolve Lung Hyper-Inflammation and Restore a Regulated Immune Response in Cystic Fibrosis",
+          "year": 2020,
+          "citations": 28,
+          "url": "https://www.semanticscholar.org/paper/6e93a8b0f2e2d7c25ff0dccec55dba54e00873c6",
+          "authors": "C. Di Pietro, H. \u00d6z, T. Murray"
+        },
+        {
+          "title": "Carbon monoxide-releasing molecules inhibit the cystic fibrosis transmembrane conductance regulator Cl- channel.",
+          "year": 2020,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/ec5ee7b5ac69458a2a908a3cfbee4b41ba77c527",
+          "authors": "Mayuree Rodrat, Walailak Jantarajit, D. Ng"
+        },
+        {
+          "title": "558: Carbon monoxide\u2013based therapy primes macrophages to express HO-1 and to resolve lung hyper-inflammation in cystic fibrosis",
+          "year": 2021,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/7eb64d2d020db74e14174c77d089aa6a95363f6f",
+          "authors": "C. Pietro, H. \u00d6z, P. Zhang"
+        },
+        {
+          "title": "MRI and Pulmonary Function Tests\u2019 Results as Ventilation Inhomogeneity Markers in Children and Adolescents with Cystic Fibrosis",
+          "year": 2023,
+          "citations": 2,
+          "url": "https://www.semanticscholar.org/paper/398d71ced27982e2341f599ad490d7efe01a37a6",
+          "authors": "I. Wojsyk-Banaszak, B. Wi\u0119ckowska, A. Szczepankiewicz"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Targeting the Heme Oxygenase 1/Carbon Monoxide Pathway to Resolve Lung Hyper-Inflammation and Restore a Regulated Immune Response in Cystic Fibrosis",
+        "year": 2020,
+        "citations": 28,
+        "url": "https://www.semanticscholar.org/paper/6e93a8b0f2e2d7c25ff0dccec55dba54e00873c6",
+        "authors": "C. Di Pietro, H. \u00d6z, T. Murray"
+      },
+      "max_citations": 28,
+      "faers_signal": "none",
+      "faers_total_reports": 625,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Carbon Monoxide to Cystic fibrosis terms. Drug has 625 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "ST4066738 (1.480)",
+        "TENIPOSIDE (1.448)",
+        "cardene (1.422)",
+        "S1455 (1.419)",
+        "spironolactone (1.417)"
+      ],
+      "signature_interpretation": "Carbon Monoxide was not found among the top 33 drugs that reverse the Cystic fibrosis gene signature. Top reversers: ST4066738 (1.480), TENIPOSIDE (1.448), cardene (1.422)",
+      "ai_hypothesis": "of its anti-inflammatory and anti-oxidant properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 0,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "gasotransmitter carbon monoxide (",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.996999979019165
+            },
+            {
+              "entity": "co",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9300000071525574
+            },
+            {
+              "entity": "fluid",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9900000095367432
+            },
+            {
+              "entity": "electrolyte movements",
+              "entity_group": "Diagnostic_procedure",
+              "score": 1.0
+            },
+            {
+              "entity": "ep",
+              "entity_group": "Biological_structure",
+              "score": 0.9100000262260437
+            },
+            {
+              "entity": "cy",
+              "entity_group": "Disease_disorder",
+              "score": 0.9539999961853027
+            },
+            {
+              "entity": "fibrosis",
+              "entity_group": "Disease_disorder",
+              "score": 0.9649999737739563
+            }
+          ]
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.6079,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "",
+      "kg_paths_text": "",
+      "validation_experiments": [],
+      "novelty_score": 0.66,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": false,
+      "clinical_trials_total": 1,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT01880723",
+          "title": "Utilizing Exhaled Breathe Condensate Collection to Study Ion Regulation in Cystic Fibrosis",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "32",
+          "url": "https://clinicaltrials.gov/study/NCT01880723"
+        }
+      ],
+      "trial_phases": {
+        "NA": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "1 clinical trial(s) found on ClinicalTrials.gov",
+        "212 PubMed articles on this drug-disease pair",
+        "Supported by 6 independent AI pillars",
+        "Supporting paper with 28 citations",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.61)"
+      ]
+    },
+    {
+      "drug_name": "Estradiol",
+      "drug_id": "DB00783",
+      "disease_name": "Cystic fibrosis",
+      "combined_score": 1.0633,
+      "transe_rank": 66,
+      "pillars_hit": 7,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "direct_relations": [],
+      "shared_target_count": 0,
+      "shared_targets": [],
+      "pubmed_total": 244,
+      "pubmed_treatment_total": 125,
+      "pubmed_repurposing_total": 1,
+      "key_papers": [
+        {
+          "pmid": "24342234",
+          "title": "Estrogen and the cystic fibrosis gender gap.",
+          "authors": "Saint-Criq V, Harvey BJ",
+          "journal": "Steroids",
+          "year": "2014",
+          "abstract_snippet": "Cystic fibrosis (CF) is the most frequent inherited disease in Caucasian populations and is due to a defect in the expression or activity of a chloride channel encoded by the cystic fibrosis transmembrane conductance regulator (CFTR) gene. Mutations in this gene affect organs with exocrine functions...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24342234/",
+          "total_results": 244
+        },
+        {
+          "pmid": "30275458",
+          "title": "Menstrual cycle rhythmicity: metabolic patterns in healthy women.",
+          "authors": "Draper CF, Duisters K, Weger B, et al.",
+          "journal": "Scientific reports",
+          "year": "2018",
+          "abstract_snippet": "The menstrual cycle is an essential life rhythm governed by interacting levels of progesterone, estradiol, follicular stimulating, and luteinizing hormones. To study metabolic changes, biofluids were collected at four timepoints in the menstrual cycle from 34 healthy, premenopausal women. Serum horm...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30275458/"
+        },
+        {
+          "pmid": "32861400",
+          "title": "Relationship Between Estrogen Treatment and Skeletal Health in Women With Cystic Fibrosis.",
+          "authors": "Wu M, Bettermann EL, Arora N, et al.",
+          "journal": "The American journal of the medical sciences",
+          "year": "2020",
+          "abstract_snippet": "BACKGROUND: Patients with cystic fibrosis (CF) are at risk for CF-related bone disease. Women with CF may use estrogen supplementation for reasons other than skeletal health. It is unknown whether estrogen therapy has a beneficial impact on skeletal health in women with CF. METHODS: In this retrospe...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32861400/"
+        },
+        {
+          "pmid": "23234443",
+          "title": "Immune, inflammatory and infectious consequences of estrogen in women with cystic fibrosis.",
+          "authors": "Chotirmall SH, Greene CM, McElvaney NG",
+          "journal": "Expert review of respiratory medicine",
+          "year": "2012",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23234443/"
+        },
+        {
+          "pmid": "20378727",
+          "title": "17Beta-estradiol inhibits IL-8 in cystic fibrosis by up-regulating secretory leucoprotease inhibitor.",
+          "authors": "Chotirmall SH, Greene CM, Oglesby IK, et al.",
+          "journal": "American journal of respiratory and critical care medicine",
+          "year": "2010",
+          "abstract_snippet": "RATIONALE: An unexplained gender gap is observed in cystic fibrosis (CF). Females have poorer lung function, decreased survival, and earlier Pseudomonas colonization. OBJECTIVES: To evaluate the effect of 17beta-estradiol (E(2)) on CF bronchial epithelial cells in vitro and in vivo. METHODS: On expo...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20378727/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "22174294",
+          "title": "Linking PharmGKB to phenotype studies and animal models of disease for drug repurposing.",
+          "authors": "Hoehndorf R, Oellrich A, Rebholz-Schuhmann D, et al.",
+          "journal": "Pacific Symposium on Biocomputing. Pacific Symposium on Biocomputing",
+          "year": "2012",
+          "abstract_snippet": "The investigation of phenotypes in model organisms has the potential to reveal the molecular mechanisms underlying disease. The large-scale comparative analysis of phenotypes across species can reveal novel associations between genotypes and diseases. We use the PhenomeNET network of phenotypic simi...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22174294/",
+          "total_results": 1
+        }
+      ],
+      "semantic_scholar_papers": [
+        {
+          "title": "Effects of the Sex Steroid Hormone Estradiol on Biofilm Growth of Cystic Fibrosis Pseudomonas aeruginosa Isolates",
+          "year": 2022,
+          "citations": 7,
+          "url": "https://www.semanticscholar.org/paper/eda745903f5e8c43da4ca99bb0b875dddd6502f8",
+          "authors": "J. Al-Zawity, F. Afzal, Aysha Awan"
+        },
+        {
+          "title": "Findings from a feasibility study of estradiol for hypogonadal women with cystic fibrosis-related bone disease",
+          "year": 2021,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/c45ac02e6855acea5c3093b7ec893dc66344d19c",
+          "authors": "Malinda Wu, R. Tirouvanziam, N. Arora"
+        },
+        {
+          "title": "Oral ethinyl estradiol treatment in women with cystic fibrosis is associated with lower bone mineral density",
+          "year": 2020,
+          "citations": 11,
+          "url": "https://www.semanticscholar.org/paper/b32f192381de2f43802250aca7eef19b01ac92e0",
+          "authors": "Malinda Wu, W. Hunt, M. Putman"
+        },
+        {
+          "title": "P144 Impact of the sex steroid hormone estradiol on biofilm formation and phenotype of Pseudomonas aeruginosa isolates from cystic fibrosis patients",
+          "year": 2022,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/09014bbbc5c7e88a8605e690d4df3ee08c75dd2a",
+          "authors": "J. Al-Zawity, F. Afzal, A. Awan"
+        },
+        {
+          "title": "SUN-337 Low Dose Ethinyl Estradiol in Women with Cystic Fibrosis Does Not Preserve Bone Mass",
+          "year": 2020,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/99a4247b868ce801d9620614db99791a175a5d3c",
+          "authors": "Malinda Wu, W. Hunt, R. Tirouvanziam"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Toward Repositioning Niclosamide for Antivirulence Therapy of Pseudomonas aeruginosa Lung Infections: Development of Inhalable Formulations through Nanosuspension Technology.",
+        "year": 2015,
+        "citations": 72,
+        "url": "https://www.semanticscholar.org/paper/ca2844276449cd055704a9aeb59ef3f79f206615",
+        "authors": "G. Costabile, I. d\u2019Angelo, G. Rampioni"
+      },
+      "max_citations": 72,
+      "faers_signal": "moderate",
+      "faers_total_reports": 75392,
+      "faers_cooccurrences": 25,
+      "faers_interpretation": "25 FAERS reports mention both Estradiol and Cystic fibrosis-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "ST4066738 (1.480)",
+        "TENIPOSIDE (1.448)",
+        "cardene (1.422)",
+        "S1455 (1.419)",
+        "spironolactone (1.417)"
+      ],
+      "signature_interpretation": "Estradiol was not found among the top 33 drugs that reverse the Cystic fibrosis gene signature. Top reversers: ST4066738 (1.480), TENIPOSIDE (1.448), cardene (1.422)",
+      "ai_hypothesis": "of its anti-inflammatory and anti-oxidant properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": true,
+      "failed_trial_phase": "Phase 1",
+      "failed_trial_count": 2,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.5143,
+      "mr_genetic_targets": 2,
+      "mechanistic_hypothesis": "",
+      "kg_paths_text": "",
+      "validation_experiments": [],
+      "novelty_score": 0.6,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": false,
+      "clinical_trials_total": 4,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT05704036",
+          "title": "Estrogen Supplementation and Bone Health in Women With CF",
+          "status": "RECRUITING",
+          "phase": "PHASE4",
+          "enrollment": "75",
+          "url": "https://clinicaltrials.gov/study/NCT05704036"
+        },
+        {
+          "nct_id": "NCT02144246",
+          "title": "Contraceptive Hormones and Women With Cystic Fibrosis",
+          "status": "TERMINATED",
+          "phase": "PHASE1",
+          "enrollment": "5",
+          "url": "https://clinicaltrials.gov/study/NCT02144246"
+        },
+        {
+          "nct_id": "NCT02036879",
+          "title": "Gender Disparity and Hormones in Cystic Fibrosis",
+          "status": "COMPLETED",
+          "phase": "EARLY_PHASE1",
+          "enrollment": "55",
+          "url": "https://clinicaltrials.gov/study/NCT02036879"
+        },
+        {
+          "nct_id": "NCT03724955",
+          "title": "Pilot E2 for Hypogonadal Women With CFBD",
+          "status": "WITHDRAWN",
+          "phase": "PHASE4",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT03724955"
+        }
+      ],
+      "trial_phases": {
+        "PHASE4": 2,
+        "PHASE1": 1,
+        "EARLY_PHASE1": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "4 clinical trial(s) found on ClinicalTrials.gov",
+        "244 PubMed articles on this drug-disease pair",
+        "1 article(s) specifically mention repurposing/repositioning",
+        "Supported by 7 independent AI pillars",
+        "Note: Drug had early-phase trial failures for this disease",
+        "Moderate FAERS signal: 25 adverse event reports mention drug-disease co-occurrence",
+        "Supporting paper with 72 citations",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.51)"
+      ]
+    },
+    {
+      "drug_name": "Chlorine",
+      "drug_id": "DB11109",
+      "disease_name": "Cystic fibrosis",
+      "combined_score": 1.0621000528335571,
+      "transe_rank": 6,
+      "pillars_hit": 4,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "direct_relations": [],
+      "shared_target_count": 0,
+      "shared_targets": [],
+      "pubmed_total": 360,
+      "pubmed_treatment_total": 90,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "38446676",
+          "title": "Microplastics and Nanoplastics in Atheromas and Cardiovascular Events.",
+          "authors": "Marfella R, Prattichizzo F, Sardu C, et al.",
+          "journal": "The New England journal of medicine",
+          "year": "2024",
+          "abstract_snippet": "BACKGROUND: Microplastics and nanoplastics (MNPs) are emerging as a potential risk factor for cardiovascular disease in preclinical studies. Direct evidence that this risk extends to humans is lacking. METHODS: We conducted a prospective, multicenter, observational study involving patients who were ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38446676/",
+          "total_results": 360
+        },
+        {
+          "pmid": "37538805",
+          "title": "Gene Therapy for Cystic Fibrosis: Recent Advances and Future Prospects.",
+          "authors": "Lomunova MA, Gershovich PM",
+          "journal": "Acta naturae",
+          "year": "2023",
+          "abstract_snippet": "Gene replacement therapies are novel therapeutic approaches that seek to tackle hereditary diseases caused by a congenital deficiency in a particular gene, when a functional copy of a gene can be delivered to the cells and tissues using various delivery systems. To do this, viral particles carrying ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37538805/"
+        },
+        {
+          "pmid": "28231890",
+          "title": "[Pancreatic infringement exocrine and endocrine in cystic fibrosis].",
+          "authors": "Kessler L, Ab\u00e9ly M",
+          "journal": "Archives de pediatrie : organe officiel de la Societe francaise de pediatrie",
+          "year": "2016",
+          "abstract_snippet": "The exocrine pancreatic insufficiency affects more than 80% of cystic fibrosis (CF) infants. Pancreatic insufficiency is diagnosed by low levels of fecal elastase. An optimal caloric intake, a pancreatic enzyme treatment are the keys to maintain a good nutritional status. The fat soluble vitamins su...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28231890/"
+        },
+        {
+          "pmid": "28805732",
+          "title": "The Mechanistic Links between Insulin and Cystic Fibrosis Transmembrane Conductance Regulator (CFTR) Cl",
+          "authors": "Marunaka Y",
+          "journal": "International journal of molecular sciences",
+          "year": "2017",
+          "abstract_snippet": "The cystic fibrosis transmembrane conductance regulator (CFTR) Cl",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28805732/"
+        },
+        {
+          "pmid": "1724873",
+          "title": "Biochemical and molecular genetics of cystic fibrosis.",
+          "authors": "Tsui LC, Buchwald M",
+          "journal": "Advances in human genetics",
+          "year": "1991",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/1724873/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Secondary amyloidosis in cystic fibrosis: a case from clinical practice",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/db9274a05bc1038ecf95b05ddd381ea5226cdff1",
+          "authors": "A. Cherniaev, S. Krasovskiy, O. N. Brodskaya"
+        },
+        {
+          "title": "A case of cystic fibrosis presenting with severe anemia in infancy",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/fe9008addad3cfed9d89ce46534c24ade3dbf32a",
+          "authors": "Nihal Karadas"
+        },
+        {
+          "title": "The effect of cystic fibrosis on total body chlorine in children : a study of body composition and of clinical factors",
+          "year": 2021,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/e0c914aa9285cbf093b2883223ccc4f7b4c2e16d",
+          "authors": "D. Borovnicar"
+        },
+        {
+          "title": "Assessment of cystic fibrosis related liver disease in a pediatric cohort.",
+          "year": 2024,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/b3d969e3ce7ba54730c23c075b6426b3e2ad9237",
+          "authors": "Saioa Vicente-Santamar\u00eda, M. Torres-Guerrero, M. Garc\u00eda\u2010Gonz\u00e1lez"
+        },
+        {
+          "title": "Imaging of cystic fibrosis manifestations in the abdomen",
+          "year": 2024,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/b7b48edb06693314e14f1debbd3590fb60f43c26",
+          "authors": "S. Dunnion, Khaled Y. Elbanna, Satheesh Krishna"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Toward Repositioning Niclosamide for Antivirulence Therapy of Pseudomonas aeruginosa Lung Infections: Development of Inhalable Formulations through Nanosuspension Technology.",
+        "year": 2015,
+        "citations": 72,
+        "url": "https://www.semanticscholar.org/paper/ca2844276449cd055704a9aeb59ef3f79f206615",
+        "authors": "G. Costabile, I. d\u2019Angelo, G. Rampioni"
+      },
+      "max_citations": 72,
+      "faers_signal": "none",
+      "faers_total_reports": 127,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Chlorine to Cystic fibrosis terms. Drug has 127 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "ST4066738 (1.480)",
+        "TENIPOSIDE (1.448)",
+        "cardene (1.422)",
+        "S1455 (1.419)",
+        "spironolactone (1.417)"
+      ],
+      "signature_interpretation": "Chlorine was not found among the top 33 drugs that reverse the Cystic fibrosis gene signature. Top reversers: ST4066738 (1.480), TENIPOSIDE (1.448), cardene (1.422)",
+      "ai_hypothesis": "of its antimicrobial properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "Phase 3",
+      "failed_trial_count": 9,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.9679,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "",
+      "kg_paths_text": "",
+      "validation_experiments": [],
+      "novelty_score": 0.48,
+      "novelty_level": "ESTABLISHED",
+      "is_known_treatment": false,
+      "clinical_trials_total": 10,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT02170025",
+          "title": "Early Signs of Efficacy Study With Riociguat in Adult Homozygous Delta F508 Cystic Fibrosis Patients",
+          "status": "TERMINATED",
+          "phase": "PHASE2",
+          "enrollment": "21",
+          "url": "https://clinicaltrials.gov/study/NCT02170025"
+        },
+        {
+          "nct_id": "NCT00179998",
+          "title": "Effectiveness of Pulmozyme in Infants With Cystic Fibrosis",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "24",
+          "url": "https://clinicaltrials.gov/study/NCT00179998"
+        },
+        {
+          "nct_id": "NCT04556162",
+          "title": "Evaluation of Salt Status in Patients With Cystic Fibrosis",
+          "status": "COMPLETED",
+          "phase": "N/A",
+          "enrollment": "222",
+          "url": "https://clinicaltrials.gov/study/NCT04556162"
+        },
+        {
+          "nct_id": "NCT00700050",
+          "title": "Modulation by Sex Hormones of Inflammation and Susceptibility to Pseudomonas Aeruginosa in Cystic Fibrosis Airways",
+          "status": "COMPLETED",
+          "phase": "N/A",
+          "enrollment": "28",
+          "url": "https://clinicaltrials.gov/study/NCT00700050"
+        },
+        {
+          "nct_id": "NCT06350461",
+          "title": "Impact of Discontinuing Hypertonic Saline in People With CF on Highly Effective CFTR Modulators- A SIMPLIFY Sub-Study",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "370",
+          "url": "https://clinicaltrials.gov/study/NCT06350461"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 4,
+        "NA": 1,
+        "PHASE4": 3,
+        "PHASE3": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "10 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "360 PubMed articles on this drug-disease pair",
+        "Supported by 4 independent AI pillars",
+        "Supporting paper with 72 citations",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.97, 1 genetic targets)"
+      ]
+    },
+    {
+      "drug_name": "Glutathione",
+      "drug_id": "DB00143",
+      "disease_name": "Cystic fibrosis",
+      "combined_score": 1.0597,
+      "transe_rank": 29,
+      "pillars_hit": 6,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "direct_relations": [],
+      "shared_target_count": 0,
+      "shared_targets": [],
+      "pubmed_total": 734,
+      "pubmed_treatment_total": 340,
+      "pubmed_repurposing_total": 1,
+      "key_papers": [
+        {
+          "pmid": "14988435",
+          "title": "Glutathione metabolism and its implications for health.",
+          "authors": "Wu G, Fang YZ, Yang S, et al.",
+          "journal": "The Journal of nutrition",
+          "year": "2004",
+          "abstract_snippet": "Glutathione (gamma-glutamyl-cysteinyl-glycine; GSH) is the most abundant low-molecular-weight thiol, and GSH/glutathione disulfide is the major redox couple in animal cells. The synthesis of GSH from glutamate, cysteine, and glycine is catalyzed sequentially by two cytosolic enzymes, gamma-glutamylc...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/14988435/",
+          "total_results": 734
+        },
+        {
+          "pmid": "34831067",
+          "title": "CFTR Protein: Not Just a Chloride Channel?",
+          "authors": "Hanssens LS, Duchateau J, Casimir GJ",
+          "journal": "Cells",
+          "year": "2021",
+          "abstract_snippet": "Cystic fibrosis (CF) is a recessive genetic disease caused by mutations in a gene encoding a protein called Cystic Fibrosis Transmembrane Conductance Regulator (CFTR). The CFTR protein is known to acts as a chloride (Cl",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34831067/"
+        },
+        {
+          "pmid": "35816813",
+          "title": "Improving nutrition in cystic fibrosis: A systematic literature review.",
+          "authors": "Mielus M, Sands D, Woynarowski M",
+          "journal": "Nutrition (Burbank, Los Angeles County, Calif.)",
+          "year": "2022",
+          "abstract_snippet": "With increasing life expectancy of patients with cystic fibrosis (CF), gastrointestinal manifestations of the disease have been increasingly brought into focus. This was a systematic review of the PubMed database and ongoing phase III clinical trials that aimed to summarize recent (published after J...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35816813/"
+        },
+        {
+          "pmid": "10929676",
+          "title": "Cystic fibrosis: nutritional status and micronutrients.",
+          "authors": "Winklhofer-Roob BM",
+          "journal": "Current opinion in clinical nutrition and metabolic care",
+          "year": "2000",
+          "abstract_snippet": "Recent studies have focused on the current dietary intake of cystic fibrosis patients, the impact of nutritional support on both the nutritional status and clinical outcome variables, and the effects on the nutritional status of antibiotic therapy and surgical treatment of meconium ileus. In additio...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10929676/"
+        },
+        {
+          "pmid": "35903252",
+          "title": "Oxidative stress and impaired insulin secretion in cystic fibrosis pig pancreas.",
+          "authors": "O'Malley Y, Coleman MC, Sun X, et al.",
+          "journal": "Advances in redox research",
+          "year": "2022",
+          "abstract_snippet": "Cystic fibrosis-related diabetes (CFRD) is one the most common comorbidities in cystic fibrosis (CF). Pancreatic oxidative stress has been postulated in the pathogenesis of CFRD, but no studies have been done to show an association. The main obstacle is the lack of suitable animal models and no imme...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35903252/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "38206016",
+          "title": "The mechanism of action of auranofin analogs in ",
+          "authors": "Maydaniuk DT, Martens B, Iqbal S, et al.",
+          "journal": "Microbiology spectrum",
+          "year": "2024",
+          "abstract_snippet": "Drug repurposing efforts led to the discovery of bactericidal activity in auranofin, a gold-containing drug used to treat rheumatoid arthritis. Auranofin kills Gram-positive bacteria by inhibiting thioredoxin reductase, an enzyme that scavenges reactive oxygen species (ROS). Despite the presence of ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38206016/",
+          "total_results": 1
+        }
+      ],
+      "semantic_scholar_papers": [
+        {
+          "title": "Glutathione and bicarbonate nanoparticles improve mucociliary transport in cystic fibrosis epithelia",
+          "year": 2023,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/76578e174ea6f877762afed0117a5124074c4d0e",
+          "authors": "D. Cho, Nicholas J. Rivers, Dong-Jin Lim"
+        },
+        {
+          "title": "Changes in urinary glutathione sulfonamide (GSA) levels between admission and discharge of patients with cystic fibrosis",
+          "year": 2023,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/1be37340ea666713ba69d220ff5cc5d125fbadee",
+          "authors": "Tamara L. Blake, P. Sly, I. Andersen"
+        },
+        {
+          "title": "229 Glutathione and bicarbonate nanoparticles improve mucociliary transport in cystic fibrosis epithelia",
+          "year": 2023,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/348b58af0638ad867cd54637c688399e70a372a0",
+          "authors": "D. Cho, S. Zhang, D. Lim"
+        },
+        {
+          "title": "Airways glutathione S-transferase omega-1 and its A140D polymorphism are associated with severity of inflammation and respiratory dysfunction in cystic fibrosis.",
+          "year": 2021,
+          "citations": 8,
+          "url": "https://www.semanticscholar.org/paper/06d1cf891b4bd91b8223789f2983870498f4188a",
+          "authors": "Simona Piaggi, E. Marchi, V. Carnicelli"
+        },
+        {
+          "title": "Efficacy of Glutathione for Patients With Cystic Fibrosis: A Meta-analysis of Randomized-Controlled Studies",
+          "year": 2020,
+          "citations": 30,
+          "url": "https://www.semanticscholar.org/paper/3a2ded2f448f854fb69f6490f48b1e12239b2a6a",
+          "authors": "Jinqiu Zhao, Wenxiang Huang, Shujun Zhang"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Toward Repositioning Niclosamide for Antivirulence Therapy of Pseudomonas aeruginosa Lung Infections: Development of Inhalable Formulations through Nanosuspension Technology.",
+        "year": 2015,
+        "citations": 72,
+        "url": "https://www.semanticscholar.org/paper/ca2844276449cd055704a9aeb59ef3f79f206615",
+        "authors": "G. Costabile, I. d\u2019Angelo, G. Rampioni"
+      },
+      "max_citations": 72,
+      "faers_signal": "none",
+      "faers_total_reports": 1968,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Glutathione to Cystic fibrosis terms. Drug has 1968 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "ST4066738 (1.480)",
+        "TENIPOSIDE (1.448)",
+        "cardene (1.422)",
+        "S1455 (1.419)",
+        "spironolactone (1.417)"
+      ],
+      "signature_interpretation": "Glutathione was not found among the top 33 drugs that reverse the Cystic fibrosis gene signature. Top reversers: ST4066738 (1.480), TENIPOSIDE (1.448), cardene (1.422)",
+      "ai_hypothesis": "of its antioxidant properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.8239,
+      "mr_genetic_targets": 4,
+      "mechanistic_hypothesis": "",
+      "kg_paths_text": "",
+      "validation_experiments": [],
+      "novelty_score": 0.66,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": true,
+      "clinical_trials_total": 5,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT02029521",
+          "title": "Supplementation of Oral Reduced Glutathione in Pediatric Cystic Fibrosis Patients",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "47",
+          "url": "https://clinicaltrials.gov/study/NCT02029521"
+        },
+        {
+          "nct_id": "NCT01450267",
+          "title": "Inhaled Glutathione (GSH) Versus Placebo in Cystic Fibrosis",
+          "status": "UNKNOWN",
+          "phase": "PHASE3",
+          "enrollment": "150",
+          "url": "https://clinicaltrials.gov/study/NCT01450267"
+        },
+        {
+          "nct_id": "NCT03020719",
+          "title": "The Role of Oral Glutathione on Growth Parameters in Children With Cystic Fibrosis",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "60",
+          "url": "https://clinicaltrials.gov/study/NCT03020719"
+        },
+        {
+          "nct_id": "NCT00506688",
+          "title": "Efficacy and Safety Study of Inhaled Glutathione in Cystic Fibrosis Patients",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "153",
+          "url": "https://clinicaltrials.gov/study/NCT00506688"
+        },
+        {
+          "nct_id": "NCT05495243",
+          "title": "Phase 2a, 28-day Investigational Use Study of ARINA-1 in Non-Cystic Fibrosis Bronchiectasis (NCFBE) With Excess Mucus and Cough",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "40",
+          "url": "https://clinicaltrials.gov/study/NCT05495243"
+        }
+      ],
+      "trial_phases": {
+        "NA": 1,
+        "PHASE3": 1,
+        "PHASE2": 3
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "5 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "734 PubMed articles on this drug-disease pair",
+        "1 article(s) specifically mention repurposing/repositioning",
+        "Supported by 6 independent AI pillars",
+        "Supporting paper with 72 citations",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.82, 4 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ]
     }
   ]
 }

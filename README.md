@@ -24,7 +24,7 @@ OpenCure screens all ~10,500 FDA-approved drugs against any disease using **11 i
 
 After scoring, the platform gathers real-world evidence from 6 biomedical databases to assess how confident and how novel each prediction is — separating genuine new discoveries from drugs that are already known to work.
 
-> **587 candidates** across 61 diseases | **44 breakthrough predictions** with zero published literature | **AUC-ROC 0.998** ensemble validation
+> **588 candidates** across 61 diseases | **59 breakthrough predictions** with zero published literature | **AUC-ROC 0.998** ensemble validation
 
 **[Browse all predictions interactively](https://simonbartosdev.github.io/opencure/)**
 
@@ -87,10 +87,10 @@ Novelty scoring uses **synonym-expanded PubMed search** across 55 disease name m
 
 | Category | Count |
 |----------|-------|
-| Total candidates | 587 |
-| BREAKTHROUGH (zero literature) | 44 |
-| NOVEL (minimal literature) | 177 |
-| HIGH confidence | 363 |
+| Total candidates | 588 |
+| BREAKTHROUGH (zero literature) | 59 |
+| NOVEL (minimal literature) | 163 |
+| HIGH confidence | 365 |
 | Diseases screened | 61 |
 | Cross-disease drugs | 32 |
 

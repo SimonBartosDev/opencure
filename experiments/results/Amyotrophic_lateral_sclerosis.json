@@ -1,21 +1,22 @@
 {
   "disease": "Amyotrophic lateral sclerosis",
   "status": "completed",
-  "timestamp": "2026-04-08T09:08:50.998745",
-  "elapsed_seconds": 4733.5,
+  "timestamp": "2026-04-17T14:38:33.936313",
+  "elapsed_seconds": 428.6,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
-    "LOW": 10
+    "HIGH": 8,
+    "MEDIUM": 2
   },
   "candidates": [
     {
       "drug_name": "Arimoclomol",
       "drug_id": "DB05025",
       "disease_name": "Amyotrophic lateral sclerosis",
-      "combined_score": 1.0996999740600586,
+      "combined_score": 1.214400053024292,
       "transe_rank": 13,
-      "pillars_hit": 3,
+      "pillars_hit": 6,
       "mol_similarity": 0,
       "similar_to": "",
       "direct_relations": [],
@@ -73,431 +74,222 @@
         }
       ],
       "repurposing_papers": [],
-      "semantic_scholar_papers": [],
-      "most_cited_paper": {},
-      "max_citations": 0,
+      "semantic_scholar_papers": [
+        {
+          "title": "Safety and efficacy of arimoclomol in amyotrophic lateral sclerosis: a systematic review and meta-analysis",
+          "year": 2025,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/74c6dc33223b2bb8af869359d035929d17af2e77",
+          "authors": "Saad Masood, Muhammad Sameer Almas, Syed Saad Ul Hassan"
+        },
+        {
+          "title": "Safety and efficacy of arimoclomol in patients with early amyotrophic lateral sclerosis (ORARIALS-01): a randomised, double-blind, placebo-controlled, multicentre, phase 3 trial.",
+          "year": 2024,
+          "citations": 15,
+          "url": "https://www.semanticscholar.org/paper/a44208a9fddc2040927ad6ad3434da45d9def93a",
+          "authors": "M. Benatar, T. Hansen, Dror Rom"
+        },
+        {
+          "title": "The Safety and Efficacy of Arimoclomol in Amyotrophic Lateral Sclerosis: A Systematic Review (P11-11.029)",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/908cc58892d31142bbab9cb062bf91b2760b5aa6",
+          "authors": "E. Barbosa, Frederico De Sousa Marinho Mendes Filho, David Abraham"
+        },
+        {
+          "title": "Efficacy of Arimoclomol for Amyotrophic Lateral Sclerosis: A Systematic Review and Meta-analysis of Randomized Control Trials (P11-11.007)",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/74175bf20921695d481a5c9e9901d2aac6808837",
+          "authors": "Warda A. Alrubasy, M. Taha, S. Sameer"
+        },
+        {
+          "title": "Safety of Arimoclomol in Amyotrophic Lateral Sclerosis: A Systematic Review and Meta-analysis of Randomized Controlled Trials (P11-11.030)",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/9ac9d36407670df506b476c876e4e3f0217821d4",
+          "authors": "Rowaid Ahmad, Hassan Waseem, Zain Ul Abideen"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Repurpose terbutaline sulfate for amyotrophic lateral sclerosis using electronic medical records",
+        "year": 2015,
+        "citations": 53,
+        "url": "https://www.semanticscholar.org/paper/07ad901d5efef7412a71bc775a493874e465feed",
+        "authors": "H. Paik, Ah\u2010Young Chung, Hae-Chul Park"
+      },
+      "max_citations": 53,
       "faers_signal": "none",
-      "faers_total_reports": 0,
+      "faers_total_reports": 3,
       "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Arimoclomol",
+      "faers_interpretation": "No FAERS reports found linking Arimoclomol to Amyotrophic lateral sclerosis terms. Drug has 3 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
-      "signature_top_reversers": [],
-      "signature_interpretation": "Insufficient disease gene signature (0 up, 0 down genes)",
-      "ai_hypothesis": "",
-      "abstract_analyses": [],
+      "signature_top_reversers": [
+        "S1252 (1.513)",
+        "S1053 (1.497)",
+        "celastrol (1.487)",
+        "trichostatin A (1.471)",
+        "Camptothecin (1.467)"
+      ],
+      "signature_interpretation": "Arimoclomol was not found among the top 35 drugs that reverse the Amyotrophic lateral sclerosis gene signature. Top reversers: S1252 (1.513), S1053 (1.497), celastrol (1.487)",
+      "ai_hypothesis": "of its ability to increase the expression of the anti-apoptotic protein Bcl-2.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "treats",
+          "confidence": 0.9,
+          "positive_signals": 4,
+          "negative_signals": 0,
+          "mechanism_signals": 1,
+          "extracted_entities": [
+            {
+              "entity": "ari",
+              "entity_group": "Medication",
+              "score": 0.9980000257492065
+            },
+            {
+              "entity": "##moclomol",
+              "entity_group": "Medication",
+              "score": 0.9169999957084656
+            },
+            {
+              "entity": "heat shock protein",
+              "entity_group": "Sign_symptom",
+              "score": 0.8349999785423279
+            },
+            {
+              "entity": "lateral sclerosis",
+              "entity_group": "Disease_disorder",
+              "score": 0.9900000095367432
+            },
+            {
+              "entity": "##mo",
+              "entity_group": "Medication",
+              "score": 0.9869999885559082
+            },
+            {
+              "entity": "##clomo",
+              "entity_group": "Medication",
+              "score": 0.7459999918937683
+            },
+            {
+              "entity": "improve",
+              "entity_group": "Lab_value",
+              "score": 1.0
+            },
+            {
+              "entity": "survival",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "muscle function",
+              "entity_group": "Diagnostic_procedure",
+              "score": 1.0
+            },
+            {
+              "entity": "mouse model",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9869999885559082
+            }
+          ]
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
       "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
+      "failed_trial_phase": "Phase 3",
+      "failed_trial_count": 2,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
+      "mr_score": 0.9451,
+      "mr_genetic_targets": 1,
       "mechanistic_hypothesis": "",
       "kg_paths_text": "",
       "validation_experiments": [],
-      "novelty_score": 0.85,
-      "novelty_level": "NOVEL",
+      "novelty_score": 0.84,
+      "novelty_level": "KNOWN",
       "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "Supported by 3 independent AI pillars"
-      ],
-      "novelty_interpretation": "Novel prediction with minimal existing evidence (32 articles). Computational support suggests this warrants investigation."
-    },
-    {
-      "drug_name": "Trimetazidine",
-      "drug_id": "DB09069",
-      "disease_name": "Amyotrophic lateral sclerosis",
-      "combined_score": 1.038100004196167,
-      "transe_rank": 315,
-      "pillars_hit": 2,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 7,
-      "pubmed_treatment_total": 7,
-      "pubmed_repurposing_total": 2,
-      "key_papers": [
+      "clinical_trials_total": 5,
+      "clinical_trials": [
         {
-          "pmid": "40594383",
-          "title": "Trimetazidine stimulates intracellular Ca",
-          "authors": "Bernardi S, Vitolo S, Gabellini C, et al.",
-          "journal": "Scientific reports",
-          "year": "2025",
-          "abstract_snippet": "The metabolic modulator trimetazidine (TMZ) is an antianginal recently found to improve skeletal muscle performance in mice models of sarcopenia and of amyotrophic lateral sclerosis (ALS). The mechanism underlying the effect of TMZ on locomotor activity has been proposed to rely on its ability to en...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40594383/",
-          "total_results": 7
+          "nct_id": "NCT03491462",
+          "title": "Arimoclomol in Amyotropic Lateral Sclerosis",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "245",
+          "url": "https://clinicaltrials.gov/study/NCT03491462"
         },
         {
-          "pmid": "41227379",
-          "title": "Does Amyotrophic Lateral Sclerosis (ALS) Have Metabolic Causes from Human Evolution?",
-          "authors": "Spedding M",
-          "journal": "Cells",
-          "year": "2025",
-          "abstract_snippet": "As so many drugs have failed in ALS a new approach is needed. The author proposes that recent human genetic variants may play major roles in the disease, changing metabolism. Evolution of hominins was accelerated 3-2.5 Mya, by cytidine monophospho-N-acetylneuraminic acid hydroxylase (CMAH) becoming ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41227379/"
+          "nct_id": "NCT03836716",
+          "title": "Arimoclomol in Amyotropic Lateral Sclerosis - Open Label Extension Trial",
+          "status": "TERMINATED",
+          "phase": "PHASE3",
+          "enrollment": "120",
+          "url": "https://clinicaltrials.gov/study/NCT03836716"
         },
         {
-          "pmid": "34783031",
-          "title": "Repurposing of Trimetazidine for amyotrophic lateral sclerosis: A study in SOD1",
-          "authors": "Scaricamazza S, Salvatori I, Amadio S, et al.",
-          "journal": "British journal of pharmacology",
-          "year": "2022",
-          "abstract_snippet": "BACKGROUND AND PURPOSE: Amyotrophic lateral sclerosis (ALS), a neurodegenerative disease characterized by the degeneration of upper and lower motor neurons, progressive wasting and paralysis of voluntary muscles and is currently incurable. Although considered to be a pure motor neuron disease, incre...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34783031/"
+          "nct_id": "NCT00706147",
+          "title": "Phase II/III Randomized, Placebo-controlled Trial of Arimoclomol in SOD1 Positive Familial Amyotrophic Lateral Sclerosis",
+          "status": "COMPLETED",
+          "phase": "PHASE2, PHASE3",
+          "enrollment": "38",
+          "url": "https://clinicaltrials.gov/study/NCT00706147"
         },
         {
-          "pmid": "34207859",
-          "title": "Skeletal Muscle Metabolism: Origin or Prognostic Factor for Amyotrophic Lateral Sclerosis (ALS) Development?",
-          "authors": "Quessada C, Bouscary A, Ren\u00e9 F, et al.",
-          "journal": "Cells",
-          "year": "2021",
-          "abstract_snippet": "Amyotrophic lateral sclerosis (ALS) is a fatal neurodegenerative disease characterized by progressive and selective loss of motor neurons, amyotrophy and skeletal muscle paralysis usually leading to death due to respiratory failure. While generally considered an intrinsic motor neuron disease, data ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34207859/"
+          "nct_id": "NCT00244244",
+          "title": "A Multicenter, Dose Ranging Safety and Pharmacokinetics Study of Arimoclomol in ALS",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "80",
+          "url": "https://clinicaltrials.gov/study/NCT00244244"
         },
         {
-          "pmid": "40008327",
-          "title": "An open-label Phase 2a study to assess the safety and tolerability of trimetazidine in patients with amyotrophic lateral sclerosis.",
-          "authors": "van Eijk RPA, Steyn FJ, Janse van Mantgem MR, et al.",
-          "journal": "Brain communications",
-          "year": "2025",
-          "abstract_snippet": "Metabolic imbalance is associated with amyotrophic lateral sclerosis progression. Impaired glucose oxidation and increased reliance on fatty acid oxidation contribute to reduced metabolic flexibility and faster disease progression in amyotrophic lateral sclerosis. We sought to evaluate the safety an...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40008327/"
+          "nct_id": "NCT00561366",
+          "title": "A Multicenter, Double-Blind Study to Investigate the Safety and Efficacy of Arimoclomol in Volunteers With ALS",
+          "status": "WITHDRAWN",
+          "phase": "PHASE2",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT00561366"
         }
       ],
-      "repurposing_papers": [
-        {
-          "pmid": "40594383",
-          "title": "Trimetazidine stimulates intracellular Ca",
-          "authors": "Bernardi S, Vitolo S, Gabellini C, et al.",
-          "journal": "Scientific reports",
-          "year": "2025",
-          "abstract_snippet": "The metabolic modulator trimetazidine (TMZ) is an antianginal recently found to improve skeletal muscle performance in mice models of sarcopenia and of amyotrophic lateral sclerosis (ALS). The mechanism underlying the effect of TMZ on locomotor activity has been proposed to rely on its ability to en...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40594383/",
-          "total_results": 2
-        },
-        {
-          "pmid": "34783031",
-          "title": "Repurposing of Trimetazidine for amyotrophic lateral sclerosis: A study in SOD1",
-          "authors": "Scaricamazza S, Salvatori I, Amadio S, et al.",
-          "journal": "British journal of pharmacology",
-          "year": "2022",
-          "abstract_snippet": "BACKGROUND AND PURPOSE: Amyotrophic lateral sclerosis (ALS), a neurodegenerative disease characterized by the degeneration of upper and lower motor neurons, progressive wasting and paralysis of voluntary muscles and is currently incurable. Although considered to be a pure motor neuron disease, incre...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34783031/"
-        }
-      ],
-      "semantic_scholar_papers": [],
-      "most_cited_paper": {},
-      "max_citations": 0,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Trimetazidine",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [],
-      "signature_interpretation": "Insufficient disease gene signature (0 up, 0 down genes)",
-      "ai_hypothesis": "",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.95,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
+      "trial_phases": {
+        "PHASE3": 3,
+        "PHASE2": 3
+      },
+      "confidence": "HIGH",
       "confidence_reasons": [
-        "Supported by 2 independent AI pillars"
-      ],
-      "novelty_interpretation": "Novel prediction with minimal existing evidence (7 articles). Computational support suggests this warrants investigation."
-    },
-    {
-      "drug_name": "Pridopidine",
-      "drug_id": "DB11947",
-      "disease_name": "Amyotrophic lateral sclerosis",
-      "combined_score": 1.0342,
-      "transe_rank": 17,
-      "pillars_hit": 2,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 14,
-      "pubmed_treatment_total": 13,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "35507432",
-          "title": "Nucleoporin POM121 signals TFEB-mediated autophagy via activation of SIGMAR1/sigma-1 receptor chaperone by pridopidine.",
-          "authors": "Wang SM, Wu HE, Yasui Y, et al.",
-          "journal": "Autophagy",
-          "year": "2023",
-          "abstract_snippet": "Macroautophagy/autophagy is an essential process for cellular survival and is implicated in many diseases. A critical step in autophagy is the transport of the transcription factor TFEB from the cytosol into the nucleus, through the nuclear pore (NP) by KPNB1/importin\u03b21. In the C9orf72 subtype of am...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35507432/",
-          "total_results": 14
-        },
-        {
-          "pmid": "40067755",
-          "title": "Pridopidine in Amyotrophic Lateral Sclerosis: The HEALEY ALS Platform Trial.",
-          "authors": "Shefner JM, Oskarsson B, et al.",
-          "journal": "JAMA",
-          "year": "2025",
-          "abstract_snippet": "IMPORTANCE: Amyotrophic lateral sclerosis (ALS) is a fatal disease. The sigma-1 (\u03c31) receptor emerged as a target for intervention. OBJECTIVE: To determine the effects of pridopidine, a \u03c31-receptor agonist, in ALS. DESIGN, SETTINGS, AND PARTICIPANTS: Pridopidine was tested as a regimen of the HEALEY...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40067755/"
-        },
-        {
-          "pmid": "37166702",
-          "title": "Targeting Sigma Receptors for the Treatment of Neurodegenerative and Neurodevelopmental Disorders.",
-          "authors": "Malar DS, Thitilertdecha P, Ruckvongacheep KS, et al.",
-          "journal": "CNS drugs",
-          "year": "2023",
-          "abstract_snippet": "The sigma-1 receptor is a 223 amino acid-long protein with a recently identified structure. The sigma-2 receptor is a genetically unrelated protein with a similarly shaped binding pocket and acts to influence cellular activities similar to the sigma-1 receptor. Both proteins are highly expressed in ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37166702/"
-        },
-        {
-          "pmid": "41471389",
-          "title": "Pridopidine, a Potent and Selective Therapeutic Sigma-1 Receptor (S1R) Agonist for Treating Neurodegenerative Diseases.",
-          "authors": "Gershoni Emek N, Tan AM, Geva M, et al.",
-          "journal": "Pharmaceuticals (Basel, Switzerland)",
-          "year": "2025",
-          "abstract_snippet": "Pridopidine is a highly selective sigma-1 receptor (S1R) agonist in clinical development for Huntington's disease (HD) and amyotrophic lateral sclerosis (ALS). The S1R is a ubiquitous chaperone protein enriched in the central nervous system and regulates multiple pathways critical for neuronal cell ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41471389/"
-        },
-        {
-          "pmid": "41406304",
-          "title": "Pridopidine treatment in ALS: subgroup analyses from the HEALEY ALS Platform trial.",
-          "authors": "Geva M, Goldberg YP, Leitner ML, et al.",
-          "journal": "Amyotrophic lateral sclerosis & frontotemporal degeneration",
-          "year": "2025",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41406304/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [],
-      "most_cited_paper": {},
-      "max_citations": 0,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Pridopidine",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [],
-      "signature_interpretation": "Insufficient disease gene signature (0 up, 0 down genes)",
-      "ai_hypothesis": "",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.85,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "Supported by 2 independent AI pillars"
-      ],
-      "novelty_interpretation": "Novel prediction with minimal existing evidence (14 articles). Computational support suggests this warrants investigation."
-    },
-    {
-      "drug_name": "Technetium Tc 99m tetrofosmin",
-      "drug_id": "DB09160",
-      "disease_name": "Amyotrophic lateral sclerosis",
-      "combined_score": 1.0262999534606934,
-      "transe_rank": 625,
-      "pillars_hit": 2,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 1,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "9411806",
-          "title": "[Technetium 99m tetrofosmin as a myocardial perfusion marker in diagnosis of coronary heart disease. Validation a one day rest-stress protocol].",
-          "authors": "Bair HJ, Altstidl R, Feistel H",
-          "journal": "Rontgenpraxis; Zeitschrift fur radiologische Technik",
-          "year": "1997",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/9411806/",
-          "total_results": 1
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [],
-      "most_cited_paper": {},
-      "max_citations": 0,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Technetium Tc 99m tetrofosmin",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [],
-      "signature_interpretation": "Insufficient disease gene signature (0 up, 0 down genes)",
-      "ai_hypothesis": "",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.95,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "Supported by 2 independent AI pillars"
-      ],
-      "novelty_interpretation": "Novel prediction with minimal existing evidence (1 articles). Computational support suggests this warrants investigation."
-    },
-    {
-      "drug_name": "Quinine",
-      "drug_id": "DB00468",
-      "disease_name": "Amyotrophic lateral sclerosis",
-      "combined_score": 1.0250999927520752,
-      "transe_rank": 179,
-      "pillars_hit": 5,
-      "mol_similarity": 1.0,
-      "similar_to": "Quinidine",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 14,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "15902691",
-          "title": "Muscle cramps.",
-          "authors": "Miller TM, Layzer RB",
-          "journal": "Muscle & nerve",
-          "year": "2005",
-          "abstract_snippet": "Muscle cramps are a common problem characterized by a sudden, painful, involuntary contraction of muscle. These true cramps, which originate from peripheral nerves, may be distinguished from other muscle pain or spasm. Medical history, physical examination, and a limited laboratory screen help to de...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/15902691/",
-          "total_results": 19
-        },
-        {
-          "pmid": "18555873",
-          "title": "[Primary muscle cramps].",
-          "authors": "Serratrice G",
-          "journal": "Revue neurologique",
-          "year": "2008",
-          "abstract_snippet": "Primary muscle cramps, without known cause, are very frequent especially in the elderly and during the night. They are different from secondary cramps. Likewise they are to be separated from several syndromes erroneously quoted as cramps. The pathophysiological mechanism seems due to result from an ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/18555873/"
-        },
-        {
-          "pmid": "22850564",
-          "title": "Peripheral (limb) myokymic discharges in motor neuron disease.",
-          "authors": "Rauf J, Akhtar J, Khealani BA, et al.",
-          "journal": "BMJ case reports",
-          "year": "2012",
-          "abstract_snippet": "We present the case of a 28-year-old gentleman who presented with weakness and wasting in the right arm. He complained about painful cramps in his left leg but there were no sensory, visual or swallowing problems. Neurological examination was significant for asymmetric weakness of both upper and low...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/22850564/"
-        },
-        {
-          "pmid": "40384575",
-          "title": "Quinine Sulfate for Muscle Cramps in Amyotrophic Lateral Sclerosis: A Randomized, Double-Blind Crossover Trial.",
-          "authors": "Vogt C, Weber M, Schneider U, et al.",
-          "journal": "Muscle & nerve",
-          "year": "2025",
-          "abstract_snippet": "INTRODUCTION/AIMS: Many patients with amyotrophic lateral sclerosis (ALS) experience muscle cramps during the course of the disease. This study aimed to evaluate the efficacy of orally administered quinine sulfate for muscle cramps in ALS patients. METHODS: We conducted a randomized, double-blind, p...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40384575/"
-        },
-        {
-          "pmid": "425866",
-          "title": "Amyotrophic lateral sclerosis: comprehensive management.",
-          "authors": "DeLisa JA, Mikulic MA, Miller RM, et al.",
-          "journal": "American family physician",
-          "year": "1979",
-          "abstract_snippet": "The cause of amyotrophic lateral sclerosis remains unknown, and no curative treatment is available. From a rehabilitation perspective, however, comprehensive management and symptomatic treatment can minimize complications, increase function and improve the patient's quality of life. Quinine, diazepa...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/425866/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [],
-      "most_cited_paper": {},
-      "max_citations": 0,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Quinine",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [],
-      "signature_interpretation": "Insufficient disease gene signature (0 up, 0 down genes)",
-      "ai_hypothesis": "",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 1.0,
-      "novelty_level": "BREAKTHROUGH",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "Supported by 5 independent AI pillars",
-        "High molecular similarity (1.00) to Quinidine"
-      ],
-      "novelty_interpretation": "No published evidence found for this drug-disease pair. Strong computational prediction suggests a potential new discovery. Requires experimental validation."
+        "5 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "32 PubMed articles found",
+        "Supported by 6 independent AI pillars",
+        "Supporting paper with 53 citations",
+        "AI analysis of 1 abstract(s) found positive treatment signals",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.95, 1 genetic targets)"
+      ]
     },
     {
       "drug_name": "Estradiol",
       "drug_id": "DB00783",
       "disease_name": "Amyotrophic lateral sclerosis",
-      "combined_score": 1.0133999586105347,
+      "combined_score": 1.152,
       "transe_rank": 34,
-      "pillars_hit": 4,
+      "pillars_hit": 7,
       "mol_similarity": 0,
       "similar_to": "",
       "direct_relations": [],
       "shared_target_count": 0,
       "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 60,
+      "pubmed_total": 116,
+      "pubmed_treatment_total": 59,
       "pubmed_repurposing_total": 0,
       "key_papers": [
         {
@@ -508,7 +300,7 @@
           "year": "2022",
           "abstract_snippet": "Amyotrophic lateral sclerosis (ALS) is a neurodegenerative disease that is characterized by the loss of upper and lower motor neurons (MNs) in the cerebral cortex, brainstem and spinal cord, with consequent weakness, atrophy and the progressive paralysis of all muscles. There is currently no medical...",
           "url": "https://pubmed.ncbi.nlm.nih.gov/36140184/",
-          "total_results": 117
+          "total_results": 116
         },
         {
           "pmid": "29241710",
@@ -548,273 +340,55 @@
         }
       ],
       "repurposing_papers": [],
-      "semantic_scholar_papers": [],
-      "most_cited_paper": {},
-      "max_citations": 0,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Estradiol",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [],
-      "signature_interpretation": "Insufficient disease gene signature (0 up, 0 down genes)",
-      "ai_hypothesis": "",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 1.0,
-      "novelty_level": "BREAKTHROUGH",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "Supported by 4 independent AI pillars"
-      ],
-      "novelty_interpretation": "No published evidence found for this drug-disease pair. Strong computational prediction suggests a potential new discovery. Requires experimental validation."
-    },
-    {
-      "drug_name": "Neamine",
-      "drug_id": "DB04808",
-      "disease_name": "Amyotrophic lateral sclerosis",
-      "combined_score": 1.0092999935150146,
-      "transe_rank": 1075,
-      "pillars_hit": 2,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 2,
-      "pubmed_treatment_total": 1,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "13401940",
-          "title": "[A new hydrocortisone ointment with neomycin as an antibiotic addition].",
-          "authors": "GOLLNICK N",
-          "journal": "Zeitschrift fur Haut- und Geschlechtskrankheiten",
-          "year": "1956",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/13401940/",
-          "total_results": 2
-        },
-        {
-          "pmid": "13397215",
-          "title": "[Neomycin as a bacteriostatic supplement to fungus culture media].",
-          "authors": "ADAM W, STEITZ K",
-          "journal": "Dermatologische Wochenschrift",
-          "year": "1956",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/13397215/"
-        }
-      ],
-      "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "Prospect of Angiogenin for Drug Development",
-          "year": 2015,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/7e08e844127b9ccd25381a0c306599f97f483880",
-          "authors": "Y. Leng"
-        },
-        {
-          "title": "Amyotrophic lateral sclerosis estimated prevalence cases from 2022 to 2030, data from the national ALS Registry",
+          "title": "Sex Hormones Associate With Amyotrophic Lateral Sclerosis Risk and Survival",
           "year": 2025,
-          "citations": 30,
-          "url": "https://www.semanticscholar.org/paper/3d84f09f770cb72552b688f1c449b473c6e46f40",
-          "authors": "P. Mehta, J. Raymond, Theresa Nair"
-        },
-        {
-          "title": "Amyotrophic lateral sclerosis.",
-          "year": 2012,
-          "citations": 6521,
-          "url": "https://www.semanticscholar.org/paper/593e5c0f33c6eb6a2c3600c4e1ffc79525fefe37",
-          "authors": "A. Ludolph, J. Brettschneider, Jochen H Weishaupt"
-        },
-        {
-          "title": "Ubiquitinated TDP-43 in Frontotemporal Lobar Degeneration and Amyotrophic Lateral Sclerosis",
-          "year": 2006,
-          "citations": 6233,
-          "url": "https://www.semanticscholar.org/paper/f0c6ade907d1549199e22221230c465ad5e0fa1a",
-          "authors": "M. Neumann, Deepak M. Sampathu, L. Kwong"
-        },
-        {
-          "title": "Mutations in Cu/Zn superoxide dismutase gene are associated with familial amyotrophic lateral sclerosis",
-          "year": 1993,
-          "citations": 7009,
-          "url": "https://www.semanticscholar.org/paper/77a39bcaaf07a146a2626887b568155153a6dfea",
-          "authors": "D. Rosen, T. Siddique, D. Patterson"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Mutations in Cu/Zn superoxide dismutase gene are associated with familial amyotrophic lateral sclerosis",
-        "year": 1993,
-        "citations": 7009,
-        "url": "https://www.semanticscholar.org/paper/77a39bcaaf07a146a2626887b568155153a6dfea",
-        "authors": "D. Rosen, T. Siddique, D. Patterson"
-      },
-      "max_citations": 7009,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Neamine",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "S1252 (1.513)",
-        "S1053 (1.497)",
-        "celastrol (1.487)",
-        "trichostatin A (1.471)",
-        "Camptothecin (1.467)"
-      ],
-      "signature_interpretation": "Neamine was not found among the top 35 drugs that reverse the Amyotrophic lateral sclerosis gene signature. Top reversers: S1252 (1.513), S1053 (1.497), celastrol (1.487)",
-      "ai_hypothesis": "",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.8,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "Supported by 2 independent AI pillars",
-        "Highly cited paper (7009 citations): \"Mutations in Cu/Zn superoxide dismutase gene are associated ...\""
-      ],
-      "novelty_interpretation": "Novel prediction with minimal existing evidence (2 articles). Computational support suggests this warrants investigation."
-    },
-    {
-      "drug_name": "Vanadium",
-      "drug_id": "DB13971",
-      "disease_name": "Amyotrophic lateral sclerosis",
-      "combined_score": 1.0085999965667725,
-      "transe_rank": 1092,
-      "pillars_hit": 2,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 16,
-      "pubmed_treatment_total": 4,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "34635126",
-          "title": "Bisperoxovanadium promotes motor neuron survival and neuromuscular innervation in amyotrophic lateral sclerosis.",
-          "authors": "Wang J, Tierney L, Mann R, et al.",
-          "journal": "Molecular brain",
-          "year": "2021",
-          "abstract_snippet": "Amyotrophic lateral sclerosis (ALS) is the most common motor neuron (MN) disease, with no present cure. The progressive loss of MNs is the hallmark of ALS. We have previously shown the therapeutic effects of the phosphatase and tensin homolog (PTEN) inhibitor, potassium bisperoxo (picolinato) vanadi...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34635126/",
-          "total_results": 8
-        },
-        {
-          "pmid": "32615355",
-          "title": "CSF neurotoxic metals/metalloids levels in amyotrophic lateral sclerosis patients: comparison between bulbar and spinal onset.",
-          "authors": "Patti F, Fiore M, Chisari CG, et al.",
-          "journal": "Environmental research",
-          "year": "2020",
-          "abstract_snippet": "INTRODUCTION: Amyotrophic lateral sclerosis (ALS) is a neurodegenerative disorder of the central nervous system (CNS) that causes progressive and irreversible damage in motor neurons. Different causal hypotheses include genetic, viral, traumatic and environmental mechanisms, such as exposure to heav...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/32615355/"
-        },
-        {
-          "pmid": "23225075",
-          "title": "Metal concentrations in cerebrospinal fluid and blood plasma from patients with amyotrophic lateral sclerosis.",
-          "authors": "Roos PM, Vesterberg O, Syversen T, et al.",
-          "journal": "Biological trace element research",
-          "year": "2013",
-          "abstract_snippet": "Amyotrophic lateral sclerosis (ALS) is a progressive and fatal degenerative disorder of motor neurons. The cause of this degeneration is unknown, and different causal hypotheses include genetic, viral, traumatic and environmental mechanisms. In this study, we have analyzed metal concentrations in ce...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/23225075/"
-        },
-        {
-          "pmid": "20438306",
-          "title": "Vanadium, aluminum, magnesium and manganese are not elevated in hair samples in amyotrophic lateral sclerosis.",
-          "authors": "Royce-Nagel G, Cudkowicz M, Myers D, et al.",
-          "journal": "Amyotrophic lateral sclerosis : official publication of the World Federation of Neurology Research Group on Motor Neuron Diseases",
-          "year": "2010",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/20438306/"
-        },
-        {
-          "pmid": "40559965",
-          "title": "Metal-Induced Genotoxic Events: Possible Distinction Between Sporadic and Familial ALS.",
-          "authors": "Kim WW, Zarus G, Alman B, et al.",
-          "journal": "Toxics",
-          "year": "2025",
-          "abstract_snippet": "Metal exposure is a potential risk factor for amyotrophic lateral sclerosis (ALS). Increasing evidence suggests that elevated levels of DNA damage are present in both familial (fALS) and sporadic (sALS) forms of ALS, characterized by the selective loss of motor neurons in the brain, brainstem, and s...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40559965/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Bisperoxovanadium promotes motor neuron survival and neuromuscular innervation in amyotrophic lateral sclerosis",
-          "year": 2021,
-          "citations": 8,
-          "url": "https://www.semanticscholar.org/paper/deee80996a7ce1b2570f36035c4b73601a2a9763",
-          "authors": "Junmei Wang, Lydia Tierney, Ranjeet Mann"
-        },
-        {
-          "title": "CSF neurotoxic metals/metalloids levels in amyotrophic lateral sclerosis patients: comparison between bulbar and spinal onset.",
-          "year": 2020,
-          "citations": 30,
-          "url": "https://www.semanticscholar.org/paper/f73a59389d74ba26aabccdaa78d69edb5d42e18f",
-          "authors": "F. Patti, M. Fiore, C. Chisari"
-        },
-        {
-          "title": "Bisperoxovanadium promotes motor neuron survival and neuromuscular innervation in amyotrophic lateral sclerosis",
-          "year": 2021,
           "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/104320d75f5980b509a045cbd8894d96a851427c",
-          "authors": "Junmei Wang, Lydia Tierney, Ranjeet Mann"
+          "url": "https://www.semanticscholar.org/paper/d76c12d758477f0c5f42bedf1b7c87a441dd7d6f",
+          "authors": "Stephen A. Goutman, David G Stouffer, Dae-Gyu Jang"
         },
         {
-          "title": "Vanadium, aluminum, magnesium and manganese are not elevated in hair samples in amyotrophic lateral sclerosis",
-          "year": 2010,
+          "title": "Genetic effects of circulating hormone and proteome on amyotrophic lateral sclerosis identified by Mendelian randomization",
+          "year": 2025,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/be0adf01cc13d809e6f4ae020e2477189d77d07b",
+          "authors": "Xinyue Fan, Yi Zeng, Feifei Zhang"
+        },
+        {
+          "title": "Key Disease Mechanisms Linked to Amyotrophic Lateral Sclerosis in Spinal Cord Motor Neurons",
+          "year": 2022,
+          "citations": 15,
+          "url": "https://www.semanticscholar.org/paper/e3fba8e4116bb64a1f41c355b9c633bf5fdb2bb9",
+          "authors": "V. Bottero, Jose A. Santiago, J. P. Quinn"
+        },
+        {
+          "title": "Estrogen Enhances Dendrite Spine Function and Recovers Deficits in Neuroplasticity in the prpTDP-43A315T Mouse Model of Amyotrophic Lateral Sclerosis",
+          "year": 2022,
+          "citations": 10,
+          "url": "https://www.semanticscholar.org/paper/21d210b3c17878cfab250fae6cc2ac324961b8de",
+          "authors": "E. Handley, L. Reale, J. Chuckowree"
+        },
+        {
+          "title": "Is Dutasteride a Therapeutic Alternative for Amyotrophic Lateral Sclerosis?",
+          "year": 2022,
           "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/f0e60d6a8bf9f433870fdcb47326e45a05bffc6c",
-          "authors": "Galen Royce-Nagel, M. Cudkowicz, D. Myers"
-        },
-        {
-          "title": "Metal Concentrations in Cerebrospinal Fluid and Blood Plasma from Patients with Amyotrophic Lateral Sclerosis",
-          "year": 2012,
-          "citations": 163,
-          "url": "https://www.semanticscholar.org/paper/dcced481076842fedc7a65c03e0c41b4b5a1925a",
-          "authors": "P. Roos, O. Vesterberg, T. Syversen"
+          "url": "https://www.semanticscholar.org/paper/b4d8a99e6f6bc7d7522e78cd918b20018ef23f0c",
+          "authors": "Bel\u00e9n Proa\u00f1o, Julia Casani-Cubel, M. Benlloch"
         }
       ],
       "most_cited_paper": {
-        "title": "Metal Concentrations in Cerebrospinal Fluid and Blood Plasma from Patients with Amyotrophic Lateral Sclerosis",
-        "year": 2012,
-        "citations": 163,
-        "url": "https://www.semanticscholar.org/paper/dcced481076842fedc7a65c03e0c41b4b5a1925a",
-        "authors": "P. Roos, O. Vesterberg, T. Syversen"
+        "title": "Repurpose terbutaline sulfate for amyotrophic lateral sclerosis using electronic medical records",
+        "year": 2015,
+        "citations": 53,
+        "url": "https://www.semanticscholar.org/paper/07ad901d5efef7412a71bc775a493874e465feed",
+        "authors": "H. Paik, Ah\u2010Young Chung, Hae-Chul Park"
       },
-      "max_citations": 163,
-      "faers_signal": "none",
-      "faers_total_reports": 46,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Vanadium to Amyotrophic lateral sclerosis terms. Drug has 46 total reports.",
+      "max_citations": 53,
+      "faers_signal": "weak",
+      "faers_total_reports": 75392,
+      "faers_cooccurrences": 2,
+      "faers_interpretation": "2 FAERS report(s) mention both Estradiol and Amyotrophic lateral sclerosis-related terms. Minimal real-world signal.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -824,8 +398,8 @@
         "trichostatin A (1.471)",
         "Camptothecin (1.467)"
       ],
-      "signature_interpretation": "Vanadium was not found among the top 35 drugs that reverse the Amyotrophic lateral sclerosis gene signature. Top reversers: S1252 (1.513), S1053 (1.497), celastrol (1.487)",
-      "ai_hypothesis": "",
+      "signature_interpretation": "Estradiol was not found among the top 35 drugs that reverse the Amyotrophic lateral sclerosis gene signature. Top reversers: S1252 (1.513), S1053 (1.497), celastrol (1.487)",
+      "ai_hypothesis": "of its neuroprotective effects.",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
@@ -847,72 +421,328 @@
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
+      "mr_score": 0.7259,
+      "mr_genetic_targets": 9,
       "mechanistic_hypothesis": "",
       "kg_paths_text": "",
       "validation_experiments": [],
-      "novelty_score": 0.75,
-      "novelty_level": "NOVEL",
+      "novelty_score": 0.84,
+      "novelty_level": "KNOWN",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
       "clinical_trials": [],
       "trial_phases": {},
-      "confidence": "LOW",
+      "confidence": "HIGH",
       "confidence_reasons": [
-        "8 PubMed article(s) - limited literature",
-        "Supported by 2 independent AI pillars",
-        "Highly cited paper (163 citations): \"Metal Concentrations in Cerebrospinal Fluid and Blood Plasma...\""
-      ],
-      "novelty_interpretation": "Novel prediction with minimal existing evidence (16 articles). Computational support suggests this warrants investigation."
+        "116 PubMed articles on this drug-disease pair",
+        "Supported by 7 independent AI pillars",
+        "Supporting paper with 53 citations",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.73, 9 genetic targets)"
+      ]
     },
     {
-      "drug_name": "Aztreonam",
-      "drug_id": "DB00355",
+      "drug_name": "Oxidized Glutathione Disulfide",
+      "drug_id": "DB03310",
       "disease_name": "Amyotrophic lateral sclerosis",
-      "combined_score": 1.0073000192642212,
-      "transe_rank": 1128,
-      "pillars_hit": 2,
+      "combined_score": 1.1378999948501587,
+      "transe_rank": 71,
+      "pillars_hit": 6,
+      "mol_similarity": 0.7317,
+      "similar_to": "Glutathione",
+      "direct_relations": [],
+      "shared_target_count": 0,
+      "shared_targets": [],
+      "pubmed_total": 0,
+      "pubmed_treatment_total": 0,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "ALSUntangled No. 52: Glutathione",
+          "year": 2019,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/25f3d930a239f63abcf3e183f60d3d9f8b85ff8b",
+          "authors": ""
+        },
+        {
+          "title": "Expression of amyotrophic lateral sclerosis associated protein disulfide isomerase A3 D217N variant recapitulates early morphological alterations at the neuromuscular junction.",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/c861af3e996f7786b3334ec24ab081a1e0b958fe",
+          "authors": "Martin Sepulveda, Francisca MartinezTraub, Patricia Ojeda"
+        },
+        {
+          "title": "Glutathione oxidation in cerebrospinal fluid as a biomarker of oxidative stress in amyotrophic lateral sclerosis",
+          "year": 2024,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/e613cb044473d938e8c633d811d67ff6bb17ba2a",
+          "authors": "Trong Khoa Pham, Nick Verber, Martin R. Turner"
+        },
+        {
+          "title": "Protein disulfide isomerases in amyotrophic lateral sclerosis: Endoplasmic reticulum proteostasis and neuromuscular function.",
+          "year": 2026,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/9f900b1b3c5e35281ae0d64312d5b6fd218732f3",
+          "authors": "Guillermo Diaz, Claudio Hetz"
+        },
+        {
+          "title": "Defects in Glutathione System in an Animal Model of Amyotrophic Lateral Sclerosis",
+          "year": 2023,
+          "citations": 8,
+          "url": "https://www.semanticscholar.org/paper/dc6ed2f394451284d28686e1fb636a29265d7513",
+          "authors": "Franziska T. Wunsch, N. Metzler\u2010Nolte, C. Theiss"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Defects in Glutathione System in an Animal Model of Amyotrophic Lateral Sclerosis",
+        "year": 2023,
+        "citations": 8,
+        "url": "https://www.semanticscholar.org/paper/dc6ed2f394451284d28686e1fb636a29265d7513",
+        "authors": "Franziska T. Wunsch, N. Metzler\u2010Nolte, C. Theiss"
+      },
+      "max_citations": 8,
+      "faers_signal": "none",
+      "faers_total_reports": 0,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found for Oxidized Glutathione Disulfide",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "S1252 (1.513)",
+        "S1053 (1.497)",
+        "celastrol (1.487)",
+        "trichostatin A (1.471)",
+        "Camptothecin (1.467)"
+      ],
+      "signature_interpretation": "Oxidized Glutathione Disulfide was not found among the top 35 drugs that reverse the Amyotrophic lateral sclerosis gene signature. Top reversers: S1252 (1.513), S1053 (1.497), celastrol (1.487)",
+      "ai_hypothesis": "it is a potent antioxidant and has been shown to protect against oxidative stress-induced cell death.",
+      "abstract_analyses": [],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.9451,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "",
+      "kg_paths_text": "",
+      "validation_experiments": [],
+      "novelty_score": 1.0,
+      "novelty_level": "BREAKTHROUGH",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "MEDIUM",
+      "confidence_reasons": [
+        "Supported by 6 independent AI pillars",
+        "High molecular similarity (0.73) to Glutathione",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.95, 1 genetic targets)"
+      ]
+    },
+    {
+      "drug_name": "Dexamethasone",
+      "drug_id": "DB01234",
+      "disease_name": "Amyotrophic lateral sclerosis",
+      "combined_score": 1.1216,
+      "transe_rank": 28,
+      "pillars_hit": 7,
       "mol_similarity": 0,
       "similar_to": "",
       "direct_relations": [],
       "shared_target_count": 0,
       "shared_targets": [],
-      "pubmed_total": 1,
-      "pubmed_treatment_total": 0,
+      "pubmed_total": 68,
+      "pubmed_treatment_total": 55,
       "pubmed_repurposing_total": 0,
       "key_papers": [
         {
-          "pmid": "22252801",
-          "title": "NagZ-dependent and NagZ-independent mechanisms for \u03b2-lactamase expression in Stenotrophomonas maltophilia.",
-          "authors": "Huang YW, Hu RM, Lin CW, et al.",
-          "journal": "Antimicrobial agents and chemotherapy",
-          "year": "2012",
-          "abstract_snippet": "\u03b2-N-Acetylglucosaminidase (NagZ), encoded by the nagZ gene, is a critical enzyme for basal-level ampC derepression (ampC expression in the absence of \u03b2-lactam challenge) in ampD and dacB mutants of Pseudomonas aeruginosa. Three mutants with a phenotype of basal-level L1 and L2 \u03b2-lactamase derepressi...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/22252801/",
-          "total_results": 1
+          "pmid": "37819954",
+          "title": "Adjunctive Dexamethasone for Tuberculous Meningitis in HIV-Positive Adults.",
+          "authors": "Donovan J, Bang ND, Imran D, et al.",
+          "journal": "The New England journal of medicine",
+          "year": "2023",
+          "abstract_snippet": "BACKGROUND: Adjunctive glucocorticoids are widely used to treat human immunodeficiency virus (HIV)-associated tuberculous meningitis despite limited data supporting their safety and efficacy. METHODS: We conducted a double-blind, randomized, placebo-controlled trial involving HIV-positive adults (\u22651...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37819954/",
+          "total_results": 68
+        },
+        {
+          "pmid": "28641540",
+          "title": "Metallothionein is a Potential Therapeutic Strategy for Amyotrophic Lateral Sclerosis.",
+          "authors": "Ono SI",
+          "journal": "Current pharmaceutical design",
+          "year": "2017",
+          "abstract_snippet": "Lou Gehrig's disease, a synonym of amyotrophic lateral sclerosis, is an adult-onset lethal neurodegenerative disorder. Irrespective of extensive efforts to elucidate the pathogenesis of the disease and searches for therapies, no favorable pharmacotherapeutic strategies have yet to be proposed. In a ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28641540/"
+        },
+        {
+          "pmid": "40295049",
+          "title": "Advantages and Disadvantages of Drug Combination Treatment: Riluzole, Metformin and Dexamethasone Effect on Glioblastoma Cell.",
+          "authors": "Keul J, Sperling S, Rohde V, et al.",
+          "journal": "Anticancer research",
+          "year": "2025",
+          "abstract_snippet": "BACKGROUND/AIM: In glioblastoma multiforme (GBM), a deadly brain tumor, glucose is one of the main fuels for accelerated growth. Patients with GBM are also exposed to excess glucose through hyperglycemia in diabetes mellitus. In addition, dexamethasone (Dex), a corticosteroid commonly administered f...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40295049/"
+        },
+        {
+          "pmid": "30791479",
+          "title": "Switching on Endogenous Metal Binding Proteins in Parkinson's Disease.",
+          "authors": "McLeary FA, Rcom-H'cheo-Gauthier AN, Goulding M, et al.",
+          "journal": "Cells",
+          "year": "2019",
+          "abstract_snippet": "The formation of cytotoxic intracellular protein aggregates is a pathological signature of multiple neurodegenerative diseases. The principle aggregating protein in Parkinson's disease (PD) and atypical Parkinson's diseases is \u03b1-synuclein (\u03b1-syn), which occurs in neural cytoplasmic inclusions. Sever...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30791479/"
+        },
+        {
+          "pmid": "36552768",
+          "title": "Development of a Nanoparticle-Based Approach for the Blood-Brain Barrier Passage in a Murine Model of Amyotrophic Lateral Sclerosis.",
+          "authors": "Violatto MB, Pasetto L, Casarin E, et al.",
+          "journal": "Cells",
+          "year": "2022",
+          "abstract_snippet": "The development of nanoparticles (NPs) to enable the passage of drugs across blood-brain barrier (BBB) represents one of the main challenges in neuropharmacology. In recent years, NPs that are able to transport drugs and interact with brain endothelial cells have been tested. Here, we investigated w...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36552768/"
         }
       ],
       "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "Amyotrophic lateral sclerosis estimated prevalence cases from 2022 to 2030, data from the national ALS Registry",
-          "year": 2025,
-          "citations": 30,
-          "url": "https://www.semanticscholar.org/paper/3d84f09f770cb72552b688f1c449b473c6e46f40",
-          "authors": "P. Mehta, J. Raymond, Theresa Nair"
+          "title": "Development of a Nanoparticle-Based Approach for the Blood\u2013Brain Barrier Passage in a Murine Model of Amyotrophic Lateral Sclerosis",
+          "year": 2022,
+          "citations": 8,
+          "url": "https://www.semanticscholar.org/paper/07c6aed0cc7a291528a643e6c0d83d682712bf33",
+          "authors": "M. Violatto, L. Pasetto, Elisabetta Casarin"
         },
+        {
+          "title": "Bilateral thoracic paravertebral nerve blocks for placement of percutaneous radiologic gastrostomy in patients with amyotrophic lateral sclerosis: a case series.",
+          "year": 2016,
+          "citations": 10,
+          "url": "https://www.semanticscholar.org/paper/da16073f04b5bd5ef97bde74f1767d2ffe5eaf49",
+          "authors": "A. Kalava, S. Clendenen, J. McKinney"
+        },
+        {
+          "title": "Regulation of Intracellular Copper by Induction of Endogenous Metallothioneins Improves the Disease Course in a Mouse Model of Amyotrophic Lateral Sclerosis",
+          "year": 2015,
+          "citations": 26,
+          "url": "https://www.semanticscholar.org/paper/4047ffa469c2cee164a372dc8117878434c7ee4e",
+          "authors": "Eiichi Tokuda, Shunsuke Watanabe, Eriko Okawa"
+        },
+        {
+          "title": "Regulation of Intracellular Copper by Induction of Endogenous Metallothioneins Improves the Disease Course in a Mouse Model of Amyotrophic Lateral Sclerosis",
+          "year": 2015,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/6df9b56fc41c947a0a8310414c0824b1e7f1dccc",
+          "authors": "Eiichi Tokuda, Shunsuke Watanabe, Eriko Okawa"
+        },
+        {
+          "title": "Preliminary Study of 1H-MRS in Diagnosis and Treatment with Rilutek in Amyotrophic Lateral Sclerosis Patients",
+          "year": 2003,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/a8085c4fc4cbaf1eeaac44600631f8b501f119fd",
+          "authors": "F. Han"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Repurpose terbutaline sulfate for amyotrophic lateral sclerosis using electronic medical records",
+        "year": 2015,
+        "citations": 53,
+        "url": "https://www.semanticscholar.org/paper/07ad901d5efef7412a71bc775a493874e465feed",
+        "authors": "H. Paik, Ah\u2010Young Chung, Hae-Chul Park"
+      },
+      "max_citations": 53,
+      "faers_signal": "none",
+      "faers_total_reports": 312747,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Dexamethasone to Amyotrophic lateral sclerosis terms. Drug has 312747 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "S1252 (1.513)",
+        "S1053 (1.497)",
+        "celastrol (1.487)",
+        "trichostatin A (1.471)",
+        "Camptothecin (1.467)"
+      ],
+      "signature_interpretation": "Dexamethasone was not found among the top 35 drugs that reverse the Amyotrophic lateral sclerosis gene signature. Top reversers: S1252 (1.513), S1053 (1.497), celastrol (1.487)",
+      "ai_hypothesis": "of its anti-inflammatory and anti-apoptotic properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.6991,
+      "mr_genetic_targets": 12,
+      "mechanistic_hypothesis": "",
+      "kg_paths_text": "",
+      "validation_experiments": [],
+      "novelty_score": 1.0,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "MEDIUM",
+      "confidence_reasons": [
+        "68 PubMed articles on this drug-disease pair",
+        "Supported by 7 independent AI pillars",
+        "Supporting paper with 53 citations",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.70)"
+      ]
+    },
+    {
+      "drug_name": "Nadide",
+      "drug_id": "DB14128",
+      "disease_name": "Amyotrophic lateral sclerosis",
+      "combined_score": 1.1208,
+      "transe_rank": 54,
+      "pillars_hit": 4,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "direct_relations": [],
+      "shared_target_count": 0,
+      "shared_targets": [],
+      "pubmed_total": 0,
+      "pubmed_treatment_total": 0,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
         {
           "title": "Amyotrophic lateral sclerosis.",
           "year": 2012,
-          "citations": 6521,
+          "citations": 6524,
           "url": "https://www.semanticscholar.org/paper/593e5c0f33c6eb6a2c3600c4e1ffc79525fefe37",
           "authors": "A. Ludolph, J. Brettschneider, Jochen H Weishaupt"
         },
         {
+          "title": "Amyotrophic lateral sclerosis estimated prevalence cases from 2022 to 2030, data from the national ALS Registry",
+          "year": 2025,
+          "citations": 31,
+          "url": "https://www.semanticscholar.org/paper/3d84f09f770cb72552b688f1c449b473c6e46f40",
+          "authors": "P. Mehta, J. Raymond, Theresa Nair"
+        },
+        {
           "title": "Ubiquitinated TDP-43 in Frontotemporal Lobar Degeneration and Amyotrophic Lateral Sclerosis",
           "year": 2006,
-          "citations": 6233,
+          "citations": 6237,
           "url": "https://www.semanticscholar.org/paper/f0c6ade907d1549199e22221230c465ad5e0fa1a",
           "authors": "M. Neumann, Deepak M. Sampathu, L. Kwong"
         },
@@ -926,7 +756,7 @@
         {
           "title": "Amyotrophic lateral sclerosis",
           "year": 2022,
-          "citations": 912,
+          "citations": 913,
           "url": "https://www.semanticscholar.org/paper/f19ad80501fe82304b746ea1bf59d9bc89a7cacb",
           "authors": "E. Feldman, Stephen A. Goutman, S. Petri"
         }
@@ -940,9 +770,9 @@
       },
       "max_citations": 7009,
       "faers_signal": "none",
-      "faers_total_reports": 14036,
+      "faers_total_reports": 19,
       "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Aztreonam to Amyotrophic lateral sclerosis terms. Drug has 14036 total reports.",
+      "faers_interpretation": "No FAERS reports found linking Nadide to Amyotrophic lateral sclerosis terms. Drug has 19 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -952,92 +782,878 @@
         "trichostatin A (1.471)",
         "Camptothecin (1.467)"
       ],
-      "signature_interpretation": "Aztreonam was not found among the top 35 drugs that reverse the Amyotrophic lateral sclerosis gene signature. Top reversers: S1252 (1.513), S1053 (1.497), celastrol (1.487)",
-      "ai_hypothesis": "",
+      "signature_interpretation": "Nadide was not found among the top 35 drugs that reverse the Amyotrophic lateral sclerosis gene signature. Top reversers: S1252 (1.513), S1053 (1.497), celastrol (1.487)",
+      "ai_hypothesis": "it improves the quality of life of patients and their caregivers.",
       "abstract_analyses": [],
+      "has_failed_trial": true,
+      "failed_trial_phase": "Phase 2",
+      "failed_trial_count": 1,
+      "failed_trial_penalty": 0.8999999999999999,
+      "mr_score": 0.8103,
+      "mr_genetic_targets": 2,
+      "mechanistic_hypothesis": "",
+      "kg_paths_text": "",
+      "validation_experiments": [],
+      "novelty_score": 0.84,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": false,
+      "clinical_trials_total": 2,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT03843710",
+          "title": "31P-MRS Imaging to Assess the Effects of CNM-Au8 on Impaired Neuronal Redox State in Amyotrophic Lateral Sclerosis (REPAIR-ALS)",
+          "status": "WITHDRAWN",
+          "phase": "PHASE2",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT03843710"
+        },
+        {
+          "nct_id": "NCT00877604",
+          "title": "Efficacy and Tolerability of Tauroursodeoxycholic Acid in Amyotrophic Lateral Sclerosis",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "34",
+          "url": "https://clinicaltrials.gov/study/NCT00877604"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 2
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "2 clinical trial(s) found on ClinicalTrials.gov",
+        "Supported by 4 independent AI pillars",
+        "Note: Drug had early-phase trial failures for this disease",
+        "Highly cited paper (7009 citations): \"Mutations in Cu/Zn superoxide dismutase gene are associated ...\"",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.81, 2 genetic targets)"
+      ]
+    },
+    {
+      "drug_name": "Cadmium",
+      "drug_id": "DB14085",
+      "disease_name": "Amyotrophic lateral sclerosis",
+      "combined_score": 1.1101000308990479,
+      "transe_rank": 88,
+      "pillars_hit": 4,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "direct_relations": [],
+      "shared_target_count": 0,
+      "shared_targets": [],
+      "pubmed_total": 104,
+      "pubmed_treatment_total": 25,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "25220531",
+          "title": "Osteoporosis in neurodegeneration.",
+          "authors": "Roos PM",
+          "journal": "Journal of trace elements in medicine and biology : organ of the Society for Minerals and Trace Elements (GMS)",
+          "year": "2014",
+          "abstract_snippet": "Osteoporosis affects bone microarchitecture and reduces bone mass. There are more than 200 million people with osteoporosis worldwide, and the prevalence is slowly increasing. The highest prevalences are found in Scandinavia and USA, also slowly increasing. A parallel increase in neurodegenerative d...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25220531/",
+          "total_results": 104
+        },
+        {
+          "pmid": "32282307",
+          "title": "Denouement of Chemicals on Amyotrophic Lateral Sclerosis: Is Green Chemistry the Answer.",
+          "authors": "Fayaz F, Pottoo FH, Shafi S, et al.",
+          "journal": "Medicinal chemistry (Shariqah (United Arab Emirates))",
+          "year": "2020",
+          "abstract_snippet": "Medicinal Chemistry has played a critical role in evolving new products, resources and processes which inexorably correspond to our high standards of living. Unfortunately, this has also caused deterioration of human health and threats to the global environment, even deaths when highly exposed to ce...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32282307/"
+        },
+        {
+          "pmid": "37474053",
+          "title": "Urban vegetable contamination - The role of adhering particles and their significance for human exposure.",
+          "authors": "Augustsson A, Lundgren M, Qvarforth A, et al.",
+          "journal": "The Science of the total environment",
+          "year": "2023",
+          "abstract_snippet": "While urban-grown vegetables could help combat future food insecurity, the elevated levels of toxic metals in urban soils need to be met with measures that minimise transfer to crops. This study firstly examines soil/dust particle inclusion in leafy vegetables and its contribution to vegetable metal...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37474053/"
+        },
+        {
+          "pmid": "33412145",
+          "title": "Astrocytes in heavy metal neurotoxicity and neurodegeneration.",
+          "authors": "Li B, Xia M, Zorec R, et al.",
+          "journal": "Brain research",
+          "year": "2021",
+          "abstract_snippet": "With the industrial development and progressive increase in environmental pollution, the mankind overexposure to heavy metals emerges as a pressing public health issue. Excessive intake of heavy metals, such as arsenic (As), manganese (Mn), mercury (Hg), aluminium (Al), lead (Pb), nickel (Ni), bismu...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33412145/"
+        },
+        {
+          "pmid": "39187026",
+          "title": "Cadmium neurotoxicity: Insights into behavioral effect and neurodegenerative diseases.",
+          "authors": "Rezaei K, Mastali G, Abbasgholinejad E, et al.",
+          "journal": "Chemosphere",
+          "year": "2024",
+          "abstract_snippet": "Cadmium (Cd) induced neurotoxicity has become a growing concern due to its potential adverse effects on the Central Nervous System. Cd is a Heavy Metal (HM) that is released into the environment, through several industrial processes. It poses a risk to the health of the community by polluting air, w...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39187026/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "An overview on amyotrophic lateral sclerosis and cadmium",
+          "year": 2020,
+          "citations": 35,
+          "url": "https://www.semanticscholar.org/paper/6b3b4ac92493cc18d70400780f3f4bfac59eae32",
+          "authors": "R. Oggiano, Andrea Pisano, Angela Sabalic"
+        },
+        {
+          "title": "Iron and Ferritin Dyshomeostasis Intersect with Sex, Age, and Disease Severity in Amyotrophic Lateral Sclerosis",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/8c4cfd946afb5ce4200ba7362c47610e7eecdf18",
+          "authors": "Xiaoge Xie, Peng Wu, Ting Wen"
+        },
+        {
+          "title": "Lead, cadmium and mercury in cerebrospinal fluid and risk of amyotrophic lateral sclerosis: A case-control study.",
+          "year": 2017,
+          "citations": 61,
+          "url": "https://www.semanticscholar.org/paper/7e645e4c5a7cf4d30db14024db9bf93dbca1fb10",
+          "authors": "M. Vinceti, T. Filippini, J. Mandrioli"
+        },
+        {
+          "title": "Amyotrophic Lateral Sclerosis and Air Pollutants in the Province of Ferrara, Northern Italy: An Ecological Study",
+          "year": 2023,
+          "citations": 11,
+          "url": "https://www.semanticscholar.org/paper/b57a0086839688a79bfdcb36e3eddb80ab6a9e84",
+          "authors": "Annibale Antonioni, V. Govoni, L. Brancaleoni"
+        },
+        {
+          "title": "Heavy Metal Pollution in Ganga basin: A Risk Factor for Amyotrophic Lateral sclerosis",
+          "year": 2023,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/a5dc9489912515a185a9011d24d0e7b72b2b9366",
+          "authors": "Bhargawi Mishra"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Lead, cadmium and mercury in cerebrospinal fluid and risk of amyotrophic lateral sclerosis: A case-control study.",
+        "year": 2017,
+        "citations": 61,
+        "url": "https://www.semanticscholar.org/paper/7e645e4c5a7cf4d30db14024db9bf93dbca1fb10",
+        "authors": "M. Vinceti, T. Filippini, J. Mandrioli"
+      },
+      "max_citations": 61,
+      "faers_signal": "none",
+      "faers_total_reports": 5,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Cadmium to Amyotrophic lateral sclerosis terms. Drug has 5 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "S1252 (1.513)",
+        "S1053 (1.497)",
+        "celastrol (1.487)",
+        "trichostatin A (1.471)",
+        "Camptothecin (1.467)"
+      ],
+      "signature_interpretation": "Cadmium was not found among the top 35 drugs that reverse the Amyotrophic lateral sclerosis gene signature. Top reversers: S1252 (1.513), S1053 (1.497), celastrol (1.487)",
+      "ai_hypothesis": "of its ability to induce oxidative stress and mitochondrial dysfunction.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
       "has_failed_trial": false,
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
+      "mr_score": 0.9451,
+      "mr_genetic_targets": 1,
       "mechanistic_hypothesis": "",
       "kg_paths_text": "",
       "validation_experiments": [],
-      "novelty_score": 0.8,
-      "novelty_level": "NOVEL",
+      "novelty_score": 0.84,
+      "novelty_level": "KNOWN",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
       "clinical_trials": [],
       "trial_phases": {},
-      "confidence": "LOW",
+      "confidence": "HIGH",
       "confidence_reasons": [
-        "Supported by 2 independent AI pillars",
-        "Highly cited paper (7009 citations): \"Mutations in Cu/Zn superoxide dismutase gene are associated ...\""
-      ],
-      "novelty_interpretation": "Novel prediction with minimal existing evidence (1 articles). Computational support suggests this warrants investigation."
+        "104 PubMed articles on this drug-disease pair",
+        "Supported by 4 independent AI pillars",
+        "Supporting paper with 61 citations",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.95, 1 genetic targets)"
+      ]
     },
     {
-      "drug_name": "Everolimus",
-      "drug_id": "DB01590",
+      "drug_name": "Ethanol",
+      "drug_id": "DB00898",
       "disease_name": "Amyotrophic lateral sclerosis",
-      "combined_score": 1.0037000179290771,
-      "transe_rank": 447,
-      "pillars_hit": 4,
-      "mol_similarity": 0.8727,
-      "similar_to": "Sirolimus",
+      "combined_score": 1.1077,
+      "transe_rank": 27,
+      "pillars_hit": 6,
+      "mol_similarity": 0,
+      "similar_to": "",
       "direct_relations": [],
       "shared_target_count": 0,
       "shared_targets": [],
-      "pubmed_total": 8,
-      "pubmed_treatment_total": 8,
+      "pubmed_total": 193,
+      "pubmed_treatment_total": 68,
       "pubmed_repurposing_total": 0,
       "key_papers": [
         {
-          "pmid": "38110026",
-          "title": "Association of Plasma Creatinine Phosphokinase Elevation and a History of Idiopathic Cardiomyopathy in Recipients of Heart Transplant.",
-          "authors": "Ambrosi P, Riberi A, Attarian S, et al.",
-          "journal": "The American journal of cardiology",
+          "pmid": "25484085",
+          "title": "Autophagy and ethanol neurotoxicity.",
+          "authors": "Luo J",
+          "journal": "Autophagy",
+          "year": "2014",
+          "abstract_snippet": "Excessive ethanol exposure is detrimental to the brain. The developing brain is particularly vulnerable to ethanol such that prenatal ethanol exposure causes fetal alcohol spectrum disorders (FASD). Neuronal loss in the brain is the most devastating consequence and is associated with mental retardat...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25484085/",
+          "total_results": 193
+        },
+        {
+          "pmid": "26473940",
+          "title": "Endoplasmic Reticulum Stress and Ethanol Neurotoxicity.",
+          "authors": "Yang F, Luo J",
+          "journal": "Biomolecules",
+          "year": "2015",
+          "abstract_snippet": "Ethanol abuse affects virtually all organ systems and the central nervous system (CNS) is particularly vulnerable to excessive ethanol exposure. Ethanol exposure causes profound damages to both the adult and developing brain. Prenatal ethanol exposure induces fetal alcohol spectrum disorders (FASD) ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26473940/"
+        },
+        {
+          "pmid": "17131224",
+          "title": "Dropped head in Parkinson's disease.",
+          "authors": "Fujimoto K",
+          "journal": "Journal of neurology",
+          "year": "2006",
+          "abstract_snippet": "\"A propensity to bend the trunk forward\" and \"the chin is now almost immovably bent down upon the sternum\" were described by James Parkinson in patients with Parkinson's disease (PD). The term \"dropped head\" was first reported in \"Gerlier disease\" in Switzerland and 'kubisagari' in Japan and since t...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17131224/"
+        },
+        {
+          "pmid": "11369436",
+          "title": "Glutamate uptake.",
+          "authors": "Danbolt NC",
+          "journal": "Progress in neurobiology",
+          "year": "2001",
+          "abstract_snippet": "Brain tissue has a remarkable ability to accumulate glutamate. This ability is due to glutamate transporter proteins present in the plasma membranes of both glial cells and neurons. The transporter proteins represent the only (significant) mechanism for removal of glutamate from the extracellular fl...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11369436/"
+        },
+        {
+          "pmid": "24491644",
+          "title": "Cyto-/genotoxic effects of the ethanol extract of Chan Su, a traditional Chinese medicine, in human cancer cell lines.",
+          "authors": "Lee S, Lee Y, Choi YJ, et al.",
+          "journal": "Journal of ethnopharmacology",
+          "year": "2014",
+          "abstract_snippet": "ETHNOPHARMACOLOGICAL RELEVANCE: Chan Su, an ethanolic extract from skin and parotid venom glands of the Bufo bufo gargarizans Cantor, is widely used as a traditional Chinese medicine for cancer therapy. Although the anti-cancer properties of Chan Su have been investigated, no information exists rega...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24491644/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Role of Alcohol Drinking in Alzheimer\u2019s Disease, Parkinson\u2019s Disease, and Amyotrophic Lateral Sclerosis",
+          "year": 2020,
+          "citations": 142,
+          "url": "https://www.semanticscholar.org/paper/5b1b8d0bddb25a141662142e3de4b51bf72cc33c",
+          "authors": "Bin Peng, Qiang Yang, Rachna B Joshi"
+        },
+        {
+          "title": "KCHO-1, a novel herbal anti-inflammatory compound, attenuates oxidative stress in an animal model of amyotrophic lateral sclerosis",
+          "year": 2017,
+          "citations": 10,
+          "url": "https://www.semanticscholar.org/paper/360c731e06e1560a47af17808dc6ec8407b6503b",
+          "authors": "Myung Geun Kook, S. Choi, Yoojin Seo"
+        },
+        {
+          "title": "Lithium-Mediated Protection Against Ethanol Neurotoxicity",
+          "year": 2010,
+          "citations": 58,
+          "url": "https://www.semanticscholar.org/paper/3b9d9b6f642023de9680db6d46e2c922be252ece",
+          "authors": "Jia Luo"
+        },
+        {
+          "title": "Antioxidant and Cytoprotective Effects of an Ethanol Extract of Acalypha wilkesiana var. macafeana from Malaysia",
+          "year": 2013,
+          "citations": 14,
+          "url": "https://www.semanticscholar.org/paper/92d0e203b40937403f93ca0249b644fdf6a4118a",
+          "authors": "W. M. Din, J. Chu, G. Clarke"
+        },
+        {
+          "title": "The effects of Brazilian green propolis that contains flavonols against mutant copper-zinc superoxide dismutase-mediated toxicity",
+          "year": 2017,
+          "citations": 64,
+          "url": "https://www.semanticscholar.org/paper/33a715ff69fd60782894643d64306c5758b11cb4",
+          "authors": "Tomoyuki Ueda, M. Inden, Katsuhiro Shirai"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Role of Alcohol Drinking in Alzheimer\u2019s Disease, Parkinson\u2019s Disease, and Amyotrophic Lateral Sclerosis",
+        "year": 2020,
+        "citations": 142,
+        "url": "https://www.semanticscholar.org/paper/5b1b8d0bddb25a141662142e3de4b51bf72cc33c",
+        "authors": "Bin Peng, Qiang Yang, Rachna B Joshi"
+      },
+      "max_citations": 142,
+      "faers_signal": "weak",
+      "faers_total_reports": 10558,
+      "faers_cooccurrences": 1,
+      "faers_interpretation": "1 FAERS report(s) mention both Ethanol and Amyotrophic lateral sclerosis-related terms. Minimal real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "S1252 (1.513)",
+        "S1053 (1.497)",
+        "celastrol (1.487)",
+        "trichostatin A (1.471)",
+        "Camptothecin (1.467)"
+      ],
+      "signature_interpretation": "Ethanol was not found among the top 35 drugs that reverse the Amyotrophic lateral sclerosis gene signature. Top reversers: S1252 (1.513), S1053 (1.497), celastrol (1.487)",
+      "ai_hypothesis": "of its ability to increase the expression of the anti-apoptotic protein Bcl-2.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "Unknown",
+      "failed_trial_count": 1,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.708,
+      "mr_genetic_targets": 7,
+      "mechanistic_hypothesis": "",
+      "kg_paths_text": "",
+      "validation_experiments": [],
+      "novelty_score": 0.54,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": false,
+      "clinical_trials_total": 5,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT03664206",
+          "title": "Assessing Motor Neuron Disease Mechanisms by Threshold Tracking Transcranial Magnetic Stimulation and Magnetic Resonance Spectroscopy",
+          "status": "WITHDRAWN",
+          "phase": "N/A",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT03664206"
+        },
+        {
+          "nct_id": "NCT02710110",
+          "title": "Respiratory Strength Training in Persons With Amyotrophic Lateral Sclerosis (ALS)",
+          "status": "COMPLETED",
+          "phase": "EARLY_PHASE1",
+          "enrollment": "50",
+          "url": "https://clinicaltrials.gov/study/NCT02710110"
+        },
+        {
+          "nct_id": "NCT02962050",
+          "title": "Delineating Swallowing Impairment and Decline in ALS",
+          "status": "COMPLETED",
+          "phase": "N/A",
+          "enrollment": "109",
+          "url": "https://clinicaltrials.gov/study/NCT02962050"
+        },
+        {
+          "nct_id": "NCT02710162",
+          "title": "Accurate Screening Tools for Dysphagia in Amyotrophic Lateral Sclerosis (ALS)",
+          "status": "COMPLETED",
+          "phase": "EARLY_PHASE1",
+          "enrollment": "21",
+          "url": "https://clinicaltrials.gov/study/NCT02710162"
+        },
+        {
+          "nct_id": "NCT00877604",
+          "title": "Efficacy and Tolerability of Tauroursodeoxycholic Acid in Amyotrophic Lateral Sclerosis",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "34",
+          "url": "https://clinicaltrials.gov/study/NCT00877604"
+        }
+      ],
+      "trial_phases": {
+        "EARLY_PHASE1": 2,
+        "PHASE2": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "5 clinical trial(s) found on ClinicalTrials.gov",
+        "193 PubMed articles on this drug-disease pair",
+        "Supported by 6 independent AI pillars",
+        "Highly cited paper (142 citations): \"Role of Alcohol Drinking in Alzheimer\u2019s Disease, Parkinson\u2019s...\"",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.71, 7 genetic targets)"
+      ]
+    },
+    {
+      "drug_name": "Acetaminophen",
+      "drug_id": "DB00316",
+      "disease_name": "Amyotrophic lateral sclerosis",
+      "combined_score": 1.1074999570846558,
+      "transe_rank": 112,
+      "pillars_hit": 7,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "direct_relations": [],
+      "shared_target_count": 0,
+      "shared_targets": [],
+      "pubmed_total": 42,
+      "pubmed_treatment_total": 23,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "25957927",
+          "title": "Clinical trials of N-acetylcysteine in psychiatry and neurology: A systematic review.",
+          "authors": "Deepmala, Slattery J, Kumar N, et al.",
+          "journal": "Neuroscience and biobehavioral reviews",
+          "year": "2015",
+          "abstract_snippet": "N-acetylcysteine (NAC) is recognized for its role in acetaminophen overdose and as a mucolytic. Over the past decade, there has been growing evidence for the use of NAC in treating psychiatric and neurological disorders, considering its role in attenuating pathophysiological processes associated wit...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25957927/",
+          "total_results": 42
+        },
+        {
+          "pmid": "39099169",
+          "title": "Preserving mitochondrial homeostasis protects against drug-induced liver injury via inducing OPTN (optineurin)-dependent Mitophagy.",
+          "authors": "Wang J, Qiu Y, Yang L, et al.",
+          "journal": "Autophagy",
           "year": "2024",
-          "abstract_snippet": "Plasma creatinine phosphokinase (CPK) elevation is frequent after heart transplantation. In the present study, we tested the hypothesis that this CPK elevation is related to idiopathic cardiomyopathy as primary cardiac disease. We included 203 patients who survived >1 year after heart transplantatio...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38110026/",
-          "total_results": 8
+          "abstract_snippet": "Disruption of mitochondrial function is observed in multiple drug-induced liver injuries (DILIs), a significant global health threat. However, how the mitochondrial dysfunction occurs and whether maintain mitochondrial homeostasis is beneficial for DILIs remains unclear. Here, we show that defective...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39099169/"
         },
         {
-          "pmid": "33843007",
-          "title": "Chemotherapy in NEN: still has a role?",
-          "authors": "Espinosa-Olarte P, La Salvia A, Riesco-Martinez MC, et al.",
-          "journal": "Reviews in endocrine & metabolic disorders",
-          "year": "2021",
-          "abstract_snippet": "Neuroendocrine neoplasms (NENs) comprise a broad spectrum of tumors with widely variable biological and clinical behavior. Primary tumor site, extent of disease, tumor differentiation and expression of so\u00a0matostatin receptors, proliferation and growth rates are the major prognostic factors that dete...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33843007/"
+          "pmid": "29241710",
+          "title": "New insights into the gene expression associated to amyotrophic lateral sclerosis.",
+          "authors": "Recabarren-Leiva D, Alarc\u00f3n M",
+          "journal": "Life sciences",
+          "year": "2018",
+          "abstract_snippet": "Amyotrophic lateral sclerosis (ALS) is the most prevalent neuromuscular disease worldwide. It is a lethal and progressive neurodegenerative disease, principally affecting motor neurons; patient clinical characteristics are muscle weakness, dysphagia and respiratory failure. The mean age is related t...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29241710/"
         },
         {
-          "pmid": "33916707",
-          "title": "Targeted Cancer Therapy: What's New in the Field of Neuroendocrine Neoplasms?",
-          "authors": "La Salvia A, Espinosa-Olarte P, Riesco-Martinez MDC, et al.",
-          "journal": "Cancers",
-          "year": "2021",
-          "abstract_snippet": "Neuroendocrine tumors (NETs) are a heterogeneous family of neoplasms of increasing incidence and high prevalence due to their relatively indolent nature. Their wide anatomic distribution and their characteristic ability to secrete hormonally active substances pose unique challenges for clinical mana...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33916707/"
-        },
-        {
-          "pmid": "41630032",
-          "title": "Therapeutic synergies that overcome carboplatin resistance in triple-negative breast cancer.",
-          "authors": "Altman JE, Valentine A, Dashti-Gibson N, et al.",
-          "journal": "Journal of experimental & clinical cancer research : CR",
-          "year": "2026",
-          "abstract_snippet": "BACKGROUND: Triple-negative breast cancer (TNBC) is an aggressive subtype lacking targeted therapeutic options, where platinum-based chemotherapy such as carboplatin serves as a cornerstone of treatment. Despite initial responses, the rapid emergence of acquired resistance remains a major clinical b...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41630032/"
-        },
-        {
-          "pmid": "28042875",
-          "title": "The PI3K/mTOR dual inhibitor BEZ235 suppresses proliferation and migration and reverses multidrug resistance in acute myeloid leukemia.",
-          "authors": "Deng L, Jiang L, Lin XH, et al.",
-          "journal": "Acta pharmacologica Sinica",
+          "pmid": "28623007",
+          "title": "Gene networks in neurodegenerative disorders.",
+          "authors": "Recabarren D, Alarc\u00f3n M",
+          "journal": "Life sciences",
           "year": "2017",
-          "abstract_snippet": "Aberrant activation of the PI3K/Akt/mTOR pathway contributes to the proliferation of malignant cells, and may confer resistance to chemotherapy in various malignancies, including acute myeloid leukemia (AML). Chemoresistance is the major reason for relapse in AML. RAD001 (everolimus) has been used a...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/28042875/"
+          "abstract_snippet": "Three neurodegenerative diseases [Amyotrophic Lateral Sclerosis (ALS), Parkinson's disease (PD) and Alzheimer's disease (AD)] have many characteristics like pathological mechanisms and genes. In this sense some researchers postulate that these diseases share the same alterations and that one alterat...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28623007/"
+        },
+        {
+          "pmid": "32113550",
+          "title": "Second-order universal calibration.",
+          "authors": "Ghaffari M, Khoshayand MR, Duponchel L, et al.",
+          "journal": "Talanta",
+          "year": "2020",
+          "abstract_snippet": "Quantification and qualification of an analyte of interest in pharmaceutical tablets from different manufacturers/companies are a hard task because of the potential presence of various interfering molecules. Indeed, the composition of the tablets covers a wide range of interferents which can be even...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32113550/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "The effectiveness of nonsteroidal anti-inflammatory drugs and acetaminophen in reduce the risk of amyotrophic lateral sclerosis? A meta-analysis",
+          "year": 2020,
+          "citations": 18,
+          "url": "https://www.semanticscholar.org/paper/40f071fb2e0af24e8445c789a16da3f646d8b06f",
+          "authors": "M. Chang, S. Kwak, Jin-Sung Park"
+        },
+        {
+          "title": "Key Disease Mechanisms Linked to Amyotrophic Lateral Sclerosis in Spinal Cord Motor Neurons",
+          "year": 2022,
+          "citations": 15,
+          "url": "https://www.semanticscholar.org/paper/e3fba8e4116bb64a1f41c355b9c633bf5fdb2bb9",
+          "authors": "V. Bottero, Jose A. Santiago, J. P. Quinn"
+        },
+        {
+          "title": "Abbreviation",
+          "year": 1996,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/e266e7357a3909d02a36d37e267bd94c530009f3",
+          "authors": ""
+        },
+        {
+          "title": "Attempted treatment of motor neuron disease with N-acetylcysteine and dithiothreitol.",
+          "year": 1987,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/bb4bf701f5140e5dc2caefb156999d948ada6415",
+          "authors": "J. D. Jong, W. A. Jager, A. Vyth"
+        },
+        {
+          "title": "[Gastric emptying in elderly patients with cerebral vascular diseases and the effect of trimebutine].",
+          "year": 1993,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/77b78aa4b68a4a6ecd125ddd6e7111581b1d78da",
+          "authors": "K. Inoue, K. Kobatake, K. Haruma"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Repurpose terbutaline sulfate for amyotrophic lateral sclerosis using electronic medical records",
+        "year": 2015,
+        "citations": 53,
+        "url": "https://www.semanticscholar.org/paper/07ad901d5efef7412a71bc775a493874e465feed",
+        "authors": "H. Paik, Ah\u2010Young Chung, Hae-Chul Park"
+      },
+      "max_citations": 53,
+      "faers_signal": "moderate",
+      "faers_total_reports": 470024,
+      "faers_cooccurrences": 24,
+      "faers_interpretation": "24 FAERS reports mention both Acetaminophen and Amyotrophic lateral sclerosis-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "S1252 (1.513)",
+        "S1053 (1.497)",
+        "celastrol (1.487)",
+        "trichostatin A (1.471)",
+        "Camptothecin (1.467)"
+      ],
+      "signature_interpretation": "Acetaminophen was not found among the top 35 drugs that reverse the Amyotrophic lateral sclerosis gene signature. Top reversers: S1252 (1.513), S1053 (1.497), celastrol (1.487)",
+      "ai_hypothesis": "of its anti-inflammatory and antioxidant properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.6857,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "",
+      "kg_paths_text": "",
+      "validation_experiments": [],
+      "novelty_score": 0.78,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": false,
+      "clinical_trials_total": 1,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT03944447",
+          "title": "Outcomes Mandate National Integration With Cannabis as Medicine",
+          "status": "UNKNOWN",
+          "phase": "PHASE2",
+          "enrollment": "200000",
+          "url": "https://clinicaltrials.gov/study/NCT03944447"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "1 clinical trial(s) found on ClinicalTrials.gov",
+        "42 PubMed articles found",
+        "Supported by 7 independent AI pillars",
+        "Moderate FAERS signal: 24 adverse event reports mention drug-disease co-occurrence",
+        "Supporting paper with 53 citations",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.69)"
+      ]
+    },
+    {
+      "drug_name": "Creatine",
+      "drug_id": "DB00148",
+      "disease_name": "Amyotrophic lateral sclerosis",
+      "combined_score": 1.090499997138977,
+      "transe_rank": 2,
+      "pillars_hit": 6,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "direct_relations": [],
+      "shared_target_count": 0,
+      "shared_targets": [],
+      "pubmed_total": 447,
+      "pubmed_treatment_total": 184,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "31939642",
+          "title": "Muscle Weakness in Adults: Evaluation and Differential Diagnosis.",
+          "authors": "Larson ST, Wilbur J",
+          "journal": "American family physician",
+          "year": "2020",
+          "abstract_snippet": "Although the prevalence of muscle weakness in the general population is uncertain, it occurs in about 5% of U.S. adults 60 years and older. Determining the cause of muscle weakness can be challenging. True muscle weakness must first be differentiated from subjective fatigue or pain-related motor imp...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31939642/",
+          "total_results": 447
+        },
+        {
+          "pmid": "34071875",
+          "title": "The Application of Creatine Supplementation in Medical Rehabilitation.",
+          "authors": "Harmon KK, Stout JR, Fukuda DH, et al.",
+          "journal": "Nutrients",
+          "year": "2021",
+          "abstract_snippet": "Numerous health conditions affecting the musculoskeletal, cardiopulmonary, and nervous systems can result in physical dysfunction, impaired performance, muscle weakness, and disuse-induced atrophy. Due to its well-documented anabolic potential, creatine monohydrate has been investigated as a supplem...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34071875/"
+        },
+        {
+          "pmid": "33643818",
+          "title": "Recent developments on PET radiotracers for TSPO and their applications in neuroimaging.",
+          "authors": "Zhang L, Hu K, Shao T, et al.",
+          "journal": "Acta pharmaceutica Sinica. B",
+          "year": "2021",
+          "abstract_snippet": "The 18\u00a0kDa translocator protein (TSPO), previously known as the peripheral benzodiazepine receptor, is predominately localized to the outer mitochondrial membrane in steroidogenic cells. Brain TSPO expression is relatively low under physiological conditions, but is upregulated in response to glial c...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33643818/"
+        },
+        {
+          "pmid": "35302338",
+          "title": "Involvement of muscle satellite cell dysfunction in neuromuscular disorders: Expanding the portfolio of satellite cell-opathies.",
+          "authors": "Ganassi M, Zammit PS",
+          "journal": "European journal of translational myology",
+          "year": "2022",
+          "abstract_snippet": "Neuromuscular disorders are a heterogeneous group of acquired or hereditary conditions that affect striated muscle function. The resulting decrease in muscle strength and motility irreversibly impacts quality of life. In addition to directly affecting skeletal muscle, pathogenesis can also arise fro...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35302338/"
+        },
+        {
+          "pmid": "28739864",
+          "title": "Late-onset Tay-Sachs disease.",
+          "authors": "Barritt AW, Anderson SJ, Leigh PN, et al.",
+          "journal": "Practical neurology",
+          "year": "2017",
+          "abstract_snippet": "We discuss the assessment and differential diagnoses of a young adult Hungarian man with a 1-year history of a progressive and symmetric amyotrophic lateral sclerosis-like syndrome, along with irregular action tremor and stimulus-sensitive myoclonus of the arms. MR scan of the brain showed isolated ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28739864/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Creatine Kinase and Respiratory Decline in Amyotrophic Lateral Sclerosis",
+          "year": 2024,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/dcf2fac0cb81c76eaa7aea4971c0a023312991d9",
+          "authors": "Jo\u00e3o Correia, M. Gromicho, A. Pronto-Laborinho"
+        },
+        {
+          "title": "Creatine Kinase MB Isoenzyme Is a Complementary Biomarker in Amyotrophic Lateral Sclerosis",
+          "year": 2023,
+          "citations": 11,
+          "url": "https://www.semanticscholar.org/paper/a167b9a4a9de70303d76521b476b4bdec5fe539e",
+          "authors": "Natsinee Kittipeerapat, Rachel Fabian, S. Bernsen"
+        },
+        {
+          "title": "Creatine kinase and prognosis in amyotrophic lateral sclerosis: a literature review and multi-centre cohort analysis",
+          "year": 2022,
+          "citations": 16,
+          "url": "https://www.semanticscholar.org/paper/7faa88838ee864886e7c1596fd4a3495b8d22f82",
+          "authors": "Jiali Gao, T. Dharmadasa, A. Malaspina"
+        },
+        {
+          "title": "Creatine Kinase and Progression Rate in Amyotrophic Lateral Sclerosis",
+          "year": 2020,
+          "citations": 37,
+          "url": "https://www.semanticscholar.org/paper/25ab5f2b4ccd5fdfe8ed76a4562f90cc0f81f51e",
+          "authors": "M. Ceccanti, V. Pozzilli, C. Cambieri"
+        },
+        {
+          "title": "Plasma troponin T reflects lower motor neuron involvement on electromyography in amyotrophic lateral sclerosis",
+          "year": 2025,
+          "citations": 6,
+          "url": "https://www.semanticscholar.org/paper/2cfdbb05967566ebef8c6b92c34541940c586aba",
+          "authors": "Sanharib Chamoun, Sofia Imrell, Z. Upate"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Repurpose terbutaline sulfate for amyotrophic lateral sclerosis using electronic medical records",
+        "year": 2015,
+        "citations": 53,
+        "url": "https://www.semanticscholar.org/paper/07ad901d5efef7412a71bc775a493874e465feed",
+        "authors": "H. Paik, Ah\u2010Young Chung, Hae-Chul Park"
+      },
+      "max_citations": 53,
+      "faers_signal": "weak",
+      "faers_total_reports": 927,
+      "faers_cooccurrences": 1,
+      "faers_interpretation": "1 FAERS report(s) mention both Creatine and Amyotrophic lateral sclerosis-related terms. Minimal real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "S1252 (1.513)",
+        "S1053 (1.497)",
+        "celastrol (1.487)",
+        "trichostatin A (1.471)",
+        "Camptothecin (1.467)"
+      ],
+      "signature_interpretation": "Creatine was not found among the top 35 drugs that reverse the Amyotrophic lateral sclerosis gene signature. Top reversers: S1252 (1.513), S1053 (1.497), celastrol (1.487)",
+      "ai_hypothesis": "of its potential to improve muscle strength and function.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.9451,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "",
+      "kg_paths_text": "",
+      "validation_experiments": [],
+      "novelty_score": 0.48,
+      "novelty_level": "ESTABLISHED",
+      "is_known_treatment": false,
+      "clinical_trials_total": 8,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT00005674",
+          "title": "Clinical Trial of Creatine in Amyotrophic Lateral Sclerosis [ALS]",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "",
+          "url": "https://clinicaltrials.gov/study/NCT00005674"
+        },
+        {
+          "nct_id": "NCT00070993",
+          "title": "Creatine for the Treatment of Amyotrophic Lateral Sclerosis",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "110",
+          "url": "https://clinicaltrials.gov/study/NCT00070993"
+        },
+        {
+          "nct_id": "NCT00069186",
+          "title": "Study of Creatine Monohydrate in Patients With Amyotrophic Lateral Sclerosis",
+          "status": "UNKNOWN",
+          "phase": "PHASE3",
+          "enrollment": "107",
+          "url": "https://clinicaltrials.gov/study/NCT00069186"
+        },
+        {
+          "nct_id": "NCT02709330",
+          "title": "ALS Reversals - Lunasin Regimen",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "60",
+          "url": "https://clinicaltrials.gov/study/NCT02709330"
+        },
+        {
+          "nct_id": "NCT00023075",
+          "title": "Nuclear Magnetic Spectroscopy Imaging to Evaluate Primary Lateral Sclerosis, Hereditary Spastic Paraplegia and Amyotrophic Lateral Sclerosis",
+          "status": "COMPLETED",
+          "phase": "N/A",
+          "enrollment": "55",
+          "url": "https://clinicaltrials.gov/study/NCT00023075"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 6,
+        "PHASE3": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "8 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "447 PubMed articles on this drug-disease pair",
+        "Supported by 6 independent AI pillars",
+        "Supporting paper with 53 citations",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.95, 1 genetic targets)"
+      ]
+    },
+    {
+      "drug_name": "Budesonide",
+      "drug_id": "DB01222",
+      "disease_name": "Amyotrophic lateral sclerosis",
+      "combined_score": 1.0749,
+      "transe_rank": 176,
+      "pillars_hit": 6,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "direct_relations": [],
+      "shared_target_count": 0,
+      "shared_targets": [],
+      "pubmed_total": 6,
+      "pubmed_treatment_total": 6,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "19918725",
+          "title": "[\"Real-life\"-data on asthma control using budesonide/formoterol for both maintenance and relief: the Swiss experience].",
+          "authors": "Steurer-Stey C, Courteheuse C, Taegtmeyer AB, et al.",
+          "journal": "Praxis",
+          "year": "2009",
+          "abstract_snippet": "BACKGROUND: Asthma is not adequately controlled in many patients. A new approach in asthma treatment, known as Budesonide/Formoterol Maintenance and Reliever Therapy has shown improvement in asthma control compared to conventional therapy regimens. As Switzerland was the first European country to fo...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19918725/",
+          "total_results": 6
+        },
+        {
+          "pmid": "10820860",
+          "title": "[Budesonide foam as a new therapeutic principle in distal ulcerative colitis in comparison with mesalazine enema. An open, controlled, randomized and prospective multicenter pilot study].",
+          "authors": "Rufle W, Fr\u00fchmorgen P, Huber W, et al.",
+          "journal": "Zeitschrift fur Gastroenterologie",
+          "year": "2000",
+          "abstract_snippet": "Budesonide is a locally acting steroid with a high first-pass metabolism in the liver and low systemic effects. We performed the first pilot study comparing budesonide foam (1 mg/50 ml b.i.d.) with mesalazine enemas (4 g/60 ml o.d.). 33 patients from 3 centres were enrolled in this open randomized c...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10820860/"
+        },
+        {
+          "pmid": "41699714",
+          "title": "Environmentally sustainable UV spectrophotometric-chemometric approach for simultaneous determination of budesonide, glycopyrrolate, and formoterol.",
+          "authors": "Al Kamaly O, Al-Khateeb LA, Halim MK, et al.",
+          "journal": "BMC chemistry",
+          "year": "2026",
+          "abstract_snippet": "This study introduces a sustainable UV-spectrophotometric platform for the simultaneous and individual determination of budesonide (BUD), glycopyrrolate (GLY), and formoterol fumarate (FOM) in pharmaceutical inhalers. Current chromatographic approaches for this triple therapy rely on toxic solvents ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41699714/"
+        },
+        {
+          "pmid": "34638154",
+          "title": "[Intramural esophageal abscess as a complication of an eosinophilic esophagitis].",
+          "authors": "Keim VJ, Lutterer A, Geddert H, et al.",
+          "journal": "Zeitschrift fur Gastroenterologie",
+          "year": "2021",
+          "abstract_snippet": "Eosinophilic esophagitis is an important differential diagnosis in the presence of dysphagia or bolus obstruction of the esophagus. Delayed diagnosis of eosinophilic esophagitis can lead to strictures of the esophagus.We report on a young patient who presented with initially unclear retrosternal sym...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34638154/"
+        },
+        {
+          "pmid": "15054953",
+          "title": "[Cutaneous nocardiosis as an opportunistic infection].",
+          "authors": "Bogaard HJ, Erkelens GW, Faber WR, et al.",
+          "journal": "Nederlands tijdschrift voor geneeskunde",
+          "year": "2004",
+          "abstract_snippet": "A 46-year-old man who had been treated with azathioprine and budesonide for Crohn's disease for the past eight years developed a purulent skin condition on the right ring finger. Despite surgical drainage and treatment with amoxicillin and flucloxacillin, the condition spread itself over the hand an...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15054953/"
         }
       ],
       "repurposing_papers": [],
@@ -1045,21 +1661,21 @@
         {
           "title": "Amyotrophic lateral sclerosis estimated prevalence cases from 2022 to 2030, data from the national ALS Registry",
           "year": 2025,
-          "citations": 30,
+          "citations": 31,
           "url": "https://www.semanticscholar.org/paper/3d84f09f770cb72552b688f1c449b473c6e46f40",
           "authors": "P. Mehta, J. Raymond, Theresa Nair"
         },
         {
           "title": "Amyotrophic lateral sclerosis.",
           "year": 2012,
-          "citations": 6521,
+          "citations": 6524,
           "url": "https://www.semanticscholar.org/paper/593e5c0f33c6eb6a2c3600c4e1ffc79525fefe37",
           "authors": "A. Ludolph, J. Brettschneider, Jochen H Weishaupt"
         },
         {
           "title": "Ubiquitinated TDP-43 in Frontotemporal Lobar Degeneration and Amyotrophic Lateral Sclerosis",
           "year": 2006,
-          "citations": 6233,
+          "citations": 6237,
           "url": "https://www.semanticscholar.org/paper/f0c6ade907d1549199e22221230c465ad5e0fa1a",
           "authors": "M. Neumann, Deepak M. Sampathu, L. Kwong"
         },
@@ -1073,7 +1689,7 @@
         {
           "title": "Amyotrophic lateral sclerosis",
           "year": 2022,
-          "citations": 912,
+          "citations": 913,
           "url": "https://www.semanticscholar.org/paper/f19ad80501fe82304b746ea1bf59d9bc89a7cacb",
           "authors": "E. Feldman, Stephen A. Goutman, S. Petri"
         }
@@ -1086,10 +1702,10 @@
         "authors": "D. Rosen, T. Siddique, D. Patterson"
       },
       "max_citations": 7009,
-      "faers_signal": "weak",
-      "faers_total_reports": 16399,
-      "faers_cooccurrences": 2,
-      "faers_interpretation": "2 FAERS report(s) mention both Everolimus and Amyotrophic lateral sclerosis-related terms. Minimal real-world signal.",
+      "faers_signal": "moderate",
+      "faers_total_reports": 57603,
+      "faers_cooccurrences": 4,
+      "faers_interpretation": "4 FAERS reports mention both Budesonide and Amyotrophic lateral sclerosis-related terms. Limited but notable real-world signal.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -1099,31 +1715,49 @@
         "trichostatin A (1.471)",
         "Camptothecin (1.467)"
       ],
-      "signature_interpretation": "Everolimus was not found among the top 35 drugs that reverse the Amyotrophic lateral sclerosis gene signature. Top reversers: S1252 (1.513), S1053 (1.497), celastrol (1.487)",
-      "ai_hypothesis": "",
-      "abstract_analyses": [],
+      "signature_interpretation": "Budesonide was not found among the top 35 drugs that reverse the Amyotrophic lateral sclerosis gene signature. Top reversers: S1252 (1.513), S1053 (1.497), celastrol (1.487)",
+      "ai_hypothesis": "of its anti-inflammatory and anti-apoptotic properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
       "has_failed_trial": false,
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
+      "mr_score": 0.7384,
+      "mr_genetic_targets": 4,
       "mechanistic_hypothesis": "",
       "kg_paths_text": "",
       "validation_experiments": [],
-      "novelty_score": 0.8,
+      "novelty_score": 0.96,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
       "clinical_trials": [],
       "trial_phases": {},
-      "confidence": "LOW",
+      "confidence": "HIGH",
       "confidence_reasons": [
-        "Supported by 4 independent AI pillars",
-        "High molecular similarity (0.87) to Sirolimus",
-        "Highly cited paper (7009 citations): \"Mutations in Cu/Zn superoxide dismutase gene are associated ...\""
-      ],
-      "novelty_interpretation": "Novel prediction with minimal existing evidence (8 articles). Computational support suggests this warrants investigation."
+        "6 PubMed article(s) - limited literature",
+        "Supported by 6 independent AI pillars",
+        "Moderate FAERS signal: 4 adverse event reports mention drug-disease co-occurrence",
+        "Highly cited paper (7009 citations): \"Mutations in Cu/Zn superoxide dismutase gene are associated ...\"",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.74, 4 genetic targets)"
+      ]
     }
   ]
 }
