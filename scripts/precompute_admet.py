@@ -28,13 +28,15 @@ def main():
     cached = load_cached_predictions()
     print(f"Loaded {len(cached)} cached predictions")
 
-    # Load SMILES
+    # Load SMILES — file format: drugbank_id	entity	smiles
     smiles_map = {}
     with open(SMILES_PATH) as f:
-        for line in f:
+        for i, line in enumerate(f):
+            if i == 0:
+                continue  # skip header
             parts = line.strip().split("\t")
-            if len(parts) >= 2:
-                smiles_map[parts[0]] = parts[1]
+            if len(parts) >= 3:
+                smiles_map[parts[0]] = parts[2]  # drugbank_id -> SMILES
 
     print(f"Total compounds with SMILES: {len(smiles_map)}")
 
