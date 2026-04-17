@@ -36,12 +36,38 @@ class EvidenceReport:
     disease_name: str
     disease_entity: str
 
-    # Scores from pipeline
+    # Scores from pipeline (all 11 pillars)
     combined_score: float = 0.0
-    transe_rank: int = 0
     pillars_hit: int = 0
+    # Pillar 3a: TransE
+    transe_rank: int = 0
+    transe_score: float = 0.0
+    # Pillar 3b: RotatE/PyKEEN
+    pykeen_score: float = 0.0
+    pykeen_rank: int = 0
+    # Pillar 6: TxGNN
+    txgnn_score: float = 0.0
+    txgnn_rank: int = 0
+    # Pillar 1a: Fingerprint similarity
     mol_similarity: float = 0.0
     similar_to: str = ""
+    # Pillar 1b: ChemBERTa learned similarity
+    mol_emb_similarity: float = 0.0
+    mol_emb_similar_to: str = ""
+    # Pillar 4: Gene signature
+    gene_sig_score: float = 0.0
+    gene_sig_rank: int = 0
+    # Pillar 5: Network proximity
+    proximity_score: float = 0.0
+    proximity_distance: float = 0.0
+    # Pillar 9: ADMET
+    admet_score: float = 0.0
+    admet_flags: str = ""
+    # Pillar 10: PrimeKG
+    primekg_score: float = 0.0
+    # Pillar 11: DeepPurpose DTI
+    dti_score: float = 0.0
+    dti_best_target: str = ""
 
     # Graph evidence
     direct_relations: list = field(default_factory=list)
@@ -114,10 +140,27 @@ class EvidenceReport:
             "drug_id": self.drug_id,
             "disease_name": self.disease_name,
             "combined_score": self.combined_score,
-            "transe_rank": self.transe_rank,
             "pillars_hit": self.pillars_hit,
+            # All 11 pillar scores
+            "transe_rank": self.transe_rank,
+            "transe_score": self.transe_score,
+            "pykeen_score": self.pykeen_score,
+            "pykeen_rank": self.pykeen_rank,
+            "txgnn_score": self.txgnn_score,
+            "txgnn_rank": self.txgnn_rank,
             "mol_similarity": self.mol_similarity,
             "similar_to": self.similar_to,
+            "mol_emb_similarity": self.mol_emb_similarity,
+            "mol_emb_similar_to": self.mol_emb_similar_to,
+            "gene_sig_score": self.gene_sig_score,
+            "gene_sig_rank": self.gene_sig_rank,
+            "proximity_score": self.proximity_score,
+            "proximity_distance": self.proximity_distance,
+            "admet_score": self.admet_score,
+            "admet_flags": self.admet_flags,
+            "primekg_score": self.primekg_score,
+            "dti_score": self.dti_score,
+            "dti_best_target": self.dti_best_target,
             "direct_relations": self.direct_relations,
             "shared_target_count": self.shared_target_count,
             "shared_targets": self.shared_targets[:10],
@@ -179,10 +222,27 @@ def generate_evidence_report(
         disease_name=disease_name,
         disease_entity=result.get("disease_entity", ""),
         combined_score=result.get("combined_score", 0),
-        transe_rank=result.get("transe_rank", 0),
         pillars_hit=result.get("pillars_hit", 0),
+        # Copy ALL pillar scores from search result
+        transe_rank=result.get("transe_rank", 0),
+        transe_score=result.get("transe_score", 0),
+        pykeen_score=result.get("pykeen_score", 0),
+        pykeen_rank=result.get("pykeen_rank", 0),
+        txgnn_score=result.get("txgnn_score", 0),
+        txgnn_rank=result.get("txgnn_rank", 0),
         mol_similarity=result.get("mol_similarity", 0),
         similar_to=result.get("similar_to", ""),
+        mol_emb_similarity=result.get("mol_emb_similarity", 0),
+        mol_emb_similar_to=result.get("mol_emb_similar_to", ""),
+        gene_sig_score=result.get("gene_sig_score", 0),
+        gene_sig_rank=result.get("gene_sig_rank", 0),
+        proximity_score=result.get("proximity_score", 0),
+        proximity_distance=result.get("proximity_distance", 0),
+        admet_score=result.get("admet_score", 0),
+        admet_flags=result.get("admet_flags", ""),
+        primekg_score=result.get("primekg_score", 0),
+        dti_score=result.get("dti_score", 0),
+        dti_best_target=result.get("dti_best_target", ""),
     )
 
     # Graph evidence (already in result)
