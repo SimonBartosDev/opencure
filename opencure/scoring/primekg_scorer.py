@@ -73,9 +73,9 @@ def build_entity_alignment():
 
     Also maps DRKG Disease::MESH:Dxxxxxx to PrimeKG disease IDs.
     """
-    from opencure.data.drkg import load_entity_map
+    from opencure.data.drkg import load_embeddings
 
-    drkg_entities = load_entity_map()
+    _, _, drkg_entities, _, _ = load_embeddings()
     alignment = {"compounds": {}, "diseases": {}}
 
     # Read PrimeKG to build drug ID set and disease ID set
@@ -134,17 +134,38 @@ def score_drugs_for_disease_primekg(
     if not alignment:
         return {}
 
-    # Find disease in PrimeKG (by name match)
+    # Find disease in PrimeKG with normalized name matching
+    import re
+    def normalize(s: str) -> str:
+        # Remove possessive 's and apostrophes
+        s = s.lower()
+        s = re.sub(r"'s\b", "", s)  # possessive 's
+        s = s.replace("'", "")       # remaining apostrophes
+        s = re.sub(r"\s+", " ", s).strip()
+        return s
+
     disease_lower = disease_name.lower().strip()
+    disease_normalized = normalize(disease_name)
     primekg_diseases = alignment.get("primekg_diseases", {})
     disease_id = None
     disease_key = None
 
+    # Try exact match first, then normalized match, then substring
     for pid, pname in primekg_diseases.items():
-        if pname.lower() == disease_lower or disease_lower in pname.lower():
+        pname_norm = normalize(pname)
+        if pname.lower() == disease_lower or pname_norm == disease_normalized:
             disease_key = f"disease_{pid}"
             disease_id = pid
             break
+
+    if disease_key is None:
+        # Fallback: substring match
+        for pid, pname in primekg_diseases.items():
+            pname_norm = normalize(pname)
+            if disease_normalized in pname_norm or pname_norm in disease_normalized:
+                disease_key = f"disease_{pid}"
+                disease_id = pid
+                break
 
     if disease_key is None or disease_key not in entity_to_id:
         return {}
