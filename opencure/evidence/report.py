@@ -465,7 +465,21 @@ def generate_evidence_report(
     # v5 clinical layer — best-effort; failures don't break evidence pipeline
     try:
         from opencure.evidence.dose_plausibility import get_dose_plausibility
-        report.dose_plausibility = get_dose_plausibility(report.drug_id)
+        # Pass the best-known target symbol so stage-2 (Cmax vs IC50) engages
+        target_sym = report.dti_best_target or None
+        if not target_sym and report.shared_targets:
+            # Fallback: first shared target's gene symbol, if we can resolve
+            # via the HGNC map used by tissue_context
+            try:
+                from opencure.scoring.tissue_context import _load_entrez_to_symbol
+                ent_to_sym = _load_entrez_to_symbol()
+                for g in report.shared_targets:
+                    if g and g in ent_to_sym:
+                        target_sym = ent_to_sym[g]
+                        break
+            except Exception:
+                pass
+        report.dose_plausibility = get_dose_plausibility(report.drug_id, target_symbol=target_sym)
     except Exception:
         pass
 

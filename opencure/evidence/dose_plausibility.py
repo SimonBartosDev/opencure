@@ -35,6 +35,14 @@ from typing import Optional
 
 # Re-use the existing ChEMBL phase cache OpenCure already built
 CHEMBL_PHASE_CACHE = Path("data/drkg/chembl_phase.json")
+# Stage-2 activity lookup (built by scripts/build_drug_target_activities.py)
+ACTIVITY_CACHE = Path("data/drkg/drug_target_activities.json")
+
+# Rough typical plasma Cmax ranges for orally administered drugs (in nM):
+# most clinically-useful oral drugs peak at 100 nM – 10 μM. We use the
+# approximate log-midpoint (1 μM = 1000 nM) as a generic fallback when
+# drug-specific Cmax data is not available.
+FALLBACK_CMAX_NM = 1000.0
 
 
 @lru_cache(maxsize=1)
@@ -46,6 +54,66 @@ def _load_phases() -> dict:
         return json.loads(CHEMBL_PHASE_CACHE.read_text())
     except Exception:
         return {}
+
+
+@lru_cache(maxsize=1)
+def _load_activities() -> dict:
+    """Stage-2 lookup: {drugbank_id: {gene_symbol: {median_nM, n, types}}}"""
+    import json
+    if not ACTIVITY_CACHE.exists():
+        return {}
+    try:
+        return json.loads(ACTIVITY_CACHE.read_text())
+    except Exception:
+        return {}
+
+
+def _target_affinity_assessment(
+    drug_id: str,
+    target_symbol: Optional[str],
+    cmax_nm: float = FALLBACK_CMAX_NM,
+) -> dict:
+    """Stage-2 dose plausibility: compare achievable plasma Cmax to median
+    measured IC50/Ki for the predicted target.
+
+    Returns {
+      'cmax_over_ic50_ratio': float,
+      'median_ic50_nM': float,
+      'n_activities': int,
+      'activity_types': list[str],
+      'mechanism_feasible': 'yes'|'borderline'|'no'|'unknown',
+    }
+    or empty dict if no data for this (drug, target) pair.
+    """
+    if not target_symbol:
+        return {}
+    bare = drug_id.split("::", 1)[1] if "::" in drug_id else drug_id
+    activities = _load_activities()
+    drug_hits = activities.get(bare, {})
+    stats = drug_hits.get(target_symbol)
+    if not stats:
+        return {}
+
+    median_ic50 = float(stats.get("median_nM", 0) or 0)
+    if median_ic50 <= 0:
+        return {}
+
+    ratio = cmax_nm / median_ic50
+    if ratio >= 10:
+        feasible = "yes"
+    elif ratio >= 1:
+        feasible = "borderline"
+    else:
+        feasible = "no"
+
+    return {
+        "cmax_over_ic50_ratio": round(ratio, 2),
+        "median_ic50_nM": median_ic50,
+        "n_activities": stats.get("n", 0),
+        "activity_types": stats.get("activity_types", []),
+        "mechanism_feasible": feasible,
+        "cmax_source": f"generic fallback {cmax_nm:.0f} nM (per-drug Cmax TBD)",
+    }
 
 
 def _phase_to_plausibility(phase: Optional[float]) -> dict:
@@ -116,12 +184,18 @@ def _phase_to_plausibility(phase: Optional[float]) -> dict:
     }
 
 
-def get_dose_plausibility(drug_id: str) -> dict:
+def get_dose_plausibility(
+    drug_id: str,
+    target_symbol: Optional[str] = None,
+) -> dict:
     """
     Return a dose-plausibility profile for a drug.
 
     Args:
         drug_id: DrugBank ID (with or without "Compound::" prefix)
+        target_symbol: optional gene symbol (e.g., "ACHE") to enable
+            stage-2 (pKi vs Cmax) assessment. If omitted or unknown,
+            only stage-1 (ChEMBL phase) signal is returned.
 
     Returns:
         {
@@ -130,15 +204,38 @@ def get_dose_plausibility(drug_id: str) -> dict:
           "confidence": "high"|"medium"|"low",
           "rationale": human-readable explanation,
           "chembl_phase": <float or None>,
-          "upgrade_pending": True if ChEMBL SQLite not yet available for pKi-vs-Cmax
+          "target_affinity": {...} if stage-2 data available else {},
+          "stage": 1 or 2
         }
     """
     bare = drug_id.split("::", 1)[1] if "::" in drug_id else drug_id
     phase = _load_phases().get(bare)
     profile = _phase_to_plausibility(phase)
     profile["chembl_phase"] = phase
-    # Check whether ChEMBL 34 SQLite has been unpacked for stage-2 upgrade
-    profile["upgrade_pending"] = not Path("data/sources_2024/chembl_34").exists()
+
+    # Stage-2 upgrade — if ChEMBL activities loaded and a target was given
+    aff = _target_affinity_assessment(drug_id, target_symbol)
+    if aff:
+        profile["target_affinity"] = aff
+        profile["stage"] = 2
+        # If mechanism infeasible, downgrade plausibility even for approved drugs
+        if aff["mechanism_feasible"] == "no" and profile["plausibility"] == "yes":
+            profile["plausibility"] = "uncertain"
+            profile["rationale"] += (
+                f" HOWEVER, at typical plasma concentrations the drug does NOT "
+                f"reach inhibitory levels for {target_symbol} "
+                f"(Cmax/IC50 = {aff['cmax_over_ic50_ratio']}x; need ≥1x for any "
+                f"effect, ≥10x for confident target engagement)."
+            )
+        elif aff["mechanism_feasible"] == "borderline":
+            profile["rationale"] += (
+                f" Target engagement borderline: Cmax/IC50 = "
+                f"{aff['cmax_over_ic50_ratio']}x for {target_symbol}."
+            )
+    else:
+        profile["target_affinity"] = {}
+        profile["stage"] = 1
+
     return profile
 
 

@@ -27,10 +27,14 @@ def load_data():
     # Build lookup from disease JSONs (rich data)
     rich = {}
     for f in sorted(RESULTS_DIR.glob("*.json")):
-        if f.name.startswith("opencure_") or f.name in ("screening_summary.json", "novel_candidates.json"):
+        if (f.name.startswith("opencure_")
+                or f.name.startswith("mechanism_")
+                or f.name in ("screening_summary.json", "novel_candidates.json")):
             continue
         try:
             d = json.loads(f.read_text())
+            if not isinstance(d, dict):
+                continue
             for c in d.get("candidates", []):
                 key = (c.get("disease_name", d.get("disease", "")), c["drug_name"])
                 rich[key] = c
@@ -630,7 +634,17 @@ function openPanel(idx){
     </div>
     ${c.has_failed_trial?'<div class="failed-warn">Warning: '+c.failed_trial_count+' failed trial(s) reported'+(c.failed_trial_phase?' ('+esc(c.failed_trial_phase)+')':'')+'</div>':''}`;
   // Tabs
-  const tabs=[{id:'summary',label:'Summary'},{id:'literature',label:'Literature ('+((c.key_papers||[]).length+(c.repurposing_papers||[]).length+(c.semantic_scholar_papers||[]).length)+')'},{id:'clinical',label:'Clinical'},{id:'molecular',label:'Molecular'},{id:'genetic',label:'Genetic'}];
+  const guardrailCount=(c.dose_plausibility?.plausibility?1:0)+(c.pharmacogenomics?.has_flags?1:0)+(c.ddi_warnings?.has_warnings?1:0)+(c.triangulation?.n_axes_agree?1:0);
+  const hasMech=c.mechanistic_hypothesis||c.kg_paths_text;
+  const tabs=[
+    {id:'summary',label:'Summary'},
+    {id:'literature',label:'Literature ('+((c.key_papers||[]).length+(c.repurposing_papers||[]).length+(c.semantic_scholar_papers||[]).length)+')'},
+    {id:'clinical',label:'Clinical'},
+    {id:'molecular',label:'Molecular'},
+    {id:'genetic',label:'Genetic'},
+  ];
+  if(hasMech)tabs.push({id:'mechanism',label:'Mechanism'});
+  if(guardrailCount>0)tabs.push({id:'guardrails',label:'Guardrails ('+guardrailCount+')'});
   document.getElementById('panel-tabs').innerHTML=tabs.map(t=>`<div class="panel-tab${t.id==='summary'?' active':''}" onclick="switchTab('${t.id}',${idx})">${t.label}</div>`).join('');
   renderTab('summary',c);
   document.body.style.overflow='hidden';
@@ -660,6 +674,91 @@ function renderTab(tab,c){
   else if(tab==='clinical')pb.innerHTML=renderClinical(c);
   else if(tab==='molecular')pb.innerHTML=renderMolecular(c);
   else if(tab==='genetic')pb.innerHTML=renderGenetic(c);
+  else if(tab==='guardrails')pb.innerHTML=renderGuardrails(c);
+  else if(tab==='mechanism')pb.innerHTML=renderMechanism(c);
+}
+
+function renderGuardrails(c){
+  // v5 clinical guardrails: dose plausibility + DDI + pharmacogenomic flags + triangulation
+  let html='';
+
+  // Dose plausibility
+  const dp=c.dose_plausibility||{};
+  if(dp.plausibility){
+    const color=dp.plausibility==='yes'?'#22c55e':dp.plausibility==='likely'?'#84cc16':dp.plausibility==='uncertain'?'#f59e0b':'#94a3b8';
+    html+=`<h3 style="font-size:.95rem;margin-bottom:.4rem">Dose Plausibility <span style="font-weight:400;color:var(--text3);font-size:.82rem">(stage ${dp.stage||1})</span></h3>`;
+    html+=`<div class="interp-box" style="border-left:3px solid ${color}"><strong style="color:${color};text-transform:uppercase">${dp.plausibility}</strong> <span style="color:var(--text3)">(${dp.dose_range||''}, confidence ${dp.confidence||''})</span><br><span style="font-size:.85rem">${esc(dp.rationale||'')}</span></div>`;
+    if(dp.target_affinity&&dp.target_affinity.median_ic50_nM){
+      const ta=dp.target_affinity;
+      html+=`<div style="margin-top:.5rem;font-size:.82rem;color:var(--text3)">Target engagement: median ${ta.median_ic50_nM} nM (n=${ta.n_activities} ${(ta.activity_types||[]).join('/')}), Cmax/IC50 ≈ ${ta.cmax_over_ic50_ratio}× → ${ta.mechanism_feasible}</div>`;
+    }
+  }
+
+  // Pharmacogenomic flags
+  const pg=c.pharmacogenomics||{};
+  if(pg.has_flags){
+    const riskColor={high_risk:'#ef4444',moderate:'#f59e0b',advisory:'#6366f1'}[pg.highest_risk]||'#94a3b8';
+    html+=`<h3 style="font-size:.95rem;margin:1rem 0 .4rem">Pharmacogenomics</h3>`;
+    html+=`<div class="interp-box" style="border-left:3px solid ${riskColor}"><strong style="color:${riskColor};text-transform:uppercase">${pg.highest_risk.replace('_',' ')}</strong><br><span style="font-size:.85rem">${esc(pg.summary||'')}</span></div>`;
+    // List top CPIC + PharmGKB
+    if(pg.cpic&&pg.cpic.length){
+      html+=`<div style="margin-top:.5rem;font-size:.82rem"><strong>CPIC:</strong> ${pg.cpic.slice(0,3).map(x=>`${esc(x.gene)} (level ${esc(x.level)})`).join(', ')}</div>`;
+    }
+    if(pg.pharmgkb&&pg.pharmgkb.length){
+      html+=`<div style="margin-top:.3rem;font-size:.82rem"><strong>PharmGKB:</strong> ${pg.pharmgkb.slice(0,3).map(x=>`${esc(x.gene)}/${esc(x.variant)} (${esc(x.level)})`).join(', ')}</div>`;
+    }
+  }
+
+  // Drug-drug interactions
+  const ddi=c.ddi_warnings||{};
+  if(ddi.has_warnings){
+    html+=`<h3 style="font-size:.95rem;margin:1rem 0 .4rem">Drug-Drug Interactions</h3>`;
+    html+=`<div class="interp-box"><strong>${ddi.n_interactions.toLocaleString()}</strong> interactions in DrugBank. Top co-prescription concerns:</div>`;
+    if(ddi.top_interactions&&ddi.top_interactions.length){
+      html+='<div style="display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.4rem">';
+      ddi.top_interactions.slice(0,8).forEach(t=>{
+        const c=t.severity==='high'?'#fca5a5':'#cbd5e1';
+        html+=`<span class="b" style="background:${c};color:#0f172a">${esc(t.drug_name)}</span>`;
+      });
+      html+='</div>';
+    }
+  }
+
+  // Triangulation
+  const tri=c.triangulation||{};
+  if(tri.n_axes_agree!==undefined){
+    const labelColor=tri.label==='silver-standard'?'#6366f1':tri.label==='multi-axis'?'#84cc16':'#94a3b8';
+    html+=`<h3 style="font-size:.95rem;margin:1rem 0 .4rem">In-silico Triangulation</h3>`;
+    html+=`<div class="interp-box" style="border-left:3px solid ${labelColor}"><strong style="color:${labelColor};text-transform:uppercase">${tri.label||'—'}</strong> (${tri.n_axes_agree}/4 axes agree)<br><span style="font-size:.82rem;color:var(--text3)">KG ${tri.axes?.kg?'✓':'·'} · Docking ${tri.axes?.docking?'✓':'·'} · Pharos ${tri.axes?.pharos?'✓':'·'} · Literature ${tri.axes?.literature?'✓':'·'}</span></div>`;
+  }
+
+  // Tissue context
+  const tc=c.tissue_context||{};
+  if(tc.tissues&&tc.tissues.length){
+    html+=`<h3 style="font-size:.95rem;margin:1rem 0 .4rem">Tissue Context</h3>`;
+    html+=`<div class="interp-box"><strong>Relevant tissue(s):</strong> ${tc.tissues.map(esc).join(', ')}<br><span style="font-size:.85rem">${tc.n_expressed}/${tc.n_genes} genes expressed (mean TPM ${tc.mean_tpm_in_tissue}); tissue specificity ${(tc.tissue_specificity*100).toFixed(0)}% → context modifier ${tc.context_modifier}×</span></div>`;
+  }
+
+  if(!html)html='<div class="empty-state">No v5 clinical-layer data for this prediction.</div>';
+  return html;
+}
+
+function renderMechanism(c){
+  let html='';
+  if(c.mechanistic_hypothesis){
+    html+=`<h3 style="font-size:.95rem;margin-bottom:.4rem">Top mechanism path</h3>`;
+    html+=`<div class="interp-box" style="font-family:monospace;font-size:.85rem">${esc(c.mechanistic_hypothesis)}</div>`;
+  }
+  if(c.kg_paths_text){
+    html+=`<h3 style="font-size:.95rem;margin:1rem 0 .4rem">All paths</h3>`;
+    html+=`<pre style="white-space:pre-wrap;background:#f8fafc;padding:.8rem;border-radius:6px;font-size:.82rem">${esc(c.kg_paths_text)}</pre>`;
+  }
+  if(c.ai_hypothesis){
+    html+=`<h3 style="font-size:.95rem;margin:1rem 0 .4rem">AI-generated hypothesis</h3>`;
+    html+=`<div class="interp-box"><em>${esc(c.ai_hypothesis)}</em></div>`;
+  }
+  if(!html)html='<div class="empty-state">No mechanism path resolved for this drug-disease pair.</div>';
+  return html;
 }
 
 function pillarBar(label,value,max,color,detail){
