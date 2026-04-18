@@ -144,6 +144,13 @@ class EvidenceReport:
     confidence: str = ""  # HIGH, MEDIUM, LOW, NOVEL
     confidence_reasons: list = field(default_factory=list)
 
+    # v5 clinical layer
+    dose_plausibility: dict = field(default_factory=dict)
+    ddi_warnings: dict = field(default_factory=dict)
+    pharmacogenomics: dict = field(default_factory=dict)
+    triangulation: dict = field(default_factory=dict)
+    tissue_context: dict = field(default_factory=dict)
+
     def to_dict(self) -> dict:
         return {
             "drug_name": self.drug_name,
@@ -218,6 +225,12 @@ class EvidenceReport:
             "trial_phases": self.trial_phases,
             "confidence": self.confidence,
             "confidence_reasons": self.confidence_reasons,
+            # v5 clinical layer
+            "dose_plausibility": self.dose_plausibility,
+            "ddi_warnings": self.ddi_warnings,
+            "pharmacogenomics": self.pharmacogenomics,
+            "triangulation": self.triangulation,
+            "tissue_context": self.tissue_context,
         }
 
 
@@ -446,6 +459,51 @@ def generate_evidence_report(
                 report.kg_paths_text = "\n".join(f"• {p['narration']}" for p in paths)
                 # Top path becomes the mechanistic hypothesis
                 report.mechanistic_hypothesis = paths[0]["narration"]
+    except Exception:
+        pass
+
+    # v5 clinical layer — best-effort; failures don't break evidence pipeline
+    try:
+        from opencure.evidence.dose_plausibility import get_dose_plausibility
+        report.dose_plausibility = get_dose_plausibility(report.drug_id)
+    except Exception:
+        pass
+
+    try:
+        from opencure.evidence.ddi_warnings import get_ddi_warnings
+        report.ddi_warnings = get_ddi_warnings(report.drug_id, top_k=10)
+    except Exception:
+        pass
+
+    try:
+        from opencure.evidence.pharmacogenomics_v5 import get_pharmacogenomic_flags
+        report.pharmacogenomics = get_pharmacogenomic_flags(report.drug_name)
+    except Exception:
+        pass
+
+    try:
+        from opencure.evidence.triangulation import compute_triangulation_score, get_pharos_tdl
+        # Best available target symbol for Pharos lookup
+        tdl = ""
+        if report.dti_best_target:
+            tdl = get_pharos_tdl(report.dti_best_target)
+        report.triangulation = compute_triangulation_score(
+            kg_score=report.combined_score,
+            docking_score=None,  # populated when docking pillar runs
+            pharos_tdl=tdl,
+            pubmed_total=report.pubmed_total,
+        )
+    except Exception:
+        pass
+
+    try:
+        from opencure.scoring.tissue_context import score_tissue_context
+        # Use shared_targets if we have them; else skip (modifier = 1.0 default)
+        if report.shared_targets:
+            report.tissue_context = score_tissue_context(
+                disease_name,
+                {f"Gene::{g}" for g in report.shared_targets if g},
+            )
     except Exception:
         pass
 
