@@ -90,15 +90,42 @@ def compute_stats(candidates):
     return {"total": len(candidates), "diseases": len(diseases), "novel": novel, "breakthrough": bt, "high_confidence": high}
 
 
+def compute_evidence_status(c: dict) -> tuple[str, str]:
+    """Classify a candidate by existing human evidence (independent of computational score).
+
+    Returns (status, label) where status is one of:
+      NEW          — zero published literature (true novel prediction)
+      RESEARCHED   — has PubMed papers but no clinical trials
+      IN_TRIALS    — has active/completed clinical trials
+      ESTABLISHED  — extensively studied (>500 papers OR 5+ trials)
+    """
+    pubmed = c.get("pubmed_articles", 0) or 0
+    trials = c.get("clinical_trials", 0) or 0
+    max_citations = c.get("max_citations", 0) or 0
+
+    if trials >= 5 or pubmed > 500:
+        return "ESTABLISHED", "Established treatment"
+    if trials >= 1:
+        return "IN_TRIALS", f"In clinical trials ({trials})"
+    if pubmed >= 10:
+        return "RESEARCHED", f"Research ({pubmed} papers)"
+    if pubmed >= 1:
+        return "EMERGING", f"Minimal research ({pubmed} papers)"
+    return "NEW", "Novel — no prior literature"
+
+
 def prep_js_candidates(candidates):
     out = []
     for c in candidates:
+        evidence_status, evidence_label = compute_evidence_status(c)
         out.append({
             "disease": c["disease"],
             "drug_name": c["drug_name"],
             "drug_id": c.get("drug_id", ""),
             "confidence": c["confidence"],
             "novelty_level": c["novelty_level"],
+            "evidence_status": evidence_status,
+            "evidence_label": evidence_label,
             "combined_score": round(c["combined_score"], 4),
             "pillars_hit": c["pillars_hit"],
             "mr_score": round(c.get("mr_score", 0), 4),
@@ -180,11 +207,17 @@ def build_html(candidates, cross_disease, stats):
 <div class="guide-toggle" id="guide-toggle">
   <button onclick="document.getElementById('guide-box').classList.toggle('open')">How to read this dashboard</button>
   <div class="guide-box" id="guide-box">
+    <p><strong>Ranking:</strong> Candidates are ranked by <strong>pure computational score</strong> — the AI has no access to published literature when scoring. Literature is tracked separately as validation.</p>
+    <p><strong>Evidence Status column</strong> shows how much human research already exists (independent of the AI ranking):</p>
+    <p style="margin-left:1rem">🆕 <strong>NEW</strong> — zero prior literature (true novel prediction, worth testing)</p>
+    <p style="margin-left:1rem">📖 <strong>EMERGING</strong> — minimal research (1-9 papers)</p>
+    <p style="margin-left:1rem">📚 <strong>RESEARCHED</strong> — active research (10+ papers)</p>
+    <p style="margin-left:1rem">🧪 <strong>IN TRIALS</strong> — existing clinical trials</p>
+    <p style="margin-left:1rem">✅ <strong>ESTABLISHED</strong> — well-known treatment (500+ papers OR 5+ trials)</p>
+    <p><strong>Why this matters:</strong> If the AI ranks a drug in the top 10 AND it already has published research, that's <em>validation</em> — it rediscovered something we know works. If it's NEW in the top 10, that's a <em>genuine novel prediction</em> worth experimental testing.</p>
     <p><strong>Confidence</strong>: HIGH = multiple evidence types agree; MEDIUM = some support; LOW = computational-only.</p>
-    <p><strong>Novelty</strong>: BREAKTHROUGH = zero published literature; NOVEL = minimal; EMERGING/KNOWN/ESTABLISHED = increasing prior evidence.</p>
-    <p><strong>Pillars</strong>: How many of the 8 independent AI methods support this prediction (more = stronger signal).</p>
-    <p><strong>MR Score</strong>: Mendelian Randomization — causal genetic evidence (0-1, higher = stronger causal support from human genetics).</p>
-    <p><strong>Score</strong>: Combined weighted score across all pillars with convergence bonus. Higher = more AI methods agree.</p>
+    <p><strong>Pillars</strong>: How many of the 11 independent AI methods support this prediction.</p>
+    <p><strong>MR Score</strong>: Causal genetic evidence from human GWAS (0-1).</p>
     <p>Click any row to see full evidence: papers, trials, molecular data, and genetic support.</p>
   </div>
 </div>
@@ -210,10 +243,12 @@ def build_html(candidates, cross_disease, stats):
       <option value="ESTABLISHED">ESTABLISHED</option>
     </select>
     <select id="f-evidence">
-      <option value="">All Evidence</option>
-      <option value="trials">Has Clinical Trials</option>
-      <option value="pubmed">Has PubMed Evidence</option>
-      <option value="computational">Pure Computational</option>
+      <option value="">All Evidence Status</option>
+      <option value="NEW">🆕 New Prediction (no prior research)</option>
+      <option value="EMERGING">📚 Emerging (minimal research)</option>
+      <option value="RESEARCHED">📚 Researched (has literature)</option>
+      <option value="IN_TRIALS">🧪 In Clinical Trials</option>
+      <option value="ESTABLISHED">✅ Established Treatment</option>
     </select>
     <input type="text" id="f-search" placeholder="Search drug name...">
   </div>
@@ -232,10 +267,9 @@ def build_html(candidates, cross_disease, stats):
         <th data-sort="drug_name">Drug <span class="sa"></span></th>
         <th data-sort="combined_score">Score <span class="sa"></span></th>
         <th data-sort="confidence">Confidence <span class="sa"></span></th>
-        <th data-sort="novelty_level">Novelty <span class="sa"></span></th>
         <th data-sort="pillars_hit">Pillars <span class="sa"></span></th>
         <th data-sort="mr_score">MR <span class="sa"></span></th>
-        <th>Evidence</th>
+        <th data-sort="evidence_status">Evidence Status <span class="sa"></span></th>
       </tr></thead>
       <tbody id="pred-body"></tbody>
     </table>
@@ -346,6 +380,11 @@ tbody tr:hover{background:#f8fafc}
 .b{display:inline-block;padding:.12rem .5rem;border-radius:6px;font-size:.72rem;font-weight:600;letter-spacing:.02em}
 .b-high{background:var(--green-l);color:var(--green)}.b-medium{background:var(--orange-l);color:var(--orange)}.b-low{background:var(--red-l);color:var(--red)}
 .b-breakthrough{background:var(--purple-l);color:var(--purple)}.b-novel{background:var(--accent-l);color:var(--accent)}.b-emerging{background:var(--orange-l);color:var(--orange)}.b-known,.b-established{background:#f1f5f9;color:var(--text3)}
+/* Evidence status badges */
+.b-new{background:#fce7f3;color:#be185d;font-weight:600}
+.b-researched{background:var(--accent-l);color:var(--accent)}
+.b-trials{background:var(--green-l);color:var(--green);font-weight:600}
+.b-established{background:#f1f5f9;color:var(--text3)}
 .ev-dots{display:flex;gap:.25rem;align-items:center}
 .ev-dot{width:7px;height:7px;border-radius:50%;background:#cbd5e1}
 .ev-dot.on{background:var(--accent)}
@@ -470,9 +509,7 @@ function applyFilters(){
     if(search&&!c.drug_name.toLowerCase().includes(search))return false;
     if(hideKnown&&c.is_known_treatment)return false;
     if(c.pillars_hit<minP)return false;
-    if(ev==='trials'&&c.clinical_trials<1)return false;
-    if(ev==='pubmed'&&c.pubmed_articles<1)return false;
-    if(ev==='computational'&&(c.pubmed_articles>0||c.clinical_trials>0))return false;
+    if(ev&&c.evidence_status!==ev)return false;
     return true;
   });
   document.getElementById('result-count').textContent=filtered.length+' of '+DATA.length;
@@ -484,13 +521,33 @@ function showDiseaseHeader(disease){
   const dh=document.getElementById('disease-header');
   if(!disease){dh.style.display='none';return}
   const all=DATA.filter(c=>c.disease===disease);
-  const hi=all.filter(c=>c.confidence==='HIGH').length;
-  const bt=all.filter(c=>c.novelty_level==='BREAKTHROUGH').length;
-  const top3=all.sort((a,b)=>b.combined_score-a.combined_score).slice(0,3);
+  const top10=all.sort((a,b)=>b.combined_score-a.combined_score).slice(0,10);
+
+  // Validation story: of top 10 computational predictions, how many have prior evidence?
+  const hasEvidence = top10.filter(c => c.evidence_status !== 'NEW').length;
+  const newPredictions = 10 - hasEvidence;
+
+  // Breakdown
+  const established = top10.filter(c=>c.evidence_status==='ESTABLISHED').length;
+  const inTrials = top10.filter(c=>c.evidence_status==='IN_TRIALS').length;
+  const researched = top10.filter(c=>c.evidence_status==='RESEARCHED').length;
+  const emerging = top10.filter(c=>c.evidence_status==='EMERGING').length;
+  const neu = top10.filter(c=>c.evidence_status==='NEW').length;
+
   dh.style.display='block';
-  dh.innerHTML=`<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem">
-    <div><strong style="font-size:1.1rem">${esc(disease)}</strong><br><span style="font-size:.85rem;color:var(--text2)">${all.length} candidates &middot; ${hi} high confidence &middot; ${bt} breakthroughs</span></div>
-    <div style="font-size:.82rem;color:var(--text3)">Top: ${top3.map(c=>'<strong>'+esc(c.drug_name)+'</strong>').join(', ')}</div>
+  dh.innerHTML=`<div>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.5rem">
+      <strong style="font-size:1.2rem">${esc(disease)}</strong>
+      <span style="font-size:.85rem;color:var(--text2)">${all.length} computational predictions</span>
+    </div>
+    <div style="margin-top:.6rem;padding:.6rem;background:#f8fafc;border-radius:6px;font-size:.88rem">
+      <strong>Validation snapshot (top 10 by pure computational score):</strong><br>
+      <span style="color:var(--green);font-weight:600">${hasEvidence}/10 have prior research evidence</span> ✓ validates the AI methodology<br>
+      <span style="color:var(--accent);font-weight:600">${neu}/10 are novel predictions</span> 🆕 worth experimental testing<br>
+      <div style="margin-top:.4rem;font-size:.8rem;color:var(--text3)">
+        ${established} Established · ${inTrials} In Trials · ${researched} Researched · ${emerging} Emerging · ${neu} New
+      </div>
+    </div>
   </div>`;
 }
 
@@ -504,28 +561,48 @@ function renderTable(){
     const a=th.querySelector('.sa');if(a)a.textContent=th.dataset.sort===sortCol?(sortAsc?'\u25B2':'\u25BC'):''
   });
   const tbody=document.getElementById('pred-body');
-  // Find global rank for each candidate
-  const allSorted=[...DATA].sort((a,b)=>b.combined_score-a.combined_score);
-  const rankMap=new Map();allSorted.forEach((c,i)=>rankMap.set(c.drug_name+'|'+c.disease,i+1));
+  // Rank by pure computational score.
+  // If filtering by one disease, rank WITHIN that disease (#1 = best for that disease).
+  // Otherwise, global rank.
+  const currentDisease = document.getElementById('f-disease').value;
+  const rankMap = new Map();
+  if (currentDisease) {
+    const diseaseOnly = [...DATA].filter(c => c.disease === currentDisease)
+      .sort((a,b) => b.combined_score - a.combined_score);
+    diseaseOnly.forEach((c,i) => rankMap.set(c.drug_name+'|'+c.disease, i+1));
+  } else {
+    const allSorted = [...DATA].sort((a,b) => b.combined_score - a.combined_score);
+    allSorted.forEach((c,i) => rankMap.set(c.drug_name+'|'+c.disease, i+1));
+  }
 
   tbody.innerHTML=filtered.map(c=>{
     const rank=rankMap.get(c.drug_name+'|'+c.disease)||'-';
     const idx=DATA.indexOf(c);
-    const hasPub=c.pubmed_articles>0;
-    const hasTrial=c.clinical_trials>0;
-    const hasFail=c.has_failed_trial;
     return `<tr onclick="openPanel(${idx})">
       <td style="text-align:center;color:var(--text3);font-size:.8rem">#${rank}</td>
       <td>${esc(c.disease)}</td>
       <td><strong>${esc(c.drug_name)}</strong></td>
-      <td><span class="score-bar"><span class="score-fill" style="width:${Math.min(c.combined_score/1.25*100,100)}%"></span></span>${c.combined_score.toFixed(2)}</td>
+      <td><span class="score-bar"><span class="score-fill" style="width:${Math.min(c.combined_score/1.0*100,100)}%"></span></span>${c.combined_score.toFixed(3)}</td>
       <td><span class="b b-${c.confidence.toLowerCase()}">${c.confidence}</span></td>
-      <td><span class="b b-${c.novelty_level.toLowerCase()}">${c.novelty_level}</span></td>
       <td style="text-align:center">${c.pillars_hit}</td>
       <td>${c.mr_score>0?c.mr_score.toFixed(2):'-'}</td>
-      <td><div class="ev-dots">${hasPub?'<span class="ev-dot on" title="PubMed"></span>':'<span class="ev-dot" title="No PubMed"></span>'}${hasTrial?'<span class="ev-dot trial" title="Clinical trials"></span>':'<span class="ev-dot" title="No trials"></span>'}${hasFail?'<span class="ev-dot warn" title="Failed trial"></span>':''}</div></td>
+      <td>${evidenceBadge(c)}</td>
     </tr>`
   }).join('');
+}
+
+function evidenceBadge(c){
+  const status = c.evidence_status;
+  const label = c.evidence_label || '';
+  const icons = {
+    "NEW":         ["🆕", "b-new"],
+    "EMERGING":    ["📖", "b-emerging"],
+    "RESEARCHED":  ["📚", "b-researched"],
+    "IN_TRIALS":   ["🧪", "b-trials"],
+    "ESTABLISHED": ["✅", "b-established"],
+  };
+  const [icon, cls] = icons[status] || ["", ""];
+  return `<span class="b ${cls}" title="${esc(label)}">${icon} ${esc(status.replace("_"," "))}</span>`;
 }
 
 function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML}
