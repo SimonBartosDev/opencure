@@ -48,18 +48,44 @@ def main() -> None:
                         out.write("\t".join(parts) + "\n")
                         n_drkg += 1
 
-        # PrimeKG — CSV with header, columns: relation, display_relation, x_id, x_type, ...
+        # PrimeKG — CSV with cols relation,display_relation,x_index,x_id,x_type,x_name,x_source,...
+        # Map entity types to DRKG-compatible form so drug/gene nodes merge:
+        #   gene/protein + NCBI source  →  Gene::<entrez>
+        #   drug + DrugBank source      →  Compound::DB<id>
+        #   disease                     →  Disease::MONDO_<index>  (won't merge, but trainable)
+        #   (other types kept with their native prefix)
         if PRIMEKG_PATH.exists():
             print(f"Loading {PRIMEKG_PATH}…")
             import csv
+
+            def primekg_entity(typ: str, ident: str, source: str) -> str:
+                typ = (typ or "").strip()
+                ident = (ident or "").strip()
+                source = (source or "").strip()
+                if not ident:
+                    return ""
+                if typ == "gene/protein":
+                    # PrimeKG x_id for NCBI is the entrez ID directly
+                    return f"Gene::{ident}"
+                if typ == "drug":
+                    # x_id is DrugBank accession when source==DrugBank
+                    if source == "DrugBank" and ident.startswith("DB"):
+                        return f"Compound::{ident}"
+                    return f"Compound::{source}:{ident}"
+                if typ == "disease":
+                    return f"Disease::MONDO_{ident.split('_')[0].strip().replace(' ','')}"
+                # Default: keep native PrimeKG type
+                safe_typ = typ.replace(" ", "_").replace("/", "_")
+                return f"{safe_typ}::{ident}"
+
             with PRIMEKG_PATH.open() as f:
                 reader = csv.DictReader(f)
                 for row in reader:
-                    h = f"{row.get('x_type','?')}::{row.get('x_id','')}"
-                    r = f"PRIMEKG::{row.get('relation','?')}"
-                    t_ = f"{row.get('y_type','?')}::{row.get('y_id','')}"
-                    if "?" in (h + t_) or not row.get("x_id") or not row.get("y_id"):
+                    h = primekg_entity(row.get("x_type", ""), row.get("x_id", ""), row.get("x_source", ""))
+                    t_ = primekg_entity(row.get("y_type", ""), row.get("y_id", ""), row.get("y_source", ""))
+                    if not h or not t_:
                         continue
+                    r = f"PRIMEKG::{row.get('relation','unknown')}"
                     trip = (h, r, t_)
                     if trip not in seen:
                         seen.add(trip)

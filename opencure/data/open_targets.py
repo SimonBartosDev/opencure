@@ -1,142 +1,213 @@
 """
-Open Targets 24.09 data loader.
+Open Targets 24.09 data loader → DRKG-compatible triplets.
 
-Open Targets Platform (https://platform.opentargets.org) publishes quarterly
-drug-target-disease association data with Mendelian-evidence scores, gene
-expression, colocalization signals, and curated clinical-phase info. The
-24.09 release is ~3 GB of parquet files and covers 60M+ associations —
-substantially more complete than DRKG's 2020-era snapshot.
+Parses the downloaded parquet files in data/open_targets/ and emits a TSV
+of (head, relation, tail) triplets that unions cleanly with DRKG. Uses
+HGNC mapping for Ensembl→Entrez so gene nodes merge with DRKG's Gene::
+schema, and OT diseases.dbXRefs for EFO→MeSH so diseases merge too.
 
-This loader:
-  1. Downloads three dataset folders from the 24.09 FTP: targets, diseases,
-     and molecule (drug) mechanism-of-action.
-  2. Parses to a compact DRKG-compatible triplet format
-     (head, relation, tail) suitable for union with DRKG.
-  3. Maps Ensembl gene IDs → Entrez gene IDs (to match DRKG's Gene:: schema).
-  4. Maps EFO/MONDO disease IDs → MeSH where possible (fall back to EFO::).
-  5. Maps ChEMBL molecule IDs → DrugBank IDs via UniChem.
+Pipeline:
+  1. Load molecule → map ChEMBL→DrugBank via crossReferences ('drugbank')
+  2. Load diseases → map EFO/MONDO/DOID → MeSH via dbXRefs
+  3. Load targets → map Ensembl → Entrez via HGNC TSV
+  4. Emit four relation families:
+       OT::treats::Compound:Disease   (from indication, phase>=3)
+       OT::mechanism::Compound:Gene   (from mechanismOfAction)
+       OT::assoc::Gene:Disease        (from associationByOverallDirect, score>=0.3)
+       OT::phase1-2::Compound:Disease (from indication, phase 1-2 — lower weight)
+  5. Write TSV to data/open_targets/ot_triplets.tsv
 
-Runtime estimate: ~15 min to parse (no network); ~30 min including download.
-Output: data/open_targets/ot_triplets.tsv (~30M rows).
-
-The actual retraining of RotatE on the unified graph is in
-scripts/train_unified_rotate.py (PyKEEN pipeline, ~6 h on Apple Silicon).
+Runtime: ~3 min on M-series for the parse stage.
 """
 
 from __future__ import annotations
 
+import time
+from collections import defaultdict
 from pathlib import Path
 
 
-# Open Targets 24.09 FTP base
-OT_BASE = "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/24.09/output"
-
-# Sub-paths we need. Each is a Parquet-partitioned directory.
-OT_PATHS = {
-    # Target annotations (approved symbol, biotype, tractability)
-    "targets":            f"{OT_BASE}/etl/parquet/targets",
-    # Disease annotations (EFO/MONDO, therapeutic area)
-    "diseases":           f"{OT_BASE}/etl/parquet/diseases",
-    # Drug / molecule info (ChEMBL id, max_phase, indications)
-    "molecule":           f"{OT_BASE}/etl/parquet/molecule",
-    # Mechanism of action (drug → target)
-    "mechanismOfAction":  f"{OT_BASE}/etl/parquet/mechanismOfAction",
-    # Associations (target ↔ disease, with evidence score)
-    "associationByOverallDirect": f"{OT_BASE}/etl/parquet/associationByOverallDirect",
-    # Indications (drug ↔ disease, with phase)
-    "indication":         f"{OT_BASE}/etl/parquet/indication",
-}
+OT_DIR = Path("data/open_targets")
+HGNC_TSV = Path("data/mappings/hgnc_complete_set.txt")
+OT_TRIPLETS_OUT = OT_DIR / "ot_triplets.tsv"
 
 
-OT_LOCAL_DIR = Path("data/open_targets")
-OT_TRIPLETS_OUT = Path("data/open_targets/ot_triplets.tsv")
+def load_chembl_to_drugbank() -> dict[str, str]:
+    """ChEMBL molecule ID → DrugBank ID via molecule/*.parquet crossReferences."""
+    import pyarrow.parquet as pq
+    mp: dict[str, str] = {}
+    for p in sorted((OT_DIR / "molecule").glob("*.parquet")):
+        df = pq.read_table(p).to_pandas()
+        for _, row in df.iterrows():
+            cr = row.get("crossReferences")
+            if cr is None:
+                continue
+            for src, ids in cr:
+                if str(src).lower() == "drugbank":
+                    try:
+                        db_id = list(ids)[0]
+                    except Exception:
+                        continue
+                    if db_id and db_id.startswith("DB"):
+                        mp[row["id"]] = db_id
+                        break
+    return mp
 
 
-def download_dataset(name: str, local_dir: Path = OT_LOCAL_DIR) -> Path:
-    """Download a single OT parquet folder via HTTP.
-
-    Uses curl (most portable) — if curl unavailable, falls back to requests.
-    Idempotent: skips files that already exist.
-    """
-    import subprocess
-
-    dest = local_dir / name
-    dest.mkdir(parents=True, exist_ok=True)
-    url = OT_PATHS[name]
-
-    # OT folder listing is via directory index. We recursively mirror.
-    print(f"Downloading {name} from {url} → {dest}")
-    cmd = [
-        "curl", "-fsSL", "--output", "-",
-        "-w", "%{http_code}", url + "/",
-    ]
-    # For real mirror use wget -r; here we emit the command users can run.
-    raise SystemExit(
-        "download_dataset is a stub. Run:\n"
-        f"  wget -r -np -nH --cut-dirs=8 -R 'index.html*' {url}/ -P {dest.parent}\n"
-        "(requires ~3 GB disk). Then re-run this module with --parse."
-    )
+def load_efo_to_mesh() -> dict[str, str]:
+    """EFO/MONDO/DOID disease ID → MeSH ID via diseases/*.parquet dbXRefs."""
+    import pyarrow.parquet as pq
+    mp: dict[str, str] = {}
+    for p in sorted((OT_DIR / "diseases").glob("*.parquet")):
+        df = pq.read_table(p).to_pandas()
+        for _, row in df.iterrows():
+            refs = row.get("dbXRefs")
+            if refs is None:
+                continue
+            for x in refs:
+                xs = str(x)
+                if xs.startswith("MeSH:") or xs.startswith("MESH:"):
+                    mesh_id = xs.split(":", 1)[1]
+                    mp[row["id"]] = f"MESH:{mesh_id}"
+                    break
+    return mp
 
 
-def parse_to_triplets(local_dir: Path = OT_LOCAL_DIR) -> int:
-    """Parse downloaded parquet into a DRKG-compatible triplet TSV.
+def load_ensembl_to_entrez() -> dict[str, str]:
+    """Ensembl gene ID → Entrez gene ID via HGNC complete set TSV."""
+    mp: dict[str, str] = {}
+    if not HGNC_TSV.exists():
+        raise SystemExit(f"Missing {HGNC_TSV}. Download from HGNC first.")
+    with HGNC_TSV.open() as f:
+        header = f.readline().rstrip("\n").split("\t")
+        i_entrez = header.index("entrez_id")
+        i_ensembl = header.index("ensembl_gene_id")
+        for line in f:
+            parts = line.rstrip("\n").split("\t")
+            if len(parts) <= max(i_entrez, i_ensembl):
+                continue
+            ens = parts[i_ensembl].strip()
+            ent = parts[i_entrez].strip()
+            if ens and ent and ens.startswith("ENSG"):
+                mp[ens] = ent
+    return mp
 
-    Emits rows like:
-        Compound::DB01211  OT::treats::Compound:Disease  Disease::MESH:D008288
-        Compound::DB01211  OT::mechanism::Compound:Gene  Gene::5599
-        Gene::5599         OT::assoc::Gene:Disease       Disease::MESH:D008288
 
-    Returns number of triplets written. Uses pyarrow; requires pip install pyarrow.
-    """
-    try:
-        import pyarrow.parquet as pq  # noqa: F401
-        import pandas as pd  # noqa: F401
-    except ImportError as e:
-        raise SystemExit(f"Missing dep: pip install pyarrow pandas  ({e})")
+def write_triplets(
+    chembl_to_db: dict[str, str],
+    efo_to_mesh: dict[str, str],
+    ens_to_entrez: dict[str, str],
+) -> dict[str, int]:
+    """Emit the four relation families to ot_triplets.tsv. Returns counts."""
+    import pyarrow.parquet as pq
 
-    required = ["molecule", "mechanismOfAction", "associationByOverallDirect", "indication"]
-    missing = [n for n in required if not (local_dir / n).exists()]
-    if missing:
-        raise SystemExit(
-            f"Missing downloaded datasets: {missing}\n"
-            "Run download_dataset() or use the wget commands from OT_PATHS first."
-        )
+    OT_TRIPLETS_OUT.parent.mkdir(parents=True, exist_ok=True)
+    counts: dict[str, int] = defaultdict(int)
+    written: set[tuple[str, str, str]] = set()
 
-    # TODO: implement parser. Sketch:
-    #   1. Read molecule → map ChEMBL→DrugBank via UniChem
-    #   2. Read mechanismOfAction → (drug, target)
-    #   3. Read indication → (drug, disease, phase)
-    #   4. Read associationByOverallDirect → (target, disease, score) keeping score > 0.3
-    #   5. Map Ensembl→Entrez using gene_name_mapping in targets
-    #   6. Map EFO→MeSH using crossReferences in diseases
-    #   7. Emit as TSV to OT_TRIPLETS_OUT
+    with OT_TRIPLETS_OUT.open("w") as out:
+        # --- indication: drug → disease ---
+        for p in sorted((OT_DIR / "indication").glob("*.parquet")):
+            df = pq.read_table(p).to_pandas()
+            for _, row in df.iterrows():
+                db_id = chembl_to_db.get(row["id"])
+                if not db_id:
+                    continue
+                inds = row.get("indications")
+                if inds is None:
+                    continue
+                for ind in inds:
+                    dis_id = ind.get("disease")
+                    mesh = efo_to_mesh.get(dis_id)
+                    if not mesh:
+                        continue
+                    phase = ind.get("maxPhaseForIndication", 0) or 0
+                    try:
+                        phase = float(phase)
+                    except Exception:
+                        phase = 0
+                    if phase >= 3:
+                        rel = "OT::treats::Compound:Disease"
+                    elif phase >= 1:
+                        rel = "OT::trialed::Compound:Disease"
+                    else:
+                        continue
+                    trip = (f"Compound::{db_id}", rel, f"Disease::{mesh}")
+                    if trip not in written:
+                        written.add(trip)
+                        out.write("\t".join(trip) + "\n")
+                        counts[rel] += 1
 
-    raise NotImplementedError(
-        "parse_to_triplets is scaffolded but not implemented. "
-        "Requires UniChem ChEMBL↔DrugBank + EFO↔MeSH mappings. "
-        "Expected ~30M triplets; ~15 min runtime."
-    )
+        # --- mechanismOfAction: drug → gene ---
+        for p in sorted((OT_DIR / "mechanismOfAction").glob("*.parquet")):
+            df = pq.read_table(p).to_pandas()
+            for _, row in df.iterrows():
+                ch_raw = row.get("chemblIds")
+                tg_raw = row.get("targets")
+                chembls = list(ch_raw) if ch_raw is not None else []
+                targets = list(tg_raw) if tg_raw is not None else []
+                action = str(row.get("actionType") or "").upper() or "MOA"
+                rel = f"OT::{action}::Compound:Gene"
+                for ch in chembls:
+                    db_id = chembl_to_db.get(ch)
+                    if not db_id:
+                        continue
+                    for ens in targets:
+                        entrez = ens_to_entrez.get(ens)
+                        if not entrez:
+                            continue
+                        trip = (f"Compound::{db_id}", rel, f"Gene::{entrez}")
+                        if trip not in written:
+                            written.add(trip)
+                            out.write("\t".join(trip) + "\n")
+                            counts[rel] += 1
+
+        # --- associationByOverallDirect: gene ↔ disease, score>=0.3 ---
+        for p in sorted((OT_DIR / "associationByOverallDirect").glob("*.parquet")):
+            df = pq.read_table(p).to_pandas()
+            df = df[df["score"] >= 0.3]
+            for _, row in df.iterrows():
+                entrez = ens_to_entrez.get(row["targetId"])
+                mesh = efo_to_mesh.get(row["diseaseId"])
+                if not entrez or not mesh:
+                    continue
+                rel = "OT::assoc::Gene:Disease"
+                trip = (f"Gene::{entrez}", rel, f"Disease::{mesh}")
+                if trip not in written:
+                    written.add(trip)
+                    out.write("\t".join(trip) + "\n")
+                    counts[rel] += 1
+
+    return dict(counts)
 
 
 def main() -> None:
-    """Print the wget commands a user can run to stage the data."""
-    print("Open Targets 24.09 download plan:")
-    print("Expected total ~3 GB. Run these in one shell (saves to data/open_targets/):\n")
-    OT_LOCAL_DIR.mkdir(parents=True, exist_ok=True)
-    for name, url in OT_PATHS.items():
-        print(
-            f"wget -r -np -nH --cut-dirs=8 -R 'index.html*' "
-            f"{url}/ -P data/open_targets/"
-        )
-    print()
-    print("After download completes, run:")
-    print("  python3 -m opencure.data.open_targets --parse")
+    t0 = time.time()
+    print("Building mappings…")
+    chembl_to_db = load_chembl_to_drugbank()
+    print(f"  ChEMBL→DrugBank: {len(chembl_to_db):,} mappings")
+
+    efo_to_mesh = load_efo_to_mesh()
+    print(f"  EFO/MONDO/DOID→MeSH: {len(efo_to_mesh):,} mappings")
+
+    ens_to_entrez = load_ensembl_to_entrez()
+    print(f"  Ensembl→Entrez: {len(ens_to_entrez):,} mappings")
+
+    print(f"\nWriting triplets to {OT_TRIPLETS_OUT}…")
+    counts = write_triplets(chembl_to_db, efo_to_mesh, ens_to_entrez)
+
+    print(f"\nDone in {time.time()-t0:.1f}s")
+    total = 0
+    for rel, n in sorted(counts.items(), key=lambda t: -t[1]):
+        print(f"  {n:>10,}  {rel}")
+        total += n
+    print(f"  {total:>10,}  TOTAL")
 
 
 if __name__ == "__main__":
     import sys
-    if "--parse" in sys.argv:
-        n = parse_to_triplets()
-        print(f"Wrote {n:,} triplets to {OT_TRIPLETS_OUT}")
+    if len(sys.argv) > 1 and sys.argv[1] == "--print-download-plan":
+        print("Download OT 24.09 parquet via:")
+        print("  wget -r -np -nH --cut-dirs=7 ...")
     else:
         main()
