@@ -69,6 +69,16 @@ class EvidenceReport:
     dti_score: float = 0.0
     dti_best_target: str = ""
 
+    # v3: Group-level scores (from grouped_combiner.py)
+    kg_group_score: float = 0.0
+    structural_group_score: float = 0.0
+    network_group_score: float = 0.0
+    txgnn_group_score: float = 0.0
+    mr_group_score: float = 0.0
+    admet_multiplier: float = 0.7
+    efficacy_score: float = 0.0
+    groups_hit: int = 0
+
     # Graph evidence
     direct_relations: list = field(default_factory=list)
     shared_targets: list = field(default_factory=list)
@@ -161,6 +171,15 @@ class EvidenceReport:
             "primekg_score": self.primekg_score,
             "dti_score": self.dti_score,
             "dti_best_target": self.dti_best_target,
+            # v3 group scores
+            "kg_group_score": self.kg_group_score,
+            "structural_group_score": self.structural_group_score,
+            "network_group_score": self.network_group_score,
+            "txgnn_group_score": self.txgnn_group_score,
+            "mr_group_score": self.mr_group_score,
+            "admet_multiplier": self.admet_multiplier,
+            "efficacy_score": self.efficacy_score,
+            "groups_hit": self.groups_hit,
             "direct_relations": self.direct_relations,
             "shared_target_count": self.shared_target_count,
             "shared_targets": self.shared_targets[:10],
@@ -243,6 +262,15 @@ def generate_evidence_report(
         primekg_score=result.get("primekg_score", 0),
         dti_score=result.get("dti_score", 0),
         dti_best_target=result.get("dti_best_target", ""),
+        # v3 group-level scores
+        kg_group_score=result.get("kg_group_score", 0),
+        structural_group_score=result.get("structural_group_score", 0),
+        network_group_score=result.get("network_group_score", 0),
+        txgnn_group_score=result.get("txgnn_group_score", 0),
+        mr_group_score=result.get("mr_group_score", 0),
+        admet_multiplier=result.get("admet_multiplier", 0.7),
+        efficacy_score=result.get("efficacy_score", 0),
+        groups_hit=result.get("groups_hit", 0),
     )
 
     # Graph evidence (already in result)
