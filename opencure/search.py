@@ -427,7 +427,113 @@ def search(
         print(f"  [WARN] ADMET filtering failed: {e}")
 
     print(f"\nCombining {len(active_pillars)} active pillars: {', '.join(active_pillars)}")
-    combined = _combine_scores_v2(transe_scores, pykeen_scores, mol_sim_scores, mol_emb_scores, data["compounds"], gene_sig_scores, proximity_scores, txgnn_scores, mr_scores, admet_scores, admet_toxic, primekg_scores, dti_scores)
+
+    # v3 pipeline: grouped scoring with hard filters
+    try:
+        from opencure.scoring.pillar_groups import (
+            group_kg_scores, group_structural_scores, group_network_scores, build_feature_matrix
+        )
+        from opencure.scoring.grouped_combiner import combine_grouped_scores
+        from opencure.filters.drug_filter import filter_compounds
+        from opencure.scoring.admet_filter import load_cached_predictions
+
+        # Hard filter BEFORE combining — reject non-therapeutic compounds
+        admet_cache = load_cached_predictions()
+        all_compounds = (
+            set(transe_scores) | set(pykeen_scores) | set(primekg_scores)
+            | set(mol_sim_scores) | set(mol_emb_scores) | set(dti_scores)
+            | set(proximity_scores) | set(gene_sig_scores) | set(mr_scores)
+            | set(admet_scores) | set(txgnn_scores)
+        )
+        all_compounds -= admet_toxic  # legacy ADMET filter
+
+        # Apply v3 hard filter (SMILES rules + ChEMBL phase + critical ADMET)
+        kept, rejections = filter_compounds(
+            list(all_compounds),
+            data["smiles_map"],
+            admet_cache=admet_cache,
+            check_chembl=True,
+        )
+        if rejections:
+            print(f"  Filtered {sum(rejections.values())} non-therapeutic compounds: {rejections}")
+        kept_set = set(kept)
+
+        # Group correlated pillars
+        kg_group = group_kg_scores(transe_scores, pykeen_scores, primekg_scores)
+        structural_group = group_structural_scores(mol_sim_scores, mol_emb_scores, dti_scores)
+        network_group = group_network_scores(proximity_scores, gene_sig_scores)
+
+        # Build grouped feature matrix (only for kept compounds)
+        features = build_feature_matrix(
+            kg_group, structural_group, network_group,
+            txgnn_scores, mr_scores, admet_scores,
+            kept_set,
+        )
+
+        # Combine with grouped combiner
+        combined = combine_grouped_scores(features)
+
+        # Attach legacy pillar-level scores for transparency (used by downstream)
+        for compound, scores in combined.items():
+            if compound in transe_scores:
+                raw, rel, disease_entity = transe_scores[compound]
+                scores["transe_score"] = raw
+                scores["transe_rank"] = 0  # filled below
+                scores["transe_relation"] = rel
+                scores["disease_entity"] = disease_entity
+            if compound in pykeen_scores:
+                raw, rel, de = pykeen_scores[compound]
+                scores["pykeen_score"] = raw
+            if compound in primekg_scores:
+                raw, rel, de = primekg_scores[compound]
+                scores["primekg_score"] = raw
+            if compound in txgnn_scores:
+                raw, rank = txgnn_scores[compound]
+                scores["txgnn_raw_score"] = raw
+                scores["txgnn_rank"] = rank
+            if compound in mol_sim_scores:
+                sim, similar_to = mol_sim_scores[compound]
+                scores["mol_similarity"] = sim
+                scores["similar_to"] = similar_to
+            if compound in mol_emb_scores:
+                sim, similar_to = mol_emb_scores[compound]
+                scores["mol_emb_similarity"] = sim
+                scores["mol_emb_similar_to"] = similar_to
+            if compound in proximity_scores:
+                ps, pd = proximity_scores[compound]
+                scores["proximity_raw_score"] = ps
+                scores["proximity_distance"] = pd
+            if compound in gene_sig_scores:
+                sig_score, sig_rank = gene_sig_scores[compound]
+                scores["gene_sig_rank"] = sig_rank
+            if compound in mr_scores:
+                mr_s, mr_t = mr_scores[compound]
+                scores["mr_score_raw"] = mr_s
+                scores["mr_genetic_targets"] = mr_t
+            if compound in dti_scores:
+                dti_s, dti_t, _ = dti_scores[compound]
+                scores["dti_score_raw"] = dti_s
+                scores["dti_best_target"] = dti_t
+            if compound in admet_scores:
+                admet_s, admet_f, _ = admet_scores[compound]
+                scores["admet_score_raw"] = admet_s
+                scores["admet_flags"] = admet_f
+
+        # Fill transe_rank from percentile rank
+        sorted_transe = sorted(transe_scores.keys(), key=lambda c: -transe_scores[c][0])
+        for i, c in enumerate(sorted_transe):
+            if c in combined:
+                combined[c]["transe_rank"] = i + 1
+
+    except ImportError as e:
+        # Fallback to legacy combiner if v3 modules unavailable
+        print(f"  [INFO] v3 combiner unavailable ({e}), falling back to v2")
+        combined = _combine_scores_v2(
+            transe_scores, pykeen_scores, mol_sim_scores, mol_emb_scores,
+            data["compounds"], gene_sig_scores, proximity_scores,
+            txgnn_scores, mr_scores, admet_scores, admet_toxic,
+            primekg_scores, dti_scores,
+        )
 
     # Step 5: Build results with evidence
     ranked = sorted(combined.items(), key=lambda x: -x[1]["combined_score"])[:top_k]
@@ -449,6 +555,15 @@ def search(
             "relation_type": rel_type,
             "disease_entity": scores.get("disease_entity", ""),
             "pillars_hit": scores.get("pillars_hit", 1),
+            # v3 group-level scores
+            "kg_group_score": round(scores.get("kg_score", 0), 4),
+            "structural_group_score": round(scores.get("structural_score", 0), 4),
+            "network_group_score": round(scores.get("network_score", 0), 4),
+            "txgnn_group_score": round(scores.get("txgnn_score", 0), 4),
+            "mr_group_score": round(scores.get("mr_score", 0), 4),
+            "admet_multiplier": round(scores.get("admet_multiplier", 0.7), 4),
+            "efficacy_score": round(scores.get("efficacy_score", 0), 4),
+            "groups_hit": scores.get("groups_hit", 0),
         }
 
         # Pillar 1a: Molecular fingerprint similarity
