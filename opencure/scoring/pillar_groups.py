@@ -159,6 +159,8 @@ def build_feature_matrix(
     txgnn_normalized = normalize_txgnn(txgnn_scores)
     features = {}
 
+    from opencure.scoring.hub_normalize import degree_penalty
+
     for compound in all_compounds:
         kg = kg_group.get(compound, (0, 0, ""))[0]
         structural = structural_group.get(compound, (0, "", ""))[0]
@@ -166,6 +168,14 @@ def build_feature_matrix(
         txgnn = txgnn_normalized.get(compound, (0, 0, ""))[0]
         mr = mr_scores.get(compound, (0, 0))[0] if compound in mr_scores else 0
         admet = admet_scores.get(compound, (0, "", ""))[0] if compound in admet_scores else 0
+
+        # Hub-degree damping: drugs connected to ~everything in DRKG (Dex, Cimetidine,
+        # Calcium, Glutathione) get mechanically high KG/network scores regardless of
+        # disease-specific biology. Damp these topology-driven pillars. Structural,
+        # MR, TxGNN, ADMET are chemistry/genetics/GNN-based and stay un-damped.
+        penalty = degree_penalty(compound)
+        kg = kg * penalty
+        network = network * penalty
 
         groups_hit = sum(1 for x in [kg, structural, network, txgnn, mr, admet] if x > 0)
 
@@ -177,6 +187,7 @@ def build_feature_matrix(
             "mr_score": mr,
             "admet_score": admet,
             "groups_hit": groups_hit,
+            "degree_penalty": penalty,
         }
 
     return features
