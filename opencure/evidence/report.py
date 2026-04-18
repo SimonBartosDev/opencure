@@ -429,6 +429,26 @@ def generate_evidence_report(
             "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
         )
 
+    # Mechanism paths (v4): render up to 3 shortest KG paths drug→disease.
+    # Best-effort — failure here must not break the evidence pipeline.
+    try:
+        from opencure.evidence.path_explainer import explain_path, graph_ready
+        drug_entity = f"Compound::{report.drug_id}" if not report.drug_id.startswith("Compound::") else report.drug_id
+        dis_entity = report.disease_entity
+        if dis_entity and graph_ready():
+            name_map = {drug_entity: report.drug_name, dis_entity: report.disease_name}
+            paths = explain_path(
+                drug_entity, dis_entity,
+                max_paths=3, cutoff=3,
+                entity_name_map=name_map,
+            )
+            if paths:
+                report.kg_paths_text = "\n".join(f"• {p['narration']}" for p in paths)
+                # Top path becomes the mechanistic hypothesis
+                report.mechanistic_hypothesis = paths[0]["narration"]
+    except Exception:
+        pass
+
     return report
 
 
