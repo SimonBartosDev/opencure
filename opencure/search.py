@@ -58,6 +58,9 @@ def _get_data():
         # Try loading ChemBERTa embeddings (Pillar 1 upgrade)
         chemberta_emb, chemberta_entities = _load_chemberta()
 
+        # v4 Phase 5: unified-KG TransE (DRKG+PrimeKG+OpenTargets)
+        unified_model, unified_tf = _load_unified_kg()
+
         _cache.update(
             {
                 "loaded": True,
@@ -74,6 +77,8 @@ def _get_data():
                 "pykeen_tf": pykeen_tf,
                 "chemberta_emb": chemberta_emb,
                 "chemberta_entities": chemberta_entities,
+                "unified_model": unified_model,
+                "unified_tf": unified_tf,
             }
         )
     return _cache
@@ -122,6 +127,15 @@ def _load_chemberta():
         if emb is not None:
             print(f"  {len(entities):,} ChemBERTa embeddings loaded")
         return emb, entities
+    except Exception:
+        return None, None
+
+
+def _load_unified_kg():
+    """Load unified-KG TransE model (v4 Phase 5) if trained."""
+    try:
+        from opencure.scoring.unified_kg_scorer import load_unified_model
+        return load_unified_model()
     except Exception:
         return None, None
 
@@ -221,6 +235,28 @@ def search(
         pass
     except Exception as e:
         print(f"  [WARN] PrimeKG scoring failed: {e}")
+
+    # Step 2d: v4 Phase 5 — unified-KG scorer (DRKG+PrimeKG+OpenTargets TransE)
+    unified_scores: dict = {}
+    if data.get("unified_model") is not None:
+        try:
+            from opencure.scoring.unified_kg_scorer import score_drugs_for_disease_unified
+            print("[Pillar 2b] Unified-KG TransE (DRKG+PrimeKG+OT)...")
+            for de in disease_entities:
+                out = score_drugs_for_disease_unified(
+                    disease_entity=de,
+                    model=data["unified_model"],
+                    triples_factory=data["unified_tf"],
+                    compound_entities=data["compounds"],
+                    top_k=500,
+                )
+                for compound, score_tuple in out.items():
+                    if compound not in unified_scores or score_tuple[0] > unified_scores[compound][0]:
+                        unified_scores[compound] = score_tuple
+            if unified_scores:
+                print(f"  Scored {len(unified_scores)} compounds with unified-KG TransE")
+        except Exception as e:
+            print(f"  [WARN] unified-KG scoring failed: {e}")
 
     # Step 3a: Pillar 1a - Fingerprint molecular similarity
     mol_sim_scores = {}
@@ -441,6 +477,7 @@ def search(
         admet_cache = load_cached_predictions()
         all_compounds = (
             set(transe_scores) | set(pykeen_scores) | set(primekg_scores)
+            | set(unified_scores)
             | set(mol_sim_scores) | set(mol_emb_scores) | set(dti_scores)
             | set(proximity_scores) | set(gene_sig_scores) | set(mr_scores)
             | set(admet_scores) | set(txgnn_scores)
@@ -461,7 +498,7 @@ def search(
         kept_set = set(kept)
 
         # Group correlated pillars
-        kg_group = group_kg_scores(transe_scores, pykeen_scores, primekg_scores)
+        kg_group = group_kg_scores(transe_scores, pykeen_scores, primekg_scores, unified_scores)
         structural_group = group_structural_scores(mol_sim_scores, mol_emb_scores, dti_scores)
         network_group = group_network_scores(proximity_scores, gene_sig_scores)
 
@@ -491,6 +528,9 @@ def search(
                 scores["primekg_score"] = raw
             if compound in txgnn_scores:
                 raw, rank = txgnn_scores[compound]
+                # Preserve both raw and the final normalized txgnn_score
+                # (the combiner sets scores["txgnn_score"] as rank-normalized;
+                # keep raw GNN probability separately for transparency)
                 scores["txgnn_raw_score"] = raw
                 scores["txgnn_rank"] = rank
             if compound in mol_sim_scores:
@@ -503,21 +543,31 @@ def search(
                 scores["mol_emb_similar_to"] = similar_to
             if compound in proximity_scores:
                 ps, pd = proximity_scores[compound]
+                # BUGFIX v5: result-dict assembly at line 635 reads
+                # "proximity_score", so write both names
+                scores["proximity_score"] = ps
                 scores["proximity_raw_score"] = ps
                 scores["proximity_distance"] = pd
             if compound in gene_sig_scores:
                 sig_score, sig_rank = gene_sig_scores[compound]
+                # BUGFIX v5: previously only rank was written. Emit the score
+                # so pillar 4 actually surfaces in final JSON.
+                scores["gene_sig_score"] = sig_score
                 scores["gene_sig_rank"] = sig_rank
             if compound in mr_scores:
                 mr_s, mr_t = mr_scores[compound]
+                # Preserve raw MR; combiner already sets scores["mr_score"]
                 scores["mr_score_raw"] = mr_s
                 scores["mr_genetic_targets"] = mr_t
             if compound in dti_scores:
                 dti_s, dti_t, _ = dti_scores[compound]
+                # BUGFIX v5: result-dict reads "dti_score"; write both
+                scores["dti_score"] = dti_s
                 scores["dti_score_raw"] = dti_s
                 scores["dti_best_target"] = dti_t
             if compound in admet_scores:
                 admet_s, admet_f, _ = admet_scores[compound]
+                # Preserve raw; combiner sets scores["admet_score"]
                 scores["admet_score_raw"] = admet_s
                 scores["admet_flags"] = admet_f
 
