@@ -26,13 +26,17 @@ def group_kg_scores(
     transe_scores: dict | None = None,
     pykeen_scores: dict | None = None,
     primekg_scores: dict | None = None,
+    unified_scores: dict | None = None,
 ) -> dict:
     """Fuse knowledge-graph pillars via Reciprocal Rank Fusion.
+
+    unified_scores (v4 Phase 5) is the RotatE embedding trained on the
+    DRKG+PrimeKG+OpenTargets unified graph; optional for backward compat.
 
     Returns dict[compound] -> (fused_score, num_kgs_contributing, "kg_group").
     """
     from opencure.scoring.kg_fusion import fuse_kg_scores
-    return fuse_kg_scores(transe_scores, pykeen_scores, primekg_scores)
+    return fuse_kg_scores(transe_scores, pykeen_scores, primekg_scores, unified_scores)
 
 
 def group_structural_scores(

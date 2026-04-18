@@ -18,8 +18,16 @@ def fuse_kg_scores(
     transe_scores: dict | None = None,
     pykeen_scores: dict | None = None,
     primekg_scores: dict | None = None,
+    unified_scores: dict | None = None,
 ) -> dict:
     """Combine multiple KG score dicts using Reciprocal Rank Fusion.
+
+    Sources:
+      - transe_scores:   DRKG TransE
+      - pykeen_scores:   DRKG RotatE (PyKEEN-trained)
+      - primekg_scores:  PrimeKG TransE
+      - unified_scores:  (optional, v4 Phase 5) RotatE on unified
+                         DRKG+PrimeKG+OpenTargets graph
 
     Each input is dict[compound] -> (score, metadata...).
     Returns dict[compound] -> (fused_score, num_kgs, "kg_fused").
@@ -34,6 +42,8 @@ def fuse_kg_scores(
         kg_dicts["pykeen"] = pykeen_scores
     if primekg_scores:
         kg_dicts["primekg"] = primekg_scores
+    if unified_scores:
+        kg_dicts["unified"] = unified_scores
 
     if not kg_dicts:
         return {}
