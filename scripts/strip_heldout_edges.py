@@ -36,6 +36,7 @@ UNIFIED_IN = Path("data/unified_kg/unified.tsv")
 UNIFIED_OUT = Path("data/unified_kg/unified_train_clean.tsv")
 STRIPPED_OUT = Path("data/unified_kg/stripped_edges.tsv")
 HOLDOUT_PATH = Path("data/eval/holdout_test.jsonl")
+TIMESLICED_PATH = Path("data/eval/time_sliced_test.jsonl")
 
 
 TREATS_LIKE_RELATIONS = {
@@ -57,13 +58,23 @@ def main() -> None:
     if not HOLDOUT_PATH.exists():
         raise SystemExit(f"Missing {HOLDOUT_PATH}")
 
-    # Load held-out (compound_entity, disease_entity) set
+    # Load BOTH held-out sources: random 80/20 split (993) + time-sliced (210).
     heldout_pairs: set[tuple[str, str]] = set()
     with HOLDOUT_PATH.open() as f:
         for line in f:
             d = json.loads(line)
             heldout_pairs.add((d["compound"], d["disease"]))
-    print(f"Loaded {len(heldout_pairs)} held-out pairs to strip")
+    n_random = len(heldout_pairs)
+
+    if TIMESLICED_PATH.exists():
+        with TIMESLICED_PATH.open() as f:
+            for line in f:
+                d = json.loads(line)
+                heldout_pairs.add((d["compound"], d["disease"]))
+        n_ts = len(heldout_pairs) - n_random
+    else:
+        n_ts = 0
+    print(f"Loaded {n_random} random held-out + {n_ts} time-sliced = {len(heldout_pairs)} unique pairs to strip")
 
     # Also strip cross-KG disease alias matches — e.g. the same disease may appear
     # as Disease::MESH:D... in DRKG and Disease::MONDO_... in PrimeKG. To be safe
