@@ -447,12 +447,14 @@ def search(
         )
         all_compounds -= admet_toxic  # legacy ADMET filter
 
-        # Apply v3 hard filter (SMILES rules + ChEMBL phase + critical ADMET)
+        # Apply v4 hard filter: SMILES rules + metabolite/IUPAC heuristics +
+        # ChEMBL phase + critical ADMET (FDA-approved bypass for each stage).
         kept, rejections = filter_compounds(
             list(all_compounds),
             data["smiles_map"],
             admet_cache=admet_cache,
             check_chembl=True,
+            name_map=data.get("drug_names"),
         )
         if rejections:
             print(f"  Filtered {sum(rejections.values())} non-therapeutic compounds: {rejections}")

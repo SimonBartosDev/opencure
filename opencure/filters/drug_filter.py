@@ -122,11 +122,13 @@ def is_therapeutic_candidate(
     smiles: str,
     admet_preds: Optional[dict] = None,
     check_chembl: bool = True,
+    drug_name: Optional[str] = None,
 ) -> tuple[bool, str]:
     """
-    Full gate: SMILES rules → [FDA-approved bypass] → ADMET critical → ChEMBL phase.
+    Full gate: SMILES rules → metabolite/IUPAC heuristics → [FDA-approved bypass]
+    → ADMET critical → ChEMBL phase.
 
-    If a drug is FDA-approved (ChEMBL phase=4), bypass ADMET check since
+    If a drug is FDA-approved (ChEMBL phase >= 2), bypass ADMET check since
     predicted toxicity is just a model; real-world approval is ground truth.
 
     Returns (is_valid, reason). If is_valid=False, reason explains rejection.
@@ -135,13 +137,31 @@ def is_therapeutic_candidate(
     if not ok:
         return False, f"smiles:{reason}"
 
-    # Clinical-grade bypass: skip ADMET rejection for drugs proven in humans.
-    # Phase ≥ 2 means human efficacy trials; ADMET predictions shouldn't
-    # override real clinical evidence. Tenofovir, Artemisinin show phase=3
-    # in ChEMBL even though they're approved — Phase 3 is safe threshold.
     cache = _load_chembl_phase()
     phase = cache.get(drug_id)
     is_fda_approved = (phase is not None and phase >= 2.0)
+
+    # Gate 1.5 — metabolite / research-chemical heuristics.
+    # Only applied for compounds NOT approved (phase < 4). Approved drugs
+    # get a free pass because they have ground-truth clinical evidence.
+    if drug_name and not (phase is not None and phase >= 4.0):
+        from opencure.filters.metabolite_blacklist import is_blacklisted_metabolite
+        from opencure.filters.name_heuristics import looks_like_research_chemical
+
+        blacklisted, category = is_blacklisted_metabolite(drug_name, chembl_phase=phase)
+        if blacklisted:
+            return False, f"metabolite:{category}"
+
+        # IUPAC / research-chemical naming: reject only if we also have NO ChEMBL
+        # clinical evidence (phase missing or phase < 1). Known clinical-phase
+        # compounds pass even if their name looks "weird".
+        if looks_like_research_chemical(drug_name):
+            try:
+                phase_num = float(phase) if phase is not None else -999
+            except (TypeError, ValueError):
+                phase_num = -999
+            if phase_num < 1:
+                return False, "research_chemical:iupac_name"
 
     if admet_preds and not is_fda_approved:
         ok, reason = check_admet_critical(admet_preds)
@@ -161,16 +181,25 @@ def filter_compounds(
     smiles_map: dict,
     admet_cache: Optional[dict] = None,
     check_chembl: bool = True,
+    name_map: Optional[dict] = None,
 ) -> tuple[list[str], dict]:
     """
     Apply hard filters to a list of compound entities.
+
+    Args:
+        compound_entities: List like ["Compound::DB00001", ...]
+        smiles_map: Entity-or-DB-id → SMILES
+        admet_cache: SMILES → {endpoint: score}
+        check_chembl: apply ChEMBL phase filter
+        name_map: Entity-or-DB-id → display name (enables metabolite +
+            research-chemical filters). Optional for backward compat.
 
     Returns:
         kept: list of compound entities that passed
         rejection_stats: dict with counts by rejection reason
     """
     kept = []
-    rejections = {}
+    rejections: dict[str, int] = {}
 
     for compound in compound_entities:
         smiles = smiles_map.get(compound)
@@ -181,7 +210,13 @@ def filter_compounds(
         admet = admet_cache.get(smiles) if admet_cache and smiles else None
         drug_id = compound.split("::")[1] if "::" in compound else compound
 
-        ok, reason = is_therapeutic_candidate(drug_id, smiles, admet, check_chembl)
+        drug_name = None
+        if name_map:
+            drug_name = name_map.get(compound) or name_map.get(drug_id)
+
+        ok, reason = is_therapeutic_candidate(
+            drug_id, smiles, admet, check_chembl, drug_name=drug_name
+        )
         if ok:
             kept.append(compound)
         else:
