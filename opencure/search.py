@@ -400,6 +400,36 @@ def search(
         except Exception:
             pass
 
+    # v5 supplementary pillar 4b: mechanistic signature reversal
+    # Supplements L1000CDS2 (which typically matches <10 DrugBank drugs per
+    # disease). Uses OT disease-gene associations + ChEMBL bioactivities to
+    # score every drug that pharmacologically modulates disease-associated
+    # genes. Coverage: ~thousands of drugs/disease vs ~5-10 from L1000CDS2.
+    try:
+        from opencure.scoring.mechanistic_reversal import score_mechanistic_reversal
+        disease_entity_list = [de for de, _ in disease_matches]
+        mech_scores = score_mechanistic_reversal(
+            disease_entity_list, data["compounds"], top_k=500,
+        )
+        if mech_scores:
+            # Merge into gene_sig_scores if the drug isn't already there from
+            # L1000CDS2 (L1000 takes precedence because it's direct expression
+            # evidence; mechanistic_reversal is a pharmacological proxy).
+            added = 0
+            for compound, (score, n_hits, best_gene) in mech_scores.items():
+                if compound in gene_sig_scores:
+                    continue
+                # Convert our [0,1] score to a pseudo-rank (1 = best)
+                pseudo_rank = max(1, int(1 / (score + 0.01)))
+                gene_sig_scores[compound] = (score, pseudo_rank)
+                added += 1
+            if added:
+                if "Gene Signatures" not in active_pillars:
+                    active_pillars.append("Gene Signatures")
+                print(f"  + {added} mechanistic reversers (OT genes × ChEMBL activities)")
+    except Exception as e:
+        print(f"  [INFO] mechanistic reversal skipped: {e}")
+
     # Step 4c: Network proximity pillar (if STRING data available)
     proximity_scores = {}
     if use_molecular_similarity:

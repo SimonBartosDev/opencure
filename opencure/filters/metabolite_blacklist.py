@@ -78,6 +78,15 @@ _BLACKLIST_BY_NAME: dict[str, str] = {
     # Core metabolites — normal biochemistry
     "glutathione": "metabolite",
     "l-glutathione": "metabolite",
+    "oxidized glutathione": "metabolite",
+    "oxidized glutathione disulfide": "metabolite",
+    "glutathione disulfide": "metabolite",
+    "dihydrofolic acid": "metabolite",
+    "dihydrofolate": "metabolite",
+    "tetrahydrofolic acid": "metabolite",
+    "tetrahydrofolate": "metabolite",
+    "methyltetrahydrofolate": "metabolite",
+    "folinic acid": "metabolite",  # leucovorin — bypass via phase-4 if approved
     "uric acid": "metabolite",
     "urate": "metabolite",
     "creatinine": "metabolite",
