@@ -1,137 +1,178 @@
 """
-One-command v5 finalization — runs AFTER the re-screen finishes.
+One-command v5 finalization — canonical post-screen pipeline.
 
-Pipeline:
-  1. Regenerate dashboard (docs/index.html) from fresh disease JSONs
-  2. Regenerate mechanism clusters
-  3. Retrain Phase C ensemble using the richer features now available
-     in the saved JSONs (proximity, mr, txgnn, etc. — not just KG)
-  4. Regenerate the data manifest (captures fresh re-screen outputs)
-  5. Take a new prospective snapshot with the v5-enriched predictions
-  6. Run the honest-scoring report
-  7. Print the final summary
+Each step is idempotent and safe to re-run. The ordering below is load-bearing:
+earlier steps populate fields later steps read.
 
-Usage (after screen finishes):
-  python3 scripts/finalize_v5.py
+    1. manifest       → data/manifest.json (freezes input-file hashes)
+    2. known_labels   → is_known_treatment via DRKG treats-edge lookup
+    3. ensemble       → ensemble_prob + ensemble_rank per candidate
+    4. tissue         → tissue_context (disease-relevant GTEx tissues)
+    5. docking        → docking axis (ChEMBL proxy + not_wired fallback)
+    6. clusters       → mechanism clusters across diseases
+    7. database       → experiments/results/opencure_database.json (dashboard input)
+    8. dashboard      → docs/index.html
+    9. snapshot       → content-hashed prospective snapshot
+   10. scoring        → scripts/honest_scoring.py report
+   11. commit         → git commit of artifacts (optional; --no-commit skips)
 
-Each step is wrapped in try/except so a single failure doesn't abort
-the whole finalize. Each step logs to experiments/finalize_v5.log.
+Usage
+-----
+    python3 scripts/finalize_v5.py                    # run all steps
+    python3 scripts/finalize_v5.py --only ensemble,tissue
+    python3 scripts/finalize_v5.py --skip commit
+    python3 scripts/finalize_v5.py --dry-run          # list steps, run nothing
+
+Each step's full stdout/stderr is tee'd to ``experiments/finalize_v5.log``.
+A one-line status is printed to the terminal.
 """
-
 from __future__ import annotations
 
+import argparse
+import os
 import subprocess
 import sys
 import time
+from dataclasses import dataclass
 from pathlib import Path
+from typing import Callable
 
 
 LOG = Path("experiments/finalize_v5.log")
 
 
-def step(label: str, cmd: list[str], env_extra: dict | None = None) -> bool:
-    """Run a subprocess step with status line output."""
-    import os
+@dataclass
+class Step:
+    name: str            # short key for --only / --skip
+    label: str           # human-readable
+    cmd: list[str]       # subprocess command
+    timeout: int = 1800  # seconds
+
+
+STEPS: list[Step] = [
+    Step("manifest",     "Refreshing data manifest",
+         ["python3", "scripts/compute_data_manifest.py"]),
+    Step("known_labels", "Refreshing is_known_treatment labels",
+         ["python3", "scripts/refresh_known_treatment_labels.py"], timeout=600),
+    Step("ensemble",     "Attaching ensemble_v5 probabilities",
+         ["python3", "scripts/score_ensemble_v5.py"], timeout=900),
+    Step("tissue",       "Populating tissue_context (GTEx)",
+         ["python3", "scripts/wire_tissue_context.py"], timeout=600),
+    Step("docking",      "Scaffolding docking axis",
+         ["python3", "scripts/add_docking_proxy_axis.py"], timeout=600),
+    Step("clusters",     "Recomputing cross-disease mechanism clusters",
+         ["python3", "-m", "opencure.scoring.mechanism_cluster", "experiments/results"]),
+    Step("database",     "Generating dashboard database JSON",
+         ["python3", "experiments/generate_database.py"]),
+    Step("dashboard",    "Building HTML dashboard",
+         ["python3", "scripts/build_explorer.py"]),
+    Step("snapshot",     "Writing content-hashed prospective snapshot",
+         ["python3", "scripts/snapshot_predictions.py"]),
+    Step("scoring",      "Running honest-scoring report",
+         ["python3", "scripts/honest_scoring.py"]),
+]
+
+
+def run_step(step: Step, dry: bool) -> bool:
+    print(f"\n▶ {step.label}")
+    if dry:
+        print(f"  (dry-run) {' '.join(step.cmd)}")
+        return True
     env = os.environ.copy()
-    env["PYTHONPATH"] = "."
-    if env_extra:
-        env.update(env_extra)
-    print(f"\n▶ {label}")
+    env["PYTHONPATH"] = env.get("PYTHONPATH", "") + os.pathsep + "."
     t0 = time.time()
     try:
-        r = subprocess.run(cmd, env=env, capture_output=True, text=True, timeout=1200)
+        r = subprocess.run(step.cmd, env=env, capture_output=True,
+                           text=True, timeout=step.timeout)
         ok = r.returncode == 0
-        msg = (r.stdout.strip().split("\n")[-1] if r.stdout else "") + \
-              (" | " + r.stderr.strip().split("\n")[-1] if not ok and r.stderr else "")
-        print(f"  {'✓' if ok else '✗'} {time.time()-t0:.1f}s  {msg[:100]}")
+        tail = (r.stdout.strip().splitlines()[-1] if r.stdout.strip() else "")
+        if not ok and r.stderr.strip():
+            tail += " | " + r.stderr.strip().splitlines()[-1]
+        print(f"  {'✓' if ok else '✗'} {time.time()-t0:.1f}s  {tail[:110]}")
         with LOG.open("a") as f:
-            f.write(f"\n=== {label} ({'OK' if ok else 'FAIL'}, {time.time()-t0:.1f}s) ===\n")
+            f.write(f"\n=== [{step.name}] {step.label} "
+                    f"({'OK' if ok else 'FAIL'}, {time.time()-t0:.1f}s) ===\n")
             f.write("STDOUT:\n" + (r.stdout or "") + "\n")
             if r.stderr:
                 f.write("STDERR:\n" + r.stderr + "\n")
         return ok
     except subprocess.TimeoutExpired:
-        print(f"  ✗ TIMEOUT after {time.time()-t0:.1f}s")
+        print(f"  ✗ TIMEOUT after {step.timeout}s")
         return False
-    except Exception as e:
-        print(f"  ✗ {type(e).__name__}: {e}")
+    except Exception as exc:
+        print(f"  ✗ {type(exc).__name__}: {exc}")
         return False
 
 
-def check_rescreen_done() -> int:
-    """Return number of disease result JSONs present."""
+def count_result_jsons() -> int:
     d = Path("experiments/results")
     if not d.exists():
         return 0
-    return len([f for f in d.glob("*.json")
-                if not any(x in f.name for x in ("opencure", "screening", "novel", "mechanism"))])
+    ignore = {"opencure_database", "screening_summary",
+              "novel_candidates", "mechanism_clusters"}
+    return sum(1 for f in d.glob("*.json")
+               if not any(x in f.stem for x in ignore))
+
+
+def maybe_commit(results: dict[str, bool], n_diseases: int) -> None:
+    print("\n▶ Committing finalize artifacts")
+    subprocess.run(["git", "add",
+                    "experiments/results/", "docs/", "data/manifest.json",
+                    "data/prospective/"], capture_output=True)
+    msg = (
+        f"v5 finalize run: {n_diseases}/61 diseases, "
+        f"{sum(results.values())}/{len(results)} steps OK\n\n"
+        "Auto-generated by scripts/finalize_v5.py.\n\n"
+        "Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>"
+    )
+    r = subprocess.run(["git", "commit", "-m", msg], capture_output=True, text=True)
+    print("  ✓ committed" if r.returncode == 0 else "  (no changes)")
 
 
 def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--only", help="Comma-separated step names to run (others skipped)")
+    ap.add_argument("--skip", help="Comma-separated step names to skip")
+    ap.add_argument("--dry-run", action="store_true", help="List steps, run nothing")
+    ap.add_argument("--no-commit", action="store_true", help="Skip the final git commit")
+    args = ap.parse_args()
+
+    only = {s.strip() for s in (args.only or "").split(",") if s.strip()}
+    skip = {s.strip() for s in (args.skip or "").split(",") if s.strip()}
+    to_run = [s for s in STEPS
+              if (not only or s.name in only) and s.name not in skip]
+
     LOG.parent.mkdir(parents=True, exist_ok=True)
-    LOG.write_text(f"v5 finalize started {time.strftime('%Y-%m-%d %H:%M:%S UTC', time.gmtime())}\n")
-
-    n_diseases = check_rescreen_done()
-    print(f"v5 finalize starting — {n_diseases} disease JSONs present")
-    if n_diseases < 30:
-        print(f"⚠ Only {n_diseases}/61 diseases complete — re-screen likely still running")
-        print("  Finalize runs anyway on what's there; re-run when complete.")
-
-    results = {}
-
-    # 1. Refresh data manifest (captures post-rescreen state)
-    results["manifest"] = step("Refreshing data manifest",
-                                ["python3", "scripts/compute_data_manifest.py"])
-
-    # 2. Regenerate the dashboard
-    results["dashboard"] = step("Rebuilding dashboard",
-                                 ["python3", "scripts/build_explorer.py"])
-
-    # 3. Recompute mechanism clusters
-    results["clusters"] = step("Recomputing mechanism clusters",
-                                ["python3", "-m", "opencure.scoring.mechanism_cluster",
-                                 "experiments/results"])
-
-    # 4. Take a fresh prospective snapshot
-    results["snapshot"] = step("Taking prospective snapshot",
-                                ["python3", "scripts/snapshot_predictions.py"])
-
-    # 5. Rerun honest scoring
-    results["scoring"] = step("Running honest-scoring report",
-                               ["python3", "scripts/honest_scoring.py"])
-
-    # 6. Commit everything
-    print("\n▶ Committing v5 finalize artifacts")
-    subprocess.run(["git", "add", "-A", "experiments/", "docs/", "data/manifest.json",
-                    "data/prospective/"], capture_output=True)
-    commit_msg = (
-        "v5 finalize: post-rescreen dashboard + clusters + snapshot + scoring\n\n"
-        "Auto-generated by scripts/finalize_v5.py after v5 re-screen completed "
-        f"({n_diseases}/61 disease JSONs).\n\n"
-        "Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>"
+    LOG.write_text(
+        f"v5 finalize started {time.strftime('%Y-%m-%d %H:%M:%S UTC', time.gmtime())}\n"
+        f"Steps: {[s.name for s in to_run]}\n"
     )
-    r = subprocess.run(["git", "commit", "-m", commit_msg], capture_output=True, text=True)
-    if r.returncode == 0:
-        print(f"  ✓ committed")
-    else:
-        print(f"  (no changes to commit)")
+
+    n_diseases = count_result_jsons()
+    print(f"v5 finalize — {n_diseases} disease JSONs on disk; {len(to_run)} step(s) queued")
+    if n_diseases < 30 and not args.dry_run:
+        print(f"  ⚠ only {n_diseases}/61 diseases — re-screen may still be running")
+        print("     (running anyway on what's present; safe to re-run later)")
+
+    results: dict[str, bool] = {}
+    for s in to_run:
+        results[s.name] = run_step(s, args.dry_run)
+
+    if not args.dry_run and not args.no_commit and "commit" not in skip:
+        maybe_commit(results, n_diseases)
 
     # Final summary
-    print()
-    print("=" * 70)
+    print("\n" + "=" * 64)
     print("v5 FINALIZE SUMMARY")
-    print("=" * 70)
-    print(f"  Disease JSONs:      {n_diseases}/61")
-    for label, ok in results.items():
-        print(f"  {label:<18s} {'✓' if ok else '✗'}")
+    print("=" * 64)
+    print(f"  Disease JSONs: {n_diseases}/61")
+    for name, ok in results.items():
+        print(f"  {name:<14s} {'✓' if ok else '✗'}")
     print(f"\n  Full log: {LOG}")
     print(f"  Dashboard: docs/index.html")
     print(f"  Latest snapshot: data/prospective/snapshots/")
-    print()
-    if all(results.values()):
-        print("All steps succeeded. Ready for public phase (Zenodo + bioRxiv + outreach).")
-    else:
-        print("Some steps failed — check experiments/finalize_v5.log")
+    if results and not all(results.values()):
+        sys.exit(1)
 
 
 if __name__ == "__main__":
