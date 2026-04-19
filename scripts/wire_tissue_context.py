@@ -95,11 +95,19 @@ def backfill(path: Path) -> int:
     # Disease-level gene set (cached once per file)
     disease_gene_set = _disease_genes(disease_name)
 
+    # score_tissue_context expects ``Gene::<entrez>`` entries. shared_targets
+    # on candidates are HGNC symbols — convert via the HGNC map so the
+    # matrix lookup actually hits. Fall back to the disease-wide gene set
+    # (already in Entrez form) when a candidate has no shared targets.
+    sym_to_ent = _load_symbol_to_entrez()
+
     n_populated = 0
     for cand in candidates:
-        # Use shared_targets if the candidate has them; else fall back
         shared = cand.get("shared_targets") or []
-        gene_set = {f"Gene::{g}" for g in shared if g} if shared else disease_gene_set
+        if shared:
+            gene_set = {f"Gene::{sym_to_ent[s]}" for s in shared if s in sym_to_ent}
+        else:
+            gene_set = disease_gene_set
         ctx = score_tissue_context(disease_name, gene_set)
         cand["tissue_context"] = ctx
         if ctx.get("tissues"):
