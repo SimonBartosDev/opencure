@@ -127,10 +127,18 @@ def main() -> None:
 
     results = {"evaluated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
 
-    for model_label, model_dir in [
+    model_candidates = [
+        ("drkg_transE_clean",          Path("data/models/drkg_transE_clean")),
         ("unified_transE_contaminated", Path("data/models/unified_transE")),
         ("unified_transE_clean",       Path("data/models/unified_transE_clean")),
-    ]:
+    ]
+    # Only evaluate models that exist
+    model_candidates = [(lbl, d) for lbl, d in model_candidates
+                         if (d / "trained_model.pkl").exists()]
+    if not model_candidates:
+        raise SystemExit("No trained models found in data/models/. Train one first.")
+    print(f"Evaluating {len(model_candidates)} trained model(s)")
+    for model_label, model_dir in model_candidates:
         print(f"\n=== {model_label} ===")
         t0 = time.time()
         results.setdefault(model_label, {})
