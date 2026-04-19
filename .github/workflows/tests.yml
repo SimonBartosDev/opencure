@@ -1,0 +1,47 @@
+name: tests
+
+on:
+  push:
+    branches: [main, v5-truly-best]
+  pull_request:
+    branches: [main]
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+        cache: pip
+
+    - name: Install minimal deps (skip heavy ML)
+      run: |
+        python -m pip install --upgrade pip
+        # Install only what tests need — not the full 2 GB of torch/pykeen/rdkit
+        pip install pytest pytest-timeout numpy pandas requests
+
+    - name: Run unit tests (integration tests skipped without data)
+      run: |
+        PYTHONPATH=. pytest -v \
+          tests/test_filters.py::TestMetaboliteBlacklist \
+          tests/test_filters.py::TestNameHeuristics \
+          tests/test_scoring.py::TestKGFusion \
+          tests/test_scoring.py::TestGroupedCombiner::test_weights_sum_to_one \
+          tests/test_scoring.py::TestGroupedCombiner::test_requires_min_efficacy_groups \
+          tests/test_evidence.py::TestTriangulation \
+          tests/test_regression.py::TestFieldNameCanonicality \
+          tests/test_regression.py::TestFilterRegression \
+          tests/test_eval.py::TestGroundTruth::test_split_deterministic
+
+    - name: Summary
+      if: always()
+      run: |
+        echo "::notice::Integration tests (marked @pytest.mark.integration) require local data and run separately; see tests/README.md"
