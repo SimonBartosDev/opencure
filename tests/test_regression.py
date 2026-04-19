@@ -73,3 +73,34 @@ class TestFilterRegression:
         from opencure.filters.metabolite_blacklist import is_blacklisted_metabolite
         rejected, _ = is_blacklisted_metabolite(name)
         assert rejected, f"regression: {name!r} must stay blacklisted"
+
+
+class TestMechanisticReversalLiveFix:
+    """The Apr-2026 fix added mechanistic_reversal.py as the gene-sig
+    fallback when L1000CDS2 coverage is thin (~5-10 matched drugs per
+    disease). Verify the module is importable and exposes the entry
+    point.  Full live regression is in TestPillarFieldNameRegression.
+    """
+
+    def test_module_import(self):
+        from opencure.scoring.mechanistic_reversal import (
+            score_mechanistic_reversal, _load_activity_index, _load_disease_gene_map,
+        )
+        assert callable(score_mechanistic_reversal)
+
+    @pytest.mark.integration
+    def test_produces_scores_for_malaria(self):
+        from opencure.scoring.mechanistic_reversal import (
+            score_mechanistic_reversal, _load_activity_index,
+        )
+        activities = _load_activity_index()
+        if not activities:
+            pytest.skip("ChEMBL activities cache not present")
+        compounds = [f"Compound::{c}" for c in list(activities.keys())[:500]]
+        out = score_mechanistic_reversal(
+            ["Disease::MESH:D008288"],  # Malaria
+            compounds,
+            top_k=50,
+        )
+        # Non-empty output means the pillar has coverage for this disease
+        assert len(out) > 0, "mechanistic reversal should find at least SOME scorers for Malaria"
