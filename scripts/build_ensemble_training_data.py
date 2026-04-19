@@ -121,54 +121,113 @@ def main() -> None:
     print("(each disease → one combiner invocation, scores batch-applied to its pairs)")
 
     # Lazy imports to avoid heavy module loads at script-import time
-    from opencure.search import _get_data
-    from opencure.scoring.pillar_groups import (
-        group_kg_scores, group_structural_scores, group_network_scores, build_feature_matrix,
-    )
-    from opencure.scoring.grouped_combiner import combine_grouped_scores
+    from opencure.data.drkg import load_embeddings, find_disease_entities
+    from opencure.scoring.transe import score_drugs_for_disease_vectorized
+    from opencure.scoring.hub_normalize import degree_penalty
 
-    data = _get_data()
+    # We avoid the full search() pipeline (which is slow) and use the fast
+    # TransE-only scorer with our degree-penalty + convergence heuristic.
+    # This gives features SHAPED like what the full pipeline produces; the
+    # learned ensemble then corrects for whatever heuristic remains.
+    print("Loading DRKG embeddings...")
+    entity_emb, relation_emb, entity_to_id, id_to_entity, relation_to_id = load_embeddings()
+    print(f"  {len(entity_to_id):,} entities")
+
+    from opencure.data.drkg import get_compound_entities
+    candidate_compounds = get_compound_entities(entity_to_id, drugbank_only=True)
+    cand_set = set(candidate_compounds)
+
+    # Treats-like relation IDs for per-disease scoring
+    TREATS = [r for r in (
+        "DRUGBANK::treats::Compound:Disease",
+        "Hetionet::CtD::Compound:Disease",
+        "GNBR::T::Compound:Disease",
+    ) if r in relation_to_id]
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     n_written = 0
+    n_diseases_processed = 0
     t0 = time.time()
     with OUT.open("w") as out:
-        # TODO: the full pipeline wiring below is a placeholder —
-        # for Phase C we need a compact version of search.py that
-        # takes (disease_entity, candidate_set) and returns per-pair
-        # features.  That's a ~200-line extraction task; for this
-        # scaffold we emit the inputs and leave the actual feature
-        # computation to a follow-up commit when DRKG-clean training
-        # completes and we can verify the loop end-to-end.
-        for disease_entity, pairs in list(by_disease.items())[:3]:  # pilot 3 diseases
-            # ... would run the grouped pipeline here ...
-            # For now: emit a stub row per pair so the file shape is
-            # correct and train_ensemble_v5 can smoke-test.
-            for c, d, label in pairs:
-                stub = {
-                    "drug_entity": c, "disease_entity": d, "label": int(label),
-                    "kg_group_score": 0.0,  # TODO fill from combiner
+        for disease_entity, pairs in by_disease.items():
+            # Filter out unusable pairs (compound or disease missing from embeddings)
+            pairs_ok = [(c, d, l) for c, d, l in pairs
+                         if c in entity_to_id and d in entity_to_id]
+            if not pairs_ok:
+                continue
+
+            # Score ALL candidate compounds against this disease via TransE
+            # (fastest pillar, gives us the main feature). Returns
+            # dict[compound] -> (raw_score, relation, disease_entity).
+            transe_scores: dict = {}
+            for rel in TREATS:
+                try:
+                    out_rel = score_drugs_for_disease_vectorized(
+                        disease_entity, entity_emb, relation_emb,
+                        entity_to_id, relation_to_id,
+                        candidate_compounds,
+                        treatment_relations=[rel],
+                        top_k=len(candidate_compounds),  # get all scores
+                    )
+                    for comp, score, _rel in out_rel:
+                        if comp not in transe_scores or score > transe_scores[comp][0]:
+                            transe_scores[comp] = (score, rel, disease_entity)
+                except Exception:
+                    continue
+
+            if not transe_scores:
+                continue
+
+            # Rank compounds by score for percentile-rank
+            sorted_transe = sorted(transe_scores.keys(), key=lambda c: -transe_scores[c][0])
+            transe_rank = {c: i for i, c in enumerate(sorted_transe)}
+            n_cand = len(sorted_transe)
+
+            # Emit a row for every labeled pair
+            for c, d, label in pairs_ok:
+                if c not in transe_rank:
+                    continue
+                rank = transe_rank[c]
+                # Normalized KG feature: rank-percentile (0 = best, 1 = worst)
+                # Flip so higher = better: 1 - rank/N
+                kg_score = max(0.0, 1.0 - rank / max(n_cand - 1, 1))
+                row = {
+                    "drug_entity": c,
+                    "disease_entity": d,
+                    "label": int(label),
+                    # Features: KG percentile + degree penalty are the ones we
+                    # can compute cheaply from embeddings alone.  The full
+                    # pipeline's richer features (txgnn/proximity/mr/etc.)
+                    # come from grouped_combiner on FRESH searches — we don't
+                    # rerun them here (too slow for 7k pairs).  The ensemble
+                    # trainer handles feature sparsity via XGBoost's natural
+                    # handling of missing / zero features.
+                    "kg_group_score": round(kg_score, 4),
                     "txgnn_score": 0.0,
                     "network_group_score": 0.0,
                     "structural_group_score": 0.0,
                     "mr_score": 0.0,
                     "admet_score": 0.0,
-                    "degree_penalty": 1.0,
-                    "groups_hit": 0,
-                    "pillars_hit": 0,
+                    "degree_penalty": round(degree_penalty(c), 4),
+                    "groups_hit": 1 if kg_score > 0 else 0,
+                    "pillars_hit": 1 if kg_score > 0 else 0,
                     "has_pubmed": 0,
                     "has_trials": 0,
                     "known_treatment": 0,
-                    "_note": "stub — Phase C feature extraction pending",
+                    "transe_rank": rank + 1,
+                    "_source": "kg_only_v5_phaseC_v1",
                 }
-                out.write(json.dumps(stub) + "\n")
+                out.write(json.dumps(row) + "\n")
                 n_written += 1
+            n_diseases_processed += 1
+            if n_diseases_processed % 25 == 0:
+                print(f"  {n_diseases_processed}/{len(by_disease)} diseases "
+                      f"({n_written:,} rows, {time.time()-t0:.0f}s)")
 
     elapsed = time.time() - t0
-    print(f"\nWrote {n_written:,} stub rows → {OUT}  ({elapsed:.0f}s)")
+    print(f"\nWrote {n_written:,} rows → {OUT}  ({elapsed:.0f}s)")
     print()
-    print("Next step: replace stub loop with real feature extraction once")
-    print("data/models/drkg_transE_clean/trained_model.pkl exists.")
+    print("Next step: python3 scripts/train_ensemble_v5.py")
 
 
 if __name__ == "__main__":
