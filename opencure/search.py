@@ -242,7 +242,7 @@ def search(
         try:
             from opencure.scoring.unified_kg_scorer import score_drugs_for_disease_unified
             print("[Pillar 2b] Unified-KG TransE (DRKG+PrimeKG+OT)...")
-            for de in disease_entities:
+            for de, _ in disease_matches:
                 out = score_drugs_for_disease_unified(
                     disease_entity=de,
                     model=data["unified_model"],
