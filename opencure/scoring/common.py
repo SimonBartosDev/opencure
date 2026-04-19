@@ -189,13 +189,14 @@ CLINICAL_FIELDS: tuple[str, ...] = (
     "tissue_context",
 )
 
-# v5.1 post-processor outputs (attached by scripts/score_ensemble_v5.py,
-# scripts/add_docking_proxy_axis.py).
+# v5.1/v5.2 post-processor outputs (attached by scripts/score_ensemble_v5.py,
+# scripts/add_docking_proxy_axis.py, scripts/annotate_structural_alerts.py).
 V51_FIELDS: tuple[str, ...] = (
     "ensemble_prob",
     "ensemble_rank",
     "ensemble_features",
     "docking",
+    "structural_alerts",
 )
 
 CANDIDATE_FIELDS: frozenset[str] = frozenset(

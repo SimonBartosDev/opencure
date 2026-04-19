@@ -148,6 +148,13 @@ def compute_repurposing_signal(drug_name: str, disease_name: str) -> dict:
         disease_cooccurrences: int
         cooccurrence_rate: float (0-1)
         details: list of (term, count) tuples
+
+    Note on disproportionality: formal PRR (Proportional Reporting Ratio)
+    and ROR (Reporting Odds Ratio) require four OpenFDA queries per
+    (drug, disease) pair: a, b, c, d in the 2×2 contingency table. This
+    signal is a lighter-weight heuristic that only queries a/(a+b). See
+    docs/RELEASE_v5.md "Known limitations" → PRR/ROR is v6 work once the
+    FAERS full-corpus download is cached locally (avoids rate limits).
     """
     # Get MedDRA terms for this disease
     meddra_terms = DISEASE_TO_MEDDRA.get(disease_name)
