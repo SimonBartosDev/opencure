@@ -31,10 +31,12 @@ from pathlib import Path
 
 RESULTS_DIR = Path("experiments/results")
 ACTIVITIES_PATH = Path("data/drkg/drug_target_activities.json")
-OT_TRIPLETS_PATH = Path("data/open_targets/ot_triplets.tsv")
+DISEASE_GENE_INDEX_PATH = Path("data/disease_gene_index.json")
+OT_TRIPLETS_PATH = Path("data/open_targets/ot_triplets.tsv")  # legacy fallback
 HGNC_PATH = Path("data/mappings/hgnc_complete_set.txt")
 
 
+_DISEASE_GENE_INDEX: dict[str, list[str]] | None = None
 _DISEASE_GENES_CACHE: dict[str, set[str]] = {}
 _ENTREZ_TO_SYMBOL: dict[str, str] | None = None
 
@@ -59,15 +61,34 @@ def _load_entrez_to_symbol() -> dict[str, str]:
 
 
 def _genes_for_disease_entity(disease_entity: str) -> set[str]:
-    """Return gene-symbol set associated with a disease via OT::assoc edges."""
+    """Return the union gene-symbol set for a disease.
+
+    Prefers the unified index built by ``scripts/build_disease_gene_index.py``
+    (OT::assoc + DRKG GNBR). Falls back to streaming OT triplets if the
+    index is missing — slower but same semantics for curated OT edges.
+    """
     if disease_entity in _DISEASE_GENES_CACHE:
         return _DISEASE_GENES_CACHE[disease_entity]
-    if not OT_TRIPLETS_PATH.exists() or not disease_entity:
+    if not disease_entity:
+        _DISEASE_GENES_CACHE[disease_entity] = set()
+        return set()
+
+    # Fast path: unified index
+    global _DISEASE_GENE_INDEX
+    if _DISEASE_GENE_INDEX is None and DISEASE_GENE_INDEX_PATH.exists():
+        _DISEASE_GENE_INDEX = json.loads(DISEASE_GENE_INDEX_PATH.read_text())
+    if _DISEASE_GENE_INDEX:
+        genes = set(_DISEASE_GENE_INDEX.get(disease_entity, []))
+        _DISEASE_GENES_CACHE[disease_entity] = genes
+        return genes
+
+    # Fallback: OT-only streaming scan
+    if not OT_TRIPLETS_PATH.exists():
         _DISEASE_GENES_CACHE[disease_entity] = set()
         return set()
     import pandas as pd
     ent_to_sym = _load_entrez_to_symbol()
-    genes: set[str] = set()
+    genes = set()
     for chunk in pd.read_csv(
         OT_TRIPLETS_PATH, sep="\t", header=None,
         names=["h", "r", "t"], chunksize=500_000,
@@ -111,12 +132,19 @@ def disease_genes(disease_name: str) -> set[str]:
 
 
 def nM_to_kcal(nM: float) -> float:
-    """Convert binding potency (nM) to pseudo-kcal/mol.
-    Vina scores are typically -5 to -12 kcal/mol (lower = better)."""
+    """Convert binding Kd/IC50 in nM to free energy ΔG° in kcal/mol.
+
+    ΔG° = RT·ln(Kd), with Kd in molar. Vina scoring convention: negative =
+    favorable binding, typical range −5 to −12 kcal/mol.
+
+    Example: 1 nM  → ΔG° ≈ −12.3 kcal/mol
+             1 μM  → ΔG° ≈ −8.2  kcal/mol
+             1 mM  → ΔG° ≈ −4.1  kcal/mol
+    """
     if nM is None or nM <= 0:
         return 0.0
-    # kcal = -RT * ln(Kd in M). R=1.987e-3 kcal/(mol·K), T=298 K → RT=0.593
-    return round(-0.593 * math.log(nM * 1e-9), 2)
+    # R = 1.987e-3 kcal/(mol·K), T = 298 K  →  RT = 0.593 kcal/mol
+    return round(0.593 * math.log(nM * 1e-9), 2)
 
 
 def best_binding(drug_id: str, acts: dict, target_set: set[str]) -> tuple[float | None, str | None]:
@@ -131,7 +159,13 @@ def best_binding(drug_id: str, acts: dict, target_set: set[str]) -> tuple[float 
     for tgt, val in drug_acts.items():
         if tgt not in target_set:
             continue
-        nM = val.get("nM") if isinstance(val, dict) else val
+        if isinstance(val, dict):
+            # drug_target_activities.json uses "median_nM"; earlier schemas
+            # sometimes used bare "nM" — accept either so we don't silently
+            # skip hits.
+            nM = val.get("median_nM") or val.get("nM")
+        else:
+            nM = val
         try:
             nM = float(nM)
         except (TypeError, ValueError):

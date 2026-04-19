@@ -21,15 +21,68 @@ from opencure.scoring.tissue_context import score_tissue_context
 
 
 RESULTS_DIR = Path("experiments/results")
+DISEASE_GENE_INDEX_PATH = Path("data/disease_gene_index.json")
+HGNC_PATH = Path("data/mappings/hgnc_complete_set.txt")
+
+
+_DISEASE_GENE_INDEX: dict[str, list[str]] | None = None
+_SYMBOL_TO_ENTREZ: dict[str, str] | None = None
+
+
+def _load_index() -> dict[str, list[str]]:
+    global _DISEASE_GENE_INDEX
+    if _DISEASE_GENE_INDEX is None:
+        if DISEASE_GENE_INDEX_PATH.exists():
+            _DISEASE_GENE_INDEX = json.loads(DISEASE_GENE_INDEX_PATH.read_text())
+        else:
+            _DISEASE_GENE_INDEX = {}
+    return _DISEASE_GENE_INDEX
+
+
+def _load_symbol_to_entrez() -> dict[str, str]:
+    global _SYMBOL_TO_ENTREZ
+    if _SYMBOL_TO_ENTREZ is None:
+        _SYMBOL_TO_ENTREZ = {}
+        if HGNC_PATH.exists():
+            import csv
+            with HGNC_PATH.open() as fh:
+                for row in csv.DictReader(fh, delimiter="\t"):
+                    ent = (row.get("entrez_id") or "").strip()
+                    sym = (row.get("symbol") or "").strip()
+                    if ent and sym:
+                        _SYMBOL_TO_ENTREZ[sym] = ent
+    return _SYMBOL_TO_ENTREZ
+
+
+def _resolve_disease_entity(disease_name: str) -> str | None:
+    try:
+        from opencure.data.drkg import load_embeddings, find_disease_entities
+        _, _, ent2id, _, _ = load_embeddings()
+        matches = find_disease_entities(ent2id, disease_name)
+        if matches:
+            m = matches[0]
+            return m[0] if isinstance(m, tuple) else m
+    except Exception:
+        pass
+    return None
 
 
 def _disease_genes(disease_name: str) -> set[str]:
-    try:
-        from opencure.data.opentargets import get_disease_targets
-        tgts = get_disease_targets(disease_name) or []
-        return {f"Gene::{g}" for g in tgts[:50] if g}
-    except Exception:
+    """Return ``{"Gene::<entrez>", ...}`` for a disease.
+
+    Reads the unified index (OT + DRKG/GNBR) built by
+    ``scripts/build_disease_gene_index.py`` and converts HGNC symbols to
+    Entrez IDs for compatibility with ``score_tissue_context``.
+    """
+    entity = _resolve_disease_entity(disease_name)
+    if not entity:
         return set()
+    sym_to_ent = _load_symbol_to_entrez()
+    return {
+        f"Gene::{sym_to_ent[sym]}"
+        for sym in _load_index().get(entity, [])
+        if sym in sym_to_ent
+    }
 
 
 def backfill(path: Path) -> int:
