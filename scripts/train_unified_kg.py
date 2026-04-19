@@ -38,36 +38,65 @@ def main() -> None:
             "  python3 scripts/build_unified_kg.py"
         )
 
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
-    print(f"Loading triplets from {UNIFIED_TSV}…")
-    tf = TriplesFactory.from_path(str(UNIFIED_TSV))
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--data", default=str(UNIFIED_TSV))
+    ap.add_argument("--out", default=str(OUT_DIR))
+    ap.add_argument("--epochs", type=int, default=20)
+    args, _ = ap.parse_known_args()
+    data_path = Path(args.data)
+    out_dir = Path(args.out)
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    print(f"Loading triplets from {data_path}…")
+    tf = TriplesFactory.from_path(str(data_path))
     print(f"  {tf.num_entities:,} entities  {tf.num_relations:,} relations  "
           f"{tf.num_triples:,} triples")
 
-    train, valid, test = tf.split([0.95, 0.025, 0.025], random_state=42)
+    # SKIP PyKEEN's default pipeline() because its final evaluation on MPS
+    # is unusably slow (~50 h for 350k triples). Train directly via
+    # SLCWATrainingLoop and save the model; held-out metrics come from
+    # scripts/run_heldout_eval.py (seconds, not hours).
+    from pykeen.models import TransE
+    from pykeen.training import SLCWATrainingLoop
+    from pykeen.sampling.basic_negative_sampler import BasicNegativeSampler
+    from torch.optim import Adam
+    import torch
+    import shutil
 
-    # MPS does NOT support complex-number norms required by RotatE. We use
-    # TransE instead — same family, real-valued, works on MPS. Upgrade to
-    # RotatE when running on CUDA. TransE is the reference model DRKG itself
-    # was trained with, so consistency with the existing DRKG TransE scorer
-    # is actually a plus.
-    result = pipeline(
-        training=train, validation=valid, testing=test,
-        model="TransE",
-        model_kwargs=dict(embedding_dim=128, scoring_fct_norm=2),
-        training_kwargs=dict(num_epochs=20, batch_size=2048, use_tqdm=True),
-        optimizer_kwargs=dict(lr=1e-3),
-        negative_sampler="basic",
+    device = torch.device("mps" if _has_mps() else "cpu")
+    print(f"Device: {device}")
+
+    model = TransE(
+        triples_factory=tf,
+        embedding_dim=128,
+        scoring_fct_norm=2,
+    ).to(device)
+
+    optimizer = Adam(params=model.parameters(), lr=1e-3)
+    trainer = SLCWATrainingLoop(
+        model=model,
+        triples_factory=tf,
+        optimizer=optimizer,
+        negative_sampler=BasicNegativeSampler,
         negative_sampler_kwargs=dict(num_negs_per_pos=20),
-        random_seed=42,
-        device="mps" if _has_mps() else "cpu",
-        evaluation_kwargs=dict(use_tqdm=True),
     )
 
-    result.save_to_directory(str(OUT_DIR))
-    print(f"Saved to {OUT_DIR}")
-    print(f"Final MRR: {result.metric_results.get_metric('mean_reciprocal_rank'):.4f}")
-    print(f"Hits@10:   {result.metric_results.get_metric('hits_at_10'):.4f}")
+    print(f"Training TransE 128-dim for {args.epochs} epochs, batch 2048...")
+    losses = trainer.train(
+        triples_factory=tf,
+        num_epochs=args.epochs,
+        batch_size=2048,
+        use_tqdm=True,
+    )
+    print(f"Final loss: {losses[-1]:.4f}")
+
+    torch.save(model, out_dir / "trained_model.pkl")
+    tf_binary_dir = out_dir / "training_triples"
+    if tf_binary_dir.exists():
+        shutil.rmtree(tf_binary_dir)
+    tf.to_path_binary(tf_binary_dir)
+    print(f"Saved to {out_dir}")
 
 
 def _has_mps() -> bool:

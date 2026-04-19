@@ -3,7 +3,7 @@ triangulation, tissue context."""
 
 import pytest
 from opencure.evidence.ddi_warnings import get_ddi_warnings
-from opencure.evidence.pharmacogenomics_v5 import get_pharmacogenomic_flags
+from opencure.evidence.pharmacogenomics import get_pharmacogenomic_flags
 from opencure.evidence.dose_plausibility import get_dose_plausibility
 from opencure.evidence.triangulation import compute_triangulation_score
 

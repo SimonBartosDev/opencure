@@ -18,19 +18,20 @@ Usage
 from __future__ import annotations
 
 import json
-import pickle
 import sys
 from pathlib import Path
 
-import numpy as np
-
 from opencure.data.drkg import load_embeddings, get_compound_entities
+from opencure.scoring.ensemble import (
+    MODEL_PATH,
+    build_features,
+    load_model,
+    score as score_candidate,
+)
 from opencure.scoring.hub_normalize import degree_penalty
 from opencure.scoring.transe import score_drugs_for_disease_vectorized
 
 
-MODEL_PATH = Path("data/models/ensemble_v5.pkl")
-REPORT_PATH = Path("data/models/ensemble_v5_report.json")
 ACTIVITIES_PATH = Path("data/drkg/drug_target_activities.json")
 CHEMBL_PHASE_PATH = Path("data/drkg/chembl_phase.json")
 OT_TRIPLETS_PATH = Path("data/open_targets/ot_triplets.tsv")
@@ -120,24 +121,17 @@ def score_file(
     for cand in candidates:
         drug_id = cand.get("drug_id", "")
         compound = drug_id if drug_id.startswith("Compound::") else f"Compound::{drug_id}"
-        rk = rank_map.get(compound, n)
-        kg_score = max(0.0, 1.0 - rk / max(n - 1, 1))
-        bare = compound.split("::", 1)[1] if "::" in compound else compound
-        phase = chembl_phase.get(bare, 0) or 0
-        try:
-            is_fda = 1 if float(phase) >= 2 else 0
-        except (TypeError, ValueError):
-            is_fda = 0
-        feats = {
-            "kg_score": kg_score,
-            "degree_penalty": degree_penalty(compound),
-            "n_drug_targets": drug_n_targets.get(bare, 0),
-            "is_fda_approved": is_fda,
-            "n_disease_genes": n_disease_genes,
-            "transe_rank_log": float(np.log1p(rk)),
-        }
-        X = np.asarray([[feats[k] for k in feature_keys]], dtype=float)
-        p = float(model.predict_proba(X)[0, 1])
+        feats = build_features(
+            compound_entity=compound,
+            disease_entity=disease_entity,
+            rank_map=rank_map,
+            n_compounds=n,
+            drug_n_targets=drug_n_targets,
+            chembl_phase=chembl_phase,
+            disease_gene_counts={disease_entity: n_disease_genes},
+            degree_penalty_fn=degree_penalty,
+        )
+        p = score_candidate(model, feature_keys, feats)
         cand["ensemble_prob"] = round(p, 4)
         cand["ensemble_features"] = {k: round(v, 4) if isinstance(v, float) else v
                                      for k, v in feats.items()}
@@ -156,21 +150,10 @@ def score_file(
 
 
 def main() -> None:
-    if not MODEL_PATH.exists():
-        sys.exit(f"Model not found at {MODEL_PATH}. Run scripts/phase_c_pipeline.py first.")
-    with MODEL_PATH.open("rb") as fh:
-        bundle = pickle.load(fh)
-    if isinstance(bundle, dict) and "model" in bundle:
-        model = bundle["model"]
-        feature_keys = tuple(bundle.get("feature_keys",
-            ("kg_score", "degree_penalty", "n_drug_targets",
-             "is_fda_approved", "n_disease_genes", "transe_rank_log")))
-    else:
-        model = bundle
-        report = json.load(REPORT_PATH.open()) if REPORT_PATH.exists() else {}
-        feature_keys = tuple(report.get("feature_keys",
-            ("kg_score", "degree_penalty", "n_drug_targets",
-             "is_fda_approved", "n_disease_genes", "transe_rank_log")))
+    try:
+        model, feature_keys = load_model()
+    except FileNotFoundError as exc:
+        sys.exit(str(exc))
     print(f"Model: {MODEL_PATH}")
     print(f"Features: {feature_keys}")
 

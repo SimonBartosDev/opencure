@@ -1,198 +1,102 @@
 """
-Ensemble scoring: learns optimal weights for combining all pillars.
+v5 ensemble inference.
 
-Instead of hand-tuned weights (70% TransE, 30% molecular similarity),
-this trains a gradient-boosted model on known drug-disease pairs to
-learn which pillars matter most - and the answer may differ by disease type.
+The canonical ensemble is trained by ``scripts/phase_c_pipeline.py`` and
+serialized to ``data/models/ensemble_v5.pkl``. This module loads that
+artifact and exposes the feature-extraction + scoring primitives so both
+the live search pipeline and the post-processor
+(``scripts/score_ensemble_v5.py``) share one codepath.
 
-Output: calibrated probability (0-1) instead of arbitrary score.
+Pre-v5 heuristic and XGBoost-native loaders were removed in the v5.1
+cleanup; history is in git.
 """
+from __future__ import annotations
+
+import json
+import pickle
+from pathlib import Path
+from typing import Any
 
 import numpy as np
-from pathlib import Path
-from typing import Optional
-
-from opencure.config import DATA_DIR
-
-MODELS_DIR = DATA_DIR.parent / "models"
-ENSEMBLE_MODEL_PATH = MODELS_DIR / "ensemble_model.json"
 
 
-def combine_pillar_scores(
-    transe_scores: dict,
-    pykeen_scores: dict,
-    mol_fingerprint_scores: dict,
-    mol_embedding_scores: dict,
-    dti_scores: dict,
-    literature_scores: dict,
-    all_compounds: list[str],
-) -> dict:
+MODEL_PATH = Path("data/models/ensemble_v5.pkl")
+REPORT_PATH = Path("data/models/ensemble_v5_report.json")
+
+DEFAULT_FEATURE_KEYS: tuple[str, ...] = (
+    "kg_score",
+    "degree_penalty",
+    "n_drug_targets",
+    "is_fda_approved",
+    "n_disease_genes",
+    "transe_rank_log",
+)
+
+
+def load_model(path: Path = MODEL_PATH) -> tuple[Any, tuple[str, ...]]:
+    """Return (sklearn CalibratedClassifierCV, feature_keys).
+
+    Raises FileNotFoundError if the trained model is absent — callers should
+    treat that as "ensemble disabled" and fall back to the grouped combiner's
+    ``combined_score``.
     """
-    Combine scores from all pillars into feature vectors for each compound.
-
-    Returns dict: compound → feature_dict with all pillar scores
-    """
-    all_scored = set()
-    for scores_dict in [transe_scores, pykeen_scores, mol_fingerprint_scores,
-                        mol_embedding_scores, dti_scores, literature_scores]:
-        all_scored.update(scores_dict.keys())
-
-    combined = {}
-    for compound in all_scored:
-        features = {
-            "transe_score": 0.0,
-            "pykeen_score": 0.0,
-            "mol_fingerprint_sim": 0.0,
-            "mol_embedding_sim": 0.0,
-            "dti_score": 0.0,
-            "literature_score": 0.0,
-            "pillars_hit": 0,
-        }
-
-        if compound in transe_scores:
-            features["transe_score"] = transe_scores[compound][0]
-            features["pillars_hit"] += 1
-
-        if compound in pykeen_scores:
-            features["pykeen_score"] = pykeen_scores[compound][0]
-            features["pillars_hit"] += 1
-
-        if compound in mol_fingerprint_scores:
-            features["mol_fingerprint_sim"] = mol_fingerprint_scores[compound][0]
-            features["pillars_hit"] += 1
-
-        if compound in mol_embedding_scores:
-            features["mol_embedding_sim"] = mol_embedding_scores[compound][0]
-            features["pillars_hit"] += 1
-
-        if compound in dti_scores:
-            features["dti_score"] = dti_scores[compound]
-            features["pillars_hit"] += 1
-
-        if compound in literature_scores:
-            features["literature_score"] = literature_scores[compound]
-            features["pillars_hit"] += 1
-
-        combined[compound] = features
-
-    return combined
-
-
-def score_with_ensemble(
-    compound_features: dict,
-    model=None,
-) -> dict:
-    """
-    Score compounds using the trained ensemble model, or fall back
-    to weighted average if no ensemble model is trained.
-
-    Returns dict: compound → calibrated_score (0-1)
-    """
-    if model is not None:
-        return _score_with_trained_model(compound_features, model)
-    else:
-        return _score_with_heuristic(compound_features)
-
-
-def _score_with_heuristic(compound_features: dict) -> dict:
-    """
-    Heuristic scoring when no trained ensemble is available.
-
-    Improved from v1: uses rank normalization across all pillars
-    and applies learned-from-validation weights.
-    """
-    if not compound_features:
-        return {}
-
-    # Normalize each pillar to [0, 1] via rank percentile
-    pillar_keys = ["transe_score", "pykeen_score", "mol_fingerprint_sim",
-                   "mol_embedding_sim", "dti_score", "literature_score"]
-
-    compounds = list(compound_features.keys())
-
-    # Collect raw scores per pillar
-    pillar_values = {k: [] for k in pillar_keys}
-    for comp in compounds:
-        for k in pillar_keys:
-            pillar_values[k].append(compound_features[comp].get(k, 0.0))
-
-    # Rank normalize each pillar
-    pillar_percentiles = {k: np.zeros(len(compounds)) for k in pillar_keys}
-    for k in pillar_keys:
-        vals = np.array(pillar_values[k])
-        if vals.max() > vals.min():
-            # Percentile rank: 1.0 = best
-            ranks = np.argsort(np.argsort(-vals))
-            pillar_percentiles[k] = 1.0 - ranks / len(ranks)
-
-    # Weights per pillar (Phase 6 will learn these; for now use informed heuristics)
-    weights = {
-        "transe_score": 0.15,        # Legacy, kept for coverage
-        "pykeen_score": 0.25,        # RotatE is more expressive
-        "mol_fingerprint_sim": 0.10, # Traditional fingerprints
-        "mol_embedding_sim": 0.15,   # ChemBERTa/MoLFormer
-        "dti_score": 0.20,           # ESM-2 based DTI
-        "literature_score": 0.15,    # Literature evidence
-    }
-
-    # Compute weighted score with multi-pillar bonus
-    scores = {}
-    for i, comp in enumerate(compounds):
-        weighted_sum = 0.0
-        active_pillars = 0
-
-        for k in pillar_keys:
-            pct = pillar_percentiles[k][i]
-            raw = compound_features[comp].get(k, 0.0)
-            if raw > 0:
-                weighted_sum += pct * weights[k]
-                active_pillars += 1
-
-        # Multi-pillar convergence bonus (scales with number of pillars)
-        if active_pillars >= 4:
-            weighted_sum *= 1.4  # 40% bonus for 4+ pillars
-        elif active_pillars >= 3:
-            weighted_sum *= 1.25  # 25% bonus for 3 pillars
-        elif active_pillars >= 2:
-            weighted_sum *= 1.1   # 10% bonus for 2 pillars
-
-        scores[comp] = {
-            "score": min(1.0, weighted_sum),
-            "pillars_hit": active_pillars,
-            "pillar_scores": {k: pillar_percentiles[k][i] for k in pillar_keys},
-        }
-
-    return scores
-
-
-def _score_with_trained_model(compound_features: dict, model) -> dict:
-    """Score using trained XGBoost/LightGBM ensemble."""
-    pillar_keys = ["transe_score", "pykeen_score", "mol_fingerprint_sim",
-                   "mol_embedding_sim", "dti_score", "literature_score", "pillars_hit"]
-
-    compounds = list(compound_features.keys())
-    X = np.array([[compound_features[c].get(k, 0.0) for k in pillar_keys] for c in compounds])
-
-    predictions = model.predict_proba(X)[:, 1]  # Probability of positive class
-
-    scores = {}
-    for comp, pred in zip(compounds, predictions):
-        scores[comp] = {
-            "score": float(pred),
-            "pillars_hit": compound_features[comp].get("pillars_hit", 0),
-        }
-
-    return scores
-
-
-def load_ensemble_model():
-    """Load trained ensemble model if available."""
-    if ENSEMBLE_MODEL_PATH.exists():
+    if not path.exists():
+        raise FileNotFoundError(
+            f"Ensemble model not found at {path}. Run "
+            "scripts/phase_c_pipeline.py to train it."
+        )
+    with path.open("rb") as fh:
+        bundle = pickle.load(fh)
+    if isinstance(bundle, dict) and "model" in bundle:
+        return bundle["model"], tuple(bundle.get("feature_keys", DEFAULT_FEATURE_KEYS))
+    # Fallback: bare model — lean on the side-car report for feature keys.
+    keys: tuple[str, ...] = DEFAULT_FEATURE_KEYS
+    if REPORT_PATH.exists():
         try:
-            import xgboost as xgb
-            model = xgb.XGBClassifier()
-            model.load_model(str(ENSEMBLE_MODEL_PATH))
-            return model
+            report = json.loads(REPORT_PATH.read_text())
+            keys = tuple(report.get("feature_keys", DEFAULT_FEATURE_KEYS))
         except Exception:
             pass
-    return None
+    return bundle, keys
+
+
+def build_features(
+    *,
+    compound_entity: str,
+    disease_entity: str,
+    rank_map: dict[str, int],
+    n_compounds: int,
+    drug_n_targets: dict[str, int],
+    chembl_phase: dict[str, float],
+    disease_gene_counts: dict[str, int],
+    degree_penalty_fn,
+) -> dict[str, float]:
+    """Compute the 6-feature vector for (drug, disease).
+
+    ``rank_map`` and ``n_compounds`` come from
+    ``opencure.scoring.transe.score_drugs_for_disease_vectorized`` for the
+    given disease. ``degree_penalty_fn`` is ``opencure.scoring.hub_normalize.degree_penalty``
+    — passed in to avoid importing torch-heavy dependencies at module import time.
+    """
+    rk = rank_map.get(compound_entity, n_compounds)
+    kg_score = max(0.0, 1.0 - rk / max(n_compounds - 1, 1))
+    bare = compound_entity.split("::", 1)[1] if "::" in compound_entity else compound_entity
+    phase = chembl_phase.get(bare, 0) or 0
+    try:
+        is_fda = 1 if float(phase) >= 2 else 0
+    except (TypeError, ValueError):
+        is_fda = 0
+    return {
+        "kg_score": kg_score,
+        "degree_penalty": degree_penalty_fn(compound_entity),
+        "n_drug_targets": drug_n_targets.get(bare, 0),
+        "is_fda_approved": is_fda,
+        "n_disease_genes": disease_gene_counts.get(disease_entity, 0),
+        "transe_rank_log": float(np.log1p(rk)),
+    }
+
+
+def score(model, feature_keys: tuple[str, ...], feats: dict[str, float]) -> float:
+    """Return the calibrated positive-class probability for a single candidate."""
+    X = np.asarray([[feats[k] for k in feature_keys]], dtype=float)
+    return float(model.predict_proba(X)[0, 1])

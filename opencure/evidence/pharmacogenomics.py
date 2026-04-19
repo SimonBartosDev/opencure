@@ -1,150 +1,163 @@
 """
-Pharmacogenomics evidence for drug repurposing candidates.
+Pharmacogenomic flags (v5): CPIC + PharmGKB → clinical actionability warnings.
 
-Queries PharmGKB for genetic variants that affect drug response,
-helping identify which patient populations would benefit most.
+For every top-10 prediction, check whether the drug has any established
+variant-drug interaction that affects dose, efficacy, or toxicity. This
+moves OpenCure from "here's a prediction" to "here's a prediction + the
+patient-subtype guardrails a prescriber must know".
 
-This adds precision medicine context to repurposing predictions:
-- CYP2D6 poor metabolizers may have reduced efficacy
-- HLA variants may increase adverse event risk
-- Specific genotypes may show enhanced response
+Sources:
+  - data/sources_2024/cpic_pairs.json (76 KB, CPIC tier-A/B/C/D pairs)
+  - data/sources_2024/pharmgkb/clinical_annotations.tsv (5187 annotations)
 
-Data source: PharmGKB REST API (free, no auth needed).
+Categories returned per drug:
+  - high_risk: CPIC level A or B — actionable, must change dose/drug
+  - moderate:  CPIC level C or PharmGKB level 1A/1B/2A
+  - advisory:  PharmGKB level 2B/3
 """
+
 from __future__ import annotations
 
-import time
-import requests
+import json
+from functools import lru_cache
+from pathlib import Path
 from typing import Optional
 
-_pgkb_cache: dict[str, list] = {}
 
-PHARMGKB_API = "https://api.pharmgkb.org/v1/data"
+CPIC_PATH = Path("data/sources_2024/cpic_pairs.json")
+PHARMGKB_PATH = Path("data/sources_2024/pharmgkb/clinical_annotations.tsv")
 
 
-def get_pharmgkb_annotations(drug_name: str) -> list[dict]:
+@lru_cache(maxsize=1)
+def _load_cpic() -> dict[str, list[dict]]:
+    """Load CPIC pairs keyed by drug name (lowercased).
+
+    Returns: {drug_lower: [{'gene': X, 'level': A|B|C|D, 'guideline': N}]}
     """
-    Get clinical pharmacogenomics annotations for a drug from PharmGKB.
-
-    Returns list of variant-drug annotations with clinical significance.
-    """
-    cache_key = drug_name.lower()
-    if cache_key in _pgkb_cache:
-        return _pgkb_cache[cache_key]
-
-    annotations = []
-
+    if not CPIC_PATH.exists():
+        return {}
     try:
-        # Search for drug in PharmGKB
-        resp = requests.get(
-            f"{PHARMGKB_API}/clinicalAnnotation",
-            params={"relatedChemicals.name": drug_name, "view": "min"},
-            timeout=15,
-        )
-        time.sleep(0.3)
-
-        if resp.status_code == 200:
-            data = resp.json()
-            results = data.get("data", [])
-
-            for ann in results[:10]:  # Limit to top 10
-                annotation = {
-                    "id": ann.get("id", ""),
-                    "level": ann.get("level", ""),
-                    "gene": "",
-                    "variant": "",
-                    "phenotype": "",
-                    "url": f"https://www.pharmgkb.org/clinicalAnnotation/{ann.get('id', '')}",
-                }
-
-                # Extract gene/variant info
-                genes = ann.get("relatedGenes", [])
-                if genes:
-                    annotation["gene"] = genes[0].get("symbol", "")
-
-                variants = ann.get("relatedVariants", [])
-                if variants:
-                    annotation["variant"] = variants[0].get("name", "")
-
-                phenotypes = ann.get("phenotypes", [])
-                if phenotypes:
-                    annotation["phenotype"] = phenotypes[0].get("name", "")
-
-                annotations.append(annotation)
-
+        data = json.loads(CPIC_PATH.read_text())
     except Exception:
-        pass
+        return {}
+    out: dict[str, list[dict]] = {}
+    for row in data:
+        drug = (row.get("drug") or {}).get("name", "").lower()
+        gene = (row.get("gene") or {}).get("symbol", "")
+        level = row.get("cpiclevel", "")
+        guideline = (row.get("guideline") or {}).get("name", "")
+        if drug and gene:
+            out.setdefault(drug, []).append({
+                "gene": gene, "level": level, "guideline": guideline
+            })
+    return out
 
-    _pgkb_cache[cache_key] = annotations
-    return annotations
 
+@lru_cache(maxsize=1)
+def _load_pharmgkb() -> dict[str, list[dict]]:
+    """Load PharmGKB clinical annotations keyed by drug name (lowercased).
 
-def get_drug_interactions(drug_name: str) -> list[dict]:
+    Returns: {drug_lower: [{'gene': X, 'variant': V, 'level': 1A/1B/2A..,
+                             'phenotype_category': Y, 'url': U}]}
     """
-    Get known drug-drug interactions from PharmGKB.
-
-    Important for combination therapy safety assessment.
-    """
-    interactions = []
-
-    try:
-        resp = requests.get(
-            f"{PHARMGKB_API}/drugLabel",
-            params={"relatedChemicals.name": drug_name, "view": "min"},
-            timeout=15,
-        )
-        time.sleep(0.3)
-
-        if resp.status_code == 200:
-            data = resp.json()
-            for label in data.get("data", [])[:5]:
-                interactions.append({
-                    "source": label.get("source", ""),
-                    "name": label.get("name", ""),
-                    "url": f"https://www.pharmgkb.org/drugLabel/{label.get('id', '')}",
+    if not PHARMGKB_PATH.exists():
+        return {}
+    out: dict[str, list[dict]] = {}
+    with PHARMGKB_PATH.open() as f:
+        header = f.readline().rstrip("\n").split("\t")
+        try:
+            i_var = header.index("Variant/Haplotypes")
+            i_gene = header.index("Gene")
+            i_level = header.index("Level of Evidence")
+            i_cat = header.index("Phenotype Category")
+            i_drugs = header.index("Drug(s)")
+            i_url = header.index("URL")
+        except ValueError:
+            return {}
+        for line in f:
+            parts = line.rstrip("\n").split("\t")
+            if len(parts) <= max(i_var, i_gene, i_level, i_drugs):
+                continue
+            drugs_raw = parts[i_drugs]
+            # Drug(s) column may contain multiple drugs separated by ';'
+            for drug in drugs_raw.split(";"):
+                drug = drug.strip().lower()
+                if not drug:
+                    continue
+                out.setdefault(drug, []).append({
+                    "gene": parts[i_gene],
+                    "variant": parts[i_var],
+                    "level": parts[i_level],
+                    "phenotype_category": parts[i_cat],
+                    "url": parts[i_url] if len(parts) > i_url else "",
                 })
-
-    except Exception:
-        pass
-
-    return interactions
+    return out
 
 
-def summarize_pharmacogenomics(drug_name: str) -> dict:
+def _classify(cpic_level: str, pgkb_level: str) -> str:
+    """Return 'high_risk' | 'moderate' | 'advisory' | '' based on levels."""
+    c = (cpic_level or "").upper()
+    p = (pgkb_level or "").upper()
+    if c in ("A", "B"):
+        return "high_risk"
+    if c == "C" or p in ("1A", "1B", "2A"):
+        return "moderate"
+    if p in ("2B", "3"):
+        return "advisory"
+    return ""
+
+
+def get_pharmacogenomic_flags(drug_name: str) -> dict:
     """
-    Generate a pharmacogenomics summary for a drug.
+    Return a structured pharmacogenomic risk profile for a drug.
 
-    Returns dict with annotations, key genes, and clinical implications.
+    {
+      "has_flags": bool,
+      "highest_risk": "high_risk"|"moderate"|"advisory"|"",
+      "summary": "short human-readable string",
+      "cpic": [...],
+      "pharmgkb": [...]
+    }
     """
-    annotations = get_pharmgkb_annotations(drug_name)
+    if not drug_name:
+        return {"has_flags": False, "highest_risk": "", "summary": "", "cpic": [], "pharmgkb": []}
 
-    if not annotations:
-        return {
-            "has_pgx_data": False,
-            "annotations": [],
-            "key_genes": [],
-            "summary": f"No pharmacogenomics data found for {drug_name} in PharmGKB.",
-        }
+    name_key = drug_name.lower()
+    cpic_hits = _load_cpic().get(name_key, [])
+    pgkb_hits = _load_pharmgkb().get(name_key, [])
 
-    # Extract key genes
-    key_genes = list(set(a["gene"] for a in annotations if a["gene"]))
+    levels = []
+    for c in cpic_hits:
+        r = _classify(c.get("level", ""), "")
+        if r:
+            levels.append(r)
+    for p in pgkb_hits:
+        r = _classify("", p.get("level", ""))
+        if r:
+            levels.append(r)
 
-    # Count by evidence level
-    levels = {}
-    for a in annotations:
-        lvl = a.get("level", "unknown")
-        levels[lvl] = levels.get(lvl, 0) + 1
+    rank = {"high_risk": 3, "moderate": 2, "advisory": 1, "": 0}
+    highest = max(levels, key=lambda x: rank.get(x, 0)) if levels else ""
 
-    summary_parts = [f"{drug_name} has {len(annotations)} pharmacogenomics annotation(s)"]
-    if key_genes:
-        summary_parts.append(f"affecting genes: {', '.join(key_genes[:5])}")
-    if levels:
-        summary_parts.append(f"evidence levels: {levels}")
+    summary_parts = []
+    if cpic_hits:
+        top = cpic_hits[0]
+        summary_parts.append(f"CPIC-{top['level']} ({top['gene']})")
+    if pgkb_hits:
+        top = pgkb_hits[0]
+        summary_parts.append(f"PharmGKB-{top['level']} ({top['gene']} / {top['variant']})")
 
     return {
-        "has_pgx_data": True,
-        "annotations": annotations[:5],
-        "key_genes": key_genes,
-        "evidence_levels": levels,
-        "summary": ". ".join(summary_parts),
+        "has_flags": bool(cpic_hits or pgkb_hits),
+        "highest_risk": highest,
+        "summary": " • ".join(summary_parts),
+        "cpic": cpic_hits[:5],
+        "pharmgkb": pgkb_hits[:5],
     }
+
+
+if __name__ == "__main__":
+    # Smoke test
+    for d in ["Warfarin", "Abacavir", "Clopidogrel", "Codeine", "Simvastatin", "Aspirin"]:
+        f = get_pharmacogenomic_flags(d)
+        print(f"{d:20s} highest={f['highest_risk']:10s}  {f['summary']}")

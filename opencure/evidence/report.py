@@ -491,7 +491,7 @@ def generate_evidence_report(
         pass
 
     try:
-        from opencure.evidence.pharmacogenomics_v5 import get_pharmacogenomic_flags
+        from opencure.evidence.pharmacogenomics import get_pharmacogenomic_flags
         report.pharmacogenomics = get_pharmacogenomic_flags(report.drug_name)
     except Exception:
         pass
