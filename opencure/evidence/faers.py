@@ -14,6 +14,8 @@ of knowledge graphs, molecular similarity, or published literature.
 import time
 import requests
 
+from opencure.evidence.cache import disk_cached
+
 FAERS_URL = "https://api.fda.gov/drug/event.json"
 
 # Map disease names to MedDRA preferred terms used in FAERS
@@ -126,9 +128,12 @@ def search_drug_disease_cooccurrence(drug_name: str, disease_terms: list[str]) -
     return results
 
 
+@disk_cached(namespace="faers_repurposing", ttl_days=30)
 def compute_repurposing_signal(drug_name: str, disease_name: str) -> dict:
     """
     Compute a drug repurposing signal from FAERS data.
+
+    Cached to data/evidence_cache/faers_repurposing/ with 30-day TTL.
 
     Strategy:
     1. Get total reports for the drug

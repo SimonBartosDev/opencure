@@ -8,6 +8,8 @@ More reliable than PubMed E-utilities for batch queries.
 import time
 import requests
 
+from opencure.evidence.cache import disk_cached
+
 S2_API = "https://api.semanticscholar.org/graph/v1"
 
 
@@ -38,6 +40,7 @@ def search_papers(
     return []
 
 
+@disk_cached(namespace="semantic_scholar_drug_disease", ttl_days=30)
 def search_drug_disease_papers(
     drug_name: str,
     disease_name: str,
@@ -47,6 +50,8 @@ def search_drug_disease_papers(
     Search for papers about a drug-disease relationship.
 
     Returns dict with total count and papers.
+
+    Cached to data/evidence_cache/semantic_scholar_drug_disease/ with 30-day TTL.
     """
     # Direct search
     query = f"{drug_name} {disease_name}"
