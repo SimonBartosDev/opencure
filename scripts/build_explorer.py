@@ -205,8 +205,20 @@ def build_html(candidates, cross_disease, stats):
   <a href="#cross-disease">Cross-Disease</a>
   <a href="#breakthroughs">Breakthroughs</a>
   <a href="#methodology">Methods</a>
+  <a href="https://github.com/SimonBartosDev/opencure/blob/main/docs/methods_paper_draft.md" target="_blank" rel="noopener">Paper</a>
+  <a href="https://github.com/SimonBartosDev/opencure/blob/main/docs/RELEASE_v5.md" target="_blank" rel="noopener">v5 Release</a>
   <a href="https://github.com/SimonBartosDev/opencure" target="_blank" rel="noopener">GitHub</a>
 </nav>
+
+<div class="v5-banner">
+  <div class="v5-banner-inner">
+    <span class="v5-badge">v5</span>
+    <strong>Clinical-guardrails release.</strong>
+    Every top prediction carries dose plausibility, DDI warnings,
+    pharmacogenomic flags, a mechanism path, and a 4-axis triangulation score.
+    <a href="https://github.com/SimonBartosDev/opencure/blob/main/docs/RELEASE_v5.md" target="_blank" rel="noopener">Release notes →</a>
+  </div>
+</div>
 
 <div class="guide-toggle" id="guide-toggle">
   <button onclick="document.getElementById('guide-box').classList.toggle('open')">How to read this dashboard</button>
@@ -348,6 +360,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,system-ui,san
 .stat-card.hl{background:rgba(96,165,250,.15);border-color:rgba(96,165,250,.3)}
 .stat-num{font-size:1.8rem;font-weight:800}
 .stat-label{font-size:.72rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-top:.1rem}
+.v5-banner{background:linear-gradient(90deg,#ede9fe 0%,#dbeafe 100%);border-bottom:1px solid var(--border);padding:.8rem 2rem}
+.v5-banner-inner{max-width:1400px;margin:0 auto;font-size:.9rem;color:var(--text);display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+.v5-badge{background:var(--purple);color:#fff;padding:.2rem .55rem;border-radius:4px;font-size:.75rem;font-weight:700;letter-spacing:.03em}
+.v5-banner a{color:var(--accent);font-weight:500;margin-left:.4rem}
 .nav-bar{position:sticky;top:0;z-index:100;background:var(--surface);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;gap:0;overflow-x:auto;box-shadow:var(--sh)}
 .nav-bar a{padding:.75rem 1.1rem;text-decoration:none;color:var(--text2);font-size:.88rem;font-weight:500;white-space:nowrap;border-bottom:2px solid transparent;transition:all .15s}
 .nav-bar a:hover{color:var(--accent);border-bottom-color:var(--accent)}
