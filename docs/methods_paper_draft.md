@@ -131,32 +131,92 @@ Per top-10 candidate:
 
 ## 4. Validation
 
-### 4.1 Random-split held-out (993 pairs)
+### 4.1 KG-retrieval held-out (993 random + 210 time-sliced)
 
-80/20 split of DRKG DRUGBANK::treats edges. Hit@10 = [X] (training-
-contaminated upper bound) / [Y] (edge-stripped clean). MRR = [Z].
+We evaluate OpenCure's KG-embedding pillar (the most common reviewer
+benchmark) on two held-out sets:
 
-### 4.2 Time-sliced benchmark (210 pairs)
+1. **Random holdout** — 993 DrugBank `treats` pairs sampled with seed 42
+2. **Time-sliced** — 210 drug-disease pairs first approved 2020-2023
+   (drugs with `yearOfFirstApproval >= 2020` in Open Targets 24.09,
+   approved indications with `maxPhaseForIndication >= 3`)
 
-Drugs with OT yearOfFirstApproval ≥ 2020 × approved indications (phase ≥ 3).
-Edge-stripped training ensures no leakage. Hit@10 = [X], MRR = [Y].
+We trained three TransE models and evaluated each:
 
-| Year | Pairs |
+| Model | Training config | Random Hit@10 | Time-sliced Hit@10 | Random MRR | Median rank |
+|---|---|---|---|---|---|
+| Original DRKG TransE (2020) | DGL-KE, 400-dim, 400 epochs | **57.2%** * | — | 0.283 | 8 |
+| drkg_transE_clean (v5) | PyKEEN, 128-dim, 50 epochs, **edge-stripped** | 3.33% | 0.0% | 0.017 | 537 |
+| unified_transE_clean (v5) | PyKEEN, 128-dim, 20 epochs, 14M-triple graph | 1.03% | 0.0% | 0.007 | 1040 |
+
+*Training-contaminated upper bound — the 57.2% model was trained on DRKG edges that include the test set.*
+
+**Honest disclosure:** the clean retrains underperform the contaminated
+2020 baseline by ~15× because PyKEEN on Apple MPS cannot reach DGL-KE's
+400-dim/400-epoch configuration in tractable time. Getting a
+publication-competitive clean Hit@10 requires a CUDA GPU retrain (~4-6 h
+on A10; ~$30 cloud spend). Time-sliced 0.0% across all three models
+confirms the **stale biology** limitation — DRKG is 2020-era and cannot
+retrieve post-2020 approved indications without a refreshed KG.
+
+The KG-embedding pillar is one of 11; ensemble scoring combines it with
+network, structural, genetic, transcriptomic, and clinical signals so
+the final OpenCure score does not collapse when any single pillar is
+weak.
+
+### 4.2 Ensemble-level validation (v5)
+
+A calibrated XGBoost ensemble was trained on 23,814 pairs (3,969 DRKG
+treats positives not held-out + 19,845 5× random-sampled negatives)
+with 5-fold stratified CV:
+
+- **AUC-ROC: 0.9968 ± 0.0004**
+- **Average precision: 0.9837**
+- Feature importances: `transe_rank_log` (56.6%), `kg_score` (34.8%),
+  `degree_penalty` (3.5%), `n_disease_genes` (2.7%), `n_drug_targets`
+  (1.2%), `is_fda_approved` (1.2%)
+
+Honest caveat: the KG features (91% combined importance) come from the
+training-contaminated 2020 DGL-KE TransE, so AUC mainly reflects KG
+memorization. On a properly-clean KG this AUC will be lower and the
+ensemble will lean on richer features (proximity, MR, TxGNN). The
+calibrated model gives isotonic probabilities — score=0.7 corresponds
+to ~70% precision in 5-fold CV.
+
+### 4.3 Held-out edge stripping
+
+`scripts/strip_heldout_edges.py` removes **1,891 treats-like edges
+across 4 knowledge graphs** corresponding to the 1,200 unique held-out
+pairs (993 random + 210 time-sliced – overlap):
+
+| Relation | Edges stripped |
 |---|---|
-| 2020 | 91 |
-| 2021 | 49 |
-| 2022 | 45 |
-| 2023 | 25 |
+| DRUGBANK::treats::Compound:Disease | 999 |
+| OT::treats::Compound:Disease | 487 |
+| GNBR::T::Compound:Disease | 361 |
+| OT::trialed::Compound:Disease | 44 |
 
-### 4.3 Prospective registry
+This closes the cross-KG leakage vector where a held-out DRKG pair
+could still be learned from PrimeKG or Open Targets alternative
+relations.
 
-Each OpenCure release is timestamped and content-hashed; predictions
-deposited at Zenodo for immutable record. Monthly re-query of PubMed
-and ClinicalTrials.gov for evidence appearing AFTER the snapshot date
-yields a rolling precision@K that cannot be retrospectively data-mined.
-First snapshot (2026-04): [fingerprint X].
+### 4.4 Prospective registry (running since 2026-04-18)
 
-### 4.4 Head-to-head vs published baselines
+Predictions are serialized to `data/prospective/snapshots/<ISO-8601>/`
+with SHA-256 content fingerprints and a Zenodo-ready metadata JSON.
+Monthly `prospective_monitor.py` re-queries PubMed and
+ClinicalTrials.gov for evidence published **after** each snapshot
+date and computes rolling precision@K on predictions ≥90 days old.
+
+First snapshot: `2026-04-18T164121Z` with fingerprint persisted in the
+snapshot README. DOI registration planned via Zenodo API at v5 release.
+
+This is the single strongest efficacy claim a repurposing platform can
+make and requires calendar time (90+ days) to produce meaningful
+numbers. The registry is running continuously; first meaningful
+precision@10 report expected 2026-07.
+
+### 4.5 Head-to-head vs published baselines
 
 On the same time-sliced test set, comparison with:
   - TxGNN (Harvard) — Hit@10 baseline
