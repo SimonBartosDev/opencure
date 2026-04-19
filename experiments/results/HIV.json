@@ -1,25 +1,50 @@
 {
   "disease": "HIV",
   "status": "completed",
-  "timestamp": "2026-04-17T12:11:55.911622",
-  "elapsed_seconds": 780.7,
+  "timestamp": "2026-04-19T14:00:20.212558",
+  "elapsed_seconds": 873.3,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
-    "HIGH": 8,
-    "LOW": 1,
-    "MEDIUM": 1
+    "HIGH": 7,
+    "MEDIUM": 3
   },
+  "pipeline_version": "v5",
+  "data_manifest_hash": "2da2aa88f2457d1b",
   "candidates": [
     {
       "drug_name": "Simvastatin",
       "drug_id": "DB00641",
       "disease_name": "HIV",
-      "combined_score": 1.1705000400543213,
+      "combined_score": 0.5396999716758728,
+      "pillars_hit": 4,
       "transe_rank": 7,
-      "pillars_hit": 7,
+      "transe_score": -9.8765,
+      "pykeen_score": -11.4483,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
+      "mol_emb_similarity": 0.9428,
+      "mol_emb_similar_to": "Saquinavir",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.800000011920929,
+      "proximity_distance": 0.800000011920929,
+      "admet_score": 0.6065,
+      "admet_flags": "hERG=0.71",
+      "primekg_score": 0.2477,
+      "dti_score": 0.2246,
+      "dti_best_target": "PRKDC",
+      "kg_group_score": 0.4088,
+      "structural_group_score": 0.9428,
+      "network_group_score": 0.6065000295639038,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.6174,
+      "admet_multiplier": 0.9213,
+      "efficacy_score": 0.5857999920845032,
+      "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 0,
       "shared_targets": [],
@@ -169,22 +194,14 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0.6174,
       "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Simvastatin \u2014[downregulates]\u2192 gene-84617 \u2014[inhibits]\u2192 DB01229 \u2014[is a therapeutic for]\u2192 HIV",
+      "kg_paths_text": "\u2022 Simvastatin \u2014[downregulates]\u2192 gene-84617 \u2014[inhibits]\u2192 DB01229 \u2014[is a therapeutic for]\u2192 HIV\n\u2022 Simvastatin \u2014[downregulates]\u2192 gene-84617 \u2014[inhibits]\u2192 DB01229 \u2014[is a therapeutic for]\u2192 HIV\n\u2022 Simvastatin \u2014[downregulates]\u2192 gene-84617 \u2014[inhibits]\u2192 DB01229 \u2014[is a therapeutic for]\u2192 HIV",
       "validation_experiments": [],
-      "novelty_score": 0.84,
+      "novelty_score": 0.453000009059906,
       "novelty_level": "KNOWN",
       "is_known_treatment": false,
       "clinical_trials_total": 3,
       "clinical_trials": [
-        {
-          "nct_id": "NCT00017758",
-          "title": "The Effect of Efavirenz and Nelfinavir on the Blood Levels of Certain Lipid-Lowering Drugs",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "56",
-          "url": "https://clinicaltrials.gov/study/NCT00017758"
-        },
         {
           "nct_id": "NCT00000941",
           "title": "A Study on Possible Interactions Between Protease Inhibitors (Anti-HIV Drugs) and Drugs Which Lower the Level of Fat in Your Blood",
@@ -200,6 +217,14 @@
           "phase": "PHASE1",
           "enrollment": "14",
           "url": "https://clinicaltrials.gov/study/NCT01138072"
+        },
+        {
+          "nct_id": "NCT00017758",
+          "title": "The Effect of Efavirenz and Nelfinavir on the Blood Levels of Certain Lipid-Lowering Drugs",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "56",
+          "url": "https://clinicaltrials.gov/study/NCT00017758"
         }
       ],
       "trial_phases": {
@@ -210,22 +235,668 @@
         "3 clinical trial(s) found on ClinicalTrials.gov",
         "83 PubMed articles on this drug-disease pair",
         "1 article(s) specifically mention repurposing/repositioning",
-        "Supported by 7 independent AI pillars",
+        "Supported by 4 independent AI pillars",
         "Moderate FAERS signal: 9 adverse event reports mention drug-disease co-occurrence",
         "Supporting paper with 75 citations",
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.62)"
-      ]
+      ],
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1139,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "high_risk",
+        "summary": "CPIC-A (SLCO1B1) \u2022 PharmGKB-3 (HMGCR / rs17238540)",
+        "cpic": [
+          {
+            "gene": "SLCO1B1",
+            "level": "A",
+            "guideline": "SLCO1B1, ABCG2, CYP2C9, and Statins"
+          },
+          {
+            "gene": "ABCB1",
+            "level": "C",
+            "guideline": ""
+          },
+          {
+            "gene": "CYP3A4",
+            "level": "C",
+            "guideline": "SLCO1B1, ABCG2, CYP2C9, and Statins"
+          },
+          {
+            "gene": "CYP3A5",
+            "level": "C",
+            "guideline": "SLCO1B1, ABCG2, CYP2C9, and Statins"
+          },
+          {
+            "gene": "CETP",
+            "level": "D",
+            "guideline": ""
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "HMGCR",
+            "variant": "rs17238540",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183491617"
+          },
+          {
+            "gene": "HMGCR",
+            "variant": "rs17244841",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183491741"
+          },
+          {
+            "gene": "RYR2",
+            "variant": "rs2819742",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1447987124"
+          },
+          {
+            "gene": "KIF6",
+            "variant": "rs20455",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449748187"
+          },
+          {
+            "gene": "SLCO1B1",
+            "variant": "rs4149056",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451356520"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.35600000619888306,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.5400000214576721,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.835
+        }
+      },
+      "tissue_context": {
+        "context_modifier": 1.0,
+        "tissues": [
+          "Whole Blood",
+          "Spleen"
+        ],
+        "n_genes": 0
+      },
+      "ensemble_prob": 0.9049,
+      "ensemble_features": {
+        "kg_score": 0.9982,
+        "degree_penalty": 0.7582,
+        "n_drug_targets": 19,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.9957
+      },
+      "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "disease_entity": "Disease::MESH:D015658"
+    },
+    {
+      "drug_name": "Methadone",
+      "drug_id": "DB00333",
+      "disease_name": "HIV",
+      "combined_score": 0.4925000071525574,
+      "pillars_hit": 4,
+      "transe_rank": 115,
+      "transe_score": -10.5124,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0.0129,
+      "gene_sig_rank": 43,
+      "proximity_score": 0.7620000243186951,
+      "proximity_distance": 0.949999988079071,
+      "admet_score": 0.6528,
+      "admet_flags": "hERG=0.89",
+      "primekg_score": 0.246,
+      "dti_score": 1.0,
+      "dti_best_target": "CD4",
+      "kg_group_score": 0.0674,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.5722000002861023,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.7867,
+      "admet_multiplier": 0.9306,
+      "efficacy_score": 0.5292999744415283,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 0,
+      "shared_targets": [],
+      "pubmed_total": 2409,
+      "pubmed_treatment_total": 2224,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "33184637",
+          "title": "Policing Practices and Risk of HIV Infection Among People Who Inject Drugs.",
+          "authors": "Baker P, Beletsky L, Avalos L, et al.",
+          "journal": "Epidemiologic reviews",
+          "year": "2020",
+          "abstract_snippet": "Drug-law enforcement constitutes a structural determinant of health among people who inject drugs (PWID). Street encounters between police and PWID (e.g., syringe confiscation, physical assault) have been associated with health harms, but these relationships have not been systematically assessed. We...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33184637/",
+          "total_results": 2409
+        },
+        {
+          "pmid": "30973652",
+          "title": "Drug-Drug Interaction Studies of Methadone and Antiviral Drugs: Lessons Learned.",
+          "authors": "Younis IR, Lakota EA, Volpe DA, et al.",
+          "journal": "Journal of clinical pharmacology",
+          "year": "2019",
+          "abstract_snippet": "Different views appear in the literature on the extent of specific cytochrome P450 (CYP) involvement in methadone metabolism. The aim of this work is to leverage knowledge from drug-drug interaction (DDI) studies in new drug applications between methadone and antiviral medications to better understa...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30973652/"
+        },
+        {
+          "pmid": "11756991",
+          "title": "Methadone enhances human immunodeficiency virus infection of human immune cells.",
+          "authors": "Li Y, Wang X, Tian S, et al.",
+          "journal": "The Journal of infectious diseases",
+          "year": "2002",
+          "abstract_snippet": "Opiate abuse has been postulated to be a cofactor in the immunopathogenesis of acquired immunodeficiency syndrome (AIDS). This study evaluated whether methadone, a drug widely prescribed for the treatment of drug abusers with opioid dependence, affects human immunodeficiency virus (HIV) infection of...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11756991/"
+        },
+        {
+          "pmid": "27009099",
+          "title": "Opioids and Opioid Maintenance Therapies: Their Impact on Monocyte-Mediated HIV Neuropathogenesis.",
+          "authors": "Jaureguiberry-Bravo M, Wilson R, Carvallo L, et al.",
+          "journal": "Current HIV research",
+          "year": "2016",
+          "abstract_snippet": "BACKGROUND: HIV-1 enters the CNS within two weeks after peripheral infection and results in chronic neuroinflammation that leads to HIV associated neurocognitive disorders (HAND) in more than 50% of infected people. HIV enters the CNS by transmigration of infected monocytes across the blood brain ba...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/27009099/"
+        },
+        {
+          "pmid": "17321313",
+          "title": "Evolution of China's response to HIV/AIDS.",
+          "authors": "Wu Z, Sullivan SG, Wang Y, et al.",
+          "journal": "Lancet (London, England)",
+          "year": "2007",
+          "abstract_snippet": "Four factors have driven China's response to the HIV/AIDS pandemic: (1) existing government structures and networks of relationships; (2) increasing scientific information; (3) external influences that underscored the potential consequences of an HIV/AIDS pandemic and thus accelerated strategic plan...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17321313/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "COMPARING THE AUTOMATIC THOUGHTS AND FEELINGS OF INFERIORITY AMONG INTRAVENOUS DRUG USERS WHO ARE LEAVING WITH METHADONE, HIV +, SUFFERING FROM HEPATITIS C AND CONTROL",
+          "year": 2016,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/05db1445828cc86dae4950899e12a903eb7e3836",
+          "authors": "G. S. Yazdi, A. Kochak, M. Modaresi"
+        },
+        {
+          "title": "Heroin, Methadone, HIV and Myalgia",
+          "year": 1999,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/79d4c6a81c505ddbd481decf3a0ccd50d73189bb",
+          "authors": "J. Gastaut"
+        },
+        {
+          "title": "Pre-exposure prophylaxis awareness, acceptability and potential stigma among medical and non-medical clinic staff in methadone treatment settings in northern New Jersey: The key role of non-medical staff in enhancing HIV prevention.",
+          "year": 2021,
+          "citations": 17,
+          "url": "https://www.semanticscholar.org/paper/00a2a8117804d46c589859ec2ca52966749f691e",
+          "authors": "J. Jaiswal, K. Dunlap, M. Griffin"
+        },
+        {
+          "title": "HIV clinic-based buprenorphine plus naloxone versus referral for methadone maintenance therapy for treatment of opioid use disorder in HIV clinics in Vietnam (BRAVO): an open-label, randomised, non-inferiority trial.",
+          "year": 2021,
+          "citations": 15,
+          "url": "https://www.semanticscholar.org/paper/d1b9af94717f62edd0b262f6aabe1990f79bdee7",
+          "authors": "P. Korthuis, Caroline A. King, R. Cook"
+        },
+        {
+          "title": "Examining common mental health disorders in people living with HIV on methadone maintenance therapy in Hanoi, Vietnam",
+          "year": 2021,
+          "citations": 14,
+          "url": "https://www.semanticscholar.org/paper/635078ac967bf5a85299c7d7e4df1c365b07114d",
+          "authors": "A. Mughal, M. Stockton, Q. Bui"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Pre-exposure prophylaxis awareness, acceptability and potential stigma among medical and non-medical clinic staff in methadone treatment settings in northern New Jersey: The key role of non-medical staff in enhancing HIV prevention.",
+        "year": 2021,
+        "citations": 17,
+        "url": "https://www.semanticscholar.org/paper/00a2a8117804d46c589859ec2ca52966749f691e",
+        "authors": "J. Jaiswal, K. Dunlap, M. Griffin"
+      },
+      "max_citations": 17,
+      "faers_signal": "moderate",
+      "faers_total_reports": 51541,
+      "faers_cooccurrences": 14,
+      "faers_interpretation": "14 FAERS reports mention both Methadone and HIV-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "XMD-1150 (1.530)",
+        "XMD16-144 (1.502)",
+        "16-HYDROXYTRIPTOLIDE (1.484)",
+        "Strophanthidin (1.483)",
+        "Importazole (1.469)"
+      ],
+      "signature_interpretation": "Methadone was not found among the top 48 drugs that reverse the HIV gene signature. Top reversers: XMD-1150 (1.530), XMD16-144 (1.502), 16-HYDROXYTRIPTOLIDE (1.484)",
+      "ai_hypothesis": "of its unique mechanism of action.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 1,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "immunodeficiency syndrome",
+              "entity_group": "Disease_disorder",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "met",
+              "entity_group": "Medication",
+              "score": 1.0
+            },
+            {
+              "entity": "##hadone",
+              "entity_group": "Medication",
+              "score": 0.925000011920929
+            },
+            {
+              "entity": "human immunodeficiency virus (",
+              "entity_group": "Disease_disorder",
+              "score": 0.9829999804496765
+            },
+            {
+              "entity": "hiv ) infection",
+              "entity_group": "Disease_disorder",
+              "score": 0.7170000076293945
+            }
+          ]
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "Phase 2",
+      "failed_trial_count": 6,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.7867,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Methadone \u2014[is a therapeutic for]\u2192 HIV",
+      "kg_paths_text": "\u2022 Methadone \u2014[is a therapeutic for]\u2192 HIV\n\u2022 Methadone \u2014[is agonized by]\u2192 gene-4986 \u2014[antagonizes]\u2192 DB00704 \u2014[is a therapeutic for]\u2192 HIV\n\u2022 Methadone \u2014[is agonized by]\u2192 gene-4986 \u2014[antagonizes]\u2192 DB00704 \u2014[is a therapeutic for]\u2192 HIV",
+      "validation_experiments": [],
+      "novelty_score": 0.14800000190734863,
+      "novelty_level": "ESTABLISHED",
+      "is_known_treatment": true,
+      "clinical_trials_total": 10,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT02715700",
+          "title": "Effects of Doravirine (MK-1439) on Methadone Pharmacokinetics in Methadone-Maintained Participants (MK-1439-045)",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "14",
+          "url": "https://clinicaltrials.gov/study/NCT02715700"
+        },
+        {
+          "nct_id": "NCT00726830",
+          "title": "Methadone, Morphine, or Oxycodone in Treating Pain in Patients With Cancer",
+          "status": "TERMINATED",
+          "phase": "NA",
+          "enrollment": "1",
+          "url": "https://clinicaltrials.gov/study/NCT00726830"
+        },
+        {
+          "nct_id": "NCT00218634",
+          "title": "Skills Based Counseling for Adherence and Depression in HIV+ Methadone Patients - 1",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "89",
+          "url": "https://clinicaltrials.gov/study/NCT00218634"
+        },
+        {
+          "nct_id": "NCT03976258",
+          "title": "Effect of Heroin Use on Immune Activation and Cardiovascular Risk in HIV",
+          "status": "COMPLETED",
+          "phase": "N/A",
+          "enrollment": "190",
+          "url": "https://clinicaltrials.gov/study/NCT03976258"
+        },
+        {
+          "nct_id": "NCT04480554",
+          "title": "Anti-retroviral Therapy, Medications for Opioid Use Disorder, Opioids and HIV Infection - Study 1",
+          "status": "TERMINATED",
+          "phase": "PHASE2",
+          "enrollment": "78",
+          "url": "https://clinicaltrials.gov/study/NCT04480554"
+        }
+      ],
+      "trial_phases": {
+        "PHASE1": 1,
+        "NA": 2,
+        "PHASE2": 4,
+        "PHASE4": 1,
+        "PHASE3": 2
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "10 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "2409 PubMed articles on this drug-disease pair",
+        "Supported by 4 independent AI pillars",
+        "Moderate FAERS signal: 14 adverse event reports mention drug-disease co-occurrence",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.79, 1 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 2152,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "moderate",
+        "summary": "CPIC-C (CYP2D6) \u2022 PharmGKB-3 (CYP2B6 / CYP2B6*1, CYP2B6*6)",
+        "cpic": [
+          {
+            "gene": "CYP2D6",
+            "level": "C",
+            "guideline": "CYP2D6, OPRM1, COMT, and Opioids"
+          },
+          {
+            "gene": "COMT",
+            "level": "C",
+            "guideline": "CYP2D6, OPRM1, COMT, and Opioids"
+          },
+          {
+            "gene": "CYP2B6",
+            "level": "C",
+            "guideline": "CYP2B6 and methadone"
+          },
+          {
+            "gene": "OPRM1",
+            "level": "C",
+            "guideline": "CYP2D6, OPRM1, COMT, and Opioids"
+          },
+          {
+            "gene": "ABCB1",
+            "level": "C/D",
+            "guideline": ""
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "CYP2B6",
+            "variant": "CYP2B6*1, CYP2B6*6",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451228945"
+          },
+          {
+            "gene": "CYP2B6",
+            "variant": "CYP2B6*1, CYP2B6*6",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451228940"
+          },
+          {
+            "gene": "GNB3",
+            "variant": "rs5443",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1448103860"
+          },
+          {
+            "gene": "CYP3A5",
+            "variant": "CYP3A5*1, CYP3A5*3",
+            "level": "4",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451228960"
+          },
+          {
+            "gene": "CYP2C19",
+            "variant": "CYP2C19*1, CYP2C19*2, CYP2C19*3",
+            "level": "4",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451229400"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.3720000088214874,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.492000013589859,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "context_modifier": 1.0,
+        "tissues": [
+          "Whole Blood",
+          "Spleen"
+        ],
+        "n_genes": 0
+      },
+      "ensemble_prob": 0.3277,
+      "ensemble_features": {
+        "kg_score": 0.9949,
+        "degree_penalty": 0.7509,
+        "n_drug_targets": 10,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.0073
+      },
+      "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "disease_entity": "Disease::MESH:D015658"
     },
     {
       "drug_name": "Dexamethasone",
       "drug_id": "DB01234",
       "disease_name": "HIV",
-      "combined_score": 1.1109,
+      "combined_score": 0.4917,
+      "pillars_hit": 4,
       "transe_rank": 13,
-      "pillars_hit": 7,
+      "transe_score": -9.9694,
+      "pykeen_score": -11.6472,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
+      "mol_emb_similarity": 0.9472,
+      "mol_emb_similar_to": "Minocycline",
+      "gene_sig_score": 0.007,
+      "gene_sig_rank": 58,
+      "proximity_score": 0.7879999876022339,
+      "proximity_distance": 0.8500000238418579,
+      "admet_score": 0.7109,
+      "admet_flags": "clean",
+      "primekg_score": 0.2481,
+      "dti_score": 0.2638,
+      "dti_best_target": "FASLG",
+      "kg_group_score": 0.4073,
+      "structural_group_score": 0.9472,
+      "network_group_score": 0.5799000263214111,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.2237,
+      "admet_multiplier": 0.9422,
+      "efficacy_score": 0.5219,
+      "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 0,
       "shared_targets": [],
@@ -253,15 +924,6 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/27121755/"
         },
         {
-          "pmid": "36044614",
-          "title": "Glucocorticoid Receptor Function and Cognitive Performance in Women With HIV.",
-          "authors": "Rubin LH, Bekhbat M, Turkson S, et al.",
-          "journal": "Psychosomatic medicine",
-          "year": "2022",
-          "abstract_snippet": "OBJECTIVE: Alterations in glucocorticoid receptor (GCR) function may be a risk factor for cognitive complications among older people with human immunodeficiency virus (HIV). We evaluated whether HIV serostatus and age modify the GCR function-cognition association among women. METHODS: Eighty women w...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36044614/"
-        },
-        {
           "pmid": "37819954",
           "title": "Adjunctive Dexamethasone for Tuberculous Meningitis in HIV-Positive Adults.",
           "authors": "Donovan J, Bang ND, Imran D, et al.",
@@ -278,6 +940,15 @@
           "year": "2016",
           "abstract_snippet": "BACKGROUND: Standard treatment for patients with primary CNS lymphoma remains to be defined. Active therapies are often associated with increased risk of haematological or neurological toxicity. In this trial, we addressed the tolerability and efficacy of adding rituximab with or without thiotepa to...",
           "url": "https://pubmed.ncbi.nlm.nih.gov/27132696/"
+        },
+        {
+          "pmid": "15496623",
+          "title": "Dexamethasone for the treatment of tuberculous meningitis in adolescents and adults.",
+          "authors": "Thwaites GE, Nguyen DB, Nguyen HD, et al.",
+          "journal": "The New England journal of medicine",
+          "year": "2004",
+          "abstract_snippet": "BACKGROUND: Tuberculous meningitis kills or disables more than half of those affected with the disease. Previous studies have been too small to determine whether adjunctive treatment with corticosteroids can reduce the risk of disability or death among adults with tuberculous meningitis, and the eff...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15496623/"
         }
       ],
       "repurposing_papers": [
@@ -384,14 +1055,30 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0.2237,
       "mr_genetic_targets": 2,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Dexamethasone \u2014[downregulates]\u2192 gene-3454 \u2014[is an agonist of]\u2192 DB00022 \u2014[is a therapeutic for]\u2192 HIV",
+      "kg_paths_text": "\u2022 Dexamethasone \u2014[downregulates]\u2192 gene-3454 \u2014[is an agonist of]\u2192 DB00022 \u2014[is a therapeutic for]\u2192 HIV\n\u2022 Dexamethasone \u2014[downregulates]\u2192 gene-3454 \u2014[is an agonist of]\u2192 DB00022 \u2014[is a therapeutic for]\u2192 HIV\n\u2022 Dexamethasone \u2014[downregulates]\u2192 gene-5167 \u2014[is a target of]\u2192 DB00811 \u2014[is a therapeutic for]\u2192 HIV",
       "validation_experiments": [],
-      "novelty_score": 0.35,
+      "novelty_score": 0.172,
       "novelty_level": "ESTABLISHED",
       "is_known_treatment": false,
       "clinical_trials_total": 10,
       "clinical_trials": [
+        {
+          "nct_id": "NCT03100786",
+          "title": "Leukotriene A4 Hydrolase Stratified Trial of Adjunctive Corticosteroids for HIV-uninfected Adults With Tuberculous Meningitis",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "702",
+          "url": "https://clinicaltrials.gov/study/NCT03100786"
+        },
+        {
+          "nct_id": "NCT00000776",
+          "title": "Dexamethasone in Cryptococcal Meningitis",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "36",
+          "url": "https://clinicaltrials.gov/study/NCT00000776"
+        },
         {
           "nct_id": "NCT06919679",
           "title": "Phase II Trial of BrECADD in HIV-Positive Patients With Advanced-Stage Classical Hodgkin Lymphoma",
@@ -401,43 +1088,27 @@
           "url": "https://clinicaltrials.gov/study/NCT06919679"
         },
         {
-          "nct_id": "NCT00000689",
-          "title": "Phase I Trial of mBACOD and Granulocyte-Macrophage Colony-Stimulating Factor (GM-CSF) in AIDS-Associated Large Cell, Immunoblastic, and Small Non-cleaved Lymphoma",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "18",
-          "url": "https://clinicaltrials.gov/study/NCT00000689"
+          "nct_id": "NCT01442428",
+          "title": "Paradoxical Tuberculosis Immune Reconstitution Inflammatory Syndrome (TB-IRIS) Treatment Trial",
+          "status": "WITHDRAWN",
+          "phase": "PHASE2, PHASE3",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT01442428"
         },
         {
-          "nct_id": "NCT00000801",
-          "title": "Phase II Trial of Sequential Chemotherapy and Radiotherapy for AIDS-Related Primary Central Nervous System Lymphoma",
+          "nct_id": "NCT00000703",
+          "title": "Chemotherapy and Azidothymidine, With or Without Radiotherapy, for High Grade Lymphoma in AIDS-Risk Group Members",
           "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "33",
-          "url": "https://clinicaltrials.gov/study/NCT00000801"
-        },
-        {
-          "nct_id": "NCT00000658",
-          "title": "A Phase III Randomized Trial of Low-Dose Versus Standard-Dose mBACOD Chemotherapy With rGM-CSF for Treatment of AIDS-Associated Non-Hodgkin's Lymphoma",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "250",
-          "url": "https://clinicaltrials.gov/study/NCT00000658"
-        },
-        {
-          "nct_id": "NCT05707156",
-          "title": "Prospective Observational Study on the Incidence of Opportunistic Fungal Infections",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "12032",
-          "url": "https://clinicaltrials.gov/study/NCT05707156"
+          "phase": "NA",
+          "enrollment": "45",
+          "url": "https://clinicaltrials.gov/study/NCT00000703"
         }
       ],
       "trial_phases": {
-        "PHASE2": 4,
-        "PHASE1": 1,
         "PHASE3": 3,
-        "NA": 2
+        "PHASE2": 5,
+        "NA": 2,
+        "PHASE1": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -445,136 +1116,264 @@
         "Phase 3 trial exists",
         "469 PubMed articles on this drug-disease pair",
         "2 article(s) specifically mention repurposing/repositioning",
-        "Supported by 7 independent AI pillars",
+        "Supported by 4 independent AI pillars",
         "Moderate FAERS signal: 36 adverse event reports mention drug-disease co-occurrence",
         "Supporting paper with 53 citations",
         "AI-generated hypothesis available"
-      ]
+      ],
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1512,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (ABCB1 / rs1045642)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "ABCB1",
+            "variant": "rs1045642",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204433"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs2032582",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981238041"
+          },
+          {
+            "gene": "CTLA4",
+            "variant": "rs4553808",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043880851"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs2229109",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449170621"
+          },
+          {
+            "gene": "GATA3",
+            "variant": "rs3824662",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1184512128"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.372,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.492,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "context_modifier": 1.0,
+        "tissues": [
+          "Whole Blood",
+          "Spleen"
+        ],
+        "n_genes": 0
+      },
+      "ensemble_prob": 0.8415,
+      "ensemble_features": {
+        "kg_score": 0.9983,
+        "degree_penalty": 0.736,
+        "n_drug_targets": 24,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.9444
+      },
+      "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "disease_entity": "Disease::MESH:D015658"
     },
     {
-      "drug_name": "2-Amino-4-Mercapto-Butyric Acid",
-      "drug_id": "DB04422",
+      "drug_name": "Clomifene",
+      "drug_id": "DB00882",
       "disease_name": "HIV",
-      "combined_score": 1.1095999479293823,
-      "transe_rank": 60,
+      "combined_score": 0.4852,
       "pillars_hit": 4,
+      "transe_rank": 105,
+      "transe_score": -10.4743,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.8119999766349792,
+      "proximity_distance": 0.75,
+      "admet_score": 0.5159,
+      "admet_flags": "hERG=0.90",
+      "primekg_score": 0.2481,
+      "dti_score": 1.0,
+      "dti_best_target": "CD4",
+      "kg_group_score": 0.0767,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.6506999731063843,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.719,
+      "admet_multiplier": 0.9032,
+      "efficacy_score": 0.5372,
+      "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 0,
       "shared_targets": [],
-      "pubmed_total": 98,
-      "pubmed_treatment_total": 63,
-      "pubmed_repurposing_total": 1,
+      "pubmed_total": 1,
+      "pubmed_treatment_total": 1,
+      "pubmed_repurposing_total": 0,
       "key_papers": [
         {
-          "pmid": "41247746",
-          "title": "Peripheral Neuropathy: A Review.",
-          "authors": "Mauermann ML, Staff NP",
-          "journal": "JAMA",
-          "year": "2026",
-          "abstract_snippet": "IMPORTANCE: Peripheral neuropathy, defined as damage to peripheral nerves, affects approximately 1% of adults worldwide. More than 200 causes of peripheral neuropathy exist, with symptoms ranging in severity from mild toe numbness to debilitating symptoms that can require a wheelchair. Diabetes is t...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41247746/",
-          "total_results": 98
-        },
-        {
-          "pmid": "36635939",
-          "title": "Evaluation of hemolysis, lipemia, and icterus interference with common clinical immunoassays.",
-          "authors": "Karin A, Higgins V, Miller J, et al.",
-          "journal": "Clinical chemistry and laboratory medicine",
-          "year": "2023",
-          "abstract_snippet": "OBJECTIVES: Hemolysis, icterus, and lipemia (HIL) are common sources of endogenous interference in clinical laboratory testing. Defining the threshold of interference for immunoassays enables appropriate reporting of their results when they are affected by HIL. METHODS: Pools of residual patient ser...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36635939/"
-        },
-        {
-          "pmid": "8875026",
-          "title": "Cobalamin.",
-          "authors": "Markle HV",
-          "journal": "Critical reviews in clinical laboratory sciences",
-          "year": "1996",
-          "abstract_snippet": "Cobalamin (vitamin B12) is an essential nutrient derived exclusively from bacterial sources. It is an essential cofactor for three known enzymatic reactions. Untreated deficiency, caused by either the autoimmune disease pernicious anemia or nutritional lack, results in a macrocytic anemia and/or sub...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/8875026/"
-        },
-        {
-          "pmid": "11896744",
-          "title": "Sulfur in human nutrition and applications in medicine.",
-          "authors": "Parcell S",
-          "journal": "Alternative medicine review : a journal of clinical therapeutic",
-          "year": "2002",
-          "abstract_snippet": "Because the role of elemental sulfur in human nutrition has not been studied extensively, it is the purpose of this article to emphasize the importance of this element in humans and discuss the therapeutic applications of sulfur compounds in medicine. Sulfur is the sixth most abundant macromineral i...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/11896744/"
-        },
-        {
-          "pmid": "29135056",
-          "title": "A systematic review of the associations between HIV/HCV coinfection and biomarkers of cardiovascular disease.",
-          "authors": "Osibogun O, Ogunmoroti O, Michos ED, et al.",
-          "journal": "Reviews in medical virology",
-          "year": "2018",
-          "abstract_snippet": "The incidence of human immunodeficiency virus (HIV) and hepatitis C virus (HCV) coinfection has been increasing with over 10 million people affected globally. The role biomarkers play as predictors of cardiovascular disease (CVD) risk among coinfected individuals is not well defined. We aimed to sys...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29135056/"
-        }
-      ],
-      "repurposing_papers": [
-        {
-          "pmid": "26470919",
-          "title": "Crystal Structure of the Human tRNA m(1)A58 Methyltransferase-tRNA(3)(Lys) Complex: Refolding of Substrate tRNA Allows Access to the Methylation Target.",
-          "authors": "Finer-Moore J, Czudnochowski N, O'Connell JD, et al.",
-          "journal": "Journal of molecular biology",
+          "pmid": "25481298",
+          "title": "Ebola virus (EBOV) infection: Therapeutic strategies.",
+          "authors": "De Clercq E",
+          "journal": "Biochemical pharmacology",
           "year": "2015",
-          "abstract_snippet": "Human tRNA3(Lys) is the primer for reverse transcription of HIV; the 3' end is complementary to the primer-binding site on HIV RNA. The complementarity ends at the 18th base, A58, which in tRNA3(Lys) is modified to remove Watson-Crick pairing. Motivated to test the role of the modification in termin...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/26470919/",
+          "abstract_snippet": "Within less than a year after its epidemic started (in December 2013) in Guinea, Ebola virus (EBOV), a member of the filoviridae, has spread over a number of West-African countries (Guinea, Sierra Leone and Liberia) and gained allures that have been unprecedented except by human immunodeficiency vir...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25481298/",
           "total_results": 1
         }
       ],
+      "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "ANALOGS OF TETRAHYDROFOLIC ACID. 8. SYNTHESIS OF N-(1-(2-AMINO-4-MERCAPTO-6-METHYL-5-PYRIMIDYL)-3-PROPYL)-P-AMINOBENZOYL-L-GLUTAMIC ACID, A MERCAPTO ANALOG.",
-          "year": 1963,
-          "citations": 21,
-          "url": "https://www.semanticscholar.org/paper/6909932b1c940d56ccf417802285811e206a4a3d",
-          "authors": "B. R. Baker, C. Morreal, B. Ho"
+          "title": "Impact of an international HIV funding crisis on HIV infections and mortality in low-income and middle-income countries: a modelling study.",
+          "year": 2025,
+          "citations": 98,
+          "url": "https://www.semanticscholar.org/paper/4fbd67797a502ea9c86360057e82836892896bc2",
+          "authors": "Debra ten Brink, Rowan Martin-Hughes, Anna L Bowring"
         },
         {
-          "title": "A new highly selective metabotropic excitatory amino acid agonist: 2-amino-4-(3-hydroxy-5-methylisoxazol-4-yl)butyric acid.",
-          "year": 1996,
-          "citations": 51,
-          "url": "https://www.semanticscholar.org/paper/635fae5a99d69e5935d81c54fdbc6b1e1b264660",
-          "authors": "H. Br\u00e4uner\u2010Osborne, F. Sl\u00f8k, Niels Skj\u00e6rb\u00e6k"
+          "title": "Longitudinal trends in causes of death among adults with HIV on antiretroviral therapy in Europe and North America from 1996 to 2020: a collaboration of cohort studies.",
+          "year": 2024,
+          "citations": 99,
+          "url": "https://www.semanticscholar.org/paper/2aa7fd85c04abc5ea24ddf68a3d8af9848b32f71",
+          "authors": "A. Trickey, Kathleen A McGinnis, M. Gill"
         },
         {
-          "title": "Chemical processing for production of no-carrier-added selenium-73 from germanium and arsenic targets and synthesis of L-2-amino-4-([73Se]methylseleno) butyric acid (L-[73Se]selenomethionine).",
-          "year": 1990,
-          "citations": 26,
-          "url": "https://www.semanticscholar.org/paper/9bc5d4d80f99439dec400d202a7cfb99889641c8",
-          "authors": "A. Plenevaux, M. Guillaume, C. Brihaye"
+          "title": "Global, regional, and national burden of HIV/AIDS, 1990\u20132021, and forecasts to 2050, for 204 countries and territories: the Global Burden of Disease Study 2021",
+          "year": 2024,
+          "citations": 72,
+          "url": "https://www.semanticscholar.org/paper/7a20949b7375a09d131f872e027912626eda5395",
+          "authors": "A. Carter, Meixin Zhang, K. Tram"
         },
         {
-          "title": "Selective agonists at group II metabotropic glutamate receptors: synthesis, stereochemistry, and molecular pharmacology of (S)- and (R)-2-amino-4-(4-hydroxy[1,2,5]thiadiazol-3-yl)butyric acid.",
-          "year": 2002,
-          "citations": 12,
-          "url": "https://www.semanticscholar.org/paper/4774069ba751a82ff51e5c667557c775117d4127",
-          "authors": "R. Clausen, H. Br\u00e4uner\u2010Osborne, J. Greenwood"
+          "title": "Life expectancy after 2015 of adults with HIV on long-term antiretroviral therapy in Europe and North America: a collaborative analysis of cohort studies.",
+          "year": 2023,
+          "citations": 289,
+          "url": "https://www.semanticscholar.org/paper/ddb63f3be4dbed745265e1a8c3f7c2656ae1c1da",
+          "authors": "A. Trickey, C. Sabin, G. Burkholder"
         },
         {
-          "title": "Amino acids and peptides. Part 49. 2-Amino-4-(3-pyridyl)butyric acid and related peptides.",
-          "year": 1985,
-          "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/2fd1188c7aa690f7000b27c5ac9e478900e21937",
-          "authors": "S. Ratcliffe, G. T. Young, R. Stein"
+          "title": "HIV-1 drug resistance in people on dolutegravir-based antiretroviral therapy: a collaborative cohort analysis.",
+          "year": 2023,
+          "citations": 93,
+          "url": "https://www.semanticscholar.org/paper/d145ed75832f6282ef51cb9a6e6e5cf758e2e0a6",
+          "authors": "T. Loosli, Stefanie Hossmann, Suzanne M Ingle"
         }
       ],
       "most_cited_paper": {
-        "title": "A new highly selective metabotropic excitatory amino acid agonist: 2-amino-4-(3-hydroxy-5-methylisoxazol-4-yl)butyric acid.",
-        "year": 1996,
-        "citations": 51,
-        "url": "https://www.semanticscholar.org/paper/635fae5a99d69e5935d81c54fdbc6b1e1b264660",
-        "authors": "H. Br\u00e4uner\u2010Osborne, F. Sl\u00f8k, Niels Skj\u00e6rb\u00e6k"
+        "title": "Life expectancy after 2015 of adults with HIV on long-term antiretroviral therapy in Europe and North America: a collaborative analysis of cohort studies.",
+        "year": 2023,
+        "citations": 289,
+        "url": "https://www.semanticscholar.org/paper/ddb63f3be4dbed745265e1a8c3f7c2656ae1c1da",
+        "authors": "A. Trickey, C. Sabin, G. Burkholder"
       },
-      "max_citations": 51,
+      "max_citations": 289,
       "faers_signal": "none",
-      "faers_total_reports": 0,
+      "faers_total_reports": 284,
       "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for 2-Amino-4-Mercapto-Butyric Acid",
+      "faers_interpretation": "No FAERS reports found linking Clomifene to HIV terms. Drug has 284 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -584,19 +1383,9 @@
         "Strophanthidin (1.483)",
         "Importazole (1.469)"
       ],
-      "signature_interpretation": "2-Amino-4-Mercapto-Butyric Acid was not found among the top 48 drugs that reverse the HIV gene signature. Top reversers: XMD-1150 (1.530), XMD16-144 (1.502), 16-HYDROXYTRIPTOLIDE (1.484)",
-      "ai_hypothesis": "of its ability to inhibit HIV replication.",
+      "signature_interpretation": "Clomifene was not found among the top 48 drugs that reverse the HIV gene signature. Top reversers: XMD-1150 (1.530), XMD16-144 (1.502), 16-HYDROXYTRIPTOLIDE (1.484)",
+      "ai_hypothesis": "of its ability to inhibit the HIV-1 integrase enzyme.",
       "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
         {
           "relation_type": "unclear",
           "confidence": 0.0,
@@ -607,336 +1396,174 @@
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.6174,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.84,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": false,
-      "clinical_trials_total": 2,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT02773147",
-          "title": "Effect of Vitamin B on Plasma Neurofilament Light Protein (NFL) in HIV-infected Individuals With Increased Plasma Homocysteine",
-          "status": "UNKNOWN",
-          "phase": "PHASE2",
-          "enrollment": "60",
-          "url": "https://clinicaltrials.gov/study/NCT02773147"
-        },
-        {
-          "nct_id": "NCT02810275",
-          "title": "Folinic Acid: Supplementation and Therapy",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "69",
-          "url": "https://clinicaltrials.gov/study/NCT02810275"
-        }
-      ],
-      "trial_phases": {
-        "PHASE2": 1,
-        "PHASE3": 1
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "2 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
-        "98 PubMed articles on this drug-disease pair",
-        "1 article(s) specifically mention repurposing/repositioning",
-        "Supported by 4 independent AI pillars",
-        "Supporting paper with 51 citations",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.62)"
-      ]
-    },
-    {
-      "drug_name": "Progesterone",
-      "drug_id": "DB00396",
-      "disease_name": "HIV",
-      "combined_score": 1.1044,
-      "transe_rank": 33,
-      "pillars_hit": 7,
-      "mol_similarity": 0.7234,
-      "similar_to": "Testosterone",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 316,
-      "pubmed_treatment_total": 194,
-      "pubmed_repurposing_total": 1,
-      "key_papers": [
-        {
-          "pmid": "38421182",
-          "title": "Pathogenesis of viral infections during pregnancy.",
-          "authors": "Creisher PS, Klein SL",
-          "journal": "Clinical microbiology reviews",
-          "year": "2024",
-          "abstract_snippet": "SUMMARYViral infections during pregnancy are associated with significant adverse perinatal and fetal outcomes. Pregnancy is a unique immunologic and physiologic state, which can influence control of virus replication, severity of disease, and vertical transmission. The placenta is the organ of the m...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38421182/",
-          "total_results": 316
-        },
-        {
-          "pmid": "24742931",
-          "title": "Acquired Thrombophilia.",
-          "authors": "Armstrong EM, Bellone JM, Hornsby LB, et al.",
-          "journal": "Journal of pharmacy practice",
-          "year": "2014",
-          "abstract_snippet": "Acquired thrombophilia is associated with an increased risk of venous thromboembolism (VTE). Antiphospholipid syndrome (APS) is the most prevalent acquired thrombophilia and is associated with both venous and arterial thromboses. Human immunodeficiency virus (HIV) is another form of acquired thrombo...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/24742931/"
-        },
-        {
-          "pmid": "36302121",
-          "title": "Increased HIV-1 infection in PBMCs treated in vitro with menstrual cycle phase hormones or medroxyprogesterone acetate likely occurs via different mechanisms.",
-          "authors": "Bick AJ, Avenant C, Tomasicchio M, et al.",
-          "journal": "American journal of reproductive immunology (New York, N.Y. : 1989)",
-          "year": "2022",
-          "abstract_snippet": "PROBLEM: Both luteal phase progesterone (P4) levels and use of the intramuscular (IM) injectable progestin-only contraceptive depo-medroxyprogesterone acetate (DMPA-IM) have been linked to increased S/HIV acquisition in animal, clinical and in vitro models. Several plausible mechanisms could explain...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36302121/"
-        },
-        {
-          "pmid": "24041719",
-          "title": "The immune system in menopause: pros and cons of hormone therapy.",
-          "authors": "Ghosh M, Rodriguez-Garcia M, Wira CR",
-          "journal": "The Journal of steroid biochemistry and molecular biology",
-          "year": "2014",
-          "abstract_snippet": "With aging, a general decline in immune function is observed leading to immune-senescence. Several of these changes are gender specific affecting postmenopausal women. Menopause is a normal part of a woman's lifecycle and consists of a series of body changes that can last from one to ten years. It i...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/24041719/"
-        },
-        {
-          "pmid": "24996766",
-          "title": "Progestin-only contraception: injectables and implants.",
-          "authors": "Jacobstein R, Polis CB",
-          "journal": "Best practice & research. Clinical obstetrics & gynaecology",
-          "year": "2014",
-          "abstract_snippet": "Progestin-only contraceptive injectables and implants are highly effective, longer-acting contraceptive methods that can be used by most women in most circumstances. Globally, 6% of women using modern contraception use injectables and 1% use implants. Injectables are the predominant contraceptive me...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/24996766/"
-        }
-      ],
-      "repurposing_papers": [
-        {
-          "pmid": "39627279",
-          "title": "Multifaceted impact of HIV inhibitor dapivirine on triple negative breast cancer cells reveals potential entities as targets for novel therapy.",
-          "authors": "Patil K, Johnston E, Novack J, et al.",
-          "journal": "Scientific reports",
-          "year": "2024",
-          "abstract_snippet": "Breast cancer is the most common cancer in women worldwide. Many breast cancers originate from the cells lining the milk duct and some become invasive. Breast cancer lacking estrogen, progesterone receptors (ER-, PR-) and epidermal growth factor receptor 2 (HER2-) amplification, termed \"Triple negat...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39627279/",
-          "total_results": 1
-        }
-      ],
-      "semantic_scholar_papers": [
-        {
-          "title": "Female-predominant anti-CD4 IgG autoantibody production and its correlations with plasma levels of progesterone, microbial translocation, and blunted immune reconstitution in HIV-infected patients on suppressive ART",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/c3738d06d4167cda37c1cb0d5f16c2488dd9ed1d",
-          "authors": "Zhuang Wan, Zhenwu Luo, John E. McKinnon"
-        },
-        {
-          "title": "Placental progesterone and its receptor in HIV-infected pre-eclamptic women",
-          "year": 2023,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/5b00f7cbe7c6cd4cc7885ded8cf5a8fad33fe645",
-          "authors": "Serisha Sewnarain, Shoohana Singh, T. Naicker"
-        },
-        {
-          "title": "Pregnancy-associated plasma protein-A, progesterone, and oestriol levels and some birth outcomes in HIV-seropositive pregnant women at Nnamdi Azikiwe University Teaching Hospital, Nnewi, Nigeria",
-          "year": 2023,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/6d368789fb99d66944fd8f6e97778517013d5428",
-          "authors": "J. Okwara, Joseph Eberendu Ahaneku, C. Onyenekwe"
-        },
-        {
-          "title": "Progesterone and prolactin levels in pregnant women living with HIV who delivered preterm and low birthweight infants: A nested case-control study",
-          "year": 2023,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/561fb80945b331a13c00379ed1f331caaa84acb1",
-          "authors": "B. Chi, Dorothy Sebikari, S. Brummel"
-        },
-        {
-          "title": "First trimester screening and progesterone levels in HIV positive women under HAART therapy.",
-          "year": 2021,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/b03bfabdd9838d81d6f06805cac82e48130bbf96",
-          "authors": "U. A. Iasi, T. Alexandra, Onofriescu Mircea"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "First trimester screening and progesterone levels in HIV positive women under HAART therapy.",
-        "year": 2021,
-        "citations": 1,
-        "url": "https://www.semanticscholar.org/paper/b03bfabdd9838d81d6f06805cac82e48130bbf96",
-        "authors": "U. A. Iasi, T. Alexandra, Onofriescu Mircea"
-      },
-      "max_citations": 1,
-      "faers_signal": "none",
-      "faers_total_reports": 19292,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Progesterone to HIV terms. Drug has 19292 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "XMD-1150 (1.530)",
-        "XMD16-144 (1.502)",
-        "16-HYDROXYTRIPTOLIDE (1.484)",
-        "Strophanthidin (1.483)",
-        "Importazole (1.469)"
-      ],
-      "signature_interpretation": "Progesterone was not found among the top 48 drugs that reverse the HIV gene signature. Top reversers: XMD-1150 (1.530), XMD16-144 (1.502), 16-HYDROXYTRIPTOLIDE (1.484)",
-      "ai_hypothesis": "of its anti-inflammatory and immunomodulatory properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 0,
-          "negative_signals": 0,
-          "mechanism_signals": 1,
-          "extracted_entities": [
-            {
-              "entity": "##tea",
-              "entity_group": "Detailed_description",
-              "score": 0.8529999852180481
-            },
-            {
-              "entity": "phase progesterone (",
-              "entity_group": "Medication",
-              "score": 0.9459999799728394
-            },
-            {
-              "entity": "intra",
-              "entity_group": "Administration",
-              "score": 0.9890000224113464
-            },
-            {
-              "entity": "##ject",
-              "entity_group": "Administration",
-              "score": 0.765999972820282
-            },
-            {
-              "entity": "contraceptive",
-              "entity_group": "Medication",
-              "score": 0.9860000014305115
-            },
-            {
-              "entity": "de",
-              "entity_group": "Medication",
-              "score": 0.996999979019165
-            },
-            {
-              "entity": "med",
-              "entity_group": "Medication",
-              "score": 0.9990000128746033
-            },
-            {
-              "entity": "##roxyprogesterone acetate",
-              "entity_group": "Medication",
-              "score": 0.9589999914169312
-            },
-            {
-              "entity": "im",
-              "entity_group": "Diagnostic_procedure",
-              "score": 0.8429999947547913
-            },
-            {
-              "entity": "increased",
-              "entity_group": "Lab_value",
-              "score": 0.9789999723434448
-            }
-          ]
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "Phase 1",
-      "failed_trial_count": 1,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.4353,
+      "mr_score": 0.719,
       "mr_genetic_targets": 2,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Clomifene \u2014[downregulates]\u2192 gene-1633 \u2014[is bound by]\u2192 DB00879 \u2014[treats]\u2192 HIV",
+      "kg_paths_text": "\u2022 Clomifene \u2014[downregulates]\u2192 gene-1633 \u2014[is bound by]\u2192 DB00879 \u2014[treats]\u2192 HIV\n\u2022 Clomifene \u2014[downregulates]\u2192 gene-1633 \u2014[is bound by]\u2192 DB00709 \u2014[treats]\u2192 HIV\n\u2022 Clomifene \u2014[downregulates]\u2192 gene-1633 \u2014[is bound by]\u2192 DB00709 \u2014[treats]\u2192 HIV",
       "validation_experiments": [],
-      "novelty_score": 0.4,
-      "novelty_level": "ESTABLISHED",
+      "novelty_score": 0.495,
+      "novelty_level": "NOVEL",
       "is_known_treatment": false,
-      "clinical_trials_total": 10,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT04531943",
-          "title": "Feminizing Hormone Therapy and the Rectal Mucosa Immune Environment in Transgender Women",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "285",
-          "url": "https://clinicaltrials.gov/study/NCT04531943"
-        },
-        {
-          "nct_id": "NCT04910711",
-          "title": "Investigating the Interaction Between Two Long-acting Reversible Methods of Contraception and Dolutegravir, a Treatment for HIV",
-          "status": "UNKNOWN",
-          "phase": "PHASE4",
-          "enrollment": "140",
-          "url": "https://clinicaltrials.gov/study/NCT04910711"
-        },
-        {
-          "nct_id": "NCT01421368",
-          "title": "Contraception and Menstrual Cycle Effect on Pharmacokinetics, Pharmacodynamics and Safety in Tenofovir Vaginal Gel Use",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "72",
-          "url": "https://clinicaltrials.gov/study/NCT01421368"
-        },
-        {
-          "nct_id": "NCT01296152",
-          "title": "Pharmacokinetic Interactions Between DMPA and LPV/r Among HIV-Infected Women",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "25",
-          "url": "https://clinicaltrials.gov/study/NCT01296152"
-        },
-        {
-          "nct_id": "NCT05570812",
-          "title": "Neuroactive Steroid to Treat Depressed Mood: A Trial for People With HIV",
-          "status": "RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "120",
-          "url": "https://clinicaltrials.gov/study/NCT05570812"
-        }
-      ],
-      "trial_phases": {
-        "PHASE4": 1,
-        "PHASE1": 2,
-        "PHASE2": 3,
-        "NA": 1
-      },
-      "confidence": "HIGH",
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "MEDIUM",
       "confidence_reasons": [
-        "10 clinical trial(s) found on ClinicalTrials.gov",
-        "316 PubMed articles on this drug-disease pair",
-        "1 article(s) specifically mention repurposing/repositioning",
-        "Supported by 7 independent AI pillars",
-        "High molecular similarity (0.72) to Testosterone",
+        "1 PubMed article(s) - limited literature",
+        "Supported by 4 independent AI pillars",
+        "Highly cited paper (289 citations): \"Life expectancy after 2015 of adults with HIV on long-term a...\"",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.44)"
-      ]
+        "Strong causal genetic evidence (MR score: 0.72, 2 genetic targets)"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 465,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.196,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.485,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.131
+        }
+      },
+      "tissue_context": {
+        "context_modifier": 1.0,
+        "tissues": [
+          "Whole Blood",
+          "Spleen"
+        ],
+        "n_genes": 0
+      },
+      "ensemble_prob": 0.0323,
+      "ensemble_features": {
+        "kg_score": 0.9611,
+        "degree_penalty": 0.8013,
+        "n_drug_targets": 9,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 6.0186
+      },
+      "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "disease_entity": "Disease::MESH:D015658"
     },
     {
       "drug_name": "Hydrocortisone",
       "drug_id": "DB00741",
       "disease_name": "HIV",
-      "combined_score": 1.099,
+      "combined_score": 0.482,
+      "pillars_hit": 4,
       "transe_rank": 10,
-      "pillars_hit": 7,
+      "transe_score": -9.9225,
+      "pykeen_score": -11.9367,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0.678,
       "similar_to": "Cortisone",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.8379999995231628,
+      "proximity_distance": 0.6499999761581421,
+      "admet_score": 0.728,
+      "admet_flags": "clean",
+      "primekg_score": 0.2553,
+      "dti_score": 0.6492,
+      "dti_best_target": "CYP2B6",
+      "kg_group_score": 0.377,
+      "structural_group_score": 0.678,
+      "network_group_score": 0.6312000155448914,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.4482,
+      "admet_multiplier": 0.9456,
+      "efficacy_score": 0.5098,
+      "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 0,
       "shared_targets": [],
@@ -1075,22 +1702,14 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0.4482,
       "mr_genetic_targets": 2,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Hydrocortisone \u2014[palliates]\u2192 DOID:10283 \u2014[is treated by]\u2192 DB00997 \u2014[is a therapeutic for]\u2192 HIV",
+      "kg_paths_text": "\u2022 Hydrocortisone \u2014[palliates]\u2192 DOID:10283 \u2014[is treated by]\u2192 DB00997 \u2014[is a therapeutic for]\u2192 HIV\n\u2022 Hydrocortisone \u2014[palliates]\u2192 DOID:10283 \u2014[is treated by]\u2192 DB00126 \u2014[is a therapeutic for]\u2192 HIV\n\u2022 Hydrocortisone \u2014[palliates]\u2192 DOID:10283 \u2014[is treated by]\u2192 DB00773 \u2014[is a therapeutic for]\u2192 HIV",
       "validation_experiments": [],
-      "novelty_score": 0.35,
+      "novelty_score": 0.169,
       "novelty_level": "ESTABLISHED",
       "is_known_treatment": false,
       "clinical_trials_total": 6,
       "clinical_trials": [
-        {
-          "nct_id": "NCT05659472",
-          "title": "The Effect of Combination Mindfulness Spiritual-Based Cognitive Therapy Plus Hypnosis in HIV Patients With Depression",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "62",
-          "url": "https://clinicaltrials.gov/study/NCT05659472"
-        },
         {
           "nct_id": "NCT05935644",
           "title": "ORCHID: An Online Intervention for Persons With HIV (Miami)",
@@ -1098,6 +1717,22 @@
           "phase": "NA",
           "enrollment": "30",
           "url": "https://clinicaltrials.gov/study/NCT05935644"
+        },
+        {
+          "nct_id": "NCT03237689",
+          "title": "Effects of Glucocorticoids on Cognition in HIV-infected Women",
+          "status": "COMPLETED",
+          "phase": "EARLY_PHASE1",
+          "enrollment": "136",
+          "url": "https://clinicaltrials.gov/study/NCT03237689"
+        },
+        {
+          "nct_id": "NCT05659472",
+          "title": "The Effect of Combination Mindfulness Spiritual-Based Cognitive Therapy Plus Hypnosis in HIV Patients With Depression",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "62",
+          "url": "https://clinicaltrials.gov/study/NCT05659472"
         },
         {
           "nct_id": "NCT07332325",
@@ -1114,148 +1749,290 @@
           "phase": "PHASE2",
           "enrollment": "34",
           "url": "https://clinicaltrials.gov/study/NCT00392834"
-        },
-        {
-          "nct_id": "NCT00466258",
-          "title": "LINFOTARGAM: Treatment With Chemotherapy Plus Rituximab and Highly Active Antiretroviral Therapy in Patients With Diffuse Large B Cell Lymphoma and Infection With the Human Immunodeficiency Virus (HIV)",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "50",
-          "url": "https://clinicaltrials.gov/study/NCT00466258"
         }
       ],
       "trial_phases": {
         "NA": 2,
+        "EARLY_PHASE1": 1,
         "PHASE3": 1,
         "PHASE2": 1,
-        "PHASE4": 1,
-        "EARLY_PHASE1": 1
+        "PHASE4": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
         "6 clinical trial(s) found on ClinicalTrials.gov",
         "Phase 3 trial exists",
         "364 PubMed articles on this drug-disease pair",
-        "Supported by 7 independent AI pillars",
+        "Supported by 4 independent AI pillars",
         "High molecular similarity (0.68) to Cortisone",
         "Moderate FAERS signal: 13 adverse event reports mention drug-disease co-occurrence",
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.45)"
-      ]
+      ],
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1320,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.369,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.482,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "context_modifier": 1.0,
+        "tissues": [
+          "Whole Blood",
+          "Spleen"
+        ],
+        "n_genes": 0
+      },
+      "ensemble_prob": 0.9433,
+      "ensemble_features": {
+        "kg_score": 0.9988,
+        "degree_penalty": 0.7532,
+        "n_drug_targets": 12,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.6391
+      },
+      "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "disease_entity": "Disease::MESH:D015658"
     },
     {
-      "drug_name": "Creatinine",
-      "drug_id": "DB11846",
+      "drug_name": "Progesterone",
+      "drug_id": "DB00396",
       "disease_name": "HIV",
-      "combined_score": 1.0817999839782715,
-      "transe_rank": 6,
+      "combined_score": 0.4802,
       "pillars_hit": 4,
-      "mol_similarity": 0,
-      "similar_to": "",
+      "transe_rank": 33,
+      "transe_score": -10.1699,
+      "pykeen_score": -11.6271,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0.7234,
+      "similar_to": "Testosterone",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0.03,
+      "gene_sig_rank": 25,
+      "proximity_score": 0.7379999756813049,
+      "proximity_distance": 1.0499999523162842,
+      "admet_score": 0.7543,
+      "admet_flags": "clean",
+      "primekg_score": 0.2537,
+      "dti_score": 0.8373,
+      "dti_best_target": "TRIM22",
+      "kg_group_score": 0.3118,
+      "structural_group_score": 0.8373,
+      "network_group_score": 0.5551999807357788,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.4353,
+      "admet_multiplier": 0.9509,
+      "efficacy_score": 0.505,
+      "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 0,
       "shared_targets": [],
-      "pubmed_total": 1837,
-      "pubmed_treatment_total": 1508,
-      "pubmed_repurposing_total": 0,
+      "pubmed_total": 316,
+      "pubmed_treatment_total": 194,
+      "pubmed_repurposing_total": 1,
       "key_papers": [
         {
-          "pmid": "37218815",
-          "title": "Bictegravir and Metformin Drug-Drug Interaction in People with Human Immunodeficiency Virus (HIV).",
-          "authors": "Masich AM, Thompson L, Fulco PP",
-          "journal": "Infectious disease reports",
-          "year": "2023",
-          "abstract_snippet": "A drug-drug interaction (DDI) exists between bictegravir and metformin. Bictegravir inhibits renal organic cation transporter-2, leading to increased metformin plasma concentrations. The objective of this analysis was to evaluate the clinical implications of concomitant bictegravir and metformin adm...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37218815/",
-          "total_results": 1837
+          "pmid": "38421182",
+          "title": "Pathogenesis of viral infections during pregnancy.",
+          "authors": "Creisher PS, Klein SL",
+          "journal": "Clinical microbiology reviews",
+          "year": "2024",
+          "abstract_snippet": "SUMMARYViral infections during pregnancy are associated with significant adverse perinatal and fetal outcomes. Pregnancy is a unique immunologic and physiologic state, which can influence control of virus replication, severity of disease, and vertical transmission. The placenta is the organ of the m...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38421182/",
+          "total_results": 316
         },
         {
-          "pmid": "22954611",
-          "title": "The kidney in HIV infection: beyond HIV-associated nephropathy.",
-          "authors": "Wyatt CM",
-          "journal": "Topics in antiviral medicine",
-          "year": "2012",
-          "abstract_snippet": "Acute kidney injury (AKI) and chronic kidney disease (CKD) are more common in HIV-infected persons than in the general population. AKI is associated with poor health outcomes, including increased risk of heart failure, cardiovascular events, end-stage renal disease (ESRD), and mortality. The most co...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/22954611/"
+          "pmid": "24742931",
+          "title": "Acquired Thrombophilia.",
+          "authors": "Armstrong EM, Bellone JM, Hornsby LB, et al.",
+          "journal": "Journal of pharmacy practice",
+          "year": "2014",
+          "abstract_snippet": "Acquired thrombophilia is associated with an increased risk of venous thromboembolism (VTE). Antiphospholipid syndrome (APS) is the most prevalent acquired thrombophilia and is associated with both venous and arterial thromboses. Human immunodeficiency virus (HIV) is another form of acquired thrombo...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24742931/"
         },
         {
-          "pmid": "31388941",
-          "title": "Clinical Pharmacodynamics, Pharmacokinetics, and Drug Interaction Profile of Doravirine.",
-          "authors": "Boyle A, Hodge D, Marzolini C, et al.",
-          "journal": "Clinical pharmacokinetics",
-          "year": "2019",
-          "abstract_snippet": "Doravirine is a novel non-nucleoside reverse transcriptase inhibitor\u00a0(NNRTI) that has demonstrated good efficacy, tolerability, and safety for the treatment of patients with human immunodeficiency virus (HIV)-1 infection in phase III clinical trials. Doravirine achieved non-inferiority when compared...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/31388941/"
+          "pmid": "24041719",
+          "title": "The immune system in menopause: pros and cons of hormone therapy.",
+          "authors": "Ghosh M, Rodriguez-Garcia M, Wira CR",
+          "journal": "The Journal of steroid biochemistry and molecular biology",
+          "year": "2014",
+          "abstract_snippet": "With aging, a general decline in immune function is observed leading to immune-senescence. Several of these changes are gender specific affecting postmenopausal women. Menopause is a normal part of a woman's lifecycle and consists of a series of body changes that can last from one to ten years. It i...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24041719/"
         },
         {
-          "pmid": "33777370",
-          "title": "Membranous nephropathy associated with viral infection.",
-          "authors": "Nikolopoulou A, Teixeira C, Cook HT, et al.",
-          "journal": "Clinical kidney journal",
-          "year": "2021",
-          "abstract_snippet": "BACKGROUND: Membranous nephropathy (MN) can be associated with hepatitis infection and less commonly with human immunodeficiency virus (HIV) infection. The significance of anti-phospholipase A2 receptor (PLA2R) and anti-thrombospondin type 1 domain-containing 7A (THSD7A) antibodies in this setting i...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33777370/"
+          "pmid": "24996766",
+          "title": "Progestin-only contraception: injectables and implants.",
+          "authors": "Jacobstein R, Polis CB",
+          "journal": "Best practice & research. Clinical obstetrics & gynaecology",
+          "year": "2014",
+          "abstract_snippet": "Progestin-only contraceptive injectables and implants are highly effective, longer-acting contraceptive methods that can be used by most women in most circumstances. Globally, 6% of women using modern contraception use injectables and 1% use implants. Injectables are the predominant contraceptive me...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24996766/"
         },
         {
-          "pmid": "37102522",
-          "title": "Prevalence of Renal Disease in Human Immunodeficiency Virus-Infected Children in Calabar, Nigeria.",
-          "authors": "Nsa EI, Uzomba CI, Etuk IS, et al.",
-          "journal": "Saudi journal of kidney diseases and transplantation : an official publication of the Saudi Center for Organ Transplantation, Saudi Arabia",
-          "year": "2022",
-          "abstract_snippet": "Renal disease is increasingly being reported in human immunodeficiency virus (HIV)-infected children with or without antiretroviral drugs. This study was aimed at determining the prevalence of renal disease in HIV-infected children with or without treatment in Calabar, Nigeria. A descriptive cross-s...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37102522/"
+          "pmid": "37975897",
+          "title": "Placental progesterone and its receptor in HIV-infected pre-eclamptic women.",
+          "authors": "Sewnarain S, Singh S, Naicker T",
+          "journal": "Histochemistry and cell biology",
+          "year": "2024",
+          "abstract_snippet": "Given the high prevalence of HIV infection and pre-eclampsia (PE) in South Africa, this study evaluated and compared the placental immunostaining of progesterone (P) and progesterone receptors (PR) in the synergy of HIV-infected PE compared to normotensive pregnant women using immunohistochemistry i...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37975897/"
         }
       ],
-      "repurposing_papers": [],
+      "repurposing_papers": [
+        {
+          "pmid": "39627279",
+          "title": "Multifaceted impact of HIV inhibitor dapivirine on triple negative breast cancer cells reveals potential entities as targets for novel therapy.",
+          "authors": "Patil K, Johnston E, Novack J, et al.",
+          "journal": "Scientific reports",
+          "year": "2024",
+          "abstract_snippet": "Breast cancer is the most common cancer in women worldwide. Many breast cancers originate from the cells lining the milk duct and some become invasive. Breast cancer lacking estrogen, progesterone receptors (ER-, PR-) and epidermal growth factor receptor 2 (HER2-) amplification, termed \"Triple negat...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39627279/",
+          "total_results": 1
+        }
+      ],
       "semantic_scholar_papers": [
         {
-          "title": "The Association between Serum Creatinine, HIV-Infection and Metabolic Variables in Patients Living with Diabetes Mellitus",
+          "title": "Female-predominant anti-CD4 IgG autoantibody production and its correlations with plasma levels of progesterone, microbial translocation, and blunted immune reconstitution in HIV-infected patients on suppressive ART",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/c3738d06d4167cda37c1cb0d5f16c2488dd9ed1d",
+          "authors": "Zhuang Wan, Zhenwu Luo, John E. McKinnon"
+        },
+        {
+          "title": "Progesterone and prolactin levels in pregnant women living with HIV who delivered preterm and low birthweight infants: A nested case-control study",
+          "year": 2023,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/561fb80945b331a13c00379ed1f331caaa84acb1",
+          "authors": "B. Chi, Dorothy Sebikari, S. Brummel"
+        },
+        {
+          "title": "Pregnancy-associated plasma protein-A, progesterone, and oestriol levels and some birth outcomes in HIV-seropositive pregnant women at Nnamdi Azikiwe University Teaching Hospital, Nnewi, Nigeria",
+          "year": 2023,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/6d368789fb99d66944fd8f6e97778517013d5428",
+          "authors": "J. Okwara, Joseph Eberendu Ahaneku, C. Onyenekwe"
+        },
+        {
+          "title": "Placental progesterone and its receptor in HIV-infected pre-eclamptic women",
+          "year": 2023,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/5b00f7cbe7c6cd4cc7885ded8cf5a8fad33fe645",
+          "authors": "Serisha Sewnarain, Shoohana Singh, T. Naicker"
+        },
+        {
+          "title": "First trimester screening and progesterone levels in HIV positive women under HAART therapy.",
           "year": 2021,
           "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/cd6f0bf8d37e87b7123d768a1aeeab2046ac5c46",
-          "authors": "R. Chetty, S. Pillay"
-        },
-        {
-          "title": "Point of care creatinine testing for early detection of renal dysfunction in Tanzanian HIV patients: a study protocol",
-          "year": 2024,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/7a5354c8638238c85667bb72b009592c775f2c07",
-          "authors": "D. Msilanga, Anthony N. Muiru, Emmanuel Balandya"
-        },
-        {
-          "title": "Comparison of Renal Function Biomarkers of Serum Creatinine and Cystatin C in HIV-Infected People on Dolutegravir-Containing Therapy",
-          "year": 2022,
-          "citations": 12,
-          "url": "https://www.semanticscholar.org/paper/81b1b0acf708e4ab87a81c4d1cbe2a9ee11a7bdb",
-          "authors": "Lianfeng Lu, Xiaodi Li, Xiaosheng Liu"
-        },
-        {
-          "title": "Creatinine and cystatin C-based estimated glomerular filtration rate estimates of kidney function in Black people with HIV on antiretroviral therapy",
-          "year": 2022,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/e89304b1971b272f5f438026e6193ace001e418c",
-          "authors": "T. Mazaheri, Devon Buchanan, R. Hung"
-        },
-        {
-          "title": "The Costs of Creatinine Testing in the Context of a HIV Pre-Exposure Prophylaxis Demonstration Project in Eswatini",
-          "year": 2021,
-          "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/f9585cba7428f4deb2d7b860609c6933acd5c2e2",
-          "authors": "Stefan Kohler, Rumbidzai Ndungwani, M. Burgert"
+          "url": "https://www.semanticscholar.org/paper/b03bfabdd9838d81d6f06805cac82e48130bbf96",
+          "authors": "U. A. Iasi, T. Alexandra, Onofriescu Mircea"
         }
       ],
       "most_cited_paper": {
-        "title": "Comparison of Renal Function Biomarkers of Serum Creatinine and Cystatin C in HIV-Infected People on Dolutegravir-Containing Therapy",
-        "year": 2022,
-        "citations": 12,
-        "url": "https://www.semanticscholar.org/paper/81b1b0acf708e4ab87a81c4d1cbe2a9ee11a7bdb",
-        "authors": "Lianfeng Lu, Xiaodi Li, Xiaosheng Liu"
+        "title": "First trimester screening and progesterone levels in HIV positive women under HAART therapy.",
+        "year": 2021,
+        "citations": 1,
+        "url": "https://www.semanticscholar.org/paper/b03bfabdd9838d81d6f06805cac82e48130bbf96",
+        "authors": "U. A. Iasi, T. Alexandra, Onofriescu Mircea"
       },
-      "max_citations": 12,
+      "max_citations": 1,
       "faers_signal": "none",
-      "faers_total_reports": 128,
+      "faers_total_reports": 19292,
       "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Creatinine to HIV terms. Drug has 128 total reports.",
+      "faers_interpretation": "No FAERS reports found linking Progesterone to HIV terms. Drug has 19292 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -1265,8 +2042,8 @@
         "Strophanthidin (1.483)",
         "Importazole (1.469)"
       ],
-      "signature_interpretation": "Creatinine was not found among the top 48 drugs that reverse the HIV gene signature. Top reversers: XMD-1150 (1.530), XMD16-144 (1.502), 16-HYDROXYTRIPTOLIDE (1.484)",
-      "ai_hypothesis": "it is a marker of kidney function.",
+      "signature_interpretation": "Progesterone was not found among the top 48 drugs that reverse the HIV gene signature. Top reversers: XMD-1150 (1.530), XMD16-144 (1.502), 16-HYDROXYTRIPTOLIDE (1.484)",
+      "ai_hypothesis": "of its anti-inflammatory and immunomodulatory properties.",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
@@ -1285,85 +2062,232 @@
         }
       ],
       "has_failed_trial": false,
-      "failed_trial_phase": "Phase 2",
+      "failed_trial_phase": "Phase 1",
       "failed_trial_count": 1,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.1945,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mr_score": 0.4353,
+      "mr_genetic_targets": 2,
+      "mechanistic_hypothesis": "Progesterone \u2014[downregulates]\u2192 gene-4609 \u2014[is a target of]\u2192 DB00945 \u2014[is a therapeutic for]\u2192 HIV",
+      "kg_paths_text": "\u2022 Progesterone \u2014[downregulates]\u2192 gene-4609 \u2014[is a target of]\u2192 DB00945 \u2014[is a therapeutic for]\u2192 HIV\n\u2022 Progesterone \u2014[downregulates]\u2192 gene-4609 \u2014[is a target of]\u2192 DB00945 \u2014[is a therapeutic for]\u2192 HIV\n\u2022 Progesterone \u2014[affects]\u2192 gene-2697 \u2014[is downregulated by]\u2192 DB01601 \u2014[treats]\u2192 HIV",
       "validation_experiments": [],
-      "novelty_score": 0.3,
+      "novelty_score": 0.192,
       "novelty_level": "ESTABLISHED",
-      "is_known_treatment": true,
+      "is_known_treatment": false,
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT00821847",
-          "title": "Renal Function Assessment in HIV Patient",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "45",
-          "url": "https://clinicaltrials.gov/study/NCT00821847"
+          "nct_id": "NCT04910711",
+          "title": "Investigating the Interaction Between Two Long-acting Reversible Methods of Contraception and Dolutegravir, a Treatment for HIV",
+          "status": "UNKNOWN",
+          "phase": "PHASE4",
+          "enrollment": "140",
+          "url": "https://clinicaltrials.gov/study/NCT04910711"
         },
         {
-          "nct_id": "NCT05881447",
-          "title": "Prevalence, Incidence and Risk Signature of Chronic Kidney Disease in Sub-Saharan Africa",
+          "nct_id": "NCT03377608",
+          "title": "Modifiers of Tenofovir in the Female Genital Tract",
+          "status": "COMPLETED",
+          "phase": "N/A",
+          "enrollment": "50",
+          "url": "https://clinicaltrials.gov/study/NCT03377608"
+        },
+        {
+          "nct_id": "NCT02970552",
+          "title": "Feasibility of Vaginal Progesterone to Reduce HIV-Associated Preterm Birth",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "140",
+          "url": "https://clinicaltrials.gov/study/NCT02970552"
+        },
+        {
+          "nct_id": "NCT05570812",
+          "title": "Neuroactive Steroid to Treat Depressed Mood: A Trial for People With HIV",
           "status": "RECRUITING",
-          "phase": "N/A",
-          "enrollment": "1200",
-          "url": "https://clinicaltrials.gov/study/NCT05881447"
-        },
-        {
-          "nct_id": "NCT00369941",
-          "title": "A Study to Evaluate the Safety and Antiretroviral Activity of MK-0518 Versus Efavirenz in Treatment Naive HIV-Infected Patients, Each in Combination With TRUVADA (0518-021 EXT)",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "566",
-          "url": "https://clinicaltrials.gov/study/NCT00369941"
-        },
-        {
-          "nct_id": "NCT01296113",
-          "title": "Chemotherapy for Lung Cancer in HIV-positive Patients",
-          "status": "COMPLETED",
           "phase": "PHASE2",
-          "enrollment": "61",
-          "url": "https://clinicaltrials.gov/study/NCT01296113"
+          "enrollment": "120",
+          "url": "https://clinicaltrials.gov/study/NCT05570812"
         },
         {
-          "nct_id": "NCT00499187",
-          "title": "Fanconi Syndrome Due to ARVs in HIV-Infected Persons",
+          "nct_id": "NCT02038335",
+          "title": "HIV-Target Cell Response in Women Initiating Various Contraceptive Methods in High HIV-Incidence Areas: Zim CHIC",
           "status": "COMPLETED",
           "phase": "N/A",
-          "enrollment": "56",
-          "url": "https://clinicaltrials.gov/study/NCT00499187"
+          "enrollment": "451",
+          "url": "https://clinicaltrials.gov/study/NCT02038335"
         }
       ],
       "trial_phases": {
-        "PHASE3": 1,
+        "PHASE4": 3,
         "PHASE2": 3,
-        "PHASE4": 1,
-        "NA": 2
+        "NA": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
         "10 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
-        "1837 PubMed articles on this drug-disease pair",
+        "316 PubMed articles on this drug-disease pair",
+        "1 article(s) specifically mention repurposing/repositioning",
         "Supported by 4 independent AI pillars",
+        "High molecular similarity (0.72) to Testosterone",
         "AI-generated hypothesis available",
-        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
-      ]
+        "Moderate genetic evidence supporting causality (MR score: 0.44)"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1310,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (CYP2C19 / CYP2C19*1, CYP2C19*2, CYP2C19*17)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "CYP2C19",
+            "variant": "CYP2C19*1, CYP2C19*2, CYP2C19*17",
+            "level": "3",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451132040"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.368,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.48,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "context_modifier": 1.0,
+        "tissues": [
+          "Whole Blood",
+          "Spleen"
+        ],
+        "n_genes": 0
+      },
+      "ensemble_prob": 0.4525,
+      "ensemble_features": {
+        "kg_score": 0.9962,
+        "degree_penalty": 0.7522,
+        "n_drug_targets": 28,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 3.7136
+      },
+      "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "disease_entity": "Disease::MESH:D015658"
     },
     {
       "drug_name": "Prednisolone",
       "drug_id": "DB00860",
       "disease_name": "HIV",
-      "combined_score": 1.0740000009536743,
+      "combined_score": 0.46950000524520874,
+      "pillars_hit": 4,
       "transe_rank": 43,
-      "pillars_hit": 7,
+      "transe_score": -10.229,
+      "pykeen_score": -12.0252,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
+      "mol_emb_similarity": 0.9544,
+      "mol_emb_similar_to": "Testosterone",
+      "gene_sig_score": 0.0043,
+      "gene_sig_rank": 69,
+      "proximity_score": 0.8500000238418579,
+      "proximity_distance": 0.6000000238418579,
+      "admet_score": 0.7161,
+      "admet_flags": "clean",
+      "primekg_score": 0.2443,
+      "dti_score": 0.6998,
+      "dti_best_target": "TRIM22",
+      "kg_group_score": 0.2674,
+      "structural_group_score": 0.9544,
+      "network_group_score": 0.6496999859809875,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.1945,
+      "admet_multiplier": 0.9432,
+      "efficacy_score": 0.4977000057697296,
+      "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 0,
       "shared_targets": [],
@@ -1449,11 +2373,11 @@
           "authors": "Gloria Lubega, J. Lutaakome, Moses Kibirige"
         },
         {
-          "title": "A Case of Subcutaneous Panniculitis-Like T-cell Lymphoma With Hemophagocytic Lymphohistiocytosis in an HIV Patient",
+          "title": "A Case of Severe Pneumocystis Pneumonia in an HIV-Negative Patient Successfully Treated with Oral Atovaquone",
           "year": 2023,
           "citations": 2,
-          "url": "https://www.semanticscholar.org/paper/15ad8befe9a598e0953a8ff829995cc3ea08a469",
-          "authors": "Chanakarn Kanitthamniyom, A. Osorio, S. Saowapa"
+          "url": "https://www.semanticscholar.org/paper/588669cdbd12122675daecdb616f42da65ff30c2",
+          "authors": "J. Hirai, Nobuaki Mori, Hideo Kato"
         }
       ],
       "most_cited_paper": {
@@ -1497,37 +2421,29 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0.1945,
       "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Prednisolone \u2014[upregulates]\u2192 gene-4792 \u2014[is a target of]\u2192 DB00945 \u2014[is a therapeutic for]\u2192 HIV",
+      "kg_paths_text": "\u2022 Prednisolone \u2014[upregulates]\u2192 gene-4792 \u2014[is a target of]\u2192 DB00945 \u2014[is a therapeutic for]\u2192 HIV\n\u2022 Prednisolone \u2014[upregulates]\u2192 gene-4792 \u2014[is a target of]\u2192 DB00945 \u2014[is a therapeutic for]\u2192 HIV\n\u2022 Prednisolone \u2014[upregulates]\u2192 gene-4792 \u2014[is a target of]\u2192 DB00945 \u2014[is a therapeutic for]\u2192 HIV",
       "validation_experiments": [],
-      "novelty_score": 0.35,
+      "novelty_score": 0.164000004529953,
       "novelty_level": "ESTABLISHED",
       "is_known_treatment": false,
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT00072644",
-          "title": "Pharmacokinetic Interactions With Prednisolone in Healthy Volunteers and HIV-infected Patients Receiving Single-Dose Prednisone",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "75",
-          "url": "https://clinicaltrials.gov/study/NCT00072644"
+          "nct_id": "NCT00000741",
+          "title": "The Safety and Effectiveness of Methylprednisolone in the Treatment of Pneumocystis Carinii Pneumonia (PCP) in Children With AIDS",
+          "status": "WITHDRAWN",
+          "phase": "PHASE3",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT00000741"
         },
         {
-          "nct_id": "NCT03856229",
-          "title": "Short-term Steroid Therapy in Patients With P. Jirovecii Pneumonia Due to HIV / AIDS",
-          "status": "ENROLLING_BY_INVITATION",
-          "phase": "NA",
-          "enrollment": "196",
-          "url": "https://clinicaltrials.gov/study/NCT03856229"
-        },
-        {
-          "nct_id": "NCT03915366",
-          "title": "Empirical Treatment Against Cytomegalovirus and Tuberculosis in HIV-infected Infants With Severe Pneumonia",
-          "status": "COMPLETED",
-          "phase": "PHASE2, PHASE3",
-          "enrollment": "563",
-          "url": "https://clinicaltrials.gov/study/NCT03915366"
+          "nct_id": "NCT01288131",
+          "title": "Study of Anti-r-HuEpo Associated Pure Red Cell Aplasia (PRCA) Treatment",
+          "status": "TERMINATED",
+          "phase": "PHASE3",
+          "enrollment": "8",
+          "url": "https://clinicaltrials.gov/study/NCT01288131"
         },
         {
           "nct_id": "NCT01516593",
@@ -1538,18 +2454,26 @@
           "url": "https://clinicaltrials.gov/study/NCT01516593"
         },
         {
-          "nct_id": "NCT00002905",
-          "title": "Combination Chemotherapy in Treating Patients With HIV-Related Non-Hodgkin's Lymphoma",
+          "nct_id": "NCT03915366",
+          "title": "Empirical Treatment Against Cytomegalovirus and Tuberculosis in HIV-infected Infants With Severe Pneumonia",
+          "status": "COMPLETED",
+          "phase": "PHASE2, PHASE3",
+          "enrollment": "563",
+          "url": "https://clinicaltrials.gov/study/NCT03915366"
+        },
+        {
+          "nct_id": "NCT02603575",
+          "title": "Effects and Safety of Caspofungin and Corticosteroids in Pneumocystis Pneumonia in Non-HIV Patients",
           "status": "UNKNOWN",
-          "phase": "PHASE2",
-          "enrollment": "20",
-          "url": "https://clinicaltrials.gov/study/NCT00002905"
+          "phase": "NA",
+          "enrollment": "60",
+          "url": "https://clinicaltrials.gov/study/NCT02603575"
         }
       ],
       "trial_phases": {
-        "NA": 2,
-        "PHASE2": 4,
-        "PHASE3": 2,
+        "PHASE3": 5,
+        "PHASE2": 5,
+        "NA": 1,
         "PHASE1": 1
       },
       "confidence": "HIGH",
@@ -1557,125 +2481,293 @@
         "10 clinical trial(s) found on ClinicalTrials.gov",
         "Phase 3 trial exists",
         "465 PubMed articles on this drug-disease pair",
-        "Supported by 7 independent AI pillars",
+        "Supported by 4 independent AI pillars",
         "Moderate FAERS signal: 43 adverse event reports mention drug-disease co-occurrence",
         "Supporting paper with 23 citations",
         "AI-generated hypothesis available"
-      ]
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1303,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (DSE;TSPYL1 / rs3828743)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "DSE;TSPYL1",
+            "variant": "rs3828743",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449576983"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs2229109",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1445402144"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs1045642",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1444704881"
+          },
+          {
+            "gene": "PNPLA3",
+            "variant": "rs738409",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1448632697"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.36399999260902405,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.4699999988079071,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "context_modifier": 1.0,
+        "tissues": [
+          "Whole Blood",
+          "Spleen"
+        ],
+        "n_genes": 0
+      },
+      "ensemble_prob": 0.7521,
+      "ensemble_features": {
+        "kg_score": 0.996,
+        "degree_penalty": 0.7643,
+        "n_drug_targets": 19,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 3.7612
+      },
+      "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "disease_entity": "Disease::MESH:D015658"
     },
     {
-      "drug_name": "Biguanide",
-      "drug_id": "DB13100",
+      "drug_name": "Tretinoin",
+      "drug_id": "DB00755",
       "disease_name": "HIV",
-      "combined_score": 1.0424000024795532,
-      "transe_rank": 1206,
-      "pillars_hit": 3,
+      "combined_score": 0.4456,
+      "pillars_hit": 4,
+      "transe_rank": 88,
+      "transe_score": -10.42,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.7250000238418579,
+      "proximity_distance": 1.100000023841858,
+      "admet_score": 0.5917,
+      "admet_flags": "Skin_Reaction=0.85",
+      "primekg_score": 0.2444,
+      "dti_score": 1.0,
+      "dti_best_target": "CD4",
+      "kg_group_score": 0.1067,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.5449000000953674,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.4636,
+      "admet_multiplier": 0.9183,
+      "efficacy_score": 0.4852,
+      "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 0,
       "shared_targets": [],
-      "pubmed_total": 14,
-      "pubmed_treatment_total": 11,
+      "pubmed_total": 118,
+      "pubmed_treatment_total": 82,
       "pubmed_repurposing_total": 0,
       "key_papers": [
         {
-          "pmid": "21106331",
-          "title": "Structure-activity relationships of polybiguanides with activity against human immunodeficiency virus type 1.",
-          "authors": "Passic SR, Ferguson ML, Catalone BJ, et al.",
-          "journal": "Biomedicine & pharmacotherapy = Biomedecine & pharmacotherapie",
-          "year": "2010",
-          "abstract_snippet": "Previous investigations showing that polydisperse biguanide (PDBG) molecules have activity against human immunodeficiency virus type 1 (HIV-1) also suggested a relationship between PDBG biologic activity and the lengths of hydrocarbon linkers surrounding the positively charged biguanide unit. To bet...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/21106331/",
-          "total_results": 14
+          "pmid": "38943643",
+          "title": "Retinoic acid enhances HIV-1 reverse transcription and transcription in macrophages via mTOR-modulated mechanisms.",
+          "authors": "Dias J, Cattin A, Bendoumou M, et al.",
+          "journal": "Cell reports",
+          "year": "2024",
+          "abstract_snippet": "The intestinal environment facilitates HIV-1 infection via mechanisms involving the gut-homing vitamin A-derived retinoic acid (RA), which transcriptionally reprograms CD4",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38943643/",
+          "total_results": 118
         },
         {
-          "pmid": "34900832",
-          "title": "The effect of metformin on body mass index and metabolic parameters in non-diabetic HIV-positive patients: a meta-analysis.",
-          "authors": "Harmooshi NN, Abeshtan A, Zakerkish M, et al.",
-          "journal": "Journal of diabetes and metabolic disorders",
-          "year": "2021",
-          "abstract_snippet": "UNLABELLED: We sought to evaluate the effetc of metformin on body mass index (BMI) and metabolic parameters in HIV-positive patients. We performed a comprehensive search through five major indexing databases, using keywords (\"metformin\"\u00a0OR \"dimethylguanylguanidine\" OR \"biguanide\" OR SUPPLEMENTARY IN...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34900832/"
+          "pmid": "35458172",
+          "title": "Actions of Retinoic Acid in the Pathophysiology of HIV Infection.",
+          "authors": "Sidell N, Kane MA",
+          "journal": "Nutrients",
+          "year": "2022",
+          "abstract_snippet": "The vitamin A metabolite all-trans retinoic acid (RA) plays a key role in tissue homeostasis and mucosal immunity. RA is produced by gut-associated dendritic cells, which are among the first cells encountered by HIV. Acute HIV infection results in rapid reduction of RA levels and dysregulation of im...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35458172/"
         },
         {
-          "pmid": "20231400",
-          "title": "Persistent interactions between biguanide-based compound NB325 and CXCR4 result in prolonged inhibition of human immunodeficiency virus type 1 infection.",
-          "authors": "Thakkar N, Pirrone V, Passic S, et al.",
-          "journal": "Antimicrobial agents and chemotherapy",
-          "year": "2010",
-          "abstract_snippet": "We previously demonstrated that the biguanide-based compound NB325 inhibits human immunodeficiency virus type 1 (HIV-1) infection by interacting with the CXCR4 viral coreceptor. This interaction also appeared to be persistent, since HIV-1 infection was inhibited even when the virus was introduced su...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/20231400/"
+          "pmid": "9800111",
+          "title": "Emerging treatments for epidemic (AIDS-related) Kaposi's sarcoma.",
+          "authors": "McGarvey ME, Tulpule A, Cai J, et al.",
+          "journal": "Current opinion in oncology",
+          "year": "1998",
+          "abstract_snippet": "Kaposi's sarcoma (KS) is an opportunistic tumor that develops with increased frequency (100,000-fold) after HIV infection. KS causes significant morbidity from mucocutaneous involvement and mortality from complications of visceral sites of disease such as the lungs, gastrointestinal tract, and the l...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/9800111/"
         },
         {
-          "pmid": "19047650",
-          "title": "Specific interactions between the viral coreceptor CXCR4 and the biguanide-based compound NB325 mediate inhibition of human immunodeficiency virus type 1 infection.",
-          "authors": "Thakkar N, Pirrone V, Passic S, et al.",
-          "journal": "Antimicrobial agents and chemotherapy",
-          "year": "2009",
-          "abstract_snippet": "The present studies were conducted to better define the mechanism of action of polyethylene hexamethylene biguanide (PEHMB) (designated herein as NB325), which was shown in previous studies to inhibit infection by the human immunodeficiency virus type 1 (HIV-1). Fluorescence-activated flow cytometri...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/19047650/"
+          "pmid": "31118366",
+          "title": "Acute Promyelocytic Leukemia and HIV: Case Reports and a Review of the Literature.",
+          "authors": "Kunitomi A, Hasegawa Y, Lmamura J, et al.",
+          "journal": "Internal medicine (Tokyo, Japan)",
+          "year": "2019",
+          "abstract_snippet": "Acute promyelocytic leukemia (APL) in human immunodeficiency virus (HIV)-infected individuals is very rare. There is currently no consensus regarding the use of anti-cancer drugs with highly active anti-retroviral therapy (ART) in these patients due to their small number. We herein report two cases ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31118366/"
         },
         {
-          "pmid": "22131821",
-          "title": "Cervicovaginal safety of the formulated, biguanide-based human immunodeficiency virus type 1 (HIV-1) inhibitor NB325 in a murine model.",
-          "authors": "Lozenski K, Kish-Catalone T, Pirrone V, et al.",
-          "journal": "Journal of biomedicine & biotechnology",
-          "year": "2011",
-          "abstract_snippet": "Vaginal microbicides that reduce or eliminate the risk of HIV-1 sexual transmission must do so safely without adversely affecting the integrity of the cervicovaginal epithelium. The present studies were performed to assess the safety of the biguanide-based antiviral compound NB325 in a formulation s...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/22131821/"
+          "pmid": "25221796",
+          "title": "Treatment of severe or progressive Kaposi's sarcoma in HIV-infected adults.",
+          "authors": "Gbabe OF, Okwundu CI, Dedicoat M, et al.",
+          "journal": "The Cochrane database of systematic reviews",
+          "year": "2014",
+          "abstract_snippet": "BACKGROUND: Kaposi's sarcoma remains the most common cancer in Sub-Saharan Africa and the second most common cancer in HIV-infected patients worldwide. Since the introduction of highly active antiretroviral therapy (HAART), there has been a decline in its incidence.However, Kaposi's sarcoma continue...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25221796/"
         }
       ],
       "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "Cervicovaginal Safety of the Formulated, Biguanide-Based Human Immunodeficiency Virus Type 1 (HIV-1) Inhibitor NB325 in a Murine Model",
-          "year": 2011,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/14b0e9cd8f8ba916e59cf0be491ffff0c9fab560",
-          "authors": "Karissa Lozenski, Tina M. Kish-Catalone, V. Pirrone"
+          "title": "Molluscum Contagiosum in HIV Patient Treated with 20% Topical Glycolic Acid After Resistance with Topical Tretinoin",
+          "year": 2023,
+          "citations": 2,
+          "url": "https://www.semanticscholar.org/paper/31d0c1a2791c1595eb107f7ce0b7781bfb5cd447",
+          "authors": "P. Achdiat, Syafira Andiani, R. Hindritiani"
         },
         {
-          "title": "Immediate and Persistent Anti-HIV-1 Activity of the Biguanide-based Compound NB325 Involves Specific Interactions with the Viral Co-receptor CXCR4",
-          "year": 2009,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/bff86e1e109b862b48d70bbe3e053c56634d15f0",
-          "authors": "Nina J Thakkar, V. Pirrone, S. Passic"
+          "title": "In silico identification of Tretinoin as a SARS-CoV-2 envelope (E) protein ion channel inhibitor",
+          "year": 2020,
+          "citations": 55,
+          "url": "https://www.semanticscholar.org/paper/f338c83d1e7d0aa6ba3cd676cb1f34ea030b2b8c",
+          "authors": "D. Dey, Subhomoi Borkotoky, Manidipa Banerjee"
         },
         {
-          "title": "The Presence of Mucin Increases the Anti-HIV-1 Activity of the Candidate Microbicide Polyethylene Hexamethylene Biguanide (PEHMB)",
-          "year": 2005,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/7fa7da6a5ecd0f0f5e893e5c13163dcf17de645a",
-          "authors": "V. Pirrone, Shendra R. Miller, M. L. Ferguson"
+          "title": "Intravenous cidofovir for recalcitrant verruca vulgaris in the setting of HIV.",
+          "year": 2004,
+          "citations": 16,
+          "url": "https://www.semanticscholar.org/paper/6971e840f23f8e94f0e738c3893fcfdddce857d4",
+          "authors": "C. Hivnor, James W Shepard, M. Shapiro"
         },
         {
-          "title": "The effect of metformin on body mass index and metabolic parameters in non-diabetic HIV-positive patients: a meta-analysis",
-          "year": 2021,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/3e8e50adda4436ce99f700fe896b96d24fd81ee7",
-          "authors": "N. N. Harmooshi, Ahmad Abeshtan, Mehrnoush Zakerkish"
+          "title": "Topical cidofovir: a novel treatment for recalcitrant molluscum contagiosum in children infected with human immunodeficiency virus 1.",
+          "year": 2000,
+          "citations": 100,
+          "url": "https://www.semanticscholar.org/paper/e66f75d44473134796b8b9cdea79f8cea3e48cef",
+          "authors": "J. Toro, L. Wood, N. K. Patel"
         },
         {
-          "title": "The First Acanthamoeba keratitis Case of Non-Contact Lens Wearer with HIV Infection in Thailand",
-          "year": 2019,
-          "citations": 10,
-          "url": "https://www.semanticscholar.org/paper/64d28ce9910cdc7ab9d705943e892dca6e81d193",
-          "authors": "N. Tananuvat, Natnaree Techajongjintana, P. Somboon"
+          "title": "Topical imiquimod therapy for chronic giant molluscum contagiosum in a patient with advanced human immunodeficiency virus 1 disease.",
+          "year": 1999,
+          "citations": 62,
+          "url": "https://www.semanticscholar.org/paper/3037935c2346f2a767185dd5c8b25334fb6ec8df",
+          "authors": "Ronald Buckley, Kathleen J. Smith"
         }
       ],
       "most_cited_paper": {
-        "title": "The First Acanthamoeba keratitis Case of Non-Contact Lens Wearer with HIV Infection in Thailand",
-        "year": 2019,
-        "citations": 10,
-        "url": "https://www.semanticscholar.org/paper/64d28ce9910cdc7ab9d705943e892dca6e81d193",
-        "authors": "N. Tananuvat, Natnaree Techajongjintana, P. Somboon"
+        "title": "Topical cidofovir: a novel treatment for recalcitrant molluscum contagiosum in children infected with human immunodeficiency virus 1.",
+        "year": 2000,
+        "citations": 100,
+        "url": "https://www.semanticscholar.org/paper/e66f75d44473134796b8b9cdea79f8cea3e48cef",
+        "authors": "J. Toro, L. Wood, N. K. Patel"
       },
-      "max_citations": 10,
+      "max_citations": 100,
       "faers_signal": "none",
-      "faers_total_reports": 85,
+      "faers_total_reports": 6607,
       "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Biguanide to HIV terms. Drug has 85 total reports.",
+      "faers_interpretation": "No FAERS reports found linking Tretinoin to HIV terms. Drug has 6607 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -1685,155 +2777,365 @@
         "Strophanthidin (1.483)",
         "Importazole (1.469)"
       ],
-      "signature_interpretation": "Biguanide was not found among the top 48 drugs that reverse the HIV gene signature. Top reversers: XMD-1150 (1.530), XMD16-144 (1.502), 16-HYDROXYTRIPTOLIDE (1.484)",
-      "ai_hypothesis": "of its ability to inhibit the HIV-1 reverse transcriptase.",
+      "signature_interpretation": "Tretinoin was not found among the top 48 drugs that reverse the HIV gene signature. Top reversers: XMD-1150 (1.530), XMD16-144 (1.502), 16-HYDROXYTRIPTOLIDE (1.484)",
+      "ai_hypothesis": "of its anti-inflammatory and immunomodulatory properties.",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 0,
-          "negative_signals": 0,
-          "mechanism_signals": 0,
-          "extracted_entities": [
-            {
-              "entity": "biguanide (",
-              "entity_group": "Diagnostic_procedure",
-              "score": 0.7940000295639038
-            },
-            {
-              "entity": "pdbg",
-              "entity_group": "Diagnostic_procedure",
-              "score": 0.8450000286102295
-            },
-            {
-              "entity": "human immunodeficiency virus type 1",
-              "entity_group": "Disease_disorder",
-              "score": 0.9020000100135803
-            },
-            {
-              "entity": "hiv",
-              "entity_group": "Disease_disorder",
-              "score": 0.9580000042915344
-            },
-            {
-              "entity": "pd",
-              "entity_group": "Diagnostic_procedure",
-              "score": 0.8270000219345093
-            },
-            {
-              "entity": "big",
-              "entity_group": "Coreference",
-              "score": 0.9269999861717224
-            }
-          ]
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
         },
         {
           "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 0,
-          "negative_signals": 0,
-          "mechanism_signals": 0,
-          "extracted_entities": [
-            {
-              "entity": "##ffe",
-              "entity_group": "Diagnostic_procedure",
-              "score": 0.9399999976158142
-            },
-            {
-              "entity": "metform",
-              "entity_group": "Medication",
-              "score": 0.9670000076293945
-            },
-            {
-              "entity": "b",
-              "entity_group": "Diagnostic_procedure",
-              "score": 0.9929999709129333
-            },
-            {
-              "entity": "metabolic parameters",
-              "entity_group": "Diagnostic_procedure",
-              "score": 1.0
-            },
-            {
-              "entity": "metformin",
-              "entity_group": "Medication",
-              "score": 0.8479999899864197
-            },
-            {
-              "entity": "dime",
-              "entity_group": "Medication",
-              "score": 0.9940000176429749
-            },
-            {
-              "entity": "##thylguanylguanidine",
-              "entity_group": "Medication",
-              "score": 0.859000027179718
-            },
-            {
-              "entity": "biguanide",
-              "entity_group": "Medication",
-              "score": 0.968999981880188
-            }
-          ]
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
         },
         {
           "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 1,
-          "negative_signals": 0,
-          "mechanism_signals": 1,
-          "extracted_entities": [
-            {
-              "entity": "big",
-              "entity_group": "Medication",
-              "score": 0.7889999747276306
-            },
-            {
-              "entity": "##uanide",
-              "entity_group": "Detailed_description",
-              "score": 0.8349999785423279
-            },
-            {
-              "entity": "- based",
-              "entity_group": "Medication",
-              "score": 0.9330000281333923
-            },
-            {
-              "entity": "nb325",
-              "entity_group": "Medication",
-              "score": 0.7860000133514404
-            },
-            {
-              "entity": "inhibit",
-              "entity_group": "Lab_value",
-              "score": 0.9599999785423279
-            },
-            {
-              "entity": "human immunodeficiency virus type 1",
-              "entity_group": "Disease_disorder",
-              "score": 0.9300000071525574
-            },
-            {
-              "entity": "hiv - 1",
-              "entity_group": "Disease_disorder",
-              "score": 0.9610000252723694
-            },
-            {
-              "entity": "infection",
-              "entity_group": "Disease_disorder",
-              "score": 0.9729999899864197
-            },
-            {
-              "entity": "hiv",
-              "entity_group": "Disease_disorder",
-              "score": 0.9990000128746033
-            },
-            {
-              "entity": "1",
-              "entity_group": "Disease_disorder",
-              "score": 0.746999979019165
-            }
-          ]
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "Phase 1",
+      "failed_trial_count": 1,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.4636,
+      "mr_genetic_targets": 2,
+      "mechanistic_hypothesis": "Tretinoin \u2014[downregulates]\u2192 gene-56654 \u2014[is downregulated by]\u2192 DB04835 \u2014[treats]\u2192 HIV",
+      "kg_paths_text": "\u2022 Tretinoin \u2014[downregulates]\u2192 gene-56654 \u2014[is downregulated by]\u2192 DB04835 \u2014[treats]\u2192 HIV\n\u2022 Tretinoin \u2014[inhibits]\u2192 gene-5300 \u2014[is downregulated by]\u2192 DB00649 \u2014[treats]\u2192 HIV\n\u2022 Tretinoin \u2014[inhibits]\u2192 gene-5300 \u2014[is downregulated by]\u2192 DB00649 \u2014[treats]\u2192 HIV",
+      "validation_experiments": [],
+      "novelty_score": 0.245,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": false,
+      "clinical_trials_total": 4,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT00002188",
+          "title": "A Study of ALRT1057 in Patients With AIDS-Related Kaposi's Sarcoma",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "27",
+          "url": "https://clinicaltrials.gov/study/NCT00002188"
+        },
+        {
+          "nct_id": "NCT00002439",
+          "title": "A Study of ALRT 1057 Topical Gel in Patients With AIDS-Related Kaposi's Sarcoma",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "",
+          "url": "https://clinicaltrials.gov/study/NCT00002439"
+        },
+        {
+          "nct_id": "NCT00001438",
+          "title": "A Pilot Study of the Combination of Retinoic Acid and Interferon-Alpha2a for the Treatment of Lymphoproliferative Disorders in Children With Immunodeficiency Syndromes",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "30",
+          "url": "https://clinicaltrials.gov/study/NCT00001438"
+        },
+        {
+          "nct_id": "NCT03753867",
+          "title": "RA Effect on Cell Surface Molecules in Vivo",
+          "status": "WITHDRAWN",
+          "phase": "PHASE1",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT03753867"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 2,
+        "NA": 1,
+        "PHASE1": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "4 clinical trial(s) found on ClinicalTrials.gov",
+        "118 PubMed articles on this drug-disease pair",
+        "Supported by 4 independent AI pillars",
+        "Supporting paper with 100 citations",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.46)"
+      ],
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1092,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.336,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.446,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.901
+        }
+      },
+      "tissue_context": {
+        "context_modifier": 1.0,
+        "tissues": [
+          "Whole Blood",
+          "Spleen"
+        ],
+        "n_genes": 0
+      },
+      "ensemble_prob": 0.337,
+      "ensemble_features": {
+        "kg_score": 0.9955,
+        "degree_penalty": 0.7515,
+        "n_drug_targets": 32,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 3.8918
+      },
+      "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "disease_entity": "Disease::MESH:D015658"
+    },
+    {
+      "drug_name": "Netilmicin",
+      "drug_id": "DB00955",
+      "disease_name": "HIV",
+      "combined_score": 0.4387,
+      "pillars_hit": 3,
+      "transe_rank": 1083,
+      "transe_score": -11.7282,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0.85,
+      "txgnn_rank": 15,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0.9674,
+      "mol_emb_similar_to": "Clarithromycin",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0,
+      "proximity_distance": 0,
+      "admet_score": 1.0,
+      "admet_flags": "clean",
+      "primekg_score": 0.2439,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": 0.1101,
+      "structural_group_score": 0.9674,
+      "network_group_score": 0.0,
+      "txgnn_group_score": 0.85,
+      "mr_group_score": 0,
+      "admet_multiplier": 1.0,
+      "efficacy_score": 0.4387,
+      "groups_hit": 3,
+      "direct_relations": [],
+      "shared_target_count": 0,
+      "shared_targets": [],
+      "pubmed_total": 12,
+      "pubmed_treatment_total": 10,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "11125229",
+          "title": "Acinetobacter infections in patients with human immunodeficiency virus infection: microbiological and clinical epidemiology.",
+          "authors": "Manfredi R, Nanetti A, Valentini R, et al.",
+          "journal": "Chemotherapy",
+          "year": "2001",
+          "abstract_snippet": "BACKGROUND: We evaluated the role of complications caused by Acinetobacter spp. in the setting of HIV infection. METHODS: Clinical records of 1,923 consecutive HIV-infected patients hospitalized in a 9-year period were retrospectively reviewed, in order to identify all cases of Acinetobacter spp. co...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11125229/",
+          "total_results": 12
+        },
+        {
+          "pmid": "12082349",
+          "title": "[Pathogenic role of Acinetobacter spp during HIV infection].",
+          "authors": "Manfredi R, Nanetti A, Valentini R, et al.",
+          "journal": "Le infezioni in medicina",
+          "year": "2001",
+          "abstract_snippet": "In order to assess the clinical role of bacterial complications due to Acinetobacter spp. during HIV disease, a retrospective survey of clinical and microbiological data of 2221 HIV-infected patients hospitalised during the past 10 years was carried out, evaluating all episodes of Acinetobacter spp....",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/12082349/"
+        },
+        {
+          "pmid": "16703559",
+          "title": "Hyperacute unilateral gonococcal endophthalmitis in an HIV-infected man without genital infection.",
+          "authors": "Faggian F, Azzini A, Lanzafame M, et al.",
+          "journal": "European journal of ophthalmology",
+          "year": "2006",
+          "abstract_snippet": "PURPOSE: To demonstrate the necessity of obtaining an accurate history from patients presenting abnormal evolution of ophthalmologic diseases. METHODS: A 42-year-old patient, denying any previous ocular or systemic morbidity, presented with an unusual severe and hyperacute gonococcal endophthalmitis...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16703559/"
+        },
+        {
+          "pmid": "8995819",
+          "title": "Stenotrophomonas africana sp. nov., an opportunistic human pathogen in Africa.",
+          "authors": "Drancourt M, Bollet C, Raoult D",
+          "journal": "International journal of systematic bacteriology",
+          "year": "1997",
+          "abstract_snippet": "A gram-negative bacterium was isolated from a cerebrospinal fluid sample from an HIV-seropositive Rwandan refugee with primary meningoencephalitis. This Marseille-Goma sample B isolate, strain MGBT (T = type strain), was found to exhibit evolutionary homology with Stenotrophomonas maltophilia, as de...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/8995819/"
+        },
+        {
+          "pmid": "12948277",
+          "title": "Rapidly growing mycobacterial infections: spectrum of diseases, antimicrobial susceptibility, pathology and treatment outcomes.",
+          "authors": "Sungkanuparph S, Sathapatayavongs B, Pracharktam R",
+          "journal": "Journal of the Medical Association of Thailand = Chotmaihet thangphaet",
+          "year": "2003",
+          "abstract_snippet": "OBJECTIVES: A series of cases infected with rapidly growing mycobacteria were studied to reveal the spectrum of disease, antimicrobial susceptibility, pathology, and treatment outcomes. METHOD: The cases identified as rapidly growing mycobacterial infections in Ramathibodi Hospital from January 1993...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/12948277/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Coliforms Associated With Bacteriuria In Human Immunodeficiency Virus (HIV) Positive Patients Attending The Bamenda Provincialhospital",
+          "year": 2008,
+          "citations": 7,
+          "url": "https://www.semanticscholar.org/paper/0bc8caf661679c4acdb8e8b3a866c924d22fbae2",
+          "authors": "L. Njunda, H. Kamga, J. N. Palle"
+        },
+        {
+          "title": "Complicated pneumococcal meningitis as the presenting illness in a patient with HIV infection",
+          "year": 1999,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/68839b2eb34dddb1410b9fce2612dbd35b3f9008",
+          "authors": "R. Manfredi, L. Calza, M. Tadolini"
+        },
+        {
+          "title": "In-vitro antimicrobial susceptibility of Rhodococcus equi.",
+          "year": 1992,
+          "citations": 106,
+          "url": "https://www.semanticscholar.org/paper/1e0f713465c27814396438fb316a9421991a8d2c",
+          "authors": "P. Nordmann, E. Ronco"
+        },
+        {
+          "title": "Stenotrophomonas africana sp. nov., an opportunistic human pathogen in Africa.",
+          "year": 1997,
+          "citations": 72,
+          "url": "https://www.semanticscholar.org/paper/620458cb3181ca06a42456d006ea5c9d06aae377",
+          "authors": "M. Drancourt, Claude Bollet, D. Raoult"
+        },
+        {
+          "title": "End of the coffee mystery: diterpene alcohols raise serum low\u2010density lipoprotein cholesterol and triglyceride levels",
+          "year": 1994,
+          "citations": 68,
+          "url": "https://www.semanticscholar.org/paper/d544260bc59357c4a58f82f89cbaf8815fb59d0a",
+          "authors": "H. Heckers, U. Go\u0308bel, U. Kleppel"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "In-vitro antimicrobial susceptibility of Rhodococcus equi.",
+        "year": 1992,
+        "citations": 106,
+        "url": "https://www.semanticscholar.org/paper/1e0f713465c27814396438fb316a9421991a8d2c",
+        "authors": "P. Nordmann, E. Ronco"
+      },
+      "max_citations": 106,
+      "faers_signal": "none",
+      "faers_total_reports": 164,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Netilmicin to HIV terms. Drug has 164 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "XMD-1150 (1.530)",
+        "XMD16-144 (1.502)",
+        "16-HYDROXYTRIPTOLIDE (1.484)",
+        "Strophanthidin (1.483)",
+        "Importazole (1.469)"
+      ],
+      "signature_interpretation": "Netilmicin was not found among the top 48 drugs that reverse the HIV gene signature. Top reversers: XMD-1150 (1.530), XMD16-144 (1.502), 16-HYDROXYTRIPTOLIDE (1.484)",
+      "ai_hypothesis": "of its broad spectrum of activity and its low toxicity.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
         }
       ],
       "has_failed_trial": false,
@@ -1842,374 +3144,281 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0,
       "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Netilmicin \u2014[is a therapeutic for]\u2192 MESH:D059413 \u2014[is treated by]\u2192 DB00537 \u2014[is a therapeutic for]\u2192 HIV",
+      "kg_paths_text": "\u2022 Netilmicin \u2014[is a therapeutic for]\u2192 MESH:D059413 \u2014[is treated by]\u2192 DB00537 \u2014[is a therapeutic for]\u2192 HIV\n\u2022 Netilmicin \u2014[is a therapeutic for]\u2192 MESH:D059413 \u2014[is treated by]\u2192 DB01212 \u2014[is a therapeutic for]\u2192 HIV\n\u2022 Netilmicin \u2014[is a therapeutic for]\u2192 MESH:D059413 \u2014[is treated by]\u2192 DB00537 \u2014[is a therapeutic for]\u2192 HIV",
       "validation_experiments": [],
-      "novelty_score": 0.85,
+      "novelty_score": 0.329,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
       "clinical_trials": [],
       "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "14 PubMed articles found",
-        "Supported by 3 independent AI pillars",
-        "AI-generated hypothesis available"
-      ]
-    },
-    {
-      "drug_name": "Fialuridine",
-      "drug_id": "DB15427",
-      "disease_name": "HIV",
-      "combined_score": 1.0361000299453735,
-      "transe_rank": 1957,
-      "pillars_hit": 3,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 8,
-      "pubmed_treatment_total": 5,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "8901088",
-          "title": "Comparison of the DNA incorporation in human MOLT-4 cells of two 2'-beta-fluoronucleosides, 2'-beta-fluoro-2',3'-dideoxyadenosine and fialuridine.",
-          "authors": "Ahluwalia GS, Driscoll JS, Ford H, et al.",
-          "journal": "Journal of pharmaceutical sciences",
-          "year": "1996",
-          "abstract_snippet": "Incorporation of 2'-beta-fluoro-2',3'-dideoxyadenosine (F-ddA), a recently developed anti-HIV agent, into the cellular DNA of human MOLT-4 cells has been compared with the DNA incorporation seen with fialuridine (FIAU; 1-[2'-deoxy-2'-fluoro-beta-D-arabinofuranosyl]-5-iodouracil), a potent anti-hepat...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/8901088/",
-          "total_results": 8
-        },
-        {
-          "pmid": "19164483",
-          "title": "Facilitated mitochondrial import of antiviral and anticancer nucleoside drugs by human equilibrative nucleoside transporter-3.",
-          "authors": "Govindarajan R, Leung GP, Zhou M, et al.",
-          "journal": "American journal of physiology. Gastrointestinal and liver physiology",
-          "year": "2009",
-          "abstract_snippet": "Human equilibrative nucleoside transporter-3 (hENT3) was recently reported as a pH-dependent, intracellular (lysosomal) transporter capable of transporting anti-human immunodeficiency virus (HIV) dideoxynucleosides (ddNs). Because most anti-HIV ddNs (e.g., zidovudine, AZT) exhibit clinical mitochond...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/19164483/"
-        },
-        {
-          "pmid": "14607828",
-          "title": "Mitochondrial expression of the human equilibrative nucleoside transporter 1 (hENT1) results in enhanced mitochondrial toxicity of antiviral drugs.",
-          "authors": "Lai Y, Tse CM, Unadkat JD",
-          "journal": "The Journal of biological chemistry",
-          "year": "2004",
-          "abstract_snippet": "Many antiviral drugs (e.g. fialuridine; FIAU) produce clinically significant mitochondrial toxicity that limits their dose or prevents their use in the clinic. Because the majority of nucleoside drugs is too hydrophilic to cross the highly impermeable mitochondrial membrane, we have hypothesized tha...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/14607828/"
-        },
-        {
-          "pmid": "7716182",
-          "title": "Treatment and prevention of chronic viral hepatitis.",
-          "authors": "Dusheiko GM",
-          "journal": "Pharmacology & therapeutics",
-          "year": "1995",
-          "abstract_snippet": "Chronic viral hepatitis caused by hepatitis B, C or D may lead to cirrhosis, hepatocellular failure and hepatocellular carcinoma. The morbidity of these diseases has necessitated a prolonged search for effective therapy. Interferon-alpha has been studied widely, and remains the mainstay of treatment...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/7716182/"
-        },
-        {
-          "pmid": "8876859",
-          "title": "Pharmacologic considerations for antiviral drug development.",
-          "authors": "Fletcher CV",
-          "journal": "The Annals of pharmacotherapy",
-          "year": "1996",
-          "abstract_snippet": "OBJECTIVE: To discuss pharmacologic considerations for the development of antiviral agents. DATA SOURCES: English-language literature pertaining to the development and clinical evaluation of antiviral compounds, primarily agents targeted against herpes group viruses and HIV. STUDY SELECTION AND DATA...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/8876859/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Comparison of the DNA Incorporation in Human MOLT-4 Cells of Two 2\u2032-\u03b2-Fluoronucleosides, 2\u2032-\u03b2-Fluoro-2\u2032,3\u2032-dideoxyadenosine and Fialuridine",
-          "year": 1996,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/11006fb4bb3393159bfecff2e45533d20a3ec530",
-          "authors": "G. Ahluwalia, J. Driscoll, H. Ford"
-        },
-        {
-          "title": "Comparison of the DNA incorporation in human MOLT-4 cells of two 2'-beta-fluoronucleosides, 2'-beta-fluoro-2',3'-dideoxyadenosine and fialuridine.",
-          "year": 1996,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/80de2ec290c15931b630623af767649b101ae93b",
-          "authors": "G. Ahluwalia, J. Driscoll, H. Ford"
-        },
-        {
-          "title": "Trends in the development of new antiviral agents for the chemotherapy of infections caused by herpesviruses and retroviruses",
-          "year": 1995,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/22a8c037c6d4f4268412bbc7dea60f3554c230ad",
-          "authors": "E. De Clercq"
-        },
-        {
-          "title": "A, B, C, D, E...any school child can tell you not to mess with viral hepatitis.",
-          "year": 1995,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/3dfc8cdfe6f306a9b77431e58260b0c5fe9e7ffa",
-          "authors": "B. Grodeck"
-        },
-        {
-          "title": "Impact of an international HIV funding crisis on HIV infections and mortality in low-income and middle-income countries: a modelling study.",
-          "year": 2025,
-          "citations": 98,
-          "url": "https://www.semanticscholar.org/paper/4fbd67797a502ea9c86360057e82836892896bc2",
-          "authors": "Debra ten Brink, Rowan Martin-Hughes, Anna L Bowring"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Impact of an international HIV funding crisis on HIV infections and mortality in low-income and middle-income countries: a modelling study.",
-        "year": 2025,
-        "citations": 98,
-        "url": "https://www.semanticscholar.org/paper/4fbd67797a502ea9c86360057e82836892896bc2",
-        "authors": "Debra ten Brink, Rowan Martin-Hughes, Anna L Bowring"
-      },
-      "max_citations": 98,
-      "faers_signal": "none",
-      "faers_total_reports": 1,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Fialuridine to HIV terms. Drug has 1 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "XMD-1150 (1.530)",
-        "XMD16-144 (1.502)",
-        "16-HYDROXYTRIPTOLIDE (1.484)",
-        "Strophanthidin (1.483)",
-        "Importazole (1.469)"
-      ],
-      "signature_interpretation": "Fialuridine was not found among the top 48 drugs that reverse the HIV gene signature. Top reversers: XMD-1150 (1.530), XMD16-144 (1.502), 16-HYDROXYTRIPTOLIDE (1.484)",
-      "ai_hypothesis": "of its antiviral activity and its ability to inhibit HIV replication.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 1,
-          "negative_signals": 0,
-          "mechanism_signals": 0,
-          "extracted_entities": [
-            {
-              "entity": "dideoxyadenosine",
-              "entity_group": "Medication",
-              "score": 0.9309999942779541
-            },
-            {
-              "entity": "dd",
-              "entity_group": "Medication",
-              "score": 0.9980000257492065
-            },
-            {
-              "entity": "human",
-              "entity_group": "Detailed_description",
-              "score": 0.8339999914169312
-            },
-            {
-              "entity": "cells",
-              "entity_group": "Biological_structure",
-              "score": 0.7120000123977661
-            },
-            {
-              "entity": "fia",
-              "entity_group": "Diagnostic_procedure",
-              "score": 0.7139999866485596
-            },
-            {
-              "entity": "##lu",
-              "entity_group": "Diagnostic_procedure",
-              "score": 0.843999981880188
-            },
-            {
-              "entity": "##u",
-              "entity_group": "Coreference",
-              "score": 0.8510000109672546
-            },
-            {
-              "entity": "de",
-              "entity_group": "Medication",
-              "score": 0.878000020980835
-            },
-            {
-              "entity": "flu",
-              "entity_group": "Medication",
-              "score": 0.9800000190734863
-            },
-            {
-              "entity": "d",
-              "entity_group": "Medication",
-              "score": 0.8550000190734863
-            }
-          ]
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.8,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 2,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT00982449",
-          "title": "124I-FIAU Imaging in EBV and KSHV Associated Cancers",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "12",
-          "url": "https://clinicaltrials.gov/study/NCT00982449"
-        },
-        {
-          "nct_id": "NCT00000654",
-          "title": "The Tolerance of HIV-Infected Patients With Herpes Group Virus Infections to Oral Doses of FIAU",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "78",
-          "url": "https://clinicaltrials.gov/study/NCT00000654"
-        }
-      ],
-      "trial_phases": {
-        "NA": 1,
-        "PHASE2": 1
-      },
       "confidence": "MEDIUM",
       "confidence_reasons": [
-        "2 clinical trial(s) found on ClinicalTrials.gov",
-        "8 PubMed article(s) - limited literature",
+        "12 PubMed articles found",
         "Supported by 3 independent AI pillars",
-        "Supporting paper with 98 citations",
+        "Highly cited paper (106 citations): \"In-vitro antimicrobial susceptibility of Rhodococcus equi....\"",
         "AI-generated hypothesis available"
-      ]
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 849,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00331",
+            "drug_name": "Metformin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00213",
+            "drug_name": "Pantoprazole",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01032",
+            "drug_name": "Probenecid",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "high_risk",
+        "summary": "CPIC-A (MT-RNR1)",
+        "cpic": [
+          {
+            "gene": "MT-RNR1",
+            "level": "A",
+            "guideline": "MT-RNR1 and Aminoglycosides"
+          }
+        ],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.25,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.439,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.484
+        }
+      },
+      "tissue_context": {
+        "context_modifier": 1.0,
+        "tissues": [
+          "Whole Blood",
+          "Spleen"
+        ],
+        "n_genes": 0
+      },
+      "ensemble_prob": 0.0199,
+      "ensemble_features": {
+        "kg_score": 0.8682,
+        "degree_penalty": 0.8063,
+        "n_drug_targets": 0,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 7.2378
+      },
+      "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "disease_entity": "Disease::MESH:D015658"
     },
     {
-      "drug_name": "Phosphine",
-      "drug_id": "DB14151",
+      "drug_name": "Budesonide",
+      "drug_id": "DB01222",
       "disease_name": "HIV",
-      "combined_score": 1.035599946975708,
-      "transe_rank": 30,
-      "pillars_hit": 3,
+      "combined_score": 0.4350999891757965,
+      "pillars_hit": 4,
+      "transe_rank": 118,
+      "transe_score": -10.5204,
+      "pykeen_score": -12.3582,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
+      "mol_emb_similarity": 0.9412,
+      "mol_emb_similar_to": "Mifepristone",
+      "gene_sig_score": 0.02,
+      "gene_sig_rank": 33,
+      "proximity_score": 0.824999988079071,
+      "proximity_distance": 0.699999988079071,
+      "admet_score": 0.6427,
+      "admet_flags": "clean",
+      "primekg_score": 0.2483,
+      "dti_score": 1.0,
+      "dti_best_target": "CD4",
+      "kg_group_score": 0.141,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.6205000281333923,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.1945,
+      "admet_multiplier": 0.9285,
+      "efficacy_score": 0.4684999883174896,
+      "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 0,
       "shared_targets": [],
-      "pubmed_total": 17,
-      "pubmed_treatment_total": 4,
+      "pubmed_total": 28,
+      "pubmed_treatment_total": 27,
       "pubmed_repurposing_total": 0,
       "key_papers": [
         {
-          "pmid": "27246555",
-          "title": "Activity of phosphino palladium(II) and platinum(II) complexes against HIV-1 and Mycobacterium tuberculosis.",
-          "authors": "Gama NH, Elkhadir AY, Gordhan BG, et al.",
-          "journal": "Biometals : an international journal on the role of metal ions in biology, biochemistry, and medicine",
-          "year": "2016",
-          "abstract_snippet": "Treatment of human immunodeficiency virus (HIV) is currently complicated by increased prevalence of co-infection with Mycobacterium tuberculosis. The development of drug candidates that offer the simultaneous management of HIV and tuberculosis (TB) would be of great benefit in the holistic treatment...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/27246555/",
-          "total_results": 17
+          "pmid": "34387182",
+          "title": "Prescribing intranasal steroids in HIV-positive patients: systematic review of the literature.",
+          "authors": "Seymour N, Robinson M, Richardson D, et al.",
+          "journal": "The Journal of laryngology and otology",
+          "year": "2021",
+          "abstract_snippet": "BACKGROUND: There are significant drug-drug interactions between human immunodeficiency virus antiretroviral therapy and intranasal steroids, leading to high serum concentrations of iatrogenic steroids and subsequently Cushing's syndrome. METHOD: All articles in the literature on cases of intranasal...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34387182/",
+          "total_results": 28
         },
         {
-          "pmid": "29465117",
-          "title": "Gold(i) phosphine compounds as parasite attenuating agents for malaria vaccine and drug development.",
-          "authors": "Ssemaganda A, Low LM, Verhoeft KR, et al.",
-          "journal": "Metallomics : integrated biometal science",
-          "year": "2018",
-          "abstract_snippet": "Here, the anti-malarial activity of two gold(i) phosphine compounds auranofin and [Au(d2pype)",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29465117/"
+          "pmid": "18459946",
+          "title": "Adrenal suppression and Cushing's syndrome secondary to an interaction between ritonavir and fluticasone: a review of the literature.",
+          "authors": "Foisy MM, Yakiwchuk EM, Chiu I, et al.",
+          "journal": "HIV medicine",
+          "year": "2008",
+          "abstract_snippet": "OBJECTIVE: The purpose of this article is to provide a systematic overview of the literature on adrenal suppression and Cushing's syndrome secondary to an interaction between inhaled/intranasal fluticasone and ritonavir. The clinical presentation, diagnosis and management will be discussed. METHODS:...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18459946/"
         },
         {
-          "pmid": "28937773",
-          "title": "Probing the HIV-1 NCp7 Nucleocapsid Protein with Site-Specific Gold(I)-Phosphine Complexes.",
-          "authors": "de Paiva REF, Du Z, Peterson EJ, et al.",
-          "journal": "Inorganic chemistry",
+          "pmid": "29108449",
+          "title": "Iatrogenic Cushing Syndrome in a 47-Year-Old HIV-Positive Woman on Ritonavir and Inhaled Budesonide.",
+          "authors": "Colpitts L, Murray TB, Tahhan SG, et al.",
+          "journal": "Journal of the International Association of Providers of AIDS Care",
           "year": "2017",
-          "abstract_snippet": "In this work, we examined a series of thiophilic Au(I) compounds based on [Au(L)(PR",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/28937773/"
+          "abstract_snippet": "Iatrogenic Cushing syndrome (CS) is a well-known complication of treating patients with systemic steroids. More rarely, it has been described in HIV-positive patients on ritonavir (RTV) while using the inhaled corticosteroid fluticasone, which is metabolized through the cytochrome P450 3A4 (CYP3A4) ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29108449/"
         },
         {
-          "pmid": "26458166",
-          "title": "Disulfide Sensitivity in the Env Protein Underlies Lytic Inactivation of HIV-1 by Peptide Triazole Thiols.",
-          "authors": "Bailey LD, Kalyana Sundaram RV, Li H, et al.",
-          "journal": "ACS chemical biology",
+          "pmid": "26208233",
+          "title": "Esophageal infections: an update.",
+          "authors": "Patel NC, Caicedo RA",
+          "journal": "Current opinion in pediatrics",
           "year": "2015",
-          "abstract_snippet": "We investigated the mode of action underlying lytic inactivation of HIV-1 virions by peptide triazole thiol (PTT), in particular the relationship between gp120 disulfides and the C-terminal cysteine-SH required for virolysis. Obligate PTT dimer obtained by PTT SH cross-linking and PTTs with serially...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/26458166/"
+          "abstract_snippet": "PURPOSE OF REVIEW: Infectious esophagitis generally occurs in patients with impaired immunity. Although methods to suppress the immune system evolve, the potential infectious consequences are poorly understood. The purpose of this article is to review the risk factors, diagnosis, and treatment of in...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26208233/"
         },
         {
-          "pmid": "21305147",
-          "title": "Novel gold(I) phosphine compounds inhibit HIV-1 enzymes.",
-          "authors": "Fonteh P, Meyer D",
-          "journal": "Metallomics : integrated biometal science",
-          "year": "2009",
-          "abstract_snippet": "The increasing incidence of human immunodeficiency virus (HIV) infection and the associated acquired immune deficiency syndrome (AIDS) mortality rates as well as the sometimes severe side effects of highly active anti retroviral therapy (HAART) warrants the continuous search for new, less toxic drug...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/21305147/"
+          "pmid": "30356346",
+          "title": "Severe Symptomatic Hypocalcemia from HIV Related Hypoparathyroidism.",
+          "authors": "Sandhu S, Desai A, Batra M, et al.",
+          "journal": "Case reports in endocrinology",
+          "year": "2018",
+          "abstract_snippet": "We report the case of a 54-year-old Caucasian female who presented with a two-year history of persistent hypocalcemia requiring multiple hospitalizations. Her medical history was significant for HIV diagnosed four years ago. She denied any history of prior neck surgery or radiation. Her vital signs ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30356346/"
         }
       ],
       "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "Unveiling a family of spiro-\u03b2-lactams with anti-HIV and antiplasmodial activity via phosphine-catalyzed [3+2] annulation of 6-alkylidene-penicillanates and allenoates",
-          "year": 2022,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/cbf95a118e18c37facf7a0df5ad6ca105ed07eb1",
-          "authors": "Am\u00e9rico J. S. Alves, Nuno G. Alves, In\u00eas B\u00e1rtolo"
-        },
-        {
-          "title": "Probing the HIV-1 NCp7 Nucleocapsid Protein with Site-Specific Gold(I)-Phosphine Complexes.",
+          "title": "Iatrogenic Cushing Syndrome in a 47-Year-Old HIV-Positive Woman on Ritonavir and Inhaled Budesonide",
           "year": 2017,
-          "citations": 16,
-          "url": "https://www.semanticscholar.org/paper/479a0277fa049a435150c95f974b4be69df4c63a",
-          "authors": "R. E. D. de Paiva, Z. Du, E. Peterson"
+          "citations": 11,
+          "url": "https://www.semanticscholar.org/paper/935c06645a3dbbfbd36ce759aa44b402ea3a54a2",
+          "authors": "L. Colpitts, T. B. Murray, Sami G. Tahhan"
         },
         {
-          "title": "Phosphine thiocarbohydrate gold (I) complexes and gold nanoparticles as potential anticancer and anti-HIV agents",
+          "title": "Iatrogenic Cushing\u2019s Syndrome: The Result of Cobicistat and Glucocorticoid Interaction in an HIV Patient After Bariatric Surgery",
+          "year": 2023,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/32853ee36bb0b14fc74df6964527385dc5b2e4a5",
+          "authors": "V\u00e2nia Benido Silva, J. Cardoso, Maria Esteves Brand\u00e3o"
+        },
+        {
+          "title": "Cushing's syndrome with adrenal suppression induced by inhaled budesonide due to a ritonavir drug interaction in a woman with HIV infection",
           "year": 2012,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/11b02d60f04fb90cba251d0dec22ed13ad3f7040",
-          "authors": "Khuphukile Sithole"
+          "citations": 28,
+          "url": "https://www.semanticscholar.org/paper/bf5e0f393e43374ec39718c0ccdb089aeb41a423",
+          "authors": "K. Yoganathan, L. David, C. Williams"
         },
         {
-          "title": "Reactivity of NiII, PdII and PtII complexes bearing phosphine ligands towards ZnII displacement and hydrolysis in Cis2His2 and Cis3His zinc-fingers domains.",
+          "title": "Budesonide-induced acute hepatitis in an HIV-positive patient with ritonavir as a co-medication.",
+          "year": 2002,
+          "citations": 13,
+          "url": "https://www.semanticscholar.org/paper/3bae1f63c945200a74e925f3b800efdd093c10ac",
+          "authors": "A. Sagir, M. Wettstein, M. Oette"
+        },
+        {
+          "title": "Esophageal Candidiasis in a Non-HIV Patient: A Primary Care Diagnosis",
           "year": 2022,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/261792446c1b626484f3ca341563ef8d34329db4",
-          "authors": "Carolina Galuppo, Arnaldo Gomes de Oliveira Junior, Laiane dos Santos Oliveira"
-        },
-        {
-          "title": "Novel gold(I) phosphine compounds inhibit HIV-1 enzymes.",
-          "year": 2009,
-          "citations": 26,
-          "url": "https://www.semanticscholar.org/paper/9cd309fced29cd0fc2827c27e154d263d32f4100",
-          "authors": "P. Fonteh, D. Meyer"
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/4cb025127c2dbcde9b4205d2e88f4cc78930617b",
+          "authors": "S. Rodrigues, Vera Leit\u00e3o Esteves, Teresa G. Martins"
         }
       ],
       "most_cited_paper": {
-        "title": "Novel gold(I) phosphine compounds inhibit HIV-1 enzymes.",
-        "year": 2009,
-        "citations": 26,
-        "url": "https://www.semanticscholar.org/paper/9cd309fced29cd0fc2827c27e154d263d32f4100",
-        "authors": "P. Fonteh, D. Meyer"
+        "title": "Cushing's syndrome with adrenal suppression induced by inhaled budesonide due to a ritonavir drug interaction in a woman with HIV infection",
+        "year": 2012,
+        "citations": 28,
+        "url": "https://www.semanticscholar.org/paper/bf5e0f393e43374ec39718c0ccdb089aeb41a423",
+        "authors": "K. Yoganathan, L. David, C. Williams"
       },
-      "max_citations": 26,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Phosphine",
+      "max_citations": 28,
+      "faers_signal": "moderate",
+      "faers_total_reports": 57603,
+      "faers_cooccurrences": 3,
+      "faers_interpretation": "3 FAERS reports mention both Budesonide and HIV-related terms. Limited but notable real-world signal.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -2219,8 +3428,8 @@
         "Strophanthidin (1.483)",
         "Importazole (1.469)"
       ],
-      "signature_interpretation": "Phosphine was not found among the top 48 drugs that reverse the HIV gene signature. Top reversers: XMD-1150 (1.530), XMD16-144 (1.502), 16-HYDROXYTRIPTOLIDE (1.484)",
-      "ai_hypothesis": "of its ability to inhibit HIV reverse transcriptase.",
+      "signature_interpretation": "Budesonide was not found among the top 48 drugs that reverse the HIV gene signature. Top reversers: XMD-1150 (1.530), XMD16-144 (1.502), 16-HYDROXYTRIPTOLIDE (1.484)",
+      "ai_hypothesis": "of its anti-inflammatory properties.",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
@@ -2242,36 +3451,169 @@
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mr_score": 0.1945,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Budesonide \u2014[affects]\u2192 gene-3553 \u2014[is a target of]\u2192 DB01017 \u2014[is a therapeutic for]\u2192 HIV",
+      "kg_paths_text": "\u2022 Budesonide \u2014[affects]\u2192 gene-3553 \u2014[is a target of]\u2192 DB01017 \u2014[is a therapeutic for]\u2192 HIV\n\u2022 Budesonide \u2014[affects]\u2192 gene-3553 \u2014[is a target of]\u2192 DB01017 \u2014[is a therapeutic for]\u2192 HIV\n\u2022 Budesonide \u2014[affects]\u2192 gene-3553 \u2014[is linked to]\u2192 HIV",
       "validation_experiments": [],
-      "novelty_score": 0.7,
-      "novelty_level": "KNOWN",
+      "novelty_score": 0.3700000047683716,
+      "novelty_level": "NOVEL",
       "is_known_treatment": false,
-      "clinical_trials_total": 1,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT00005811",
-          "title": "Topotecan Hydrochloride in Treating Children With Meningeal Cancer That Has Not Responded to Previous Treatment",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "77",
-          "url": "https://clinicaltrials.gov/study/NCT00005811"
-        }
-      ],
-      "trial_phases": {
-        "PHASE2": 1
-      },
-      "confidence": "HIGH",
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "MEDIUM",
       "confidence_reasons": [
-        "1 clinical trial(s) found on ClinicalTrials.gov",
-        "17 PubMed articles found",
-        "Supported by 3 independent AI pillars",
-        "Supporting paper with 26 citations",
+        "28 PubMed articles found",
+        "Supported by 4 independent AI pillars",
+        "Moderate FAERS signal: 3 adverse event reports mention drug-disease co-occurrence",
+        "Supporting paper with 28 citations",
         "AI-generated hypothesis available"
-      ]
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1887,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "CPIC-D (CRHR1) \u2022 PharmGKB-3 (GLCCI1 / rs37973)",
+        "cpic": [
+          {
+            "gene": "CRHR1",
+            "level": "D",
+            "guideline": ""
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "GLCCI1",
+            "variant": "rs37973",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/827863843"
+          },
+          {
+            "gene": "",
+            "variant": "rs2392165",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451123485"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.27900001406669617,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.4350000023841858,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.635
+        }
+      },
+      "tissue_context": {
+        "context_modifier": 1.0,
+        "tissues": [
+          "Whole Blood",
+          "Spleen"
+        ],
+        "n_genes": 0
+      },
+      "ensemble_prob": 0.3829,
+      "ensemble_features": {
+        "kg_score": 0.9944,
+        "degree_penalty": 0.7521,
+        "n_drug_targets": 15,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.0943
+      },
+      "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "disease_entity": "Disease::MESH:D015658"
     }
-  ]
+  ],
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
+  "docking_axis": {
+    "source": "chembl_bioactivity_proxy + not_wired fallback",
+    "n_disease_genes": 305,
+    "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
+  },
+  "disease_entity": "Disease::MESH:D015658"
 }

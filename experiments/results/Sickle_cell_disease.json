@@ -1,625 +1,155 @@
 {
   "disease": "Sickle cell disease",
   "status": "completed",
-  "timestamp": "2026-04-17T12:37:33.865505",
-  "elapsed_seconds": 788.2,
+  "timestamp": "2026-04-19T14:33:50.218960",
+  "elapsed_seconds": 1019.7,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
-    "HIGH": 6,
-    "MEDIUM": 1,
-    "LOW": 3
+    "HIGH": 3,
+    "LOW": 6,
+    "MEDIUM": 1
   },
+  "pipeline_version": "v5",
+  "data_manifest_hash": "2da2aa88f2457d1b",
   "candidates": [
     {
-      "drug_name": "Rivipansel",
-      "drug_id": "DB12778",
+      "drug_name": "Mannitol",
+      "drug_id": "DB00742",
       "disease_name": "Sickle cell disease",
-      "combined_score": 1.0785,
-      "transe_rank": 17,
+      "combined_score": 0.41029998660087585,
       "pillars_hit": 3,
+      "transe_rank": 88,
+      "transe_score": -11.1941,
+      "pykeen_score": -12.8852,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.6880000233650208,
+      "proximity_distance": 1.25,
+      "admet_score": 0.7038,
+      "admet_flags": "clean",
+      "primekg_score": 0.266,
+      "dti_score": 1.0,
+      "dti_best_target": "ANGPTL3",
+      "kg_group_score": 0.4002,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.5303000211715698,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9408,
+      "efficacy_score": 0.4361000061035156,
+      "groups_hit": 3,
       "direct_relations": [],
       "shared_target_count": 0,
       "shared_targets": [],
-      "pubmed_total": 18,
-      "pubmed_treatment_total": 16,
+      "pubmed_total": 9,
+      "pubmed_treatment_total": 8,
       "pubmed_repurposing_total": 0,
       "key_papers": [
         {
-          "pmid": "25243412",
-          "title": "Investigational selectin-targeted therapy of sickle cell disease.",
-          "authors": "Okpala I",
-          "journal": "Expert opinion on investigational drugs",
-          "year": "2015",
-          "abstract_snippet": "INTRODUCTION: Under conditions of blood flow, selectins mediate the intercellular adhesion between erythrocytes, leukocytes, platelets and vascular endothelium that contribute to vaso-occlusion and tissue damage in sickle cell disease (SCD). Therefore, selectin antagonists have the potential to amel...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/25243412/",
-          "total_results": 18
-        },
-        {
-          "pmid": "36633883",
-          "title": "Ups and downs in the treatment of sickle cell disease.",
-          "authors": "Brousse V",
-          "journal": "Blood",
-          "year": "2023",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36633883/"
-        },
-        {
-          "pmid": "30499731",
-          "title": "Emerging pharmacotherapeutic approaches for the management of sickle cell disease.",
-          "authors": "Torres L, Conran N",
-          "journal": "Expert opinion on pharmacotherapy",
-          "year": "2019",
-          "abstract_snippet": "INTRODUCTION: Sickle cell disease (SCD) is an inherited disease with lifelong morbidity, whose complications include frequent acute painful vaso-occlusive episodes (VOEs) that often require hospitalization. The only pharmacotherapy currently in regular use for SCD management is hydroxyurea (hydroxyc...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30499731/"
-        },
-        {
-          "pmid": "38728868",
-          "title": "Analogues of the pan-selectin antagonist rivipansel (GMI-1070).",
-          "authors": "Wagner B, Smie\u0161ko M, Jakob RP, et al.",
-          "journal": "European journal of medicinal chemistry",
-          "year": "2024",
-          "abstract_snippet": "The selectin family consisting of E-, P- and L-selectin plays dominant roles in atherosclerosis, ischemia-reperfusion injury, inflammatory diseases, and metastatic spreading of some cancers. An early goal in selectin-targeted drug discovery campaigns was to identify ligands binding to all three sele...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38728868/"
-        },
-        {
-          "pmid": "33993463",
-          "title": "Population Pharmacokinetic Analysis of Rivipansel in Healthy Subjects and Subjects with Sickle Cell Disease.",
-          "authors": "Nayak S, Tammara B, Harnisch LO",
-          "journal": "Drugs in R&D",
-          "year": "2021",
-          "abstract_snippet": "BACKGROUND: Sickle cell disease is an inherited blood disorder with reduced blood-carrying capacity. It is associated with a tendency to form microclots in blood vessels, leading to painful episodes known as a vaso-occlusive crisis. Rivipansel is a pan-selectin inhibitor being studied for the treatm...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33993463/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Population Pharmacokinetic Analysis of Rivipansel in Healthy Subjects and Subjects with Sickle Cell Disease",
-          "year": 2021,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/411953c4d4cce4787bb7aabcd32e6c5b741deb25",
-          "authors": "Satyaprakash Nayak, B. Tammara, L. Harnisch"
-        },
-        {
-          "title": "Early Initiation of Treatment with Rivipansel for Acute Vaso-Occlusive Crisis in Sickle Cell Disease (SCD) Achieves Earlier Discontinuation of IV Opioids and Shorter Hospital Stay: Reset Clinical Trial Analysis",
-          "year": 2020,
-          "citations": 12,
-          "url": "https://www.semanticscholar.org/paper/09707447b41dd00db92d57ae489a04cd841145ea",
-          "authors": "C. Dampier, M. Telen, T. Wun"
-        },
-        {
-          "title": "Dose Selection Based on Modeling and Simulation for Rivipansel in Pediatric Patients Aged 6 to 11 Years With Sickle Cell Disease",
-          "year": 2017,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/493c9ef88700bb0ab230753898444b50ba6a36b5",
-          "authors": "B. Tammara, L. Harnisch"
-        },
-        {
-          "title": "Dose Selection Process for Younger Children Participating in a Phase 3 Study to Evaluate the Efficacy and Safety of Rivipansel (GMI-1070) in the Treatment of Vaso-Occlusive Crisis in Hospitalized Patients with Sickle Cell Disease",
-          "year": 2018,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/fb6227f8b2032e6796afbea2e9f7e8b1212f80fc",
-          "authors": "B. Tammara, F. Shafer, L. Harnisch"
-        },
-        {
-          "title": "Rivipansel: A Small Pan-Selectin Antagonist Improves Cerebral Perfusion and Inhibits Leukocyte Adhesion and in Murine Sickle Cell Disease Model",
-          "year": 2016,
-          "citations": 2,
-          "url": "https://www.semanticscholar.org/paper/856f1164da0c9821fd87cd36a57a809092fb26a6",
-          "authors": "R. Jasuja, G. Suidan, S. Hett"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Early Initiation of Treatment with Rivipansel for Acute Vaso-Occlusive Crisis in Sickle Cell Disease (SCD) Achieves Earlier Discontinuation of IV Opioids and Shorter Hospital Stay: Reset Clinical Trial Analysis",
-        "year": 2020,
-        "citations": 12,
-        "url": "https://www.semanticscholar.org/paper/09707447b41dd00db92d57ae489a04cd841145ea",
-        "authors": "C. Dampier, M. Telen, T. Wun"
-      },
-      "max_citations": 12,
-      "faers_signal": "weak",
-      "faers_total_reports": 2,
-      "faers_cooccurrences": 2,
-      "faers_interpretation": "2 FAERS report(s) mention both Rivipansel and Sickle cell disease-related terms. Minimal real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "K784-3131 (1.563)",
-        "HY-10992 (1.546)",
-        "MLN2238 (1.511)",
-        "XMD16-144 (1.507)",
-        "Arachidonyl trifluoro-methyl ketone (1.496)"
-      ],
-      "signature_interpretation": "Rivipansel was not found among the top 31 drugs that reverse the Sickle cell disease gene signature. Top reversers: K784-3131 (1.563), HY-10992 (1.546), MLN2238 (1.511)",
-      "ai_hypothesis": "of its unique features.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "Phase 3",
-      "failed_trial_count": 1,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.7,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": false,
-      "clinical_trials_total": 4,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT02187003",
-          "title": "Efficacy and Safety of Rivipansel (GMI-1070) in the Treatment of Vaso-Occlusive Crisis in Hospitalized Subjects With Sickle Cell Disease",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "345",
-          "url": "https://clinicaltrials.gov/study/NCT02187003"
-        },
-        {
-          "nct_id": "NCT02433158",
-          "title": "Safety of Rivipansel (GMI-1070) in the Treatment of One or More Vaso-Occlusive Crises in Hospitalized Subjects With Sickle Cell Disease",
-          "status": "TERMINATED",
-          "phase": "PHASE3",
-          "enrollment": "154",
-          "url": "https://clinicaltrials.gov/study/NCT02433158"
-        },
-        {
-          "nct_id": "NCT00911495",
-          "title": "Study of Intravenous GMI-1070 in Adults With Sickle Cell Disease",
-          "status": "COMPLETED",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "15",
-          "url": "https://clinicaltrials.gov/study/NCT00911495"
-        },
-        {
-          "nct_id": "NCT01119833",
-          "title": "Study of GMI-1070 for the Treatment of Sickle Cell Pain Crisis",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "81",
-          "url": "https://clinicaltrials.gov/study/NCT01119833"
-        }
-      ],
-      "trial_phases": {
-        "PHASE3": 2,
-        "PHASE1": 1,
-        "PHASE2": 2
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "4 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
-        "18 PubMed articles found",
-        "Supported by 3 independent AI pillars",
-        "AI-generated hypothesis available"
-      ]
-    },
-    {
-      "drug_name": "Oxygen",
-      "drug_id": "DB09140",
-      "disease_name": "Sickle cell disease",
-      "combined_score": 1.0497000217437744,
-      "transe_rank": 7,
-      "pillars_hit": 6,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 1849,
-      "pubmed_treatment_total": 1135,
-      "pubmed_repurposing_total": 9,
-      "key_papers": [
-        {
-          "pmid": "37746969",
-          "title": "Understanding Sickle cell disease: Causes, symptoms, and treatment options.",
-          "authors": "Elendu C, Amaechi DC, Alakwe-Ojimba CE, et al.",
-          "journal": "Medicine",
-          "year": "2023",
-          "abstract_snippet": "Sickle cell disease (SCD) is a hereditary blood disorder characterized by the production of abnormal hemoglobin molecules that cause red blood cells to take on a crescent or sickle shape. This condition affects millions of people worldwide, particularly those of African, Mediterranean, Middle Easter...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37746969/",
-          "total_results": 1849
-        },
-        {
-          "pmid": "32923220",
-          "title": "Cardiomyopathy in Sickle Cell Disease.",
-          "authors": "Kaur H, Aurif F, Kittaneh M, et al.",
-          "journal": "Cureus",
-          "year": "2020",
-          "abstract_snippet": "Sickle cell disease (SCD) is an inherited disorder that occurs due to point mutation in the beta-globin chain resulting in the production of hemoglobin S that tends to become rigid and sickle-shaped under low oxygen concentration. These sickle-shaped red blood cells (RBCs) obstruct the blood vessels...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/32923220/"
-        },
-        {
-          "pmid": "26836899",
-          "title": "Crises in Sickle Cell Disease.",
-          "authors": "Novelli EM, Gladwin MT",
-          "journal": "Chest",
-          "year": "2016",
-          "abstract_snippet": "In spite of significant strides in the treatment of sickle cell disease (SCD), SCD crises are still responsible for high morbidity and early mortality. While most patients initially seek care in the acute setting for a seemingly uncomplicated pain episode (pain crisis or vaso-occlusive crisis), this...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/26836899/"
-        },
-        {
-          "pmid": "37624668",
-          "title": "Sickle Cell Disease: From Genetics to Curative Approaches.",
-          "authors": "Hardouin G, Magrin E, Corsia A, et al.",
-          "journal": "Annual review of genomics and human genetics",
-          "year": "2023",
-          "abstract_snippet": "Sickle cell disease (SCD) is a monogenic blood disease caused by a point mutation in the gene coding for \u03b2-globin. The abnormal hemoglobin [sickle hemoglobin (HbS)] polymerizes under low-oxygen conditions and causes red blood cells to sickle. The clinical presentation varies from very severe (with a...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37624668/"
-        },
-        {
-          "pmid": "32231672",
-          "title": "The Red Blood Cell-Inflammation Vicious Circle in Sickle Cell Disease.",
-          "authors": "Nader E, Romana M, Connes P",
-          "journal": "Frontiers in immunology",
-          "year": "2020",
-          "abstract_snippet": "Sickle cell disease (SCD) is a genetic disease caused by a single mutation in the \u03b2-globin gene, leading to the production of an abnormal hemoglobin called hemoglobin S (HbS), which polymerizes under deoxygenation, and induces the sickling of red blood cells (RBCs). Sickled RBCs are very fragile and...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/32231672/"
-        }
-      ],
-      "repurposing_papers": [
-        {
-          "pmid": "38915775",
-          "title": "Modulation of the allosteric and vasoregulatory arms of erythrocytic oxygen transport.",
-          "authors": "Wise TJ, Ott ME, Joseph MS, et al.",
-          "journal": "Frontiers in physiology",
-          "year": "2024",
-          "abstract_snippet": "Efficient distribution of oxygen (O",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38915775/",
+          "pmid": "40405390",
+          "title": "Extracorporeal Blood Purification Therapy to Deal a Deferasirox Induced Life-Threatening Hepatic Encephalopathy in a Septic Child With Sickle-Cell Disease: A Case Report.",
+          "authors": "Rossetti E, Cappoli A, Labbadia R, et al.",
+          "journal": "Journal of clinical apheresis",
+          "year": "2025",
+          "abstract_snippet": "This report details a rare pediatric case of hyperammonemic encephalopathy caused by the oral iron chelating drug deferasirox (DFR) in a septic patient. It is our contention that this study lends support to the existing literature, as it describes the case of a 15-year-old female patient with a hist...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40405390/",
           "total_results": 9
         },
         {
-          "pmid": "32346864",
-          "title": "Inhibition of Band 3 tyrosine phosphorylation: a new mechanism for treatment of sickle cell disease.",
-          "authors": "Noomuna P, Risinger M, Zhou S, et al.",
-          "journal": "British journal of haematology",
-          "year": "2020",
-          "abstract_snippet": "Many hypotheses have been proposed to explain how a glutamate to valine substitution in sickle haemoglobin (HbS) can cause sickle cell disease (SCD). We propose and document a new mechanism in which elevated tyrosine phosphorylation of Band 3 initiates sequelae that cause vaso-occlusion and the symp...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/32346864/"
+          "pmid": "6023770",
+          "title": "Nature of the renal concentrating defect in sickle cell disease.",
+          "authors": "Hatch FE, Culbertson JW, Diggs LW",
+          "journal": "The Journal of clinical investigation",
+          "year": "1967",
+          "abstract_snippet": "Free water reabsorption (T(c) (H2O)) measured during 10% mannitol diuresis and subsequently during 3% saline diuresis was compared in patients with sickle cell anemia and in normal subjects. During mannitol infusion, T(c) (H2O) progressively rose with increasing osmolar clearance (C(osm)) and reache...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/6023770/"
         },
         {
-          "pmid": "36161945",
-          "title": "Phenotypic screening of the ReFRAME drug repurposing library to discover new drugs for treating sickle cell disease.",
-          "authors": "Metaferia B, Cellmer T, Dunkelberger EB, et al.",
-          "journal": "Proceedings of the National Academy of Sciences of the United States of America",
-          "year": "2022",
-          "abstract_snippet": "Stem cell transplantation and genetic therapies offer potential cures for patients with sickle cell disease (SCD), but these options require advanced medical facilities and are expensive. Consequently, these treatments will not be available for many years to the majority of patients suffering from t...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36161945/"
-        }
-      ],
-      "semantic_scholar_papers": [
-        {
-          "title": "The Influence of Voxelotor on Cerebral Blood Flow and Oxygen Extraction in Pediatric Sickle Cell Disease.",
-          "year": 2024,
-          "citations": 6,
-          "url": "https://www.semanticscholar.org/paper/623e16c44a581a7ec7b14c2618c388ef705b2bbc",
-          "authors": "Rowan O. Brothers, Katherine B. Turrentine, M. Akbar"
+          "pmid": "11170226",
+          "title": "Hydroxyurea-induced oxidative damage of normal and sickle cell hemoglobins in vitro: amelioration by radical scavengers.",
+          "authors": "Iyamu EW, Fasold H, Roa D, et al.",
+          "journal": "Journal of clinical laboratory analysis",
+          "year": "2001",
+          "abstract_snippet": "Hydroxyurea (HU) induces fetal hemoglobin (Hb F) production in patients with sickle cell anemia. The therapeutic dosage of HU used for Hb F induction often elicits myelosuppression, which becomes its major associated complication. We examined the effect of HU on hemoglobin modulation and the role of...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11170226/"
         },
         {
-          "title": "Reticulocyte mitochondrial retention increases reactive oxygen species and oxygen consumption in mouse models of sickle cell disease and phlebotomy-induced anemia.",
-          "year": 2023,
-          "citations": 18,
-          "url": "https://www.semanticscholar.org/paper/13db24a83e48b56e744e85e59e3d0fa20a91f985",
-          "authors": "Anne Gallivan, Mikail Alejandro, Amarachi Kanu"
+          "pmid": "21992742",
+          "title": "Anesthesia for cerebral revascularization for adult moyamoya syndrome associated with sickle cell disease.",
+          "authors": "Chong CT, Manninen PH",
+          "journal": "Journal of clinical neuroscience : official journal of the Neurosurgical Society of Australasia",
+          "year": "2011",
+          "abstract_snippet": "We report the anesthetic management of an adult patient undergoing cerebral revascularization surgery for moyamoya syndrome complicating sickle-cell disease (SCD). We present a 25 year-old male of African ethnicity with homozygous SCD who was experiencing worsening ischemic neurologic symptoms culmi...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/21992742/"
         },
         {
-          "title": "High-throughput quantification of red blood cell deformability and oxygen saturation to probe mechanisms of sickle cell disease",
-          "year": 2023,
-          "citations": 13,
-          "url": "https://www.semanticscholar.org/paper/50ece0d8890ab4a073eead8273c20b69f5b9f3c7",
-          "authors": "Dillon C Williams, David K. Wood"
-        },
-        {
-          "title": "Oxygen gradient ektacytometry\u2013derived biomarkers are associated with acute complications in sickle cell disease",
-          "year": 2023,
-          "citations": 6,
-          "url": "https://www.semanticscholar.org/paper/484d2ac68de329a6de790af4df2f6091b3183502",
-          "authors": "M. Rab, C. Kanne, C. Boisson"
-        },
-        {
-          "title": "Treatment of sickle cell disease by increasing oxygen affinity of hemoglobin.",
-          "year": 2021,
-          "citations": 73,
-          "url": "https://www.semanticscholar.org/paper/8b56bd5a4b4d15eb068ffb5e6f6a817e0b3c5290",
-          "authors": "E. Henry, B. Metaferia, Quan Li"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Treatment of sickle cell disease by increasing oxygen affinity of hemoglobin.",
-        "year": 2021,
-        "citations": 73,
-        "url": "https://www.semanticscholar.org/paper/8b56bd5a4b4d15eb068ffb5e6f6a817e0b3c5290",
-        "authors": "E. Henry, B. Metaferia, Quan Li"
-      },
-      "max_citations": 73,
-      "faers_signal": "moderate",
-      "faers_total_reports": 48115,
-      "faers_cooccurrences": 54,
-      "faers_interpretation": "54 FAERS reports mention both Oxygen and Sickle cell disease-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "K784-3131 (1.563)",
-        "HY-10992 (1.546)",
-        "MLN2238 (1.511)",
-        "XMD16-144 (1.507)",
-        "Arachidonyl trifluoro-methyl ketone (1.496)"
-      ],
-      "signature_interpretation": "Oxygen was not found among the top 31 drugs that reverse the Sickle cell disease gene signature. Top reversers: K784-3131 (1.563), HY-10992 (1.546), MLN2238 (1.511)",
-      "ai_hypothesis": "of its anti-sickling properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 0,
-          "negative_signals": 0,
-          "mechanism_signals": 0,
-          "extracted_entities": [
-            {
-              "entity": "sickle cell disease",
-              "entity_group": "Disease_disorder",
-              "score": 0.9980000257492065
-            },
-            {
-              "entity": "sc",
-              "entity_group": "Disease_disorder",
-              "score": 1.0
-            },
-            {
-              "entity": "##d",
-              "entity_group": "Disease_disorder",
-              "score": 0.9980000257492065
-            },
-            {
-              "entity": "mutation",
-              "entity_group": "Detailed_description",
-              "score": 0.8920000195503235
-            },
-            {
-              "entity": "beta - globin chain",
-              "entity_group": "Diagnostic_procedure",
-              "score": 0.9480000138282776
-            },
-            {
-              "entity": "hemog",
-              "entity_group": "Diagnostic_procedure",
-              "score": 0.9089999794960022
-            },
-            {
-              "entity": "##lo",
-              "entity_group": "Sign_symptom",
-              "score": 0.7789999842643738
-            },
-            {
-              "entity": "##bin",
-              "entity_group": "Diagnostic_procedure",
-              "score": 0.7730000019073486
-            },
-            {
-              "entity": "s",
-              "entity_group": "Sign_symptom",
-              "score": 0.8889999985694885
-            },
-            {
-              "entity": "rigid",
-              "entity_group": "Shape",
-              "score": 0.7379999756813049
-            }
-          ]
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "Phase 2",
-      "failed_trial_count": 8,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.6749,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.3,
-      "novelty_level": "ESTABLISHED",
-      "is_known_treatment": true,
-      "clinical_trials_total": 10,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT02280733",
-          "title": "A Real-World Registry of Chronic Wounds and Ulcers",
-          "status": "RECRUITING",
-          "phase": "N/A",
-          "enrollment": "300000",
-          "url": "https://clinicaltrials.gov/study/NCT02280733"
-        },
-        {
-          "nct_id": "NCT01925001",
-          "title": "Phase 2 Study of MP4CO to Treat Vaso-occlusive Sickle Crisis",
-          "status": "WITHDRAWN",
-          "phase": "PHASE2",
-          "enrollment": "0",
-          "url": "https://clinicaltrials.gov/study/NCT01925001"
-        },
-        {
-          "nct_id": "NCT00415727",
-          "title": "Prevention Of Morbidity In Sickle Cell Disease Pilot Phase",
-          "status": "UNKNOWN",
-          "phase": "PHASE2",
-          "enrollment": "22",
-          "url": "https://clinicaltrials.gov/study/NCT00415727"
-        },
-        {
-          "nct_id": "NCT05469828",
-          "title": "Crizanlizumab Improves Tissue Oxygen Supply Demand Matching in Patients With Sickle Cell Anemia",
-          "status": "NOT_YET_RECRUITING",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "30",
-          "url": "https://clinicaltrials.gov/study/NCT05469828"
-        },
-        {
-          "nct_id": "NCT00874172",
-          "title": "Effectiveness of New Analgesic Strategy Compared to the Usal Antalgic Strategy",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "176",
-          "url": "https://clinicaltrials.gov/study/NCT00874172"
-        }
-      ],
-      "trial_phases": {
-        "PHASE2": 4,
-        "PHASE1": 1,
-        "NA": 4,
-        "PHASE3": 2
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "10 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
-        "1849 PubMed articles on this drug-disease pair",
-        "9 article(s) specifically mention repurposing/repositioning",
-        "Supported by 6 independent AI pillars",
-        "Moderate FAERS signal: 54 adverse event reports mention drug-disease co-occurrence",
-        "Supporting paper with 73 citations",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.67)",
-        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
-      ]
-    },
-    {
-      "drug_name": "Copper",
-      "drug_id": "DB09130",
-      "disease_name": "Sickle cell disease",
-      "combined_score": 1.0221999883651733,
-      "transe_rank": 14,
-      "pillars_hit": 6,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 84,
-      "pubmed_treatment_total": 33,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "36340300",
-          "title": "Pathogenesis of Alcohol-Associated Liver Disease.",
-          "authors": "Osna NA, Rasineni K, Ganesan M, et al.",
-          "journal": "Journal of clinical and experimental hepatology",
-          "year": "2022",
-          "abstract_snippet": "Excessive alcohol consumption is a global healthcare problem with enormous social, economic, and clinical consequences. While chronic, heavy alcohol consumption causes structural damage and/or disrupts normal organ function in virtually every tissue of the body, the liver sustains the greatest damag...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36340300/",
-          "total_results": 84
-        },
-        {
-          "pmid": "25494639",
-          "title": "Is Pica under-reported in children with sickle cell disease? A pilot study in a Belgian cohort.",
-          "authors": "Aloni MN, Lecerf P, L\u00ea PQ, et al.",
-          "journal": "Hematology (Amsterdam, Netherlands)",
-          "year": "2015",
-          "abstract_snippet": "BACKGROUND: For centuries, writers have recorded their observations on pica. Nevertheless the association of pica with sickle cell disease (SCD) was poorly documented. METHODS: Cross-sectional evaluation performed on SCD children and caregivers attending the outpatient clinic who were invited to com...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/25494639/"
-        },
-        {
-          "pmid": "18720418",
-          "title": "Erythrocyte programmed cell death.",
-          "authors": "F\u00f6ller M, Huber SM, Lang F",
-          "journal": "IUBMB life",
-          "year": "2008",
-          "abstract_snippet": "Eryptosis, the suicidal death of erythrocytes, is characterised by cell shrinkage, membrane blebbing and cell membrane phospholipid scrambling with phosphatidylserine exposure at the cell surface. Phosphatidylserine-exposing erythrocytes are recognised by macrophages, which engulf and degrade the af...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/18720418/"
-        },
-        {
-          "pmid": "39676190",
-          "title": "Association of Copper, Zinc, Copper-to-zinc ratio and Disease Severity Scores in Sickle Cell Anemia: An Observational Analytical Study.",
-          "authors": "Wasnik PN, Patel S, Kannauje PK, et al.",
-          "journal": "The Journal of the Association of Physicians of India",
-          "year": "2024",
-          "abstract_snippet": "OBJECTIVE: The purpose of the study was to assess the amount of serum copper, zinc, and copper-to-zinc ratio in sickle cell anemia patients and healthy subjects and to relate the parameters with an objective disease severity score. Further, to see the correlation between copper and zinc levels with ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39676190/"
-        },
-        {
-          "pmid": "35833156",
-          "title": "Zinc, Magnesium, and Copper Levels in Patients with Sickle Cell Disease: A Systematic Review and Meta-analysis.",
-          "authors": "Elkhidir IH, Ali SS, Ali WK, et al.",
-          "journal": "Avicenna journal of medicine",
-          "year": "2022",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35833156/"
+          "pmid": "24051181",
+          "title": "Nitric oxide scavenging by red cell microparticles.",
+          "authors": "Liu C, Zhao W, Christ GJ, et al.",
+          "journal": "Free radical biology & medicine",
+          "year": "2013",
+          "abstract_snippet": "Red cell microparticles form during the storage of red blood cells and in diseases associated with red cell breakdown and asplenia, including hemolytic anemias such as sickle cell disease. These small phospholipid vesicles that are derived from red blood cells have been implicated in the pathogenesi...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24051181/"
         }
       ],
       "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "Copper to Zinc Ratio in Pediatric Patients with Sickle Cell Disease (Steady-State and Crises)",
+          "title": "Extracorporeal Blood Purification Therapy to Deal a Deferasirox Induced Life\u2010Threatening Hepatic Encephalopathy in a Septic Child With Sickle\u2010Cell Disease: A Case Report",
           "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/8664da2e0c6ea11b5a87f91647d22c73944b830a",
-          "authors": "B. Hasan, M. Hassan, W. Ibrahim"
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/dc03c11e6baf4804e4d0fd6096e3b955bf2c0334",
+          "authors": "E. Rossetti, A. Cappoli, R. Labbadia"
         },
         {
-          "title": "Zinc, Magnesium, and Copper Levels in Patients with Sickle Cell Disease: A Systematic Review and Meta-analysis",
-          "year": 2022,
-          "citations": 6,
-          "url": "https://www.semanticscholar.org/paper/355f311c2a93b5231c915f249435370c4de427a9",
-          "authors": "I. Elkhidir, Shahd S Ali, Waad K. Ali"
+          "title": "A Case of Cerebral Venous Sinus Thrombosis in a Patient with Sickle Cell Disease",
+          "year": 2019,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/a0943c32f77af40eaa9f94cc1ea752f751bc1c66",
+          "authors": "D. M. Reddy"
         },
         {
-          "title": "Copper-To-Zinc Ratio as an Inflammatory Marker in Patients with Sickle Cell Disease",
+          "title": "Comments on renal abnormalities of sickle cell disease",
+          "year": 2013,
+          "citations": 2,
+          "url": "https://www.semanticscholar.org/paper/ed028fa53bb99f1914f410677b867d4a67c90947",
+          "authors": "M. Abbud-Filho"
+        },
+        {
+          "title": "Nature of the renal concentrating defect in sickle cell disease.",
+          "year": 1967,
+          "citations": 70,
+          "url": "https://www.semanticscholar.org/paper/91c0167706a3f3936b14467debcdc720f1f676a6",
+          "authors": "F. Hatch, J. W. Culbertson, L. W. Diggs"
+        },
+        {
+          "title": "Rare Presentation and Successful Management of Cerebral Sinus Venous Thrombosis in a Patient with Sickle Cell Trait",
           "year": 2020,
-          "citations": 12,
-          "url": "https://www.semanticscholar.org/paper/d9570d387b03ffad66d60c5bd9fd35f8f72b0c07",
-          "authors": "Mathias Abiodun Emokpae, Emmanuel Bamidele Fatimehin"
-        },
-        {
-          "title": "Serum levels of copper, zinc and disease severity scores in sickle cell disease patients in Benin City, Nigeria",
-          "year": 2019,
-          "citations": 13,
-          "url": "https://www.semanticscholar.org/paper/4324aa9f655ffce050eff8a833a07b94cc933b59",
-          "authors": "Mathias Abiodun Emokpae, E. B. Fatimehin, P. Obazelu"
-        },
-        {
-          "title": "Serum Iron Levels and Copper-to-Zinc Ratio in Sickle Cell Disease",
-          "year": 2019,
-          "citations": 14,
-          "url": "https://www.semanticscholar.org/paper/7477dbfb1c56ef73dc0bb4a26a67423ba8fc5196",
-          "authors": "C. Antwi-Boasiako, G. Dankwah, Robert Aryee"
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/2c1c663e3908daa7cbd2d3c5422c5f34f5a0c149",
+          "authors": "K. Khan, A. Chaturvedi"
         }
       ],
       "most_cited_paper": {
-        "title": "Serum Iron Levels and Copper-to-Zinc Ratio in Sickle Cell Disease",
-        "year": 2019,
-        "citations": 14,
-        "url": "https://www.semanticscholar.org/paper/7477dbfb1c56ef73dc0bb4a26a67423ba8fc5196",
-        "authors": "C. Antwi-Boasiako, G. Dankwah, Robert Aryee"
+        "title": "Nature of the renal concentrating defect in sickle cell disease.",
+        "year": 1967,
+        "citations": 70,
+        "url": "https://www.semanticscholar.org/paper/91c0167706a3f3936b14467debcdc720f1f676a6",
+        "authors": "F. Hatch, J. W. Culbertson, L. W. Diggs"
       },
-      "max_citations": 14,
+      "max_citations": 70,
       "faers_signal": "weak",
-      "faers_total_reports": 2224,
+      "faers_total_reports": 6125,
       "faers_cooccurrences": 1,
-      "faers_interpretation": "1 FAERS report(s) mention both Copper and Sickle cell disease-related terms. Minimal real-world signal.",
+      "faers_interpretation": "1 FAERS report(s) mention both Mannitol and Sickle cell disease-related terms. Minimal real-world signal.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -629,8 +159,8 @@
         "XMD16-144 (1.507)",
         "Arachidonyl trifluoro-methyl ketone (1.496)"
       ],
-      "signature_interpretation": "Copper was not found among the top 31 drugs that reverse the Sickle cell disease gene signature. Top reversers: K784-3131 (1.563), HY-10992 (1.546), MLN2238 (1.511)",
-      "ai_hypothesis": "of its anti-sickling properties.",
+      "signature_interpretation": "Mannitol was not found among the top 31 drugs that reverse the Sickle cell disease gene signature. Top reversers: K784-3131 (1.563), HY-10992 (1.546), MLN2238 (1.511)",
+      "ai_hypothesis": "of its ability to reduce the sickling of red blood cells.",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
@@ -652,238 +182,887 @@
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.6749,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Mannitol \u2014[is a therapeutic for]\u2192 MESH:D054556 \u2014[is treated by]\u2192 DB00945 \u2014[is a therapeutic for]\u2192 Sickle cell disease",
+      "kg_paths_text": "\u2022 Mannitol \u2014[is a therapeutic for]\u2192 MESH:D054556 \u2014[is treated by]\u2192 DB00945 \u2014[is a therapeutic for]\u2192 Sickle cell disease\n\u2022 Mannitol \u2014[is a therapeutic for]\u2192 MESH:D054556 \u2014[is treated by]\u2192 DB00945 \u2014[is a therapeutic for]\u2192 Sickle cell disease\n\u2022 Mannitol \u2014[is a therapeutic for]\u2192 MESH:D020521 \u2014[is treated by]\u2192 DB00945 \u2014[is a therapeutic for]\u2192 Sickle cell disease",
       "validation_experiments": [],
-      "novelty_score": 1.0,
+      "novelty_score": 0.328000009059906,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
+      "clinical_trials_total": 1,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT01142219",
+          "title": "L-Arginine and Sickle Cell Disease",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "40",
+          "url": "https://clinicaltrials.gov/study/NCT01142219"
+        }
+      ],
+      "trial_phases": {
+        "PHASE3": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "1 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "9 PubMed article(s) - limited literature",
+        "Supported by 3 independent AI pillars",
+        "Supporting paper with 70 citations",
+        "AI-generated hypothesis available"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1432,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.23000000417232513,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.4099999964237213,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.434
+        }
+      },
+      "tissue_context": {
+        "context_modifier": 1.0,
+        "tissues": [
+          "Whole Blood",
+          "Spleen"
+        ],
+        "n_genes": 0
+      },
+      "ensemble_prob": 0.3354,
+      "ensemble_features": {
+        "kg_score": 0.9932,
+        "degree_penalty": 0.7707,
+        "n_drug_targets": 0,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.2905
+      },
+      "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "disease_entity": "Disease::MESH:D000755"
+    },
+    {
+      "drug_name": "Liothyronine",
+      "drug_id": "DB00279",
+      "disease_name": "Sickle cell disease",
+      "combined_score": 0.4025000035762787,
+      "pillars_hit": 3,
+      "transe_rank": 183,
+      "transe_score": -11.5278,
+      "pykeen_score": -12.9367,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0.8947,
+      "mol_emb_similar_to": "Folic Acid",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.7120000123977661,
+      "proximity_distance": 1.149999976158142,
+      "admet_score": 1.0,
+      "admet_flags": "clean",
+      "primekg_score": 0.2499,
+      "dti_score": 1.0,
+      "dti_best_target": "ANGPTL3",
+      "kg_group_score": 0.2462,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.5550000071525574,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 1.0,
+      "efficacy_score": 0.4025000035762787,
+      "groups_hit": 3,
+      "direct_relations": [],
+      "shared_target_count": 0,
+      "shared_targets": [],
+      "pubmed_total": 2,
+      "pubmed_treatment_total": 1,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "41210895",
+          "title": "Hashimoto's thyroiditis and congenital long QT syndrome: a dangerous addition causing torsades-case report.",
+          "authors": "Acharya R, Sabesan V, Pandit D, et al.",
+          "journal": "European heart journal. Case reports",
+          "year": "2025",
+          "abstract_snippet": "BACKGROUND: Hypothyroidism leads to a prolonged QT interval due to modulation of the potassium channel by low circulating T3, leading to a disproportionate lengthening of the action potential. Patients with long QT syndromes (LQTS) have an increased risk of symptomatic ventricular arrhythmias and su...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41210895/",
+          "total_results": 2
+        },
+        {
+          "pmid": "39483027",
+          "title": "Intermittent cold stimulation acclimates broilers to acute cold stress by affecting cardiac lipid metabolism.",
+          "authors": "Zhang Y, Chang M, Xue Q, et al.",
+          "journal": "Animal bioscience",
+          "year": "2025",
+          "abstract_snippet": "OBJECTIVE: This study aimed to investigate whether intermittent cold stimulation can induce adaptation in broilers to acute cold stress (ACS) by regulating the lipid metabolism of hearts. METHODS: CS0 were kept at normal rearing temperature, while CS3 and CS5 were exposed to 3\u00b0C for 3 and 5 hours, r...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39483027/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Exagamglogene Autotemcel for Severe Sickle Cell Disease.",
+          "year": 2024,
+          "citations": 113,
+          "url": "https://www.semanticscholar.org/paper/ff70aebe90b5070988b7e8b52e107411aed93ae8",
+          "authors": "H. Frangoul, F. Locatelli, Akshay Sharma"
+        },
+        {
+          "title": "Sickle cell disease.",
+          "year": 1996,
+          "citations": 4488,
+          "url": "https://www.semanticscholar.org/paper/1cd9bd0b255a79abc643a43c7dce182a5e896290",
+          "authors": "P. Lane"
+        },
+        {
+          "title": "Global, regional, and national prevalence and mortality burden of sickle cell disease, 2000\u20132021: a systematic analysis from the Global Burden of Disease Study 2021",
+          "year": 2023,
+          "citations": 364,
+          "url": "https://www.semanticscholar.org/paper/3f9f311815b0cd485614734f99e737e307bd8407",
+          "authors": "A. Thomson, T. A. McHugh, A. Oron"
+        },
+        {
+          "title": "Mortality in sickle cell disease. Life expectancy and risk factors for early death.",
+          "year": 1994,
+          "citations": 3287,
+          "url": "https://www.semanticscholar.org/paper/6bcc7a4d436214c41a4d128f9d221e950eb4962b",
+          "authors": "O. Platt, D. Brambilla, W. Rosse"
+        },
+        {
+          "title": "CRISPR-Cas9 Editing of the HBG1 and HBG2 Promoters to Treat Sickle Cell Disease.",
+          "year": 2023,
+          "citations": 103,
+          "url": "https://www.semanticscholar.org/paper/e53f2ddfff4987c25384a6e8efc07334e2cac239",
+          "authors": "Akshay Sharma, J. Boelens, M. Cancio"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Sickle cell disease.",
+        "year": 1996,
+        "citations": 4488,
+        "url": "https://www.semanticscholar.org/paper/1cd9bd0b255a79abc643a43c7dce182a5e896290",
+        "authors": "P. Lane"
+      },
+      "max_citations": 4488,
+      "faers_signal": "none",
+      "faers_total_reports": 7908,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Liothyronine to Sickle cell disease terms. Drug has 7908 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "K784-3131 (1.563)",
+        "HY-10992 (1.546)",
+        "MLN2238 (1.511)",
+        "XMD16-144 (1.507)",
+        "Arachidonyl trifluoro-methyl ketone (1.496)"
+      ],
+      "signature_interpretation": "Liothyronine was not found among the top 31 drugs that reverse the Sickle cell disease gene signature. Top reversers: K784-3131 (1.563), HY-10992 (1.546), MLN2238 (1.511)",
+      "ai_hypothesis": "of its ability to increase hemoglobin F and decrease the sickling of red blood cells.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Liothyronine \u2014[treats]\u2192 MESH:D013964 \u2014[is treated by]\u2192 DB01593 \u2014[is a therapeutic for]\u2192 Sickle cell disease",
+      "kg_paths_text": "\u2022 Liothyronine \u2014[treats]\u2192 MESH:D013964 \u2014[is treated by]\u2192 DB01593 \u2014[is a therapeutic for]\u2192 Sickle cell disease\n\u2022 Liothyronine \u2014[treats]\u2192 MESH:D013964 \u2014[is treated by]\u2192 DB11094 \u2014[is a therapeutic for]\u2192 Sickle cell disease\n\u2022 Liothyronine \u2014[treats]\u2192 MESH:D013964 \u2014[is treated by]\u2192 MESH:D003520 \u2014[is a therapeutic for]\u2192 Sickle cell disease",
+      "validation_experiments": [],
+      "novelty_score": 0.32199999690055847,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "LOW",
+      "confidence_reasons": [
+        "2 PubMed article(s) - limited literature",
+        "Supported by 3 independent AI pillars",
+        "Highly cited paper (4488 citations): \"Sickle cell disease....\"",
+        "AI-generated hypothesis available"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1254,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (HTR1B / rs130058)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "HTR1B",
+            "variant": "rs130058",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183624421"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.18199999630451202,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.4020000100135803,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.207
+        }
+      },
+      "tissue_context": {
+        "context_modifier": 1.0,
+        "tissues": [
+          "Whole Blood",
+          "Spleen"
+        ],
+        "n_genes": 0
+      },
+      "ensemble_prob": 0.4982,
+      "ensemble_features": {
+        "kg_score": 0.9902,
+        "degree_penalty": 0.7795,
+        "n_drug_targets": 11,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.6444
+      },
+      "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "disease_entity": "Disease::MESH:D000755"
+    },
+    {
+      "drug_name": "Ceftriaxone",
+      "drug_id": "DB01212",
+      "disease_name": "Sickle cell disease",
+      "combined_score": 0.39160001277923584,
+      "pillars_hit": 3,
+      "transe_rank": 93,
+      "transe_score": -11.2112,
+      "pykeen_score": -12.593,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.44999998807907104,
+      "proximity_distance": 2.200000047683716,
+      "admet_score": 1.0,
+      "admet_flags": "DILI=0.99",
+      "primekg_score": 0.2525,
+      "dti_score": 1.0,
+      "dti_best_target": "ANGPTL3",
+      "kg_group_score": 0.3657,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.35100001096725464,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 1.0,
+      "efficacy_score": 0.39160001277923584,
+      "groups_hit": 3,
+      "direct_relations": [],
+      "shared_target_count": 0,
+      "shared_targets": [],
+      "pubmed_total": 73,
+      "pubmed_treatment_total": 57,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "37893474",
+          "title": "Cognitive Impairment in Parkinson's Disease: An Updated Overview Focusing on Emerging Pharmaceutical Treatment Approaches.",
+          "authors": "Degirmenci Y, Angelopoulou E, Georgakopoulou VE, et al.",
+          "journal": "Medicina (Kaunas, Lithuania)",
+          "year": "2023",
+          "abstract_snippet": "Cognitive impairment in patients with Parkinson's disease (PD) is one of the commonest and most disabling non-motor manifestations during the course of the disease. The clinical spectrum of PD-related cognitive impairment includes subjective cognitive decline (SCD), mild cognitive impairment (MCI) a...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37893474/",
+          "total_results": 73
+        },
+        {
+          "pmid": "11735665",
+          "title": "Prevention and management of infection in children with sickle cell anaemia.",
+          "authors": "Wong WY",
+          "journal": "Paediatric drugs",
+          "year": "2001",
+          "abstract_snippet": "Sickle cell anaemia (SCA) predisposes a child to infections for various reasons, including increased bone marrow turnover, poor perfusion and functional asplenia leading to decreased opsonisation of polysaccharide encapsulated organisms. Bacteria and viruses that most frequently cause serious infect...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11735665/"
+        },
+        {
+          "pmid": "32144089",
+          "title": "Safety of ceftriaxone in paediatrics: a systematic review.",
+          "authors": "Zeng L, Wang C, Jiang M, et al.",
+          "journal": "Archives of disease in childhood",
+          "year": "2020",
+          "abstract_snippet": "OBJECTIVE: To determine the safety of ceftriaxone in paediatric patients and systematically evaluate the categories and incidences of adverse drug reactions (ADRs) of ceftriaxone in paediatric patients. METHODS: We performed a systematic search in Medline, PubMed, Cochrane Central Register of Contro...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32144089/"
+        },
+        {
+          "pmid": "25163809",
+          "title": "Ceftriaxone-induced immune hemolytic anemia.",
+          "authors": "Neuman G, Boodhan S, Wurman I, et al.",
+          "journal": "The Annals of pharmacotherapy",
+          "year": "2014",
+          "abstract_snippet": "OBJECTIVES: To describe a case of ceftriaxone-induced immune hemolytic anemia (CIIHA) in a 6 year-old boy with sickle cell disease (SCD) and perform a systematic literature review to delineate the clinical and laboratory features of this condition. DATA SOURCES: EMBASE (1947-January 2014), MEDLINE (...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25163809/"
+        },
+        {
+          "pmid": "24841634",
+          "title": "Fever in sickle cell disease patients in the Kingdom of Bahrain.",
+          "authors": "Al Salman J, Al Agha RA, Al Taitoon S, et al.",
+          "journal": "Journal of infection and public health",
+          "year": "2014",
+          "abstract_snippet": "Sickle cell disease (SCD) is a hereditary blood disorder characterized by abnormal red blood cell shape (sickling). The incidence of the disease in the Kingdom of Bahrain is approximately 2.1%. Patients with SCD are prone to multiple health complications, some of which are fatal. A retrospective stu...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24841634/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Fatal Ceftriaxone-induced Hemolytic Anemia in a Pediatric Patient With Sickle Cell Disease: A Case Report",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/01a43073133c53a083981f592e71de0c99a95a99",
+          "authors": "Kathleen G. Schad, Prachi Patel, Harjot Gill"
+        },
+        {
+          "title": "7716\u2005Fever in paediatric sickle cell disease: a 4-year, single-center, observational study on using ceftriaxone as first line antibiotic treatment",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/ea926934c8358547b3853c8ff27faa28c630476c",
+          "authors": "Niamh Mccarville, Farah Ghumran, K. Ominu-Evbota"
+        },
+        {
+          "title": "A LETHAL REACTION: DRUG-INDUCED HYPERHEMOLYSIS FOLLOWING EMPIRIC CEFTRIAXONE IN SICKLE CELL DISEASE",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/1fcc2cfbc52e3aa1b05897625ba41e27ae743383",
+          "authors": "D. Sasson, E. Fox, L. Bernstein"
+        },
+        {
+          "title": "\u0392-Lactam Antibiotic Ceftriaxone As a Potential Therapeutic Intervention for Chronic Pain in Sickle Cell Disease",
+          "year": 2023,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/f14986bdd3761133316fe005530fda8f45679929",
+          "authors": "Ying He, Xiao Guo, R. Molokie"
+        },
+        {
+          "title": "Therapeutic potential of \u03b2-lactam ceftriaxone for chronic pain in sickle cell disease",
+          "year": 2022,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/07b5a3f83781547582ccba37069f400fe5e156a7",
+          "authors": "Ying He, Xiao Guo, Z. Wang"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Therapeutic potential of \u03b2-lactam ceftriaxone for chronic pain in sickle cell disease",
+        "year": 2022,
+        "citations": 3,
+        "url": "https://www.semanticscholar.org/paper/07b5a3f83781547582ccba37069f400fe5e156a7",
+        "authors": "Ying He, Xiao Guo, Z. Wang"
+      },
+      "max_citations": 3,
+      "faers_signal": "moderate",
+      "faers_total_reports": 39161,
+      "faers_cooccurrences": 8,
+      "faers_interpretation": "8 FAERS reports mention both Ceftriaxone and Sickle cell disease-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "K784-3131 (1.563)",
+        "HY-10992 (1.546)",
+        "MLN2238 (1.511)",
+        "XMD16-144 (1.507)",
+        "Arachidonyl trifluoro-methyl ketone (1.496)"
+      ],
+      "signature_interpretation": "Ceftriaxone was not found among the top 31 drugs that reverse the Sickle cell disease gene signature. Top reversers: K784-3131 (1.563), HY-10992 (1.546), MLN2238 (1.511)",
+      "ai_hypothesis": "of its broad spectrum of activity and its ability to cross the blood-brain barrier.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Ceftriaxone \u2014[is a therapeutic for]\u2192 Sickle cell disease",
+      "kg_paths_text": "\u2022 Ceftriaxone \u2014[is a therapeutic for]\u2192 Sickle cell disease\n\u2022 Ceftriaxone \u2014[treats]\u2192 MESH:D020852 \u2014[is treated by]\u2192 DB00493 \u2014[is a therapeutic for]\u2192 Sickle cell disease\n\u2022 Ceftriaxone \u2014[treats]\u2192 MESH:D016920 \u2014[is treated by]\u2192 DB00493 \u2014[is a therapeutic for]\u2192 Sickle cell disease",
+      "validation_experiments": [],
+      "novelty_score": 0.3330000042915344,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": true,
       "clinical_trials_total": 0,
       "clinical_trials": [],
       "trial_phases": {},
       "confidence": "MEDIUM",
       "confidence_reasons": [
-        "84 PubMed articles on this drug-disease pair",
-        "Supported by 6 independent AI pillars",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.67)"
-      ]
-    },
-    {
-      "drug_name": "Biguanide",
-      "drug_id": "DB13100",
-      "disease_name": "Sickle cell disease",
-      "combined_score": 1.0020999908447266,
-      "transe_rank": 2440,
-      "pillars_hit": 3,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Exagamglogene Autotemcel for Severe Sickle Cell Disease.",
-          "year": 2024,
-          "citations": 113,
-          "url": "https://www.semanticscholar.org/paper/ff70aebe90b5070988b7e8b52e107411aed93ae8",
-          "authors": "H. Frangoul, F. Locatelli, Akshay Sharma"
-        },
-        {
-          "title": "Sickle cell disease.",
-          "year": 1996,
-          "citations": 4485,
-          "url": "https://www.semanticscholar.org/paper/1cd9bd0b255a79abc643a43c7dce182a5e896290",
-          "authors": "P. Lane"
-        },
-        {
-          "title": "Global, regional, and national prevalence and mortality burden of sickle cell disease, 2000\u20132021: a systematic analysis from the Global Burden of Disease Study 2021",
-          "year": 2023,
-          "citations": 364,
-          "url": "https://www.semanticscholar.org/paper/3f9f311815b0cd485614734f99e737e307bd8407",
-          "authors": "A. Thomson, T. A. McHugh, A. Oron"
-        },
-        {
-          "title": "Mortality in sickle cell disease. Life expectancy and risk factors for early death.",
-          "year": 1994,
-          "citations": 3286,
-          "url": "https://www.semanticscholar.org/paper/6bcc7a4d436214c41a4d128f9d221e950eb4962b",
-          "authors": "O. Platt, D. Brambilla, W. Rosse"
-        },
-        {
-          "title": "CRISPR-Cas9 Editing of the HBG1 and HBG2 Promoters to Treat Sickle Cell Disease.",
-          "year": 2023,
-          "citations": 102,
-          "url": "https://www.semanticscholar.org/paper/e53f2ddfff4987c25384a6e8efc07334e2cac239",
-          "authors": "Akshay Sharma, J. Boelens, M. Cancio"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Sickle cell disease.",
-        "year": 1996,
-        "citations": 4485,
-        "url": "https://www.semanticscholar.org/paper/1cd9bd0b255a79abc643a43c7dce182a5e896290",
-        "authors": "P. Lane"
-      },
-      "max_citations": 4485,
-      "faers_signal": "none",
-      "faers_total_reports": 85,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Biguanide to Sickle cell disease terms. Drug has 85 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "K784-3131 (1.563)",
-        "HY-10992 (1.546)",
-        "MLN2238 (1.511)",
-        "XMD16-144 (1.507)",
-        "Arachidonyl trifluoro-methyl ketone (1.496)"
-      ],
-      "signature_interpretation": "Biguanide was not found among the top 31 drugs that reverse the Sickle cell disease gene signature. Top reversers: K784-3131 (1.563), HY-10992 (1.546), MLN2238 (1.511)",
-      "ai_hypothesis": "it is a potent inhibitor of the sickling process.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.85,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
+        "73 PubMed articles on this drug-disease pair",
         "Supported by 3 independent AI pillars",
-        "Highly cited paper (4485 citations): \"Sickle cell disease....\"",
+        "Moderate FAERS signal: 8 adverse event reports mention drug-disease co-occurrence",
         "AI-generated hypothesis available"
-      ]
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1090,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (ABCC2 / rs2273697)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "ABCC2",
+            "variant": "rs2273697",
+            "level": "3",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1450044809"
+          },
+          {
+            "gene": "ABCG2",
+            "variant": "rs13120400",
+            "level": "3",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1450044803"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": false,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.29899999499320984,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.3919999897480011,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.812
+        }
+      },
+      "tissue_context": {
+        "context_modifier": 1.0,
+        "tissues": [
+          "Whole Blood",
+          "Spleen"
+        ],
+        "n_genes": 0
+      },
+      "ensemble_prob": 0.337,
+      "ensemble_features": {
+        "kg_score": 0.9896,
+        "degree_penalty": 0.7799,
+        "n_drug_targets": 13,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.7095
+      },
+      "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "disease_entity": "Disease::MESH:D000755"
     },
     {
-      "drug_name": "Vanadium",
-      "drug_id": "DB13971",
+      "drug_name": "Progesterone",
+      "drug_id": "DB00396",
       "disease_name": "Sickle cell disease",
-      "combined_score": 0.9969000220298767,
-      "transe_rank": 2167,
+      "combined_score": 0.3776,
       "pillars_hit": 3,
+      "transe_rank": 38,
+      "transe_score": -10.7788,
+      "pykeen_score": -13.0555,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0.0691,
+      "gene_sig_rank": 12,
+      "proximity_score": 0.4749999940395355,
+      "proximity_distance": 2.0999999046325684,
+      "admet_score": 0.7543,
+      "admet_flags": "clean",
+      "primekg_score": 0.2502,
+      "dti_score": 1.0,
+      "dti_best_target": "ANGPTL3",
+      "kg_group_score": 0.2111,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.5717,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9509,
+      "efficacy_score": 0.3971,
+      "groups_hit": 3,
       "direct_relations": [],
       "shared_target_count": 0,
       "shared_targets": [],
-      "pubmed_total": 6,
-      "pubmed_treatment_total": 4,
+      "pubmed_total": 40,
+      "pubmed_treatment_total": 20,
       "pubmed_repurposing_total": 0,
       "key_papers": [
         {
-          "pmid": "11841449",
-          "title": "Nitric oxide donor properties of hydroxyurea in patients with sickle cell disease.",
-          "authors": "Gladwin MT, Shelhamer JH, Ognibene FP, et al.",
-          "journal": "British journal of haematology",
-          "year": "2002",
-          "abstract_snippet": "Hydroxyurea therapy reduces the rates of vaso-occlusive crisis in patients with sickle cell anaemia and recent data suggest that hydroxyurea treatment can generate nitric oxide (NO). Nitric oxide has been proposed as a novel therapy for sickle cell disease via a number of pathways. We therefore soug...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/11841449/",
-          "total_results": 6
-        },
-        {
-          "pmid": "30927246",
-          "title": "Sodium Orthovanadate Changes Fatty Acid Composition and Increased Expression of Stearoyl-Coenzyme A Desaturase in THP-1 Macrophages.",
-          "authors": "Korbecki J, Gutowska I, Wiercioch M, et al.",
-          "journal": "Biological trace element research",
-          "year": "2020",
-          "abstract_snippet": "Vanadium compounds are promising antidiabetic agents. In addition to regulating glucose metabolism, they also alter lipid metabolism. Due to the clear association between diabetes and atherosclerosis, the purpose of the present study was to assess the effect of sodium orthovanadate on the amount of ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30927246/"
-        },
-        {
-          "pmid": "41251544",
-          "title": "Freeze-Thaw Cycling Accelerates Microbial Reduction and Immobilization of Vanadium(V) in Groundwater.",
-          "authors": "Pang X, Zhang B, Zhang Q, et al.",
-          "journal": "Environmental science & technology",
-          "year": "2025",
-          "abstract_snippet": "As global warming intensifies, freeze-thaw cycling has become more pronounced, significantly impacting microbial metabolic processes. In this study, microbial vanadium(V) [V(V)] reduction under freeze-thaw conditions was investigated. Temperature fluctuations between -4 and +4 \u00b0C accelerated V(V) re...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41251544/"
-        },
-        {
-          "pmid": "3032246",
-          "title": "2,3-diphosphoglycerate phosphatase activity of phosphoglycerate mutase: stimulation by vanadate and phosphate.",
-          "authors": "Stankiewicz PJ, Gresser MJ, Tracey AS, et al.",
-          "journal": "Biochemistry",
-          "year": "1987",
-          "abstract_snippet": "The binding of inorganic vanadate (Vi) to rabbit muscle phosphoglycerate mutase (PGM), studied by using 51V nuclear magnetic resonance spectroscopy, shows a sigmoidal dependence on vanadate concentration with a stoichiometry of four vanadium atoms per PGM molecule at saturating [Vi]. The data are co...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/3032246/"
-        },
-        {
-          "pmid": "26762722",
-          "title": "Aluminum and bone: Review of new clinical circumstances associated with Al(3+) deposition in the calcified matrix of bone.",
-          "authors": "Chappard D, Bizot P, Mabilleau G, et al.",
-          "journal": "Morphologie : bulletin de l'Association des anatomistes",
+          "pmid": "26613137",
+          "title": "Common gynecological challenges in adolescents with sickle cell disease.",
+          "authors": "Stimpson SJ, Rebele EC, DeBaun MR",
+          "journal": "Expert review of hematology",
           "year": "2016",
-          "abstract_snippet": "Several decades ago, aluminum encephalopathy associated with osteomalacia has been recognized as the major complication of chronic renal failure in dialyzed patients. Removal of aluminum from the dialysate has led to a disappearance of the disease. However, aluminum deposit occurs in the hydroxyapat...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/26762722/"
+          "abstract_snippet": "Sickle cell anemia is one of the most common genetic blood disorders worldwide. Individuals with sickle cell disease (SCD) experience clinical manifestations such as chronic anemia, developmental delay, vaso-occlusive pain, acute chest syndrome, and neurological complications. Adolescent girls with ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26613137/",
+          "total_results": 40
+        },
+        {
+          "pmid": "4863074",
+          "title": "Steroid hormones in sickle-cell disease.",
+          "authors": "Isaacs WA, Hayhoe FG",
+          "journal": "Nature",
+          "year": "1967",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/4863074/"
+        },
+        {
+          "pmid": "38024611",
+          "title": "Sickle cell anemia and pregnancy: Profile of hemodynamic changes in sickle cell pregnant women in Kinshasa.",
+          "authors": "Mikobi TM, Kamuanya NC, Mikobi EKB, et al.",
+          "journal": "EJHaem",
+          "year": "2023",
+          "abstract_snippet": "Pregnancy is accompanied by hormonal changes. These relate mainly to progesterone and placenate growth factor. Hemodynamic changes are also observed. in a sickle cell pregnant woman, all these changes have a direct effect on hypoxia. This is responsible for the polymerization of HbS. The latter caus...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38024611/"
+        },
+        {
+          "pmid": "36140684",
+          "title": "Mechanism of ",
+          "authors": "Yuan X, Abdul-Rahman I, Hu S, et al.",
+          "journal": "Genes",
+          "year": "2022",
+          "abstract_snippet": "Stearoyl-CoA desaturase (SCD) is a key enzyme catalyzing the rate-limiting step in monounsaturated fatty acids (MUFAs) production. There may be a mechanism by which SCD is involved in lipid metabolism, which is assumed to be essential for goose follicular development. For this reason, a cellular mod...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36140684/"
+        },
+        {
+          "pmid": "4110053",
+          "title": "Steroid treatment in the prevention of painful episodes in sickle-cell disease.",
+          "authors": "Isaacs WA, Effiong CE, Ayeni O",
+          "journal": "Lancet (London, England)",
+          "year": "1972",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/4110053/"
         }
       ],
       "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "Mineral Element Contents and Antisickling Activity of Cyttaranthus congolensis and Hypoxis angustifolia Traditionally Used to Treat Sickle Cell Disease in Kwilu Province, Democratic Republic of the Congo",
+          "title": "Estradiol is Pro-Nociceptive and Associated with a Small-Fiber Neuropathy Among Premenopausal Women with Sickle Cell Disease",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/44803abae62feefca041b9ba2c31c57d48d7f8df",
+          "authors": "Z. Ramsay, D. Sharma, Margaret E Wisdom-Phipps"
+        },
+        {
+          "title": "Levels of Estrogen, Progesterone and Follicle Stimulating Hormone among Nigerian Females Living with Sickle Cell Anaemia",
           "year": 2022,
           "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/c3661300fdf55aedfe0b4902df483c96fbf8e27b",
-          "authors": "J. M. Kitadi, C. Inkoto, S. Tshibangu"
+          "url": "https://www.semanticscholar.org/paper/66393d4df65c8718603d9b63efe22eec2772e39e",
+          "authors": "E. Okocha, P. Manafa, N. Ugwu"
         },
         {
-          "title": "Mineral Composition of Medicinal Plants Traditionally Used in the Management of Sickle Cell Disease in the Kwilu Province (Congo-Kinshasa)",
-          "year": 2021,
+          "title": "Venous thromboembolism with contraceptive use in females with sickle cell trait",
+          "year": 2025,
           "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/239958a67d4a5a9938fdd76000de1c844562b0ea",
-          "authors": "J. M. Kitadi, C. Inkoto, E. Lengbiye"
+          "url": "https://www.semanticscholar.org/paper/32f1c7815b5bf1dce0e7cef8f172afc14c937132",
+          "authors": "Angela K Phillips, Candy Wilson, Anwar E. Ahmed"
         },
         {
-          "title": "ANTISICKLING ACTIVITY AND MINERAL CONTENT OF HURA CREPITANS L., ALTERNANTHERA BETTZICKIANA (REGLE) G. NICHOLSON AND DISSOTIS BRAZZAE COGN, PLANTS USED IN THE MANAGEMENT OF SICKLE CELL DISEASE IN KWILU PROVINCE, DEMOCRATIC REPUBLIC OF THE CONGO",
-          "year": 2019,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/75d2d34b0c33426fa99d054b86b4ca15896d3e30",
-          "authors": "J. M. Kitadi, C. Inkoto, E. Lengbiye"
+          "title": "Sex Hormones and Prolactin Ranges in Sickle Cell Disease Subjects in Southern Nigeria",
+          "year": 2016,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/9b11e8f27988676d07e3a653c7bc58d18563fb57",
+          "authors": "F. Ezeiruaku"
         },
         {
-          "title": "Micronutrients as therapeutic tools in the management of sickle cell disease, malaria and diabetes",
-          "year": 2011,
-          "citations": 25,
-          "url": "https://www.semanticscholar.org/paper/b559060f4028a519d3ae21063fcf8623bbc83ea5",
-          "authors": "V. Okochi, J. Okpuzor"
-        },
-        {
-          "title": "Nitric oxide donor properties of hydroxyurea in patients with sickle cell disease",
-          "year": 2002,
-          "citations": 225,
-          "url": "https://www.semanticscholar.org/paper/39cd33b44fc1b6eedf2ab2b01ccff33774ee9ac3",
-          "authors": "M. Gladwin, J. Shelhamer, F. Ognibene"
+          "title": "Reduction in serum IL\u201010 levels is a surrogate marker for predicting vaso\u2010occlusive crisis in sickle cell disease",
+          "year": 2014,
+          "citations": 9,
+          "url": "https://www.semanticscholar.org/paper/6b996cbbf6ade20dad677ef94552e4868e67f53c",
+          "authors": "S. Sarray, N. Mahdi, Layal R Saleh"
         }
       ],
       "most_cited_paper": {
-        "title": "Nitric oxide donor properties of hydroxyurea in patients with sickle cell disease",
-        "year": 2002,
-        "citations": 225,
-        "url": "https://www.semanticscholar.org/paper/39cd33b44fc1b6eedf2ab2b01ccff33774ee9ac3",
-        "authors": "M. Gladwin, J. Shelhamer, F. Ognibene"
+        "title": "Computational repositioning and preclinical validation of mifepristone for human vestibular schwannoma",
+        "year": 2018,
+        "citations": 20,
+        "url": "https://www.semanticscholar.org/paper/05e9db5f93f5a95121f63873fafc3ffa499ee907",
+        "authors": "T. Harvard, Jessica E. Sagers, Adam S. Brown"
       },
-      "max_citations": 225,
+      "max_citations": 20,
       "faers_signal": "none",
-      "faers_total_reports": 46,
+      "faers_total_reports": 19292,
       "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Vanadium to Sickle cell disease terms. Drug has 46 total reports.",
+      "faers_interpretation": "No FAERS reports found linking Progesterone to Sickle cell disease terms. Drug has 19292 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -893,14 +1072,9 @@
         "XMD16-144 (1.507)",
         "Arachidonyl trifluoro-methyl ketone (1.496)"
       ],
-      "signature_interpretation": "Vanadium was not found among the top 31 drugs that reverse the Sickle cell disease gene signature. Top reversers: K784-3131 (1.563), HY-10992 (1.546), MLN2238 (1.511)",
-      "ai_hypothesis": "of its antioxidant properties.",
+      "signature_interpretation": "Progesterone was not found among the top 31 drugs that reverse the Sickle cell disease gene signature. Top reversers: K784-3131 (1.563), HY-10992 (1.546), MLN2238 (1.511)",
+      "ai_hypothesis": "of its anti-sickling properties.",
       "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
         {
           "relation_type": "unclear",
           "confidence": 0.0,
@@ -918,10 +1092,10 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0,
       "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Progesterone \u2014[targets]\u2192 gene-2099 \u2014[is a target of]\u2192 DB01593 \u2014[is a therapeutic for]\u2192 Sickle cell disease",
+      "kg_paths_text": "\u2022 Progesterone \u2014[targets]\u2192 gene-2099 \u2014[is a target of]\u2192 DB01593 \u2014[is a therapeutic for]\u2192 Sickle cell disease\n\u2022 Progesterone \u2014[targets]\u2192 gene-2099 \u2014[is a target of]\u2192 DB01593 \u2014[is a therapeutic for]\u2192 Sickle cell disease\n\u2022 Progesterone \u2014[targets]\u2192 gene-6462 \u2014[is a target of]\u2192 DB01593 \u2014[is a therapeutic for]\u2192 Sickle cell disease",
       "validation_experiments": [],
-      "novelty_score": 0.847000002861023,
+      "novelty_score": 0.321,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -929,498 +1103,224 @@
       "trial_phases": {},
       "confidence": "LOW",
       "confidence_reasons": [
-        "6 PubMed article(s) - limited literature",
+        "40 PubMed articles found",
         "Supported by 3 independent AI pillars",
-        "Highly cited paper (225 citations): \"Nitric oxide donor properties of hydroxyurea in patients wit...\"",
         "AI-generated hypothesis available"
-      ]
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1310,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (CYP2C19 / CYP2C19*1, CYP2C19*2, CYP2C19*17)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "CYP2C19",
+            "variant": "CYP2C19*1, CYP2C19*2, CYP2C19*17",
+            "level": "3",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451132040"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": false,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.272,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.378,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.7
+        }
+      },
+      "tissue_context": {
+        "context_modifier": 1.0,
+        "tissues": [
+          "Whole Blood",
+          "Spleen"
+        ],
+        "n_genes": 0
+      },
+      "ensemble_prob": 0.8674,
+      "ensemble_features": {
+        "kg_score": 0.9984,
+        "degree_penalty": 0.7522,
+        "n_drug_targets": 28,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.8904
+      },
+      "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "disease_entity": "Disease::MESH:D000755"
     },
     {
-      "drug_name": "Sirolimus",
-      "drug_id": "DB00877",
+      "drug_name": "Hemi-Babim",
+      "drug_id": "DB01767",
       "disease_name": "Sickle cell disease",
-      "combined_score": 0.988099992275238,
-      "transe_rank": 156,
-      "pillars_hit": 6,
+      "combined_score": 0.3711000084877014,
+      "pillars_hit": 3,
+      "transe_rank": 5124,
+      "transe_score": -14.2779,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
+      "mol_emb_similarity": 0.9013,
+      "mol_emb_similar_to": "Folic Acid",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.75,
+      "proximity_distance": 1.0,
+      "admet_score": 1.0,
+      "admet_flags": "clean",
+      "primekg_score": 0.2567,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": 0.0355,
+      "structural_group_score": 0.9013,
+      "network_group_score": 0.75,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 1.0,
+      "efficacy_score": 0.3711000084877014,
+      "groups_hit": 3,
       "direct_relations": [],
       "shared_target_count": 0,
       "shared_targets": [],
-      "pubmed_total": 49,
-      "pubmed_treatment_total": 49,
+      "pubmed_total": 0,
+      "pubmed_treatment_total": 0,
       "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "39998298",
-          "title": "Haploidentical Bone Marrow Transplantation for Sickle Cell Disease.",
-          "authors": "Kassim AA, Walters MC, Eapen M, et al.",
-          "journal": "NEJM evidence",
-          "year": "2025",
-          "abstract_snippet": "BACKGROUND: Related human leukocyte antigen (HLA)-haploidentical bone marrow transplantation (BMT) with posttransplant cyclophosphamide may be curative for sickle cell disease. However, graft failure, severe graft-versus-host disease (GVHD), infections, and mortality remain a concern. We evaluated a...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39998298/",
-          "total_results": 49
-        },
-        {
-          "pmid": "41569644",
-          "title": "Bone marrow transplantation for sickle cell disease using posttransplantation cyclophosphamide and 400 cGy TBI.",
-          "authors": "Goldenberg M, Varadhan R, Gamper CJ, et al.",
-          "journal": "Blood advances",
-          "year": "2026",
-          "abstract_snippet": "Reduced-intensity conditioning (RIC), haploidentical donors, and posttransplantation cyclophosphamide (PTCy) have overcome many barriers associated with bone marrow transplantation (BMT) for sickle cell disease (SCD). However, initial approaches had high graft failure rates. Our preliminary data sug...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41569644/"
-        },
-        {
-          "pmid": "25058214",
-          "title": "Reconsideration of age as a contraindication for curative therapy of sickle cell disease.",
-          "authors": "King AA, DiPersio JF",
-          "journal": "JAMA",
-          "year": "2014",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/25058214/"
-        },
-        {
-          "pmid": "38673849",
-          "title": "Pharmacogenomics of Drugs Used in \u03b2-Thalassemia and Sickle-Cell Disease: From Basic Research to Clinical Applications.",
-          "authors": "Gambari R, Waziri AD, Goonasekera H, et al.",
-          "journal": "International journal of molecular sciences",
-          "year": "2024",
-          "abstract_snippet": "In this short review we have presented and discussed studies on pharmacogenomics (also termed pharmacogenetics) of the drugs employed in the treatment of \u03b2-thalassemia or Sickle-cell disease (SCD). This field of investigation is relevant, since it is expected to help clinicians select the appropriat...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38673849/"
-        },
-        {
-          "pmid": "33534948",
-          "title": "Non-myeloablative human leukocyte antigen-matched related donor transplantation in sickle cell disease: outcomes from three independent centres.",
-          "authors": "Alzahrani M, Damlaj M, Jeffries N, et al.",
-          "journal": "British journal of haematology",
-          "year": "2021",
-          "abstract_snippet": "Non-myeloablative haematopoietic progenitor cell transplantation (HPCT) from matched related donors (MRD) has been increasingly utilized in sickle cell disease (SCD). A total of 122 patients received 300\u00a0cGy of total body irradiation (TBI), alemtuzumab, unmanipulated filgrastim-mobilized peripheral ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33534948/"
-        }
-      ],
+      "key_papers": [],
       "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "Adding CD117 Antibody to Alemtuzumab, Low Dose Total Body Irradiation (TBI), and Sirolimus for Matched Related Donor (MRD) Hematopoietic Cell Transplant (HCT) in Sickle Cell Disease (SCD): Initial Results",
+          "title": "Abstract TMP12: Large Vessel Vasculopathy is Associated With Oxygen Metabolic Stress in Children and Young Adults With Sickle Cell Disease",
           "year": 2024,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/2f8f9e991092adcd229c89125c69875129c50af6",
-          "authors": "Matthew Hsieh, Priscilla Pollack, Elizabeth Harvey"
-        },
-        {
-          "title": "Sirolimus-induced Hypertriglyceridemia Leads to Acute Pancreatitis and Diabetic Ketoacidosis Post Stem Cell Transplant for Sickle Cell Disease.",
-          "year": 2023,
           "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/e05215b7dd122b981c3a9f7a44b4799f89344122",
-          "authors": "Subhasish Paul, Garima Nirmal, Vaibhav Chadha"
+          "url": "https://www.semanticscholar.org/paper/0ed6e30d4b447f86e1cd4edf20d631ac4e1d43b8",
+          "authors": "Yan Wang, S. Fellah, K. Guilliams"
         },
         {
-          "title": "Feasibility of early sirolimus cessation post non-myeloablative transplantation in adult patients with severe sickle cell disease",
-          "year": 2022,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/6481c2cbd9c98dbe2345be47f172d70a6ef22007",
-          "authors": "M. Damlaj, B. Alahmari, A. Alaskar"
-        },
-        {
-          "title": "Haploidentical Bone Marrow Transplantation for Sickle Cell Disease.",
-          "year": 2025,
-          "citations": 26,
-          "url": "https://www.semanticscholar.org/paper/657a0a47b537c06f8a6abe4310594e5528dd9dd3",
-          "authors": "A. Kassim, Mark C. Walters, M. Eapen"
-        },
-        {
-          "title": "Absence of clinically relevant sirolimus\u2010related hyperlipidemia in a cohort of children posthematopoietic cell transplantation for sickle cell disease",
+          "title": "Red blood cell exchange in sickle cell disease patient with multiple alloantibodies",
           "year": 2020,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/a10fab04f83d9afd0fec3789bfc44a3119de481c",
-          "authors": "Dania A Monagel, Esther Jadusingh, Jennifer Jupp"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Haploidentical Bone Marrow Transplantation for Sickle Cell Disease.",
-        "year": 2025,
-        "citations": 26,
-        "url": "https://www.semanticscholar.org/paper/657a0a47b537c06f8a6abe4310594e5528dd9dd3",
-        "authors": "A. Kassim, Mark C. Walters, M. Eapen"
-      },
-      "max_citations": 26,
-      "faers_signal": "moderate",
-      "faers_total_reports": 13389,
-      "faers_cooccurrences": 4,
-      "faers_interpretation": "4 FAERS reports mention both Sirolimus and Sickle cell disease-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "K784-3131 (1.563)",
-        "HY-10992 (1.546)",
-        "MLN2238 (1.511)",
-        "XMD16-144 (1.507)",
-        "Arachidonyl trifluoro-methyl ketone (1.496)"
-      ],
-      "signature_interpretation": "Sirolimus was not found among the top 31 drugs that reverse the Sickle cell disease gene signature. Top reversers: K784-3131 (1.563), HY-10992 (1.546), MLN2238 (1.511)",
-      "ai_hypothesis": "of its anti-inflammatory and anti-proliferative effects.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/24b4302d96e60904cb4e833328f0a5209700a93b",
+          "authors": "G. Aggarwal, A. Tiwari, Pratibha Dhiman"
         },
         {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "Phase 2",
-      "failed_trial_count": 7,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.6749,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.6520000100135803,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": false,
-      "clinical_trials_total": 10,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT05384756",
-          "title": "TMLI and Alemtuzumab for Treatment of Sickle Cell Disease",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "phase": "PHASE1",
-          "enrollment": "2",
-          "url": "https://clinicaltrials.gov/study/NCT05384756"
+          "title": "Nitric Oxide\u2010Independent Soluble Guanylate Cyclase Activation Improves Vascular Function and Cardiac Remodeling in Sickle Cell Disease",
+          "year": 2017,
+          "citations": 24,
+          "url": "https://www.semanticscholar.org/paper/b1b879e027f3927a2e894386ab9605f8c801aae8",
+          "authors": "Karin P. Potoka, K. Wood, J. Baust"
         },
         {
-          "nct_id": "NCT03421756",
-          "title": "Stem Cell Transplant in Patients With Severe Sickle Cell Disease",
-          "status": "TERMINATED",
-          "phase": "EARLY_PHASE1",
-          "enrollment": "1",
-          "url": "https://clinicaltrials.gov/study/NCT03421756"
+          "title": "First successful allogeneic hematopoietic stem cell transplantation for a sickle cell disease patient in a low resource country (Nigeria): a case report.",
+          "year": 2014,
+          "citations": 25,
+          "url": "https://www.semanticscholar.org/paper/636454a9b854f5ec93e4d3dd973b0faeaa7a86c6",
+          "authors": "Nosakhare Bazuaye, B. Nwogoh, Douglas Ikponmwen"
         },
         {
-          "nct_id": "NCT07252050",
-          "title": "Ruxolitinib-Enhanced Haplo HCT for Children and Young Adults With Sickle Cell Disease",
-          "status": "NOT_YET_RECRUITING",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "24",
-          "url": "https://clinicaltrials.gov/study/NCT07252050"
-        },
-        {
-          "nct_id": "NCT02013375",
-          "title": "SCD-Haplo: Phase II Study of HLA-Haploidentical SCT for Aggressive SCD",
-          "status": "TERMINATED",
-          "phase": "PHASE2",
-          "enrollment": "2",
-          "url": "https://clinicaltrials.gov/study/NCT02013375"
-        },
-        {
-          "nct_id": "NCT04362293",
-          "title": "Reduced Intensity Transplantation for Severe Sickle Cell Disease",
-          "status": "SUSPENDED",
-          "phase": "PHASE2",
-          "enrollment": "40",
-          "url": "https://clinicaltrials.gov/study/NCT04362293"
-        }
-      ],
-      "trial_phases": {
-        "PHASE1": 4,
-        "EARLY_PHASE1": 1,
-        "PHASE2": 6
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "10 clinical trial(s) found on ClinicalTrials.gov",
-        "49 PubMed articles found",
-        "Supported by 6 independent AI pillars",
-        "Moderate FAERS signal: 4 adverse event reports mention drug-disease co-occurrence",
-        "Supporting paper with 26 citations",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.67)"
-      ]
-    },
-    {
-      "drug_name": "Zinc",
-      "drug_id": "DB01593",
-      "disease_name": "Sickle cell disease",
-      "combined_score": 0.9527000188827515,
-      "transe_rank": 28,
-      "pillars_hit": 6,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 301,
-      "pubmed_treatment_total": 175,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "40013946",
-          "title": "Gene therapy for sickle cell disease and thalassemia.",
-          "authors": "Scaramellini N, Panzieri DL, Cappellini MD",
-          "journal": "Current opinion in hematology",
-          "year": "2025",
-          "abstract_snippet": "PURPOSE OF REVIEW: Thalassemia and sickle cell disease are among the most frequent monogenic hereditary diseases. Access to transfusions, iron chelation therapies and drugs such as hydroxyurea have improved life expectancy and quality of life. However, these diseases still cause significant disabili...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40013946/",
-          "total_results": 301
-        },
-        {
-          "pmid": "36340300",
-          "title": "Pathogenesis of Alcohol-Associated Liver Disease.",
-          "authors": "Osna NA, Rasineni K, Ganesan M, et al.",
-          "journal": "Journal of clinical and experimental hepatology",
-          "year": "2022",
-          "abstract_snippet": "Excessive alcohol consumption is a global healthcare problem with enormous social, economic, and clinical consequences. While chronic, heavy alcohol consumption causes structural damage and/or disrupts normal organ function in virtually every tissue of the body, the liver sustains the greatest damag...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36340300/"
-        },
-        {
-          "pmid": "40165374",
-          "title": "Genome editing strategies for targeted correction of \u03b2-globin mutation in sickle cell disease: From bench to bedside.",
-          "authors": "Butt H, Sathish S, London E, et al.",
-          "journal": "Molecular therapy : the journal of the American Society of Gene Therapy",
-          "year": "2025",
-          "abstract_snippet": "Sickle cell disease (SCD) includes a range of genotypes that\u00a0result in a clinical syndrome, where abnormal red blood cell (RBC) physiology leads to widespread complications affecting nearly every organ system. Treatment strategies for SCD can be broadly categorized into disease-modifying therapies a...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40165374/"
-        },
-        {
-          "pmid": "38775255",
-          "title": "Antioxidant supplementation for sickle cell disease.",
-          "authors": "Bolarinwa AB, Oduwole O, Okebe J, et al.",
-          "journal": "The Cochrane database of systematic reviews",
-          "year": "2024",
-          "abstract_snippet": "BACKGROUND: Sickle cell disease (SCD) refers to a group of genetic disorders characterized by the presence of an abnormal haemoglobin molecule called haemoglobin S (HbS). When subjected to oxidative stress from low oxygen concentrations, HbS molecules form rigid polymers, giving the red cell the typ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38775255/"
-        },
-        {
-          "pmid": "35413496",
-          "title": "Zinc in sickle cell disease: A narrative review.",
-          "authors": "Miranda CTOF, Vermeulen-Serpa KM, Pedro ACC, et al.",
-          "journal": "Journal of trace elements in medicine and biology : organ of the Society for Minerals and Trace Elements (GMS)",
-          "year": "2022",
-          "abstract_snippet": "Sickle cell disease (SCD) is an inherited disease caused by hemoglobin S mutated hemoglobin S. It is characterized by chronic hemolysis, intermittent vaso-occlusive crises followed by ischemia-reperfusion, and organ damage. These patients have an increased risk of multiple micronutrient deficiencies...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35413496/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Plasma Zinc and Magnesium Levels in Sickle Cell Disease Patients in Latakia, Syria",
-          "year": 2025,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/1a72bb297b843a4a0084563af97be1a02d3ebd09",
-          "authors": "Zenab M Yousef, R. Asaad, M. Khayat"
-        },
-        {
-          "title": "Zinc level and its impact on the phenotype of sickle cell disease",
-          "year": 2025,
+          "title": "Targeted Disruption of Nrf2 in Non-Hematopoietic Tissues Exacerbates Hemolysis and Accelerates Chronic Lung Disease in Transgenic Sickle Cell Anemia Mice",
+          "year": 2014,
           "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/f87b2b4606b25a6c0105dcf307cf0438aa2cef65",
-          "authors": "Ilham Youssry, M. El-Ghamrawy, E. Youness"
-        },
-        {
-          "title": "Zinc finger nuclease-mediated gene editing in hematopoietic stem cells results in reactivation of fetal hemoglobin in sickle cell disease",
-          "year": 2024,
-          "citations": 10,
-          "url": "https://www.semanticscholar.org/paper/d000ca93d6bf2929e09965c31ca3e7fda9efa05f",
-          "authors": "Samuel Lessard, Pauline Rimmel\u00e9, Hui Ling"
-        },
-        {
-          "title": "Sickle Cell Disease Pain and Zinc, Any Link? A Case-Control Study among Patients With Sickle Cell Disease In Korle-Bu",
-          "year": 2024,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/3f0a3a6c96f2c2efb52c40be0e87e1a98aac2d3a",
-          "authors": "Grace Ababio, Lawrence Ababio Boateng, E. V. Asare"
-        },
-        {
-          "title": "Zinc in sickle cell disease: A narrative review.",
-          "year": 2022,
-          "citations": 17,
-          "url": "https://www.semanticscholar.org/paper/cb58c74914f360052b05daa369fc8e95f25d85d0",
-          "authors": "C. Miranda, K. M. Vermeulen-Serpa, A. C. C. Pedro"
+          "url": "https://www.semanticscholar.org/paper/23bc042c10672e108cc2fa97a08f88cbbf8d25df",
+          "authors": "Samit Ghosh, J. Hansen, R. Hazra"
         }
       ],
       "most_cited_paper": {
-        "title": "Zinc in sickle cell disease: A narrative review.",
-        "year": 2022,
-        "citations": 17,
-        "url": "https://www.semanticscholar.org/paper/cb58c74914f360052b05daa369fc8e95f25d85d0",
-        "authors": "C. Miranda, K. M. Vermeulen-Serpa, A. C. C. Pedro"
+        "title": "First successful allogeneic hematopoietic stem cell transplantation for a sickle cell disease patient in a low resource country (Nigeria): a case report.",
+        "year": 2014,
+        "citations": 25,
+        "url": "https://www.semanticscholar.org/paper/636454a9b854f5ec93e4d3dd973b0faeaa7a86c6",
+        "authors": "Nosakhare Bazuaye, B. Nwogoh, Douglas Ikponmwen"
       },
-      "max_citations": 17,
-      "faers_signal": "moderate",
-      "faers_total_reports": 38704,
-      "faers_cooccurrences": 38,
-      "faers_interpretation": "38 FAERS reports mention both Zinc and Sickle cell disease-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "K784-3131 (1.563)",
-        "HY-10992 (1.546)",
-        "MLN2238 (1.511)",
-        "XMD16-144 (1.507)",
-        "Arachidonyl trifluoro-methyl ketone (1.496)"
-      ],
-      "signature_interpretation": "Zinc was not found among the top 31 drugs that reverse the Sickle cell disease gene signature. Top reversers: K784-3131 (1.563), HY-10992 (1.546), MLN2238 (1.511)",
-      "ai_hypothesis": "of its anti-sickling properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.6749,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.4000000059604645,
-      "novelty_level": "ESTABLISHED",
-      "is_known_treatment": false,
-      "clinical_trials_total": 7,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT06260891",
-          "title": "Zinc Supplementation in Sickle Cell Disease: A Precursor to the Think Zinc for Bones Trial",
-          "status": "RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "34",
-          "url": "https://clinicaltrials.gov/study/NCT06260891"
-        },
-        {
-          "nct_id": "NCT06561061",
-          "title": "Zinc for Infection Prevention in Sickle Cell Anemia-2 (ZIPS-2)",
-          "status": "COMPLETED",
-          "phase": "PHASE2, PHASE3",
-          "enrollment": "100",
-          "url": "https://clinicaltrials.gov/study/NCT06561061"
-        },
-        {
-          "nct_id": "NCT03528434",
-          "title": "Zinc for Infection Prevention in Sickle Cell Anemia (ZIPS)",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "250",
-          "url": "https://clinicaltrials.gov/study/NCT03528434"
-        },
-        {
-          "nct_id": "NCT04479618",
-          "title": "Test of the Safety, Effectiveness, & Acceptability of An Improvised Dressing for Sickle Cell Leg Ulcers in the Tropics",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "48",
-          "url": "https://clinicaltrials.gov/study/NCT04479618"
-        },
-        {
-          "nct_id": "NCT03293641",
-          "title": "Zinc Supplementation in Children With Sickle Cell Disease in Western Kenya",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "40",
-          "url": "https://clinicaltrials.gov/study/NCT03293641"
-        }
-      ],
-      "trial_phases": {
-        "PHASE2": 4,
-        "PHASE3": 2,
-        "NA": 3,
-        "PHASE1": 1
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "7 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
-        "301 PubMed articles on this drug-disease pair",
-        "Supported by 6 independent AI pillars",
-        "Moderate FAERS signal: 38 adverse event reports mention drug-disease co-occurrence",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.67)"
-      ]
-    },
-    {
-      "drug_name": "Nadide",
-      "drug_id": "DB14128",
-      "disease_name": "Sickle cell disease",
-      "combined_score": 0.9491999745368958,
-      "transe_rank": 237,
-      "pillars_hit": 4,
-      "mol_similarity": 0.8795,
-      "similar_to": "2'-Monophosphoadenosine 5'-Diphosphoribose",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Sickle cell disease.",
-          "year": 1996,
-          "citations": 4485,
-          "url": "https://www.semanticscholar.org/paper/1cd9bd0b255a79abc643a43c7dce182a5e896290",
-          "authors": "P. Lane"
-        },
-        {
-          "title": "Exagamglogene Autotemcel for Severe Sickle Cell Disease.",
-          "year": 2024,
-          "citations": 113,
-          "url": "https://www.semanticscholar.org/paper/ff70aebe90b5070988b7e8b52e107411aed93ae8",
-          "authors": "H. Frangoul, F. Locatelli, Akshay Sharma"
-        },
-        {
-          "title": "Mortality in sickle cell disease. Life expectancy and risk factors for early death.",
-          "year": 1994,
-          "citations": 3286,
-          "url": "https://www.semanticscholar.org/paper/6bcc7a4d436214c41a4d128f9d221e950eb4962b",
-          "authors": "O. Platt, D. Brambilla, W. Rosse"
-        },
-        {
-          "title": "Global, regional, and national prevalence and mortality burden of sickle cell disease, 2000\u20132021: a systematic analysis from the Global Burden of Disease Study 2021",
-          "year": 2023,
-          "citations": 364,
-          "url": "https://www.semanticscholar.org/paper/3f9f311815b0cd485614734f99e737e307bd8407",
-          "authors": "A. Thomson, T. A. McHugh, A. Oron"
-        },
-        {
-          "title": "CRISPR-Cas9 Editing of the HBG1 and HBG2 Promoters to Treat Sickle Cell Disease.",
-          "year": 2023,
-          "citations": 102,
-          "url": "https://www.semanticscholar.org/paper/e53f2ddfff4987c25384a6e8efc07334e2cac239",
-          "authors": "Akshay Sharma, J. Boelens, M. Cancio"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Sickle cell disease.",
-        "year": 1996,
-        "citations": 4485,
-        "url": "https://www.semanticscholar.org/paper/1cd9bd0b255a79abc643a43c7dce182a5e896290",
-        "authors": "P. Lane"
-      },
-      "max_citations": 4485,
+      "max_citations": 25,
       "faers_signal": "none",
-      "faers_total_reports": 19,
+      "faers_total_reports": 0,
       "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Nadide to Sickle cell disease terms. Drug has 19 total reports.",
+      "faers_interpretation": "No FAERS reports found for Hemi-Babim",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -1430,8 +1330,8 @@
         "XMD16-144 (1.507)",
         "Arachidonyl trifluoro-methyl ketone (1.496)"
       ],
-      "signature_interpretation": "Nadide was not found among the top 31 drugs that reverse the Sickle cell disease gene signature. Top reversers: K784-3131 (1.563), HY-10992 (1.546), MLN2238 (1.511)",
-      "ai_hypothesis": "it is a potent inhibitor of sickling.",
+      "signature_interpretation": "Hemi-Babim was not found among the top 31 drugs that reverse the Sickle cell disease gene signature. Top reversers: K784-3131 (1.563), HY-10992 (1.546), MLN2238 (1.511)",
+      "ai_hypothesis": "it is a safe and effective treatment for the sickling process.",
       "abstract_analyses": [],
       "has_failed_trial": false,
       "failed_trial_phase": "",
@@ -1439,296 +1339,10 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0,
       "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Hemi-Babim \u2014[targets]\u2192 gene-2147 \u2014[is associated with]\u2192 Sickle cell disease",
+      "kg_paths_text": "\u2022 Hemi-Babim \u2014[targets]\u2192 gene-2147 \u2014[is associated with]\u2192 Sickle cell disease\n\u2022 Hemi-Babim \u2014[targets]\u2192 gene-2147 \u2014[is associated with]\u2192 Sickle cell disease\n\u2022 Hemi-Babim \u2014[targets]\u2192 gene-2147 \u2014[is a target of]\u2192 DB09130 \u2014[is a therapeutic for]\u2192 Sickle cell disease",
       "validation_experiments": [],
-      "novelty_score": 0.6639999747276306,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": false,
-      "clinical_trials_total": 1,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT05199766",
-          "title": "Hemolysis Related Complications in SCD. A Phase II Study With Voxelotor",
-          "status": "UNKNOWN",
-          "phase": "PHASE2",
-          "enrollment": "30",
-          "url": "https://clinicaltrials.gov/study/NCT05199766"
-        }
-      ],
-      "trial_phases": {
-        "PHASE2": 1
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "1 clinical trial(s) found on ClinicalTrials.gov",
-        "Supported by 4 independent AI pillars",
-        "High molecular similarity (0.88) to 2'-Monophosphoadenosine 5'-Diphosphoribose",
-        "Highly cited paper (4485 citations): \"Sickle cell disease....\"",
-        "AI-generated hypothesis available"
-      ]
-    },
-    {
-      "drug_name": "Gadolinium",
-      "drug_id": "DB12091",
-      "disease_name": "Sickle cell disease",
-      "combined_score": 0.9492,
-      "transe_rank": 318,
-      "pillars_hit": 2,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 300,
-      "pubmed_treatment_total": 125,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "37795986",
-          "title": "Assessment of late gadolinium enhancement in hypertrophic cardiomyopathy improves risk stratification based on current guidelines.",
-          "authors": "Wang J, Yang S, Ma X, et al.",
-          "journal": "European heart journal",
-          "year": "2023",
-          "abstract_snippet": "BACKGROUND AND AIMS: Identifying patients with hypertrophic cardiomyopathy (HCM) who are candidates for implantable cardioverter defibrillator (ICD) implantation in primary prevention for sudden cardiac death (SCD) is crucial. The aim of this study was to externally validate the 2022 European Societ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37795986/",
-          "total_results": 300
-        },
-        {
-          "pmid": "39143936",
-          "title": "Precision prediction of heart failure events in patients with dilated cardiomyopathy and mildly reduced ejection fraction using multi-parametric cardiovascular magnetic resonance.",
-          "authors": "Hammersley DJ, Mukhopadhyay S, Chen X, et al.",
-          "journal": "European journal of heart failure",
-          "year": "2024",
-          "abstract_snippet": "AIMS: To assess whether left ventricular (LV) global longitudinal strain (GLS), derived from cardiovascular magnetic resonance (CMR), is associated with (i) progressive heart failure (HF), and (ii) sudden cardiac death (SCD) in patients with dilated cardiomyopathy with mildly reduced ejection fracti...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39143936/"
-        },
-        {
-          "pmid": "37632503",
-          "title": "Quantitative Late Gadolinium Enhancement Cardiac Magnetic Resonance and Sudden Death in Hypertrophic Cardiomyopathy: A Meta-Analysis.",
-          "authors": "Kiaos A, Daskalopoulos GN, Kamperidis V, et al.",
-          "journal": "JACC. Cardiovascular imaging",
-          "year": "2024",
-          "abstract_snippet": "BACKGROUND: Quantitative late gadolinium enhancement (LGE) cardiac magnetic resonance provides important prognostic information for sudden cardiac death (SCD) in hypertrophic cardiomyopathy (HCM). However, it has not been fully integrated into clinical practice. OBJECTIVES: The purpose of this study...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37632503/"
-        },
-        {
-          "pmid": "39180571",
-          "title": "Enhanced detection of damaged myocardium and risk stratification in hypertrophic cardiomyopathy using integrated [",
-          "authors": "Ding J, Zhang H, Chen X, et al.",
-          "journal": "European journal of nuclear medicine and molecular imaging",
-          "year": "2024",
-          "abstract_snippet": "PURPOSE: This study aims to explore the correlation between PET and CMR in integrated [ METHODS: This study included 20 HCM patients and 11 age- and gender-matched controls. PET analysis evaluated left ventricular (LV) [ RESULT: The FAPI uptake, myocardial mass, myocardial thickness, and T1/T2 mappi...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39180571/"
-        },
-        {
-          "pmid": "39320884",
-          "title": "Myocardial Scarring and Sudden Cardiac Death in Young Patients With Hypertrophic Cardiomyopathy: A Multicenter Cohort Study.",
-          "authors": "Chan RH, van der Wal L, Liberato G, et al.",
-          "journal": "JAMA cardiology",
-          "year": "2024",
-          "abstract_snippet": "IMPORTANCE: The ability to predict sudden cardiac death (SCD) in children and adolescents with hypertrophic cardiomyopathy (HCM) is currently inadequate. Late gadolinium enhancement (LGE) by cardiovascular magnetic resonance (CMR) imaging is associated with SCD events in adults with HCM. OBJECTIVE: ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39320884/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Evaluating the safety of intravenous gadolinium-based contrast agents in patients with sickle cell disease: A prospective study",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/9bbe64162cf62d526b821f0f3c62194ed00c3305",
-          "authors": "Abhijan Maity, Bhawana Sonawane, A. Deshpande"
-        },
-        {
-          "title": "Gadolinium induced anaphylaxis under general anesthesia in a patient with sickle cell disease.",
-          "year": 2019,
-          "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/bcbf56673179b3a2005d2a748de375e684340b84",
-          "authors": "Irim Salik, J. Hernandez"
-        },
-        {
-          "title": "Longitudinal Assessment of Myocardial Fibrosis in Sickle Cell Disease",
-          "year": 2024,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/3a3bb510e793d52a6622959687d17ffcd860b3e6",
-          "authors": "O. Niss, Cara Morin, Sean M Lang"
-        },
-        {
-          "title": "Abstract TMP7: Disruption of Blood Brain Barrier is Associated With Silent Cerebral Infarcts in Patients With Sickle Cell Disease",
-          "year": 2024,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/b01d4a6b52bf73265d2f4e9ead6ff9c1174b227f",
-          "authors": "Yan Wang, S. Astafiev, S. Fellah"
-        },
-        {
-          "title": "Evaluation of cardiac fibrosis and subclinical cardiac changes in children with sickle cell disease using magnetic resonance imaging, echocardiography, and serum galectin-3",
-          "year": 2023,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/d0b318ab497e6d1d01ddb71956c3691b8ab9872a",
-          "authors": "Reham Wagdy, A. Fathy, Abdelaziz Elnekidy"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Evaluation of cardiac fibrosis and subclinical cardiac changes in children with sickle cell disease using magnetic resonance imaging, echocardiography, and serum galectin-3",
-        "year": 2023,
-        "citations": 5,
-        "url": "https://www.semanticscholar.org/paper/d0b318ab497e6d1d01ddb71956c3691b8ab9872a",
-        "authors": "Reham Wagdy, A. Fathy, Abdelaziz Elnekidy"
-      },
-      "max_citations": 5,
-      "faers_signal": "none",
-      "faers_total_reports": 1993,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Gadolinium to Sickle cell disease terms. Drug has 1993 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "K784-3131 (1.563)",
-        "HY-10992 (1.546)",
-        "MLN2238 (1.511)",
-        "XMD16-144 (1.507)",
-        "Arachidonyl trifluoro-methyl ketone (1.496)"
-      ],
-      "signature_interpretation": "Gadolinium was not found among the top 31 drugs that reverse the Sickle cell disease gene signature. Top reversers: K784-3131 (1.563), HY-10992 (1.546), MLN2238 (1.511)",
-      "ai_hypothesis": "of its anti-sickling properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.522,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": false,
-      "clinical_trials_total": 1,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT01044901",
-          "title": "Cardiovascular Complications of Sickle Cell Disease",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "51",
-          "url": "https://clinicaltrials.gov/study/NCT01044901"
-        }
-      ],
-      "trial_phases": {},
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "1 clinical trial(s) found on ClinicalTrials.gov",
-        "300 PubMed articles on this drug-disease pair",
-        "Supported by 2 independent AI pillars",
-        "AI-generated hypothesis available"
-      ]
-    },
-    {
-      "drug_name": "L-Alanyl-L-Glutamine",
-      "drug_id": "DB11876",
-      "disease_name": "Sickle cell disease",
-      "combined_score": 0.9481,
-      "transe_rank": 1506,
-      "pillars_hit": 2,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "A Population Pharmacokinetic Analysis of l-Glutamine Exposure in Patients with Sickle Cell Disease: Evaluation of Dose and Food Effects",
-          "year": 2024,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/28b570c667793e7e68416e48f3d721e58e937ee2",
-          "authors": "Alina Sadaf, M. Dong, A. Pfeiffer"
-        },
-        {
-          "title": "Real-world observational study on the long-term effect of L-glutamine treatment on renal parameters of adult and pediatric patients with sickle cell disease",
-          "year": 2023,
-          "citations": 6,
-          "url": "https://www.semanticscholar.org/paper/acef8b2338d7ad1c4a7ba6ab6704db4002750722",
-          "authors": "N. Elenga, Mohamed A. Yassin"
-        },
-        {
-          "title": "l-glutamine, crizanlizumab, voxelotor, and cell-based therapy for adult sickle cell disease: Hype or hope?",
-          "year": 2022,
-          "citations": 30,
-          "url": "https://www.semanticscholar.org/paper/899440da938d3364d1c3b9f0dd4ae68cc70f6a80",
-          "authors": "J. Leibovitch, A. Tambe, E. Cimpeanu"
-        },
-        {
-          "title": "Real-World data on efficacy of L-glutamine in preventing sickle cell disease-related complications in pediatric and adult patients",
-          "year": 2022,
-          "citations": 28,
-          "url": "https://www.semanticscholar.org/paper/17b2a4999572225430af5584f4f080e6128e4962",
-          "authors": "N. Elenga, G. Loko, M. Etienne\u2010Julan"
-        },
-        {
-          "title": "Recent Advances in Sickle-Cell Disease Therapies: A Review of Voxelotor, Crizanlizumab, and L-glutamine",
-          "year": 2022,
-          "citations": 30,
-          "url": "https://www.semanticscholar.org/paper/9957ca5a67cecc4672ed1588d98aa6abdb39c783",
-          "authors": "Michael Migotsky, Molly Beestrum, S. Badawy"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "l-glutamine, crizanlizumab, voxelotor, and cell-based therapy for adult sickle cell disease: Hype or hope?",
-        "year": 2022,
-        "citations": 30,
-        "url": "https://www.semanticscholar.org/paper/899440da938d3364d1c3b9f0dd4ae68cc70f6a80",
-        "authors": "J. Leibovitch, A. Tambe, E. Cimpeanu"
-      },
-      "max_citations": 30,
-      "faers_signal": "none",
-      "faers_total_reports": 5,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking L-Alanyl-L-Glutamine to Sickle cell disease terms. Drug has 5 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "K784-3131 (1.563)",
-        "HY-10992 (1.546)",
-        "MLN2238 (1.511)",
-        "XMD16-144 (1.507)",
-        "Arachidonyl trifluoro-methyl ketone (1.496)"
-      ],
-      "signature_interpretation": "L-Alanyl-L-Glutamine was not found among the top 31 drugs that reverse the Sickle cell disease gene signature. Top reversers: K784-3131 (1.563), HY-10992 (1.546), MLN2238 (1.511)",
-      "ai_hypothesis": "it is a substrate for the enzyme glutamine synthetase, which is deficient in sickle cell disease.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.948,
+      "novelty_score": 0.3709999918937683,
       "novelty_level": "BREAKTHROUGH",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -1736,10 +1350,1400 @@
       "trial_phases": {},
       "confidence": "LOW",
       "confidence_reasons": [
-        "Supported by 2 independent AI pillars",
-        "Supporting paper with 30 citations",
+        "Supported by 3 independent AI pillars",
+        "Supporting paper with 25 citations",
         "AI-generated hypothesis available"
-      ]
+      ],
+      "dose_plausibility": {
+        "plausibility": "unknown",
+        "dose_range": "research",
+        "confidence": "low",
+        "rationale": "No ChEMBL clinical phase data available.",
+        "chembl_phase": null,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 0,
+        "has_warnings": false,
+        "top_interactions": []
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 0,
+        "axes": {
+          "kg": false,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.12999999523162842,
+        "label": "",
+        "axis_values": {
+          "kg": 0.3709999918937683,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.0
+        }
+      },
+      "tissue_context": {
+        "context_modifier": 1.0,
+        "tissues": [
+          "Whole Blood",
+          "Spleen"
+        ],
+        "n_genes": 0
+      },
+      "ensemble_prob": 0.0,
+      "ensemble_features": {
+        "kg_score": 0.5153,
+        "degree_penalty": 1.0,
+        "n_drug_targets": 3,
+        "is_fda_approved": 0,
+        "n_disease_genes": 0,
+        "transe_rank_log": 8.5399
+      },
+      "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "disease_entity": "Disease::MESH:D000755"
+    },
+    {
+      "drug_name": "2-{4-[(2s)-2-[({[(1s)-1-Carboxy-2-Phenylethyl]Amino}Carbonyl)Amino]-3-Oxo-3-(Pentylamino)Propyl]Phenoxy}Malonic Acid",
+      "drug_id": "DB02436",
+      "disease_name": "Sickle cell disease",
+      "combined_score": 0.36550000309944153,
+      "pillars_hit": 3,
+      "transe_rank": 7024,
+      "transe_score": -14.6273,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0.8946,
+      "mol_emb_similar_to": "Enalapril",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.75,
+      "proximity_distance": 1.0,
+      "admet_score": 1.0,
+      "admet_flags": "clean",
+      "primekg_score": 0.2545,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": 0.0179,
+      "structural_group_score": 0.8946,
+      "network_group_score": 0.75,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 1.0,
+      "efficacy_score": 0.36550000309944153,
+      "groups_hit": 3,
+      "direct_relations": [],
+      "shared_target_count": 0,
+      "shared_targets": [],
+      "pubmed_total": 0,
+      "pubmed_treatment_total": 0,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [],
+      "most_cited_paper": {},
+      "max_citations": 0,
+      "faers_signal": "none",
+      "faers_total_reports": 0,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found for 2-{4-[(2s)-2-[({[(1s)-1-Carboxy-2-Phenylethyl]Amino}Carbonyl)Amino]-3-Oxo-3-(Pentylamino)Propyl]Phenoxy}Malonic Acid",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "K784-3131 (1.563)",
+        "HY-10992 (1.546)",
+        "MLN2238 (1.511)",
+        "XMD16-144 (1.507)",
+        "Arachidonyl trifluoro-methyl ketone (1.496)"
+      ],
+      "signature_interpretation": "2-{4-[(2s)-2-[({[(1s)-1-Carboxy-2-Phenylethyl]Amino}Carbonyl)Amino]-3-Oxo-3-(Pentylamino)Propyl]Phenoxy}Malonic Acid was not found among the top 31 drugs that reverse the Sickle cell disease gene signature. Top reversers: K784-3131 (1.563), HY-10992 (1.546), MLN2238 (1.511)",
+      "ai_hypothesis": "it is a potent inhibitor of the polymerization of sickle hemoglobin.",
+      "abstract_analyses": [],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "2-{4-[(2s)-2-[({[(1s)-1-Carboxy-2-Phenylethyl]Amino}Carbonyl)Amino]-3-Oxo-3-(Pentylamino)Propyl]Phenoxy}Malonic Acid \u2014[targets]\u2192 gene-5770 \u2014[is affected by]\u2192 DB01593 \u2014[is a therapeutic for]\u2192 Sickle cell disease",
+      "kg_paths_text": "\u2022 2-{4-[(2s)-2-[({[(1s)-1-Carboxy-2-Phenylethyl]Amino}Carbonyl)Amino]-3-Oxo-3-(Pentylamino)Propyl]Phenoxy}Malonic Acid \u2014[targets]\u2192 gene-5770 \u2014[is affected by]\u2192 DB01593 \u2014[is a therapeutic for]\u2192 Sickle cell disease\n\u2022 2-{4-[(2s)-2-[({[(1s)-1-Carboxy-2-Phenylethyl]Amino}Carbonyl)Amino]-3-Oxo-3-(Pentylamino)Propyl]Phenoxy}Malonic Acid \u2014[targets]\u2192 gene-5770 \u2014[is affected by]\u2192 DB01593 \u2014[is a therapeutic for]\u2192 Sickle cell disease\n\u2022 2-{4-[(2s)-2-[({[(1s)-1-Carboxy-2-Phenylethyl]Amino}Carbonyl)Amino]-3-Oxo-3-(Pentylamino)Propyl]Phenoxy}Malonic Acid \u2014[targets]\u2192 gene-5770 \u2014[is affected by]\u2192 DB09140 \u2014[is a therapeutic for]\u2192 Sickle cell disease",
+      "validation_experiments": [],
+      "novelty_score": 0.3659999966621399,
+      "novelty_level": "BREAKTHROUGH",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "LOW",
+      "confidence_reasons": [
+        "Supported by 3 independent AI pillars",
+        "AI-generated hypothesis available"
+      ],
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 0,
+        "has_warnings": false,
+        "top_interactions": []
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 0,
+        "axes": {
+          "kg": false,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.12800000607967377,
+        "label": "",
+        "axis_values": {
+          "kg": 0.3659999966621399,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.0
+        }
+      },
+      "tissue_context": {
+        "context_modifier": 1.0,
+        "tissues": [
+          "Whole Blood",
+          "Spleen"
+        ],
+        "n_genes": 0
+      },
+      "ensemble_prob": 0.0,
+      "ensemble_features": {
+        "kg_score": 0.3574,
+        "degree_penalty": 1.0,
+        "n_drug_targets": 0,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 8.8217
+      },
+      "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "disease_entity": "Disease::MESH:D000755"
+    },
+    {
+      "drug_name": "Phosphoramidon",
+      "drug_id": "DB02557",
+      "disease_name": "Sickle cell disease",
+      "combined_score": 0.3646000027656555,
+      "pillars_hit": 3,
+      "transe_rank": 1787,
+      "transe_score": -12.7827,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0.9,
+      "mol_emb_similar_to": "Cholecalciferol",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.75,
+      "proximity_distance": 1.0,
+      "admet_score": 1.0,
+      "admet_flags": "clean",
+      "primekg_score": 0.2443,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": 0.0105,
+      "structural_group_score": 0.9,
+      "network_group_score": 0.75,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 1.0,
+      "efficacy_score": 0.3646000027656555,
+      "groups_hit": 3,
+      "direct_relations": [],
+      "shared_target_count": 0,
+      "shared_targets": [],
+      "pubmed_total": 0,
+      "pubmed_treatment_total": 0,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Exagamglogene Autotemcel for Severe Sickle Cell Disease.",
+          "year": 2024,
+          "citations": 113,
+          "url": "https://www.semanticscholar.org/paper/ff70aebe90b5070988b7e8b52e107411aed93ae8",
+          "authors": "H. Frangoul, F. Locatelli, Akshay Sharma"
+        },
+        {
+          "title": "Sickle cell disease.",
+          "year": 1996,
+          "citations": 4488,
+          "url": "https://www.semanticscholar.org/paper/1cd9bd0b255a79abc643a43c7dce182a5e896290",
+          "authors": "P. Lane"
+        },
+        {
+          "title": "Global, regional, and national prevalence and mortality burden of sickle cell disease, 2000\u20132021: a systematic analysis from the Global Burden of Disease Study 2021",
+          "year": 2023,
+          "citations": 364,
+          "url": "https://www.semanticscholar.org/paper/3f9f311815b0cd485614734f99e737e307bd8407",
+          "authors": "A. Thomson, T. A. McHugh, A. Oron"
+        },
+        {
+          "title": "Mortality in sickle cell disease. Life expectancy and risk factors for early death.",
+          "year": 1994,
+          "citations": 3287,
+          "url": "https://www.semanticscholar.org/paper/6bcc7a4d436214c41a4d128f9d221e950eb4962b",
+          "authors": "O. Platt, D. Brambilla, W. Rosse"
+        },
+        {
+          "title": "CRISPR-Cas9 Editing of the HBG1 and HBG2 Promoters to Treat Sickle Cell Disease.",
+          "year": 2023,
+          "citations": 103,
+          "url": "https://www.semanticscholar.org/paper/e53f2ddfff4987c25384a6e8efc07334e2cac239",
+          "authors": "Akshay Sharma, J. Boelens, M. Cancio"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Sickle cell disease.",
+        "year": 1996,
+        "citations": 4488,
+        "url": "https://www.semanticscholar.org/paper/1cd9bd0b255a79abc643a43c7dce182a5e896290",
+        "authors": "P. Lane"
+      },
+      "max_citations": 4488,
+      "faers_signal": "none",
+      "faers_total_reports": 0,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found for Phosphoramidon",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "K784-3131 (1.563)",
+        "HY-10992 (1.546)",
+        "MLN2238 (1.511)",
+        "XMD16-144 (1.507)",
+        "Arachidonyl trifluoro-methyl ketone (1.496)"
+      ],
+      "signature_interpretation": "Phosphoramidon was not found among the top 31 drugs that reverse the Sickle cell disease gene signature. Top reversers: K784-3131 (1.563), HY-10992 (1.546), MLN2238 (1.511)",
+      "ai_hypothesis": "it inhibits the activity of the enzyme, which is responsible for the breakdown of the vaso-occlusion.",
+      "abstract_analyses": [],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Phosphoramidon \u2014[targets]\u2192 gene-4311 \u2014[is affected by]\u2192 DB01593 \u2014[is a therapeutic for]\u2192 Sickle cell disease",
+      "kg_paths_text": "\u2022 Phosphoramidon \u2014[targets]\u2192 gene-4311 \u2014[is affected by]\u2192 DB01593 \u2014[is a therapeutic for]\u2192 Sickle cell disease\n\u2022 Phosphoramidon \u2014[targets]\u2192 gene-4311 \u2014[is affected by]\u2192 DB00295 \u2014[is a therapeutic for]\u2192 Sickle cell disease\n\u2022 Phosphoramidon \u2014[targets]\u2192 gene-4311 \u2014[is affected by]\u2192 DB00295 \u2014[is a therapeutic for]\u2192 Sickle cell disease",
+      "validation_experiments": [],
+      "novelty_score": 0.3100000023841858,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "LOW",
+      "confidence_reasons": [
+        "Supported by 3 independent AI pillars",
+        "Highly cited paper (4488 citations): \"Sickle cell disease....\"",
+        "AI-generated hypothesis available"
+      ],
+      "dose_plausibility": {
+        "plausibility": "unknown",
+        "dose_range": "research",
+        "confidence": "low",
+        "rationale": "No ChEMBL clinical phase data available.",
+        "chembl_phase": null,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 0,
+        "has_warnings": false,
+        "top_interactions": []
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 0,
+        "axes": {
+          "kg": false,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.12800000607967377,
+        "label": "",
+        "axis_values": {
+          "kg": 0.36500000953674316,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.0
+        }
+      },
+      "tissue_context": {
+        "context_modifier": 1.0,
+        "tissues": [
+          "Whole Blood",
+          "Spleen"
+        ],
+        "n_genes": 0
+      },
+      "ensemble_prob": 0.0,
+      "ensemble_features": {
+        "kg_score": 0.702,
+        "degree_penalty": 1.0,
+        "n_drug_targets": 5,
+        "is_fda_approved": 0,
+        "n_disease_genes": 0,
+        "transe_rank_log": 8.0536
+      },
+      "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "disease_entity": "Disease::MESH:D000755"
+    },
+    {
+      "drug_name": "Hydromorphone",
+      "drug_id": "DB00327",
+      "disease_name": "Sickle cell disease",
+      "combined_score": 0.3615,
+      "pillars_hit": 3,
+      "transe_rank": 212,
+      "transe_score": -11.5963,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0.541,
+      "similar_to": "Morphine",
+      "mol_emb_similarity": 0.9835,
+      "mol_emb_similar_to": "Morphine",
+      "gene_sig_score": 0.1304,
+      "gene_sig_rank": 7,
+      "proximity_score": 0.5120000243186951,
+      "proximity_distance": 1.9500000476837158,
+      "admet_score": 0.6585,
+      "admet_flags": "clean",
+      "primekg_score": 0.2613,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": 0.1201,
+      "structural_group_score": 0.9835,
+      "network_group_score": 0.6546,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9317,
+      "efficacy_score": 0.388,
+      "groups_hit": 3,
+      "direct_relations": [],
+      "shared_target_count": 0,
+      "shared_targets": [],
+      "pubmed_total": 26,
+      "pubmed_treatment_total": 20,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "39238512",
+          "title": "Regional anesthesia and analgesia in sickle cell pain episodes: A scoping review.",
+          "authors": "Howie BA, Rajput K, Chow R",
+          "journal": "Interventional pain medicine",
+          "year": "2022",
+          "abstract_snippet": "REVIEW PURPOSE: Sickle cell disease (SCD) vaso-occlusive crises are the most common reason patients with SCD present for medical care in the US. The goal of this scoping review is to outline existing literature on regional anesthesia for sickle cell vaso-occlusive crises (VOC) and identify areas for...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39238512/",
+          "total_results": 26
+        },
+        {
+          "pmid": "22506947",
+          "title": "Adult emergency department patients with sickle cell pain crisis: results from a quality improvement learning collaborative model to improve analgesic management.",
+          "authors": "Tanabe P, Hafner JW, Martinovich Z, et al.",
+          "journal": "Academic emergency medicine : official journal of the Society for Academic Emergency Medicine",
+          "year": "2012",
+          "abstract_snippet": "OBJECTIVES: The aims of this study were to 1) estimate differences in pain management process and patient-reported outcomes, pre- and postimplementation of analgesic protocols for adults with sickle cell disease (SCD), and 2) examine the effects of site and visit frequency on changes in pain scores ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22506947/"
+        },
+        {
+          "pmid": "34277180",
+          "title": "Opioid-Induced Psychosis in a Patient With Sickle Cell Disease.",
+          "authors": "Tumenta T, Thanju A, Perera P, et al.",
+          "journal": "Cureus",
+          "year": "2021",
+          "abstract_snippet": "Sickle cell disease (SCD) is a common inherited hemoglobin disorder in which people have atypical hemoglobin, known as hemoglobin S. It is highly prevalent in non-Hispanic Blacks and people of Arab descent. It causes a distortion of the shape of red blood cells,\u00a0leading to occlusion of blood vessels...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34277180/"
+        },
+        {
+          "pmid": "35494937",
+          "title": "Sickle Cell Disease and COVID-19 Infection: Importance of COVID-19 Testing and Approach to Management.",
+          "authors": "Umar Z, Ilyas U, Nso N",
+          "journal": "Cureus",
+          "year": "2022",
+          "abstract_snippet": "Sickle cell disease is an autosomal recessive disorder resulting in the substitution of CTG by CAG in the sixth codon of the beta-globin gene. As a result of this, the hydrophilic glutamic acid residue is replaced by hydrophobic valine residue, leading to the formation of hemoglobin tetramer HBS. Th...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35494937/"
+        },
+        {
+          "pmid": "1373356",
+          "title": "Survey of pain management therapy provided for children with sickle cell disease.",
+          "authors": "Pegelow CH",
+          "journal": "Clinical pediatrics",
+          "year": "1992",
+          "abstract_snippet": "A questionnaire was sent to principal investigators of NIH-sponsored clinical research in sickle cell disease. Twenty of 21 respondents indicated they used parenteral narcotic analgesics for pain episodes sufficiently severe to warrant hospitalization. Eleven used meperidine; seven, morphine; and on...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/1373356/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Patient-Controlled Analgesia vs Intravenous Push Hydromorphone for Pain Management of Vaso-Occlusive Crisis Associated With Sickle Cell Disease",
+          "year": 2023,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/718a87a909fc36d6feab5e05b33a61091b0125c5",
+          "authors": "Katharine Russo, Poonam Chhunchha"
+        },
+        {
+          "title": "Associations between the Use of Pain Management Strategies and Self-Reported Emotional and Behavioral Functioning of Adolescent and Young Adults with Sickle Cell Disease",
+          "year": 2023,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/44434fcad5917cd1f507f81f21e9af743d8fb2e0",
+          "authors": "Ryan N. James, Kathryn Russell, N. Alberts"
+        },
+        {
+          "title": "Opioid-Induced Psychosis in a Patient With Sickle Cell Disease",
+          "year": 2021,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/1ff415ac99046db78906b612420adec71bd85623",
+          "authors": "Terence Tumenta, Amod Thanju, Pradilka Perera"
+        },
+        {
+          "title": "Early Ultrasound-Guided Nerve Blocks for Sickle Cell Pain Crisis: A Novel Approach to Pain Management.",
+          "year": 2025,
+          "citations": 2,
+          "url": "https://www.semanticscholar.org/paper/f053f467320a9727dc467c05747a8f7003e42da9",
+          "authors": "Pranita Kaginele, Tyler Najac, Jonathan Maik"
+        },
+        {
+          "title": "Process implementation and outcomes associated with patient-controlled analgesia in the emergency department for adult sickle cell patients.",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/05c51166e356ecccd3a6ffed34662113dae66413",
+          "authors": "Marin Valentino, Nicole M. Acquisto, Rebekah Torchon"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Patient-Controlled Analgesia vs Intravenous Push Hydromorphone for Pain Management of Vaso-Occlusive Crisis Associated With Sickle Cell Disease",
+        "year": 2023,
+        "citations": 5,
+        "url": "https://www.semanticscholar.org/paper/718a87a909fc36d6feab5e05b33a61091b0125c5",
+        "authors": "Katharine Russo, Poonam Chhunchha"
+      },
+      "max_citations": 5,
+      "faers_signal": "moderate",
+      "faers_total_reports": 79353,
+      "faers_cooccurrences": 121,
+      "faers_interpretation": "121 FAERS reports mention both Hydromorphone and Sickle cell disease-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "K784-3131 (1.563)",
+        "HY-10992 (1.546)",
+        "MLN2238 (1.511)",
+        "XMD16-144 (1.507)",
+        "Arachidonyl trifluoro-methyl ketone (1.496)"
+      ],
+      "signature_interpretation": "Hydromorphone was not found among the top 31 drugs that reverse the Sickle cell disease gene signature. Top reversers: K784-3131 (1.563), HY-10992 (1.546), MLN2238 (1.511)",
+      "ai_hypothesis": "of its analgesic and anti-inflammatory properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": true,
+      "failed_trial_phase": "Phase 3",
+      "failed_trial_count": 4,
+      "failed_trial_penalty": 0.6,
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Hydromorphone \u2014[treats]\u2192 MESH:D010146 \u2014[is treated by]\u2192 DB00945 \u2014[is a therapeutic for]\u2192 Sickle cell disease",
+      "kg_paths_text": "\u2022 Hydromorphone \u2014[treats]\u2192 MESH:D010146 \u2014[is treated by]\u2192 DB00945 \u2014[is a therapeutic for]\u2192 Sickle cell disease\n\u2022 Hydromorphone \u2014[treats]\u2192 MESH:D010146 \u2014[is treated by]\u2192 DB00945 \u2014[is a therapeutic for]\u2192 Sickle cell disease\n\u2022 Hydromorphone \u2014[is a therapeutic for]\u2192 MESH:D059350 \u2014[is treated by]\u2192 DB00295 \u2014[is a therapeutic for]\u2192 Sickle cell disease",
+      "validation_experiments": [],
+      "novelty_score": 0.163,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": false,
+      "clinical_trials_total": 6,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT03502421",
+          "title": "Ketamine Sickle Cell Disease",
+          "status": "WITHDRAWN",
+          "phase": "PHASE3",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT03502421"
+        },
+        {
+          "nct_id": "NCT01932554",
+          "title": "Abciximab (ReoPro) as a Therapeutic Intervention for Sickle Cell Vaso-Occlusive Pain Crisis",
+          "status": "WITHDRAWN",
+          "phase": "PHASE2",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT01932554"
+        },
+        {
+          "nct_id": "NCT03933397",
+          "title": "Comparing Individualized vs. Weight Based Protocols to Treat Vaso-Occlusive Episodes in Sickle Cell Disease",
+          "status": "TERMINATED",
+          "phase": "PHASE3",
+          "enrollment": "328",
+          "url": "https://clinicaltrials.gov/study/NCT03933397"
+        },
+        {
+          "nct_id": "NCT00999245",
+          "title": "THE IMPROVE TRIAL: Improving Pain Management and Outcomes With Various Strategies of Patient-Controlled Analgesia (PCA)",
+          "status": "TERMINATED",
+          "phase": "PHASE3",
+          "enrollment": "38",
+          "url": "https://clinicaltrials.gov/study/NCT00999245"
+        },
+        {
+          "nct_id": "NCT02222246",
+          "title": "Comparing Acute Pain Management Protocols for Patients With Sickle Cell Disease",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "106",
+          "url": "https://clinicaltrials.gov/study/NCT02222246"
+        }
+      ],
+      "trial_phases": {
+        "PHASE3": 3,
+        "PHASE2": 2,
+        "PHASE4": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "6 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "26 PubMed articles found",
+        "Supported by 3 independent AI pillars",
+        "High molecular similarity (0.54) to Morphine",
+        "CAUTION: Drug had terminated/withdrawn trials (Phase 3) for this disease",
+        "Moderate FAERS signal: 121 adverse event reports mention drug-disease co-occurrence",
+        "AI-generated hypothesis available"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1626,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00227",
+            "drug_name": "Lovastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00331",
+            "drug_name": "Metformin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "moderate",
+        "summary": "CPIC-C (COMT)",
+        "cpic": [
+          {
+            "gene": "COMT",
+            "level": "C",
+            "guideline": "CYP2D6, OPRM1, COMT, and Opioids"
+          },
+          {
+            "gene": "OPRM1",
+            "level": "C",
+            "guideline": "CYP2D6, OPRM1, COMT, and Opioids"
+          }
+        ],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": false,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.251,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.361,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.621
+        }
+      },
+      "tissue_context": {
+        "context_modifier": 1.0,
+        "tissues": [
+          "Whole Blood",
+          "Spleen"
+        ],
+        "n_genes": 0
+      },
+      "ensemble_prob": 0.2779,
+      "ensemble_features": {
+        "kg_score": 0.9936,
+        "degree_penalty": 0.7612,
+        "n_drug_targets": 4,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.2195
+      },
+      "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "disease_entity": "Disease::MESH:D000755"
+    },
+    {
+      "drug_name": "Pitavastatin",
+      "drug_id": "DB08860",
+      "disease_name": "Sickle cell disease",
+      "combined_score": 0.3589000105857849,
+      "pillars_hit": 4,
+      "transe_rank": 178,
+      "transe_score": -11.5213,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.5379999876022339,
+      "proximity_distance": 1.850000023841858,
+      "admet_score": 1.0,
+      "admet_flags": "clean",
+      "primekg_score": 0.2464,
+      "dti_score": 0.2536,
+      "dti_best_target": "ANGPTL3",
+      "kg_group_score": 0.1131,
+      "structural_group_score": 0.2536,
+      "network_group_score": 0.4187000095844269,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.6749,
+      "admet_multiplier": 1.0,
+      "efficacy_score": 0.3589000105857849,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 0,
+      "shared_targets": [],
+      "pubmed_total": 1,
+      "pubmed_treatment_total": 1,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "40424543",
+          "title": "Risks for sudden cardiac and undetermined cause of death among people with HIV in the REPRIEVE primary cardiovascular prevention trial.",
+          "authors": "deFilippi C, Awwad A, Bloomfield GS, et al.",
+          "journal": "AIDS (London, England)",
+          "year": "2025",
+          "abstract_snippet": "OBJECTIVE: People with HIV (PWH) are at increased risk of sudden cardiac death (SCD) but the mechanisms are unclear limiting prevention efforts. We leveraged the global REPRIEVE trial with carefully adjudicated atherosclerotic cardiovascular disease (ASCVD) outcomes to determine cardiac, behavioral,...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40424543/",
+          "total_results": 1
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Exagamglogene Autotemcel for Severe Sickle Cell Disease.",
+          "year": 2024,
+          "citations": 113,
+          "url": "https://www.semanticscholar.org/paper/ff70aebe90b5070988b7e8b52e107411aed93ae8",
+          "authors": "H. Frangoul, F. Locatelli, Akshay Sharma"
+        },
+        {
+          "title": "Sickle cell disease.",
+          "year": 1996,
+          "citations": 4488,
+          "url": "https://www.semanticscholar.org/paper/1cd9bd0b255a79abc643a43c7dce182a5e896290",
+          "authors": "P. Lane"
+        },
+        {
+          "title": "Global, regional, and national prevalence and mortality burden of sickle cell disease, 2000\u20132021: a systematic analysis from the Global Burden of Disease Study 2021",
+          "year": 2023,
+          "citations": 364,
+          "url": "https://www.semanticscholar.org/paper/3f9f311815b0cd485614734f99e737e307bd8407",
+          "authors": "A. Thomson, T. A. McHugh, A. Oron"
+        },
+        {
+          "title": "Mortality in sickle cell disease. Life expectancy and risk factors for early death.",
+          "year": 1994,
+          "citations": 3287,
+          "url": "https://www.semanticscholar.org/paper/6bcc7a4d436214c41a4d128f9d221e950eb4962b",
+          "authors": "O. Platt, D. Brambilla, W. Rosse"
+        },
+        {
+          "title": "CRISPR-Cas9 Editing of the HBG1 and HBG2 Promoters to Treat Sickle Cell Disease.",
+          "year": 2023,
+          "citations": 103,
+          "url": "https://www.semanticscholar.org/paper/e53f2ddfff4987c25384a6e8efc07334e2cac239",
+          "authors": "Akshay Sharma, J. Boelens, M. Cancio"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Sickle cell disease.",
+        "year": 1996,
+        "citations": 4488,
+        "url": "https://www.semanticscholar.org/paper/1cd9bd0b255a79abc643a43c7dce182a5e896290",
+        "authors": "P. Lane"
+      },
+      "max_citations": 4488,
+      "faers_signal": "none",
+      "faers_total_reports": 3630,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Pitavastatin to Sickle cell disease terms. Drug has 3630 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "K784-3131 (1.563)",
+        "HY-10992 (1.546)",
+        "MLN2238 (1.511)",
+        "XMD16-144 (1.507)",
+        "Arachidonyl trifluoro-methyl ketone (1.496)"
+      ],
+      "signature_interpretation": "Pitavastatin was not found among the top 31 drugs that reverse the Sickle cell disease gene signature. Top reversers: K784-3131 (1.563), HY-10992 (1.546), MLN2238 (1.511)",
+      "ai_hypothesis": "of its pleiotropic effects.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.6749,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Pitavastatin \u2014[is inhibited by]\u2192 gene-3156 \u2014[is a target of]\u2192 DB03461 \u2014[is a therapeutic for]\u2192 Sickle cell disease",
+      "kg_paths_text": "\u2022 Pitavastatin \u2014[is inhibited by]\u2192 gene-3156 \u2014[is a target of]\u2192 DB03461 \u2014[is a therapeutic for]\u2192 Sickle cell disease\n\u2022 Pitavastatin \u2014[is inhibited by]\u2192 gene-3156 \u2014[inhibits]\u2192 DB00945 \u2014[is a therapeutic for]\u2192 Sickle cell disease\n\u2022 Pitavastatin \u2014[is inhibited by]\u2192 gene-3156 \u2014[is a target of]\u2192 DB03461 \u2014[is a therapeutic for]\u2192 Sickle cell disease",
+      "validation_experiments": [],
+      "novelty_score": 0.2800000011920929,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": false,
+      "clinical_trials_total": 1,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT06813924",
+          "title": "A Research Study of the Effect of Etavopivat on Other Drugs in Healthy Participants",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "37",
+          "url": "https://clinicaltrials.gov/study/NCT06813924"
+        }
+      ],
+      "trial_phases": {
+        "PHASE1": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "1 clinical trial(s) found on ClinicalTrials.gov",
+        "1 PubMed article(s) - limited literature",
+        "Supported by 4 independent AI pillars",
+        "Highly cited paper (4488 citations): \"Sickle cell disease....\"",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.67)"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 837,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "high_risk",
+        "summary": "CPIC-A (SLCO1B1) \u2022 PharmGKB-3 (ABCC2 / rs717620)",
+        "cpic": [
+          {
+            "gene": "SLCO1B1",
+            "level": "A",
+            "guideline": "SLCO1B1, ABCG2, CYP2C9, and Statins"
+          },
+          {
+            "gene": "CYP3A4",
+            "level": "C",
+            "guideline": "SLCO1B1, ABCG2, CYP2C9, and Statins"
+          },
+          {
+            "gene": "CYP3A5",
+            "level": "C",
+            "guideline": "SLCO1B1, ABCG2, CYP2C9, and Statins"
+          },
+          {
+            "gene": "HMGCR",
+            "level": "C",
+            "guideline": "SLCO1B1, ABCG2, CYP2C9, and Statins"
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "ABCC2",
+            "variant": "rs717620",
+            "level": "3",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1450814822"
+          },
+          {
+            "gene": "SLCO1B1",
+            "variant": "rs2306283",
+            "level": "3",
+            "phenotype_category": "Other",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043880567"
+          },
+          {
+            "gene": "SLCO1B1",
+            "variant": "SLCO1B1*1, SLCO1B1*5, SLCO1B1*15, SLCO1B1*37",
+            "level": "1A",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1450814813"
+          },
+          {
+            "gene": "SLCO1B1",
+            "variant": "rs4149056",
+            "level": "1A",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451678210"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 0,
+        "axes": {
+          "kg": false,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.15199999511241913,
+        "label": "",
+        "axis_values": {
+          "kg": 0.35899999737739563,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.131
+        }
+      },
+      "tissue_context": {
+        "context_modifier": 1.0,
+        "tissues": [
+          "Whole Blood",
+          "Spleen"
+        ],
+        "n_genes": 0
+      },
+      "ensemble_prob": 0.0694,
+      "ensemble_features": {
+        "kg_score": 0.9619,
+        "degree_penalty": 0.7782,
+        "n_drug_targets": 2,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 5.9989
+      },
+      "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "disease_entity": "Disease::MESH:D000755"
+    },
+    {
+      "drug_name": "Dimethyl sulfoxide",
+      "drug_id": "DB01093",
+      "disease_name": "Sickle cell disease",
+      "combined_score": 0.3555000126361847,
+      "pillars_hit": 3,
+      "transe_rank": 78,
+      "transe_score": -11.1442,
+      "pykeen_score": -13.1796,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.625,
+      "proximity_distance": 1.5,
+      "admet_score": 0.8162,
+      "admet_flags": "clean",
+      "primekg_score": 0.2495,
+      "dti_score": 0.9311,
+      "dti_best_target": "ANGPTL3",
+      "kg_group_score": 0.2116,
+      "structural_group_score": 0.9311,
+      "network_group_score": 0.4927999973297119,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9632,
+      "efficacy_score": 0.36910000443458557,
+      "groups_hit": 3,
+      "direct_relations": [],
+      "shared_target_count": 0,
+      "shared_targets": [],
+      "pubmed_total": 12,
+      "pubmed_treatment_total": 8,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "36473034",
+          "title": "Dimethyl Sulfoxide Induces Hemolysis and Pulmonary Hypertension.",
+          "authors": "Tofovic SP, Bilan VP, Rafikova O, et al.",
+          "journal": "Prilozi (Makedonska akademija na naukite i umetnostite. Oddelenie za medicinski nauki)",
+          "year": "2022",
+          "abstract_snippet": "Vascular and lung injury are well established complications associated with hemolytic disorders, and hemolysis associated pulmonary hypertension (PH) has emerged as the most serious complication of sickle cell disease. The causal relationship between intravascular hemolysis and the development of PH...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36473034/",
+          "total_results": 12
+        },
+        {
+          "pmid": "31517566",
+          "title": "",
+          "authors": "Andrejeva G, Gowan S, Lin G, et al.",
+          "journal": "Autophagy",
+          "year": "2020",
+          "abstract_snippet": "UNLABELLED: Macroautophagy/autophagy can enable cancer cells to withstand cellular stress and maintain bioenergetic homeostasis by sequestering cellular components into newly formed double-membrane vesicles destined for lysosomal degradation, potentially affecting the efficacy of anti-cancer treatme...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31517566/"
+        },
+        {
+          "pmid": "27803313",
+          "title": "Optimizing human hepatocyte models for metabolic phenotype and function: effects of treatment with dimethyl sulfoxide (DMSO).",
+          "authors": "Nikolaou N, Green CJ, Gunn PJ, et al.",
+          "journal": "Physiological reports",
+          "year": "2016",
+          "abstract_snippet": "Primary human hepatocytes are considered to be the \"gold standard\" cellular model for studying hepatic fatty acid and glucose metabolism; however, they come with limitations. Although the HepG2 cell line retains many of the primary hepatocyte metabolic functions they have a malignant origin and low ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/27803313/"
+        },
+        {
+          "pmid": "11806986",
+          "title": "Mobilization, collection, and processing of peripheral blood stem cells in individuals with sickle cell trait.",
+          "authors": "Kang EM, Areman EM, David-Ocampo V, et al.",
+          "journal": "Blood",
+          "year": "2002",
+          "abstract_snippet": "Mobilized peripheral blood is increasingly used as the source of hematopoietic stem cells for allogeneic transplantation, currently the only curative approach for sickle cell anemia. However, the safety and feasibility of stem cell mobilization in individuals with sickle cell trait (SCT) has not bee...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11806986/"
+        },
+        {
+          "pmid": "7708766",
+          "title": "Retroviral transfer of a human beta-globin/delta-globin hybrid gene linked to beta locus control region hypersensitive site 2 aimed at the gene therapy of sickle cell disease.",
+          "authors": "Takekoshi KJ, Oh YH, Westerman KW, et al.",
+          "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+          "year": "1995",
+          "abstract_snippet": "Human gamma-globin and delta-globin chains have been previously identified as strong inhibitors of the polymerization of hemoglobin S, in contrast to the beta-globin chain, which exerts only a moderate antisickling effect. However, gamma-globin and delta-globin are normally expressed at very low lev...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/7708766/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Dimethyl Sulfoxide Induces Hemolysis and Pulmonary Hypertension",
+          "year": 2022,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/96aa1d1ecd2b3ddc63ba11a355e6b27254e4a2d7",
+          "authors": "S. Tofovic, Victor P. Bilan, O. Rafikova"
+        },
+        {
+          "title": "Infusion of hemolyzed red blood cells within peripheral blood stem cell grafts in patients with and without sickle cell disease.",
+          "year": 2012,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/7bd9a6493e3927ff1d4d30b99e374356e2827302",
+          "authors": "C. Fitzhugh, Hayato Unno, Vincent Hathaway"
+        },
+        {
+          "title": "The Potential Use of Hydroxyurea as Treatment for Sickle Cell Disease",
+          "year": 1995,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/2ee9b63c08b1b5e1ebb5e6ceb8f092fdd12f182a",
+          "authors": "S. Lamba, K. Buch, H. Lewis"
+        },
+        {
+          "title": "Combined Administration of Recombinant TGF-\u03b21 and DMSO Decreases the in Vitro Inflammatory Properties of Neutrophils from Sickle Cell Anemia Individuals",
+          "year": 2018,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/417aa5673278abc5564bc35898b935ae1b2452d3",
+          "authors": "L. Torres, L. I. Miguel, M. Shaul"
+        },
+        {
+          "title": "Pomalidomide Augments Fetal Hemoglobin Production In Primary Erythroid Cells By a Novel Mechanism Modulating BCL11A But Not KLF-1",
+          "year": 2013,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/cf446367f64c87e7ea4acb1b5cf93b239a9c9c84",
+          "authors": "Abena Appiah-Kubi, L. Blanc, Sharon A. Singh"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Infusion of hemolyzed red blood cells within peripheral blood stem cell grafts in patients with and without sickle cell disease.",
+        "year": 2012,
+        "citations": 4,
+        "url": "https://www.semanticscholar.org/paper/7bd9a6493e3927ff1d4d30b99e374356e2827302",
+        "authors": "C. Fitzhugh, Hayato Unno, Vincent Hathaway"
+      },
+      "max_citations": 4,
+      "faers_signal": "none",
+      "faers_total_reports": 332,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Dimethyl sulfoxide to Sickle cell disease terms. Drug has 332 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "K784-3131 (1.563)",
+        "HY-10992 (1.546)",
+        "MLN2238 (1.511)",
+        "XMD16-144 (1.507)",
+        "Arachidonyl trifluoro-methyl ketone (1.496)"
+      ],
+      "signature_interpretation": "Dimethyl sulfoxide was not found among the top 31 drugs that reverse the Sickle cell disease gene signature. Top reversers: K784-3131 (1.563), HY-10992 (1.546), MLN2238 (1.511)",
+      "ai_hypothesis": "of its anti-sickling properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Dimethyl sulfoxide \u2014[is a therapeutic for]\u2192 MESH:D012871 \u2014[is treated by]\u2192 DB01005 \u2014[treats]\u2192 Sickle cell disease",
+      "kg_paths_text": "\u2022 Dimethyl sulfoxide \u2014[is a therapeutic for]\u2192 MESH:D012871 \u2014[is treated by]\u2192 DB01005 \u2014[treats]\u2192 Sickle cell disease\n\u2022 Dimethyl sulfoxide \u2014[is a therapeutic for]\u2192 MESH:D012871 \u2014[is treated by]\u2192 DB01005 \u2014[treats]\u2192 Sickle cell disease\n\u2022 Dimethyl sulfoxide \u2014[is a therapeutic for]\u2192 MESH:D011565 \u2014[is treated by]\u2192 DB01005 \u2014[treats]\u2192 Sickle cell disease",
+      "validation_experiments": [],
+      "novelty_score": 0.3019999861717224,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "LOW",
+      "confidence_reasons": [
+        "12 PubMed articles found",
+        "Supported by 3 independent AI pillars",
+        "AI-generated hypothesis available"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1050,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": false,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.22100000083446503,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.35600000619888306,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.484
+        }
+      },
+      "tissue_context": {
+        "context_modifier": 1.0,
+        "tissues": [
+          "Whole Blood",
+          "Spleen"
+        ],
+        "n_genes": 0
+      },
+      "ensemble_prob": 0.6404,
+      "ensemble_features": {
+        "kg_score": 0.99,
+        "degree_penalty": 0.7886,
+        "n_drug_targets": 1,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.6728
+      },
+      "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "disease_entity": "Disease::MESH:D000755"
     }
-  ]
+  ],
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
+  "docking_axis": {
+    "source": "chembl_bioactivity_proxy + not_wired fallback",
+    "n_disease_genes": 23,
+    "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
+  },
+  "disease_entity": "Disease::MESH:D000755"
 }

@@ -226,23 +226,63 @@ def compute_mechanism_novelty(
     return ratio_novel
 
 
+_KNOWN_TREATMENTS_CACHE: dict[str, set[str]] = {}
+
+
+def _known_drugs_for_disease(disease_entity: str) -> set[str]:
+    """Return set of Compound:: entity IDs with a DRKG/OT/GNBR treats edge to
+    the given disease entity. Cached per-disease across calls."""
+    if not disease_entity:
+        return set()
+    if disease_entity in _KNOWN_TREATMENTS_CACHE:
+        return _KNOWN_TREATMENTS_CACHE[disease_entity]
+    try:
+        import pandas as pd
+        from opencure.config import DATA_DIR, KNOWN_TREATMENT_RELATIONS
+        drkg_path = DATA_DIR / "drkg.tsv"
+        if not drkg_path.exists():
+            _KNOWN_TREATMENTS_CACHE[disease_entity] = set()
+            return set()
+        # Stream only matching rows to keep memory modest.
+        known: set[str] = set()
+        chunksize = 500_000
+        for chunk in pd.read_csv(
+            drkg_path, sep="\t", header=None,
+            names=["head", "relation", "tail"], chunksize=chunksize,
+        ):
+            mask = (
+                chunk["tail"] == disease_entity
+            ) & chunk["relation"].isin(KNOWN_TREATMENT_RELATIONS) & chunk["head"].str.startswith("Compound::")
+            known.update(chunk.loc[mask, "head"].tolist())
+        _KNOWN_TREATMENTS_CACHE[disease_entity] = known
+        return known
+    except Exception:
+        _KNOWN_TREATMENTS_CACHE[disease_entity] = set()
+        return set()
+
+
 def is_known_treatment(report_dict: dict) -> bool:
     """
-    Check if a drug is likely an already-approved treatment for this disease.
+    Check if a drug is already an approved treatment for this disease.
 
-    Returns True if the evidence strongly suggests this is a known treatment,
-    not a repurposing candidate.
+    Primary signal: a DRKG/OT/GNBR ``treats`` edge between the drug's Compound
+    entity and the disease entity (authoritative on curated indications).
+
+    Fallback: heuristic on literature + trial volume (pre-v5 behavior),
+    kept for cases where the entity is not mapped in DRKG.
     """
-    pubmed = report_dict.get("pubmed_total", report_dict.get("pubmed_articles", 0))
-    trials = report_dict.get("clinical_trials_total", 0)
-
-    # Safety: ensure numeric types
-    pubmed = int(pubmed) if isinstance(pubmed, (int, float)) else 0
-    trials = int(trials) if isinstance(trials, (int, float)) else 0
-
-    # If there are many trials AND many papers, it's almost certainly
-    # an existing treatment, not a repurposing candidate
-    if trials >= 5 and pubmed >= 500:
+    drug_id = report_dict.get("drug_id", "")
+    disease_entity = report_dict.get("disease_entity", "")
+    compound_entity = drug_id if drug_id.startswith("Compound::") else f"Compound::{drug_id}"
+    known = _known_drugs_for_disease(disease_entity)
+    if compound_entity in known:
         return True
 
+    # Fallback heuristic (kept intentionally strict so false-positives stay rare)
+    pubmed = report_dict.get("pubmed_total", report_dict.get("pubmed_articles", 0))
+    trials = report_dict.get("clinical_trials_total", 0)
+    pubmed = int(pubmed) if isinstance(pubmed, (int, float)) else 0
+    trials = int(trials) if isinstance(trials, (int, float)) else 0
+    if trials >= 5 and pubmed >= 500:
+        return True
     return False

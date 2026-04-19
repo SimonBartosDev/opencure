@@ -34,3 +34,12 @@ TREATMENT_RELATIONS = [
     "GNBR::J::Compound:Disease",        # Role in disease pathogenesis (relevant)
     "GNBR::Mp::Compound:Disease",       # Mechanism related
 ]
+
+# Authoritative treats edges used ONLY for labeling (is_known_treatment /
+# positive-control flagging). Kept separate from TREATMENT_RELATIONS because
+# DRUGBANK::treats is stripped from the training KG (strip_heldout_edges.py)
+# and must not feed pillar scoring. Labeling is downstream of scoring so
+# the label consults the full curated set.
+KNOWN_TREATMENT_RELATIONS = TREATMENT_RELATIONS + [
+    "DRUGBANK::treats::Compound:Disease",
+]

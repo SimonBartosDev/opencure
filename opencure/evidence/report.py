@@ -225,6 +225,7 @@ class EvidenceReport:
             "trial_phases": self.trial_phases,
             "confidence": self.confidence,
             "confidence_reasons": self.confidence_reasons,
+            "disease_entity": self.disease_entity,
             # v5 clinical layer
             "dose_plausibility": self.dose_plausibility,
             "ddi_warnings": self.ddi_warnings,
@@ -512,12 +513,22 @@ def generate_evidence_report(
 
     try:
         from opencure.scoring.tissue_context import score_tissue_context
-        # Use shared_targets if we have them; else skip (modifier = 1.0 default)
+        # Prefer shared drug-disease targets; fall back to disease-associated
+        # genes so the field always populates with the disease's tissue map
+        # even when drug-target overlap is empty. Context modifier stays 1.0
+        # in that fallback — the field becomes informative, not a score shift.
+        gene_set: set[str] = set()
         if report.shared_targets:
-            report.tissue_context = score_tissue_context(
-                disease_name,
-                {f"Gene::{g}" for g in report.shared_targets if g},
-            )
+            gene_set = {f"Gene::{g}" for g in report.shared_targets if g}
+        else:
+            # Best-effort: disease-associated genes from OT, if available.
+            try:
+                from opencure.data.opentargets import get_disease_targets
+                tgts = get_disease_targets(disease_name) or []
+                gene_set = {f"Gene::{g}" for g in tgts[:50] if g}
+            except Exception:
+                gene_set = set()
+        report.tissue_context = score_tissue_context(disease_name, gene_set)
     except Exception:
         pass
 
