@@ -86,10 +86,11 @@ We don't oversell. Known limits disclosed publicly:
 
 **What we're good at**
 - Multi-pillar ensemble AUC-ROC 0.9968 on 23,814 held-out pairs
-- Evidence-triangulated predictions: 68% of candidates have ≥1
-  external validation axis; 34% have ≥2
-- Clinical-actionability coverage: dose 100%, DDI 86%, PGx 46%,
-  mechanism path 98% of top candidates
+- Evidence-triangulated predictions: 66% of candidates have ≥1
+  external validation axis; 31% have ≥2; silver-standard (≥3) 0%
+  pending docking wire-up (AutoDock Vina addition planned post-screen)
+- Clinical-actionability coverage (live, n=80 on first 8 diseases):
+  dose 100%, DDI 82%, PGx 44%, mechanism path 99% of top candidates
 
 **What we're not (yet) good at**
 - Clean time-sliced Hit@10 on 2020-era KG retrieval: blocked on a

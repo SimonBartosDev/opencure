@@ -31,7 +31,7 @@ clinical hypotheses.
 - **DDI warnings** — top 10 dangerous co-prescriptions from 1.4M DrugBank drug-drug interaction edges, severity-ranked against 25 commonly-co-prescribed reference drugs
 - **Pharmacogenomic flags** — 76 CPIC drug-gene pairs + 5,187 PharmGKB annotations, classified high-risk / moderate / advisory
 - **Mechanism paths** — natural-language graph paths via bounded BFS on filtered DRKG adjacency (filtered to drug-target, target-disease, drug-disease, literature-mined only; mega-hub clipped)
-- **Triangulation** — 4-axis aggregate (KG + docking + Pharos target-development-level + literature); labels "silver-standard" when ≥3 agree
+- **Triangulation** — 4-axis aggregate (KG + docking + Pharos target-development-level + literature); labels "silver-standard" when ≥3 agree. **Live coverage on first 8 diseases (n=80 candidates): ≥1 axis 66%, ≥2 axes 31%, ≥3 axes (silver-standard) 0%.** The docking axis is not yet wired into the screening pipeline; Pharos TDL populates only for UniProt-mapped targets. Until both wire through, silver-standard remains a ceiling, not a floor.
 - **Tissue context** — GTEx v8 median TPM across 54 tissues; 55 diseases manually mapped to relevant tissue sets; context modifier in [0.85, 1.15] applied to pillar scores
 
 ### Scoring improvements
@@ -90,6 +90,7 @@ clinical hypotheses.
 - **R-GCN pillar** scaffolded (`opencure/scoring/rgcn_scorer.py`) but untrained. Activates as the 12th pillar once a GPU-trained model lands in `data/models/rgcn_v5/`.
 - **No wet-lab validation yet.** Zero predictions have been experimentally confirmed. 5 lab outreach briefs ready to send at `docs/lab_outreach_briefs.md`.
 - **No peer review yet.** Methods paper drafted at `docs/methods_paper_draft.md`; target journals Nature Machine Intelligence or Bioinformatics.
+- **Silver-standard triangulation currently unreachable.** On the live 8-disease sample, 0/80 candidates hit ≥3 axes. Docking is not wired into the screening loop; Pharos TDL fires only for UniProt-mapped targets. Plan: wire AutoDock Vina for top-10 per disease post-screen (adds ~10 min/disease) so the label becomes achievable.
 
 ## Upgrade path
 
