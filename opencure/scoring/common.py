@@ -120,3 +120,148 @@ class PillarScore(TypedDict, total=False):
 
 
 ALL_SCORE_FIELDS: frozenset[str] = frozenset(PILLAR_FIELDS + GROUP_FIELDS + FINAL_FIELDS)
+
+
+# -------- Candidate record schema (full JSON output) --------
+# A candidate is a drug-disease prediction row as emitted by the evidence
+# pipeline into experiments/results/<Disease>.json. Fields below are the
+# canonical names; anything missing is either optional or a bug.
+
+IDENTITY_FIELDS: tuple[str, ...] = (
+    "rank",
+    "drug_id",
+    "drug_entity",
+    "drug_name",
+    "disease_name",
+    "disease_entity",
+)
+
+EVIDENCE_FIELDS: tuple[str, ...] = (
+    "pubmed_total",
+    "pubmed_treatment_total",
+    "pubmed_repurposing_total",
+    "key_papers",
+    "most_cited_paper",
+    "max_citations",
+    "semantic_scholar_papers",
+    "abstract_analyses",
+    "repurposing_papers",
+    "clinical_trials",
+    "clinical_trials_total",
+    "trial_phases",
+    "failed_trial_count",
+    "failed_trial_phase",
+    "failed_trial_penalty",
+    "has_failed_trial",
+    "faers_total_reports",
+    "faers_cooccurrences",
+    "faers_signal",
+    "faers_interpretation",
+    "shared_targets",
+    "shared_target_count",
+    "direct_relations",
+    "validation_experiments",
+    "ai_hypothesis",
+    "mechanistic_hypothesis",
+    "kg_paths_text",
+    "relation_type",
+    "signature_reversal_found",
+    "signature_reversal_rank",
+    "signature_top_reversers",
+    "signature_interpretation",
+)
+
+LABEL_FIELDS: tuple[str, ...] = (
+    "is_known_treatment",
+    "novelty_score",
+    "novelty_level",
+    "confidence",
+    "confidence_reasons",
+)
+
+# v5 clinical guardrails (always present; may be empty dict if the
+# underlying data isn't available for a candidate).
+CLINICAL_FIELDS: tuple[str, ...] = (
+    "dose_plausibility",
+    "ddi_warnings",
+    "pharmacogenomics",
+    "triangulation",
+    "tissue_context",
+)
+
+# v5.1 post-processor outputs (attached by scripts/score_ensemble_v5.py,
+# scripts/add_docking_proxy_axis.py).
+V51_FIELDS: tuple[str, ...] = (
+    "ensemble_prob",
+    "ensemble_rank",
+    "ensemble_features",
+    "docking",
+)
+
+CANDIDATE_FIELDS: frozenset[str] = frozenset(
+    IDENTITY_FIELDS + PILLAR_FIELDS + GROUP_FIELDS + FINAL_FIELDS
+    + EVIDENCE_FIELDS + LABEL_FIELDS + CLINICAL_FIELDS + V51_FIELDS
+)
+
+# Fields required on every candidate (missing = schema violation).
+REQUIRED_CANDIDATE_FIELDS: frozenset[str] = frozenset({
+    "drug_id", "drug_name", "disease_name", "combined_score",
+    "pillars_hit", "confidence",
+})
+
+# Legacy / obsolete names that must NOT appear in any new output.
+# Presence indicates an un-migrated codepath.
+LEGACY_FIELDS: frozenset[str] = frozenset({
+    "txgnn_raw_score",       # v3 leftover
+    "proximity_raw_score",   # v3 leftover
+    "dti_raw_score",         # v3 leftover
+    "gene_sig_raw_score",    # v3 leftover
+    "pgx_flags",             # predates v5 rename to "pharmacogenomics"
+    "triangulation_score",   # predates v5 nested dict
+    "mechanism_path",        # predates v5 rename to "mechanistic_hypothesis"
+    "top_candidates",        # file-level; canonical is "candidates"
+})
+
+
+# Top-level (file) keys — everything a result JSON should have.
+RESULT_TOP_LEVEL: frozenset[str] = frozenset({
+    "disease", "status", "timestamp", "elapsed_seconds", "total_searched",
+    "evidence_generated", "confidence_counts", "pipeline_version",
+    "data_manifest_hash", "candidates",
+    # optional (added by post-processors / finalize)
+    "ensemble_version", "ensemble_model_path", "docking_axis",
+    "disease_entity",
+})
+
+
+def validate_candidate(cand: dict) -> list[str]:
+    """Return a list of warning strings for a candidate dict.
+
+    Empty list ⇒ candidate conforms to the canonical schema.
+    """
+    warnings: list[str] = []
+    missing = REQUIRED_CANDIDATE_FIELDS - set(cand)
+    if missing:
+        warnings.append(f"missing required: {sorted(missing)}")
+    legacy = LEGACY_FIELDS & set(cand)
+    if legacy:
+        warnings.append(f"legacy fields present: {sorted(legacy)}")
+    unknown = set(cand) - CANDIDATE_FIELDS
+    if unknown:
+        warnings.append(f"unknown fields: {sorted(unknown)}")
+    return warnings
+
+
+def validate_result_file(data: dict) -> list[str]:
+    """Validate a full result-file dict (top-level + every candidate)."""
+    warnings: list[str] = []
+    unknown_top = set(data) - RESULT_TOP_LEVEL
+    if unknown_top:
+        warnings.append(f"unknown top-level keys: {sorted(unknown_top)}")
+    if "candidates" not in data:
+        warnings.append("missing 'candidates' key at top level")
+        return warnings
+    for i, c in enumerate(data["candidates"]):
+        for w in validate_candidate(c):
+            warnings.append(f"candidate[{i}] {c.get('drug_name', '?')}: {w}")
+    return warnings
