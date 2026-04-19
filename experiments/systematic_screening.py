@@ -181,6 +181,16 @@ def screen_disease(disease_name: str, top_k: int = 50, evidence_top_k: int = 10)
         conf = c.get("confidence", "UNKNOWN")
         confidence_counts[conf] = confidence_counts.get(conf, 0) + 1
 
+    # v5 provenance: record the exact data-manifest hash that produced this
+    # screen, so every prediction is tied to an immutable data version.
+    manifest_hash = ""
+    try:
+        import json as _json
+        _m = _json.loads(Path("data/manifest.json").read_text())
+        manifest_hash = _m.get("manifest_hash", "")
+    except Exception:
+        pass
+
     return {
         "disease": disease_name,
         "status": "completed",
@@ -189,6 +199,8 @@ def screen_disease(disease_name: str, top_k: int = 50, evidence_top_k: int = 10)
         "total_searched": len(results),
         "evidence_generated": len([c for c in candidates if not c.get("evidence_skipped")]),
         "confidence_counts": confidence_counts,
+        "pipeline_version": "v5",
+        "data_manifest_hash": manifest_hash,
         "candidates": candidates,
     }
 
