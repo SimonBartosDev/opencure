@@ -13,7 +13,7 @@ evidence (knowledge graphs, molecular structure, transcriptomic signatures,
 human genetics, clinical data) into a single, calibrated, interpretable
 prediction. Existing platforms either rely on a single evidence type (shallow
 KG embeddings) or are closed-source (PandaOmics, DeepPurpose Pro). We present
-**OpenCure**, an open-source platform that fuses **12 independent evidence
+**OpenCure**, an open-source platform that fuses **11 active evidence
 pillars**, applies curated filtering for metabolite and research-chemical
 artifacts, surfaces graph-path mechanism explanations for every prediction,
 identifies cross-disease polypharmacology clusters, and layers clinical
@@ -70,22 +70,25 @@ Three gates before scoring:
   3. Critical ADMET (hERG > 0.97, AMES > 0.92, DILI > 0.92, Skin > 0.92)
      with phase-4 FDA-approved bypass
 
-### 3.2 The 12 pillars
+### 3.2 The 11 active pillars (and 1 scaffolded)
 
-| # | Pillar | Type |
-|---|---|---|
-| 1 | TransE on DRKG | KG embedding |
-| 2 | RotatE on DRKG (PyKEEN) | KG embedding |
-| 3 | TransE on unified KG | KG embedding |
-| 4 | PrimeKG TransE | KG embedding |
-| 5 | TxGNN (Harvard pre-computed) | GNN |
-| 6 | Molecular fingerprints (Morgan) | Structural |
-| 7 | ChemBERTa embeddings | Structural |
-| 8 | DeepPurpose DTI | Binding |
-| 9 | Network proximity (STRING PPI) | Network |
-| 10 | L1000 gene signatures | Transcriptomic |
-| 11 | Mendelian randomization | Causal |
-| 12 | R-GCN heterogeneous GNN | GNN |
+| # | Pillar | Type | Status |
+|---|---|---|---|
+| 1 | TransE on DRKG | KG embedding | active |
+| 2 | RotatE on DRKG (PyKEEN) | KG embedding | active |
+| 3 | TransE on unified KG | KG embedding | **scaffolded** (underperforms DGL-KE 2020 baseline on MPS; disabled at inference) |
+| 4 | PrimeKG TransE | KG embedding | active |
+| 5 | TxGNN (Harvard pre-computed) | GNN | active |
+| 6 | Molecular fingerprints (Morgan) | Structural | active |
+| 7 | ChemBERTa embeddings | Structural | active |
+| 8 | DeepPurpose DTI | Binding | active |
+| 9 | Network proximity (STRING PPI) | Network | active |
+| 10 | L1000 + mechanistic reversal | Transcriptomic | active |
+| 11 | Mendelian randomization | Causal | active |
+| 12 | R-GCN heterogeneous GNN | GNN | **scaffolded** (model architecture defined, awaits CUDA training) |
+
+We report "11 active pillars" everywhere user-facing; pillars 3 and 12
+are honest v6 placeholders that unblock with a cloud GPU retrain.
 
 ### 3.3 Pillar grouping and combination
 
