@@ -1,254 +1,159 @@
 {
   "disease": "Marfan syndrome",
   "status": "completed",
-  "timestamp": "2026-04-17T13:24:37.179048",
-  "elapsed_seconds": 715.9,
+  "timestamp": "2026-04-19T15:30:39.425085",
+  "elapsed_seconds": 821.4,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
-    "LOW": 10
+    "HIGH": 1,
+    "LOW": 9
   },
+  "pipeline_version": "v5",
+  "data_manifest_hash": "2da2aa88f2457d1b",
   "candidates": [
     {
-      "drug_name": "Creatinine",
-      "drug_id": "DB11846",
+      "drug_name": "Propranolol",
+      "drug_id": "DB00571",
       "disease_name": "Marfan syndrome",
-      "combined_score": 1.0472,
-      "transe_rank": 42,
-      "pillars_hit": 2,
-      "mol_similarity": 0,
-      "similar_to": "",
+      "combined_score": 0.4128,
+      "pillars_hit": 3,
+      "transe_rank": 8,
+      "transe_score": -11.9007,
+      "pykeen_score": -13.1532,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0.44,
+      "similar_to": "Atenolol",
+      "mol_emb_similarity": 0.9324,
+      "mol_emb_similar_to": "Atenolol",
+      "gene_sig_score": 0.0821,
+      "gene_sig_rank": 10,
+      "proximity_score": 0,
+      "proximity_distance": 0,
+      "admet_score": 0.5927,
+      "admet_flags": "hERG=0.78",
+      "primekg_score": 0.2489,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": 0.4478,
+      "structural_group_score": 0.9324,
+      "network_group_score": 0.5983,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9185,
+      "efficacy_score": 0.4494,
+      "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 18,
-      "pubmed_treatment_total": 12,
+      "shared_target_count": 4,
+      "shared_targets": [
+        "ACE",
+        "ADRB1",
+        "AGTR1",
+        "CACNA1C"
+      ],
+      "pubmed_total": 29,
+      "pubmed_treatment_total": 28,
       "pubmed_repurposing_total": 0,
       "key_papers": [
         {
-          "pmid": "34152285",
-          "title": "One in a billion: a patient with Marfan syndrome and familial hypocalciuric hypercalcaemia.",
-          "authors": "Ann Tee S, Brennan P, L Mitchell A",
-          "journal": "Endocrinology, diabetes & metabolism case reports",
-          "year": "2021",
-          "abstract_snippet": "SUMMARY: Marfan syndrome is an autosomal dominant multisystem disorder that has an estimated incidence of 1 in 5000. It is caused by mutations in the FBN1 gene, which encodes the extracellular matrix protein type 1 fibrillin. Familial hypocalciuric hypercalcaemia (FHH), also inherited in an autosoma...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34152285/",
-          "total_results": 18
-        },
-        {
-          "pmid": "18069021",
-          "title": "Thoracoabdominal aortic aneurysm repair in patients with marfan syndrome.",
-          "authors": "Mommertz G, Sigala F, Langer S, et al.",
-          "journal": "European journal of vascular and endovascular surgery : the official journal of the European Society for Vascular Surgery",
-          "year": "2008",
-          "abstract_snippet": "OBJECTIVE: We assessed the surgical outcome of descending thoracic aortic aneurysm repair (DTAA) and thoracoabdominal aortic aneurym (TAAA) repair in patients with Marfan syndrome. METHODS: During a six year period, 206 patients underwent DTAA and TAAA repair. In 22 patients, Marfan syndrome was con...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/18069021/"
-        },
-        {
-          "pmid": "15480770",
-          "title": "Characterization of the renal phenotype in a mouse model of Marfan syndrome.",
-          "authors": "Hartner A, Eifert T, Haas CS, et al.",
-          "journal": "Virchows Archiv : an international journal of pathology",
-          "year": "2004",
-          "abstract_snippet": "The microfibrillar protein fibrillin-1 is expressed abundantly in the vasculature and the glomerulus of the kidney. Mutations in the fibrillin-1 gene lead to Marfan syndrome. The most common complication of this disease is aortic dilatation due to elastic deficiencies of the vascular wall. Several c...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/15480770/"
-        },
-        {
-          "pmid": "30359839",
-          "title": "Renal cystic disease in the Fbn1",
-          "authors": "Hibender S, Wanga S, van der Made I, et al.",
-          "journal": "Cardiovascular pathology : the official journal of the Society for Cardiovascular Pathology",
-          "year": "2019",
-          "abstract_snippet": "Marfan syndrome (MFS) is a connective tissue disorder caused by mutations in the fibrillin-1 gene (FBN1), resulting in aortic aneurysm formation and dissections. Interestingly, variable aortopathy is observed even within MFS families with the same mutation. Thus, additional risk factors determine di...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30359839/"
-        },
-        {
-          "pmid": "1680259",
-          "title": "[Excretion of pyridinoline with urine in children with Ehlers-Danlos syndrome and Marfan's syndrome and the effect of beta blocker and complex vitamin therapy on it].",
-          "authors": "Prozorovskaia NN, Kozlov EA, Luk'ianov SV, et al.",
-          "journal": "Voprosy meditsinskoi khimii",
-          "year": "1991",
-          "abstract_snippet": "Excretion of pyridinoline and polypeptide-bound hydroxyproline with urine was studied in 27 children with hereditary impairment of connective tissue. At the same time, effects of beta-adrenoblocking agents and vitamin complex, prescribed during preoperation period before thoracoplasty in hereditary ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/1680259/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Characterization of the renal phenotype in a mouse model of Marfan syndrome",
-          "year": 2004,
-          "citations": 16,
-          "url": "https://www.semanticscholar.org/paper/20f737378f921d22820391e655be53b37a84ceb3",
-          "authors": "A. Hartner, T. Eifert, C. Haas"
-        },
-        {
-          "title": "[Excretion of pyridinoline with urine in children with Ehlers-Danlos syndrome and Marfan's syndrome and the effect of beta blocker and complex vitamin therapy on it].",
-          "year": 1991,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/dce992f679fbb70f98aff12a61f16d1f233221db",
-          "authors": "Prozorovskaia Nn, Kozlov \u00c9a, Luk'ianov Sv"
-        },
-        {
-          "title": "[Excretion of pyridinoline with urine in children with Ehlers-Danlos syndrome and Marfan's syndrome and the effect of beta blocker and complex vitamin therapy on it].",
-          "year": 1991,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/3628b70371e9d661256fe224f4785098a9713955",
-          "authors": "N. N. Prozorovskaia, E. Kozlov, S. V. Luk'ianov"
-        },
-        {
-          "title": "A CASE OF MARFAN'S SYNDROME WITH MULTIPLE ABDOMINAL ANEURYSMS",
-          "year": 1992,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/14036b73477785f1120164449a5cf914dcd42a25",
-          "authors": "K. Kikuchi, S. Iida, K. Ishitobi"
-        },
-        {
-          "title": "Renal cystic disease in the Fbn1C1039G/+ Marfan mouse is associated with enhanced aortic aneurysm formation.",
-          "year": 2019,
-          "citations": 9,
-          "url": "https://www.semanticscholar.org/paper/fc81aadf142adfac173bf1309ec1e8c7090b71b9",
-          "authors": "S. Hibender, S. Wanga, I. van der Made"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Characterization of the renal phenotype in a mouse model of Marfan syndrome",
-        "year": 2004,
-        "citations": 16,
-        "url": "https://www.semanticscholar.org/paper/20f737378f921d22820391e655be53b37a84ceb3",
-        "authors": "A. Hartner, T. Eifert, C. Haas"
-      },
-      "max_citations": 16,
-      "faers_signal": "none",
-      "faers_total_reports": 128,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Creatinine to Marfan syndrome terms. Drug has 128 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "AS-601245 (1.512)",
-        "U 99194 maleate (1.499)",
-        "TRICLOSAN (1.496)",
-        "selumetinib (1.489)",
-        "NTNCB hydrochloride (1.487)"
-      ],
-      "signature_interpretation": "Creatinine was not found among the top 41 drugs that reverse the Marfan syndrome gene signature. Top reversers: AS-601245 (1.512), U 99194 maleate (1.499), TRICLOSAN (1.496)",
-      "ai_hypothesis": "it is a marker of the disease and is a good predictor of the risk of cardiovascular complications.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.85,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "18 PubMed articles found",
-        "Supported by 2 independent AI pillars",
-        "AI-generated hypothesis available"
-      ]
-    },
-    {
-      "drug_name": "Bradykinin",
-      "drug_id": "DB12126",
-      "disease_name": "Marfan syndrome",
-      "combined_score": 1.0453,
-      "transe_rank": 70,
-      "pillars_hit": 2,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 1,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "10027814",
-          "title": "Endothelial function in Marfan syndrome: selective impairment of flow-mediated vasodilation.",
-          "authors": "Wilson DG, Bellamy MF, Ramsey MW, et al.",
+          "pmid": "2924416",
+          "title": "Arterial hemodynamic indexes in Marfan's syndrome.",
+          "authors": "Yin FC, Brin KP, Ting CT, et al.",
           "journal": "Circulation",
-          "year": "1999",
-          "abstract_snippet": "BACKGROUND: The cardiovascular complications of Marfan syndrome arise due to alterations in the structural and functional properties of fibrillin, a constituent of vascular connective tissues. Fibrillin-containing microfibrils are closely associated with arterial endothelial cells, indicating a poss...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/10027814/",
-          "total_results": 1
+          "year": "1989",
+          "abstract_snippet": "Aortic impedance, wave reflection magnitude, and compliance were measured in patients with Marfan's syndrome during diagnostic cardiac catheterization. Impedance and wave reflections were calculated from standard Fourier series analysis of ascending aorta micromanometer pressure and electromagnetic ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/2924416/",
+          "total_results": 29
+        },
+        {
+          "pmid": "31066871",
+          "title": "Update on Clinical Trials of Losartan With and Without \u03b2-Blockers to Block Aneurysm Growth in Patients With Marfan Syndrome: A Review.",
+          "authors": "Hofmann Bowman MA, Eagle KA, Milewicz DM",
+          "journal": "JAMA cardiology",
+          "year": "2019",
+          "abstract_snippet": "IMPORTANCE: Thoracic aortic aneurysms leading to acute aortic dissections are a major cause of morbidity and mortality despite significant advances in surgical treatment, which remains the main intervention to prevent type A dissections. In the past 2 decades progress has been made toward a better u...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31066871/"
+        },
+        {
+          "pmid": "19662746",
+          "title": "Marfan syndrome: a study of a Nigerian family and review of current cardiovascular management.",
+          "authors": "Ekure EN, Onakoya AO, Oke DA",
+          "journal": "West African journal of medicine",
+          "year": "2009",
+          "abstract_snippet": "BACKGROUND: Marfan's syndrome is a connective tissue disorder inherited as an autosomal dominant disorder. It causes a myriad of distinct clinical problems, of which the musculoskeletal, cardiac, and ocular system problems predominate. Nearly 50 percent of patients have to undergo aortic surgery in ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19662746/"
+        },
+        {
+          "pmid": "19114",
+          "title": "Prophylactiv use of propranolol in the Marfan syndrome to prevent aortic dissection.",
+          "authors": "Ose L, McKusick VA",
+          "journal": "Birth defects original article series",
+          "year": "1977",
+          "abstract_snippet": "Twenty-five patients, 16 men and 9 women, 5-59 years of age with the Marfan syndrome and cardiac complications were started on propranolol over a 6-year period. Propranolol was used as a beta-adrenergic blocking agent to reduce myocardial contractility in an attempt thereby to stay the progression o...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19114/"
+        },
+        {
+          "pmid": "28823387",
+          "title": "Losartan in combination with propranolol slows the aortic root dilatation in neonatal Marfan syndrome.",
+          "authors": "Liu LH, Lin SM, Lin DS, et al.",
+          "journal": "Pediatrics and neonatology",
+          "year": "2018",
+          "abstract_snippet": "Neonatal Marfan syndrome, in contrast to classical Marfan syndrome, is characterized by rapidly progressive multi-valvular cardiac disease and death from congestive heart failure, typically within the first year of life. Due to the rarity of this condition, treatment for neonatal Marfan syndrome has...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28823387/"
         }
       ],
       "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "Abstract P253: Angiotensin Converting Enzyme Inhibition vs. Angiotensin II Receptor Blockade in Marfan Mouse: Role of Bradykinin",
-          "year": 2015,
+          "title": "Losartan in combination with propranolol slows the aortic root dilatation in neonatal Marfan syndrome.",
+          "year": 2017,
+          "citations": 9,
+          "url": "https://www.semanticscholar.org/paper/2e83a93c22eadd1f40ff2f4e80b1e46c9bc3814b",
+          "authors": "Lucille Liu, Shan-Miao Lin, D. Lin"
+        },
+        {
+          "title": "Do angiotensin receptor blockers prevent cardiac events in patients with Marfan syndrome?",
+          "year": 2020,
           "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/c3767d10611aefa9e379f4cd0802919d147f4478",
-          "authors": "J. Gamboa, Kevin D. Hill, Susan M. Fowler"
+          "url": "https://www.semanticscholar.org/paper/c3755ab7f40f9f961a140609bbb160fb28a6e71c",
+          "authors": "Pei-Yu Su, H. Chiu, Y. Kang"
         },
         {
-          "title": "Marfan Syndrome: Enhanced Diagnostic Tools and Follow-up Management Strategies",
-          "year": 2023,
-          "citations": 36,
-          "url": "https://www.semanticscholar.org/paper/5910f6072bd28ebd3f7ab6632d0ea63cb27c7418",
-          "authors": "S. Marelli, E. Micaglio, Jacopo Taurino"
+          "title": "Prophylactiv use of propranolol in the Marfan syndrome to prevent aortic dissection.",
+          "year": 1977,
+          "citations": 24,
+          "url": "https://www.semanticscholar.org/paper/8842f2777784291523d12e9181c4b19befae1ee7",
+          "authors": "L. Ose, McKusick Va"
         },
         {
-          "title": "Angiotensin receptor blockers and \u03b2 blockers in Marfan syndrome: an individual patient data meta-analysis of randomised trials",
-          "year": 2022,
-          "citations": 69,
-          "url": "https://www.semanticscholar.org/paper/454015af766d782112ae8e3f4ad16dcfd582cf71",
-          "authors": ""
+          "title": "Usefulness of enalapril versus propranolol or atenolol for prevention of aortic dilation in patients with the Marfan syndrome.",
+          "year": 2005,
+          "citations": 178,
+          "url": "https://www.semanticscholar.org/paper/e3b2c6f927767fa825c7d7626768d503289d9ef6",
+          "authors": "A. Yetman, R. A. Bornemeier, B. McCrindle"
         },
         {
-          "title": "Marfan syndrome",
-          "year": 2021,
-          "citations": 186,
-          "url": "https://www.semanticscholar.org/paper/d4cd05fcba2bcbce2cdc58069feded4ff1e9406d",
-          "authors": "D. Milewicz, A. Braverman, J. De Backer"
-        },
-        {
-          "title": "Clinical relevance of genotype\u2013phenotype correlations beyond vascular events in a cohort study of 1500 Marfan syndrome patients with FBN1 pathogenic variants",
-          "year": 2021,
-          "citations": 109,
-          "url": "https://www.semanticscholar.org/paper/4dba7e56c609f890e48ba763044c7a323dd05e8a",
-          "authors": "P. Arnaud, O. Milleron, N. Hanna"
+          "title": "Marfan syndrome treated with propranolol.",
+          "year": 1975,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/6267655dbe04f4cb0b3e4f5c17e9087a696bd4f6",
+          "authors": "Siggers Dc"
         }
       ],
       "most_cited_paper": {
-        "title": "Marfan syndrome",
-        "year": 2021,
-        "citations": 186,
-        "url": "https://www.semanticscholar.org/paper/d4cd05fcba2bcbce2cdc58069feded4ff1e9406d",
-        "authors": "D. Milewicz, A. Braverman, J. De Backer"
+        "title": "Usefulness of enalapril versus propranolol or atenolol for prevention of aortic dilation in patients with the Marfan syndrome.",
+        "year": 2005,
+        "citations": 178,
+        "url": "https://www.semanticscholar.org/paper/e3b2c6f927767fa825c7d7626768d503289d9ef6",
+        "authors": "A. Yetman, R. A. Bornemeier, B. McCrindle"
       },
-      "max_citations": 186,
+      "max_citations": 178,
       "faers_signal": "none",
-      "faers_total_reports": 0,
+      "faers_total_reports": 59698,
       "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Bradykinin",
+      "faers_interpretation": "No FAERS reports found linking Propranolol to Marfan syndrome terms. Drug has 59698 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -258,203 +163,13 @@
         "selumetinib (1.489)",
         "NTNCB hydrochloride (1.487)"
       ],
-      "signature_interpretation": "Bradykinin was not found among the top 41 drugs that reverse the Marfan syndrome gene signature. Top reversers: AS-601245 (1.512), U 99194 maleate (1.499), TRICLOSAN (1.496)",
-      "ai_hypothesis": "of its role in the pathogenesis of aortic root dilatation.",
+      "signature_interpretation": "Propranolol was not found among the top 41 drugs that reverse the Marfan syndrome gene signature. Top reversers: AS-601245 (1.512), U 99194 maleate (1.499), TRICLOSAN (1.496)",
+      "ai_hypothesis": "of its effect on the aortic root and the aortic root's elastic properties.",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
           "confidence": 0.0,
           "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.85,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "1 PubMed article(s) - limited literature",
-        "Supported by 2 independent AI pillars",
-        "Highly cited paper (186 citations): \"Marfan syndrome...\"",
-        "AI-generated hypothesis available"
-      ]
-    },
-    {
-      "drug_name": "Methotrexate",
-      "drug_id": "DB00563",
-      "disease_name": "Marfan syndrome",
-      "combined_score": 1.0421,
-      "transe_rank": 200,
-      "pillars_hit": 5,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 4,
-      "pubmed_treatment_total": 4,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "35757348",
-          "title": "Treatment With Methotrexate Associated With Lipid Core Nanoparticles Prevents Aortic Dilation in a Murine Model of Marfan Syndrome.",
-          "authors": "Guido MC, Lopes NM, Albuquerque CI, et al.",
-          "journal": "Frontiers in cardiovascular medicine",
-          "year": "2022",
-          "abstract_snippet": "In Marfan syndrome (MFS), dilation, dissection, and rupture of the aorta occur. Inflammation can be involved in the pathogenicity of aortic defects and can thus be a therapeutic target for MFS. Previously, we showed that the formulation of methotrexate (MTX) associated with lipid nanoparticles (LDE)...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35757348/",
-          "total_results": 4
-        },
-        {
-          "pmid": "17454940",
-          "title": "Cogan's syndrome with recurrent carotid and aortic aneurysms: a potentially fatal disorder mimicking Marfan syndrome.",
-          "authors": "Low AH, Su JW, Sin KY, et al.",
-          "journal": "Scandinavian journal of rheumatology",
-          "year": "2007",
-          "abstract_snippet": "Cogan's syndrome (CS) is a rare multisystemic disease characterized by vestibuloauditory dysfunction, inflammatory eye disease and vasculitis. Aortic aneurysms due to aortitis are under-recognized in CS, and are potentially fatal, with two of eight reported cases dying from aneurysm/arterial rupture...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/17454940/"
-        },
-        {
-          "pmid": "18839274",
-          "title": "Veno-occlusive disease of the liver during induction therapy for acute lymphoblastic leukemia.",
-          "authors": "Papadopoulos A, Ntaios G, Kaiafa G, et al.",
-          "journal": "International journal of hematology",
-          "year": "2008",
-          "abstract_snippet": "Veno-occlusive disease (VOD) of the liver, also termed as sinusoidal obstruction syndrome, constitutes a well-known complication of high-dose cytoreductive chemotherapy prior to allogeneic or autologous bone marrow transplantation and is associated with the intensity of treatment [1]. On the contrar...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/18839274/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Treatment With Methotrexate Associated With Lipid Core Nanoparticles Prevents Aortic Dilation in a Murine Model of Marfan Syndrome",
-          "year": 2022,
-          "citations": 8,
-          "url": "https://www.semanticscholar.org/paper/9572bf5c3221fb269492e3b8c800a448a1f801e7",
-          "authors": "M. Guido, N. M. Lopes, C. Albuquerque"
-        },
-        {
-          "title": "Lipid core nanoparticle associated with methotrexate improved left ventricular cardiomyopathy in mice with Marfan syndrome",
-          "year": 2022,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/25ac7aa34669bbb15a49de8978bb2f87f7d5bf02",
-          "authors": "M. Guido, N. M. Lopes, P. O. Carvalho"
-        },
-        {
-          "title": "Methotrexate associated with a lipid core nanoparticle prevented the dilation and dissection of the aortic arch in mice with Marfan syndrome",
-          "year": 2020,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/e19560a0864505b44cff32d6938185e489c58598",
-          "authors": "M. Guido, N. M. Lopes, C. Albuquerque"
-        },
-        {
-          "title": "Abstract 13025: Methotrexate Carried in Lipid Core Nanoparticles Prevented the Dilation and Dissection of the Aortic Arch in Mice With Marfan Syndrome by Increasing the Bioavailability of Intracellular Adenosine",
-          "year": 2020,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/b8f9b3c3640ada2b4a2d476ef2be5db29b625b6a",
-          "authors": "M. Guido, N. M. Lopes, C. Albuquerque"
-        },
-        {
-          "title": "Cogan's syndrome with recurrent carotid and aortic aneurysms: a potentially fatal disorder mimicking Marfan syndrome",
-          "year": 2007,
-          "citations": 8,
-          "url": "https://www.semanticscholar.org/paper/bddf56f43cc88c8106459a0489f7cd3d509895b7",
-          "authors": "A. Low, J. Su, K. Sin"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Treatment With Methotrexate Associated With Lipid Core Nanoparticles Prevents Aortic Dilation in a Murine Model of Marfan Syndrome",
-        "year": 2022,
-        "citations": 8,
-        "url": "https://www.semanticscholar.org/paper/9572bf5c3221fb269492e3b8c800a448a1f801e7",
-        "authors": "M. Guido, N. M. Lopes, C. Albuquerque"
-      },
-      "max_citations": 8,
-      "faers_signal": "none",
-      "faers_total_reports": 490174,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Methotrexate to Marfan syndrome terms. Drug has 490174 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "AS-601245 (1.512)",
-        "U 99194 maleate (1.499)",
-        "TRICLOSAN (1.496)",
-        "selumetinib (1.489)",
-        "NTNCB hydrochloride (1.487)"
-      ],
-      "signature_interpretation": "Methotrexate was not found among the top 41 drugs that reverse the Marfan syndrome gene signature. Top reversers: AS-601245 (1.512), U 99194 maleate (1.499), TRICLOSAN (1.496)",
-      "ai_hypothesis": "of its anti-inflammatory and anti-fibrotic properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 1,
-          "negative_signals": 0,
-          "mechanism_signals": 1,
-          "extracted_entities": [
-            {
-              "entity": "dil",
-              "entity_group": "Sign_symptom",
-              "score": 0.9990000128746033
-            },
-            {
-              "entity": "di",
-              "entity_group": "Sign_symptom",
-              "score": 0.9869999885559082
-            },
-            {
-              "entity": "ru",
-              "entity_group": "Sign_symptom",
-              "score": 1.0
-            },
-            {
-              "entity": "##pt",
-              "entity_group": "Sign_symptom",
-              "score": 1.0
-            },
-            {
-              "entity": "##ure of",
-              "entity_group": "Sign_symptom",
-              "score": 0.7940000295639038
-            },
-            {
-              "entity": "aorta",
-              "entity_group": "Biological_structure",
-              "score": 0.9990000128746033
-            },
-            {
-              "entity": "inflammation",
-              "entity_group": "Disease_disorder",
-              "score": 0.9940000176429749
-            },
-            {
-              "entity": "ao",
-              "entity_group": "Biological_structure",
-              "score": 0.7689999938011169
-            },
-            {
-              "entity": "methotrexate",
-              "entity_group": "Medication",
-              "score": 0.9980000257492065
-            },
-            {
-              "entity": "mt",
-              "entity_group": "Medication",
-              "score": 0.7870000004768372
-            }
-          ]
         },
         {
           "relation_type": "unclear",
@@ -471,36 +186,248 @@
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.1897,
-      "mr_genetic_targets": 2,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Propranolol \u2014[treats]\u2192 DOID:10763 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome",
+      "kg_paths_text": "\u2022 Propranolol \u2014[treats]\u2192 DOID:10763 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome\n\u2022 Propranolol \u2014[treats]\u2192 DOID:10763 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome\n\u2022 Propranolol \u2014[treats]\u2192 MESH:D006973 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome",
       "validation_experiments": [],
-      "novelty_score": 0.95,
-      "novelty_level": "NOVEL",
+      "novelty_score": 0.248,
+      "novelty_level": "KNOWN",
       "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
+      "clinical_trials_total": 1,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT00651235",
+          "title": "A Randomized, Open-label, LOSARTAN Therapy on the Progression of Aortic Root Dilation in Patients With Marfan Syndrome",
+          "status": "UNKNOWN",
+          "phase": "PHASE2",
+          "enrollment": "44",
+          "url": "https://clinicaltrials.gov/study/NCT00651235"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 1
+      },
+      "confidence": "HIGH",
       "confidence_reasons": [
-        "4 PubMed article(s) - limited literature",
-        "Supported by 5 independent AI pillars",
+        "1 clinical trial(s) found on ClinicalTrials.gov",
+        "29 PubMed articles found",
+        "Supported by 3 independent AI pillars",
+        "Highly cited paper (178 citations): \"Usefulness of enalapril versus propranolol or atenolol for p...\"",
         "AI-generated hypothesis available"
-      ]
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 2135,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "moderate",
+        "summary": "CPIC-C (ADRB2) \u2022 PharmGKB-3 (COMT / rs4680)",
+        "cpic": [
+          {
+            "gene": "ADRB2",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "ADRA2C",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "CYP2D6",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "ADRB1",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "GRK4",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "COMT",
+            "variant": "rs4680",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451359886"
+          },
+          {
+            "gene": "CYP2D6",
+            "variant": "CYP2D6*1, CYP2D6*10",
+            "level": "4",
+            "phenotype_category": "Other",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183700477"
+          },
+          {
+            "gene": "ADRB2",
+            "variant": "rs1042713",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1447959515"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.566,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.413,
+          "docking": 0.978,
+          "pharos": 0.0,
+          "literature": 0.641
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Artery - Aorta",
+          "Heart - Left Ventricle"
+        ],
+        "n_genes": 4,
+        "n_expressed": 4,
+        "mean_tpm_in_tissue": 11.34,
+        "max_tpm_in_tissue": 23.03,
+        "tissue_specificity": 0.542,
+        "context_modifier": 1.013
+      },
+      "disease_entity": "Disease::MESH:D008382",
+      "docking": {
+        "kcal_per_mol": -11.74,
+        "target_symbol": "ADRB1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "ensemble_prob": 0.8623,
+      "ensemble_features": {
+        "kg_score": 0.9984,
+        "degree_penalty": 0.7479,
+        "n_drug_targets": 55,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.8904
+      },
+      "ensemble_rank": 5,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
-      "drug_name": "Nadide",
-      "drug_id": "DB14128",
+      "drug_name": "Esmolol",
+      "drug_id": "DB00187",
       "disease_name": "Marfan syndrome",
-      "combined_score": 1.0299,
-      "transe_rank": 298,
-      "pillars_hit": 2,
-      "mol_similarity": 0,
-      "similar_to": "",
+      "combined_score": 0.391,
+      "pillars_hit": 3,
+      "transe_rank": 31,
+      "transe_score": -12.1896,
+      "pykeen_score": -13.2326,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0.6522,
+      "similar_to": "Atenolol",
+      "mol_emb_similarity": 0.9884,
+      "mol_emb_similar_to": "Atenolol",
+      "gene_sig_score": 0.0704,
+      "gene_sig_rank": 12,
+      "proximity_score": 0,
+      "proximity_distance": 0,
+      "admet_score": 0.6585,
+      "admet_flags": "clean",
+      "primekg_score": 0.2545,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": 0.2962,
+      "structural_group_score": 0.9884,
+      "network_group_score": 0.5882,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9317,
+      "efficacy_score": 0.4196,
+      "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "ADRB1"
+      ],
       "pubmed_total": 0,
       "pubmed_treatment_total": 0,
       "pubmed_repurposing_total": 0,
@@ -536,11 +463,11 @@
           "authors": "P. Arnaud, O. Milleron, N. Hanna"
         },
         {
-          "title": "Pathophysiology and Therapeutics of Thoracic Aortic Aneurysm in Marfan Syndrome",
-          "year": 2022,
-          "citations": 34,
-          "url": "https://www.semanticscholar.org/paper/fd6208404e9f5eb64798ee7d9738fc38c022e7bf",
-          "authors": "Keiichi Asano, Anna Cantalupo, Lauriane S\u00e9des"
+          "title": "Pathophysiology and Pathogenesis of Marfan Syndrome.",
+          "year": 2021,
+          "citations": 70,
+          "url": "https://www.semanticscholar.org/paper/252a415a23829d52914785b33daa347b338edfd2",
+          "authors": "Sanford M Zeigler, B. Sloan, Jeffrey A. Jones"
         }
       ],
       "most_cited_paper": {
@@ -552,9 +479,9 @@
       },
       "max_citations": 186,
       "faers_signal": "none",
-      "faers_total_reports": 19,
+      "faers_total_reports": 1136,
       "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Nadide to Marfan syndrome terms. Drug has 19 total reports.",
+      "faers_interpretation": "No FAERS reports found linking Esmolol to Marfan syndrome terms. Drug has 1136 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -564,8 +491,8 @@
         "selumetinib (1.489)",
         "NTNCB hydrochloride (1.487)"
       ],
-      "signature_interpretation": "Nadide was not found among the top 41 drugs that reverse the Marfan syndrome gene signature. Top reversers: AS-601245 (1.512), U 99194 maleate (1.499), TRICLOSAN (1.496)",
-      "ai_hypothesis": "it is a safe and effective drug.",
+      "signature_interpretation": "Esmolol was not found among the top 41 drugs that reverse the Marfan syndrome gene signature. Top reversers: AS-601245 (1.512), U 99194 maleate (1.499), TRICLOSAN (1.496)",
+      "ai_hypothesis": "it is a short-acting beta-blocker with a rapid onset of action.",
       "abstract_analyses": [],
       "has_failed_trial": false,
       "failed_trial_phase": "",
@@ -573,10 +500,10 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0,
       "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Esmolol \u2014[treats]\u2192 DOID:10763 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome",
+      "kg_paths_text": "\u2022 Esmolol \u2014[treats]\u2192 DOID:10763 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome\n\u2022 Esmolol \u2014[treats]\u2192 DOID:10763 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome\n\u2022 Esmolol \u2014[is a therapeutic for]\u2192 MESH:D006973 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome",
       "validation_experiments": [],
-      "novelty_score": 0.9,
+      "novelty_score": 0.352,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -584,123 +511,197 @@
       "trial_phases": {},
       "confidence": "LOW",
       "confidence_reasons": [
-        "Supported by 2 independent AI pillars",
+        "Supported by 3 independent AI pillars",
+        "High molecular similarity (0.65) to Atenolol",
         "Highly cited paper (186 citations): \"Marfan syndrome...\"",
         "AI-generated hypothesis available"
-      ]
-    },
-    {
-      "drug_name": "Aceneuramic Acid",
-      "drug_id": "DB11797",
-      "disease_name": "Marfan syndrome",
-      "combined_score": 1.0289,
-      "transe_rank": 312,
-      "pillars_hit": 2,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Nitro-oleic acid (NO2-OA) reduces thoracic aortic aneurysm progression in a mouse model of Marfan syndrome.",
-          "year": 2021,
-          "citations": 25,
-          "url": "https://www.semanticscholar.org/paper/ad2434cf3a44d8ed3215fe28f66eec1e419f121a",
-          "authors": "F. Nettersheim, Julian Lemties, S. Braumann"
-        },
-        {
-          "title": "Amino Acid and Phospholipid Metabolism as an Indicator of Inflammation and Subtle Cardiomyopathy in Patients with Marfan Syndrome",
-          "year": 2021,
-          "citations": 6,
-          "url": "https://www.semanticscholar.org/paper/645fe6cdf1179e9b1f7a0e59fb2ac0dde67ac5b4",
-          "authors": "Lisa Bartenbach, T. Karall, Jakob Koch"
-        },
-        {
-          "title": "Tranexamic acid use is associated with reduced intraoperative blood loss during spine surgery for Marfan syndrome",
-          "year": 2021,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/ee5864fdc47685682a258bab45a698897eeec977",
-          "authors": "Ijezie Ikwuezunma, A. Margalit, P. Sponseller"
-        },
-        {
-          "title": "[Analysis of FBN1 gene mutations in six Chinese pedigrees affected with Marfan syndrome].",
-          "year": 2025,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/4d3723b95ba9336d983358b08d3ab40d5d9ce03c",
-          "authors": "Xianhong Ding, Hongliang Chen, Yang Lu"
-        },
-        {
-          "title": "Abstract 4346626: A Therapeutic Vaccine Against Transforming Growth Factor-\u03b2 Prevents Aortic Aneurysm Formation in a Mouse Model of Marfan Syndrome",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/ae53bf9df0fef1d17c5430aac290363d3db2d67e",
-          "authors": "S. Okamura, Hiroki Yagi, Hiroki Hayashi"
-        }
       ],
-      "most_cited_paper": {
-        "title": "Nitro-oleic acid (NO2-OA) reduces thoracic aortic aneurysm progression in a mouse model of Marfan syndrome.",
-        "year": 2021,
-        "citations": 25,
-        "url": "https://www.semanticscholar.org/paper/ad2434cf3a44d8ed3215fe28f66eec1e419f121a",
-        "authors": "F. Nettersheim, Julian Lemties, S. Braumann"
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
       },
-      "max_citations": 25,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Aceneuramic Acid",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "AS-601245 (1.512)",
-        "U 99194 maleate (1.499)",
-        "TRICLOSAN (1.496)",
-        "selumetinib (1.489)",
-        "NTNCB hydrochloride (1.487)"
-      ],
-      "signature_interpretation": "Aceneuramic Acid was not found among the top 41 drugs that reverse the Marfan syndrome gene signature. Top reversers: AS-601245 (1.512), U 99194 maleate (1.499), TRICLOSAN (1.496)",
-      "ai_hypothesis": "of its ability to inhibit the activity of the enzyme lysyl oxidase.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 1.0,
-      "novelty_level": "BREAKTHROUGH",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "Supported by 2 independent AI pillars",
-        "Supporting paper with 25 citations",
-        "AI-generated hypothesis available"
-      ]
+      "ddi_warnings": {
+        "n_interactions": 1371,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00227",
+            "drug_name": "Lovastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00338",
+            "drug_name": "Omeprazole",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00641",
+            "drug_name": "Simvastatin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "moderate",
+        "summary": "CPIC-C (GRK4)",
+        "cpic": [
+          {
+            "gene": "GRK4",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "GRK5",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "ADRB1",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "ADRA2C",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          }
+        ],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": false,
+          "docking": true,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.375,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.391,
+          "docking": 0.793,
+          "pharos": 0.0,
+          "literature": 0.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Artery - Aorta",
+          "Heart - Left Ventricle"
+        ],
+        "n_genes": 1,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 14.09,
+        "max_tpm_in_tissue": 14.09,
+        "tissue_specificity": 0.882,
+        "context_modifier": 1.062
+      },
+      "disease_entity": "Disease::MESH:D008382",
+      "docking": {
+        "kcal_per_mol": -9.52,
+        "target_symbol": "ADRB1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "ensemble_prob": 0.7641,
+      "ensemble_features": {
+        "kg_score": 0.9985,
+        "degree_penalty": 0.774,
+        "n_drug_targets": 3,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.8332
+      },
+      "ensemble_rank": 6,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
       "drug_name": "Metoprolol",
       "drug_id": "DB00264",
       "disease_name": "Marfan syndrome",
-      "combined_score": 1.0047,
+      "combined_score": 0.3893,
+      "pillars_hit": 3,
       "transe_rank": 20,
-      "pillars_hit": 6,
+      "transe_score": -12.1208,
+      "pykeen_score": -13.0847,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0.6222,
       "similar_to": "Atenolol",
+      "mol_emb_similarity": 0.9398,
+      "mol_emb_similar_to": "Atenolol",
+      "gene_sig_score": 0.0714,
+      "gene_sig_rank": 12,
+      "proximity_score": 0,
+      "proximity_distance": 0,
+      "admet_score": 0.7058,
+      "admet_flags": "clean",
+      "primekg_score": 0.2535,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": 0.3198,
+      "structural_group_score": 0.9398,
+      "network_group_score": 0.5725,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9412,
+      "efficacy_score": 0.4136,
+      "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 2,
+      "shared_targets": [
+        "ACE",
+        "ADRB1"
+      ],
       "pubmed_total": 7,
       "pubmed_treatment_total": 5,
       "pubmed_repurposing_total": 0,
@@ -836,10 +837,10 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0,
       "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Metoprolol \u2014[treats]\u2192 DOID:10763 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome",
+      "kg_paths_text": "\u2022 Metoprolol \u2014[treats]\u2192 DOID:10763 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome\n\u2022 Metoprolol \u2014[treats]\u2192 DOID:10763 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome\n\u2022 Metoprolol \u2014[treats]\u2192 MESH:D006973 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome",
       "validation_experiments": [],
-      "novelty_score": 0.95,
+      "novelty_score": 0.37,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -848,124 +849,237 @@
       "confidence": "LOW",
       "confidence_reasons": [
         "7 PubMed article(s) - limited literature",
-        "Supported by 6 independent AI pillars",
+        "Supported by 3 independent AI pillars",
         "High molecular similarity (0.62) to Atenolol",
         "Supporting paper with 55 citations",
         "AI-generated hypothesis available"
-      ]
-    },
-    {
-      "drug_name": "pGlu-Gln-Arg-Leu-Gly-Asn-Gln-Trp-Ala-Val",
-      "drug_id": "DB11724",
-      "disease_name": "Marfan syndrome",
-      "combined_score": 1.0001,
-      "transe_rank": 738,
-      "pillars_hit": 2,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "The Basics The Proteinogenic \u03b1-amino acids Amino Acid Abbreviation Side Chain ( R ) Glycine Gly H Alanine Ala Me",
-          "year": 2003,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/ce232f8b99a7229a589d2355bb23559734f1c275",
-          "authors": "Valine Val CHMe, L. Leu"
-        },
-        {
-          "title": "Triphasic Development of the Genetic Code",
-          "year": 2024,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/f9149c01776c6859be5c184f067c22a7f152c037",
-          "authors": "Tze-Fei Wong"
-        },
-        {
-          "title": "EFFECT OF BACILLUS SUBTILIS ON SOME BIOCHEMICAL PARAMETERS OF LONG-LEAVED MINT AND MEDICINAL MELISSA UNDER HYDROPONIC CULTIVATION",
-          "year": 2025,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/6f3c4b1cf9583a7eafa5d9b11a607a9de7ee6eca",
-          "authors": "Inna V. Knyazeva"
-        },
-        {
-          "title": "Expanding the Landscape of Amino Acid-Rich Antimicrobial Peptides: Definition, Deployment in Nature, Implications for Peptide Design and Therapeutic Potential",
-          "year": 2022,
-          "citations": 42,
-          "url": "https://www.semanticscholar.org/paper/089b1e8418b73df315dc64b9391a1754a09bc2ff",
-          "authors": "Aaron P Decker, A. Mechesso, Guangshun Wang"
-        },
-        {
-          "title": "A helix propensity scale based on experimental studies of peptides and proteins.",
-          "year": 1998,
-          "citations": 968,
-          "url": "https://www.semanticscholar.org/paper/6ba37a30b75c1e4d4dc4734ca47174460aaac328",
-          "authors": "C. Pace, J. Scholtz"
-        }
       ],
-      "most_cited_paper": {
-        "title": "A helix propensity scale based on experimental studies of peptides and proteins.",
-        "year": 1998,
-        "citations": 968,
-        "url": "https://www.semanticscholar.org/paper/6ba37a30b75c1e4d4dc4734ca47174460aaac328",
-        "authors": "C. Pace, J. Scholtz"
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
       },
-      "max_citations": 968,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for pGlu-Gln-Arg-Leu-Gly-Asn-Gln-Trp-Ala-Val",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "AS-601245 (1.512)",
-        "U 99194 maleate (1.499)",
-        "TRICLOSAN (1.496)",
-        "selumetinib (1.489)",
-        "NTNCB hydrochloride (1.487)"
-      ],
-      "signature_interpretation": "pGlu-Gln-Arg-Leu-Gly-Asn-Gln-Trp-Ala-Val was not found among the top 41 drugs that reverse the Marfan syndrome gene signature. Top reversers: AS-601245 (1.512), U 99194 maleate (1.499), TRICLOSAN (1.496)",
-      "ai_hypothesis": "it is a potent inhibitor of the activity of the enzyme.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.85,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "Supported by 2 independent AI pillars",
-        "Highly cited paper (968 citations): \"A helix propensity scale based on experimental studies of pe...\"",
-        "AI-generated hypothesis available"
-      ]
+      "ddi_warnings": {
+        "n_interactions": 2049,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "high_risk",
+        "summary": "CPIC-B (CYP2D6) \u2022 PharmGKB-3 (CYP2D6 / rs5030655)",
+        "cpic": [
+          {
+            "gene": "CYP2D6",
+            "level": "B",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "ADRB1",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "ADRA2C",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "GRK4",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "GRK5",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "CYP2D6",
+            "variant": "rs5030655",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/655385338"
+          },
+          {
+            "gene": "CYP2D6",
+            "variant": "rs3892097",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/655385352"
+          },
+          {
+            "gene": "CYP2D6",
+            "variant": "CYP2D6*1, CYP2D6*45, CYP2D6*46",
+            "level": "3",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451428340"
+          },
+          {
+            "gene": "CYP2D6",
+            "variant": "CYP2D6*1, CYP2D6*4",
+            "level": "1A",
+            "phenotype_category": "Dosage",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1450415170"
+          },
+          {
+            "gene": "GRK4",
+            "variant": "rs1024323",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/827864159"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": false,
+          "docking": true,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.457,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.389,
+          "docking": 0.808,
+          "pharos": 0.0,
+          "literature": 0.392
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Artery - Aorta",
+          "Heart - Left Ventricle"
+        ],
+        "n_genes": 2,
+        "n_expressed": 2,
+        "mean_tpm_in_tissue": 8.45,
+        "max_tpm_in_tissue": 14.09,
+        "tissue_specificity": 0.4,
+        "context_modifier": 0.986
+      },
+      "disease_entity": "Disease::MESH:D008382",
+      "docking": {
+        "kcal_per_mol": -9.7,
+        "target_symbol": "ADRB1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "ensemble_prob": 0.9527,
+      "ensemble_features": {
+        "kg_score": 0.9989,
+        "degree_penalty": 0.7532,
+        "n_drug_targets": 16,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.5649
+      },
+      "ensemble_rank": 3,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
-      "drug_name": "Esmolol",
-      "drug_id": "DB00187",
+      "drug_name": "Betaxolol",
+      "drug_id": "DB00195",
       "disease_name": "Marfan syndrome",
-      "combined_score": 0.9993,
-      "transe_rank": 31,
-      "pillars_hit": 6,
-      "mol_similarity": 0.6522,
+      "combined_score": 0.3814,
+      "pillars_hit": 3,
+      "transe_rank": 11,
+      "transe_score": -12.0085,
+      "pykeen_score": -12.9952,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0.5385,
       "similar_to": "Atenolol",
+      "mol_emb_similarity": 0.873,
+      "mol_emb_similar_to": "Atenolol",
+      "gene_sig_score": 0.0714,
+      "gene_sig_rank": 12,
+      "proximity_score": 0,
+      "proximity_distance": 0,
+      "admet_score": 0.6438,
+      "admet_flags": "hERG=0.83",
+      "primekg_score": 0.2481,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": 0.3485,
+      "structural_group_score": 0.873,
+      "network_group_score": 0.5819,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9288,
+      "efficacy_score": 0.4106,
+      "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "ADRB1"
+      ],
       "pubmed_total": 0,
       "pubmed_treatment_total": 0,
       "pubmed_repurposing_total": 0,
@@ -1017,9 +1131,9 @@
       },
       "max_citations": 186,
       "faers_signal": "none",
-      "faers_total_reports": 1136,
+      "faers_total_reports": 1246,
       "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Esmolol to Marfan syndrome terms. Drug has 1136 total reports.",
+      "faers_interpretation": "No FAERS reports found linking Betaxolol to Marfan syndrome terms. Drug has 1246 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -1029,8 +1143,8 @@
         "selumetinib (1.489)",
         "NTNCB hydrochloride (1.487)"
       ],
-      "signature_interpretation": "Esmolol was not found among the top 41 drugs that reverse the Marfan syndrome gene signature. Top reversers: AS-601245 (1.512), U 99194 maleate (1.499), TRICLOSAN (1.496)",
-      "ai_hypothesis": "it is a short-acting beta-blocker with a rapid onset of action.",
+      "signature_interpretation": "Betaxolol was not found among the top 41 drugs that reverse the Marfan syndrome gene signature. Top reversers: AS-601245 (1.512), U 99194 maleate (1.499), TRICLOSAN (1.496)",
+      "ai_hypothesis": "of its beta-adrenergic blocking action.",
       "abstract_analyses": [],
       "has_failed_trial": false,
       "failed_trial_phase": "",
@@ -1038,10 +1152,10 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0,
       "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Betaxolol \u2014[treats]\u2192 DOID:10763 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome",
+      "kg_paths_text": "\u2022 Betaxolol \u2014[treats]\u2192 DOID:10763 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome\n\u2022 Betaxolol \u2014[treats]\u2192 DOID:10763 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome\n\u2022 Betaxolol \u2014[treats]\u2192 MESH:D006973 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome",
       "validation_experiments": [],
-      "novelty_score": 0.899,
+      "novelty_score": 0.343,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -1049,24 +1163,1202 @@
       "trial_phases": {},
       "confidence": "LOW",
       "confidence_reasons": [
-        "Supported by 6 independent AI pillars",
-        "High molecular similarity (0.65) to Atenolol",
+        "Supported by 3 independent AI pillars",
+        "High molecular similarity (0.54) to Atenolol",
         "Highly cited paper (186 citations): \"Marfan syndrome...\"",
         "AI-generated hypothesis available"
-      ]
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1516,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00773",
+            "drug_name": "Etoposide",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "moderate",
+        "summary": "CPIC-C (GRK4)",
+        "cpic": [
+          {
+            "gene": "GRK4",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "CYP2D6",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "ADRA2C",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "ADRB1",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "GRK5",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          }
+        ],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": false,
+          "docking": true,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.432,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.381,
+          "docking": 0.997,
+          "pharos": 0.0,
+          "literature": 0.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Artery - Aorta",
+          "Heart - Left Ventricle"
+        ],
+        "n_genes": 1,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 14.09,
+        "max_tpm_in_tissue": 14.09,
+        "tissue_specificity": 0.882,
+        "context_modifier": 1.062
+      },
+      "disease_entity": "Disease::MESH:D008382",
+      "docking": {
+        "kcal_per_mol": -11.96,
+        "target_symbol": "ADRB1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "ensemble_prob": 0.9914,
+      "ensemble_features": {
+        "kg_score": 0.9995,
+        "degree_penalty": 0.7656,
+        "n_drug_targets": 6,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 1.7918
+      },
+      "ensemble_rank": 1,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "ALIPHATIC"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "Aliphatic_long_chain"
+        ]
+      }
     },
     {
-      "drug_name": "Succimer",
-      "drug_id": "DB00566",
+      "drug_name": "Olmesartan",
+      "drug_id": "DB00275",
       "disease_name": "Marfan syndrome",
-      "combined_score": 0.9954,
-      "transe_rank": 807,
-      "pillars_hit": 2,
+      "combined_score": 0.3689,
+      "pillars_hit": 3,
+      "transe_rank": 9,
+      "transe_score": -11.9374,
+      "pykeen_score": -13.7179,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0.5634,
+      "similar_to": "Losartan",
+      "mol_emb_similarity": 0.9308,
+      "mol_emb_similar_to": "Losartan",
+      "gene_sig_score": 0.0714,
+      "gene_sig_rank": 12,
+      "proximity_score": 0,
+      "proximity_distance": 0,
+      "admet_score": 0.5274,
+      "admet_flags": "DILI=0.97",
+      "primekg_score": 0.2479,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": 0.2787,
+      "structural_group_score": 0.9308,
+      "network_group_score": 0.6011,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9055,
+      "efficacy_score": 0.4074,
+      "groups_hit": 3,
+      "direct_relations": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "AGTR1"
+      ],
+      "pubmed_total": 1,
+      "pubmed_treatment_total": 1,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "12368744",
+          "title": "An angiotensin-converting enzyme inhibitor, not an angiotensin II type-1 receptor blocker, prevents beta-aminopropionitrile monofumarate-induced aortic dissection in rats.",
+          "authors": "Nagashima H, Uto K, Sakomura Y, et al.",
+          "journal": "Journal of vascular surgery",
+          "year": "2002",
+          "abstract_snippet": "OBJECTIVE: Cystic medial degeneration (CMD) is a histologic abnormality that is common in aortic diseases such as aortic dilation, aneurysm, or dissection. Although little is known about the mechanism underlying CMD, we have previously demonstrated that angiotensin II signaling via angiotensin II ty...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/12368744/",
+          "total_results": 1
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Phenotypic Variability in Marfan Syndrome in a Family With a Novel Nonsense FBN1 Gene Mutation",
+          "year": 2019,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/ff9f49b60894a1135f27beea4e8613180021da05",
+          "authors": "L. Consuegra-S\u00e1nchez, J. Sanchis, J. N\u00fa\u00f1ez"
+        },
+        {
+          "title": "Phenotypic variability in Marfan syndrome in a family with a novel nonsense FBN1 gene mutation.",
+          "year": 2012,
+          "citations": 12,
+          "url": "https://www.semanticscholar.org/paper/e7406478fa7388a2214e07d92e88a97f6a791764",
+          "authors": "A. D\u00edaz de Bustamante, E. Ruiz-Casares, M. T. Darnaude"
+        },
+        {
+          "title": "Apendagitis epiploica recidivada contralateral",
+          "year": 2015,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/4a480b3e5389906a704cf578f1659298dfc30a3d",
+          "authors": "A. Fern\u00e1ndez-L\u00f3pez, M. Gonz\u00e1lez-Valverde, J. Benavides-Buleje"
+        },
+        {
+          "title": "Marfan Syndrome: Enhanced Diagnostic Tools and Follow-up Management Strategies",
+          "year": 2023,
+          "citations": 36,
+          "url": "https://www.semanticscholar.org/paper/5910f6072bd28ebd3f7ab6632d0ea63cb27c7418",
+          "authors": "S. Marelli, E. Micaglio, Jacopo Taurino"
+        },
+        {
+          "title": "Angiotensin receptor blockers and \u03b2 blockers in Marfan syndrome: an individual patient data meta-analysis of randomised trials",
+          "year": 2022,
+          "citations": 69,
+          "url": "https://www.semanticscholar.org/paper/454015af766d782112ae8e3f4ad16dcfd582cf71",
+          "authors": ""
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Angiotensin receptor blockers and \u03b2 blockers in Marfan syndrome: an individual patient data meta-analysis of randomised trials",
+        "year": 2022,
+        "citations": 69,
+        "url": "https://www.semanticscholar.org/paper/454015af766d782112ae8e3f4ad16dcfd582cf71",
+        "authors": ""
+      },
+      "max_citations": 69,
+      "faers_signal": "none",
+      "faers_total_reports": 27259,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Olmesartan to Marfan syndrome terms. Drug has 27259 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "AS-601245 (1.512)",
+        "U 99194 maleate (1.499)",
+        "TRICLOSAN (1.496)",
+        "selumetinib (1.489)",
+        "NTNCB hydrochloride (1.487)"
+      ],
+      "signature_interpretation": "Olmesartan was not found among the top 41 drugs that reverse the Marfan syndrome gene signature. Top reversers: AS-601245 (1.512), U 99194 maleate (1.499), TRICLOSAN (1.496)",
+      "ai_hypothesis": "of its angiotensin II receptor antagonist properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Olmesartan \u2014[treats]\u2192 DOID:10763 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome",
+      "kg_paths_text": "\u2022 Olmesartan \u2014[treats]\u2192 DOID:10763 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome\n\u2022 Olmesartan \u2014[treats]\u2192 DOID:10763 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome\n\u2022 Olmesartan \u2014[treats]\u2192 DOID:3393 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome",
+      "validation_experiments": [],
+      "novelty_score": 0.35,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "LOW",
+      "confidence_reasons": [
+        "1 PubMed article(s) - limited literature",
+        "Supported by 3 independent AI pillars",
+        "High molecular similarity (0.56) to Losartan",
+        "Supporting paper with 69 citations",
+        "AI-generated hypothesis available"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 900,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00227",
+            "drug_name": "Lovastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00213",
+            "drug_name": "Pantoprazole",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00175",
+            "drug_name": "Pravastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01098",
+            "drug_name": "Rosuvastatin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (SLCO1B1 / SLCO1B1*15, SLCO1B1*37)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "SLCO1B1",
+            "variant": "SLCO1B1*15, SLCO1B1*37",
+            "level": "3",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1184753786"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": false,
+          "docking": true,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.432,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.369,
+          "docking": 0.921,
+          "pharos": 0.0,
+          "literature": 0.131
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Artery - Aorta",
+          "Heart - Left Ventricle"
+        ],
+        "n_genes": 1,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 5.45,
+        "max_tpm_in_tissue": 5.45,
+        "tissue_specificity": 0.08,
+        "context_modifier": 0.932
+      },
+      "disease_entity": "Disease::MESH:D008382",
+      "docking": {
+        "kcal_per_mol": -11.05,
+        "target_symbol": "AGTR1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "ensemble_prob": 0.9545,
+      "ensemble_features": {
+        "kg_score": 0.9991,
+        "degree_penalty": 0.7909,
+        "n_drug_targets": 3,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.3026
+      },
+      "ensemble_rank": 2,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Labetalol",
+      "drug_id": "DB00598",
+      "disease_name": "Marfan syndrome",
+      "combined_score": 0.3568,
+      "pillars_hit": 3,
+      "transe_rank": 63,
+      "transe_score": -12.3997,
+      "pykeen_score": -13.5192,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0.2615,
+      "similar_to": "Atenolol",
+      "mol_emb_similarity": 0.885,
+      "mol_emb_similar_to": "Atenolol",
+      "gene_sig_score": 0.0714,
+      "gene_sig_rank": 12,
+      "proximity_score": 0,
+      "proximity_distance": 0,
+      "admet_score": 0.5969,
+      "admet_flags": "clean",
+      "primekg_score": 0.2499,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": 0.253,
+      "structural_group_score": 0.885,
+      "network_group_score": 0.5775,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9194,
+      "efficacy_score": 0.3881,
+      "groups_hit": 3,
+      "direct_relations": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "ADRB1"
+      ],
+      "pubmed_total": 4,
+      "pubmed_treatment_total": 3,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "15519180",
+          "title": "Beta-blocking therapy in patients with the Marfan syndrome and entire aortic replacement.",
+          "authors": "Meijboom LJ, Westerhof BE, Nollen GJ, et al.",
+          "journal": "European journal of cardio-thoracic surgery : official journal of the European Association for Cardio-thoracic Surgery",
+          "year": "2004",
+          "abstract_snippet": "OBJECTIVE: Beta-blocking therapy is the standard therapy in non-operated Marfan patients, however its efficacy after entire aortic replacement is unknown. The aim of this study was to describe the influence of (nearly) entire aortic replacement and beta-blocking therapy on blood pressure and wave re...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15519180/",
+          "total_results": 4
+        },
+        {
+          "pmid": "25612980",
+          "title": "[High-risk pregnancy in a woman with Marfan syndrome, a bicuspid aortic valve, and a dilated aortic sinus].",
+          "authors": "Groth KA, Greisen JR, Nielsen BB, et al.",
+          "journal": "Ugeskrift for laeger",
+          "year": "2015",
+          "abstract_snippet": "A 29-year-old woman with Marfan syndrome, a bicuspid aortic valve, and a dilated aortic sinus (5.2 cm) presented herself in clinic 14 weeks pregnant. She was advised to discontinue the pregnancy due to risk of dissection; however, she decided to continue. She was treated with labetalol (300 mg/day) ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25612980/"
+        },
+        {
+          "pmid": "2225986",
+          "title": "Labetalol and MRI as initial medical and diagnostic modalities in a marfanoid patient with expanding ascending aortic aneurysm.",
+          "authors": "Laden N, Baciewicz FA, Grubb B",
+          "journal": "Chest",
+          "year": "1990",
+          "abstract_snippet": "Marfan syndrome is a hereditable disorder of connective tissue that causes several distinct cardiovascular abnormalities, including aortic regurgitation, dissection, and aneurysm. These cardiac manifestations can be identified with echocardiography, computer tomography, and angiography. Standard tre...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/2225986/"
+        },
+        {
+          "pmid": "8922773",
+          "title": "Anaesthesia for caesarean section in a Marfan patient with recurrent aortic dissection.",
+          "authors": "Tritapepe L, Voci P, Pinto G, et al.",
+          "journal": "Canadian journal of anaesthesia = Journal canadien d'anesthesie",
+          "year": "1996",
+          "abstract_snippet": "PURPOSE: We report the anaesthetic management of a 34-yr-old pregnant woman with recurrent aortic dissection and Marfan syndrome for Caesarean section. CLINICAL FEATURES: She presented at 28 wk gestation with recurrent aortic dissection and had undergone aortic valve replacement and coronary ostia r...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/8922773/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "[High-risk pregnancy in a woman with Marfan syndrome, a bicuspid aortic valve, and a dilated aortic sinus].",
+          "year": 2015,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/baea9c03821680efd896bc5575e153446081b3bf",
+          "authors": "Kristian A. Groth, J. Greisen, B. B. Nielsen"
+        },
+        {
+          "title": "Beta-blocking therapy in patients with the Marfan syndrome and entire aortic replacement.",
+          "year": 2004,
+          "citations": 20,
+          "url": "https://www.semanticscholar.org/paper/7e63936b74ca7139699a55bced767ad3646138bd",
+          "authors": "L. Meijboom, B. Westerhof, G. Nollen"
+        },
+        {
+          "title": "Anaesthesia for Caesarean section in a Marfan patient with recurrent aortic dissection",
+          "year": 1996,
+          "citations": 22,
+          "url": "https://www.semanticscholar.org/paper/2adf010f3815002374435ca3c1829ba075190ee4",
+          "authors": "L. Tritapepe, P. Voci, G. Pinto"
+        },
+        {
+          "title": "Labetalol and MRI as initial medical and diagnostic modalities in a marfanoid patient with expanding ascending aortic aneurysm.",
+          "year": 1990,
+          "citations": 2,
+          "url": "https://www.semanticscholar.org/paper/9771186855ed6e25e31a8bfb4499c8e9e931d171",
+          "authors": "N. Laden, F. Baciewicz, B. Grubb"
+        },
+        {
+          "title": "Marfan Syndrome: Enhanced Diagnostic Tools and Follow-up Management Strategies",
+          "year": 2023,
+          "citations": 36,
+          "url": "https://www.semanticscholar.org/paper/5910f6072bd28ebd3f7ab6632d0ea63cb27c7418",
+          "authors": "S. Marelli, E. Micaglio, Jacopo Taurino"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Marfan Syndrome: Enhanced Diagnostic Tools and Follow-up Management Strategies",
+        "year": 2023,
+        "citations": 36,
+        "url": "https://www.semanticscholar.org/paper/5910f6072bd28ebd3f7ab6632d0ea63cb27c7418",
+        "authors": "S. Marelli, E. Micaglio, Jacopo Taurino"
+      },
+      "max_citations": 36,
+      "faers_signal": "none",
+      "faers_total_reports": 15925,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Labetalol to Marfan syndrome terms. Drug has 15925 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "AS-601245 (1.512)",
+        "U 99194 maleate (1.499)",
+        "TRICLOSAN (1.496)",
+        "selumetinib (1.489)",
+        "NTNCB hydrochloride (1.487)"
+      ],
+      "signature_interpretation": "Labetalol was not found among the top 41 drugs that reverse the Marfan syndrome gene signature. Top reversers: AS-601245 (1.512), U 99194 maleate (1.499), TRICLOSAN (1.496)",
+      "ai_hypothesis": "of its beta-adrenergic blocking properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 0,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "29 - year - old",
+              "entity_group": "Age",
+              "score": 0.9980000257492065
+            },
+            {
+              "entity": "woman",
+              "entity_group": "Sex",
+              "score": 1.0
+            },
+            {
+              "entity": "mar",
+              "entity_group": "History",
+              "score": 0.8100000023841858
+            },
+            {
+              "entity": "ao",
+              "entity_group": "Biological_structure",
+              "score": 0.8370000123977661
+            },
+            {
+              "entity": "dil",
+              "entity_group": "Sign_symptom",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "##ated",
+              "entity_group": "Sign_symptom",
+              "score": 0.9629999995231628
+            },
+            {
+              "entity": "aortic sinus",
+              "entity_group": "Biological_structure",
+              "score": 1.0
+            },
+            {
+              "entity": "2 cm",
+              "entity_group": "Distance",
+              "score": 0.8069999814033508
+            },
+            {
+              "entity": "presented",
+              "entity_group": "Clinical_event",
+              "score": 0.9980000257492065
+            },
+            {
+              "entity": "clinic",
+              "entity_group": "Nonbiological_location",
+              "score": 1.0
+            }
+          ]
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Labetalol \u2014[treats]\u2192 DOID:10763 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome",
+      "kg_paths_text": "\u2022 Labetalol \u2014[treats]\u2192 DOID:10763 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome\n\u2022 Labetalol \u2014[treats]\u2192 DOID:10763 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome\n\u2022 Labetalol \u2014[treats]\u2192 MESH:D006973 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome",
+      "validation_experiments": [],
+      "novelty_score": 0.339,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "LOW",
+      "confidence_reasons": [
+        "4 PubMed article(s) - limited literature",
+        "Supported by 3 independent AI pillars",
+        "Supporting paper with 36 citations",
+        "AI-generated hypothesis available"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1832,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00227",
+            "drug_name": "Lovastatin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "moderate",
+        "summary": "CPIC-B/C (CYP2D6)",
+        "cpic": [
+          {
+            "gene": "CYP2D6",
+            "level": "B/C",
+            "guideline": ""
+          },
+          {
+            "gene": "ADRA2C",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "ADRB2",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "GRK4",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "ADRB1",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          }
+        ],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": false,
+          "docking": true,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.459,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.357,
+          "docking": 0.91,
+          "pharos": 0.0,
+          "literature": 0.303
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Artery - Aorta",
+          "Heart - Left Ventricle"
+        ],
+        "n_genes": 1,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 14.09,
+        "max_tpm_in_tissue": 14.09,
+        "tissue_specificity": 0.882,
+        "context_modifier": 1.062
+      },
+      "disease_entity": "Disease::MESH:D008382",
+      "docking": {
+        "kcal_per_mol": -10.92,
+        "target_symbol": "ADRB1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "ensemble_prob": 0.8999,
+      "ensemble_features": {
+        "kg_score": 0.9979,
+        "degree_penalty": 0.7599,
+        "n_drug_targets": 14,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 3.1355
+      },
+      "ensemble_rank": 4,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Ramipril",
+      "drug_id": "DB00178",
+      "disease_name": "Marfan syndrome",
+      "combined_score": 0.3567,
+      "pillars_hit": 3,
+      "transe_rank": 102,
+      "transe_score": -12.5831,
+      "pykeen_score": -13.5189,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
+      "mol_emb_similarity": 0.87,
+      "mol_emb_similar_to": "Atenolol",
+      "gene_sig_score": 0.0675,
+      "gene_sig_rank": 12,
+      "proximity_score": 0,
+      "proximity_distance": 0,
+      "admet_score": 0.6366,
+      "admet_flags": "clean",
+      "primekg_score": 0.257,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": 0.2373,
+      "structural_group_score": 0.87,
+      "network_group_score": 0.5938,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9273,
+      "efficacy_score": 0.3847,
+      "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "ACE"
+      ],
+      "pubmed_total": 4,
+      "pubmed_treatment_total": 4,
+      "pubmed_repurposing_total": 1,
+      "key_papers": [
+        {
+          "pmid": "34171513",
+          "title": "Hyperkyphosis is not dependent on bone mass and quality in the mouse model of Marfan syndrome.",
+          "authors": "Souza RB, Kawahara EI, Farinha-Arcieri LE, et al.",
+          "journal": "Bone",
+          "year": "2021",
+          "abstract_snippet": "Marfan syndrome (MFS) is an autosomal dominant disease affecting cardiovascular, ocular and skeletal systems. It is caused by mutations in the fibrillin-1 (FBN1) gene, leading to structural defects of connective tissue and increased activation of TGF-\u03b2. Angiotensin II (ang-II) is involved in TGF-\u03b2 a...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34171513/",
+          "total_results": 4
+        },
+        {
+          "pmid": "37169875",
+          "title": "New pharmacological agents and novel cardiovascular pharmacotherapy strategies in 2022.",
+          "authors": "Tamargo J, Agewall S, Borghi C, et al.",
+          "journal": "European heart journal. Cardiovascular pharmacotherapy",
+          "year": "2023",
+          "abstract_snippet": "Cardiovascular diseases (CVD) remain the leading cause of death worldwide and pharmacotherapy of most of them is suboptimal. Thus, there is a clear unmet clinical need to develop new pharmacological strategies with greater efficacy and better safety profiles. In this review, we summarize the most re...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37169875/"
+        },
+        {
+          "pmid": "17722475",
+          "title": "[New therapeutic targets for ACE inhibitors and angiotensin receptor blockers].",
+          "authors": "Petkow-Dimitrow P",
+          "journal": "Polskie Archiwum Medycyny Wewnetrznej",
+          "year": "2007",
+          "abstract_snippet": "Angiotensin-converting enzyme inhibitors (ACE-I) and angiotensin receptor blockers (ARB) posses multiple beneficial effects such as cardioprotection, cerebroprotection, nephroprotection which provide opportunity to select the most suitable drug for the target vascular bed (e.g. coronary, or cerebral...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17722475/"
+        },
+        {
+          "pmid": "20587891",
+          "title": "Marfan syndrome and focal segmental glomerulosclerosis: a novel association.",
+          "authors": "Gupta A, Gaikwad J, Khaira A, et al.",
+          "journal": "Saudi journal of kidney diseases and transplantation : an official publication of the Saudi Center for Organ Transplantation, Saudi Arabia",
+          "year": "2010",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20587891/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "37169875",
+          "title": "New pharmacological agents and novel cardiovascular pharmacotherapy strategies in 2022.",
+          "authors": "Tamargo J, Agewall S, Borghi C, et al.",
+          "journal": "European heart journal. Cardiovascular pharmacotherapy",
+          "year": "2023",
+          "abstract_snippet": "Cardiovascular diseases (CVD) remain the leading cause of death worldwide and pharmacotherapy of most of them is suboptimal. Thus, there is a clear unmet clinical need to develop new pharmacological strategies with greater efficacy and better safety profiles. In this review, we summarize the most re...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37169875/",
+          "total_results": 1
+        }
+      ],
+      "semantic_scholar_papers": [
+        {
+          "title": "Hyperkyphosis is not dependent on bone mass and quality in the mouse model of Marfan syndrome.",
+          "year": 2021,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/5be85f5aabe4d395c0c495b617575da86c90d067",
+          "authors": "Rodrigo Barbosa de Souza, Elisa Ito Kawahara, L. E. Farinha-Arcieri"
+        },
+        {
+          "title": "Phenotypic Variability in Marfan Syndrome in a Family With a Novel Nonsense FBN1 Gene Mutation",
+          "year": 2019,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/ff9f49b60894a1135f27beea4e8613180021da05",
+          "authors": "L. Consuegra-S\u00e1nchez, J. Sanchis, J. N\u00fa\u00f1ez"
+        },
+        {
+          "title": "Phenotypic variability in Marfan syndrome in a family with a novel nonsense FBN1 gene mutation.",
+          "year": 2012,
+          "citations": 12,
+          "url": "https://www.semanticscholar.org/paper/e7406478fa7388a2214e07d92e88a97f6a791764",
+          "authors": "A. D\u00edaz de Bustamante, E. Ruiz-Casares, M. T. Darnaude"
+        },
+        {
+          "title": "Abstract P253: Angiotensin Converting Enzyme Inhibition vs. Angiotensin II Receptor Blockade in Marfan Mouse: Role of Bradykinin",
+          "year": 2015,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/c3767d10611aefa9e379f4cd0802919d147f4478",
+          "authors": "J. Gamboa, Kevin D. Hill, Susan M. Fowler"
+        },
+        {
+          "title": "96\u2005The Effect of Ramipril on the Rate of Aortic Dilatation in Bicuspid Aortic Valve Disease: Results from a Prospective, Double Blinded, Randomised Trial",
+          "year": 2014,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/d63718a89952ae035b93ac9f9afc63229df4a228",
+          "authors": "M. Loudon, S. Bull, J. Joseph"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "New pharmacological agents and novel cardiovascular pharmacotherapy strategies in 2022.",
+        "year": 2023,
+        "citations": 24,
+        "url": "https://www.semanticscholar.org/paper/43eb27f9b6f64da49680377a3753d989ff436c16",
+        "authors": "J. Tamargo, S. Agewall, C. Borghi"
+      },
+      "max_citations": 24,
+      "faers_signal": "none",
+      "faers_total_reports": 127611,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Ramipril to Marfan syndrome terms. Drug has 127611 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "AS-601245 (1.512)",
+        "U 99194 maleate (1.499)",
+        "TRICLOSAN (1.496)",
+        "selumetinib (1.489)",
+        "NTNCB hydrochloride (1.487)"
+      ],
+      "signature_interpretation": "Ramipril was not found among the top 41 drugs that reverse the Marfan syndrome gene signature. Top reversers: AS-601245 (1.512), U 99194 maleate (1.499), TRICLOSAN (1.496)",
+      "ai_hypothesis": "of its ACE-inhibiting properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Ramipril \u2014[treats]\u2192 DOID:3393 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome",
+      "kg_paths_text": "\u2022 Ramipril \u2014[treats]\u2192 DOID:3393 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome\n\u2022 Ramipril \u2014[treats]\u2192 DOID:3393 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome\n\u2022 Ramipril \u2014[treats]\u2192 DOID:9352 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome",
+      "validation_experiments": [],
+      "novelty_score": 0.339,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "LOW",
+      "confidence_reasons": [
+        "4 PubMed article(s) - limited literature",
+        "1 article(s) specifically mention repurposing/repositioning",
+        "Supported by 3 independent AI pillars",
+        "Supporting paper with 24 citations",
+        "AI-generated hypothesis available"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1060,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00331",
+            "drug_name": "Metformin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00959",
+            "drug_name": "Methylprednisolone",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00338",
+            "drug_name": "Omeprazole",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00213",
+            "drug_name": "Pantoprazole",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00860",
+            "drug_name": "Prednisolone",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB14068",
+            "drug_name": "(+)-Niguldipine",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB13762",
+            "drug_name": "(+)-Rabeprazole",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB06764",
+            "drug_name": "(+-)-Tetrahydrozoline",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB13398",
+            "drug_name": "(-)-Oxyfedrine",
+            "severity": "moderate"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (ACE / rs4344)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "ACE",
+            "variant": "rs4344",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1447960554"
+          },
+          {
+            "gene": "ACE",
+            "variant": "rs4359",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1447960566"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": false,
+          "docking": true,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.421,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.357,
+          "docking": 0.784,
+          "pharos": 0.0,
+          "literature": 0.303
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Artery - Aorta",
+          "Heart - Left Ventricle"
+        ],
+        "n_genes": 1,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 2.81,
+        "max_tpm_in_tissue": 2.81,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.902
+      },
+      "disease_entity": "Disease::MESH:D008382",
+      "docking": {
+        "kcal_per_mol": -9.41,
+        "target_symbol": "ACE",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "ensemble_prob": 0.6195,
+      "ensemble_features": {
+        "kg_score": 0.9952,
+        "degree_penalty": 0.7813,
+        "n_drug_targets": 5,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 3.9512
+      },
+      "ensemble_rank": 8,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Practolol",
+      "drug_id": "DB01297",
+      "disease_name": "Marfan syndrome",
+      "combined_score": 0.3471,
+      "pillars_hit": 3,
+      "transe_rank": 116,
+      "transe_score": -12.633,
+      "pykeen_score": -13.7106,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0.6222,
+      "similar_to": "Atenolol",
+      "mol_emb_similarity": 0.9742,
+      "mol_emb_similar_to": "Atenolol",
+      "gene_sig_score": 0.043,
+      "gene_sig_rank": 18,
+      "proximity_score": 0,
+      "proximity_distance": 0,
+      "admet_score": 0.6974,
+      "admet_flags": "clean",
+      "primekg_score": 0.2583,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": 0.1759,
+      "structural_group_score": 0.9742,
+      "network_group_score": 0.5007,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9395,
+      "efficacy_score": 0.3695,
+      "groups_hit": 3,
+      "direct_relations": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "ADRB1"
+      ],
       "pubmed_total": 0,
       "pubmed_treatment_total": 0,
       "pubmed_repurposing_total": 0,
@@ -1102,11 +2394,11 @@
           "authors": "P. Arnaud, O. Milleron, N. Hanna"
         },
         {
-          "title": "Pathophysiology and Therapeutics of Thoracic Aortic Aneurysm in Marfan Syndrome",
-          "year": 2022,
-          "citations": 34,
-          "url": "https://www.semanticscholar.org/paper/fd6208404e9f5eb64798ee7d9738fc38c022e7bf",
-          "authors": "Keiichi Asano, Anna Cantalupo, Lauriane S\u00e9des"
+          "title": "Pathophysiology and Pathogenesis of Marfan Syndrome.",
+          "year": 2021,
+          "citations": 70,
+          "url": "https://www.semanticscholar.org/paper/252a415a23829d52914785b33daa347b338edfd2",
+          "authors": "Sanford M Zeigler, B. Sloan, Jeffrey A. Jones"
         }
       ],
       "most_cited_paper": {
@@ -1118,9 +2410,9 @@
       },
       "max_citations": 186,
       "faers_signal": "none",
-      "faers_total_reports": 31,
+      "faers_total_reports": 6,
       "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Succimer to Marfan syndrome terms. Drug has 31 total reports.",
+      "faers_interpretation": "No FAERS reports found linking Practolol to Marfan syndrome terms. Drug has 6 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -1130,8 +2422,8 @@
         "selumetinib (1.489)",
         "NTNCB hydrochloride (1.487)"
       ],
-      "signature_interpretation": "Succimer was not found among the top 41 drugs that reverse the Marfan syndrome gene signature. Top reversers: AS-601245 (1.512), U 99194 maleate (1.499), TRICLOSAN (1.496)",
-      "ai_hypothesis": "it is a safe and effective treatment for aortic root dilatation.",
+      "signature_interpretation": "Practolol was not found among the top 41 drugs that reverse the Marfan syndrome gene signature. Top reversers: AS-601245 (1.512), U 99194 maleate (1.499), TRICLOSAN (1.496)",
+      "ai_hypothesis": "of its beta-blocking action.",
       "abstract_analyses": [],
       "has_failed_trial": false,
       "failed_trial_phase": "",
@@ -1139,10 +2431,10 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0,
       "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Practolol \u2014[is a therapeutic for]\u2192 MESH:D006973 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome",
+      "kg_paths_text": "\u2022 Practolol \u2014[is a therapeutic for]\u2192 MESH:D006973 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome\n\u2022 Practolol \u2014[is a therapeutic for]\u2192 MESH:D006973 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome\n\u2022 Practolol \u2014[is a therapeutic for]\u2192 MESH:D006973 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome",
       "validation_experiments": [],
-      "novelty_score": 0.896,
+      "novelty_score": 0.312,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -1150,70 +2442,181 @@
       "trial_phases": {},
       "confidence": "LOW",
       "confidence_reasons": [
-        "Supported by 2 independent AI pillars",
+        "Supported by 3 independent AI pillars",
+        "High molecular similarity (0.62) to Atenolol",
         "Highly cited paper (186 citations): \"Marfan syndrome...\"",
         "AI-generated hypothesis available"
-      ]
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1292,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00227",
+            "drug_name": "Lovastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00331",
+            "drug_name": "Metformin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00338",
+            "drug_name": "Omeprazole",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00641",
+            "drug_name": "Simvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB14068",
+            "drug_name": "(+)-Niguldipine",
+            "severity": "moderate"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": false,
+          "docking": true,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.333,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.347,
+          "docking": 0.706,
+          "pharos": 0.0,
+          "literature": 0.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Artery - Aorta",
+          "Heart - Left Ventricle"
+        ],
+        "n_genes": 1,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 14.09,
+        "max_tpm_in_tissue": 14.09,
+        "tissue_specificity": 0.882,
+        "context_modifier": 1.062
+      },
+      "disease_entity": "Disease::MESH:D008382",
+      "docking": {
+        "kcal_per_mol": -8.47,
+        "target_symbol": "ADRB1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "ensemble_prob": 0.3882,
+      "ensemble_features": {
+        "kg_score": 0.9907,
+        "degree_penalty": 0.7823,
+        "n_drug_targets": 6,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.5951
+      },
+      "ensemble_rank": 10,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
-      "drug_name": "Bisoprolol",
-      "drug_id": "DB00612",
+      "drug_name": "Acebutolol",
+      "drug_id": "DB01193",
       "disease_name": "Marfan syndrome",
-      "combined_score": 0.9825,
-      "transe_rank": 72,
-      "pillars_hit": 6,
-      "mol_similarity": 0.5714,
+      "combined_score": 0.342,
+      "pillars_hit": 3,
+      "transe_rank": 66,
+      "transe_score": -12.4302,
+      "pykeen_score": -13.4548,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0.4,
       "similar_to": "Atenolol",
+      "mol_emb_similarity": 0.8845,
+      "mol_emb_similar_to": "Atenolol",
+      "gene_sig_score": 0.0443,
+      "gene_sig_rank": 18,
+      "proximity_score": 0,
+      "proximity_distance": 0,
+      "admet_score": 0.6578,
+      "admet_flags": "clean",
+      "primekg_score": 0.2593,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": 0.2399,
+      "structural_group_score": 0.8845,
+      "network_group_score": 0.4898,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9316,
+      "efficacy_score": 0.3671,
+      "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 2,
-      "pubmed_treatment_total": 2,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "16802751",
-          "title": "[Recommendations for the medical management of aortic complications of Marfan's syndrome].",
-          "authors": "Jondeau G, Barthelet M, Baumann C, et al.",
-          "journal": "Archives des maladies du coeur et des vaisseaux",
-          "year": "2006",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/16802751/",
-          "total_results": 2
-        },
-        {
-          "pmid": "41653364",
-          "title": "Impact of \u03b2-Blockers on the Risk of Low-Birth-Weight Infants in Women with Long QT Syndrome or Marfan Syndrome: A Single-Center Retrospective Study from 2008 to 2022 in a Tertiary Care Center.",
-          "authors": "Gr\u00e9gori M, Le Gloan L, Goronflot T, et al.",
-          "journal": "Paediatric drugs",
-          "year": "2026",
-          "abstract_snippet": "INTRODUCTION: \u03b2-Blockers are an essential treatment for cardiovascular disease, the incidence of which is rising among women of childbearing age. Several large cohort and registry studies have reported an association between \u03b2-blocker exposure in pregnancy and reduced birth weight, but most have inc...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41653364/"
-        }
+      "shared_target_count": 1,
+      "shared_targets": [
+        "ADRB1"
       ],
+      "pubmed_total": 0,
+      "pubmed_treatment_total": 0,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [],
       "repurposing_papers": [],
       "semantic_scholar_papers": [
-        {
-          "title": "075\u2005A case of spontaneous CSF rhinorrhea in a patient with marfan syndrome",
-          "year": 2019,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/1f69fec767d3acef2822a1d635303f795b1333e5",
-          "authors": "Viral Upadhyay, Salman Khan"
-        },
-        {
-          "title": "Diagnostic Challenges and Management Considerations for Aortic Root Aneurysm in Adult Suspected with Marfan Syndrome: A Case Report",
-          "year": 2024,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/28325b50a3967dbef6d086b0c1e57b9a4241ddca",
-          "authors": "Ni Putu Ika, R. Maharani, Leoni"
-        },
-        {
-          "title": "Marfan syndrome in children: large, single centre experience on management and outcome",
-          "year": 2024,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/9d4cf3354f3a361ce937cdac3109a67fffcd0194",
-          "authors": "A. Freixa-Benavente, L. Tang, E. Field"
-        },
         {
           "title": "Marfan Syndrome: Enhanced Diagnostic Tools and Follow-up Management Strategies",
           "year": 2023,
@@ -1227,20 +2630,41 @@
           "citations": 69,
           "url": "https://www.semanticscholar.org/paper/454015af766d782112ae8e3f4ad16dcfd582cf71",
           "authors": ""
+        },
+        {
+          "title": "Marfan syndrome",
+          "year": 2021,
+          "citations": 186,
+          "url": "https://www.semanticscholar.org/paper/d4cd05fcba2bcbce2cdc58069feded4ff1e9406d",
+          "authors": "D. Milewicz, A. Braverman, J. De Backer"
+        },
+        {
+          "title": "Clinical relevance of genotype\u2013phenotype correlations beyond vascular events in a cohort study of 1500 Marfan syndrome patients with FBN1 pathogenic variants",
+          "year": 2021,
+          "citations": 109,
+          "url": "https://www.semanticscholar.org/paper/4dba7e56c609f890e48ba763044c7a323dd05e8a",
+          "authors": "P. Arnaud, O. Milleron, N. Hanna"
+        },
+        {
+          "title": "Pathophysiology and Pathogenesis of Marfan Syndrome.",
+          "year": 2021,
+          "citations": 70,
+          "url": "https://www.semanticscholar.org/paper/252a415a23829d52914785b33daa347b338edfd2",
+          "authors": "Sanford M Zeigler, B. Sloan, Jeffrey A. Jones"
         }
       ],
       "most_cited_paper": {
-        "title": "Angiotensin receptor blockers and \u03b2 blockers in Marfan syndrome: an individual patient data meta-analysis of randomised trials",
-        "year": 2022,
-        "citations": 69,
-        "url": "https://www.semanticscholar.org/paper/454015af766d782112ae8e3f4ad16dcfd582cf71",
-        "authors": ""
+        "title": "Marfan syndrome",
+        "year": 2021,
+        "citations": 186,
+        "url": "https://www.semanticscholar.org/paper/d4cd05fcba2bcbce2cdc58069feded4ff1e9406d",
+        "authors": "D. Milewicz, A. Braverman, J. De Backer"
       },
-      "max_citations": 69,
+      "max_citations": 186,
       "faers_signal": "none",
-      "faers_total_reports": 142044,
+      "faers_total_reports": 3979,
       "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Bisoprolol to Marfan syndrome terms. Drug has 142044 total reports.",
+      "faers_interpretation": "No FAERS reports found linking Acebutolol to Marfan syndrome terms. Drug has 3979 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -1250,25 +2674,19 @@
         "selumetinib (1.489)",
         "NTNCB hydrochloride (1.487)"
       ],
-      "signature_interpretation": "Bisoprolol was not found among the top 41 drugs that reverse the Marfan syndrome gene signature. Top reversers: AS-601245 (1.512), U 99194 maleate (1.499), TRICLOSAN (1.496)",
-      "ai_hypothesis": "of its beta-blocking properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
+      "signature_interpretation": "Acebutolol was not found among the top 41 drugs that reverse the Marfan syndrome gene signature. Top reversers: AS-601245 (1.512), U 99194 maleate (1.499), TRICLOSAN (1.496)",
+      "ai_hypothesis": "of its beta-blocking action.",
+      "abstract_analyses": [],
       "has_failed_trial": false,
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
       "mr_score": 0,
       "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Acebutolol \u2014[treats]\u2192 DOID:10763 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome",
+      "kg_paths_text": "\u2022 Acebutolol \u2014[treats]\u2192 DOID:10763 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome\n\u2022 Acebutolol \u2014[treats]\u2192 DOID:10763 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome\n\u2022 Acebutolol \u2014[treats]\u2192 MESH:D006973 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome",
       "validation_experiments": [],
-      "novelty_score": 0.933,
+      "novelty_score": 0.308,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -1276,12 +2694,428 @@
       "trial_phases": {},
       "confidence": "LOW",
       "confidence_reasons": [
-        "2 PubMed article(s) - limited literature",
-        "Supported by 6 independent AI pillars",
-        "High molecular similarity (0.57) to Atenolol",
-        "Supporting paper with 69 citations",
+        "Supported by 3 independent AI pillars",
+        "Highly cited paper (186 citations): \"Marfan syndrome...\"",
         "AI-generated hypothesis available"
-      ]
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1668,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "moderate",
+        "summary": "CPIC-C (GRK4)",
+        "cpic": [
+          {
+            "gene": "GRK4",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "GRK5",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "ADRA2C",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "CYP2D6",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "ADRB1",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          }
+        ],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": false,
+          "docking": true,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.333,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.342,
+          "docking": 0.71,
+          "pharos": 0.0,
+          "literature": 0.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Artery - Aorta",
+          "Heart - Left Ventricle"
+        ],
+        "n_genes": 1,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 14.09,
+        "max_tpm_in_tissue": 14.09,
+        "tissue_specificity": 0.882,
+        "context_modifier": 1.062
+      },
+      "disease_entity": "Disease::MESH:D008382",
+      "docking": {
+        "kcal_per_mol": -8.52,
+        "target_symbol": "ADRB1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "ensemble_prob": 0.5471,
+      "ensemble_features": {
+        "kg_score": 0.9955,
+        "degree_penalty": 0.7653,
+        "n_drug_targets": 3,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 3.8712
+      },
+      "ensemble_rank": 9,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Trandolapril",
+      "drug_id": "DB00519",
+      "disease_name": "Marfan syndrome",
+      "combined_score": 0.3399,
+      "pillars_hit": 3,
+      "transe_rank": 160,
+      "transe_score": -12.7444,
+      "pykeen_score": -13.7511,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0.8715,
+      "mol_emb_similar_to": "Atenolol",
+      "gene_sig_score": 0.0714,
+      "gene_sig_rank": 12,
+      "proximity_score": 0,
+      "proximity_distance": 0,
+      "admet_score": 0.6133,
+      "admet_flags": "clean",
+      "primekg_score": 0.261,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": 0.1643,
+      "structural_group_score": 0.8715,
+      "network_group_score": 0.6021,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9227,
+      "efficacy_score": 0.3684,
+      "groups_hit": 3,
+      "direct_relations": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "ACE"
+      ],
+      "pubmed_total": 0,
+      "pubmed_treatment_total": 0,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Marfan Syndrome: Enhanced Diagnostic Tools and Follow-up Management Strategies",
+          "year": 2023,
+          "citations": 36,
+          "url": "https://www.semanticscholar.org/paper/5910f6072bd28ebd3f7ab6632d0ea63cb27c7418",
+          "authors": "S. Marelli, E. Micaglio, Jacopo Taurino"
+        },
+        {
+          "title": "Angiotensin receptor blockers and \u03b2 blockers in Marfan syndrome: an individual patient data meta-analysis of randomised trials",
+          "year": 2022,
+          "citations": 69,
+          "url": "https://www.semanticscholar.org/paper/454015af766d782112ae8e3f4ad16dcfd582cf71",
+          "authors": ""
+        },
+        {
+          "title": "Marfan syndrome",
+          "year": 2021,
+          "citations": 186,
+          "url": "https://www.semanticscholar.org/paper/d4cd05fcba2bcbce2cdc58069feded4ff1e9406d",
+          "authors": "D. Milewicz, A. Braverman, J. De Backer"
+        },
+        {
+          "title": "Clinical relevance of genotype\u2013phenotype correlations beyond vascular events in a cohort study of 1500 Marfan syndrome patients with FBN1 pathogenic variants",
+          "year": 2021,
+          "citations": 109,
+          "url": "https://www.semanticscholar.org/paper/4dba7e56c609f890e48ba763044c7a323dd05e8a",
+          "authors": "P. Arnaud, O. Milleron, N. Hanna"
+        },
+        {
+          "title": "Pathophysiology and Pathogenesis of Marfan Syndrome.",
+          "year": 2021,
+          "citations": 70,
+          "url": "https://www.semanticscholar.org/paper/252a415a23829d52914785b33daa347b338edfd2",
+          "authors": "Sanford M Zeigler, B. Sloan, Jeffrey A. Jones"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Marfan syndrome",
+        "year": 2021,
+        "citations": 186,
+        "url": "https://www.semanticscholar.org/paper/d4cd05fcba2bcbce2cdc58069feded4ff1e9406d",
+        "authors": "D. Milewicz, A. Braverman, J. De Backer"
+      },
+      "max_citations": 186,
+      "faers_signal": "none",
+      "faers_total_reports": 2251,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Trandolapril to Marfan syndrome terms. Drug has 2251 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "AS-601245 (1.512)",
+        "U 99194 maleate (1.499)",
+        "TRICLOSAN (1.496)",
+        "selumetinib (1.489)",
+        "NTNCB hydrochloride (1.487)"
+      ],
+      "signature_interpretation": "Trandolapril was not found among the top 41 drugs that reverse the Marfan syndrome gene signature. Top reversers: AS-601245 (1.512), U 99194 maleate (1.499), TRICLOSAN (1.496)",
+      "ai_hypothesis": "it reduces the incidence of aortic dissection and aortic root dilatation.",
+      "abstract_analyses": [],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Trandolapril \u2014[treats]\u2192 DOID:10763 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome",
+      "kg_paths_text": "\u2022 Trandolapril \u2014[treats]\u2192 DOID:10763 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome\n\u2022 Trandolapril \u2014[treats]\u2192 DOID:10763 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome\n\u2022 Trandolapril \u2014[treats]\u2192 DOID:3393 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Marfan syndrome",
+      "validation_experiments": [],
+      "novelty_score": 0.306,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "LOW",
+      "confidence_reasons": [
+        "Supported by 3 independent AI pillars",
+        "Highly cited paper (186 citations): \"Marfan syndrome...\"",
+        "AI-generated hypothesis available"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 870,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00331",
+            "drug_name": "Metformin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00338",
+            "drug_name": "Omeprazole",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00213",
+            "drug_name": "Pantoprazole",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB14068",
+            "drug_name": "(+)-Niguldipine",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB13762",
+            "drug_name": "(+)-Rabeprazole",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB06764",
+            "drug_name": "(+-)-Tetrahydrozoline",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB13398",
+            "drug_name": "(-)-Oxyfedrine",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB13139",
+            "drug_name": "(-)-Salbutamol",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB12093",
+            "drug_name": "(-)-Tetrahydropalmatine",
+            "severity": "moderate"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (PTPRD / rs4742610)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "PTPRD",
+            "variant": "rs4742610",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1446902927"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": false,
+          "docking": true,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.419,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.34,
+          "docking": 1.0,
+          "pharos": 0.0,
+          "literature": 0.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Artery - Aorta",
+          "Heart - Left Ventricle"
+        ],
+        "n_genes": 1,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 2.81,
+        "max_tpm_in_tissue": 2.81,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.902
+      },
+      "disease_entity": "Disease::MESH:D008382",
+      "docking": {
+        "kcal_per_mol": -12.33,
+        "target_symbol": "ACE",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "ensemble_prob": 0.6339,
+      "ensemble_features": {
+        "kg_score": 0.9929,
+        "degree_penalty": 0.7922,
+        "n_drug_targets": 4,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.3307
+      },
+      "ensemble_rank": 7,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     }
-  ]
+  ],
+  "disease_entity": "Disease::MESH:D008382",
+  "docking_axis": {
+    "source": "chembl_bioactivity_proxy + not_wired fallback",
+    "n_disease_genes": 14,
+    "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
+  },
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl"
 }

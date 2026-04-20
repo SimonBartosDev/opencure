@@ -1,28 +1,59 @@
 {
   "disease": "Duchenne muscular dystrophy",
   "status": "completed",
-  "timestamp": "2026-04-17T13:02:53.950836",
-  "elapsed_seconds": 652.2,
+  "timestamp": "2026-04-19T15:06:33.106711",
+  "elapsed_seconds": 837.6,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
-    "HIGH": 3,
-    "MEDIUM": 1,
+    "HIGH": 4,
     "LOW": 6
   },
+  "pipeline_version": "v5",
+  "data_manifest_hash": "2da2aa88f2457d1b",
   "candidates": [
     {
       "drug_name": "Methylprednisolone",
       "drug_id": "DB00959",
       "disease_name": "Duchenne muscular dystrophy",
-      "combined_score": 1.1979000568389893,
+      "combined_score": 0.5601000189781189,
+      "pillars_hit": 4,
       "transe_rank": 19,
-      "pillars_hit": 8,
+      "transe_score": -10.6935,
+      "pykeen_score": -12.6191,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0.7049,
       "similar_to": "Prednisolone",
+      "mol_emb_similarity": 0.941,
+      "mol_emb_similar_to": "Digoxin",
+      "gene_sig_score": 0.02,
+      "gene_sig_rank": 33,
+      "proximity_score": 0.7379999756813049,
+      "proximity_distance": 1.0499999523162842,
+      "admet_score": 0.7065,
+      "admet_flags": "clean",
+      "primekg_score": 0.2537,
+      "dti_score": 0.5795,
+      "dti_best_target": "HPGDS",
+      "kg_group_score": 0.3035,
+      "structural_group_score": 0.941,
+      "network_group_score": 0.5634999871253967,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.9138,
+      "admet_multiplier": 0.9413,
+      "efficacy_score": 0.5950000286102295,
+      "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 5,
+      "shared_targets": [
+        "CSF3",
+        "CST3",
+        "DMD",
+        "LEP",
+        "NR3C1"
+      ],
       "pubmed_total": 41,
       "pubmed_treatment_total": 38,
       "pubmed_repurposing_total": 0,
@@ -212,21 +243,37 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0.9138,
       "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Methylprednisolone \u2014[treats]\u2192 DOID:2377 \u2014[is treated by]\u2192 DB00860 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy",
+      "kg_paths_text": "\u2022 Methylprednisolone \u2014[treats]\u2192 DOID:2377 \u2014[is treated by]\u2192 DB00860 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy\n\u2022 Methylprednisolone \u2014[treats]\u2192 DOID:2377 \u2014[is treated by]\u2192 DB00635 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy\n\u2022 Methylprednisolone \u2014[treats]\u2192 DOID:8577 \u2014[is treated by]\u2192 DB00860 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy",
       "validation_experiments": [],
-      "novelty_score": 0.66,
+      "novelty_score": 0.3700000047683716,
       "novelty_level": "KNOWN",
       "is_known_treatment": false,
       "clinical_trials_total": 6,
       "clinical_trials": [
         {
-          "nct_id": "NCT03633565",
-          "title": "Comparative Study of Strategies for Management of Duchenne Myopathy (DM)",
-          "status": "UNKNOWN",
-          "phase": "PHASE4",
-          "enrollment": "45",
-          "url": "https://clinicaltrials.gov/study/NCT03633565"
+          "nct_id": "NCT02592941",
+          "title": "Deflazacort Expanded Access Program for Children, Adolescents and Adults With Duchenne Muscular Dystrophy",
+          "status": "APPROVED_FOR_MARKETING",
+          "phase": "N/A",
+          "enrollment": "",
+          "url": "https://clinicaltrials.gov/study/NCT02592941"
+        },
+        {
+          "nct_id": "NCT02167217",
+          "title": "Historically Controlled Trial of Corticosteroids in Young Boys With Duchenne Muscular Dystrophy",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "25",
+          "url": "https://clinicaltrials.gov/study/NCT02167217"
+        },
+        {
+          "nct_id": "NCT04054375",
+          "title": "Weekly Steroids in Muscular Dystrophy",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "20",
+          "url": "https://clinicaltrials.gov/study/NCT04054375"
         },
         {
           "nct_id": "NCT05412394",
@@ -237,132 +284,216 @@
           "url": "https://clinicaltrials.gov/study/NCT05412394"
         },
         {
-          "nct_id": "NCT02592941",
-          "title": "Deflazacort Expanded Access Program for Children, Adolescents and Adults With Duchenne Muscular Dystrophy",
-          "status": "APPROVED_FOR_MARKETING",
-          "phase": "N/A",
-          "enrollment": "",
-          "url": "https://clinicaltrials.gov/study/NCT02592941"
-        },
-        {
-          "nct_id": "NCT03777319",
-          "title": "Spironolactone Versus Prednisolone in DMD",
-          "status": "TERMINATED",
-          "phase": "PHASE1",
-          "enrollment": "2",
-          "url": "https://clinicaltrials.gov/study/NCT03777319"
-        },
-        {
-          "nct_id": "NCT04054375",
-          "title": "Weekly Steroids in Muscular Dystrophy",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "20",
-          "url": "https://clinicaltrials.gov/study/NCT04054375"
+          "nct_id": "NCT03633565",
+          "title": "Comparative Study of Strategies for Management of Duchenne Myopathy (DM)",
+          "status": "UNKNOWN",
+          "phase": "PHASE4",
+          "enrollment": "45",
+          "url": "https://clinicaltrials.gov/study/NCT03633565"
         }
       ],
       "trial_phases": {
+        "PHASE2": 2,
         "PHASE4": 2,
-        "PHASE1": 1,
-        "PHASE2": 2
+        "PHASE1": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
         "6 clinical trial(s) found on ClinicalTrials.gov",
         "41 PubMed articles found",
-        "Supported by 8 independent AI pillars",
+        "Supported by 4 independent AI pillars",
         "High molecular similarity (0.70) to Prednisolone",
         "AI analysis of 1 abstract(s) found positive treatment signals",
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.91, 1 genetic targets)"
-      ]
+      ],
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1299,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (ABCB1 / rs1045642)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "ABCB1",
+            "variant": "rs1045642",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1444704881"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.613,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.56,
+          "docking": 0.921,
+          "pharos": 0.0,
+          "literature": 0.705
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Muscle - Skeletal",
+          "Heart - Left Ventricle"
+        ],
+        "n_genes": 5,
+        "n_expressed": 4,
+        "mean_tpm_in_tissue": 34.17,
+        "max_tpm_in_tissue": 117.67,
+        "tissue_specificity": 0.116,
+        "context_modifier": 1.003
+      },
+      "disease_entity": "Disease::MESH:D020388",
+      "docking": {
+        "kcal_per_mol": -11.05,
+        "target_symbol": "NR3C1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "ensemble_prob": 0.9545,
+      "ensemble_features": {
+        "kg_score": 0.999,
+        "degree_penalty": 0.7636,
+        "n_drug_targets": 8,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.4849
+      },
+      "ensemble_rank": 2,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
-      "drug_name": "Sirolimus",
-      "drug_id": "DB00877",
+      "drug_name": "Cimetidine",
+      "drug_id": "DB00501",
       "disease_name": "Duchenne muscular dystrophy",
-      "combined_score": 1.0121999979019165,
-      "transe_rank": 58,
-      "pillars_hit": 7,
+      "combined_score": 0.5407999753952026,
+      "pillars_hit": 4,
+      "transe_rank": 154,
+      "transe_score": -11.3687,
+      "pykeen_score": -12.9208,
+      "pykeen_rank": 0,
+      "txgnn_score": 0.99,
+      "txgnn_rank": 1,
       "mol_similarity": 0,
       "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.699999988079071,
+      "proximity_distance": 1.2000000476837158,
+      "admet_score": 0.5683,
+      "admet_flags": "clean",
+      "primekg_score": 0.2588,
+      "dti_score": 0.7269,
+      "dti_best_target": "ESR2",
+      "kg_group_score": 0.1464,
+      "structural_group_score": 0.7269,
+      "network_group_score": 0.53329998254776,
+      "txgnn_group_score": 0.99,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9137,
+      "efficacy_score": 0.5918999910354614,
+      "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 0,
       "shared_targets": [],
-      "pubmed_total": 6,
-      "pubmed_treatment_total": 6,
+      "pubmed_total": 1,
+      "pubmed_treatment_total": 1,
       "pubmed_repurposing_total": 0,
       "key_papers": [
         {
-          "pmid": "24500923",
-          "title": "Rapamycin nanoparticles target defective autophagy in muscular dystrophy to enhance both strength and cardiac function.",
-          "authors": "Bibee KP, Cheng YJ, Ching JK, et al.",
-          "journal": "FASEB journal : official publication of the Federation of American Societies for Experimental Biology",
-          "year": "2014",
-          "abstract_snippet": "Duchenne muscular dystrophy in boys progresses rapidly to severe impairment of muscle function and death in the second or third decade of life. Current supportive therapy with corticosteroids results in a modest increase in strength as a consequence of a general reduction in inflammation, albeit wit...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/24500923/",
-          "total_results": 6
-        },
-        {
-          "pmid": "41672410",
-          "title": "ALT/CK Ratio as an Early Marker of Liver Injury After Gene Therapy in Duchenne Muscular Dystrophy.",
-          "authors": "Drakou E, Needum C, Konst K, et al.",
-          "journal": "Pediatrics",
-          "year": "2026",
-          "abstract_snippet": "We report a case of delayed acute liver injury (ALI) after treatment with delandistrogene moxeparvovec-rokl (DM), an adeno-associated virus-based gene therapy, in a 10-year-old ambulatory boy with Duchenne muscular dystrophy (DMD). The patient had a duplication of exons 8-11 in the DMD gene and was ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41672410/"
-        },
-        {
-          "pmid": "41854298",
-          "title": "Sirolimus for the treatment of steroid-refractory hepatotoxicity following AAV gene therapy in patients with Duchenne muscular dystrophy.",
-          "authors": "Leon-Astudillo C, Salabarria SM, Chadwick CB, et al.",
-          "journal": "Journal of neuromuscular diseases",
-          "year": "2026",
-          "abstract_snippet": "BACKGROUND: Adeno-associated virus (AAV)-mediated gene therapy with delandistrogene moxeparvovec-rokl (Elevidys\u00ae) is an approved treatment for patients with Duchenne muscular dystrophy (DMD). While generally well tolerated, hepatotoxicity has been observed following its administration, leading to li...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41854298/"
-        },
-        {
-          "pmid": "41681118",
-          "title": "Learnings from Patient Mortality after Delandistrogene Moxeparvovec Administration: A Report of Two Cases and Expert Committee Considerations for Future Mitigation and Management.",
-          "authors": "Shieh PB, Proud C, Diamond T, et al.",
-          "journal": "Human gene therapy",
-          "year": "2026",
-          "abstract_snippet": "Acute liver injury (ALI) is a recognized adverse event with adeno-associated virus (AAV)-based gene therapies, including delandistrogene moxeparvovec, an AAVrh74-based gene therapy for Duchenne muscular dystrophy. Progression of ALI to acute liver failure (ALF) is rare. In clinical trials, ALF was d...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41681118/"
-        },
-        {
-          "pmid": "38327805",
-          "title": "Use of plasmapheresis to lower anti-AAV antibodies in nonhuman primates with pre-existing immunity to AAVrh74.",
-          "authors": "Potter RA, Peterson EL, Griffin D, et al.",
-          "journal": "Molecular therapy. Methods & clinical development",
-          "year": "2024",
-          "abstract_snippet": "Patients with pre-existing immunity to adeno-associated virus (AAV) are currently unable to receive systemic gene transfer therapies. In this nonhuman primate study, we investigated the impact of immunosuppression strategies on gene transfer therapy safety and efficacy and analyzed plasmapheresis as...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38327805/"
+          "pmid": "24571246",
+          "title": "Near fatal 5-FU gut toxicity post surgery--remarkable effect of high-dose sucralfate.",
+          "authors": "Toh JW, Morris D, Chen Z, et al.",
+          "journal": "Journal of chemotherapy (Florence, Italy)",
+          "year": "2015",
+          "abstract_snippet": "BACKGROUND: The objective of this review article and case report was to investigate the effectiveness of high-dose sucralfate on severe life-threatening 5-fluorouracil (5-FU) gut toxicity, with reference to, but not limited to dihydropyrimidine dehydrogenase (DPD) deficiency. METHODS: A search was c...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24571246/",
+          "total_results": 1
         }
       ],
       "repurposing_papers": [],
       "semantic_scholar_papers": [
-        {
-          "title": "Sirolimus for the treatment of steroid-refractory hepatotoxicity following AAV gene therapy in patients with Duchenne muscular dystrophy.",
-          "year": 2026,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/cec92c513c2e37cbca2b758273cabad058f144d7",
-          "authors": "C. Leon-Astudillo, Stephanie M Salabarria, Christina B Chadwick"
-        },
-        {
-          "title": "ALT/CK Ratio as an Early Marker of Liver Injury After Gene Therapy in Duchenne Muscular Dystrophy.",
-          "year": 2026,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/1d1c792e1b6cd2e4dba99ddce2d9623881f508e0",
-          "authors": "E. Drakou, Catrice Needum, Kylee Konst"
-        },
-        {
-          "title": "Use of plasmapheresis to lower anti-AAV antibodies in nonhuman primates with pre-existing immunity to AAVrh74",
-          "year": 2024,
-          "citations": 21,
-          "url": "https://www.semanticscholar.org/paper/17c8b6a37cfed8e7bf37b66278c6f446257c0c7e",
-          "authors": "R. Potter, E. Peterson, Danielle A. Griffin"
-        },
         {
           "title": "AAV gene therapy for Duchenne muscular dystrophy: the EMBARK phase 3 randomized trial",
           "year": 2024,
@@ -376,185 +507,41 @@
           "citations": 69,
           "url": "https://www.semanticscholar.org/paper/34c6cc0dfa9f157b08768c02cbde873c05706258",
           "authors": "Eugenio Mercuri, J. J. V\u00edlchez, Odile Boespflug-Tanguy"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "AAV gene therapy for Duchenne muscular dystrophy: the EMBARK phase 3 randomized trial",
-        "year": 2024,
-        "citations": 118,
-        "url": "https://www.semanticscholar.org/paper/61ee44ac5b56900c7cf0ec1a0831542d7caf9464",
-        "authors": "J. R. Mendell, Francesco Muntoni, Craig M. McDonald"
-      },
-      "max_citations": 118,
-      "faers_signal": "none",
-      "faers_total_reports": 13389,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Sirolimus to Duchenne muscular dystrophy terms. Drug has 13389 total reports.",
-      "signature_reversal_found": true,
-      "signature_reversal_rank": 13,
-      "signature_top_reversers": [
-        "Y-39983 (1.494)",
-        "TWS-119 (1.452)",
-        "DOXEPIN HYDROCHLORIDE (1.429)",
-        "METHYLENE BLUE (1.410)",
-        "\"\"\"(3,4-dihydroisoquinolin-2(1H)-yl)(4-(hydroxydiphenylmethyl)-1H-1,2,3-triazol-1-yl)methanone\"\"\" (1.410)"
-      ],
-      "signature_interpretation": "Sirolimus ranks #13 out of 35 drugs for reversing the Duchenne muscular dystrophy gene signature (30 up + 30 down genes). This suggests a mechanistic basis for treatment.",
-      "ai_hypothesis": "of its ability to inhibit the mTOR pathway.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
         },
         {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.85,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "MEDIUM",
-      "confidence_reasons": [
-        "6 PubMed article(s) - limited literature",
-        "Supported by 7 independent AI pillars",
-        "Drug ranks #13 for reversing disease gene signature",
-        "Highly cited paper (118 citations): \"AAV gene therapy for Duchenne muscular dystrophy: the EMBARK...\"",
-        "AI-generated hypothesis available"
-      ]
-    },
-    {
-      "drug_name": "Hydrocortisone",
-      "drug_id": "DB00741",
-      "disease_name": "Duchenne muscular dystrophy",
-      "combined_score": 1.0084999799728394,
-      "transe_rank": 21,
-      "pillars_hit": 7,
-      "mol_similarity": 0.6833,
-      "similar_to": "Prednisolone",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 17,
-      "pubmed_treatment_total": 14,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "36036925",
-          "title": "Efficacy and Safety of Vamorolone vs Placebo and Prednisone Among Boys With Duchenne Muscular Dystrophy: A Randomized Clinical Trial.",
-          "authors": "Guglieri M, Clemens PR, Perlman SJ, et al.",
-          "journal": "JAMA neurology",
-          "year": "2022",
-          "abstract_snippet": "IMPORTANCE: Corticosteroidal anti-inflammatory drugs are widely prescribed but long-term use shows adverse effects that detract from patient quality of life. OBJECTIVE: To determine if vamorolone, a structurally unique dissociative steroidal anti-inflammatory drug, is able to retain efficacy while r...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36036925/",
-          "total_results": 17
-        },
-        {
-          "pmid": "30219580",
-          "title": "Phase IIa trial in Duchenne muscular dystrophy shows vamorolone is a first-in-class dissociative steroidal anti-inflammatory drug.",
-          "authors": "Conklin LS, Damsker JM, Hoffman EP, et al.",
-          "journal": "Pharmacological research",
-          "year": "2018",
-          "abstract_snippet": "We report a first-in-patient study of vamorolone, a first-in-class dissociative steroidal anti-inflammatory drug, in Duchenne muscular dystrophy. This 2-week, open-label Phase IIa multiple ascending dose study (0.25, 0.75, 2.0, and 6.0\u2009mg/kg/day) enrolled 48 boys with Duchenne muscular dystrophy (4 ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30219580/"
-        },
-        {
-          "pmid": "39097643",
-          "title": "Adrenal Suppression From Vamorolone and Prednisone in Duchenne Muscular Dystrophy: Results From the Phase 2b Clinical Trial.",
-          "authors": "Ahmet A, Tobin R, Dang UJ, et al.",
-          "journal": "The Journal of clinical endocrinology and metabolism",
-          "year": "2025",
-          "abstract_snippet": "CONTEXT: Vamorolone, a novel \"dissociative\" steroid, demonstrated similar efficacy in muscle function relative to prednisone 0.75\u2005mg/kg/day but improved linear growth and bone turnover markers in a randomized trial of pediatric Duchenne muscular dystrophy (DMD). OBJECTIVES: To determine the frequenc...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39097643/"
-        },
-        {
-          "pmid": "41920460",
-          "title": "Survey of Adrenal Insufficiency Management for Duchenne muscular dystrophy in Italy.",
-          "authors": "Tornese G, Wong SC, Sbrocchi AM, et al.",
-          "journal": "Endocrine",
-          "year": "2026",
-          "abstract_snippet": "PURPOSE: The aim of this study was to evaluate current real-world practices for the prevention and management of adrenal insufficiency (AI) among Italian physicians caring for children and adolescents with Duchenne muscular dystrophy (DMD) receiving chronic glucocorticoid (GC) therapy, a treatment k...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41920460/"
-        },
-        {
-          "pmid": "710453",
-          "title": "Steroid-CPK test. A new diagnostic aid for muscular dystrophy and its carriers?",
-          "authors": "Sen S, Das PK",
-          "journal": "European neurology",
-          "year": "1978",
-          "abstract_snippet": "The response of serum creatine phosphokinase (SCPK) to intravenous hydrocortisone was studied in different neuromuscular diseases, in Duchenne carriers and relatives of various muscular dystrophy (MD) cases. SCPK activity increased significantly in MD cases, 50% of known and 18.7% of possible Duchen...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/710453/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "35\u2005What is known about the pharmacology of intramuscular therapeutics in duchenne muscular dystrophy? A systematic review",
+          "title": "Death after High-Dose rAAV9 Gene Therapy in a Patient with Duchenne's Muscular Dystrophy.",
           "year": 2023,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/18904d3978196d5927f275e092fb18d09b1b966b",
-          "authors": "E. Roberts, Jia Yi Gan, D. Hawcutt"
+          "citations": 163,
+          "url": "https://www.semanticscholar.org/paper/098e0682bb5432b31c57f1cfbab4de8f8c1ec384",
+          "authors": "A. Lek, B. Wong, A. Keeler"
         },
         {
-          "title": "Description of a Novel Mechanism Possibly Explaining the Antiproliferative Properties of Glucocorticoids in Duchenne Muscular Dystrophy Fibroblasts Based on Glucocorticoid Receptor GR and NFAT5",
-          "year": 2020,
-          "citations": 7,
-          "url": "https://www.semanticscholar.org/paper/63dfb72db47e6f5b9c253bde617e6f601db4f7b9",
-          "authors": "Sandrine Herbelet, B. De Paepe, J. D. De Bleecker"
+          "title": "Duchenne muscular dystrophy: disease mechanism and therapeutic strategies",
+          "year": 2023,
+          "citations": 121,
+          "url": "https://www.semanticscholar.org/paper/f59f27d1c0325f5aae308451632d3821367e26f9",
+          "authors": "Addeli Bez Batti Angulski, Nora Hosny, Houda Cohen"
         },
         {
-          "title": "Inhalation anesthetics and Duchenne\u2019s Muscular Dystrophy",
-          "year": 1999,
-          "citations": 22,
-          "url": "https://www.semanticscholar.org/paper/84cf43868b5ee53a38345e9ef345fbafa7f9c67d",
-          "authors": "G. Goresky, R. Cox"
-        },
-        {
-          "title": "Systemic membrane defect and the inhibition of lymphocyte capping in Duchenne muscular dystrophy.",
-          "year": 1987,
-          "citations": 6,
-          "url": "https://www.semanticscholar.org/paper/37e6d59f933ebfeac656e85c58b0c15b1883b6f7",
-          "authors": "B. Goldsmith, H. Gruemer"
-        },
-        {
-          "title": "[Electrolyte abnormalities and metabolic acidosis in two Duchenne muscular dystrophy patients with advanced congestive heart failure].",
-          "year": 2000,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/5dfb9eb5485fb880d9210b6a7180a8f8bc07b84a",
-          "authors": "T. Matsumura, T. Saito, I. Miyai"
+          "title": "Therapeutic approaches for Duchenne muscular dystrophy",
+          "year": 2023,
+          "citations": 70,
+          "url": "https://www.semanticscholar.org/paper/55e8b4c28825b40a91ce646b306cb2ebeb523a62",
+          "authors": "T. Roberts, Matthew J. A. Wood, Kay E. Davies"
         }
       ],
       "most_cited_paper": {
-        "title": "Inhalation anesthetics and Duchenne\u2019s Muscular Dystrophy",
-        "year": 1999,
-        "citations": 22,
-        "url": "https://www.semanticscholar.org/paper/84cf43868b5ee53a38345e9ef345fbafa7f9c67d",
-        "authors": "G. Goresky, R. Cox"
+        "title": "Death after High-Dose rAAV9 Gene Therapy in a Patient with Duchenne's Muscular Dystrophy.",
+        "year": 2023,
+        "citations": 163,
+        "url": "https://www.semanticscholar.org/paper/098e0682bb5432b31c57f1cfbab4de8f8c1ec384",
+        "authors": "A. Lek, B. Wong, A. Keeler"
       },
-      "max_citations": 22,
+      "max_citations": 163,
       "faers_signal": "none",
-      "faers_total_reports": 79272,
+      "faers_total_reports": 6461,
       "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Hydrocortisone to Duchenne muscular dystrophy terms. Drug has 79272 total reports.",
+      "faers_interpretation": "No FAERS reports found linking Cimetidine to Duchenne muscular dystrophy terms. Drug has 6461 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -564,8 +551,580 @@
         "METHYLENE BLUE (1.410)",
         "\"\"\"(3,4-dihydroisoquinolin-2(1H)-yl)(4-(hydroxydiphenylmethyl)-1H-1,2,3-triazol-1-yl)methanone\"\"\" (1.410)"
       ],
-      "signature_interpretation": "Hydrocortisone was not found among the top 35 drugs that reverse the Duchenne muscular dystrophy gene signature. Top reversers: Y-39983 (1.494), TWS-119 (1.452), DOXEPIN HYDROCHLORIDE (1.429)",
-      "ai_hypothesis": "of its anabolic effects.",
+      "signature_interpretation": "Cimetidine was not found among the top 35 drugs that reverse the Duchenne muscular dystrophy gene signature. Top reversers: Y-39983 (1.494), TWS-119 (1.452), DOXEPIN HYDROCHLORIDE (1.429)",
+      "ai_hypothesis": "of its anti-inflammatory properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Cimetidine \u2014[is a therapeutic for]\u2192 MESH:D062787 \u2014[is treated by]\u2192 DB00818 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy",
+      "kg_paths_text": "\u2022 Cimetidine \u2014[is a therapeutic for]\u2192 MESH:D062787 \u2014[is treated by]\u2192 DB00818 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy\n\u2022 Cimetidine \u2014[is a therapeutic for]\u2192 MESH:D062787 \u2014[is treated by]\u2192 DB00343 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy\n\u2022 Cimetidine \u2014[is a therapeutic for]\u2192 MESH:D062787 \u2014[is treated by]\u2192 DB11846 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy",
+      "validation_experiments": [],
+      "novelty_score": 0.46000000834465027,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "LOW",
+      "confidence_reasons": [
+        "1 PubMed article(s) - limited literature",
+        "Supported by 4 independent AI pillars",
+        "Highly cited paper (163 citations): \"Death after High-Dose rAAV9 Gene Therapy in a Patient with D...\"",
+        "AI-generated hypothesis available"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1670,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.2150000035762787,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.5410000085830688,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.131
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Muscle - Skeletal",
+          "Heart - Left Ventricle"
+        ],
+        "n_genes": 120,
+        "n_expressed": 105,
+        "mean_tpm_in_tissue": 312.39,
+        "max_tpm_in_tissue": 2229.3,
+        "tissue_specificity": 0.148,
+        "context_modifier": 1.048
+      },
+      "disease_entity": "Disease::MESH:D020388",
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "ensemble_prob": 0.0286,
+      "ensemble_features": {
+        "kg_score": 0.9704,
+        "degree_penalty": 0.7619,
+        "n_drug_targets": 23,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 5.7462
+      },
+      "ensemble_rank": 6,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "ALIPHATIC",
+          "CYANATE",
+          "ENAMINE",
+          "IMIDAZOLE",
+          "IMINE"
+        ],
+        "n_alerts": 6,
+        "alert_names": [
+          "imidazole_B(2)",
+          "Aliphatic_long_chain",
+          "cyanate_/aminonitrile_/thiocyanate",
+          "enamine",
+          "imine_1"
+        ]
+      }
+    },
+    {
+      "drug_name": "Oxamniquine",
+      "drug_id": "DB01096",
+      "disease_name": "Duchenne muscular dystrophy",
+      "combined_score": 0.5297999978065491,
+      "pillars_hit": 4,
+      "transe_rank": 2426,
+      "transe_score": -13.1546,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0.78,
+      "txgnn_rank": 22,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0.9174,
+      "mol_emb_similar_to": "Melatonin",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.75,
+      "proximity_distance": 1.0,
+      "admet_score": 0.6311,
+      "admet_flags": "clean",
+      "primekg_score": 0.2515,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": 0.0077,
+      "structural_group_score": 0.9174,
+      "network_group_score": 0.666700005531311,
+      "txgnn_group_score": 0.78,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9262,
+      "efficacy_score": 0.5720000267028809,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 0,
+      "shared_targets": [],
+      "pubmed_total": 0,
+      "pubmed_treatment_total": 0,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "AAV gene therapy for Duchenne muscular dystrophy: the EMBARK phase 3 randomized trial",
+          "year": 2024,
+          "citations": 118,
+          "url": "https://www.semanticscholar.org/paper/61ee44ac5b56900c7cf0ec1a0831542d7caf9464",
+          "authors": "J. R. Mendell, Francesco Muntoni, Craig M. McDonald"
+        },
+        {
+          "title": "Safety and efficacy of givinostat in boys with Duchenne muscular dystrophy (EPIDYS): a multicentre, randomised, double-blind, placebo-controlled, phase 3 trial.",
+          "year": 2024,
+          "citations": 69,
+          "url": "https://www.semanticscholar.org/paper/34c6cc0dfa9f157b08768c02cbde873c05706258",
+          "authors": "Eugenio Mercuri, J. J. V\u00edlchez, Odile Boespflug-Tanguy"
+        },
+        {
+          "title": "Death after High-Dose rAAV9 Gene Therapy in a Patient with Duchenne's Muscular Dystrophy.",
+          "year": 2023,
+          "citations": 163,
+          "url": "https://www.semanticscholar.org/paper/098e0682bb5432b31c57f1cfbab4de8f8c1ec384",
+          "authors": "A. Lek, B. Wong, A. Keeler"
+        },
+        {
+          "title": "Duchenne muscular dystrophy: disease mechanism and therapeutic strategies",
+          "year": 2023,
+          "citations": 121,
+          "url": "https://www.semanticscholar.org/paper/f59f27d1c0325f5aae308451632d3821367e26f9",
+          "authors": "Addeli Bez Batti Angulski, Nora Hosny, Houda Cohen"
+        },
+        {
+          "title": "Therapeutic approaches for Duchenne muscular dystrophy",
+          "year": 2023,
+          "citations": 70,
+          "url": "https://www.semanticscholar.org/paper/55e8b4c28825b40a91ce646b306cb2ebeb523a62",
+          "authors": "T. Roberts, Matthew J. A. Wood, Kay E. Davies"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Death after High-Dose rAAV9 Gene Therapy in a Patient with Duchenne's Muscular Dystrophy.",
+        "year": 2023,
+        "citations": 163,
+        "url": "https://www.semanticscholar.org/paper/098e0682bb5432b31c57f1cfbab4de8f8c1ec384",
+        "authors": "A. Lek, B. Wong, A. Keeler"
+      },
+      "max_citations": 163,
+      "faers_signal": "none",
+      "faers_total_reports": 2,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Oxamniquine to Duchenne muscular dystrophy terms. Drug has 2 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "Y-39983 (1.494)",
+        "TWS-119 (1.452)",
+        "DOXEPIN HYDROCHLORIDE (1.429)",
+        "METHYLENE BLUE (1.410)",
+        "\"\"\"(3,4-dihydroisoquinolin-2(1H)-yl)(4-(hydroxydiphenylmethyl)-1H-1,2,3-triazol-1-yl)methanone\"\"\" (1.410)"
+      ],
+      "signature_interpretation": "Oxamniquine was not found among the top 35 drugs that reverse the Duchenne muscular dystrophy gene signature. Top reversers: Y-39983 (1.494), TWS-119 (1.452), DOXEPIN HYDROCHLORIDE (1.429)",
+      "ai_hypothesis": "of its ability to inhibit the enzyme dihydropteridine reductase.",
+      "abstract_analyses": [],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Oxamniquine \u2014[is a therapeutic for]\u2192 MESH:D012555 \u2014[is treated by]\u2192 DB00818 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy",
+      "kg_paths_text": "\u2022 Oxamniquine \u2014[is a therapeutic for]\u2192 MESH:D012555 \u2014[is treated by]\u2192 DB00818 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy\n\u2022 Oxamniquine \u2014[is a therapeutic for]\u2192 MESH:D012555 \u2014[is treated by]\u2192 DB01065 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy\n\u2022 Oxamniquine \u2014[is a therapeutic for]\u2192 MESH:D012555 \u2014[is treated by]\u2192 DB11846 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy",
+      "validation_experiments": [],
+      "novelty_score": 0.47699999809265137,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "LOW",
+      "confidence_reasons": [
+        "Supported by 4 independent AI pillars",
+        "Highly cited paper (163 citations): \"Death after High-Dose rAAV9 Gene Therapy in a Patient with D...\"",
+        "AI-generated hypothesis available"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 249,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00641",
+            "drug_name": "Simvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB09195",
+            "drug_name": "(1S,8R)-5-[2-[4-[3-(Trifluoromethyl)phenyl]piperazin-1-yl]ethyl]-3,4,6-triazatricyclo[6.3.0.02,6]undeca-2,4-diene",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB01454",
+            "drug_name": "3,4-Methylenedioxymethamphetamine",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB01472",
+            "drug_name": "4-Methoxyamphetamine",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB01193",
+            "drug_name": "Acebutolol",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB00918",
+            "drug_name": "Almotriptan",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB06203",
+            "drug_name": "Alogliptin",
+            "severity": "moderate"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.1850000023841858,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.5299999713897705,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Muscle - Skeletal",
+          "Heart - Left Ventricle"
+        ],
+        "n_genes": 120,
+        "n_expressed": 105,
+        "mean_tpm_in_tissue": 312.39,
+        "max_tpm_in_tissue": 2229.3,
+        "tissue_specificity": 0.148,
+        "context_modifier": 1.048
+      },
+      "disease_entity": "Disease::MESH:D020388",
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "ensemble_prob": 0.0003,
+      "ensemble_features": {
+        "kg_score": 0.7667,
+        "degree_penalty": 0.889,
+        "n_drug_targets": 0,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 7.8087
+      },
+      "ensemble_rank": 8,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "NITRO",
+          "OXYGEN-NITROGEN"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "nitro_group",
+          "Oxygen-nitrogen_single_bond"
+        ]
+      }
+    },
+    {
+      "drug_name": "Tacrolimus",
+      "drug_id": "DB00864",
+      "disease_name": "Duchenne muscular dystrophy",
+      "combined_score": 0.5009999871253967,
+      "pillars_hit": 4,
+      "transe_rank": 269,
+      "transe_score": -11.5687,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0.84,
+      "txgnn_rank": 16,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0.9421,
+      "mol_emb_similar_to": "Digoxin",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.5879999995231628,
+      "proximity_distance": 1.649999976158142,
+      "admet_score": 0.54,
+      "admet_flags": "hERG=0.83",
+      "primekg_score": 0.255,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": 0.0377,
+      "structural_group_score": 0.9421,
+      "network_group_score": 0.4397999942302704,
+      "txgnn_group_score": 0.84,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.908,
+      "efficacy_score": 0.551800012588501,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "RPS4Y1"
+      ],
+      "pubmed_total": 21,
+      "pubmed_treatment_total": 21,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "26543057",
+          "title": "Intra-arterial transplantation of HLA-matched donor mesoangioblasts in Duchenne muscular dystrophy.",
+          "authors": "Cossu G, Previtali SC, Napolitano S, et al.",
+          "journal": "EMBO molecular medicine",
+          "year": "2015",
+          "abstract_snippet": "Intra-arterial transplantation of mesoangioblasts proved safe and partially efficacious in preclinical models of muscular dystrophy. We now report the first-in-human, exploratory, non-randomized open-label phase I-IIa clinical trial of intra-arterial HLA-matched donor cell transplantation in 5 Duche...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26543057/",
+          "total_results": 21
+        },
+        {
+          "pmid": "34884796",
+          "title": "Skeletal Ryanodine Receptors Are Involved in Impaired Myogenic Differentiation in Duchenne Muscular Dystrophy Patients.",
+          "authors": "Meyer P, Notarnicola C, Meli AC, et al.",
+          "journal": "International journal of molecular sciences",
+          "year": "2021",
+          "abstract_snippet": "Duchenne muscular dystrophy (DMD) is characterized by progressive muscle wasting following repeated muscle damage and inadequate regeneration. Impaired myogenesis and differentiation play a major role in DMD as well as intracellular calcium (Ca",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34884796/"
+        },
+        {
+          "pmid": "20080623",
+          "title": "Leaky RyR2 trigger ventricular arrhythmias in Duchenne muscular dystrophy.",
+          "authors": "Fauconnier J, Thireau J, Reiken S, et al.",
+          "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+          "year": "2010",
+          "abstract_snippet": "Patients with Duchenne muscular dystrophy (DMD) have a progressive dilated cardiomyopathy associated with fatal cardiac arrhythmias. Electrical and functional abnormalities have been attributed to cardiac fibrosis; however, electrical abnormalities may occur in the absence of overt cardiac histopath...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20080623/"
+        },
+        {
+          "pmid": "15038390",
+          "title": "Dystrophin expression in myofibers of Duchenne muscular dystrophy patients following intramuscular injections of normal myogenic cells.",
+          "authors": "Skuk D, Roy B, Goulet M, et al.",
+          "journal": "Molecular therapy : the journal of the American Society of Gene Therapy",
+          "year": "2004",
+          "abstract_snippet": "Three Duchenne muscular dystrophy (DMD) patients received injections of myogenic cells obtained from skeletal muscle biopsies of normal donors. The cells (30 x 10 (6)) were injected in 1 cm3 of the tibialis anterior by 25 parallel injections. We performed similar patterns of saline injections in the...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15038390/"
+        },
+        {
+          "pmid": "17142039",
+          "title": "First test of a \"high-density injection\" protocol for myogenic cell transplantation throughout large volumes of muscles in a Duchenne muscular dystrophy patient: eighteen months follow-up.",
+          "authors": "Skuk D, Goulet M, Roy B, et al.",
+          "journal": "Neuromuscular disorders : NMD",
+          "year": "2007",
+          "abstract_snippet": "A 26-years old Duchenne muscular dystrophy (DMD) patient received normal muscle-precursor cells, proliferated in vitro and implanted in a thenar eminence, biceps brachii, and in a portion of a gastrocnemius by injections placed 1mm from each other or less. Saline was injected in the contralateral ga...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17142039/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "A preliminary examination of short-term tacrolimus treatment for a CRISPR/Cas9-generated rat model with Duchenne muscular dystrophy",
+          "year": 2026,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/a99d87ab714f88b21dbbc9c2219bc274021d1b09",
+          "authors": "Yusuke Eiraku, R. Tochinai, Koichi Kimura"
+        },
+        {
+          "title": "Intra\u2010arterial transplantation of HLA\u2010matched donor mesoangioblasts in Duchenne muscular dystrophy",
+          "year": 2015,
+          "citations": 168,
+          "url": "https://www.semanticscholar.org/paper/01c65a3996afb1d59b30a0b06e56e9d6a56e4819",
+          "authors": "G. Cossu, S. Previtali, S. Napolitano"
+        },
+        {
+          "title": "First test of a \"high-density injection\" protocol for myogenic cell transplantation throughout large volumes of muscles in a Duchenne muscular dystrophy patient: eighteen months follow-up.",
+          "year": 2007,
+          "citations": 188,
+          "url": "https://www.semanticscholar.org/paper/198fd2836b5774eb94fe61cb29f605653c262cd5",
+          "authors": "D. Skuk, M. Goulet, B. Roy"
+        },
+        {
+          "title": "Dystrophin Expression in Muscles of Duchenne Muscular Dystrophy Patients After High-Density Injections of Normal Myogenic Cells",
+          "year": 2006,
+          "citations": 224,
+          "url": "https://www.semanticscholar.org/paper/4b124c39b658a51d757407166a1241bf5129ac33",
+          "authors": "D. Skuk, M. Goulet, B. Roy"
+        },
+        {
+          "title": "Dystrophin expression in myofibers of Duchenne muscular dystrophy patients following intramuscular injections of normal myogenic cells.",
+          "year": 2004,
+          "citations": 191,
+          "url": "https://www.semanticscholar.org/paper/998470cf8f011e36bc2281aa9488d476eb34a37a",
+          "authors": "D. Skuk, B. Roy, M. Goulet"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Dystrophin Expression in Muscles of Duchenne Muscular Dystrophy Patients After High-Density Injections of Normal Myogenic Cells",
+        "year": 2006,
+        "citations": 224,
+        "url": "https://www.semanticscholar.org/paper/4b124c39b658a51d757407166a1241bf5129ac33",
+        "authors": "D. Skuk, M. Goulet, B. Roy"
+      },
+      "max_citations": 224,
+      "faers_signal": "none",
+      "faers_total_reports": 124653,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Tacrolimus to Duchenne muscular dystrophy terms. Drug has 124653 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "Y-39983 (1.494)",
+        "TWS-119 (1.452)",
+        "DOXEPIN HYDROCHLORIDE (1.429)",
+        "METHYLENE BLUE (1.410)",
+        "\"\"\"(3,4-dihydroisoquinolin-2(1H)-yl)(4-(hydroxydiphenylmethyl)-1H-1,2,3-triazol-1-yl)methanone\"\"\" (1.410)"
+      ],
+      "signature_interpretation": "Tacrolimus was not found among the top 35 drugs that reverse the Duchenne muscular dystrophy gene signature. Top reversers: Y-39983 (1.494), TWS-119 (1.452), DOXEPIN HYDROCHLORIDE (1.429)",
+      "ai_hypothesis": "of its ability to improve muscle function and reduce the risk of respiratory failure.",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
@@ -589,158 +1148,616 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0,
       "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Tacrolimus \u2014[treats]\u2192 DOID:3310 \u2014[is treated by]\u2192 DB00860 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy",
+      "kg_paths_text": "\u2022 Tacrolimus \u2014[treats]\u2192 DOID:3310 \u2014[is treated by]\u2192 DB00860 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy\n\u2022 Tacrolimus \u2014[treats]\u2192 DOID:3310 \u2014[is treated by]\u2192 DB00635 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy\n\u2022 Tacrolimus \u2014[treats]\u2192 MESH:D001172 \u2014[is treated by]\u2192 DB00635 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy",
       "validation_experiments": [],
-      "novelty_score": 0.7,
+      "novelty_score": 0.3009999990463257,
       "novelty_level": "KNOWN",
       "is_known_treatment": false,
       "clinical_trials_total": 2,
       "clinical_trials": [
         {
-          "nct_id": "NCT01921374",
-          "title": "Mother-caregivers of Children With Duchenne Muscular Dystrophy",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "60",
-          "url": "https://clinicaltrials.gov/study/NCT01921374"
+          "nct_id": "NCT02196467",
+          "title": "Transplantation of Myoblasts to Duchenne Muscular Dystrophy (DMD) Patients",
+          "status": "UNKNOWN",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "10",
+          "url": "https://clinicaltrials.gov/study/NCT02196467"
         },
         {
-          "nct_id": "NCT05338099",
-          "title": "Determine the Safety and Dose of EN001 in Patients With Duchenne Muscular Dystrophy(DMD)",
-          "status": "COMPLETED",
+          "nct_id": "NCT06692426",
+          "title": "Trial of Cell Based Therapy for DMD",
+          "status": "RECRUITING",
           "phase": "PHASE1",
-          "enrollment": "7",
-          "url": "https://clinicaltrials.gov/study/NCT05338099"
+          "enrollment": "8",
+          "url": "https://clinicaltrials.gov/study/NCT06692426"
         }
       ],
       "trial_phases": {
-        "NA": 1,
-        "PHASE1": 1
+        "PHASE1": 2,
+        "PHASE2": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
         "2 clinical trial(s) found on ClinicalTrials.gov",
-        "17 PubMed articles found",
-        "Supported by 7 independent AI pillars",
-        "High molecular similarity (0.68) to Prednisolone",
-        "Supporting paper with 22 citations",
+        "21 PubMed articles found",
+        "Supported by 4 independent AI pillars",
+        "Highly cited paper (224 citations): \"Dystrophin Expression in Muscles of Duchenne Muscular Dystro...\"",
         "AI-generated hypothesis available"
-      ]
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1995,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "high_risk",
+        "summary": "CPIC-A (CYP3A5) \u2022 PharmGKB-3 (ABCB1 / rs1045642)",
+        "cpic": [
+          {
+            "gene": "CYP3A5",
+            "level": "A",
+            "guideline": "CYP3A5 and Tacrolimus"
+          },
+          {
+            "gene": "CYP3A4",
+            "level": "C",
+            "guideline": ""
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "ABCB1",
+            "variant": "rs1045642",
+            "level": "3",
+            "phenotype_category": "Other",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/655388022"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs2032582",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204116"
+          },
+          {
+            "gene": "KCNJ11",
+            "variant": "rs5219",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1450376188"
+          },
+          {
+            "gene": "POR",
+            "variant": "rs1057868",
+            "level": "3",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451257000"
+          },
+          {
+            "gene": "CYP3A4",
+            "variant": "rs2242480",
+            "level": "2A",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451989360"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.2919999957084656,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.5009999871253967,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.583
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Muscle - Skeletal",
+          "Heart - Left Ventricle"
+        ],
+        "n_genes": 1,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 102.02,
+        "max_tpm_in_tissue": 102.02,
+        "tissue_specificity": 0.241,
+        "context_modifier": 1.059
+      },
+      "disease_entity": "Disease::MESH:D020388",
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "ensemble_prob": 0.1956,
+      "ensemble_features": {
+        "kg_score": 0.9893,
+        "degree_penalty": 0.7479,
+        "n_drug_targets": 16,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.7362
+      },
+      "ensemble_rank": 5,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "DIKETO",
+          "ISOLATED"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "diketo_group",
+          "isolated_alkene"
+        ]
+      }
     },
     {
-      "drug_name": "Creatinine",
-      "drug_id": "DB11846",
+      "drug_name": "Trandolaprilat",
+      "drug_id": "DB14209",
       "disease_name": "Duchenne muscular dystrophy",
-      "combined_score": 1.0011999607086182,
-      "transe_rank": 3,
+      "combined_score": 0.46810001134872437,
       "pillars_hit": 4,
+      "transe_rank": 4118,
+      "transe_score": -14.0638,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0.8,
+      "txgnn_rank": 20,
+      "mol_similarity": 0.5385,
+      "similar_to": "Enalapril",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.75,
+      "proximity_distance": 1.0,
+      "admet_score": 0.6218,
+      "admet_flags": "clean",
+      "primekg_score": 0.2592,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": 0.0126,
+      "structural_group_score": 0.5385,
+      "network_group_score": 0.6516000032424927,
+      "txgnn_group_score": 0.8,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9244,
+      "efficacy_score": 0.5063999891281128,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "ACE"
+      ],
+      "pubmed_total": 0,
+      "pubmed_treatment_total": 0,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "AAV gene therapy for Duchenne muscular dystrophy: the EMBARK phase 3 randomized trial",
+          "year": 2024,
+          "citations": 118,
+          "url": "https://www.semanticscholar.org/paper/61ee44ac5b56900c7cf0ec1a0831542d7caf9464",
+          "authors": "J. R. Mendell, Francesco Muntoni, Craig M. McDonald"
+        },
+        {
+          "title": "Safety and efficacy of givinostat in boys with Duchenne muscular dystrophy (EPIDYS): a multicentre, randomised, double-blind, placebo-controlled, phase 3 trial.",
+          "year": 2024,
+          "citations": 69,
+          "url": "https://www.semanticscholar.org/paper/34c6cc0dfa9f157b08768c02cbde873c05706258",
+          "authors": "Eugenio Mercuri, J. J. V\u00edlchez, Odile Boespflug-Tanguy"
+        },
+        {
+          "title": "Dystrophin: the protein product of the Duchenne muscular dystrophy locus.",
+          "year": 1987,
+          "citations": 4630,
+          "url": "https://www.semanticscholar.org/paper/9b498ef13f4150c2bfdf1fc2c875455b3e31117f",
+          "authors": "Eric P. Hoffman, Robert H. Brown, L. Kunkel"
+        },
+        {
+          "title": "Duchenne muscular dystrophy",
+          "year": 2021,
+          "citations": 782,
+          "url": "https://www.semanticscholar.org/paper/7d0c8084a611eb582619087f465cacd4b104f0ea",
+          "authors": "D. Duan, N. Goemans, S. Takeda"
+        },
+        {
+          "title": "Death after High-Dose rAAV9 Gene Therapy in a Patient with Duchenne's Muscular Dystrophy.",
+          "year": 2023,
+          "citations": 163,
+          "url": "https://www.semanticscholar.org/paper/098e0682bb5432b31c57f1cfbab4de8f8c1ec384",
+          "authors": "A. Lek, B. Wong, A. Keeler"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Dystrophin: the protein product of the Duchenne muscular dystrophy locus.",
+        "year": 1987,
+        "citations": 4630,
+        "url": "https://www.semanticscholar.org/paper/9b498ef13f4150c2bfdf1fc2c875455b3e31117f",
+        "authors": "Eric P. Hoffman, Robert H. Brown, L. Kunkel"
+      },
+      "max_citations": 4630,
+      "faers_signal": "none",
+      "faers_total_reports": 0,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found for Trandolaprilat",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "Y-39983 (1.494)",
+        "TWS-119 (1.452)",
+        "DOXEPIN HYDROCHLORIDE (1.429)",
+        "METHYLENE BLUE (1.410)",
+        "\"\"\"(3,4-dihydroisoquinolin-2(1H)-yl)(4-(hydroxydiphenylmethyl)-1H-1,2,3-triazol-1-yl)methanone\"\"\" (1.410)"
+      ],
+      "signature_interpretation": "Trandolaprilat was not found among the top 35 drugs that reverse the Duchenne muscular dystrophy gene signature. Top reversers: Y-39983 (1.494), TWS-119 (1.452), DOXEPIN HYDROCHLORIDE (1.429)",
+      "ai_hypothesis": "it is a potent inhibitor of angiotensin-converting enzyme and has a long half-life.",
+      "abstract_analyses": [],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Trandolaprilat \u2014[is inhibited by]\u2192 gene-1636 \u2014[inhibits]\u2192 DB00584 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy",
+      "kg_paths_text": "\u2022 Trandolaprilat \u2014[is inhibited by]\u2192 gene-1636 \u2014[inhibits]\u2192 DB00584 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy\n\u2022 Trandolaprilat \u2014[is inhibited by]\u2192 gene-1636 \u2014[inhibits]\u2192 DB00584 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy\n\u2022 Trandolaprilat \u2014[is inhibited by]\u2192 gene-1636 \u2014[inhibits]\u2192 DB00584 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy",
+      "validation_experiments": [],
+      "novelty_score": 0.39800000190734863,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "LOW",
+      "confidence_reasons": [
+        "Supported by 4 independent AI pillars",
+        "High molecular similarity (0.54) to Enalapril",
+        "Highly cited paper (4630 citations): \"Dystrophin: the protein product of the Duchenne muscular dys...\"",
+        "AI-generated hypothesis available"
+      ],
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 340,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00331",
+            "drug_name": "Metformin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00338",
+            "drug_name": "Omeprazole",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00213",
+            "drug_name": "Pantoprazole",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB13762",
+            "drug_name": "(+)-Rabeprazole",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB02224",
+            "drug_name": "(2s,3s)-Trans-Dihydroquercetin",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB08382",
+            "drug_name": "2-(4-{(3S,5S)-5-[(3,3-difluoropyrrolidin-1-yl)carbonyl]pyrrolidin-3-yl}piperazin-1-yl)pyrimidine",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB13544",
+            "drug_name": "2-Ethoxybenzamide",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB14026",
+            "drug_name": "2-Mercaptobenzoic Acid",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB12445",
+            "drug_name": "3-(Nitroxymethyl)phenyl 2-acetoxybenzoate",
+            "severity": "moderate"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.164000004529953,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.46799999475479126,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Muscle - Skeletal",
+          "Heart - Left Ventricle"
+        ],
+        "n_genes": 1,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 2.16,
+        "max_tpm_in_tissue": 2.16,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.895
+      },
+      "disease_entity": "Disease::MESH:D020388",
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "ensemble_prob": 0.0003,
+      "ensemble_features": {
+        "kg_score": 0.6865,
+        "degree_penalty": 0.8688,
+        "n_drug_targets": 0,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 8.1041
+      },
+      "ensemble_rank": 9,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Acetylcholine",
+      "drug_id": "DB03128",
+      "disease_name": "Duchenne muscular dystrophy",
+      "combined_score": 0.41200000047683716,
+      "pillars_hit": 4,
+      "transe_rank": 110,
+      "transe_score": -11.2438,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.5120000243186951,
+      "proximity_distance": 1.9500000476837158,
+      "admet_score": 0.7858,
+      "admet_flags": "Skin_Reaction=0.90",
+      "primekg_score": 0.2527,
+      "dti_score": 0.4932,
+      "dti_best_target": "HPGDS",
+      "kg_group_score": 0.0771,
+      "structural_group_score": 0.4932,
+      "network_group_score": 0.42649999260902405,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.9138,
+      "admet_multiplier": 0.9572,
+      "efficacy_score": 0.430400013923645,
+      "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 129,
-      "pubmed_treatment_total": 75,
+      "shared_target_count": 4,
+      "shared_targets": [
+        "ACE",
+        "DMD",
+        "INS",
+        "NOS1"
+      ],
+      "pubmed_total": 92,
+      "pubmed_treatment_total": 28,
       "pubmed_repurposing_total": 0,
       "key_papers": [
         {
-          "pmid": "30006121",
-          "title": "Urinary prostaglandin metabolites as Duchenne muscular dystrophy progression markers.",
-          "authors": "Takeshita E, Komaki H, Tachimori H, et al.",
-          "journal": "Brain & development",
-          "year": "2018",
-          "abstract_snippet": "BACKGROUND: Patients with Duchenne muscular dystrophy (DMD) exhibit increased prostaglandin D OBJECTIVE: We investigated the involvement of PGD METHODS: Sixty-one male children with DMD and thirty-five age-matched controls were enrolled in the study. DMD patients were divided into \"ambulant\" and \"no...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30006121/",
-          "total_results": 129
+          "pmid": "41207134",
+          "title": "Antisense-mediated exon skipping therapy improves neuromuscular junction deficits in a Duchenne muscular dystrophy mouse model.",
+          "authors": "van der Pijl EM, Pasteuning-Vuhman S, Boertje-van der Meulen J, et al.",
+          "journal": "Neuromuscular disorders : NMD",
+          "year": "2025",
+          "abstract_snippet": "Duchenne muscular dystrophy is a muscle wasting disorder caused by lack of dystrophin protein. Dystrophin is present intracellularly at the sarcolemma and is enriched at the postsynaptic membrane of the neuromuscular junction. Morphological and functional neuromuscular junction deficits have been sh...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41207134/",
+          "total_results": 92
         },
         {
-          "pmid": "30312761",
-          "title": "Xanthine oxidase is hyper-active in Duchenne muscular dystrophy.",
-          "authors": "Lindsay A, McCourt PM, Karachunski P, et al.",
-          "journal": "Free radical biology & medicine",
-          "year": "2018",
-          "abstract_snippet": "Generation of superoxide by xanthine oxidase can be stimulated under ischemic and aberrant calcium homeostasis. Because patients and mice with Duchenne muscular dystrophy (DMD) suffer from ischemia and excessive calcium influx, we tested the hypothesis that xanthine oxidase activity is elevated and ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30312761/"
+          "pmid": "34048282",
+          "title": "Ifetroban reduces coronary artery dysfunction in a mouse model of Duchenne muscular dystrophy.",
+          "authors": "Mitchell R, Frederick NE, Holzman ER, et al.",
+          "journal": "American journal of physiology. Heart and circulatory physiology",
+          "year": "2021",
+          "abstract_snippet": "Dilated cardiomyopathy contributes to morbidity and mortality in Duchenne muscular dystrophy (DMD), an inheritable muscle-wasting disease caused by a mutation in the dystrophin gene. Preclinical studies in mouse models of muscular dystrophy have demonstrated reduced cardiomyopathy and improved cardi...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34048282/"
         },
         {
-          "pmid": "26179421",
-          "title": "Late-onset Becker muscular dystrophy: Refining the clinical features and electrophysiological findings.",
-          "authors": "Beltran Papsdorf T, Howard JF, Chahin N",
-          "journal": "Muscle & nerve",
-          "year": "2015",
-          "abstract_snippet": "INTRODUCTION: The aim of this study was to characterize a unique distribution of muscle involvement in sporadic Becker muscle dystrophy (BMD). METHODS: Retrospective chart review, clinical examination, electrophysiological studies, cardiac testing, and genetic testing were performed in 5 patients. R...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/26179421/"
+          "pmid": "40466939",
+          "title": "Pharmacologic Inhibition of Glutamate Dehydrogenase 1 Improves Functional Recovery of Neuromuscular Junctions and Muscle Function in Duchenne Muscular Dystrophy.",
+          "authors": "Pereira-Nunes A, Ammarah U, Shang M, et al.",
+          "journal": "The American journal of pathology",
+          "year": "2025",
+          "abstract_snippet": "Presynaptic terminals of neuromuscular junctions (NMJs) are sensitive to glutamate, which contributes to NMJ plasticity and synaptic neurotransmission. However, the effect of glutamate on neurotransmission and its pharmacologic modulation in muscle pathologies are understudied. In this study, the ef...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40466939/"
         },
         {
-          "pmid": "27082433",
-          "title": "Discovery of Metabolic Biomarkers for Duchenne Muscular Dystrophy within a Natural History Study.",
-          "authors": "Boca SM, Nishida M, Harris M, et al.",
-          "journal": "PloS one",
+          "pmid": "18230070",
+          "title": "C Histomorphology of neuromuscular junction in Duchenne muscular dystrophy.",
+          "authors": "Theroux MC, Olivant A, Akins RE",
+          "journal": "Paediatric anaesthesia",
+          "year": "2008",
+          "abstract_snippet": "BACKGROUND: Our objective was to better understand neuromuscular junction (NMJ) morphology in children with Duchenne muscular dystrophy (DMD). METHODS: We examined the NMJs of four children, age 6-13 years, who were diagnosed with DMD. Using our previously established staining technique, we examined...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18230070/"
+        },
+        {
+          "pmid": "27037492",
+          "title": "Characterization of neuromuscular synapse function abnormalities in multiple Duchenne muscular dystrophy mouse models.",
+          "authors": "van der Pijl EM, van Putten M, Niks EH, et al.",
+          "journal": "The European journal of neuroscience",
           "year": "2016",
-          "abstract_snippet": "Serum metabolite profiling in Duchenne muscular dystrophy (DMD) may enable discovery of valuable molecular markers for disease progression and treatment response. Serum samples from 51 DMD patients from a natural history study and 22 age-matched healthy volunteers were profiled using liquid chromato...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/27082433/"
-        },
-        {
-          "pmid": "36849458",
-          "title": "Longitudinal Assessment of Creatine Kinase, Creatine/Creatinine",
-          "authors": "van de Velde NM, Koeks Z, Signorelli M, et al.",
-          "journal": "Neurology",
-          "year": "2023",
-          "abstract_snippet": "BACKGROUND AND OBJECTIVES: The slow and variable disease progression of Becker muscular dystrophy (BMD) urges the development of biomarkers to facilitate clinical trials. We explored changes in 3 muscle-enriched biomarkers in serum of patients with BMD over 4-year time and studied associations with ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36849458/"
+          "abstract_snippet": "Duchenne muscular dystrophy (DMD) is an X-linked myopathy caused by dystrophin deficiency. Dystrophin is present intracellularly at the sarcolemma, connecting actin to the dystrophin-associated glycoprotein complex. Interestingly, it is enriched postsynaptically at the neuromuscular junction (NMJ), ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/27037492/"
         }
       ],
       "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "Creatine/creatinine ratio and myostatin as biomarkers to monitor muscle function in Duchenne Muscular Dystrophy patients",
+          "title": "Pharmacologic Inhibition of Glutamate Dehydrogenase 1 Improves Functional Recovery of Neuromuscular Junctions and Muscle Function in Duchenne Muscular Dystrophy",
           "year": 2025,
           "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/7b8cf4d9f50bca57e995297c5020f238b762d711",
-          "authors": "C. Degan, Roula Tsonaka, Sharon I. de Vries"
+          "url": "https://www.semanticscholar.org/paper/6af83208bfaa77f22df89fe1142b4f85272a6623",
+          "authors": "Andreia Pereira-Nunes, Ummi Ammarah, M. Shang"
         },
         {
-          "title": "285PCreatine/creatinine ratio and myostatin as biomarkers to monitor muscle function in Duchenne muscular dystrophy",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/73805994ee9463bef28f673eb4af803fd38fe65f",
-          "authors": "P. Spitali, C. Degan, R. Tsonaka"
-        },
-        {
-          "title": "A case of Duchenne muscular dystrophy recovered from prolonged ischemic kidney injury which emerged with a normal creatinine level",
+          "title": "Duchenne muscular dystrophy skeletal muscle cells derived from human induced pluripotent stem cells recapitulate various calcium dysregulation pathways.",
           "year": 2024,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/28fb9f02d192d5bb0a993d693cfe589443c689aa",
-          "authors": "Kensuke Daikoku, Hinako Kondo, Masataka Kudo"
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/ced74468570f94d4414fc37e65199cc17f11f0c4",
+          "authors": "Arnaud Delafen\u00eatre, Charles-Albert Chapotte-Baldacci, L\u00e9a Dor\u00e9mus"
         },
         {
-          "title": "A longitudinal study of creatine kinase and creatinine levels in Duchenne muscular dystrophy",
-          "year": 2022,
-          "citations": 8,
-          "url": "https://www.semanticscholar.org/paper/f3d826caba5daf7e715621db0d996bc165ea0c1d",
-          "authors": "Alexander Zygmunt, B. Wong, P. Horn"
+          "title": "Cycles of myofiber degeneration and regeneration lead to remodeling of the neuromuscular junction in two mammalian models of Duchenne muscular dystrophy",
+          "year": 2018,
+          "citations": 47,
+          "url": "https://www.semanticscholar.org/paper/3a0464dbd1b7cdae6af497389dd26ede1aa1128a",
+          "authors": "Seth G Haddix, Young il Lee, J. Kornegay"
         },
         {
-          "title": "Myocardial injury in Duchenne muscular dystrophy: assessment via cardiac magnetic resonance intra-voxel incoherent motion",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/f341fa3b792b86e1c7fc20a681c454e00d7ccf82",
-          "authors": "A. Yamamoto, Michinobu Nagao, Keiko Ishigaki"
+          "title": "Restoration of Contractile Protein Expression and Colonic Smooth Muscle Function by H2S in Duchenne Muscular Dystrophy Mice",
+          "year": 2019,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/a24b181b1f261f8bc526788dd9328b1c81c5784f",
+          "authors": "Kulpreet Singh, G. Randhawa, S. Mahavadi"
+        },
+        {
+          "title": "Properties of acetylcholine-receptor activation in human Duchenne muscular dystrophy myotubes",
+          "year": 1989,
+          "citations": 10,
+          "url": "https://www.semanticscholar.org/paper/516b6526f037eb6ff1ecc77fbe290bf1cced45b2",
+          "authors": "E. Mancinelli, A. Sardini, A. D'Aumiller"
         }
       ],
       "most_cited_paper": {
-        "title": "Teaching an Old Molecule New Tricks: Drug Repositioning for Duchenne Muscular Dystrophy",
-        "year": 2019,
-        "citations": 19,
-        "url": "https://www.semanticscholar.org/paper/509edab13cce4686f4a961a36f28c4bd12fe15dc",
-        "authors": "L. Vitiello, Lucia Tibaudo, E. Pegoraro"
+        "title": "Cycles of myofiber degeneration and regeneration lead to remodeling of the neuromuscular junction in two mammalian models of Duchenne muscular dystrophy",
+        "year": 2018,
+        "citations": 47,
+        "url": "https://www.semanticscholar.org/paper/3a0464dbd1b7cdae6af497389dd26ede1aa1128a",
+        "authors": "Seth G Haddix, Young il Lee, J. Kornegay"
       },
-      "max_citations": 19,
+      "max_citations": 47,
       "faers_signal": "none",
-      "faers_total_reports": 128,
+      "faers_total_reports": 99,
       "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Creatinine to Duchenne muscular dystrophy terms. Drug has 128 total reports.",
+      "faers_interpretation": "No FAERS reports found linking Acetylcholine to Duchenne muscular dystrophy terms. Drug has 99 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -750,8 +1767,8 @@
         "METHYLENE BLUE (1.410)",
         "\"\"\"(3,4-dihydroisoquinolin-2(1H)-yl)(4-(hydroxydiphenylmethyl)-1H-1,2,3-triazol-1-yl)methanone\"\"\" (1.410)"
       ],
-      "signature_interpretation": "Creatinine was not found among the top 35 drugs that reverse the Duchenne muscular dystrophy gene signature. Top reversers: Y-39983 (1.494), TWS-119 (1.452), DOXEPIN HYDROCHLORIDE (1.429)",
-      "ai_hypothesis": "it is a biomarker of muscle damage.",
+      "signature_interpretation": "Acetylcholine was not found among the top 35 drugs that reverse the Duchenne muscular dystrophy gene signature. Top reversers: Y-39983 (1.494), TWS-119 (1.452), DOXEPIN HYDROCHLORIDE (1.429)",
+      "ai_hypothesis": "of its ability to increase muscle mass and strength.",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
@@ -773,75 +1790,224 @@
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mr_score": 0.9138,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Acetylcholine \u2014[is a therapeutic for]\u2192 MESH:D029424 \u2014[is treated by]\u2192 DB00635 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy",
+      "kg_paths_text": "\u2022 Acetylcholine \u2014[is a therapeutic for]\u2192 MESH:D029424 \u2014[is treated by]\u2192 DB00635 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy\n\u2022 Acetylcholine \u2014[is a therapeutic for]\u2192 MESH:D029424 \u2014[is treated by]\u2192 DB00860 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy\n\u2022 Acetylcholine \u2014[is a therapeutic for]\u2192 MESH:D029424 \u2014[is treated by]\u2192 DB00860 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy",
       "validation_experiments": [],
-      "novelty_score": 0.55,
-      "novelty_level": "KNOWN",
+      "novelty_score": 0.41999998688697815,
+      "novelty_level": "NOVEL",
       "is_known_treatment": false,
-      "clinical_trials_total": 2,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT01921374",
-          "title": "Mother-caregivers of Children With Duchenne Muscular Dystrophy",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "60",
-          "url": "https://clinicaltrials.gov/study/NCT01921374"
-        },
-        {
-          "nct_id": "NCT02834650",
-          "title": "Validating Cardiac MRI Biomarkers and Genotype-Phenotype Correlations for DMD",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "89",
-          "url": "https://clinicaltrials.gov/study/NCT02834650"
-        }
-      ],
-      "trial_phases": {
-        "NA": 2
-      },
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
       "confidence": "HIGH",
       "confidence_reasons": [
-        "2 clinical trial(s) found on ClinicalTrials.gov",
-        "129 PubMed articles on this drug-disease pair",
+        "92 PubMed articles on this drug-disease pair",
         "Supported by 4 independent AI pillars",
-        "AI-generated hypothesis available"
-      ]
+        "Supporting paper with 47 citations",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.91, 1 genetic targets)"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 169,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01032",
+            "drug_name": "Probenecid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB02365",
+            "drug_name": "1,10-Phenanthroline",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB03322",
+            "drug_name": "1-(Isopropylamino)-3-(1-Naphthyloxy)-2-Propanol",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB01193",
+            "drug_name": "Acebutolol",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB00787",
+            "drug_name": "Aciclovir",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB12482",
+            "drug_name": "Acotiamide",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB00866",
+            "drug_name": "Alprenolol",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB00915",
+            "drug_name": "Amantadine",
+            "severity": "moderate"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (ACE / rs1799752)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "ACE",
+            "variant": "rs1799752",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/982034888"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.3149999976158142,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.41200000047683716,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.855
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Muscle - Skeletal",
+          "Heart - Left Ventricle"
+        ],
+        "n_genes": 4,
+        "n_expressed": 3,
+        "mean_tpm_in_tissue": 8.34,
+        "max_tpm_in_tissue": 23.09,
+        "tissue_specificity": 0.016,
+        "context_modifier": 0.939
+      },
+      "disease_entity": "Disease::MESH:D020388",
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "ensemble_prob": 0.0105,
+      "ensemble_features": {
+        "kg_score": 0.8986,
+        "degree_penalty": 0.833,
+        "n_drug_targets": 9,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 6.9763
+      },
+      "ensemble_rank": 7,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "QUATERNARY"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "quaternary_nitrogen_2"
+        ]
+      }
     },
     {
-      "drug_name": "4-Hydroxytestosterone",
-      "drug_id": "DB01485",
+      "drug_name": "Clodronate",
+      "drug_id": "DB00720",
       "disease_name": "Duchenne muscular dystrophy",
-      "combined_score": 1.000599980354309,
-      "transe_rank": 2284,
-      "pillars_hit": 6,
-      "mol_similarity": 0.6042,
-      "similar_to": "Testosterone",
+      "combined_score": 0.4072999954223633,
+      "pillars_hit": 3,
+      "transe_rank": 13,
+      "transe_score": -10.5866,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.6029999852180481,
+      "proximity_distance": 1.590000033378601,
+      "admet_score": 1.0,
+      "admet_flags": "clean",
+      "primekg_score": 0.2578,
+      "dti_score": 1.0,
+      "dti_best_target": "ALOX12",
+      "kg_group_score": 0.3,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.5113999843597412,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 1.0,
+      "efficacy_score": 0.4072999954223633,
+      "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
+      "shared_target_count": 1,
+      "shared_targets": [
+        "MMP2"
+      ],
+      "pubmed_total": 1,
+      "pubmed_treatment_total": 1,
       "pubmed_repurposing_total": 0,
-      "key_papers": [],
+      "key_papers": [
+        {
+          "pmid": "15223893",
+          "title": "Innate inflammatory cells are not responsible for early death of donor myoblasts after myoblast transfer therapy.",
+          "authors": "Sammels LM, Bosio E, Fragall CT, et al.",
+          "journal": "Transplantation",
+          "year": "2004",
+          "abstract_snippet": "BACKGROUND: Myoblast transfer therapy (MTT) is a cell-based gene therapy representing a potential treatment for Duchenne muscular dystrophy. The rapid disappearance of donor myoblasts from transplanted muscles after MTT is one of the most controversial and significant obstacles facing research in th...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15223893/",
+          "total_results": 1
+        }
+      ],
       "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "Transcriptional adaptation upregulates utrophin in Duchenne muscular dystrophy",
-          "year": 2025,
-          "citations": 16,
-          "url": "https://www.semanticscholar.org/paper/bf4d1e363a6afb11eccd41a9c2fdb95c0edfe536",
-          "authors": "Lara Falcucci, Christopher M Dooley, Douglas Adamoski"
-        },
-        {
-          "title": "Delandistrogene Moxeparvovec Gene Therapy in Individuals With Duchenne Muscular Dystrophy: Evidence in Focus: Report of the AAN Guidelines Subcommittee.",
-          "year": 2025,
-          "citations": 16,
-          "url": "https://www.semanticscholar.org/paper/baa24c71f23c82686efa3f2a3408b55bdcb730da",
-          "authors": "Maryam Oskoui, T. Caller, J. Parsons"
+          "title": "INNATE INFLAMMATORY CELLS ARE NOT RESPONSIBLE FOR EARLY DEATH OF DONOR MYOBLASTS AFTER MYOBLAST TRANSFER THERAPY",
+          "year": 2004,
+          "citations": 35,
+          "url": "https://www.semanticscholar.org/paper/e71ed9e11db66fa32249b7807b54483c992a4035",
+          "authors": "L. Sammels, E. Bosio, Clayton T. Fragall"
         },
         {
           "title": "AAV gene therapy for Duchenne muscular dystrophy: the EMBARK phase 3 randomized trial",
@@ -851,93 +2017,6 @@
           "authors": "J. R. Mendell, Francesco Muntoni, Craig M. McDonald"
         },
         {
-          "title": "Efficacy of delandistrogene moxeparvovec on Duchenne muscular dystrophy: a systematic review and meta-analysis",
-          "year": 2025,
-          "citations": 9,
-          "url": "https://www.semanticscholar.org/paper/74e5c9bf698e82bb293d9c4d09c91a3b850db003",
-          "authors": "Carlos Pascual-Morena, Silvana Pati\u00f1o-Cardona, I. Mart\u00ednez-Garc\u00eda"
-        },
-        {
-          "title": "Repurposed Nrf2 activator dimethyl fumarate rescues muscle inflammation and fibrosis in an aggravated mdx mouse model of Duchenne muscular dystrophy",
-          "year": 2025,
-          "citations": 6,
-          "url": "https://www.semanticscholar.org/paper/effcb4b9220ed76610accfb28b206e114dde0088",
-          "authors": "Stephanie Kourakis, Cara A. Timpani, R. Bagaric"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "AAV gene therapy for Duchenne muscular dystrophy: the EMBARK phase 3 randomized trial",
-        "year": 2024,
-        "citations": 118,
-        "url": "https://www.semanticscholar.org/paper/61ee44ac5b56900c7cf0ec1a0831542d7caf9464",
-        "authors": "J. R. Mendell, Francesco Muntoni, Craig M. McDonald"
-      },
-      "max_citations": 118,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for 4-Hydroxytestosterone",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "Y-39983 (1.494)",
-        "TWS-119 (1.452)",
-        "DOXEPIN HYDROCHLORIDE (1.429)",
-        "METHYLENE BLUE (1.410)",
-        "\"\"\"(3,4-dihydroisoquinolin-2(1H)-yl)(4-(hydroxydiphenylmethyl)-1H-1,2,3-triazol-1-yl)methanone\"\"\" (1.410)"
-      ],
-      "signature_interpretation": "4-Hydroxytestosterone was not found among the top 35 drugs that reverse the Duchenne muscular dystrophy gene signature. Top reversers: Y-39983 (1.494), TWS-119 (1.452), DOXEPIN HYDROCHLORIDE (1.429)",
-      "ai_hypothesis": "it is a potent androgen and has a longer half-life than testosterone.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.9,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "Supported by 6 independent AI pillars",
-        "High molecular similarity (0.60) to Testosterone",
-        "Highly cited paper (118 citations): \"AAV gene therapy for Duchenne muscular dystrophy: the EMBARK...\"",
-        "AI-generated hypothesis available"
-      ]
-    },
-    {
-      "drug_name": "5-Androstenediol",
-      "drug_id": "DB01524",
-      "disease_name": "Duchenne muscular dystrophy",
-      "combined_score": 0.9977999925613403,
-      "transe_rank": 3239,
-      "pillars_hit": 5,
-      "mol_similarity": 0.52,
-      "similar_to": "Testosterone",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Transcriptional adaptation upregulates utrophin in Duchenne muscular dystrophy",
-          "year": 2025,
-          "citations": 16,
-          "url": "https://www.semanticscholar.org/paper/bf4d1e363a6afb11eccd41a9c2fdb95c0edfe536",
-          "authors": "Lara Falcucci, Christopher M Dooley, Douglas Adamoski"
-        },
-        {
           "title": "Safety and efficacy of givinostat in boys with Duchenne muscular dystrophy (EPIDYS): a multicentre, randomised, double-blind, placebo-controlled, phase 3 trial.",
           "year": 2024,
           "citations": 69,
@@ -945,39 +2024,32 @@
           "authors": "Eugenio Mercuri, J. J. V\u00edlchez, Odile Boespflug-Tanguy"
         },
         {
-          "title": "Repurposed Nrf2 activator dimethyl fumarate rescues muscle inflammation and fibrosis in an aggravated mdx mouse model of Duchenne muscular dystrophy",
-          "year": 2025,
-          "citations": 6,
-          "url": "https://www.semanticscholar.org/paper/effcb4b9220ed76610accfb28b206e114dde0088",
-          "authors": "Stephanie Kourakis, Cara A. Timpani, R. Bagaric"
+          "title": "Death after High-Dose rAAV9 Gene Therapy in a Patient with Duchenne's Muscular Dystrophy.",
+          "year": 2023,
+          "citations": 163,
+          "url": "https://www.semanticscholar.org/paper/098e0682bb5432b31c57f1cfbab4de8f8c1ec384",
+          "authors": "A. Lek, B. Wong, A. Keeler"
         },
         {
-          "title": "Efficacy and Safety of Vamorolone Over 48 Weeks in Boys With Duchenne Muscular Dystrophy",
-          "year": 2024,
-          "citations": 31,
-          "url": "https://www.semanticscholar.org/paper/c116c43d1c2c50daa70a2de385ff06b89f82f180",
-          "authors": "Utkarsh J. Dang, Jesse M Damsker, M. Guglieri"
-        },
-        {
-          "title": "Practical Considerations for Delandistrogene Moxeparvovec Gene Therapy in Patients With Duchenne Muscular Dystrophy.",
-          "year": 2024,
-          "citations": 33,
-          "url": "https://www.semanticscholar.org/paper/1c596f9f225dfb719b9b7e3dff70dfc348cf5e25",
-          "authors": "J. Mendell, Crystal M Proud, Craig M. Zaidman"
+          "title": "Duchenne muscular dystrophy: disease mechanism and therapeutic strategies",
+          "year": 2023,
+          "citations": 121,
+          "url": "https://www.semanticscholar.org/paper/f59f27d1c0325f5aae308451632d3821367e26f9",
+          "authors": "Addeli Bez Batti Angulski, Nora Hosny, Houda Cohen"
         }
       ],
       "most_cited_paper": {
-        "title": "Safety and efficacy of givinostat in boys with Duchenne muscular dystrophy (EPIDYS): a multicentre, randomised, double-blind, placebo-controlled, phase 3 trial.",
-        "year": 2024,
-        "citations": 69,
-        "url": "https://www.semanticscholar.org/paper/34c6cc0dfa9f157b08768c02cbde873c05706258",
-        "authors": "Eugenio Mercuri, J. J. V\u00edlchez, Odile Boespflug-Tanguy"
+        "title": "Death after High-Dose rAAV9 Gene Therapy in a Patient with Duchenne's Muscular Dystrophy.",
+        "year": 2023,
+        "citations": 163,
+        "url": "https://www.semanticscholar.org/paper/098e0682bb5432b31c57f1cfbab4de8f8c1ec384",
+        "authors": "A. Lek, B. Wong, A. Keeler"
       },
-      "max_citations": 69,
+      "max_citations": 163,
       "faers_signal": "none",
-      "faers_total_reports": 0,
+      "faers_total_reports": 598,
       "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for 5-Androstenediol",
+      "faers_interpretation": "No FAERS reports found linking Clodronate to Duchenne muscular dystrophy terms. Drug has 598 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -987,44 +2059,245 @@
         "METHYLENE BLUE (1.410)",
         "\"\"\"(3,4-dihydroisoquinolin-2(1H)-yl)(4-(hydroxydiphenylmethyl)-1H-1,2,3-triazol-1-yl)methanone\"\"\" (1.410)"
       ],
-      "signature_interpretation": "5-Androstenediol was not found among the top 35 drugs that reverse the Duchenne muscular dystrophy gene signature. Top reversers: Y-39983 (1.494), TWS-119 (1.452), DOXEPIN HYDROCHLORIDE (1.429)",
-      "ai_hypothesis": "of its ability to increase the number of dystrophin-positive fibers.",
-      "abstract_analyses": [],
+      "signature_interpretation": "Clodronate was not found among the top 35 drugs that reverse the Duchenne muscular dystrophy gene signature. Top reversers: Y-39983 (1.494), TWS-119 (1.452), DOXEPIN HYDROCHLORIDE (1.429)",
+      "ai_hypothesis": "of its ability to increase the number of muscle fibers that are able to regenerate.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
       "has_failed_trial": false,
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
       "mr_score": 0,
       "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Clodronate \u2014[is a therapeutic for]\u2192 MESH:D010146 \u2014[is treated by]\u2192 DB00621 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy",
+      "kg_paths_text": "\u2022 Clodronate \u2014[is a therapeutic for]\u2192 MESH:D010146 \u2014[is treated by]\u2192 DB00621 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy\n\u2022 Clodronate \u2014[is a therapeutic for]\u2192 MESH:D010024 \u2014[is treated by]\u2192 DB06285 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy\n\u2022 Clodronate \u2014[is a therapeutic for]\u2192 MESH:D010024 \u2014[is treated by]\u2192 DB00630 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy",
       "validation_experiments": [],
-      "novelty_score": 0.9980000257492065,
-      "novelty_level": "BREAKTHROUGH",
-      "is_known_treatment": false,
+      "novelty_score": 0.34599998593330383,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": true,
       "clinical_trials_total": 0,
       "clinical_trials": [],
       "trial_phases": {},
       "confidence": "LOW",
       "confidence_reasons": [
-        "Supported by 5 independent AI pillars",
-        "High molecular similarity (0.52) to Testosterone",
-        "Supporting paper with 69 citations",
+        "1 PubMed article(s) - limited literature",
+        "Supported by 3 independent AI pillars",
+        "Highly cited paper (163 citations): \"Death after High-Dose rAAV9 Gene Therapy in a Patient with D...\"",
         "AI-generated hypothesis available"
-      ]
+      ],
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "late-trial",
+        "confidence": "medium",
+        "rationale": "Phase-3 investigational \u2014 dose range established in Phase-2 pharmacokinetic studies; efficacy trials ongoing or recently completed.",
+        "chembl_phase": 3.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 332,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00338",
+            "drug_name": "Omeprazole",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00213",
+            "drug_name": "Pantoprazole",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB13762",
+            "drug_name": "(+)-Rabeprazole",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB02224",
+            "drug_name": "(2s,3s)-Trans-Dihydroquercetin",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB13142",
+            "drug_name": "(4-O-beta-D-Galactopyranosyl-D-gluconato-O1)(D-gluconato-O1)calcium",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB08633",
+            "drug_name": "(CHLOROACETYL)CARBAMIC ACID (3R,4S,5S,5R)-5-METHOXY-4-[(2R,3R)-2-METHYL-3-(3-METHYL-2-BUTENYL)OXIRANYL]-1-OXASPIRO[2.5]OCT-6-YL ESTER",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB13544",
+            "drug_name": "2-Ethoxybenzamide",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB12445",
+            "drug_name": "3-(Nitroxymethyl)phenyl 2-acetoxybenzoate",
+            "severity": "moderate"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (VDR / rs731236)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "VDR",
+            "variant": "rs731236",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/655386873"
+          },
+          {
+            "gene": "IL1B",
+            "variant": "rs16944",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/655386888"
+          },
+          {
+            "gene": "VDR",
+            "variant": "rs1544410",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451285000"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.3,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.407,
+          "docking": 0.437,
+          "pharos": 0.0,
+          "literature": 0.131
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Muscle - Skeletal",
+          "Heart - Left Ventricle"
+        ],
+        "n_genes": 1,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 48.14,
+        "max_tpm_in_tissue": 48.14,
+        "tissue_specificity": 0.0,
+        "context_modifier": 1.002
+      },
+      "disease_entity": "Disease::MESH:D020388",
+      "docking": {
+        "kcal_per_mol": -5.24,
+        "target_symbol": "MMP2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "ensemble_prob": 0.9527,
+      "ensemble_features": {
+        "kg_score": 0.9991,
+        "degree_penalty": 0.8481,
+        "n_drug_targets": 5,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.3979
+      },
+      "ensemble_rank": 3,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "ALKYL",
+          "GTE",
+          "PHOSPHOR"
+        ],
+        "n_alerts": 3,
+        "alert_names": [
+          "alkyl_halide",
+          "phosphor",
+          "gte_2_free_phos"
+        ]
+      }
     },
     {
       "drug_name": "Dexamethasone",
       "drug_id": "DB01234",
       "disease_name": "Duchenne muscular dystrophy",
-      "combined_score": 0.9958999752998352,
+      "combined_score": 0.4041999876499176,
+      "pillars_hit": 3,
       "transe_rank": 7,
-      "pillars_hit": 6,
+      "transe_score": -10.445,
+      "pykeen_score": -12.3068,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
+      "mol_emb_similarity": 0.9268,
+      "mol_emb_similar_to": "Digoxin",
+      "gene_sig_score": 0.02,
+      "gene_sig_rank": 33,
+      "proximity_score": 0.6880000233650208,
+      "proximity_distance": 1.25,
+      "admet_score": 0.7109,
+      "admet_flags": "clean",
+      "primekg_score": 0.2542,
+      "dti_score": 0.3738,
+      "dti_best_target": "HPGDS",
+      "kg_group_score": 0.4435,
+      "structural_group_score": 0.9268,
+      "network_group_score": 0.5062999725341797,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9422,
+      "efficacy_score": 0.42899999022483826,
+      "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 15,
+      "shared_targets": [
+        "ACE",
+        "CSF3",
+        "CST3",
+        "CXCR4",
+        "EGFR",
+        "ESR1",
+        "IGF1",
+        "IGFBP2",
+        "INS",
+        "LEP",
+        "MMP2",
+        "NFKB1",
+        "NR3C1",
+        "NR3C2",
+        "RPS4Y1"
+      ],
       "pubmed_total": 16,
       "pubmed_treatment_total": 14,
       "pubmed_repurposing_total": 0,
@@ -1160,10 +2433,10 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0,
       "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Dexamethasone \u2014[downregulates]\u2192 gene-3303 \u2014[is bound by]\u2192 DB00171 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy",
+      "kg_paths_text": "\u2022 Dexamethasone \u2014[downregulates]\u2192 gene-3303 \u2014[is bound by]\u2192 DB00171 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy\n\u2022 Dexamethasone \u2014[affects]\u2192 gene-4313 \u2014[is associated with]\u2192 Duchenne muscular dystrophy\n\u2022 Dexamethasone \u2014[downregulates]\u2192 gene-6461 \u2014[is downregulated by]\u2192 DB00584 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy",
       "validation_experiments": [],
-      "novelty_score": 0.847000002861023,
+      "novelty_score": 0.3440000116825104,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -1172,184 +2445,205 @@
       "confidence": "LOW",
       "confidence_reasons": [
         "16 PubMed articles found",
-        "Supported by 6 independent AI pillars",
+        "Supported by 3 independent AI pillars",
         "Supporting paper with 21 citations",
         "AI-generated hypothesis available"
-      ]
-    },
-    {
-      "drug_name": "Vanadium",
-      "drug_id": "DB13971",
-      "disease_name": "Duchenne muscular dystrophy",
-      "combined_score": 0.9907000064849854,
-      "transe_rank": 2358,
-      "pillars_hit": 3,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 5,
-      "pubmed_treatment_total": 2,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "39183368",
-          "title": "N-Halogenation by Vanadium-Dependent Haloperoxidases Enables 1,2,4-Oxadiazole Synthesis.",
-          "authors": "Sharma M, Patton ZE, Shoemaker CR, et al.",
-          "journal": "Angewandte Chemie (International ed. in English)",
-          "year": "2024",
-          "abstract_snippet": "Nitrogen-containing compounds are valuable synthetic intermediates and targets in nearly every chemical industry. While methods for nitrogen-carbon and nitrogen-heteroatom bond formation have primarily relied on nucleophilic nitrogen atom reactivity, molecules containing nitrogen-halogen bonds allow...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39183368/",
-          "total_results": 5
-        },
-        {
-          "pmid": "3068522",
-          "title": "Active oxygen in neuromuscular disorders.",
-          "authors": "Davison A, Tibbits G, Shi ZG, et al.",
-          "journal": "Molecular and cellular biochemistry",
-          "year": "1988",
-          "abstract_snippet": "Although muscle and nerve are reasonably well protected against active oxygen and related free radicals, environmental or inherited malfunctions can overpower their defences. Active oxygen is involved in many neuropathies and myopathies. In every case the damage is caused by agents which exert effec...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/3068522/"
-        },
-        {
-          "pmid": "40825369",
-          "title": "Simulated Wear and Fatigue Performance of Cobalt-Chrome-Molybdenum and Co-Cr-Free Nitrided Titanium Femoral Components in Primary Total Knee Arthroplasty.",
-          "authors": "Ramos MS, Mimnaugh KD, Khan ST, et al.",
-          "journal": "The journal of knee surgery",
-          "year": "2026",
-          "abstract_snippet": "Cobalt-chromium-molybdenum (Co-Cr-Mo) femoral components are widely used in total knee arthroplasty (TKA) due to their mechanical strength and wear performance. However, concerns regarding corrosion, metal ion release, and hypersensitivity have prompted the development of alternative materials, incl...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40825369/"
-        },
-        {
-          "pmid": "40514889",
-          "title": "Lithography-free transparent spacecraft smart radiation device based on phase change material VO",
-          "authors": "Zhang K, Hu Q, Wu B, et al.",
-          "journal": "Optics express",
-          "year": "2024",
-          "abstract_snippet": "As the complexity of spacecraft operations in extreme space environments escalates, the development of a device that can simultaneously manage thermal radiation while maintaining transmission to visible light becomes critically important. Such devices not only effectively shield spacecraft against d...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40514889/"
-        },
-        {
-          "pmid": "33142888",
-          "title": "Influence of Co-Sputtered Ag:Al Ultra-Thin Layers in Transparent V",
-          "authors": "Tom T, Ros E, L\u00f3pez-Pint\u00f3 N, et al.",
-          "journal": "Materials (Basel, Switzerland)",
-          "year": "2020",
-          "abstract_snippet": "As optoelectronic devices continue to improve, control over film thickness has become crucial, especially in applications that require ultra-thin films. A variety of undesired effects may arise depending on the specific growth mechanism of each material, for instance a percolation threshold thicknes...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33142888/"
-        }
       ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "AAV gene therapy for Duchenne muscular dystrophy: the EMBARK phase 3 randomized trial",
-          "year": 2024,
-          "citations": 118,
-          "url": "https://www.semanticscholar.org/paper/61ee44ac5b56900c7cf0ec1a0831542d7caf9464",
-          "authors": "J. R. Mendell, Francesco Muntoni, Craig M. McDonald"
-        },
-        {
-          "title": "Safety and efficacy of givinostat in boys with Duchenne muscular dystrophy (EPIDYS): a multicentre, randomised, double-blind, placebo-controlled, phase 3 trial.",
-          "year": 2024,
-          "citations": 69,
-          "url": "https://www.semanticscholar.org/paper/34c6cc0dfa9f157b08768c02cbde873c05706258",
-          "authors": "Eugenio Mercuri, J. J. V\u00edlchez, Odile Boespflug-Tanguy"
-        },
-        {
-          "title": "Death after High-Dose rAAV9 Gene Therapy in a Patient with Duchenne's Muscular Dystrophy.",
-          "year": 2023,
-          "citations": 163,
-          "url": "https://www.semanticscholar.org/paper/098e0682bb5432b31c57f1cfbab4de8f8c1ec384",
-          "authors": "A. Lek, B. Wong, A. Keeler"
-        },
-        {
-          "title": "Duchenne muscular dystrophy: disease mechanism and therapeutic strategies",
-          "year": 2023,
-          "citations": 121,
-          "url": "https://www.semanticscholar.org/paper/f59f27d1c0325f5aae308451632d3821367e26f9",
-          "authors": "Addeli Bez Batti Angulski, Nora Hosny, Houda Cohen"
-        },
-        {
-          "title": "Therapeutic approaches for Duchenne muscular dystrophy",
-          "year": 2023,
-          "citations": 70,
-          "url": "https://www.semanticscholar.org/paper/55e8b4c28825b40a91ce646b306cb2ebeb523a62",
-          "authors": "T. Roberts, Matthew J. A. Wood, Kay E. Davies"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Death after High-Dose rAAV9 Gene Therapy in a Patient with Duchenne's Muscular Dystrophy.",
-        "year": 2023,
-        "citations": 163,
-        "url": "https://www.semanticscholar.org/paper/098e0682bb5432b31c57f1cfbab4de8f8c1ec384",
-        "authors": "A. Lek, B. Wong, A. Keeler"
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
       },
-      "max_citations": 163,
-      "faers_signal": "none",
-      "faers_total_reports": 46,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Vanadium to Duchenne muscular dystrophy terms. Drug has 46 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "Y-39983 (1.494)",
-        "TWS-119 (1.452)",
-        "DOXEPIN HYDROCHLORIDE (1.429)",
-        "METHYLENE BLUE (1.410)",
-        "\"\"\"(3,4-dihydroisoquinolin-2(1H)-yl)(4-(hydroxydiphenylmethyl)-1H-1,2,3-triazol-1-yl)methanone\"\"\" (1.410)"
-      ],
-      "signature_interpretation": "Vanadium was not found among the top 35 drugs that reverse the Duchenne muscular dystrophy gene signature. Top reversers: Y-39983 (1.494), TWS-119 (1.452), DOXEPIN HYDROCHLORIDE (1.429)",
-      "ai_hypothesis": "of its potential to improve muscle function and reduce the risk of respiratory failure.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
+      "ddi_warnings": {
+        "n_interactions": 1512,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (ABCB1 / rs1045642)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "ABCB1",
+            "variant": "rs1045642",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204433"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs2032582",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981238041"
+          },
+          {
+            "gene": "CTLA4",
+            "variant": "rs4553808",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043880851"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs2229109",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449170621"
+          },
+          {
+            "gene": "GATA3",
+            "variant": "rs3824662",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1184512128"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
         },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
+        "triangulation_score": 0.539,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.404,
+          "docking": 0.97,
+          "pharos": 0.0,
+          "literature": 0.534
         }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.8420000076293945,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "5 PubMed article(s) - limited literature",
-        "Supported by 3 independent AI pillars",
-        "Highly cited paper (163 citations): \"Death after High-Dose rAAV9 Gene Therapy in a Patient with D...\"",
-        "AI-generated hypothesis available"
-      ]
+      },
+      "tissue_context": {
+        "tissues": [
+          "Muscle - Skeletal",
+          "Heart - Left Ventricle"
+        ],
+        "n_genes": 15,
+        "n_expressed": 12,
+        "mean_tpm_in_tissue": 24.28,
+        "max_tpm_in_tissue": 117.67,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.976
+      },
+      "disease_entity": "Disease::MESH:D020388",
+      "docking": {
+        "kcal_per_mol": -11.64,
+        "target_symbol": "NR3C1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "ensemble_prob": 0.9754,
+      "ensemble_features": {
+        "kg_score": 0.9997,
+        "degree_penalty": 0.736,
+        "n_drug_targets": 24,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 1.3863
+      },
+      "ensemble_rank": 1,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
-      "drug_name": "Motixafortide",
-      "drug_id": "DB14939",
+      "drug_name": "Rebamipide",
+      "drug_id": "DB11656",
       "disease_name": "Duchenne muscular dystrophy",
-      "combined_score": 0.9900000095367432,
-      "transe_rank": 3366,
+      "combined_score": 0.398499995470047,
       "pillars_hit": 3,
+      "transe_rank": 1909,
+      "transe_score": -12.8471,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0.95,
+      "txgnn_rank": 5,
       "mol_similarity": 0,
       "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.75,
+      "proximity_distance": 1.0,
+      "admet_score": 0.824,
+      "admet_flags": "DILI=0.91",
+      "primekg_score": 0.2583,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": 0.0162,
+      "structural_group_score": 0,
+      "network_group_score": 0.75,
+      "txgnn_group_score": 0.95,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9648,
+      "efficacy_score": 0.4129999876022339,
+      "groups_hit": 3,
       "direct_relations": [],
       "shared_target_count": 0,
       "shared_targets": [],
@@ -1374,126 +2668,6 @@
           "authors": "Eugenio Mercuri, J. J. V\u00edlchez, Odile Boespflug-Tanguy"
         },
         {
-          "title": "Dystrophin: the protein product of the Duchenne muscular dystrophy locus.",
-          "year": 1987,
-          "citations": 4629,
-          "url": "https://www.semanticscholar.org/paper/9b498ef13f4150c2bfdf1fc2c875455b3e31117f",
-          "authors": "Eric P. Hoffman, Robert H. Brown, L. Kunkel"
-        },
-        {
-          "title": "Duchenne muscular dystrophy",
-          "year": 2021,
-          "citations": 781,
-          "url": "https://www.semanticscholar.org/paper/7d0c8084a611eb582619087f465cacd4b104f0ea",
-          "authors": "D. Duan, N. Goemans, S. Takeda"
-        },
-        {
-          "title": "Death after High-Dose rAAV9 Gene Therapy in a Patient with Duchenne's Muscular Dystrophy.",
-          "year": 2023,
-          "citations": 163,
-          "url": "https://www.semanticscholar.org/paper/098e0682bb5432b31c57f1cfbab4de8f8c1ec384",
-          "authors": "A. Lek, B. Wong, A. Keeler"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Dystrophin: the protein product of the Duchenne muscular dystrophy locus.",
-        "year": 1987,
-        "citations": 4629,
-        "url": "https://www.semanticscholar.org/paper/9b498ef13f4150c2bfdf1fc2c875455b3e31117f",
-        "authors": "Eric P. Hoffman, Robert H. Brown, L. Kunkel"
-      },
-      "max_citations": 4629,
-      "faers_signal": "none",
-      "faers_total_reports": 6,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Motixafortide to Duchenne muscular dystrophy terms. Drug has 6 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "Y-39983 (1.494)",
-        "TWS-119 (1.452)",
-        "DOXEPIN HYDROCHLORIDE (1.429)",
-        "METHYLENE BLUE (1.410)",
-        "\"\"\"(3,4-dihydroisoquinolin-2(1H)-yl)(4-(hydroxydiphenylmethyl)-1H-1,2,3-triazol-1-yl)methanone\"\"\" (1.410)"
-      ],
-      "signature_interpretation": "Motixafortide was not found among the top 35 drugs that reverse the Duchenne muscular dystrophy gene signature. Top reversers: Y-39983 (1.494), TWS-119 (1.452), DOXEPIN HYDROCHLORIDE (1.429)",
-      "ai_hypothesis": "it is a potent activator of the cGMP-dependent protein kinase.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.8420000076293945,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "Supported by 3 independent AI pillars",
-        "Highly cited paper (4629 citations): \"Dystrophin: the protein product of the Duchenne muscular dys...\"",
-        "AI-generated hypothesis available"
-      ]
-    },
-    {
-      "drug_name": "Biguanide",
-      "drug_id": "DB13100",
-      "disease_name": "Duchenne muscular dystrophy",
-      "combined_score": 0.9818999767303467,
-      "transe_rank": 3057,
-      "pillars_hit": 3,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 2,
-      "pubmed_treatment_total": 2,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "31664444",
-          "title": "Effect of Combination l-Citrulline and Metformin Treatment on Motor Function in Patients With Duchenne Muscular Dystrophy: A Randomized Clinical Trial.",
-          "authors": "Hafner P, Bonati U, Klein A, et al.",
-          "journal": "JAMA network open",
-          "year": "2019",
-          "abstract_snippet": "IMPORTANCE: Nitric oxide precursors, such as the amino acid l-arginine and the biguanide antidiabetic drug metformin, have been associated with metabolism and muscle function in patients with Duchenne muscular dystrophy (DMD). The treatment of DMD remains an unmet medical need. OBJECTIVE: To evaluat...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/31664444/",
-          "total_results": 2
-        },
-        {
-          "pmid": "36474458",
-          "title": "Metformin: new applications for an old drug.",
-          "authors": "Naseri A, Sanaie S, Hamzehzadeh S, et al.",
-          "journal": "Journal of basic and clinical physiology and pharmacology",
-          "year": "2023",
-          "abstract_snippet": "Metformin is a biguanide, evolved as one of the most widely used medicines. The applications of this component include but are not limited to reducing blood glucose, weight loss, and polycystic ovary syndrome. Studies about other probable indications have emerged, indicating that this agent can also...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36474458/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "AAV gene therapy for Duchenne muscular dystrophy: the EMBARK phase 3 randomized trial",
-          "year": 2024,
-          "citations": 118,
-          "url": "https://www.semanticscholar.org/paper/61ee44ac5b56900c7cf0ec1a0831542d7caf9464",
-          "authors": "J. R. Mendell, Francesco Muntoni, Craig M. McDonald"
-        },
-        {
-          "title": "Safety and efficacy of givinostat in boys with Duchenne muscular dystrophy (EPIDYS): a multicentre, randomised, double-blind, placebo-controlled, phase 3 trial.",
-          "year": 2024,
-          "citations": 69,
-          "url": "https://www.semanticscholar.org/paper/34c6cc0dfa9f157b08768c02cbde873c05706258",
-          "authors": "Eugenio Mercuri, J. J. V\u00edlchez, Odile Boespflug-Tanguy"
-        },
-        {
           "title": "Death after High-Dose rAAV9 Gene Therapy in a Patient with Duchenne's Muscular Dystrophy.",
           "year": 2023,
           "citations": 163,
@@ -1524,9 +2698,9 @@
       },
       "max_citations": 163,
       "faers_signal": "none",
-      "faers_total_reports": 85,
+      "faers_total_reports": 8548,
       "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Biguanide to Duchenne muscular dystrophy terms. Drug has 85 total reports.",
+      "faers_interpretation": "No FAERS reports found linking Rebamipide to Duchenne muscular dystrophy terms. Drug has 8548 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -1536,57 +2710,270 @@
         "METHYLENE BLUE (1.410)",
         "\"\"\"(3,4-dihydroisoquinolin-2(1H)-yl)(4-(hydroxydiphenylmethyl)-1H-1,2,3-triazol-1-yl)methanone\"\"\" (1.410)"
       ],
-      "signature_interpretation": "Biguanide was not found among the top 35 drugs that reverse the Duchenne muscular dystrophy gene signature. Top reversers: Y-39983 (1.494), TWS-119 (1.452), DOXEPIN HYDROCHLORIDE (1.429)",
-      "ai_hypothesis": "of its ability to increase the expression of utrophin, a protein that is a major structural protein of the neuromuscular junction.",
+      "signature_interpretation": "Rebamipide was not found among the top 35 drugs that reverse the Duchenne muscular dystrophy gene signature. Top reversers: Y-39983 (1.494), TWS-119 (1.452), DOXEPIN HYDROCHLORIDE (1.429)",
+      "ai_hypothesis": "it improves the function of the gastrointestinal tract and improves the quality of life.",
+      "abstract_analyses": [],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Rebamipide \u2014[is a therapeutic for]\u2192 MESH:D003093 \u2014[is treated by]\u2192 DB00635 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy",
+      "kg_paths_text": "\u2022 Rebamipide \u2014[is a therapeutic for]\u2192 MESH:D003093 \u2014[is treated by]\u2192 DB00635 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy\n\u2022 Rebamipide \u2014[is a therapeutic for]\u2192 MESH:D003093 \u2014[is treated by]\u2192 DB00860 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy\n\u2022 Rebamipide \u2014[is a therapeutic for]\u2192 MESH:D003093 \u2014[is treated by]\u2192 DB00860 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy",
+      "validation_experiments": [],
+      "novelty_score": 0.35899999737739563,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "LOW",
+      "confidence_reasons": [
+        "Supported by 3 independent AI pillars",
+        "Highly cited paper (163 citations): \"Death after High-Dose rAAV9 Gene Therapy in a Patient with D...\"",
+        "AI-generated hypothesis available"
+      ],
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "late-trial",
+        "confidence": "medium",
+        "rationale": "Phase-3 investigational \u2014 dose range established in Phase-2 pharmacokinetic studies; efficacy trials ongoing or recently completed.",
+        "chembl_phase": 3.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 0,
+        "has_warnings": false,
+        "top_interactions": []
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 0,
+        "axes": {
+          "kg": false,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.13899999856948853,
+        "label": "",
+        "axis_values": {
+          "kg": 0.39800000190734863,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Muscle - Skeletal",
+          "Heart - Left Ventricle"
+        ],
+        "n_genes": 120,
+        "n_expressed": 105,
+        "mean_tpm_in_tissue": 312.39,
+        "max_tpm_in_tissue": 2229.3,
+        "tissue_specificity": 0.148,
+        "context_modifier": 1.048
+      },
+      "disease_entity": "Disease::MESH:D020388",
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "ensemble_prob": 0.0,
+      "ensemble_features": {
+        "kg_score": 0.6417,
+        "degree_penalty": 1.0,
+        "n_drug_targets": 0,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 8.2377
+      },
+      "ensemble_rank": 10,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Hydrocortisone",
+      "drug_id": "DB00741",
+      "disease_name": "Duchenne muscular dystrophy",
+      "combined_score": 0.39800000190734863,
+      "pillars_hit": 3,
+      "transe_rank": 21,
+      "transe_score": -10.7178,
+      "pykeen_score": -12.4978,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0.6833,
+      "similar_to": "Prednisolone",
+      "mol_emb_similarity": 0.913,
+      "mol_emb_similar_to": "Oxandrolone",
+      "gene_sig_score": 0.02,
+      "gene_sig_rank": 33,
+      "proximity_score": 0.6380000114440918,
+      "proximity_distance": 1.4500000476837158,
+      "admet_score": 0.728,
+      "admet_flags": "clean",
+      "primekg_score": 0.264,
+      "dti_score": 1.0,
+      "dti_best_target": "ALOX12",
+      "kg_group_score": 0.3792,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.4805999994277954,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9456,
+      "efficacy_score": 0.42089998722076416,
+      "groups_hit": 3,
+      "direct_relations": [],
+      "shared_target_count": 6,
+      "shared_targets": [
+        "CXCR4",
+        "IGF1",
+        "INS",
+        "LEP",
+        "NR3C1",
+        "NR3C2"
+      ],
+      "pubmed_total": 17,
+      "pubmed_treatment_total": 14,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "36036925",
+          "title": "Efficacy and Safety of Vamorolone vs Placebo and Prednisone Among Boys With Duchenne Muscular Dystrophy: A Randomized Clinical Trial.",
+          "authors": "Guglieri M, Clemens PR, Perlman SJ, et al.",
+          "journal": "JAMA neurology",
+          "year": "2022",
+          "abstract_snippet": "IMPORTANCE: Corticosteroidal anti-inflammatory drugs are widely prescribed but long-term use shows adverse effects that detract from patient quality of life. OBJECTIVE: To determine if vamorolone, a structurally unique dissociative steroidal anti-inflammatory drug, is able to retain efficacy while r...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36036925/",
+          "total_results": 17
+        },
+        {
+          "pmid": "30219580",
+          "title": "Phase IIa trial in Duchenne muscular dystrophy shows vamorolone is a first-in-class dissociative steroidal anti-inflammatory drug.",
+          "authors": "Conklin LS, Damsker JM, Hoffman EP, et al.",
+          "journal": "Pharmacological research",
+          "year": "2018",
+          "abstract_snippet": "We report a first-in-patient study of vamorolone, a first-in-class dissociative steroidal anti-inflammatory drug, in Duchenne muscular dystrophy. This 2-week, open-label Phase IIa multiple ascending dose study (0.25, 0.75, 2.0, and 6.0\u2009mg/kg/day) enrolled 48 boys with Duchenne muscular dystrophy (4 ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30219580/"
+        },
+        {
+          "pmid": "39097643",
+          "title": "Adrenal Suppression From Vamorolone and Prednisone in Duchenne Muscular Dystrophy: Results From the Phase 2b Clinical Trial.",
+          "authors": "Ahmet A, Tobin R, Dang UJ, et al.",
+          "journal": "The Journal of clinical endocrinology and metabolism",
+          "year": "2025",
+          "abstract_snippet": "CONTEXT: Vamorolone, a novel \"dissociative\" steroid, demonstrated similar efficacy in muscle function relative to prednisone 0.75\u2005mg/kg/day but improved linear growth and bone turnover markers in a randomized trial of pediatric Duchenne muscular dystrophy (DMD). OBJECTIVES: To determine the frequenc...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39097643/"
+        },
+        {
+          "pmid": "41920460",
+          "title": "Survey of Adrenal Insufficiency Management for Duchenne muscular dystrophy in Italy.",
+          "authors": "Tornese G, Wong SC, Sbrocchi AM, et al.",
+          "journal": "Endocrine",
+          "year": "2026",
+          "abstract_snippet": "PURPOSE: The aim of this study was to evaluate current real-world practices for the prevention and management of adrenal insufficiency (AI) among Italian physicians caring for children and adolescents with Duchenne muscular dystrophy (DMD) receiving chronic glucocorticoid (GC) therapy, a treatment k...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41920460/"
+        },
+        {
+          "pmid": "710453",
+          "title": "Steroid-CPK test. A new diagnostic aid for muscular dystrophy and its carriers?",
+          "authors": "Sen S, Das PK",
+          "journal": "European neurology",
+          "year": "1978",
+          "abstract_snippet": "The response of serum creatine phosphokinase (SCPK) to intravenous hydrocortisone was studied in different neuromuscular diseases, in Duchenne carriers and relatives of various muscular dystrophy (MD) cases. SCPK activity increased significantly in MD cases, 50% of known and 18.7% of possible Duchen...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/710453/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "35\u2005What is known about the pharmacology of intramuscular therapeutics in duchenne muscular dystrophy? A systematic review",
+          "year": 2023,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/18904d3978196d5927f275e092fb18d09b1b966b",
+          "authors": "E. Roberts, Jia Yi Gan, D. Hawcutt"
+        },
+        {
+          "title": "Description of a Novel Mechanism Possibly Explaining the Antiproliferative Properties of Glucocorticoids in Duchenne Muscular Dystrophy Fibroblasts Based on Glucocorticoid Receptor GR and NFAT5",
+          "year": 2020,
+          "citations": 7,
+          "url": "https://www.semanticscholar.org/paper/63dfb72db47e6f5b9c253bde617e6f601db4f7b9",
+          "authors": "Sandrine Herbelet, B. De Paepe, J. D. De Bleecker"
+        },
+        {
+          "title": "Inhalation anesthetics and Duchenne\u2019s Muscular Dystrophy",
+          "year": 1999,
+          "citations": 22,
+          "url": "https://www.semanticscholar.org/paper/84cf43868b5ee53a38345e9ef345fbafa7f9c67d",
+          "authors": "G. Goresky, R. Cox"
+        },
+        {
+          "title": "Systemic membrane defect and the inhibition of lymphocyte capping in Duchenne muscular dystrophy.",
+          "year": 1987,
+          "citations": 6,
+          "url": "https://www.semanticscholar.org/paper/37e6d59f933ebfeac656e85c58b0c15b1883b6f7",
+          "authors": "B. Goldsmith, H. Gruemer"
+        },
+        {
+          "title": "[Electrolyte abnormalities and metabolic acidosis in two Duchenne muscular dystrophy patients with advanced congestive heart failure].",
+          "year": 2000,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/5dfb9eb5485fb880d9210b6a7180a8f8bc07b84a",
+          "authors": "T. Matsumura, T. Saito, I. Miyai"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Inhalation anesthetics and Duchenne\u2019s Muscular Dystrophy",
+        "year": 1999,
+        "citations": 22,
+        "url": "https://www.semanticscholar.org/paper/84cf43868b5ee53a38345e9ef345fbafa7f9c67d",
+        "authors": "G. Goresky, R. Cox"
+      },
+      "max_citations": 22,
+      "faers_signal": "none",
+      "faers_total_reports": 79272,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Hydrocortisone to Duchenne muscular dystrophy terms. Drug has 79272 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "Y-39983 (1.494)",
+        "TWS-119 (1.452)",
+        "DOXEPIN HYDROCHLORIDE (1.429)",
+        "METHYLENE BLUE (1.410)",
+        "\"\"\"(3,4-dihydroisoquinolin-2(1H)-yl)(4-(hydroxydiphenylmethyl)-1H-1,2,3-triazol-1-yl)methanone\"\"\" (1.410)"
+      ],
+      "signature_interpretation": "Hydrocortisone was not found among the top 35 drugs that reverse the Duchenne muscular dystrophy gene signature. Top reversers: Y-39983 (1.494), TWS-119 (1.452), DOXEPIN HYDROCHLORIDE (1.429)",
+      "ai_hypothesis": "of its anabolic effects.",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 1,
-          "negative_signals": 0,
-          "mechanism_signals": 0,
-          "extracted_entities": [
-            {
-              "entity": "amino",
-              "entity_group": "Medication",
-              "score": 0.8769999742507935
-            },
-            {
-              "entity": "l - arginine",
-              "entity_group": "Medication",
-              "score": 0.972000002861023
-            },
-            {
-              "entity": "biguanide antidiabetic drug",
-              "entity_group": "Medication",
-              "score": 0.9589999914169312
-            },
-            {
-              "entity": "metformin",
-              "entity_group": "Medication",
-              "score": 0.996999979019165
-            },
-            {
-              "entity": "duc",
-              "entity_group": "Disease_disorder",
-              "score": 0.7390000224113464
-            },
-            {
-              "entity": "muscular dystrophy",
-              "entity_group": "Disease_disorder",
-              "score": 1.0
-            },
-            {
-              "entity": "d",
-              "entity_group": "Disease_disorder",
-              "score": 1.0
-            },
-            {
-              "entity": "##md",
-              "entity_group": "Disease_disorder",
-              "score": 0.9950000047683716
-            }
-          ]
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
         },
         {
           "relation_type": "unclear",
@@ -1600,22 +2987,177 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0,
       "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Hydrocortisone \u2014[treats]\u2192 DOID:8577 \u2014[is treated by]\u2192 DB00860 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy",
+      "kg_paths_text": "\u2022 Hydrocortisone \u2014[treats]\u2192 DOID:8577 \u2014[is treated by]\u2192 DB00860 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy\n\u2022 Hydrocortisone \u2014[treats]\u2192 DOID:8577 \u2014[is treated by]\u2192 DB00635 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy\n\u2022 Hydrocortisone \u2014[treats]\u2192 DOID:13189 \u2014[is treated by]\u2192 DB00860 \u2014[is a therapeutic for]\u2192 Duchenne muscular dystrophy",
       "validation_experiments": [],
-      "novelty_score": 0.8349999785423279,
-      "novelty_level": "NOVEL",
+      "novelty_score": 0.27900001406669617,
+      "novelty_level": "KNOWN",
       "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
+      "clinical_trials_total": 2,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT05338099",
+          "title": "Determine the Safety and Dose of EN001 in Patients With Duchenne Muscular Dystrophy(DMD)",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "7",
+          "url": "https://clinicaltrials.gov/study/NCT05338099"
+        },
+        {
+          "nct_id": "NCT01921374",
+          "title": "Mother-caregivers of Children With Duchenne Muscular Dystrophy",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "60",
+          "url": "https://clinicaltrials.gov/study/NCT01921374"
+        }
+      ],
+      "trial_phases": {
+        "PHASE1": 1,
+        "NA": 1
+      },
+      "confidence": "HIGH",
       "confidence_reasons": [
-        "2 PubMed article(s) - limited literature",
+        "2 clinical trial(s) found on ClinicalTrials.gov",
+        "17 PubMed articles found",
         "Supported by 3 independent AI pillars",
-        "Highly cited paper (163 citations): \"Death after High-Dose rAAV9 Gene Therapy in a Patient with D...\"",
+        "High molecular similarity (0.68) to Prednisolone",
+        "Supporting paper with 22 citations",
         "AI-generated hypothesis available"
-      ]
+      ],
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1320,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": false,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.548,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.398,
+          "docking": 1.0,
+          "pharos": 0.0,
+          "literature": 0.545
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Muscle - Skeletal",
+          "Heart - Left Ventricle"
+        ],
+        "n_genes": 6,
+        "n_expressed": 4,
+        "mean_tpm_in_tissue": 4.97,
+        "max_tpm_in_tissue": 20.17,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.92
+      },
+      "disease_entity": "Disease::MESH:D020388",
+      "docking": {
+        "kcal_per_mol": -12.7,
+        "target_symbol": "NR3C2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "ensemble_prob": 0.9438,
+      "ensemble_features": {
+        "kg_score": 0.9984,
+        "degree_penalty": 0.7532,
+        "n_drug_targets": 12,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.8904
+      },
+      "ensemble_rank": 4,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     }
-  ]
+  ],
+  "disease_entity": "Disease::MESH:D020388",
+  "docking_axis": {
+    "source": "chembl_bioactivity_proxy + not_wired fallback",
+    "n_disease_genes": 120,
+    "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
+  },
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl"
 }

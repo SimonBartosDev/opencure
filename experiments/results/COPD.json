@@ -1,28 +1,2024 @@
 {
   "disease": "COPD",
   "status": "completed",
-  "timestamp": "2026-04-17T21:19:37.823994",
-  "elapsed_seconds": 411.7,
+  "timestamp": "2026-04-20T00:45:12.230906",
+  "elapsed_seconds": 763.4,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
-    "HIGH": 6,
-    "MEDIUM": 2,
-    "LOW": 2
+    "LOW": 3,
+    "HIGH": 4,
+    "MEDIUM": 3
   },
+  "pipeline_version": "v5",
+  "data_manifest_hash": "2da2aa88f2457d1b",
   "candidates": [
+    {
+      "drug_name": "Carboxyatractyloside",
+      "drug_id": "DB02426",
+      "disease_name": "COPD",
+      "combined_score": 0.5867999792098999,
+      "pillars_hit": 4,
+      "transe_rank": 6729,
+      "transe_score": -14.4253,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0.75,
+      "txgnn_rank": 25,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0.9425,
+      "mol_emb_similar_to": "Budesonide",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.75,
+      "proximity_distance": 1.0,
+      "admet_score": 1.0,
+      "admet_flags": "clean",
+      "primekg_score": 0.2651,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": 0.0086,
+      "structural_group_score": 0.9425,
+      "network_group_score": 0.75,
+      "txgnn_group_score": 0.75,
+      "mr_group_score": 0,
+      "admet_multiplier": 1.0,
+      "efficacy_score": 0.5867999792098999,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 0,
+      "shared_targets": [],
+      "pubmed_total": 0,
+      "pubmed_treatment_total": 0,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Hypoxic Preconditioning Improves Respiratory Muscle Function during Hypoxia by Regulating Mitochondria in COPD Mice",
+          "year": 2017,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/df51943d0a173fe53ebd9d243b6291bf9aeb4a50",
+          "authors": "L. Zuo, Chia-Chen Chuang, Tingyang Zhou"
+        },
+        {
+          "title": "Current Progress of COPD Early Detection: Key Points and Novel Strategies",
+          "year": 2023,
+          "citations": 57,
+          "url": "https://www.semanticscholar.org/paper/e069665ef90c77d6f839519ae51f72c342d9545f",
+          "authors": "Ching-Hsiung Lin, Shih-Lung Cheng, Chiung-Zuei Chen"
+        },
+        {
+          "title": "Novel Anti-Inflammatory Approaches to COPD",
+          "year": 2023,
+          "citations": 52,
+          "url": "https://www.semanticscholar.org/paper/35fe776410fc8ad18ce1102fe6450660d4fe2b51",
+          "authors": "M. Cazzola, N. Hanania, C. Page"
+        },
+        {
+          "title": "NT-proBNP in Different Patient Groups of COPD: A Systematic Review and Meta-Analysis",
+          "year": 2023,
+          "citations": 33,
+          "url": "https://www.semanticscholar.org/paper/940b3b9f260f143f1f2c79b5bc022be59ad3d304",
+          "authors": "Xiaojie Su, Ting Lei, Haichuan Yu"
+        },
+        {
+          "title": "Inhaler Adherence in COPD: A Crucial Step Towards the Correct Treatment",
+          "year": 2023,
+          "citations": 33,
+          "url": "https://www.semanticscholar.org/paper/f31ef33dc5a9a2389775f14f7dde979c58f111c6",
+          "authors": "Miguel Tur\u00e9gano-Yedro, E. Trillo-Calvo, Fernando Navarro i Ros"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Current Progress of COPD Early Detection: Key Points and Novel Strategies",
+        "year": 2023,
+        "citations": 57,
+        "url": "https://www.semanticscholar.org/paper/e069665ef90c77d6f839519ae51f72c342d9545f",
+        "authors": "Ching-Hsiung Lin, Shih-Lung Cheng, Chiung-Zuei Chen"
+      },
+      "max_citations": 57,
+      "faers_signal": "none",
+      "faers_total_reports": 0,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found for Carboxyatractyloside",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "withaferin-a (1.445)",
+        "CV 1808 (1.442)",
+        "Ritodrine hydrochloride (1.412)",
+        "dabrafenib (1.408)",
+        "Cyclosporin A (1.402)"
+      ],
+      "signature_interpretation": "Carboxyatractyloside was not found among the top 35 drugs that reverse the COPD gene signature. Top reversers: withaferin-a (1.445), CV 1808 (1.442), Ritodrine hydrochloride (1.412)",
+      "ai_hypothesis": "of its anti-inflammatory and bronchodilator properties.",
+      "abstract_analyses": [],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Carboxyatractyloside \u2014[targets]\u2192 gene-291 \u2014[is downregulated by]\u2192 DB01156 \u2014[is a therapeutic for]\u2192 COPD",
+      "kg_paths_text": "\u2022 Carboxyatractyloside \u2014[targets]\u2192 gene-291 \u2014[is downregulated by]\u2192 DB01156 \u2014[is a therapeutic for]\u2192 COPD\n\u2022 Carboxyatractyloside \u2014[targets]\u2192 gene-291 \u2014[is downregulated by]\u2192 DB00641 \u2014[is a therapeutic for]\u2192 COPD\n\u2022 Carboxyatractyloside \u2014[targets]\u2192 gene-291 \u2014[is downregulated by]\u2192 DB01115 \u2014[is a therapeutic for]\u2192 COPD",
+      "validation_experiments": [],
+      "novelty_score": 0.5870000123977661,
+      "novelty_level": "BREAKTHROUGH",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "LOW",
+      "confidence_reasons": [
+        "Supported by 4 independent AI pillars",
+        "Supporting paper with 57 citations",
+        "AI-generated hypothesis available"
+      ],
+      "dose_plausibility": {
+        "plausibility": "unknown",
+        "dose_range": "research",
+        "confidence": "low",
+        "rationale": "No ChEMBL clinical phase data available.",
+        "chembl_phase": null,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 0,
+        "has_warnings": false,
+        "top_interactions": []
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.20499999821186066,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.5870000123977661,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Lung"
+        ],
+        "n_genes": 292,
+        "n_expressed": 239,
+        "mean_tpm_in_tissue": 347.04,
+        "max_tpm_in_tissue": 23696.8,
+        "tissue_specificity": 0.348,
+        "context_modifier": 1.072
+      },
+      "disease_entity": "Disease::MESH:D029424",
+      "ensemble_prob": 0.0,
+      "ensemble_features": {
+        "kg_score": 0.0721,
+        "degree_penalty": 1.0,
+        "n_drug_targets": 0,
+        "is_fda_approved": 0,
+        "n_disease_genes": 0,
+        "transe_rank_log": 9.1891
+      },
+      "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "BETA-KETO/ANHYDRIDE",
+          "ISOLATED",
+          "OXYGEN-NITROGEN",
+          "PEROXIDE",
+          "SAPONINE",
+          "SULFONIC"
+        ],
+        "n_alerts": 7,
+        "alert_names": [
+          "beta-keto/anhydride",
+          "isolated_alkene",
+          "Oxygen-nitrogen_single_bond",
+          "peroxide",
+          "saponine_derivative"
+        ]
+      }
+    },
+    {
+      "drug_name": "Acetylcholine",
+      "drug_id": "DB03128",
+      "disease_name": "COPD",
+      "combined_score": 0.5425,
+      "pillars_hit": 4,
+      "transe_rank": 33,
+      "transe_score": -10.2445,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.7879999876022339,
+      "proximity_distance": 0.8500000238418579,
+      "admet_score": 0.7858,
+      "admet_flags": "Skin_Reaction=0.90",
+      "primekg_score": 0.2613,
+      "dti_score": 1.0,
+      "dti_best_target": "MTOR",
+      "kg_group_score": 0.1393,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.6564000248908997,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.8043,
+      "admet_multiplier": 0.9572,
+      "efficacy_score": 0.5668,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 16,
+      "shared_targets": [
+        "ACE",
+        "ACHE",
+        "CA1",
+        "CA2",
+        "CHRM1",
+        "CHRM2",
+        "CHRM3",
+        "CHRM4",
+        "CHRM5",
+        "CHRNA3",
+        "CHRNA4",
+        "CHRNA5",
+        "F2",
+        "IL2",
+        "KCNMB2",
+        "TNF"
+      ],
+      "pubmed_total": 375,
+      "pubmed_treatment_total": 221,
+      "pubmed_repurposing_total": 1,
+      "key_papers": [
+        {
+          "pmid": "35411324",
+          "title": "Research Opportunities in Autonomic Neural Mechanisms of Cardiopulmonary\u00a0Regulation: A Report From the National Heart, Lung, and Blood Institute and\u00a0the National Institutes of Health Office of the Director\u00a0Workshop.",
+          "authors": "Mehra R, Tjurmina OA, Ajijola OA, et al.",
+          "journal": "JACC. Basic to translational science",
+          "year": "2022",
+          "abstract_snippet": "This virtual workshop was convened by the National Heart, Lung, and Blood Institute, in partnership with the Office of Strategic Coordination of the Office of the National Institutes of Health Director, and held September 2 to 3, 2020. The intent was to assemble a multidisciplinary group of experts ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35411324/",
+          "total_results": 375
+        },
+        {
+          "pmid": "34987088",
+          "title": "Inhaled Medicines: Past, Present, and Future.",
+          "authors": "Anderson S, Atkins P, B\u00e4ckman P, et al.",
+          "journal": "Pharmacological reviews",
+          "year": "2022",
+          "abstract_snippet": "The purpose of this review is to summarize essential pharmacological, pharmaceutical, and clinical aspects in the field of orally inhaled therapies that may help scientists seeking to develop new products. After general comments on the rationale for inhaled therapies for respiratory disease, the foc...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34987088/"
+        },
+        {
+          "pmid": "39676750",
+          "title": "The Bronchodilator and Anti-Inflammatory Effect of Long-Acting Muscarinic Antagonists in Asthma: An EAACI Position Paper.",
+          "authors": "Agache I, Adcock IM, Akdis CA, et al.",
+          "journal": "Allergy",
+          "year": "2025",
+          "abstract_snippet": "As cholinergic innervation is a major contributor to increased vagal tone and mucus secretion, inhaled long-acting muscarinic antagonists (LAMA) are a pillar for the treatment of chronic obstructive pulmonary disease and asthma. By blocking the muscarinic receptors expressed in the lung, LAMA improv...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39676750/"
+        },
+        {
+          "pmid": "31404293",
+          "title": "Eosinophil Inflammation and Hyperresponsiveness in the Airways as Phenotypes of COPD, and Usefulness of Inhaled Glucocorticosteroids.",
+          "authors": "Kume H, Hojo M, Hashimoto N",
+          "journal": "Frontiers in pharmacology",
+          "year": "2019",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31404293/"
+        },
+        {
+          "pmid": "25511176",
+          "title": "Acetylcholine beyond bronchoconstriction: roles in inflammation and remodeling.",
+          "authors": "Kistemaker LE, Gosens R",
+          "journal": "Trends in pharmacological sciences",
+          "year": "2015",
+          "abstract_snippet": "Acetylcholine is the primary parasympathetic neurotransmitter in the airways, where it not only induces bronchoconstriction and mucus secretion, but also regulates airway inflammation and remodeling. In this review, we propose that these effects are all primarily mediated via the muscarinic M3 recep...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25511176/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "41677741",
+          "title": "Acetylcholinesterase Inhibition Reverses Age-Related Pulmonary Decline and Increases Bronchus-Associated Lymphoid Tissue Formation in Aged Mice.",
+          "authors": "Kenny K, Niesman IR, Moon KS, et al.",
+          "journal": "Biology",
+          "year": "2026",
+          "abstract_snippet": "Age-related chronic, low-grade inflammation, known as inflammaging, contributes to tissue damage and disease. In the lungs, inflammaging leads to abnormal tissue remodeling, reduced function, and decreased immunity. A key factor in inflammaging is declining acetylcholine signaling, which normally su...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41677741/",
+          "total_results": 1
+        }
+      ],
+      "semantic_scholar_papers": [
+        {
+          "title": "In vitro anti-inflammatory effects of AZD8999, a novel bifunctional muscarinic acetylcholine receptor antagonist /\u03b22-adrenoceptor agonist (MABA) compound in neutrophils from COPD patients",
+          "year": 2019,
+          "citations": 9,
+          "url": "https://www.semanticscholar.org/paper/efd67bc4a44ed19c45eda4c01b346d7d2247a5eb",
+          "authors": "J. Milara, Sonia Contreras, A. de Diego"
+        },
+        {
+          "title": "Efficacy and safety of long-acting muscarinic antagonists in COPD: a meta-analysis and meta-regression with a focus on aging.",
+          "year": 2025,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/3caaa59172d63c46f0842170e84362de0673f21b",
+          "authors": "L. Calzetta, Elena Pistocchini, R. Laitano"
+        },
+        {
+          "title": "Oxidative stress in smokers with and without COPD: what variables are associated?",
+          "year": 2025,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/ec8d5785be7f52bd5362fb1b9cb65a14733b4297",
+          "authors": "Aldo Pezzuto, Alberto Ricci, Antonella Tammaro"
+        },
+        {
+          "title": "Muscarinic acetylcholine receptors as targets for drug development",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/b64e339670cfba7c1fd1012d14161ee9ca9bede5",
+          "authors": "Maja Stojkovi\u0107, D. Proti\u0107, Sa\u0161a M. Trailovi\u0107"
+        },
+        {
+          "title": "Pathophysiology, Therapeutic Targets, and Future Therapeutic Alternatives in COPD: Focus on the Importance of the Cholinergic System",
+          "year": 2023,
+          "citations": 18,
+          "url": "https://www.semanticscholar.org/paper/362c6324eee8ef0b4e45341bd57ffb381a2f8e53",
+          "authors": "F. Gomes, Shih-Lung Cheng"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Pathophysiology, Therapeutic Targets, and Future Therapeutic Alternatives in COPD: Focus on the Importance of the Cholinergic System",
+        "year": 2023,
+        "citations": 18,
+        "url": "https://www.semanticscholar.org/paper/362c6324eee8ef0b4e45341bd57ffb381a2f8e53",
+        "authors": "F. Gomes, Shih-Lung Cheng"
+      },
+      "max_citations": 18,
+      "faers_signal": "none",
+      "faers_total_reports": 99,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Acetylcholine to COPD terms. Drug has 99 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "withaferin-a (1.445)",
+        "CV 1808 (1.442)",
+        "Ritodrine hydrochloride (1.412)",
+        "dabrafenib (1.408)",
+        "Cyclosporin A (1.402)"
+      ],
+      "signature_interpretation": "Acetylcholine was not found among the top 35 drugs that reverse the COPD gene signature. Top reversers: withaferin-a (1.445), CV 1808 (1.442), Ritodrine hydrochloride (1.412)",
+      "ai_hypothesis": "of its anti-inflammatory and anti-oxidant properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.8043,
+      "mr_genetic_targets": 5,
+      "mechanistic_hypothesis": "Acetylcholine \u2014[is a therapeutic for]\u2192 COPD",
+      "kg_paths_text": "\u2022 Acetylcholine \u2014[is a therapeutic for]\u2192 COPD\n\u2022 Acetylcholine \u2014[is a therapeutic for]\u2192 MESH:D054058 \u2014[is treated by]\u2192 DB00945 \u2014[is a therapeutic for]\u2192 COPD\n\u2022 Acetylcholine \u2014[is a therapeutic for]\u2192 MESH:D054058 \u2014[is treated by]\u2192 DB00945 \u2014[is a therapeutic for]\u2192 COPD",
+      "validation_experiments": [],
+      "novelty_score": 0.358,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": true,
+      "clinical_trials_total": 4,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT04668027",
+          "title": "Impulse Oscillation to Evaluate Diagnostic Efficacy in Patients With Chronic Airway Disease",
+          "status": "UNKNOWN",
+          "phase": "NA",
+          "enrollment": "172",
+          "url": "https://clinicaltrials.gov/study/NCT04668027"
+        },
+        {
+          "nct_id": "NCT02966665",
+          "title": ": Vascular Function in Health and Disease",
+          "status": "RECRUITING",
+          "phase": "PHASE1",
+          "enrollment": "420",
+          "url": "https://clinicaltrials.gov/study/NCT02966665"
+        },
+        {
+          "nct_id": "NCT06326671",
+          "title": "A Trial to Assess the Bioequivalence of Generic Tiotropium Bromide Inhalation Powder and Reference Product in Healthy Adult Participants Under Fasting Conditions (Pilot)",
+          "status": "UNKNOWN",
+          "phase": "PHASE1",
+          "enrollment": "39",
+          "url": "https://clinicaltrials.gov/study/NCT06326671"
+        },
+        {
+          "nct_id": "NCT06487416",
+          "title": "A Trial to Assess the Bioequivalence of Tiotropium Bromide Inhalation Powder in Healthy Adult Participants Under Fasting Conditions",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "phase": "PHASE1",
+          "enrollment": "186",
+          "url": "https://clinicaltrials.gov/study/NCT06487416"
+        }
+      ],
+      "trial_phases": {
+        "NA": 1,
+        "PHASE1": 3
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "4 clinical trial(s) found on ClinicalTrials.gov",
+        "375 PubMed articles on this drug-disease pair",
+        "1 article(s) specifically mention repurposing/repositioning",
+        "Supported by 4 independent AI pillars",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.80, 5 genetic targets)"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 169,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01032",
+            "drug_name": "Probenecid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB02365",
+            "drug_name": "1,10-Phenanthroline",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB03322",
+            "drug_name": "1-(Isopropylamino)-3-(1-Naphthyloxy)-2-Propanol",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB01193",
+            "drug_name": "Acebutolol",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB00787",
+            "drug_name": "Aciclovir",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB12482",
+            "drug_name": "Acotiamide",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB00866",
+            "drug_name": "Alprenolol",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB00915",
+            "drug_name": "Amantadine",
+            "severity": "moderate"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (ACE / rs1799752)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "ACE",
+            "variant": "rs1799752",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/982034888"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.639,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.542,
+          "docking": 0.832,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Lung"
+        ],
+        "n_genes": 16,
+        "n_expressed": 6,
+        "mean_tpm_in_tissue": 5.32,
+        "max_tpm_in_tissue": 38.96,
+        "tissue_specificity": 0.471,
+        "context_modifier": 0.978
+      },
+      "disease_entity": "Disease::MESH:D029424",
+      "ensemble_prob": 0.0746,
+      "ensemble_features": {
+        "kg_score": 0.9625,
+        "degree_penalty": 0.833,
+        "n_drug_targets": 9,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 5.9839
+      },
+      "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": -9.98,
+        "target_symbol": "CHRM4",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "QUATERNARY"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "quaternary_nitrogen_2"
+        ]
+      }
+    },
+    {
+      "drug_name": "Testosterone",
+      "drug_id": "DB00624",
+      "disease_name": "COPD",
+      "combined_score": 0.5257,
+      "pillars_hit": 4,
+      "transe_rank": 30,
+      "transe_score": -10.211,
+      "pykeen_score": -12.0177,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0.0063,
+      "gene_sig_rank": 61,
+      "proximity_score": 0.7749999761581421,
+      "proximity_distance": 0.8999999761581421,
+      "admet_score": 0.7521,
+      "admet_flags": "clean",
+      "primekg_score": 0.2615,
+      "dti_score": 1.0,
+      "dti_best_target": "ELANE",
+      "kg_group_score": 0.3524,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.579200029373169,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.461,
+      "admet_multiplier": 0.9504,
+      "efficacy_score": 0.5531,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 18,
+      "shared_targets": [
+        "ACHE",
+        "CRP",
+        "IL10",
+        "IL18",
+        "IL1A",
+        "IL5",
+        "IL6",
+        "MMP1",
+        "MMP2",
+        "NR3C1",
+        "P2RY12",
+        "PDE5A",
+        "POMC",
+        "SERPINA7",
+        "SERPINE1",
+        "TF",
+        "TNF",
+        "TRPM8"
+      ],
+      "pubmed_total": 134,
+      "pubmed_treatment_total": 80,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "33067077",
+          "title": "[Testosterone and chronic obstructive pulmonary disease].",
+          "authors": "Slim A, Hedhli A, Ouahchi Y, et al.",
+          "journal": "Revue des maladies respiratoires",
+          "year": "2020",
+          "abstract_snippet": "INTRODUCTION: Testosterone level has been shown to be associated with respiratory function and loss of lean body mass in patients with chronic obstructive pulmonary disease (COPD). The aim of this study was to assess the relationship between testosterone level and functional respiratory parameters d...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33067077/",
+          "total_results": 134
+        },
+        {
+          "pmid": "36882807",
+          "title": "Sexual dimorphism in chronic respiratory diseases.",
+          "authors": "Reddy KD, Oliver BGG",
+          "journal": "Cell & bioscience",
+          "year": "2023",
+          "abstract_snippet": "Sex differences in susceptibility, severity, and progression are prevalent for various diseases in multiple organ systems. This phenomenon is particularly apparent in respiratory diseases. Asthma demonstrates an age-dependent pattern of sexual dimorphism. However, marked differences between males an...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36882807/"
+        },
+        {
+          "pmid": "20125007",
+          "title": "Androgens and chronic obstructive pulmonary disease.",
+          "authors": "Svartberg J",
+          "journal": "Current opinion in endocrinology, diabetes, and obesity",
+          "year": "2010",
+          "abstract_snippet": "PURPOSE OF REVIEW: To evaluate the recent literature on the effect of the use of androgens in men with chronic obstructive pulmonary disease (COPD). RECENT FINDINGS: Men with COPD have been found to have reduced endogenous testosterone levels in some studies, and they also share several traits with ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20125007/"
+        },
+        {
+          "pmid": "34019274",
+          "title": "Sex Hormones and Lung Inflammation.",
+          "authors": "Reyes-Garc\u00eda J, Monta\u00f1o LM, Carbajal-Garc\u00eda A, et al.",
+          "journal": "Advances in experimental medicine and biology",
+          "year": "2021",
+          "abstract_snippet": "Inflammation is a characteristic marker in numerous lung disorders. Several immune cells, such as macrophages, dendritic cells, eosinophils, as well as T and B lymphocytes, synthetize and release cytokines involved in the inflammatory process. Gender differences in the incidence and severity of infl...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34019274/"
+        },
+        {
+          "pmid": "30029723",
+          "title": "Dehydroepiandrosterone Research: Past, Current, and Future.",
+          "authors": "Klinge CM, Clark BJ, Prough RA",
+          "journal": "Vitamins and hormones",
+          "year": "2018",
+          "abstract_snippet": "The discovery of \"oestrus-producing\" hormones was a major research breakthrough in biochemistry and pharmacology during the early part of the 20th century. The elucidation of the molecular weight and chemical structure of major oxidative metabolites of dehydroepiandrosterone (DHEA) led to the award ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30029723/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "EXPRESS: Exploring Testosterone's Impact on Pulmonary Health in a Rat Model of COPD: Investigating MMP-9 and FGF-23.",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/6534e4108d4e957758c72943493a3b27875507c1",
+          "authors": "Zexuan Ji, Changhong Zhang, Bu Wang"
+        },
+        {
+          "title": "Erectile dysfunction and testosterone deficiency in COPD: associations with disease severity and symptoms",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/4872567086a90ee29d86d86ed594845e9d86c0a5",
+          "authors": "Ane Lopez Gonzalez, Cristina Aljama, Galo Granados"
+        },
+        {
+          "title": "Association of serum testosterone with chronic obstructive pulmonary disease (COPD) in a nationally representative sample of White, Black, and Hispanic men",
+          "year": 2023,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/90210940715462e324cce9175eb5b1e071981b08",
+          "authors": "Samuel V. David, D. Gibson, Alejandro G Villasante-Tezanos"
+        },
+        {
+          "title": "Testosterone attenuates pulmonary epithelial inflammation in male rats of COPD model through preventing NRF1-derived NF-\u03baB signaling",
+          "year": 2021,
+          "citations": 27,
+          "url": "https://www.semanticscholar.org/paper/af7068b0ccd6e814813f688f6810c0044c5a0fbe",
+          "authors": "Xueting Wang, Linlin Huang, Shan Jiang"
+        },
+        {
+          "title": "Testosterone replacement therapy and hospitalization rates in men with COPD",
+          "year": 2018,
+          "citations": 48,
+          "url": "https://www.semanticscholar.org/paper/1ea6f1eb23824422a12b9b5d4697f69435b01f8b",
+          "authors": "J. Baillargeon, R. Urban, W. Zhang"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Testosterone replacement therapy and hospitalization rates in men with COPD",
+        "year": 2018,
+        "citations": 48,
+        "url": "https://www.semanticscholar.org/paper/1ea6f1eb23824422a12b9b5d4697f69435b01f8b",
+        "authors": "J. Baillargeon, R. Urban, W. Zhang"
+      },
+      "max_citations": 48,
+      "faers_signal": "none",
+      "faers_total_reports": 30252,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Testosterone to COPD terms. Drug has 30252 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "withaferin-a (1.445)",
+        "CV 1808 (1.442)",
+        "Ritodrine hydrochloride (1.412)",
+        "dabrafenib (1.408)",
+        "Cyclosporin A (1.402)"
+      ],
+      "signature_interpretation": "Testosterone was not found among the top 35 drugs that reverse the COPD gene signature. Top reversers: withaferin-a (1.445), CV 1808 (1.442), Ritodrine hydrochloride (1.412)",
+      "ai_hypothesis": "of its anti-inflammatory and anti-oxidant properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 0,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "testosterone",
+              "entity_group": "Diagnostic_procedure",
+              "score": 1.0
+            },
+            {
+              "entity": "respiratory function",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "lean",
+              "entity_group": "Sign_symptom",
+              "score": 0.9919999837875366
+            },
+            {
+              "entity": "body",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.8730000257492065
+            },
+            {
+              "entity": "mass",
+              "entity_group": "Sign_symptom",
+              "score": 0.968999981880188
+            },
+            {
+              "entity": "chronic obstructive pulmonary disease",
+              "entity_group": "Disease_disorder",
+              "score": 0.9980000257492065
+            },
+            {
+              "entity": "copd",
+              "entity_group": "Disease_disorder",
+              "score": 0.7409999966621399
+            },
+            {
+              "entity": "respiratory parameters",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9990000128746033
+            }
+          ]
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 1,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "and",
+              "entity_group": "Medication",
+              "score": 1.0
+            },
+            {
+              "entity": "##rogens",
+              "entity_group": "Medication",
+              "score": 0.9919999837875366
+            },
+            {
+              "entity": "chronic obstructive pulmonary disease",
+              "entity_group": "Disease_disorder",
+              "score": 0.9959999918937683
+            },
+            {
+              "entity": "cop",
+              "entity_group": "Disease_disorder",
+              "score": 1.0
+            },
+            {
+              "entity": "men",
+              "entity_group": "Sex",
+              "score": 0.9620000123977661
+            },
+            {
+              "entity": "copd",
+              "entity_group": "Disease_disorder",
+              "score": 0.9900000095367432
+            },
+            {
+              "entity": "reduced",
+              "entity_group": "Lab_value",
+              "score": 1.0
+            },
+            {
+              "entity": "testosterone",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9100000262260437
+            }
+          ]
+        }
+      ],
+      "has_failed_trial": true,
+      "failed_trial_phase": "Phase 3",
+      "failed_trial_count": 1,
+      "failed_trial_penalty": 0.6,
+      "mr_score": 0.461,
+      "mr_genetic_targets": 12,
+      "mechanistic_hypothesis": "Testosterone \u2014[is a therapeutic for]\u2192 COPD",
+      "kg_paths_text": "\u2022 Testosterone \u2014[is a therapeutic for]\u2192 COPD\n\u2022 Testosterone \u2014[downregulates]\u2192 gene-5111 \u2014[is a target of]\u2192 DB00945 \u2014[is a therapeutic for]\u2192 COPD\n\u2022 Testosterone \u2014[downregulates]\u2192 gene-56915 \u2014[is activated by]\u2192 gene-10199 \u2014[is downregulated by]\u2192 COPD",
+      "validation_experiments": [],
+      "novelty_score": 0.289,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": true,
+      "clinical_trials_total": 3,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT03674320",
+          "title": "Cycled Testosterone Administration During Pulmonary Rehabilitation in Early Stage COPD",
+          "status": "WITHDRAWN",
+          "phase": "PHASE2, PHASE3",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT03674320"
+        },
+        {
+          "nct_id": "NCT02824809",
+          "title": "Association Between Testosterone Levels and COPD Severity",
+          "status": "UNKNOWN",
+          "phase": "N/A",
+          "enrollment": "150",
+          "url": "https://clinicaltrials.gov/study/NCT02824809"
+        },
+        {
+          "nct_id": "NCT00230984",
+          "title": "IRAD2 : Patients With Respiratory Failure at Home",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "200",
+          "url": "https://clinicaltrials.gov/study/NCT00230984"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 1,
+        "PHASE3": 2
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "3 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "134 PubMed articles on this drug-disease pair",
+        "Supported by 4 independent AI pillars",
+        "CAUTION: Drug had terminated/withdrawn trials (Phase 3) for this disease",
+        "Supporting paper with 48 citations",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.46)"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1511,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (UGT1A4 / UGT1A4*1a, UGT1A4*3a)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "UGT1A4",
+            "variant": "UGT1A4*1a, UGT1A4*3a",
+            "level": "3",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1447980857"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.561,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.526,
+          "docking": 0.641,
+          "pharos": 0.0,
+          "literature": 0.925
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Lung"
+        ],
+        "n_genes": 18,
+        "n_expressed": 14,
+        "mean_tpm_in_tissue": 42.39,
+        "max_tpm_in_tissue": 362.58,
+        "tissue_specificity": 0.317,
+        "context_modifier": 1.035
+      },
+      "disease_entity": "Disease::MESH:D029424",
+      "ensemble_prob": 0.9924,
+      "ensemble_features": {
+        "kg_score": 0.9994,
+        "degree_penalty": 0.7473,
+        "n_drug_targets": 24,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 1.9459
+      },
+      "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": -7.69,
+        "target_symbol": "NR3C1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Ouabain",
+      "drug_id": "DB01092",
+      "disease_name": "COPD",
+      "combined_score": 0.5212,
+      "pillars_hit": 4,
+      "transe_rank": 84,
+      "transe_score": -10.5865,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0.956,
+      "mol_emb_similar_to": "Clarithromycin",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.7620000243186951,
+      "proximity_distance": 0.949999988079071,
+      "admet_score": 0.9582,
+      "admet_flags": "clean",
+      "primekg_score": 0.2549,
+      "dti_score": 0.1505,
+      "dti_best_target": "KMT2D",
+      "kg_group_score": 0.1431,
+      "structural_group_score": 0.956,
+      "network_group_score": 0.6015999913215637,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.7249,
+      "admet_multiplier": 0.9707,
+      "efficacy_score": 0.5369,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 13,
+      "shared_targets": [
+        "CCL2",
+        "CFTR",
+        "EGR1",
+        "HSPA1A",
+        "HSPD1",
+        "ICAM1",
+        "IL6",
+        "NDUFA8",
+        "NFE2L2",
+        "NR3C1",
+        "PTGS2",
+        "SMAD3",
+        "TRPV4"
+      ],
+      "pubmed_total": 6,
+      "pubmed_treatment_total": 2,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "19472354",
+          "title": "Vastus lateralis Na(+)-K(+)-ATPase activity, protein, and isoform distribution in chronic obstructive pulmonary disease.",
+          "authors": "Green HJ, Burnett ME, D'Arsigny CL, et al.",
+          "journal": "Muscle & nerve",
+          "year": "2009",
+          "abstract_snippet": "In this study we investigate the hypothesis that protein abundance, isoform distribution, and maximal catalytic activity of sodium-potassium-adenosine triphosphatase (Na(+)-K(+)-ATPase) would be altered in muscle of patients with moderate to severe chronic obstructive pulmonary disease (COPD). Tissu...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19472354/",
+          "total_results": 6
+        },
+        {
+          "pmid": "10405566",
+          "title": "[Sodium efflux through lymphocytic cell membranes in patients with chronic respiratory insufficiency].",
+          "authors": "Salomon P, Mysiak A, Halawa B",
+          "journal": "Polskie Archiwum Medycyny Wewnetrznej",
+          "year": "1998",
+          "abstract_snippet": "Disturbances of Na(+)-K(+)-ATPase activity in patients with respiratory insufficiency may cause the hypertonia of non-striated muscles, which leads to increased peripheral resistance or bronchoconstriction, and also may inhibit the uptake of catecholamines and therefore may intensify their action on...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10405566/"
+        },
+        {
+          "pmid": "665537",
+          "title": "Improved right ventricular systolic time intravals after digitalis in patients with cor pulmonale and chronic obstructive pulmonary disease.",
+          "authors": "Smith DE, Bissett JK, Phillips JR, et al.",
+          "journal": "The American journal of cardiology",
+          "year": "1978",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/665537/"
+        },
+        {
+          "pmid": "19864578",
+          "title": "Selective expression of a sodium pump isozyme by cough receptors and evidence for its essential role in regulating cough.",
+          "authors": "Mazzone SB, Reynolds SM, Mori N, et al.",
+          "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
+          "year": "2009",
+          "abstract_snippet": "We have identified a distinct subtype of airway vagal afferent nerve that plays an essential role in regulating the cough reflex. These afferents are exquisitely sensitive to punctate mechanical stimuli, acid, and decreases in extracellular chloride concentrations, but are insensitive to capsaicin, ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19864578/"
+        },
+        {
+          "pmid": "720544",
+          "title": "Glycoprotein secretion in vitro by human airway: normal and chronic bronchitis.",
+          "authors": "Coles SJ, Reid L",
+          "journal": "Experimental and molecular pathology",
+          "year": "1978",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/720544/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Vastus lateralis NA+\u2010K+\u2010ATpase activity, protein, and isoform distribution in chronic obstructive pulmonary disease",
+          "year": 2009,
+          "citations": 9,
+          "url": "https://www.semanticscholar.org/paper/e4b957f21619bf5686e56848503ea4a42a1498e4",
+          "authors": "H. Green, M. Burnett, C. D\u2019Arsigny"
+        },
+        {
+          "title": "Current Progress of COPD Early Detection: Key Points and Novel Strategies",
+          "year": 2023,
+          "citations": 57,
+          "url": "https://www.semanticscholar.org/paper/e069665ef90c77d6f839519ae51f72c342d9545f",
+          "authors": "Ching-Hsiung Lin, Shih-Lung Cheng, Chiung-Zuei Chen"
+        },
+        {
+          "title": "Novel Anti-Inflammatory Approaches to COPD",
+          "year": 2023,
+          "citations": 52,
+          "url": "https://www.semanticscholar.org/paper/35fe776410fc8ad18ce1102fe6450660d4fe2b51",
+          "authors": "M. Cazzola, N. Hanania, C. Page"
+        },
+        {
+          "title": "NT-proBNP in Different Patient Groups of COPD: A Systematic Review and Meta-Analysis",
+          "year": 2023,
+          "citations": 33,
+          "url": "https://www.semanticscholar.org/paper/940b3b9f260f143f1f2c79b5bc022be59ad3d304",
+          "authors": "Xiaojie Su, Ting Lei, Haichuan Yu"
+        },
+        {
+          "title": "Inhaler Adherence in COPD: A Crucial Step Towards the Correct Treatment",
+          "year": 2023,
+          "citations": 33,
+          "url": "https://www.semanticscholar.org/paper/f31ef33dc5a9a2389775f14f7dde979c58f111c6",
+          "authors": "Miguel Tur\u00e9gano-Yedro, E. Trillo-Calvo, Fernando Navarro i Ros"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Current Progress of COPD Early Detection: Key Points and Novel Strategies",
+        "year": 2023,
+        "citations": 57,
+        "url": "https://www.semanticscholar.org/paper/e069665ef90c77d6f839519ae51f72c342d9545f",
+        "authors": "Ching-Hsiung Lin, Shih-Lung Cheng, Chiung-Zuei Chen"
+      },
+      "max_citations": 57,
+      "faers_signal": "none",
+      "faers_total_reports": 2,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Ouabain to COPD terms. Drug has 2 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "withaferin-a (1.445)",
+        "CV 1808 (1.442)",
+        "Ritodrine hydrochloride (1.412)",
+        "dabrafenib (1.408)",
+        "Cyclosporin A (1.402)"
+      ],
+      "signature_interpretation": "Ouabain was not found among the top 35 drugs that reverse the COPD gene signature. Top reversers: withaferin-a (1.445), CV 1808 (1.442), Ritodrine hydrochloride (1.412)",
+      "ai_hypothesis": "of its anti-inflammatory and antioxidant properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.7249,
+      "mr_genetic_targets": 15,
+      "mechanistic_hypothesis": "Ouabain \u2014[downregulates]\u2192 gene-79415 \u2014[is upregulated by]\u2192 COPD",
+      "kg_paths_text": "\u2022 Ouabain \u2014[downregulates]\u2192 gene-79415 \u2014[is upregulated by]\u2192 COPD\n\u2022 Ouabain \u2014[downregulates]\u2192 gene-55272 \u2014[is activated by]\u2192 gene-6201 \u2014[is downregulated by]\u2192 COPD\n\u2022 Ouabain \u2014[downregulates]\u2192 gene-55272 \u2014[is activated by]\u2192 gene-6201 \u2014[is downregulated by]\u2192 COPD",
+      "validation_experiments": [],
+      "novelty_score": 0.594,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "MEDIUM",
+      "confidence_reasons": [
+        "6 PubMed article(s) - limited literature",
+        "Supported by 4 independent AI pillars",
+        "Supporting paper with 57 citations",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.72, 15 genetic targets)"
+      ],
+      "dose_plausibility": {
+        "plausibility": "unknown",
+        "dose_range": "research",
+        "confidence": "low",
+        "rationale": "No ChEMBL clinical phase data available.",
+        "chembl_phase": null,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 545,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00773",
+            "drug_name": "Etoposide",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00227",
+            "drug_name": "Lovastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00213",
+            "drug_name": "Pantoprazole",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.256,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.521,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.367
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Lung"
+        ],
+        "n_genes": 13,
+        "n_expressed": 13,
+        "mean_tpm_in_tissue": 79.8,
+        "max_tpm_in_tissue": 217.44,
+        "tissue_specificity": 0.743,
+        "context_modifier": 1.11
+      },
+      "disease_entity": "Disease::MESH:D029424",
+      "ensemble_prob": 0.2274,
+      "ensemble_features": {
+        "kg_score": 0.9801,
+        "degree_penalty": 0.7895,
+        "n_drug_targets": 6,
+        "is_fda_approved": 0,
+        "n_disease_genes": 0,
+        "transe_rank_log": 5.3519
+      },
+      "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "GTE",
+          "SAPONINE"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "saponine_derivative",
+          "gte_7_aliphatic_OH"
+        ]
+      }
+    },
+    {
+      "drug_name": "Progesterone",
+      "drug_id": "DB00396",
+      "disease_name": "COPD",
+      "combined_score": 0.5198,
+      "pillars_hit": 4,
+      "transe_rank": 94,
+      "transe_score": -10.6193,
+      "pykeen_score": -12.2328,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0.0162,
+      "gene_sig_rank": 38,
+      "proximity_score": 0.75,
+      "proximity_distance": 1.0,
+      "admet_score": 0.7543,
+      "admet_flags": "clean",
+      "primekg_score": 0.268,
+      "dti_score": 1.0,
+      "dti_best_target": "ELANE",
+      "kg_group_score": 0.1843,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.5641999840736389,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.718,
+      "admet_multiplier": 0.9509,
+      "efficacy_score": 0.5466,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 27,
+      "shared_targets": [
+        "ADA",
+        "CCL2",
+        "CCL5",
+        "CDH11",
+        "CFTR",
+        "FBLN1",
+        "FN1",
+        "HSP90AA1",
+        "ICAM1",
+        "IFNG",
+        "IL10",
+        "IL18",
+        "IL1A",
+        "IL2",
+        "IL6",
+        "MMP2",
+        "MSTN",
+        "NR3C1",
+        "PAPPA",
+        "POMC"
+      ],
+      "pubmed_total": 41,
+      "pubmed_treatment_total": 34,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "39138434",
+          "title": "Progesterone (P4) ameliorates cigarette smoke-induced chronic obstructive pulmonary disease (COPD).",
+          "authors": "Xie B, Chen Q, Dai Z, et al.",
+          "journal": "Molecular medicine (Cambridge, Mass.)",
+          "year": "2024",
+          "abstract_snippet": "BACKGROUND: Chronic obstructive pulmonary disease (COPD) is a chronic inflammatory lung disease associated with high morbidity and mortality worldwide. Oxidative injury and mitochondrial dysfunction in the airway epithelium are major events in COPD progression. METHODS AND RESULTS: The therapeutic e...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39138434/",
+          "total_results": 41
+        },
+        {
+          "pmid": "15174888",
+          "title": "Hormone replacement therapy and obstructive airway diseases.",
+          "authors": "Barr RG, Camargo CA",
+          "journal": "Treatments in respiratory medicine",
+          "year": "2004",
+          "abstract_snippet": "Controversy exists as to the role of female reproductive hormones in asthma and COPD and, specifically, the effect of hormone replacement therapy (HRT) on these disorders. The differential incidence of asthma over the menstrual life cycle suggests an effect of female reproductive hormones on asthma;...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15174888/"
+        },
+        {
+          "pmid": "8941496",
+          "title": "Corticosteroid-induced bone loss. Prevention and management.",
+          "authors": "Picado C, Luengo M",
+          "journal": "Drug safety",
+          "year": "1996",
+          "abstract_snippet": "Osteoporosis is one of the most serious adverse effects experienced by patients receiving long term corticosteroid therapy. Bone loss occurs soon after corticosteroid therapy is initiated and results from a complex mechanism involving osteoblastic suppression and increased bone resorption. There are...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/8941496/"
+        },
+        {
+          "pmid": "33788197",
+          "title": "Sex-Steroid Signaling in Lung Diseases and Inflammation.",
+          "authors": "Ambhore NS, Kalidhindi RSR, Sathish V",
+          "journal": "Advances in experimental medicine and biology",
+          "year": "2021",
+          "abstract_snippet": "Sex/gender difference exists in the physiology of multiple organs. Recent epidemiological reports suggest the influence of sex-steroids in modulating a wide variety of disease conditions. Sex-based discrepancies have been reported in pulmonary physiology and various chronic inflammatory responses as...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33788197/"
+        },
+        {
+          "pmid": "28279894",
+          "title": "Inhalation of progesterone inhibits chronic airway inflammation of mice exposed to ozone.",
+          "authors": "Fei X, Bao W, Zhang P, et al.",
+          "journal": "Molecular immunology",
+          "year": "2017",
+          "abstract_snippet": "Chronic ozone exposure leads to a model of mice with lung inflammation, emphysema and oxidative stress. Progesterone plays an important role in attenuating the neuroinflammation. We assume that progesterone will reduce the chronic airway inflammation exposed to ozone and evaluate whether combination...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28279894/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Progesterone (P4) ameliorates cigarette smoke-induced chronic obstructive pulmonary disease (COPD)",
+          "year": 2024,
+          "citations": 13,
+          "url": "https://www.semanticscholar.org/paper/26155cb005ba98680f5526389729ba8fffd3a6f7",
+          "authors": "Bin Xie, Qiong Chen, Ziyu Dai"
+        },
+        {
+          "title": "Abstract 5835: Good quality sixty-eight percent 5-year survival in patients with treatment refractory stage IV lung cancer following treatment with a single agent progesterone receptor antagonist",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/868e09432afc03847fb7177f7a68421e8d2c007a",
+          "authors": "Jerome H. Check, D. Check, C. Wilson"
+        },
+        {
+          "title": "PROBABILITY OF CHANGES IN THE RESPIRATORY FUNCTION INDICATORS IN THE DEVELOPMENT OF COPD, DEPENDING ON THE NUMBER OF CIGARETTES SMOKED AND ASSOCIATED WITH PREGNANCY-RELATED HORMONE FLUCTUATIONS",
+          "year": 2023,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/56ebd0062b3a5de260b4ca33f4ab9af245d0f2a7",
+          "authors": "A. Dzyubailo, V. Lotkov"
+        },
+        {
+          "title": "NICOTINE ADDICTION AND HORMONAL IMBALANCE IN PREGNANT SMOKERS WITH VARYING DEGREES OF COPD SEVERITY",
+          "year": 2023,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/96aeb21c1e0db94c38a3f7fdeab23c314fbda3f3",
+          "authors": "A. Dzyubailo, V. Lotkov"
+        },
+        {
+          "title": "Clinical Study on Progesterone Combined with Low Molecular Heparin Sodium Hypercoagulable State in Treatment of COPD with Type II Respiratory Failure",
+          "year": 2013,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/a229e9d325aaf9850946e324237ed13ea39ed361",
+          "authors": "P. Yi-xin"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Progesterone (P4) ameliorates cigarette smoke-induced chronic obstructive pulmonary disease (COPD)",
+        "year": 2024,
+        "citations": 13,
+        "url": "https://www.semanticscholar.org/paper/26155cb005ba98680f5526389729ba8fffd3a6f7",
+        "authors": "Bin Xie, Qiong Chen, Ziyu Dai"
+      },
+      "max_citations": 13,
+      "faers_signal": "none",
+      "faers_total_reports": 19292,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Progesterone to COPD terms. Drug has 19292 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "withaferin-a (1.445)",
+        "CV 1808 (1.442)",
+        "Ritodrine hydrochloride (1.412)",
+        "dabrafenib (1.408)",
+        "Cyclosporin A (1.402)"
+      ],
+      "signature_interpretation": "Progesterone was not found among the top 35 drugs that reverse the COPD gene signature. Top reversers: withaferin-a (1.445), CV 1808 (1.442), Ritodrine hydrochloride (1.412)",
+      "ai_hypothesis": "of its anti-inflammatory and anti-oxidant properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.718,
+      "mr_genetic_targets": 11,
+      "mechanistic_hypothesis": "Progesterone \u2014[is a therapeutic for]\u2192 COPD",
+      "kg_paths_text": "\u2022 Progesterone \u2014[is a therapeutic for]\u2192 COPD\n\u2022 Progesterone \u2014[downregulates]\u2192 gene-4609 \u2014[is a target of]\u2192 DB00945 \u2014[is a therapeutic for]\u2192 COPD\n\u2022 Progesterone \u2014[downregulates]\u2192 gene-4609 \u2014[is a target of]\u2192 DB00945 \u2014[is a therapeutic for]\u2192 COPD",
+      "validation_experiments": [],
+      "novelty_score": 0.53,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": true,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "MEDIUM",
+      "confidence_reasons": [
+        "41 PubMed articles found",
+        "Supported by 4 independent AI pillars",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.72, 11 genetic targets)"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1310,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (CYP2C19 / CYP2C19*1, CYP2C19*2, CYP2C19*17)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "CYP2C19",
+            "variant": "CYP2C19*1, CYP2C19*2, CYP2C19*17",
+            "level": "3",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451132040"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.549,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.52,
+          "docking": 0.753,
+          "pharos": 0.0,
+          "literature": 0.705
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Lung"
+        ],
+        "n_genes": 20,
+        "n_expressed": 17,
+        "mean_tpm_in_tissue": 127.13,
+        "max_tpm_in_tissue": 919.51,
+        "tissue_specificity": 0.596,
+        "context_modifier": 1.102
+      },
+      "disease_entity": "Disease::MESH:D029424",
+      "ensemble_prob": 0.0925,
+      "ensemble_features": {
+        "kg_score": 0.9887,
+        "degree_penalty": 0.7522,
+        "n_drug_targets": 28,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.7875
+      },
+      "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": -9.04,
+        "target_symbol": "NR3C1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Carbenoxolone",
+      "drug_id": "DB02329",
+      "disease_name": "COPD",
+      "combined_score": 0.5159000158309937,
+      "pillars_hit": 4,
+      "transe_rank": 836,
+      "transe_score": -11.4851,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0.59,
+      "txgnn_rank": 41,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0.9374,
+      "mol_emb_similar_to": "Budesonide",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.75,
+      "proximity_distance": 1.0,
+      "admet_score": 0.6523,
+      "admet_flags": "clean",
+      "primekg_score": 0.2651,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": 0.0234,
+      "structural_group_score": 0.9374,
+      "network_group_score": 0.75,
+      "txgnn_group_score": 0.59,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9305,
+      "efficacy_score": 0.5544000267982483,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "HSPA4"
+      ],
+      "pubmed_total": 2,
+      "pubmed_treatment_total": 1,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "24885163",
+          "title": "Real-time imaging of ATP release induced by mechanical stretch in human airway smooth muscle cells.",
+          "authors": "Takahara N, Ito S, Furuya K, et al.",
+          "journal": "American journal of respiratory cell and molecular biology",
+          "year": "2014",
+          "abstract_snippet": "Airway smooth muscle (ASM) cells within the airway walls are continually exposed to mechanical stimuli, and exhibit various functions in response to these mechanical stresses. ATP acts as an extracellular mediator in the airway. Moreover, extracellular ATP is considered to play an important role in ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24885163/",
+          "total_results": 2
+        },
+        {
+          "pmid": "27677339",
+          "title": "Extracellular ATP is involved in dsRNA-induced MUC5AC production via P2Y2R in human airway epithelium.",
+          "authors": "Shishikura Y, Koarai A, Aizawa H, et al.",
+          "journal": "Respiratory research",
+          "year": "2016",
+          "abstract_snippet": "BACKGROUND: In response to tissue damage or inflammation, adenosine-5'-triphosphate (ATP) is released into the extracellular compartment and has been demonstrated to augment inflammation via purinergic P2 receptors (P2Rs). Recently, ATP has been shown to be increased in the airways of COPD patients....",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/27677339/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Extracellular ATP is involved in dsRNA-induced MUC5AC production via P2Y2R in human airway epithelium",
+          "year": 2016,
+          "citations": 27,
+          "url": "https://www.semanticscholar.org/paper/853686e20490668827eb1b62f5092e24e3cda018",
+          "authors": "Yutaka Shishikura, A. Koarai, Hiroyuki Aizawa"
+        },
+        {
+          "title": "Understanding the Gaps in the Reporting of COPD Exacerbations by Patients: A Review",
+          "year": 2024,
+          "citations": 14,
+          "url": "https://www.semanticscholar.org/paper/b42a071e4ea576948827ce5c1b8a57c1bd5f34b5",
+          "authors": "Paul Jones, Ashraf Alzaabi, Alejandro Casas Herrera"
+        },
+        {
+          "title": "Current Progress of COPD Early Detection: Key Points and Novel Strategies",
+          "year": 2023,
+          "citations": 57,
+          "url": "https://www.semanticscholar.org/paper/e069665ef90c77d6f839519ae51f72c342d9545f",
+          "authors": "Ching-Hsiung Lin, Shih-Lung Cheng, Chiung-Zuei Chen"
+        },
+        {
+          "title": "Novel Anti-Inflammatory Approaches to COPD",
+          "year": 2023,
+          "citations": 52,
+          "url": "https://www.semanticscholar.org/paper/35fe776410fc8ad18ce1102fe6450660d4fe2b51",
+          "authors": "M. Cazzola, N. Hanania, C. Page"
+        },
+        {
+          "title": "NT-proBNP in Different Patient Groups of COPD: A Systematic Review and Meta-Analysis",
+          "year": 2023,
+          "citations": 33,
+          "url": "https://www.semanticscholar.org/paper/940b3b9f260f143f1f2c79b5bc022be59ad3d304",
+          "authors": "Xiaojie Su, Ting Lei, Haichuan Yu"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Current Progress of COPD Early Detection: Key Points and Novel Strategies",
+        "year": 2023,
+        "citations": 57,
+        "url": "https://www.semanticscholar.org/paper/e069665ef90c77d6f839519ae51f72c342d9545f",
+        "authors": "Ching-Hsiung Lin, Shih-Lung Cheng, Chiung-Zuei Chen"
+      },
+      "max_citations": 57,
+      "faers_signal": "none",
+      "faers_total_reports": 12,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Carbenoxolone to COPD terms. Drug has 12 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "withaferin-a (1.445)",
+        "CV 1808 (1.442)",
+        "Ritodrine hydrochloride (1.412)",
+        "dabrafenib (1.408)",
+        "Cyclosporin A (1.402)"
+      ],
+      "signature_interpretation": "Carbenoxolone was not found among the top 35 drugs that reverse the COPD gene signature. Top reversers: withaferin-a (1.445), CV 1808 (1.442), Ritodrine hydrochloride (1.412)",
+      "ai_hypothesis": "of its anti-inflammatory properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Carbenoxolone \u2014[is a therapeutic for]\u2192 MESH:D014456 \u2014[is treated by]\u2192 DB01222 \u2014[treats]\u2192 COPD",
+      "kg_paths_text": "\u2022 Carbenoxolone \u2014[is a therapeutic for]\u2192 MESH:D014456 \u2014[is treated by]\u2192 DB01222 \u2014[treats]\u2192 COPD\n\u2022 Carbenoxolone \u2014[is a therapeutic for]\u2192 MESH:D014456 \u2014[is treated by]\u2192 DB01222 \u2014[treats]\u2192 COPD\n\u2022 Carbenoxolone \u2014[is a therapeutic for]\u2192 MESH:D014456 \u2014[is treated by]\u2192 DB00635 \u2014[treats]\u2192 COPD",
+      "validation_experiments": [],
+      "novelty_score": 0.49000000953674316,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "LOW",
+      "confidence_reasons": [
+        "2 PubMed article(s) - limited literature",
+        "Supported by 4 independent AI pillars",
+        "Supporting paper with 57 citations",
+        "AI-generated hypothesis available"
+      ],
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00968",
+            "drug_name": "Methyldopa",
+            "severity": "moderate"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.22200000286102295,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.515999972820282,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.207
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Lung"
+        ],
+        "n_genes": 1,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 39.18,
+        "max_tpm_in_tissue": 39.18,
+        "tissue_specificity": 0.49,
+        "context_modifier": 1.053
+      },
+      "disease_entity": "Disease::MESH:D029424",
+      "ensemble_prob": 0.0,
+      "ensemble_features": {
+        "kg_score": 0.7294,
+        "degree_penalty": 1.0,
+        "n_drug_targets": 5,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 7.9572
+      },
+      "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
     {
       "drug_name": "Methylprednisolone",
       "drug_id": "DB00959",
       "disease_name": "COPD",
-      "combined_score": 1.1937,
+      "combined_score": 0.5115,
+      "pillars_hit": 4,
       "transe_rank": 31,
-      "pillars_hit": 8,
+      "transe_score": -10.2167,
+      "pykeen_score": -11.8664,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0.7049,
       "similar_to": "Prednisolone",
+      "mol_emb_similarity": 0.9641,
+      "mol_emb_similar_to": "Dexamethasone",
+      "gene_sig_score": 0.02,
+      "gene_sig_rank": 33,
+      "proximity_score": 0.8119999766349792,
+      "proximity_distance": 0.75,
+      "admet_score": 0.7065,
+      "admet_flags": "clean",
+      "primekg_score": 0.2625,
+      "dti_score": 0.2261,
+      "dti_best_target": "ELANE",
+      "kg_group_score": 0.2949,
+      "structural_group_score": 0.9641,
+      "network_group_score": 0.6200000047683716,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.4806,
+      "admet_multiplier": 0.9413,
+      "efficacy_score": 0.5434,
+      "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 4,
+      "shared_targets": [
+        "CCL2",
+        "NR3C1",
+        "POMC",
+        "TNF"
+      ],
       "pubmed_total": 213,
       "pubmed_treatment_total": 200,
       "pubmed_repurposing_total": 0,
@@ -152,10 +2148,10 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0.4806,
       "mr_genetic_targets": 4,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Methylprednisolone \u2014[palliates]\u2192 DOID:2531 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 COPD",
+      "kg_paths_text": "\u2022 Methylprednisolone \u2014[palliates]\u2192 DOID:2531 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 COPD\n\u2022 Methylprednisolone \u2014[palliates]\u2192 DOID:2531 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 COPD\n\u2022 Methylprednisolone \u2014[palliates]\u2192 DOID:2531 \u2014[is treated by]\u2192 DB00635 \u2014[treats]\u2192 COPD",
       "validation_experiments": [],
-      "novelty_score": 0.4,
+      "novelty_score": 0.205,
       "novelty_level": "ESTABLISHED",
       "is_known_treatment": false,
       "clinical_trials_total": 10,
@@ -212,234 +2208,201 @@
         "10 clinical trial(s) found on ClinicalTrials.gov",
         "Phase 3 trial exists",
         "213 PubMed articles on this drug-disease pair",
-        "Supported by 8 independent AI pillars",
+        "Supported by 4 independent AI pillars",
         "High molecular similarity (0.70) to Prednisolone",
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.48)"
-      ]
-    },
-    {
-      "drug_name": "Betamethasone",
-      "drug_id": "DB00443",
-      "disease_name": "COPD",
-      "combined_score": 1.1794,
-      "transe_rank": 145,
-      "pillars_hit": 7,
-      "mol_similarity": 1.0,
-      "similar_to": "Dexamethasone",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 34,
-      "pubmed_treatment_total": 31,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "344009",
-          "title": "Corticosteroids in chronic bronchitis and pulmonary emphysema.",
-          "authors": "Sahn SA",
-          "journal": "Chest",
-          "year": "1978",
-          "abstract_snippet": "Chronic bronchitis and emphysema (chronic obstructive pulmonary disease [COPD]) represent a major health problem in this country. Corticosteroids have provided an important advance in the management of bronchial asthma, but the role of these drugs in the therapy for COPD has not been defined clearly...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/344009/",
-          "total_results": 34
-        },
-        {
-          "pmid": "19374854",
-          "title": "Effects of betamethasone on inflammation and emphysema induced by cadmium nebulisation in rats.",
-          "authors": "Fi\u00e9vez L, Kirschvink N, Zhang WH, et al.",
-          "journal": "European journal of pharmacology",
-          "year": "2009",
-          "abstract_snippet": "Cadmium (Cd) induces centrilobular emphysema and is suspected to contribute to tobacco related lung diseases as chronic obstructive pulmonary disease (COPD). This study aimed to check whether the inflammatory process observed in rats exposed to nebulised Cd is resistant to betamethasone as observed ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/19374854/"
-        },
-        {
-          "pmid": "29946071",
-          "title": "Betamethasone prevents human rhinovirus- and cigarette smoke- induced loss of respiratory epithelial barrier function.",
-          "authors": "Waltl EE, Selb R, Eckl-Dorna J, et al.",
-          "journal": "Scientific reports",
-          "year": "2018",
-          "abstract_snippet": "The respiratory epithelium is a barrier against pathogens and allergens and a target for therapy in respiratory allergy, asthma and chronic obstructive pulmonary disease (COPD). We investigated barrier-damaging factors and protective factors by real-time measurement of respiratory cell barrier integ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29946071/"
-        },
-        {
-          "pmid": "38955386",
-          "title": "Pseudomonas and aspergillus symbiotic coinfections in a case of chronic obstructive pulmonary disease and diabetes mellitus.",
-          "authors": "Das D, Panda PK",
-          "journal": "BMJ case reports",
-          "year": "2024",
-          "abstract_snippet": "Coinfection of Pseudomonas and Aspergillus has not been previously reported in patients with chronic obstructive pulmonary disease (COPD). A middle-aged, thinly built woman (Body Mass Index: 18.1\u2009kg/m\u00b2) who smokes bidi (a type of tobacco) and has a history of exposure to open log fires for cooking, ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38955386/"
-        },
-        {
-          "pmid": "10988135",
-          "title": "Pulmonary interstitial emphysema 24 hours after antenatal betamethasone treatment in preterm sheep.",
-          "authors": "Willet KE, Jobe AH, Ikegami M, et al.",
-          "journal": "American journal of respiratory and critical care medicine",
-          "year": "2000",
-          "abstract_snippet": "During a series of studies investigating the maturational response to antenatal glucocorticoids, we observed that 70% of lambs delivered at 128 d gestation (term = 150 d), 24 h after a single injection of 0.5 mg/kg betamethasone or betamethasone + L-thyroxine (15 microgram/kg), developed pulmonary i...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/10988135/"
-        }
       ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Betamethasone prevents human rhinovirus- and cigarette smoke- induced loss of respiratory epithelial barrier function",
-          "year": 2018,
-          "citations": 24,
-          "url": "https://www.semanticscholar.org/paper/276436ca08e1d06732a9814d93e341a2e32cf80b",
-          "authors": "Eva E. Waltl, R. Selb, J. Eckl-Dorna"
-        },
-        {
-          "title": "Effects of betamethasone on inflammation and emphysema induced by cadmium nebulisation in rats.",
-          "year": 2009,
-          "citations": 18,
-          "url": "https://www.semanticscholar.org/paper/bd7da7a561fe3550b843228b55de8857426afb1b",
-          "authors": "L. Fi\u00e9vez, N. Kirschvink, Wenhui Zhang"
-        },
-        {
-          "title": "Pseudomonas and aspergillus symbiotic coinfections in a case of chronic obstructive pulmonary disease and diabetes mellitus",
-          "year": 2024,
-          "citations": 2,
-          "url": "https://www.semanticscholar.org/paper/c9bc70196ad00f8f5513edefc86e0a167e063a1a",
-          "authors": "Drupad Das, P. Panda"
-        },
-        {
-          "title": "Rare Presentation of Disseminated Tuberculosis in the Present Era of Modern Tuberculosis Management",
-          "year": 2022,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/e1c8217939432330aa3e5bd33a9bb9a588271e42",
-          "authors": "A. Anilkumar, S. Manikandan, V. Sreenivasan"
-        },
-        {
-          "title": "Effect observation of Pulmicort combined with inhalation of ambroxol treatment of chronic obstructive pulmonary disease",
-          "year": 2011,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/8ae4d4b47e1a54044cb814e9f0282d7f11faa9d7",
-          "authors": "Wang Li-song"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Betamethasone prevents human rhinovirus- and cigarette smoke- induced loss of respiratory epithelial barrier function",
-        "year": 2018,
-        "citations": 24,
-        "url": "https://www.semanticscholar.org/paper/276436ca08e1d06732a9814d93e341a2e32cf80b",
-        "authors": "Eva E. Waltl, R. Selb, J. Eckl-Dorna"
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
       },
-      "max_citations": 24,
-      "faers_signal": "none",
-      "faers_total_reports": 32595,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Betamethasone to COPD terms. Drug has 32595 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "withaferin-a (1.445)",
-        "CV 1808 (1.442)",
-        "Ritodrine hydrochloride (1.412)",
-        "dabrafenib (1.408)",
-        "Cyclosporin A (1.402)"
-      ],
-      "signature_interpretation": "Betamethasone was not found among the top 35 drugs that reverse the COPD gene signature. Top reversers: withaferin-a (1.445), CV 1808 (1.442), Ritodrine hydrochloride (1.412)",
-      "ai_hypothesis": "of its anti-inflammatory and anti-fibrotic properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
+      "ddi_warnings": {
+        "n_interactions": 1299,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (ABCB1 / rs1045642)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "ABCB1",
+            "variant": "rs1045642",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1444704881"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
         },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 0,
-          "negative_signals": 0,
-          "mechanism_signals": 0,
-          "extracted_entities": [
-            {
-              "entity": "cd",
-              "entity_group": "Medication",
-              "score": 0.906000018119812
-            },
-            {
-              "entity": "cent",
-              "entity_group": "Biological_structure",
-              "score": 0.9599999785423279
-            },
-            {
-              "entity": "emphy",
-              "entity_group": "Sign_symptom",
-              "score": 0.824999988079071
-            },
-            {
-              "entity": "tobacco related lung diseases",
-              "entity_group": "Disease_disorder",
-              "score": 0.8769999742507935
-            },
-            {
-              "entity": "##structive pulmonary disease",
-              "entity_group": "Disease_disorder",
-              "score": 0.9769999980926514
-            },
-            {
-              "entity": "cop",
-              "entity_group": "Disease_disorder",
-              "score": 0.996999979019165
-            },
-            {
-              "entity": "inflammatory",
-              "entity_group": "Sign_symptom",
-              "score": 0.9419999718666077
-            },
-            {
-              "entity": "betamethasone",
-              "entity_group": "Medication",
-              "score": 0.9900000095367432
-            }
-          ]
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
+        "triangulation_score": 0.655,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.511,
+          "docking": 0.921,
+          "pharos": 0.0,
+          "literature": 1.0
         }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.6451,
-      "mr_genetic_targets": 14,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 1.0,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "MEDIUM",
-      "confidence_reasons": [
-        "34 PubMed articles found",
-        "Supported by 7 independent AI pillars",
-        "High molecular similarity (1.00) to Dexamethasone",
-        "Supporting paper with 24 citations",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.65)"
-      ]
+      },
+      "tissue_context": {
+        "tissues": [
+          "Lung"
+        ],
+        "n_genes": 4,
+        "n_expressed": 4,
+        "mean_tpm_in_tissue": 31.2,
+        "max_tpm_in_tissue": 94.33,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.985
+      },
+      "disease_entity": "Disease::MESH:D029424",
+      "ensemble_prob": 0.9811,
+      "ensemble_features": {
+        "kg_score": 0.9993,
+        "degree_penalty": 0.7636,
+        "n_drug_targets": 8,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.0794
+      },
+      "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": -11.05,
+        "target_symbol": "NR3C1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
       "drug_name": "Estradiol",
       "drug_id": "DB00783",
       "disease_name": "COPD",
-      "combined_score": 1.1633,
+      "combined_score": 0.5075,
+      "pillars_hit": 4,
       "transe_rank": 110,
-      "pillars_hit": 7,
+      "transe_score": -10.6586,
+      "pykeen_score": -11.783,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
+      "mol_emb_similarity": 0.966,
+      "mol_emb_similar_to": "Testosterone",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.7250000238418579,
+      "proximity_distance": 1.100000023841858,
+      "admet_score": 0.6574,
+      "admet_flags": "clean",
+      "primekg_score": 0.2671,
+      "dti_score": 0.7061,
+      "dti_best_target": "ELANE",
+      "kg_group_score": 0.2432,
+      "structural_group_score": 0.966,
+      "network_group_score": 0.5321999788284302,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.6912,
+      "admet_multiplier": 0.9315,
+      "efficacy_score": 0.5448,
+      "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 24,
+      "shared_targets": [
+        "ACE",
+        "CA1",
+        "CAT",
+        "CCL2",
+        "CCL5",
+        "CHRNA4",
+        "CRP",
+        "CTNNB1",
+        "EPAS1",
+        "HSP90AA1",
+        "IFNG",
+        "IL10",
+        "IL1A",
+        "IL2",
+        "IL6",
+        "MMP1",
+        "MMP13",
+        "MMP2",
+        "NOS3",
+        "NR3C1"
+      ],
       "pubmed_total": 34,
       "pubmed_treatment_total": 15,
       "pubmed_repurposing_total": 1,
@@ -595,10 +2558,10 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0.6912,
       "mr_genetic_targets": 16,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Estradiol \u2014[downregulates]\u2192 gene-23089 \u2014[is downregulated by]\u2192 COPD",
+      "kg_paths_text": "\u2022 Estradiol \u2014[downregulates]\u2192 gene-23089 \u2014[is downregulated by]\u2192 COPD\n\u2022 Estradiol \u2014[downregulates]\u2192 gene-1500 \u2014[inhibits]\u2192 gene-1950 \u2014[is upregulated by]\u2192 COPD\n\u2022 Estradiol \u2014[downregulates]\u2192 gene-1500 \u2014[inhibits]\u2192 gene-1950 \u2014[is upregulated by]\u2192 COPD",
       "validation_experiments": [],
-      "novelty_score": 1.0,
+      "novelty_score": 0.518,
       "novelty_level": "EMERGING",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -608,513 +2571,325 @@
       "confidence_reasons": [
         "34 PubMed articles found",
         "1 article(s) specifically mention repurposing/repositioning",
-        "Supported by 7 independent AI pillars",
+        "Supported by 4 independent AI pillars",
         "Supporting paper with 31 citations",
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.69)"
-      ]
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 2120,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 ( / rs11849538)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "",
+            "variant": "rs11849538",
+            "level": "3",
+            "phenotype_category": "Other",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1444704861"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.466,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.507,
+          "docking": 0.514,
+          "pharos": 0.0,
+          "literature": 0.67
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Lung"
+        ],
+        "n_genes": 20,
+        "n_expressed": 15,
+        "mean_tpm_in_tissue": 118.23,
+        "max_tpm_in_tissue": 1031.42,
+        "tissue_specificity": 0.871,
+        "context_modifier": 1.135
+      },
+      "disease_entity": "Disease::MESH:D029424",
+      "ensemble_prob": 0.4234,
+      "ensemble_features": {
+        "kg_score": 0.9968,
+        "degree_penalty": 0.7341,
+        "n_drug_targets": 36,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 3.5553
+      },
+      "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": -6.17,
+        "target_symbol": "NR3C1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
-      "drug_name": "Triamcinolone",
-      "drug_id": "DB00620",
+      "drug_name": "Acetylcysteine",
+      "drug_id": "DB06151",
       "disease_name": "COPD",
-      "combined_score": 1.1608,
-      "transe_rank": 141,
-      "pillars_hit": 7,
-      "mol_similarity": 0.8596,
-      "similar_to": "Dexamethasone",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 49,
-      "pubmed_treatment_total": 47,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "26559138",
-          "title": "Mortality and drug therapy in patients with chronic obstructive pulmonary disease: a network meta-analysis.",
-          "authors": "Scott DA, Woods B, Thompson JC, et al.",
-          "journal": "BMC pulmonary medicine",
-          "year": "2015",
-          "abstract_snippet": "BACKGROUND: Increasing evidence suggests pharmacological treatments may impact on overall survival in Chronic Obstructive Pulmonary Disease (COPD) patients. Individual clinical trials are rarely powered to detect mortality differences between treatments and may not include all treatment options rele...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/26559138/",
-          "total_results": 49
-        },
-        {
-          "pmid": "31537701",
-          "title": "The pharmacogenomics of inhaled corticosteroids and lung function decline in COPD.",
-          "authors": "Obeidat M, Faiz A, Li X, et al.",
-          "journal": "The European respiratory journal",
-          "year": "2019",
-          "abstract_snippet": "Inhaled corticosteroids (ICS) are widely prescribed for patients with chronic obstructive pulmonary disease (COPD), yet have variable outcomes and adverse reactions, which may be genetically determined. The primary aim of the study was to identify the genetic determinants for forced expiratory volum...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/31537701/"
-        },
-        {
-          "pmid": "31190791",
-          "title": "Long-term use of inhaled glucocorticoids in patients with stable chronic obstructive pulmonary disease and risk of bone fractures: a narrative review of the literature.",
-          "authors": "Caramori G, Ruggeri P, Arpinelli F, et al.",
-          "journal": "International journal of chronic obstructive pulmonary disease",
-          "year": "2019",
-          "abstract_snippet": "Patients with chronic obstructive pulmonary disease (COPD) demonstrate a greater osteoporosis prevalence than the general population. This osteoporosis risk may be enhanced by treatment with inhaled corticosteroids (ICSs), which are recommended for COPD management when combined with long-acting bron...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/31190791/"
-        },
-        {
-          "pmid": "13881245",
-          "title": "Triamcinolone in the therapy of chronic bronchitis and pulmonary emphysema.",
-          "authors": "CORAZZA LJ, MORROW CS, CHESNEY TA",
-          "journal": "The American journal of the medical sciences",
-          "year": "1961",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/13881245/"
-        },
-        {
-          "pmid": "26503392",
-          "title": "Comparative safety and effectiveness of long-acting inhaled agents for treating chronic obstructive pulmonary disease: a systematic review and network meta-analysis.",
-          "authors": "Tricco AC, Strifler L, Veroniki AA, et al.",
-          "journal": "BMJ open",
-          "year": "2015",
-          "abstract_snippet": "OBJECTIVE: To compare the safety and effectiveness of long-acting \u03b2-antagonists (LABA), long-acting antimuscarinic agents (LAMA) and inhaled corticosteroids (ICS) for managing chronic obstructive pulmonary disease (COPD). SETTING: Systematic review and network meta-analysis (NMA). PARTICIPANTS: 208 ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/26503392/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Inhaled triamcinolone did not slow the decline in pulmonary function in patients with COPD",
-          "year": 2001,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/f395d96c5a5f76fc0b75510d35684b227288ca4c",
-          "authors": "P. Jones"
-        },
-        {
-          "title": "Triamcinolone doesn't halt progression of COPD",
-          "year": 2001,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/fbdf55580925d927757ddb7d646553a0194db082",
-          "authors": ""
-        },
-        {
-          "title": "The pharmacogenomics of inhaled corticosteroids and lung function decline in COPD",
-          "year": 2019,
-          "citations": 21,
-          "url": "https://www.semanticscholar.org/paper/071ca8c9f6ee4eddae2c965af26a3ea526ceafa3",
-          "authors": "Wiepke van Haren, Neeltje E. M. Sommer, Iris E. Bozzali"
-        },
-        {
-          "title": "[Risk of diabetes mellitus during regular long-term inhaled glucocorticoid treatment in COPD patients: narrative review of the literature.]",
-          "year": 2021,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/130a15d2c178c5a949adce5f603f733057282eeb",
-          "authors": "F. Arpinelli, F. Nucera, P. Ruggeri"
-        },
-        {
-          "title": "[Risk of pneumonia during long term regular treatment of stable COPD with inhaled glucocorticoids: a systematic review.]",
-          "year": 2017,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/9648e8dbeffde3c2b8ab259244d90ff1d781388e",
-          "authors": "F. Arpinelli, G. Caramori, M. S. Magnoni"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "The pharmacogenomics of inhaled corticosteroids and lung function decline in COPD",
-        "year": 2019,
-        "citations": 21,
-        "url": "https://www.semanticscholar.org/paper/071ca8c9f6ee4eddae2c965af26a3ea526ceafa3",
-        "authors": "Wiepke van Haren, Neeltje E. M. Sommer, Iris E. Bozzali"
-      },
-      "max_citations": 21,
-      "faers_signal": "none",
-      "faers_total_reports": 48905,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Triamcinolone to COPD terms. Drug has 48905 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "withaferin-a (1.445)",
-        "CV 1808 (1.442)",
-        "Ritodrine hydrochloride (1.412)",
-        "dabrafenib (1.408)",
-        "Cyclosporin A (1.402)"
-      ],
-      "signature_interpretation": "Triamcinolone was not found among the top 35 drugs that reverse the COPD gene signature. Top reversers: withaferin-a (1.445), CV 1808 (1.442), Ritodrine hydrochloride (1.412)",
-      "ai_hypothesis": "of its anti-inflammatory and anti-fibrotic properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.6285,
-      "mr_genetic_targets": 7,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.84,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": false,
-      "clinical_trials_total": 3,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT02509299",
-          "title": "Effect of Physiotherapy in Hospitalized COPD Patients",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "49",
-          "url": "https://clinicaltrials.gov/study/NCT02509299"
-        },
-        {
-          "nct_id": "NCT00000569",
-          "title": "Lung Health Study II",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "1116",
-          "url": "https://clinicaltrials.gov/study/NCT00000569"
-        },
-        {
-          "nct_id": "NCT02515318",
-          "title": "Physiotherapy in Acute Exacerbation of Chronic Obstructive Pulmonary Disease",
-          "status": "UNKNOWN",
-          "phase": "NA",
-          "enrollment": "60",
-          "url": "https://clinicaltrials.gov/study/NCT02515318"
-        }
-      ],
-      "trial_phases": {
-        "NA": 2,
-        "PHASE3": 1
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "3 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
-        "49 PubMed articles found",
-        "Supported by 7 independent AI pillars",
-        "High molecular similarity (0.86) to Dexamethasone",
-        "Supporting paper with 21 citations",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.63)"
-      ]
-    },
-    {
-      "drug_name": "Creatinine",
-      "drug_id": "DB11846",
-      "disease_name": "COPD",
-      "combined_score": 1.1452,
-      "transe_rank": 7,
-      "pillars_hit": 5,
+      "combined_score": 0.5073,
+      "pillars_hit": 4,
+      "transe_rank": 17,
+      "transe_score": -10.1158,
+      "pykeen_score": -12.3722,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.7620000243186951,
+      "proximity_distance": 0.949999988079071,
+      "admet_score": 0.7052,
+      "admet_flags": "clean",
+      "primekg_score": 0.2627,
+      "dti_score": 0.6986,
+      "dti_best_target": "ACSS1",
+      "kg_group_score": 0.3566,
+      "structural_group_score": 0.6986,
+      "network_group_score": 0.6640999913215637,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.6094,
+      "admet_multiplier": 0.941,
+      "efficacy_score": 0.5391,
+      "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 773,
-      "pubmed_treatment_total": 492,
-      "pubmed_repurposing_total": 0,
+      "shared_target_count": 14,
+      "shared_targets": [
+        "CCL2",
+        "CRP",
+        "GRIN1",
+        "GRIN2A",
+        "GRIN2B",
+        "GRIN2D",
+        "GRIN3A",
+        "HSPA1A",
+        "ICAM1",
+        "IL1A",
+        "IL6",
+        "NFE2L2",
+        "PTGS2",
+        "TNF"
+      ],
+      "pubmed_total": 405,
+      "pubmed_treatment_total": 339,
+      "pubmed_repurposing_total": 3,
       "key_papers": [
         {
-          "pmid": "38061785",
-          "title": "Associations of combined phenotypic ageing and genetic risk with incidence of chronic respiratory diseases in the UK Biobank: a prospective cohort study.",
-          "authors": "Wang T, Duan W, Jia X, et al.",
-          "journal": "The European respiratory journal",
+          "pmid": "38555190",
+          "title": "N-acetylcysteine Treatment in Chronic Obstructive Pulmonary Disease (COPD) and Chronic Bronchitis/Pre-COPD: Distinct Meta-analyses.",
+          "authors": "Papi A, Alfano F, Bigoni T, et al.",
+          "journal": "Archivos de bronconeumologia",
           "year": "2024",
-          "abstract_snippet": "BACKGROUND: Accelerated biological ageing has been associated with an increased risk of several chronic respiratory diseases. However, the associations between phenotypic age, a new biological age indicator based on clinical chemistry biomarkers, and common chronic respiratory diseases have not been...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38061785/",
-          "total_results": 773
+          "abstract_snippet": "INTRODUCTION: N-acetylcysteine (NAC) is a mucolytic agent with antioxidant properties. Oxidative stress is a key pathogenic mechanism in chronic respiratory conditions such as COPD and chronic bronchitis (CB). In these meta-analyses we investigated the efficacy of NAC in subjects with COPD or CB, th...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38555190/",
+          "total_results": 405
         },
         {
-          "pmid": "41796819",
-          "title": "COPD and kidney disease: not so far apart?",
-          "authors": "Stratan I, Covantsev S, Mathioudakis AG, et al.",
-          "journal": "Respiratory medicine",
-          "year": "2026",
-          "abstract_snippet": "This review synthesizes current literature on the epidemiology, mechanistic links, and clinical consequences of the COPD-CKD association. In addition to evaluating established risk factors such as age and tobacco smoking, we discuss emerging insights into the roles of novel biomarkers and epigenetic...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41796819/"
+          "pmid": "26324807",
+          "title": "Influence of N-acetylcysteine on chronic bronchitis or COPD exacerbations: a meta-analysis.",
+          "authors": "Cazzola M, Calzetta L, Page C, et al.",
+          "journal": "European respiratory review : an official journal of the European Respiratory Society",
+          "year": "2015",
+          "abstract_snippet": "In order to clarify the possible role of N-acetylcysteine (NAC) in the treatment of patients with chronic bronchitis and chronic obstructive pulmonary disease (COPD), we have carried out a meta-analysis testing the available evidence that NAC treatment may be effective in preventing exacerbations of...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26324807/"
         },
         {
-          "pmid": "30523563",
-          "title": "When kidneys and lungs suffer together.",
-          "authors": "Sorino C, Scichilone N, Pedone C, et al.",
-          "journal": "Journal of nephrology",
-          "year": "2019",
-          "abstract_snippet": "A significant interaction between kidneys and lungs has been shown in physiological and pathological conditions. The two organs can both be targets of the same systemic disease (eg., some vasculitides). Moreover, loss of normal function of either of them can induce direct and indirect dysregulation ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30523563/"
-        },
-        {
-          "pmid": "24370540",
-          "title": "Renal and hepatobiliary dysfunction in chronic obstructive pulmonary disease.",
-          "authors": "Mapel D",
-          "journal": "Current opinion in pulmonary medicine",
-          "year": "2014",
-          "abstract_snippet": "PURPOSE OF REVIEW: This review examines the associations between chronic obstructive pulmonary disease (COPD) and renal and hepatobiliary diseases, with emphasis on the epidemiology and clinical outcomes, along with current information on pathophysiologic mechanisms and risk factors. RECENT FINDINGS...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/24370540/"
-        },
-        {
-          "pmid": "34750341",
-          "title": "Association Between Severe Chronic Obstructive Pulmonary Disease and Polyneuropathy.",
-          "authors": "Arisoy A, Yilgor A, Uney \u0130H",
-          "journal": "Medical science monitor : international medical journal of experimental and clinical research",
-          "year": "2021",
-          "abstract_snippet": "BACKGROUND Chronic obstructive pulmonary disease (COPD) is a life-threatening and devastating disease associated with low-grade systemic inflammation. In adults, the most common disease of the peripheral nervous system is peripheral neuropathy. While most polyneuropathy has a mixed presentation, som...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34750341/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Association and risk of blood urea nitrogen-to-creatinine ratio with congestive heart failure in critically ill COPD patients",
-          "year": 2025,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/03ff0d99a948a43e0e4eb6cda0cebd8ad80f763c",
-          "authors": "Jinjun Sun, Weiwei Chen, Hongli Xu"
-        },
-        {
-          "title": "Urine Albumin-Creatinine Ratio (ACR) of Patients With Chronic Obstructive Pulmonary Disease (COPD): A Cross-Sectional Study",
-          "year": 2025,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/b7ebced85303c7c1e1010a86e92cd6d712573592",
-          "authors": "Souradip Laha, Amrut Mohapatra, RajLaxmi Sarangi"
-        },
-        {
-          "title": "Urine microalbumin and albumin-creatinine ratio in COPD: Implications for perioperative and cardiovascular risk",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/8689751085f604a0b7100e8e1941eeef03c8ffd0",
-          "authors": "Yusuf Barkati, Ravi Shankar Mishra, M. Maqsood"
-        },
-        {
-          "title": "The Relationship Between Blood Urea Nitrogen to Creatinine Ratio and Severe Acute Exacerbation of COPD Patients: A Propensity Score Matching Study",
-          "year": 2024,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/10eda2e0d6ecb00f64d128a0cb22c9edf5f15af5",
-          "authors": "Zhiwei Long, Tieshi Zhu, Yue Zhou"
-        },
-        {
-          "title": "Diagnostic Utility of the BUN/Creatinine Ratio in Differentiating Heart Failure, COPD, and Asthma in Emergency Department Patients with Dyspnea",
-          "year": 2026,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/d4e1b5a6b0a471884d6c08d50d6d387bea8773f4",
-          "authors": "O. Ya\u015far, Harun Y\u0131ld\u0131r\u0131m"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Association and risk of blood urea nitrogen-to-creatinine ratio with congestive heart failure in critically ill COPD patients",
-        "year": 2025,
-        "citations": 1,
-        "url": "https://www.semanticscholar.org/paper/03ff0d99a948a43e0e4eb6cda0cebd8ad80f763c",
-        "authors": "Jinjun Sun, Weiwei Chen, Hongli Xu"
-      },
-      "max_citations": 1,
-      "faers_signal": "none",
-      "faers_total_reports": 128,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Creatinine to COPD terms. Drug has 128 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "withaferin-a (1.445)",
-        "CV 1808 (1.442)",
-        "Ritodrine hydrochloride (1.412)",
-        "dabrafenib (1.408)",
-        "Cyclosporin A (1.402)"
-      ],
-      "signature_interpretation": "Creatinine was not found among the top 35 drugs that reverse the COPD gene signature. Top reversers: withaferin-a (1.445), CV 1808 (1.442), Ritodrine hydrochloride (1.412)",
-      "ai_hypothesis": "it is a marker of renal function.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.4764,
-      "mr_genetic_targets": 2,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.55,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": false,
-      "clinical_trials_total": 3,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT05690009",
-          "title": "Real Clinical Practice Register of AlbUminuRia Detection in Patients With Previously undiAgnosed Chronic Kidney Disease",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "4580",
-          "url": "https://clinicaltrials.gov/study/NCT05690009"
-        },
-        {
-          "nct_id": "NCT03534934",
-          "title": "CT-Based Modeling of Bone Micro-Architecture and Fracture-Risk in COPD",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "560",
-          "url": "https://clinicaltrials.gov/study/NCT03534934"
-        },
-        {
-          "nct_id": "NCT05991778",
-          "title": "Bioelectrical Impedance in Monitoring Hyperhydration and Polyneuromyopathy in Critically Ill Patients",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "61",
-          "url": "https://clinicaltrials.gov/study/NCT05991778"
-        }
-      ],
-      "trial_phases": {
-        "NA": 1
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "3 clinical trial(s) found on ClinicalTrials.gov",
-        "773 PubMed articles on this drug-disease pair",
-        "Supported by 5 independent AI pillars",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.48)"
-      ]
-    },
-    {
-      "drug_name": "Prednisolone",
-      "drug_id": "DB00860",
-      "disease_name": "COPD",
-      "combined_score": 1.1295,
-      "transe_rank": 28,
-      "pillars_hit": 6,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 370,
-      "pubmed_treatment_total": 342,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "39615502",
-          "title": "Treating eosinophilic exacerbations of asthma and COPD with benralizumab (ABRA): a double-blind, double-dummy, active placebo-controlled randomised trial.",
-          "authors": "Ramakrishnan S, Russell REK, Mahmood HR, et al.",
-          "journal": "The Lancet. Respiratory medicine",
-          "year": "2025",
-          "abstract_snippet": "BACKGROUND: Exacerbations of asthma and chronic obstructive pulmonary disease (COPD) are important events and are associated with critical illness. Eosinophilic inflammation is a treatable trait commonly found during acute exacerbations of asthma and COPD. We hypothesised that for patients with eosi...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39615502/",
-          "total_results": 370
-        },
-        {
-          "pmid": "12324669",
-          "title": "Relationship between exacerbation frequency and lung function decline in chronic obstructive pulmonary disease.",
-          "authors": "Donaldson GC, Seemungal TA, Bhowmik A, et al.",
-          "journal": "Thorax",
-          "year": "2002",
-          "abstract_snippet": "BACKGROUND: Chronic obstructive pulmonary disease (COPD) is characterised by both an accelerated decline in lung function and periods of acute deterioration in symptoms termed exacerbations. The aim of this study was to investigate whether these are related. METHODS: Over 4 years, peak expiratory fl...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/12324669/"
-        },
-        {
-          "pmid": "34495549",
-          "title": "Integrated disease management interventions for patients with chronic obstructive pulmonary disease.",
-          "authors": "Poot CC, Meijer E, Kruis AL, et al.",
+          "pmid": "31107966",
+          "title": "Mucolytic agents versus placebo for chronic bronchitis or chronic obstructive pulmonary disease.",
+          "authors": "Poole P, Sathananthan K, Fortescue R",
           "journal": "The Cochrane database of systematic reviews",
-          "year": "2021",
-          "abstract_snippet": "BACKGROUND: People with chronic obstructive pulmonary disease (COPD) show considerable variation in symptoms, limitations, and well-being; this often complicates medical care. A multi-disciplinary and multi-component programme that addresses different elements of care could improve quality of life (...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34495549/"
+          "year": "2019",
+          "abstract_snippet": "BACKGROUND: Individuals with chronic bronchitis or chronic obstructive pulmonary disease (COPD) may suffer recurrent exacerbations with an increase in volume or purulence of sputum, or both. Personal and healthcare costs associated with exacerbations indicate that therapies that reduce the occurrenc...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31107966/"
         },
         {
-          "pmid": "36725331",
-          "title": "Budesonide/formoterol maintenance and reliever therapy versus fluticasone/salmeterol fixed-dose treatment in patients with COPD.",
-          "authors": "Muiser S, Imkamp K, Seigers D, et al.",
-          "journal": "Thorax",
-          "year": "2023",
-          "abstract_snippet": "BACKGROUND: Maintenance and reliever therapy (MART) with inhaled corticosteroid (ICS)/formoterol effectively reduces exacerbations in asthma. We aimed to investigate its efficacy compared with fixed-dose fluticasone/salmeterol in chronic obstructive pulmonary disease (COPD). METHODS: Patients with C...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36725331/"
+          "pmid": "39450216",
+          "title": "N-acetylcysteine Clinical Applications.",
+          "authors": "Yahia Z, Yahia A, Abdelaziz T",
+          "journal": "Cureus",
+          "year": "2024",
+          "abstract_snippet": "This study aims to evaluate the therapeutic application of N-acetylcysteine (NAC) as a treatment or adjunct therapy for various medical conditions. While its efficacy in treating acetaminophen overdose, cystic fibrosis, and chronic obstructive pulmonary disease is well-established, emerging evidence...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39450216/"
         },
         {
-          "pmid": "344009",
-          "title": "Corticosteroids in chronic bronchitis and pulmonary emphysema.",
-          "authors": "Sahn SA",
-          "journal": "Chest",
-          "year": "1978",
-          "abstract_snippet": "Chronic bronchitis and emphysema (chronic obstructive pulmonary disease [COPD]) represent a major health problem in this country. Corticosteroids have provided an important advance in the management of bronchial asthma, but the role of these drugs in the therapy for COPD has not been defined clearly...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/344009/"
+          "pmid": "32336666",
+          "title": "Oxidative stress-based therapeutics in COPD.",
+          "authors": "Barnes PJ",
+          "journal": "Redox biology",
+          "year": "2020",
+          "abstract_snippet": "Oxidative stress is a major driving mechanism in the pathogenesis of COPD. There is increased oxidative stress in the lungs of COPD patients due to exogenous oxidants in cigarette smoke and air pollution and due to endogenous generation of reactive oxygen species by inflammatory and structural cells...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32336666/"
         }
       ],
-      "repurposing_papers": [],
+      "repurposing_papers": [
+        {
+          "pmid": "37203858",
+          "title": "Rationale and evidence for the adjunctive use of N-acetylcysteine in multidrug-resistant infections.",
+          "authors": "Oliva A, Pallecchi L, Rossolini GM, et al.",
+          "journal": "European review for medical and pharmacological sciences",
+          "year": "2023",
+          "abstract_snippet": "Bacterial multidrug resistance has been a serious issue for healthcare systems in recent decades, responsible for many infections and deaths. Due to the increasing incidence of antimicrobial resistance and scarce treatment options, research is focused on finding possible therapeutic adjuvants able t...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37203858/",
+          "total_results": 3
+        },
+        {
+          "pmid": "36445126",
+          "title": "Combination of Cefditoren and ",
+          "authors": "Llamos\u00ed M, Sempere J, Coronel P, et al.",
+          "journal": "Microbiology spectrum",
+          "year": "2022",
+          "abstract_snippet": "Biofilm formation by Streptococcus pneumoniae is associated with colonization of the upper respiratory tract, including the carrier state, and with chronic respiratory infections in patients suffering from chronic obstructive pulmonary disease (COPD). The use of antibiotics alone to treat recalcitra...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36445126/"
+        },
+        {
+          "pmid": "37102780",
+          "title": "Effect of Nebulized BromAc on Rheology of Artificial Sputum: Relevance to Muco-Obstructive Respiratory Diseases.",
+          "authors": "Pillai K, Mekkawy AH, Akhter J, et al.",
+          "journal": "Advances in respiratory medicine",
+          "year": "2023",
+          "abstract_snippet": "Respiratory diseases such as cystic fibrosis, COPD, and COVID-19 are difficult to treat owing to viscous secretions in the airways that evade mucocilliary clearance. Earlier studies have shown success with BromAc as a mucolytic agent. Hence, we tested the formulation on two gelatinous airway represe...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37102780/"
+        }
+      ],
       "semantic_scholar_papers": [
         {
-          "title": "Blood eosinophil-guided oral prednisolone for COPD exacerbations in primary care in the UK (STARR2): a non-inferiority, multicentre, double-blind, placebo-controlled, randomised controlled trial.",
-          "year": 2023,
-          "citations": 43,
-          "url": "https://www.semanticscholar.org/paper/417a80c6a604995313c9171c109258a3b38eb392",
-          "authors": "Sanjay Ramakrishnan, H. Jeffers, Beverly Langford-Wiley"
+          "title": "CARE: Combination of Acetylcysteine and Acebrophylline in Moderate to Severe Asthma and COPD Patients",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/b395e23494c3c2fcca5ed75bed44b0454c3fca45",
+          "authors": "R. Dhar, R. Chawla, Moumita Rahaman"
         },
         {
-          "title": "Prednisolone in COPD: the overlooked harm.",
+          "title": "N-acetylcysteine Treatment in Chronic Obstructive Pulmonary Disease (COPD) and Chronic Bronchitis/Pre-COPD: Distinct Meta-analyses.",
+          "year": 2024,
+          "citations": 22,
+          "url": "https://www.semanticscholar.org/paper/19c9da69cfe08d3610ed74d375ca84b61e4db1f1",
+          "authors": "A. Papi, Franco Alfano, Tommaso Bigoni"
+        },
+        {
+          "title": "Effect of high-dose N-acetylcysteine on exacerbations and lung function in patients with mild-to-moderate COPD: a double-blind, parallel group, multicentre randomised clinical trial",
+          "year": 2024,
+          "citations": 20,
+          "url": "https://www.semanticscholar.org/paper/1ebcbf3978db91dc515c718df315e91a1dc72d17",
+          "authors": "Yumin Zhou, Fan Wu, Zhe Shi"
+        },
+        {
+          "title": "Effect of N-acetylcysteine in treatment of COPD with pulmonary interstitial fibrosis, inflammatory factors and VEGF levels",
           "year": 2024,
           "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/8c115fedf093cda5c11c1f2d38c8fac671610c4a",
-          "authors": "Sophie E Yale"
+          "url": "https://www.semanticscholar.org/paper/49bfe7f46029007d30cb71edaadc35cbfc9b19e2",
+          "authors": "Jie Yang, Yuanping Cai, Qiaofa Lu"
         },
         {
-          "title": "Prednisolone for COPD exacerbations: time for a rethink",
-          "year": 2023,
-          "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/24143f5ea3d3f6f8c369164ac9bbb34c2f05ef86",
-          "authors": "S. Ramakrishnan"
-        },
-        {
-          "title": "Point of care blood eosinophil guided oral prednisolone for COPD exacerbations: a multi-centre double blind randomised controlled trial (The STARR2 trial)",
-          "year": 2022,
-          "citations": 9,
-          "url": "https://www.semanticscholar.org/paper/c05ea9bc432069e79937dda9059f7ceed4f6a174",
-          "authors": "S. Ramakrishnan, H. Jeffers, B. Langford-Wiley"
-        },
-        {
-          "title": "Doxycycline Added to Prednisolone in Outpatient-Treated Acute Exacerbations of COPD: A Cost-Effectiveness Analysis Alongside a Randomised Controlled Trial",
-          "year": 2018,
-          "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/ed218b9e8b81b884ae8d03ed34233af47d7e2efa",
-          "authors": "A. Finch, P. van Velzen, G. ter Riet"
+          "title": "Comparison of Clinical Outcomes Between Acetylcysteine and Ambroxol in Post Acute Exacerbation of COPD Patients",
+          "year": 2024,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/c019308f12fdf9e710a30199b5af4f2affdcaf37",
+          "authors": "Sri Rahmat Molidia, Dewa Putu Pramantara, Z. Ikawati"
         }
       ],
       "most_cited_paper": {
-        "title": "Blood eosinophil-guided oral prednisolone for COPD exacerbations in primary care in the UK (STARR2): a non-inferiority, multicentre, double-blind, placebo-controlled, randomised controlled trial.",
-        "year": 2023,
-        "citations": 43,
-        "url": "https://www.semanticscholar.org/paper/417a80c6a604995313c9171c109258a3b38eb392",
-        "authors": "Sanjay Ramakrishnan, H. Jeffers, Beverly Langford-Wiley"
+        "title": "N-acetylcysteine Treatment in Chronic Obstructive Pulmonary Disease (COPD) and Chronic Bronchitis/Pre-COPD: Distinct Meta-analyses.",
+        "year": 2024,
+        "citations": 22,
+        "url": "https://www.semanticscholar.org/paper/19c9da69cfe08d3610ed74d375ca84b61e4db1f1",
+        "authors": "A. Papi, Franco Alfano, Tommaso Bigoni"
       },
-      "max_citations": 43,
+      "max_citations": 22,
       "faers_signal": "none",
-      "faers_total_reports": 190318,
+      "faers_total_reports": 10374,
       "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Prednisolone to COPD terms. Drug has 190318 total reports.",
+      "faers_interpretation": "No FAERS reports found linking Acetylcysteine to COPD terms. Drug has 10374 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -1124,18 +2899,96 @@
         "dabrafenib (1.408)",
         "Cyclosporin A (1.402)"
       ],
-      "signature_interpretation": "Prednisolone was not found among the top 35 drugs that reverse the COPD gene signature. Top reversers: withaferin-a (1.445), CV 1808 (1.442), Ritodrine hydrochloride (1.412)",
-      "ai_hypothesis": "of its anti-inflammatory properties.",
+      "signature_interpretation": "Acetylcysteine was not found among the top 35 drugs that reverse the COPD gene signature. Top reversers: withaferin-a (1.445), CV 1808 (1.442), Ritodrine hydrochloride (1.412)",
+      "ai_hypothesis": "of its antioxidant properties.",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
+          "confidence": 0.3,
+          "positive_signals": 1,
+          "negative_signals": 0,
+          "mechanism_signals": 1,
+          "extracted_entities": [
+            {
+              "entity": "n - acetylcysteine",
+              "entity_group": "Medication",
+              "score": 0.847000002861023
+            },
+            {
+              "entity": "agent",
+              "entity_group": "Detailed_description",
+              "score": 0.7200000286102295
+            },
+            {
+              "entity": "anti",
+              "entity_group": "Detailed_description",
+              "score": 0.9980000257492065
+            },
+            {
+              "entity": "cop",
+              "entity_group": "Disease_disorder",
+              "score": 1.0
+            },
+            {
+              "entity": "chronic",
+              "entity_group": "Detailed_description",
+              "score": 0.9980000257492065
+            },
+            {
+              "entity": "bronchitis",
+              "entity_group": "Disease_disorder",
+              "score": 0.8870000243186951
+            },
+            {
+              "entity": "cb",
+              "entity_group": "Disease_disorder",
+              "score": 0.949999988079071
+            },
+            {
+              "entity": "na",
+              "entity_group": "Disease_disorder",
+              "score": 0.7770000100135803
+            }
+          ]
         },
         {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
+          "relation_type": "treats",
+          "confidence": 0.7,
+          "positive_signals": 2,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "acetylcysteine",
+              "entity_group": "Medication",
+              "score": 0.8920000195503235
+            },
+            {
+              "entity": "na",
+              "entity_group": "Disease_disorder",
+              "score": 0.8069999814033508
+            },
+            {
+              "entity": "chronic",
+              "entity_group": "Detailed_description",
+              "score": 0.8190000057220459
+            },
+            {
+              "entity": "bronchitis",
+              "entity_group": "Disease_disorder",
+              "score": 0.9869999885559082
+            },
+            {
+              "entity": "chronic obstructive pulmonary disease",
+              "entity_group": "Disease_disorder",
+              "score": 0.9629999995231628
+            },
+            {
+              "entity": "cop",
+              "entity_group": "Disease_disorder",
+              "score": 1.0
+            }
+          ]
         },
         {
           "relation_type": "unclear",
@@ -1145,607 +2998,247 @@
       ],
       "has_failed_trial": false,
       "failed_trial_phase": "Unknown",
-      "failed_trial_count": 4,
+      "failed_trial_count": 1,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.5185,
-      "mr_genetic_targets": 3,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mr_score": 0.6094,
+      "mr_genetic_targets": 4,
+      "mechanistic_hypothesis": "Acetylcysteine \u2014[is a therapeutic for]\u2192 COPD",
+      "kg_paths_text": "\u2022 Acetylcysteine \u2014[is a therapeutic for]\u2192 COPD\n\u2022 Acetylcysteine \u2014[palliates]\u2192 DOID:3083 \u2014[is treated by]\u2192 DB00983 \u2014[treats]\u2192 COPD\n\u2022 Acetylcysteine \u2014[palliates]\u2192 DOID:3083 \u2014[is treated by]\u2192 DB00635 \u2014[treats]\u2192 COPD",
       "validation_experiments": [],
-      "novelty_score": 0.48,
+      "novelty_score": 0.244,
       "novelty_level": "ESTABLISHED",
-      "is_known_treatment": false,
+      "is_known_treatment": true,
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT01353235",
-          "title": "Oral Prednisolone in Severe Acute Exacerbation of Chronic Obstructive Pulmonary Disease (COPD)",
+          "nct_id": "NCT03843541",
+          "title": "A Clinical Trial to Compare the Efficacy and Safety of 1-week Treatment of Intravenous N-acetylcysteine (NAC) 600 mg Twice Daily, Ambroxol Hydrochloride 30 mg Twice Daily and Placebo as Expectorant Therapies in Adult Chinese Patients With Respiratory Tract Diseases and Abnormal Mucus Secretions",
           "status": "COMPLETED",
           "phase": "PHASE3",
-          "enrollment": "317",
-          "url": "https://clinicaltrials.gov/study/NCT01353235"
+          "enrollment": "333",
+          "url": "https://clinicaltrials.gov/study/NCT03843541"
         },
         {
-          "nct_id": "NCT01865500",
-          "title": "Two Different Dosages of Nebulized Steroid Versus Parenteral Steroid in the Management of COPD Exacerbations",
+          "nct_id": "NCT02579772",
+          "title": "Effects of N-acetylcysteine on Cardiorespiratory Control in COPD Patients With Mild-to-moderate Airflow Obstruction",
           "status": "COMPLETED",
           "phase": "PHASE4",
-          "enrollment": "100",
-          "url": "https://clinicaltrials.gov/study/NCT01865500"
+          "enrollment": "13",
+          "url": "https://clinicaltrials.gov/study/NCT02579772"
         },
         {
-          "nct_id": "NCT06189586",
-          "title": "Comparison of Aerosol Inhalation and Intravenous Glucocorticoid in the Treatment of Severe AECOPD",
+          "nct_id": "NCT05706402",
+          "title": "N-acetylcysteine (NAC) for the Treatment of Acute Exacerbation of COPD",
           "status": "UNKNOWN",
-          "phase": "NA",
-          "enrollment": "100",
-          "url": "https://clinicaltrials.gov/study/NCT06189586"
+          "phase": "PHASE3",
+          "enrollment": "80",
+          "url": "https://clinicaltrials.gov/study/NCT05706402"
         },
         {
-          "nct_id": "NCT00379730",
-          "title": "Prednisolone Novel Endpoint Study in Patients With Chronic Obstructive Pulmonary Disease (COPD)",
+          "nct_id": "NCT02818270",
+          "title": "Evaluation of Aerosolized Drugs Deposition During Mechanical Ventilation",
           "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "90",
-          "url": "https://clinicaltrials.gov/study/NCT00379730"
+          "phase": "NA",
+          "enrollment": "30",
+          "url": "https://clinicaltrials.gov/study/NCT02818270"
         },
         {
-          "nct_id": "NCT05480566",
-          "title": "Functional Strength Training and Neuromuscular Electrical Stimulation in Severe Acute Exacerbations of COPD",
-          "status": "TERMINATED",
-          "phase": "NA",
-          "enrollment": "35",
-          "url": "https://clinicaltrials.gov/study/NCT05480566"
+          "nct_id": "NCT06828120",
+          "title": "A Randomized, Safety and Efficacy Study of Taneasy 600mg Granules and Fluimucil 600mg Granules in COPD Subjects",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "45",
+          "url": "https://clinicaltrials.gov/study/NCT06828120"
         }
       ],
       "trial_phases": {
-        "PHASE3": 2,
-        "PHASE4": 3,
-        "NA": 3,
-        "PHASE1": 2
+        "PHASE3": 3,
+        "PHASE4": 4,
+        "NA": 2
       },
       "confidence": "HIGH",
       "confidence_reasons": [
         "10 clinical trial(s) found on ClinicalTrials.gov",
         "Phase 3 trial exists",
-        "370 PubMed articles on this drug-disease pair",
-        "Supported by 6 independent AI pillars",
-        "Supporting paper with 43 citations",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.52)"
-      ]
-    },
-    {
-      "drug_name": "Aceneuramic Acid",
-      "drug_id": "DB11797",
-      "disease_name": "COPD",
-      "combined_score": 1.1264,
-      "transe_rank": 74,
-      "pillars_hit": 4,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Cordyceps militaris alleviates COPD by regulating amino acid metabolism, gut microbiota and short chain fatty acids.",
-          "year": 2025,
-          "citations": 8,
-          "url": "https://www.semanticscholar.org/paper/a38f10ac800cee679f4c4e851a74b3675cd12d5f",
-          "authors": "Wen Zhang, Yuqi Zong, Xiao Huang"
-        },
-        {
-          "title": "Probiotics-derived butyric acid may suppress systemic inflammation in a murine model of chronic obstructive pulmonary disease (COPD)",
-          "year": 2025,
-          "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/76daa15363d58dd11a1c3cb68abbf3e68e31a40f",
-          "authors": "A. Pradana, D. K. Sari, M. Rusda"
-        },
-        {
-          "title": "Dietary polyunsaturated fatty acid intake and all-cause and cardiovascular mortality in patients with COPD",
-          "year": 2025,
-          "citations": 2,
-          "url": "https://www.semanticscholar.org/paper/48cb296308d09e48d41f9a09d582fa2381280e52",
-          "authors": "Yang Zhang, Xiao Liang, Shuai Luo"
-        },
-        {
-          "title": "Safety and efficacy of aceneuramic acid in GNE myopathy: open-label extension study",
-          "year": 2024,
-          "citations": 6,
-          "url": "https://www.semanticscholar.org/paper/31e6afeb0302a14d89b772dc6e03dfd398c24cac",
-          "authors": "N. Suzuki, M. Mori-Yoshimura, M. Katsuno"
-        },
-        {
-          "title": "Efficacy confirmation study of aceneuramic acid administration for GNE myopathy in Japan",
-          "year": 2023,
-          "citations": 14,
-          "url": "https://www.semanticscholar.org/paper/831795b5506379d266d6c932bd63f3acada2d57b",
-          "authors": "M. Mori-Yoshimura, N. Suzuki, M. Katsuno"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Efficacy confirmation study of aceneuramic acid administration for GNE myopathy in Japan",
-        "year": 2023,
-        "citations": 14,
-        "url": "https://www.semanticscholar.org/paper/831795b5506379d266d6c932bd63f3acada2d57b",
-        "authors": "M. Mori-Yoshimura, N. Suzuki, M. Katsuno"
-      },
-      "max_citations": 14,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Aceneuramic Acid",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "withaferin-a (1.445)",
-        "CV 1808 (1.442)",
-        "Ritodrine hydrochloride (1.412)",
-        "dabrafenib (1.408)",
-        "Cyclosporin A (1.402)"
-      ],
-      "signature_interpretation": "Aceneuramic Acid was not found among the top 35 drugs that reverse the COPD gene signature. Top reversers: withaferin-a (1.445), CV 1808 (1.442), Ritodrine hydrochloride (1.412)",
-      "ai_hypothesis": "of its anti-inflammatory and anti-oxidant properties.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.5484,
-      "mr_genetic_targets": 2,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 1.0,
-      "novelty_level": "BREAKTHROUGH",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
+        "405 PubMed articles on this drug-disease pair",
+        "3 article(s) specifically mention repurposing/repositioning",
         "Supported by 4 independent AI pillars",
+        "Supporting paper with 22 citations",
+        "AI analysis of 1 abstract(s) found positive treatment signals",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.55)"
-      ]
+        "Moderate genetic evidence supporting causality (MR score: 0.61)"
+      ],
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 55,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00227",
+            "drug_name": "Lovastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00175",
+            "drug_name": "Pravastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01098",
+            "drug_name": "Rosuvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00641",
+            "drug_name": "Simvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB13139",
+            "drug_name": "(-)-Salbutamol",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB06403",
+            "drug_name": "Ambrisentan",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB11586",
+            "drug_name": "Asunaprevir",
+            "severity": "moderate"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (TOLLIP / rs3750920)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "TOLLIP",
+            "variant": "rs3750920",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1447982723"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.378,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.507,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Lung"
+        ],
+        "n_genes": 14,
+        "n_expressed": 8,
+        "mean_tpm_in_tissue": 40.21,
+        "max_tpm_in_tissue": 217.44,
+        "tissue_specificity": 0.766,
+        "context_modifier": 1.087
+      },
+      "disease_entity": "Disease::MESH:D029424",
+      "ensemble_prob": 0.4118,
+      "ensemble_features": {
+        "kg_score": 0.9847,
+        "degree_penalty": 0.8715,
+        "n_drug_targets": 0,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 5.0876
+      },
+      "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "THIOL"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "thiol_2",
+          "thiol_warhead"
+        ]
+      }
     },
     {
-      "drug_name": "Dexamethasone",
-      "drug_id": "DB01234",
+      "drug_name": "Pazufloxacin",
+      "drug_id": "DB11774",
       "disease_name": "COPD",
-      "combined_score": 1.1259,
-      "transe_rank": 6,
-      "pillars_hit": 6,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 398,
-      "pubmed_treatment_total": 334,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "33146552",
-          "title": "Global Initiative for the Diagnosis, Management, and Prevention of Chronic Obstructive Lung Disease. The 2020 GOLD Science Committee Report on COVID-19 and Chronic Obstructive Pulmonary Disease.",
-          "authors": "Halpin DMG, Criner GJ, Papi A, et al.",
-          "journal": "American journal of respiratory and critical care medicine",
-          "year": "2021",
-          "abstract_snippet": "The severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) pandemic has raised many questions about the management of patients with chronic obstructive pulmonary disease (COPD) and whether modifications of their therapy are required. It has raised questions about recognizing and differentiatin...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33146552/",
-          "total_results": 398
-        },
-        {
-          "pmid": "39439801",
-          "title": "Inflammatory profile of eosinophils in asthma-COPD overlap and eosinophilic COPD: a multi-omics study.",
-          "authors": "Sunata K, Miyata J, Kawashima Y, et al.",
-          "journal": "Frontiers in immunology",
-          "year": "2024",
-          "abstract_snippet": "INTRODUCTION: Elevated blood eosinophil levels in patients with chronic obstructive pulmonary disease (COPD) with or without asthma are linked to increased exacerbations and the effectiveness of inhaled corticosteroid treatment. This study aimed to delineate the inflammatory cellular properties of e...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39439801/"
-        },
-        {
-          "pmid": "35562628",
-          "title": "COVID-19 and corticosteroids: a narrative review.",
-          "authors": "El-Saber Batiha G, Al-Gareeb AI, Saad HM, et al.",
-          "journal": "Inflammopharmacology",
-          "year": "2022",
-          "abstract_snippet": "It has been reported that corticosteroid therapy was effective in the management of severe acute respiratory syndrome (SARS) and the Middle East Respiratory Syndrome (MERS), and recently in coronavirus disease 2019 (COVID-19). Corticosteroids are potent anti-inflammatory drugs that mitigate the risk...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35562628/"
-        },
-        {
-          "pmid": "40666830",
-          "title": "Long-Term Cigarette Smoke Exposure Promotes Neutrophil Ferroptosis Resistance, Inducing Neutrophil Extracellular Trap Formation and Driving Glucocorticoid Resistance in Chronic Obstructive Pulmonary Disease.",
-          "authors": "Wang L, Zhu L, Tang Y, et al.",
-          "journal": "Research (Washington, D.C.)",
-          "year": "2025",
-          "abstract_snippet": "Glucocorticoid resistance increases the frequency of acute exacerbations and the risk of death in chronic obstructive pulmonary disease (COPD) patients with a history of long-term heavy smoking. In this study we aimed to investigate the role of neutrophil ferroptosis resistance and the formation of ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40666830/"
-        },
-        {
-          "pmid": "32812458",
-          "title": "Dexamethasone and losartan combination treatment protected cigarette smoke-induced COPD in rats.",
-          "authors": "Sokar SS, Afify EH, Osman EY",
-          "journal": "Human & experimental toxicology",
-          "year": "2021",
-          "abstract_snippet": "Chronic Obstructive Pulmonary Disease (COPD) is a dangerous prevalent smoking-related disease characterized by abnormal inflammation and oxidative stress and expected to be the third cause of death in the world next decade. Corticosteroids have low effects in decreasing numbers of inflammatory media...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/32812458/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Dexamethasone Treatment Considerably Reduces the Levels of Some Inflammatory Cytokines, Lactate Dehydrogenase, and C-Reactive Protein in COVID-19 Pneumonia Patients With Pre-existing COPD",
-          "year": 2024,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/470d1dbce83e066bc6d9ba6f15173ddaa1e15f4d",
-          "authors": "G. Sepehri, Z. Fallah, Mitra Samare Fekri"
-        },
-        {
-          "title": "Effects of Pre-Hospital Dexamethasone Administration on Outcomes of Patients with COPD and Asthma Exacerbation; a Cross-Sectional Study",
-          "year": 2023,
-          "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/f35af9f296b82f2206d552d2c1e90c27b555b315",
-          "authors": "Thongpitak Huabbangyang, Agasak Silakoon, C. Sangketchon"
-        },
-        {
-          "title": "Dexamethasone and losartan combination treatment protected cigarette smoke-induced COPD in rats",
-          "year": 2020,
-          "citations": 14,
-          "url": "https://www.semanticscholar.org/paper/b51d0ae60f04bac3e6688672df39a6c8fedc56f7",
-          "authors": "S. Sokar, Esraa H Afify, Enass Y Osman"
-        },
-        {
-          "title": "Glucocorticoid Receptor \u03b1 Mediates Roflumilast\u2019s Ability to Restore Dexamethasone Sensitivity in COPD",
-          "year": 2020,
-          "citations": 18,
-          "url": "https://www.semanticscholar.org/paper/d8fc3531a5068308374ce21263a46ea8fc3318f1",
-          "authors": "Aravind Reddy Tarugu, S. Lakshmi, A. Banno"
-        },
-        {
-          "title": "Dexamethasone improves pulmonary hemodynamics in COPD-patients going to altitude: A randomized trial.",
-          "year": 2019,
-          "citations": 24,
-          "url": "https://www.semanticscholar.org/paper/eea47bbedce60324cbc8553252c951bb0dc3d243",
-          "authors": "M. Lichtblau, M. Furian, S. Aeschbacher"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Dexamethasone improves pulmonary hemodynamics in COPD-patients going to altitude: A randomized trial.",
-        "year": 2019,
-        "citations": 24,
-        "url": "https://www.semanticscholar.org/paper/eea47bbedce60324cbc8553252c951bb0dc3d243",
-        "authors": "M. Lichtblau, M. Furian, S. Aeschbacher"
-      },
-      "max_citations": 24,
-      "faers_signal": "none",
-      "faers_total_reports": 312747,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Dexamethasone to COPD terms. Drug has 312747 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "withaferin-a (1.445)",
-        "CV 1808 (1.442)",
-        "Ritodrine hydrochloride (1.412)",
-        "dabrafenib (1.408)",
-        "Cyclosporin A (1.402)"
-      ],
-      "signature_interpretation": "Dexamethasone was not found among the top 35 drugs that reverse the COPD gene signature. Top reversers: withaferin-a (1.445), CV 1808 (1.442), Ritodrine hydrochloride (1.412)",
-      "ai_hypothesis": "of its anti-inflammatory properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.7151,
-      "mr_genetic_targets": 27,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.48,
-      "novelty_level": "ESTABLISHED",
-      "is_known_treatment": false,
-      "clinical_trials_total": 6,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT02450968",
-          "title": "Altitude Related Illness In Patients With Respiratory Disease",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "124",
-          "url": "https://clinicaltrials.gov/study/NCT02450968"
-        },
-        {
-          "nct_id": "NCT00942201",
-          "title": "Comparison of Oral Dexamethasone Doses in Asthma Exacerbation",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "125",
-          "url": "https://clinicaltrials.gov/study/NCT00942201"
-        },
-        {
-          "nct_id": "NCT01241006",
-          "title": "Single Oral Dose of Dexamethasone Versus Five Days of Prednisone in Adult Asthma",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "376",
-          "url": "https://clinicaltrials.gov/study/NCT01241006"
-        },
-        {
-          "nct_id": "NCT02237820",
-          "title": "Dexamethasone Versus Prednisone in Heart Failure Patients, Hospitalized With Exacerbation of Chronic Obstructive Pulmonary Disease.",
-          "status": "UNKNOWN",
-          "phase": "PHASE4",
-          "enrollment": "80",
-          "url": "https://clinicaltrials.gov/study/NCT02237820"
-        },
-        {
-          "nct_id": "NCT02450994",
-          "title": "Effect of Dexamethasone on Sleep Related Breathing Disturbances in Patients With COPD at Altitude",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "124",
-          "url": "https://clinicaltrials.gov/study/NCT02450994"
-        }
-      ],
-      "trial_phases": {
-        "PHASE4": 4,
-        "NA": 1
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "6 clinical trial(s) found on ClinicalTrials.gov",
-        "398 PubMed articles on this drug-disease pair",
-        "Supported by 6 independent AI pillars",
-        "Supporting paper with 24 citations",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.72, 27 genetic targets)"
-      ]
-    },
-    {
-      "drug_name": "Acetylsalicylic acid",
-      "drug_id": "DB00945",
-      "disease_name": "COPD",
-      "combined_score": 1.1204,
-      "transe_rank": 20,
-      "pillars_hit": 6,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 24,
-      "pubmed_treatment_total": 22,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "29922050",
-          "title": "Factors associated with lung cancer in COPD patients.",
-          "authors": "Sandelin M, Mindus S, Thuresson M, et al.",
-          "journal": "International journal of chronic obstructive pulmonary disease",
-          "year": "2018",
-          "abstract_snippet": "BACKGROUND: The risk of dying of lung cancer is up to eightfold higher in patients with COPD than in age- and gender-matched controls. The aim of this study was to investigate the factors associated with lung cancer in a large cohort of COPD patients from primary care centers. METHODS: To analyze wh...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29922050/",
-          "total_results": 24
-        },
-        {
-          "pmid": "26738368",
-          "title": "Echocardiographic Evaluation of the Relationship Between inflammatory factors (IL6, TNF\u03b1, hs-CRP) and Secondary Pulmonary Hypertension in patients with COPD. A Cross sectional study.",
-          "authors": "Ansarin K, Rashidi F, Namdar H, et al.",
-          "journal": "Pneumologia (Bucharest, Romania)",
-          "year": "2015",
-          "abstract_snippet": "BACKGROUND: Inflammatory mechanism appears to play a major role in the pathogenesis of various types of human pulmonary hypertension such as idiopathic PAH (IPAH) and PAH associated\" with connective tissue disease. Although we know that inflammatory factors such as IL6 and TNF\u03b1 have an important rol...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/26738368/"
-        },
-        {
-          "pmid": "32099348",
-          "title": "Impact of Comorbidities and Commonly Used Drugs on Mortality in COPD - Real-World Data from a Primary Care Setting.",
-          "authors": "Ellingsen J, Johansson G, Larsson K, et al.",
-          "journal": "International journal of chronic obstructive pulmonary disease",
-          "year": "2020",
-          "abstract_snippet": "BACKGROUND: Life expectancy is significantly shorter for patients with chronic obstructive pulmonary disease (COPD) than the general population. Concurrent diseases are known to infer an increased mortality risk in those with COPD, but the effects of pharmacological treatments on survival are less e...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/32099348/"
-        },
-        {
-          "pmid": "27757229",
-          "title": "Risk of cardiovascular events after initiation of long-acting bronchodilators in patients with chronic obstructive lung disease: A population-based study.",
-          "authors": "Aljaafareh A, Valle JR, Lin YL, et al.",
-          "journal": "SAGE open medicine",
-          "year": "2016",
-          "abstract_snippet": "OBJECTIVES: Long-acting bronchodilators are mainstay treatment for moderate to severe chronic obstructive pulmonary disease. A growing body of evidence indicates an increased risk of cardiovascular events upon initiation of these medications. We hypothesize that this risk is higher in patients with ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/27757229/"
-        },
-        {
-          "pmid": "41399225",
-          "title": "Systematic Review of Length of Stay After Carotid Endarterectomy and Carotid Artery Stenting.",
-          "authors": "Lehmann S, Hoene A, Golbach R, et al.",
-          "journal": "Annali italiani di chirurgia",
-          "year": "2025",
-          "abstract_snippet": "AIM: This systematic review with meta-analysis aims to compare postoperative length of stay (LOS) after carotid endarterectomy (CEA) and carotid artery stenting (CAS) and to identify potentially modifiable risk factors for prolonged hospitalization. METHODS: This systematic review was performed in a...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41399225/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Pleiotropic effects of acetylsalicylic acid",
-          "year": 2024,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/abc6714bfcb0458ea8ff744c736176ee0db34ae2",
-          "authors": "M. Smirnova"
-        },
-        {
-          "title": "Investigation of the Influence of Acetylsalicylic Acid on the Steady State of Long\u2010Term Therapy With Theophylline in Elderly Male Patients With Normal Renal Function",
-          "year": 1994,
-          "citations": 8,
-          "url": "https://www.semanticscholar.org/paper/11f4d8dfd80ed2cdc82640ff8f7b05f27c854962",
-          "authors": "E. A. Daigneault, R. Hamdy, K. Ferslew"
-        },
-        {
-          "title": "Echocardiographic Evaluation of the Relationship Between inflammatory factors (IL6, TNF\u03b1, hs-CRP) and Secondary Pulmonary Hypertension in patients with COPD. A Cross sectional study.",
-          "year": 2015,
-          "citations": 10,
-          "url": "https://www.semanticscholar.org/paper/e1a2f5e7075b38e768b0713d21979603c259f104",
-          "authors": "K. Ansarin, F. Rashidi, H. Namdar"
-        },
-        {
-          "title": "The use of aspirin for primary prevention of cardiovascular disease is associated with a lower likelihood of COVID\u201019 infection",
-          "year": 2021,
-          "citations": 46,
-          "url": "https://www.semanticscholar.org/paper/346795e2ec084c0754363570cd2ee2930b1a3026",
-          "authors": "E. Merzon, I. Green, S. Vinker"
-        },
-        {
-          "title": "Efficacy of Combination Therapy in Patients with Stable Coronary Heart Disease with Comorbid Chronic Obstructive Pulmonary Disease",
-          "year": 2022,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/21df031516ce1c26564e2f4f3598e0cc77ecf305",
-          "authors": "O. Kniazieva, V. Potabashnii"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "The use of aspirin for primary prevention of cardiovascular disease is associated with a lower likelihood of COVID\u201019 infection",
-        "year": 2021,
-        "citations": 46,
-        "url": "https://www.semanticscholar.org/paper/346795e2ec084c0754363570cd2ee2930b1a3026",
-        "authors": "E. Merzon, I. Green, S. Vinker"
-      },
-      "max_citations": 46,
-      "faers_signal": "none",
-      "faers_total_reports": 93282,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Acetylsalicylic acid to COPD terms. Drug has 93282 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "withaferin-a (1.445)",
-        "CV 1808 (1.442)",
-        "Ritodrine hydrochloride (1.412)",
-        "dabrafenib (1.408)",
-        "Cyclosporin A (1.402)"
-      ],
-      "signature_interpretation": "Acetylsalicylic acid was not found among the top 35 drugs that reverse the COPD gene signature. Top reversers: withaferin-a (1.445), CV 1808 (1.442), Ritodrine hydrochloride (1.412)",
-      "ai_hypothesis": "of its anti-inflammatory properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "Phase 1",
-      "failed_trial_count": 1,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.7386,
-      "mr_genetic_targets": 7,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.66,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": false,
-      "clinical_trials_total": 7,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT05567562",
-          "title": "Anti-Platelets in Chronic Obstructive Pulmonary Disease",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "19",
-          "url": "https://clinicaltrials.gov/study/NCT05567562"
-        },
-        {
-          "nct_id": "NCT05625347",
-          "title": "Study to Compare the Pharmacokinetics and Pharmacodynamics of ASA Powder for Oral Inhalation With Non-enteric-coated Chewable Aspirin in Adult Subjects With Obstructive or Restrictive Pulmonary Function",
-          "status": "TERMINATED",
-          "phase": "PHASE1",
-          "enrollment": "4",
-          "url": "https://clinicaltrials.gov/study/NCT05625347"
-        },
-        {
-          "nct_id": "NCT02519608",
-          "title": "ComparisoN of ticAgrelor vs. Clopidogrel in endoTHeliAl Function of COPD patieNts",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "44",
-          "url": "https://clinicaltrials.gov/study/NCT02519608"
-        },
-        {
-          "nct_id": "NCT03487406",
-          "title": "Anti-platelet Therapy in the Prevention of Cardiovascular Disease in Patients With COPD (APPLE-COPD: ICON 2)",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "120",
-          "url": "https://clinicaltrials.gov/study/NCT03487406"
-        },
-        {
-          "nct_id": "NCT03008915",
-          "title": "Targeting Pulmonary Perfusion in Alpha-1 Antitrypsin Deficiency",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "15",
-          "url": "https://clinicaltrials.gov/study/NCT03008915"
-        }
-      ],
-      "trial_phases": {
-        "PHASE2": 5,
-        "PHASE1": 1,
-        "PHASE3": 1
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "7 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
-        "24 PubMed articles found",
-        "Supported by 6 independent AI pillars",
-        "Supporting paper with 46 citations",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.74, 7 genetic targets)"
-      ]
-    },
-    {
-      "drug_name": "Dihydroxyacetone",
-      "drug_id": "DB01775",
-      "disease_name": "COPD",
-      "combined_score": 1.115,
-      "transe_rank": 131,
+      "combined_score": 0.5034000277519226,
       "pillars_hit": 4,
-      "mol_similarity": 0,
-      "similar_to": "",
+      "transe_rank": 1540,
+      "transe_score": -11.9167,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0.77,
+      "txgnn_rank": 23,
+      "mol_similarity": 0.629,
+      "similar_to": "Ofloxacin",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 1.0,
+      "proximity_distance": 0.0,
+      "admet_score": 0.6028,
+      "admet_flags": "DILI=0.86",
+      "primekg_score": 0.2655,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": 0.0133,
+      "structural_group_score": 0.629,
+      "network_group_score": 0.8044999837875366,
+      "txgnn_group_score": 0.77,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9206,
+      "efficacy_score": 0.5468999743461609,
+      "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 0,
       "shared_targets": [],
@@ -1755,6 +3248,13 @@
       "key_papers": [],
       "repurposing_papers": [],
       "semantic_scholar_papers": [
+        {
+          "title": "Understanding the Gaps in the Reporting of COPD Exacerbations by Patients: A Review",
+          "year": 2024,
+          "citations": 14,
+          "url": "https://www.semanticscholar.org/paper/b42a071e4ea576948827ce5c1b8a57c1bd5f34b5",
+          "authors": "Paul Jones, Ashraf Alzaabi, Alejandro Casas Herrera"
+        },
         {
           "title": "Current Progress of COPD Early Detection: Key Points and Novel Strategies",
           "year": 2023,
@@ -1772,23 +3272,16 @@
         {
           "title": "NT-proBNP in Different Patient Groups of COPD: A Systematic Review and Meta-Analysis",
           "year": 2023,
-          "citations": 32,
+          "citations": 33,
           "url": "https://www.semanticscholar.org/paper/940b3b9f260f143f1f2c79b5bc022be59ad3d304",
           "authors": "Xiaojie Su, Ting Lei, Haichuan Yu"
         },
         {
           "title": "Inhaler Adherence in COPD: A Crucial Step Towards the Correct Treatment",
           "year": 2023,
-          "citations": 31,
+          "citations": 33,
           "url": "https://www.semanticscholar.org/paper/f31ef33dc5a9a2389775f14f7dde979c58f111c6",
           "authors": "Miguel Tur\u00e9gano-Yedro, E. Trillo-Calvo, Fernando Navarro i Ros"
-        },
-        {
-          "title": "Body Composition and COPD: A New Perspective",
-          "year": 2023,
-          "citations": 27,
-          "url": "https://www.semanticscholar.org/paper/f249b70512a359093f1e2ad6d617dbde6efb2da1",
-          "authors": "Xin Wang, Qianqian Liang, Zhengfu Li"
         }
       ],
       "most_cited_paper": {
@@ -1800,9 +3293,9 @@
       },
       "max_citations": 57,
       "faers_signal": "none",
-      "faers_total_reports": 13,
+      "faers_total_reports": 157,
       "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Dihydroxyacetone to COPD terms. Drug has 13 total reports.",
+      "faers_interpretation": "No FAERS reports found linking Pazufloxacin to COPD terms. Drug has 157 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -1812,19 +3305,19 @@
         "dabrafenib (1.408)",
         "Cyclosporin A (1.402)"
       ],
-      "signature_interpretation": "Dihydroxyacetone was not found among the top 35 drugs that reverse the COPD gene signature. Top reversers: withaferin-a (1.445), CV 1808 (1.442), Ritodrine hydrochloride (1.412)",
-      "ai_hypothesis": "it is a precursor of the antioxidant vitamin C.",
+      "signature_interpretation": "Pazufloxacin was not found among the top 35 drugs that reverse the COPD gene signature. Top reversers: withaferin-a (1.445), CV 1808 (1.442), Ritodrine hydrochloride (1.412)",
+      "ai_hypothesis": "of its broad spectrum of activity and its favorable pharmacokinetic profile.",
       "abstract_analyses": [],
       "has_failed_trial": false,
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.4878,
-      "mr_genetic_targets": 4,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Pazufloxacin \u2014[is metabolized by]\u2192 gene-1544 \u2014[is linked to]\u2192 COPD",
+      "kg_paths_text": "\u2022 Pazufloxacin \u2014[is metabolized by]\u2192 gene-1544 \u2014[is linked to]\u2192 COPD\n\u2022 Pazufloxacin \u2014[is metabolized by]\u2192 gene-1544 \u2014[is bound by]\u2192 DB00678 \u2014[is a therapeutic for]\u2192 COPD\n\u2022 Pazufloxacin \u2014[is metabolized by]\u2192 gene-1544 \u2014[is bound by]\u2192 DB00633 \u2014[is a therapeutic for]\u2192 COPD",
       "validation_experiments": [],
-      "novelty_score": 1.0,
+      "novelty_score": 0.503000020980835,
       "novelty_level": "BREAKTHROUGH",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -1833,10 +3326,142 @@
       "confidence": "LOW",
       "confidence_reasons": [
         "Supported by 4 independent AI pillars",
+        "High molecular similarity (0.63) to Ofloxacin",
         "Supporting paper with 57 citations",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.49)"
-      ]
+        "AI-generated hypothesis available"
+      ],
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "late-trial",
+        "confidence": "medium",
+        "rationale": "Phase-3 investigational \u2014 dose range established in Phase-2 pharmacokinetic studies; efficacy trials ongoing or recently completed.",
+        "chembl_phase": 3.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 897,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00773",
+            "drug_name": "Etoposide",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.17599999904632568,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.503000020980835,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Lung"
+        ],
+        "n_genes": 292,
+        "n_expressed": 239,
+        "mean_tpm_in_tissue": 347.04,
+        "max_tpm_in_tissue": 23696.8,
+        "tissue_specificity": 0.348,
+        "context_modifier": 1.072
+      },
+      "disease_entity": "Disease::MESH:D029424",
+      "ensemble_prob": 0.007,
+      "ensemble_features": {
+        "kg_score": 0.8817,
+        "degree_penalty": 0.8045,
+        "n_drug_targets": 5,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 7.1301
+      },
+      "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     }
-  ]
+  ],
+  "disease_entity": "Disease::MESH:D029424",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
+  "docking_axis": {
+    "source": "chembl_bioactivity_proxy + not_wired fallback",
+    "n_disease_genes": 300,
+    "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
+  }
 }

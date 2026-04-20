@@ -47,8 +47,10 @@
       "efficacy_score": 0.600600004196167,
       "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "IFNG"
+      ],
       "pubmed_total": 3,
       "pubmed_treatment_total": 3,
       "pubmed_repurposing_total": 0,
@@ -266,13 +268,17 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Whole Blood",
           "Spleen",
           "Liver"
         ],
-        "n_genes": 0
+        "n_genes": 1,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 1.08,
+        "max_tpm_in_tissue": 1.08,
+        "tissue_specificity": 1.0,
+        "context_modifier": 0.998
       },
       "ensemble_prob": 0.0666,
       "ensemble_features": {
@@ -291,7 +297,25 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D007896"
+      "disease_entity": "Disease::MESH:D007896",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "ALIPHATIC",
+          "CYANATE",
+          "ENAMINE",
+          "IMIDAZOLE",
+          "IMINE"
+        ],
+        "n_alerts": 6,
+        "alert_names": [
+          "imidazole_B(2)",
+          "Aliphatic_long_chain",
+          "cyanate_/aminonitrile_/thiocyanate",
+          "enamine",
+          "imine_1"
+        ]
+      }
     },
     {
       "drug_name": "Tacrolimus",
@@ -617,13 +641,17 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Whole Blood",
           "Spleen",
           "Liver"
         ],
-        "n_genes": 0
+        "n_genes": 14,
+        "n_expressed": 11,
+        "mean_tpm_in_tissue": 50.66,
+        "max_tpm_in_tissue": 306.45,
+        "tissue_specificity": 0.694,
+        "context_modifier": 1.087
       },
       "ensemble_prob": 0.8293,
       "ensemble_features": {
@@ -642,7 +670,19 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D007896"
+      "disease_entity": "Disease::MESH:D007896",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "DIKETO",
+          "ISOLATED"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "diketo_group",
+          "isolated_alkene"
+        ]
+      }
     },
     {
       "drug_name": "Tioguanine",
@@ -857,13 +897,17 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Whole Blood",
           "Spleen",
           "Liver"
         ],
-        "n_genes": 0
+        "n_genes": 14,
+        "n_expressed": 11,
+        "mean_tpm_in_tissue": 50.66,
+        "max_tpm_in_tissue": 306.45,
+        "tissue_specificity": 0.694,
+        "context_modifier": 1.087
       },
       "ensemble_prob": 0.007,
       "ensemble_features": {
@@ -882,7 +926,17 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D007896"
+      "disease_entity": "Disease::MESH:D007896",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "THIOCARBONYL"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "Thiocarbonyl_group"
+        ]
+      }
     },
     {
       "drug_name": "Clindamycin",
@@ -1167,13 +1221,17 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Whole Blood",
           "Spleen",
           "Liver"
         ],
-        "n_genes": 0
+        "n_genes": 14,
+        "n_expressed": 11,
+        "mean_tpm_in_tissue": 50.66,
+        "max_tpm_in_tissue": 306.45,
+        "tissue_specificity": 0.694,
+        "context_modifier": 1.087
       },
       "ensemble_prob": 0.849,
       "ensemble_features": {
@@ -1192,7 +1250,19 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D007896"
+      "disease_entity": "Disease::MESH:D007896",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "ALKYL",
+          "SECONDARY"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "alkyl_halide",
+          "secondary_halide_sulfate"
+        ]
+      }
     },
     {
       "drug_name": "Roxithromycin",
@@ -1228,8 +1298,10 @@
       "efficacy_score": 0.4002000093460083,
       "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "MMP1"
+      ],
       "pubmed_total": 1,
       "pubmed_treatment_total": 1,
       "pubmed_repurposing_total": 0,
@@ -1475,13 +1547,17 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Whole Blood",
           "Spleen",
           "Liver"
         ],
-        "n_genes": 0
+        "n_genes": 1,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 3.0,
+        "max_tpm_in_tissue": 3.0,
+        "tissue_specificity": 0.346,
+        "context_modifier": 0.946
       },
       "ensemble_prob": 0.6003,
       "ensemble_features": {
@@ -1500,7 +1576,25 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D007896"
+      "disease_entity": "Disease::MESH:D007896",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "ALIPHATIC",
+          "HET-C-HET",
+          "IMINE",
+          "NON",
+          "OXYGEN-NITROGEN"
+        ],
+        "n_alerts": 5,
+        "alert_names": [
+          "Aliphatic_long_chain",
+          "het-C-het_not_in_ring",
+          "imine_1",
+          "Oxygen-nitrogen_single_bond",
+          "non_ring_CH2O_acetal"
+        ]
+      }
     },
     {
       "drug_name": "Amikacin",
@@ -1793,13 +1887,17 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Whole Blood",
           "Spleen",
           "Liver"
         ],
-        "n_genes": 0
+        "n_genes": 14,
+        "n_expressed": 11,
+        "mean_tpm_in_tissue": 50.66,
+        "max_tpm_in_tissue": 306.45,
+        "tissue_specificity": 0.694,
+        "context_modifier": 1.087
       },
       "ensemble_prob": 0.337,
       "ensemble_features": {
@@ -1818,7 +1916,18 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D007896"
+      "disease_entity": "Disease::MESH:D007896",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "GTE"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "gte_4_basic_N",
+          "gte_7_aliphatic_OH"
+        ]
+      }
     },
     {
       "drug_name": "Erythromycin",
@@ -2143,13 +2252,17 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Whole Blood",
           "Spleen",
           "Liver"
         ],
-        "n_genes": 0
+        "n_genes": 14,
+        "n_expressed": 11,
+        "mean_tpm_in_tissue": 50.66,
+        "max_tpm_in_tissue": 306.45,
+        "tissue_specificity": 0.694,
+        "context_modifier": 1.087
       },
       "ensemble_prob": 0.142,
       "ensemble_features": {
@@ -2168,7 +2281,13 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D007896"
+      "disease_entity": "Disease::MESH:D007896",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
       "drug_name": "Levamisole",
@@ -2473,13 +2592,17 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Whole Blood",
           "Spleen",
           "Liver"
         ],
-        "n_genes": 0
+        "n_genes": 14,
+        "n_expressed": 11,
+        "mean_tpm_in_tissue": 50.66,
+        "max_tpm_in_tissue": 306.45,
+        "tissue_specificity": 0.694,
+        "context_modifier": 1.087
       },
       "ensemble_prob": 0.0,
       "ensemble_features": {
@@ -2498,7 +2621,13 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D007896"
+      "disease_entity": "Disease::MESH:D007896",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
       "drug_name": "Folic Acid",
@@ -2826,13 +2955,17 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Whole Blood",
           "Spleen",
           "Liver"
         ],
-        "n_genes": 0
+        "n_genes": 14,
+        "n_expressed": 11,
+        "mean_tpm_in_tissue": 50.66,
+        "max_tpm_in_tissue": 306.45,
+        "tissue_specificity": 0.694,
+        "context_modifier": 1.087
       },
       "ensemble_prob": 0.0203,
       "ensemble_features": {
@@ -2851,7 +2984,13 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D007896"
+      "disease_entity": "Disease::MESH:D007896",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
       "drug_name": "H TYPE II TRISACCHARIDE",
@@ -3015,13 +3154,17 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Whole Blood",
           "Spleen",
           "Liver"
         ],
-        "n_genes": 0
+        "n_genes": 14,
+        "n_expressed": 11,
+        "mean_tpm_in_tissue": 50.66,
+        "max_tpm_in_tissue": 306.45,
+        "tissue_specificity": 0.694,
+        "context_modifier": 1.087
       },
       "ensemble_prob": 0.0,
       "ensemble_features": {
@@ -3040,14 +3183,24 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D007896"
+      "disease_entity": "Disease::MESH:D007896",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "GTE"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "gte_7_aliphatic_OH"
+        ]
+      }
     }
   ],
   "ensemble_version": "v5",
   "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
-    "n_disease_genes": 5,
+    "n_disease_genes": 14,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
   },
   "disease_entity": "Disease::MESH:D007896"

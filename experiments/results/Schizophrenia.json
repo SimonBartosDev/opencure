@@ -1,28 +1,68 @@
 {
   "disease": "Schizophrenia",
   "status": "completed",
-  "timestamp": "2026-04-17T22:08:21.317278",
-  "elapsed_seconds": 575.6,
+  "timestamp": "2026-04-20T01:42:47.789731",
+  "elapsed_seconds": 656.1,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
-    "HIGH": 8,
-    "LOW": 1,
+    "HIGH": 9,
     "MEDIUM": 1
   },
+  "pipeline_version": "v5",
+  "data_manifest_hash": "2da2aa88f2457d1b",
   "candidates": [
     {
       "drug_name": "Serotonin",
       "drug_id": "DB08839",
       "disease_name": "Schizophrenia",
-      "combined_score": 1.1733,
+      "combined_score": 0.5289,
+      "pillars_hit": 5,
       "transe_rank": 1,
-      "pillars_hit": 7,
+      "transe_score": -9.5164,
+      "pykeen_score": -11.4895,
+      "pykeen_rank": 0,
+      "txgnn_score": 0.85,
+      "txgnn_rank": 15,
       "mol_similarity": 0,
       "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.8500000238418579,
+      "proximity_distance": 0.6000000238418579,
+      "admet_score": 0.5722,
+      "admet_flags": "clean",
+      "primekg_score": 0.259,
+      "dti_score": 0.5233,
+      "dti_best_target": "SLC18A2",
+      "kg_group_score": 0.4252,
+      "structural_group_score": 0.5233,
+      "network_group_score": 0.6650999784469604,
+      "txgnn_group_score": 0.85,
+      "mr_group_score": 0.5629,
+      "admet_multiplier": 0.7005,
+      "efficacy_score": 0.755,
+      "groups_hit": 5,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 14,
+      "shared_targets": [
+        "BCHE",
+        "DLG4",
+        "ENO2",
+        "GNRH1",
+        "IL10",
+        "IL1A",
+        "INS",
+        "KNG1",
+        "NELFCD",
+        "NOS1",
+        "SLC18A2",
+        "SLC6A2",
+        "SYP",
+        "TRH"
+      ],
       "pubmed_total": 4982,
       "pubmed_treatment_total": 3441,
       "pubmed_repurposing_total": 12,
@@ -211,10 +251,10 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0.5629,
       "mr_genetic_targets": 10,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Serotonin \u2014[is a therapeutic for]\u2192 Schizophrenia",
+      "kg_paths_text": "\u2022 Serotonin \u2014[is a therapeutic for]\u2192 Schizophrenia\n\u2022 Serotonin \u2014[is a therapeutic for]\u2192 MESH:D013313 \u2014[is treated by]\u2192 DB01224 \u2014[treats]\u2192 Schizophrenia\n\u2022 Serotonin \u2014[is a therapeutic for]\u2192 MESH:D013313 \u2014[is treated by]\u2192 DB00334 \u2014[treats]\u2192 Schizophrenia",
       "validation_experiments": [],
-      "novelty_score": 0.24,
+      "novelty_score": 0.127,
       "novelty_level": "ESTABLISHED",
       "is_known_treatment": true,
       "clinical_trials_total": 10,
@@ -272,550 +312,291 @@
         "Phase 3 trial exists",
         "4982 PubMed articles on this drug-disease pair",
         "12 article(s) specifically mention repurposing/repositioning",
-        "Supported by 7 independent AI pillars",
+        "Supported by 5 independent AI pillars",
         "Highly cited paper (184 citations): \"Serotonin, schizophrenia and antipsychotic drug action....\"",
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.56)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
-      ]
-    },
-    {
-      "drug_name": "Prochlorperazine",
-      "drug_id": "DB00433",
-      "disease_name": "Schizophrenia",
-      "combined_score": 1.143,
-      "transe_rank": 69,
-      "pillars_hit": 7,
-      "mol_similarity": 0.8043,
-      "similar_to": "Perphenazine",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 72,
-      "pubmed_treatment_total": 61,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "29442053",
-          "title": "Prochlorperazine interaction with melanin and melanocytes.",
-          "authors": "Otr\u0119ba M, Wrze\u015bniok D, Rok J, et al.",
-          "journal": "Die Pharmazie",
-          "year": "2017",
-          "abstract_snippet": "Prochlorperazine is a phenothiazine-class antipsychotic drug usually used to treat nausea, vomiting and schizophrenia. Phenothiazine derivatives have been known to cause serious side effects, like extrapyramidal symptoms, but also skin disorders which mechanism has not been fully established. The ai...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29442053/",
-          "total_results": 72
-        },
-        {
-          "pmid": "31493244",
-          "title": "Transdermal Delivery of Antipsychotics: Rationale and Current Status.",
-          "authors": "Abruzzo A, Cerchiara T, Luppi B, et al.",
-          "journal": "CNS drugs",
-          "year": "2019",
-          "abstract_snippet": "The aim of this article is to provide the rationale for the development of transdermal formulations of antipsychotics by highlighting their main advantages, starting with an overview of the antipsychotic formulations that are currently available on the market. Progress regarding transdermal antipsyc...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/31493244/"
-        },
-        {
-          "pmid": "13808146",
-          "title": "Treatment of schizophrenic reactions with phenothiazine derivatives. A comparative study of chlorpromazine, triflupromazine, mepazine, prochlorperazine, perphenazine, and phenobarbital.",
-          "authors": "CASEY JF, LASKY JJ, KLETT CJ, et al.",
-          "journal": "The American journal of psychiatry",
-          "year": "1960",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/13808146/"
-        }
       ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "[COMPARATIVE STUDY OF BUTAPERAZINE AND PROCHLORPERAZINE IN CHRONIC SCHIZOPHRENIA].",
-          "year": 1965,
-          "citations": 2,
-          "url": "https://www.semanticscholar.org/paper/ac3ad63e1407c9322e55ca4eefac9dc70725ad1d",
-          "authors": "P. Rajotte, J. Bordeleau, L. T\u00e9treault"
+      "dose_plausibility": {
+        "plausibility": "unknown",
+        "dose_range": "research",
+        "confidence": "low",
+        "rationale": "No ChEMBL clinical phase data available.",
+        "chembl_phase": null,
+        "target_affinity": {
+          "cmax_over_ic50_ratio": 0.2,
+          "median_ic50_nM": 4990.0,
+          "n_activities": 4,
+          "activity_types": [
+            "IC50",
+            "Ki"
+          ],
+          "mechanism_feasible": "no",
+          "cmax_source": "generic fallback 1000 nM (per-drug Cmax TBD)"
         },
-        {
-          "title": "A double-blind trial to investigate the effects of Thorazine (Largactil, chlorpromazine), Compazine (Stemetil, prochlorperazine) and Stelazine (trifluoperazine) in paranoid schizophrenia.",
-          "year": 1961,
-          "citations": 9,
-          "url": "https://www.semanticscholar.org/paper/cf33242ec49bdce9d082df407d7a69611edf88ed",
-          "authors": "I. Wilson, J. McKAY, M. G. Sandifer"
-        },
-        {
-          "title": "Prochlorperazine in chronic schizophrenia.",
-          "year": 1962,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/da335f69fe963b425cddd12714f5b411b1c4e372",
-          "authors": "K. Bhaskaran, D. Nand"
-        },
-        {
-          "title": "[Comparative study of butaperazine and prochlorperazine for schizophrenia in acute phase].",
-          "year": 1970,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/61950fd3d77313ae1a2286dfc86412ece08d5fb9",
-          "authors": "J. Albert, P. Rajotte, E. Rajotte"
-        },
-        {
-          "title": "A synergistic action of prochlorperazine and mepazine in two cases of schizophrenia.",
-          "year": 1959,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/2abd15c2b1c92d346f8ae936537c6610326d7911",
-          "authors": "M. Braun, M. Drucker, A. Shapiro"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "A double-blind trial to investigate the effects of Thorazine (Largactil, chlorpromazine), Compazine (Stemetil, prochlorperazine) and Stelazine (trifluoperazine) in paranoid schizophrenia.",
-        "year": 1961,
-        "citations": 9,
-        "url": "https://www.semanticscholar.org/paper/cf33242ec49bdce9d082df407d7a69611edf88ed",
-        "authors": "I. Wilson, J. McKAY, M. G. Sandifer"
+        "stage": 2
       },
-      "max_citations": 9,
-      "faers_signal": "weak",
-      "faers_total_reports": 38629,
-      "faers_cooccurrences": 1,
-      "faers_interpretation": "1 FAERS report(s) mention both Prochlorperazine and Schizophrenia-related terms. Minimal real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "CT-200783 (1.482)",
-        "PZ0004 (1.451)",
-        "niguldipine hydrochloride (1.439)",
-        "STOCK2S-79598 (1.435)",
-        "B3063 (1.433)"
-      ],
-      "signature_interpretation": "Prochlorperazine was not found among the top 34 drugs that reverse the Schizophrenia gene signature. Top reversers: CT-200783 (1.482), PZ0004 (1.451), niguldipine hydrochloride (1.439)",
-      "ai_hypothesis": "of its antipsychotic properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 0,
-          "negative_signals": 0,
-          "mechanism_signals": 1,
-          "extracted_entities": [
-            {
-              "entity": "pro",
-              "entity_group": "Medication",
-              "score": 0.9959999918937683
-            },
-            {
-              "entity": "##ch",
-              "entity_group": "Medication",
-              "score": 0.9879999756813049
-            },
-            {
-              "entity": "##lor",
-              "entity_group": "Medication",
-              "score": 0.9269999861717224
-            },
-            {
-              "entity": "##perazine",
-              "entity_group": "Medication",
-              "score": 0.9490000009536743
-            },
-            {
-              "entity": "vomiting",
-              "entity_group": "Sign_symptom",
-              "score": 0.828000009059906
-            },
-            {
-              "entity": "ph",
-              "entity_group": "Medication",
-              "score": 0.9900000095367432
-            },
-            {
-              "entity": "skin disorders",
-              "entity_group": "Disease_disorder",
-              "score": 0.9950000047683716
-            }
-          ]
+      "ddi_warnings": {
+        "n_interactions": 770,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00682",
+            "drug_name": "Warfarin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB14672",
+            "drug_name": "(+-)-Oxazepam acetate",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB12093",
+            "drug_name": "(-)-Tetrahydropalmatine",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB08059",
+            "drug_name": "(1S,6BR,9AS,11R,11BR)-9A,11B-DIMETHYL-1-[(METHYLOXY)METHYL]-3,6,9-TRIOXO-1,6,6B,7,8,9,9A,10,11,11B-DECAHYDRO-3H-FURO[4,3,2-DE]INDENO[4,5-H][2]BENZOPYRAN-11-YL ACETATE",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB12071",
+            "drug_name": "(9aR,12aS)-4,5,6,7,9,9a,10,11,12,12a-Decahydrocyclopenta(4,5)pyrido(3,2,1-jk)(1,4)benzodiazepine",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB08496",
+            "drug_name": "(R)-Warfarin",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB14055",
+            "drug_name": "(S)-Warfarin",
+            "severity": "moderate"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
         },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
+        "triangulation_score": 0.566,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.529,
+          "docking": 0.603,
+          "pharos": 0.0,
+          "literature": 1.0
         }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.5065,
-      "mr_genetic_targets": 5,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.84,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": false,
-      "clinical_trials_total": 1,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT02600741",
-          "title": "Family Intervention in Recent Onset Schizophrenia Treatment (FIRST)",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "296",
-          "url": "https://clinicaltrials.gov/study/NCT02600741"
-        }
-      ],
-      "trial_phases": {},
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "1 clinical trial(s) found on ClinicalTrials.gov",
-        "72 PubMed articles on this drug-disease pair",
-        "Supported by 7 independent AI pillars",
-        "High molecular similarity (0.80) to Perphenazine",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.51)"
-      ]
+      },
+      "tissue_context": {
+        "tissues": [
+          "Brain - Frontal Cortex (BA9)",
+          "Brain - Cortex"
+        ],
+        "n_genes": 14,
+        "n_expressed": 8,
+        "mean_tpm_in_tissue": 90.18,
+        "max_tpm_in_tissue": 560.7,
+        "tissue_specificity": 0.999,
+        "context_modifier": 1.146
+      },
+      "disease_entity": "Disease::MESH:D012559",
+      "ensemble_prob": 0.0416,
+      "ensemble_features": {
+        "kg_score": 0.9774,
+        "degree_penalty": 0.7824,
+        "n_drug_targets": 44,
+        "is_fda_approved": 0,
+        "n_disease_genes": 0,
+        "transe_rank_log": 5.4765
+      },
+      "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": -7.24,
+        "target_symbol": "SLC18A2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
-      "drug_name": "Paliperidone",
-      "drug_id": "DB01267",
+      "drug_name": "Amantadine",
+      "drug_id": "DB00915",
       "disease_name": "Schizophrenia",
-      "combined_score": 1.1367,
-      "transe_rank": 173,
-      "pillars_hit": 7,
-      "mol_similarity": 0.7465,
-      "similar_to": "Risperidone",
+      "combined_score": 0.4952,
+      "pillars_hit": 4,
+      "transe_rank": 34,
+      "transe_score": -10.2381,
+      "pykeen_score": -12.0456,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.875,
+      "proximity_distance": 0.5,
+      "admet_score": 0.8068,
+      "admet_flags": "clean",
+      "primekg_score": 0.2526,
+      "dti_score": 0.6504,
+      "dti_best_target": "NRXN1",
+      "kg_group_score": 0.2498,
+      "structural_group_score": 0.6504,
+      "network_group_score": 0.67330002784729,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.673,
+      "admet_multiplier": 0.9614,
+      "efficacy_score": 0.5151,
+      "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 1379,
-      "pubmed_treatment_total": 1313,
+      "shared_target_count": 3,
+      "shared_targets": [
+        "DDC",
+        "GRIN3A",
+        "SIGMAR1"
+      ],
+      "pubmed_total": 120,
+      "pubmed_treatment_total": 115,
       "pubmed_repurposing_total": 1,
       "key_papers": [
         {
-          "pmid": "31661992",
-          "title": "The preclinical discovery and development of paliperidone for the treatment of schizophrenia.",
-          "authors": "Weso\u0142owska A, Jastrz\u0119bska-Wi\u0119sek M, Cios A, et al.",
-          "journal": "Expert opinion on drug discovery",
-          "year": "2020",
+          "pmid": "40072421",
+          "title": "Circulating Blood-Based Proteins in Psychopathology and Cognition: A Mendelian Randomization Study.",
+          "authors": "Bhattacharyya U, John J, Lam M, et al.",
+          "journal": "JAMA psychiatry",
+          "year": "2025",
+          "abstract_snippet": "IMPORTANCE: Peripheral (blood-based) biomarkers for psychiatric illness could benefit diagnosis and treatment, but research to date has typically been low throughput, and traditional case-control studies are subject to potential confounds of treatment and other exposures. Large-scale 2-sample mendel...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40072421/",
+          "total_results": 120
+        },
+        {
+          "pmid": "16754421",
+          "title": "Amantadine and memantine in catatonic schizophrenia.",
+          "authors": "Carroll BT, Thomas C, Jayanti K",
+          "journal": "Annals of clinical psychiatry : official journal of the American Academy of Clinical Psychiatrists",
+          "year": "2006",
           "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/31661992/",
-          "total_results": 1379
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16754421/"
         },
         {
-          "pmid": "31909750",
-          "title": "Paliperidone palmitate in short- and long-term treatment of schizophrenia.",
-          "authors": "Valsecchi P, Barlati S, Garozzo A, et al.",
-          "journal": "Rivista di psichiatria",
-          "year": "2019",
-          "abstract_snippet": "Poor adherence to treatment remains a major problem in the management of patients with schizophrenia. In the 60s, first generation antipsychotics in depot formulation have been introduced on the market with the aim to improve adherence to therapy. However, the limited effectiveness on negative sympt...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/31909750/"
+          "pmid": "7728369",
+          "title": "Effects of biperiden and amantadine on memory in medicated chronic schizophrenic patients. A Double-blind cross-over study.",
+          "authors": "Silver H, Geraisy N",
+          "journal": "The British journal of psychiatry : the journal of mental science",
+          "year": "1995",
+          "abstract_snippet": "BACKGROUND: The effects on memory of an anticholinergic (biperiden) and a dopaminergic (amantadine) anti-Parkinsonian agent were compared. METHOD: Twenty-six chronically medicated schizophrenic (DSM-III-R) in-patients received amantadine (200 mg/day) or biperiden (4 mg/day) for two weeks in a double...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/7728369/"
         },
         {
-          "pmid": "30985829",
-          "title": "Paliperidone extended-release in the short- and long-term treatment of schizophrenia.",
-          "authors": "Valsecchi P, Garozzo A, Nibbio G, et al.",
-          "journal": "Rivista di psichiatria",
-          "year": "2019",
-          "abstract_snippet": "Paliperidone is a second-generation antipsychotic drug belonging to the class of benzisoxasole derivatives. Paliperidone is the major active metabolite of risperidone (9-OH-risperidone) and, as such, is comparable to the latter in terms of pharmacodynamic properties. However, due to its peculiar cha...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30985829/"
-        },
-        {
-          "pmid": "28455891",
-          "title": "Paliperidone palmitate: effectiveness, safety, and the use for treatment of schizophrenia.",
-          "authors": "Jarema M, Bie\u0144kowski P, Heitzman J, et al.",
-          "journal": "Psychiatria polska",
-          "year": "2017",
-          "abstract_snippet": "The aim of the study was to summarize the efficacy and tolerability of paliperidone palmitate, an atypical long-acting antipsychotic drug. Paliperidone is a 9-hydroxy metabolite of risperidone with a slightly different receptor profile and significantly different pharmacokinetic profile. After the s...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/28455891/"
-        },
-        {
-          "pmid": "28140680",
-          "title": "Paliperidone for the treatment of schizophrenia and schizoaffective disorders - a drug safety evaluation.",
-          "authors": "Mauri MC, Reggiori A, Paletta S, et al.",
-          "journal": "Expert opinion on drug safety",
-          "year": "2017",
-          "abstract_snippet": "Paliperidone, the major active metabolite of risperidone, is a second-generation antipsychotic that has been developed as an extended-release (ER) oral formulation and a long-acting injectable paliperidone palmitate (PP) formulation. Paliperidone has demonstrated efficacy in the reduction of acute s...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/28140680/"
-        }
-      ],
-      "repurposing_papers": [
-        {
-          "pmid": "39399035",
-          "title": "Leveraging the Genetics of Psychiatric Disorders to Prioritize Potential Drug Targets and Compounds.",
-          "authors": "Parker N, Koch E, Shadrin AA, et al.",
-          "journal": "medRxiv : the preprint server for health sciences",
-          "year": "2024",
-          "abstract_snippet": "BACKGROUND: Genetics has the potential to inform biologically relevant drug treatment and repurposing which may ultimately improve patient care. In this study, we combine methods which leverage the genetics of psychiatric disorders to prioritize potential drug targets and compounds. METHODS: We used...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39399035/",
-          "total_results": 1
-        }
-      ],
-      "semantic_scholar_papers": [
-        {
-          "title": "Human medicines European public assessment report (EPAR): Trevicta (previously Paliperidone Janssen), paliperidone, Schizophrenia, Date of authorisation: 05/12/2014, Revision: 9, Status: Authorised",
-          "year": 2019,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/f3a72272a9f686526aa2f0094a70c8b81aed967c",
-          "authors": ""
-        },
-        {
-          "title": "Human medicines European public assessment report (EPAR): Xeplion, paliperidone, Schizophrenia, Date of authorisation: 03/03/2011, Revision: 13, Status: Authorised",
-          "year": 2018,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/fe530e556a9f614cdc8e585ed68aff405568974e",
-          "authors": ""
-        },
-        {
-          "title": "Human medicines European public assessment report (EPAR): Trevicta (previously Paliperidone Janssen), paliperidone, Schizophrenia, Date of authorisation: 04/12/2014, Revision: 8, Status: Authorised",
-          "year": 2018,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/eeaa90d0483f13c1d41c613d89b2930f0ee5e2e8",
-          "authors": ""
-        },
-        {
-          "title": "Human medicines European public assessment report (EPAR): Invega, paliperidone, Schizophrenia,Psychotic Disorders, Date of authorisation: 24/06/2007, Revision: 16, Status: Authorised",
-          "year": 2018,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/baeee618ef0799236e5f64f87df66b24c5a5b746",
-          "authors": ""
-        },
-        {
-          "title": "Long-term effectiveness, adherence and safety of twice-yearly paliperidone-palmitate long acting-injectable in patients with schizophrenia in Europe: 2-year mirror-image data from the paliperdone-2 per year study (P2Y)",
-          "year": 2025,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/f0cf24ac0a3591223ea7db6e26450aa30875b8fd",
-          "authors": "Sof\u00eda Manchado Perero, Ana Rodr\u00edguez Lorente, A. Garc\u00eda-P\u00e9rez"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Long-term effectiveness, adherence and safety of twice-yearly paliperidone-palmitate long acting-injectable in patients with schizophrenia in Europe: 2-year mirror-image data from the paliperdone-2 per year study (P2Y)",
-        "year": 2025,
-        "citations": 3,
-        "url": "https://www.semanticscholar.org/paper/f0cf24ac0a3591223ea7db6e26450aa30875b8fd",
-        "authors": "Sof\u00eda Manchado Perero, Ana Rodr\u00edguez Lorente, A. Garc\u00eda-P\u00e9rez"
-      },
-      "max_citations": 3,
-      "faers_signal": "strong",
-      "faers_total_reports": 7999,
-      "faers_cooccurrences": 594,
-      "faers_interpretation": "594 FAERS reports mention both Paliperidone and Schizophrenia-related terms (7.4% of all Paliperidone reports). This suggests real-world clinical association.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "CT-200783 (1.482)",
-        "PZ0004 (1.451)",
-        "niguldipine hydrochloride (1.439)",
-        "STOCK2S-79598 (1.435)",
-        "B3063 (1.433)"
-      ],
-      "signature_interpretation": "Paliperidone was not found among the top 34 drugs that reverse the Schizophrenia gene signature. Top reversers: CT-200783 (1.482), PZ0004 (1.451), niguldipine hydrochloride (1.439)",
-      "ai_hypothesis": "of its unique mechanism of action.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "Phase 2",
-      "failed_trial_count": 10,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.4388,
-      "mr_genetic_targets": 3,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.2,
-      "novelty_level": "ESTABLISHED",
-      "is_known_treatment": true,
-      "clinical_trials_total": 10,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT01157351",
-          "title": "15 Month Study for Adults Who Have Been Diagnosed With Schizophrenia and Incarcerated",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "450",
-          "url": "https://clinicaltrials.gov/study/NCT01157351"
-        },
-        {
-          "nct_id": "NCT00439634",
-          "title": "Efficacy and Safety of AVE1625 as a Co-treatment With Antipsychotic Therapy in Schizophrenia",
-          "status": "TERMINATED",
-          "phase": "PHASE2",
-          "enrollment": "873",
-          "url": "https://clinicaltrials.gov/study/NCT00439634"
-        },
-        {
-          "nct_id": "NCT00796471",
-          "title": "A Pharmacokinetics and Pharmacodynamics Study Under Fasting and Fed Conditions With Paliperidone Extended-release and Immediate-release Formulations",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "35",
-          "url": "https://clinicaltrials.gov/study/NCT00796471"
-        },
-        {
-          "nct_id": "NCT03713658",
-          "title": "A Study to Evaluate the Ability of Conducting a Study of Oral Risperidone Followed by Paliperidone Palmitate in Rwandan Healthcare Facilities",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "34",
-          "url": "https://clinicaltrials.gov/study/NCT03713658"
-        },
-        {
-          "nct_id": "NCT00784238",
-          "title": "Efficacy Study of Paliperidone to Evaluate Subjective Change in Well-being and Drug Attitude in Schizophrenic Participants",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "289",
-          "url": "https://clinicaltrials.gov/study/NCT00784238"
-        }
-      ],
-      "trial_phases": {
-        "PHASE4": 5,
-        "PHASE2": 2,
-        "PHASE1": 1,
-        "PHASE3": 2
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "10 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
-        "1379 PubMed articles on this drug-disease pair",
-        "1 article(s) specifically mention repurposing/repositioning",
-        "Supported by 7 independent AI pillars",
-        "High molecular similarity (0.75) to Risperidone",
-        "Strong FAERS signal: 594 adverse event reports link drug to disease (7999 total reports)",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.44)",
-        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
-      ]
-    },
-    {
-      "drug_name": "Zuclopenthixol",
-      "drug_id": "DB01624",
-      "disease_name": "Schizophrenia",
-      "combined_score": 1.1341,
-      "transe_rank": 123,
-      "pillars_hit": 7,
-      "mol_similarity": 1.0,
-      "similar_to": "Zuclopenthixol",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 141,
-      "pubmed_treatment_total": 140,
-      "pubmed_repurposing_total": 1,
-      "key_papers": [
-        {
-          "pmid": "31303314",
-          "title": "Comparative efficacy and tolerability of 32 oral antipsychotics for the acute treatment of adults with multi-episode schizophrenia: a systematic review and network meta-analysis.",
-          "authors": "Huhn M, Nikolakopoulou A, Schneider-Thoma J, et al.",
-          "journal": "Lancet (London, England)",
-          "year": "2019",
-          "abstract_snippet": "BACKGROUND: Schizophrenia is one of the most common, burdensome, and costly psychiatric disorders in adults worldwide. Antipsychotic drugs are its treatment of choice, but there is controversy about which agent should be used. We aimed to compare and rank antipsychotics by quantifying information fr...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/31303314/",
-          "total_results": 141
-        },
-        {
-          "pmid": "10796607",
-          "title": "Zuclopenthixol decanoate for schizophrenia and other serious mental illnesses.",
-          "authors": "Coutinho E, Fenton M, Quraishi S",
-          "journal": "The Cochrane database of systematic reviews",
-          "year": "2000",
-          "abstract_snippet": "BACKGROUND: There is a clear link between stopping antipsychotic medications and a relapse of psychotic symptoms. A series of long-acting intra-muscular preparations has been developed since the 1960s in the hope of reducing the frequency of relapse and, hence, overall disability. These depot prepar...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/10796607/"
-        },
-        {
-          "pmid": "22513898",
-          "title": "Zuclopenthixol acetate for acute schizophrenia and similar serious mental illnesses.",
-          "authors": "Jayakody K, Gibson RC, Kumar A, et al.",
-          "journal": "The Cochrane database of systematic reviews",
-          "year": "2012",
-          "abstract_snippet": "BACKGROUND: Medication used for acute aggression in psychiatry must have rapid onset of effect, low frequency of administration and low levels of adverse effects. Zuclopenthixol acetate is said to have these properties. OBJECTIVES: To estimate the clinical effects of zuclopenthixol acetate for the m...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/22513898/"
-        },
-        {
-          "pmid": "15266432",
-          "title": "Zuclopenthixol acetate for acute schizophrenia and similar serious mental illnesses.",
-          "authors": "Gibson RC, Fenton M, Coutinho ES, et al.",
-          "journal": "The Cochrane database of systematic reviews",
-          "year": "2004",
-          "abstract_snippet": "BACKGROUND: Medication used for acute aggression in psychiatry must have rapid onset of effect, low frequency of administration and low levels of adverse effects. Zuclopenthixol acetate is said to have these properties. OBJECTIVES: To estimate the clinical effects of zuclopenthixol acetate for the m...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/15266432/"
-        },
-        {
-          "pmid": "11686965",
-          "title": "Zuclopenthixol acetate in the treatment of acute schizophrenia and similar serious mental illnesses.",
-          "authors": "Fenton M, Coutinho ES, Campbell C",
-          "journal": "The Cochrane database of systematic reviews",
-          "year": "2001",
-          "abstract_snippet": "BACKGROUND: People with schizophrenia or other psychotic illnesses may have delusions or hallucinations that may lead them to be aggressive or violent to themselves or others. Medication that is used in this context requires the properties of rapid onset of effect (tranquillisation or at least initi...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/11686965/"
-        }
-      ],
-      "repurposing_papers": [
-        {
-          "pmid": "33841149",
-          "title": "Head-to-Head Comparison of Sedation and Somnolence Among 37 Antipsychotics in Schizophrenia, Bipolar Disorder, Major Depression, Autism Spectrum Disorders, Delirium, and Repurposed in COVID-19, Infectious Diseases, and Oncology From the FAERS, 2004-2020.",
-          "authors": "Eugene AR, Eugene B, Masiak M, et al.",
-          "journal": "Frontiers in pharmacology",
+          "pmid": "33624170",
+          "title": "Amantadine: reappraisal of the timeless diamond-target updates and novel therapeutic potentials.",
+          "authors": "Danysz W, Dekundy A, Scheschonka A, et al.",
+          "journal": "Journal of neural transmission (Vienna, Austria : 1996)",
           "year": "2021",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33841149/",
+          "abstract_snippet": "The aim of the current review was to provide a new, in-depth insight into possible pharmacological targets of amantadine to pave the way to extending its therapeutic use to further indications beyond Parkinson's disease symptoms and viral infections. Considering amantadine's affinities in vitro and ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33624170/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "40072421",
+          "title": "Circulating Blood-Based Proteins in Psychopathology and Cognition: A Mendelian Randomization Study.",
+          "authors": "Bhattacharyya U, John J, Lam M, et al.",
+          "journal": "JAMA psychiatry",
+          "year": "2025",
+          "abstract_snippet": "IMPORTANCE: Peripheral (blood-based) biomarkers for psychiatric illness could benefit diagnosis and treatment, but research to date has typically been low throughput, and traditional case-control studies are subject to potential confounds of treatment and other exposures. Large-scale 2-sample mendel...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40072421/",
           "total_results": 1
         }
       ],
       "semantic_scholar_papers": [
         {
-          "title": "Greenness, Blueness, and Whiteness Assessment of Novel Chromatographic Methods for Separation and Simultaneous Analysis of Zuclopenthixol and Its Major Potentially Toxic Impurity: A Comparative Study.",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/6b0f7b790eaf03e09f2981dbfd3a89203c7c742d",
-          "authors": "F. F. Abdallah, Eglal A Abdelaleem, Aml G Korany"
-        },
-        {
-          "title": "Priapism following antipsychotic-gabapentinoid combination in a case of treatment-resistant schizophrenia: a case report",
-          "year": 2025,
+          "title": "Amantadine in the Treatment of Sexual Inactivity in Schizophrenia Patients Taking Atypical Antipsychotics\u2014The Pilot Case Series Study",
+          "year": 2021,
           "citations": 2,
-          "url": "https://www.semanticscholar.org/paper/b1859fe71f3aacceda5cf6d5ea7d534b2a396a9b",
-          "authors": "Tanzida Haque, Kirti Shastri, Bassem Naguib"
+          "url": "https://www.semanticscholar.org/paper/93bb7bd0016624d0a3f71714fc402c05ade7d875",
+          "authors": "M. Krzystanek, A. Warchala, Beata Tr\u0119dzbor"
         },
         {
-          "title": "Antipsychotics and other risk factors for mortality among people with schizophrenia during an extreme heat event: a population-based case-control study",
-          "year": 2025,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/474b07a7b363fcdcd44a394ad894d25e598b108f",
-          "authors": "Shirley X Chen, M. J. Lee, David A. McVea"
+          "title": "The role of NMDA receptor antagonists, amantadine and memantine, in schizophrenia treatment: a systematic review",
+          "year": 2019,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/674ceb05b4a3590da2f3276f41ad0a95175cb24a",
+          "authors": "B. T. Junho, V. D. de Oliveira"
         },
         {
-          "title": "Strategic and tactic use of antipsychotic medications in schizophrenia: a perspective on current prescription practice",
-          "year": 2025,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/bfd625238d6c98bed04c7ac1a4864e1206df7e7c",
-          "authors": "M. de Pieri"
+          "title": "Amantadine-induced psychosis in Wilson disease.",
+          "year": 2024,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/404a0163f2fc81477756664412fd165b22a987cb",
+          "authors": "Satish Suhas, G. Singh, V. Sreeraj"
         },
         {
-          "title": "Zuclopenthixol versus placebo for schizophrenia.",
+          "title": "[Treating treatment resistant catatonia with amantadine].",
+          "year": 2024,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/9445a17e862499d65b5994a593a814f65582a634",
+          "authors": "E. C. van der Sloot, E. A. M. Kouwert"
+        },
+        {
+          "title": "Changes in verbal learning of patients with schizophrenia: Results from a randomized, double-blind, placebo-controlled trial of amantadine adjunctive to antipsychotics.",
           "year": 2015,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/4204d1419ed30837e06268dc2d7392c06237d908",
-          "authors": "M. Lacey, M. Jayaram"
+          "citations": 2,
+          "url": "https://www.semanticscholar.org/paper/2f37d9e35248f161da361fb251c2eaa6895bc81f",
+          "authors": "L. Czepielewski, Leonardo A Sodr\u00e9, A. L. Souza"
         }
       ],
       "most_cited_paper": {
-        "title": "Zuclopenthixol versus placebo for schizophrenia.",
-        "year": 2015,
-        "citations": 3,
-        "url": "https://www.semanticscholar.org/paper/4204d1419ed30837e06268dc2d7392c06237d908",
-        "authors": "M. Lacey, M. Jayaram"
+        "title": "The role of NMDA receptor antagonists, amantadine and memantine, in schizophrenia treatment: a systematic review",
+        "year": 2019,
+        "citations": 4,
+        "url": "https://www.semanticscholar.org/paper/674ceb05b4a3590da2f3276f41ad0a95175cb24a",
+        "authors": "B. T. Junho, V. D. de Oliveira"
       },
-      "max_citations": 3,
-      "faers_signal": "strong",
-      "faers_total_reports": 3554,
-      "faers_cooccurrences": 495,
-      "faers_interpretation": "495 FAERS reports mention both Zuclopenthixol and Schizophrenia-related terms (13.9% of all Zuclopenthixol reports). This suggests real-world clinical association.",
+      "max_citations": 4,
+      "faers_signal": "moderate",
+      "faers_total_reports": 17778,
+      "faers_cooccurrences": 19,
+      "faers_interpretation": "19 FAERS reports mention both Amantadine and Schizophrenia-related terms. Limited but notable real-world signal.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -825,14 +606,9 @@
         "STOCK2S-79598 (1.435)",
         "B3063 (1.433)"
       ],
-      "signature_interpretation": "Zuclopenthixol was not found among the top 34 drugs that reverse the Schizophrenia gene signature. Top reversers: CT-200783 (1.482), PZ0004 (1.451), niguldipine hydrochloride (1.439)",
-      "ai_hypothesis": "of its antipsychotic properties.",
+      "signature_interpretation": "Amantadine was not found among the top 34 drugs that reverse the Schizophrenia gene signature. Top reversers: CT-200783 (1.482), PZ0004 (1.451), niguldipine hydrochloride (1.439)",
+      "ai_hypothesis": "of its ability to block the NMDA receptor.",
       "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
         {
           "relation_type": "unclear",
           "confidence": 0.0,
@@ -846,144 +622,370 @@
       ],
       "has_failed_trial": false,
       "failed_trial_phase": "Phase 3",
-      "failed_trial_count": 1,
+      "failed_trial_count": 5,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.4715,
-      "mr_genetic_targets": 2,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mr_score": 0.673,
+      "mr_genetic_targets": 4,
+      "mechanistic_hypothesis": "Amantadine \u2014[is a therapeutic for]\u2192 Schizophrenia",
+      "kg_paths_text": "\u2022 Amantadine \u2014[is a therapeutic for]\u2192 Schizophrenia\n\u2022 Amantadine \u2014[binds]\u2192 gene-2904 \u2014[is linked to]\u2192 Schizophrenia\n\u2022 Amantadine \u2014[binds]\u2192 gene-2906 \u2014[is linked to]\u2192 Schizophrenia",
       "validation_experiments": [],
-      "novelty_score": 0.3,
+      "novelty_score": 0.208,
       "novelty_level": "ESTABLISHED",
-      "is_known_treatment": false,
-      "clinical_trials_total": 8,
+      "is_known_treatment": true,
+      "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT02307396",
-          "title": "Evaluation of the Necessity of Long-term Pharmacological Treatment With Antipsychotics in Schizophrenic Patients",
+          "nct_id": "NCT00757978",
+          "title": "Memantine as Adjunctive Therapy for Schizophrenia Negative Symptoms",
           "status": "COMPLETED",
           "phase": "PHASE4",
-          "enrollment": "21",
-          "url": "https://clinicaltrials.gov/study/NCT02307396"
+          "enrollment": "22",
+          "url": "https://clinicaltrials.gov/study/NCT00757978"
         },
         {
-          "nct_id": "NCT07047651",
-          "title": "\u03a4he Combination of Pharmacotherapy With RECOVERYTRSGR and RECOVERYTRSBDGR.",
+          "nct_id": "NCT02001103",
+          "title": "Memantine add-on for Cognitive and Negative Symptoms of Schizophrenia",
+          "status": "UNKNOWN",
+          "phase": "PHASE3",
+          "enrollment": "120",
+          "url": "https://clinicaltrials.gov/study/NCT02001103"
+        },
+        {
+          "nct_id": "NCT04789915",
+          "title": "Add-on MEmaNtine to Dopamine Modulation to Improve Negative Symptoms at First Psychosis",
           "status": "RECRUITING",
-          "phase": "PHASE4",
+          "phase": "PHASE1",
+          "enrollment": "46",
+          "url": "https://clinicaltrials.gov/study/NCT04789915"
+        },
+        {
+          "nct_id": "NCT00401973",
+          "title": "Assessment of Safety and Efficacy of Therapy for the Prevention of Weight Gain Associated With Olanzapine",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "199",
+          "url": "https://clinicaltrials.gov/study/NCT00401973"
+        },
+        {
+          "nct_id": "NCT00999505",
+          "title": "Amantadine as Adjunctive Therapy to Antipsychotics in Schizophrenia",
+          "status": "UNKNOWN",
+          "phase": "PHASE3",
           "enrollment": "40",
-          "url": "https://clinicaltrials.gov/study/NCT07047651"
-        },
-        {
-          "nct_id": "NCT00206960",
-          "title": "Dopaminergic, Functional, Structural, and Cognitive Disturbances in First-episode Schizophrenia",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "56",
-          "url": "https://clinicaltrials.gov/study/NCT00206960"
-        },
-        {
-          "nct_id": "NCT02582736",
-          "title": "Antipsychotics and Risk of Hyperglycemic Emergencies",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "725489",
-          "url": "https://clinicaltrials.gov/study/NCT02582736"
-        },
-        {
-          "nct_id": "NCT05766007",
-          "title": "Long-acting Injectable Antipsychotics for Mental Ill-Health in Pregnancy and Postpartum",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "168",
-          "url": "https://clinicaltrials.gov/study/NCT05766007"
+          "url": "https://clinicaltrials.gov/study/NCT00999505"
         }
       ],
       "trial_phases": {
-        "PHASE4": 2,
-        "NA": 1,
-        "PHASE3": 1,
-        "PHASE2": 2
+        "PHASE4": 1,
+        "PHASE3": 5,
+        "PHASE1": 3,
+        "PHASE2": 3
       },
       "confidence": "HIGH",
       "confidence_reasons": [
-        "8 clinical trial(s) found on ClinicalTrials.gov",
+        "10 clinical trial(s) found on ClinicalTrials.gov",
         "Phase 3 trial exists",
-        "141 PubMed articles on this drug-disease pair",
+        "120 PubMed articles on this drug-disease pair",
         "1 article(s) specifically mention repurposing/repositioning",
-        "Supported by 7 independent AI pillars",
-        "High molecular similarity (1.00) to Zuclopenthixol",
-        "Strong FAERS signal: 495 adverse event reports link drug to disease (3554 total reports)",
+        "Supported by 4 independent AI pillars",
+        "Moderate FAERS signal: 19 adverse event reports mention drug-disease co-occurrence",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.47)"
-      ]
+        "Moderate genetic evidence supporting causality (MR score: 0.67)"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1452,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (SLC22A1 / rs622342)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "SLC22A1",
+            "variant": "rs622342",
+            "level": "3",
+            "phenotype_category": "Dosage;Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1448101086"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.617,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.495,
+          "docking": 0.876,
+          "pharos": 0.0,
+          "literature": 0.904
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Brain - Frontal Cortex (BA9)",
+          "Brain - Cortex"
+        ],
+        "n_genes": 3,
+        "n_expressed": 2,
+        "mean_tpm_in_tissue": 11.36,
+        "max_tpm_in_tissue": 31.33,
+        "tissue_specificity": 0.266,
+        "context_modifier": 0.98
+      },
+      "disease_entity": "Disease::MESH:D012559",
+      "ensemble_prob": 0.7325,
+      "ensemble_features": {
+        "kg_score": 0.9968,
+        "degree_penalty": 0.7695,
+        "n_drug_targets": 7,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 3.5553
+      },
+      "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": -10.51,
+        "target_symbol": "SIGMAR1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
-      "drug_name": "Aceneuramic Acid",
-      "drug_id": "DB11797",
+      "drug_name": "Verapamil",
+      "drug_id": "DB00661",
       "disease_name": "Schizophrenia",
-      "combined_score": 1.1224000453948975,
-      "transe_rank": 124,
+      "combined_score": 0.4934,
       "pillars_hit": 4,
+      "transe_rank": 196,
+      "transe_score": -10.7812,
+      "pykeen_score": -12.2661,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.800000011920929,
+      "proximity_distance": 0.800000011920929,
+      "admet_score": 0.5621,
+      "admet_flags": "hERG=0.97",
+      "primekg_score": 0.2538,
+      "dti_score": 1.0,
+      "dti_best_target": "NRXN1",
+      "kg_group_score": 0.1339,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.6000999808311462,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.7151,
+      "admet_multiplier": 0.9124,
+      "efficacy_score": 0.5408,
+      "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
+      "shared_target_count": 2,
+      "shared_targets": [
+        "EGFR",
+        "INS"
+      ],
+      "pubmed_total": 45,
+      "pubmed_treatment_total": 43,
+      "pubmed_repurposing_total": 2,
+      "key_papers": [
+        {
+          "pmid": "10507527",
+          "title": "Comparative pharmacology of bipolar disorder and schizophrenia.",
+          "authors": "Post RM",
+          "journal": "Schizophrenia research",
+          "year": "1999",
+          "abstract_snippet": "The treatment of acute mania and schizophrenia overlap considerably in terms of the typical and atypical neuroleptics, but begin to diverge with the recognized mood stabilizers for bipolar affective illness--lithium, carbamazepine, and valproate--which are substantially less effective in schizophren...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10507527/",
+          "total_results": 45
+        },
+        {
+          "pmid": "3545130",
+          "title": "Clinical and biochemical effects of verapamil administration to schizophrenic patients.",
+          "authors": "Pickar D, Wolkowitz OM, Doran AR, et al.",
+          "journal": "Archives of general psychiatry",
+          "year": "1987",
+          "abstract_snippet": "We administered verapamil hydrochloride, a calcium channel antagonist, to seven chronically ill schizophrenic patients for five weeks under double-blind, placebo-controlled conditions. No therapeutic effect was noted. Worsening in hostile and uncooperative behaviors and a syndrome of heightened emot...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/3545130/"
+        },
+        {
+          "pmid": "3180637",
+          "title": "Steady-state cerebrospinal fluid transfer of verapamil and metabolites in patients with schizophrenia.",
+          "authors": "Narang PK, Blumhardt CL, Doran AR, et al.",
+          "journal": "Clinical pharmacology and therapeutics",
+          "year": "1988",
+          "abstract_snippet": "Cerebrospinal fluid (CSF) and plasma levels of verapamil and its two metabolites, norverapamil and D-620, were measured in seven patients with schizophrenia under steady-state conditions. Simultaneous sampling of CSF and plasma just before the dose during week 4 of the trial showed that verapamil, n...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/3180637/"
+        },
+        {
+          "pmid": "3797552",
+          "title": "Effect of verapamil on platelet serotonin concentration in normal and schizophrenic subjects.",
+          "authors": "Uhr SB, Adriaenssens PI, Ciaranello RD, et al.",
+          "journal": "Psychiatry research",
+          "year": "1986",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/3797552/"
+        },
+        {
+          "pmid": "40710367",
+          "title": "Therapeutic Potential of Calcium Channel Blockers in Neuropsychiatric, Endocrine and Pain Disorders.",
+          "authors": "Manzar A, Sic A, Banh C, et al.",
+          "journal": "Cells",
+          "year": "2025",
+          "abstract_snippet": "Calcium channel blockers (CCBs), originally developed for cardiovascular indications, have gained attention for their therapeutic potential in neuropsychiatric, endocrine, and pain-related disorders. In neuropsychiatry, nimodipine and isradipine, both L-type CCBs, show mood-stabilizing and neuroprot...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40710367/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "40710367",
+          "title": "Therapeutic Potential of Calcium Channel Blockers in Neuropsychiatric, Endocrine and Pain Disorders.",
+          "authors": "Manzar A, Sic A, Banh C, et al.",
+          "journal": "Cells",
+          "year": "2025",
+          "abstract_snippet": "Calcium channel blockers (CCBs), originally developed for cardiovascular indications, have gained attention for their therapeutic potential in neuropsychiatric, endocrine, and pain-related disorders. In neuropsychiatry, nimodipine and isradipine, both L-type CCBs, show mood-stabilizing and neuroprot...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40710367/",
+          "total_results": 2
+        },
+        {
+          "pmid": "33479257",
+          "title": "Adenosine modulators and calcium channel blockers as add-on treatment for schizophrenia.",
+          "authors": "Lintunen J, L\u00e4hteenvuo M, Tiihonen J, et al.",
+          "journal": "NPJ schizophrenia",
+          "year": "2021",
+          "abstract_snippet": "Relapses remain common among individuals with schizophrenia indicating a need for improved treatments. Creating a completely new drug molecule is expensive and time consuming, and therefore drug repurposing should be considered. Aim of this study was to investigate the risk of psychiatric rehospital...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33479257/"
+        }
+      ],
       "semantic_scholar_papers": [
         {
-          "title": "Safety and efficacy of aceneuramic acid in GNE myopathy: open-label extension study",
-          "year": 2024,
-          "citations": 6,
-          "url": "https://www.semanticscholar.org/paper/31e6afeb0302a14d89b772dc6e03dfd398c24cac",
-          "authors": "N. Suzuki, M. Mori-Yoshimura, M. Katsuno"
+          "title": "Verapamil for the treatment of clozapine-induced persistent sinus tachycardia in a patient with schizophrenia: a case report and literature review.",
+          "year": 2014,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/da34933a38a6c802e933dfedbf746cbc2e3a7287",
+          "authors": "P. Das, P. S. Kuppuswamy, A. Rai"
         },
         {
-          "title": "Phase II/III Study of Aceneuramic Acid Administration for GNE Myopathy in Japan",
-          "year": 2023,
-          "citations": 15,
-          "url": "https://www.semanticscholar.org/paper/d40955d40c8297abe206cfe8653c14c86bc58b01",
-          "authors": "N. Suzuki, M. Mori-Yoshimura, M. Katsuno"
+          "title": "Adenosine modulators and calcium channel blockers as add-on treatment for schizophrenia",
+          "year": 2021,
+          "citations": 28,
+          "url": "https://www.semanticscholar.org/paper/b53b1a675e3a99c4724221a149a0db05454323f0",
+          "authors": "J. Lintunen, M. L\u00e4hteenvuo, J. Tiihonen"
         },
         {
-          "title": "Efficacy confirmation study of aceneuramic acid administration for GNE myopathy in Japan",
-          "year": 2023,
-          "citations": 14,
-          "url": "https://www.semanticscholar.org/paper/831795b5506379d266d6c932bd63f3acada2d57b",
-          "authors": "M. Mori-Yoshimura, N. Suzuki, M. Katsuno"
+          "title": "Regional increase in P-glycoprotein function in the blood-brain barrier of patients with chronic schizophrenia: a PET study with [(11)C]verapamil as a probe for P-glycoprotein function.",
+          "year": 2010,
+          "citations": 75,
+          "url": "https://www.semanticscholar.org/paper/23d4bf8645cf776a9a4ff6624e16497e88146b80",
+          "authors": "Onno L de Klerk, A. Willemsen, F. Bosker"
         },
         {
-          "title": "Symptomatic and cognitive effects of D-amino acid oxidase inhibitors in patients with schizophrenia: a meta-analysis of double-blind randomized controlled trials",
-          "year": 2025,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/d4c9dfb9f1740d08747cde4bee853696400f3ad0",
-          "authors": "Chun-Hung Chang, Yu-Der Hsia, Wen-Chun Liu"
+          "title": "Suppressing leukocyte Kv1.3-channels by commonly used drugs: A novel therapeutic target for schizophrenia?",
+          "year": 2022,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/89a476ff6fc9f3d11a6d19f80a70eeff72b84fa8",
+          "authors": "Yasuhiro Sato, R. Kuwana, I. Kazama"
         },
         {
-          "title": "Global evaluation of the impact of food fortification with folic acid on rates of schizophrenia.",
-          "year": 2025,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/36a036488db9038c357083b17fa39a5f710edf57",
-          "authors": "Samantha Yoo, Azita Montazeri, Helene McNulty"
+          "title": "A negative, double-blind, placebo-controlled, clinical trial of verapamil in chronic schizophrenia.",
+          "year": 1986,
+          "citations": 46,
+          "url": "https://www.semanticscholar.org/paper/a2056cec4d4e45f6030994944008ed24c24a175f",
+          "authors": "J. Grebb, R. Shelton, E. Taylor"
         }
       ],
       "most_cited_paper": {
-        "title": "Phase II/III Study of Aceneuramic Acid Administration for GNE Myopathy in Japan",
-        "year": 2023,
-        "citations": 15,
-        "url": "https://www.semanticscholar.org/paper/d40955d40c8297abe206cfe8653c14c86bc58b01",
-        "authors": "N. Suzuki, M. Mori-Yoshimura, M. Katsuno"
+        "title": "Regional increase in P-glycoprotein function in the blood-brain barrier of patients with chronic schizophrenia: a PET study with [(11)C]verapamil as a probe for P-glycoprotein function.",
+        "year": 2010,
+        "citations": 75,
+        "url": "https://www.semanticscholar.org/paper/23d4bf8645cf776a9a4ff6624e16497e88146b80",
+        "authors": "Onno L de Klerk, A. Willemsen, F. Bosker"
       },
-      "max_citations": 15,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Aceneuramic Acid",
+      "max_citations": 75,
+      "faers_signal": "moderate",
+      "faers_total_reports": 40970,
+      "faers_cooccurrences": 10,
+      "faers_interpretation": "10 FAERS reports mention both Verapamil and Schizophrenia-related terms. Limited but notable real-world signal.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -993,43 +995,320 @@
         "STOCK2S-79598 (1.435)",
         "B3063 (1.433)"
       ],
-      "signature_interpretation": "Aceneuramic Acid was not found among the top 34 drugs that reverse the Schizophrenia gene signature. Top reversers: CT-200783 (1.482), PZ0004 (1.451), niguldipine hydrochloride (1.439)",
-      "ai_hypothesis": "of its ability to inhibit the NMDA receptor.",
-      "abstract_analyses": [],
+      "signature_interpretation": "Verapamil was not found among the top 34 drugs that reverse the Schizophrenia gene signature. Top reversers: CT-200783 (1.482), PZ0004 (1.451), niguldipine hydrochloride (1.439)",
+      "ai_hypothesis": "of its calcium channel blocking properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 0,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "cerebrospinal fluid",
+              "entity_group": "Biological_structure",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "cs",
+              "entity_group": "Biological_structure",
+              "score": 1.0
+            },
+            {
+              "entity": "plasma",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9269999861717224
+            },
+            {
+              "entity": "verapami",
+              "entity_group": "Medication",
+              "score": 0.8560000061988831
+            },
+            {
+              "entity": "norverapamil",
+              "entity_group": "Medication",
+              "score": 0.7519999742507935
+            },
+            {
+              "entity": "schizophrenia",
+              "entity_group": "Disease_disorder",
+              "score": 0.9909999966621399
+            },
+            {
+              "entity": "steady",
+              "entity_group": "Detailed_description",
+              "score": 0.8949999809265137
+            },
+            {
+              "entity": "plasma",
+              "entity_group": "Administration",
+              "score": 0.7070000171661377
+            },
+            {
+              "entity": "vera",
+              "entity_group": "Medication",
+              "score": 0.9959999918937683
+            },
+            {
+              "entity": "##pa",
+              "entity_group": "Medication",
+              "score": 0.902999997138977
+            }
+          ]
+        }
+      ],
       "has_failed_trial": false,
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.5327,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mr_score": 0.7151,
+      "mr_genetic_targets": 7,
+      "mechanistic_hypothesis": "Verapamil \u2014[is a therapeutic for]\u2192 Schizophrenia",
+      "kg_paths_text": "\u2022 Verapamil \u2014[is a therapeutic for]\u2192 Schizophrenia\n\u2022 Verapamil \u2014[targets]\u2192 gene-8913 \u2014[is a target of]\u2192 DB09061 \u2014[is a therapeutic for]\u2192 Schizophrenia\n\u2022 Verapamil \u2014[targets]\u2192 gene-8913 \u2014[is a target of]\u2192 DB09061 \u2014[is a therapeutic for]\u2192 Schizophrenia",
       "validation_experiments": [],
-      "novelty_score": 1.0,
-      "novelty_level": "BREAKTHROUGH",
-      "is_known_treatment": false,
+      "novelty_score": 0.503,
+      "novelty_level": "EMERGING",
+      "is_known_treatment": true,
       "clinical_trials_total": 0,
       "clinical_trials": [],
       "trial_phases": {},
-      "confidence": "LOW",
+      "confidence": "HIGH",
       "confidence_reasons": [
+        "45 PubMed articles found",
+        "2 article(s) specifically mention repurposing/repositioning",
         "Supported by 4 independent AI pillars",
+        "Moderate FAERS signal: 10 adverse event reports mention drug-disease co-occurrence",
+        "Supporting paper with 75 citations",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.53)"
-      ]
+        "Strong causal genetic evidence (MR score: 0.72, 7 genetic targets)"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 2025,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (KCNIP1;KCNMB1 / rs2301149)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "KCNIP1;KCNMB1",
+            "variant": "rs2301149",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/982034400"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs1045642",
+            "level": "3",
+            "phenotype_category": "Other",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/982036238"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs2032582",
+            "level": "3",
+            "phenotype_category": "Other",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/982036249"
+          },
+          {
+            "gene": "NR1H3",
+            "variant": "rs11039149",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043880783"
+          },
+          {
+            "gene": "NOS1AP",
+            "variant": "rs10918594",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/655384894"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.317,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.493,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.722
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Brain - Frontal Cortex (BA9)",
+          "Brain - Cortex"
+        ],
+        "n_genes": 2,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 3.14,
+        "max_tpm_in_tissue": 6.25,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.905
+      },
+      "disease_entity": "Disease::MESH:D012559",
+      "ensemble_prob": 0.0226,
+      "ensemble_features": {
+        "kg_score": 0.975,
+        "degree_penalty": 0.7501,
+        "n_drug_targets": 40,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 5.5797
+      },
+      "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
       "drug_name": "Cyclic Adenosine Monophosphate",
       "drug_id": "DB02527",
       "disease_name": "Schizophrenia",
-      "combined_score": 1.1216,
+      "combined_score": 0.4921,
+      "pillars_hit": 4,
       "transe_rank": 105,
-      "pillars_hit": 7,
+      "transe_score": -10.5487,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0.6721,
       "similar_to": "Cyclic Guanosine Monophosphate",
+      "mol_emb_similarity": 0.941,
+      "mol_emb_similar_to": "Cyclic Guanosine Monophosphate",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.7120000123977661,
+      "proximity_distance": 1.149999976158142,
+      "admet_score": 1.0,
+      "admet_flags": "DILI=0.90",
+      "primekg_score": 0.2505,
+      "dti_score": 0.5356,
+      "dti_best_target": "SLC18A2",
+      "kg_group_score": 0.0752,
+      "structural_group_score": 0.941,
+      "network_group_score": 0.5631999969482422,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.6087,
+      "admet_multiplier": 1.0,
+      "efficacy_score": 0.4921,
+      "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 17,
+      "shared_targets": [
+        "ADA",
+        "CA3",
+        "CTLA4",
+        "CXCL8",
+        "GH1",
+        "GHRH",
+        "GNRH1",
+        "IL10",
+        "IL1A",
+        "INS",
+        "KNG1",
+        "MAP2",
+        "MT-CO2",
+        "NR4A1",
+        "RGS2",
+        "SLC12A2",
+        "TRH"
+      ],
       "pubmed_total": 76,
       "pubmed_treatment_total": 44,
       "pubmed_repurposing_total": 1,
@@ -1176,10 +1455,10 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0.6087,
       "mr_genetic_targets": 9,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Cyclic Adenosine Monophosphate \u2014[is a therapeutic for]\u2192 MESH:D016584 \u2014[is treated by]\u2192 DB00370 \u2014[treats]\u2192 Schizophrenia",
+      "kg_paths_text": "\u2022 Cyclic Adenosine Monophosphate \u2014[is a therapeutic for]\u2192 MESH:D016584 \u2014[is treated by]\u2192 DB00370 \u2014[treats]\u2192 Schizophrenia\n\u2022 Cyclic Adenosine Monophosphate \u2014[is a therapeutic for]\u2192 MESH:D016584 \u2014[is treated by]\u2192 DB01104 \u2014[is a therapeutic for]\u2192 Schizophrenia\n\u2022 Cyclic Adenosine Monophosphate \u2014[is a therapeutic for]\u2192 MESH:D016584 \u2014[is treated by]\u2192 DB00215 \u2014[is a therapeutic for]\u2192 Schizophrenia",
       "validation_experiments": [],
-      "novelty_score": 1.0,
+      "novelty_score": 0.502,
       "novelty_level": "EMERGING",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -1189,445 +1468,190 @@
       "confidence_reasons": [
         "76 PubMed articles on this drug-disease pair",
         "1 article(s) specifically mention repurposing/repositioning",
-        "Supported by 7 independent AI pillars",
+        "Supported by 4 independent AI pillars",
         "High molecular similarity (0.67) to Cyclic Guanosine Monophosphate",
         "Supporting paper with 47 citations",
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.61)"
-      ]
-    },
-    {
-      "drug_name": "Amoxapine",
-      "drug_id": "DB00543",
-      "disease_name": "Schizophrenia",
-      "combined_score": 1.1197,
-      "transe_rank": 116,
-      "pillars_hit": 7,
-      "mol_similarity": 0.7391,
-      "similar_to": "Loxapine",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 18,
-      "pubmed_treatment_total": 14,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "24294487",
-          "title": "Addition of amoxapine improves positive and negative symptoms in a patient with schizophrenia.",
-          "authors": "Reeves KC, Virk S, Niedermier J, et al.",
-          "journal": "Therapeutic advances in psychopharmacology",
-          "year": "2013",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/24294487/",
-          "total_results": 18
-        },
-        {
-          "pmid": "10340683",
-          "title": "D2 and 5-HT2 receptor effects of antipsychotics: bridging basic and clinical findings using PET.",
-          "authors": "Remington G, Kapur S",
-          "journal": "The Journal of clinical psychiatry",
-          "year": "1999",
-          "abstract_snippet": "The advent of a number of new antipsychotics has been paralleled by efforts to better delineate their mechanisms of action and, in doing so, further our understanding of schizophrenia and its pathophysiology. Technological advances, such as positron emission tomography (PET), have proven to be power...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/10340683/"
-        },
-        {
-          "pmid": "11043672",
-          "title": "Loxapine intoxication: case report and literature review.",
-          "authors": "Mazzola CD, Miron S, Jenkins AJ",
-          "journal": "Journal of analytical toxicology",
-          "year": "2000",
-          "abstract_snippet": "Loxapine is a dibenzoxazepine tricyclic compound used to treat schizophrenia in the United States since 1976. Metabolism includes demethylation to its primary metabolite, amoxapine. There are few documented reports of the disposition of loxapine in deaths due to overdose. This report discusses the o...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/11043672/"
-        },
-        {
-          "pmid": "12413640",
-          "title": "Amoxapine shows atypical antipsychotic effects in patients with schizophrenia: results from a prospective open-label study.",
-          "authors": "Apiquian R, Ulloa E, Fresan A, et al.",
-          "journal": "Schizophrenia research",
-          "year": "2003",
-          "abstract_snippet": "OBJECTIVE: Amoxapine is marketed as an antidepressant. However, its receptor occupancy, in vitro and in vivo, and its effects in pre-clinical models are very similar to atypical antipsychotics. To examine if this leads to an atypical antipsychotic effect in the clinical context, the authors examined...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/12413640/"
-        },
-        {
-          "pmid": "7026396",
-          "title": "Effects of amoxapine, a new antidepressant, on pseudoneurotic schizophrenia.",
-          "authors": "Aono T, Kaneko M, Numata Y, et al.",
-          "journal": "Folia psychiatrica et neurologica japonica",
-          "year": "1981",
-          "abstract_snippet": "During a four-week open study, amoxapine (AX), a new antidepressant agent, was administered to seven patients with pseudoneurotic schizophrenia, seven with neurosis and another seven with schizophrenia, all having similar symptoms. The improvement ratio was 71.4% in the pseudoneurotic schizophrenia ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/7026396/"
-        }
       ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Addition of amoxapine improves positive and negative symptoms in a patient with schizophrenia",
-          "year": 2013,
-          "citations": 2,
-          "url": "https://www.semanticscholar.org/paper/67cfa6408614ae736352e653dffc296f2f55b19b",
-          "authors": "Kevin C Reeves, S. Virk, Julie A. Niedermier"
-        },
-        {
-          "title": "Amoxapine shows atypical antipsychotic effects in patients with schizophrenia: results from a prospective open-label study.",
-          "year": 2003,
-          "citations": 19,
-          "url": "https://www.semanticscholar.org/paper/267a1ab50f75f2b14d4862640fd078dad591a39c",
-          "authors": "R. Apiqui\u00e1n, Elena Ulloa, A. Fres\u00e1n"
-        },
-        {
-          "title": "Effects of Amoxapine, a New Antidepressant, on Pseud oneurotic Schizophrenia",
-          "year": 1981,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/1b919488012c407683e9d800c32d69bb2b088e0a",
-          "authors": "T. Aono, M. Kaneko, Yoshihiko Numata"
-        },
-        {
-          "title": "Amoxapine shows atypicalantipsychoticeffectsinpatientswith schizophrenia:resultsfroma prospectiveopen-labelstudy",
-          "year": 2002,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/6e58edf53718bd0cb47fe7c1693ee1ed7d5f505a",
-          "authors": "A. Fres\u00e1n, H. Nicolini"
-        },
-        {
-          "title": "Amoxapine in schizophrenia: a negative double-blind controlled trial.",
-          "year": 2004,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/8a9fd7d90a8c42966e2efef4b1e4f14acf6310e9",
-          "authors": "P. Fitzgerald, S. Filia, A. D. de Castella"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Amoxapine shows atypical antipsychotic effects in patients with schizophrenia: results from a prospective open-label study.",
-        "year": 2003,
-        "citations": 19,
-        "url": "https://www.semanticscholar.org/paper/267a1ab50f75f2b14d4862640fd078dad591a39c",
-        "authors": "R. Apiqui\u00e1n, Elena Ulloa, A. Fres\u00e1n"
+      "dose_plausibility": {
+        "plausibility": "unknown",
+        "dose_range": "research",
+        "confidence": "low",
+        "rationale": "No ChEMBL clinical phase data available.",
+        "chembl_phase": null,
+        "target_affinity": {},
+        "stage": 1
       },
-      "max_citations": 19,
-      "faers_signal": "none",
-      "faers_total_reports": 486,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Amoxapine to Schizophrenia terms. Drug has 486 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "CT-200783 (1.482)",
-        "PZ0004 (1.451)",
-        "niguldipine hydrochloride (1.439)",
-        "STOCK2S-79598 (1.435)",
-        "B3063 (1.433)"
-      ],
-      "signature_interpretation": "Amoxapine was not found among the top 34 drugs that reverse the Schizophrenia gene signature. Top reversers: CT-200783 (1.482), PZ0004 (1.451), niguldipine hydrochloride (1.439)",
-      "ai_hypothesis": "of its unique mechanism of action.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 0,
-          "negative_signals": 0,
-          "mechanism_signals": 0,
-          "extracted_entities": [
-            {
-              "entity": "loxapine",
-              "entity_group": "Medication",
-              "score": 0.9959999918937683
-            },
-            {
-              "entity": "di",
-              "entity_group": "Medication",
-              "score": 0.9990000128746033
-            },
-            {
-              "entity": "##ben",
-              "entity_group": "Medication",
-              "score": 1.0
-            },
-            {
-              "entity": "##zoxazepine",
-              "entity_group": "Medication",
-              "score": 0.9490000009536743
-            },
-            {
-              "entity": "schizophrenia",
-              "entity_group": "Disease_disorder",
-              "score": 0.8859999775886536
-            },
-            {
-              "entity": "demeth",
-              "entity_group": "Medication",
-              "score": 0.7210000157356262
-            },
-            {
-              "entity": "am",
-              "entity_group": "Medication",
-              "score": 1.0
-            },
-            {
-              "entity": "##ox",
-              "entity_group": "Medication",
-              "score": 0.996999979019165
-            },
-            {
-              "entity": "##ap",
-              "entity_group": "Medication",
-              "score": 0.953000009059906
-            }
-          ]
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.4824,
-      "mr_genetic_targets": 8,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.85,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "MEDIUM",
-      "confidence_reasons": [
-        "18 PubMed articles found",
-        "Supported by 7 independent AI pillars",
-        "High molecular similarity (0.74) to Loxapine",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.48)"
-      ]
-    },
-    {
-      "drug_name": "Ethanol",
-      "drug_id": "DB00898",
-      "disease_name": "Schizophrenia",
-      "combined_score": 1.1186,
-      "transe_rank": 6,
-      "pillars_hit": 6,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 222,
-      "pubmed_treatment_total": 133,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "34532853",
-          "title": "The role of glucagon-like peptide 1 (GLP-1) in addictive disorders.",
-          "authors": "Klausen MK, Thomsen M, Wortwein G, et al.",
-          "journal": "British journal of pharmacology",
-          "year": "2022",
-          "abstract_snippet": "Drug, alcohol and tobacco use disorders are a global burden affecting millions of people. Despite decades of research, treatment options are sparse or missing, and relapse rates are high. Glucagon-like peptide 1 (GLP-1) is released in the small intestine, promotes blood glucose homeostasis, slows ga...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34532853/",
-          "total_results": 222
-        },
-        {
-          "pmid": "36206872",
-          "title": "Mechanisms underpinning Carpolobia lutea G. Don ethanol extract's neurorestorative and antipsychotic-like activities in an NMDA receptor antagonist model of schizophrenia.",
-          "authors": "Omeiza NA, Bakre A, Ben-Azu B, et al.",
-          "journal": "Journal of ethnopharmacology",
-          "year": "2023",
-          "abstract_snippet": "ETHNOPHARMACOLOGICAL RELEVANCE: Persistent ketamine insults to the central nervous system block NMDA receptors and disrupt putative neurotransmission, oxido-nitrosative, and inflammatory pathways, resulting in schizophrenia-like symptoms in animals. Previously, the ethnomedicinal benefits of Carpolo...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36206872/"
-        },
-        {
-          "pmid": "37047464",
-          "title": "The Hypothalamic-Pituitary-Gonadal Axis in Men with Schizophrenia.",
-          "authors": "Matuszewska A, Kowalski K, Jawie\u0144 P, et al.",
-          "journal": "International journal of molecular sciences",
-          "year": "2023",
-          "abstract_snippet": "Schizophrenia is a severe mental disorder with a chronic, progressive course. The etiology of this condition is linked to the interactions of multiple genes and environmental factors. The earlier age of onset of schizophrenia, the higher frequency of negative symptoms in the clinical presentation, a...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37047464/"
-        },
-        {
-          "pmid": "28285734",
-          "title": "Behavioral predictors of alcohol drinking in a neurodevelopmental rat model of schizophrenia and co-occurring alcohol use disorder.",
-          "authors": "Khokhar JY, Todd TP",
-          "journal": "Schizophrenia research",
-          "year": "2018",
-          "abstract_snippet": "Alcohol use disorder commonly occurs in patients with schizophrenia and contributes greatly to its morbidity. Unfortunately, the neural and behavioral underpinnings of alcohol drinking in these patients are not well understood. In order to begin to understand the cognitive and reward-related changes...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/28285734/"
-        },
-        {
-          "pmid": "10852851",
-          "title": "Critical periods of vulnerability for the developing nervous system: evidence from humans and animal models.",
-          "authors": "Rice D, Barone S",
-          "journal": "Environmental health perspectives",
-          "year": "2000",
-          "abstract_snippet": "Vulnerable periods during the development of the nervous system are sensitive to environmental insults because they are dependent on the temporal and regional emergence of critical developmental processes (i.e., proliferation, migration, differentiation, synaptogenesis, myelination, and apoptosis). ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/10852851/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "NEUROBEHAVIORAL EFFECT OF ETHANOL LEAF EXTRACT OF CHROMOLAENA ODORATA AGAINST ACUTE KETAMINE-INDUCED COGNITIVE IMPAIRMENT IN MURINE MODELS OF SCHIZOPHRENIA",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/8aceaf6b66cf988e3641e557203ba81d087791ad",
-          "authors": "Olayemi K. Wakeel, Okoduwa J. Omoabhiena, Olajide S. Annafi"
-        },
-        {
-          "title": "Mechanisms underpinning Carpolobia lutea G. Don ethanol extract's neurorestorative and antipsychotic-like activities in an NMDA receptor antagonist model of schizophrenia.",
-          "year": 2022,
-          "citations": 19,
-          "url": "https://www.semanticscholar.org/paper/dec8112c8a69284ad2cddb7f3abbb10c8266fd11",
-          "authors": "Noah A. Omeiza, A. Bakre, B. Ben-Azu"
-        },
-        {
-          "title": "Pretreatment with Carpolobia lutea ethanol extract prevents schizophrenia-like behavior in mice models of psychosis.",
-          "year": 2022,
-          "citations": 13,
-          "url": "https://www.semanticscholar.org/paper/af6aa05fdfe923c07661a527a5fc590d33cb89a2",
-          "authors": "Noah A. Omeiza, A. Bakre, H. Abdulrahim"
-        },
-        {
-          "title": "Neuroprotective effects of the ethanol stem bark extracts of Terminalia ivorensis in ketamine-induced schizophrenia-like behaviors and oxidative damage in mice",
-          "year": 2016,
-          "citations": 36,
-          "url": "https://www.semanticscholar.org/paper/1b3780cc71dd5ddbef9816d415afae1b568dd71d",
-          "authors": "B. Ben-Azu, A. Aderibigbe, A. Ajayi"
-        },
-        {
-          "title": "Separation and Quantitative Estimation of Pharmacopeial Organic Impurities, Process-Related Impurities, and Degradation Products of the Anti-Schizophrenia Drug Clozapine in Pharmaceutical Formulations by Using Stability-Indicating HPLC Method.",
-          "year": 2025,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/901c71b3812e33b5cc922ca79699da4820d1399d",
-          "authors": "Abhishek Sharma, Narayana Reddy Pedavenkatagari, Bhujanga Rao Nagulancha"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Neuroprotective effects of the ethanol stem bark extracts of Terminalia ivorensis in ketamine-induced schizophrenia-like behaviors and oxidative damage in mice",
-        "year": 2016,
-        "citations": 36,
-        "url": "https://www.semanticscholar.org/paper/1b3780cc71dd5ddbef9816d415afae1b568dd71d",
-        "authors": "B. Ben-Azu, A. Aderibigbe, A. Ajayi"
+      "ddi_warnings": {
+        "n_interactions": 143,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00213",
+            "drug_name": "Pantoprazole",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00175",
+            "drug_name": "Pravastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01032",
+            "drug_name": "Probenecid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01098",
+            "drug_name": "Rosuvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01685",
+            "drug_name": "4-[5-Pyridin-4-Yl-1h-[1,2,4]Triazol-3-Yl]-Pyridine-2-Carbonitrile",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB00819",
+            "drug_name": "Acetazolamide",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB00787",
+            "drug_name": "Aciclovir",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB00718",
+            "drug_name": "Adefovir Dipivoxil",
+            "severity": "moderate"
+          }
+        ]
       },
-      "max_citations": 36,
-      "faers_signal": "none",
-      "faers_total_reports": 10558,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Ethanol to Schizophrenia terms. Drug has 10558 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "CT-200783 (1.482)",
-        "PZ0004 (1.451)",
-        "niguldipine hydrochloride (1.439)",
-        "STOCK2S-79598 (1.435)",
-        "B3063 (1.433)"
-      ],
-      "signature_interpretation": "Ethanol was not found among the top 34 drugs that reverse the Schizophrenia gene signature. Top reversers: CT-200783 (1.482), PZ0004 (1.451), niguldipine hydrochloride (1.439)",
-      "ai_hypothesis": "of its anti-inflammatory and antioxidant properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "Phase 2",
-      "failed_trial_count": 5,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.6948,
-      "mr_genetic_targets": 18,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.48,
-      "novelty_level": "ESTABLISHED",
-      "is_known_treatment": false,
-      "clinical_trials_total": 10,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT00540267",
-          "title": "Bone Density in Patients With Schizophrenia",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "300",
-          "url": "https://clinicaltrials.gov/study/NCT00540267"
-        },
-        {
-          "nct_id": "NCT00453804",
-          "title": "Injectable Versus Oral Naltrexone Treatment of Alcohol Dependence In Serious Mental Illness (SMI)",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "15",
-          "url": "https://clinicaltrials.gov/study/NCT00453804"
-        },
-        {
-          "nct_id": "NCT00727103",
-          "title": "Varenicline Treatment in Alcohol and Nicotine Dependent Patients With Schizophrenia",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "10",
-          "url": "https://clinicaltrials.gov/study/NCT00727103"
-        },
-        {
-          "nct_id": "NCT07398365",
-          "title": "Medical Phenotyping of NHS General Adult Psychiatry (GAP) Inpatients",
-          "status": "RECRUITING",
-          "phase": "N/A",
-          "enrollment": "100",
-          "url": "https://clinicaltrials.gov/study/NCT07398365"
-        },
-        {
-          "nct_id": "NCT07056894",
-          "title": "Effects of Action-Based Cognitive Remediation on Substance Misuse in Early Phase Psychosis",
-          "status": "RECRUITING",
-          "phase": "NA",
-          "enrollment": "50",
-          "url": "https://clinicaltrials.gov/study/NCT07056894"
-        }
-      ],
-      "trial_phases": {
-        "PHASE4": 2,
-        "NA": 2,
-        "PHASE1": 2
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
       },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "10 clinical trial(s) found on ClinicalTrials.gov",
-        "222 PubMed articles on this drug-disease pair",
-        "Supported by 6 independent AI pillars",
-        "Supporting paper with 36 citations",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.69)"
-      ]
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.336,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.492,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.819
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Brain - Frontal Cortex (BA9)",
+          "Brain - Cortex"
+        ],
+        "n_genes": 17,
+        "n_expressed": 10,
+        "mean_tpm_in_tissue": 3717.14,
+        "max_tpm_in_tissue": 62949.6,
+        "tissue_specificity": 0.721,
+        "context_modifier": 1.116
+      },
+      "disease_entity": "Disease::MESH:D012559",
+      "ensemble_prob": 0.0183,
+      "ensemble_features": {
+        "kg_score": 0.8796,
+        "degree_penalty": 0.791,
+        "n_drug_targets": 2,
+        "is_fda_approved": 0,
+        "n_disease_genes": 0,
+        "transe_rank_log": 7.1476
+      },
+      "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "PHOSPHOR"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "phosphor"
+        ]
+      }
     },
     {
       "drug_name": "Dopamine",
       "drug_id": "DB00988",
       "disease_name": "Schizophrenia",
-      "combined_score": 1.1152,
+      "combined_score": 0.488,
+      "pillars_hit": 4,
       "transe_rank": 10,
-      "pillars_hit": 6,
+      "transe_score": -9.9947,
+      "pykeen_score": -11.5234,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.8619999885559082,
+      "proximity_distance": 0.550000011920929,
+      "admet_score": 0.6872,
+      "admet_flags": "Skin_Reaction=0.81",
+      "primekg_score": 0.2516,
+      "dti_score": 0.4842,
+      "dti_best_target": "SRGAP2C",
+      "kg_group_score": 0.4399,
+      "structural_group_score": 0.4842,
+      "network_group_score": 0.6567999720573425,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.6136,
+      "admet_multiplier": 0.9374,
+      "efficacy_score": 0.5205,
+      "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 11,
+      "shared_targets": [
+        "DDC",
+        "EGR1",
+        "GH1",
+        "GHRH",
+        "GNRH1",
+        "INS",
+        "KNG1",
+        "PPP1R1B",
+        "SLC18A2",
+        "SLC6A2",
+        "TRH"
+      ],
       "pubmed_total": 11611,
       "pubmed_treatment_total": 7266,
       "pubmed_repurposing_total": 23,
@@ -1727,9 +1751,16 @@
         {
           "title": "Integrating the Neurodevelopmental and Dopamine Hypotheses of Schizophrenia and the Role of Cortical Excitation-Inhibition Balance.",
           "year": 2022,
-          "citations": 194,
+          "citations": 196,
           "url": "https://www.semanticscholar.org/paper/5e2d5f5cef112667be7ba7d3e519868f441775ae",
           "authors": "O. Howes, Ekaterina Shatalina"
+        },
+        {
+          "title": "The interplay of dopamine metabolism abnormalities and mitochondrial defects in the pathogenesis of schizophrenia",
+          "year": 2022,
+          "citations": 85,
+          "url": "https://www.semanticscholar.org/paper/3f5d474e4b816f7d6de6f7cef978b609ccec2824",
+          "authors": "Haiyun Xu, F. Yang"
         },
         {
           "title": "Linking Inflammation, Aberrant Glutamate-Dopamine Interaction, and Post-synaptic Changes: Translational Relevance for Schizophrenia and Antipsychotic Treatment: a Systematic Review",
@@ -1737,13 +1768,6 @@
           "citations": 85,
           "url": "https://www.semanticscholar.org/paper/3125915b5d44bf5999652c3dbea51bf187d8db9f",
           "authors": "A. de Bartolomeis, A. Barone, L. Vellucci"
-        },
-        {
-          "title": "The interplay of dopamine metabolism abnormalities and mitochondrial defects in the pathogenesis of schizophrenia",
-          "year": 2022,
-          "citations": 84,
-          "url": "https://www.semanticscholar.org/paper/3f5d474e4b816f7d6de6f7cef978b609ccec2824",
-          "authors": "Haiyun Xu, F. Yang"
         }
       ],
       "most_cited_paper": {
@@ -1874,10 +1898,10 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0.6136,
       "mr_genetic_targets": 14,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Dopamine \u2014[is agonized by]\u2192 gene-1814 \u2014[is linked to]\u2192 Schizophrenia",
+      "kg_paths_text": "\u2022 Dopamine \u2014[is agonized by]\u2192 gene-1814 \u2014[is linked to]\u2192 Schizophrenia\n\u2022 Dopamine \u2014[targets]\u2192 gene-6530 \u2014[is a target of]\u2192 DB00408 \u2014[treats]\u2192 Schizophrenia\n\u2022 Dopamine \u2014[targets]\u2192 gene-6530 \u2014[is a target of]\u2192 DB00408 \u2014[treats]\u2192 Schizophrenia",
       "validation_experiments": [],
-      "novelty_score": 0.18,
+      "novelty_score": 0.088,
       "novelty_level": "ESTABLISHED",
       "is_known_treatment": true,
       "clinical_trials_total": 10,
@@ -1936,126 +1960,283 @@
         "Phase 3 trial exists",
         "11611 PubMed articles on this drug-disease pair",
         "23 article(s) specifically mention repurposing/repositioning",
-        "Supported by 6 independent AI pillars",
+        "Supported by 4 independent AI pillars",
         "Highly cited paper (694 citations): \"Dopamine, schizophrenia, mania, and depression: Toward a uni...\"",
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.61)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
-      ]
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1295,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00331",
+            "drug_name": "Metformin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00213",
+            "drug_name": "Pantoprazole",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.537,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.488,
+          "docking": 0.552,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Brain - Frontal Cortex (BA9)",
+          "Brain - Cortex"
+        ],
+        "n_genes": 11,
+        "n_expressed": 5,
+        "mean_tpm_in_tissue": 22.76,
+        "max_tpm_in_tissue": 205.63,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.974
+      },
+      "disease_entity": "Disease::MESH:D012559",
+      "ensemble_prob": 0.1711,
+      "ensemble_features": {
+        "kg_score": 0.9896,
+        "degree_penalty": 0.7619,
+        "n_drug_targets": 31,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.7095
+      },
+      "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": -6.63,
+        "target_symbol": "SLC6A2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "CATECHOL"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "catechol_A(92)",
+          "catechol"
+        ]
+      }
     },
     {
-      "drug_name": "Naltrexone",
-      "drug_id": "DB00704",
+      "drug_name": "Phencyclidine",
+      "drug_id": "DB03575",
       "disease_name": "Schizophrenia",
-      "combined_score": 1.1078,
-      "transe_rank": 145,
-      "pillars_hit": 7,
-      "mol_similarity": 0.7541,
-      "similar_to": "Naloxone",
+      "combined_score": 0.4877,
+      "pillars_hit": 4,
+      "transe_rank": 2,
+      "transe_score": -9.6967,
+      "pykeen_score": -12.2807,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.906000018119812,
+      "proximity_distance": 0.3799999952316284,
+      "admet_score": 0.6734,
+      "admet_flags": "hERG=0.88",
+      "primekg_score": 0.2558,
+      "dti_score": 0.6935,
+      "dti_best_target": "SLC18A2",
+      "kg_group_score": 0.2932,
+      "structural_group_score": 0.6935,
+      "network_group_score": 0.7317000031471252,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.5153,
+      "admet_multiplier": 0.9347,
+      "efficacy_score": 0.5218,
+      "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 136,
-      "pubmed_treatment_total": 131,
+      "shared_target_count": 2,
+      "shared_targets": [
+        "GRIN3A",
+        "SIGMAR1"
+      ],
+      "pubmed_total": 1215,
+      "pubmed_treatment_total": 865,
       "pubmed_repurposing_total": 0,
       "key_papers": [
         {
-          "pmid": "36093756",
-          "title": "Is there a therapeutic potential in combining bupropion and naltrexone in schizophrenia?",
-          "authors": "El Hayek SA, Shatila MA, Adnan JA, et al.",
-          "journal": "Expert review of neurotherapeutics",
-          "year": "2022",
-          "abstract_snippet": "INTRODUCTION: A sustained-release tablet composed of a combination of the dopamine and norepinephrine reuptake inhibitor bupropion (BUP) and the \u00b5-opioid receptor antagonist naltrexone (NAT) is marketed under the brand name Contrave by Orexigen Therapeutics for appetite control. Minimal literature i...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36093756/",
-          "total_results": 136
+          "pmid": "27624147",
+          "title": "Modelling the cognitive and neuropathological features of schizophrenia with phencyclidine.",
+          "authors": "Reynolds GP, Neill JC",
+          "journal": "Journal of psychopharmacology (Oxford, England)",
+          "year": "2016",
+          "abstract_snippet": "Here, Reynolds and Neill describe the studies that preceded and followed publication of this paper, which reported a deficit in parvalbumin (PV), a calcium-binding protein found in GABA interneurons known to be reduced in schizophrenia patients, in conjunction with a deficit in reversal learning in ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/27624147/",
+          "total_results": 1215
         },
         {
-          "pmid": "35040357",
-          "title": "Olanzapine/Samidorphan: New Drug Approved for Treating Bipolar I Disorder and Schizophrenia.",
-          "authors": "Monahan C, McCoy L, Powell J, et al.",
-          "journal": "The Annals of pharmacotherapy",
-          "year": "2022",
-          "abstract_snippet": "OBJECTIVE: To describe the approval of olanzapine/samidorphan, compare the clinical trial data, and summarize key findings, with a focus on impact to clinical practice. DATA SOURCES: A literature search of PubMed was performed (March 2006 to November 2021) using the following search terms:  STUDY SE...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35040357/"
+          "pmid": "17609743",
+          "title": "Phencyclidine and genetic animal models of schizophrenia developed in relation to the glutamate hypothesis.",
+          "authors": "Enomoto T, Noda Y, Nabeshima T",
+          "journal": "Methods and findings in experimental and clinical pharmacology",
+          "year": "2007",
+          "abstract_snippet": "In humans, phencyclidine (PCP), a noncompetitive N-methyl-D-aspartate (NMDA) receptor antagonist, reproduces a schizophrenia-like psychosis including positive symptoms, negative symptoms and cognitive dysfunction. Thus, PCP-treated animals have been utilized as an animal model of schizophrenia. PCP-...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17609743/"
         },
         {
-          "pmid": "17619840",
-          "title": "[Pharmacotherapy of schizophrenia and comorbid substance use disorder. A systematic review].",
-          "authors": "Wobrock T, D'Amelio R, Falkai P",
-          "journal": "Der Nervenarzt",
-          "year": "2008",
-          "abstract_snippet": "Substance use disorder is the most common psychiatric comorbidity in patients with schizophrenia, revealing prevalence rates of up to 65%. Recommendations of antipsychotic pharmacotherapy in schizophrenia are based on studies excluding patients with this double diagnosis. In this systematic review t...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/17619840/"
+          "pmid": "17669558",
+          "title": "Phencyclidine animal models of schizophrenia: approaches from abnormality of glutamatergic neurotransmission and neurodevelopment.",
+          "authors": "Mouri A, Noda Y, Enomoto T, et al.",
+          "journal": "Neurochemistry international",
+          "year": "2007",
+          "abstract_snippet": "In humans, phencyclidine (PCP), a non-competitive N-methyl-d-aspartate (NMDA) receptor antagonist, reproduces a schizophrenia-like psychosis including positive symptoms, negative symptoms and cognitive dysfunction. Thus, the glutamatergic neuronal dysfunction hypothesis is one of the main explanator...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17669558/"
         },
         {
-          "pmid": "35644903",
-          "title": "Olanzapine/Samidorphan: A New Combination Treatment for Schizophrenia and Bipolar I Disorder Intended to Reduce Weight Gain.",
-          "authors": "Corrao MM, Nelson LA",
-          "journal": "CNS drugs",
-          "year": "2022",
-          "abstract_snippet": "Olanzapine is a second-generation antipsychotic with established efficacy in several psychiatric disease states, but its use is limited because of weight gain and metabolic side effects. Samidorphan is a novel opioid antagonist that binds to mu-opioid, kappa-opioid, and delta-opioid receptors and is...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35644903/"
+          "pmid": "11385502",
+          "title": "Advances in schizophrenia.",
+          "authors": "Thaker GK, Carpenter WT",
+          "journal": "Nature medicine",
+          "year": "2001",
+          "abstract_snippet": "Recent studies into the etiology of schizophrenia have yielded both promising leads and disappointing dead ends, indicating the multifactored and complex nature of the disorder. The focus has subsequently shifted back to refining the phenotype and identifying clinical and biological subtypes. Recent...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11385502/"
         },
         {
-          "pmid": "32805083",
-          "title": "Multiple Psychiatric Morbidity and Continued Use of Naltrexone for Alcohol Use Disorder.",
-          "authors": "Muvvala SB, O'Malley SS, Rosenheck R",
-          "journal": "The American journal on addictions",
-          "year": "2021",
-          "abstract_snippet": "BACKGROUND AND OBJECTIVES: Despite substantial evidence of the efficacy of naltrexone in treating alcohol use disorder (AUD), naltrexone is used infrequently and often for short durations. Understanding factors related to the initiation and continued use of naltrexone could identify targets for impr...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/32805083/"
+          "pmid": "26510740",
+          "title": "Postnatal Phencyclidine (PCP) as a Neurodevelopmental Animal Model of Schizophrenia Pathophysiology and Symptomatology: A Review.",
+          "authors": "Grayson B, Barnes SA, Markou A, et al.",
+          "journal": "Current topics in behavioral neurosciences",
+          "year": "2016",
+          "abstract_snippet": "Cognitive dysfunction and negative symptoms of schizophrenia remain an unmet clinical need. Therefore, it is essential that new treatments and approaches are developed to recover the cognitive and social impairments that are seen in patients with schizophrenia. These may only be discovered through t...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26510740/"
         }
       ],
       "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "Is there a therapeutic potential in combining bupropion and naltrexone in schizophrenia?",
+          "title": "Phencyclidine/schizophrenia: one view toward the past, the other to the future.",
+          "year": 2012,
+          "citations": 73,
+          "url": "https://www.semanticscholar.org/paper/116cb9300c7ce1e6877b2dddf33bf994b308db71",
+          "authors": "E. Domino, E. Luby"
+        },
+        {
+          "title": "Advances in the study of phencyclidine-induced schizophrenia-like animal models and the underlying neural mechanisms",
+          "year": 2024,
+          "citations": 13,
+          "url": "https://www.semanticscholar.org/paper/6354639ffb71ea029a9af88b41982b31501110da",
+          "authors": "Dabing Li, Qiangwen Pan, Yewei Xiao"
+        },
+        {
+          "title": "Neonatal phencyclidine as a model of sex-biased schizophrenia symptomatology in adolescent mice",
+          "year": 2023,
+          "citations": 10,
+          "url": "https://www.semanticscholar.org/paper/fbbf154ce75c2d327ffe2fc8e51c385ce65c77ec",
+          "authors": "A. C. Dutra-Tavares, Thain\u00e1 P Souza, Juliana O. Silva"
+        },
+        {
+          "title": "Fingolimod ameliorates schizophrenia\u2010like cognitive impairments induced by phencyclidine in male rats",
           "year": 2022,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/a875a3497fb62cb9c436ec82054bbb935e8d77c6",
-          "authors": "Samer El Hayek, Malek A. Shatila, Jana A Adnan"
+          "citations": 18,
+          "url": "https://www.semanticscholar.org/paper/e1689b65aeed221f708c849ac47c722cf5e860b8",
+          "authors": "Xueli Yu, Xueyu Qi, Long Wei"
         },
         {
-          "title": "Naltrexone and Bupropion Combination Treatment for Smoking Cessation and Weight Loss in Patients With Schizophrenia",
-          "year": 2018,
-          "citations": 30,
-          "url": "https://www.semanticscholar.org/paper/d796d2eb5c25a6f0bae313e2866d04b65692e006",
-          "authors": "Xuechan Lyu, Jiang Du, Guilai Zhan"
-        },
-        {
-          "title": "F56. NALTREXONE AS MAINTENANCE TREATMENT IN OPIOID USE DISORDER COMORBID WITH SCHIZOPHRENIA - A CASE SERIES",
-          "year": 2019,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/b147d2554ff01d49b492816a0def6ec1241cfe2c",
-          "authors": "O. Vasiliu"
-        },
-        {
-          "title": "A Case Report: Irbesartan and Naltrexone Treatment of Polydipsia in a Patient with Schizophrenia",
-          "year": 2015,
-          "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/f0a972f672b99205d9160404bbd9a6b040e8eb2b",
-          "authors": "H. Dong, Seung-Hyun Kim, S. Y. Park"
-        },
-        {
-          "title": "Naltrexone and Bupropion Combination Treatment for Smoking Naltrexone and Bupropion Combination Treatment for Smoking Cessation and Weight Loss in Patients With Schizophrenia Cessation and Weight Loss in Patients With Schizophrenia",
-          "year": null,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/87bdef5754a20d29c0cf1731313086f647121525",
-          "authors": ""
+          "title": "Modified climbing fiber/Purkinje cell synaptic connectivity in the cerebellum of the neonatal phencyclidine model of schizophrenia",
+          "year": 2022,
+          "citations": 10,
+          "url": "https://www.semanticscholar.org/paper/f33a65729ce2ad6eaf4719b22a8e92c46df0613d",
+          "authors": "M. Veleanu, Beetsi Urrieta-Ch\u00e1vez, S. Sigoillot"
         }
       ],
       "most_cited_paper": {
-        "title": "Naltrexone and Bupropion Combination Treatment for Smoking Cessation and Weight Loss in Patients With Schizophrenia",
-        "year": 2018,
-        "citations": 30,
-        "url": "https://www.semanticscholar.org/paper/d796d2eb5c25a6f0bae313e2866d04b65692e006",
-        "authors": "Xuechan Lyu, Jiang Du, Guilai Zhan"
+        "title": "Phencyclidine/schizophrenia: one view toward the past, the other to the future.",
+        "year": 2012,
+        "citations": 73,
+        "url": "https://www.semanticscholar.org/paper/116cb9300c7ce1e6877b2dddf33bf994b308db71",
+        "authors": "E. Domino, E. Luby"
       },
-      "max_citations": 30,
-      "faers_signal": "moderate",
-      "faers_total_reports": 8572,
-      "faers_cooccurrences": 8,
-      "faers_interpretation": "8 FAERS reports mention both Naltrexone and Schizophrenia-related terms. Limited but notable real-world signal.",
+      "max_citations": 73,
+      "faers_signal": "weak",
+      "faers_total_reports": 565,
+      "faers_cooccurrences": 1,
+      "faers_interpretation": "1 FAERS report(s) mention both Phencyclidine and Schizophrenia-related terms. Minimal real-world signal.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -2065,8 +2246,424 @@
         "STOCK2S-79598 (1.435)",
         "B3063 (1.433)"
       ],
-      "signature_interpretation": "Naltrexone was not found among the top 34 drugs that reverse the Schizophrenia gene signature. Top reversers: CT-200783 (1.482), PZ0004 (1.451), niguldipine hydrochloride (1.439)",
-      "ai_hypothesis": "of its ability to reduce the symptoms of the disease.",
+      "signature_interpretation": "Phencyclidine was not found among the top 34 drugs that reverse the Schizophrenia gene signature. Top reversers: CT-200783 (1.482), PZ0004 (1.451), niguldipine hydrochloride (1.439)",
+      "ai_hypothesis": "of its ability to induce psychosis and to increase the risk of suicide.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 0,
+          "negative_signals": 0,
+          "mechanism_signals": 1,
+          "extracted_entities": [
+            {
+              "entity": "phencyclidine",
+              "entity_group": "Medication",
+              "score": 0.8730000257492065
+            },
+            {
+              "entity": "pc",
+              "entity_group": "Medication",
+              "score": 0.7409999966621399
+            },
+            {
+              "entity": "n - methyl - d - aspartate ( nmda )",
+              "entity_group": "Medication",
+              "score": 0.8309999704360962
+            },
+            {
+              "entity": "psychosis",
+              "entity_group": "Sign_symptom",
+              "score": 0.9570000171661377
+            },
+            {
+              "entity": "positive symptoms",
+              "entity_group": "Sign_symptom",
+              "score": 0.7260000109672546
+            },
+            {
+              "entity": "negative symptoms",
+              "entity_group": "Sign_symptom",
+              "score": 0.9800000190734863
+            },
+            {
+              "entity": "cognitive dysfunction",
+              "entity_group": "Sign_symptom",
+              "score": 0.9449999928474426
+            },
+            {
+              "entity": "pc",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.8640000224113464
+            }
+          ]
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 0,
+          "negative_signals": 0,
+          "mechanism_signals": 1,
+          "extracted_entities": [
+            {
+              "entity": "ph",
+              "entity_group": "Medication",
+              "score": 0.9520000219345093
+            },
+            {
+              "entity": "##encyclidine",
+              "entity_group": "Medication",
+              "score": 0.8500000238418579
+            },
+            {
+              "entity": "pc",
+              "entity_group": "Medication",
+              "score": 0.828000009059906
+            },
+            {
+              "entity": "n - methyl - d - aspartate",
+              "entity_group": "Medication",
+              "score": 0.8420000076293945
+            },
+            {
+              "entity": "##da",
+              "entity_group": "Medication",
+              "score": 0.8669999837875366
+            },
+            {
+              "entity": "schizophrenia - like psychosis",
+              "entity_group": "Sign_symptom",
+              "score": 0.9330000281333923
+            },
+            {
+              "entity": "positive symptoms",
+              "entity_group": "Sign_symptom",
+              "score": 0.9670000076293945
+            },
+            {
+              "entity": "negative symptoms",
+              "entity_group": "Sign_symptom",
+              "score": 0.9950000047683716
+            },
+            {
+              "entity": "cognitive dysfunction",
+              "entity_group": "Sign_symptom",
+              "score": 0.8539999723434448
+            },
+            {
+              "entity": "g",
+              "entity_group": "Sign_symptom",
+              "score": 1.0
+            }
+          ]
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.5153,
+      "mr_genetic_targets": 3,
+      "mechanistic_hypothesis": "Phencyclidine \u2014[is a therapeutic for]\u2192 MESH:D015658 \u2014[is treated by]\u2192 DB00363 \u2014[treats]\u2192 Schizophrenia",
+      "kg_paths_text": "\u2022 Phencyclidine \u2014[is a therapeutic for]\u2192 MESH:D015658 \u2014[is treated by]\u2192 DB00363 \u2014[treats]\u2192 Schizophrenia\n\u2022 Phencyclidine \u2014[is a therapeutic for]\u2192 MESH:D015658 \u2014[is treated by]\u2192 DB00363 \u2014[treats]\u2192 Schizophrenia\n\u2022 Phencyclidine \u2014[is a therapeutic for]\u2192 MESH:D014786 \u2014[is treated by]\u2192 DB00679 \u2014[treats]\u2192 Schizophrenia",
+      "validation_experiments": [],
+      "novelty_score": 0.351,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "MEDIUM",
+      "confidence_reasons": [
+        "1215 PubMed articles on this drug-disease pair",
+        "Supported by 4 independent AI pillars",
+        "Supporting paper with 73 citations",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.52)"
+      ],
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 767,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB14672",
+            "drug_name": "(+-)-Oxazepam acetate",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB12093",
+            "drug_name": "(-)-Tetrahydropalmatine",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB08059",
+            "drug_name": "(1S,6BR,9AS,11R,11BR)-9A,11B-DIMETHYL-1-[(METHYLOXY)METHYL]-3,6,9-TRIOXO-1,6,6B,7,8,9,9A,10,11,11B-DECAHYDRO-3H-FURO[4,3,2-DE]INDENO[4,5-H][2]BENZOPYRAN-11-YL ACETATE",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB12071",
+            "drug_name": "(9aR,12aS)-4,5,6,7,9,9a,10,11,12,12a-Decahydrocyclopenta(4,5)pyrido(3,2,1-jk)(1,4)benzodiazepine",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB13014",
+            "drug_name": "1,3,4,6,8,13-Hexahydroxy-10,11-dimethylphenanthro[1,10,9,8-opqra]perylene-7,14-dione P-conformer",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB15197",
+            "drug_name": "1-(2-fluorophenyl)-3-[(3S)-2-oxo-5-phenyl-1,3-dihydro-1,4-benzodiazepin-3-yl]urea",
+            "severity": "moderate"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.575,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.488,
+          "docking": 0.682,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Brain - Frontal Cortex (BA9)",
+          "Brain - Cortex"
+        ],
+        "n_genes": 2,
+        "n_expressed": 2,
+        "mean_tpm_in_tissue": 16.99,
+        "max_tpm_in_tissue": 31.33,
+        "tissue_specificity": 0.288,
+        "context_modifier": 0.997
+      },
+      "disease_entity": "Disease::MESH:D012559",
+      "ensemble_prob": 0.337,
+      "ensemble_features": {
+        "kg_score": 0.9892,
+        "degree_penalty": 0.8076,
+        "n_drug_targets": 8,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.7449
+      },
+      "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": -8.18,
+        "target_symbol": "SIGMAR1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Phenobarbital",
+      "drug_id": "DB01174",
+      "disease_name": "Schizophrenia",
+      "combined_score": 0.4876,
+      "pillars_hit": 4,
+      "transe_rank": 91,
+      "transe_score": -10.5191,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.8119999766349792,
+      "proximity_distance": 0.75,
+      "admet_score": 1.0,
+      "admet_flags": "DILI=0.93",
+      "primekg_score": 0.2557,
+      "dti_score": 0.8835,
+      "dti_best_target": "RWDD4",
+      "kg_group_score": 0.0813,
+      "structural_group_score": 0.8835,
+      "network_group_score": 0.6152999997138977,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.5678,
+      "admet_multiplier": 1.0,
+      "efficacy_score": 0.4876,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 3,
+      "shared_targets": [
+        "APOA1",
+        "CHRFAM7A",
+        "EGFR"
+      ],
+      "pubmed_total": 64,
+      "pubmed_treatment_total": 57,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "31625485",
+          "title": "Antipsychotic drugs ",
+          "authors": "Siafis S, Deste G, Ceraso A, et al.",
+          "journal": "Psychological medicine",
+          "year": "2020",
+          "abstract_snippet": "BACKGROUND: Comparisons of antipsychotics with placebo can be biased by unblinding due to side effects. Therefore, this meta-analysis compared the efficacy of antipsychotics for acute schizophrenia in trials using barbiturates or benzodiazepines as active placebos. METHODS: Randomized controlled tri...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31625485/",
+          "total_results": 64
+        },
+        {
+          "pmid": "33302543",
+          "title": "Perinatal Brain Injury and Inflammation: Lessons from Experimental Murine Models.",
+          "authors": "Leavy A, Jimenez Mateos EM",
+          "journal": "Cells",
+          "year": "2020",
+          "abstract_snippet": "Perinatal brain injury or neonatal encephalopathy (NE) is a state of disturbed neurological function in neonates, caused by a number of different aetiologies. The most prominent cause of NE is hypoxic ischaemic encephalopathy, which can often induce seizures. NE and neonatal seizures are both associ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33302543/"
+        },
+        {
+          "pmid": "6512009",
+          "title": "Combination of phenobarbital and haloperidol in resistant schizophrenia.",
+          "authors": "Prakash R, Reed RM, Bass AD",
+          "journal": "Journal of clinical psychopharmacology",
+          "year": "1984",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/6512009/"
+        },
+        {
+          "pmid": "7592263",
+          "title": "Psychopharmacology in child and adolescent psychiatry: a review of the past seven years. Part II.",
+          "authors": "Campbell M, Cueva JE",
+          "journal": "Journal of the American Academy of Child and Adolescent Psychiatry",
+          "year": "1995",
+          "abstract_snippet": "OBJECTIVE: To present a critical overview of the selected literature published in the past 7 years on the efficacy and safety of psychoactive agents in conduct disorder, schizophrenia, separation anxiety disorder, selective mutism, obsessive-compulsive disorder, panic disorder, major depressive diso...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/7592263/"
+        },
+        {
+          "pmid": "13808145",
+          "title": "Drug therapy in schizophrenia. A controlled study of the relative effectiveness of chlorpromazine, promazine, phenobarbital, and placebo.",
+          "authors": "CASEY JF, BENNETT IF, LINDLEY CJ, et al.",
+          "journal": "A.M.A. archives of general psychiatry",
+          "year": "1960",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/13808145/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Neonatal exposure to phenobarbital potentiates schizophrenia-like behavioral outcomes in the rat.",
+          "year": 2012,
+          "citations": 49,
+          "url": "https://www.semanticscholar.org/paper/a9088fe4d50a1108b60bacad16ffb3e7ee292e92",
+          "authors": "S. Bhardwaj, P. Forcelli, G. Palchik"
+        },
+        {
+          "title": "Inducing effect of phenobarbital on clozapine metabolism in patients with chronic schizophrenia.",
+          "year": 1998,
+          "citations": 31,
+          "url": "https://www.semanticscholar.org/paper/8e3e82d317f9bff0fb270228e378d54f39b0ad1b",
+          "authors": "G. Facciol\u00e1, A. Avenoso, E. Spina"
+        },
+        {
+          "title": "Drug therapy in schizophrenia. A controlled study of the relative effectiveness of chlorpromazine, promazine, phenobarbital, and placebo.",
+          "year": 1960,
+          "citations": 132,
+          "url": "https://www.semanticscholar.org/paper/4a532a6d65e2291d280c5aaf007e205ece89c28e",
+          "authors": "J. F. Casey, I. F. Bennett, C. Lindley"
+        },
+        {
+          "title": "Drug therapy in schizophrenia. A controlled study of the relative effectiveness of chlorpromazine, promazine, phenobarbital, and placebo.",
+          "year": 1960,
+          "citations": 7,
+          "url": "https://www.semanticscholar.org/paper/562cf615a74885641b4cd1d78ae6ceaef70c1f2c",
+          "authors": "J. F. Casey, I. F. Bennett, C. J. Lindley"
+        },
+        {
+          "title": "Chemotherapeutic trials in psychosis. II. Design and conduct of a trial of raunormine versus reserpine and phenobarbital in chronic schizophrenia.",
+          "year": 1958,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/df90e5845d373e83369a52fecb29ef68c0331e45",
+          "authors": "W. J. Turner, A. Carl, S. Merlis"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Drug therapy in schizophrenia. A controlled study of the relative effectiveness of chlorpromazine, promazine, phenobarbital, and placebo.",
+        "year": 1960,
+        "citations": 132,
+        "url": "https://www.semanticscholar.org/paper/4a532a6d65e2291d280c5aaf007e205ece89c28e",
+        "authors": "J. F. Casey, I. F. Bennett, C. Lindley"
+      },
+      "max_citations": 132,
+      "faers_signal": "moderate",
+      "faers_total_reports": 18591,
+      "faers_cooccurrences": 20,
+      "faers_interpretation": "20 FAERS reports mention both Phenobarbital and Schizophrenia-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "CT-200783 (1.482)",
+        "PZ0004 (1.451)",
+        "niguldipine hydrochloride (1.439)",
+        "STOCK2S-79598 (1.435)",
+        "B3063 (1.433)"
+      ],
+      "signature_interpretation": "Phenobarbital was not found among the top 34 drugs that reverse the Schizophrenia gene signature. Top reversers: CT-200783 (1.482), PZ0004 (1.451), niguldipine hydrochloride (1.439)",
+      "ai_hypothesis": "of its antipsychotic properties.",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
@@ -2077,6 +2674,484 @@
           "relation_type": "unclear",
           "confidence": 0.0,
           "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": true,
+      "failed_trial_phase": "Phase 3",
+      "failed_trial_count": 1,
+      "failed_trial_penalty": 0.3,
+      "mr_score": 0.5678,
+      "mr_genetic_targets": 2,
+      "mechanistic_hypothesis": "Phenobarbital \u2014[is a therapeutic for]\u2192 Schizophrenia",
+      "kg_paths_text": "\u2022 Phenobarbital \u2014[is a therapeutic for]\u2192 Schizophrenia\n\u2022 Phenobarbital \u2014[targets]\u2192 gene-2898 \u2014[is linked to]\u2192 Schizophrenia\n\u2022 Phenobarbital \u2014[binds]\u2192 gene-89832 \u2014[is linked to]\u2192 Schizophrenia",
+      "validation_experiments": [],
+      "novelty_score": 0.322,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": true,
+      "clinical_trials_total": 1,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT02374567",
+          "title": "Pharmacovigilance in Gerontopsychiatric Patients",
+          "status": "TERMINATED",
+          "phase": "PHASE3",
+          "enrollment": "407",
+          "url": "https://clinicaltrials.gov/study/NCT02374567"
+        }
+      ],
+      "trial_phases": {
+        "PHASE3": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "1 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "64 PubMed articles on this drug-disease pair",
+        "Supported by 4 independent AI pillars",
+        "WARNING: Drug FAILED Phase 3 trial(s) for this disease (1 terminated/withdrawn)",
+        "Moderate FAERS signal: 20 adverse event reports mention drug-disease co-occurrence",
+        "Highly cited paper (132 citations): \"Drug therapy in schizophrenia. A controlled study of the rel...\"",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.57)"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1805,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-4 (SCN2A / rs17183814)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "SCN2A",
+            "variant": "rs17183814",
+            "level": "4",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183614578"
+          },
+          {
+            "gene": "HLA-B",
+            "variant": "HLA-B*51:01",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183701234"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs1045642",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1444702822"
+          },
+          {
+            "gene": "CYP1A1",
+            "variant": "rs2606345",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1448104015"
+          },
+          {
+            "gene": "MTHFR",
+            "variant": "rs1801133",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451120280"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.328,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.488,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.787
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Brain - Frontal Cortex (BA9)",
+          "Brain - Cortex"
+        ],
+        "n_genes": 3,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 2.38,
+        "max_tpm_in_tissue": 6.25,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.897
+      },
+      "disease_entity": "Disease::MESH:D012559",
+      "ensemble_prob": 0.4083,
+      "ensemble_features": {
+        "kg_score": 0.9936,
+        "degree_penalty": 0.7578,
+        "n_drug_targets": 1,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.2341
+      },
+      "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "BETA-KETO/ANHYDRIDE"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "beta-keto/anhydride"
+        ]
+      }
+    },
+    {
+      "drug_name": "Dexamethasone",
+      "drug_id": "DB01234",
+      "disease_name": "Schizophrenia",
+      "combined_score": 0.4852,
+      "pillars_hit": 4,
+      "transe_rank": 168,
+      "transe_score": -10.7227,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0.9472,
+      "mol_emb_similar_to": "Minocycline",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.7620000243186951,
+      "proximity_distance": 0.949999988079071,
+      "admet_score": 0.7109,
+      "admet_flags": "clean",
+      "primekg_score": 0.2508,
+      "dti_score": 0.5358,
+      "dti_best_target": "SLC18A2",
+      "kg_group_score": 0.1189,
+      "structural_group_score": 0.9472,
+      "network_group_score": 0.5608000159263611,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.6843,
+      "admet_multiplier": 0.9422,
+      "efficacy_score": 0.515,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 23,
+      "shared_targets": [
+        "CCL11",
+        "CTLA4",
+        "CXCL8",
+        "EGFR",
+        "EGR1",
+        "GH1",
+        "GHRH",
+        "GLUL",
+        "GNRH1",
+        "HLA-G",
+        "IGF2BP2",
+        "IL10",
+        "IL1A",
+        "IL6R",
+        "INS",
+        "MACF1",
+        "MSRA",
+        "MT-CO2",
+        "NR4A1",
+        "RGS2"
+      ],
+      "pubmed_total": 299,
+      "pubmed_treatment_total": 119,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "8310850",
+          "title": "Negative symptoms of schizophrenia and the dexamethasone suppression test.",
+          "authors": "Garyfallos G, Lavrentiadis G, Amoutzias D, et al.",
+          "journal": "Acta psychiatrica Scandinavica",
+          "year": "1993",
+          "abstract_snippet": "The dexamethasone suppression test (DST) was administered to 30 inpatients who met the DSM-III-R criteria for chronic schizophrenia and shared similar environments. Four of them (13%) were DST nonsuppressors. The mean and maximum postdexamethasone cortisol levels were correlated with the patient's s...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/8310850/",
+          "total_results": 299
+        },
+        {
+          "pmid": "2138504",
+          "title": "The incidence of abnormal dexamethasone suppression in schizophrenia: a review and a meta-analytic comparison with the incidence in normal controls.",
+          "authors": "Yeragani VK",
+          "journal": "Canadian journal of psychiatry. Revue canadienne de psychiatrie",
+          "year": "1990",
+          "abstract_snippet": "Studies on dexamethasone suppression test (DST) and schizophrenia are reviewed and the incidence of nonsuppression in the group of studies on schizophrenic patients is compared to that in the group of studies on normal controls from a previous review article. The incidence of nonsuppression in schiz...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/2138504/"
+        },
+        {
+          "pmid": "3587576",
+          "title": "The dexamethasone suppression test in affective illnesses and schizophrenia: relationship with psychotic symptoms.",
+          "authors": "Hubain PP, Simonnet MP, Mendlewicz J",
+          "journal": "Neuropsychobiology",
+          "year": "1986",
+          "abstract_snippet": "The authors studied the dexamethasone suppression test (DST) on a series of 112 inpatients including 65 patients with major depressive disorder (21 bipolars: 4 with, 17 without psychotic symptoms; 44 unipolars: 13 with, 31 without psychotic symptoms), 15 patients with depressive disorder, 10 schizoa...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/3587576/"
+        },
+        {
+          "pmid": "10356625",
+          "title": "Platelet serotonin, plasma cortisol, and dexamethasone suppression test in schizophrenic patients.",
+          "authors": "M\u00fcck-Seler D, Pivac N, Jakovljevi\u0107 M, et al.",
+          "journal": "Biological psychiatry",
+          "year": "1999",
+          "abstract_snippet": "BACKGROUND: Serotonin (5-HT) regulates hypothalamic-pituitary-adrenal (HPA) axis activity. Abnormal response to the dexamethasone suppression test (DST) and altered platelet 5-HT concentration have been shown in some schizophrenic patients. METHODS: Platelet 5-HT and plasma cortisol concentrations w...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10356625/"
+        },
+        {
+          "pmid": "11728857",
+          "title": "Dexamethasone suppression test and suicide attempts in schizophrenic patients.",
+          "authors": "P\u0142ocka-Lewandowska M, Araszkiewicz A, Rybakowski JK",
+          "journal": "European psychiatry : the journal of the Association of European Psychiatrists",
+          "year": "2001",
+          "abstract_snippet": "The suicide attempts were assessed in 32 schizophrenic patients on whom the dexamethasone suppression test (DST) was done twice in the course of illness: in the years 1985-91 and 1996-97. In the 1985-91 period, both baseline and post-dexamethasone cortisol levels were significantly higher in the pat...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11728857/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Microglia involvement in sex-dependent behaviors and schizophrenia occurrence in offspring with maternal dexamethasone exposure",
+          "year": 2022,
+          "citations": 14,
+          "url": "https://www.semanticscholar.org/paper/5306ff34a893be73938d11aef5013088e8d05fa0",
+          "authors": "Changil Rim, Hyun-Sun Park, M. You"
+        },
+        {
+          "title": "Cortisol in schizophrenia spectrum disorders: A comprehensive meta-analysis.",
+          "year": 2025,
+          "citations": 6,
+          "url": "https://www.semanticscholar.org/paper/d0d656e2775032f42b2c67246199c220b619c4a1",
+          "authors": "L. Kogler, Rui Wang, Teresa Luther"
+        },
+        {
+          "title": "Venetoclax as a cytoreduction therapy option for acute promyelocytic leukemia in newly diagnosed adult patients: a case report of a 35-year-old female with schizophrenia",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/1998d44b4d1d2571b08a1b608488d05f7e31414c",
+          "authors": "Lingling Wang, Yuqing Miao, Yuexin Cheng"
+        },
+        {
+          "title": "Acute liver failure and hemolytic anemia induced by quetiapine and aripiprazole overdose in a patient with schizophrenia and metastatic breast cancer: a unique case report",
+          "year": 2026,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/3d147b08626430b2d2fa21ccb8ef51e6217f9e14",
+          "authors": "Hua Zhong, Shu Zhou"
+        },
+        {
+          "title": "Case report: Impact of hyperthyroidism on psychotic symptoms in schizophrenia comorbid with Graves\u2019 disease",
+          "year": 2023,
+          "citations": 7,
+          "url": "https://www.semanticscholar.org/paper/5feda559104d18c9413fc1b07ff441af9cd7bbd1",
+          "authors": "Y. Sumi, Sanae Kawahara, K. Fujii"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Microglia involvement in sex-dependent behaviors and schizophrenia occurrence in offspring with maternal dexamethasone exposure",
+        "year": 2022,
+        "citations": 14,
+        "url": "https://www.semanticscholar.org/paper/5306ff34a893be73938d11aef5013088e8d05fa0",
+        "authors": "Changil Rim, Hyun-Sun Park, M. You"
+      },
+      "max_citations": 14,
+      "faers_signal": "moderate",
+      "faers_total_reports": 312747,
+      "faers_cooccurrences": 81,
+      "faers_interpretation": "81 FAERS reports mention both Dexamethasone and Schizophrenia-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "CT-200783 (1.482)",
+        "PZ0004 (1.451)",
+        "niguldipine hydrochloride (1.439)",
+        "STOCK2S-79598 (1.435)",
+        "B3063 (1.433)"
+      ],
+      "signature_interpretation": "Dexamethasone was not found among the top 34 drugs that reverse the Schizophrenia gene signature. Top reversers: CT-200783 (1.482), PZ0004 (1.451), niguldipine hydrochloride (1.439)",
+      "ai_hypothesis": "of its anti-inflammatory properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 1,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "dexamethasone",
+              "entity_group": "Medication",
+              "score": 0.777999997138977
+            },
+            {
+              "entity": "suppression test",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.7860000133514404
+            },
+            {
+              "entity": "ds",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9290000200271606
+            },
+            {
+              "entity": "30",
+              "entity_group": "Lab_value",
+              "score": 0.9929999709129333
+            },
+            {
+              "entity": "ds",
+              "entity_group": "Detailed_description",
+              "score": 0.9010000228881836
+            },
+            {
+              "entity": "four",
+              "entity_group": "Lab_value",
+              "score": 0.996999979019165
+            },
+            {
+              "entity": "ds",
+              "entity_group": "Disease_disorder",
+              "score": 0.9950000047683716
+            },
+            {
+              "entity": "mean",
+              "entity_group": "Lab_value",
+              "score": 1.0
+            },
+            {
+              "entity": "maximum",
+              "entity_group": "Lab_value",
+              "score": 1.0
+            },
+            {
+              "entity": "post",
+              "entity_group": "Medication",
+              "score": 0.9940000176429749
+            }
+          ]
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 1,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "dexamethasone suppression test",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.8769999742507935
+            },
+            {
+              "entity": "ds",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9909999966621399
+            },
+            {
+              "entity": "schizophrenia",
+              "entity_group": "Disease_disorder",
+              "score": 0.996999979019165
+            },
+            {
+              "entity": "nonsuppression",
+              "entity_group": "Sign_symptom",
+              "score": 1.0
+            },
+            {
+              "entity": "normal",
+              "entity_group": "Lab_value",
+              "score": 1.0
+            },
+            {
+              "entity": "nonsupp",
+              "entity_group": "Sign_symptom",
+              "score": 1.0
+            },
+            {
+              "entity": "##ression",
+              "entity_group": "Sign_symptom",
+              "score": 0.9890000224113464
+            }
+          ]
         },
         {
           "relation_type": "unclear",
@@ -2085,77 +3160,984 @@
         }
       ],
       "has_failed_trial": false,
-      "failed_trial_phase": "Phase 2",
-      "failed_trial_count": 2,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.4966,
-      "mr_genetic_targets": 2,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mr_score": 0.6843,
+      "mr_genetic_targets": 23,
+      "mechanistic_hypothesis": "Dexamethasone \u2014[downregulates]\u2192 gene-6461 \u2014[is activated by]\u2192 gene-6093 \u2014[is upregulated by]\u2192 Schizophrenia",
+      "kg_paths_text": "\u2022 Dexamethasone \u2014[downregulates]\u2192 gene-6461 \u2014[is activated by]\u2192 gene-6093 \u2014[is upregulated by]\u2192 Schizophrenia\n\u2022 Dexamethasone \u2014[downregulates]\u2192 gene-6461 \u2014[is activated by]\u2192 gene-6093 \u2014[is upregulated by]\u2192 Schizophrenia\n\u2022 Dexamethasone \u2014[downregulates]\u2192 gene-6461 \u2014[is activated by]\u2192 gene-6093 \u2014[is upregulated by]\u2192 Schizophrenia",
       "validation_experiments": [],
-      "novelty_score": 0.4,
+      "novelty_score": 0.378,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "299 PubMed articles on this drug-disease pair",
+        "Supported by 4 independent AI pillars",
+        "Moderate FAERS signal: 81 adverse event reports mention drug-disease co-occurrence",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.68)"
+      ],
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1512,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (ABCB1 / rs1045642)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "ABCB1",
+            "variant": "rs1045642",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204433"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs2032582",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981238041"
+          },
+          {
+            "gene": "CTLA4",
+            "variant": "rs4553808",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043880851"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs2229109",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449170621"
+          },
+          {
+            "gene": "GATA3",
+            "variant": "rs3824662",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1184512128"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.37,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.485,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Brain - Frontal Cortex (BA9)",
+          "Brain - Cortex"
+        ],
+        "n_genes": 20,
+        "n_expressed": 11,
+        "mean_tpm_in_tissue": 3178.81,
+        "max_tpm_in_tissue": 62949.6,
+        "tissue_specificity": 0.718,
+        "context_modifier": 1.116
+      },
+      "disease_entity": "Disease::MESH:D012559",
+      "ensemble_prob": 0.0412,
+      "ensemble_features": {
+        "kg_score": 0.976,
+        "degree_penalty": 0.736,
+        "n_drug_targets": 24,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 5.5373
+      },
+      "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Methadone",
+      "drug_id": "DB00333",
+      "disease_name": "Schizophrenia",
+      "combined_score": 0.4819,
+      "pillars_hit": 4,
+      "transe_rank": 110,
+      "transe_score": -10.5734,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.800000011920929,
+      "proximity_distance": 0.800000011920929,
+      "admet_score": 0.6528,
+      "admet_flags": "hERG=0.89",
+      "primekg_score": 0.2506,
+      "dti_score": 1.0,
+      "dti_best_target": "NPEPL1",
+      "kg_group_score": 0.0694,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.6007000207901001,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.6692,
+      "admet_multiplier": 0.9306,
+      "efficacy_score": 0.5179,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "GRIN3A"
+      ],
+      "pubmed_total": 90,
+      "pubmed_treatment_total": 80,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "31101511",
+          "title": "Methadone and buprenorphine treatments in patients with schizophrenia.",
+          "authors": "Dervaux A, Plancke L, Amariei A, et al.",
+          "journal": "Schizophrenia research",
+          "year": "2019",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31101511/",
+          "total_results": 90
+        },
+        {
+          "pmid": "34516229",
+          "title": "Insights Into Improving Clinical Outcomes Across Psychiatric Disorders and Medical Comorbidities.",
+          "authors": "Kalin NH",
+          "journal": "The American journal of psychiatry",
+          "year": "2021",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34516229/"
+        },
+        {
+          "pmid": "32608328",
+          "title": "Methadone maintenance treatment and survival of schizophrenic patients with a lifetime comorbid substance use disorders: a long-term follow-up study.",
+          "authors": "Gimelfarb Y, Shamir EZ, Ness Dabush K, et al.",
+          "journal": "Journal of addictive diseases",
+          "year": "2020",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32608328/"
+        },
+        {
+          "pmid": "34379049",
+          "title": "Cannabis use is associated with lower retention in methadone maintenance treatment, but not among schizophrenic- and other chronically psychotic patients.",
+          "authors": "Volkov I, Schreiber S, Adelson M, et al.",
+          "journal": "Journal of addictive diseases",
+          "year": "2022",
+          "abstract_snippet": "The findings of studies on cannabis use and retention in methadone maintenance treatment (MMT) are inconsistent. To study cannabis use and its relationship to patients' outcomes in MMT with/without lifetime DSM-IV-TR schizophrenia/chronic-psychosis diagnosis. Since June 1993, 877 patients with avail...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34379049/"
+        },
+        {
+          "pmid": "1957940",
+          "title": "Methadone and schizophrenia.",
+          "authors": "Feinberg DT, Hartman N",
+          "journal": "The American journal of psychiatry",
+          "year": "1991",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/1957940/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Methadone and buprenorphine treatments in patients with schizophrenia.",
+          "year": 2019,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/f73f1e7a016082f177d19efefc0331e421518f08",
+          "authors": "A. Dervaux, L. Plancke, A. Amariei"
+        },
+        {
+          "title": "Effects of buprenorphine, methadone, and cariprazine on economic choice between remifentanil and food in squirrel monkeys.",
+          "year": 2023,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/4159e6c93a098e5e91d0eb3cd4283cbd6aeb1602",
+          "authors": "Alishan S Amirali, Jacquelin C. Hecker, H. M. Figueroa"
+        },
+        {
+          "title": "Investigating Cognitive Functions in Methadone Users in Comparison with Methadone and Methamphetamine Users and Control Group",
+          "year": 2022,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/10f4488b3dc56301b225ec1d962dfacd1270141d",
+          "authors": "Mahin Eslami-Shahrbabaki, Delaram Barfehee, N. Parvaresh"
+        },
+        {
+          "title": "Psychosis after buprenorphine, heroin, methadone, morphine, oxycodone, and tramadol withdrawal: a systematic review.",
+          "year": 2021,
+          "citations": 16,
+          "url": "https://www.semanticscholar.org/paper/f25535c97926d2ede799d59e24b6afa89710450f",
+          "authors": "M. T. Lozano-L\u00f3pez, S. Gamonal-Limcaoco, N. Casado-Espada"
+        },
+        {
+          "title": "Effect of methadone plus neuroleptics on treatment-resistant chronic paranoid schizophrenia.",
+          "year": 1985,
+          "citations": 65,
+          "url": "https://www.semanticscholar.org/paper/46d3e9857d3ea90d44c204aa7a20225bd90a43ee",
+          "authors": "D. Brizer, N. Hartman, J. Sweeney"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Effect of methadone plus neuroleptics on treatment-resistant chronic paranoid schizophrenia.",
+        "year": 1985,
+        "citations": 65,
+        "url": "https://www.semanticscholar.org/paper/46d3e9857d3ea90d44c204aa7a20225bd90a43ee",
+        "authors": "D. Brizer, N. Hartman, J. Sweeney"
+      },
+      "max_citations": 65,
+      "faers_signal": "moderate",
+      "faers_total_reports": 51541,
+      "faers_cooccurrences": 32,
+      "faers_interpretation": "32 FAERS reports mention both Methadone and Schizophrenia-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "CT-200783 (1.482)",
+        "PZ0004 (1.451)",
+        "niguldipine hydrochloride (1.439)",
+        "STOCK2S-79598 (1.435)",
+        "B3063 (1.433)"
+      ],
+      "signature_interpretation": "Methadone was not found among the top 34 drugs that reverse the Schizophrenia gene signature. Top reversers: CT-200783 (1.482), PZ0004 (1.451), niguldipine hydrochloride (1.439)",
+      "ai_hypothesis": "of its antipsychotic properties.",
+      "abstract_analyses": [],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.6692,
+      "mr_genetic_targets": 3,
+      "mechanistic_hypothesis": "Methadone \u2014[is a therapeutic for]\u2192 Schizophrenia",
+      "kg_paths_text": "\u2022 Methadone \u2014[is a therapeutic for]\u2192 Schizophrenia\n\u2022 Methadone \u2014[binds]\u2192 gene-1565 \u2014[is linked to]\u2192 Schizophrenia\n\u2022 Methadone \u2014[is agonized by]\u2192 gene-4986 \u2014[is a target of]\u2192 DB00370 \u2014[treats]\u2192 Schizophrenia",
+      "validation_experiments": [],
+      "novelty_score": 0.376,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": true,
+      "clinical_trials_total": 1,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT05886504",
+          "title": "Drug Use & Infections in ViEtnam: Mental Health Intervention for INjecting Drug Users",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "567",
+          "url": "https://clinicaltrials.gov/study/NCT05886504"
+        }
+      ],
+      "trial_phases": {
+        "NA": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "1 clinical trial(s) found on ClinicalTrials.gov",
+        "90 PubMed articles on this drug-disease pair",
+        "Supported by 4 independent AI pillars",
+        "Moderate FAERS signal: 32 adverse event reports mention drug-disease co-occurrence",
+        "Supporting paper with 65 citations",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.67)"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 2152,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "moderate",
+        "summary": "CPIC-C (CYP2D6) \u2022 PharmGKB-3 (CYP2B6 / CYP2B6*1, CYP2B6*6)",
+        "cpic": [
+          {
+            "gene": "CYP2D6",
+            "level": "C",
+            "guideline": "CYP2D6, OPRM1, COMT, and Opioids"
+          },
+          {
+            "gene": "COMT",
+            "level": "C",
+            "guideline": "CYP2D6, OPRM1, COMT, and Opioids"
+          },
+          {
+            "gene": "CYP2B6",
+            "level": "C",
+            "guideline": "CYP2B6 and methadone"
+          },
+          {
+            "gene": "OPRM1",
+            "level": "C",
+            "guideline": "CYP2D6, OPRM1, COMT, and Opioids"
+          },
+          {
+            "gene": "ABCB1",
+            "level": "C/D",
+            "guideline": ""
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "CYP2B6",
+            "variant": "CYP2B6*1, CYP2B6*6",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451228945"
+          },
+          {
+            "gene": "CYP2B6",
+            "variant": "CYP2B6*1, CYP2B6*6",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451228940"
+          },
+          {
+            "gene": "GNB3",
+            "variant": "rs5443",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1448103860"
+          },
+          {
+            "gene": "CYP3A5",
+            "variant": "CYP3A5*1, CYP3A5*3",
+            "level": "4",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451228960"
+          },
+          {
+            "gene": "CYP2C19",
+            "variant": "CYP2C19*1, CYP2C19*2, CYP2C19*3",
+            "level": "4",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451229400"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.339,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.482,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.851
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Brain - Frontal Cortex (BA9)",
+          "Brain - Cortex"
+        ],
+        "n_genes": 1,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 2.64,
+        "max_tpm_in_tissue": 2.64,
+        "tissue_specificity": 1.0,
+        "context_modifier": 1.02
+      },
+      "disease_entity": "Disease::MESH:D012559",
+      "ensemble_prob": 0.3882,
+      "ensemble_features": {
+        "kg_score": 0.9942,
+        "degree_penalty": 0.7509,
+        "n_drug_targets": 10,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.1271
+      },
+      "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Melatonin",
+      "drug_id": "DB01065",
+      "disease_name": "Schizophrenia",
+      "combined_score": 0.4801,
+      "pillars_hit": 4,
+      "transe_rank": 8,
+      "transe_score": -9.9014,
+      "pykeen_score": -11.5559,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0.6042,
+      "similar_to": "Agomelatine",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.7379999756813049,
+      "proximity_distance": 1.0499999523162842,
+      "admet_score": 0.4757,
+      "admet_flags": "clean",
+      "primekg_score": 0.2468,
+      "dti_score": 0.6408,
+      "dti_best_target": "SLC18A2",
+      "kg_group_score": 0.5074,
+      "structural_group_score": 0.6408,
+      "network_group_score": 0.5613999962806702,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.546,
+      "admet_multiplier": 0.8951,
+      "efficacy_score": 0.5364,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 12,
+      "shared_targets": [
+        "BACE1",
+        "BCHE",
+        "CLOCK",
+        "CXCL8",
+        "GH1",
+        "GNRH1",
+        "IL1A",
+        "INS",
+        "MT-CO2",
+        "NEDD4",
+        "NOS1",
+        "SOD2"
+      ],
+      "pubmed_total": 254,
+      "pubmed_treatment_total": 174,
+      "pubmed_repurposing_total": 1,
+      "key_papers": [
+        {
+          "pmid": "37597078",
+          "title": "Reactive oxygen species, toxicity, oxidative stress, and antioxidants: chronic diseases and aging.",
+          "authors": "Jomova K, Raptova R, Alomar SY, et al.",
+          "journal": "Archives of toxicology",
+          "year": "2023",
+          "abstract_snippet": "A physiological level of oxygen/nitrogen free radicals and non-radical reactive species (collectively known as ROS/RNS) is termed oxidative eustress or \"good stress\" and is characterized by low to mild levels of oxidants involved in the regulation of various biochemical transformations such as carbo...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37597078/",
+          "total_results": 254
+        },
+        {
+          "pmid": "23698762",
+          "title": "Role of melatonin in schizophrenia.",
+          "authors": "Morera-Fumero AL, Abreu-Gonzalez P",
+          "journal": "International journal of molecular sciences",
+          "year": "2013",
+          "abstract_snippet": "Schizophrenia is a chronic mental disease that disturbs several cognitive functions, such as memory, thought, perception and volition. Schizophrenia's biological etiology is multifactorial and is still under investigation. Melatonin has been involved in schizophrenia since the first decades of the t...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23698762/"
+        },
+        {
+          "pmid": "36077360",
+          "title": "The Role of Tryptophan Metabolites in Neuropsychiatric Disorders.",
+          "authors": "Davidson M, Rashidi N, Nurgali K, et al.",
+          "journal": "International journal of molecular sciences",
+          "year": "2022",
+          "abstract_snippet": "In recent decades, neuropsychiatric disorders such as major depressive disorder, schizophrenia, bipolar, etc., have become a global health concern, causing various detrimental influences on patients. Tryptophan is an important amino acid that plays an indisputable role in several physiological proce...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36077360/"
+        },
+        {
+          "pmid": "22527998",
+          "title": "Melatonin: an overlooked factor in schizophrenia and in the inhibition of anti-psychotic side effects.",
+          "authors": "Anderson G, Maes M",
+          "journal": "Metabolic brain disease",
+          "year": "2012",
+          "abstract_snippet": "This paper reviews melatonin as an overlooked factor in the developmental etiology and maintenance of schizophrenia; the neuroimmune and oxidative pathophysiology of schizophrenia; specific symptoms in schizophrenia, including sleep disturbance; circadian rhythms; and side effects of antipsychotics,...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22527998/"
+        },
+        {
+          "pmid": "41571206",
+          "title": "Neurophysiological and neuropharmacological effects of melatonin MT2 receptors activation in MK-801-induced schizophrenia-like dysfunctions.",
+          "authors": "Barzon B, Marchiotto F, Nasini S, et al.",
+          "journal": "Biochemical pharmacology",
+          "year": "2026",
+          "abstract_snippet": "Schizophrenia (SCZ) is a chronic psychiatric disorder characterized by positive, negative, and cognitive symptoms that remain insufficiently controlled by current dopamine- and serotonin-based antipsychotics. Emerging evidence implicates melatonin MT2 receptors in the regulation of the sleep-wake cy...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41571206/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "36641432",
+          "title": "Disclosing common biological signatures and predicting new therapeutic targets in schizophrenia and obsessive-compulsive disorder by integrated bioinformatics analysis.",
+          "authors": "Ghanbarzehi A, Sepehrinezhad A, Hashemi N, et al.",
+          "journal": "BMC psychiatry",
+          "year": "2023",
+          "abstract_snippet": "Schizophrenia (SCZ) is a severe mental illness mainly characterized by a number of psychiatric symptoms. Obsessive-compulsive disorder (OCD) is a long-lasting and devastating mental disorder. SCZ has high co-occurrence with OCD resulting in the emergence of a concept entitled \"schizo-obsessive disor...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36641432/",
+          "total_results": 1
+        }
+      ],
+      "semantic_scholar_papers": [
+        {
+          "title": "Neuroendocrine characterization into schizophrenia: norepinephrine and melatonin as promising biomarkers",
+          "year": 2025,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/e62cb1df29ad7fa94908eebdce6c9f1cca35e7a6",
+          "authors": "Junwei Shen, Xin Li, Y. Zhong"
+        },
+        {
+          "title": "ROLE OF MELATONIN IN THE MANAGEMENT OF SLEEP DISORDERS IN SCHIZOPHRENIA: A LITERATURE REVIEW",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/c3b9feff5a6e63988e5709e944bd1933ec1f2cd4",
+          "authors": "Andrzej Wydrych, Patryk Pindlowski, Ewa Wietrzykowska"
+        },
+        {
+          "title": "DECODING THE LINK AMONG SCHIZOPHRENIA, METABOLIC SYNDROME, AND THE SEROTONIN/MELATONIN PATHWAY USING THE MK-801 MOUSE MODEL",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/a2531679a57a38c65a9de2c36625b59201d9f3b3",
+          "authors": "A. Shkodra, B. Barzon, L. Cherchi"
+        },
+        {
+          "title": "The Effect of Melatonin Adjuvant on Cognitive Function and Melatonin Levels in Schizophrenia Patients",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/6e12ea5a066e4d5fcba1a12c41e681f692ecce27",
+          "authors": "Christian Haryanto Junaedi, A. Tanra, K. Liaury"
+        },
+        {
+          "title": "Onset in late adolescence of schizophrenia: Could melatonin modulate this debut?",
+          "year": 2024,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/0486fcd4cdf3a3f35f8bfe37d5dd9f60b9e9531a",
+          "authors": "C. Cach\u00e1n-Vega, J. Boga, Y. Potes"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Neuroendocrine characterization into schizophrenia: norepinephrine and melatonin as promising biomarkers",
+        "year": 2025,
+        "citations": 5,
+        "url": "https://www.semanticscholar.org/paper/e62cb1df29ad7fa94908eebdce6c9f1cca35e7a6",
+        "authors": "Junwei Shen, Xin Li, Y. Zhong"
+      },
+      "max_citations": 5,
+      "faers_signal": "moderate",
+      "faers_total_reports": 53144,
+      "faers_cooccurrences": 33,
+      "faers_interpretation": "33 FAERS reports mention both Melatonin and Schizophrenia-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "CT-200783 (1.482)",
+        "PZ0004 (1.451)",
+        "niguldipine hydrochloride (1.439)",
+        "STOCK2S-79598 (1.435)",
+        "B3063 (1.433)"
+      ],
+      "signature_interpretation": "Melatonin was not found among the top 34 drugs that reverse the Schizophrenia gene signature. Top reversers: CT-200783 (1.482), PZ0004 (1.451), niguldipine hydrochloride (1.439)",
+      "ai_hypothesis": "of its antioxidant and anti-inflammatory properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 0,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "schizophrenia",
+              "entity_group": "Disease_disorder",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "disease",
+              "entity_group": "Disease_disorder",
+              "score": 0.9610000252723694
+            },
+            {
+              "entity": "mel",
+              "entity_group": "Medication",
+              "score": 0.9980000257492065
+            },
+            {
+              "entity": "first decades",
+              "entity_group": "Duration",
+              "score": 0.9319999814033508
+            }
+          ]
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "Phase 3",
+      "failed_trial_count": 1,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.546,
+      "mr_genetic_targets": 7,
+      "mechanistic_hypothesis": "Melatonin \u2014[downregulates]\u2192 gene-6382 \u2014[activates]\u2192 gene-7057 \u2014[is upregulated by]\u2192 Schizophrenia",
+      "kg_paths_text": "\u2022 Melatonin \u2014[downregulates]\u2192 gene-6382 \u2014[activates]\u2192 gene-7057 \u2014[is upregulated by]\u2192 Schizophrenia\n\u2022 Melatonin \u2014[downregulates]\u2192 gene-6382 \u2014[activates]\u2192 gene-7057 \u2014[is upregulated by]\u2192 Schizophrenia\n\u2022 Melatonin \u2014[downregulates]\u2192 gene-6382 \u2014[activates]\u2192 gene-7057 \u2014[is upregulated by]\u2192 Schizophrenia",
+      "validation_experiments": [],
+      "novelty_score": 0.202,
       "novelty_level": "ESTABLISHED",
       "is_known_treatment": false,
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT00453804",
-          "title": "Injectable Versus Oral Naltrexone Treatment of Alcohol Dependence In Serious Mental Illness (SMI)",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "15",
-          "url": "https://clinicaltrials.gov/study/NCT00453804"
+          "nct_id": "NCT05413486",
+          "title": "Sleep, Obesity and Mental Disease - Biological Markers for the Evaluation of Circadian Rhythmicity",
+          "status": "UNKNOWN",
+          "phase": "N/A",
+          "enrollment": "86",
+          "url": "https://clinicaltrials.gov/study/NCT05413486"
         },
         {
-          "nct_id": "NCT07213466",
-          "title": "Individualized Pharmacological Approach to Obesity in Patients With Bipolar Disorder",
-          "status": "RECRUITING",
-          "phase": "PHASE4",
-          "enrollment": "100",
-          "url": "https://clinicaltrials.gov/study/NCT07213466"
-        },
-        {
-          "nct_id": "NCT00453609",
-          "title": "Injectable Naltrexone Treatment of Alcohol Dependence in Serious Mental Illness (SMI)",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "15",
-          "url": "https://clinicaltrials.gov/study/NCT00453609"
-        },
-        {
-          "nct_id": "NCT02736474",
-          "title": "Naltrexone and Bupropion Combination on Obese,Smoking Patients With Schizophrenia",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "22",
-          "url": "https://clinicaltrials.gov/study/NCT02736474"
-        },
-        {
-          "nct_id": "NCT01866098",
-          "title": "Naltrexone for Antipsychotic-Induced Weight Gain",
+          "nct_id": "NCT03826563",
+          "title": "Melatonin Effects on Sleep and Circadian Rhythm in Youth and Young Adults With At-risk Symptoms",
           "status": "COMPLETED",
           "phase": "NA",
-          "enrollment": "144",
-          "url": "https://clinicaltrials.gov/study/NCT01866098"
+          "enrollment": "21",
+          "url": "https://clinicaltrials.gov/study/NCT03826563"
+        },
+        {
+          "nct_id": "NCT06838104",
+          "title": "Effect of Melatonin on Schizophrenic Symptoms: a Randomized Placebo-Controlled Trial",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "phase": "NA",
+          "enrollment": "76",
+          "url": "https://clinicaltrials.gov/study/NCT06838104"
+        },
+        {
+          "nct_id": "NCT01593774",
+          "title": "Melatonin for Prevention of Metabolic Side Effects of Olanzapine",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "36",
+          "url": "https://clinicaltrials.gov/study/NCT01593774"
+        },
+        {
+          "nct_id": "NCT01391390",
+          "title": "Melatonin Treatment for Tardive Dyskinesia in Schizophrenia",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "120",
+          "url": "https://clinicaltrials.gov/study/NCT01391390"
         }
       ],
       "trial_phases": {
-        "PHASE4": 5,
-        "NA": 2,
-        "PHASE1": 2,
-        "PHASE2": 1
+        "NA": 4,
+        "PHASE2": 1,
+        "PHASE4": 3,
+        "PHASE3": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
         "10 clinical trial(s) found on ClinicalTrials.gov",
-        "136 PubMed articles on this drug-disease pair",
-        "Supported by 7 independent AI pillars",
-        "High molecular similarity (0.75) to Naloxone",
-        "Moderate FAERS signal: 8 adverse event reports mention drug-disease co-occurrence",
-        "Supporting paper with 30 citations",
+        "Phase 3 trial exists",
+        "254 PubMed articles on this drug-disease pair",
+        "1 article(s) specifically mention repurposing/repositioning",
+        "Supported by 4 independent AI pillars",
+        "High molecular similarity (0.60) to Agomelatine",
+        "Moderate FAERS signal: 33 adverse event reports mention drug-disease co-occurrence",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.50)"
-      ]
+        "Moderate genetic evidence supporting causality (MR score: 0.55)"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1241,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00773",
+            "drug_name": "Etoposide",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.607,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.48,
+          "docking": 0.797,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Brain - Frontal Cortex (BA9)",
+          "Brain - Cortex"
+        ],
+        "n_genes": 12,
+        "n_expressed": 8,
+        "mean_tpm_in_tissue": 5252.57,
+        "max_tpm_in_tissue": 62949.6,
+        "tissue_specificity": 0.722,
+        "context_modifier": 1.117
+      },
+      "disease_entity": "Disease::MESH:D012559",
+      "ensemble_prob": 0.4781,
+      "ensemble_features": {
+        "kg_score": 0.9928,
+        "degree_penalty": 0.7607,
+        "n_drug_targets": 16,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.3438
+      },
+      "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": -9.56,
+        "target_symbol": "BCHE",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     }
-  ]
+  ],
+  "disease_entity": "Disease::MESH:D012559",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
+  "docking_axis": {
+    "source": "chembl_bioactivity_proxy + not_wired fallback",
+    "n_disease_genes": 154,
+    "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
+  }
 }

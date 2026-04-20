@@ -47,8 +47,12 @@
       "efficacy_score": 0.503000020980835,
       "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 3,
+      "shared_targets": [
+        "ALB",
+        "IFNA2",
+        "IFNAR1"
+      ],
       "pubmed_total": 7,
       "pubmed_treatment_total": 7,
       "pubmed_repurposing_total": 0,
@@ -321,11 +325,15 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Liver"
         ],
-        "n_genes": 0
+        "n_genes": 3,
+        "n_expressed": 2,
+        "mean_tpm_in_tissue": 8407.03,
+        "max_tpm_in_tissue": 25201.3,
+        "tissue_specificity": 1.0,
+        "context_modifier": 1.15
       },
       "ensemble_prob": 0.0343,
       "ensemble_features": {
@@ -344,7 +352,17 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D006526"
+      "disease_entity": "Disease::MESH:D006526",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "ALIPHATIC"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "Aliphatic_long_chain"
+        ]
+      }
     },
     {
       "drug_name": "Umifenovir",
@@ -380,8 +398,10 @@
       "efficacy_score": 0.4537000060081482,
       "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "IL10"
+      ],
       "pubmed_total": 11,
       "pubmed_treatment_total": 8,
       "pubmed_repurposing_total": 1,
@@ -635,11 +655,15 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Liver"
         ],
-        "n_genes": 0
+        "n_genes": 1,
+        "n_expressed": 0,
+        "mean_tpm_in_tissue": 0.1,
+        "max_tpm_in_tissue": 0.1,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.854
       },
       "ensemble_prob": 0.0791,
       "ensemble_features": {
@@ -658,7 +682,17 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D006526"
+      "disease_entity": "Disease::MESH:D006526",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "MANNICH"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "mannich_A(296)"
+        ]
+      }
     },
     {
       "drug_name": "Crizotinib",
@@ -694,8 +728,20 @@
       "efficacy_score": 0.44690001010894775,
       "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 11,
+      "shared_targets": [
+        "CYP3A4",
+        "CYP3A5",
+        "DHCR24",
+        "GADD45A",
+        "HMGCR",
+        "IL1B",
+        "IMPDH1",
+        "LDLR",
+        "NDUFA13",
+        "PRKAA2",
+        "RAF1"
+      ],
       "pubmed_total": 2,
       "pubmed_treatment_total": 2,
       "pubmed_repurposing_total": 0,
@@ -950,21 +996,25 @@
           "pharos": false,
           "literature": false
         },
-        "triangulation_score": 0.17599999904632568,
+        "triangulation_score": 0.347,
         "label": "",
         "axis_values": {
-          "kg": 0.38600000739097595,
-          "docking": 0.0,
+          "kg": 0.386,
+          "docking": 0.569,
           "pharos": 0.0,
           "literature": 0.207
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Liver"
         ],
-        "n_genes": 0
+        "n_genes": 11,
+        "n_expressed": 9,
+        "mean_tpm_in_tissue": 101.16,
+        "max_tpm_in_tissue": 419.48,
+        "tissue_specificity": 0.89,
+        "context_modifier": 1.137
       },
       "ensemble_prob": 0.0459,
       "ensemble_features": {
@@ -977,13 +1027,23 @@
       },
       "ensemble_rank": 3,
       "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
+        "kcal_per_mol": -6.83,
+        "target_symbol": "RAF1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
       },
-      "disease_entity": "Disease::MESH:D006526"
+      "disease_entity": "Disease::MESH:D006526",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "HALOGENATED"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "halogenated_ring_1"
+        ]
+      }
     },
     {
       "drug_name": "Dexamethasone",
@@ -1019,8 +1079,29 @@
       "efficacy_score": 0.40529999136924744,
       "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 20,
+      "shared_targets": [
+        "ADIPOQ",
+        "ALB",
+        "CRP",
+        "CYP3A4",
+        "CYP3A43",
+        "CYP3A5",
+        "CYP3A7",
+        "IFNA1",
+        "IFNAR1",
+        "IL10",
+        "IL17A",
+        "IL1B",
+        "IMPDH1",
+        "INS",
+        "NFKB1",
+        "PPARG",
+        "RAF1",
+        "TGFB1",
+        "TNF",
+        "TNFSF10"
+      ],
       "pubmed_total": 37,
       "pubmed_treatment_total": 32,
       "pubmed_repurposing_total": 0,
@@ -1299,21 +1380,25 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.2709999978542328,
+        "triangulation_score": 0.418,
         "label": "kg-only",
         "axis_values": {
-          "kg": 0.38199999928474426,
-          "docking": 0.0,
+          "kg": 0.382,
+          "docking": 0.489,
           "pharos": 0.0,
           "literature": 0.686
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Liver"
         ],
-        "n_genes": 0
+        "n_genes": 20,
+        "n_expressed": 13,
+        "mean_tpm_in_tissue": 1576.66,
+        "max_tpm_in_tissue": 25201.3,
+        "tissue_specificity": 1.0,
+        "context_modifier": 1.15
       },
       "ensemble_prob": 0.4231,
       "ensemble_features": {
@@ -1326,13 +1411,19 @@
       },
       "ensemble_rank": 1,
       "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
+        "kcal_per_mol": -5.87,
+        "target_symbol": "CYP3A4",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
       },
-      "disease_entity": "Disease::MESH:D006526"
+      "disease_entity": "Disease::MESH:D006526",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
       "drug_name": "Folic Acid",
@@ -1368,8 +1459,15 @@
       "efficacy_score": 0.3702999949455261,
       "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 6,
+      "shared_targets": [
+        "ADIPOQ",
+        "ALB",
+        "CRP",
+        "INS",
+        "NDUFB3",
+        "TNF"
+      ],
       "pubmed_total": 27,
       "pubmed_treatment_total": 18,
       "pubmed_repurposing_total": 0,
@@ -1680,11 +1778,15 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Liver"
         ],
-        "n_genes": 0
+        "n_genes": 6,
+        "n_expressed": 3,
+        "mean_tpm_in_tissue": 5153.67,
+        "max_tpm_in_tissue": 25201.3,
+        "tissue_specificity": 1.0,
+        "context_modifier": 1.15
       },
       "ensemble_prob": 0.0345,
       "ensemble_features": {
@@ -1703,7 +1805,13 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D006526"
+      "disease_entity": "Disease::MESH:D006526",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
       "drug_name": "Hemi-Babim",
@@ -1867,11 +1975,15 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Liver"
         ],
-        "n_genes": 0
+        "n_genes": 107,
+        "n_expressed": 90,
+        "mean_tpm_in_tissue": 1902.28,
+        "max_tpm_in_tissue": 58775.3,
+        "tissue_specificity": 0.708,
+        "context_modifier": 1.115
       },
       "ensemble_prob": 0.0,
       "ensemble_features": {
@@ -1890,7 +2002,18 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D006526"
+      "disease_entity": "Disease::MESH:D006526",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "IMINE"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "imine_1",
+          "imine_2"
+        ]
+      }
     },
     {
       "drug_name": "Rutin",
@@ -1926,8 +2049,11 @@
       "efficacy_score": 0.40299999713897705,
       "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 2,
+      "shared_targets": [
+        "ALB",
+        "CYP3A4"
+      ],
       "pubmed_total": 7,
       "pubmed_treatment_total": 5,
       "pubmed_repurposing_total": 1,
@@ -2171,21 +2297,25 @@
           "pharos": false,
           "literature": false
         },
-        "triangulation_score": 0.2070000022649765,
+        "triangulation_score": 0.356,
         "label": "",
         "axis_values": {
-          "kg": 0.3659999966621399,
-          "docking": 0.0,
+          "kg": 0.366,
+          "docking": 0.498,
           "pharos": 0.0,
           "literature": 0.392
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Liver"
         ],
-        "n_genes": 0
+        "n_genes": 2,
+        "n_expressed": 2,
+        "mean_tpm_in_tissue": 12768.3,
+        "max_tpm_in_tissue": 25201.3,
+        "tissue_specificity": 1.0,
+        "context_modifier": 1.15
       },
       "ensemble_prob": 0.0201,
       "ensemble_features": {
@@ -2198,13 +2328,24 @@
       },
       "ensemble_rank": 6,
       "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
+        "kcal_per_mol": -5.98,
+        "target_symbol": "ALB",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
       },
-      "disease_entity": "Disease::MESH:D006526"
+      "disease_entity": "Disease::MESH:D006526",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "CATECHOL"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "catechol_A(92)",
+          "catechol"
+        ]
+      }
     },
     {
       "drug_name": "Adenosine Phosphonoacetic Acid",
@@ -2367,11 +2508,15 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Liver"
         ],
-        "n_genes": 0
+        "n_genes": 107,
+        "n_expressed": 90,
+        "mean_tpm_in_tissue": 1902.28,
+        "max_tpm_in_tissue": 58775.3,
+        "tissue_specificity": 0.708,
+        "context_modifier": 1.115
       },
       "ensemble_prob": 0.0,
       "ensemble_features": {
@@ -2390,7 +2535,17 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D006526"
+      "disease_entity": "Disease::MESH:D006526",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "PHOSPHOR"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "phosphor"
+        ]
+      }
     },
     {
       "drug_name": "Carba-Nicotinamide-Adenine-Dinucleotide",
@@ -2554,11 +2709,15 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Liver"
         ],
-        "n_genes": 0
+        "n_genes": 107,
+        "n_expressed": 90,
+        "mean_tpm_in_tissue": 1902.28,
+        "max_tpm_in_tissue": 58775.3,
+        "tissue_specificity": 0.708,
+        "context_modifier": 1.115
       },
       "ensemble_prob": 0.0,
       "ensemble_features": {
@@ -2577,7 +2736,21 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D006526"
+      "disease_entity": "Disease::MESH:D006526",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "GTE",
+          "PHOSPHOR",
+          "QUATERNARY"
+        ],
+        "n_alerts": 3,
+        "alert_names": [
+          "phosphor",
+          "quaternary_nitrogen_1",
+          "gte_2_free_phos"
+        ]
+      }
     },
     {
       "drug_name": "Urea",
@@ -2613,8 +2786,14 @@
       "efficacy_score": 0.3758000135421753,
       "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 5,
+      "shared_targets": [
+        "ALB",
+        "CRP",
+        "INS",
+        "SLC17A5",
+        "TNF"
+      ],
       "pubmed_total": 215,
       "pubmed_treatment_total": 133,
       "pubmed_repurposing_total": 0,
@@ -2850,11 +3029,15 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Liver"
         ],
-        "n_genes": 0
+        "n_genes": 5,
+        "n_expressed": 3,
+        "mean_tpm_in_tissue": 6178.78,
+        "max_tpm_in_tissue": 25201.3,
+        "tissue_specificity": 1.0,
+        "context_modifier": 1.15
       },
       "ensemble_prob": 0.0,
       "ensemble_features": {
@@ -2873,14 +3056,20 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D006526"
+      "disease_entity": "Disease::MESH:D006526",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     }
   ],
   "ensemble_version": "v5",
   "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
-    "n_disease_genes": 68,
+    "n_disease_genes": 109,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
   },
   "disease_entity": "Disease::MESH:D006526"

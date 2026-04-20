@@ -173,8 +173,45 @@
           "literature": 0.0
         }
       },
-      "tissue_context": {},
-      "disease_entity": "Disease::MESH:D005600"
+      "tissue_context": {
+        "tissues": [
+          "Brain - Cortex"
+        ],
+        "n_genes": 82,
+        "n_expressed": 69,
+        "mean_tpm_in_tissue": 2440.16,
+        "max_tpm_in_tissue": 53710.3,
+        "tissue_specificity": 0.713,
+        "context_modifier": 1.116
+      },
+      "disease_entity": "Disease::MESH:D005600",
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "ensemble_prob": 0.0,
+      "ensemble_features": {
+        "kg_score": 0.4445,
+        "degree_penalty": 1.0,
+        "n_drug_targets": 0,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 8.6761
+      },
+      "ensemble_rank": 8,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "SULFONIC"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "Sulfonic_acid_2"
+        ]
+      }
     },
     {
       "drug_name": "Netilmicin",
@@ -394,8 +431,45 @@
           "literature": 0.0
         }
       },
-      "tissue_context": {},
-      "disease_entity": "Disease::MESH:D005600"
+      "tissue_context": {
+        "tissues": [
+          "Brain - Cortex"
+        ],
+        "n_genes": 82,
+        "n_expressed": 69,
+        "mean_tpm_in_tissue": 2440.16,
+        "max_tpm_in_tissue": 53710.3,
+        "tissue_specificity": 0.713,
+        "context_modifier": 1.116
+      },
+      "disease_entity": "Disease::MESH:D005600",
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "ensemble_prob": 0.0195,
+      "ensemble_features": {
+        "kg_score": 0.9116,
+        "degree_penalty": 0.8063,
+        "n_drug_targets": 0,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 6.8395
+      },
+      "ensemble_rank": 6,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "GTE"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "gte_4_basic_N"
+        ]
+      }
     },
     {
       "drug_name": "Rutin",
@@ -609,8 +683,46 @@
           "literature": 0.0
         }
       },
-      "tissue_context": {},
-      "disease_entity": "Disease::MESH:D005600"
+      "tissue_context": {
+        "tissues": [
+          "Brain - Cortex"
+        ],
+        "n_genes": 82,
+        "n_expressed": 69,
+        "mean_tpm_in_tissue": 2440.16,
+        "max_tpm_in_tissue": 53710.3,
+        "tissue_specificity": 0.713,
+        "context_modifier": 1.116
+      },
+      "disease_entity": "Disease::MESH:D005600",
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "ensemble_prob": 0.2454,
+      "ensemble_features": {
+        "kg_score": 0.9687,
+        "degree_penalty": 0.8733,
+        "n_drug_targets": 24,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 5.8021
+      },
+      "ensemble_rank": 3,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "CATECHOL"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "catechol_A(92)",
+          "catechol"
+        ]
+      }
     },
     {
       "drug_name": "Gamma(Amino)-Butyric Acid",
@@ -646,8 +758,12 @@
       "efficacy_score": 0.4318999946117401,
       "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 3,
+      "shared_targets": [
+        "FMR1",
+        "GABBR1",
+        "GABBR2"
+      ],
       "pubmed_total": 3,
       "pubmed_treatment_total": 2,
       "pubmed_repurposing_total": 0,
@@ -804,24 +920,57 @@
         "pharmgkb": []
       },
       "triangulation": {
-        "n_axes_agree": 0,
+        "n_axes_agree": 1,
         "axes": {
           "kg": false,
-          "docking": false,
+          "docking": true,
           "pharos": false,
           "literature": false
         },
-        "triangulation_score": 0.17800000309944153,
-        "label": "",
+        "triangulation_score": 0.375,
+        "label": "kg-only",
         "axis_values": {
-          "kg": 0.36000001430511475,
-          "docking": 0.0,
+          "kg": 0.36,
+          "docking": 0.657,
           "pharos": 0.0,
           "literature": 0.261
         }
       },
-      "tissue_context": {},
-      "disease_entity": "Disease::MESH:D005600"
+      "tissue_context": {
+        "tissues": [
+          "Brain - Cortex"
+        ],
+        "n_genes": 3,
+        "n_expressed": 3,
+        "mean_tpm_in_tissue": 82.77,
+        "max_tpm_in_tissue": 168.59,
+        "tissue_specificity": 0.872,
+        "context_modifier": 1.127
+      },
+      "disease_entity": "Disease::MESH:D005600",
+      "docking": {
+        "kcal_per_mol": -7.88,
+        "target_symbol": "GABBR1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "ensemble_prob": 0.1526,
+      "ensemble_features": {
+        "kg_score": 0.9408,
+        "degree_penalty": 0.8699,
+        "n_drug_targets": 15,
+        "is_fda_approved": 0,
+        "n_disease_genes": 0,
+        "transe_rank_log": 6.4394
+      },
+      "ensemble_rank": 5,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
       "drug_name": "Dexamethasone",
@@ -857,8 +1006,10 @@
       "efficacy_score": 0.36959999799728394,
       "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "PTH"
+      ],
       "pubmed_total": 2,
       "pubmed_treatment_total": 1,
       "pubmed_repurposing_total": 0,
@@ -1103,8 +1254,41 @@
           "literature": 0.207
         }
       },
-      "tissue_context": {},
-      "disease_entity": "Disease::MESH:D005600"
+      "tissue_context": {
+        "tissues": [
+          "Brain - Cortex"
+        ],
+        "n_genes": 1,
+        "n_expressed": 0,
+        "mean_tpm_in_tissue": 0.0,
+        "max_tpm_in_tissue": 0.0,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.85
+      },
+      "disease_entity": "Disease::MESH:D005600",
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "ensemble_prob": 0.8478,
+      "ensemble_features": {
+        "kg_score": 0.9988,
+        "degree_penalty": 0.736,
+        "n_drug_targets": 24,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.6391
+      },
+      "ensemble_rank": 2,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
       "drug_name": "Mavoglurant",
@@ -1140,8 +1324,10 @@
       "efficacy_score": 0.3822999894618988,
       "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "GRM5"
+      ],
       "pubmed_total": 20,
       "pubmed_treatment_total": 18,
       "pubmed_repurposing_total": 0,
@@ -1372,24 +1558,61 @@
         "pharmgkb": []
       },
       "triangulation": {
-        "n_axes_agree": 1,
+        "n_axes_agree": 2,
         "axes": {
           "kg": false,
-          "docking": false,
+          "docking": true,
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.23600000143051147,
-        "label": "kg-only",
+        "triangulation_score": 0.509,
+        "label": "multi-axis",
         "axis_values": {
-          "kg": 0.3449999988079071,
-          "docking": 0.0,
+          "kg": 0.345,
+          "docking": 0.91,
           "pharos": 0.0,
           "literature": 0.574
         }
       },
-      "tissue_context": {},
-      "disease_entity": "Disease::MESH:D005600"
+      "tissue_context": {
+        "tissues": [
+          "Brain - Cortex"
+        ],
+        "n_genes": 1,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 1.57,
+        "max_tpm_in_tissue": 1.57,
+        "tissue_specificity": 1.0,
+        "context_modifier": 1.007
+      },
+      "disease_entity": "Disease::MESH:D005600",
+      "docking": {
+        "kcal_per_mol": -10.92,
+        "target_symbol": "GRM5",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "ensemble_prob": 0.0063,
+      "ensemble_features": {
+        "kg_score": 0.8705,
+        "degree_penalty": 1.0,
+        "n_drug_targets": 2,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 7.2204
+      },
+      "ensemble_rank": 7,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "TRIPLE"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "triple_bond"
+        ]
+      }
     },
     {
       "drug_name": "7-Methyl-Gpppa",
@@ -1551,8 +1774,49 @@
           "literature": 0.0
         }
       },
-      "tissue_context": {},
-      "disease_entity": "Disease::MESH:D005600"
+      "tissue_context": {
+        "tissues": [
+          "Brain - Cortex"
+        ],
+        "n_genes": 82,
+        "n_expressed": 69,
+        "mean_tpm_in_tissue": 2440.16,
+        "max_tpm_in_tissue": 53710.3,
+        "tissue_specificity": 0.713,
+        "context_modifier": 1.116
+      },
+      "disease_entity": "Disease::MESH:D005600",
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "ensemble_prob": 0.0,
+      "ensemble_features": {
+        "kg_score": 0.5587,
+        "degree_penalty": 1.0,
+        "n_drug_targets": 0,
+        "is_fda_approved": 0,
+        "n_disease_genes": 0,
+        "transe_rank_log": 8.4461
+      },
+      "ensemble_rank": 9,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "GTE",
+          "PHOSPHOR",
+          "QUATERNARY"
+        ],
+        "n_alerts": 3,
+        "alert_names": [
+          "phosphor",
+          "quaternary_nitrogen_1",
+          "gte_2_free_phos"
+        ]
+      }
     },
     {
       "drug_name": "Atosiban",
@@ -1766,8 +2030,45 @@
           "literature": 0.0
         }
       },
-      "tissue_context": {},
-      "disease_entity": "Disease::MESH:D005600"
+      "tissue_context": {
+        "tissues": [
+          "Brain - Cortex"
+        ],
+        "n_genes": 82,
+        "n_expressed": 69,
+        "mean_tpm_in_tissue": 2440.16,
+        "max_tpm_in_tissue": 53710.3,
+        "tissue_specificity": 0.713,
+        "context_modifier": 1.116
+      },
+      "disease_entity": "Disease::MESH:D005600",
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "ensemble_prob": 0.0,
+      "ensemble_features": {
+        "kg_score": 0.6536,
+        "degree_penalty": 1.0,
+        "n_drug_targets": 9,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 8.2039
+      },
+      "ensemble_rank": 10,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "DISULPHIDE"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "disulphide"
+        ]
+      }
     },
     {
       "drug_name": "Amantadine",
@@ -1803,8 +2104,10 @@
       "efficacy_score": 0.3499000072479248,
       "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "DRD2"
+      ],
       "pubmed_total": 0,
       "pubmed_treatment_total": 0,
       "pubmed_repurposing_total": 0,
@@ -2010,8 +2313,41 @@
           "literature": 0.0
         }
       },
-      "tissue_context": {},
-      "disease_entity": "Disease::MESH:D005600"
+      "tissue_context": {
+        "tissues": [
+          "Brain - Cortex"
+        ],
+        "n_genes": 1,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 1.23,
+        "max_tpm_in_tissue": 1.23,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.881
+      },
+      "disease_entity": "Disease::MESH:D005600",
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "ensemble_prob": 0.9183,
+      "ensemble_features": {
+        "kg_score": 0.9977,
+        "degree_penalty": 0.7695,
+        "n_drug_targets": 7,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 3.2189
+      },
+      "ensemble_rank": 1,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
       "drug_name": "Novobiocin",
@@ -2047,8 +2383,10 @@
       "efficacy_score": 0.366100013256073,
       "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "NDUFA13"
+      ],
       "pubmed_total": 1,
       "pubmed_treatment_total": 0,
       "pubmed_repurposing_total": 0,
@@ -2243,9 +2581,55 @@
           "literature": 0.131
         }
       },
-      "tissue_context": {},
-      "disease_entity": "Disease::MESH:D005600"
+      "tissue_context": {
+        "tissues": [
+          "Brain - Cortex"
+        ],
+        "n_genes": 1,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 124.0,
+        "max_tpm_in_tissue": 124.0,
+        "tissue_specificity": 0.517,
+        "context_modifier": 1.092
+      },
+      "disease_entity": "Disease::MESH:D005600",
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "ensemble_prob": 0.1741,
+      "ensemble_features": {
+        "kg_score": 0.9641,
+        "degree_penalty": 0.8849,
+        "n_drug_targets": 10,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 5.9402
+      },
+      "ensemble_rank": 4,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "CUMARINE",
+          "ISOLATED"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "cumarine",
+          "isolated_alkene"
+        ]
+      }
     }
   ],
-  "disease_entity": "Disease::MESH:D005600"
+  "disease_entity": "Disease::MESH:D005600",
+  "docking_axis": {
+    "source": "chembl_bioactivity_proxy + not_wired fallback",
+    "n_disease_genes": 84,
+    "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
+  },
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl"
 }

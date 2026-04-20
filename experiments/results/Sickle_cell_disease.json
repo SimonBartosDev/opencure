@@ -47,8 +47,10 @@
       "efficacy_score": 0.4361000061035156,
       "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "CD40LG"
+      ],
       "pubmed_total": 9,
       "pubmed_treatment_total": 8,
       "pubmed_repurposing_total": 0,
@@ -303,12 +305,16 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Whole Blood",
           "Spleen"
         ],
-        "n_genes": 0
+        "n_genes": 1,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 5.51,
+        "max_tpm_in_tissue": 5.51,
+        "tissue_specificity": 1.0,
+        "context_modifier": 1.043
       },
       "ensemble_prob": 0.3354,
       "ensemble_features": {
@@ -327,7 +333,13 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D000755"
+      "disease_entity": "Disease::MESH:D000755",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
       "drug_name": "Liothyronine",
@@ -363,8 +375,12 @@
       "efficacy_score": 0.4025000035762787,
       "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 3,
+      "shared_targets": [
+        "F2",
+        "GH1",
+        "INS"
+      ],
       "pubmed_total": 2,
       "pubmed_treatment_total": 1,
       "pubmed_repurposing_total": 0,
@@ -565,29 +581,33 @@
         ]
       },
       "triangulation": {
-        "n_axes_agree": 1,
+        "n_axes_agree": 2,
         "axes": {
           "kg": true,
-          "docking": false,
+          "docking": true,
           "pharos": false,
           "literature": false
         },
-        "triangulation_score": 0.18199999630451202,
-        "label": "kg-only",
+        "triangulation_score": 0.482,
+        "label": "multi-axis",
         "axis_values": {
-          "kg": 0.4020000100135803,
-          "docking": 0.0,
+          "kg": 0.403,
+          "docking": 1.0,
           "pharos": 0.0,
           "literature": 0.207
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Whole Blood",
           "Spleen"
         ],
-        "n_genes": 0
+        "n_genes": 3,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 1.6,
+        "max_tpm_in_tissue": 4.37,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.887
       },
       "ensemble_prob": 0.4982,
       "ensemble_features": {
@@ -600,13 +620,25 @@
       },
       "ensemble_rank": 3,
       "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
+        "kcal_per_mol": -12.18,
+        "target_symbol": "F2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
       },
-      "disease_entity": "Disease::MESH:D000755"
+      "disease_entity": "Disease::MESH:D000755",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "GTE",
+          "IODINE"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "iodine",
+          "gte_3_iodine"
+        ]
+      }
     },
     {
       "drug_name": "Ceftriaxone",
@@ -900,12 +932,16 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Whole Blood",
           "Spleen"
         ],
-        "n_genes": 0
+        "n_genes": 44,
+        "n_expressed": 27,
+        "mean_tpm_in_tissue": 8299.41,
+        "max_tpm_in_tissue": 267405.0,
+        "tissue_specificity": 1.0,
+        "context_modifier": 1.15
       },
       "ensemble_prob": 0.337,
       "ensemble_features": {
@@ -924,7 +960,23 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D000755"
+      "disease_entity": "Disease::MESH:D000755",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "BETALACTAM",
+          "DIKETO",
+          "IMINE",
+          "OXYGEN-NITROGEN"
+        ],
+        "n_alerts": 4,
+        "alert_names": [
+          "diketo_group",
+          "imine_1",
+          "Oxygen-nitrogen_single_bond",
+          "betalactam"
+        ]
+      }
     },
     {
       "drug_name": "Progesterone",
@@ -960,8 +1012,21 @@
       "efficacy_score": 0.3971,
       "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 12,
+      "shared_targets": [
+        "EDN1",
+        "GH1",
+        "HMOX1",
+        "IGFBP3",
+        "IL17A",
+        "INS",
+        "OPRK1",
+        "PGR",
+        "PTGS2",
+        "SIGMAR1",
+        "SOD2",
+        "VEGFA"
+      ],
       "pubmed_total": 40,
       "pubmed_treatment_total": 20,
       "pubmed_repurposing_total": 0,
@@ -1188,29 +1253,33 @@
         ]
       },
       "triangulation": {
-        "n_axes_agree": 1,
+        "n_axes_agree": 2,
         "axes": {
           "kg": false,
-          "docking": false,
+          "docking": true,
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.272,
-        "label": "kg-only",
+        "triangulation_score": 0.561,
+        "label": "multi-axis",
         "axis_values": {
           "kg": 0.378,
-          "docking": 0.0,
+          "docking": 0.963,
           "pharos": 0.0,
           "literature": 0.7
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Whole Blood",
           "Spleen"
         ],
-        "n_genes": 0
+        "n_genes": 12,
+        "n_expressed": 9,
+        "mean_tpm_in_tissue": 102.9,
+        "max_tpm_in_tissue": 895.36,
+        "tissue_specificity": 0.174,
+        "context_modifier": 1.051
       },
       "ensemble_prob": 0.8674,
       "ensemble_features": {
@@ -1223,13 +1292,19 @@
       },
       "ensemble_rank": 1,
       "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
+        "kcal_per_mol": -11.55,
+        "target_symbol": "PGR",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
       },
-      "disease_entity": "Disease::MESH:D000755"
+      "disease_entity": "Disease::MESH:D000755",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
       "drug_name": "Hemi-Babim",
@@ -1265,8 +1340,10 @@
       "efficacy_score": 0.3711000084877014,
       "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "F2"
+      ],
       "pubmed_total": 0,
       "pubmed_treatment_total": 0,
       "pubmed_repurposing_total": 0,
@@ -1383,22 +1460,26 @@
           "pharos": false,
           "literature": false
         },
-        "triangulation_score": 0.12999999523162842,
+        "triangulation_score": 0.282,
         "label": "",
         "axis_values": {
-          "kg": 0.3709999918937683,
-          "docking": 0.0,
+          "kg": 0.371,
+          "docking": 0.507,
           "pharos": 0.0,
           "literature": 0.0
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Whole Blood",
           "Spleen"
         ],
-        "n_genes": 0
+        "n_genes": 1,
+        "n_expressed": 0,
+        "mean_tpm_in_tissue": 0.09,
+        "max_tpm_in_tissue": 0.09,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.853
       },
       "ensemble_prob": 0.0,
       "ensemble_features": {
@@ -1411,13 +1492,24 @@
       },
       "ensemble_rank": 8,
       "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
+        "kcal_per_mol": -6.08,
+        "target_symbol": "F2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
       },
-      "disease_entity": "Disease::MESH:D000755"
+      "disease_entity": "Disease::MESH:D000755",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "IMINE"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "imine_1",
+          "imine_2"
+        ]
+      }
     },
     {
       "drug_name": "2-{4-[(2s)-2-[({[(1s)-1-Carboxy-2-Phenylethyl]Amino}Carbonyl)Amino]-3-Oxo-3-(Pentylamino)Propyl]Phenoxy}Malonic Acid",
@@ -1538,12 +1630,16 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Whole Blood",
           "Spleen"
         ],
-        "n_genes": 0
+        "n_genes": 44,
+        "n_expressed": 27,
+        "mean_tpm_in_tissue": 8299.41,
+        "max_tpm_in_tissue": 267405.0,
+        "tissue_specificity": 1.0,
+        "context_modifier": 1.15
       },
       "ensemble_prob": 0.0,
       "ensemble_features": {
@@ -1562,7 +1658,21 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D000755"
+      "disease_entity": "Disease::MESH:D000755",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "ALIPHATIC",
+          "BETA-KETO/ANHYDRIDE",
+          "GTE"
+        ],
+        "n_alerts": 3,
+        "alert_names": [
+          "Aliphatic_long_chain",
+          "beta-keto/anhydride",
+          "gte_3_COOH"
+        ]
+      }
     },
     {
       "drug_name": "Phosphoramidon",
@@ -1598,8 +1708,10 @@
       "efficacy_score": 0.3646000027656555,
       "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "EDN1"
+      ],
       "pubmed_total": 0,
       "pubmed_treatment_total": 0,
       "pubmed_repurposing_total": 0,
@@ -1726,12 +1838,16 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Whole Blood",
           "Spleen"
         ],
-        "n_genes": 0
+        "n_genes": 1,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 16.48,
+        "max_tpm_in_tissue": 16.48,
+        "tissue_specificity": 0.311,
+        "context_modifier": 0.999
       },
       "ensemble_prob": 0.0,
       "ensemble_features": {
@@ -1750,7 +1866,19 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D000755"
+      "disease_entity": "Disease::MESH:D000755",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "PHOSPHOR",
+          "PHOSPHOROUS"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "phosphor",
+          "phosphorous_nitrogen_bond"
+        ]
+      }
     },
     {
       "drug_name": "Hydromorphone",
@@ -1786,8 +1914,13 @@
       "efficacy_score": 0.388,
       "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 4,
+      "shared_targets": [
+        "OPRD1",
+        "OPRK1",
+        "OPRM1",
+        "PTGS1"
+      ],
       "pubmed_total": 26,
       "pubmed_treatment_total": 20,
       "pubmed_repurposing_total": 0,
@@ -2072,29 +2205,33 @@
         "pharmgkb": []
       },
       "triangulation": {
-        "n_axes_agree": 1,
+        "n_axes_agree": 2,
         "axes": {
           "kg": false,
-          "docking": false,
+          "docking": true,
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.251,
-        "label": "kg-only",
+        "triangulation_score": 0.551,
+        "label": "multi-axis",
         "axis_values": {
           "kg": 0.361,
-          "docking": 0.0,
+          "docking": 1.0,
           "pharos": 0.0,
           "literature": 0.621
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Whole Blood",
           "Spleen"
         ],
-        "n_genes": 0
+        "n_genes": 4,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 3.48,
+        "max_tpm_in_tissue": 13.75,
+        "tissue_specificity": 0.191,
+        "context_modifier": 0.931
       },
       "ensemble_prob": 0.2779,
       "ensemble_features": {
@@ -2107,13 +2244,19 @@
       },
       "ensemble_rank": 6,
       "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
+        "kcal_per_mol": -12.07,
+        "target_symbol": "OPRM1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
       },
-      "disease_entity": "Disease::MESH:D000755"
+      "disease_entity": "Disease::MESH:D000755",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
       "drug_name": "Pitavastatin",
@@ -2149,8 +2292,11 @@
       "efficacy_score": 0.3589000105857849,
       "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 2,
+      "shared_targets": [
+        "HBB",
+        "SELP"
+      ],
       "pubmed_total": 1,
       "pubmed_treatment_total": 1,
       "pubmed_repurposing_total": 0,
@@ -2409,12 +2555,16 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Whole Blood",
           "Spleen"
         ],
-        "n_genes": 0
+        "n_genes": 2,
+        "n_expressed": 2,
+        "mean_tpm_in_tissue": 133704.55,
+        "max_tpm_in_tissue": 267405.0,
+        "tissue_specificity": 1.0,
+        "context_modifier": 1.15
       },
       "ensemble_prob": 0.0694,
       "ensemble_features": {
@@ -2433,7 +2583,13 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D000755"
+      "disease_entity": "Disease::MESH:D000755",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
       "drug_name": "Dimethyl sulfoxide",
@@ -2469,8 +2625,12 @@
       "efficacy_score": 0.36910000443458557,
       "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 3,
+      "shared_targets": [
+        "HMOX1",
+        "INS",
+        "PTGS1"
+      ],
       "pubmed_total": 12,
       "pubmed_treatment_total": 8,
       "pubmed_repurposing_total": 0,
@@ -2711,12 +2871,16 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Whole Blood",
           "Spleen"
         ],
-        "n_genes": 0
+        "n_genes": 3,
+        "n_expressed": 2,
+        "mean_tpm_in_tissue": 303.15,
+        "max_tpm_in_tissue": 895.36,
+        "tissue_specificity": 1.0,
+        "context_modifier": 1.15
       },
       "ensemble_prob": 0.6404,
       "ensemble_features": {
@@ -2735,14 +2899,20 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D000755"
+      "disease_entity": "Disease::MESH:D000755",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     }
   ],
   "ensemble_version": "v5",
   "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
-    "n_disease_genes": 23,
+    "n_disease_genes": 44,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
   },
   "disease_entity": "Disease::MESH:D000755"

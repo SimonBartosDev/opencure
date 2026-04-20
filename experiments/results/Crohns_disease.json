@@ -1,89 +1,347 @@
 {
   "disease": "Crohn's disease",
   "status": "completed",
-  "timestamp": "2026-04-17T20:18:50.227214",
-  "elapsed_seconds": 800.0,
+  "timestamp": "2026-04-19T23:25:17.911857",
+  "elapsed_seconds": 782.5,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
-    "HIGH": 8,
-    "MEDIUM": 2
+    "MEDIUM": 2,
+    "HIGH": 8
   },
+  "pipeline_version": "v5",
+  "data_manifest_hash": "2da2aa88f2457d1b",
   "candidates": [
     {
-      "drug_name": "Methylprednisolone",
-      "drug_id": "DB00959",
+      "drug_name": "Rebamipide",
+      "drug_id": "DB11656",
       "disease_name": "Crohn's disease",
-      "combined_score": 1.189,
-      "transe_rank": 9,
-      "pillars_hit": 8,
-      "mol_similarity": 0.7049,
-      "similar_to": "Prednisolone",
+      "combined_score": 0.692300021648407,
+      "pillars_hit": 5,
+      "transe_rank": 96,
+      "transe_score": -11.3767,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0.95,
+      "txgnn_rank": 5,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.875,
+      "proximity_distance": 0.5,
+      "admet_score": 0.824,
+      "admet_flags": "DILI=0.91",
+      "primekg_score": 0.2686,
+      "dti_score": 0.41,
+      "dti_best_target": "CSF2",
+      "kg_group_score": 0.1101,
+      "structural_group_score": 0.41,
+      "network_group_score": 0.875,
+      "txgnn_group_score": 0.95,
+      "mr_group_score": 0.5483,
+      "admet_multiplier": 0.9648,
+      "efficacy_score": 0.7175999879837036,
+      "groups_hit": 5,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 154,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "31562236",
-          "title": "British Society of Gastroenterology consensus guidelines on the management of inflammatory bowel disease in adults.",
-          "authors": "Lamb CA, Kennedy NA, Raine T, et al.",
-          "journal": "Gut",
-          "year": "2019",
-          "abstract_snippet": "Ulcerative colitis and Crohn's disease are the principal forms of inflammatory bowel disease. Both represent chronic inflammation of the gastrointestinal tract, which displays heterogeneity in inflammatory and symptomatic burden between patients and within individuals over time. Optimal management r...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/31562236/",
-          "total_results": 154
-        },
-        {
-          "pmid": "9096421",
-          "title": "Perianal Crohn's disease.",
-          "authors": "O'Donoghue DP, Hyland JM",
-          "journal": "European journal of gastroenterology & hepatology",
-          "year": "1997",
-          "abstract_snippet": "Perianal involvement in Crohn's disease is common but often mild and asymptomatic. Medical treatment of more severe disease has met with limited success. The guiding surgical principle in the management of perianal Crohn's disease is the drainage of sepsis and the preservation of sphincter integrity...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/9096421/"
-        },
-        {
-          "pmid": "28597827",
-          "title": "Inflammatory Bowel Disease in Childhood and Adolescence.",
-          "authors": "D\u00e4britz J, Gerner P, Enninger A, et al.",
-          "journal": "Deutsches Arzteblatt international",
-          "year": "2017",
-          "abstract_snippet": "BACKGROUND: The incidence of inflammatory bowel disease (IBD) in childhood and adolescence is 5-11 cases per 100 000 persons per year, corresponding to a new diagnosis of IBD in 800-1470 patients in Germany each year. METHODS: This review is based on pertinent publications retrieved by a selective s...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/28597827/"
-        }
+      "shared_target_count": 1,
+      "shared_targets": [
+        "CXCL8"
       ],
+      "pubmed_total": 0,
+      "pubmed_treatment_total": 0,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [],
       "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "ECCO Guidelines on Therapeutics in Crohn's Disease: Medical Treatment.",
-          "year": 2024,
-          "citations": 214,
-          "url": "https://www.semanticscholar.org/paper/2232498325182bd49bb2ac733feeb060347cfaa0",
-          "authors": "H. Gordon, Silvia Minozzi, U. Kopylov"
+          "title": "P104 Rebamipide, sucralfate, and rifaximin have the suppressive effects on radiation-induced inflammation in the intestine of mouse.",
+          "year": 2017,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/18078dd73e06afe17879a795574ea204b6a2af09",
+          "authors": "W. Moon, S. Park, J. Kim"
         },
         {
-          "title": "IgA Nephropathy Associated With Infliximab Treatment in Patients With Crohn\u2019s Disease: Study of IgA1 and IgA2 Expression in Glomeruli",
+          "title": "Association of NOD2 leucine-rich repeat variants with susceptibility to Crohn's disease",
+          "year": 2001,
+          "citations": 5700,
+          "url": "https://www.semanticscholar.org/paper/91e4a385304126274f4b148a58b806f67d15991c",
+          "authors": "J. Hugot, M. Chamaillard, H. Zouali"
+        },
+        {
+          "title": "A frameshift mutation in NOD2 associated with susceptibility to Crohn's disease",
+          "year": 2001,
+          "citations": 5094,
+          "url": "https://www.semanticscholar.org/paper/9539bd9020db3ee3d98aec0a70c1240802f77417",
+          "authors": "Y. Ogura, D. Bonen, N. Inohara"
+        },
+        {
+          "title": "Development of a Crohn's disease activity index. National Cooperative Crohn's Disease Study.",
+          "year": 1976,
+          "citations": 3606,
+          "url": "https://www.semanticscholar.org/paper/ad6b876642b0509cb2e2dac94d986778eb148836",
+          "authors": "W. Best, J. Becktel, J. Singleton"
+        },
+        {
+          "title": "[Crohn's disease].",
+          "year": 1967,
+          "citations": 3757,
+          "url": "https://www.semanticscholar.org/paper/5206afd91de67fd98dc870657908602e41dc85e2",
+          "authors": "I. Leodolter"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Association of NOD2 leucine-rich repeat variants with susceptibility to Crohn's disease",
+        "year": 2001,
+        "citations": 5700,
+        "url": "https://www.semanticscholar.org/paper/91e4a385304126274f4b148a58b806f67d15991c",
+        "authors": "J. Hugot, M. Chamaillard, H. Zouali"
+      },
+      "max_citations": 5700,
+      "faers_signal": "none",
+      "faers_total_reports": 8548,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Rebamipide to Crohn's disease terms. Drug has 8548 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "trichostatin A (1.517)",
+        "vorinostat (1.486)",
+        "\"\"\"7-fluoro-6-methoxy-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indol-1-one KLK-40\"\"\" (1.485)",
+        "trichostatin A (1.476)",
+        "(+)-JQ1 (1.475)"
+      ],
+      "signature_interpretation": "Rebamipide was not found among the top 44 drugs that reverse the Crohn's disease gene signature. Top reversers: trichostatin A (1.517), vorinostat (1.486), \"\"\"7-fluoro-6-methoxy-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indol-1-one KLK-40\"\"\" (1.485)",
+      "ai_hypothesis": "of its anti-inflammatory and cytoprotective effects.",
+      "abstract_analyses": [],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.5483,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Rebamipide \u2014[is a therapeutic for]\u2192 MESH:D013280 \u2014[is treated by]\u2192 DB00620 \u2014[treats]\u2192 Crohn's disease",
+      "kg_paths_text": "\u2022 Rebamipide \u2014[is a therapeutic for]\u2192 MESH:D013280 \u2014[is treated by]\u2192 DB00620 \u2014[treats]\u2192 Crohn's disease\n\u2022 Rebamipide \u2014[is a therapeutic for]\u2192 MESH:D011349 \u2014[is treated by]\u2192 DB00795 \u2014[treats]\u2192 Crohn's disease\n\u2022 Rebamipide \u2014[is a therapeutic for]\u2192 MESH:D011349 \u2014[is treated by]\u2192 DB00795 \u2014[treats]\u2192 Crohn's disease",
+      "validation_experiments": [],
+      "novelty_score": 0.7059999704360962,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "MEDIUM",
+      "confidence_reasons": [
+        "Supported by 5 independent AI pillars",
+        "Highly cited paper (5700 citations): \"Association of NOD2 leucine-rich repeat variants with suscep...\"",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.55)"
+      ],
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "late-trial",
+        "confidence": "medium",
+        "rationale": "Phase-3 investigational \u2014 dose range established in Phase-2 pharmacokinetic studies; efficacy trials ongoing or recently completed.",
+        "chembl_phase": 3.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 0,
+        "has_warnings": false,
+        "top_interactions": []
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.24199999868869781,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.6919999718666077,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 1,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 17.46,
+        "max_tpm_in_tissue": 17.46,
+        "tissue_specificity": 1.0,
+        "context_modifier": 1.084
+      },
+      "disease_entity": "Disease::MESH:D003424",
+      "ensemble_prob": 0.0003,
+      "ensemble_features": {
+        "kg_score": 0.814,
+        "degree_penalty": 1.0,
+        "n_drug_targets": 0,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 7.5822
+      },
+      "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Tacrolimus",
+      "drug_id": "DB00864",
+      "disease_name": "Crohn's disease",
+      "combined_score": 0.6276999711990356,
+      "pillars_hit": 5,
+      "transe_rank": 168,
+      "transe_score": -11.6546,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0.86,
+      "txgnn_rank": 14,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0.925,
+      "mol_emb_similar_to": "Prednisolone",
+      "gene_sig_score": 0.02,
+      "gene_sig_rank": 33,
+      "proximity_score": 0.574999988079071,
+      "proximity_distance": 1.7000000476837158,
+      "admet_score": 0.54,
+      "admet_flags": "hERG=0.83",
+      "primekg_score": 0.2636,
+      "dti_score": 0.2796,
+      "dti_best_target": "CHI3L1",
+      "kg_group_score": 0.053,
+      "structural_group_score": 0.925,
+      "network_group_score": 0.4300000071525574,
+      "txgnn_group_score": 0.86,
+      "mr_group_score": 0.5756,
+      "admet_multiplier": 0.908,
+      "efficacy_score": 0.6912999749183655,
+      "groups_hit": 5,
+      "direct_relations": [],
+      "shared_target_count": 2,
+      "shared_targets": [
+        "FKBP1A",
+        "TLR4"
+      ],
+      "pubmed_total": 154,
+      "pubmed_treatment_total": 152,
+      "pubmed_repurposing_total": 1,
+      "key_papers": [
+        {
+          "pmid": "32653651",
+          "title": "Inflammatory Bowel Disease - Non-biological treatment.",
+          "authors": "Magro F, Cordeiro G, Dias AM, et al.",
+          "journal": "Pharmacological research",
+          "year": "2020",
+          "abstract_snippet": "Nowadays, non-biological treatments remain valuable approaches among the therapeutic armamentarium of inflammatory bowel disease (IBD). Mesalamine is the core treatment of mild\u2011to\u2011moderate ulcerative colitis (UC) and corticosteroids are crucial for the induction of remission of moderate\u2011to\u2011severe fl...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32653651/",
+          "total_results": 154
+        },
+        {
+          "pmid": "35537812",
+          "title": "Tacrolimus-binding protein FKBP8 directs myosin light chain kinase-dependent barrier regulation and is a potential therapeutic target in Crohn's disease.",
+          "authors": "Zuo L, Kuo WT, Cao F, et al.",
+          "journal": "Gut",
+          "year": "2023",
+          "abstract_snippet": "OBJECTIVE: Intestinal barrier loss is a Crohn's disease (CD) risk factor. This may be related to increased expression and enzymatic activation of myosin light chain kinase 1 (MLCK1), which increases intestinal paracellular permeability and correlates with CD severity. Moreover, preclinical studies h...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35537812/"
+        },
+        {
+          "pmid": "18573158",
+          "title": "Metastatic Crohn's disease: a review.",
+          "authors": "Palamaras I, El-Jabbour J, Pietropaolo N, et al.",
+          "journal": "Journal of the European Academy of Dermatology and Venereology : JEADV",
+          "year": "2008",
+          "abstract_snippet": "Metastatic Crohn's disease (MCD) indicates the presence of non-caseating granuloma of the skin at sites separated from the gastrointestinal tract by normal tissue and is the least common dermatologic manifestation of CD. In adults, MCD usually appears after the initial diagnosis of CD in 70% of case...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18573158/"
+        },
+        {
+          "pmid": "18239406",
+          "title": "Extraintestinal manifestations of Crohn's disease.",
+          "authors": "Juillerat P, Mottet C, Pittet V, et al.",
+          "journal": "Digestion",
+          "year": "2007",
+          "abstract_snippet": "In each case of extraintestinal manifestations of Crohn's disease, active disease, if present, should be treated to induce remission, which may positively influence the course of most concomitant extraintestinal manifestations. For some extraintestinal manifestations, however, a specific treatment s...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18239406/"
+        },
+        {
+          "pmid": "16985094",
+          "title": "Novel therapies for Crohn's disease: focus on immunomodulators and antibiotics.",
+          "authors": "Wilhelm SM, Taylor JD, Osiecki LL, et al.",
+          "journal": "The Annals of pharmacotherapy",
+          "year": "2006",
+          "abstract_snippet": "OBJECTIVE: To review the literature on novel immunomodulators such as tumor necrosis factor alpha (TNF-alpha)- and interleukin (IL)-related agents, 6-thioguanine (6-TG), tacrolimus, and leflunomide, and antibiotics such as ornidazole, rifaximin, and ciprofloxacin for the treatment of Crohn's disease...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16985094/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "32917155",
+          "title": "Efficacy, safety and drug survival of thioguanine as maintenance treatment for inflammatory bowel disease: a retrospective multi-centre study in the United Kingdom.",
+          "authors": "Bayoumy AB, van Liere ELSA, Simsek M, et al.",
+          "journal": "BMC gastroenterology",
+          "year": "2020",
+          "abstract_snippet": "BACKGROUND: Thioguanine (TG) is a thiopurine which has been used for patients with inflammatory bowel disease (IBD), who have failed azathioprine (AZA) or mercaptopurine (MP) due to adverse events or suboptimal response. Its widespread use has been hampered due to concerns about nodular regenerative...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32917155/",
+          "total_results": 1
+        }
+      ],
+      "semantic_scholar_papers": [
+        {
+          "title": "Rejection and Graft Vasculopathy Secondary to Effects of Crohn's Disease in a Heart-Transplanted Child.",
           "year": 2025,
           "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/4978d70d387d30e8f5d7f2623f5359cd38df5894",
-          "authors": "A. Mima, Takahiro Nakamoto, Takamasa Matsuki"
+          "url": "https://www.semanticscholar.org/paper/c28925457a7dd13b52ac4dab0639a14e0079767c",
+          "authors": "S. Oliver, Jennifer Conway, Darren H Freed"
         },
         {
-          "title": "A case of IgA nephropathy associated with Crohn\u2019s disease treated with enteric-coated budesonide",
+          "title": "Tacrolimus-binding protein FKBP8 directs myosin light chain kinase-dependent barrier regulation and is a potential therapeutic target in Crohn\u2019s disease",
+          "year": 2022,
+          "citations": 39,
+          "url": "https://www.semanticscholar.org/paper/11ddb2ce7084489fdae22c72efea1d7737e20751",
+          "authors": "Li Zuo, W. Kuo, Feng Cao"
+        },
+        {
+          "title": "A118 DE NOVO CROHN\u2019S DISEASE FOLLOWING ORTHOTOPIC LIVER TRANSPLANTATION IN A PATIENT WITH PRIMARY SCLEROSING CHOLANGITIS: A CASE REPORT",
           "year": 2025,
           "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/bd5c6660e870e8f5cc6526dd6f0a0cb1f35e7f57",
-          "authors": "Ryuto Yoshida, T. Nakayama, A. Hashiguchi"
+          "url": "https://www.semanticscholar.org/paper/1858676b4b005a80bbc65e5e53608feedb14e4c8",
+          "authors": "A. Bello, N. Samad"
         },
         {
-          "title": "Multi-system inflammatory syndrome in a child with Crohn's disease- a diagnostic dilemma",
-          "year": 2026,
+          "title": "Safety and Efficacy of Infusional Perioperative Tacrolimus Therapy in Crohn\u2019s Disease Patients Undergoing Intestinal Resection",
+          "year": 2024,
           "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/cff0e346c0d1077dcb987987d269e9d08bd98ff0",
-          "authors": "Barkha Dhanjani, Shivangi Tetarbe, Dhruv Gandhi"
+          "url": "https://www.semanticscholar.org/paper/1743f78b5a7f31b2d6aebe44caa5a70be599cd57",
+          "authors": "M. Beck, Niklas Schomburg, Max B Albers"
         },
         {
           "title": "De Novo Crohn\u2019s Disease Treated with Ustekinumab in a Pediatric Liver Transplant Recipient with Tyrosinemia: A Case Report",
@@ -94,17 +352,17 @@
         }
       ],
       "most_cited_paper": {
-        "title": "Computational Repositioning of the Anticonvulsant Topiramate for Inflammatory Bowel Disease",
+        "title": "Discovery and Preclinical Validation of Drug Indications Using Compendia of Public Gene Expression Data",
         "year": 2011,
-        "citations": 551,
-        "url": "https://www.semanticscholar.org/paper/65228a9f1b83b09af483779bb637fa6e037ae12f",
-        "authors": "J. Dudley, M. Sirota, M. Shenoy"
+        "citations": 740,
+        "url": "https://www.semanticscholar.org/paper/b2b8f9ae9c48f7183fb2e52ed014ba5f048a8ad4",
+        "authors": "M. Sirota, J. Dudley, Jeewon Kim"
       },
-      "max_citations": 551,
+      "max_citations": 740,
       "faers_signal": "none",
-      "faers_total_reports": 125031,
+      "faers_total_reports": 124653,
       "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Methylprednisolone to Crohn's disease terms. Drug has 125031 total reports.",
+      "faers_interpretation": "No FAERS reports found linking Tacrolimus to Crohn's disease terms. Drug has 124653 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -114,8 +372,8 @@
         "trichostatin A (1.476)",
         "(+)-JQ1 (1.475)"
       ],
-      "signature_interpretation": "Methylprednisolone was not found among the top 44 drugs that reverse the Crohn's disease gene signature. Top reversers: trichostatin A (1.517), vorinostat (1.486), \"\"\"7-fluoro-6-methoxy-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indol-1-one KLK-40\"\"\" (1.485)",
-      "ai_hypothesis": "of its anti-inflammatory effects.",
+      "signature_interpretation": "Tacrolimus was not found among the top 44 drugs that reverse the Crohn's disease gene signature. Top reversers: trichostatin A (1.517), vorinostat (1.486), \"\"\"7-fluoro-6-methoxy-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indol-1-one KLK-40\"\"\" (1.485)",
+      "ai_hypothesis": "of its anti-inflammatory properties.",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
@@ -133,91 +391,1033 @@
           "reason": "Drug or disease not mentioned in abstract"
         }
       ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "Phase 3",
-      "failed_trial_count": 5,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.7587,
-      "mr_genetic_targets": 4,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "has_failed_trial": true,
+      "failed_trial_phase": "Phase 2",
+      "failed_trial_count": 2,
+      "failed_trial_penalty": 0.8999999999999999,
+      "mr_score": 0.5756,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Tacrolimus \u2014[treats]\u2192 DOID:3310 \u2014[is treated by]\u2192 DB00443 \u2014[treats]\u2192 Crohn's disease",
+      "kg_paths_text": "\u2022 Tacrolimus \u2014[treats]\u2192 DOID:3310 \u2014[is treated by]\u2192 DB00443 \u2014[treats]\u2192 Crohn's disease\n\u2022 Tacrolimus \u2014[treats]\u2192 DOID:3310 \u2014[is treated by]\u2192 DB01234 \u2014[treats]\u2192 Crohn's disease\n\u2022 Tacrolimus \u2014[treats]\u2192 DOID:3310 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 Crohn's disease",
       "validation_experiments": [],
-      "novelty_score": 0.66,
-      "novelty_level": "KNOWN",
+      "novelty_score": 0.3009999990463257,
+      "novelty_level": "ESTABLISHED",
       "is_known_treatment": false,
-      "clinical_trials_total": 10,
+      "clinical_trials_total": 3,
       "clinical_trials": [
         {
-          "nct_id": "NCT00796250",
-          "title": "Efficacy of Infliximab in the Treatment of Patients Affected by Corticodependent Crohn's Disease (P02732)",
+          "nct_id": "NCT01570348",
+          "title": "Crohn's Allogeneic Transplant Study",
           "status": "TERMINATED",
-          "phase": "PHASE3",
-          "enrollment": "9",
-          "url": "https://clinicaltrials.gov/study/NCT00796250"
-        },
-        {
-          "nct_id": "NCT02517684",
-          "title": "Top-down Infliximab Study in Kids With Crohn's Disease",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "100",
-          "url": "https://clinicaltrials.gov/study/NCT02517684"
-        },
-        {
-          "nct_id": "NCT04921033",
-          "title": "Exclusive Enteral Nutrition in Patients With Ileocaecal Crohn's Disease",
-          "status": "UNKNOWN",
-          "phase": "PHASE3",
-          "enrollment": "256",
-          "url": "https://clinicaltrials.gov/study/NCT04921033"
-        },
-        {
-          "nct_id": "NCT00955123",
-          "title": "Effects of Prednisolone and Infliximab on the Regulation of Urea Synthesis in Active Inflammatory Bowel Disease",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "40",
-          "url": "https://clinicaltrials.gov/study/NCT00955123"
-        },
-        {
-          "nct_id": "NCT03219359",
-          "title": "Autologous Stem Cell Transplant for Crohn's Disease",
-          "status": "RECRUITING",
           "phase": "PHASE2",
-          "enrollment": "50",
-          "url": "https://clinicaltrials.gov/study/NCT03219359"
+          "enrollment": "2",
+          "url": "https://clinicaltrials.gov/study/NCT01570348"
+        },
+        {
+          "nct_id": "NCT01233570",
+          "title": "Topical Tacrolimus 0.1% Ointment For Treatment Of Cutaneous Crohn's Disease",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "20",
+          "url": "https://clinicaltrials.gov/study/NCT01233570"
+        },
+        {
+          "nct_id": "NCT04154735",
+          "title": "Autologous Transplant Targeted Against Crohn's",
+          "status": "WITHDRAWN",
+          "phase": "PHASE2",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT04154735"
         }
       ],
       "trial_phases": {
-        "PHASE3": 3,
-        "PHASE4": 2,
-        "PHASE2": 3,
-        "PHASE1": 2,
-        "NA": 1
+        "PHASE2": 3
       },
       "confidence": "HIGH",
       "confidence_reasons": [
-        "10 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
-        "Supported by 8 independent AI pillars",
-        "High molecular similarity (0.70) to Prednisolone",
-        "Highly cited paper (551 citations): \"Computational Repositioning of the Anticonvulsant Topiramate...\"",
+        "3 clinical trial(s) found on ClinicalTrials.gov",
+        "154 PubMed articles on this drug-disease pair",
+        "1 article(s) specifically mention repurposing/repositioning",
+        "Supported by 5 independent AI pillars",
+        "Note: Drug had early-phase trial failures for this disease",
+        "Highly cited paper (740 citations): \"Discovery and Preclinical Validation of Drug Indications Usi...\"",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.76, 4 genetic targets)"
-      ]
+        "Moderate genetic evidence supporting causality (MR score: 0.58)"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1995,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "high_risk",
+        "summary": "CPIC-A (CYP3A5) \u2022 PharmGKB-3 (ABCB1 / rs1045642)",
+        "cpic": [
+          {
+            "gene": "CYP3A5",
+            "level": "A",
+            "guideline": "CYP3A5 and Tacrolimus"
+          },
+          {
+            "gene": "CYP3A4",
+            "level": "C",
+            "guideline": ""
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "ABCB1",
+            "variant": "rs1045642",
+            "level": "3",
+            "phenotype_category": "Other",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/655388022"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs2032582",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204116"
+          },
+          {
+            "gene": "KCNJ11",
+            "variant": "rs5219",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1450376188"
+          },
+          {
+            "gene": "POR",
+            "variant": "rs1057868",
+            "level": "3",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451257000"
+          },
+          {
+            "gene": "CYP3A4",
+            "variant": "rs2242480",
+            "level": "2A",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451989360"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.71,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.628,
+          "docking": 1.0,
+          "pharos": 0.0,
+          "literature": 0.951
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 2,
+        "n_expressed": 2,
+        "mean_tpm_in_tissue": 104.05,
+        "max_tpm_in_tissue": 168.03,
+        "tissue_specificity": 0.606,
+        "context_modifier": 1.103
+      },
+      "disease_entity": "Disease::MESH:D003424",
+      "ensemble_prob": 0.4263,
+      "ensemble_features": {
+        "kg_score": 0.996,
+        "degree_penalty": 0.7479,
+        "n_drug_targets": 16,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 3.7612
+      },
+      "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": -12.01,
+        "target_symbol": "FKBP1A",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "DIKETO",
+          "ISOLATED"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "diketo_group",
+          "isolated_alkene"
+        ]
+      }
+    },
+    {
+      "drug_name": "Cimetidine",
+      "drug_id": "DB00501",
+      "disease_name": "Crohn's disease",
+      "combined_score": 0.6062,
+      "pillars_hit": 5,
+      "transe_rank": 60,
+      "transe_score": -11.1877,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0.99,
+      "txgnn_rank": 1,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.5619999766349792,
+      "proximity_distance": 1.75,
+      "admet_score": 0.5683,
+      "admet_flags": "clean",
+      "primekg_score": 0.2707,
+      "dti_score": 0.5098,
+      "dti_best_target": "CSF2",
+      "kg_group_score": 0.1137,
+      "structural_group_score": 0.5098,
+      "network_group_score": 0.42820000648498535,
+      "txgnn_group_score": 0.99,
+      "mr_group_score": 0.599,
+      "admet_multiplier": 0.9137,
+      "efficacy_score": 0.6635,
+      "groups_hit": 5,
+      "direct_relations": [],
+      "shared_target_count": 4,
+      "shared_targets": [
+        "IFNG",
+        "IL18",
+        "PTH",
+        "SLC22A4"
+      ],
+      "pubmed_total": 14,
+      "pubmed_treatment_total": 12,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "6102281",
+          "title": "Reversal of anergy in Crohn's disease by cimetidine.",
+          "authors": "Bicks RO, Rosenberg EW",
+          "journal": "Lancet (London, England)",
+          "year": "1980",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/6102281/",
+          "total_results": 14
+        },
+        {
+          "pmid": "2897213",
+          "title": "Interaction of metronidazole with phenobarbital, cimetidine, prednisone, and sulfasalazine in Crohn's disease.",
+          "authors": "Eradiri O, Jamali F, Thomson AB",
+          "journal": "Biopharmaceutics & drug disposition",
+          "year": "1988",
+          "abstract_snippet": "The influence of prednisone(PR), sulfasalazine(SZ), cimetidine(CM), and phenobarbital(PB) on the pharmacokinetics of metronidazole was investigated in six Crohn's patients. Metronidazole was first administered alone (250 mg bid, po) and then with prednisone (10 mg bid, po), sulfasalazine (1 g bid, p...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/2897213/"
+        },
+        {
+          "pmid": "6226601",
+          "title": "The effect of cimetidine on immunological parameters in Crohn's disease: a double blind trial.",
+          "authors": "Hamid J, Ross IN, Ward C",
+          "journal": "Immunology letters",
+          "year": "1983",
+          "abstract_snippet": "Thirty-six patients with Crohn's disease were entered into a double-blind trial to assess any beneficial effect that cimetidine might have on immunological and clinical status. Eighteen patients were randomized to receive cimetidine, 1 g orally for 28 days, and the other 18 patients to receive a pla...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/6226601/"
+        },
+        {
+          "pmid": "6102837",
+          "title": "Effect of an H2-receptor blocking agent on diarrhoeas after extensive small bowel resection in Crohn's disease.",
+          "authors": "Aly A, B\u00e1r\u00e1ny F, Kollberg B, et al.",
+          "journal": "Acta medica Scandinavica",
+          "year": "1980",
+          "abstract_snippet": "The effect of an H2-receptor blocking agent, cimetidine, on faecal losses of fluid, electrolytes and fat was examined in 10 patients with Crohn's disease, who had diarrhoeas after extensive small bowel resection. A randomized, double-blind and cross-over design was applied, and patients were hospita...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/6102837/"
+        },
+        {
+          "pmid": "6829539",
+          "title": "Pancreatitis associated with duodenal Crohn's disease.",
+          "authors": "Altman HS, Phillips G, Bank S, et al.",
+          "journal": "The American journal of gastroenterology",
+          "year": "1983",
+          "abstract_snippet": "The fourth reported patient with acute pancreatitis associated with Crohn's disease of the duodenum is presented and the clinical features compared with previously described cases. The pathogenesis of the pancreatitis was not clear but the inflammatory process was found to involve the ampulla of Vat...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/6829539/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Pancreatitis associated with duodenal Crohn's disease.",
+          "year": 1983,
+          "citations": 54,
+          "url": "https://www.semanticscholar.org/paper/f1e6cffcdd547cccafc7b0b5aeb6ca649c4ddf9b",
+          "authors": "Altman Hs, G. Phillips, S. Bank"
+        },
+        {
+          "title": "Effect of an H2-receptor blocking agent on diarrhoeas after extensive small bowel resection in Crohn's disease.",
+          "year": 2009,
+          "citations": 39,
+          "url": "https://www.semanticscholar.org/paper/426088c372f5bea3e0b7787d4efc80c90362b135",
+          "authors": "A. Aly, F. B\u00e1r\u00e1ny, B. Kollberg"
+        },
+        {
+          "title": "Reversal of anergy in Crohn's disease by cimetidine.",
+          "year": 1980,
+          "citations": 27,
+          "url": "https://www.semanticscholar.org/paper/ab2f378f92efdbd59e5bb19be8f2abeb41c522d3",
+          "authors": "R. Bicks, E. Rosenberg"
+        },
+        {
+          "title": "Recurrent free perforation in gastroduodenal Crohn's disease.",
+          "year": 1983,
+          "citations": 15,
+          "url": "https://www.semanticscholar.org/paper/d3dedfc70c54d4397a061afdaf5cd7fc2ac65610",
+          "authors": "S. Katz, A. Talansky, E. Kahn"
+        },
+        {
+          "title": "The effect of cimetidine on immunological parameters in Crohn's disease: a double blind trial.",
+          "year": 1983,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/c4e882b787447a796a7dba95e0e3dffb036cdc60",
+          "authors": "J. Hamid, I. Ross, C. Ward"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Discovery and Preclinical Validation of Drug Indications Using Compendia of Public Gene Expression Data",
+        "year": 2011,
+        "citations": 740,
+        "url": "https://www.semanticscholar.org/paper/b2b8f9ae9c48f7183fb2e52ed014ba5f048a8ad4",
+        "authors": "M. Sirota, J. Dudley, Jeewon Kim"
+      },
+      "max_citations": 740,
+      "faers_signal": "none",
+      "faers_total_reports": 6461,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Cimetidine to Crohn's disease terms. Drug has 6461 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "trichostatin A (1.517)",
+        "vorinostat (1.486)",
+        "\"\"\"7-fluoro-6-methoxy-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indol-1-one KLK-40\"\"\" (1.485)",
+        "trichostatin A (1.476)",
+        "(+)-JQ1 (1.475)"
+      ],
+      "signature_interpretation": "Cimetidine was not found among the top 44 drugs that reverse the Crohn's disease gene signature. Top reversers: trichostatin A (1.517), vorinostat (1.486), \"\"\"7-fluoro-6-methoxy-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indol-1-one KLK-40\"\"\" (1.485)",
+      "ai_hypothesis": "of its anti-inflammatory properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 1,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "thirty",
+              "entity_group": "Lab_value",
+              "score": 0.9779999852180481
+            },
+            {
+              "entity": "crohn ' s disease",
+              "entity_group": "Disease_disorder",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "ci",
+              "entity_group": "Medication",
+              "score": 0.9539999961853027
+            },
+            {
+              "entity": "eighteen",
+              "entity_group": "Lab_value",
+              "score": 0.9919999837875366
+            },
+            {
+              "entity": "##metidine",
+              "entity_group": "Medication",
+              "score": 0.7490000128746033
+            },
+            {
+              "entity": "1 g",
+              "entity_group": "Dosage",
+              "score": 0.9850000143051147
+            },
+            {
+              "entity": "oral",
+              "entity_group": "Administration",
+              "score": 0.9980000257492065
+            },
+            {
+              "entity": "28",
+              "entity_group": "Lab_value",
+              "score": 0.8849999904632568
+            },
+            {
+              "entity": "pl",
+              "entity_group": "Medication",
+              "score": 0.9919999837875366
+            }
+          ]
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.599,
+      "mr_genetic_targets": 3,
+      "mechanistic_hypothesis": "Cimetidine \u2014[is a therapeutic for]\u2192 MESH:D051437 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 Crohn's disease",
+      "kg_paths_text": "\u2022 Cimetidine \u2014[is a therapeutic for]\u2192 MESH:D051437 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 Crohn's disease\n\u2022 Cimetidine \u2014[is a therapeutic for]\u2192 MESH:D051437 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 Crohn's disease\n\u2022 Cimetidine \u2014[is a therapeutic for]\u2192 MESH:D051437 \u2014[is treated by]\u2192 DB00741 \u2014[treats]\u2192 Crohn's disease",
+      "validation_experiments": [],
+      "novelty_score": 0.509,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "MEDIUM",
+      "confidence_reasons": [
+        "14 PubMed articles found",
+        "Supported by 5 independent AI pillars",
+        "Highly cited paper (740 citations): \"Discovery and Preclinical Validation of Drug Indications Usi...\"",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.60)"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1670,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.314,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.606,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.511
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 4,
+        "n_expressed": 3,
+        "mean_tpm_in_tissue": 9.26,
+        "max_tpm_in_tissue": 26.17,
+        "tissue_specificity": 0.73,
+        "context_modifier": 1.028
+      },
+      "disease_entity": "Disease::MESH:D003424",
+      "ensemble_prob": 0.5618,
+      "ensemble_features": {
+        "kg_score": 0.9947,
+        "degree_penalty": 0.7619,
+        "n_drug_targets": 23,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.0431
+      },
+      "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "ALIPHATIC",
+          "CYANATE",
+          "ENAMINE",
+          "IMIDAZOLE",
+          "IMINE"
+        ],
+        "n_alerts": 6,
+        "alert_names": [
+          "imidazole_B(2)",
+          "Aliphatic_long_chain",
+          "cyanate_/aminonitrile_/thiocyanate",
+          "enamine",
+          "imine_1"
+        ]
+      }
+    },
+    {
+      "drug_name": "Hydrocortisone",
+      "drug_id": "DB00741",
+      "disease_name": "Crohn's disease",
+      "combined_score": 0.5479,
+      "pillars_hit": 4,
+      "transe_rank": 12,
+      "transe_score": -10.5729,
+      "pykeen_score": -12.5384,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0.6833,
+      "similar_to": "Prednisolone",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0.02,
+      "gene_sig_rank": 33,
+      "proximity_score": 0.5120000243186951,
+      "proximity_distance": 1.9500000476837158,
+      "admet_score": 0.728,
+      "admet_flags": "clean",
+      "primekg_score": 0.2761,
+      "dti_score": 1.0,
+      "dti_best_target": "CHI3L1",
+      "kg_group_score": 0.4394,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.385699987411499,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.7493,
+      "admet_multiplier": 0.9456,
+      "efficacy_score": 0.5794,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 19,
+      "shared_targets": [
+        "CD4",
+        "CD8A",
+        "CSF2",
+        "CXCL8",
+        "GH1",
+        "HGF",
+        "IFNG",
+        "IL10",
+        "IL1A",
+        "MIF",
+        "MMP9",
+        "NR3C1",
+        "PLA2G4A",
+        "PPARG",
+        "PTGS2",
+        "PTH",
+        "PYY",
+        "TGFB1",
+        "TNF"
+      ],
+      "pubmed_total": 131,
+      "pubmed_treatment_total": 122,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "31562236",
+          "title": "British Society of Gastroenterology consensus guidelines on the management of inflammatory bowel disease in adults.",
+          "authors": "Lamb CA, Kennedy NA, Raine T, et al.",
+          "journal": "Gut",
+          "year": "2019",
+          "abstract_snippet": "Ulcerative colitis and Crohn's disease are the principal forms of inflammatory bowel disease. Both represent chronic inflammation of the gastrointestinal tract, which displays heterogeneity in inflammatory and symptomatic burden between patients and within individuals over time. Optimal management r...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31562236/",
+          "total_results": 131
+        },
+        {
+          "pmid": "4152917",
+          "title": "Inflammatory bowel disease.",
+          "authors": "Sachar DB, Janowitz HD",
+          "journal": "Disease-a-month : DM",
+          "year": "1974",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/4152917/"
+        },
+        {
+          "pmid": "37418329",
+          "title": "Drugs for inflammatory bowel disease.",
+          "authors": "",
+          "journal": "The Medical letter on drugs and therapeutics",
+          "year": "2023",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37418329/"
+        },
+        {
+          "pmid": "25223",
+          "title": "Little people, big people, and Crohn's disease.",
+          "authors": "Janowitz HD",
+          "journal": "Gastroenterology",
+          "year": "1978",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25223/"
+        },
+        {
+          "pmid": "782236",
+          "title": "Pharmacotherapy of inflammatory bowel disease.",
+          "authors": "Gardner RC",
+          "journal": "American journal of hospital pharmacy",
+          "year": "1976",
+          "abstract_snippet": "The etiology, pharmacotherapy and management of the two major types of inflammatory bowel disease--ulcerative colitis and Crohn's disease--are reviewed. Sulfasalazine and topical corticosteroids (i.e., hydrocortisone, hydrocortisone acetate or methylprednisolone acetate) are effective in many patien...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/782236/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Intravenous hydrocortisone premedication reduces antibodies to infliximab in Crohn's disease: a randomized controlled trial.",
+          "year": 2003,
+          "citations": 572,
+          "url": "https://www.semanticscholar.org/paper/e1a08d412f782420fd3b0bdda156db45e4d91d48",
+          "authors": "R. Farrell, M. Alsahli, Y. Jeen"
+        },
+        {
+          "title": "Resolution of Laryngeal Ulceration with Prednisolone Therapy in a Patient with Crohn's Disease",
+          "year": 2022,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/19b8a6f0592d825db3c3b0426705f77b378ba0dc",
+          "authors": "Yi-Ling Ko, H. Matsuoka, Ryohei Nomaru"
+        },
+        {
+          "title": "Therapeutic factors of exclusive enteral nutrition-induced remission in adult patients with Crohn's disease",
+          "year": 2023,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/9886c0d706265284419e507b74a3b5e64161e467",
+          "authors": "Jiancheng Tu, K. Guo, Jian Fang"
+        },
+        {
+          "title": "P104 PEDIATRIC CROHN\u2019S DISEASE PRESENTINAG AS GENITAL EDEMA",
+          "year": 2020,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/90ed0d9ef5514a5ba3d6f55d6a72ddfeee260aa1",
+          "authors": "D. Ebach, D. Storm, Matthew Gosse"
+        },
+        {
+          "title": "Combined use of high doses of vasopressin and corticosteroids in a patient with Crohn\u2019s disease with refractory septic shock after intestinal perforation: a case report",
+          "year": 2017,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/1fe2e223fbd51d786b8f92e1eba56197b0f779f4",
+          "authors": "S. Notaro, M. Sorrentino, A. Ruocco"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Discovery and Preclinical Validation of Drug Indications Using Compendia of Public Gene Expression Data",
+        "year": 2011,
+        "citations": 740,
+        "url": "https://www.semanticscholar.org/paper/b2b8f9ae9c48f7183fb2e52ed014ba5f048a8ad4",
+        "authors": "M. Sirota, J. Dudley, Jeewon Kim"
+      },
+      "max_citations": 740,
+      "faers_signal": "none",
+      "faers_total_reports": 79272,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Hydrocortisone to Crohn's disease terms. Drug has 79272 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "trichostatin A (1.517)",
+        "vorinostat (1.486)",
+        "\"\"\"7-fluoro-6-methoxy-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indol-1-one KLK-40\"\"\" (1.485)",
+        "trichostatin A (1.476)",
+        "(+)-JQ1 (1.475)"
+      ],
+      "signature_interpretation": "Hydrocortisone was not found among the top 44 drugs that reverse the Crohn's disease gene signature. Top reversers: trichostatin A (1.517), vorinostat (1.486), \"\"\"7-fluoro-6-methoxy-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indol-1-one KLK-40\"\"\" (1.485)",
+      "ai_hypothesis": "of its anti-inflammatory properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": true,
+      "failed_trial_phase": "Unknown",
+      "failed_trial_count": 1,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.7493,
+      "mr_genetic_targets": 9,
+      "mechanistic_hypothesis": "Hydrocortisone \u2014[treats]\u2192 Crohn's disease",
+      "kg_paths_text": "\u2022 Hydrocortisone \u2014[treats]\u2192 Crohn's disease\n\u2022 Hydrocortisone \u2014[is agonized by]\u2192 gene-2908 \u2014[is an agonist of]\u2192 DB00620 \u2014[treats]\u2192 Crohn's disease\n\u2022 Hydrocortisone \u2014[is agonized by]\u2192 gene-2908 \u2014[is an agonist of]\u2192 DB01380 \u2014[treats]\u2192 Crohn's disease",
+      "validation_experiments": [],
+      "novelty_score": 0.263,
+      "novelty_level": "ESTABLISHED",
+      "is_known_treatment": true,
+      "clinical_trials_total": 4,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT02872506",
+          "title": "Comparing the Quality of Life of Terminal Ileitis Patients With Crohn's Disease Treated With Anti-TNF or Surgical Resection",
+          "status": "WITHDRAWN",
+          "phase": "NA",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT02872506"
+        },
+        {
+          "nct_id": "NCT02056418",
+          "title": "Effects of Enteral Nutrition and Corticosteroid on Intestinal Flora in Induction Remission of Crohn Disease in Adult",
+          "status": "UNKNOWN",
+          "phase": "PHASE4",
+          "enrollment": "30",
+          "url": "https://clinicaltrials.gov/study/NCT02056418"
+        },
+        {
+          "nct_id": "NCT05284136",
+          "title": "Exclusion Diet vs corticosteroIds in patientS With activE Crohn's Disease",
+          "status": "UNKNOWN",
+          "phase": "PHASE2, PHASE3",
+          "enrollment": "80",
+          "url": "https://clinicaltrials.gov/study/NCT05284136"
+        },
+        {
+          "nct_id": "NCT01095042",
+          "title": "Cognition and Emotion in the SII and IBD",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "120",
+          "url": "https://clinicaltrials.gov/study/NCT01095042"
+        }
+      ],
+      "trial_phases": {
+        "NA": 2,
+        "PHASE4": 1,
+        "PHASE2": 1,
+        "PHASE3": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "4 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "131 PubMed articles on this drug-disease pair",
+        "Supported by 4 independent AI pillars",
+        "High molecular similarity (0.68) to Prednisolone",
+        "Note: Drug had early-phase trial failures for this disease",
+        "Highly cited paper (740 citations): \"Discovery and Preclinical Validation of Drug Indications Usi...\"",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.75, 9 genetic targets)"
+      ],
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1320,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.639,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.548,
+          "docking": 0.878,
+          "pharos": 0.0,
+          "literature": 0.921
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 19,
+        "n_expressed": 13,
+        "mean_tpm_in_tissue": 50.22,
+        "max_tpm_in_tissue": 550.48,
+        "tissue_specificity": 0.416,
+        "context_modifier": 1.053
+      },
+      "disease_entity": "Disease::MESH:D003424",
+      "ensemble_prob": 0.9845,
+      "ensemble_features": {
+        "kg_score": 0.9991,
+        "degree_penalty": 0.7532,
+        "n_drug_targets": 12,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.3026
+      },
+      "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": -10.54,
+        "target_symbol": "NR3C1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
       "drug_name": "Dexamethasone",
       "drug_id": "DB01234",
       "disease_name": "Crohn's disease",
-      "combined_score": 1.1578,
+      "combined_score": 0.54,
+      "pillars_hit": 4,
       "transe_rank": 6,
-      "pillars_hit": 8,
+      "transe_score": -10.4512,
+      "pykeen_score": -11.942,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0.4189,
       "similar_to": "Prednisolone",
+      "mol_emb_similarity": 0.9509,
+      "mol_emb_similar_to": "Budesonide",
+      "gene_sig_score": 0.02,
+      "gene_sig_rank": 33,
+      "proximity_score": 0.550000011920929,
+      "proximity_distance": 1.7999999523162842,
+      "admet_score": 0.7109,
+      "admet_flags": "clean",
+      "primekg_score": 0.2644,
+      "dti_score": 0.5039,
+      "dti_best_target": "CSF2",
+      "kg_group_score": 0.4421,
+      "structural_group_score": 0.9509,
+      "network_group_score": 0.4047999978065491,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.7364,
+      "admet_multiplier": 0.9422,
+      "efficacy_score": 0.5731,
+      "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 36,
+      "shared_targets": [
+        "ADO",
+        "ALOX5",
+        "CCL2",
+        "CCL5",
+        "CD14",
+        "CHI3L1",
+        "CSF2",
+        "CTLA4",
+        "CXCL8",
+        "DNMT3A",
+        "FCGR1A",
+        "GH1",
+        "HGF",
+        "ICAM1",
+        "IFNG",
+        "IL10",
+        "IL1A",
+        "IL2RA",
+        "MIF",
+        "MMP2"
+      ],
       "pubmed_total": 66,
       "pubmed_treatment_total": 62,
       "pubmed_repurposing_total": 1,
@@ -364,12 +1564,12 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0.7364,
       "mr_genetic_targets": 38,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Dexamethasone \u2014[treats]\u2192 Crohn's disease",
+      "kg_paths_text": "\u2022 Dexamethasone \u2014[treats]\u2192 Crohn's disease\n\u2022 Dexamethasone \u2014[downregulates]\u2192 gene-23657 \u2014[is a target of]\u2192 DB00795 \u2014[treats]\u2192 Crohn's disease\n\u2022 Dexamethasone \u2014[downregulates]\u2192 gene-23657 \u2014[is a target of]\u2192 DB00795 \u2014[treats]\u2192 Crohn's disease",
       "validation_experiments": [],
-      "novelty_score": 0.66,
+      "novelty_score": 0.356,
       "novelty_level": "KNOWN",
-      "is_known_treatment": false,
+      "is_known_treatment": true,
       "clinical_trials_total": 4,
       "clinical_trials": [
         {
@@ -417,553 +1617,214 @@
         "Phase 3 trial exists",
         "66 PubMed articles on this drug-disease pair",
         "1 article(s) specifically mention repurposing/repositioning",
-        "Supported by 8 independent AI pillars",
+        "Supported by 4 independent AI pillars",
         "Highly cited paper (551 citations): \"Computational Repositioning of the Anticonvulsant Topiramate...\"",
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.74, 38 genetic targets)"
-      ]
-    },
-    {
-      "drug_name": "Creatinine",
-      "drug_id": "DB11846",
-      "disease_name": "Crohn's disease",
-      "combined_score": 1.1233,
-      "transe_rank": 3,
-      "pillars_hit": 5,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 121,
-      "pubmed_treatment_total": 85,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "34566512",
-          "title": "Renal Amyloidosis and Crohn Disease.",
-          "authors": "Barahona-Correa JE, Morales SD, Andrade-P\u00e9rez R, et al.",
-          "journal": "Ochsner journal",
-          "year": "2021",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34566512/",
-          "total_results": 121
-        },
-        {
-          "pmid": "40650893",
-          "title": "Fecal and Serum Metabolome in Crohn's Disease is Linked With Future Flare.",
-          "authors": "Levhar N, Hadar R, Braun T, et al.",
-          "journal": "United European gastroenterology journal",
-          "year": "2025",
-          "abstract_snippet": "BACKGROUND: Metabolites are key mediators of various physiological functions. However, there is a lack of data linking their levels to future Crohn's Disease (CD) flares. OBJECTIVE: We aimed to identify systemic and gut metabolic changes that precede flare and generate metabolite-based indexes that ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40650893/"
-        },
-        {
-          "pmid": "32147005",
-          "title": "The Association of Mesalamine With Kidney Disease.",
-          "authors": "Adiga A, Goldfarb DS",
-          "journal": "Advances in chronic kidney disease",
-          "year": "2020",
-          "abstract_snippet": "The package inserts for products containing 5-aminosalicylic acid, or mesalamine, include the following language regarding the risk of adverse kidney effects: \"renal impairment, including minimal change nephropathy, acute and chronic interstitial nephritis, and rarely renal failure, has been reporte...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/32147005/"
-        },
-        {
-          "pmid": "39180897",
-          "title": "Prediction of early remission after infliximab in Crohn's disease using baseline microbiome and metabolomics.",
-          "authors": "Guo Y, Wu X, Wang Y, et al.",
-          "journal": "Journal of pharmaceutical and biomedical analysis",
-          "year": "2024",
-          "abstract_snippet": "To characterize the microbiome and metabolic profile in Crohn's disease (CD) patients with different outcome after infliximab (IFX) treatment. The clinical data of a cohort of 35 patients with moderate-to-severe CD admitted at Jinling hospital between Oct 2022 and Dec 2023 were collected. Stool samp...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39180897/"
-        },
-        {
-          "pmid": "19330730",
-          "title": "Growth failure in children and adolescents with Crohn's disease.",
-          "authors": "Tietjen K, Behrens R, Weimann E",
-          "journal": "The Turkish journal of gastroenterology : the official journal of Turkish Society of Gastroenterology",
-          "year": "2009",
-          "abstract_snippet": "BACKGROUND/AIMS: A clinical analysis in children, adolescents and young adults with Crohn's disease was performed to investigate if growth failure is caused by an impaired growth hormone secretion in these patients. METHODS: 40 patients with Crohn's disease (26 male, 14 female) with an average age o...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/19330730/"
-        }
       ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Oxalate nephropathy causing renal failure in small bowel Crohn\u2019s disease: a case report",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/60812ac59365ba322f4b0045f15a5e263cae60da",
-          "authors": "Aishwarya Chitnis, Saumya Gupta, I. Roberts"
-        },
-        {
-          "title": "Comparative effects of ciprofloxacin and prednisolone on renal function markers in a TNBS-induced Crohn's disease rat model",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/306c0bb99f84364558b17a8a4b09504269048e28",
-          "authors": "O. Oyesola, O. Olayemi, O. Soetan"
-        },
-        {
-          "title": "Serum level of soluble endoglin in active and inactive Crohn's disease.",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/09763c37d93c382d68e3dea5b6811c1ddc5ccdc8",
-          "authors": "K. Prz\u0119czek, D. Cibor, T. Iwaniec"
-        },
-        {
-          "title": "Intestinal Oxalate Absorption, Enteric Hyperoxaluria, and Risk of Urinary Stone Formation in Patients with Crohn\u2019s Disease",
-          "year": 2024,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/8e00c043e2d812e455498280dd1561abb369fac9",
-          "authors": "Roswitha Siener, Charlotte Ernsten, Jan Speller"
-        },
-        {
-          "title": "Prediction of early remission after infliximab in Crohn's disease using baseline microbiome and metabolomics.",
-          "year": 2024,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/6b64212184dfef3306821492f246e19cb123f72a",
-          "authors": "Yanzhe Guo, Xianhai Wu, Yixiao Wang"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Discovery and Preclinical Validation of Drug Indications Using Compendia of Public Gene Expression Data",
-        "year": 2011,
-        "citations": 740,
-        "url": "https://www.semanticscholar.org/paper/b2b8f9ae9c48f7183fb2e52ed014ba5f048a8ad4",
-        "authors": "M. Sirota, J. Dudley, Jeewon Kim"
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
       },
-      "max_citations": 740,
-      "faers_signal": "none",
-      "faers_total_reports": 128,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Creatinine to Crohn's disease terms. Drug has 128 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "trichostatin A (1.517)",
-        "vorinostat (1.486)",
-        "\"\"\"7-fluoro-6-methoxy-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indol-1-one KLK-40\"\"\" (1.485)",
-        "trichostatin A (1.476)",
-        "(+)-JQ1 (1.475)"
-      ],
-      "signature_interpretation": "Creatinine was not found among the top 44 drugs that reverse the Crohn's disease gene signature. Top reversers: trichostatin A (1.517), vorinostat (1.486), \"\"\"7-fluoro-6-methoxy-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indol-1-one KLK-40\"\"\" (1.485)",
-      "ai_hypothesis": "it is a marker of inflammation and is not a cause of the disease.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.8009,
-      "mr_genetic_targets": 4,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.48,
-      "novelty_level": "ESTABLISHED",
-      "is_known_treatment": false,
-      "clinical_trials_total": 2,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT04921033",
-          "title": "Exclusive Enteral Nutrition in Patients With Ileocaecal Crohn's Disease",
-          "status": "UNKNOWN",
-          "phase": "PHASE3",
-          "enrollment": "256",
-          "url": "https://clinicaltrials.gov/study/NCT04921033"
-        },
-        {
-          "nct_id": "NCT01235689",
-          "title": "Efficacy and Safety of Two Treatment Algorithms in Adults With Moderate to Severe Crohn's Disease",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "252",
-          "url": "https://clinicaltrials.gov/study/NCT01235689"
-        }
-      ],
-      "trial_phases": {
-        "PHASE3": 2
+      "ddi_warnings": {
+        "n_interactions": 1512,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
       },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "2 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
-        "121 PubMed articles on this drug-disease pair",
-        "Supported by 5 independent AI pillars",
-        "Highly cited paper (740 citations): \"Discovery and Preclinical Validation of Drug Indications Usi...\"",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.80, 4 genetic targets)"
-      ]
-    },
-    {
-      "drug_name": "Betamethasone",
-      "drug_id": "DB00443",
-      "disease_name": "Crohn's disease",
-      "combined_score": 1.1219,
-      "transe_rank": 34,
-      "pillars_hit": 8,
-      "mol_similarity": 0.4189,
-      "similar_to": "Prednisolone",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 19,
-      "pubmed_treatment_total": 19,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "30036352",
-          "title": "Drugs for inflammatory bowel disease.",
-          "authors": "",
-          "journal": "The Medical letter on drugs and therapeutics",
-          "year": "2018",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30036352/",
-          "total_results": 19
-        },
-        {
-          "pmid": "6103523",
-          "title": "[Ulcerative colitis and Crohn's colitis. Medical or surgical treatment].",
-          "authors": "Gallone L, Olmi L",
-          "journal": "Minerva medica",
-          "year": "1980",
-          "abstract_snippet": "Colectomy with ileorectal anastomosis was performed in 47 patients affected by ulcerative colitis and Crohn's colitis. These two forms of \"aggressive idiopathic colitis\" present the same problems of therapy from both the pharmacological and the surgical point of view. The topical employment of antip...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/6103523/"
-        },
-        {
-          "pmid": "37908604",
-          "title": "Ustekinumab in the treatment of acute disseminated pyoderma gangrenosum in a patient with Crohn's disease.",
-          "authors": "Miklusiak K, Miklusiak K, Kaczmarczyk O, et al.",
-          "journal": "Dermatology reports",
-          "year": "2023",
-          "abstract_snippet": "Pyoderma gangrenosum (PG) is an auto-inflammatory dermatosis characterized by lesions that often cause ulcers. We present a case of successful ustekinumab treatment for acute general PG in a 31-year-old woman with coexisting Crohn's disease (CD). For a month, the patient suffered from skin ulcers, t...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37908604/"
-        },
-        {
-          "pmid": "28633753",
-          "title": "Tumor necrosis factor-induced alopecia: alternative pathology and therapy.",
-          "authors": "Udkoff J, Cohen PR",
-          "journal": "Dermatology online journal",
-          "year": "2017",
-          "abstract_snippet": "Tumor necrosis factor (TNF) inhibitors are used to treat Crohn disease and psoriasis. Although they are typically well tolerated, adverse effects include the development of alopecia, and paradoxically, psoriatic lesions. We recently described a woman with Crohn disease who developed alopecia and sca...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/28633753/"
-        },
-        {
-          "pmid": "35791787",
-          "title": "A diagnostic challenge: chronic cutaneous ulcers as an isolated clinical finding in metastatic Crohn's disease.",
-          "authors": "P\u00e9rez-Santiago L, Garc\u00eda-V\u00e1zquez A, Mart\u00edn-Ar\u00e9valo J, et al.",
-          "journal": "Revista espanola de enfermedades digestivas",
-          "year": "2023",
-          "abstract_snippet": "Metastasic Crohn disease (MCD) is the most uncommon cutaneous manifestation of Crohn disease. The actual incidence is not clear. There are fewer than 200 cases described in the literature. We report a case of 21 years-old girl that came to our emergency care with large exudative ulcers in the inguin...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35791787/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Ustekinumab in the treatment of acute disseminated pyoderma gangrenosum in a patient with Crohn\u2019s disease",
-          "year": 2023,
-          "citations": 6,
-          "url": "https://www.semanticscholar.org/paper/a3180afc09a8fb8500a02f89693d3ec27989b3c5",
-          "authors": "Klaudia Miklusiak, Karol Miklusiak, Olga Kaczmarczyk"
-        },
-        {
-          "title": "A diagnostic challenge: chronic cutaneous ulcers as an isolated clinical finding in metastatic Crohn\u00b4s disease.",
-          "year": 2022,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/c6fe15813aeb0e17e0d30aa671917afa1cd40c42",
-          "authors": "L. P\u00e9rez-Santiago, A. Garc\u00eda-V\u00e1zquez, J. Mart\u00edn-Ar\u00e9valo"
-        },
-        {
-          "title": "Methotrexate for recalcitrant cutaneous Crohn's disease: a dermatology\u2010based case series with emphasis on outcomes",
-          "year": 2022,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/ea615fd7e354dbf659cf488445a3d1085594e871",
-          "authors": "M. Hrin, Josiah A. Williams, Nathan L Bowers"
-        },
-        {
-          "title": "IDDF2020-ABS-0207\u2005Efficacy and safety of endoscopic balloon dilatation combined with local injection of betamethasone in the treatment of intestinal stenosis in Crohn\u2019s disease",
-          "year": 2020,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/52e0340fff421c856cc040e2fadfeb95a84ef761",
-          "authors": "Junrong Chen, Jiachen Sun, Xiang Peng"
-        },
-        {
-          "title": "Severe Infliximab-Induced Alopecia and Scalp Psoriasis in a Woman with Crohn\u2019s Disease: Dramatic Improvement after Drug Discontinuation and Treatment with Adjuvant Systemic and Topical Therapies",
-          "year": 2016,
-          "citations": 19,
-          "url": "https://www.semanticscholar.org/paper/8ab6e3f60c9f30dbc8733f14a5c2f39a586bea90",
-          "authors": "J. Udkoff, Philip R. Cohen"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Discovery and Preclinical Validation of Drug Indications Using Compendia of Public Gene Expression Data",
-        "year": 2011,
-        "citations": 740,
-        "url": "https://www.semanticscholar.org/paper/b2b8f9ae9c48f7183fb2e52ed014ba5f048a8ad4",
-        "authors": "M. Sirota, J. Dudley, Jeewon Kim"
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (ABCB1 / rs1045642)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "ABCB1",
+            "variant": "rs1045642",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204433"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs2032582",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981238041"
+          },
+          {
+            "gene": "CTLA4",
+            "variant": "rs4553808",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043880851"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs2229109",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449170621"
+          },
+          {
+            "gene": "GATA3",
+            "variant": "rs3824662",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1184512128"
+          }
+        ]
       },
-      "max_citations": 740,
-      "faers_signal": "none",
-      "faers_total_reports": 32595,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Betamethasone to Crohn's disease terms. Drug has 32595 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "trichostatin A (1.517)",
-        "vorinostat (1.486)",
-        "\"\"\"7-fluoro-6-methoxy-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indol-1-one KLK-40\"\"\" (1.485)",
-        "trichostatin A (1.476)",
-        "(+)-JQ1 (1.475)"
-      ],
-      "signature_interpretation": "Betamethasone was not found among the top 44 drugs that reverse the Crohn's disease gene signature. Top reversers: trichostatin A (1.517), vorinostat (1.486), \"\"\"7-fluoro-6-methoxy-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indol-1-one KLK-40\"\"\" (1.485)",
-      "ai_hypothesis": "of its anti-inflammatory properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
         },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
+        "triangulation_score": 0.639,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.54,
+          "docking": 0.97,
+          "pharos": 0.0,
+          "literature": 0.793
         }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.6981,
-      "mr_genetic_targets": 24,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.84,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "MEDIUM",
-      "confidence_reasons": [
-        "19 PubMed articles found",
-        "Supported by 8 independent AI pillars",
-        "Highly cited paper (740 citations): \"Discovery and Preclinical Validation of Drug Indications Usi...\"",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.70)"
-      ]
-    },
-    {
-      "drug_name": "Calcitriol",
-      "drug_id": "DB00136",
-      "disease_name": "Crohn's disease",
-      "combined_score": 1.1187,
-      "transe_rank": 69,
-      "pillars_hit": 8,
-      "mol_similarity": 0.6418,
-      "similar_to": "Cholecalciferol",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 60,
-      "pubmed_treatment_total": 28,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "28025175",
-          "title": "Vitamin D deficiency and the pathogenesis of Crohn's disease.",
-          "authors": "White JH",
-          "journal": "The Journal of steroid biochemistry and molecular biology",
-          "year": "2018",
-          "abstract_snippet": "Vitamin D has emerged as a key regulator of innate immune responses to pathogen threat. The hormonal form of vitamin D signals through a nuclear receptor transcription factor and regulates gene transcription. Several papers have shown that vitamin D signaling is active both upstream and downstream o...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/28025175/",
-          "total_results": 60
-        },
-        {
-          "pmid": "27779898",
-          "title": "Reflections About Inflammatory Bowel Disease and Vitamins A and D.",
-          "authors": "Barbalho SM, Bechara MD, de Alvares Goulart R, et al.",
-          "journal": "Journal of medicinal food",
-          "year": "2016",
-          "abstract_snippet": "Ulcerative colitis and Crohn's disease are two major forms of the inflammatory bowel diseases (IBDs). Vitamin A (VA) and vitamin D (VD) may be associated with reduction in inflammation in these disorders. The aim of this review was to show the current evidence that may associate VA and VD with IBDs....",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/27779898/"
-        },
-        {
-          "pmid": "25497215",
-          "title": "Optimal vitamin D levels in Crohn's disease: a review.",
-          "authors": "Raftery T, O'Sullivan M",
-          "journal": "The Proceedings of the Nutrition Society",
-          "year": "2015",
-          "abstract_snippet": "Vitamin D deficiency is common among patients with Crohn's disease. Serum 25-hydroxyvitamin D (25(OH)D) is the best measure of an individual's vitamin D status and current cut-off ranges for sufficiency are debatable. Several factors contribute to vitamin D deficiency in Crohn's disease. These inclu...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/25497215/"
-        },
-        {
-          "pmid": "37891214",
-          "title": "Mucosal expression of PI3, ANXA1, and VDR discriminates Crohn's disease from ulcerative colitis.",
-          "authors": "James JP, Nielsen BS, Christensen IJ, et al.",
-          "journal": "Scientific reports",
-          "year": "2023",
-          "abstract_snippet": "Differential diagnosis of inflammatory bowel disease (IBD) to Crohn's disease (CD) or ulcerative colitis (UC) is crucial for treatment decision making. With the aim of generating a clinically applicable molecular-based tool to classify IBD patients, we assessed whole transcriptome analysis on endosc...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37891214/"
-        },
-        {
-          "pmid": "40542081",
-          "title": "CCL20 expression is elevated in inflammatory bowel disease and attenuated by vitamin D metabolites.",
-          "authors": "Stallhofer J, Reichl F, Lauseker M, et al.",
-          "journal": "Scientific reports",
-          "year": "2025",
-          "abstract_snippet": "Intestinal epithelial overexpression of the Th17 cell chemoattractant CCL20 is implicated in inflammatory bowel disease and influenced by NOD2 mutations in Crohn's disease. Vitamin D metabolites have been shown to ameliorate inflammatory bowel disease. Considering NOD2 mutations in Crohn's disease, ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40542081/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Effect of Vitamin D Supplementation on Clinical Course and T Helper 17/ T-Regulatory Balance in Peripheral Blood of Patients with Crohn\u2019s Disease",
-          "year": 2023,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/62c64145d4f8c25c1b23ddba9ec415b692f8b7c9",
-          "authors": "Xiao-Kun Lin, Xiaoli Wu, Yini Zhang"
-        },
-        {
-          "title": "Vitamin D receptor gene polymorphism: association with Crohn's disease susceptibility",
-          "year": 2000,
-          "citations": 283,
-          "url": "https://www.semanticscholar.org/paper/281fc5f543a0dcd75c544dd8cb6d5b1d50a41c01",
-          "authors": "J. Simmons, C. Mullighan, K. Welsh"
-        },
-        {
-          "title": "Bone mineral density and calcium regulating hormones in patients with inflammatory bowel disease (Crohn's disease and ulcerative colitis).",
-          "year": 2009,
-          "citations": 60,
-          "url": "https://www.semanticscholar.org/paper/c3c43c13ba7fa5964390a2c2f7c760aa85ec0153",
-          "authors": "S. Scharla, H. W. Minne, U. Lempert"
-        },
-        {
-          "title": "Vitamin D-mediated calcium absorption in patients with clinically stable Crohn's disease: a pilot study.",
-          "year": 2010,
-          "citations": 28,
-          "url": "https://www.semanticscholar.org/paper/424e86dff05cf7d83f61806cd90d30951481bf1e",
-          "authors": "M. Kumari, Natasha B. Khazai, T. Ziegler"
-        },
-        {
-          "title": "Rennies, Crohn's disease and severe hypercalcaemia",
-          "year": 2010,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/7f9a50c6f22371455aeae0d9e95325c4ed464362",
-          "authors": "Filip Zemrak, L. McNeil, N. Peden"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Discovery and Preclinical Validation of Drug Indications Using Compendia of Public Gene Expression Data",
-        "year": 2011,
-        "citations": 740,
-        "url": "https://www.semanticscholar.org/paper/b2b8f9ae9c48f7183fb2e52ed014ba5f048a8ad4",
-        "authors": "M. Sirota, J. Dudley, Jeewon Kim"
       },
-      "max_citations": 740,
-      "faers_signal": "none",
-      "faers_total_reports": 19950,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Calcitriol to Crohn's disease terms. Drug has 19950 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "trichostatin A (1.517)",
-        "vorinostat (1.486)",
-        "\"\"\"7-fluoro-6-methoxy-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indol-1-one KLK-40\"\"\" (1.485)",
-        "trichostatin A (1.476)",
-        "(+)-JQ1 (1.475)"
-      ],
-      "signature_interpretation": "Calcitriol was not found among the top 44 drugs that reverse the Crohn's disease gene signature. Top reversers: trichostatin A (1.517), vorinostat (1.486), \"\"\"7-fluoro-6-methoxy-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indol-1-one KLK-40\"\"\" (1.485)",
-      "ai_hypothesis": "of its anti-inflammatory properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.7347,
-      "mr_genetic_targets": 8,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.66,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": false,
-      "clinical_trials_total": 2,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT00427804",
-          "title": "Tumor Necrosis Factor Decreases Vitamin D Dependant Calcium Absorption",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "9",
-          "url": "https://clinicaltrials.gov/study/NCT00427804"
-        },
-        {
-          "nct_id": "NCT00287170",
-          "title": "Efficacy Study of Targeted, Local Delivery of Drugs to Treat Crohn's Disease",
-          "status": "COMPLETED",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "15",
-          "url": "https://clinicaltrials.gov/study/NCT00287170"
-        }
-      ],
-      "trial_phases": {
-        "NA": 1,
-        "PHASE1": 1,
-        "PHASE2": 1
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 20,
+        "n_expressed": 14,
+        "mean_tpm_in_tissue": 48.3,
+        "max_tpm_in_tissue": 322.35,
+        "tissue_specificity": 0.336,
+        "context_modifier": 1.042
       },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "2 clinical trial(s) found on ClinicalTrials.gov",
-        "60 PubMed articles on this drug-disease pair",
-        "Supported by 8 independent AI pillars",
-        "High molecular similarity (0.64) to Cholecalciferol",
-        "Highly cited paper (740 citations): \"Discovery and Preclinical Validation of Drug Indications Usi...\"",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.73, 8 genetic targets)"
-      ]
+      "disease_entity": "Disease::MESH:D003424",
+      "ensemble_prob": 0.9616,
+      "ensemble_features": {
+        "kg_score": 0.9995,
+        "degree_penalty": 0.736,
+        "n_drug_targets": 24,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 1.7918
+      },
+      "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": -11.64,
+        "target_symbol": "NR3C1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
       "drug_name": "Folic Acid",
       "drug_id": "DB00158",
       "disease_name": "Crohn's disease",
-      "combined_score": 1.1176,
+      "combined_score": 0.54,
+      "pillars_hit": 4,
       "transe_rank": 112,
-      "pillars_hit": 8,
+      "transe_score": -11.4539,
+      "pykeen_score": -12.9022,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0.5263,
       "similar_to": "Methotrexate",
+      "mol_emb_similarity": 0.9051,
+      "mol_emb_similar_to": "Sulfasalazine",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.6119999885559082,
+      "proximity_distance": 1.5499999523162842,
+      "admet_score": 1.0,
+      "admet_flags": "DILI=0.99",
+      "primekg_score": 0.2678,
+      "dti_score": 0.7284,
+      "dti_best_target": "IFNG",
+      "kg_group_score": 0.2969,
+      "structural_group_score": 0.9051,
+      "network_group_score": 0.4846000075340271,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.706,
+      "admet_multiplier": 1.0,
+      "efficacy_score": 0.54,
+      "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 5,
+      "shared_targets": [
+        "CCL2",
+        "CSF2",
+        "DHFR",
+        "STAT3",
+        "TNF"
+      ],
       "pubmed_total": 166,
       "pubmed_treatment_total": 106,
       "pubmed_repurposing_total": 1,
@@ -1043,18 +1904,18 @@
           "authors": "M. Jeli\u010di\u0107, Edvin Brusa\u010d, D. A. Klari\u0107"
         },
         {
-          "title": "A Rare Presentation of Crohn\u2019s Disease: A Case Report",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/9749f1ad12fe97200297861d068a2a70b28ba60d",
-          "authors": "In\u00eas Marques Ferreira, Rui Coelho, C\u00e9lia Cruz"
-        },
-        {
           "title": "[Analysis of nutritional status before and after different induction therapies in children with Crohn's disease].",
           "year": 2025,
           "citations": 0,
           "url": "https://www.semanticscholar.org/paper/f2624ac7cad2b42ceb62901d78a95c1f5fa81e3b",
           "authors": "Lei-lei Chen, Yu Yu, Youyou Luo"
+        },
+        {
+          "title": "A Rare Presentation of Crohn\u2019s Disease: A Case Report",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/9749f1ad12fe97200297861d068a2a70b28ba60d",
+          "authors": "In\u00eas Marques Ferreira, Rui Coelho, C\u00e9lia Cruz"
         },
         {
           "title": "Sensory sensitivity to sour and bitter taste among people with Crohn's disease and folic acid supplementation",
@@ -1110,10 +1971,10 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0.706,
       "mr_genetic_targets": 2,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Folic Acid \u2014[is a therapeutic for]\u2192 MESH:D064420 \u2014[is treated by]\u2192 DB00635 \u2014[treats]\u2192 Crohn's disease",
+      "kg_paths_text": "\u2022 Folic Acid \u2014[is a therapeutic for]\u2192 MESH:D064420 \u2014[is treated by]\u2192 DB00635 \u2014[treats]\u2192 Crohn's disease\n\u2022 Folic Acid \u2014[is a therapeutic for]\u2192 MESH:D064420 \u2014[is treated by]\u2192 DB00635 \u2014[treats]\u2192 Crohn's disease\n\u2022 Folic Acid \u2014[is a therapeutic for]\u2192 MESH:D064420 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 Crohn's disease",
       "validation_experiments": [],
-      "novelty_score": 0.48,
+      "novelty_score": 0.259,
       "novelty_level": "ESTABLISHED",
       "is_known_treatment": false,
       "clinical_trials_total": 3,
@@ -1153,414 +2014,305 @@
         "Phase 3 trial exists",
         "166 PubMed articles on this drug-disease pair",
         "1 article(s) specifically mention repurposing/repositioning",
-        "Supported by 8 independent AI pillars",
+        "Supported by 4 independent AI pillars",
         "High molecular similarity (0.53) to Methotrexate",
         "Highly cited paper (740 citations): \"Discovery and Preclinical Validation of Drug Indications Usi...\"",
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.71, 2 genetic targets)"
-      ]
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 845,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00331",
+            "drug_name": "Metformin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00338",
+            "drug_name": "Omeprazole",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (MTRR / rs1801394)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "MTRR",
+            "variant": "rs1801394",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183491035"
+          },
+          {
+            "gene": "MTHFR",
+            "variant": "rs1801131",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204525"
+          },
+          {
+            "gene": "TLR4",
+            "variant": "rs4986790",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043880467"
+          },
+          {
+            "gene": "MTHFR",
+            "variant": "rs1801133",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183491364"
+          },
+          {
+            "gene": "MTR",
+            "variant": "rs1805087",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451634907"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.382,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.54,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.965
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 5,
+        "n_expressed": 3,
+        "mean_tpm_in_tissue": 20.75,
+        "max_tpm_in_tissue": 96.72,
+        "tissue_specificity": 0.479,
+        "context_modifier": 1.028
+      },
+      "disease_entity": "Disease::MESH:D003424",
+      "ensemble_prob": 0.1175,
+      "ensemble_features": {
+        "kg_score": 0.9773,
+        "degree_penalty": 0.7918,
+        "n_drug_targets": 6,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 5.4806
+      },
+      "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
-      "drug_name": "Azithromycin",
-      "drug_id": "DB00207",
+      "drug_name": "Mesalazine",
+      "drug_id": "DB00244",
       "disease_name": "Crohn's disease",
-      "combined_score": 1.1062999963760376,
-      "transe_rank": 106,
-      "pillars_hit": 7,
+      "combined_score": 0.5374,
+      "pillars_hit": 4,
+      "transe_rank": 44,
+      "transe_score": -11.0909,
+      "pykeen_score": -12.3957,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0.0024,
+      "gene_sig_rank": 80,
+      "proximity_score": 0.7250000238418579,
+      "proximity_distance": 1.100000023841858,
+      "admet_score": 0.6601,
+      "admet_flags": "clean",
+      "primekg_score": 0.2665,
+      "dti_score": 1.0,
+      "dti_best_target": "CHI3L1",
+      "kg_group_score": 0.2754,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.550599992275238,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.7841,
+      "admet_multiplier": 0.932,
+      "efficacy_score": 0.5766,
+      "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 16,
-      "pubmed_treatment_total": 15,
+      "shared_target_count": 8,
+      "shared_targets": [
+        "ALOX5",
+        "CCL2",
+        "CD274",
+        "NR3C1",
+        "PPARG",
+        "PTGS1",
+        "PTGS2",
+        "TNF"
+      ],
+      "pubmed_total": 395,
+      "pubmed_treatment_total": 372,
       "pubmed_repurposing_total": 0,
       "key_papers": [
         {
-          "pmid": "9096189",
-          "title": "Two-year-outcomes analysis of Crohn's disease treated with rifabutin and macrolide antibiotics.",
-          "authors": "Gui GP, Thomas PR, Tizard ML, et al.",
-          "journal": "The Journal of antimicrobial chemotherapy",
-          "year": "1997",
-          "abstract_snippet": "Fifty-two patients with severe Crohn's disease were enrolled in this study. Six (11.5%) were intolerant of the medication and had to be excluded. The remaining 46 patients were treated with rifabutin in combination with a macrolide antibiotic (clarithromycin or azithromycin). Patients were treated f...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/9096189/",
-          "total_results": 16
+          "pmid": "31562236",
+          "title": "British Society of Gastroenterology consensus guidelines on the management of inflammatory bowel disease in adults.",
+          "authors": "Lamb CA, Kennedy NA, Raine T, et al.",
+          "journal": "Gut",
+          "year": "2019",
+          "abstract_snippet": "Ulcerative colitis and Crohn's disease are the principal forms of inflammatory bowel disease. Both represent chronic inflammation of the gastrointestinal tract, which displays heterogeneity in inflammatory and symptomatic burden between patients and within individuals over time. Optimal management r...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31562236/",
+          "total_results": 395
         },
         {
-          "pmid": "39648957",
-          "title": "A decade of real-world clinical experience with 8-week azithromycin-metronidazole combined therapy in paediatric Crohn's disease.",
-          "authors": "Fioretti MT, Gianolio L, Armstrong K, et al.",
-          "journal": "Journal of pediatric gastroenterology and nutrition",
-          "year": "2025",
-          "abstract_snippet": "OBJECTIVES: The aim of our study was to assess the effectiveness and side-effect profile of a combination of azithromycin and metronidazole (CD AZCRO) as alternative induction therapy for 8 weeks in mild to moderately active paediatric Crohn's disease (CD). METHODS: We performed a retrospective coho...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39648957/"
+          "pmid": "32172251",
+          "title": "Treatment Algorithms for Crohn's Disease.",
+          "authors": "Sulz MC, Burri E, Michetti P, et al.",
+          "journal": "Digestion",
+          "year": "2020",
+          "abstract_snippet": "BACKGROUND: Treatment of Crohn's disease (CD) patients is complex as therapy choices depend on a variety of factors, such as location and severity of inflammation, disease behavior (inflammatory, stricturing or penetrating) but also comorbidities, extra-intestinal manifestations, the patient's age, ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32172251/"
         },
         {
-          "pmid": "18070962",
-          "title": "Replication of Colonic Crohn's Disease Mucosal Escherichia coli Isolates within Macrophages and Their Susceptibility to Antibiotics.",
-          "authors": "Subramanian S, Roberts CL, Hart CA, et al.",
-          "journal": "Antimicrobial agents and chemotherapy",
-          "year": "2008",
-          "abstract_snippet": "There is increasing evidence that Escherichia coli organisms are important in Crohn's disease (CD) pathogenesis. In CD tissue they are found within macrophages, and the adherent-invasive CD ileal E. coli isolate LF82 can replicate inside macrophage phagolysosomes. This study investigates replication...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/18070962/"
+          "pmid": "9803254",
+          "title": "Inflammatory bowel disease.",
+          "authors": "Gibson PR, Anderson RP",
+          "journal": "The Medical journal of Australia",
+          "year": "1998",
+          "abstract_snippet": "IBD results from the interaction of genetic and environmental factors (e.g., smoking). Clinical suspicion is the key to diagnosis, which then rests on colonoscopy, histopathological examination of multiple biopsy specimens, small bowel barium radiology and faecal examination. The primary goal of tre...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/9803254/"
         },
         {
-          "pmid": "21575885",
-          "title": "Combined azithromycin and metronidazole therapy is effective in inducing remission in pediatric Crohn's disease.",
-          "authors": "Levine A, Turner D",
-          "journal": "Journal of Crohn's & colitis",
-          "year": "2011",
-          "abstract_snippet": "BACKGROUND: Crohn's disease (CD) is characterized by an aberrant response to the gut microbiota. We aimed to assess whether azithromycin based therapy is effective in inducing remission in CD, due to its effect in inducing apoptosis and efficacy against biofilms and intracellular bacteria. METHODS: ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/21575885/"
+          "pmid": "15861742",
+          "title": "Inflammatory bowel disease.",
+          "authors": "Gibson PR, Iser J",
+          "journal": "Australian family physician",
+          "year": "2005",
+          "abstract_snippet": "BACKGROUND: Inflammatory bowel disease (IBD) is increasing in frequency in Australia. General practitioners play an important role in early diagnosis and in a multidisciplinary approach to managing such patients. Keeping abreast of evolving concepts, particularly in treatment, is challenging. OBJECT...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15861742/"
         },
         {
-          "pmid": "36725090",
-          "title": "Personalised azithromycin+metronidazole (PAZAZ), in combination with standard induction therapy, to achieve a faecal microbiome community structure and metagenome changes associated with sustained remission in paediatric Crohn's disease (CD): protocol of a pilot study.",
-          "authors": "Verburgt CM, Dunn KA, Otley A, et al.",
-          "journal": "BMJ open",
-          "year": "2023",
-          "abstract_snippet": "INTRODUCTION: Early relapse in Crohn's disease (CD) is associated with a more severe disease course. The microbiome plays a crucial role, yet strategies targeting the microbiome are underrepresented in current guidelines. We hypothesise that early manipulation of the microbiome will improve clinical...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36725090/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "A decade of real-world clinical experience with 8-week azithromycin-metronidazole combined therapy in paediatric Crohn's disease.",
-          "year": 2024,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/b6b1b255138c8fe4f05a8b308ca60976777d56e7",
-          "authors": "Maria Teresa Fioretti, L. Gianolio, K. Armstrong"
-        },
-        {
-          "title": "Non-Clostridium difficile Bacterial Infection in an Acute Flare of Crohn's Disease: A Case Report and Literature Review.",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/0f3e54e42597e0a653cd7c454d6d11f5b875e078",
-          "authors": "N. T. Phan, P. T. Ho, N. P. Ma"
-        },
-        {
-          "title": "Personalised azithromycin+metronidazole (PAZAZ), in combination with standard induction therapy, to achieve a faecal microbiome community structure and metagenome changes associated with sustained remission in paediatric Crohn\u2019s disease (CD): protocol of a pilot study",
-          "year": 2023,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/8c747b609d56d8b4a2f9ec8b1f8e76b92875c399",
-          "authors": "C. Verburgt, K. Dunn, A. Otley"
-        },
-        {
-          "title": "Azithromycin and metronidazole versus metronidazole-based therapy for the induction of remission in mild to moderate paediatric Crohn\u2019s disease : a randomised controlled trial",
-          "year": 2018,
-          "citations": 43,
-          "url": "https://www.semanticscholar.org/paper/0b54040c780265e93406a30b211946a47366a4eb",
-          "authors": "A. Levine, M. Kori, J. Kierku\u015b"
-        },
-        {
-          "title": "Temporal Improvement of a COVID-19-Positive Crohn's Disease Patient Treated With Bismuth Subsalicylate",
-          "year": 2020,
-          "citations": 11,
-          "url": "https://www.semanticscholar.org/paper/585d9bb0d2fdd3546cbb763011a5a13bb4d98379",
-          "authors": "D. Wolf, C. Wolf, D. Rubin"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Computational Repositioning of the Anticonvulsant Topiramate for Inflammatory Bowel Disease",
-        "year": 2011,
-        "citations": 551,
-        "url": "https://www.semanticscholar.org/paper/65228a9f1b83b09af483779bb637fa6e037ae12f",
-        "authors": "J. Dudley, M. Sirota, M. Shenoy"
-      },
-      "max_citations": 551,
-      "faers_signal": "none",
-      "faers_total_reports": 75824,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Azithromycin to Crohn's disease terms. Drug has 75824 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "trichostatin A (1.517)",
-        "vorinostat (1.486)",
-        "\"\"\"7-fluoro-6-methoxy-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indol-1-one KLK-40\"\"\" (1.485)",
-        "trichostatin A (1.476)",
-        "(+)-JQ1 (1.475)"
-      ],
-      "signature_interpretation": "Azithromycin was not found among the top 44 drugs that reverse the Crohn's disease gene signature. Top reversers: trichostatin A (1.517), vorinostat (1.486), \"\"\"7-fluoro-6-methoxy-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indol-1-one KLK-40\"\"\" (1.485)",
-      "ai_hypothesis": "of its anti-inflammatory properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 0,
-          "negative_signals": 0,
-          "mechanism_signals": 0,
-          "extracted_entities": [
-            {
-              "entity": "fifty",
-              "entity_group": "Lab_value",
-              "score": 0.9929999709129333
-            },
-            {
-              "entity": "two",
-              "entity_group": "Lab_value",
-              "score": 0.8579999804496765
-            },
-            {
-              "entity": "severe",
-              "entity_group": "Severity",
-              "score": 1.0
-            },
-            {
-              "entity": "crohn ' s disease",
-              "entity_group": "Disease_disorder",
-              "score": 0.9959999918937683
-            },
-            {
-              "entity": "six",
-              "entity_group": "Lab_value",
-              "score": 0.9810000061988831
-            },
-            {
-              "entity": "medication",
-              "entity_group": "Medication",
-              "score": 0.996999979019165
-            },
-            {
-              "entity": "ri",
-              "entity_group": "Medication",
-              "score": 1.0
-            },
-            {
-              "entity": "##fabutin",
-              "entity_group": "Medication",
-              "score": 0.9700000286102295
-            },
-            {
-              "entity": "macrolide antibiotic",
-              "entity_group": "Medication",
-              "score": 0.9990000128746033
-            },
-            {
-              "entity": "cl",
-              "entity_group": "Medication",
-              "score": 1.0
-            }
-          ]
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 1,
-          "negative_signals": 0,
-          "mechanism_signals": 0,
-          "extracted_entities": [
-            {
-              "entity": "az",
-              "entity_group": "Medication",
-              "score": 1.0
-            },
-            {
-              "entity": "##ith",
-              "entity_group": "Medication",
-              "score": 0.8209999799728394
-            },
-            {
-              "entity": "##romycin",
-              "entity_group": "Medication",
-              "score": 0.9860000014305115
-            },
-            {
-              "entity": "metronidazole",
-              "entity_group": "Medication",
-              "score": 0.9959999918937683
-            },
-            {
-              "entity": "cd",
-              "entity_group": "Medication",
-              "score": 0.9990000128746033
-            },
-            {
-              "entity": "alternative",
-              "entity_group": "Detailed_description",
-              "score": 0.9869999885559082
-            },
-            {
-              "entity": "induction",
-              "entity_group": "Therapeutic_procedure",
-              "score": 0.9559999704360962
-            },
-            {
-              "entity": "8 weeks",
-              "entity_group": "Duration",
-              "score": 1.0
-            },
-            {
-              "entity": "mild",
-              "entity_group": "Severity",
-              "score": 0.9950000047683716
-            },
-            {
-              "entity": "moderately",
-              "entity_group": "Severity",
-              "score": 0.984000027179718
-            }
-          ]
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "Phase 2",
-      "failed_trial_count": 1,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.8867,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.66,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": false,
-      "clinical_trials_total": 3,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT04186247",
-          "title": "Personalized AZithromycin/metronidAZole Therapy in Pediatric Crohn's Disease (CD)",
-          "status": "TERMINATED",
-          "phase": "PHASE2",
-          "enrollment": "13",
-          "url": "https://clinicaltrials.gov/study/NCT04186247"
-        },
-        {
-          "nct_id": "NCT01596894",
-          "title": "Azithromycin Based Therapy for Induction of Remission in Active Pediatric Crohn's Disease",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "73",
-          "url": "https://clinicaltrials.gov/study/NCT01596894"
-        },
-        {
-          "nct_id": "NCT05599347",
-          "title": "Pre-treatment With Azithromycin to Reduce Immunogenicity to to Anti-TNF Agents in Patients With Crohn's Disease",
-          "status": "RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "180",
-          "url": "https://clinicaltrials.gov/study/NCT05599347"
-        }
-      ],
-      "trial_phases": {
-        "PHASE2": 2,
-        "PHASE4": 1
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "3 clinical trial(s) found on ClinicalTrials.gov",
-        "16 PubMed articles found",
-        "Supported by 7 independent AI pillars",
-        "Highly cited paper (551 citations): \"Computational Repositioning of the Anticonvulsant Topiramate...\"",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.89, 1 genetic targets)"
-      ]
-    },
-    {
-      "drug_name": "Prednisolone",
-      "drug_id": "DB00860",
-      "disease_name": "Crohn's disease",
-      "combined_score": 1.1022,
-      "transe_rank": 1,
-      "pillars_hit": 6,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 600,
-      "pubmed_treatment_total": 583,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "8652141",
-          "title": "Budesonide or prednisolone in active Crohn's disease.",
-          "authors": "Baert F, Rutgeerts P",
-          "journal": "Annals of medicine",
-          "year": "1995",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/8652141/",
-          "total_results": 600
-        },
-        {
-          "pmid": "18641593",
-          "title": "Sequential therapies for Crohn's disease: optimizing conventional and biologic strategies.",
-          "authors": "Desilva S, Kaplan G, Panaccione R",
-          "journal": "Reviews in gastroenterological disorders",
-          "year": "2008",
-          "abstract_snippet": "The current guidelines for the management of Crohn's disease (CD) suggest a stepwise approach to treatment according to the severity of clinical presentation. The use of tumor necrosis factor (TNF) antagonists are currently reserved for patients who do not respond to conventional nonbiological thera...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/18641593/"
-        },
-        {
-          "pmid": "21355357",
-          "title": "Prednisolone in the management of patients with Crohn's disease.",
-          "authors": "Cronin E",
-          "journal": "British journal of nursing (Mark Allen Publishing)",
-          "year": "2010",
-          "abstract_snippet": "Glucocorticoids, a type of steroid hormone, are widely used in the treatment of inflammatory bowel disease (IBD) in patients with Crohn's disease or ulcerative colitis. Many patients with these conditions are managed conservatively outside hospital, with continued support from their gastroenterologi...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/21355357/"
-        },
-        {
-          "pmid": "39525430",
-          "title": "Crohn's Disease Confined to the Esophagus, with No Involvement of the Small or Large Bowel.",
-          "authors": "Karam K, Fahmi H, Bechara S, et al.",
-          "journal": "European journal of case reports in internal medicine",
+          "pmid": "38681984",
+          "title": "Combination treatment of inflammatory bowel disease: Present status and future perspectives.",
+          "authors": "Triantafillidis JK, Zografos CG, Konstadoulakis MM, et al.",
+          "journal": "World journal of gastroenterology",
           "year": "2024",
-          "abstract_snippet": "UNLABELLED: Crohn's disease (CD) is a transmural inflammatory process that can affect any segment of the gastrointestinal tract. CD has a predilection for the colon and the small bowel, specifically the terminal ileum. Esophageal involvement of CD is exceedingly rare and there is a paucity of data r...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39525430/"
-        },
-        {
-          "pmid": "12693319",
-          "title": "[Treatment of Crohn's disease].",
-          "authors": "Beglinger Ch",
-          "journal": "Therapeutische Umschau. Revue therapeutique",
-          "year": "2003",
-          "abstract_snippet": "In this chapter, the state-of-the-art treatment of Crohn's disease is summarized; the chapter intends to provide an uptodate knowledge of current treatment strategies of Crohn's disease. The indications for steroids and for immunomodulators are described and compared to newer approaches based on neu...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/12693319/"
+          "abstract_snippet": "The treatment of patients with inflammatory bowel disease (IBD), especially those with severe or refractory disease, represents an important challenge for the clinical gastroenterologist. It seems to be no exaggeration to say that in these patients, not only the scientific background of the gastroen...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38681984/"
         }
       ],
       "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "ECCO Guidelines on Therapeutics in Crohn's Disease: Medical Treatment.",
+          "title": "Mesalazine Induced Pancytopenia in Crohn's Disease",
           "year": 2024,
-          "citations": 214,
-          "url": "https://www.semanticscholar.org/paper/2232498325182bd49bb2ac733feeb060347cfaa0",
-          "authors": "H. Gordon, Silvia Minozzi, U. Kopylov"
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/ad98416891d6dd0b28fd3972d3006a721310aa48",
+          "authors": "M. Haida, M. Michouar, O. Nacir"
         },
         {
-          "title": "Cutaneous Arteritis Complicated by Crohn's Disease",
+          "title": "Complications of Immunomodulator and Mesalazine Therapy in Crohn\u2019s Disease",
+          "year": 2024,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/2dc4ac4ceba8121cf70b3e596caacc9157bd1c94",
+          "authors": "Kaka Renaldi, Fransiscus Nikodemus Hosea"
+        },
+        {
+          "title": "Bone Marrow Aplasia and Neutropenic Fever Following Azathioprine Dose Escalation in a TPMT-Deficient Patient with Crohn\u2019s Disease and Psoriatic Arthritis\u2014A CARE\u2013Compliant Case",
           "year": 2025,
           "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/e75138af6f03ef27becd11fcc5e9f9831ea748d0",
-          "authors": "Takao Nagashima, Hiroki Yabe, N. Umemoto"
+          "url": "https://www.semanticscholar.org/paper/7bec9af103fa0acc5209410782b6d685005622be",
+          "authors": "Krzysztof Wro\u0144ski, M. Holecki, Natalia Boguszewska"
         },
         {
-          "title": "Portal vein thrombosis as extraintestinal complications of Crohn\u2019s disease: a case report and review of literature",
-          "year": 2024,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/cb5a742f9bbaf3260ce455c3e9e87d5328cc6a76",
-          "authors": "M. Alhalabi, Duaa Nasri, Widad Aji"
+          "title": "Systematic review with network meta\u2010analysis: comparative efficacy and safety of budesonide and mesalazine (mesalamine) for Crohn's disease",
+          "year": 2015,
+          "citations": 71,
+          "url": "https://www.semanticscholar.org/paper/a24ffc05e62dd8a551add138e03857a0d79b60b9",
+          "authors": "L. Moja, S. Danese, G. Fiorino"
         },
         {
-          "title": "Treatment of Crohn\u2019s Disease With Infliximab and Subsequent Development of Takayasu\u2019s Arteritis",
-          "year": 2024,
-          "citations": 2,
-          "url": "https://www.semanticscholar.org/paper/7099332bbbfe53371ea8651aad907802b40c05c2",
-          "authors": "K. Nomura, T. Shibuya, M. Furusho"
-        },
-        {
-          "title": "Serum Immune Profiling in Paediatric Crohn\u2019s Disease Demonstrates Stronger Immune Modulation With First-Line Infliximab Than Conventional Therapy and Pre-Treatment Profiles Predict Clinical Response to Both Treatments",
-          "year": 2023,
-          "citations": 14,
-          "url": "https://www.semanticscholar.org/paper/70d9fcd93f8f0beb6a5aa27f649d8afdca645ba9",
-          "authors": "M. Jongsma, L. Costes, I. Tindemans"
+          "title": "Mesalazine granule formulation improves clinical data in Crohn's disease compared with tablet formulation",
+          "year": 2020,
+          "citations": 8,
+          "url": "https://www.semanticscholar.org/paper/1ad8776fe75dc8e74a44bbf3016383cc58b70ad9",
+          "authors": "Satoshi Tamura, Natsuki Ishida, Takahiro Miyazu"
         }
       ],
       "most_cited_paper": {
@@ -1572,9 +2324,9 @@
       },
       "max_citations": 740,
       "faers_signal": "none",
-      "faers_total_reports": 190318,
+      "faers_total_reports": 8100,
       "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Prednisolone to Crohn's disease terms. Drug has 190318 total reports.",
+      "faers_interpretation": "No FAERS reports found linking Mesalazine to Crohn's disease terms. Drug has 8100 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -1584,9 +2336,798 @@
         "trichostatin A (1.476)",
         "(+)-JQ1 (1.475)"
       ],
-      "signature_interpretation": "Prednisolone was not found among the top 44 drugs that reverse the Crohn's disease gene signature. Top reversers: trichostatin A (1.517), vorinostat (1.486), \"\"\"7-fluoro-6-methoxy-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indol-1-one KLK-40\"\"\" (1.485)",
+      "signature_interpretation": "Mesalazine was not found among the top 44 drugs that reverse the Crohn's disease gene signature. Top reversers: trichostatin A (1.517), vorinostat (1.486), \"\"\"7-fluoro-6-methoxy-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indol-1-one KLK-40\"\"\" (1.485)",
       "ai_hypothesis": "of its anti-inflammatory properties.",
       "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "Phase 3",
+      "failed_trial_count": 4,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.7841,
+      "mr_genetic_targets": 3,
+      "mechanistic_hypothesis": "Mesalazine \u2014[treats]\u2192 Crohn's disease",
+      "kg_paths_text": "\u2022 Mesalazine \u2014[treats]\u2192 Crohn's disease\n\u2022 Mesalazine \u2014[treats]\u2192 Crohn's disease\n\u2022 Mesalazine \u2014[treats]\u2192 DOID:8778 \u2014[is treated by]\u2192 DB01033 \u2014[treats]\u2192 Crohn's disease",
+      "validation_experiments": [],
+      "novelty_score": 0.161,
+      "novelty_level": "ESTABLISHED",
+      "is_known_treatment": true,
+      "clinical_trials_total": 10,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT01514240",
+          "title": "Phase III Study of D9421-C 9 mg in Patients With Active Crohn's Disease in Japan",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "123",
+          "url": "https://clinicaltrials.gov/study/NCT01514240"
+        },
+        {
+          "nct_id": "NCT03553472",
+          "title": "Identifying Young Inflammatory Bowel Disease Patients at Risk for Herpes Zoster",
+          "status": "COMPLETED",
+          "phase": "N/A",
+          "enrollment": "97",
+          "url": "https://clinicaltrials.gov/study/NCT03553472"
+        },
+        {
+          "nct_id": "NCT00862121",
+          "title": "A Study With Pentasa in Patients With Active Crohn's Disease",
+          "status": "TERMINATED",
+          "phase": "PHASE3",
+          "enrollment": "20",
+          "url": "https://clinicaltrials.gov/study/NCT00862121"
+        },
+        {
+          "nct_id": "NCT01696942",
+          "title": "Cimzia Versus Mesalamine for Crohn's Recurrence",
+          "status": "TERMINATED",
+          "phase": "PHASE4",
+          "enrollment": "10",
+          "url": "https://clinicaltrials.gov/study/NCT01696942"
+        },
+        {
+          "nct_id": "NCT01505855",
+          "title": "Efficacy Study of Pneumococcal Vaccination in Crohn's Disease",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "197",
+          "url": "https://clinicaltrials.gov/study/NCT01505855"
+        }
+      ],
+      "trial_phases": {
+        "PHASE3": 2,
+        "PHASE4": 4,
+        "NA": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "10 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "395 PubMed articles on this drug-disease pair",
+        "Supported by 4 independent AI pillars",
+        "Highly cited paper (740 citations): \"Discovery and Preclinical Validation of Drug Indications Usi...\"",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.78, 3 genetic targets)"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1529,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00331",
+            "drug_name": "Metformin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00959",
+            "drug_name": "Methylprednisolone",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "moderate",
+        "summary": "CPIC-C (G6PD)",
+        "cpic": [
+          {
+            "gene": "G6PD",
+            "level": "C",
+            "guideline": "G6PD"
+          }
+        ],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.563,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.537,
+          "docking": 0.583,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 8,
+        "n_expressed": 7,
+        "mean_tpm_in_tissue": 40.22,
+        "max_tpm_in_tissue": 284.29,
+        "tissue_specificity": 1.0,
+        "context_modifier": 1.115
+      },
+      "disease_entity": "Disease::MESH:D003424",
+      "ensemble_prob": 0.9433,
+      "ensemble_features": {
+        "kg_score": 0.9988,
+        "degree_penalty": 0.7595,
+        "n_drug_targets": 10,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.6391
+      },
+      "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": -7.0,
+        "target_symbol": "PTGS2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "ANILINE",
+          "HYDROQUINONE"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "aniline",
+          "hydroquinone"
+        ]
+      }
+    },
+    {
+      "drug_name": "Alendronate",
+      "drug_id": "DB00630",
+      "disease_name": "Crohn's disease",
+      "combined_score": 0.5372,
+      "pillars_hit": 4,
+      "transe_rank": 100,
+      "transe_score": -11.4092,
+      "pykeen_score": -13.0632,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.5879999995231628,
+      "proximity_distance": 1.649999976158142,
+      "admet_score": 1.0,
+      "admet_flags": "clean",
+      "primekg_score": 0.2671,
+      "dti_score": 1.0,
+      "dti_best_target": "CHI3L1",
+      "kg_group_score": 0.3258,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.48330000042915344,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.5276,
+      "admet_multiplier": 1.0,
+      "efficacy_score": 0.5372,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 3,
+      "shared_targets": [
+        "MMP2",
+        "PTH",
+        "TNFSF11"
+      ],
+      "pubmed_total": 9,
+      "pubmed_treatment_total": 9,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "28296781",
+          "title": "Efficacy and safety of medical therapy for low bone mineral density in patients with Crohn disease: A systematic review with network meta-analysis.",
+          "authors": "Zhao X, Zhou C, Chen H, et al.",
+          "journal": "Medicine",
+          "year": "2017",
+          "abstract_snippet": "BACKGROUND: Low bone mineral density (BMD) is a frequent complication of inflammatory bowel disease (IBD), particularly in patients with Crohn disease (CD). The aim of our study is to determine the efficacy and safety of different drugs used to treat low BMD in patients with CD. METHODS: PUBMED/MEDL...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28296781/",
+          "total_results": 9
+        },
+        {
+          "pmid": "10566230",
+          "title": "[Bone demineralization in Crohn's disease, its diagnosis, therapy and prevention].",
+          "authors": "Koci\u00e1n J, Koci\u00e1nov\u00e1 J",
+          "journal": "Casopis lekaru ceskych",
+          "year": "1999",
+          "abstract_snippet": "In 20-60% of patients with Crohn's disease bone demineralization is found, usually osteoporosis, but also osteoporosis with malatic features. The cause is the reduced calcium intake (loss of appetite, lactose intolerance and malabsorption), reduced vitamin D intake and corticoid therapy. Nowadays th...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10566230/"
+        },
+        {
+          "pmid": "10982756",
+          "title": "Alendronate increases lumbar spine bone mineral density in patients with Crohn's disease.",
+          "authors": "Haderslev KV, Tjellesen L, Sorensen HA, et al.",
+          "journal": "Gastroenterology",
+          "year": "2000",
+          "abstract_snippet": "BACKGROUND & AIMS: Low bone mineral density (BMD) is a common complication of Crohn's disease and may lead to increased morbidity and mortality because of fractures. We investigated the effect of treatment with the bisphosphonate alendronate on bone mass and markers of bone remodeling in patients wi...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10982756/"
+        },
+        {
+          "pmid": "15959617",
+          "title": "Absorption of the oral bisphosphonate alendronate in osteoporotic patients with Crohn's disease.",
+          "authors": "Cremers SC, van Hogezand R, B\u00e4nffer D, et al.",
+          "journal": "Osteoporosis international : a journal established as result of cooperation between the European Foundation for Osteoporosis and the National Osteoporosis Foundation of the USA",
+          "year": "2005",
+          "abstract_snippet": "The absorption of bisphosphonates from the gut is poor. The question arises whether the absorption of alendronate, and thus its bioavailability, is further altered by the local inflammatory process in patients with Crohn's disease, thereby potentially affecting clinical outcome when used in the trea...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15959617/"
+        },
+        {
+          "pmid": "19525577",
+          "title": "Alendronate improves low bone mineral density induced by steroid therapy in Crohn's disease.",
+          "authors": "Tsujikawa T, Andoh A, Inatomi O, et al.",
+          "journal": "Internal medicine (Tokyo, Japan)",
+          "year": "2009",
+          "abstract_snippet": "AIM: We investigated whether steroid therapy for Crohn's disease (CD) patients influences bone mineral density (BMD), and whether alendronate is effective for improving this loss of BMD. METHODS: We recruited 16 outpatients with CD. The BMD of the whole body, the lumbar spine, and the proximal femor...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19525577/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Alendronate increases lumbar spine bone mineral density in patients with Crohn's disease.",
+          "year": 2000,
+          "citations": 160,
+          "url": "https://www.semanticscholar.org/paper/c6011e5b2853698d86c6e43869bf4c0f498fdfc2",
+          "authors": "K. Haderslev, L. Tjellesen, H. A. S\u00f8rensen"
+        },
+        {
+          "title": "Alendronate improves low bone mineral density induced by steroid therapy in Crohn's disease.",
+          "year": 2009,
+          "citations": 18,
+          "url": "https://www.semanticscholar.org/paper/9646cac4674db031ee1266a7345cf9c2c9a43c70",
+          "authors": "T. Tsujikawa, A. Andoh, O. Inatomi"
+        },
+        {
+          "title": "Absorption of the oral bisphosphonate alendronate in osteoporotic patients with Crohn\u2019s disease",
+          "year": 2005,
+          "citations": 21,
+          "url": "https://www.semanticscholar.org/paper/ee951d991cc84c269dc1dd0a6cd8b21e2d4e4c11",
+          "authors": "S. Cremers, R. Hogezand, D. B\u00e4nffer"
+        },
+        {
+          "title": "Bones and Crohn's: should we treat Crohn's disease patients with alendronate?",
+          "year": 2001,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/72b7800c526f40b635692a8e7046534cf5cc693d",
+          "authors": "Laurence S. Bailen"
+        },
+        {
+          "title": "[Bone demineralization in Crohn's disease, its diagnosis, therapy and prevention].",
+          "year": 1999,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/32e1e77e1019a0e80d7a7454bc45bf92a52971d4",
+          "authors": "J. Koci\u00e1n, J. Koci\u00e1nov\u00e1"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Computational Repositioning of the Anticonvulsant Topiramate for Inflammatory Bowel Disease",
+        "year": 2011,
+        "citations": 551,
+        "url": "https://www.semanticscholar.org/paper/65228a9f1b83b09af483779bb637fa6e037ae12f",
+        "authors": "J. Dudley, M. Sirota, M. Shenoy"
+      },
+      "max_citations": 551,
+      "faers_signal": "none",
+      "faers_total_reports": 53012,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Alendronate to Crohn's disease terms. Drug has 53012 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "trichostatin A (1.517)",
+        "vorinostat (1.486)",
+        "\"\"\"7-fluoro-6-methoxy-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indol-1-one KLK-40\"\"\" (1.485)",
+        "trichostatin A (1.476)",
+        "(+)-JQ1 (1.475)"
+      ],
+      "signature_interpretation": "Alendronate was not found among the top 44 drugs that reverse the Crohn's disease gene signature. Top reversers: trichostatin A (1.517), vorinostat (1.486), \"\"\"7-fluoro-6-methoxy-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indol-1-one KLK-40\"\"\" (1.485)",
+      "ai_hypothesis": "of its anti-inflammatory properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 1,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "low",
+              "entity_group": "Lab_value",
+              "score": 0.9929999709129333
+            },
+            {
+              "entity": "density",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.859000027179718
+            },
+            {
+              "entity": "b",
+              "entity_group": "Disease_disorder",
+              "score": 0.7480000257492065
+            },
+            {
+              "entity": "##md",
+              "entity_group": "Disease_disorder",
+              "score": 0.9279999732971191
+            },
+            {
+              "entity": "crohn ' s disease",
+              "entity_group": "Disease_disorder",
+              "score": 0.9980000257492065
+            },
+            {
+              "entity": "bisphosphonate",
+              "entity_group": "Medication",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "alendronate",
+              "entity_group": "Medication",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "bone",
+              "entity_group": "Biological_structure",
+              "score": 1.0
+            },
+            {
+              "entity": "mass",
+              "entity_group": "Sign_symptom",
+              "score": 1.0
+            }
+          ]
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.5276,
+      "mr_genetic_targets": 4,
+      "mechanistic_hypothesis": "Alendronate \u2014[treats]\u2192 DOID:11476 \u2014[is treated by]\u2192 DB00169 \u2014[is a therapeutic for]\u2192 Crohn's disease",
+      "kg_paths_text": "\u2022 Alendronate \u2014[treats]\u2192 DOID:11476 \u2014[is treated by]\u2192 DB00169 \u2014[is a therapeutic for]\u2192 Crohn's disease\n\u2022 Alendronate \u2014[is a therapeutic for]\u2192 MESH:D013585 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 Crohn's disease\n\u2022 Alendronate \u2014[is a therapeutic for]\u2192 MESH:D013585 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 Crohn's disease",
+      "validation_experiments": [],
+      "novelty_score": 0.419,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": false,
+      "clinical_trials_total": 1,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT00277251",
+          "title": "Alendronate Osteoporosis Study",
+          "status": "COMPLETED",
+          "phase": "PHASE2, PHASE3",
+          "enrollment": "20",
+          "url": "https://clinicaltrials.gov/study/NCT00277251"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 1,
+        "PHASE3": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "1 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "9 PubMed article(s) - limited literature",
+        "Supported by 4 independent AI pillars",
+        "Highly cited paper (551 citations): \"Computational Repositioning of the Anticonvulsant Topiramate...\"",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.53)"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 423,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00227",
+            "drug_name": "Lovastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00338",
+            "drug_name": "Omeprazole",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00213",
+            "drug_name": "Pantoprazole",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00175",
+            "drug_name": "Pravastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01098",
+            "drug_name": "Rosuvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00641",
+            "drug_name": "Simvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB13762",
+            "drug_name": "(+)-Rabeprazole",
+            "severity": "moderate"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "CPIC-D (FDPS) \u2022 PharmGKB-3 (VDR / rs1544410)",
+        "cpic": [
+          {
+            "gene": "FDPS",
+            "level": "D",
+            "guideline": ""
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "VDR",
+            "variant": "rs1544410",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/655386869"
+          },
+          {
+            "gene": "MVK",
+            "variant": "rs10161126",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1445401193"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.275,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.537,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.434
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 3,
+        "n_expressed": 0,
+        "mean_tpm_in_tissue": 0.18,
+        "max_tpm_in_tissue": 0.51,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.856
+      },
+      "disease_entity": "Disease::MESH:D003424",
+      "ensemble_prob": 0.5398,
+      "ensemble_features": {
+        "kg_score": 0.9919,
+        "degree_penalty": 0.8219,
+        "n_drug_targets": 4,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.4543
+      },
+      "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "GTE",
+          "PHOSPHOR"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "phosphor",
+          "gte_2_free_phos"
+        ]
+      }
+    },
+    {
+      "drug_name": "Methylprednisolone",
+      "drug_id": "DB00959",
+      "disease_name": "Crohn's disease",
+      "combined_score": 0.5362,
+      "pillars_hit": 4,
+      "transe_rank": 9,
+      "transe_score": -10.5455,
+      "pykeen_score": -12.3198,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0.7049,
+      "similar_to": "Prednisolone",
+      "mol_emb_similarity": 0.9505,
+      "mol_emb_similar_to": "Budesonide",
+      "gene_sig_score": 0.02,
+      "gene_sig_rank": 33,
+      "proximity_score": 0.625,
+      "proximity_distance": 1.5,
+      "admet_score": 0.7065,
+      "admet_flags": "clean",
+      "primekg_score": 0.2642,
+      "dti_score": 0.6603,
+      "dti_best_target": "IFNG",
+      "kg_group_score": 0.3572,
+      "structural_group_score": 0.9505,
+      "network_group_score": 0.4772999882698059,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.7587,
+      "admet_multiplier": 0.9413,
+      "efficacy_score": 0.5696,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 4,
+      "shared_targets": [
+        "CCL2",
+        "CXCL8",
+        "NR3C1",
+        "TNF"
+      ],
+      "pubmed_total": 161,
+      "pubmed_treatment_total": 154,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "31562236",
+          "title": "British Society of Gastroenterology consensus guidelines on the management of inflammatory bowel disease in adults.",
+          "authors": "Lamb CA, Kennedy NA, Raine T, et al.",
+          "journal": "Gut",
+          "year": "2019",
+          "abstract_snippet": "Ulcerative colitis and Crohn's disease are the principal forms of inflammatory bowel disease. Both represent chronic inflammation of the gastrointestinal tract, which displays heterogeneity in inflammatory and symptomatic burden between patients and within individuals over time. Optimal management r...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31562236/",
+          "total_results": 161
+        },
+        {
+          "pmid": "9096421",
+          "title": "Perianal Crohn's disease.",
+          "authors": "O'Donoghue DP, Hyland JM",
+          "journal": "European journal of gastroenterology & hepatology",
+          "year": "1997",
+          "abstract_snippet": "Perianal involvement in Crohn's disease is common but often mild and asymptomatic. Medical treatment of more severe disease has met with limited success. The guiding surgical principle in the management of perianal Crohn's disease is the drainage of sepsis and the preservation of sphincter integrity...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/9096421/"
+        },
+        {
+          "pmid": "28597827",
+          "title": "Inflammatory Bowel Disease in Childhood and Adolescence.",
+          "authors": "D\u00e4britz J, Gerner P, Enninger A, et al.",
+          "journal": "Deutsches Arzteblatt international",
+          "year": "2017",
+          "abstract_snippet": "BACKGROUND: The incidence of inflammatory bowel disease (IBD) in childhood and adolescence is 5-11 cases per 100 000 persons per year, corresponding to a new diagnosis of IBD in 800-1470 patients in Germany each year. METHODS: This review is based on pertinent publications retrieved by a selective s...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28597827/"
+        },
+        {
+          "pmid": "40447912",
+          "title": "A case of IgA nephropathy associated with Crohn's disease treated with enteric-coated budesonide.",
+          "authors": "Yoshida R, Nakayama T, Hashiguchi A, et al.",
+          "journal": "CEN case reports",
+          "year": "2025",
+          "abstract_snippet": "The gut-kidney axis has recently gained attention as a pathogenesis of IgA nephropathy (IgAN). In fact, the efficacy of target-release formulation of budesonide for IgAN has been reported in recent studies. On the other hand, there have been no reports yet on the efficacy of enteric-coated budesonid...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40447912/"
+        },
+        {
+          "pmid": "30731030",
+          "title": "Antibiotics for induction and maintenance of remission in Crohn's disease.",
+          "authors": "Townsend CM, Parker CE, MacDonald JK, et al.",
+          "journal": "The Cochrane database of systematic reviews",
+          "year": "2019",
+          "abstract_snippet": "BACKGROUND: Several antibiotics have been evaluated in Crohn's disease (CD), however randomised controlled trials (RCTs) have produced conflicting results. OBJECTIVES: To assess the efficacy and safety of antibiotics for induction and maintenance of remission in CD. SEARCH METHODS: We searched MEDLI...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30731030/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "ECCO Guidelines on Therapeutics in Crohn's Disease: Medical Treatment.",
+          "year": 2024,
+          "citations": 215,
+          "url": "https://www.semanticscholar.org/paper/2232498325182bd49bb2ac733feeb060347cfaa0",
+          "authors": "H. Gordon, Silvia Minozzi, U. Kopylov"
+        },
+        {
+          "title": "IgA Nephropathy Associated With Infliximab Treatment in Patients With Crohn\u2019s Disease: Study of IgA1 and IgA2 Expression in Glomeruli",
+          "year": 2025,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/4978d70d387d30e8f5d7f2623f5359cd38df5894",
+          "authors": "A. Mima, Takahiro Nakamoto, Takamasa Matsuki"
+        },
+        {
+          "title": "A case of IgA nephropathy associated with Crohn\u2019s disease treated with enteric-coated budesonide",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/bd5c6660e870e8f5cc6526dd6f0a0cb1f35e7f57",
+          "authors": "Ryuto Yoshida, T. Nakayama, A. Hashiguchi"
+        },
+        {
+          "title": "De Novo Crohn\u2019s Disease Treated with Ustekinumab in a Pediatric Liver Transplant Recipient with Tyrosinemia: A Case Report",
+          "year": 2026,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/5eee9329e79527cc2efe61227d436e260204cf74",
+          "authors": "Saray Mesonero-Cavia, Marta Freixas-Bermejo, M. \u00c1lvarez-Beltr\u00e1n"
+        },
+        {
+          "title": "Multi-system inflammatory syndrome in a child with Crohn's disease- a diagnostic dilemma",
+          "year": 2026,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/cff0e346c0d1077dcb987987d269e9d08bd98ff0",
+          "authors": "Barkha Dhanjani, Shivangi Tetarbe, Dhruv Gandhi"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Computational Repositioning of the Anticonvulsant Topiramate for Inflammatory Bowel Disease",
+        "year": 2011,
+        "citations": 551,
+        "url": "https://www.semanticscholar.org/paper/65228a9f1b83b09af483779bb637fa6e037ae12f",
+        "authors": "J. Dudley, M. Sirota, M. Shenoy"
+      },
+      "max_citations": 551,
+      "faers_signal": "none",
+      "faers_total_reports": 125031,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Methylprednisolone to Crohn's disease terms. Drug has 125031 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "trichostatin A (1.517)",
+        "vorinostat (1.486)",
+        "\"\"\"7-fluoro-6-methoxy-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indol-1-one KLK-40\"\"\" (1.485)",
+        "trichostatin A (1.476)",
+        "(+)-JQ1 (1.475)"
+      ],
+      "signature_interpretation": "Methylprednisolone was not found among the top 44 drugs that reverse the Crohn's disease gene signature. Top reversers: trichostatin A (1.517), vorinostat (1.486), \"\"\"7-fluoro-6-methoxy-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indol-1-one KLK-40\"\"\" (1.485)",
+      "ai_hypothesis": "of its anti-inflammatory properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
         {
           "relation_type": "unclear",
           "confidence": 0.0,
@@ -1602,12 +3143,12 @@
       "failed_trial_phase": "Phase 3",
       "failed_trial_count": 5,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.7661,
-      "mr_genetic_targets": 7,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mr_score": 0.7587,
+      "mr_genetic_targets": 4,
+      "mechanistic_hypothesis": "Methylprednisolone \u2014[treats]\u2192 Crohn's disease",
+      "kg_paths_text": "\u2022 Methylprednisolone \u2014[treats]\u2192 Crohn's disease\n\u2022 Methylprednisolone \u2014[is agonized by]\u2192 gene-2908 \u2014[is an agonist of]\u2192 DB00620 \u2014[treats]\u2192 Crohn's disease\n\u2022 Methylprednisolone \u2014[is agonized by]\u2192 gene-2908 \u2014[is an agonist of]\u2192 DB01380 \u2014[treats]\u2192 Crohn's disease",
       "validation_experiments": [],
-      "novelty_score": 0.3,
+      "novelty_score": 0.161,
       "novelty_level": "ESTABLISHED",
       "is_known_treatment": true,
       "clinical_trials_total": 10,
@@ -1664,127 +3205,297 @@
       "confidence_reasons": [
         "10 clinical trial(s) found on ClinicalTrials.gov",
         "Phase 3 trial exists",
-        "600 PubMed articles on this drug-disease pair",
-        "Supported by 6 independent AI pillars",
-        "Highly cited paper (740 citations): \"Discovery and Preclinical Validation of Drug Indications Usi...\"",
+        "161 PubMed articles on this drug-disease pair",
+        "Supported by 4 independent AI pillars",
+        "High molecular similarity (0.70) to Prednisolone",
+        "Highly cited paper (551 citations): \"Computational Repositioning of the Anticonvulsant Topiramate...\"",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.77, 7 genetic targets)",
-        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
-      ]
+        "Strong causal genetic evidence (MR score: 0.76, 4 genetic targets)"
+      ],
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1299,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (ABCB1 / rs1045642)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "ABCB1",
+            "variant": "rs1045642",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1444704881"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.656,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.536,
+          "docking": 0.921,
+          "pharos": 0.0,
+          "literature": 0.959
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 4,
+        "n_expressed": 3,
+        "mean_tpm_in_tissue": 7.98,
+        "max_tpm_in_tissue": 17.46,
+        "tissue_specificity": 0.327,
+        "context_modifier": 0.975
+      },
+      "disease_entity": "Disease::MESH:D003424",
+      "ensemble_prob": 0.9892,
+      "ensemble_features": {
+        "kg_score": 0.9994,
+        "degree_penalty": 0.7636,
+        "n_drug_targets": 8,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 1.9459
+      },
+      "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": -11.05,
+        "target_symbol": "NR3C1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
-      "drug_name": "Demannose",
-      "drug_id": "DB12907",
+      "drug_name": "Budesonide",
+      "drug_id": "DB01222",
       "disease_name": "Crohn's disease",
-      "combined_score": 1.0964,
-      "transe_rank": 83,
+      "combined_score": 0.5244,
       "pillars_hit": 4,
+      "transe_rank": 19,
+      "transe_score": -10.7619,
+      "pykeen_score": -12.2428,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0.02,
+      "gene_sig_rank": 33,
+      "proximity_score": 0.6119999885559082,
+      "proximity_distance": 1.5499999523162842,
+      "admet_score": 0.6427,
+      "admet_flags": "clean",
+      "primekg_score": 0.265,
+      "dti_score": 1.0,
+      "dti_best_target": "CHI3L1",
+      "kg_group_score": 0.3129,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.4602999985218048,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.7632,
+      "admet_multiplier": 0.9285,
+      "efficacy_score": 0.5648,
+      "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 66,
-      "pubmed_treatment_total": 29,
+      "shared_target_count": 13,
+      "shared_targets": [
+        "CCL2",
+        "CSF2",
+        "CXCL8",
+        "ICAM1",
+        "IL10",
+        "MMP9",
+        "NFKB1",
+        "NR3C1",
+        "PPARG",
+        "SMAD3",
+        "TLR4",
+        "TNF",
+        "VDR"
+      ],
+      "pubmed_total": 395,
+      "pubmed_treatment_total": 389,
       "pubmed_repurposing_total": 0,
       "key_papers": [
         {
-          "pmid": "39080486",
-          "title": "A unique serum IgG glycosylation signature predicts development of Crohn's disease and is associated with pathogenic antibodies to mannose glycan.",
-          "authors": "Gaifem J, Rodrigues CS, Petralia F, et al.",
-          "journal": "Nature immunology",
-          "year": "2024",
-          "abstract_snippet": "Inflammatory bowel disease (IBD) is characterized by chronic inflammation in the gut. There is growing evidence in Crohn's disease (CD) of the existence of a preclinical period characterized by immunological changes preceding symptom onset that starts years before diagnosis. Gaining insight into thi...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39080486/",
-          "total_results": 66
+          "pmid": "31562236",
+          "title": "British Society of Gastroenterology consensus guidelines on the management of inflammatory bowel disease in adults.",
+          "authors": "Lamb CA, Kennedy NA, Raine T, et al.",
+          "journal": "Gut",
+          "year": "2019",
+          "abstract_snippet": "Ulcerative colitis and Crohn's disease are the principal forms of inflammatory bowel disease. Both represent chronic inflammation of the gastrointestinal tract, which displays heterogeneity in inflammatory and symptomatic burden between patients and within individuals over time. Optimal management r...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31562236/",
+          "total_results": 395
         },
         {
-          "pmid": "34589398",
-          "title": "Receptor-mediated targeted drug delivery systems for treatment of inflammatory bowel disease: Opportunities and emerging strategies.",
-          "authors": "Liu P, Gao C, Chen H, et al.",
-          "journal": "Acta pharmaceutica Sinica. B",
+          "pmid": "36753033",
+          "title": "Mild Crohn's Disease: Definition and Management.",
+          "authors": "Claytor J, Kumar P, Ananthakrishnan AN, et al.",
+          "journal": "Current gastroenterology reports",
+          "year": "2023",
+          "abstract_snippet": "PURPOSE OF REVIEW: Crohn's Disease (CD) is a chronic inflammatory disease that can lead to progressive damage to the gastrointestinal tract and significant disability. Early, \"top-down\" biologic therapy is recommended in moderate-to-severe CD to induce remission and to prevent hospitalization and co...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36753033/"
+        },
+        {
+          "pmid": "30007787",
+          "title": "Reviewing the therapeutic role of budesonide in Crohn's disease.",
+          "authors": "L\u00f3pez-Sanrom\u00e1n A, Clofent J, Garcia-Planella E, et al.",
+          "journal": "Gastroenterologia y hepatologia",
+          "year": "2018",
+          "abstract_snippet": "Oral budesonide is a glucocorticoid of primarily local action. In the field of digestive diseases, it is used mainly in inflammatory bowel disease, but also in other indications. This review addresses the pharmacology, pharmacodynamics and therapeutic use of budesonide. Its approved indications are ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30007787/"
+        },
+        {
+          "pmid": "32681228",
+          "title": "Randomized Trial of Ciprofloxacin Doxycycline and Hydroxychloroquine Versus Budesonide in Active Crohn's Disease.",
+          "authors": "Rhodes JM, Subramanian S, Flanagan PK, et al.",
+          "journal": "Digestive diseases and sciences",
           "year": "2021",
-          "abstract_snippet": "Inflammatory bowel disease (IBD) is a chronic intestinal disease with painful clinical manifestations and high risks of cancerization. With no curative therapy for IBD at present, the development of effective therapeutics is highly advocated. Drug delivery systems have been extensively studied to tr...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34589398/"
+          "abstract_snippet": "BACKGROUND: Increased mucosa-associated E. coli are present in Crohn's disease, but their role in pathogenesis is uncertain. AIMS: To assess efficacy and safety of an antibiotic/hydroxychloroquine combination effective against E. coli inside macrophages. METHODS: Adults with moderately active diseas...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32681228/"
         },
         {
-          "pmid": "38040100",
-          "title": "From ASCA breakthrough in Crohn's disease and Candida albicans research to thirty years of investigations about their meaning in human health.",
-          "authors": "Sendid B, Cornu M, Cordier C, et al.",
-          "journal": "Autoimmunity reviews",
-          "year": "2024",
-          "abstract_snippet": "Anti-Saccharomyces cerevisiae antibodies (ASCA) are human antibodies that can be detected using an enzyme-linked immunosorbent assay involving a mannose polymer (mannan) extracted from the cell wall of the yeast S. cerevisiae. The ASCA test was developed in 1993 with the aim of differentiating the s...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38040100/"
-        },
-        {
-          "pmid": "28506090",
-          "title": "Rational design strategies for FimH antagonists: new drugs on the horizon for urinary tract infection and Crohn's disease.",
-          "authors": "Mydock-McGrane LK, Hannan TJ, Janetka JW",
-          "journal": "Expert opinion on drug discovery",
-          "year": "2017",
-          "abstract_snippet": "The bacterial adhesin FimH is a virulence factor and an attractive therapeutic target for urinary tract infection (UTI) and Crohn's Disease (CD). Located on type 1 pili of uropathogenic E. coli (UPEC), the FimH adhesin plays an integral role in the pathogenesis of UPEC. Recent efforts have culminate...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/28506090/"
-        },
-        {
-          "pmid": "26651364",
-          "title": "Mannose-derived FimH antagonists: a promising anti-virulence therapeutic strategy for urinary tract infections and Crohn's disease.",
-          "authors": "Mydock-McGrane LK, Cusumano ZT, Janetka JW",
-          "journal": "Expert opinion on therapeutic patents",
-          "year": "2016",
-          "abstract_snippet": "INTRODUCTION: Type 1 pili are utilized by Gram-negative bacteria to adhere to host tissue and thus are a key virulence factor in urinary tract infections (UTIs) and Crohn's disease (CD). This adhesion is mediated through specific binding of the terminal adhesin, FimH, to mannosylated host glycoprote...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/26651364/"
+          "pmid": "19611401",
+          "title": "Budesonide for Crohn's disease.",
+          "authors": "Seow CH, Benchimol EI, Steinhart AH, et al.",
+          "journal": "Expert opinion on drug metabolism & toxicology",
+          "year": "2009",
+          "abstract_snippet": "Crohn's disease is characterized by recurrent transmural inflammation of the gastrointestinal tract, most commonly, the terminal ileum and the colon. Therapy is aimed at breaking the cycle of inflammation by inducing and maintaining remission. Current effective therapies include systemic corticoster...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19611401/"
         }
       ],
       "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "Association of NOD2 leucine-rich repeat variants with susceptibility to Crohn's disease",
-          "year": 2001,
-          "citations": 5700,
-          "url": "https://www.semanticscholar.org/paper/91e4a385304126274f4b148a58b806f67d15991c",
-          "authors": "J. Hugot, M. Chamaillard, H. Zouali"
+          "title": "A case of IgA nephropathy associated with Crohn\u2019s disease treated with enteric-coated budesonide",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/bd5c6660e870e8f5cc6526dd6f0a0cb1f35e7f57",
+          "authors": "Ryuto Yoshida, T. Nakayama, A. Hashiguchi"
         },
         {
-          "title": "A frameshift mutation in NOD2 associated with susceptibility to Crohn's disease",
-          "year": 2001,
-          "citations": 5094,
-          "url": "https://www.semanticscholar.org/paper/9539bd9020db3ee3d98aec0a70c1240802f77417",
-          "authors": "Y. Ogura, D. Bonen, N. Inohara"
+          "title": "Phage intervention improves colitis and response to corticosteroids by attenuating virulence of Crohn\u2019s disease-associated bacteria",
+          "year": 2025,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/db1687e2dc658b5c94795b332392050b20ec09d3",
+          "authors": "Kyle Jackson, H. Galipeau, A. Hann"
         },
         {
-          "title": "Development of a Crohn's disease activity index. National Cooperative Crohn's Disease Study.",
-          "year": 1976,
-          "citations": 3606,
-          "url": "https://www.semanticscholar.org/paper/ad6b876642b0509cb2e2dac94d986778eb148836",
-          "authors": "W. Best, J. Becktel, J. Singleton"
+          "title": "Oral Budesonide and low serum albumin levels at surgery are associated with a higher risk of postoperative intra-abdominal septic complications after primary ileocaecal resection for Crohn's disease: A retrospective analysis of 853 consecutive patients.",
+          "year": 2024,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/aa2129e1b5bd77feb916e445c00b16ecba493467",
+          "authors": "Gerti Dajti, S. Cardelli, G. Calini"
         },
         {
-          "title": "[Crohn's disease].",
-          "year": 1967,
-          "citations": 3754,
-          "url": "https://www.semanticscholar.org/paper/5206afd91de67fd98dc870657908602e41dc85e2",
-          "authors": "I. Leodolter"
+          "title": "Mild Crohn\u2019s Disease: Definition and Management",
+          "year": 2023,
+          "citations": 21,
+          "url": "https://www.semanticscholar.org/paper/61f6d3c0d96177385bbdb6f1e77f50cdab5d341c",
+          "authors": "J. Claytor, Pushkar Kumar, A. Ananthakrishnan"
         },
         {
-          "title": "Infliximab, azathioprine, or combination therapy for Crohn's disease.",
-          "year": 2010,
-          "citations": 2964,
-          "url": "https://www.semanticscholar.org/paper/e1dd7e1427a02136dda28467895a8ede6c26e334",
-          "authors": "J. Colombel, W. Sandborn, W. Reinisch"
+          "title": "Understanding Discordance between In Vitro Dissolution, Local Gut and Systemic Bioequivalence of Budesonide in Healthy and Crohn\u2019s Disease Patients through PBPK Modeling",
+          "year": 2023,
+          "citations": 10,
+          "url": "https://www.semanticscholar.org/paper/2fbbc1c2794121a44b5c84eae88724e5a6b3d62a",
+          "authors": "Chun-li Han, Tiancheng Sun, Siri Kalyan Chirumamilla"
         }
       ],
       "most_cited_paper": {
-        "title": "Association of NOD2 leucine-rich repeat variants with susceptibility to Crohn's disease",
-        "year": 2001,
-        "citations": 5700,
-        "url": "https://www.semanticscholar.org/paper/91e4a385304126274f4b148a58b806f67d15991c",
-        "authors": "J. Hugot, M. Chamaillard, H. Zouali"
+        "title": "Discovery and Preclinical Validation of Drug Indications Using Compendia of Public Gene Expression Data",
+        "year": 2011,
+        "citations": 740,
+        "url": "https://www.semanticscholar.org/paper/b2b8f9ae9c48f7183fb2e52ed014ba5f048a8ad4",
+        "authors": "M. Sirota, J. Dudley, Jeewon Kim"
       },
-      "max_citations": 5700,
+      "max_citations": 740,
       "faers_signal": "none",
-      "faers_total_reports": 251,
+      "faers_total_reports": 57603,
       "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Demannose to Crohn's disease terms. Drug has 251 total reports.",
+      "faers_interpretation": "No FAERS reports found linking Budesonide to Crohn's disease terms. Drug has 57603 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -1794,8 +3505,8 @@
         "trichostatin A (1.476)",
         "(+)-JQ1 (1.475)"
       ],
-      "signature_interpretation": "Demannose was not found among the top 44 drugs that reverse the Crohn's disease gene signature. Top reversers: trichostatin A (1.517), vorinostat (1.486), \"\"\"7-fluoro-6-methoxy-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indol-1-one KLK-40\"\"\" (1.485)",
-      "ai_hypothesis": "of its association with the development of the disease.",
+      "signature_interpretation": "Budesonide was not found among the top 44 drugs that reverse the Crohn's disease gene signature. Top reversers: trichostatin A (1.517), vorinostat (1.486), \"\"\"7-fluoro-6-methoxy-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indol-1-one KLK-40\"\"\" (1.485)",
+      "ai_hypothesis": "of its anti-inflammatory properties.",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
@@ -1814,130 +3525,230 @@
         }
       ],
       "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
+      "failed_trial_phase": "Phase 1",
+      "failed_trial_count": 2,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.746,
-      "mr_genetic_targets": 2,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mr_score": 0.7632,
+      "mr_genetic_targets": 10,
+      "mechanistic_hypothesis": "Budesonide \u2014[is a therapeutic for]\u2192 Crohn's disease",
+      "kg_paths_text": "\u2022 Budesonide \u2014[is a therapeutic for]\u2192 Crohn's disease\n\u2022 Budesonide \u2014[downregulates]\u2192 gene-7298 \u2014[is a target of]\u2192 DB00563 \u2014[treats]\u2192 Crohn's disease\n\u2022 Budesonide \u2014[downregulates]\u2192 gene-7298 \u2014[is a target of]\u2192 DB00563 \u2014[treats]\u2192 Crohn's disease",
       "validation_experiments": [],
-      "novelty_score": 0.84,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "66 PubMed articles on this drug-disease pair",
-        "Supported by 4 independent AI pillars",
-        "Highly cited paper (5700 citations): \"Association of NOD2 leucine-rich repeat variants with suscep...\"",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.75, 2 genetic targets)"
-      ]
-    },
-    {
-      "drug_name": "Calcipotriol",
-      "drug_id": "DB02300",
-      "disease_name": "Crohn's disease",
-      "combined_score": 1.094599962234497,
-      "transe_rank": 156,
-      "pillars_hit": 7,
-      "mol_similarity": 0.5139,
-      "similar_to": "Cholecalciferol",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
+      "novelty_score": 0.157,
+      "novelty_level": "ESTABLISHED",
+      "is_known_treatment": true,
+      "clinical_trials_total": 10,
+      "clinical_trials": [
         {
-          "title": "Clinical Benefits of Switching from Original Infliximab to its Biosimilar (CT-P13) as a Potential TNF-\u03b1 Inhibitor",
-          "year": 2020,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/5474a57706432e80a49afc31c9d95f72035188ea",
-          "authors": "A. Kumari, D. Prasad, Sahil Kumar"
+          "nct_id": "NCT05542355",
+          "title": "EXL01 in the Maintenance of Steroid-induced Clinical Response/Remission in Participants With Mild to Moderate Crohn's Disease",
+          "status": "TERMINATED",
+          "phase": "PHASE1",
+          "enrollment": "8",
+          "url": "https://clinicaltrials.gov/study/NCT05542355"
         },
         {
-          "title": "Association of NOD2 leucine-rich repeat variants with susceptibility to Crohn's disease",
-          "year": 2001,
-          "citations": 5700,
-          "url": "https://www.semanticscholar.org/paper/91e4a385304126274f4b148a58b806f67d15991c",
-          "authors": "J. Hugot, M. Chamaillard, H. Zouali"
+          "nct_id": "NCT04233463",
+          "title": "The Effect of Oral Polymeric Diet Enriched With TGF-beta 2 (Modulen) on Clinical Response and Mucosal Healing in Adult Patients With Newly Diagnosed Crohn's Disease",
+          "status": "UNKNOWN",
+          "phase": "NA",
+          "enrollment": "50",
+          "url": "https://clinicaltrials.gov/study/NCT04233463"
         },
         {
-          "title": "A frameshift mutation in NOD2 associated with susceptibility to Crohn's disease",
-          "year": 2001,
-          "citations": 5094,
-          "url": "https://www.semanticscholar.org/paper/9539bd9020db3ee3d98aec0a70c1240802f77417",
-          "authors": "Y. Ogura, D. Bonen, N. Inohara"
+          "nct_id": "NCT01453946",
+          "title": "Safety and Maintenance Study of Entocort for Children With Crohn's Disease",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "55",
+          "url": "https://clinicaltrials.gov/study/NCT01453946"
         },
         {
-          "title": "Development of a Crohn's disease activity index. National Cooperative Crohn's Disease Study.",
-          "year": 1976,
-          "citations": 3606,
-          "url": "https://www.semanticscholar.org/paper/ad6b876642b0509cb2e2dac94d986778eb148836",
-          "authors": "W. Best, J. Becktel, J. Singleton"
+          "nct_id": "NCT04921033",
+          "title": "Exclusive Enteral Nutrition in Patients With Ileocaecal Crohn's Disease",
+          "status": "UNKNOWN",
+          "phase": "PHASE3",
+          "enrollment": "256",
+          "url": "https://clinicaltrials.gov/study/NCT04921033"
         },
         {
-          "title": "[Crohn's disease].",
-          "year": 1967,
-          "citations": 3754,
-          "url": "https://www.semanticscholar.org/paper/5206afd91de67fd98dc870657908602e41dc85e2",
-          "authors": "I. Leodolter"
+          "nct_id": "NCT01444092",
+          "title": "Safety Study of Entocort for Children With Crohn's Disease",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "123",
+          "url": "https://clinicaltrials.gov/study/NCT01444092"
         }
       ],
-      "most_cited_paper": {
-        "title": "Association of NOD2 leucine-rich repeat variants with susceptibility to Crohn's disease",
-        "year": 2001,
-        "citations": 5700,
-        "url": "https://www.semanticscholar.org/paper/91e4a385304126274f4b148a58b806f67d15991c",
-        "authors": "J. Hugot, M. Chamaillard, H. Zouali"
+      "trial_phases": {
+        "PHASE1": 2,
+        "NA": 1,
+        "PHASE3": 4,
+        "PHASE2": 1,
+        "PHASE4": 1
       },
-      "max_citations": 5700,
-      "faers_signal": "none",
-      "faers_total_reports": 1391,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Calcipotriol to Crohn's disease terms. Drug has 1391 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "trichostatin A (1.517)",
-        "vorinostat (1.486)",
-        "\"\"\"7-fluoro-6-methoxy-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indol-1-one KLK-40\"\"\" (1.485)",
-        "trichostatin A (1.476)",
-        "(+)-JQ1 (1.475)"
-      ],
-      "signature_interpretation": "Calcipotriol was not found among the top 44 drugs that reverse the Crohn's disease gene signature. Top reversers: trichostatin A (1.517), vorinostat (1.486), \"\"\"7-fluoro-6-methoxy-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indol-1-one KLK-40\"\"\" (1.485)",
-      "ai_hypothesis": "of its ability to inhibit the production of proinflammatory cytokines.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.8256,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 1.0,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "confidence_reasons": [
-        "Supported by 7 independent AI pillars",
-        "High molecular similarity (0.51) to Cholecalciferol",
-        "Highly cited paper (5700 citations): \"Association of NOD2 leucine-rich repeat variants with suscep...\"",
+        "10 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "395 PubMed articles on this drug-disease pair",
+        "Supported by 4 independent AI pillars",
+        "Highly cited paper (740 citations): \"Discovery and Preclinical Validation of Drug Indications Usi...\"",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.83, 1 genetic targets)"
-      ]
+        "Strong causal genetic evidence (MR score: 0.76, 10 genetic targets)"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1887,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "CPIC-D (CRHR1) \u2022 PharmGKB-3 (GLCCI1 / rs37973)",
+        "cpic": [
+          {
+            "gene": "CRHR1",
+            "level": "D",
+            "guideline": ""
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "GLCCI1",
+            "variant": "rs37973",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/827863843"
+          },
+          {
+            "gene": "",
+            "variant": "rs2392165",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451123485"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.68,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.524,
+          "docking": 0.989,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 13,
+        "n_expressed": 11,
+        "mean_tpm_in_tissue": 52.01,
+        "max_tpm_in_tissue": 550.48,
+        "tissue_specificity": 1.0,
+        "context_modifier": 1.125
+      },
+      "disease_entity": "Disease::MESH:D003424",
+      "ensemble_prob": 0.9892,
+      "ensemble_features": {
+        "kg_score": 0.9993,
+        "degree_penalty": 0.7521,
+        "n_drug_targets": 15,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.0794
+      },
+      "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": -11.87,
+        "target_symbol": "NR3C1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     }
-  ]
+  ],
+  "disease_entity": "Disease::MESH:D003424",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
+  "docking_axis": {
+    "source": "chembl_bioactivity_proxy + not_wired fallback",
+    "n_disease_genes": 200,
+    "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
+  }
 }

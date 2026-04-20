@@ -45,8 +45,10 @@
       "efficacy_score": 0.5078999996185303,
       "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "GAST"
+      ],
       "pubmed_total": 1,
       "pubmed_treatment_total": 0,
       "pubmed_repurposing_total": 0,
@@ -242,12 +244,16 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Heart - Left Ventricle",
           "Whole Blood"
         ],
-        "n_genes": 0
+        "n_genes": 1,
+        "n_expressed": 0,
+        "mean_tpm_in_tissue": 0.0,
+        "max_tpm_in_tissue": 0.0,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.85
       },
       "ensemble_prob": 0.4324,
       "ensemble_features": {
@@ -266,7 +272,25 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D014355"
+      "disease_entity": "Disease::MESH:D014355",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "ALIPHATIC",
+          "CYANATE",
+          "ENAMINE",
+          "IMIDAZOLE",
+          "IMINE"
+        ],
+        "n_alerts": 6,
+        "alert_names": [
+          "imidazole_B(2)",
+          "Aliphatic_long_chain",
+          "cyanate_/aminonitrile_/thiocyanate",
+          "enamine",
+          "imine_1"
+        ]
+      }
     },
     {
       "drug_name": "Methyldopa",
@@ -302,8 +326,10 @@
       "efficacy_score": 0.4542999863624573,
       "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "CRP"
+      ],
       "pubmed_total": 0,
       "pubmed_treatment_total": 0,
       "pubmed_repurposing_total": 0,
@@ -481,12 +507,16 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Heart - Left Ventricle",
           "Whole Blood"
         ],
-        "n_genes": 0
+        "n_genes": 1,
+        "n_expressed": 0,
+        "mean_tpm_in_tissue": 0.09,
+        "max_tpm_in_tissue": 0.09,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.853
       },
       "ensemble_prob": 0.2621,
       "ensemble_features": {
@@ -505,7 +535,18 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D014355"
+      "disease_entity": "Disease::MESH:D014355",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "CATECHOL"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "catechol_A(92)",
+          "catechol"
+        ]
+      }
     },
     {
       "drug_name": "Forodesine",
@@ -669,12 +710,16 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Heart - Left Ventricle",
           "Whole Blood"
         ],
-        "n_genes": 0
+        "n_genes": 9,
+        "n_expressed": 5,
+        "mean_tpm_in_tissue": 52.21,
+        "max_tpm_in_tissue": 306.45,
+        "tissue_specificity": 0.36,
+        "context_modifier": 1.048
       },
       "ensemble_prob": 0.0,
       "ensemble_features": {
@@ -693,7 +738,13 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D014355"
+      "disease_entity": "Disease::MESH:D014355",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
       "drug_name": "Tacrolimus",
@@ -1020,12 +1071,16 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Heart - Left Ventricle",
           "Whole Blood"
         ],
-        "n_genes": 0
+        "n_genes": 9,
+        "n_expressed": 5,
+        "mean_tpm_in_tissue": 52.21,
+        "max_tpm_in_tissue": 306.45,
+        "tissue_specificity": 0.36,
+        "context_modifier": 1.048
       },
       "ensemble_prob": 0.5069,
       "ensemble_features": {
@@ -1044,7 +1099,19 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D014355"
+      "disease_entity": "Disease::MESH:D014355",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "DIKETO",
+          "ISOLATED"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "diketo_group",
+          "isolated_alkene"
+        ]
+      }
     },
     {
       "drug_name": "Ceruletide",
@@ -1080,8 +1147,10 @@
       "efficacy_score": 0.3776000142097473,
       "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "GAST"
+      ],
       "pubmed_total": 3,
       "pubmed_treatment_total": 0,
       "pubmed_repurposing_total": 0,
@@ -1249,12 +1318,16 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Heart - Left Ventricle",
           "Whole Blood"
         ],
-        "n_genes": 0
+        "n_genes": 1,
+        "n_expressed": 0,
+        "mean_tpm_in_tissue": 0.0,
+        "max_tpm_in_tissue": 0.0,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.85
       },
       "ensemble_prob": 0.0,
       "ensemble_features": {
@@ -1273,7 +1346,17 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D014355"
+      "disease_entity": "Disease::MESH:D014355",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "SULFONIC"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "Sulfonic_acid_2"
+        ]
+      }
     },
     {
       "drug_name": "Octreotide",
@@ -1309,8 +1392,10 @@
       "efficacy_score": 0.3637999892234802,
       "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "GAST"
+      ],
       "pubmed_total": 1,
       "pubmed_treatment_total": 0,
       "pubmed_repurposing_total": 0,
@@ -1500,12 +1585,16 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Heart - Left Ventricle",
           "Whole Blood"
         ],
-        "n_genes": 0
+        "n_genes": 1,
+        "n_expressed": 0,
+        "mean_tpm_in_tissue": 0.0,
+        "max_tpm_in_tissue": 0.0,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.85
       },
       "ensemble_prob": 0.0263,
       "ensemble_features": {
@@ -1524,7 +1613,19 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D014355"
+      "disease_entity": "Disease::MESH:D014355",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "ALIPHATIC",
+          "DISULPHIDE"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "Aliphatic_long_chain",
+          "disulphide"
+        ]
+      }
     },
     {
       "drug_name": "Hydrocortisone",
@@ -1560,8 +1661,15 @@
       "efficacy_score": 0.38429999351501465,
       "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 6,
+      "shared_targets": [
+        "CD4",
+        "CD8A",
+        "CRP",
+        "GAST",
+        "HGF",
+        "TGFB1"
+      ],
       "pubmed_total": 6,
       "pubmed_treatment_total": 2,
       "pubmed_repurposing_total": 0,
@@ -1803,12 +1911,16 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Heart - Left Ventricle",
           "Whole Blood"
         ],
-        "n_genes": 0
+        "n_genes": 6,
+        "n_expressed": 4,
+        "mean_tpm_in_tissue": 59.91,
+        "max_tpm_in_tissue": 306.45,
+        "tissue_specificity": 0.51,
+        "context_modifier": 1.071
       },
       "ensemble_prob": 0.0547,
       "ensemble_features": {
@@ -1827,7 +1939,13 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D014355"
+      "disease_entity": "Disease::MESH:D014355",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
       "drug_name": "Hemi-Babim",
@@ -1991,12 +2109,16 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Heart - Left Ventricle",
           "Whole Blood"
         ],
-        "n_genes": 0
+        "n_genes": 9,
+        "n_expressed": 5,
+        "mean_tpm_in_tissue": 52.21,
+        "max_tpm_in_tissue": 306.45,
+        "tissue_specificity": 0.36,
+        "context_modifier": 1.048
       },
       "ensemble_prob": 0.0,
       "ensemble_features": {
@@ -2015,7 +2137,18 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D014355"
+      "disease_entity": "Disease::MESH:D014355",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "IMINE"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "imine_1",
+          "imine_2"
+        ]
+      }
     },
     {
       "drug_name": "Amphotericin B",
@@ -2294,12 +2427,16 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Heart - Left Ventricle",
           "Whole Blood"
         ],
-        "n_genes": 0
+        "n_genes": 9,
+        "n_expressed": 5,
+        "mean_tpm_in_tissue": 52.21,
+        "max_tpm_in_tissue": 306.45,
+        "tissue_specificity": 0.36,
+        "context_modifier": 1.048
       },
       "ensemble_prob": 0.4688,
       "ensemble_features": {
@@ -2318,7 +2455,17 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D014355"
+      "disease_entity": "Disease::MESH:D014355",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "GTE"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "gte_7_aliphatic_OH"
+        ]
+      }
     },
     {
       "drug_name": "Fusidic Acid",
@@ -2533,12 +2680,16 @@
         }
       },
       "tissue_context": {
-        "context_modifier": 1.0,
         "tissues": [
           "Heart - Left Ventricle",
           "Whole Blood"
         ],
-        "n_genes": 0
+        "n_genes": 9,
+        "n_expressed": 5,
+        "mean_tpm_in_tissue": 52.21,
+        "max_tpm_in_tissue": 306.45,
+        "tissue_specificity": 0.36,
+        "context_modifier": 1.048
       },
       "ensemble_prob": 0.1956,
       "ensemble_features": {
@@ -2557,14 +2708,26 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D014355"
+      "disease_entity": "Disease::MESH:D014355",
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "ISOLATED",
+          "MICHAEL"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "isolated_alkene",
+          "Michael_acceptor_1"
+        ]
+      }
     }
   ],
   "ensemble_version": "v5",
   "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
-    "n_disease_genes": 0,
+    "n_disease_genes": 9,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
   },
   "disease_entity": "Disease::MESH:D014355"

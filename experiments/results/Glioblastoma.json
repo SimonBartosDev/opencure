@@ -1,27 +1,74 @@
 {
   "disease": "Glioblastoma",
   "status": "completed",
-  "timestamp": "2026-04-17T17:21:13.994339",
-  "elapsed_seconds": 997.7,
+  "timestamp": "2026-04-19T20:27:08.204837",
+  "elapsed_seconds": 777.1,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
-    "HIGH": 4,
-    "LOW": 6
+    "HIGH": 8,
+    "LOW": 2
   },
+  "pipeline_version": "v5",
+  "data_manifest_hash": "2da2aa88f2457d1b",
   "candidates": [
     {
       "drug_name": "Paclitaxel",
       "drug_id": "DB01229",
       "disease_name": "Glioblastoma",
-      "combined_score": 1.1253999471664429,
+      "combined_score": 0.5117999911308289,
+      "pillars_hit": 4,
       "transe_rank": 7,
-      "pillars_hit": 7,
+      "transe_score": -9.7312,
+      "pykeen_score": -11.8365,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
+      "mol_emb_similarity": 0.9334,
+      "mol_emb_similar_to": "Sirolimus",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.7879999876022339,
+      "proximity_distance": 0.8500000238418579,
+      "admet_score": 0.4859,
+      "admet_flags": "hERG=0.85",
+      "primekg_score": 0.2583,
+      "dti_score": 1.0,
+      "dti_best_target": "MTOR",
+      "kg_group_score": 0.4273,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.5896999835968018,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.4377,
+      "admet_multiplier": 0.8972,
+      "efficacy_score": 0.5703999996185303,
+      "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 73,
+      "shared_targets": [
+        "ABCB1",
+        "ABCC1",
+        "ABCG2",
+        "ABL1",
+        "ADGRE5",
+        "AKT1",
+        "ANGPT1",
+        "AURKA",
+        "AXL",
+        "BCL2",
+        "BRAF",
+        "BRCA1",
+        "BUB1B",
+        "CCNB1",
+        "CD44",
+        "CDK1",
+        "CDK4",
+        "CDKN1A",
+        "CHEK2",
+        "COL11A2"
+      ],
       "pubmed_total": 385,
       "pubmed_treatment_total": 367,
       "pubmed_repurposing_total": 2,
@@ -117,18 +164,18 @@
           "authors": "Yudie Yan, K. Hwang, Jungmin Lee"
         },
         {
-          "title": "Dynamic release of extracellular particles after opening of the blood-brain barrier predicts glioblastoma susceptibility to paclitaxel",
-          "year": 2025,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/e97e2176263b9c2a06d7185ecc40087e06906e6f",
-          "authors": "Mark W. Youngblood, Abha Kumari, Yoon-Tae Kang"
-        },
-        {
           "title": "Synergistic Dual-Targeting Bacterial Extracellular Vesicles Delivering Paclitaxel for Precision Glioblastoma Therapy.",
           "year": 2025,
           "citations": 1,
           "url": "https://www.semanticscholar.org/paper/72ef424fd51ae110b74afbc78c7044511ef26be2",
           "authors": "Bo Sun, Zongqiang Lv, Rong Li"
+        },
+        {
+          "title": "Dynamic release of extracellular particles after opening of the blood-brain barrier predicts glioblastoma susceptibility to paclitaxel",
+          "year": 2025,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/e97e2176263b9c2a06d7185ecc40087e06906e6f",
+          "authors": "Mark W. Youngblood, Abha Kumari, Yoon-Tae Kang"
         }
       ],
       "most_cited_paper": {
@@ -231,21 +278,21 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0.4377,
       "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Paclitaxel \u2014[downregulates]\u2192 gene-191 \u2014[is upregulated by]\u2192 DB00762 \u2014[treats]\u2192 Glioblastoma",
+      "kg_paths_text": "\u2022 Paclitaxel \u2014[downregulates]\u2192 gene-191 \u2014[is upregulated by]\u2192 DB00762 \u2014[treats]\u2192 Glioblastoma\n\u2022 Paclitaxel \u2014[downregulates]\u2192 gene-8520 \u2014[is downregulated by]\u2192 DB00541 \u2014[is a therapeutic for]\u2192 Glioblastoma\n\u2022 Paclitaxel \u2014[downregulates]\u2192 gene-8520 \u2014[is downregulated by]\u2192 DB00877 \u2014[is a therapeutic for]\u2192 Glioblastoma",
       "validation_experiments": [],
-      "novelty_score": 0.4,
+      "novelty_score": 0.20499999821186066,
       "novelty_level": "ESTABLISHED",
       "is_known_treatment": false,
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT06047379",
-          "title": "Safety and Efficacy of NEO212 in Patients With Astrocytoma IDH-mutant, Glioblastoma IDH-wildtype or Brain Metastasis",
-          "status": "RECRUITING",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "134",
-          "url": "https://clinicaltrials.gov/study/NCT06047379"
+          "nct_id": "NCT01402063",
+          "title": "PPX and Concurrent Radiation for Newly Diagnosed Glioblastoma Without MGMT Methylation",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "63",
+          "url": "https://clinicaltrials.gov/study/NCT01402063"
         },
         {
           "nct_id": "NCT00002814",
@@ -256,57 +303,269 @@
           "url": "https://clinicaltrials.gov/study/NCT00002814"
         },
         {
-          "nct_id": "NCT02711137",
-          "title": "Open-Label Safety and Tolerability Study of INCB057643 in Subjects With Advanced Malignancies",
-          "status": "TERMINATED",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "137",
-          "url": "https://clinicaltrials.gov/study/NCT02711137"
-        },
-        {
-          "nct_id": "NCT00014573",
-          "title": "Chemotherapy and Vaccine Therapy Followed by Bone Marrow or Peripheral Stem Cell Transplantation and Interleukin-2 in Treating Patients With Recurrent or Refractory Brain Cancer",
+          "nct_id": "NCT01967810",
+          "title": "ANG1005 in Patients With Recurrent High-Grade Glioma",
           "status": "COMPLETED",
           "phase": "PHASE2",
-          "enrollment": "",
-          "url": "https://clinicaltrials.gov/study/NCT00014573"
+          "enrollment": "73",
+          "url": "https://clinicaltrials.gov/study/NCT01967810"
         },
         {
-          "nct_id": "NCT04528680",
-          "title": "Ultrasound-based Blood-brain Barrier Opening and Albumin-bound Paclitaxel and Carboplatin for Recurrent Glioblastoma",
-          "status": "ACTIVE_NOT_RECRUITING",
+          "nct_id": "NCT00019019",
+          "title": "Carboxyamidotriazole and Paclitaxel in Treating Patients With Advanced Solid Tumors or Refractory Lymphomas",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "70",
+          "url": "https://clinicaltrials.gov/study/NCT00019019"
+        },
+        {
+          "nct_id": "NCT06047379",
+          "title": "Safety and Efficacy of NEO212 in Patients With Astrocytoma IDH-mutant, Glioblastoma IDH-wildtype or Brain Metastasis",
+          "status": "RECRUITING",
           "phase": "PHASE1, PHASE2",
-          "enrollment": "57",
-          "url": "https://clinicaltrials.gov/study/NCT04528680"
+          "enrollment": "134",
+          "url": "https://clinicaltrials.gov/study/NCT06047379"
         }
       ],
       "trial_phases": {
-        "PHASE1": 6,
-        "PHASE2": 8
+        "PHASE2": 8,
+        "PHASE1": 6
       },
       "confidence": "HIGH",
       "confidence_reasons": [
         "10 clinical trial(s) found on ClinicalTrials.gov",
         "385 PubMed articles on this drug-disease pair",
         "2 article(s) specifically mention repurposing/repositioning",
-        "Supported by 7 independent AI pillars",
+        "Supported by 4 independent AI pillars",
         "Moderate FAERS signal: 4 adverse event reports mention drug-disease co-occurrence",
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.44)"
-      ]
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1533,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (ABCB1 / rs2032582)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "ABCB1",
+            "variant": "rs2032582",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/655385856"
+          },
+          {
+            "gene": "CYP2C8",
+            "variant": "rs1113129",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/699639328"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs1045642",
+            "level": "4",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204258"
+          },
+          {
+            "gene": "FGD4",
+            "variant": "rs10771973",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1444700958"
+          },
+          {
+            "gene": "ERCC1",
+            "variant": "rs3212986",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1445401847"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.55,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.512,
+          "docking": 0.569,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Brain - Cortex",
+          "Brain - Frontal Cortex (BA9)"
+        ],
+        "n_genes": 20,
+        "n_expressed": 15,
+        "mean_tpm_in_tissue": 7.87,
+        "max_tpm_in_tissue": 30.49,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.935
+      },
+      "disease_entity": "Disease::MESH:D005909",
+      "docking": {
+        "kcal_per_mol": -6.83,
+        "target_symbol": "EGFR",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "ensemble_prob": 0.9954,
+      "ensemble_features": {
+        "kg_score": 0.9999,
+        "degree_penalty": 0.7483,
+        "n_drug_targets": 25,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 0.6931
+      },
+      "ensemble_rank": 1,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          ">",
+          "ISOLATED"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          ">_2_ester_groups",
+          "isolated_alkene"
+        ]
+      }
     },
     {
       "drug_name": "Vinblastine",
       "drug_id": "DB00570",
       "disease_name": "Glioblastoma",
-      "combined_score": 1.1014000177383423,
+      "combined_score": 0.4717000126838684,
+      "pillars_hit": 4,
       "transe_rank": 93,
-      "pillars_hit": 7,
+      "transe_score": -10.5443,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0.8835,
       "similar_to": "Vincristine",
+      "mol_emb_similarity": 0.9996,
+      "mol_emb_similar_to": "Vincristine",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.699999988079071,
+      "proximity_distance": 1.2000000476837158,
+      "admet_score": 0.4736,
+      "admet_flags": "hERG=0.98",
+      "primekg_score": 0.2588,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": 0.2257,
+      "structural_group_score": 0.9996,
+      "network_group_score": 0.5350000262260437,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.5593,
+      "admet_multiplier": 0.8947,
+      "efficacy_score": 0.5273000001907349,
+      "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 53,
+      "shared_targets": [
+        "ABCB1",
+        "ABCC1",
+        "ALDH1A1",
+        "AURKA",
+        "AXL",
+        "BAG3",
+        "BRCA1",
+        "CAPN2",
+        "CAVIN1",
+        "CD63",
+        "CDK1",
+        "CDK4",
+        "CDK7",
+        "CDKN1A",
+        "CHEK2",
+        "CTSL",
+        "CXCR4",
+        "DNMT1",
+        "EDN1",
+        "EGFR"
+      ],
       "pubmed_total": 41,
       "pubmed_treatment_total": 35,
       "pubmed_repurposing_total": 0,
@@ -442,10 +701,10 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0.5593,
       "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Vinblastine \u2014[downregulates]\u2192 gene-5111 \u2014[is linked to]\u2192 Glioblastoma",
+      "kg_paths_text": "\u2022 Vinblastine \u2014[downregulates]\u2192 gene-5111 \u2014[is linked to]\u2192 Glioblastoma\n\u2022 Vinblastine \u2014[downregulates]\u2192 gene-23077 \u2014[is downregulated by]\u2192 DB00762 \u2014[treats]\u2192 Glioblastoma\n\u2022 Vinblastine \u2014[downregulates]\u2192 gene-55247 \u2014[is downregulated by]\u2192 DB00762 \u2014[treats]\u2192 Glioblastoma",
       "validation_experiments": [],
-      "novelty_score": 0.84,
+      "novelty_score": 0.3959999978542328,
       "novelty_level": "KNOWN",
       "is_known_treatment": false,
       "clinical_trials_total": 1,
@@ -466,25 +725,198 @@
       "confidence_reasons": [
         "1 clinical trial(s) found on ClinicalTrials.gov",
         "41 PubMed articles found",
-        "Supported by 7 independent AI pillars",
+        "Supported by 4 independent AI pillars",
         "High molecular similarity (0.88) to Vincristine",
         "Supporting paper with 40 citations",
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.56)"
-      ]
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1186,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (GSTM1 / GSTM1 non-null, GSTM1 null)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "GSTM1",
+            "variant": "GSTM1 non-null, GSTM1 null",
+            "level": "3",
+            "phenotype_category": "Efficacy;Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1444607870"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.468,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.472,
+          "docking": 0.541,
+          "pharos": 0.0,
+          "literature": 0.705
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Brain - Cortex",
+          "Brain - Frontal Cortex (BA9)"
+        ],
+        "n_genes": 19,
+        "n_expressed": 16,
+        "mean_tpm_in_tissue": 20.53,
+        "max_tpm_in_tissue": 146.66,
+        "tissue_specificity": 0.009,
+        "context_modifier": 0.971
+      },
+      "disease_entity": "Disease::MESH:D005909",
+      "docking": {
+        "kcal_per_mol": -6.49,
+        "target_symbol": "ABCB1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "ensemble_prob": 0.9892,
+      "ensemble_features": {
+        "kg_score": 0.9994,
+        "degree_penalty": 0.7642,
+        "n_drug_targets": 14,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 1.9459
+      },
+      "ensemble_rank": 3,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          ">",
+          "ISOLATED"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          ">_2_ester_groups",
+          "isolated_alkene"
+        ]
+      }
     },
     {
       "drug_name": "3,3'-Diindolylmethane",
       "drug_id": "DB11875",
       "disease_name": "Glioblastoma",
-      "combined_score": 1.0842000246047974,
-      "transe_rank": 69,
+      "combined_score": 0.4699000120162964,
       "pillars_hit": 4,
+      "transe_rank": 69,
+      "transe_score": -10.448,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.9319999814033508,
+      "proximity_distance": 0.27000001072883606,
+      "admet_score": 0.3184,
+      "admet_flags": "hERG=0.74",
+      "primekg_score": 0,
+      "dti_score": 0.9024,
+      "dti_best_target": "TNFSF10",
+      "kg_group_score": 0.1182,
+      "structural_group_score": 0.9024,
+      "network_group_score": 0.9319999814033508,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.4377,
+      "admet_multiplier": 0.8637,
+      "efficacy_score": 0.5440000295639038,
+      "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 9,
+      "shared_targets": [
+        "ABCB1",
+        "AHR",
+        "AKT1",
+        "ATM",
+        "CDKN1A",
+        "ESR1",
+        "JAK2",
+        "STAT3",
+        "VEGFA"
+      ],
       "pubmed_total": 3,
       "pubmed_treatment_total": 3,
       "pubmed_repurposing_total": 0,
@@ -542,11 +974,11 @@
           "authors": "Jiewen Su, Heng Fang, Yunfeng Lin"
         },
         {
-          "title": "3,3\u2032-Diindolylmethane improves pathology and neurological outcome following traumatic brain injury",
+          "title": "3,3\u2032-Diindolylmethane (DIM): A Molecular Scaffold for Inhibition of WWP1 and WWP2, Members of the NEDD4 Family HECT E3 Ligases",
           "year": 2025,
           "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/86e1d3bb4cc16199c8968502543136d1f2face8f",
-          "authors": "Carlos A. Dallera, Fabiola Placeres-Uray, Patrizzia Mastromatteo-Alberga"
+          "url": "https://www.semanticscholar.org/paper/dbbe0a3430fabe970796532e3af1230dca4a2cfc",
+          "authors": "Ashley P. Dudey, Gregory R. Hughes, Jake M. Rigby"
         },
         {
           "title": "Ultrasound-Induced Changes in Physicochemical, Microstructural, and Antioxidative Properties of Whey-Protein-Concentrate-Encapsulated 3,3\u2032-Diindolylmethane Nanoparticles",
@@ -651,10 +1083,10 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0.4377,
       "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "3,3'-Diindolylmethane \u2014[is a therapeutic for]\u2192 MESH:D008103 \u2014[is treated by]\u2192 DB00091 \u2014[is a therapeutic for]\u2192 Glioblastoma",
+      "kg_paths_text": "\u2022 3,3'-Diindolylmethane \u2014[is a therapeutic for]\u2192 MESH:D008103 \u2014[is treated by]\u2192 DB00091 \u2014[is a therapeutic for]\u2192 Glioblastoma\n\u2022 3,3'-Diindolylmethane \u2014[is a therapeutic for]\u2192 MESH:D008103 \u2014[is treated by]\u2192 DB00675 \u2014[is a therapeutic for]\u2192 Glioblastoma\n\u2022 3,3'-Diindolylmethane \u2014[is a therapeutic for]\u2192 MESH:D008103 \u2014[is treated by]\u2192 MESH:D013256 \u2014[is a therapeutic for]\u2192 Glioblastoma",
       "validation_experiments": [],
-      "novelty_score": 0.95,
+      "novelty_score": 0.44600000977516174,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -667,94 +1099,262 @@
         "Supporting paper with 40 citations",
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.44)"
-      ]
+      ],
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "late-trial",
+        "confidence": "medium",
+        "rationale": "Phase-3 investigational \u2014 dose range established in Phase-2 pharmacokinetic studies; efficacy trials ongoing or recently completed.",
+        "chembl_phase": 3.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 0,
+        "has_warnings": false,
+        "top_interactions": []
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.367,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.47,
+          "docking": 0.502,
+          "pharos": 0.0,
+          "literature": 0.261
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Brain - Cortex",
+          "Brain - Frontal Cortex (BA9)"
+        ],
+        "n_genes": 9,
+        "n_expressed": 8,
+        "mean_tpm_in_tissue": 11.53,
+        "max_tpm_in_tissue": 30.49,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.949
+      },
+      "disease_entity": "Disease::MESH:D005909",
+      "docking": {
+        "kcal_per_mol": -6.02,
+        "target_symbol": "AHR",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "ensemble_prob": 0.0,
+      "ensemble_features": {
+        "kg_score": 0.6623,
+        "degree_penalty": 1.0,
+        "n_drug_targets": 4,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 8.1786
+      },
+      "ensemble_rank": 9,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
-      "drug_name": "Tocladesine",
-      "drug_id": "DB13046",
+      "drug_name": "Temozolomide",
+      "drug_id": "DB00853",
       "disease_name": "Glioblastoma",
-      "combined_score": 1.0824999809265137,
-      "transe_rank": 753,
+      "combined_score": 0.427700012922287,
       "pillars_hit": 4,
-      "mol_similarity": 0.6833,
-      "similar_to": "Cyclic Adenosine Monophosphate",
+      "transe_rank": 33,
+      "transe_score": -10.1891,
+      "pykeen_score": -12.3325,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.925000011920929,
+      "proximity_distance": 0.30000001192092896,
+      "admet_score": 0.6082,
+      "admet_flags": "DILI=0.97",
+      "primekg_score": 0.2511,
+      "dti_score": 0.4158,
+      "dti_best_target": "ETS1",
+      "kg_group_score": 0.3191,
+      "structural_group_score": 0.4158,
+      "network_group_score": 0.7188000082969666,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.4377,
+      "admet_multiplier": 0.9216,
+      "efficacy_score": 0.46399998664855957,
+      "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 2,
-      "pubmed_treatment_total": 2,
-      "pubmed_repurposing_total": 0,
+      "shared_target_count": 13,
+      "shared_targets": [
+        "AIMP1",
+        "AKT1",
+        "CA9",
+        "CTNNB1",
+        "GJA1",
+        "H19",
+        "HIF1A",
+        "KLF8",
+        "MGMT",
+        "MIR21",
+        "MTOR",
+        "SLC7A11",
+        "TP53"
+      ],
+      "pubmed_total": 7576,
+      "pubmed_treatment_total": 7271,
+      "pubmed_repurposing_total": 159,
       "key_papers": [
         {
-          "pmid": "28076790",
-          "title": "The Anti-Warburg Effect Elicited by the cAMP-PGC1\u03b1 Pathway Drives Differentiation of Glioblastoma Cells into Astrocytes.",
-          "authors": "Xing F, Luan Y, Cai J, et al.",
-          "journal": "Cell reports",
-          "year": "2017",
-          "abstract_snippet": "Glioblastoma multiforme (GBM) is among the most\u00a0aggressive of human cancers. Although differentiation therapy has been proposed as a potential approach to treat GBM, the mechanisms of induced differentiation remain poorly defined. Here, we established an induced differentiation model of GBM using cA...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/28076790/",
-          "total_results": 2
+          "pmid": "33623077",
+          "title": "Cannabinoids in glioblastoma multiforme-hype or hope?",
+          "authors": "Doherty GJ, de Paula BHR",
+          "journal": "British journal of cancer",
+          "year": "2021",
+          "abstract_snippet": "Cannabis and its derivatives are being used increasingly by patients with cancer, including patients with glioblastoma multiforme (GBM), the most common and aggressive primary brain malignancy. Despite promising preclinical data suggesting potential anti-cancer effects for cannabinoids in GBM, clini...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33623077/",
+          "total_results": 7576
         },
         {
-          "pmid": "11129740",
-          "title": "8-Cl-cAMP and tiazofurin affect vascular endothelial growth factor production and glial fibrillary acidic protein expression in human glioblastoma cells.",
-          "authors": "Drabek K, Pesi\u0107 M, Piperski V, et al.",
-          "journal": "Anti-cancer drugs",
-          "year": "2000",
-          "abstract_snippet": "Compounds that could block tumor angiogenesis and induce tumor cell differentiation in malignant gliomas represent a very valuable tool in anticancer treatments. In this paper, we demonstrate that more selective drugs, which interfere with specific cellular targets, could treat glioma more effective...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/11129740/"
+          "pmid": "37459849",
+          "title": "Glioblastoma Multiforme: The Latest Diagnostics and Treatment Techniques.",
+          "authors": "Czarnywojtek A, Borowska M, Dyrka K, et al.",
+          "journal": "Pharmacology",
+          "year": "2023",
+          "abstract_snippet": "BACKGROUND: Glioblastoma multiforme (GBM) is a WHO grade 4 glioma and the most common malignant primary brain tumour. Recently, there has been outstanding progress in the treatment of GBM. In addition to the newest form of GBM removal using fluorescence, three-dimensional (3D) imaging, tomoradiother...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37459849/"
+        },
+        {
+          "pmid": "30258889",
+          "title": "Temozolomide resistance in glioblastoma multiforme.",
+          "authors": "Lee SY",
+          "journal": "Genes & diseases",
+          "year": "2016",
+          "abstract_snippet": "Temozolomide (TMZ) is an oral alkylating agent used to treat glioblastoma multiforme (GBM) and astrocytomas. However, at least 50% of TMZ treated patients do not respond to TMZ. This is due primarily to the over-expression of O",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30258889/"
+        },
+        {
+          "pmid": "39057168",
+          "title": "Temozolomide (TMZ) in the Treatment of Glioblastoma Multiforme-A Literature Review and Clinical Outcomes.",
+          "authors": "Jezierza\u0144ski M, Nafalska N, Stopyra M, et al.",
+          "journal": "Current oncology (Toronto, Ont.)",
+          "year": "2024",
+          "abstract_snippet": "Glioblastoma multiforme (GBM) is one of the most aggressive primary tumors of the central nervous system. It is associated with a very poor prognosis, with up to half of patients failing to survive the first year after diagnosis. It develops from glial tissue and belongs to the adult-type diffuse gl...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39057168/"
+        },
+        {
+          "pmid": "28840962",
+          "title": "Biomarkers and therapeutic advances in glioblastoma multiforme.",
+          "authors": "Sasmita AO, Wong YP, Ling APK",
+          "journal": "Asia-Pacific journal of clinical oncology",
+          "year": "2018",
+          "abstract_snippet": "Glioblastoma multiforme (GBM) is a malignant tumor within the brain. Generally classified as primary and secondary with several different subtypes, ample molecular biomarkers have risen throughout the years which have garnered the attention of researchers. The advancements in genomics and proteomics...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28840962/"
         }
       ],
-      "repurposing_papers": [],
+      "repurposing_papers": [
+        {
+          "pmid": "31541850",
+          "title": "Molecular targeted therapy of glioblastoma.",
+          "authors": "Le Rhun E, Preusser M, Roth P, et al.",
+          "journal": "Cancer treatment reviews",
+          "year": "2019",
+          "abstract_snippet": "Glioblastomas are intrinsic brain tumors thought to originate from neuroglial stem or progenitor cells. More than 90% of glioblastomas are isocitrate dehydrogenase (IDH)-wildtype tumors. Incidence increases with age, males are more often affected. Beyond rare instances of genetic predisposition and ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31541850/",
+          "total_results": 159
+        },
+        {
+          "pmid": "34731610",
+          "title": "Targeting glioblastoma signaling and metabolism with a re-purposed brain-penetrant drug.",
+          "authors": "Bi J, Khan A, Tang J, et al.",
+          "journal": "Cell reports",
+          "year": "2021",
+          "abstract_snippet": "The highly lethal brain cancer glioblastoma (GBM) poses a daunting challenge because the blood-brain barrier renders potentially druggable amplified or mutated oncoproteins relatively inaccessible. Here, we identify sphingomyelin phosphodiesterase 1 (SMPD1), an enzyme that regulates the conversion o...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34731610/"
+        },
+        {
+          "pmid": "33049911",
+          "title": "Novel Treatment Strategies for Glioblastoma.",
+          "authors": "Stylli SS",
+          "journal": "Cancers",
+          "year": "2020",
+          "abstract_snippet": "Glioblastoma (GBM) is the most common primary central nervous system tumor in adults. It is a highly invasive disease, making it difficult to achieve a complete surgical resection, resulting in poor prognosis with a median survival of 12-15 months after diagnosis, and less than 5% of patients surviv...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33049911/"
+        }
+      ],
       "semantic_scholar_papers": [
         {
-          "title": "Glioblastoma at the crossroads: current understanding and future therapeutic horizons",
+          "title": "Regulated cell death modalities: breaking resistance of temozolomide glioblastoma therapy.",
           "year": 2025,
-          "citations": 114,
-          "url": "https://www.semanticscholar.org/paper/1445c096bc679931586564b48bbb15167d4847f8",
-          "authors": "Shilpi Singh, Devanjan Dey, Debashis Barik"
+          "citations": 14,
+          "url": "https://www.semanticscholar.org/paper/8e00ac248862fa549d5ede6e822911fda423aaee",
+          "authors": "T. Mishchenko, O. Olajide, Ekaterina N Gorshkova"
         },
         {
-          "title": "Glioblastoma evolution and heterogeneity from a 3D whole-tumor perspective.",
+          "title": "Radiotherapy plus concomitant and adjuvant temozolomide for glioblastoma.",
+          "year": 2005,
+          "citations": 19640,
+          "url": "https://www.semanticscholar.org/paper/e4b17209bfffb5809810c87fbb2079cb9263f7d0",
+          "authors": "R. Stupp, W. Mason, M. V. D. Bent"
+        },
+        {
+          "title": "Effects of radiotherapy with concomitant and adjuvant temozolomide versus radiotherapy alone on survival in glioblastoma in a randomised phase III study: 5-year analysis of the EORTC-NCIC trial.",
+          "year": 2009,
+          "citations": 7182,
+          "url": "https://www.semanticscholar.org/paper/925d73157c731c36e540b2cc12a83a1bf1b61be9",
+          "authors": "R. Stupp, M. Hegi, W. Mason"
+        },
+        {
+          "title": "Histone H3K9 Lactylation Confers Temozolomide Resistance in Glioblastoma via LUC7L2\u2010Mediated MLH1 Intron Retention",
           "year": 2024,
-          "citations": 142,
-          "url": "https://www.semanticscholar.org/paper/a46756b26b70bae040884ba32677c850ea492ad6",
-          "authors": "Radhika Mathur, Qixuan Wang, Patrick G. Schupp"
+          "citations": 130,
+          "url": "https://www.semanticscholar.org/paper/74b08906ce6cef0a91be92ae2cb9389f5c2235a3",
+          "authors": "Qu Yue, Zhao Wang, Yixiong Shen"
         },
         {
-          "title": "Glioblastoma and Other Primary Brain Malignancies in Adults: A Review.",
-          "year": 2023,
-          "citations": 898,
-          "url": "https://www.semanticscholar.org/paper/6c49b835703b5011fa849f27957c013ac501b522",
-          "authors": "L. R. Schaff, I. Mellinghoff"
-        },
-        {
-          "title": "High-throughput identification of repurposable neuroactive drugs with potent anti-glioblastoma activity",
-          "year": 2024,
-          "citations": 52,
-          "url": "https://www.semanticscholar.org/paper/5b4db4a0a2cab320684d107717d122ee477c7e94",
-          "authors": "Sohyon Lee, Tobias Weiss, Marcel B\u00fchler"
-        },
-        {
-          "title": "Macrophages and microglia in glioblastoma: heterogeneity, plasticity, and therapy",
-          "year": 2023,
-          "citations": 282,
-          "url": "https://www.semanticscholar.org/paper/f1cd55400dfc9d730267ae10edf8b3e63bc625db",
-          "authors": "Fatima Khan, Lizhi Pang, Madeline Dunterman"
+          "title": "MGMT gene silencing and benefit from temozolomide in glioblastoma.",
+          "year": 2005,
+          "citations": 6352,
+          "url": "https://www.semanticscholar.org/paper/a3f84508219cc1dfb2987d60788aa33ebc6cd90e",
+          "authors": "M. Hegi, A. Diserens, T. Gorlia"
         }
       ],
       "most_cited_paper": {
-        "title": "Glioblastoma and Other Primary Brain Malignancies in Adults: A Review.",
-        "year": 2023,
-        "citations": 898,
-        "url": "https://www.semanticscholar.org/paper/6c49b835703b5011fa849f27957c013ac501b522",
-        "authors": "L. R. Schaff, I. Mellinghoff"
+        "title": "Radiotherapy plus concomitant and adjuvant temozolomide for glioblastoma.",
+        "year": 2005,
+        "citations": 19640,
+        "url": "https://www.semanticscholar.org/paper/e4b17209bfffb5809810c87fbb2079cb9263f7d0",
+        "authors": "R. Stupp, W. Mason, M. V. D. Bent"
       },
-      "max_citations": 898,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Tocladesine",
+      "max_citations": 19640,
+      "faers_signal": "strong",
+      "faers_total_reports": 17585,
+      "faers_cooccurrences": 288,
+      "faers_interpretation": "288 FAERS reports mention both Temozolomide and Glioblastoma-related terms (1.6% of all Temozolomide reports). This suggests real-world clinical association.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -764,8 +1364,8 @@
         "sirolimus (1.432)",
         "GSK-1059615 (1.431)"
       ],
-      "signature_interpretation": "Tocladesine was not found among the top 38 drugs that reverse the Glioblastoma gene signature. Top reversers: methylstat (1.514), vemurafenib (1.459), SB-239063 (1.435)",
-      "ai_hypothesis": "of its ability to inhibit the PI3K / AKT pathway.",
+      "signature_interpretation": "Temozolomide was not found among the top 38 drugs that reverse the Glioblastoma gene signature. Top reversers: methylstat (1.514), vemurafenib (1.459), SB-239063 (1.435)",
+      "ai_hypothesis": "of its ability to induce apoptosis and inhibit angiogenesis.",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
@@ -776,18 +1376,381 @@
           "relation_type": "unclear",
           "confidence": 0.0,
           "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 0,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "temozolomide",
+              "entity_group": "Medication",
+              "score": 0.8700000047683716
+            },
+            {
+              "entity": "t",
+              "entity_group": "Coreference",
+              "score": 0.8069999814033508
+            },
+            {
+              "entity": "oral",
+              "entity_group": "Administration",
+              "score": 0.9980000257492065
+            },
+            {
+              "entity": "alkylating agent",
+              "entity_group": "Medication",
+              "score": 0.9520000219345093
+            },
+            {
+              "entity": "gb",
+              "entity_group": "Disease_disorder",
+              "score": 0.9710000157356262
+            },
+            {
+              "entity": "t",
+              "entity_group": "Disease_disorder",
+              "score": 0.9890000224113464
+            },
+            {
+              "entity": "##m",
+              "entity_group": "Disease_disorder",
+              "score": 0.996999979019165
+            }
+          ]
         }
       ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "Phase 3",
+      "failed_trial_count": 10,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.4377,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Temozolomide \u2014[treats]\u2192 Glioblastoma",
+      "kg_paths_text": "\u2022 Temozolomide \u2014[treats]\u2192 Glioblastoma\n\u2022 Temozolomide \u2014[treats]\u2192 Glioblastoma\n\u2022 Temozolomide \u2014[downregulates]\u2192 gene-6284 \u2014[is upregulated by]\u2192 DB00762 \u2014[treats]\u2192 Glioblastoma",
+      "validation_experiments": [],
+      "novelty_score": 0.020999999716877937,
+      "novelty_level": "ESTABLISHED",
+      "is_known_treatment": true,
+      "clinical_trials_total": 10,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT06140875",
+          "title": "Amplitude Modulated Radiofrequency Electromagnetic Field Treatment Combined With Radiochemotherapy and Maintenance Chemotherapy in Patients With Glioblastoma (Brain-RF)",
+          "status": "RECRUITING",
+          "phase": "NA",
+          "enrollment": "26",
+          "url": "https://clinicaltrials.gov/study/NCT06140875"
+        },
+        {
+          "nct_id": "NCT07179328",
+          "title": "Focused Ultrasound Blood-Brain Barrier Disruption for the Treatment of High-Grade Glioma in Patients Undergoing Standard Chemotherapy",
+          "status": "RECRUITING",
+          "phase": "PHASE1",
+          "enrollment": "10",
+          "url": "https://clinicaltrials.gov/study/NCT07179328"
+        },
+        {
+          "nct_id": "NCT00687765",
+          "title": "Study of the Poly (ADP-ribose) Polymerase-1 (PARP-1) Inhibitor BSI-201 in Patients With Newly Diagnosed Malignant Glioma",
+          "status": "COMPLETED",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "126",
+          "url": "https://clinicaltrials.gov/study/NCT00687765"
+        },
+        {
+          "nct_id": "NCT00574964",
+          "title": "Gliadel Wafers and Temodar in the Treatment of Glioblastoma Multiforme",
+          "status": "TERMINATED",
+          "phase": "PHASE2",
+          "enrollment": "50",
+          "url": "https://clinicaltrials.gov/study/NCT00574964"
+        },
+        {
+          "nct_id": "NCT01985087",
+          "title": "A Study Using Radiation Therapy and Temozolomide to Treat Glioblastoma in Patients Over 70",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "18",
+          "url": "https://clinicaltrials.gov/study/NCT01985087"
+        }
+      ],
+      "trial_phases": {
+        "NA": 1,
+        "PHASE1": 4,
+        "PHASE2": 7,
+        "PHASE3": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "10 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "7576 PubMed articles on this drug-disease pair",
+        "159 article(s) specifically mention repurposing/repositioning",
+        "Supported by 4 independent AI pillars",
+        "Strong FAERS signal: 288 adverse event reports link drug to disease (17585 total reports)",
+        "Highly cited paper (19640 citations): \"Radiotherapy plus concomitant and adjuvant temozolomide for ...\"",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.44)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1118,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00773",
+            "drug_name": "Etoposide",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00331",
+            "drug_name": "Metformin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (ABCB1 / rs2229109)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "ABCB1",
+            "variant": "rs2229109",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451126200"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs1128503",
+            "level": "3",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451417123"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.496,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.428,
+          "docking": 0.489,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Brain - Cortex",
+          "Brain - Frontal Cortex (BA9)"
+        ],
+        "n_genes": 13,
+        "n_expressed": 10,
+        "mean_tpm_in_tissue": 27.92,
+        "max_tpm_in_tissue": 188.07,
+        "tissue_specificity": 0.325,
+        "context_modifier": 1.02
+      },
+      "disease_entity": "Disease::MESH:D005909",
+      "docking": {
+        "kcal_per_mol": -5.87,
+        "target_symbol": "CA9",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "ensemble_prob": 0.994,
+      "ensemble_features": {
+        "kg_score": 0.9997,
+        "degree_penalty": 0.777,
+        "n_drug_targets": 9,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 1.3863
+      },
+      "ensemble_rank": 2,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "2-Bromoacetyl Group",
+      "drug_id": "DB02198",
+      "disease_name": "Glioblastoma",
+      "combined_score": 0.4226999878883362,
+      "pillars_hit": 3,
+      "transe_rank": 5169,
+      "transe_score": -13.7382,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0.9527,
+      "mol_emb_similar_to": "Dihydroxyacetone",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 1.0,
+      "proximity_distance": 0.0,
+      "admet_score": 1.0,
+      "admet_flags": "clean",
+      "primekg_score": 0.2459,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": 0.005,
+      "structural_group_score": 0.9527,
+      "network_group_score": 1.0,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 1.0,
+      "efficacy_score": 0.4226999878883362,
+      "groups_hit": 3,
+      "direct_relations": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "PTGS1"
+      ],
+      "pubmed_total": 0,
+      "pubmed_treatment_total": 0,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Prognostic evaluation of re-resection for recurrent glioblastoma using the novel RANO classification for extent of resection: A report of the RANO resect group",
+          "year": 2023,
+          "citations": 72,
+          "url": "https://www.semanticscholar.org/paper/99ee538dad838d827a89cc13dbefc08b1cb0ced1",
+          "authors": "P. Karschnia, A. Dono, Jacob S. Young"
+        },
+        {
+          "title": "Impact of extent of resection on outcome from glioblastoma using the RANO resect group classification system: a retrospective, population-based cohort study",
+          "year": 2023,
+          "citations": 20,
+          "url": "https://www.semanticscholar.org/paper/7321d1c939a2c235f1525082c6891f1f8cea9ef4",
+          "authors": "L. Bjorland, R. Mahesparan, Fluge \u00d8ystein"
+        },
+        {
+          "title": "Prognostic validation of a new classification system for extent of resection in glioblastoma: A report of the RANO resect group",
+          "year": 2022,
+          "citations": 280,
+          "url": "https://www.semanticscholar.org/paper/7e65bef82d5b1de1919be1549a33c19fd0a23102",
+          "authors": "P. Karschnia, Jacob S. Young, A. Dono"
+        },
+        {
+          "title": "Synthesis of undecagold cluster molecules as biochemical labeling reagents. 2. Bromoacetyl and maleimido undecagold clusters.",
+          "year": 1984,
+          "citations": 25,
+          "url": "https://www.semanticscholar.org/paper/253097324173b3f97d19173613072f5041e4cd0a",
+          "authors": "H. Yang, J. Reardon, P. Frey"
+        },
+        {
+          "title": "Aggressive resection of non-contrast-enhanced tumor provides varying benefits to glioblastoma, IDH-wildtype patients based on different clinical characteristics.",
+          "year": 2025,
+          "citations": 8,
+          "url": "https://www.semanticscholar.org/paper/787922a226b0a7a9d2c22cfafa52ef8cfb11daca",
+          "authors": "Lingyu Liu, Chihyi Liao, Siqi Ge"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Prognostic validation of a new classification system for extent of resection in glioblastoma: A report of the RANO resect group",
+        "year": 2022,
+        "citations": 280,
+        "url": "https://www.semanticscholar.org/paper/7e65bef82d5b1de1919be1549a33c19fd0a23102",
+        "authors": "P. Karschnia, Jacob S. Young, A. Dono"
+      },
+      "max_citations": 280,
+      "faers_signal": "none",
+      "faers_total_reports": 0,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found for 2-Bromoacetyl Group",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "methylstat (1.514)",
+        "vemurafenib (1.459)",
+        "SB-239063 (1.435)",
+        "sirolimus (1.432)",
+        "GSK-1059615 (1.431)"
+      ],
+      "signature_interpretation": "2-Bromoacetyl Group was not found among the top 38 drugs that reverse the Glioblastoma gene signature. Top reversers: methylstat (1.514), vemurafenib (1.459), SB-239063 (1.435)",
+      "ai_hypothesis": "of its ability to inhibit the activity of histone deacetylases.",
+      "abstract_analyses": [],
       "has_failed_trial": false,
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
       "mr_score": 0,
       "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "2-Bromoacetyl Group \u2014[targets]\u2192 gene-5742 \u2014[is linked to]\u2192 Glioblastoma",
+      "kg_paths_text": "\u2022 2-Bromoacetyl Group \u2014[targets]\u2192 gene-5742 \u2014[is linked to]\u2192 Glioblastoma\n\u2022 2-Bromoacetyl Group \u2014[targets]\u2192 gene-5742 \u2014[is linked to]\u2192 Glioblastoma\n\u2022 2-Bromoacetyl Group \u2014[targets]\u2192 gene-5742 \u2014[is bound by]\u2192 DB00470 \u2014[is a therapeutic for]\u2192 Glioblastoma",
       "validation_experiments": [],
-      "novelty_score": 0.8,
+      "novelty_score": 0.3799999952316284,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -795,225 +1758,150 @@
       "trial_phases": {},
       "confidence": "LOW",
       "confidence_reasons": [
-        "2 PubMed article(s) - limited literature",
-        "Supported by 4 independent AI pillars",
-        "High molecular similarity (0.68) to Cyclic Adenosine Monophosphate",
-        "Highly cited paper (898 citations): \"Glioblastoma and Other Primary Brain Malignancies in Adults:...\"",
-        "AI-generated hypothesis available"
-      ]
-    },
-    {
-      "drug_name": "Eco 4601",
-      "drug_id": "DB12420",
-      "disease_name": "Glioblastoma",
-      "combined_score": 1.070199966430664,
-      "transe_rank": 147,
-      "pillars_hit": 4,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "ECO-FRIENDLY SYNTHESIS OF SILICON NANOPARTICLES FROM BANANA PEEL EXTRACT AND THEIR IN VITRO AND IN VIVO POTENTIAL IN GLIOBLASTOMA TREATMENT",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/0b446c6c438018736fd1a26254fbe248875d6988",
-          "authors": ""
-        },
-        {
-          "title": "In vitro cytotoxicity perspective of diazepinomicin (ECO-4601) on human hepatoma cell line (HEPG2)",
-          "year": 2014,
-          "citations": 12,
-          "url": "https://www.semanticscholar.org/paper/93143fa46fbe248906547f28e268e33639eeeb12",
-          "authors": "V. Rambabu, S. Vijayakumar"
-        },
-        {
-          "title": "Identification, characterization and potent antitumor activity of ECO-4601, a novel peripheral benzodiazepine receptor ligand",
-          "year": 2009,
-          "citations": 38,
-          "url": "https://www.semanticscholar.org/paper/adcfdf7a9af2f0919147da3f0aafd4cb3eb4af17",
-          "authors": "H. Gourdeau, J. McAlpine, M. Ranger"
-        },
-        {
-          "title": "Biosynthesis of diazepinomicin/ECO-4601, a Micromonospora secondary metabolite with a novel ring system.",
-          "year": 2008,
-          "citations": 59,
-          "url": "https://www.semanticscholar.org/paper/d44764caeabdaf9ecb5901d7a8025a40539b6caf",
-          "authors": "J. McAlpine, A. Banskota, R. Charan"
-        },
-        {
-          "title": "Improving Radiation Response in Glioblastoma Using ECO/siRNA Nanoparticles Targeting DNA Damage Repair",
-          "year": 2020,
-          "citations": 10,
-          "url": "https://www.semanticscholar.org/paper/3614faf32e8efa25eda8f2c04ae64c8958054cf6",
-          "authors": "Jennifer A. Lee, N. Ayat, Zhanhu Sun"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Biosynthesis of diazepinomicin/ECO-4601, a Micromonospora secondary metabolite with a novel ring system.",
-        "year": 2008,
-        "citations": 59,
-        "url": "https://www.semanticscholar.org/paper/d44764caeabdaf9ecb5901d7a8025a40539b6caf",
-        "authors": "J. McAlpine, A. Banskota, R. Charan"
-      },
-      "max_citations": 59,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Eco 4601",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "methylstat (1.514)",
-        "vemurafenib (1.459)",
-        "SB-239063 (1.435)",
-        "sirolimus (1.432)",
-        "GSK-1059615 (1.431)"
-      ],
-      "signature_interpretation": "Eco 4601 was not found among the top 38 drugs that reverse the Glioblastoma gene signature. Top reversers: methylstat (1.514), vemurafenib (1.459), SB-239063 (1.435)",
-      "ai_hypothesis": "of its ability to inhibit the proliferation of cancer cells and induce apoptosis.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 1.0,
-      "novelty_level": "BREAKTHROUGH",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "Supported by 4 independent AI pillars",
-        "Supporting paper with 59 citations",
-        "AI-generated hypothesis available"
-      ]
-    },
-    {
-      "drug_name": "Pyrrole-2-Carboxylate",
-      "drug_id": "DB02543",
-      "disease_name": "Glioblastoma",
-      "combined_score": 1.0527000427246094,
-      "transe_rank": 307,
-      "pillars_hit": 3,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "N-(para-Methoxyphenylpropargyl) Pyrrole-2-carboxylate (PPPC) Glycosides as Donors for Glycosylation.",
-          "year": 2024,
-          "citations": 2,
-          "url": "https://www.semanticscholar.org/paper/876dfc38ae0e156fd0526b3013d09453c7a3da37",
-          "authors": "Li Song, Meifang Yang, Mengyue Li"
-        },
-        {
-          "title": "Spectroscopic investigations, quantum chemical, drug likeness and molecular docking studies of methyl 1-methyl-4-nitro-pyrrole-2-carboxylate: A novel ovarian cancer drug.",
-          "year": 2023,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/f76eb6c6f0987235950d07b1bc0b6edaf5ab1969",
-          "authors": "A. Kavi Bharathi, S. Christopher Jeyaseelan, S. Hussain"
-        },
-        {
-          "title": "Azomethines based on ethyl 4-formyl-3,5-dimethyl-1H-pyrrole-2-carboxylate, its biological activity and reaction with thioglycolic acid",
-          "year": 2023,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/cb2d320e08483a10b30d6e5ebe26c8848626b50e",
-          "authors": "O. Mikhedkina, V. Ananieva, Yana I Sakhno"
-        },
-        {
-          "title": "SERS and DFT investigations of methyl 4\u2011bromo-1H-pyrrole-2-carboxylate adsorbed on silver and gold substrates: In perspective of biosensor applications",
-          "year": 2021,
-          "citations": 27,
-          "url": "https://www.semanticscholar.org/paper/eb535edeb881857dfecd1ef96e4263bac5032a3f",
-          "authors": "R. Premkumar, S. Hussain, St\u00e8ve-Jonathan Koyambo-Konzapa"
-        },
-        {
-          "title": "Molecular docking study and molecular dynamics simulation of ethyl 3,5\u2010diphenyl\u20101H\u2010pyrrole\u20102\u2010carboxylate and (Z)\u2010ethyl\u20102\u2010(3\u2010oxo\u20101,3\u2010diphenylprop\u20101\u2010enylamino)acetate",
-          "year": 2022,
-          "citations": 2,
-          "url": "https://www.semanticscholar.org/paper/b9e61a0e545d67d367d56337578cf444f38ce719",
-          "authors": "M. Kurbanova, A. Maharramov, A. Safarova"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "SERS and DFT investigations of methyl 4\u2011bromo-1H-pyrrole-2-carboxylate adsorbed on silver and gold substrates: In perspective of biosensor applications",
-        "year": 2021,
-        "citations": 27,
-        "url": "https://www.semanticscholar.org/paper/eb535edeb881857dfecd1ef96e4263bac5032a3f",
-        "authors": "R. Premkumar, S. Hussain, St\u00e8ve-Jonathan Koyambo-Konzapa"
-      },
-      "max_citations": 27,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Pyrrole-2-Carboxylate",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "methylstat (1.514)",
-        "vemurafenib (1.459)",
-        "SB-239063 (1.435)",
-        "sirolimus (1.432)",
-        "GSK-1059615 (1.431)"
-      ],
-      "signature_interpretation": "Pyrrole-2-Carboxylate was not found among the top 38 drugs that reverse the Glioblastoma gene signature. Top reversers: methylstat (1.514), vemurafenib (1.459), SB-239063 (1.435)",
-      "ai_hypothesis": "of its ability to inhibit the proliferation of cancer cells.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 1.0,
-      "novelty_level": "BREAKTHROUGH",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
         "Supported by 3 independent AI pillars",
-        "Supporting paper with 27 citations",
+        "Highly cited paper (280 citations): \"Prognostic validation of a new classification system for ext...\"",
         "AI-generated hypothesis available"
-      ]
+      ],
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "late-trial",
+        "confidence": "medium",
+        "rationale": "Phase-3 investigational \u2014 dose range established in Phase-2 pharmacokinetic studies; efficacy trials ongoing or recently completed.",
+        "chembl_phase": 3.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 0,
+        "has_warnings": false,
+        "top_interactions": []
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.14800000190734863,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.4230000078678131,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Brain - Cortex",
+          "Brain - Frontal Cortex (BA9)"
+        ],
+        "n_genes": 1,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 1.12,
+        "max_tpm_in_tissue": 1.12,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.879
+      },
+      "disease_entity": "Disease::MESH:D005909",
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "ensemble_prob": 0.0,
+      "ensemble_features": {
+        "kg_score": 0.6245,
+        "degree_penalty": 1.0,
+        "n_drug_targets": 0,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 8.2845
+      },
+      "ensemble_rank": 10,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "ALKYL",
+          "ALPHA",
+          "PRIMARY"
+        ],
+        "n_alerts": 3,
+        "alert_names": [
+          "alkyl_halide",
+          "alpha_halo_carbonyl",
+          "primary_halide_sulfate"
+        ]
+      }
     },
     {
       "drug_name": "Fluorouracil",
       "drug_id": "DB00544",
       "disease_name": "Glioblastoma",
-      "combined_score": 1.0499000549316406,
+      "combined_score": 0.41850000619888306,
+      "pillars_hit": 4,
       "transe_rank": 17,
-      "pillars_hit": 6,
+      "transe_score": -9.9993,
+      "pykeen_score": -11.9056,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.699999988079071,
+      "proximity_distance": 1.2000000476837158,
+      "admet_score": 0.7145,
+      "admet_flags": "clean",
+      "primekg_score": 0.2642,
+      "dti_score": 0.236,
+      "dti_best_target": "ZEB1",
+      "kg_group_score": 0.4412,
+      "structural_group_score": 0.236,
+      "network_group_score": 0.5357999801635742,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.5593,
+      "admet_multiplier": 0.9429,
+      "efficacy_score": 0.4438000023365021,
+      "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 40,
+      "shared_targets": [
+        "ABCB1",
+        "ABCG2",
+        "AKT1",
+        "BCL2",
+        "CASP3",
+        "CCNA2",
+        "CDKN1A",
+        "CHEK1",
+        "CSF2",
+        "CTNNB1",
+        "CYP19A1",
+        "EGF",
+        "EGFR",
+        "EGR1",
+        "ERBB2",
+        "GJA1",
+        "H19",
+        "H3P16",
+        "IFNA1",
+        "IFNG"
+      ],
       "pubmed_total": 177,
       "pubmed_treatment_total": 163,
       "pubmed_repurposing_total": 0,
@@ -1070,7 +1958,7 @@
         {
           "title": "Synthesis of 5-Fluorouracil (5-FU) coated platinum nanoparticles and apoptotic effects on U87 human glioblastoma cells",
           "year": 2025,
-          "citations": 5,
+          "citations": 6,
           "url": "https://www.semanticscholar.org/paper/32fac98e2ccf7963e3a46651ff3857c1c4685f1e",
           "authors": "Atena Abed, M. Karimi, M. Nejati"
         },
@@ -1089,28 +1977,28 @@
           "authors": "Abhijit Saha, Indranil Mondal, Anuj Kumari"
         },
         {
-          "title": "THOC2 expression and its impact on 5-fluorouracil resistance in glioblastoma multiforme.",
-          "year": 2023,
-          "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/a1ae5f054d71bb27191eb6d118cb1a88d119293d",
-          "authors": "Y. J. Lee, Jin-Hwa Jung, Da-Young Chang"
-        },
-        {
           "title": "Synergistic role of thymoquinone and 5-fluorouracil in U-251MG glioblastoma cell line",
           "year": 2023,
           "citations": 4,
           "url": "https://www.semanticscholar.org/paper/300993bff696cbdd785bda1051b9624bdf7ad145",
           "authors": "Erg\u00fcl Mutlu Altunda\u011f, A. T. Jannuzzi, Cahit \u00d6zbilenler"
+        },
+        {
+          "title": "THOC2 expression and its impact on 5-fluorouracil resistance in glioblastoma multiforme.",
+          "year": 2023,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/a1ae5f054d71bb27191eb6d118cb1a88d119293d",
+          "authors": "Y. J. Lee, Jin-Hwa Jung, Da-Young Chang"
         }
       ],
       "most_cited_paper": {
         "title": "Synthesis of 5-Fluorouracil (5-FU) coated platinum nanoparticles and apoptotic effects on U87 human glioblastoma cells",
         "year": 2025,
-        "citations": 5,
+        "citations": 6,
         "url": "https://www.semanticscholar.org/paper/32fac98e2ccf7963e3a46651ff3857c1c4685f1e",
         "authors": "Atena Abed, M. Karimi, M. Nejati"
       },
-      "max_citations": 5,
+      "max_citations": 6,
       "faers_signal": "moderate",
       "faers_total_reports": 85326,
       "faers_cooccurrences": 6,
@@ -1203,38 +2091,14 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0.5593,
       "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "Fluorouracil \u2014[downregulates]\u2192 gene-2697 \u2014[is linked to]\u2192 Glioblastoma",
+      "kg_paths_text": "\u2022 Fluorouracil \u2014[downregulates]\u2192 gene-2697 \u2014[is linked to]\u2192 Glioblastoma\n\u2022 Fluorouracil \u2014[downregulates]\u2192 gene-54477 \u2014[is downregulated by]\u2192 DB00762 \u2014[treats]\u2192 Glioblastoma\n\u2022 Fluorouracil \u2014[downregulates]\u2192 gene-2886 \u2014[is downregulated by]\u2192 DB06589 \u2014[is a therapeutic for]\u2192 Glioblastoma",
       "validation_experiments": [],
-      "novelty_score": 0.48,
+      "novelty_score": 0.20100000500679016,
       "novelty_level": "ESTABLISHED",
       "is_known_treatment": false,
       "clinical_trials_total": 10,
       "clinical_trials": [
-        {
-          "nct_id": "NCT06047379",
-          "title": "Safety and Efficacy of NEO212 in Patients With Astrocytoma IDH-mutant, Glioblastoma IDH-wildtype or Brain Metastasis",
-          "status": "RECRUITING",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "134",
-          "url": "https://clinicaltrials.gov/study/NCT06047379"
-        },
-        {
-          "nct_id": "NCT02576665",
-          "title": "A Study of Toca 511, a Retroviral Replicating Vector, Combined With Toca FC in Patients With Solid Tumors or Lymphoma (Toca 6)",
-          "status": "TERMINATED",
-          "phase": "PHASE1",
-          "enrollment": "21",
-          "url": "https://clinicaltrials.gov/study/NCT02576665"
-        },
-        {
-          "nct_id": "NCT02414165",
-          "title": "The Toca 5 Trial: Toca 511 & Toca FC Versus Standard of Care in Patients With Recurrent High Grade Glioma",
-          "status": "TERMINATED",
-          "phase": "PHASE2, PHASE3",
-          "enrollment": "403",
-          "url": "https://clinicaltrials.gov/study/NCT02414165"
-        },
         {
           "nct_id": "NCT00959946",
           "title": "Study Of Bosutinib With Capecitabine In Solid Tumors And Locally Advanced Or Metastatic Breast Cancer",
@@ -1244,17 +2108,41 @@
           "url": "https://clinicaltrials.gov/study/NCT00959946"
         },
         {
-          "nct_id": "NCT01470794",
-          "title": "Study of a Retroviral Replicating Vector Combined With a Prodrug to Treat Patients Undergoing Surgery for a Recurrent Malignant Brain Tumor",
+          "nct_id": "NCT00504660",
+          "title": "6-TG, Capecitabine and Celecoxib Plus TMZ or CCNU for Anaplastic Glioma Patients",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "75",
+          "url": "https://clinicaltrials.gov/study/NCT00504660"
+        },
+        {
+          "nct_id": "NCT00357253",
+          "title": "Capecitabine and Radiation Therapy in Treating Young Patients With Newly Diagnosed, Nonmetastatic Brain Stem Glioma or High-Grade Glioma",
           "status": "COMPLETED",
           "phase": "PHASE1",
-          "enrollment": "58",
-          "url": "https://clinicaltrials.gov/study/NCT01470794"
+          "enrollment": "24",
+          "url": "https://clinicaltrials.gov/study/NCT00357253"
+        },
+        {
+          "nct_id": "NCT01985256",
+          "title": "Study of a Retroviral Replicating Vector Given Intravenously to Patients Undergoing Surgery for Recurrent Brain Tumor",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "17",
+          "url": "https://clinicaltrials.gov/study/NCT01985256"
+        },
+        {
+          "nct_id": "NCT04327011",
+          "title": "A Continuation Protocol for Patients Previously Enrolled in a Study of Toca 511",
+          "status": "TERMINATED",
+          "phase": "PHASE1",
+          "enrollment": "65",
+          "url": "https://clinicaltrials.gov/study/NCT04327011"
         }
       ],
       "trial_phases": {
         "PHASE1": 8,
-        "PHASE2": 6,
+        "PHASE2": 5,
         "PHASE3": 1
       },
       "confidence": "HIGH",
@@ -1262,155 +2150,313 @@
         "10 clinical trial(s) found on ClinicalTrials.gov",
         "Phase 3 trial exists",
         "177 PubMed articles on this drug-disease pair",
-        "Supported by 6 independent AI pillars",
+        "Supported by 4 independent AI pillars",
         "Moderate FAERS signal: 6 adverse event reports mention drug-disease co-occurrence",
         "AI analysis of 1 abstract(s) found positive treatment signals",
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.56)"
-      ]
+      ],
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1216,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "high_risk",
+        "summary": "CPIC-A (DPYD) \u2022 PharmGKB-3 (GSTP1 / rs1695)",
+        "cpic": [
+          {
+            "gene": "DPYD",
+            "level": "A",
+            "guideline": "DPYD and Fluoropyrimidines"
+          },
+          {
+            "gene": "MTHFR",
+            "level": "C",
+            "guideline": ""
+          },
+          {
+            "gene": "GSTP1",
+            "level": "D",
+            "guideline": ""
+          },
+          {
+            "gene": "NQO1",
+            "level": "D",
+            "guideline": ""
+          },
+          {
+            "gene": "TYMS",
+            "level": "D",
+            "guideline": ""
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "GSTP1",
+            "variant": "rs1695",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/769171387"
+          },
+          {
+            "gene": "DPYD",
+            "variant": "rs2297595",
+            "level": "1A",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981201535"
+          },
+          {
+            "gene": "DPYD",
+            "variant": "rs1801265",
+            "level": "1A",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981201981"
+          },
+          {
+            "gene": "MTHFR",
+            "variant": "rs1801133",
+            "level": "4",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204912"
+          },
+          {
+            "gene": "LGR5",
+            "variant": "rs17109924",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1446903310"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.554,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.419,
+          "docking": 0.706,
+          "pharos": 0.0,
+          "literature": 0.977
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Brain - Cortex",
+          "Brain - Frontal Cortex (BA9)"
+        ],
+        "n_genes": 19,
+        "n_expressed": 13,
+        "mean_tpm_in_tissue": 20.29,
+        "max_tpm_in_tissue": 188.07,
+        "tissue_specificity": 0.185,
+        "context_modifier": 0.991
+      },
+      "disease_entity": "Disease::MESH:D005909",
+      "docking": {
+        "kcal_per_mol": -8.47,
+        "target_symbol": "CYP19A1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "ensemble_prob": 0.9642,
+      "ensemble_features": {
+        "kg_score": 0.9991,
+        "degree_penalty": 0.7655,
+        "n_drug_targets": 7,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.3026
+      },
+      "ensemble_rank": 5,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
     },
     {
-      "drug_name": "3-Methyladenine",
-      "drug_id": "DB04104",
+      "drug_name": "Edotecarin",
+      "drug_id": "DB04882",
       "disease_name": "Glioblastoma",
-      "combined_score": 1.0462000370025635,
-      "transe_rank": 195,
+      "combined_score": 0.40709999203681946,
       "pillars_hit": 3,
+      "transe_rank": 66,
+      "transe_score": -10.4146,
+      "pykeen_score": -12.0891,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.75,
+      "proximity_distance": 1.0,
+      "admet_score": 0.434,
+      "admet_flags": "DILI=0.98",
+      "primekg_score": 0.2543,
+      "dti_score": 1.0,
+      "dti_best_target": "MTOR",
+      "kg_group_score": 0.3161,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.75,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.8868,
+      "efficacy_score": 0.45899999141693115,
+      "groups_hit": 3,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 62,
-      "pubmed_treatment_total": 57,
-      "pubmed_repurposing_total": 3,
+      "shared_target_count": 2,
+      "shared_targets": [
+        "EGFR",
+        "TOP1"
+      ],
+      "pubmed_total": 2,
+      "pubmed_treatment_total": 2,
+      "pubmed_repurposing_total": 0,
       "key_papers": [
         {
-          "pmid": "32186433",
-          "title": "Hypoxia-induced acetylation of PAK1 enhances autophagy and promotes brain tumorigenesis via phosphorylating ATG5.",
-          "authors": "Feng X, Zhang H, Meng L, et al.",
-          "journal": "Autophagy",
-          "year": "2021",
-          "abstract_snippet": "Although the treatment of brain tumors by targeting kinase-regulated macroautophagy/autophagy, is under investigation, the precise mechanism underlying autophagy initiation and its significance in glioblastoma (GBM) remains to be defined. Here, we report that PAK1 (p21 [RAC1] activated kinase 1) is ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/32186433/",
-          "total_results": 62
+          "pmid": "16625697",
+          "title": "Long-lasting partial regression of glioblastoma multiforme achieved by edotecarin: case report.",
+          "authors": "Vrdoljak E, Boban M, Saratlija-Novakovi\u0107 Z, et al.",
+          "journal": "Croatian medical journal",
+          "year": "2006",
+          "abstract_snippet": "We describe the response to a new chemotherapy agent, topoisomerase I inhibitor edotecarin in an 18-year-old woman with recurring glioblastoma. The therapy was administered for 17 months. The radiological partial response and clinical improvement have been achieved, with minor toxicity. Median survi...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16625697/",
+          "total_results": 2
         },
         {
-          "pmid": "40408405",
-          "title": "Autophagy-mediated downregulation of AXL and TIM-1 promotes sustained Zika virus infection.",
-          "authors": "Yu J, Zheng YM, Sheridan MA, et al.",
-          "journal": "Proceedings of the National Academy of Sciences of the United States of America",
-          "year": "2025",
-          "abstract_snippet": "Zika virus (ZIKV) infection can lead to a variety of clinical outcomes, including severe congenital abnormalities. The phosphatidylserine receptors AXL and TIM-1 are recognized as critical entry factors for ZIKV in vitro. However, it remains unclear whether and how ZIKV regulates these receptors dur...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40408405/"
-        },
-        {
-          "pmid": "22156195",
-          "title": "Alkylpurine-DNA-N-glycosylase confers resistance to temozolomide in xenograft models of glioblastoma multiforme and is associated with poor survival in patients.",
-          "authors": "Agnihotri S, Gajadhar AS, Ternamian C, et al.",
-          "journal": "The Journal of clinical investigation",
-          "year": "2012",
-          "abstract_snippet": "Glioblastoma multiforme (GBM) is the most common and lethal of all gliomas. The current standard of care includes surgery followed by concomitant radiation and chemotherapy with the DNA alkylating agent temozolomide (TMZ). O\u2076-methylguanine-DNA methyltransferase (MGMT) repairs the most cytotoxic of l...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/22156195/"
-        },
-        {
-          "pmid": "37569432",
-          "title": "Autophagy Inhibition via Hydroxychloroquine or 3-Methyladenine Enhances Chemotherapy-Induced Apoptosis in Neuro-Blastoma and Glioblastoma.",
-          "authors": "Wear D, Bhagirath E, Balachandar A, et al.",
-          "journal": "International journal of molecular sciences",
-          "year": "2023",
-          "abstract_snippet": "Neuroblastoma is the most common tumour in children under 1 year old, accounting for 12-15% of childhood cancer deaths. Although current treatments are relatively efficacious against this cancer, associated adverse effects could be detrimental to growth and development. In contrast, glioblastoma acc...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37569432/"
-        },
-        {
-          "pmid": "22342518",
-          "title": "Pharmacological concentrations of ascorbate radiosensitize glioblastoma multiforme primary cells by increasing oxidative DNA damage and inhibiting G2/M arrest.",
-          "authors": "Herst PM, Broadley KW, Harper JL, et al.",
-          "journal": "Free radical biology & medicine",
-          "year": "2012",
-          "abstract_snippet": "Glioblastoma multiforme (GBM) has a very poor prognosis because of its chemo- and radiation therapy resistance. Here we investigated the ability of pharmacological concentrations of ascorbate to radiosensitize primary cells isolated from six GBM patients, mouse astrocytoma cells, and mouse astrocyte...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/22342518/"
+          "pmid": "11592348",
+          "title": "Therapeutic activity of the topoisomerase I inhibitor J-107088 [6-N-(1-hydroxymethyla-2-hydroxyl) ethylamino-12,13-dihydro-13-(beta-D-glucopyranosyl) -5H-indolo[2,3-a]-pyrrolo[3,4-c]-carbazole-5,7(6H)-dione]] against pediatric and adult central nervous system tumor xenografts.",
+          "authors": "Cavazos CM, Keir ST, Yoshinari T, et al.",
+          "journal": "Cancer chemotherapy and pharmacology",
+          "year": "2001",
+          "abstract_snippet": "PURPOSE: The in vivo antitumor activity of a novel topoisomerase I inhibitor, J-107088, was tested in athymic nude mice bearing subcutaneous or intracranial pediatric and adult malignant CNS tumor-derived xenografts. METHODS: J-107088 was administered to animals on days 1-5 and 8-12 via intraperiton...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11592348/"
         }
       ],
-      "repurposing_papers": [
-        {
-          "pmid": "33194631",
-          "title": "Psychotropic Drugs Show Anticancer Activity by Disrupting Mitochondrial and Lysosomal Function.",
-          "authors": "Varalda M, Antona A, Bettio V, et al.",
-          "journal": "Frontiers in oncology",
-          "year": "2020",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33194631/",
-          "total_results": 3
-        },
-        {
-          "pmid": "32971907",
-          "title": "Pimozide Suppresses the Growth of Brain Tumors by Targeting STAT3-Mediated Autophagy.",
-          "authors": "Ranjan A, Kaushik I, Srivastava SK",
-          "journal": "Cells",
-          "year": "2020",
-          "abstract_snippet": "Brain tumors are considered as one of the most aggressive and incurable forms of cancer. The majority of the patients with brain tumors have a median survival rate of 12%. Brain tumors are lethal despite the availability of advanced treatment options such as surgical removal, chemotherapy, and radio...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/32971907/"
-        },
-        {
-          "pmid": "32764319",
-          "title": "Doxazosin, a Classic Alpha 1-Adrenoceptor Antagonist, Overcomes Osimertinib Resistance in Cancer Cells via the Upregulation of Autophagy as Drug Repurposing.",
-          "authors": "Suzuki S, Yamamoto M, Sanomachi T, et al.",
-          "journal": "Biomedicines",
-          "year": "2020",
-          "abstract_snippet": "Osimertinib, which is a third-generation epidermal growth factor receptor tyrosine kinase inhibitor, is an important anticancer drug because of its high efficacy and excellent safety profile. However, resistance against osimertinib is inevitable; therefore, therapeutic strategies to overcome the res...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/32764319/"
-        }
-      ],
+      "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "Autophagy Inhibition via Hydroxychloroquine or 3-Methyladenine Enhances Chemotherapy-Induced Apoptosis in Neuro-Blastoma and Glioblastoma",
+          "title": "Long-lasting partial regression of glioblastoma multiforme achieved by edotecarin: case report.",
+          "year": 2006,
+          "citations": 2,
+          "url": "https://www.semanticscholar.org/paper/7d9455119c5c010a9a919cac870190bf24fcdf01",
+          "authors": "E. Vrdoljak, M. Boban, \u017d. Saratlija-Novakovi\u0107"
+        },
+        {
+          "title": "Pharmacokinetics (PK) of edotecarin (J-107088), a topoisomerase I inhibitor, in patients with metastatic breast cancer (mBC) or glioblastoma multiforme (GBM)",
+          "year": 2005,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/a28fc3d4b7122352aaac19d3554f21813d3b1a90",
+          "authors": "D. Yin, S. Toler, F. Guo"
+        },
+        {
+          "title": "Lactate dehydrogenase A regulates tumor-macrophage symbiosis to promote glioblastoma progression",
+          "year": 2024,
+          "citations": 105,
+          "url": "https://www.semanticscholar.org/paper/4ef792a8bad31499bc4e6a5cad62049a4a6d8bb6",
+          "authors": "Fatima Khan, Yiyun Lin, Heba Ali"
+        },
+        {
+          "title": "Glioblastoma vaccines: past, present, and opportunities",
+          "year": 2024,
+          "citations": 67,
+          "url": "https://www.semanticscholar.org/paper/fd73298a08a4e88c5ab16ab0308e312a8973bf60",
+          "authors": "Zujian Xiong, Itay Raphael, M. Olin"
+        },
+        {
+          "title": "Glioblastoma and Other Primary Brain Malignancies in Adults: A Review.",
           "year": 2023,
-          "citations": 17,
-          "url": "https://www.semanticscholar.org/paper/462470568ef8de643ab567a7da6bfe0f3dd44ee8",
-          "authors": "D. Wear, Eesha Bhagirath, Arpana Balachandar"
-        },
-        {
-          "title": "Repair of 3-methyladenine and abasic sites by base excision repair mediates glioblastoma resistance to temozolomide",
-          "year": 2012,
-          "citations": 34,
-          "url": "https://www.semanticscholar.org/paper/e06f3937d6e888ae84690a1d505e0a325087495c",
-          "authors": "M. Bobola, D. Kolstoe, A. Blank"
-        },
-        {
-          "title": "Lower dose of metformin combined with artesunate induced autophagy-dependent apoptosis of glioblastoma by activating ROS-AMPK-mTOR axis.",
-          "year": 2023,
-          "citations": 13,
-          "url": "https://www.semanticscholar.org/paper/4c6d5f28dd426c85501b4a28503a77756d4810e7",
-          "authors": "Wencong Ding, Lingxiao Liao, Jia Liu"
-        },
-        {
-          "title": "KDELC2 Upregulates Glioblastoma Angiogenesis via Reactive Oxygen Species Activation and Tumor-Associated Macrophage Proliferation",
-          "year": 2023,
-          "citations": 13,
-          "url": "https://www.semanticscholar.org/paper/2df64fe213f794749538da84bf713d8304e9b46f",
-          "authors": "Yu-Ling Tsai, Ying Chen, Ying-Chuan Chen"
-        },
-        {
-          "title": "Regorafenib induces lethal autophagy arrest by stabilizing PSAT1 in glioblastoma",
-          "year": 2020,
-          "citations": 115,
-          "url": "https://www.semanticscholar.org/paper/a3377f1729c9f47c28bd56798980c49acd348d9e",
-          "authors": "Jingwen Jiang, Lu Zhang, Haining Chen"
+          "citations": 902,
+          "url": "https://www.semanticscholar.org/paper/6c49b835703b5011fa849f27957c013ac501b522",
+          "authors": "L. R. Schaff, I. Mellinghoff"
         }
       ],
       "most_cited_paper": {
-        "title": "Regorafenib induces lethal autophagy arrest by stabilizing PSAT1 in glioblastoma",
-        "year": 2020,
-        "citations": 115,
-        "url": "https://www.semanticscholar.org/paper/a3377f1729c9f47c28bd56798980c49acd348d9e",
-        "authors": "Jingwen Jiang, Lu Zhang, Haining Chen"
+        "title": "Glioblastoma and Other Primary Brain Malignancies in Adults: A Review.",
+        "year": 2023,
+        "citations": 902,
+        "url": "https://www.semanticscholar.org/paper/6c49b835703b5011fa849f27957c013ac501b522",
+        "authors": "L. R. Schaff, I. Mellinghoff"
       },
-      "max_citations": 115,
+      "max_citations": 902,
       "faers_signal": "none",
-      "faers_total_reports": 0,
+      "faers_total_reports": 3,
       "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for 3-Methyladenine",
+      "faers_interpretation": "No FAERS reports found linking Edotecarin to Glioblastoma terms. Drug has 3 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -1420,8 +2466,377 @@
         "sirolimus (1.432)",
         "GSK-1059615 (1.431)"
       ],
-      "signature_interpretation": "3-Methyladenine was not found among the top 38 drugs that reverse the Glioblastoma gene signature. Top reversers: methylstat (1.514), vemurafenib (1.459), SB-239063 (1.435)",
-      "ai_hypothesis": "of its ability to inhibit the DNA repair pathway.",
+      "signature_interpretation": "Edotecarin was not found among the top 38 drugs that reverse the Glioblastoma gene signature. Top reversers: methylstat (1.514), vemurafenib (1.459), SB-239063 (1.435)",
+      "ai_hypothesis": "of its ability to inhibit the proliferation of cancer cells.",
+      "abstract_analyses": [
+        {
+          "relation_type": "treats",
+          "confidence": 0.7,
+          "positive_signals": 2,
+          "negative_signals": 1,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "chemotherapy",
+              "entity_group": "Medication",
+              "score": 1.0
+            },
+            {
+              "entity": "topoisomerase i inhibitor",
+              "entity_group": "Medication",
+              "score": 0.9359999895095825
+            },
+            {
+              "entity": "edotecarin",
+              "entity_group": "Medication",
+              "score": 0.9079999923706055
+            },
+            {
+              "entity": "18 - year - old",
+              "entity_group": "Age",
+              "score": 0.9980000257492065
+            },
+            {
+              "entity": "woman",
+              "entity_group": "Sex",
+              "score": 1.0
+            },
+            {
+              "entity": "g",
+              "entity_group": "Disease_disorder",
+              "score": 0.9039999842643738
+            },
+            {
+              "entity": "17 months",
+              "entity_group": "Duration",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "median",
+              "entity_group": "Detailed_description",
+              "score": 0.9779999852180481
+            }
+          ]
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Edotecarin \u2014[is a therapeutic for]\u2192 Glioblastoma",
+      "kg_paths_text": "\u2022 Edotecarin \u2014[is a therapeutic for]\u2192 Glioblastoma\n\u2022 Edotecarin \u2014[is a therapeutic for]\u2192 MESH:D009369 \u2014[is treated by]\u2192 DB00262 \u2014[treats]\u2192 Glioblastoma\n\u2022 Edotecarin \u2014[is a therapeutic for]\u2192 MESH:D009369 \u2014[is treated by]\u2192 DB00262 \u2014[treats]\u2192 Glioblastoma",
+      "validation_experiments": [],
+      "novelty_score": 0.26499998569488525,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": true,
+      "clinical_trials_total": 1,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT00068952",
+          "title": "Study of IV Edotecarin Vs Temozolomide or Carmustine (BCNU) or Lomustine (CCNU) in Patients With Glioblastoma Multiforme",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "118",
+          "url": "https://clinicaltrials.gov/study/NCT00068952"
+        }
+      ],
+      "trial_phases": {
+        "PHASE3": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "1 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "2 PubMed article(s) - limited literature",
+        "Supported by 3 independent AI pillars",
+        "Highly cited paper (902 citations): \"Glioblastoma and Other Primary Brain Malignancies in Adults:...\"",
+        "AI analysis of 1 abstract(s) found positive treatment signals",
+        "AI-generated hypothesis available"
+      ],
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "late-trial",
+        "confidence": "medium",
+        "rationale": "Phase-3 investigational \u2014 dose range established in Phase-2 pharmacokinetic studies; efficacy trials ongoing or recently completed.",
+        "chembl_phase": 3.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 0,
+        "has_warnings": false,
+        "top_interactions": []
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.433,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.407,
+          "docking": 0.83,
+          "pharos": 0.0,
+          "literature": 0.207
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Brain - Cortex",
+          "Brain - Frontal Cortex (BA9)"
+        ],
+        "n_genes": 2,
+        "n_expressed": 2,
+        "mean_tpm_in_tissue": 16.54,
+        "max_tpm_in_tissue": 26.83,
+        "tissue_specificity": 0.171,
+        "context_modifier": 0.982
+      },
+      "disease_entity": "Disease::MESH:D005909",
+      "docking": {
+        "kcal_per_mol": -9.96,
+        "target_symbol": "TOP1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "ensemble_prob": 0.0851,
+      "ensemble_features": {
+        "kg_score": 0.9408,
+        "degree_penalty": 1.0,
+        "n_drug_targets": 3,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 6.4394
+      },
+      "ensemble_rank": 7,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "PHTHALIMIDE"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "phthalimide"
+        ]
+      }
+    },
+    {
+      "drug_name": "Gemcitabine",
+      "drug_id": "DB00441",
+      "disease_name": "Glioblastoma",
+      "combined_score": 0.40470001101493835,
+      "pillars_hit": 3,
+      "transe_rank": 18,
+      "transe_score": -10.007,
+      "pykeen_score": -12.0154,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.7120000123977661,
+      "proximity_distance": 1.149999976158142,
+      "admet_score": 0.6272,
+      "admet_flags": "clean",
+      "primekg_score": 0.2523,
+      "dti_score": 1.0,
+      "dti_best_target": "MTOR",
+      "kg_group_score": 0.4002,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.536300003528595,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9254,
+      "efficacy_score": 0.4372999966144562,
+      "groups_hit": 3,
+      "direct_relations": [],
+      "shared_target_count": 65,
+      "shared_targets": [
+        "ABCB1",
+        "ABCC1",
+        "ANXA7",
+        "ATF3",
+        "AURKA",
+        "BCL2",
+        "CAV1",
+        "CCNA2",
+        "CCNB1",
+        "CDK1",
+        "CDKN1A",
+        "CDKN1B",
+        "CHEK1",
+        "CREB1",
+        "CTNNB1",
+        "CXCL8",
+        "DDR1",
+        "DNMT1",
+        "EGFR",
+        "EGR1"
+      ],
+      "pubmed_total": 94,
+      "pubmed_treatment_total": 88,
+      "pubmed_repurposing_total": 3,
+      "key_papers": [
+        {
+          "pmid": "38049204",
+          "title": "Bioinspired Lipoproteins of Furoxans-Gemcitabine Preferentially Targets Glioblastoma and Overcomes Radiotherapy Resistance.",
+          "authors": "Sun M, Xie H, Zhang W, et al.",
+          "journal": "Advanced science (Weinheim, Baden-Wurttemberg, Germany)",
+          "year": "2024",
+          "abstract_snippet": "Radiotherapy (RT) resistance is an enormous challenge in glioblastoma multiforme (GBM) treatment, which is largely associated with DNA repair, poor distribution of reactive radicals in tumors, and limited delivery of radiosensitizers to the tumor sites. Inspired by the aberrant upregulation of RAD51...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38049204/",
+          "total_results": 94
+        },
+        {
+          "pmid": "40912600",
+          "title": "Nuclear cGAS mediated replication stress and mitotic catastrophe can overcome gemcitabine resistance.",
+          "authors": "Park SY, Jeong KJ, Poire A, et al.",
+          "journal": "Cancer letters",
+          "year": "2025",
+          "abstract_snippet": "Gemcitabine, a ribonucleotide reductase (RNR) inhibitor, is active in pancreatic ductal carcinoma (PDAC) patients, but unfortunately has a limited impact on long term outcomes. Gemcitabine induces nucleotide deficiency, DNA damage including single stranded DNA (ssDNA) and replication stress (RS). DN...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40912600/"
+        },
+        {
+          "pmid": "18701427",
+          "title": "Gemcitabine uptake in glioblastoma multiforme: potential as a radiosensitizer.",
+          "authors": "Sigmond J, Honeywell RJ, Postma TJ, et al.",
+          "journal": "Annals of oncology : official journal of the European Society for Medical Oncology",
+          "year": "2009",
+          "abstract_snippet": "Glioblastoma multiforme (GBM), the most frequent malignant brain tumor, has a poor prognosis, but is relatively sensitive to radiation. Both gemcitabine and its metabolite difluorodeoxyuridine (dFdU) are potent radiosensitizers. The aim of this phase 0 study was to investigate whether gemcitabine pa...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18701427/"
+        },
+        {
+          "pmid": "29074439",
+          "title": "Gemcitabine and glioblastoma: challenges and current perspectives.",
+          "authors": "Bastiancich C, Bastiat G, Lagarce F",
+          "journal": "Drug discovery today",
+          "year": "2018",
+          "abstract_snippet": "Gemcitabine is a nucleoside analog currently used for the treatment of various solid tumors as a single agent or in combination with other chemotherapeutic drugs. Its use against highly aggressive brain tumors (glioblastoma) has been evaluated in preclinical and clinical trials leading to controvers...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29074439/"
+        },
+        {
+          "pmid": "29397747",
+          "title": "Hyaluronic Acid-Modified Micelles Encapsulating Gem-C",
+          "authors": "Liu X, Li W, Chen T, et al.",
+          "journal": "Molecular pharmaceutics",
+          "year": "2018",
+          "abstract_snippet": "Glioblastoma multiforme (GBM), a prevalent brain cancer with high mortality, is resistant to the conventional single-agent chemotherapy. In this study, we employed a combination chemotherapy strategy to inhibit GBM growth and addressed its possible beneficial effects. The synergistic effect of lauro...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29397747/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "38759897",
+          "title": "Chitosan-PLGA mucoadhesive nanoparticles for gemcitabine repurposing for glioblastoma therapy.",
+          "authors": "Ramalho MJ, Serra \u00c9, Lima J, et al.",
+          "journal": "European journal of pharmaceutics and biopharmaceutics : official journal of Arbeitsgemeinschaft fur Pharmazeutische Verfahrenstechnik e.V",
+          "year": "2024",
+          "abstract_snippet": "Glioblastoma (GBM) is a highly deadly brain tumor that does not respond satisfactorily to conventional treatment. The non-alkylating agent gemcitabine (GEM) has been proposed for treating GBM. It can overcome MGMT protein-mediated resistance, a major limitation of conventional therapy with the alkyl...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38759897/",
+          "total_results": 3
+        },
+        {
+          "pmid": "40252866",
+          "title": "Repurposing Chemotherapeutics in a Hyaluronic Acid-conjugate Combination Treatment Approach for the Local Immunomodulation of the Glioblastoma Microenvironment.",
+          "authors": "Rodella G, Ma Z, Ucakar B, et al.",
+          "journal": "International journal of pharmaceutics",
+          "year": "2025",
+          "abstract_snippet": "The immunosuppressive tumor immune microenvironment (TIME) renders glioblastoma (GBM) refractory to current chemo-immunotherapeutics. We sought to explore a novel approach for local GBM-associated TIME immunomodulation based on a synergistic combination of the repurposed chemotherapeutic drugs doxor...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40252866/"
+        },
+        {
+          "pmid": "31033488",
+          "title": "Drug Repositioning in Oncology.",
+          "authors": "Serafin MB, Bottega A, da Rosa TF, et al.",
+          "journal": "American journal of therapeutics",
+          "year": "2021",
+          "abstract_snippet": "BACKGROUND: The worldwide increase in the occurrence of cancer associated with the limitations of immunotherapy and the emergence of resistance have impaired the prognosis of cancer patients, which leads to the search for alternative treatment methods. Drug repositioning, a well-established process ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31033488/"
+        }
+      ],
+      "semantic_scholar_papers": [
+        {
+          "title": "Chitosan-PLGA mucoadhesive nanoparticles for gemcitabine repurposing for glioblastoma therapy.",
+          "year": 2024,
+          "citations": 22,
+          "url": "https://www.semanticscholar.org/paper/7147e7039ac07b6360479ffb65034c02cbee6870",
+          "authors": "M. J. Ramalho, \u00c9rica Serra, Jorge Lima"
+        },
+        {
+          "title": "Synergistic Local Delivery of Gemcitabine and Resiquimod (R848) via Janus Micelles Encapsulated in a Dual-Responsive Hydrogel for Subcutaneous Glioblastoma Treatment Models",
+          "year": 2025,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/e2a92488e9979e2488286b8feb7f6d2bffd573b2",
+          "authors": "Yohannis Wondwosen Ahmed, Tsung-Yun Wu, H. Tsai"
+        },
+        {
+          "title": "Repurposing gemcitabine for glioblastoma treatment: the role of drug-conjugates and nanoparticles as drug delivery systems",
+          "year": 2024,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/4190d2986106d0b7767b3bffb6ea9204aa17aa33",
+          "authors": "M. J. Ramalho, \u00c9rica Serra, J. Loureiro"
+        },
+        {
+          "title": "Bioinspired Lipoproteins of Furoxans\u2013Gemcitabine Preferentially Targets Glioblastoma and Overcomes Radiotherapy Resistance",
+          "year": 2023,
+          "citations": 10,
+          "url": "https://www.semanticscholar.org/paper/e13752469914457da532936a1eb52078fe98ed69",
+          "authors": "Mao-min Sun, Hong Xie, Wenli Zhang"
+        },
+        {
+          "title": "Correction to \"Temozolomide, Gemcitabine, and Decitabine Hybrid Nanoconjugates: From Design to Proof-of-Concept (PoC) of Synergies toward the Understanding of Drug Impact on Human Glioblastoma Cells\".",
+          "year": 2022,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/94740866ab929e4ea3039e4b213e227ad368fd50",
+          "authors": "Ferdaous Sahli, Manon Courcelle, T. Palama"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Chitosan-PLGA mucoadhesive nanoparticles for gemcitabine repurposing for glioblastoma therapy.",
+        "year": 2024,
+        "citations": 22,
+        "url": "https://www.semanticscholar.org/paper/7147e7039ac07b6360479ffb65034c02cbee6870",
+        "authors": "M. J. Ramalho, \u00c9rica Serra, Jorge Lima"
+      },
+      "max_citations": 22,
+      "faers_signal": "moderate",
+      "faers_total_reports": 55284,
+      "faers_cooccurrences": 3,
+      "faers_interpretation": "3 FAERS reports mention both Gemcitabine and Glioblastoma-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "methylstat (1.514)",
+        "vemurafenib (1.459)",
+        "SB-239063 (1.435)",
+        "sirolimus (1.432)",
+        "GSK-1059615 (1.431)"
+      ],
+      "signature_interpretation": "Gemcitabine was not found among the top 38 drugs that reverse the Glioblastoma gene signature. Top reversers: methylstat (1.514), vemurafenib (1.459), SB-239063 (1.435)",
+      "ai_hypothesis": "of its ability to induce apoptosis and inhibit angiogenesis.",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
@@ -1435,200 +2850,936 @@
         },
         {
           "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 1,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "g",
+              "entity_group": "Disease_disorder",
+              "score": 0.9829999804496765
+            },
+            {
+              "entity": "##lioblastoma",
+              "entity_group": "Disease_disorder",
+              "score": 0.8619999885559082
+            },
+            {
+              "entity": "gb",
+              "entity_group": "Disease_disorder",
+              "score": 0.9959999918937683
+            },
+            {
+              "entity": "brain",
+              "entity_group": "Biological_structure",
+              "score": 0.996999979019165
+            },
+            {
+              "entity": "gemcitabi",
+              "entity_group": "Medication",
+              "score": 0.9229999780654907
+            },
+            {
+              "entity": "##fluorodeoxyuridine",
+              "entity_group": "Medication",
+              "score": 0.8399999737739563
+            },
+            {
+              "entity": "gem",
+              "entity_group": "Medication",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "##citabi",
+              "entity_group": "Medication",
+              "score": 0.7540000081062317
+            }
+          ]
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "Phase 2",
+      "failed_trial_count": 1,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Gemcitabine \u2014[downregulates]\u2192 gene-995 \u2014[is downregulated by]\u2192 DB00762 \u2014[treats]\u2192 Glioblastoma",
+      "kg_paths_text": "\u2022 Gemcitabine \u2014[downregulates]\u2192 gene-995 \u2014[is downregulated by]\u2192 DB00762 \u2014[treats]\u2192 Glioblastoma\n\u2022 Gemcitabine \u2014[downregulates]\u2192 gene-27161 \u2014[is downregulated by]\u2192 DB00563 \u2014[is a therapeutic for]\u2192 Glioblastoma\n\u2022 Gemcitabine \u2014[downregulates]\u2192 gene-27161 \u2014[is upregulated by]\u2192 DB00541 \u2014[is a therapeutic for]\u2192 Glioblastoma",
+      "validation_experiments": [],
+      "novelty_score": 0.28299999237060547,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": false,
+      "clinical_trials_total": 5,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT03684811",
+          "title": "A Study of FT-2102 in Patients With Advanced Solid Tumors and Gliomas With an IDH1 Mutation",
+          "status": "COMPLETED",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "93",
+          "url": "https://clinicaltrials.gov/study/NCT03684811"
+        },
+        {
+          "nct_id": "NCT03607643",
+          "title": "A Study of the Efficacy of Cannabidiol in Patients With Multiple Myeloma, Glioblastoma Multiforme, and GI Malignancies",
+          "status": "UNKNOWN",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "160",
+          "url": "https://clinicaltrials.gov/study/NCT03607643"
+        },
+        {
+          "nct_id": "NCT04521686",
+          "title": "Study of LY3410738 Administered to Patients With Advanced Solid Tumors With IDH1 or IDH2 Mutations",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "phase": "PHASE1",
+          "enrollment": "200",
+          "url": "https://clinicaltrials.gov/study/NCT04521686"
+        },
+        {
+          "nct_id": "NCT03434262",
+          "title": "SJDAWN: St. Jude Children's Research Hospital Phase 1 Study Evaluating Molecularly-Driven Doublet Therapies for Children and Young Adults With Recurrent Brain Tumors",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "68",
+          "url": "https://clinicaltrials.gov/study/NCT03434262"
+        },
+        {
+          "nct_id": "NCT02711137",
+          "title": "Open-Label Safety and Tolerability Study of INCB057643 in Subjects With Advanced Malignancies",
+          "status": "TERMINATED",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "137",
+          "url": "https://clinicaltrials.gov/study/NCT02711137"
+        }
+      ],
+      "trial_phases": {
+        "PHASE1": 5,
+        "PHASE2": 3
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "5 clinical trial(s) found on ClinicalTrials.gov",
+        "94 PubMed articles on this drug-disease pair",
+        "3 article(s) specifically mention repurposing/repositioning",
+        "Supported by 3 independent AI pillars",
+        "Moderate FAERS signal: 3 adverse event reports mention drug-disease co-occurrence",
+        "Supporting paper with 22 citations",
+        "AI-generated hypothesis available"
+      ],
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1408,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "CPIC-D (NT5C2) \u2022 PharmGKB-3 (CDA / rs60369023)",
+        "cpic": [
+          {
+            "gene": "NT5C2",
+            "level": "D",
+            "guideline": ""
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "CDA",
+            "variant": "rs60369023",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/655386830"
+          },
+          {
+            "gene": "ERCC2;KLC3",
+            "variant": "rs13181",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449004739"
+          },
+          {
+            "gene": "ERCC1;POLR1G;PPP1R13L",
+            "variant": "rs3212986",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449004745"
+          },
+          {
+            "gene": "C6orf15",
+            "variant": "rs2233980",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451125500"
+          },
+          {
+            "gene": "SERPINC1",
+            "variant": "rs5877",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451125506"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.31299999356269836,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.4050000011920929,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.859
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Brain - Cortex",
+          "Brain - Frontal Cortex (BA9)"
+        ],
+        "n_genes": 20,
+        "n_expressed": 18,
+        "mean_tpm_in_tissue": 17.64,
+        "max_tpm_in_tissue": 70.25,
+        "tissue_specificity": 0.042,
+        "context_modifier": 0.969
+      },
+      "disease_entity": "Disease::MESH:D005909",
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "ensemble_prob": 0.9724,
+      "ensemble_features": {
+        "kg_score": 0.9992,
+        "degree_penalty": 0.7532,
+        "n_drug_targets": 1,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.1972
+      },
+      "ensemble_rank": 4,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "AZD2171",
+      "drug_id": "DB04849",
+      "disease_name": "Glioblastoma",
+      "combined_score": 0.3932,
+      "pillars_hit": 3,
+      "transe_rank": 45,
+      "transe_score": -10.2912,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0.179,
+      "gene_sig_rank": 5,
+      "proximity_score": 0.8119999766349792,
+      "proximity_distance": 0.75,
+      "admet_score": 0.4745,
+      "admet_flags": "hERG=0.96",
+      "primekg_score": 0.2521,
+      "dti_score": 1.0,
+      "dti_best_target": "MTOR",
+      "kg_group_score": 0.1431,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.8681,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.8949,
+      "efficacy_score": 0.4394,
+      "groups_hit": 3,
+      "direct_relations": [],
+      "shared_target_count": 77,
+      "shared_targets": [
+        "ABL1",
+        "AKT1",
+        "ALK",
+        "AURKA",
+        "AXL",
+        "BCR",
+        "BRAF",
+        "CAMK2A",
+        "CDK1",
+        "CDK4",
+        "CDK7",
+        "CHD4",
+        "CHEK1",
+        "CHEK2",
+        "DDR1",
+        "EEF2K",
+        "EGFR",
+        "EPHA2",
+        "EPHA3",
+        "EPHB2"
+      ],
+      "pubmed_total": 8,
+      "pubmed_treatment_total": 8,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "26044202",
+          "title": "The effect of AZD2171- or sTRAIL/Apo2L-loaded polylactic-co-glycolic acid microspheres on a subcutaneous glioblastoma model.",
+          "authors": "Shivinsky A, Bronshtein T, Haber T, et al.",
+          "journal": "Biomedical microdevices",
+          "year": "2015",
+          "abstract_snippet": "Studies with AZD2171-a new anti-angiogenic inhibitor of tyrosine kinases associated with VEGF signaling-have shown great promise for treating glioblastoma. Unfortunately, AZD2171 success is limited by low permeability through the blood-brain barrier. Due to AZD2171's short half-life and high toxicit...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26044202/",
+          "total_results": 8
+        },
+        {
+          "pmid": "17222792",
+          "title": "AZD2171, a pan-VEGF receptor tyrosine kinase inhibitor, normalizes tumor vasculature and alleviates edema in glioblastoma patients.",
+          "authors": "Batchelor TT, Sorensen AG, di Tomaso E, et al.",
+          "journal": "Cancer cell",
+          "year": "2007",
+          "abstract_snippet": "Using MRI techniques, we show here that normalization of tumor vessels in recurrent glioblastoma patients by daily administration of AZD2171-an oral tyrosine kinase inhibitor of VEGF receptors-has rapid onset, is prolonged but reversible, and has the significant clinical benefit of alleviating edema...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17222792/"
+        },
+        {
+          "pmid": "17457854",
+          "title": "Initial testing of the VEGFR inhibitor AZD2171 by the pediatric preclinical testing program.",
+          "authors": "Maris JM, Courtright J, Houghton PJ, et al.",
+          "journal": "Pediatric blood & cancer",
+          "year": "2008",
+          "abstract_snippet": "BACKGROUND: Inhibition of vascular endothelial growth factor mediated signaling shows promise as an antiangiogenic strategy for solid tumors. AZD2171 is a potent and relatively selective inhibitor of the vascular endothelial growth factor (VEGF) receptor family that is orally bioavailable. This stud...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17457854/"
+        },
+        {
+          "pmid": "17906459",
+          "title": "Molecular targeted therapies and chemotherapy in malignant gliomas.",
+          "authors": "Brandsma D, van den Bent MJ",
+          "journal": "Current opinion in oncology",
+          "year": "2007",
+          "abstract_snippet": "PURPOSE OF REVIEW: To review current developments in the field of chemotherapy and targeted treatment of high-grade glioma. RECENT FINDINGS: Two independent large phase III trials on adjuvant procarbazine, lomustine and vincristine chemotherapy in anaplastic oligodendroglial tumors have shown this i...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17906459/"
+        },
+        {
+          "pmid": "21538824",
+          "title": "Combination testing of cediranib (AZD2171) against childhood cancer models by the pediatric preclinical testing program.",
+          "authors": "Morton CL, Maris JM, Keir ST, et al.",
+          "journal": "Pediatric blood & cancer",
+          "year": "2012",
+          "abstract_snippet": "BACKGROUND: Cediranib (AZD2171) is a potent small molecule inhibitor of vascular endothelial growth factor (VEGF) receptors. Cediranib has demonstrated single agent activity in several adult cancers and is being studied in combination with standard cytotoxic agents in multiple disease settings. PROC...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/21538824/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "AZD2171, a pan-VEGF receptor tyrosine kinase inhibitor, normalizes tumor vasculature and alleviates edema in glioblastoma patients.",
+          "year": 2007,
+          "citations": 1809,
+          "url": "https://www.semanticscholar.org/paper/526e612e06b4e93936440597336fbb3d7b913af5",
+          "authors": "T. Batchelor, A. Sorensen, E. di Tomaso"
+        },
+        {
+          "title": "The effect of AZD2171- or sTRAIL/Apo2L-loaded polylactic-co-glycolic acid microspheres on a subcutaneous glioblastoma model",
+          "year": 2015,
+          "citations": 9,
+          "url": "https://www.semanticscholar.org/paper/d514ce04bd93c3879ded40d92826455fedbee76a",
+          "authors": "Anna Shivinsky, T. Bronshtein, Tom Haber"
+        },
+        {
+          "title": "The effect of AZD2171- or sTRAIL/Apo2L-loaded polylactic-co-glycolic acid microspheres on a subcutaneous glioblastoma model",
+          "year": 2015,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/19fee43ea182fcf168ef19b9b0a031de3e9a1e5f",
+          "authors": "Anna Shivinsky, T. Bronshtein, Tom Haber"
+        },
+        {
+          "title": "AT-43MULTI-CENTRE, RANDOMIZED, DOUBLE-BLIND PHASE II STUDY COMPARING CEDIRANIB (AZD2171) PLUS GEFITINIB (IRESSA, ZD1839) WITH CEDIRANIB PLUS PLACEBO IN SUBJECTS WITH RECURRENT/PROGRESSIVE GLIOBLASTOMA",
+          "year": 2014,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/1096740b1a298077fa07578bf1d9de80c4a4a9ef",
+          "authors": "P. Mulholland, D. Krell, I. Khan"
+        },
+        {
+          "title": "A phase II trial of AZD2171 (cediranib), an oral pan-VEGF receptor tyrosine kinase inhibitor, in patients with recurrent glioblastoma",
+          "year": 2007,
+          "citations": 27,
+          "url": "https://www.semanticscholar.org/paper/a7fb384a54e75fff5252ae905dc2bdc154dd3e7f",
+          "authors": "T. Batchelor, A. Sorensen, M. Ancukiewicz"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "AZD2171, a pan-VEGF receptor tyrosine kinase inhibitor, normalizes tumor vasculature and alleviates edema in glioblastoma patients.",
+        "year": 2007,
+        "citations": 1809,
+        "url": "https://www.semanticscholar.org/paper/526e612e06b4e93936440597336fbb3d7b913af5",
+        "authors": "T. Batchelor, A. Sorensen, E. di Tomaso"
+      },
+      "max_citations": 1809,
+      "faers_signal": "none",
+      "faers_total_reports": 50,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking AZD2171 to Glioblastoma terms. Drug has 50 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "methylstat (1.514)",
+        "vemurafenib (1.459)",
+        "SB-239063 (1.435)",
+        "sirolimus (1.432)",
+        "GSK-1059615 (1.431)"
+      ],
+      "signature_interpretation": "AZD2171 was not found among the top 38 drugs that reverse the Glioblastoma gene signature. Top reversers: methylstat (1.514), vemurafenib (1.459), SB-239063 (1.435)",
+      "ai_hypothesis": "of its ability to inhibit the proliferation of tumor cells and its ability to induce apoptosis.",
+      "abstract_analyses": [
+        {
+          "relation_type": "mechanism_related",
+          "confidence": 0.5,
+          "positive_signals": 1,
+          "negative_signals": 1,
+          "mechanism_signals": 2,
+          "extracted_entities": [
+            {
+              "entity": "az",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9549999833106995
+            },
+            {
+              "entity": "##d2171",
+              "entity_group": "Coreference",
+              "score": 0.7279999852180481
+            },
+            {
+              "entity": "tyrosine kinase",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.8009999990463257
+            }
+          ]
+        },
+        {
+          "relation_type": "mechanism_related",
+          "confidence": 0.5,
+          "positive_signals": 1,
+          "negative_signals": 0,
+          "mechanism_signals": 2,
+          "extracted_entities": [
+            {
+              "entity": "mri",
+              "entity_group": "Diagnostic_procedure",
+              "score": 1.0
+            },
+            {
+              "entity": "normal",
+              "entity_group": "Lab_value",
+              "score": 1.0
+            },
+            {
+              "entity": "tumor",
+              "entity_group": "Sign_symptom",
+              "score": 1.0
+            },
+            {
+              "entity": "rec",
+              "entity_group": "Detailed_description",
+              "score": 1.0
+            },
+            {
+              "entity": "##urrent",
+              "entity_group": "Detailed_description",
+              "score": 0.996999979019165
+            },
+            {
+              "entity": "g",
+              "entity_group": "Disease_disorder",
+              "score": 0.9819999933242798
+            },
+            {
+              "entity": "##lioblastoma",
+              "entity_group": "Disease_disorder",
+              "score": 0.8970000147819519
+            },
+            {
+              "entity": "azd2171",
+              "entity_group": "Medication",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "oral",
+              "entity_group": "Administration",
+              "score": 1.0
+            },
+            {
+              "entity": "tyrosine kinase",
+              "entity_group": "Medication",
+              "score": 0.9950000047683716
+            }
+          ]
+        },
+        {
+          "relation_type": "unclear",
           "confidence": 0.0,
           "reason": "Drug or disease not mentioned in abstract"
         }
       ],
       "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
+      "failed_trial_phase": "Phase 2",
+      "failed_trial_count": 1,
       "failed_trial_penalty": 1.0,
       "mr_score": 0,
       "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "mechanistic_hypothesis": "AZD2171 \u2014[is a therapeutic for]\u2192 Glioblastoma",
+      "kg_paths_text": "\u2022 AZD2171 \u2014[is a therapeutic for]\u2192 Glioblastoma\n\u2022 AZD2171 \u2014[is a therapeutic for]\u2192 MESH:D055752 \u2014[is treated by]\u2192 DB00762 \u2014[treats]\u2192 Glioblastoma\n\u2022 AZD2171 \u2014[is a therapeutic for]\u2192 MESH:D055752 \u2014[is treated by]\u2192 DB00541 \u2014[is a therapeutic for]\u2192 Glioblastoma",
       "validation_experiments": [],
-      "novelty_score": 0.75,
-      "novelty_level": "EMERGING",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
+      "novelty_score": 0.197,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": true,
+      "clinical_trials_total": 10,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT00979862",
+          "title": "Cediranib Maleate and Cilengitide in Treating Patients With Progressive or Recurrent Glioblastoma",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "47",
+          "url": "https://clinicaltrials.gov/study/NCT00979862"
+        },
+        {
+          "nct_id": "NCT01131234",
+          "title": "Gamma-Secretase Inhibitor RO4929097 and Cediranib Maleate in Treating Patients With Advanced Solid Tumors",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "20",
+          "url": "https://clinicaltrials.gov/study/NCT01131234"
+        },
+        {
+          "nct_id": "NCT00662506",
+          "title": "Cediranib, Temozolomide, and Radiation Therapy in Treating Patients With Newly Diagnosed Glioblastoma",
+          "status": "COMPLETED",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "46",
+          "url": "https://clinicaltrials.gov/study/NCT00662506"
+        },
+        {
+          "nct_id": "NCT01062425",
+          "title": "Temozolomide and Radiation Therapy With or Without Cediranib Maleate in Treating Patients With Newly Diagnosed Glioblastoma",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "261",
+          "url": "https://clinicaltrials.gov/study/NCT01062425"
+        },
+        {
+          "nct_id": "NCT00503204",
+          "title": "Phase I : Cediranib in Combination With Lomustine Chemotherapy in Recurrent Malignant Brain Tumour",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "20",
+          "url": "https://clinicaltrials.gov/study/NCT00503204"
+        }
+      ],
+      "trial_phases": {
+        "PHASE1": 5,
+        "PHASE2": 5,
+        "PHASE3": 1
+      },
       "confidence": "HIGH",
       "confidence_reasons": [
-        "62 PubMed articles on this drug-disease pair",
-        "3 article(s) specifically mention repurposing/repositioning",
+        "10 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "8 PubMed article(s) - limited literature",
         "Supported by 3 independent AI pillars",
-        "Highly cited paper (115 citations): \"Regorafenib induces lethal autophagy arrest by stabilizing P...\"",
+        "Highly cited paper (1809 citations): \"AZD2171, a pan-VEGF receptor tyrosine kinase inhibitor, norm...\"",
         "AI-generated hypothesis available"
-      ]
+      ],
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "late-trial",
+        "confidence": "medium",
+        "rationale": "Phase-3 investigational \u2014 dose range established in Phase-2 pharmacokinetic studies; efficacy trials ongoing or recently completed.",
+        "chembl_phase": 3.0,
+        "target_affinity": {
+          "cmax_over_ic50_ratio": 0.1,
+          "median_ic50_nM": 10000.0,
+          "n_activities": 1,
+          "activity_types": [
+            "Kd"
+          ],
+          "mechanism_feasible": "no",
+          "cmax_source": "generic fallback 1000 nM (per-drug Cmax TBD)"
+        },
+        "stage": 2
+      },
+      "ddi_warnings": {
+        "n_interactions": 30,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB07637",
+            "drug_name": "3,5 DIBROMOTYROSINE",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB12629",
+            "drug_name": "3,5-Diiodothyropropionic acid",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB03374",
+            "drug_name": "3,5-Diiodotyrosine",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB05084",
+            "drug_name": "BA058",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB13804",
+            "drug_name": "Benzylthiouracil",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB00389",
+            "drug_name": "Carbimazole",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB09100",
+            "drug_name": "DB09100",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB13742",
+            "drug_name": "DB13742",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB15263",
+            "drug_name": "DB15263",
+            "severity": "moderate"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": false,
+          "docking": true,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.52,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.393,
+          "docking": 1.0,
+          "pharos": 0.0,
+          "literature": 0.414
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Brain - Cortex",
+          "Brain - Frontal Cortex (BA9)"
+        ],
+        "n_genes": 20,
+        "n_expressed": 18,
+        "mean_tpm_in_tissue": 43.5,
+        "max_tpm_in_tissue": 625.72,
+        "tissue_specificity": 0.758,
+        "context_modifier": 1.089
+      },
+      "disease_entity": "Disease::MESH:D005909",
+      "docking": {
+        "kcal_per_mol": -12.65,
+        "target_symbol": "KIT",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "ensemble_prob": 0.3467,
+      "ensemble_features": {
+        "kg_score": 0.9847,
+        "degree_penalty": 0.9646,
+        "n_drug_targets": 485,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 5.0876
+      },
+      "ensemble_rank": 6,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "ALIPHATIC"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "Aliphatic_long_chain"
+        ]
+      }
     },
     {
-      "drug_name": "L-D-(a-Aminoadipoyl)-L-Cysteinyl-D-Valine",
-      "drug_id": "DB02025",
+      "drug_name": "Acetylcysteine",
+      "drug_id": "DB06151",
       "disease_name": "Glioblastoma",
-      "combined_score": 1.0413999557495117,
-      "transe_rank": 1795,
-      "pillars_hit": 3,
+      "combined_score": 0.39089998602867126,
+      "pillars_hit": 4,
+      "transe_rank": 53,
+      "transe_score": -10.3399,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.7379999756813049,
+      "proximity_distance": 1.0499999523162842,
+      "admet_score": 0.7052,
+      "admet_flags": "clean",
+      "primekg_score": 0.2522,
+      "dti_score": 0.423,
+      "dti_best_target": "SLC26A3",
+      "kg_group_score": 0.18,
+      "structural_group_score": 0.423,
+      "network_group_score": 0.6431999802589417,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.4377,
+      "admet_multiplier": 0.941,
+      "efficacy_score": 0.4153999984264374,
+      "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
+      "shared_target_count": 31,
+      "shared_targets": [
+        "AKT1",
+        "ATM",
+        "BCL2",
+        "CASP3",
+        "CXCL8",
+        "EGFR",
+        "FPR1",
+        "GRIN2A",
+        "GRIN2B",
+        "GRIN2D",
+        "HIF1A",
+        "HMOX1",
+        "HSPA1A",
+        "ICAM1",
+        "IL1A",
+        "IL1B",
+        "IL4",
+        "IL6",
+        "MAPK1",
+        "MAPK14"
+      ],
+      "pubmed_total": 70,
+      "pubmed_treatment_total": 60,
+      "pubmed_repurposing_total": 2,
+      "key_papers": [
         {
-          "title": "Substrate specificity of l-\u03b4-(\u03b1-aminoadipoyl)-l-cysteinyl-d-valine synthetase from Cephalosporium acremonium: demonstration of the structure of several unnatural tripeptide products",
-          "year": 1994,
-          "citations": 34,
-          "url": "https://www.semanticscholar.org/paper/ab8df5fa0def68cc7f847f47516ae9dd6a4a8b90",
-          "authors": "J. Baldwin, C. Shiau, M. Byford"
+          "pmid": "39954037",
+          "title": "N-acetylcysteine remodels the tumor microenvironment of primary and recurrent mouse glioblastoma.",
+          "authors": "Zhu X, Yuan F, Sun Q, et al.",
+          "journal": "Journal of neuro-oncology",
+          "year": "2025",
+          "abstract_snippet": "PURPOSE: Glioblastoma (GBM) exhibits a high ROS character, giving rise to an immunosuppressive microenvironment and tumor vascular abnormality. This study investigated the potential effect of N-acetylcysteine (NAC), an antioxidant, on primary and recurrent mouse brain tumors. METHODS: We measured re...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39954037/",
+          "total_results": 70
         },
         {
-          "title": "\u03b4\u2010L\u2010(\u03b1\u2010Aminoadipoyl)\u2010L\u2010cysteinyl\u2010D\u2010valine synthetase: the order of peptide bond formation and timing of the epimerisation reaction",
-          "year": 1995,
-          "citations": 27,
-          "url": "https://www.semanticscholar.org/paper/0ce9d8ef1907fa61dfc144208e2f48d89a497b65",
-          "authors": "C. Shiau, J. Baldwin, M. Byford"
+          "pmid": "38359293",
+          "title": "Cysteine induces mitochondrial reductive stress in glioblastoma through hydrogen peroxide production.",
+          "authors": "Noch EK, Palma L, Yim I, et al.",
+          "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+          "year": "2024",
+          "abstract_snippet": "Glucose and amino acid metabolism are critical for glioblastoma (GBM) growth, but little is known about the specific metabolic alterations in GBM that are targetable with FDA-approved compounds. To investigate tumor metabolism signatures unique to GBM, we interrogated The Cancer Genome Atlas for alt...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38359293/"
         },
         {
-          "title": "Synthesis of \u03b4-(L-\u03b1-aminoadipoyl)-L-cysteinyl-D-valine and some carbon-13 and nitrogen-15 labelled isotopomers",
-          "year": 1981,
-          "citations": 21,
-          "url": "https://www.semanticscholar.org/paper/560c7a8787939faa7aaa3921336176814f7b39c4",
-          "authors": "J. Baldwin, S. Herchen, B. L. Johnson"
+          "pmid": "38507470",
+          "title": "Reactivating PTEN to impair glioma stem cells by inhibiting cytosolic iron-sulfur assembly.",
+          "authors": "Yin J, Ge X, Ding F, et al.",
+          "journal": "Science translational medicine",
+          "year": "2024",
+          "abstract_snippet": "Glioblastoma, the most lethal primary brain tumor, harbors glioma stem cells (GSCs) that not only initiate and maintain malignant phenotypes but also enhance therapeutic resistance. Although frequently mutated in glioblastomas, the function and regulation of PTEN in PTEN-intact GSCs are unknown. Her...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38507470/"
         },
         {
-          "title": "\u03b4\u2010l\u2010(\u03b1\u2010Aminoadipoyl)\u2010l\u2010cysteinyl\u2010d\u2010valine synthetase: isolation of l\u2010cysteinyl\u2010d\u2010valine, a \u2018shunt\u2019 product, and implications for the order of peptide bond formation",
-          "year": 1995,
-          "citations": 14,
-          "url": "https://www.semanticscholar.org/paper/f7d1ad5cc7053c12bc6d333d547ce526f0907687",
-          "authors": "C. Shiau, J. Baldwin, M. Byford"
+          "pmid": "39377544",
+          "title": "N-Acetyl-L-Cysteine (NAC) Blunts Axitinib-Related Adverse Effects in Preclinical Models of Glioblastoma.",
+          "authors": "Formato A, Salbini M, Orecchini E, et al.",
+          "journal": "Cancer medicine",
+          "year": "2024",
+          "abstract_snippet": "OBJECTIVE: Axitinib is a tyrosine kinase inhibitor characterized by a strong affinity for Vascular Endothelial Growth Factor Receptors (VEGFRs). It was approved in 2012 by Food and Drug Administration and European Medicines Agency as a second line treatment for advanced renal cell carcinoma and is c...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39377544/"
         },
         {
-          "title": "Further evidence for the involvement of a monocyclic \u03b2-lactam in the enzymatic conversion of \u03b4-L-\u03b1-aminoadipoyl-L-cysteinyl-D-valine into isopenicillin N.",
-          "year": 1991,
-          "citations": 14,
-          "url": "https://www.semanticscholar.org/paper/8012de2dc12080749847fef4dadfd7976f84bb12",
-          "authors": "J. Baldwin, M. Bradley, R. Adlington"
+          "pmid": "41591765",
+          "title": "A Mussel-Inspired Bioadhesive Patch to Selectively Kill Glioblastoma Cells.",
+          "authors": "Bola\u00f1os-Cardet J, Pugliese S, Bruna J, et al.",
+          "journal": "Advanced science (Weinheim, Baden-Wurttemberg, Germany)",
+          "year": "2026",
+          "abstract_snippet": "Glioblastoma, the most prevalent and aggressive brain tumor, presents significant challenge due to its rapid proliferation, invasive nature, and resistance to conventional therapies. Current treatments, including surgery, radiation, and chemotherapy, frequently lead to recurrence, underscoring the u...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41591765/"
         }
       ],
-      "most_cited_paper": {
-        "title": "Substrate specificity of l-\u03b4-(\u03b1-aminoadipoyl)-l-cysteinyl-d-valine synthetase from Cephalosporium acremonium: demonstration of the structure of several unnatural tripeptide products",
-        "year": 1994,
-        "citations": 34,
-        "url": "https://www.semanticscholar.org/paper/ab8df5fa0def68cc7f847f47516ae9dd6a4a8b90",
-        "authors": "J. Baldwin, C. Shiau, M. Byford"
-      },
-      "max_citations": 34,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for L-D-(a-Aminoadipoyl)-L-Cysteinyl-D-Valine",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "methylstat (1.514)",
-        "vemurafenib (1.459)",
-        "SB-239063 (1.435)",
-        "sirolimus (1.432)",
-        "GSK-1059615 (1.431)"
+      "repurposing_papers": [
+        {
+          "pmid": "38507470",
+          "title": "Reactivating PTEN to impair glioma stem cells by inhibiting cytosolic iron-sulfur assembly.",
+          "authors": "Yin J, Ge X, Ding F, et al.",
+          "journal": "Science translational medicine",
+          "year": "2024",
+          "abstract_snippet": "Glioblastoma, the most lethal primary brain tumor, harbors glioma stem cells (GSCs) that not only initiate and maintain malignant phenotypes but also enhance therapeutic resistance. Although frequently mutated in glioblastomas, the function and regulation of PTEN in PTEN-intact GSCs are unknown. Her...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38507470/",
+          "total_results": 2
+        },
+        {
+          "pmid": "33007830",
+          "title": "Repositioning ",
+          "authors": "Mahumane GD, Kumar P, Pillay V, et al.",
+          "journal": "Pharmaceutics",
+          "year": "2020",
+          "abstract_snippet": "Traumatic brain injury (TBI) presents a serious challenge for modern medicine due to the poor regenerative capabilities of the brain, complex pathophysiology, and lack of effective treatment for TBI to date. Tissue-engineered scaffolds have shown some experimental success in vivo; unfortunately, non...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33007830/"
+        }
       ],
-      "signature_interpretation": "L-D-(a-Aminoadipoyl)-L-Cysteinyl-D-Valine was not found among the top 38 drugs that reverse the Glioblastoma gene signature. Top reversers: methylstat (1.514), vemurafenib (1.459), SB-239063 (1.435)",
-      "ai_hypothesis": "it is a substrate for the enzyme dipeptidyl peptidase IV (DPP IV).",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 1.0,
-      "novelty_level": "BREAKTHROUGH",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "Supported by 3 independent AI pillars",
-        "Supporting paper with 34 citations",
-        "AI-generated hypothesis available"
-      ]
-    },
-    {
-      "drug_name": "Vesnarinone",
-      "drug_id": "DB12082",
-      "disease_name": "Glioblastoma",
-      "combined_score": 1.0369000434875488,
-      "transe_rank": 291,
-      "pillars_hit": 3,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "Glioblastoma at the crossroads: current understanding and future therapeutic horizons",
+          "title": "N-acetylcysteine remodels the tumor microenvironment of primary and recurrent mouse glioblastoma",
           "year": 2025,
-          "citations": 114,
-          "url": "https://www.semanticscholar.org/paper/1445c096bc679931586564b48bbb15167d4847f8",
-          "authors": "Shilpi Singh, Devanjan Dey, Debashis Barik"
+          "citations": 2,
+          "url": "https://www.semanticscholar.org/paper/349c3998ed0c8e54799ecc5ca57fa26fa4490c61",
+          "authors": "Xiwei Zhu, Fan'en Yuan, Qian Sun"
         },
         {
-          "title": "Glioblastoma evolution and heterogeneity from a 3D whole-tumor perspective.",
-          "year": 2024,
-          "citations": 142,
-          "url": "https://www.semanticscholar.org/paper/a46756b26b70bae040884ba32677c850ea492ad6",
-          "authors": "Radhika Mathur, Qixuan Wang, Patrick G. Schupp"
+          "title": "TMET-47. N-acetylcysteine induced lactate reprogramming is a targetable metabolic susceptibility in glioblastoma",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/7af3b649728b243cffd78cbe14fb33156c401507",
+          "authors": "Sukanya Rauniyar, J. Elliott, Kathleen Earhart"
         },
         {
-          "title": "Glioblastoma and Other Primary Brain Malignancies in Adults: A Review.",
-          "year": 2023,
-          "citations": 898,
-          "url": "https://www.semanticscholar.org/paper/6c49b835703b5011fa849f27957c013ac501b522",
-          "authors": "L. R. Schaff, I. Mellinghoff"
+          "title": "Evaluation of the mycotoxin patulin on cytotoxicity and oxidative stress in human glioblastoma cells and investigation of protective effect of the antioxidant N-acetylcysteine (NAC).",
+          "year": 2022,
+          "citations": 17,
+          "url": "https://www.semanticscholar.org/paper/3aff915e10fdafa7dd4227a0bb7c1e695a7c6989",
+          "authors": "S. Hsu, Yung-Shang Lin, Liyi Chio"
         },
         {
-          "title": "Macrophages and microglia in glioblastoma: heterogeneity, plasticity, and therapy",
-          "year": 2023,
-          "citations": 282,
-          "url": "https://www.semanticscholar.org/paper/f1cd55400dfc9d730267ae10edf8b3e63bc625db",
-          "authors": "Fatima Khan, Lizhi Pang, Madeline Dunterman"
+          "title": "N-acetylcysteine decreases malignant characteristics of glioblastoma cells by inhibiting Notch2 signaling",
+          "year": 2019,
+          "citations": 50,
+          "url": "https://www.semanticscholar.org/paper/15625692f8a61bb8b992e2589137fd681fb71996",
+          "authors": "J. Deng, An-Dong Liu, G. Hou"
         },
         {
-          "title": "Glioblastoma and brain connectivity: the need for a paradigm shift.",
-          "year": 2024,
-          "citations": 48,
-          "url": "https://www.semanticscholar.org/paper/b6ce7884036c0e78b7928afba3c2e45226d5390d",
-          "authors": "A. Salvalaggio, L. Pini, A. Bertoldo"
+          "title": "N-acetylcysteine decreases malignant characteristics of glioblastoma cells by inhibiting Notch2 signaling",
+          "year": 2019,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/306641a2e9328699a96f9fb55badf18d9608940e",
+          "authors": "J. Deng, An-Dong Liu, Guo-qing Hou"
         }
       ],
       "most_cited_paper": {
-        "title": "Glioblastoma and Other Primary Brain Malignancies in Adults: A Review.",
-        "year": 2023,
-        "citations": 898,
-        "url": "https://www.semanticscholar.org/paper/6c49b835703b5011fa849f27957c013ac501b522",
-        "authors": "L. R. Schaff, I. Mellinghoff"
+        "title": "N-acetylcysteine decreases malignant characteristics of glioblastoma cells by inhibiting Notch2 signaling",
+        "year": 2019,
+        "citations": 50,
+        "url": "https://www.semanticscholar.org/paper/15625692f8a61bb8b992e2589137fd681fb71996",
+        "authors": "J. Deng, An-Dong Liu, G. Hou"
       },
-      "max_citations": 898,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Vesnarinone",
+      "max_citations": 50,
+      "faers_signal": "weak",
+      "faers_total_reports": 10374,
+      "faers_cooccurrences": 1,
+      "faers_interpretation": "1 FAERS report(s) mention both Acetylcysteine and Glioblastoma-related terms. Minimal real-world signal.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -1638,30 +3789,262 @@
         "sirolimus (1.432)",
         "GSK-1059615 (1.431)"
       ],
-      "signature_interpretation": "Vesnarinone was not found among the top 38 drugs that reverse the Glioblastoma gene signature. Top reversers: methylstat (1.514), vemurafenib (1.459), SB-239063 (1.435)",
-      "ai_hypothesis": "of its ability to inhibit the proliferation of tumor cells and to induce apoptosis.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
+      "signature_interpretation": "Acetylcysteine was not found among the top 38 drugs that reverse the Glioblastoma gene signature. Top reversers: methylstat (1.514), vemurafenib (1.459), SB-239063 (1.435)",
+      "ai_hypothesis": "of its antioxidant properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "treats",
+          "confidence": 0.7,
+          "positive_signals": 2,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "g",
+              "entity_group": "Disease_disorder",
+              "score": 0.9959999918937683
+            },
+            {
+              "entity": "##liobla",
+              "entity_group": "Disease_disorder",
+              "score": 0.8330000042915344
+            },
+            {
+              "entity": "##stoma",
+              "entity_group": "Disease_disorder",
+              "score": 0.968999981880188
+            },
+            {
+              "entity": "gb",
+              "entity_group": "Disease_disorder",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "high",
+              "entity_group": "Lab_value",
+              "score": 0.996999979019165
+            },
+            {
+              "entity": "ro",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "n - acetylcysteine",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9810000061988831
+            },
+            {
+              "entity": "brain",
+              "entity_group": "Biological_structure",
+              "score": 0.9700000286102295
+            }
+          ]
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": true,
+      "failed_trial_phase": "Phase 1",
+      "failed_trial_count": 1,
+      "failed_trial_penalty": 0.8,
+      "mr_score": 0.4377,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Acetylcysteine \u2014[downregulates]\u2192 gene-10112 \u2014[is downregulated by]\u2192 DB00762 \u2014[treats]\u2192 Glioblastoma",
+      "kg_paths_text": "\u2022 Acetylcysteine \u2014[downregulates]\u2192 gene-10112 \u2014[is downregulated by]\u2192 DB00762 \u2014[treats]\u2192 Glioblastoma\n\u2022 Acetylcysteine \u2014[downregulates]\u2192 gene-10112 \u2014[is downregulated by]\u2192 DB00997 \u2014[is a therapeutic for]\u2192 Glioblastoma\n\u2022 Acetylcysteine \u2014[downregulates]\u2192 gene-10112 \u2014[is downregulated by]\u2192 DB00563 \u2014[is a therapeutic for]\u2192 Glioblastoma",
       "validation_experiments": [],
-      "novelty_score": 0.85,
-      "novelty_level": "NOVEL",
+      "novelty_score": 0.27399998903274536,
+      "novelty_level": "KNOWN",
       "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
+      "clinical_trials_total": 2,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT00238173",
+          "title": "Acetylcysteine, Mannitol, Combination Chemotherapy, and Sodium Thiosulfate in Treating Children With Malignant Brain Tumors",
+          "status": "TERMINATED",
+          "phase": "PHASE1",
+          "enrollment": "2",
+          "url": "https://clinicaltrials.gov/study/NCT00238173"
+        },
+        {
+          "nct_id": "NCT07387666",
+          "title": "Imaging Acetadote Metabolism in Glioblastoma",
+          "status": "NOT_YET_RECRUITING",
+          "phase": "EARLY_PHASE1",
+          "enrollment": "10",
+          "url": "https://clinicaltrials.gov/study/NCT07387666"
+        }
+      ],
+      "trial_phases": {
+        "PHASE1": 1,
+        "EARLY_PHASE1": 1
+      },
+      "confidence": "HIGH",
       "confidence_reasons": [
-        "Supported by 3 independent AI pillars",
-        "Highly cited paper (898 citations): \"Glioblastoma and Other Primary Brain Malignancies in Adults:...\"",
-        "AI-generated hypothesis available"
-      ]
+        "2 clinical trial(s) found on ClinicalTrials.gov",
+        "70 PubMed articles on this drug-disease pair",
+        "2 article(s) specifically mention repurposing/repositioning",
+        "Supported by 4 independent AI pillars",
+        "Note: Drug had early-phase trial failures for this disease",
+        "Supporting paper with 50 citations",
+        "AI analysis of 1 abstract(s) found positive treatment signals",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.44)"
+      ],
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 55,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00227",
+            "drug_name": "Lovastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00175",
+            "drug_name": "Pravastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01098",
+            "drug_name": "Rosuvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00641",
+            "drug_name": "Simvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB13139",
+            "drug_name": "(-)-Salbutamol",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB06403",
+            "drug_name": "Ambrisentan",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB11586",
+            "drug_name": "Asunaprevir",
+            "severity": "moderate"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (TOLLIP / rs3750920)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "TOLLIP",
+            "variant": "rs3750920",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1447982723"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": false,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.2980000078678131,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.39100000262260437,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.804
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Brain - Cortex",
+          "Brain - Frontal Cortex (BA9)"
+        ],
+        "n_genes": 20,
+        "n_expressed": 15,
+        "mean_tpm_in_tissue": 11.11,
+        "max_tpm_in_tissue": 49.78,
+        "tissue_specificity": 0.166,
+        "context_modifier": 0.967
+      },
+      "disease_entity": "Disease::MESH:D005909",
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "ensemble_prob": 0.0506,
+      "ensemble_features": {
+        "kg_score": 0.9112,
+        "degree_penalty": 0.8715,
+        "n_drug_targets": 0,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 6.8437
+      },
+      "ensemble_rank": 8,
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "THIOL"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "thiol_2",
+          "thiol_warhead"
+        ]
+      }
     }
-  ]
+  ],
+  "disease_entity": "Disease::MESH:D005909",
+  "docking_axis": {
+    "source": "chembl_bioactivity_proxy + not_wired fallback",
+    "n_disease_genes": 717,
+    "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
+  },
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl"
 }
