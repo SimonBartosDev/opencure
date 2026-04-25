@@ -18,11 +18,19 @@ On RTX 4070 laptop (8 GB VRAM):
     # TransE — sanity check, fast
     python3 scripts/train_unified_kg.py --model TransE --epochs 400
     # RotatE — the publishable retrain (10-16 h overnight)
-    python3 scripts/train_unified_kg.py --model RotatE --epochs 400
+    python3 scripts/train_unified_kg.py --model RotatE --epochs 400 \
+        --checkpoint-every 10
+    # Resume after a crash (picks up from latest checkpoint):
+    python3 scripts/train_unified_kg.py --model RotatE --epochs 400 \
+        --checkpoint-every 10 --resume
 
 On Apple MPS (current machine):
-    python3 scripts/train_unified_kg.py           # 128-dim, 20 epochs,
+    python3 scripts/train_unified_kg.py           # 128-dim, 50 epochs,
                                                   # honest-baseline only
+
+Or run the whole chain at once via:
+    bash scripts/gpu_full_retrain.sh              # train + eval + ensemble
+                                                  # + re-screen + finalize
 
 Requires ``scripts/build_unified_kg.py`` to have produced
 ``data/unified_kg/unified.tsv``.
@@ -100,6 +108,10 @@ def parse_args() -> argparse.Namespace:
     ap.add_argument("--batch-size", type=int, default=defaults["batch_size"])
     ap.add_argument("--num-negs-per-pos", type=int, default=defaults["num_negs_per_pos"])
     ap.add_argument("--lr", type=float, default=defaults["lr"])
+    ap.add_argument("--checkpoint-every", type=int, default=10,
+                    help="Save model + epoch state every N epochs (0 = disable).")
+    ap.add_argument("--resume", action="store_true",
+                    help="Resume from latest checkpoint in --out if present.")
     return ap.parse_args()
 
 
@@ -149,8 +161,18 @@ def main() -> None:
     if args.model == "TransE":
         model_kwargs["scoring_fct_norm"] = 2
     model = ModelCls(triples_factory=tf, **model_kwargs).to(device)
-
     optimizer = Adam(params=model.parameters(), lr=args.lr)
+
+    # Resume from a previous run if requested + a checkpoint exists.
+    ckpt_path = out_dir / "checkpoint.pt"
+    start_epoch = 0
+    if args.resume and ckpt_path.exists():
+        ckpt = torch.load(ckpt_path, map_location=device, weights_only=False)
+        model.load_state_dict(ckpt["model"])
+        optimizer.load_state_dict(ckpt["optimizer"])
+        start_epoch = int(ckpt.get("epoch", 0))
+        print(f"Resumed from {ckpt_path} at epoch {start_epoch}")
+
     trainer = SLCWATrainingLoop(
         model=model,
         triples_factory=tf,
@@ -162,14 +184,44 @@ def main() -> None:
     # Deliberately bypass pykeen.pipeline() — its on-device evaluator
     # was unusably slow on MPS (~50 h for 350k triples). Held-out
     # metrics are computed separately via scripts/run_heldout_eval.py.
-    print(f"Training {args.model} ({args.embedding_dim}-dim) for {args.epochs} epochs...")
-    losses = trainer.train(
-        triples_factory=tf,
-        num_epochs=args.epochs,
-        batch_size=args.batch_size,
-        use_tqdm=True,
-    )
-    print(f"Final loss: {losses[-1]:.4f}")
+    remaining = args.epochs - start_epoch
+    if remaining <= 0:
+        print(f"Already at epoch {start_epoch} ≥ requested {args.epochs}; nothing to do.")
+        return
+
+    print(f"Training {args.model} ({args.embedding_dim}-dim) "
+          f"epochs {start_epoch}→{args.epochs} (remaining: {remaining})…")
+
+    # Chunk the run into checkpoint-sized blocks so a crash mid-night
+    # only loses one block. PyKEEN's SLCWATrainingLoop doesn't expose a
+    # per-epoch callback hook, so we restart it every `checkpoint_every`
+    # epochs and persist state. Slight overhead (re-init negative sampler
+    # cache) is dwarfed by the cost of losing 10 h of training.
+    chunk = args.checkpoint_every if args.checkpoint_every > 0 else remaining
+    last_loss: float = float("nan")
+    epoch = start_epoch
+    while epoch < args.epochs:
+        block = min(chunk, args.epochs - epoch)
+        losses = trainer.train(
+            triples_factory=tf,
+            num_epochs=block,
+            batch_size=args.batch_size,
+            use_tqdm=True,
+        )
+        last_loss = float(losses[-1]) if losses else last_loss
+        epoch += block
+        if args.checkpoint_every > 0:
+            torch.save({
+                "model": model.state_dict(),
+                "optimizer": optimizer.state_dict(),
+                "epoch": epoch,
+                "loss": last_loss,
+                "model_name": args.model,
+                "embedding_dim": args.embedding_dim,
+            }, ckpt_path)
+            print(f"  ✓ checkpoint @ epoch {epoch}  loss={last_loss:.4f}  → {ckpt_path}")
+
+    print(f"Final loss: {last_loss:.4f}")
 
     torch.save(model, out_dir / "trained_model.pkl")
     tf_binary_dir = out_dir / "training_triples"
