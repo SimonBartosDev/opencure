@@ -75,14 +75,10 @@ step() {
 # ---- pre-flight ----
 echo "OpenCure GPU full retrain — host: $(hostname)  date: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
 echo "Repo:    $REPO_ROOT"
-python3 -c "
-import torch
-ok = torch.cuda.is_available()
-print(f'CUDA: {ok}')
-if ok:
-    print(f'Device: {torch.cuda.get_device_name(0)}')
-    print(f'VRAM:   {torch.cuda.get_device_properties(0).total_memory / 1024**3:.1f} GB')
-" || { echo "torch import failed; install CUDA-enabled pytorch first"; exit 1; }
+
+# Run the full preflight unless --skip preflight was passed.
+step preflight \
+    python3 scripts/preflight_gpu.py
 
 # ---- 1. Unified-KG RotatE ----
 step train_kg \
