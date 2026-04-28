@@ -32,6 +32,7 @@ RESULTS_DIR = Path("experiments/results")
 # Target diseases organized by category
 TARGET_DISEASES = {
     "Neglected Tropical": [
+        # Original 8
         "Malaria",
         "Tuberculosis",
         "Dengue",
@@ -40,8 +41,24 @@ TARGET_DISEASES = {
         "Schistosomiasis",
         "HIV",
         "Hepatitis C",
+        # v5.3 expansion: WHO neglected-tropical priority list
+        "African trypanosomiasis",
+        "Onchocerciasis",
+        "Lymphatic filariasis",
+        "Leprosy",
+        "Buruli ulcer",
+        "Trachoma",
+        "Echinococcosis",
+        "Cysticercosis",
+        "Rabies",
+        "Scabies",
+        "Ascariasis",
+        "Hookworm infection",
+        "Visceral leishmaniasis",
+        "Cutaneous leishmaniasis",
     ],
     "Rare Diseases": [
+        # Original 8
         "Sickle cell disease",
         "Fragile X syndrome",
         "Duchenne muscular dystrophy",
@@ -50,6 +67,18 @@ TARGET_DISEASES = {
         "Ehlers-Danlos syndrome",
         "Gaucher disease",
         "Fabry disease",
+        # v5.3 expansion: high-need rare diseases (genetic, lysosomal, neurological)
+        "Spinal muscular atrophy",
+        "Friedreich's ataxia",
+        "Hunter syndrome",
+        "Pompe disease",
+        "Niemann-Pick disease",
+        "Rett syndrome",
+        "Tay-Sachs disease",
+        "Wilson's disease",
+        "Phenylketonuria",
+        "Spinocerebellar ataxia",
+        "Acromegaly",
     ],
     "Neurodegenerative": [
         "Alzheimer's disease",
@@ -65,6 +94,7 @@ TARGET_DISEASES = {
         "Sepsis",
     ],
     "Cancer": [
+        # Original 11 (mostly adult)
         "Breast cancer",
         "Lung cancer",
         "Colorectal cancer",
@@ -76,6 +106,14 @@ TARGET_DISEASES = {
         "Leukemia",
         "Lymphoma",
         "Multiple myeloma",
+        # v5.3 expansion: pediatric cancers (mission-critical, low commercial-incentive)
+        "Neuroblastoma",
+        "Retinoblastoma",
+        "Wilms tumor",
+        "Medulloblastoma",
+        "Rhabdomyosarcoma",
+        "Ewing sarcoma",
+        "Osteosarcoma",
     ],
     "Cardiovascular & Metabolic": [
         "Heart failure",

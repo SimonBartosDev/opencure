@@ -236,4 +236,42 @@ DISEASE_NAME_MAP = {
     "Osteoporosis": ["MESH:D010024"],
     "Endometriosis": ["MESH:D004715"],
     "Sepsis": ["MESH:D018805"],
+
+    # WHO Neglected Tropical Diseases — v5.3 expansion (high mission impact)
+    "African trypanosomiasis": ["MESH:D014353"],
+    "Onchocerciasis": ["MESH:D009855"],
+    "Lymphatic filariasis": ["MESH:D004605"],
+    "Leprosy": ["MESH:D007918"],
+    "Buruli ulcer": ["MESH:D009164"],
+    "Trachoma": ["MESH:D014141"],
+    "Echinococcosis": ["MESH:D004443"],
+    "Cysticercosis": ["MESH:D003551"],
+    "Rabies": ["MESH:D011818"],
+    "Scabies": ["MESH:D012532"],
+    "Ascariasis": ["MESH:D001196"],
+    "Hookworm infection": ["MESH:D006725"],
+    "Visceral leishmaniasis": ["MESH:D007898"],
+    "Cutaneous leishmaniasis": ["MESH:D016773"],
+
+    # Pediatric cancers — v5.3 expansion
+    "Neuroblastoma": ["MESH:D009447"],
+    "Retinoblastoma": ["MESH:D012175"],
+    "Wilms tumor": ["MESH:D009396"],
+    "Medulloblastoma": ["MESH:D008527"],
+    "Rhabdomyosarcoma": ["MESH:D012208"],
+    "Ewing sarcoma": ["MESH:D012512"],
+    "Osteosarcoma": ["MESH:D012516"],
+
+    # High-need rare diseases — v5.3 expansion
+    "Spinal muscular atrophy": ["MESH:D014897"],
+    "Friedreich's ataxia": ["MESH:D005621"],
+    "Hunter syndrome": ["MESH:D009084"],
+    "Pompe disease": ["MESH:D006009"],
+    "Niemann-Pick disease": ["MESH:D009542"],
+    "Rett syndrome": ["MESH:D015518"],
+    "Tay-Sachs disease": ["MESH:D013661"],
+    "Wilson's disease": ["MESH:D006527"],
+    "Phenylketonuria": ["MESH:D010661"],
+    "Spinocerebellar ataxia": ["MESH:D020754"],
+    "Acromegaly": ["MESH:D000172"],
 }
