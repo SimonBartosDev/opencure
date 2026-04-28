@@ -85,7 +85,7 @@ What separates OpenCure from pure-ranking repurposing platforms: every predictio
 - **Held-out random split**: 993 DrugBank treats pairs held out, scored against the full 10,551-compound candidate pool
 - **Time-sliced benchmark**: 210 post-2020 approved drug-disease pairs (drugs with `yearOfFirstApproval >= 2020` from OT 24.09), for testing generalization beyond the 2020-era knowledge graph
 - **Edge-stripped retraining**: `scripts/strip_heldout_edges.py` removes 1,200 test-set edges from DRKG+PrimeKG+OT before training a clean model
-- **79 automated tests** across filters, scoring, evidence, and regression suites (catches the 3-pillar silent-zero bug class)
+- **172 automated tests** across filters, scoring, evidence, and regression suites (catches the 3-pillar silent-zero bug class)
 - **Continuous integration** via GitHub Actions on Python 3.11 and 3.12
 - **Prospective validation infrastructure**: `scripts/snapshot_predictions.py` takes timestamped immutable snapshots; `scripts/prospective_monitor.py` re-queries PubMed/CT.gov monthly to compute rolling precision@K on predictions older than 90 days
 
@@ -160,7 +160,7 @@ opencure/
   data/                  DRKG + PrimeKG + Open Targets loaders
   web/                   FastAPI app + crowd validation endpoint
   log_setup.py           Structured logging + timing metrics
-tests/                   79 tests (unit + integration + regression)
+tests/                   172 tests (unit + integration + regression + schema)
 experiments/
   systematic_screening.py  Full 61-disease pipeline
   eval/                    Held-out metric reports

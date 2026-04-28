@@ -31,7 +31,7 @@ clinical hypotheses.
 - **DDI warnings** — top 10 dangerous co-prescriptions from 1.4M DrugBank drug-drug interaction edges, severity-ranked against 25 commonly-co-prescribed reference drugs
 - **Pharmacogenomic flags** — 76 CPIC drug-gene pairs + 5,187 PharmGKB annotations, classified high-risk / moderate / advisory
 - **Mechanism paths** — natural-language graph paths via bounded BFS on filtered DRKG adjacency (filtered to drug-target, target-disease, drug-disease, literature-mined only; mega-hub clipped)
-- **Triangulation** — 4-axis aggregate (KG + docking + Pharos target-development-level + literature); labels "silver-standard" when ≥3 agree. **Live coverage on first 8 diseases (n=80 candidates): ≥1 axis 66%, ≥2 axes 31%, ≥3 axes (silver-standard) 0%.** The docking axis is not yet wired into the screening pipeline; Pharos TDL populates only for UniProt-mapped targets. Until both wire through, silver-standard remains a ceiling, not a floor.
+- **Triangulation** — 4-axis aggregate (KG + docking + Pharos target-development-level + literature); labels "silver-standard" when ≥3 agree. **Live v5.2 coverage on full 61-disease screen (n=610 candidates): ≥1 axis 90%, ≥2 axes 70%, ≥3 axes (silver-standard) 35%.** Unlocked by `scripts/build_disease_gene_index.py` (OT + DRKG/GNBR merge → 5,207 diseases × 115K gene associations) and the ChEMBL-bioactivity docking proxy. Real AutoDock Vina docking remains v6 work — the proxy stands in for now, honestly labeled in the `docking.source` field of every candidate.
 - **Tissue context** — GTEx v8 median TPM across 54 tissues; 55 diseases manually mapped to relevant tissue sets; context modifier in [0.85, 1.15] applied to pillar scores
 
 ### Scoring improvements
@@ -58,7 +58,7 @@ clinical hypotheses.
 
 ### Engineering quality
 
-- **79 automated tests** across filters, scoring, evidence, evaluation harness, and a regression suite that catches the class of the 3-pillar silent-zero bug.
+- **172 automated tests** across filters, scoring, evidence, evaluation harness, and a regression suite that catches the class of the 3-pillar silent-zero bug.
 - **CI**: GitHub Actions on every push, Python 3.11 and 3.12.
 - **Structured logging** (`opencure/log_setup.py`): colored console output + optional JSON-lines file logging + per-pillar timing CSV at `data/metrics/timings.csv` for performance regression detection.
 - **Data provenance**: `scripts/compute_data_manifest.py` hashes 15 tracked source files → `data/manifest.json`. Every result JSON now carries `data_manifest_hash` field (`2da2aa88f2457d1b` this release).

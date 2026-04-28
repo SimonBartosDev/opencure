@@ -61,7 +61,7 @@ applies to pharmaceutical and biotech uses.
 
 **14M-triple unified knowledge graph** (DRKG + PrimeKG + Open Targets 24.09)
 
-**79 automated tests** on 5 test modules + GitHub Actions CI
+**172 automated tests** on 5 test modules + GitHub Actions CI
 → the class of bugs you'd find in internal tools is gone
 
 **Evidence cache** with 4,174× verified speedup on repeat queries
@@ -86,11 +86,12 @@ We don't oversell. Known limits disclosed publicly:
 
 **What we're good at**
 - Multi-pillar ensemble AUC-ROC 0.9968 on 23,814 held-out pairs
-- Evidence-triangulated predictions: 66% of candidates have ≥1
-  external validation axis; 31% have ≥2; silver-standard (≥3) 0%
-  pending docking wire-up (AutoDock Vina addition planned post-screen)
-- Clinical-actionability coverage (live, n=80 on first 8 diseases):
-  dose 100%, DDI 82%, PGx 44%, mechanism path 99% of top candidates
+- Evidence-triangulated predictions (v5.2, live n=610 across 61
+  diseases): 90% of candidates have ≥1 external validation axis,
+  70% have ≥2, **35% reach silver-standard** (≥3 axes agree)
+- Clinical-actionability coverage (live, n=610): dose 100%, DDI 85%,
+  PGx 53%, mechanism path 95%, ensemble probability 100% of top
+  candidates
 
 **What we're not (yet) good at**
 - Clean time-sliced Hit@10 on 2020-era KG retrieval: blocked on a
@@ -210,7 +211,7 @@ incentives are weakest.
 **Email:** opencure.research@gmail.com
 **Zenodo DOI series:** [registered at v5 release]
 
-**Repo status:** v5 release, 79 tests passing, CI green, data manifest
+**Repo status:** v5 release, 172 tests passing, CI green, data manifest
 hash `2da2aa88f2457d1b`.
 
 **License:** Apache 2.0 with patent grant.

@@ -254,8 +254,16 @@ def validate_candidate(cand: dict) -> list[str]:
 
 
 def validate_result_file(data: dict) -> list[str]:
-    """Validate a full result-file dict (top-level + every candidate)."""
+    """Validate a full result-file dict (top-level + every candidate).
+
+    Returns warnings as strings; empty list ⇒ conformant. If ``data`` is
+    not even shaped like a per-disease result file (e.g. a list emitted
+    by an aggregate post-processor), a single warning is returned
+    instead of raising.
+    """
     warnings: list[str] = []
+    if not isinstance(data, dict):
+        return [f"not a result-file dict (got {type(data).__name__})"]
     unknown_top = set(data) - RESULT_TOP_LEVEL
     if unknown_top:
         warnings.append(f"unknown top-level keys: {sorted(unknown_top)}")

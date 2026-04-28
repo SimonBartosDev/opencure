@@ -19,9 +19,10 @@ from opencure.scoring.common import (
 
 RESULTS_DIR = Path("experiments/results")
 # Files produced by post-processors / aggregation, not single-disease
-# screen outputs. Skipped.
+# screen outputs. Skipped — these have their own shape (lists, summary
+# dicts, etc.) that the per-disease schema validator is not for.
 NON_DISEASE_FILES = {"screening_summary", "novel_candidates",
-                     "opencure_database"}
+                     "opencure_database", "mechanism_clusters"}
 
 
 def _result_files() -> list[Path]:
