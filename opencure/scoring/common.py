@@ -224,6 +224,19 @@ LEGACY_FIELDS: frozenset[str] = frozenset({
 })
 
 
+# Aggregate / non-per-disease files emitted into experiments/results/.
+# Post-processors iterating over the directory must skip these — they have
+# different shapes (lists, summary dicts) and the per-disease validators
+# would crash. Centralized here so adding a new aggregate is a one-line
+# change instead of six.
+AGGREGATE_RESULT_FILES: frozenset[str] = frozenset({
+    "screening_summary",
+    "novel_candidates",
+    "opencure_database",
+    "mechanism_clusters",
+})
+
+
 # Top-level (file) keys — everything a result JSON should have.
 RESULT_TOP_LEVEL: frozenset[str] = frozenset({
     "disease", "status", "timestamp", "elapsed_seconds", "total_searched",

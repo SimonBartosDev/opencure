@@ -17,6 +17,7 @@ import sys
 from pathlib import Path
 
 from opencure.evidence.novelty import is_known_treatment
+from opencure.scoring.common import AGGREGATE_RESULT_FILES
 
 
 RESULTS_DIR = Path("experiments/results")
@@ -76,8 +77,7 @@ def main() -> None:
         files = [RESULTS_DIR / f"{d}.json" for d in sys.argv[1:]]
     else:
         files = sorted(p for p in RESULTS_DIR.glob("*.json")
-                       if p.stem not in {"screening_summary", "novel_candidates",
-                                          "opencure_database"})
+                       if p.stem not in AGGREGATE_RESULT_FILES)
     total_k = 0
     total_n = 0
     for f in files:

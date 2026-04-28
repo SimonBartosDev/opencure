@@ -142,3 +142,38 @@ def test_legacy_triangulation_name_is_forbidden() -> None:
 def test_pgx_flags_is_forbidden() -> None:
     from opencure.scoring.common import LEGACY_FIELDS
     assert "pgx_flags" in LEGACY_FIELDS
+
+
+# ---- Regression: aggregate-file filter shared across post-processors -----
+
+def test_aggregate_files_constant_covers_all_known_aggregates() -> None:
+    """Catches the v5.2 bug where 6 post-processors hardcoded a 3-name
+    aggregate filter and crashed on mechanism_clusters.json (which is a
+    list, not a per-disease dict). The constant must list every aggregate
+    file produced under experiments/results/."""
+    from opencure.scoring.common import AGGREGATE_RESULT_FILES
+    expected = {"screening_summary", "novel_candidates",
+                "opencure_database", "mechanism_clusters"}
+    missing = expected - AGGREGATE_RESULT_FILES
+    assert not missing, f"AGGREGATE_RESULT_FILES missing entries: {missing}"
+
+
+def test_post_processors_import_aggregate_filter() -> None:
+    """Each post-processor MUST consume AGGREGATE_RESULT_FILES from the
+    central constant rather than hardcoding its own set. Catches the
+    'someone added a script with a stale local set' regression."""
+    import re
+    from pathlib import Path
+    scripts = [
+        "scripts/score_ensemble_v5.py",
+        "scripts/wire_tissue_context.py",
+        "scripts/add_docking_proxy_axis.py",
+        "scripts/refresh_known_treatment_labels.py",
+        "scripts/backfill_shared_targets.py",
+        "scripts/annotate_structural_alerts.py",
+    ]
+    pattern = re.compile(r"AGGREGATE_RESULT_FILES")
+    for s in scripts:
+        src = Path(s).read_text()
+        assert pattern.search(src), \
+            f"{s} does not reference AGGREGATE_RESULT_FILES — likely uses a stale local set"
