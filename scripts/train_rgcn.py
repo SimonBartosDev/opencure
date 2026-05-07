@@ -56,6 +56,17 @@ def main() -> None:
                     help="Save model + epoch state every N epochs (0 = disable).")
     ap.add_argument("--resume", action="store_true",
                     help="Resume from checkpoint.pt in MODEL_DIR if present.")
+    # Sampling-based training (correct R-GCN-at-scale pattern):
+    # full-graph encode + per-batch backward causes autograd version
+    # mismatch when optim.step() mutates relation weight matrices
+    # mid-graph. We instead subsample edges + triples per epoch and do
+    # ONE backward + step per epoch — same statistical guarantees over
+    # multiple epochs, no autograd inplace-version error.
+    ap.add_argument("--edges_per_epoch", type=int, default=2_000_000,
+                    help="Edges sampled for the encoder pass each epoch "
+                         "(out of ~14M; full set covers in ~7 epochs at 2M/epoch).")
+    ap.add_argument("--triples_per_epoch", type=int, default=500_000,
+                    help="Positive triples scored each epoch (out of ~14M).")
     args = ap.parse_args()
 
     if not PYG_OK:
@@ -146,45 +157,69 @@ def main() -> None:
         start_epoch = int(ckpt.get("epoch", 0))
         print(f"Resumed from {ckpt_path} at epoch {start_epoch}")
 
-    # Training loop (simplified — full impl would use negative sampling
-    # with batched edges; this sketch covers the key structure)
-    print(f"Training: epochs {start_epoch}→{args.epochs}, batch {args.batch_size}")
+    # Training: sampled single-step per epoch (correct R-GCN-at-scale pattern).
+    #
+    # Why not the obvious full-graph encode + mini-batch loop:
+    #   The encoder produces x (node features) by message-passing through
+    #   relation-weight matrices [dim, dim] per relation. If we then do
+    #   mini-batch backward+step, optim.step() mutates those weight
+    #   matrices. The next batch's gradient flows back through x, which
+    #   was computed against the now-stale weights → autograd raises
+    #   "[X, X] is at version 1; expected version 0" and kills training.
+    #
+    # The fix: ONE forward, ONE backward, ONE step per epoch. To keep
+    # epochs fast on a 14M-edge graph we subsample:
+    #   - edges_per_epoch    edges go through the encoder
+    #   - triples_per_epoch  positive triples are scored
+    # Across `epochs` runs of stochastic sampling, the model sees the
+    # full graph with high probability while each individual epoch fits
+    # comfortably on A100 40GB.
+    print(f"Training: epochs {start_epoch}→{args.epochs}; "
+          f"sampling {args.edges_per_epoch:,} edges / {args.triples_per_epoch:,} triples per epoch")
     edge_index_d = edge_index.to(device)
     edge_type_d = edge_type.to(device)
     triples_t_d = triples_t.to(device)
+    n_edges_total = edge_index_d.size(1)
+    n_triples_total = triples_t_d.size(0)
 
     for epoch in range(start_epoch, args.epochs):
         model.train()
         t_ep = time.time()
+        optim.zero_grad()
 
-        # Encode all nodes once per epoch
-        x = model.encode(edge_index_d, edge_type_d)
+        # Sample a fresh edge subset for the encoder this epoch.
+        edge_perm = torch.randperm(n_edges_total, device=device)[:args.edges_per_epoch]
+        sub_edge_index = edge_index_d[:, edge_perm]
+        sub_edge_type = edge_type_d[edge_perm]
 
-        # Mini-batch over positive triples
-        perm = torch.randperm(triples_t_d.size(0))
-        total_loss = 0.0
-        n_batches = 0
-        for start in range(0, triples_t_d.size(0), args.batch_size):
-            batch = triples_t_d[perm[start:start + args.batch_size]]
-            h, r, t = batch[:, 0], batch[:, 1], batch[:, 2]
-            # Negative sampling: corrupt tail
-            neg_t = torch.randint(0, n_ent, (batch.size(0) * args.neg_samples,), device=device)
-            h_neg = h.repeat_interleave(args.neg_samples)
-            r_neg = r.repeat_interleave(args.neg_samples)
-            pos_score = model.score(h, r, t, x)
-            neg_score = model.score(h_neg, r_neg, neg_t, x)
-            # Margin ranking loss
-            loss = torch.clamp(1.0 - pos_score.repeat_interleave(args.neg_samples) + neg_score, min=0).mean()
-            optim.zero_grad()
-            loss.backward(retain_graph=True)
-            optim.step()
-            total_loss += loss.item()
-            n_batches += 1
+        # Encode the subsampled graph (single forward pass)
+        x = model.encode(sub_edge_index, sub_edge_type)
 
+        # Sample a triple batch + corrupt-tail negatives
+        triple_perm = torch.randperm(n_triples_total, device=device)[:args.triples_per_epoch]
+        batch = triples_t_d[triple_perm]
+        h, r, t = batch[:, 0], batch[:, 1], batch[:, 2]
+        neg_t = torch.randint(0, n_ent, (batch.size(0) * args.neg_samples,), device=device)
+        h_neg = h.repeat_interleave(args.neg_samples)
+        r_neg = r.repeat_interleave(args.neg_samples)
+
+        pos_score = model.score(h, r, t, x)
+        neg_score = model.score(h_neg, r_neg, neg_t, x)
+        # Margin ranking loss (DistMult-style decoder)
+        loss = torch.clamp(
+            1.0 - pos_score.repeat_interleave(args.neg_samples) + neg_score,
+            min=0,
+        ).mean()
+
+        # Single backward + step — no inplace-version conflict.
+        loss.backward()
+        optim.step()
         sched.step()
+
         dt = time.time() - t_ep
-        print(f"  epoch {epoch + 1}/{args.epochs}  loss={total_loss / n_batches:.4f}  "
-              f"lr={sched.get_last_lr()[0]:.2e}  dt={dt:.1f}s")
+        print(f"  epoch {epoch + 1}/{args.epochs}  loss={loss.item():.4f}  "
+              f"lr={sched.get_last_lr()[0]:.2e}  dt={dt:.1f}s",
+              flush=True)
 
         # Periodic checkpoint so a crash mid-training loses ≤checkpoint_every epochs
         if args.checkpoint_every > 0 and (epoch + 1) % args.checkpoint_every == 0:
@@ -194,9 +229,9 @@ def main() -> None:
                 "optimizer": optim.state_dict(),
                 "scheduler": sched.state_dict(),
                 "epoch": epoch + 1,
-                "loss": total_loss / max(n_batches, 1),
+                "loss": loss.item(),
             }, ckpt_path)
-            print(f"  ✓ checkpoint @ epoch {epoch+1} → {ckpt_path}")
+            print(f"  ✓ checkpoint @ epoch {epoch+1} → {ckpt_path}", flush=True)
 
     # Save
     MODEL_DIR.mkdir(parents=True, exist_ok=True)

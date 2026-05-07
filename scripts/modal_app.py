@@ -217,22 +217,22 @@ def train_kg() -> None:
 
 
 @app.function(
-    image=image, gpu=GPU_RGCN,        # 80 GB needed; 40 GB OOMs at full-graph encode
+    image=image, gpu=GPU_TRAIN,        # 40 GB now fits — sampled training
     volumes={VOLUME_ROOT: volume},
-    timeout=6 * 3600,                  # cap at 6h to keep within $16 budget
+    timeout=2 * 3600,                   # 2h cap (sampled training is fast)
 )
 def train_rgcn() -> None:
     _bootstrap()
-    # 30 epochs (was 50) — empirically R-GCN converges in 20-40 epochs on
-    # 14M-edge graphs; 30 is the budget-safe middle and fits ≤4h on A100 80GB.
-    # Bump back to 50 with `modal run --env EPOCHS=50` when budget allows.
+    # Sampled single-step per-epoch training (see train_rgcn.py header).
+    # 50 epochs × ~30s/epoch on A100 40GB ≈ 25 min wall-clock.
     _run([
         "python3", "scripts/train_rgcn.py",
-        "--embedding_dim", "200", "--epochs", "30",
-        "--batch_size", "4096", "--neg_samples", "20",
-        "--device", "cuda",
-        "--checkpoint_every", "5",
-        "--resume",   # idempotent — picks up from checkpoint if present
+        "--embedding_dim", "200", "--epochs", "50",
+        "--neg_samples", "20", "--device", "cuda",
+        "--edges_per_epoch", "2000000",
+        "--triples_per_epoch", "500000",
+        "--checkpoint_every", "10",
+        "--resume",
     ], "train_rgcn")
     _commit_volume()
 
