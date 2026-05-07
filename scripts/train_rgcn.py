@@ -52,6 +52,10 @@ def main() -> None:
     ap.add_argument("--neg_samples", type=int, default=20)
     ap.add_argument("--lr", type=float, default=0.01)
     ap.add_argument("--device", type=str, default="auto")
+    ap.add_argument("--checkpoint_every", type=int, default=5,
+                    help="Save model + epoch state every N epochs (0 = disable).")
+    ap.add_argument("--resume", action="store_true",
+                    help="Resume from checkpoint.pt in MODEL_DIR if present.")
     args = ap.parse_args()
 
     if not PYG_OK:
@@ -131,14 +135,25 @@ def main() -> None:
     optim = Adam(model.parameters(), lr=args.lr)
     sched = CosineAnnealingLR(optim, T_max=args.epochs)
 
+    # Resume from checkpoint if present
+    ckpt_path = MODEL_DIR / "checkpoint.pt"
+    start_epoch = 0
+    if args.resume and ckpt_path.exists():
+        ckpt = torch.load(ckpt_path, map_location=device, weights_only=False)
+        model.load_state_dict(ckpt["model"])
+        optim.load_state_dict(ckpt["optimizer"])
+        sched.load_state_dict(ckpt["scheduler"])
+        start_epoch = int(ckpt.get("epoch", 0))
+        print(f"Resumed from {ckpt_path} at epoch {start_epoch}")
+
     # Training loop (simplified — full impl would use negative sampling
     # with batched edges; this sketch covers the key structure)
-    print(f"Starting training: {args.epochs} epochs, batch {args.batch_size}")
+    print(f"Training: epochs {start_epoch}→{args.epochs}, batch {args.batch_size}")
     edge_index_d = edge_index.to(device)
     edge_type_d = edge_type.to(device)
     triples_t_d = triples_t.to(device)
 
-    for epoch in range(args.epochs):
+    for epoch in range(start_epoch, args.epochs):
         model.train()
         t_ep = time.time()
 
@@ -170,6 +185,18 @@ def main() -> None:
         dt = time.time() - t_ep
         print(f"  epoch {epoch + 1}/{args.epochs}  loss={total_loss / n_batches:.4f}  "
               f"lr={sched.get_last_lr()[0]:.2e}  dt={dt:.1f}s")
+
+        # Periodic checkpoint so a crash mid-training loses ≤checkpoint_every epochs
+        if args.checkpoint_every > 0 and (epoch + 1) % args.checkpoint_every == 0:
+            MODEL_DIR.mkdir(parents=True, exist_ok=True)
+            torch.save({
+                "model": model.state_dict(),
+                "optimizer": optim.state_dict(),
+                "scheduler": sched.state_dict(),
+                "epoch": epoch + 1,
+                "loss": total_loss / max(n_batches, 1),
+            }, ckpt_path)
+            print(f"  ✓ checkpoint @ epoch {epoch+1} → {ckpt_path}")
 
     # Save
     MODEL_DIR.mkdir(parents=True, exist_ok=True)
