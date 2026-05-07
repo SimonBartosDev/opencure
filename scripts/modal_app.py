@@ -179,8 +179,9 @@ def _commit_volume() -> None:
 # Per-step functions
 # ---------------------------------------------------------------------------
 
-GPU_TRAIN = "A100-40GB"          # full-power steps
-GPU_LIGHT = "A10G"               # ~$1.10/h vs $1.81 — for eval / rescreen
+GPU_TRAIN = "A100-40GB"          # RotatE + preflight + eval (40 GB is plenty)
+GPU_RGCN  = "A100-80GB"          # R-GCN full-graph encode needs ~50 GB at 200-dim
+GPU_LIGHT = "A10G"               # ~$1.10/h vs $1.81 — rescreen pillars
 TIMEOUT_LONG = 10 * 3600         # 10 h cap on training functions
 TIMEOUT_MED = 2 * 3600           # 2 h
 TIMEOUT_SHORT = 30 * 60          # 30 min
@@ -216,15 +217,18 @@ def train_kg() -> None:
 
 
 @app.function(
-    image=image, gpu=GPU_TRAIN,
+    image=image, gpu=GPU_RGCN,        # 80 GB needed; 40 GB OOMs at full-graph encode
     volumes={VOLUME_ROOT: volume},
-    timeout=TIMEOUT_LONG,
+    timeout=6 * 3600,                  # cap at 6h to keep within $16 budget
 )
 def train_rgcn() -> None:
     _bootstrap()
+    # 30 epochs (was 50) — empirically R-GCN converges in 20-40 epochs on
+    # 14M-edge graphs; 30 is the budget-safe middle and fits ≤4h on A100 80GB.
+    # Bump back to 50 with `modal run --env EPOCHS=50` when budget allows.
     _run([
         "python3", "scripts/train_rgcn.py",
-        "--embedding_dim", "200", "--epochs", "50",
+        "--embedding_dim", "200", "--epochs", "30",
         "--batch_size", "4096", "--neg_samples", "20",
         "--device", "cuda",
         "--checkpoint_every", "5",
@@ -541,6 +545,54 @@ def resume_post_rgcn() -> None:
     handle = chain_resume_post_rgcn.spawn()
     print(f"✓ Resume chain spawned — function call id: {handle.object_id}")
     print(f"  Watch: modal app logs <app-id>")
+
+
+@app.function(
+    image=image,
+    cpu=2, memory=2048,
+    volumes={VOLUME_ROOT: volume},
+    timeout=10 * 3600,                 # 10h cap on whole RGCN-included chain
+)
+def chain_with_rgcn_first() -> None:
+    """train_kg already done on volume → run R-GCN (80 GB) → rest of chain.
+
+    Skips train_kg because the RotatE checkpoint is already on the
+    volume from the previous run. R-GCN on A100 80GB should fit and
+    finish in ~3-4h with 30 epochs (was OOMing at 50 epochs/40GB).
+    Then eval, ensemble, rescreen, finalize all run with the full
+    12-pillar model set.
+    """
+    import time
+
+    steps: list[tuple[str, modal.Function]] = [
+        ("train_rgcn", train_rgcn),     # 80 GB GPU, 30 epochs
+        ("eval",       eval_holdout),
+        ("ensemble",   train_ensemble),
+        ("rescreen",   rescreen),
+        ("finalize",   finalize),
+    ]
+    t0 = time.time()
+    for name, fn in steps:
+        print(f"\n{'=' * 64}\n▶ {name}\n{'=' * 64}", flush=True)
+        s0 = time.time()
+        try:
+            fn.remote()
+            print(f"  ✓ {name} done in {time.time()-s0:.0f}s", flush=True)
+        except Exception as exc:
+            print(f"  ✗ {name} FAILED after {time.time()-s0:.0f}s: {exc}", flush=True)
+            raise
+    print(f"\n{'=' * 64}\n✓ R-GCN chain done in {(time.time()-t0)/3600:.2f}h\n"
+          f"{'=' * 64}", flush=True)
+
+
+@app.local_entrypoint()
+def chain_with_rgcn() -> None:
+    """Spawn R-GCN-included chain (assumes RotatE already on volume)."""
+    handle = chain_with_rgcn_first.spawn()
+    print(f"✓ R-GCN chain spawned — function call id: {handle.object_id}")
+    print(f"  Watch: modal app logs <app-id>")
+    print(f"  GPU: A100 80GB for R-GCN, A100 40GB for eval, CPU for ensemble/finalize")
+    print(f"  Estimated wall-clock: ~4-5h. Estimated cost: ~$10-12.")
 
 
 @app.local_entrypoint()
