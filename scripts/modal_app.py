@@ -217,20 +217,25 @@ def train_kg() -> None:
 
 
 @app.function(
-    image=image, gpu=GPU_TRAIN,        # 40 GB now fits — sampled training
+    image=image, gpu=GPU_RGCN,          # 80GB — RGCNConv's per-relation
+                                        # autograd graph (162 rel × per-rel
+                                        # message tensors) is huge even with
+                                        # sampling
     volumes={VOLUME_ROOT: volume},
-    timeout=2 * 3600,                   # 2h cap (sampled training is fast)
+    timeout=2 * 3600,
 )
 def train_rgcn() -> None:
     _bootstrap()
-    # Sampled single-step per-epoch training (see train_rgcn.py header).
-    # 50 epochs × ~30s/epoch on A100 40GB ≈ 25 min wall-clock.
+    # 128-dim is the sweet spot: same quality range as 200-dim per the
+    # R-GCN paper (PyG examples use 128), 2.5x less memory across all
+    # tensors, comfortable headroom on A100 80GB.
+    # 1M edges/epoch × 50 epochs ≈ ~80% coverage with replacement.
     _run([
         "python3", "scripts/train_rgcn.py",
-        "--embedding_dim", "200", "--epochs", "50",
+        "--embedding_dim", "128", "--epochs", "50",
         "--neg_samples", "20", "--device", "cuda",
-        "--edges_per_epoch", "2000000",
-        "--triples_per_epoch", "500000",
+        "--edges_per_epoch", "1000000",
+        "--triples_per_epoch", "300000",
         "--checkpoint_every", "10",
         "--resume",
     ], "train_rgcn")
@@ -593,6 +598,38 @@ def chain_with_rgcn() -> None:
     print(f"  Watch: modal app logs <app-id>")
     print(f"  GPU: A100 80GB for R-GCN, A100 40GB for eval, CPU for ensemble/finalize")
     print(f"  Estimated wall-clock: ~4-5h. Estimated cost: ~$10-12.")
+
+
+@app.function(
+    image=image,
+    cpu=2, memory=2048,
+    volumes={VOLUME_ROOT: volume},
+    timeout=8 * 3600,
+)
+def chain_rescreen_finalize() -> None:
+    """Resume just the tail (rescreen + finalize). Use when R-GCN, eval,
+    and ensemble are already done on the volume but rescreen got
+    interrupted or the evidence cache wasn't warm."""
+    import time
+    steps = [("rescreen", rescreen), ("finalize", finalize)]
+    t0 = time.time()
+    for name, fn in steps:
+        print(f"\n{'=' * 64}\n▶ {name}\n{'=' * 64}", flush=True)
+        s0 = time.time()
+        try:
+            fn.remote()
+            print(f"  ✓ {name} done in {time.time()-s0:.0f}s", flush=True)
+        except Exception as exc:
+            print(f"  ✗ {name} FAILED: {exc}", flush=True)
+            raise
+    print(f"\n✓ Tail chain done in {(time.time()-t0)/60:.1f}m\n", flush=True)
+
+
+@app.local_entrypoint()
+def resume_rescreen_finalize() -> None:
+    """Spawn just rescreen + finalize on Modal (cheaper resume after cache warmup)."""
+    handle = chain_rescreen_finalize.spawn()
+    print(f"✓ Tail chain spawned — function call id: {handle.object_id}")
 
 
 @app.local_entrypoint()
