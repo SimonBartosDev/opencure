@@ -498,6 +498,51 @@ def chain_orchestrator() -> None:
           f"{'=' * 64}", flush=True)
 
 
+@app.function(
+    image=image,
+    cpu=2, memory=2048,
+    volumes={VOLUME_ROOT: volume},
+    timeout=4 * 3600,
+)
+def chain_resume_post_rgcn() -> None:
+    """Resume the chain from `eval` onward — skips train_rgcn.
+
+    Use this after train_kg succeeds but train_rgcn fails (e.g. OOM on
+    A100 40GB at full 200-dim). R-GCN is the scaffolded 12th pillar;
+    rgcn_score = 0 across candidates without it, which is the same
+    state as before this run. Everything else (RotatE retrain, eval,
+    ensemble, 93-disease re-screen, dashboard, snapshot) still ships.
+    """
+    import time
+
+    steps: list[tuple[str, modal.Function]] = [
+        ("eval",       eval_holdout),
+        ("ensemble",   train_ensemble),
+        ("rescreen",   rescreen),
+        ("finalize",   finalize),
+    ]
+    t0 = time.time()
+    for name, fn in steps:
+        print(f"\n{'=' * 64}\n▶ {name}\n{'=' * 64}", flush=True)
+        s0 = time.time()
+        try:
+            fn.remote()
+            print(f"  ✓ {name} done in {time.time()-s0:.0f}s", flush=True)
+        except Exception as exc:
+            print(f"  ✗ {name} FAILED after {time.time()-s0:.0f}s: {exc}", flush=True)
+            raise
+    print(f"\n{'=' * 64}\n✓ Resume chain done in {(time.time()-t0)/3600:.2f}h\n"
+          f"{'=' * 64}", flush=True)
+
+
+@app.local_entrypoint()
+def resume_post_rgcn() -> None:
+    """Spawn the resume-after-RGCN-OOM chain on Modal."""
+    handle = chain_resume_post_rgcn.spawn()
+    print(f"✓ Resume chain spawned — function call id: {handle.object_id}")
+    print(f"  Watch: modal app logs <app-id>")
+
+
 @app.local_entrypoint()
 def full_chain() -> None:
     """Spawn the chain on Modal and exit immediately.
