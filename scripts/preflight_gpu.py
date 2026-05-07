@@ -104,7 +104,7 @@ def check_pip_packages():
             missing.append(mod)
     if missing:
         return False, f"Missing: {', '.join(missing)}", \
-            "pip install pykeen torch-geometric xgboost scikit-learn pandas rdkit-pypi tqdm"
+            "pip install pykeen torch-geometric xgboost scikit-learn pandas rdkit tqdm"
     return True, "pykeen+pyg+xgboost+sklearn+pandas+rdkit OK", ""
 
 

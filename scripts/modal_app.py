@@ -85,7 +85,7 @@ image = (
         "xgboost",
         "scikit-learn",
         "pandas",
-        "rdkit-pypi",
+        "rdkit",
         "tqdm",
         "numpy",
         "requests",
@@ -343,15 +343,23 @@ def upload_data() -> None:
     """
     import shutil
 
+    # Curated upload list — explicitly avoid the 28 GB ChEMBL SQLite tree
+    # under data/sources_2024/chembl_34* which is dev-only. The runtime
+    # already has the precomputed extracts (drug_target_activities.json,
+    # chembl_phase.json) inside data/drkg/.
     paths_to_upload = [
-        "data/drkg",
-        "data/unified_kg",
-        "data/open_targets",
-        "data/sources_2024",
-        "data/mappings",
-        "data/eval",
-        "data/models/drkg_transE_clean",
-        "data/models/primekg",
+        "data/drkg",                                            # ~750 MB
+        "data/unified_kg",                                      # ~900 MB
+        "data/open_targets",                                    # ~5 MB
+        "data/sources_2024/gtex",                               # ~24 MB
+        "data/sources_2024/pharmgkb",                           # ~11 MB
+        "data/sources_2024/cpic_pairs.json",                    # 76 KB
+        "data/sources_2024/9606.protein.aliases.v12.0.txt.gz",  # 19 MB STRING
+        "data/sources_2024/9606.protein.links.v12.0.txt.gz",    # 79 MB STRING
+        "data/mappings",                                        # ~17 MB HGNC
+        "data/eval",                                            # ~150 KB
+        "data/models/drkg_transE_clean",                        # ~65 MB
+        "data/models/primekg",                                  # ~36 MB
         "data/disease_gene_index.json",
         "data/disease_pool.json",
         "data/manifest.json",
@@ -416,9 +424,17 @@ def download_artifacts(out_dir: str = "modal_v6_artifacts") -> None:
     print("  git add -A && git commit -m 'v6: Modal-trained artifacts'")
 
 
-@app.local_entrypoint()
-def full_chain() -> None:
-    """Run all 7 chain steps sequentially. Reuses prior checkpoints."""
+@app.function(
+    image=image,                  # CPU only — orchestrator just dispatches
+    cpu=2, memory=2048,
+    volumes={VOLUME_ROOT: volume},
+    timeout=12 * 3600,             # 12 h cap on whole chain (incl. waits)
+)
+def chain_orchestrator() -> None:
+    """Server-side orchestrator. Runs on Modal so the chain survives the
+    local CLI disconnecting (the warning ``modal run --detach`` prints
+    about ``.remote()`` cancellation only applies to local entrypoints).
+    """
     import time
 
     steps: list[tuple[str, modal.Function]] = [
@@ -432,18 +448,34 @@ def full_chain() -> None:
     ]
     t0 = time.time()
     for name, fn in steps:
-        print(f"\n{'=' * 64}\n▶ {name}\n{'=' * 64}")
+        print(f"\n{'=' * 64}\n▶ {name}\n{'=' * 64}", flush=True)
         s0 = time.time()
         try:
             fn.remote()
             dt = time.time() - s0
-            print(f"  ✓ {name} done in {dt:.0f}s")
+            print(f"  ✓ {name} done in {dt:.0f}s", flush=True)
         except Exception as exc:
             dt = time.time() - s0
-            print(f"  ✗ {name} FAILED after {dt:.0f}s: {exc}")
-            print("  Re-run the chain or just this step:")
-            print(f"    modal run scripts/modal_app.py::{name}")
-            sys.exit(1)
+            print(f"  ✗ {name} FAILED after {dt:.0f}s: {exc}", flush=True)
+            print(f"  Resume just this step: modal run scripts/modal_app.py::{name}",
+                  flush=True)
+            raise
     print(f"\n{'=' * 64}\n✓ Full chain done in {(time.time()-t0)/3600:.1f}h\n"
-          f"{'=' * 64}")
-    print("Next:  modal run scripts/modal_app.py::download_artifacts")
+          f"{'=' * 64}", flush=True)
+
+
+@app.local_entrypoint()
+def full_chain() -> None:
+    """Spawn the chain on Modal and exit immediately.
+
+    The chain runs entirely on Modal — closing your laptop, the SSH
+    session, or this terminal won't affect it. Watch progress with
+    ``modal app logs opencure-v6-retrain``.
+    """
+    handle = chain_orchestrator.spawn()
+    print(f"✓ Chain spawned on Modal — function call id: {handle.object_id}")
+    print(f"  Watch live:  modal app logs opencure-v6-retrain")
+    print(f"  Status:      modal app list")
+    print(f"  Cancel:      modal app stop opencure-v6-retrain")
+    print(f"  Pull artifacts when done:  "
+          f"modal run scripts/modal_app.py::download_artifacts")
