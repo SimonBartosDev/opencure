@@ -47,8 +47,14 @@ def group_structural_scores(
     mol_fp_scores: dict | None = None,
     mol_emb_scores: dict | None = None,
     dti_scores: dict | None = None,
+    jump_scores: dict | None = None,
 ) -> dict:
-    """Combine molecular-similarity + drug-target-interaction pillars.
+    """Combine molecular-similarity + drug-target-interaction + morphology pillars.
+
+    v7 adds ``jump_scores`` (JUMP Cell Painting morphological similarity)
+    to the structural group: a compound that produces the same cellular
+    phenotype as a known treatment carries structural-mechanism signal
+    even when its 2D fingerprint is dissimilar.
 
     Takes max score across pillars per compound (most optimistic signal).
     Returns dict[compound] -> (max_score, best_pillar, "structural_group").
@@ -60,6 +66,8 @@ def group_structural_scores(
         dicts["mol_emb"] = mol_emb_scores
     if dti_scores:
         dicts["dti"] = dti_scores
+    if jump_scores:
+        dicts["jump"] = jump_scores
 
     if not dicts:
         return {}

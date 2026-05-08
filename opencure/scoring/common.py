@@ -42,6 +42,9 @@ PILLAR_FIELDS: tuple[str, ...] = (
     "rgcn_score",          # v6.1 heterogeneous GNN (trained model required)
     "rgcn_rank",           # rank under R-GCN scoring
     "rgcn_relation",       # which treats-relation gave the best DistMult score
+    "jump_score",          # v7 Pillar 13: JUMP-CP morphological similarity (0-1)
+    "jump_rank",           # rank by morphological similarity to known treatments
+    "jump_similar_to",     # the known-treatment with closest morphological profile
 )
 
 

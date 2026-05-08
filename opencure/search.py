@@ -356,6 +356,34 @@ def search(
     except Exception:
         pass
 
+    # Step 2f: JUMP Cell Painting morphological similarity — 13th pillar (v7).
+    # Phenotype-space anchored similarity to known treatments. Requires the
+    # JUMP-CP artifact at data/jump_cp/; fail-open when absent.
+    jump_scores = {}
+    try:
+        from opencure.scoring.jump_cell_painting import (
+            load_jump_features, score_drugs_for_disease_jump,
+        )
+        jump_emb, jump_entities = load_jump_features()
+        if jump_emb is not None:
+            print("[Pillar 13] JUMP Cell Painting (morphological similarity)...")
+            for disease_entity, _ in disease_matches:
+                scored = score_drugs_for_disease_jump(
+                    disease_entity,
+                    triplets=data["triplets"],
+                    compound_set=data["compounds"],
+                    embeddings=jump_emb,
+                    embedding_entities=jump_entities,
+                    top_k=top_k * 5,
+                )
+                for compound, val in scored.items():
+                    if compound not in jump_scores or val[0] > jump_scores[compound][0]:
+                        jump_scores[compound] = val
+            if jump_scores:
+                print(f"  {len(jump_scores)} compounds with morphological similarity")
+    except Exception as exc:
+        print(f"  [INFO] JUMP-CP skipped: {exc}")
+
     # Step 2e: R-GCN heterogeneous-GNN scoring — 12th pillar.
     # Loads the trained model from data/models/rgcn_v5/ when present;
     # fail-open (empty dict) when absent or untrained.
@@ -411,6 +439,8 @@ def search(
         active_pillars.append("Mendelian Randomization")
     if rgcn_scores:
         active_pillars.append("R-GCN")
+    if jump_scores:
+        active_pillars.append("JUMP-CP")
 
     # Step 4b: Gene signature reversal pillar (if enabled)
     gene_sig_scores = {}
@@ -579,7 +609,7 @@ def search(
         | set(unified_scores) | set(rgcn_scores)
         | set(mol_sim_scores) | set(mol_emb_scores) | set(dti_scores)
         | set(proximity_scores) | set(gene_sig_scores) | set(mr_scores)
-        | set(admet_scores) | set(txgnn_scores)
+        | set(admet_scores) | set(txgnn_scores) | set(jump_scores)
     )
     all_compounds -= admet_toxic  # legacy ADMET filter
 
@@ -599,7 +629,9 @@ def search(
     # Group correlated pillars (RRF fusion across all KG embeddings + R-GCN)
     kg_group = group_kg_scores(transe_scores, pykeen_scores, primekg_scores,
                                unified_scores, rgcn_scores)
-    structural_group = group_structural_scores(mol_sim_scores, mol_emb_scores, dti_scores)
+    structural_group = group_structural_scores(
+        mol_sim_scores, mol_emb_scores, dti_scores, jump_scores,
+    )
     network_group = group_network_scores(proximity_scores, gene_sig_scores)
 
     # Build grouped feature matrix (only for kept compounds)
@@ -674,6 +706,16 @@ def search(
             admet_s, admet_f, _ = admet_scores[compound]
             # grouped_combiner sets admet_score; we keep flags
             scores["admet_flags"] = admet_f
+        if compound in jump_scores:
+            jump_sim, similar_to = jump_scores[compound]
+            scores["jump_score"] = jump_sim
+            scores["jump_similar_to"] = similar_to
+
+    # v7: jump_rank — per-disease ranking by morphological similarity.
+    sorted_jump = sorted(jump_scores.keys(), key=lambda c: -jump_scores[c][0])
+    for i, c in enumerate(sorted_jump, 1):
+        if c in combined:
+            combined[c]["jump_rank"] = i
 
     # Fill transe_rank from percentile rank
     sorted_transe = sorted(transe_scores.keys(), key=lambda c: -transe_scores[c][0])
