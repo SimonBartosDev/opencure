@@ -122,6 +122,7 @@ def main() -> None:
         from pykeen.models import TransE, RotatE
         from pykeen.training import SLCWATrainingLoop
         from pykeen.sampling.basic_negative_sampler import BasicNegativeSampler
+        from pykeen.losses import NSSALoss, MarginRankingLoss
         import torch
         from torch.optim import Adam
     except ImportError as exc:
@@ -158,8 +159,21 @@ def main() -> None:
 
     ModelCls = RotatE if args.model == "RotatE" else TransE
     model_kwargs: dict = {"embedding_dim": args.embedding_dim}
-    if args.model == "TransE":
+
+    # Loss function — PyKEEN's default for both TransE and RotatE is
+    # MarginRankingLoss(margin=1.0), which is far too small for RotatE
+    # (the model collapses to uniform output and Hit@10 is 0%, even
+    # though the loss curve looks like it's converging — see
+    # experiments/eval/v5_unified_heldout.json from the first v6 run).
+    # The RotatE paper and PyKEEN's reference example use NSSALoss with
+    # margin=9 and adversarial_temperature=1.0; that's what we set here.
+    if args.model == "RotatE":
+        model_kwargs["loss"] = NSSALoss(margin=9.0, adversarial_temperature=1.0)
+    else:  # TransE
         model_kwargs["scoring_fct_norm"] = 2
+        # NSSALoss also works (and often better) for TransE on large graphs.
+        model_kwargs["loss"] = NSSALoss(margin=9.0, adversarial_temperature=1.0)
+
     model = ModelCls(triples_factory=tf, **model_kwargs).to(device)
     optimizer = Adam(params=model.parameters(), lr=args.lr)
 
