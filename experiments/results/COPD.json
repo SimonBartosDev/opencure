@@ -1,8 +1,8 @@
 {
   "disease": "COPD",
   "status": "completed",
-  "timestamp": "2026-04-20T00:45:12.230906",
-  "elapsed_seconds": 763.4,
+  "timestamp": "2026-05-08T01:47:22.652873",
+  "elapsed_seconds": 120.3,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -136,6 +136,7 @@
         "Supporting paper with 57 citations",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D029424",
       "dose_plausibility": {
         "plausibility": "unknown",
         "dose_range": "research",
@@ -185,7 +186,6 @@
         "tissue_specificity": 0.348,
         "context_modifier": 1.072
       },
-      "disease_entity": "Disease::MESH:D029424",
       "ensemble_prob": 0.0,
       "ensemble_features": {
         "kg_score": 0.0721,
@@ -247,7 +247,7 @@
       "admet_flags": "Skin_Reaction=0.90",
       "primekg_score": 0.2613,
       "dti_score": 1.0,
-      "dti_best_target": "MTOR",
+      "dti_best_target": "MYOD1",
       "kg_group_score": 0.1393,
       "structural_group_score": 1.0,
       "network_group_score": 0.6564000248908997,
@@ -431,14 +431,6 @@
       "clinical_trials_total": 4,
       "clinical_trials": [
         {
-          "nct_id": "NCT04668027",
-          "title": "Impulse Oscillation to Evaluate Diagnostic Efficacy in Patients With Chronic Airway Disease",
-          "status": "UNKNOWN",
-          "phase": "NA",
-          "enrollment": "172",
-          "url": "https://clinicaltrials.gov/study/NCT04668027"
-        },
-        {
           "nct_id": "NCT02966665",
           "title": ": Vascular Function in Health and Disease",
           "status": "RECRUITING",
@@ -461,11 +453,19 @@
           "phase": "PHASE1",
           "enrollment": "186",
           "url": "https://clinicaltrials.gov/study/NCT06487416"
+        },
+        {
+          "nct_id": "NCT04668027",
+          "title": "Impulse Oscillation to Evaluate Diagnostic Efficacy in Patients With Chronic Airway Disease",
+          "status": "UNKNOWN",
+          "phase": "NA",
+          "enrollment": "172",
+          "url": "https://clinicaltrials.gov/study/NCT04668027"
         }
       ],
       "trial_phases": {
-        "NA": 1,
-        "PHASE1": 3
+        "PHASE1": 3,
+        "NA": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -474,8 +474,10 @@
         "1 article(s) specifically mention repurposing/repositioning",
         "Supported by 4 independent AI pillars",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.80, 5 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.80, 5 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D029424",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -584,8 +586,7 @@
         "tissue_specificity": 0.471,
         "context_modifier": 0.978
       },
-      "disease_entity": "Disease::MESH:D029424",
-      "ensemble_prob": 0.0746,
+      "ensemble_prob": 0.0488,
       "ensemble_features": {
         "kg_score": 0.9625,
         "degree_penalty": 0.833,
@@ -637,7 +638,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2615,
       "dti_score": 1.0,
-      "dti_best_target": "ELANE",
+      "dti_best_target": "MYOD1",
       "kg_group_score": 0.3524,
       "structural_group_score": 1.0,
       "network_group_score": 0.579200029373169,
@@ -900,12 +901,12 @@
       "clinical_trials_total": 3,
       "clinical_trials": [
         {
-          "nct_id": "NCT03674320",
-          "title": "Cycled Testosterone Administration During Pulmonary Rehabilitation in Early Stage COPD",
-          "status": "WITHDRAWN",
-          "phase": "PHASE2, PHASE3",
-          "enrollment": "0",
-          "url": "https://clinicaltrials.gov/study/NCT03674320"
+          "nct_id": "NCT00230984",
+          "title": "IRAD2 : Patients With Respiratory Failure at Home",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "200",
+          "url": "https://clinicaltrials.gov/study/NCT00230984"
         },
         {
           "nct_id": "NCT02824809",
@@ -916,17 +917,17 @@
           "url": "https://clinicaltrials.gov/study/NCT02824809"
         },
         {
-          "nct_id": "NCT00230984",
-          "title": "IRAD2 : Patients With Respiratory Failure at Home",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "200",
-          "url": "https://clinicaltrials.gov/study/NCT00230984"
+          "nct_id": "NCT03674320",
+          "title": "Cycled Testosterone Administration During Pulmonary Rehabilitation in Early Stage COPD",
+          "status": "WITHDRAWN",
+          "phase": "PHASE2, PHASE3",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT03674320"
         }
       ],
       "trial_phases": {
-        "PHASE2": 1,
-        "PHASE3": 2
+        "PHASE3": 2,
+        "PHASE2": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -937,8 +938,10 @@
         "CAUTION: Drug had terminated/withdrawn trials (Phase 3) for this disease",
         "Supporting paper with 48 citations",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.46)"
+        "Moderate genetic evidence supporting causality (MR score: 0.46)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D029424",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1047,8 +1050,7 @@
         "tissue_specificity": 0.317,
         "context_modifier": 1.035
       },
-      "disease_entity": "Disease::MESH:D029424",
-      "ensemble_prob": 0.9924,
+      "ensemble_prob": 0.9847,
       "ensemble_features": {
         "kg_score": 0.9994,
         "degree_penalty": 0.7473,
@@ -1057,7 +1059,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 1.9459
       },
-      "ensemble_rank": 1,
+      "ensemble_rank": 2,
       "docking": {
         "kcal_per_mol": -7.69,
         "target_symbol": "NR3C1",
@@ -1095,8 +1097,8 @@
       "admet_score": 0.9582,
       "admet_flags": "clean",
       "primekg_score": 0.2549,
-      "dti_score": 0.1505,
-      "dti_best_target": "KMT2D",
+      "dti_score": 0.1462,
+      "dti_best_target": "CFTR",
       "kg_group_score": 0.1431,
       "structural_group_score": 0.956,
       "network_group_score": 0.6015999913215637,
@@ -1269,6 +1271,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.72, 15 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D029424",
       "dose_plausibility": {
         "plausibility": "unknown",
         "dose_range": "research",
@@ -1369,8 +1372,7 @@
         "tissue_specificity": 0.743,
         "context_modifier": 1.11
       },
-      "disease_entity": "Disease::MESH:D029424",
-      "ensemble_prob": 0.2274,
+      "ensemble_prob": 0.1473,
       "ensemble_features": {
         "kg_score": 0.9801,
         "degree_penalty": 0.7895,
@@ -1424,7 +1426,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.268,
       "dti_score": 1.0,
-      "dti_best_target": "ELANE",
+      "dti_best_target": "MYOD1",
       "kg_group_score": 0.1843,
       "structural_group_score": 1.0,
       "network_group_score": 0.5641999840736389,
@@ -1606,8 +1608,10 @@
         "41 PubMed articles found",
         "Supported by 4 independent AI pillars",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.72, 11 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.72, 11 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D029424",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1716,8 +1720,7 @@
         "tissue_specificity": 0.596,
         "context_modifier": 1.102
       },
-      "disease_entity": "Disease::MESH:D029424",
-      "ensemble_prob": 0.0925,
+      "ensemble_prob": 0.0975,
       "ensemble_features": {
         "kg_score": 0.9887,
         "degree_penalty": 0.7522,
@@ -1898,6 +1901,7 @@
         "Supporting paper with 57 citations",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D029424",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -1953,7 +1957,6 @@
         "tissue_specificity": 0.49,
         "context_modifier": 1.053
       },
-      "disease_entity": "Disease::MESH:D029424",
       "ensemble_prob": 0.0,
       "ensemble_features": {
         "kg_score": 0.7294,
@@ -2001,8 +2004,8 @@
       "admet_score": 0.7065,
       "admet_flags": "clean",
       "primekg_score": 0.2625,
-      "dti_score": 0.2261,
-      "dti_best_target": "ELANE",
+      "dti_score": 0.1892,
+      "dti_best_target": "TICRR",
       "kg_group_score": 0.2949,
       "structural_group_score": 0.9641,
       "network_group_score": 0.6200000047683716,
@@ -2157,62 +2160,61 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT01353235",
-          "title": "Oral Prednisolone in Severe Acute Exacerbation of Chronic Obstructive Pulmonary Disease (COPD)",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "317",
-          "url": "https://clinicaltrials.gov/study/NCT01353235"
-        },
-        {
-          "nct_id": "NCT01865500",
-          "title": "Two Different Dosages of Nebulized Steroid Versus Parenteral Steroid in the Management of COPD Exacerbations",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "100",
-          "url": "https://clinicaltrials.gov/study/NCT01865500"
-        },
-        {
-          "nct_id": "NCT06189586",
-          "title": "Comparison of Aerosol Inhalation and Intravenous Glucocorticoid in the Treatment of Severe AECOPD",
+          "nct_id": "NCT06211920",
+          "title": "Prehospital Non-invasive Ventilation for Acute Exacerbation of Chronic Obstructive Pulmonary Disease",
           "status": "UNKNOWN",
           "phase": "NA",
-          "enrollment": "100",
-          "url": "https://clinicaltrials.gov/study/NCT06189586"
+          "enrollment": "140",
+          "url": "https://clinicaltrials.gov/study/NCT06211920"
         },
         {
-          "nct_id": "NCT00379730",
-          "title": "Prednisolone Novel Endpoint Study in Patients With Chronic Obstructive Pulmonary Disease (COPD)",
+          "nct_id": "NCT02147015",
+          "title": "Personalized Variable Versus Fixed Dose Glucocorticoid Therapy in AECOPD",
           "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "90",
-          "url": "https://clinicaltrials.gov/study/NCT00379730"
+          "phase": "NA",
+          "enrollment": "248",
+          "url": "https://clinicaltrials.gov/study/NCT02147015"
         },
         {
-          "nct_id": "NCT05480566",
-          "title": "Functional Strength Training and Neuromuscular Electrical Stimulation in Severe Acute Exacerbations of COPD",
+          "nct_id": "NCT05012033",
+          "title": "Evaluation of High Dose Prednisolone Pharmacokinetics in the Acute and Chronic Setting",
+          "status": "RECRUITING",
+          "phase": "N/A",
+          "enrollment": "120",
+          "url": "https://clinicaltrials.gov/study/NCT05012033"
+        },
+        {
+          "nct_id": "NCT06892210",
+          "title": "Comparing Hydrocortisone and Prednisolone for Acute Exacerbation of Chronic Obstructive Pulmonary Disease (AECOPD)",
+          "status": "RECRUITING",
+          "phase": "PHASE4",
+          "enrollment": "2000",
+          "url": "https://clinicaltrials.gov/study/NCT06892210"
+        },
+        {
+          "nct_id": "NCT00600639",
+          "title": "Non-Invasive Mechanical Ventilation in Elderly Patients",
           "status": "TERMINATED",
-          "phase": "NA",
-          "enrollment": "35",
-          "url": "https://clinicaltrials.gov/study/NCT05480566"
+          "phase": "PHASE4",
+          "enrollment": "82",
+          "url": "https://clinicaltrials.gov/study/NCT00600639"
         }
       ],
       "trial_phases": {
-        "PHASE3": 2,
+        "NA": 4,
         "PHASE4": 3,
-        "NA": 3,
-        "PHASE1": 2
+        "PHASE2": 2
       },
       "confidence": "HIGH",
       "confidence_reasons": [
         "10 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
         "213 PubMed articles on this drug-disease pair",
         "Supported by 4 independent AI pillars",
         "High molecular similarity (0.70) to Prednisolone",
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.48)"
       ],
+      "disease_entity": "Disease::MESH:D029424",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -2321,8 +2323,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.985
       },
-      "disease_entity": "Disease::MESH:D029424",
-      "ensemble_prob": 0.9811,
+      "ensemble_prob": 0.9877,
       "ensemble_features": {
         "kg_score": 0.9993,
         "degree_penalty": 0.7636,
@@ -2331,7 +2332,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.0794
       },
-      "ensemble_rank": 2,
+      "ensemble_rank": 1,
       "docking": {
         "kcal_per_mol": -11.05,
         "target_symbol": "NR3C1",
@@ -2369,8 +2370,8 @@
       "admet_score": 0.6574,
       "admet_flags": "clean",
       "primekg_score": 0.2671,
-      "dti_score": 0.7061,
-      "dti_best_target": "ELANE",
+      "dti_score": 0.565,
+      "dti_best_target": "MYOD1",
       "kg_group_score": 0.2432,
       "structural_group_score": 0.966,
       "network_group_score": 0.5321999788284302,
@@ -2576,6 +2577,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.69)"
       ],
+      "disease_entity": "Disease::MESH:D029424",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2684,8 +2686,7 @@
         "tissue_specificity": 0.871,
         "context_modifier": 1.135
       },
-      "disease_entity": "Disease::MESH:D029424",
-      "ensemble_prob": 0.4234,
+      "ensemble_prob": 0.5369,
       "ensemble_features": {
         "kg_score": 0.9968,
         "degree_penalty": 0.7341,
@@ -2694,7 +2695,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 3.5553
       },
-      "ensemble_rank": 3,
+      "ensemble_rank": 4,
       "docking": {
         "kcal_per_mol": -6.17,
         "target_symbol": "NR3C1",
@@ -2713,7 +2714,7 @@
       "drug_name": "Acetylcysteine",
       "drug_id": "DB06151",
       "disease_name": "COPD",
-      "combined_score": 0.5073,
+      "combined_score": 0.5063,
       "pillars_hit": 4,
       "transe_rank": 17,
       "transe_score": -10.1158,
@@ -2732,15 +2733,15 @@
       "admet_score": 0.7052,
       "admet_flags": "clean",
       "primekg_score": 0.2627,
-      "dti_score": 0.6986,
-      "dti_best_target": "ACSS1",
+      "dti_score": 0.6923,
+      "dti_best_target": "TICRR",
       "kg_group_score": 0.3566,
-      "structural_group_score": 0.6986,
+      "structural_group_score": 0.6923,
       "network_group_score": 0.6640999913215637,
       "txgnn_group_score": 0,
       "mr_group_score": 0.6094,
       "admet_multiplier": 0.941,
-      "efficacy_score": 0.5391,
+      "efficacy_score": 0.538,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 14,
@@ -3005,19 +3006,11 @@
       "mechanistic_hypothesis": "Acetylcysteine \u2014[is a therapeutic for]\u2192 COPD",
       "kg_paths_text": "\u2022 Acetylcysteine \u2014[is a therapeutic for]\u2192 COPD\n\u2022 Acetylcysteine \u2014[palliates]\u2192 DOID:3083 \u2014[is treated by]\u2192 DB00983 \u2014[treats]\u2192 COPD\n\u2022 Acetylcysteine \u2014[palliates]\u2192 DOID:3083 \u2014[is treated by]\u2192 DB00635 \u2014[treats]\u2192 COPD",
       "validation_experiments": [],
-      "novelty_score": 0.244,
+      "novelty_score": 0.243,
       "novelty_level": "ESTABLISHED",
       "is_known_treatment": true,
       "clinical_trials_total": 10,
       "clinical_trials": [
-        {
-          "nct_id": "NCT03843541",
-          "title": "A Clinical Trial to Compare the Efficacy and Safety of 1-week Treatment of Intravenous N-acetylcysteine (NAC) 600 mg Twice Daily, Ambroxol Hydrochloride 30 mg Twice Daily and Placebo as Expectorant Therapies in Adult Chinese Patients With Respiratory Tract Diseases and Abnormal Mucus Secretions",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "333",
-          "url": "https://clinicaltrials.gov/study/NCT03843541"
-        },
         {
           "nct_id": "NCT02579772",
           "title": "Effects of N-acetylcysteine on Cardiorespiratory Control in COPD Patients With Mild-to-moderate Airflow Obstruction",
@@ -3027,12 +3020,12 @@
           "url": "https://clinicaltrials.gov/study/NCT02579772"
         },
         {
-          "nct_id": "NCT05706402",
-          "title": "N-acetylcysteine (NAC) for the Treatment of Acute Exacerbation of COPD",
+          "nct_id": "NCT04798118",
+          "title": "Role of Toilet Bronchoscopy in RICU",
           "status": "UNKNOWN",
-          "phase": "PHASE3",
-          "enrollment": "80",
-          "url": "https://clinicaltrials.gov/study/NCT05706402"
+          "phase": "NA",
+          "enrollment": "130",
+          "url": "https://clinicaltrials.gov/study/NCT04798118"
         },
         {
           "nct_id": "NCT02818270",
@@ -3043,18 +3036,26 @@
           "url": "https://clinicaltrials.gov/study/NCT02818270"
         },
         {
-          "nct_id": "NCT06828120",
-          "title": "A Randomized, Safety and Efficacy Study of Taneasy 600mg Granules and Fluimucil 600mg Granules in COPD Subjects",
+          "nct_id": "NCT05102305",
+          "title": "A Multi-center,Prospective, OS to Evaluate the Effectiveness of 'NAC' Nebulizer Therapy in COPD (NEWEST)",
           "status": "COMPLETED",
+          "phase": "N/A",
+          "enrollment": "100",
+          "url": "https://clinicaltrials.gov/study/NCT05102305"
+        },
+        {
+          "nct_id": "NCT06152653",
+          "title": "The Effects of Positive Airway Pressure on the Mucolytic Effects of NAC (TEAM)",
+          "status": "RECRUITING",
           "phase": "PHASE4",
-          "enrollment": "45",
-          "url": "https://clinicaltrials.gov/study/NCT06828120"
+          "enrollment": "40",
+          "url": "https://clinicaltrials.gov/study/NCT06152653"
         }
       ],
       "trial_phases": {
-        "PHASE3": 3,
-        "PHASE4": 4,
-        "NA": 2
+        "PHASE4": 5,
+        "NA": 3,
+        "PHASE3": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -3066,8 +3067,10 @@
         "Supporting paper with 22 citations",
         "AI analysis of 1 abstract(s) found positive treatment signals",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.61)"
+        "Moderate genetic evidence supporting causality (MR score: 0.61)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D029424",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -3156,10 +3159,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.378,
+        "triangulation_score": 0.377,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.507,
+          "kg": 0.506,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 1.0
@@ -3176,8 +3179,7 @@
         "tissue_specificity": 0.766,
         "context_modifier": 1.087
       },
-      "disease_entity": "Disease::MESH:D029424",
-      "ensemble_prob": 0.4118,
+      "ensemble_prob": 0.7086,
       "ensemble_features": {
         "kg_score": 0.9847,
         "degree_penalty": 0.8715,
@@ -3186,7 +3188,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 5.0876
       },
-      "ensemble_rank": 4,
+      "ensemble_rank": 3,
       "docking": {
         "kcal_per_mol": null,
         "target_symbol": null,
@@ -3330,6 +3332,7 @@
         "Supporting paper with 57 citations",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D029424",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "late-trial",
@@ -3430,8 +3433,7 @@
         "tissue_specificity": 0.348,
         "context_modifier": 1.072
       },
-      "disease_entity": "Disease::MESH:D029424",
-      "ensemble_prob": 0.007,
+      "ensemble_prob": 0.013,
       "ensemble_features": {
         "kg_score": 0.8817,
         "degree_penalty": 0.8045,

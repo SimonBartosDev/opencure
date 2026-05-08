@@ -1,8 +1,8 @@
 {
   "disease": "Type 2 diabetes",
   "status": "completed",
-  "timestamp": "2026-04-19T22:23:01.757893",
-  "elapsed_seconds": 746.0,
+  "timestamp": "2026-05-08T01:18:41.919080",
+  "elapsed_seconds": 122.0,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -36,7 +36,7 @@
       "admet_flags": "clean",
       "primekg_score": 0,
       "dti_score": 1.0,
-      "dti_best_target": "CYP11A1",
+      "dti_best_target": "CISD1",
       "kg_group_score": 0.4179,
       "structural_group_score": 1.0,
       "network_group_score": 1.0,
@@ -301,14 +301,6 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT00334399",
-          "title": "Double-Blind Trial of Miglitol in Type 2 Diabetic Patients Treated With Biguanide",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "",
-          "url": "https://clinicaltrials.gov/study/NCT00334399"
-        },
-        {
           "nct_id": "NCT01386671",
           "title": "Metformin Glycinate on Metabolic Control and Inflammatory Mediators in Type 2 Diabetes",
           "status": "COMPLETED",
@@ -317,34 +309,42 @@
           "url": "https://clinicaltrials.gov/study/NCT01386671"
         },
         {
-          "nct_id": "NCT02207374",
-          "title": "A Trial Comparing the Safety and Efficacy of Semaglutide Once Weekly in Monotherapy or in Combination With One OAD in Japanese Subjects With Type 2 Diabetes",
+          "nct_id": "NCT05132179",
+          "title": "Treating Diabetic Foot Ulcers, Comparing Two Topical Antimicrobial Agents, Dakin\u00b4s and Prontosan",
+          "status": "RECRUITING",
+          "phase": "NA",
+          "enrollment": "202",
+          "url": "https://clinicaltrials.gov/study/NCT05132179"
+        },
+        {
+          "nct_id": "NCT01940965",
+          "title": "Safety and Tolerability of Lixisenatide in Combination With Oral Anti-Diabetic Treatment in Patients With Type 2 Diabetes",
           "status": "COMPLETED",
           "phase": "PHASE3",
-          "enrollment": "601",
-          "url": "https://clinicaltrials.gov/study/NCT02207374"
+          "enrollment": "294",
+          "url": "https://clinicaltrials.gov/study/NCT01940965"
         },
         {
-          "nct_id": "NCT06449235",
-          "title": "Real-World Evaluation of Omarigliptin for Type 2 Diabetes Meliitus in Bangladesh",
-          "status": "NOT_YET_RECRUITING",
-          "phase": "PHASE4",
-          "enrollment": "938",
-          "url": "https://clinicaltrials.gov/study/NCT06449235"
+          "nct_id": "NCT01204294",
+          "title": "Comprehensive Add on Study in Japan",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "574",
+          "url": "https://clinicaltrials.gov/study/NCT01204294"
         },
         {
-          "nct_id": "NCT05663515",
-          "title": "A Pan-European Post-Authorisation Safety Study: Risk of Pancreatic Cancer Among Type 2 Diabetes Patients Who Initiated Exenatide as Compared With Those Who Initiated Other Non-Glucagon-Like Peptide 1 Receptor Agonists Based Glucose Lowering Drugs",
-          "status": "RECRUITING",
-          "phase": "N/A",
-          "enrollment": "24000",
-          "url": "https://clinicaltrials.gov/study/NCT05663515"
+          "nct_id": "NCT01584232",
+          "title": "A Study of Dulaglutide in Japanese Participants With Type 2 Diabetes Mellitus",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "361",
+          "url": "https://clinicaltrials.gov/study/NCT01584232"
         }
       ],
       "trial_phases": {
-        "PHASE3": 5,
-        "PHASE4": 2,
-        "NA": 2
+        "PHASE3": 7,
+        "NA": 1,
+        "PHASE4": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -357,6 +357,7 @@
         "Moderate genetic evidence supporting causality (MR score: 0.66)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D003924",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "late-trial",
@@ -409,15 +410,7 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.15
       },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D003924",
-      "ensemble_prob": 0.0003,
+      "ensemble_prob": 0.0043,
       "ensemble_features": {
         "kg_score": 0.8166,
         "degree_penalty": 1.0,
@@ -426,7 +419,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 7.5684
       },
-      "ensemble_rank": 10,
+      "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -443,7 +443,7 @@
       "drug_name": "Glycyrrhizin",
       "drug_id": "DB13751",
       "disease_name": "Type 2 diabetes",
-      "combined_score": 0.5897,
+      "combined_score": 0.591,
       "pillars_hit": 4,
       "transe_rank": 147,
       "transe_score": -10.962,
@@ -462,15 +462,15 @@
       "admet_score": 1.0,
       "admet_flags": "clean",
       "primekg_score": 0.2566,
-      "dti_score": 0.8924,
-      "dti_best_target": "SLC26A9",
+      "dti_score": 0.9,
+      "dti_best_target": "PCK1",
       "kg_group_score": 0.1949,
-      "structural_group_score": 0.8924,
+      "structural_group_score": 0.9,
       "network_group_score": 0.8008999824523926,
       "txgnn_group_score": 0,
       "mr_group_score": 0.801,
       "admet_multiplier": 1.0,
-      "efficacy_score": 0.5897,
+      "efficacy_score": 0.591,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 3,
@@ -617,7 +617,7 @@
       "mechanistic_hypothesis": "Glycyrrhizin \u2014[is a therapeutic for]\u2192 MESH:D056486 \u2014[is treated by]\u2192 DB01124 \u2014[treats]\u2192 Type 2 diabetes",
       "kg_paths_text": "\u2022 Glycyrrhizin \u2014[is a therapeutic for]\u2192 MESH:D056486 \u2014[is treated by]\u2192 DB01124 \u2014[treats]\u2192 Type 2 diabetes\n\u2022 Glycyrrhizin \u2014[is a therapeutic for]\u2192 MESH:D056486 \u2014[is treated by]\u2192 DB01124 \u2014[treats]\u2192 Type 2 diabetes\n\u2022 Glycyrrhizin \u2014[is a therapeutic for]\u2192 MESH:D056486 \u2014[is treated by]\u2192 DB00672 \u2014[treats]\u2192 Type 2 diabetes",
       "validation_experiments": [],
-      "novelty_score": 0.601,
+      "novelty_score": 0.603,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -630,6 +630,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.80, 3 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D003924",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -710,10 +711,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.442,
+        "triangulation_score": 0.443,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.59,
+          "kg": 0.591,
           "docking": 0.455,
           "pharos": 0.0,
           "literature": 0.498
@@ -733,15 +734,7 @@
         "tissue_specificity": 0.608,
         "context_modifier": 1.103
       },
-      "docking": {
-        "kcal_per_mol": -5.46,
-        "target_symbol": "PTPN1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D003924",
-      "ensemble_prob": 0.2897,
+      "ensemble_prob": 0.1947,
       "ensemble_features": {
         "kg_score": 0.9163,
         "degree_penalty": 0.9324,
@@ -751,6 +744,13 @@
         "transe_rank_log": 6.7845
       },
       "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": -5.46,
+        "target_symbol": "PTPN1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -789,7 +789,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2527,
       "dti_score": 1.0,
-      "dti_best_target": "CYP11A1",
+      "dti_best_target": "CISD1",
       "kg_group_score": 0.3191,
       "structural_group_score": 1.0,
       "network_group_score": 0.7727000117301941,
@@ -981,52 +981,51 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT07053319",
-          "title": "SGLT2i, Pioglitazone, and Ketone Production in T2D",
-          "status": "RECRUITING",
-          "phase": "PHASE1",
-          "enrollment": "64",
-          "url": "https://clinicaltrials.gov/study/NCT07053319"
+          "nct_id": "NCT00280865",
+          "title": "GLAD: Dose-Finding, Efficacy, and Safety of AZ 242 (Tesaglitazar) in Subjects With Type 2 Diabetes",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "500",
+          "url": "https://clinicaltrials.gov/study/NCT00280865"
         },
         {
-          "nct_id": "NCT02024971",
-          "title": "Special Drug Use Surveillance of Pioglitazone/Metformin Hydrochloride Combination Tablets Survey on Long-term Use for Type 2 Diabetes Mellitus",
+          "nct_id": "NCT00994682",
+          "title": "University of Texas H.S.C. San Antonio Pioglitazone in Non-Alcoholic Steatohepatitis Trial (UTHSCSA NASH Trial)",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "176",
+          "url": "https://clinicaltrials.gov/study/NCT00994682"
+        },
+        {
+          "nct_id": "NCT01055223",
+          "title": "Fracture Risk With Thiazolidinediones",
           "status": "COMPLETED",
           "phase": "N/A",
-          "enrollment": "1103",
-          "url": "https://clinicaltrials.gov/study/NCT02024971"
+          "enrollment": "98483",
+          "url": "https://clinicaltrials.gov/study/NCT01055223"
         },
         {
-          "nct_id": "NCT00399711",
-          "title": "Effect of Repaglinide and Metformin Combination Tablet or Rosiglitazone and Metformin in Fixed Dose Combination on Blood Glucose Control in Patients With Type 2 Diabetes",
+          "nct_id": "NCT05411965",
+          "title": "A Study to Evaluate the Pharmacokinetics After Administration of BR3003 and Co-administration of BR3003B and BR3003C.",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "48",
+          "url": "https://clinicaltrials.gov/study/NCT05411965"
+        },
+        {
+          "nct_id": "NCT00231387",
+          "title": "Rosiglitazone And Plaque Study for Type 2 Diabetes Mellitus",
           "status": "COMPLETED",
           "phase": "PHASE3",
-          "enrollment": "560",
-          "url": "https://clinicaltrials.gov/study/NCT00399711"
-        },
-        {
-          "nct_id": "NCT05422092",
-          "title": "Canagliflozin on Liver Inflammation Damage in Type 2 Diabetes Patients With Nonalcoholic Fatty Liver Disease",
-          "status": "UNKNOWN",
-          "phase": "NA",
-          "enrollment": "80",
-          "url": "https://clinicaltrials.gov/study/NCT05422092"
-        },
-        {
-          "nct_id": "NCT05305287",
-          "title": "Quantifying Hepatic Mitochondrial Fluxes in Humans",
-          "status": "RECRUITING",
-          "phase": "PHASE4",
           "enrollment": "60",
-          "url": "https://clinicaltrials.gov/study/NCT05305287"
+          "url": "https://clinicaltrials.gov/study/NCT00231387"
         }
       ],
       "trial_phases": {
+        "PHASE2": 1,
+        "PHASE4": 4,
         "PHASE1": 1,
-        "PHASE3": 2,
-        "NA": 1,
-        "PHASE4": 2,
-        "PHASE2": 1
+        "PHASE3": 2
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -1040,6 +1039,7 @@
         "Moderate genetic evidence supporting causality (MR score: 0.66)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D003924",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "late-trial",
@@ -1143,15 +1143,7 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.15
       },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D003924",
-      "ensemble_prob": 0.9433,
+      "ensemble_prob": 0.9857,
       "ensemble_features": {
         "kg_score": 0.9986,
         "degree_penalty": 0.8291,
@@ -1161,6 +1153,13 @@
         "transe_rank_log": 2.7726
       },
       "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -1196,7 +1195,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2601,
       "dti_score": 1.0,
-      "dti_best_target": "CYP11A1",
+      "dti_best_target": "CISD1",
       "kg_group_score": 0.235,
       "structural_group_score": 1.0,
       "network_group_score": 0.7218000292778015,
@@ -1367,50 +1366,51 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT05220917",
-          "title": "Comparative Effectiveness and Safety of Four Second Line Pharmacological Strategies in Type 2 Diabetes Study",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "phase": "N/A",
-          "enrollment": "781430",
-          "url": "https://clinicaltrials.gov/study/NCT05220917"
+          "nct_id": "NCT07256613",
+          "title": "Non-surgical Periodontal Therapy and Kidney Outcomes in Type 2 Diabetes Mellitus",
+          "status": "RECRUITING",
+          "phase": "NA",
+          "enrollment": "46",
+          "url": "https://clinicaltrials.gov/study/NCT07256613"
         },
         {
-          "nct_id": "NCT00494312",
-          "title": "Safety Study of Pioglitazone Compared To Glyburide on Liver Function",
+          "nct_id": "NCT06085703",
+          "title": "Effects of Henagliflozin on the Brain Function in T2DM Patients With Mild Cognitive Impairment: a Randomized, Parallel Controlled Clinical Trial",
           "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "2120",
-          "url": "https://clinicaltrials.gov/study/NCT00494312"
+          "phase": "NA",
+          "enrollment": "24",
+          "url": "https://clinicaltrials.gov/study/NCT06085703"
         },
         {
-          "nct_id": "NCT02730377",
-          "title": "Efficacy in Controlling Glycaemia With Victoza\u00ae (Liraglutide) as add-on to Metformin vs. OADs as add-on to Metformin After up to 104 Weeks of Treatment in Subjects With Type 2 Diabetes",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "1991",
-          "url": "https://clinicaltrials.gov/study/NCT02730377"
-        },
-        {
-          "nct_id": "NCT01076075",
-          "title": "A Study to Evaluate the Safety and Efficacy of Sitagliptin 100 mg in Participants With Type 2 Diabetes Mellitus Who Have Inadequate Glycemic Control (MK-0431-229)",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "427",
-          "url": "https://clinicaltrials.gov/study/NCT01076075"
-        },
-        {
-          "nct_id": "NCT00267683",
-          "title": "Efficacy and Safety of Insulin Aspart Versus Glibenclamide in Type 2 Diabetes",
+          "nct_id": "NCT00255541",
+          "title": "GALLANT 4 Tesaglitazar vs. Glibenclamide",
           "status": "TERMINATED",
           "phase": "PHASE3",
-          "enrollment": "9",
-          "url": "https://clinicaltrials.gov/study/NCT00267683"
+          "enrollment": "580",
+          "url": "https://clinicaltrials.gov/study/NCT00255541"
+        },
+        {
+          "nct_id": "NCT00347100",
+          "title": "Insulin Glargine in Type 2 Diabetic Patients",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "387",
+          "url": "https://clinicaltrials.gov/study/NCT00347100"
+        },
+        {
+          "nct_id": "NCT01107717",
+          "title": "Durability of Combination Therapy With Exenatide/Pioglitazone/Metformin vs. Conventional Therapy in New Onset T2DM",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "318",
+          "url": "https://clinicaltrials.gov/study/NCT01107717"
         }
       ],
       "trial_phases": {
+        "NA": 3,
+        "PHASE3": 2,
         "PHASE4": 4,
-        "PHASE3": 3,
-        "NA": 2
+        "PHASE1": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -1425,6 +1425,7 @@
         "Strong causal genetic evidence (MR score: 0.78, 7 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D003924",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1477,15 +1478,7 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.15
       },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D003924",
-      "ensemble_prob": 0.0018,
+      "ensemble_prob": 0.0043,
       "ensemble_features": {
         "kg_score": 0.8367,
         "degree_penalty": 0.916,
@@ -1494,7 +1487,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 7.4524
       },
-      "ensemble_rank": 9,
+      "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1525,8 +1525,8 @@
       "admet_score": 0.7109,
       "admet_flags": "clean",
       "primekg_score": 0.2528,
-      "dti_score": 0.8114,
-      "dti_best_target": "SLC26A9",
+      "dti_score": 0.8309,
+      "dti_best_target": "PCK1",
       "kg_group_score": 0.3714,
       "structural_group_score": 0.9444,
       "network_group_score": 0.5799000263214111,
@@ -1722,6 +1722,22 @@
           "url": "https://clinicaltrials.gov/study/NCT05759637"
         },
         {
+          "nct_id": "NCT00331162",
+          "title": "Study of Alemtuzumab Versus Anti-thymocyte Globulin to Help Prevent Rejection in Kidney and Pancreas Transplantation",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "222",
+          "url": "https://clinicaltrials.gov/study/NCT00331162"
+        },
+        {
+          "nct_id": "NCT02235584",
+          "title": "Insulinotropic Effect of GLP-1 and GIP After Dexamethasone",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "19",
+          "url": "https://clinicaltrials.gov/study/NCT02235584"
+        },
+        {
           "nct_id": "NCT07280780",
           "title": "CGM-Based Glycemic Analysis After ESI",
           "status": "NOT_YET_RECRUITING",
@@ -1730,34 +1746,18 @@
           "url": "https://clinicaltrials.gov/study/NCT07280780"
         },
         {
-          "nct_id": "NCT00784745",
-          "title": "Is Insulin Resistance and/or Glucose Intolerance Pathogenetic in the Development of a Reduced Incretin Effect",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "21",
-          "url": "https://clinicaltrials.gov/study/NCT00784745"
-        },
-        {
           "nct_id": "NCT01383759",
           "title": "Bortezomib/Dexamethasone (BD), Followed By Autologous Stem Cell Transplantation and Maintenance Bortezomib/Dexamethasone For the Initial Treatment of Monoclonal Immunoglobulin Deposition Disease (MIDD) Associated With Multiple Myeloma and AL Amyloidosis",
           "status": "COMPLETED",
           "phase": "NA",
           "enrollment": "20",
           "url": "https://clinicaltrials.gov/study/NCT01383759"
-        },
-        {
-          "nct_id": "NCT06190158",
-          "title": "Subclinical Primary Aldosteronism in Diabetes At-Risk for Kidney Disease",
-          "status": "RECRUITING",
-          "phase": "EARLY_PHASE1",
-          "enrollment": "125",
-          "url": "https://clinicaltrials.gov/study/NCT06190158"
         }
       ],
       "trial_phases": {
+        "PHASE4": 1,
         "NA": 3,
-        "EARLY_PHASE1": 1,
-        "PHASE4": 1
+        "EARLY_PHASE1": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -1769,6 +1769,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.85, 39 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D003924",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -1908,15 +1909,7 @@
         "tissue_specificity": 0.769,
         "context_modifier": 1.122
       },
-      "docking": {
-        "kcal_per_mol": -10.22,
-        "target_symbol": "NR3C2",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D003924",
-      "ensemble_prob": 0.4778,
+      "ensemble_prob": 0.6243,
       "ensemble_features": {
         "kg_score": 0.9967,
         "degree_penalty": 0.736,
@@ -1926,6 +1919,13 @@
         "transe_rank_log": 3.5835
       },
       "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": -10.22,
+        "target_symbol": "NR3C2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1957,7 +1957,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2506,
       "dti_score": 1.0,
-      "dti_best_target": "CYP11A1",
+      "dti_best_target": "CISD1",
       "kg_group_score": 0.3318,
       "structural_group_score": 1.0,
       "network_group_score": 0.5515000224113464,
@@ -2307,12 +2307,36 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT00479609",
-          "title": "Testosterone Therapy in Men With Low Testosterone Levels and Metabolic Syndrome or Early Stages of Type 2 Diabetes",
-          "status": "UNKNOWN",
+          "nct_id": "NCT00141492",
+          "title": "Efficacy and Safety of Androgel in the Treatment of Hypogonadal and Low Testosterone Men With Type 2 Diabetes",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "",
+          "url": "https://clinicaltrials.gov/study/NCT00141492"
+        },
+        {
+          "nct_id": "NCT06489457",
+          "title": "The Effects of Semaglutide vs Testosterone Replacement Therapy on Functional Hypogonadism and Sperm Quality in Men With Type 2 Diabetes Mellitus and Obesity",
+          "status": "COMPLETED",
           "phase": "PHASE3",
-          "enrollment": "176",
-          "url": "https://clinicaltrials.gov/study/NCT00479609"
+          "enrollment": "25",
+          "url": "https://clinicaltrials.gov/study/NCT06489457"
+        },
+        {
+          "nct_id": "NCT00440440",
+          "title": "Effect of Testosterone Gel Replacement on Fat Mass in Males With Low Testosterone Levels and Diabetes",
+          "status": "WITHDRAWN",
+          "phase": "PHASE4",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT00440440"
+        },
+        {
+          "nct_id": "NCT00355537",
+          "title": "Testosterone Replacement in Diabetes With Vascular Disease (Version 2)",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "19",
+          "url": "https://clinicaltrials.gov/study/NCT00355537"
         },
         {
           "nct_id": "NCT05806723",
@@ -2321,36 +2345,12 @@
           "phase": "PHASE4",
           "enrollment": "104",
           "url": "https://clinicaltrials.gov/study/NCT05806723"
-        },
-        {
-          "nct_id": "NCT00613782",
-          "title": "Reandron in Diabetic Men Witn Low Testosterone Level",
-          "status": "COMPLETED",
-          "phase": "PHASE2, PHASE3",
-          "enrollment": "88",
-          "url": "https://clinicaltrials.gov/study/NCT00613782"
-        },
-        {
-          "nct_id": "NCT02612714",
-          "title": "Statin Lowering Testosterone and Sexual Function",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "151",
-          "url": "https://clinicaltrials.gov/study/NCT02612714"
-        },
-        {
-          "nct_id": "NCT01510847",
-          "title": "The Effect of 90-day Oral Testosterone Therapy in Chinese Males With Type 2 Diabetes (T2DM)",
-          "status": "TERMINATED",
-          "phase": "PHASE4",
-          "enrollment": "19",
-          "url": "https://clinicaltrials.gov/study/NCT01510847"
         }
       ],
       "trial_phases": {
-        "PHASE3": 2,
-        "PHASE4": 6,
-        "PHASE2": 2
+        "PHASE2": 1,
+        "PHASE3": 1,
+        "PHASE4": 6
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -2365,6 +2365,7 @@
         "Strong causal genetic evidence (MR score: 0.84, 13 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D003924",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2476,15 +2477,7 @@
         "tissue_specificity": 0.532,
         "context_modifier": 1.094
       },
-      "docking": {
-        "kcal_per_mol": -11.11,
-        "target_symbol": "SHBG",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D003924",
-      "ensemble_prob": 0.9004,
+      "ensemble_prob": 0.8294,
       "ensemble_features": {
         "kg_score": 0.998,
         "degree_penalty": 0.7473,
@@ -2494,6 +2487,13 @@
         "transe_rank_log": 3.091
       },
       "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": -11.11,
+        "target_symbol": "SHBG",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2505,7 +2505,7 @@
       "drug_name": "Pitavastatin",
       "drug_id": "DB08860",
       "disease_name": "Type 2 diabetes",
-      "combined_score": 0.557,
+      "combined_score": 0.5572,
       "pillars_hit": 4,
       "transe_rank": 104,
       "transe_score": -10.8211,
@@ -2524,15 +2524,15 @@
       "admet_score": 1.0,
       "admet_flags": "clean",
       "primekg_score": 0.2507,
-      "dti_score": 0.9745,
-      "dti_best_target": "CALCA",
+      "dti_score": 0.9756,
+      "dti_best_target": "CTF1",
       "kg_group_score": 0.1213,
-      "structural_group_score": 0.9745,
+      "structural_group_score": 0.9756,
       "network_group_score": 0.6226000189781189,
       "txgnn_group_score": 0,
       "mr_group_score": 0.8451,
       "admet_multiplier": 1.0,
-      "efficacy_score": 0.557,
+      "efficacy_score": 0.5572,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 21,
@@ -2713,14 +2713,6 @@
       "clinical_trials_total": 3,
       "clinical_trials": [
         {
-          "nct_id": "NCT00344370",
-          "title": "Follow-On Study of Pitavastatin Versus Atorvastatin in Patients With Type II Diabetes Mellitus and Combined Dyslipidemia",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "214",
-          "url": "https://clinicaltrials.gov/study/NCT00344370"
-        },
-        {
           "nct_id": "NCT00889226",
           "title": "Efficacy and Safety Study of Pitavastatin Compared to atoRvastatin in Type 2 dIabeTes Mellitus With Hypercholesterolemia",
           "status": "COMPLETED",
@@ -2735,11 +2727,19 @@
           "phase": "PHASE3",
           "enrollment": "418",
           "url": "https://clinicaltrials.gov/study/NCT00309751"
+        },
+        {
+          "nct_id": "NCT00344370",
+          "title": "Follow-On Study of Pitavastatin Versus Atorvastatin in Patients With Type II Diabetes Mellitus and Combined Dyslipidemia",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "214",
+          "url": "https://clinicaltrials.gov/study/NCT00344370"
         }
       ],
       "trial_phases": {
-        "PHASE3": 2,
-        "PHASE4": 1
+        "PHASE4": 1,
+        "PHASE3": 2
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -2752,6 +2752,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.85, 16 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D003924",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2905,15 +2906,7 @@
         "tissue_specificity": 0.546,
         "context_modifier": 1.075
       },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D003924",
-      "ensemble_prob": 0.1862,
+      "ensemble_prob": 0.1637,
       "ensemble_features": {
         "kg_score": 0.9771,
         "degree_penalty": 0.7782,
@@ -2923,6 +2916,13 @@
         "transe_rank_log": 5.4931
       },
       "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2954,7 +2954,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2516,
       "dti_score": 1.0,
-      "dti_best_target": "CYP11A1",
+      "dti_best_target": "CISD1",
       "kg_group_score": 0.3353,
       "structural_group_score": 1.0,
       "network_group_score": 0.5252000093460083,
@@ -3119,20 +3119,20 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT00845130",
-          "title": "Quantitative in Vivo Biomarkers of Oxidative Stress in Diabetes",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "42",
-          "url": "https://clinicaltrials.gov/study/NCT00845130"
+          "nct_id": "NCT01720719",
+          "title": "Atorvastatin Versus Vitamin E in Treatment of Non-alcoholic Fatty Liver Disease",
+          "status": "UNKNOWN",
+          "phase": "PHASE4",
+          "enrollment": "120",
+          "url": "https://clinicaltrials.gov/study/NCT01720719"
         },
         {
-          "nct_id": "NCT00534014",
-          "title": "Vitamin C and Cardiovascular Risk",
+          "nct_id": "NCT02107976",
+          "title": "Famine From Feast: Linking Vitamin C, Red Blood Cell Fragility, and Diabetes",
           "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "8",
-          "url": "https://clinicaltrials.gov/study/NCT00534014"
+          "phase": "PHASE1",
+          "enrollment": "55",
+          "url": "https://clinicaltrials.gov/study/NCT02107976"
         },
         {
           "nct_id": "NCT04877366",
@@ -3143,27 +3143,27 @@
           "url": "https://clinicaltrials.gov/study/NCT04877366"
         },
         {
+          "nct_id": "NCT03734445",
+          "title": "Effect of Vitamin C, D and Zinc Supplementation on the Immune and Inflammatory Process in Type 2 Diabetic Subjects",
+          "status": "UNKNOWN",
+          "phase": "NA",
+          "enrollment": "120",
+          "url": "https://clinicaltrials.gov/study/NCT03734445"
+        },
+        {
           "nct_id": "NCT00775541",
           "title": "Hyperglycemia and Oxidative Stress in the Human Brain With Diabetes",
           "status": "TERMINATED",
           "phase": "NA",
           "enrollment": "5",
           "url": "https://clinicaltrials.gov/study/NCT00775541"
-        },
-        {
-          "nct_id": "NCT00638560",
-          "title": "Changes of Biomarkers in Response to Training and Antioxidant Treatment",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "40",
-          "url": "https://clinicaltrials.gov/study/NCT00638560"
         }
       ],
       "trial_phases": {
+        "PHASE4": 2,
+        "PHASE1": 1,
         "NA": 5,
-        "PHASE1": 2,
-        "PHASE2": 2,
-        "PHASE4": 1
+        "PHASE2": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -3173,8 +3173,10 @@
         "Strong FAERS signal: 1739 adverse event reports link drug to disease (94708 total reports)",
         "Supporting paper with 100 citations",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.81, 4 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.81, 4 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D003924",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3284,15 +3286,7 @@
         "tissue_specificity": 0.557,
         "context_modifier": 1.097
       },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D003924",
-      "ensemble_prob": 0.0343,
+      "ensemble_prob": 0.0213,
       "ensemble_features": {
         "kg_score": 0.9196,
         "degree_penalty": 0.808,
@@ -3302,6 +3296,13 @@
         "transe_rank_log": 6.7441
       },
       "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -3332,8 +3333,8 @@
       "admet_score": 0.7047,
       "admet_flags": "clean",
       "primekg_score": 0.2544,
-      "dti_score": 0.3072,
-      "dti_best_target": "MC4R",
+      "dti_score": 0.3213,
+      "dti_best_target": "MYH9",
       "kg_group_score": 0.2157,
       "structural_group_score": 0.9281,
       "network_group_score": 0.6509000062942505,
@@ -3512,6 +3513,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.81, 7 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D003924",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -3615,15 +3617,7 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.15
       },
-      "docking": {
-        "kcal_per_mol": -11.23,
-        "target_symbol": "ADRB1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D003924",
-      "ensemble_prob": 0.0749,
+      "ensemble_prob": 0.1182,
       "ensemble_features": {
         "kg_score": 0.9794,
         "degree_penalty": 0.789,
@@ -3633,6 +3627,13 @@
         "transe_rank_log": 5.3845
       },
       "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": -11.23,
+        "target_symbol": "ADRB1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -3669,7 +3670,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2554,
       "dti_score": 1.0,
-      "dti_best_target": "CYP11A1",
+      "dti_best_target": "CISD1",
       "kg_group_score": 0.0734,
       "structural_group_score": 1.0,
       "network_group_score": 0.6359999775886536,
@@ -3831,12 +3832,12 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT02476760",
-          "title": "Incretin-based Drugs and Acute Pancreatitis",
+          "nct_id": "NCT00437918",
+          "title": "The Effects of Nateglinide and Acarbose on the Post-Prandial Glucose Control in Type 2 Diabetic Patients",
           "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "1417914",
-          "url": "https://clinicaltrials.gov/study/NCT02476760"
+          "phase": "PHASE4",
+          "enrollment": "85",
+          "url": "https://clinicaltrials.gov/study/NCT00437918"
         },
         {
           "nct_id": "NCT00212290",
@@ -3847,33 +3848,33 @@
           "url": "https://clinicaltrials.gov/study/NCT00212290"
         },
         {
-          "nct_id": "NCT02616666",
-          "title": "A Pragmatic Randomized Trial to Evaluate the Comparative Effectiveness Between Dapagliflozin and Standard of Care in Type 2 Diabetes Patients",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "632",
-          "url": "https://clinicaltrials.gov/study/NCT02616666"
-        },
-        {
-          "nct_id": "NCT00369148",
-          "title": "Combination of Glinides With Premixed Insulin",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "60",
-          "url": "https://clinicaltrials.gov/study/NCT00369148"
-        },
-        {
-          "nct_id": "NCT01316107",
-          "title": "A Study to Assess Safety and Efficacy of ASP1941 in Combination With Nateglinide in Type 2 Diabetic Patients",
+          "nct_id": "NCT00097786",
+          "title": "Long-term Study of Nateglinide+Valsartan to Prevent or Delay Type II Diabetes Mellitus and Cardiovascular Complications",
           "status": "COMPLETED",
           "phase": "PHASE3",
-          "enrollment": "122",
-          "url": "https://clinicaltrials.gov/study/NCT01316107"
+          "enrollment": "9306",
+          "url": "https://clinicaltrials.gov/study/NCT00097786"
+        },
+        {
+          "nct_id": "NCT00928889",
+          "title": "Effects of Nateglinide vs Acarbose on Postprandial Glucose Fluctuation, Dyslipidemia, and Inflammatory Factors",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "160",
+          "url": "https://clinicaltrials.gov/study/NCT00928889"
+        },
+        {
+          "nct_id": "NCT02475499",
+          "title": "Incretin-based Drugs and Pancreatic Cancer",
+          "status": "COMPLETED",
+          "phase": "N/A",
+          "enrollment": "886172",
+          "url": "https://clinicaltrials.gov/study/NCT02475499"
         }
       ],
       "trial_phases": {
-        "PHASE4": 6,
-        "PHASE3": 2
+        "PHASE4": 4,
+        "PHASE3": 3
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -3884,8 +3885,10 @@
         "Supported by 4 independent AI pillars",
         "Moderate FAERS signal: 6 adverse event reports mention drug-disease co-occurrence",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.91, 3 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.91, 3 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D003924",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3989,15 +3992,7 @@
         "tissue_specificity": 0.57,
         "context_modifier": 1.074
       },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D003924",
-      "ensemble_prob": 0.849,
+      "ensemble_prob": 0.7467,
       "ensemble_features": {
         "kg_score": 0.9979,
         "degree_penalty": 0.7709,
@@ -4007,6 +4002,13 @@
         "transe_rank_log": 3.1355
       },
       "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -4015,12 +4017,12 @@
       }
     }
   ],
+  "disease_entity": "Disease::MESH:D003924",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
     "n_disease_genes": 625,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
-  },
-  "disease_entity": "Disease::MESH:D003924",
-  "ensemble_version": "v5",
-  "ensemble_model_path": "data/models/ensemble_v5.pkl"
+  }
 }

@@ -1,8 +1,8 @@
 {
   "disease": "Bipolar disorder",
   "status": "completed",
-  "timestamp": "2026-04-20T01:55:22.432163",
-  "elapsed_seconds": 752.6,
+  "timestamp": "2026-05-08T02:05:04.885316",
+  "elapsed_seconds": 304.9,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -16,7 +16,7 @@
       "drug_name": "Cimetidine",
       "drug_id": "DB00501",
       "disease_name": "Bipolar disorder",
-      "combined_score": 0.5888,
+      "combined_score": 0.586,
       "pillars_hit": 5,
       "transe_rank": 158,
       "transe_score": -10.7996,
@@ -35,15 +35,15 @@
       "admet_score": 0.5683,
       "admet_flags": "clean",
       "primekg_score": 0.2673,
-      "dti_score": 0.6404,
-      "dti_best_target": "ZNF804A",
+      "dti_score": 0.6234,
+      "dti_best_target": "TSHB",
       "kg_group_score": 0.0716,
-      "structural_group_score": 0.6404,
+      "structural_group_score": 0.6234,
       "network_group_score": 0.4952999949455261,
       "txgnn_group_score": 0.99,
       "mr_group_score": 0.296,
       "admet_multiplier": 0.9137,
-      "efficacy_score": 0.6444,
+      "efficacy_score": 0.6414,
       "groups_hit": 5,
       "direct_relations": [],
       "shared_target_count": 3,
@@ -180,7 +180,7 @@
       "mechanistic_hypothesis": "Cimetidine \u2014[binds]\u2192 gene-8647 \u2014[is bound by]\u2192 DB00477 \u2014[treats]\u2192 Bipolar disorder",
       "kg_paths_text": "\u2022 Cimetidine \u2014[binds]\u2192 gene-8647 \u2014[is bound by]\u2192 DB00477 \u2014[treats]\u2192 Bipolar disorder\n\u2022 Cimetidine \u2014[binds]\u2192 gene-8647 \u2014[is bound by]\u2192 DB00477 \u2014[treats]\u2192 Bipolar disorder\n\u2022 Cimetidine \u2014[binds]\u2192 gene-8647 \u2014[is bound by]\u2192 DB00477 \u2014[treats]\u2192 Bipolar disorder",
       "validation_experiments": [],
-      "novelty_score": 0.471,
+      "novelty_score": 0.469,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -194,6 +194,7 @@
         "Highly cited paper (551 citations): \"Computational Repositioning of the Anticonvulsant Topiramate...\"",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D001714",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -274,10 +275,10 @@
           "pharos": false,
           "literature": false
         },
-        "triangulation_score": 0.285,
+        "triangulation_score": 0.284,
         "label": "kg-only",
         "axis_values": {
-          "kg": 0.589,
+          "kg": 0.586,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 0.392
@@ -295,8 +296,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.929
       },
-      "disease_entity": "Disease::MESH:D001714",
-      "ensemble_prob": 0.0286,
+      "ensemble_prob": 0.0254,
       "ensemble_features": {
         "kg_score": 0.97,
         "degree_penalty": 0.7619,
@@ -355,8 +355,8 @@
       "admet_score": 0.8068,
       "admet_flags": "clean",
       "primekg_score": 0.2622,
-      "dti_score": 0.7056,
-      "dti_best_target": "CLK4",
+      "dti_score": 0.7689,
+      "dti_best_target": "DRD4",
       "kg_group_score": 0.2659,
       "structural_group_score": 0.925,
       "network_group_score": 0.6064000129699707,
@@ -545,6 +545,14 @@
       "clinical_trials_total": 8,
       "clinical_trials": [
         {
+          "nct_id": "NCT02630888",
+          "title": "Efficacy of Memantine add-on in the Treatment of Bipolar Disorder (Type I) Nonresponders or Partial Responders Patients",
+          "status": "UNKNOWN",
+          "phase": "PHASE2",
+          "enrollment": "44",
+          "url": "https://clinicaltrials.gov/study/NCT02630888"
+        },
+        {
           "nct_id": "NCT00586066",
           "title": "Memantine and Cognitive Dysfunction in Bipolar Disorder",
           "status": "COMPLETED",
@@ -561,20 +569,12 @@
           "url": "https://clinicaltrials.gov/study/NCT00106405"
         },
         {
-          "nct_id": "NCT01188148",
-          "title": "Series Studies of Bipolar Disorder-Valproate add-on Memantine",
+          "nct_id": "NCT00305578",
+          "title": "Memantine Augmentation of Lamotrigine Incomplete-Response in Bipolar Depression",
           "status": "COMPLETED",
-          "phase": "PHASE2, PHASE3",
-          "enrollment": "219",
-          "url": "https://clinicaltrials.gov/study/NCT01188148"
-        },
-        {
-          "nct_id": "NCT02630888",
-          "title": "Efficacy of Memantine add-on in the Treatment of Bipolar Disorder (Type I) Nonresponders or Partial Responders Patients",
-          "status": "UNKNOWN",
-          "phase": "PHASE2",
-          "enrollment": "44",
-          "url": "https://clinicaltrials.gov/study/NCT02630888"
+          "phase": "PHASE4",
+          "enrollment": "29",
+          "url": "https://clinicaltrials.gov/study/NCT00305578"
         },
         {
           "nct_id": "NCT04035798",
@@ -586,8 +586,8 @@
         }
       ],
       "trial_phases": {
-        "PHASE4": 2,
         "PHASE2": 4,
+        "PHASE4": 2,
         "PHASE3": 4
       },
       "confidence": "HIGH",
@@ -602,6 +602,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.72, 3 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D001714",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -711,8 +712,7 @@
         "tissue_specificity": 0.867,
         "context_modifier": 1.091
       },
-      "disease_entity": "Disease::MESH:D001714",
-      "ensemble_prob": 0.8652,
+      "ensemble_prob": 0.6953,
       "ensemble_features": {
         "kg_score": 0.9975,
         "degree_penalty": 0.7695,
@@ -936,6 +936,7 @@
         "Supporting paper with 23 citations",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D001714",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1084,8 +1085,7 @@
         "tissue_specificity": 0.666,
         "context_modifier": 1.11
       },
-      "disease_entity": "Disease::MESH:D001714",
-      "ensemble_prob": 0.0131,
+      "ensemble_prob": 0.0129,
       "ensemble_features": {
         "kg_score": 0.9514,
         "degree_penalty": 0.7479,
@@ -1139,7 +1139,7 @@
       "admet_flags": "hERG=0.89",
       "primekg_score": 0.2722,
       "dti_score": 1.0,
-      "dti_best_target": "TACR1",
+      "dti_best_target": "DRD4",
       "kg_group_score": 0.4091,
       "structural_group_score": 1.0,
       "network_group_score": 0.49300000071525574,
@@ -1322,14 +1322,6 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT02893371",
-          "title": "Longitudinal Comparative Effectiveness of Bipolar Disorder Therapies",
-          "status": "TERMINATED",
-          "phase": "N/A",
-          "enrollment": "1037352",
-          "url": "https://clinicaltrials.gov/study/NCT02893371"
-        },
-        {
           "nct_id": "NCT00485771",
           "title": "Olanzapine/Fluoxetine Combination Versus Comparator in the Treatment of Bipolar I Depression",
           "status": "COMPLETED",
@@ -1338,20 +1330,20 @@
           "url": "https://clinicaltrials.gov/study/NCT00485771"
         },
         {
-          "nct_id": "NCT00844857",
-          "title": "A Study for Assessing Treatment of Patients Ages 10-17 With Bipolar Depression",
+          "nct_id": "NCT01833897",
+          "title": "NMDA Antagonists in Bipolar Depression",
           "status": "COMPLETED",
           "phase": "PHASE4",
-          "enrollment": "291",
-          "url": "https://clinicaltrials.gov/study/NCT00844857"
+          "enrollment": "8",
+          "url": "https://clinicaltrials.gov/study/NCT01833897"
         },
         {
-          "nct_id": "NCT00005015",
-          "title": "Treatment of Depression in Youth With Bipolar Disorders",
-          "status": "TERMINATED",
-          "phase": "PHASE3",
-          "enrollment": "",
-          "url": "https://clinicaltrials.gov/study/NCT00005015"
+          "nct_id": "NCT02473250",
+          "title": "Prediction of Clinical Response to SSRI Treatment in Bipolar Disorder Using Serotonin 1A Receptor PET Imaging",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "40",
+          "url": "https://clinicaltrials.gov/study/NCT02473250"
         },
         {
           "nct_id": "NCT00188942",
@@ -1360,13 +1352,19 @@
           "phase": "PHASE4",
           "enrollment": "42",
           "url": "https://clinicaltrials.gov/study/NCT00188942"
+        },
+        {
+          "nct_id": "NCT01000402",
+          "title": "Juvenile Bipolar Disorder Outpatient Program",
+          "status": "UNKNOWN",
+          "phase": "PHASE4",
+          "enrollment": "150",
+          "url": "https://clinicaltrials.gov/study/NCT01000402"
         }
       ],
       "trial_phases": {
-        "PHASE4": 7,
-        "PHASE3": 1,
-        "PHASE1": 1,
-        "PHASE2": 1
+        "PHASE4": 8,
+        "PHASE3": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -1378,8 +1376,10 @@
         "Moderate FAERS signal: 169 adverse event reports mention drug-disease co-occurrence",
         "Supporting paper with 26 citations",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.46)"
+        "Moderate genetic evidence supporting causality (MR score: 0.46)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D001714",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1543,8 +1543,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.929
       },
-      "disease_entity": "Disease::MESH:D001714",
-      "ensemble_prob": 0.9928,
+      "ensemble_prob": 0.9912,
       "ensemble_features": {
         "kg_score": 0.9996,
         "degree_penalty": 0.7448,
@@ -1592,7 +1591,7 @@
       "admet_flags": "hERG=0.98",
       "primekg_score": 0.2711,
       "dti_score": 1.0,
-      "dti_best_target": "TACR1",
+      "dti_best_target": "TSHB",
       "kg_group_score": 0.1099,
       "structural_group_score": 1.0,
       "network_group_score": 0.6421999931335449,
@@ -1763,6 +1762,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.77, 1 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D001714",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "late-trial",
@@ -1864,8 +1864,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.937
       },
-      "disease_entity": "Disease::MESH:D001714",
-      "ensemble_prob": 0.1608,
+      "ensemble_prob": 0.105,
       "ensemble_features": {
         "kg_score": 0.986,
         "degree_penalty": 0.7664,
@@ -1874,7 +1873,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 5.0039
       },
-      "ensemble_rank": 7,
+      "ensemble_rank": 8,
       "docking": {
         "kcal_per_mol": -11.81,
         "target_symbol": "SIGMAR1",
@@ -1894,14 +1893,14 @@
       }
     },
     {
-      "drug_name": "Epinephrine",
-      "drug_id": "DB00668",
+      "drug_name": "Dopamine",
+      "drug_id": "DB00988",
       "disease_name": "Bipolar disorder",
-      "combined_score": 0.48179998993873596,
+      "combined_score": 0.4822,
       "pillars_hit": 4,
-      "transe_rank": 107,
-      "transe_score": -10.6882,
-      "pykeen_score": -12.0636,
+      "transe_rank": 1,
+      "transe_score": -9.7942,
+      "pykeen_score": -11.6835,
       "pykeen_rank": 0,
       "txgnn_score": 0,
       "txgnn_rank": 0,
@@ -1909,140 +1908,177 @@
       "similar_to": "",
       "mol_emb_similarity": 0,
       "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.625,
-      "proximity_distance": 1.5,
-      "admet_score": 0.7026,
-      "admet_flags": "clean",
-      "primekg_score": 0.2614,
-      "dti_score": 0.7964,
-      "dti_best_target": "CLK4",
-      "kg_group_score": 0.2323,
-      "structural_group_score": 0.7964,
-      "network_group_score": 0.4799000024795532,
+      "gene_sig_score": 0.02,
+      "gene_sig_rank": 33,
+      "proximity_score": 0.7379999756813049,
+      "proximity_distance": 1.0499999523162842,
+      "admet_score": 0.6872,
+      "admet_flags": "Skin_Reaction=0.81",
+      "primekg_score": 0.2625,
+      "dti_score": 0.6306,
+      "dti_best_target": "DRD4",
+      "kg_group_score": 0.4098,
+      "structural_group_score": 0.6306,
+      "network_group_score": 0.5623000264167786,
       "txgnn_group_score": 0,
-      "mr_group_score": 0.7655,
-      "admet_multiplier": 0.9405,
-      "efficacy_score": 0.5121999979019165,
+      "mr_group_score": 0.5728,
+      "admet_multiplier": 0.9374,
+      "efficacy_score": 0.5144,
       "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 12,
+      "shared_target_count": 31,
       "shared_targets": [
         "ACHE",
-        "ADRA2A",
-        "ADRA2B",
-        "ADRA2C",
+        "CD4",
+        "CHRNA4",
+        "DBH",
+        "DCC",
+        "DDC",
         "DRD2",
+        "DRD3",
+        "DRD4",
         "GH1",
+        "GRIA1",
+        "GRIN1",
+        "GSK3B",
+        "HTR1A",
+        "HTR2C",
+        "HTR3A",
         "INS",
         "LEP",
         "MAOA",
-        "PDE4A",
-        "PRL",
-        "TNF"
+        "MAOB"
       ],
-      "pubmed_total": 68,
-      "pubmed_treatment_total": 36,
-      "pubmed_repurposing_total": 0,
+      "pubmed_total": 1581,
+      "pubmed_treatment_total": 1009,
+      "pubmed_repurposing_total": 5,
       "key_papers": [
         {
-          "pmid": "3588809",
-          "title": "Sustained urinary norepinephrine and epinephrine elevation in post-traumatic stress disorder.",
-          "authors": "Kosten TR, Mason JW, Giller EL, et al.",
-          "journal": "Psychoneuroendocrinology",
-          "year": "1987",
-          "abstract_snippet": "Urinary norepinephrine and epinephrine levels (microgram/day) were measured at two-week intervals during the course of hospitalization in the following patient groups: post-traumatic stress disorder (PTSD); major depressive disorder (MDD); bipolar I, manic (BP); paranoid schizophrenia (PS); and undi...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/3588809/",
-          "total_results": 68
+          "pmid": "37800205",
+          "title": "Association Between Bipolar Disorder and Parkinson's Disease.",
+          "authors": "Geelhand de Merxem R, Launay S, Hanak C",
+          "journal": "Psychiatria Danubina",
+          "year": "2023",
+          "abstract_snippet": "Bipolar disorder and Parkinson's disease are two distinct neurological conditions that share common features related to dopaminergic dysfunction. This article presents a comprehensive review of the existing literature to investigate the association between bipolar disorder and Parkinson's disease, f...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37800205/",
+          "total_results": 1581
         },
         {
-          "pmid": "9680055",
-          "title": "Addressing comorbidity in adults with attention-deficit/hyperactivity disorder.",
-          "authors": "Hornig M",
-          "journal": "The Journal of clinical psychiatry",
-          "year": "1998",
-          "abstract_snippet": "Psychiatric comorbidity complicates the accurate diagnosis and effective treatment of attention-deficit/hyperactivity disorder (ADHD) in adults. This paper examines the influence of comorbidity on treatment responsiveness in ADHD adults, the neurobiological underpinnings of comorbidity, and the pote...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/9680055/"
+          "pmid": "31468317",
+          "title": "Dopamine Receptor Partial Agonists for the Treatment of Bipolar Disorder.",
+          "authors": "Azorin JM, Simon N",
+          "journal": "Drugs",
+          "year": "2019",
+          "abstract_snippet": "Bipolar disorder is a chronic, disabling, and costly illness with frequent relapses and recurrences, high rates of co-morbid conditions, and poor adherence to treatment. Mood stabilizers and antipsychotics are the cornerstones of treatment. Dopamine receptor partial agonists are a novel class of ant...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31468317/"
         },
         {
-          "pmid": "1876629",
-          "title": "Mania: sympathoadrenal function and clinical state.",
-          "authors": "Swann AC, Secunda SK, Koslow SH, et al.",
-          "journal": "Psychiatry research",
-          "year": "1991",
-          "abstract_snippet": "We investigated sympathoadrenal and sympathetic nervous system activity, catecholamine disposition, and clinical state in 19 hospitalized manic patients. Severity of the core manic syndrome, anxiety, and hostility correlated with 24-hour urinary excretion of epinephrine relative to its metabolites, ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/1876629/"
+          "pmid": "31644326",
+          "title": "Efficacy and safety of cariprazine in the treatment of bipolar disorder.",
+          "authors": "Saraf G, Pinto JV, Yatham LN",
+          "journal": "Expert opinion on pharmacotherapy",
+          "year": "2019",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31644326/"
         },
         {
-          "pmid": "6178382",
-          "title": "Effect of low-dose clorgyline on 24-hour urinary monoamine excretion in patients with rapidly cycling bipolar affective disorder.",
-          "authors": "Linnoila M, Karoum F, Potter WZ",
-          "journal": "Archives of general psychiatry",
-          "year": "1982",
-          "abstract_snippet": "Effects of clorgyline on urinary excretion of norepinephrine, dopamine, tyramine, and their major metabolites, 5-hydroxyindoleacetic acid and phenylethylamine, were studied in four women who suffered from primary, bipolar affective disorder. All patients had rapid mood cycles and were nonresponsive ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/6178382/"
+          "pmid": "27524901",
+          "title": "Update on schizophrenia and bipolar disorder: focus on cariprazine.",
+          "authors": "Roberts RJ, Findlay LJ, El-Mallakh PL, et al.",
+          "journal": "Neuropsychiatric disease and treatment",
+          "year": "2016",
+          "abstract_snippet": "Schizophrenia and bipolar disorder are severe psychiatric disorders that are frequently associated with persistent symptoms and significant dysfunction. While there are a multitude of psychopharmacologic agents are available for treatment of these illnesses, suboptimal response and significant adver...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/27524901/"
         },
         {
-          "pmid": "3938307",
-          "title": "Cerebrospinal fluid vasopressin--changes in depression.",
-          "authors": "Gjerris A, Hammer M, Vendsborg P, et al.",
-          "journal": "The British journal of psychiatry : the journal of mental science",
-          "year": "1985",
-          "abstract_snippet": "Cerebrospinal fluid (CSF), thyrotropin releasing hormone (TRH), CSF-vasopressin (AVP), plasma-AVP, CSF-osmolality, plasma-osmolality, CSF-adrenaline (A) and -noradrenaline (NA) were measured in psychiatric patients and controls. Psychiatric patients were classified according to ICD-9 and grouped int...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/3938307/"
+          "pmid": "35361016",
+          "title": "The use of modern dopamine partial agonists in bipolar depression: is the evidence sound?",
+          "authors": "Serafini G, Nasrallah HA, Amore M",
+          "journal": "Current medical research and opinion",
+          "year": "2022",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35361016/"
         }
       ],
-      "repurposing_papers": [],
+      "repurposing_papers": [
+        {
+          "pmid": "39427446",
+          "title": "Development progress of drugs for bipolar disorder: 75\u00a0Years after lithium proved effective.",
+          "authors": "Nishida K, Osaka H, Kanazawa T",
+          "journal": "Journal of psychiatric research",
+          "year": "2024",
+          "abstract_snippet": "Bipolar disorder, a psychiatric condition identified by significant mood changes and a considerable genetic connection with schizophrenia, needs continuous and extensive management due to its common onset in adolescence and significant impact on psychosocial activities. While traditional mood stabil...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39427446/",
+          "total_results": 5
+        },
+        {
+          "pmid": "22182458",
+          "title": "Adjunct treatments for schizophrenia and bipolar disorder: what to try when you are out of ideas.",
+          "authors": "Torrey EF, Davis JM",
+          "journal": "Clinical schizophrenia & related psychoses",
+          "year": "2012",
+          "abstract_snippet": "The pharmacologic treatment of schizophrenia and bipolar disorder leaves much to be desired. Repurposed drugs, which are approved for other medical conditions, represent an underutilized therapeutic resource for patients who have not responded to other drugs. Using experience gained from a decade of...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22182458/"
+        },
+        {
+          "pmid": "39553890",
+          "title": "Unlocking the secrets of trace amine-associated receptor 1 agonists: new horizon in neuropsychiatric treatment.",
+          "authors": "Shajan B, Bastiampillai T, Hellyer SD, et al.",
+          "journal": "Frontiers in psychiatry",
+          "year": "2024",
+          "abstract_snippet": "For over seven decades, dopamine receptor 2 (D",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39553890/"
+        }
+      ],
       "semantic_scholar_papers": [
         {
-          "title": "Association between Catechol-O-Methyltransferase Gene Variant and Bipolar Disorder",
-          "year": 2011,
-          "citations": 2,
-          "url": "https://www.semanticscholar.org/paper/22ba60484ba03b506947d0f5d48933a31af146d8",
-          "authors": "N.H.V. Kutumbarao, Arundhuti Das, V. Lakshmi"
+          "title": "Elevated synaptic PKA activity and abnormal striatal dopamine signaling in Akap11 mutant mice, a genetic model of schizophrenia and bipolar disorder",
+          "year": 2025,
+          "citations": 6,
+          "url": "https://www.semanticscholar.org/paper/4367688d0097fb8ed5457d536c0f015d66354a9b",
+          "authors": "Bryan J. Song, Yang Ge, Ally A. Nicolella"
         },
         {
-          "title": "Sustained urinary norepinephrine and epinephrine elevation in post-traumatic stress disorder.",
-          "year": 1987,
-          "citations": 298,
-          "url": "https://www.semanticscholar.org/paper/53f3a677e811ef810e90d800d83c754eea54723b",
-          "authors": "T. Kosten, J. Mason, E. Giller"
+          "title": "A Positron Emission Tomography Study of Dopamine Transporter Density in Patients With Bipolar Disorder With Current Mania and Those With Recently Remitted Mania.",
+          "year": 2022,
+          "citations": 15,
+          "url": "https://www.semanticscholar.org/paper/2abc7129d342936f3dc13acf512165a1f14618a8",
+          "authors": "L. Yatham, P. Liddle, Marjorie E. Gonzalez"
         },
         {
-          "title": "Body fat distribution and associations with metabolic and clinical characteristics in bipolar individuals",
-          "year": 2015,
-          "citations": 24,
-          "url": "https://www.semanticscholar.org/paper/83cdd2dbab8fc10d3974a5e7a0fc66e20fcb1e88",
-          "authors": "N. Lackner, H. Mangge, E. Reininghaus"
+          "title": "Genetic evidence for the \u201cdopamine hypothesis of bipolar disorder\u201d",
+          "year": 2022,
+          "citations": 6,
+          "url": "https://www.semanticscholar.org/paper/426b4ca3ffe4c8fa8a1f46f7aadaaaea54dd9b71",
+          "authors": "Chuyi Zhang, X. Cai, Lei Guo"
         },
         {
-          "title": "Precipitated opioid withdrawal in a patient started on olanzapine/samidorphan.",
-          "year": 2024,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/3a54ce71a0cc10212f2e21be7096d78c18f2a9fd",
-          "authors": "Andrew Chambers, Jessica Patton, Brandon K Wills"
+          "title": "Changes in striatal dopamine transporters in bipolar disorder and valproate treatment",
+          "year": 2021,
+          "citations": 15,
+          "url": "https://www.semanticscholar.org/paper/7cacf6aa0e25e8828e5f3bc2201201eaef8802e4",
+          "authors": "Y. Hsueh, Chih-Ying Lin, N. Chiu"
         },
         {
-          "title": "Increased psychological and attenuated cortisol and alpha-amylase responses to acute psychosocial stress in female patients with borderline personality disorder.",
-          "year": 2010,
-          "citations": 102,
-          "url": "https://www.semanticscholar.org/paper/32864e1a23db2c2e312c248107ba0b5375c310e2",
-          "authors": "U. Nater, M. Bohus, Elvira Abbruzzese"
+          "title": "Treatment of Symptom Clusters in Schizophrenia, Bipolar Disorder and Major Depressive Disorder With the Dopamine D3/D2 Preferring Partial Agonist Cariprazine",
+          "year": 2021,
+          "citations": 13,
+          "url": "https://www.semanticscholar.org/paper/2b3d03abb6c869fd0335b0336712c5dfa66f2f70",
+          "authors": "B. Batini\u0107, I. Risti\u0107, M. \u017dugi\u0107"
         }
       ],
       "most_cited_paper": {
-        "title": "Sustained urinary norepinephrine and epinephrine elevation in post-traumatic stress disorder.",
-        "year": 1987,
-        "citations": 298,
-        "url": "https://www.semanticscholar.org/paper/53f3a677e811ef810e90d800d83c754eea54723b",
-        "authors": "T. Kosten, J. Mason, E. Giller"
+        "title": "The future of psychopharmacology:\u00a0a critical appraisal of\u00a0ongoing phase 2/3 trials, and of some current trends aiming to de\u2010risk trial programmes of novel agents",
+        "year": 2023,
+        "citations": 99,
+        "url": "https://www.semanticscholar.org/paper/83f08a610cd882000f6263b45a873ba5f2dd77c9",
+        "authors": "C. Correll, Marco Solmi, S. Cortese"
       },
-      "max_citations": 298,
-      "faers_signal": "moderate",
-      "faers_total_reports": 46064,
-      "faers_cooccurrences": 19,
-      "faers_interpretation": "19 FAERS reports mention both Epinephrine and Bipolar disorder-related terms. Limited but notable real-world signal.",
+      "max_citations": 99,
+      "faers_signal": "weak",
+      "faers_total_reports": 5872,
+      "faers_cooccurrences": 1,
+      "faers_interpretation": "1 FAERS report(s) mention both Dopamine and Bipolar disorder-related terms. Minimal real-world signal.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -2052,107 +2088,209 @@
         "Meclocycline sulfosalicylate (1.504)",
         "VX-680 (1.501)"
       ],
-      "signature_interpretation": "Epinephrine was not found among the top 34 drugs that reverse the Bipolar disorder gene signature. Top reversers: geldanamycin (1.542), NICLOSAMIDE (1.540), 5374640 (1.519)",
-      "ai_hypothesis": "of its anti-inflammatory properties.",
+      "signature_interpretation": "Dopamine was not found among the top 34 drugs that reverse the Bipolar disorder gene signature. Top reversers: geldanamycin (1.542), NICLOSAMIDE (1.540), 5374640 (1.519)",
+      "ai_hypothesis": "of its role in the regulation of mood and cognition.",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
+          "confidence": 0.3,
+          "positive_signals": 0,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "bipolar disorder",
+              "entity_group": "Disease_disorder",
+              "score": 0.9980000257492065
+            },
+            {
+              "entity": "parkinson ' s disease",
+              "entity_group": "Disease_disorder",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "conditions",
+              "entity_group": "Disease_disorder",
+              "score": 0.8420000076293945
+            },
+            {
+              "entity": "dopaminerg",
+              "entity_group": "Disease_disorder",
+              "score": 0.8169999718666077
+            },
+            {
+              "entity": "parkinson ' s",
+              "entity_group": "Disease_disorder",
+              "score": 0.9929999709129333
+            }
+          ]
         },
         {
           "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
+          "confidence": 0.3,
+          "positive_signals": 1,
+          "negative_signals": 0,
+          "mechanism_signals": 1,
+          "extracted_entities": [
+            {
+              "entity": "bipolar disorder",
+              "entity_group": "Disease_disorder",
+              "score": 0.9959999918937683
+            },
+            {
+              "entity": "costly",
+              "entity_group": "Detailed_description",
+              "score": 0.9279999732971191
+            },
+            {
+              "entity": "frequent",
+              "entity_group": "Frequency",
+              "score": 0.8610000014305115
+            },
+            {
+              "entity": "re",
+              "entity_group": "Sign_symptom",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "##lapses",
+              "entity_group": "Sign_symptom",
+              "score": 0.722000002861023
+            },
+            {
+              "entity": "recurrences",
+              "entity_group": "Sign_symptom",
+              "score": 0.9649999737739563
+            },
+            {
+              "entity": "high",
+              "entity_group": "Lab_value",
+              "score": 0.9229999780654907
+            },
+            {
+              "entity": "rates",
+              "entity_group": "History",
+              "score": 0.7049999833106995
+            },
+            {
+              "entity": "co - morbid",
+              "entity_group": "History",
+              "score": 0.8410000205039978
+            },
+            {
+              "entity": "poor",
+              "entity_group": "Lab_value",
+              "score": 0.9950000047683716
+            }
+          ]
         }
       ],
       "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
+      "failed_trial_phase": "Unknown",
+      "failed_trial_count": 1,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.7655,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "Epinephrine \u2014[is a therapeutic for]\u2192 Bipolar disorder",
-      "kg_paths_text": "\u2022 Epinephrine \u2014[is a therapeutic for]\u2192 Bipolar disorder\n\u2022 Epinephrine \u2014[targets]\u2192 gene-146 \u2014[is a target of]\u2192 DB01142 \u2014[treats]\u2192 Bipolar disorder\n\u2022 Epinephrine \u2014[targets]\u2192 gene-146 \u2014[is a target of]\u2192 DB01403 \u2014[treats]\u2192 Bipolar disorder",
+      "mr_score": 0.5728,
+      "mr_genetic_targets": 8,
+      "mechanistic_hypothesis": "Dopamine \u2014[is agonized by]\u2192 gene-1814 \u2014[is linked to]\u2192 Bipolar disorder",
+      "kg_paths_text": "\u2022 Dopamine \u2014[is agonized by]\u2192 gene-1814 \u2014[is linked to]\u2192 Bipolar disorder\n\u2022 Dopamine \u2014[is agonized by]\u2192 gene-1816 \u2014[is linked to]\u2192 Bipolar disorder\n\u2022 Dopamine \u2014[targets]\u2192 gene-6530 \u2014[inhibits]\u2192 DB00934 \u2014[treats]\u2192 Bipolar disorder",
       "validation_experiments": [],
-      "novelty_score": 0.3179999887943268,
-      "novelty_level": "KNOWN",
+      "novelty_score": 0.174,
+      "novelty_level": "ESTABLISHED",
       "is_known_treatment": true,
-      "clinical_trials_total": 4,
+      "clinical_trials_total": 9,
       "clinical_trials": [
         {
-          "nct_id": "NCT05353062",
-          "title": "Bipolar Hemostatic Forceps Versus Standard Therapy in Acute Non-variceal Upper GI Bleeding",
+          "nct_id": "NCT05060549",
+          "title": "Dopamine D3 Receptor Occupancy in Bipolar Depression",
+          "status": "WITHDRAWN",
+          "phase": "PHASE4",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT05060549"
+        },
+        {
+          "nct_id": "NCT01244815",
+          "title": "Efficacy and Safety of Asenapine Treatment for Pediatric Bipolar Disorder (P06107 Has an Extension [P05898; NCT01349907])(P06107)",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "404",
+          "url": "https://clinicaltrials.gov/study/NCT01244815"
+        },
+        {
+          "nct_id": "NCT00335205",
+          "title": "A Placebo Controlled Trial of the Dopamine D-2 Receptor Agonist Ropinirole in Treatment of 60 Patients With Refractory Bipolar Depression.",
           "status": "UNKNOWN",
+          "phase": "PHASE4",
+          "enrollment": "60",
+          "url": "https://clinicaltrials.gov/study/NCT00335205"
+        },
+        {
+          "nct_id": "NCT01093937",
+          "title": "Study of Varenicline (Champix) for Smoking Cessation/Reduction in Patients With Bipolar Disorder",
+          "status": "COMPLETED",
           "phase": "NA",
-          "enrollment": "80",
-          "url": "https://clinicaltrials.gov/study/NCT05353062"
+          "enrollment": "30",
+          "url": "https://clinicaltrials.gov/study/NCT01093937"
         },
         {
-          "nct_id": "NCT00223197",
-          "title": "Pregnenolone Trial for Depression in Bipolar Disorders or Recurrent Major Depressive Disorder With Substance Abuse",
+          "nct_id": "NCT00029458",
+          "title": "Clozapine for Treatment-Resistant Mania",
           "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "75",
-          "url": "https://clinicaltrials.gov/study/NCT00223197"
-        },
-        {
-          "nct_id": "NCT01409096",
-          "title": "Study Using Pregnenolone to Treat Bipolar Depression",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "80",
-          "url": "https://clinicaltrials.gov/study/NCT01409096"
-        },
-        {
-          "nct_id": "NCT02582905",
-          "title": "Clinical Medication Development for Bipolar Disorder and Alcohol Use Disorders",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "96",
-          "url": "https://clinicaltrials.gov/study/NCT02582905"
+          "phase": "PHASE2",
+          "enrollment": "42",
+          "url": "https://clinicaltrials.gov/study/NCT00029458"
         }
       ],
       "trial_phases": {
+        "PHASE4": 2,
+        "PHASE3": 1,
         "NA": 1,
-        "PHASE4": 3
+        "PHASE2": 3,
+        "PHASE1": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
-        "4 clinical trial(s) found on ClinicalTrials.gov",
-        "68 PubMed articles on this drug-disease pair",
+        "9 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "1581 PubMed articles on this drug-disease pair",
+        "5 article(s) specifically mention repurposing/repositioning",
         "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 19 adverse event reports mention drug-disease co-occurrence",
-        "Highly cited paper (298 citations): \"Sustained urinary norepinephrine and epinephrine elevation i...\"",
+        "Supporting paper with 99 citations",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.77, 1 genetic targets)"
+        "Moderate genetic evidence supporting causality (MR score: 0.57)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D001714",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
         "confidence": "high",
         "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
         "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
+        "target_affinity": {
+          "cmax_over_ic50_ratio": 81.3,
+          "median_ic50_nM": 12.3,
+          "n_activities": 15,
+          "activity_types": [
+            "EC50",
+            "Ki"
+          ],
+          "mechanism_feasible": "yes",
+          "cmax_source": "generic fallback 1000 nM (per-drug Cmax TBD)"
+        },
+        "stage": 2
       },
       "ddi_warnings": {
-        "n_interactions": 1250,
+        "n_interactions": 1295,
         "has_warnings": true,
         "top_interactions": [
           {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
             "severity": "high"
           },
           {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
             "severity": "high"
           },
           {
@@ -2163,11 +2301,6 @@
           {
             "drug_id": "DB00758",
             "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
             "severity": "high"
           },
           {
@@ -2186,13 +2319,18 @@
             "severity": "high"
           },
           {
-            "drug_id": "DB00227",
-            "drug_name": "Lovastatin",
+            "drug_id": "DB00331",
+            "drug_name": "Metformin",
             "severity": "high"
           },
           {
-            "drug_id": "DB00331",
-            "drug_name": "Metformin",
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00213",
+            "drug_name": "Pantoprazole",
             "severity": "high"
           }
         ]
@@ -2212,13 +2350,13 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.556,
+        "triangulation_score": 0.644,
         "label": "silver-standard",
         "axis_values": {
           "kg": 0.482,
-          "docking": 0.758,
+          "docking": 0.918,
           "pharos": 0.0,
-          "literature": 0.798
+          "literature": 1.0
         }
       },
       "tissue_context": {
@@ -2226,27 +2364,26 @@
           "Brain - Frontal Cortex (BA9)",
           "Brain - Cortex"
         ],
-        "n_genes": 12,
-        "n_expressed": 8,
-        "mean_tpm_in_tissue": 6.65,
-        "max_tpm_in_tissue": 29.48,
+        "n_genes": 20,
+        "n_expressed": 15,
+        "mean_tpm_in_tissue": 20.83,
+        "max_tpm_in_tissue": 222.85,
         "tissue_specificity": 0.0,
-        "context_modifier": 0.929
+        "context_modifier": 0.97
       },
-      "disease_entity": "Disease::MESH:D001714",
-      "ensemble_prob": 0.1011,
+      "ensemble_prob": 0.3145,
       "ensemble_features": {
-        "kg_score": 0.9822,
-        "degree_penalty": 0.7678,
-        "n_drug_targets": 16,
+        "kg_score": 0.9949,
+        "degree_penalty": 0.7619,
+        "n_drug_targets": 31,
         "is_fda_approved": 1,
         "n_disease_genes": 0,
-        "transe_rank_log": 5.2417
+        "transe_rank_log": 4.0073
       },
-      "ensemble_rank": 8,
+      "ensemble_rank": 7,
       "docking": {
-        "kcal_per_mol": -9.1,
-        "target_symbol": "ADRA2A",
+        "kcal_per_mol": -11.02,
+        "target_symbol": "DRD3",
         "source": "chembl_bioactivity_proxy",
         "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
         "hit": true
@@ -2287,7 +2424,7 @@
       "admet_flags": "hERG=0.85",
       "primekg_score": 0.259,
       "dti_score": 1.0,
-      "dti_best_target": "TACR1",
+      "dti_best_target": "TSHB",
       "kg_group_score": 0.0732,
       "structural_group_score": 1.0,
       "network_group_score": 0.5979999899864197,
@@ -2466,12 +2603,20 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT02893371",
-          "title": "Longitudinal Comparative Effectiveness of Bipolar Disorder Therapies",
-          "status": "TERMINATED",
-          "phase": "N/A",
-          "enrollment": "1037352",
-          "url": "https://clinicaltrials.gov/study/NCT02893371"
+          "nct_id": "NCT01211704",
+          "title": "Paliperidone Palmitate Efficacy and Safety in Bipolar Disorder Complicated by Alcoholism",
+          "status": "WITHDRAWN",
+          "phase": "PHASE4",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT01211704"
+        },
+        {
+          "nct_id": "NCT00299715",
+          "title": "A Study to Evaluate the Efficacy and Safety of Three Fixed Doses of Extended-release Paliperidone in Subjects With Bipolar I Disorder",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "473",
+          "url": "https://clinicaltrials.gov/study/NCT00299715"
         },
         {
           "nct_id": "NCT01181960",
@@ -2482,34 +2627,26 @@
           "url": "https://clinicaltrials.gov/study/NCT01181960"
         },
         {
-          "nct_id": "NCT02087579",
-          "title": "Parallel Group, Multiple Dose Pharmacokinetics Study of Five Antipsychotic Medications in Psychiatric Participants",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "305",
-          "url": "https://clinicaltrials.gov/study/NCT02087579"
-        },
-        {
-          "nct_id": "NCT07047651",
-          "title": "\u03a4he Combination of Pharmacotherapy With RECOVERYTRSGR and RECOVERYTRSBDGR.",
-          "status": "RECRUITING",
-          "phase": "PHASE4",
-          "enrollment": "40",
-          "url": "https://clinicaltrials.gov/study/NCT07047651"
-        },
-        {
-          "nct_id": "NCT00490971",
-          "title": "A Study to Evaluate the Effectiveness and Safety of Extended-Release (ER) Paliperidone Compared With Placebo in Delaying the Recurrence of Symptoms in Bipolar I Disorder",
+          "nct_id": "NCT00309686",
+          "title": "A Study to Evaluate the Efficacy and Safety of Adjustable Doses of Extended-release (ER) Paliperidone Compared With Placebo, in Combination With Lithium or Valproate, to Treat Manic and Mixed Episodes in Patients With Bipolar I Disorder",
           "status": "COMPLETED",
           "phase": "PHASE3",
-          "enrollment": "768",
-          "url": "https://clinicaltrials.gov/study/NCT00490971"
+          "enrollment": "300",
+          "url": "https://clinicaltrials.gov/study/NCT00309686"
+        },
+        {
+          "nct_id": "NCT00592358",
+          "title": "Invega (Paliperidone) for the Treatment of Mania in Children and Adolescents Ages 6-17 With Bipolar Disorder",
+          "status": "TERMINATED",
+          "phase": "PHASE4",
+          "enrollment": "17",
+          "url": "https://clinicaltrials.gov/study/NCT00592358"
         }
       ],
       "trial_phases": {
-        "PHASE1": 2,
-        "PHASE4": 3,
-        "PHASE3": 3
+        "PHASE4": 2,
+        "PHASE3": 4,
+        "PHASE1": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -2524,6 +2661,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.52)"
       ],
+      "disease_entity": "Disease::MESH:D001714",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2660,8 +2798,7 @@
         "tissue_specificity": 0.274,
         "context_modifier": 0.944
       },
-      "disease_entity": "Disease::MESH:D001714",
-      "ensemble_prob": 0.6702,
+      "ensemble_prob": 0.4906,
       "ensemble_features": {
         "kg_score": 0.9968,
         "degree_penalty": 0.7474,
@@ -2670,7 +2807,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 3.5553
       },
-      "ensemble_rank": 4,
+      "ensemble_rank": 6,
       "docking": {
         "kcal_per_mol": -11.31,
         "target_symbol": "HTR2A",
@@ -2686,14 +2823,14 @@
       }
     },
     {
-      "drug_name": "Clomipramine",
-      "drug_id": "DB01242",
+      "drug_name": "Memantine",
+      "drug_id": "DB01043",
       "disease_name": "Bipolar disorder",
-      "combined_score": 0.4748,
+      "combined_score": 0.4727,
       "pillars_hit": 4,
-      "transe_rank": 44,
-      "transe_score": -10.4157,
-      "pykeen_score": -11.9965,
+      "transe_rank": 16,
+      "transe_score": -10.1317,
+      "pykeen_score": -12.416,
       "pykeen_rank": 0,
       "txgnn_score": 0,
       "txgnn_rank": 0,
@@ -2701,142 +2838,136 @@
       "similar_to": "",
       "mol_emb_similarity": 0,
       "mol_emb_similar_to": "",
-      "gene_sig_score": 0.06,
-      "gene_sig_rank": 14,
-      "proximity_score": 0.7379999756813049,
-      "proximity_distance": 1.0499999523162842,
-      "admet_score": 0.5826,
-      "admet_flags": "hERG=0.97",
-      "primekg_score": 0.2597,
-      "dti_score": 0.8942,
-      "dti_best_target": "TACR1",
-      "kg_group_score": 0.2486,
-      "structural_group_score": 0.8942,
-      "network_group_score": 0.5485000014305115,
+      "gene_sig_score": 0.02,
+      "gene_sig_rank": 33,
+      "proximity_score": 0.75,
+      "proximity_distance": 1.0,
+      "admet_score": 0.799,
+      "admet_flags": "clean",
+      "primekg_score": 0.2607,
+      "dti_score": 0.6629,
+      "dti_best_target": "DRD4",
+      "kg_group_score": 0.2353,
+      "structural_group_score": 0.6629,
+      "network_group_score": 0.57669997215271,
       "txgnn_group_score": 0,
-      "mr_group_score": 0.5685,
-      "admet_multiplier": 0.9165,
-      "efficacy_score": 0.5181,
+      "mr_group_score": 0.6603,
+      "admet_multiplier": 0.9598,
+      "efficacy_score": 0.4925,
       "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 14,
+      "shared_target_count": 8,
       "shared_targets": [
-        "ADRA2A",
-        "ADRA2B",
-        "ADRA2C",
-        "CACNA1B",
+        "ACHE",
         "DRD2",
-        "DRD3",
-        "GH1",
-        "HTR2A",
-        "HTR2C",
-        "PRL",
-        "SIGMAR1",
-        "SLC6A2",
-        "SLC6A3",
-        "SLC6A4"
+        "GABRA1",
+        "GRIN1",
+        "GRIN2A",
+        "GRIN2B",
+        "GRIN3A",
+        "HTR3A"
       ],
-      "pubmed_total": 100,
-      "pubmed_treatment_total": 96,
+      "pubmed_total": 71,
+      "pubmed_treatment_total": 71,
       "pubmed_repurposing_total": 0,
       "key_papers": [
         {
-          "pmid": "29477251",
-          "title": "Comparative efficacy and acceptability of 21 antidepressant drugs for the acute treatment of adults with major depressive disorder: a systematic review and network meta-analysis.",
-          "authors": "Cipriani A, Furukawa TA, Salanti G, et al.",
-          "journal": "Lancet (London, England)",
+          "pmid": "26693882",
+          "title": "Alternative pharmacological strategies for adult ADHD treatment: a systematic review.",
+          "authors": "Buoli M, Serati M, Cahn W",
+          "journal": "Expert review of neurotherapeutics",
+          "year": "2016",
+          "abstract_snippet": "Adult Attention Deficit Hyperactivity Disorder (ADHD) is a prevalent psychiatric condition associated with high disability and frequent comorbidity. Current standard pharmacotherapy (methylphenidate and atomoxetine) improves ADHD symptoms in the short-term, but poor data were published about long-te...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26693882/",
+          "total_results": 71
+        },
+        {
+          "pmid": "28222534",
+          "title": "A Meta-Analysis of Memantine for\u00a0Depression.",
+          "authors": "Kishi T, Matsunaga S, Iwata N",
+          "journal": "Journal of Alzheimer's disease : JAD",
+          "year": "2017",
+          "abstract_snippet": "We conducted a systematic review and meta-analysis on whether memantine was beneficial for the treatment of depressive symptoms in major depressive disorder (MDD) and bipolar disorder (BD). The analysis included double-blind, randomized, placebo-controlled trials of memantine in MDD and BD. The prim...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28222534/"
+        },
+        {
+          "pmid": "25540723",
+          "title": "Memantine: New prospective in bipolar disorder treatment.",
+          "authors": "Serra G, Demontis F, Serra F, et al.",
+          "journal": "World journal of psychiatry",
+          "year": "2014",
+          "abstract_snippet": "UNLABELLED: We review preclinical and clinical evidences strongly suggesting that memantine, an old drug currently approved for Alzheimer's dementia, is an effective treatment for acute mania and for the prevention of manic/hypomanic and depressive recurrences of manic-depressive illness. Lithium re...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25540723/"
+        },
+        {
+          "pmid": "30028898",
+          "title": "The use of memantine in neuropsychiatric disorders: An overview.",
+          "authors": "Lu S, Nasrallah HA",
+          "journal": "Annals of clinical psychiatry : official journal of the American Academy of Clinical Psychiatrists",
           "year": "2018",
-          "abstract_snippet": "BACKGROUND: Major depressive disorder is one of the most common, burdensome, and costly psychiatric disorders worldwide in adults. Pharmacological and non-pharmacological treatments are available; however, because of inadequate resources, antidepressants are used more frequently than psychological i...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29477251/",
-          "total_results": 100
+          "abstract_snippet": "BACKGROUND: Memantine is a non-competitive N-methyl-d-aspartate receptor antagonist currently used for the treatment of Alzheimer's disease as an approved indication. However, as knowledge of signaling pathways is increasing, the therapeutic potential of memantine is being applied for the treatment ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30028898/"
         },
         {
-          "pmid": "27318812",
-          "title": "Pharmacological and psychotherapeutic interventions for management of obsessive-compulsive disorder in adults: a systematic review and network meta-analysis.",
-          "authors": "Skapinakis P, Caldwell DM, Hollingworth W, et al.",
-          "journal": "The lancet. Psychiatry",
-          "year": "2016",
-          "abstract_snippet": "BACKGROUND: Several interventions are available for management of obsessive-compulsive disorder in adults, but few studies have compared their relative efficacy in a single analysis. We aimed to simultaneously compare all available treatments using both direct and indirect data. METHODS: In this sys...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/27318812/"
-        },
-        {
-          "pmid": "28066002",
-          "title": "Management of obsessive-compulsive disorder comorbid with bipolar disorder.",
-          "authors": "Kazhungil F, Mohandas E",
-          "journal": "Indian journal of psychiatry",
-          "year": "2016",
-          "abstract_snippet": "Obsessive-compulsive disorder (OCD) is one of the most common comorbidities in bipolar disorder (BD). Clinicians often get perplexed in making treatment decisions when encountering comorbid OCD and BD as treatment of OCD by pharmacotherapy may induce or exacerbate mood instability and psychotherapeu...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/28066002/"
-        },
-        {
-          "pmid": "36333412",
-          "title": "Effect of CYP2C19 polymorphisms on antidepressant prescription patterns and treatment emergent mania in bipolar disorder.",
-          "authors": "Joas E, Jonsson L, Viktorin A, et al.",
-          "journal": "The pharmacogenomics journal",
-          "year": "2023",
-          "abstract_snippet": "Antidepressant medication is used extensively to treat bipolar depression despite uncertain efficacy. The cytochrome P450 (CYP) 2C19 enzyme metabolize several antidepressants, and polymorphisms in the corresponding gene CYP2C19 influence plasma concentration and hence treatment outcomes in major dep...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36333412/"
-        },
-        {
-          "pmid": "11986508",
-          "title": "Psychodynamic psychotherapy and clomipramine in the treatment of major depression.",
-          "authors": "Burnand Y, Andreoli A, Kolatte E, et al.",
-          "journal": "Psychiatric services (Washington, D.C.)",
-          "year": "2002",
-          "abstract_snippet": "OBJECTIVE: The authors compared a combination of clomipramine and psychodynamic psychotherapy with clomipramine alone in a randomized controlled trial among patients with major depression. METHODS: Seventy-four patients between the ages of 20 and 65 years who were assigned to ten weeks of acute outp...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/11986508/"
+          "pmid": "26467409",
+          "title": "Pharmacological Approaches for Treatment-resistant Bipolar Disorder.",
+          "authors": "Hui Poon S, Sim K, Baldessarini RJ",
+          "journal": "Current neuropharmacology",
+          "year": "2015",
+          "abstract_snippet": "Bipolar disorder is prevalent, with high risks of disability, substance abuse and premature mortality. Treatment responses typically are incomplete, especially for depressive components, so that many cases can be considered \"treatment resistant.\" We reviewed reports on experimental treatments for su...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26467409/"
         }
       ],
       "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "Management of obsessive-compulsive disorder comorbid with bipolar disorder",
-          "year": 2016,
-          "citations": 17,
-          "url": "https://www.semanticscholar.org/paper/5c2d87853981ae4f3ab35d7f2d7329ba7d1d32f9",
-          "authors": "Firoz Kazhungil, E. Mohandas"
+          "title": "Combination of dextromethorphan and memantine in treating bipolar spectrum disorder: a 12-week double-blind randomized clinical trial",
+          "year": 2020,
+          "citations": 15,
+          "url": "https://www.semanticscholar.org/paper/9dd1946bf12ed94a486352d1bf56cebf684472ad",
+          "authors": "Sheng-Yu Lee, Tzu-Yun Wang, Shiou-Lan Chen"
         },
         {
-          "title": "Molecular network-selected pharmacogenomics in a case of bipolar spectrum disorder.",
+          "title": "Prescribing cascade in an older adult with bipolar disorder",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/ce8cca96ebeee3d343907ddb6a3bb202155821ed",
+          "authors": "Song\u00fcl G\u00fcltekin, Mustafa \u00c7etin, M. Naharc\u0131"
+        },
+        {
+          "title": "Memantine as an Adjuvant Treatment for Obsessive Compulsive Symptoms in Manic Phase of Bipolar Disorder: A Randomized, Double-Blind, Placebo-Controlled Clinical Trial",
           "year": 2017,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/2196737c274b4929fc1b787b7ab90c69abef05bf",
-          "authors": "Stefano Fortinguerra, A. Buriani, V. Sorrenti"
+          "citations": 28,
+          "url": "https://www.semanticscholar.org/paper/fcad151e16c3dd53b533cb4abf03a6bd2ff8b278",
+          "authors": "A. Sahraian, L. Jahromi, A. Ghanizadeh"
         },
         {
-          "title": "Severe behavioral disturbances in bipolar disorder: A case report",
-          "year": 2016,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/b2987fbfc2c495903227bb8d726c8acb86e5b423",
-          "authors": "S. Benavente L\u00f3pez, N. Salgado Borrego, M.I. de la Hera Cabero"
+          "title": "Add-on memantine may improve cognitive functions and attenuate inflammation in middle- to old-aged bipolar II disorder patients.",
+          "year": 2020,
+          "citations": 10,
+          "url": "https://www.semanticscholar.org/paper/58cd7a5b9b9479947c8e4fa3a7dce474d18f8146",
+          "authors": "R. Lu, Tzu-Yun Wang, Sheng-Yu Lee"
         },
         {
-          "title": "Can Australian psychiatrists prescribe clozapine off-label for treatment-refractory bipolar disorder?",
-          "year": 2016,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/ca2d1766ddfd34445344e1856c69a8ce04367866",
-          "authors": "T. Bastiampillai, S. Allison, Arun Gupta"
-        },
-        {
-          "title": "Clozapine treatment of bipolar disorder in a young adolescent.",
-          "year": 1994,
-          "citations": 43,
-          "url": "https://www.semanticscholar.org/paper/eca270fa32efdffba3b03bfa6d1e6370e359f8b8",
-          "authors": "D. Fuchs"
+          "title": "Evaluation of the Effect of Memantine Supplementation in the Treatment of Acute Phase of Mania in Bipolar Disorder of Elderly Patients: A Double-blind Randomized Controlled Trial",
+          "year": 2018,
+          "citations": 10,
+          "url": "https://www.semanticscholar.org/paper/37c8b3f6da7bacab77776c63c833781becea985e",
+          "authors": "V. Omranifard, M. Tarrahi, S. Sharifi"
         }
       ],
       "most_cited_paper": {
-        "title": "Clozapine treatment of bipolar disorder in a young adolescent.",
-        "year": 1994,
-        "citations": 43,
-        "url": "https://www.semanticscholar.org/paper/eca270fa32efdffba3b03bfa6d1e6370e359f8b8",
-        "authors": "D. Fuchs"
+        "title": "Memantine as an Adjuvant Treatment for Obsessive Compulsive Symptoms in Manic Phase of Bipolar Disorder: A Randomized, Double-Blind, Placebo-Controlled Clinical Trial",
+        "year": 2017,
+        "citations": 28,
+        "url": "https://www.semanticscholar.org/paper/fcad151e16c3dd53b533cb4abf03a6bd2ff8b278",
+        "authors": "A. Sahraian, L. Jahromi, A. Ghanizadeh"
       },
-      "max_citations": 43,
+      "max_citations": 28,
       "faers_signal": "moderate",
-      "faers_total_reports": 5887,
-      "faers_cooccurrences": 20,
-      "faers_interpretation": "20 FAERS reports mention both Clomipramine and Bipolar disorder-related terms. Limited but notable real-world signal.",
+      "faers_total_reports": 16607,
+      "faers_cooccurrences": 10,
+      "faers_interpretation": "10 FAERS reports mention both Memantine and Bipolar disorder-related terms. Limited but notable real-world signal.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -2846,8 +2977,8 @@
         "Meclocycline sulfosalicylate (1.504)",
         "VX-680 (1.501)"
       ],
-      "signature_interpretation": "Clomipramine was not found among the top 34 drugs that reverse the Bipolar disorder gene signature. Top reversers: geldanamycin (1.542), NICLOSAMIDE (1.540), 5374640 (1.519)",
-      "ai_hypothesis": "of its antidepressant properties.",
+      "signature_interpretation": "Memantine was not found among the top 34 drugs that reverse the Bipolar disorder gene signature. Top reversers: geldanamycin (1.542), NICLOSAMIDE (1.540), 5374640 (1.519)",
+      "ai_hypothesis": "of its anti-depressant properties.",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
@@ -2855,9 +2986,58 @@
           "reason": "Drug or disease not mentioned in abstract"
         },
         {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
+          "relation_type": "treats",
+          "confidence": 0.7,
+          "positive_signals": 2,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "analysis",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.996999979019165
+            },
+            {
+              "entity": "meman",
+              "entity_group": "Medication",
+              "score": 0.9779999852180481
+            },
+            {
+              "entity": "symptoms",
+              "entity_group": "Disease_disorder",
+              "score": 0.9100000262260437
+            },
+            {
+              "entity": "major depressive disorder",
+              "entity_group": "Disease_disorder",
+              "score": 0.9309999942779541
+            },
+            {
+              "entity": "md",
+              "entity_group": "Disease_disorder",
+              "score": 0.9760000109672546
+            },
+            {
+              "entity": "bipolar disorder",
+              "entity_group": "Disease_disorder",
+              "score": 0.8140000104904175
+            },
+            {
+              "entity": "placebo - controlled trials",
+              "entity_group": "Detailed_description",
+              "score": 0.9070000052452087
+            },
+            {
+              "entity": "me",
+              "entity_group": "Medication",
+              "score": 1.0
+            },
+            {
+              "entity": "##mantine",
+              "entity_group": "Medication",
+              "score": 0.7059999704360962
+            }
+          ]
         },
         {
           "relation_type": "unclear",
@@ -2869,26 +3049,76 @@
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.5685,
-      "mr_genetic_targets": 4,
-      "mechanistic_hypothesis": "Clomipramine \u2014[is a therapeutic for]\u2192 Bipolar disorder",
-      "kg_paths_text": "\u2022 Clomipramine \u2014[is a therapeutic for]\u2192 Bipolar disorder\n\u2022 Clomipramine \u2014[targets]\u2192 gene-3358 \u2014[is linked to]\u2192 Bipolar disorder\n\u2022 Clomipramine \u2014[targets]\u2192 gene-3358 \u2014[antagonizes]\u2192 DB00246 \u2014[treats]\u2192 Bipolar disorder",
+      "mr_score": 0.6603,
+      "mr_genetic_targets": 3,
+      "mechanistic_hypothesis": "Memantine \u2014[is a therapeutic for]\u2192 Bipolar disorder",
+      "kg_paths_text": "\u2022 Memantine \u2014[is a therapeutic for]\u2192 Bipolar disorder\n\u2022 Memantine \u2014[targets]\u2192 gene-1813 \u2014[is linked to]\u2192 Bipolar disorder\n\u2022 Memantine \u2014[binds]\u2192 gene-2904 \u2014[is linked to]\u2192 Bipolar disorder",
       "validation_experiments": [],
-      "novelty_score": 0.456,
-      "novelty_level": "NOVEL",
+      "novelty_score": 0.312,
+      "novelty_level": "KNOWN",
       "is_known_treatment": true,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
+      "clinical_trials_total": 8,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT02630888",
+          "title": "Efficacy of Memantine add-on in the Treatment of Bipolar Disorder (Type I) Nonresponders or Partial Responders Patients",
+          "status": "UNKNOWN",
+          "phase": "PHASE2",
+          "enrollment": "44",
+          "url": "https://clinicaltrials.gov/study/NCT02630888"
+        },
+        {
+          "nct_id": "NCT00586066",
+          "title": "Memantine and Cognitive Dysfunction in Bipolar Disorder",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "72",
+          "url": "https://clinicaltrials.gov/study/NCT00586066"
+        },
+        {
+          "nct_id": "NCT00106405",
+          "title": "An Evaluation of the Safety and Efficacy of Memantine in Patients With Acute Mania Associated With Bipolar I Disorder",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "35",
+          "url": "https://clinicaltrials.gov/study/NCT00106405"
+        },
+        {
+          "nct_id": "NCT00305578",
+          "title": "Memantine Augmentation of Lamotrigine Incomplete-Response in Bipolar Depression",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "29",
+          "url": "https://clinicaltrials.gov/study/NCT00305578"
+        },
+        {
+          "nct_id": "NCT04035798",
+          "title": "add-on Low Dose Memantine in Middle-to-old Aged Bipolar II Disorder Patients",
+          "status": "UNKNOWN",
+          "phase": "PHASE2, PHASE3",
+          "enrollment": "120",
+          "url": "https://clinicaltrials.gov/study/NCT04035798"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 4,
+        "PHASE4": 2,
+        "PHASE3": 4
+      },
       "confidence": "HIGH",
       "confidence_reasons": [
-        "100 PubMed articles on this drug-disease pair",
+        "8 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "71 PubMed articles on this drug-disease pair",
         "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 20 adverse event reports mention drug-disease co-occurrence",
-        "Supporting paper with 43 citations",
+        "Moderate FAERS signal: 10 adverse event reports mention drug-disease co-occurrence",
+        "Supporting paper with 28 citations",
+        "AI analysis of 1 abstract(s) found positive treatment signals",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.57)"
+        "Moderate genetic evidence supporting causality (MR score: 0.66)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D001714",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2899,7 +3129,7 @@
         "stage": 1
       },
       "ddi_warnings": {
-        "n_interactions": 2327,
+        "n_interactions": 1162,
         "has_warnings": true,
         "top_interactions": [
           {
@@ -2913,18 +3143,8 @@
             "severity": "high"
           },
           {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
             "drug_id": "DB00564",
             "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
             "severity": "high"
           },
           {
@@ -2933,78 +3153,49 @@
             "severity": "high"
           },
           {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
             "drug_id": "DB00829",
             "drug_name": "Diazepam",
             "severity": "high"
           },
           {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
             "severity": "high"
           },
           {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00331",
+            "drug_name": "Metformin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00959",
+            "drug_name": "Methylprednisolone",
             "severity": "high"
           }
         ]
       },
       "pharmacogenomics": {
         "has_flags": true,
-        "highest_risk": "high_risk",
-        "summary": "CPIC-B (CYP2C19) \u2022 PharmGKB-3 (HTR1B / rs130058)",
-        "cpic": [
-          {
-            "gene": "CYP2C19",
-            "level": "B",
-            "guideline": "CYP2D6, CYP2C19 and Tricyclic Antidepressants"
-          },
-          {
-            "gene": "CYP2D6",
-            "level": "B",
-            "guideline": "CYP2D6, CYP2C19 and Tricyclic Antidepressants"
-          }
-        ],
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (NR1I2 / rs1523130)",
+        "cpic": [],
         "pharmgkb": [
           {
-            "gene": "HTR1B",
-            "variant": "rs130058",
+            "gene": "NR1I2",
+            "variant": "rs1523130",
             "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183624421"
-          },
-          {
-            "gene": "FKBP5",
-            "variant": "rs1360780",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981238234"
-          },
-          {
-            "gene": "ABCB1",
-            "variant": "rs2032582",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/982032743"
-          },
-          {
-            "gene": "CYP2C19",
-            "variant": "CYP2C19*1, CYP2C19*2, CYP2C19*3, CYP2C19*17",
-            "level": "1A",
-            "phenotype_category": "Metabolism/PK",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183616699"
-          },
-          {
-            "gene": "FKBP5",
-            "variant": "rs1360780",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/655384568"
+            "phenotype_category": "Other",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183631460"
           }
         ]
       },
@@ -3016,13 +3207,13 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.64,
+        "triangulation_score": 0.61,
         "label": "silver-standard",
         "axis_values": {
-          "kg": 0.475,
-          "docking": 1.0,
+          "kg": 0.473,
+          "docking": 0.946,
           "pharos": 0.0,
-          "literature": 0.87
+          "literature": 0.806
         }
       },
       "tissue_context": {
@@ -3030,27 +3221,26 @@
           "Brain - Frontal Cortex (BA9)",
           "Brain - Cortex"
         ],
-        "n_genes": 14,
-        "n_expressed": 9,
-        "mean_tpm_in_tissue": 5.96,
-        "max_tpm_in_tissue": 31.33,
-        "tissue_specificity": 0.0,
-        "context_modifier": 0.926
+        "n_genes": 8,
+        "n_expressed": 7,
+        "mean_tpm_in_tissue": 41.03,
+        "max_tpm_in_tissue": 222.85,
+        "tissue_specificity": 1.0,
+        "context_modifier": 1.116
       },
-      "disease_entity": "Disease::MESH:D001714",
-      "ensemble_prob": 0.2368,
+      "ensemble_prob": 0.986,
       "ensemble_features": {
-        "kg_score": 0.9955,
-        "degree_penalty": 0.7432,
-        "n_drug_targets": 39,
+        "kg_score": 0.9995,
+        "degree_penalty": 0.7689,
+        "n_drug_targets": 7,
         "is_fda_approved": 1,
         "n_disease_genes": 0,
-        "transe_rank_log": 3.8918
+        "transe_rank_log": 1.7918
       },
-      "ensemble_rank": 6,
+      "ensemble_rank": 2,
       "docking": {
-        "kcal_per_mol": -13.29,
-        "target_symbol": "SLC6A4",
+        "kcal_per_mol": -11.35,
+        "target_symbol": "ACHE",
         "source": "chembl_bioactivity_proxy",
         "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
         "hit": true
@@ -3066,7 +3256,7 @@
       "drug_name": "Metoclopramide",
       "drug_id": "DB01233",
       "disease_name": "Bipolar disorder",
-      "combined_score": 0.4715,
+      "combined_score": 0.4704,
       "pillars_hit": 4,
       "transe_rank": 19,
       "transe_score": -10.1894,
@@ -3085,15 +3275,15 @@
       "admet_score": 0.5926,
       "admet_flags": "hERG=0.75",
       "primekg_score": 0.2638,
-      "dti_score": 0.8588,
-      "dti_best_target": "TACR1",
+      "dti_score": 0.8522,
+      "dti_best_target": "DRD4",
       "kg_group_score": 0.2543,
-      "structural_group_score": 0.8588,
+      "structural_group_score": 0.8522,
       "network_group_score": 0.5454999804496765,
       "txgnn_group_score": 0,
       "mr_group_score": 0.5739,
       "admet_multiplier": 0.9185,
-      "efficacy_score": 0.5133,
+      "efficacy_score": 0.5121,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 10,
@@ -3237,7 +3427,7 @@
       "mechanistic_hypothesis": "Metoclopramide \u2014[is antagonized by]\u2192 gene-1813 \u2014[is linked to]\u2192 Bipolar disorder",
       "kg_paths_text": "\u2022 Metoclopramide \u2014[is antagonized by]\u2192 gene-1813 \u2014[is linked to]\u2192 Bipolar disorder\n\u2022 Metoclopramide \u2014[is antagonized by]\u2192 gene-1813 \u2014[is a target of]\u2192 DB01622 \u2014[treats]\u2192 Bipolar disorder\n\u2022 Metoclopramide \u2014[is antagonized by]\u2192 gene-1813 \u2014[antagonizes]\u2192 DB00334 \u2014[treats]\u2192 Bipolar disorder",
       "validation_experiments": [],
-      "novelty_score": 0.509,
+      "novelty_score": 0.508,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -3252,6 +3442,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.57)"
       ],
+      "disease_entity": "Disease::MESH:D001714",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3361,7 +3552,7 @@
         "triangulation_score": 0.493,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.471,
+          "kg": 0.47,
           "docking": 0.833,
           "pharos": 0.0,
           "literature": 0.392
@@ -3379,8 +3570,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.916
       },
-      "disease_entity": "Disease::MESH:D001714",
-      "ensemble_prob": 0.6457,
+      "ensemble_prob": 0.5861,
       "ensemble_features": {
         "kg_score": 0.9969,
         "degree_penalty": 0.7524,
@@ -3409,14 +3599,14 @@
       }
     },
     {
-      "drug_name": "Bupropion",
-      "drug_id": "DB01156",
+      "drug_name": "Pimozide",
+      "drug_id": "DB01100",
       "disease_name": "Bipolar disorder",
-      "combined_score": 0.467,
+      "combined_score": 0.4666,
       "pillars_hit": 4,
-      "transe_rank": 12,
-      "transe_score": -10.0964,
-      "pykeen_score": -11.6902,
+      "transe_rank": 43,
+      "transe_score": -10.4132,
+      "pykeen_score": -12.1751,
       "pykeen_rank": 0,
       "txgnn_score": 0,
       "txgnn_rank": 0,
@@ -3424,119 +3614,120 @@
       "similar_to": "",
       "mol_emb_similarity": 0,
       "mol_emb_similar_to": "",
-      "gene_sig_score": 0.0073,
-      "gene_sig_rank": 57,
-      "proximity_score": 0.7120000123977661,
-      "proximity_distance": 1.149999976158142,
-      "admet_score": 0.6799,
-      "admet_flags": "clean",
-      "primekg_score": 0.2638,
-      "dti_score": 0.7759,
-      "dti_best_target": "TACR1",
-      "kg_group_score": 0.3361,
-      "structural_group_score": 0.7759,
-      "network_group_score": 0.5365999937057495,
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.7879999876022339,
+      "proximity_distance": 0.8500000238418579,
+      "admet_score": 0.5185,
+      "admet_flags": "hERG=0.99",
+      "primekg_score": 0.269,
+      "dti_score": 0.7895,
+      "dti_best_target": "DRD4",
+      "kg_group_score": 0.2559,
+      "structural_group_score": 0.7895,
+      "network_group_score": 0.6007999777793884,
       "txgnn_group_score": 0,
-      "mr_group_score": 0.4532,
-      "admet_multiplier": 0.936,
-      "efficacy_score": 0.499,
+      "mr_group_score": 0.6004,
+      "admet_multiplier": 0.9037,
+      "efficacy_score": 0.5163,
       "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 5,
+      "shared_target_count": 6,
       "shared_targets": [
-        "HTR3A",
-        "SLC6A2",
-        "SLC6A3",
-        "SLC6A4",
-        "TNF"
+        "DRD2",
+        "DRD3",
+        "GH1",
+        "HTR1A",
+        "HTR2A",
+        "PRL"
       ],
-      "pubmed_total": 210,
-      "pubmed_treatment_total": 203,
+      "pubmed_total": 32,
+      "pubmed_treatment_total": 31,
       "pubmed_repurposing_total": 0,
       "key_papers": [
         {
-          "pmid": "29536616",
-          "title": "Canadian Network for Mood and Anxiety Treatments (CANMAT) and International Society for Bipolar Disorders (ISBD) 2018 guidelines for the management of patients with bipolar disorder.",
-          "authors": "Yatham LN, Kennedy SH, Parikh SV, et al.",
-          "journal": "Bipolar disorders",
-          "year": "2018",
-          "abstract_snippet": "The Canadian Network for Mood and Anxiety Treatments (CANMAT) previously published treatment guidelines for bipolar disorder in 2005, along with international commentaries and subsequent updates in 2007, 2009, and 2013. The last two updates were published in collaboration with the International Soci...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29536616/",
-          "total_results": 210
+          "pmid": "17017818",
+          "title": "Efficacy of typical and atypical antipsychotics for primary and comorbid anxiety symptoms or disorders: a review.",
+          "authors": "Gao K, Muzina D, Gajwani P, et al.",
+          "journal": "The Journal of clinical psychiatry",
+          "year": "2006",
+          "abstract_snippet": "OBJECTIVE: The efficacy of antipsychotics in the treatment of primary or comorbid anxiety disorders or anxiety symptoms in major depressive disorder or bipolar disorder was reviewed. DATA SOURCES: English-language literature cited in MEDLINE from January 1, 1968, to December 31, 2005, was searched w...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17017818/",
+          "total_results": 32
         },
         {
-          "pmid": "37405312",
-          "title": "Bupropion Mediated Effects on Depression, Attention Deficit Hyperactivity Disorder, and Smoking Cessation.",
-          "authors": "Clark A, Tate B, Urban B, et al.",
-          "journal": "Health psychology research",
-          "year": "2023",
-          "abstract_snippet": "Bupropion had been in use since the late 1980s as an unconventional treatment for depression. Unlike other antidepressants, bupropion has no serotonergic activity and inhibits the reuptake of norepinephrine and dopamine. The drug has been used to treat depression, Attention Deficit Hyperactivity Dis...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37405312/"
+          "pmid": "6155678",
+          "title": "Dopamine and mania: behavioral and biochemical effects of the dopamine receptor blocker pimozide.",
+          "authors": "Post RM, Jimerson DC, Bunney WE, et al.",
+          "journal": "Psychopharmacology",
+          "year": "1980",
+          "abstract_snippet": "Although recent data suggest that pimozide has effects at other neurotransmitter receptor sites, it is one of the more specific neuroleptics in its effects on dopamine receptors. We report that in manic patients pimozide produces substantial clinical improvement with a magnitude and time course simi...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/6155678/"
         },
         {
-          "pmid": "33252911",
-          "title": "Seasonal Affective Disorder: Common Questions and Answers.",
-          "authors": "Galima SV, Vogel SR, Kowalski AW",
-          "journal": "American family physician",
-          "year": "2020",
-          "abstract_snippet": "Seasonal affective disorder is a mood disorder that is a subtype or qualifier of major depressive disorder or bipolar disorder in the Diagnostic and Statistical Manual of Mental Disorders. It is characterized by depressive symptoms that occur at a specific time of year (typically fall or winter) wit...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33252911/"
+          "pmid": "7093595",
+          "title": "Plasma prolactin and growth hormone levels in manic patients treated with pimozide.",
+          "authors": "Cookson JC, Silverstone T, Rees L",
+          "journal": "The British journal of psychiatry : the journal of mental science",
+          "year": "1982",
+          "abstract_snippet": "During two weeks' treatment of 11 manic patients with pimozide there was close correspondence between the timecourse of improvement in clinical ratings and the rise in plasma prolactin between the second and fourteenth day. There were no significant differences in growth hormone levels during the ma...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/7093595/"
         },
         {
-          "pmid": "39096466",
-          "title": "Pharmacological Treatment of Binge Eating Disorder and Frequent Comorbid Diseases.",
-          "authors": "Himmerich H, Bentley J, McElroy SL",
-          "journal": "CNS drugs",
-          "year": "2024",
-          "abstract_snippet": "Binge eating disorder (BED) is the most common specific eating disorder (ED). It is frequently associated with attention deficit hyperactivity disorder (ADHD), depression, bipolar disorder (BD), anxiety disorders, alcohol and nicotine use disorder, and obesity. The aim of this narrative review was t...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39096466/"
+          "pmid": "6125807",
+          "title": "Post-partum mania, dopamine, and estrogens.",
+          "authors": "Cookson JC",
+          "journal": "Lancet (London, England)",
+          "year": "1982",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/6125807/"
         },
         {
-          "pmid": "26693882",
-          "title": "Alternative pharmacological strategies for adult ADHD treatment: a systematic review.",
-          "authors": "Buoli M, Serati M, Cahn W",
-          "journal": "Expert review of neurotherapeutics",
-          "year": "2016",
-          "abstract_snippet": "Adult Attention Deficit Hyperactivity Disorder (ADHD) is a prevalent psychiatric condition associated with high disability and frequent comorbidity. Current standard pharmacotherapy (methylphenidate and atomoxetine) improves ADHD symptoms in the short-term, but poor data were published about long-te...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/26693882/"
+          "pmid": "26164056",
+          "title": "An Unusual Case of Erotomania and Delusional Misidentification Syndrome.",
+          "authors": "Granstein J, Strimbu K, Francois D, et al.",
+          "journal": "Journal of psychiatric practice",
+          "year": "2015",
+          "abstract_snippet": "Delusional misidentification syndromes and erotomania are rare entities, each with several distinct manifestations and no clearly defined treatment regimen. Here we expand upon an earlier literature review and describe the case of a 40-year-old woman with a history of bipolar I disorder who presente...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26164056/"
         }
       ],
       "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "Bupropion Treatment for Stimulant Withdrawal in a Patient With Substance Use Disorder and Unspecified Bipolar Disorder",
-          "year": 2023,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/3c6cef1063ef7f1cbd8334250ed27f6a6f5a4338",
-          "authors": "Daanish Y Khan, Bita Crystal Behaeddin, Stepan Uhlyar"
-        },
-        {
-          "title": "Comparison of the efficacy of venlafaxine and bupropion in the treatment of depressive episode in patients with bipolar II disorder",
-          "year": 2023,
-          "citations": 2,
-          "url": "https://www.semanticscholar.org/paper/ebdfddc92f56c13de5711020163389628e397fb2",
-          "authors": "A. Fakhri, K. Asadi, S. Pakseresht"
-        },
-        {
-          "title": "Rapid cycling bipolar disorder and atypical anorexia nervosa: changes in drug metabolism",
-          "year": 2024,
+          "title": "EFFECTIVENESS OF A CLOZAPINE\u2013ARIPIPRAZOLE COMBINATION IN TOURETTE SYNDROME AND BIPOLAR SPECTRUM DISORDER",
+          "year": 2018,
           "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/56a7bc2daaf3ee210d36df7caac5ce6eae8a5cba",
-          "authors": "J. Tei\u0161erskyt\u0117, K. Norvainyt\u0117"
+          "url": "https://www.semanticscholar.org/paper/24756968480af0b84ad5606bd6682ba632845568",
+          "authors": "A. Piccinni, F. Mucci, I. Moroni"
         },
         {
-          "title": "Significant Treatment Effect of Bupropion in Patients With Bipolar Disorder but Similar Phase-Shifting Rate as Other Antidepressants",
-          "year": 2016,
-          "citations": 12,
-          "url": "https://www.semanticscholar.org/paper/755aaa4ac6ad6b50f1db6df5ff5517368d1970a6",
-          "authors": "Dian-Jeng Li, Ping\u2010Tao Tseng, Yen-Wen Chen"
-        },
-        {
-          "title": "Bipolar Disorder Predisposition in a Greek Male With \u03b2-Thalassemia Trait: External Factors, Including COVID-19, and Other Clinical Implications",
-          "year": 2024,
+          "title": "Bipolar disorder in Pendred syndrome: A case report of two siblings",
+          "year": 2014,
           "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/8572fb58a1bd59b96d420f63b140fb6f641dcc56",
-          "authors": "S. Tedesco, Katherine Reyes, Alec I Meiselman"
+          "url": "https://www.semanticscholar.org/paper/2fd78d6adf50713dbee69c7a5c2cfac661d20280",
+          "authors": "S. Chauhan, Praveen Tripathi, P. Goyal"
+        },
+        {
+          "title": "GEODON (ziprasidone HCl) Capsules is a psychotropic medication indicated for schizophrenia and patients experiencing acute manic or mixed episodes associated with bipolar I disorder. GEODON (ziprasidone mesylate) for Injection is indicated for schizophrenia [SEE PACKAGE INSERT FOR FULL PRESCRIBING I",
+          "year": 2005,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/35112f6e9401a304631f3c2b9cc6707f58d7218a",
+          "authors": ""
+        },
+        {
+          "title": "Pimozide: An Old Wine in a New Bottle!",
+          "year": 2017,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/211e305453a3550ba0e685df5e37f4bfead95b2c",
+          "authors": "Ahmed Naguy"
+        },
+        {
+          "title": "Deep brain stimulation of the subcallosal cingulate for medication\u2010resistant type I bipolar depression: case report",
+          "year": 2013,
+          "citations": 14,
+          "url": "https://www.semanticscholar.org/paper/7b01f8bb695faee213d1ac3b966939f769ef0069",
+          "authors": "C. Torres, E. Ezquiaga, M. Navas"
         }
       ],
       "most_cited_paper": {
@@ -3547,10 +3738,10 @@
         "authors": "M. A. de Bastiani, B. Pfaffenseller, F. Klamt"
       },
       "max_citations": 23,
-      "faers_signal": "moderate",
-      "faers_total_reports": 75532,
-      "faers_cooccurrences": 152,
-      "faers_interpretation": "152 FAERS reports mention both Bupropion and Bipolar disorder-related terms. Limited but notable real-world signal.",
+      "faers_signal": "none",
+      "faers_total_reports": 573,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Pimozide to Bipolar disorder terms. Drug has 573 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -3560,8 +3751,8 @@
         "Meclocycline sulfosalicylate (1.504)",
         "VX-680 (1.501)"
       ],
-      "signature_interpretation": "Bupropion was not found among the top 34 drugs that reverse the Bipolar disorder gene signature. Top reversers: geldanamycin (1.542), NICLOSAMIDE (1.540), 5374640 (1.519)",
-      "ai_hypothesis": "of its antidepressant properties.",
+      "signature_interpretation": "Pimozide was not found among the top 34 drugs that reverse the Bipolar disorder gene signature. Top reversers: geldanamycin (1.542), NICLOSAMIDE (1.540), 5374640 (1.519)",
+      "ai_hypothesis": "of its ability to block dopamine receptors.",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
@@ -3580,77 +3771,40 @@
         }
       ],
       "has_failed_trial": false,
-      "failed_trial_phase": "Phase 3",
-      "failed_trial_count": 3,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.4532,
-      "mr_genetic_targets": 2,
-      "mechanistic_hypothesis": "Bupropion \u2014[is a therapeutic for]\u2192 Bipolar disorder",
-      "kg_paths_text": "\u2022 Bupropion \u2014[is a therapeutic for]\u2192 Bipolar disorder\n\u2022 Bupropion \u2014[downregulates]\u2192 gene-4609 \u2014[is a target of]\u2192 DB00945 \u2014[is a therapeutic for]\u2192 Bipolar disorder\n\u2022 Bupropion \u2014[downregulates]\u2192 gene-4609 \u2014[is a target of]\u2192 DB00945 \u2014[is a therapeutic for]\u2192 Bipolar disorder",
+      "mr_score": 0.6004,
+      "mr_genetic_targets": 7,
+      "mechanistic_hypothesis": "Pimozide \u2014[is a therapeutic for]\u2192 Bipolar disorder",
+      "kg_paths_text": "\u2022 Pimozide \u2014[is a therapeutic for]\u2192 Bipolar disorder\n\u2022 Pimozide \u2014[downregulates]\u2192 gene-54205 \u2014[is a target of]\u2192 DB01017 \u2014[is a therapeutic for]\u2192 Bipolar disorder\n\u2022 Pimozide \u2014[downregulates]\u2192 gene-54205 \u2014[is a target of]\u2192 DB01017 \u2014[is a therapeutic for]\u2192 Bipolar disorder",
       "validation_experiments": [],
-      "novelty_score": 0.14,
-      "novelty_level": "ESTABLISHED",
+      "novelty_score": 0.392,
+      "novelty_level": "KNOWN",
       "is_known_treatment": true,
-      "clinical_trials_total": 10,
+      "clinical_trials_total": 1,
       "clinical_trials": [
         {
-          "nct_id": "NCT02893371",
-          "title": "Longitudinal Comparative Effectiveness of Bipolar Disorder Therapies",
-          "status": "TERMINATED",
-          "phase": "N/A",
-          "enrollment": "1037352",
-          "url": "https://clinicaltrials.gov/study/NCT02893371"
-        },
-        {
-          "nct_id": "NCT07213466",
-          "title": "Individualized Pharmacological Approach to Obesity in Patients With Bipolar Disorder",
-          "status": "RECRUITING",
-          "phase": "PHASE4",
-          "enrollment": "100",
-          "url": "https://clinicaltrials.gov/study/NCT07213466"
-        },
-        {
-          "nct_id": "NCT00621777",
-          "title": "A Study of Varenicline for Prevention of Relapse to Smoking in Patients With Schizophrenia or Bipolar Disorder",
+          "nct_id": "NCT02582736",
+          "title": "Antipsychotics and Risk of Hyperglycemic Emergencies",
           "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "247",
-          "url": "https://clinicaltrials.gov/study/NCT00621777"
-        },
-        {
-          "nct_id": "NCT01583023",
-          "title": "Using Repetitive Transcranial Magnetic Stimulation (rTMS) for the Treatment of Bipolar Depression",
-          "status": "UNKNOWN",
-          "phase": "PHASE4",
-          "enrollment": "45",
-          "url": "https://clinicaltrials.gov/study/NCT01583023"
-        },
-        {
-          "nct_id": "NCT06417437",
-          "title": "Non-invasive BCI and Application Verification for Depressed People",
-          "status": "RECRUITING",
-          "phase": "PHASE4",
-          "enrollment": "400",
-          "url": "https://clinicaltrials.gov/study/NCT06417437"
+          "phase": "N/A",
+          "enrollment": "725489",
+          "url": "https://clinicaltrials.gov/study/NCT02582736"
         }
       ],
-      "trial_phases": {
-        "PHASE4": 6,
-        "PHASE1": 1,
-        "PHASE2": 2,
-        "PHASE3": 1
-      },
+      "trial_phases": {},
       "confidence": "HIGH",
       "confidence_reasons": [
-        "10 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
-        "210 PubMed articles on this drug-disease pair",
+        "1 clinical trial(s) found on ClinicalTrials.gov",
+        "32 PubMed articles found",
         "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 152 adverse event reports mention drug-disease co-occurrence",
         "Supporting paper with 23 citations",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.45)"
+        "Moderate genetic evidence supporting causality (MR score: 0.60)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D001714",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3661,7 +3815,7 @@
         "stage": 1
       },
       "ddi_warnings": {
-        "n_interactions": 1675,
+        "n_interactions": 1671,
         "has_warnings": true,
         "top_interactions": [
           {
@@ -3685,8 +3839,18 @@
             "severity": "high"
           },
           {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
             "drug_id": "DB00758",
             "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
             "severity": "high"
           },
           {
@@ -3700,75 +3864,24 @@
             "severity": "high"
           },
           {
-            "drug_id": "DB00783",
-            "drug_name": "Estradiol",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00502",
-            "drug_name": "Haloperidol",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00227",
-            "drug_name": "Lovastatin",
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
             "severity": "high"
           }
         ]
       },
       "pharmacogenomics": {
         "has_flags": true,
-        "highest_risk": "moderate",
-        "summary": "CPIC-B/C (CYP2B6) \u2022 PharmGKB-3 (CHRNA5 / rs16969968)",
+        "highest_risk": "",
+        "summary": "CPIC-A/B (CYP2D6)",
         "cpic": [
           {
-            "gene": "CYP2B6",
-            "level": "B/C",
-            "guideline": ""
-          },
-          {
-            "gene": "ANKK1",
-            "level": "D",
+            "gene": "CYP2D6",
+            "level": "A/B",
             "guideline": ""
           }
         ],
-        "pharmgkb": [
-          {
-            "gene": "CHRNA5",
-            "variant": "rs16969968",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204874"
-          },
-          {
-            "gene": "SLC18A2",
-            "variant": "rs363225",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1450814659"
-          },
-          {
-            "gene": "SLC18A2",
-            "variant": "rs363226",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1450814665"
-          },
-          {
-            "gene": "CHRNA5",
-            "variant": "rs2036527",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1450928829"
-          },
-          {
-            "gene": "DRD1",
-            "variant": "rs11749035",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1123915607"
-          }
-        ]
+        "pharmgkb": []
       },
       "triangulation": {
         "n_axes_agree": 3,
@@ -3778,13 +3891,13 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.57,
+        "triangulation_score": 0.566,
         "label": "silver-standard",
         "axis_values": {
           "kg": 0.467,
-          "docking": 0.688,
+          "docking": 0.902,
           "pharos": 0.0,
-          "literature": 1.0
+          "literature": 0.659
         }
       },
       "tissue_context": {
@@ -3792,27 +3905,26 @@
           "Brain - Frontal Cortex (BA9)",
           "Brain - Cortex"
         ],
-        "n_genes": 5,
-        "n_expressed": 0,
-        "mean_tpm_in_tissue": 0.19,
-        "max_tpm_in_tissue": 0.67,
+        "n_genes": 6,
+        "n_expressed": 5,
+        "mean_tpm_in_tissue": 3.61,
+        "max_tpm_in_tissue": 15.53,
         "tissue_specificity": 0.0,
-        "context_modifier": 0.857
+        "context_modifier": 0.91
       },
-      "disease_entity": "Disease::MESH:D001714",
-      "ensemble_prob": 0.9249,
+      "ensemble_prob": 0.6515,
       "ensemble_features": {
-        "kg_score": 0.9985,
-        "degree_penalty": 0.7537,
-        "n_drug_targets": 7,
+        "kg_score": 0.996,
+        "degree_penalty": 0.7625,
+        "n_drug_targets": 29,
         "is_fda_approved": 1,
         "n_disease_genes": 0,
-        "transe_rank_log": 2.8332
+        "transe_rank_log": 3.7612
       },
-      "ensemble_rank": 2,
+      "ensemble_rank": 4,
       "docking": {
-        "kcal_per_mol": -8.25,
-        "target_symbol": "SLC6A3",
+        "kcal_per_mol": -10.82,
+        "target_symbol": "DRD2",
         "source": "chembl_bioactivity_proxy",
         "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
         "hit": true

@@ -1,8 +1,8 @@
 {
   "disease": "Lupus",
   "status": "completed",
-  "timestamp": "2026-04-20T00:04:32.114889",
-  "elapsed_seconds": 866.9,
+  "timestamp": "2026-05-08T01:38:29.540805",
+  "elapsed_seconds": 141.9,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -36,7 +36,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2635,
       "dti_score": 1.0,
-      "dti_best_target": "CDA",
+      "dti_best_target": "SNRPD1",
       "kg_group_score": 0.4096,
       "structural_group_score": 1.0,
       "network_group_score": 0.5519999861717224,
@@ -224,14 +224,6 @@
       "clinical_trials_total": 4,
       "clinical_trials": [
         {
-          "nct_id": "NCT03580291",
-          "title": "Human Umbilical Cord Mesenchymal Stem Cells Treatment for Lupus Nephritis (LN)",
-          "status": "UNKNOWN",
-          "phase": "PHASE2",
-          "enrollment": "230",
-          "url": "https://clinicaltrials.gov/study/NCT03580291"
-        },
-        {
           "nct_id": "NCT07340463",
           "title": "The Efficacy and Safety of Biologics (Belimumab/ Telitacicept) Induction Therapy in Proliferative Lupus Nephritis Patients for 6 Months Compared With Mycophenolate Mofetil Treatment",
           "status": "RECRUITING",
@@ -254,6 +246,14 @@
           "phase": "NA",
           "enrollment": "150",
           "url": "https://clinicaltrials.gov/study/NCT00007358"
+        },
+        {
+          "nct_id": "NCT03580291",
+          "title": "Human Umbilical Cord Mesenchymal Stem Cells Treatment for Lupus Nephritis (LN)",
+          "status": "UNKNOWN",
+          "phase": "PHASE2",
+          "enrollment": "230",
+          "url": "https://clinicaltrials.gov/study/NCT03580291"
         }
       ],
       "trial_phases": {
@@ -269,8 +269,10 @@
         "Moderate FAERS signal: 965 adverse event reports mention drug-disease co-occurrence",
         "Supporting paper with 48 citations",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.72, 32 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.72, 32 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D008180",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -408,8 +410,7 @@
         "tissue_specificity": 0.484,
         "context_modifier": 1.087
       },
-      "disease_entity": "Disease::MESH:D008180",
-      "ensemble_prob": 0.9532,
+      "ensemble_prob": 0.9914,
       "ensemble_features": {
         "kg_score": 0.9994,
         "degree_penalty": 0.736,
@@ -418,7 +419,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 1.9459
       },
-      "ensemble_rank": 2,
+      "ensemble_rank": 1,
       "docking": {
         "kcal_per_mol": -11.64,
         "target_symbol": "NR3C1",
@@ -437,7 +438,7 @@
       "drug_name": "Hydrocortisone",
       "drug_id": "DB00741",
       "disease_name": "Lupus",
-      "combined_score": 0.5531,
+      "combined_score": 0.5587,
       "pillars_hit": 4,
       "transe_rank": 24,
       "transe_score": -10.2203,
@@ -456,15 +457,15 @@
       "admet_score": 0.728,
       "admet_flags": "clean",
       "primekg_score": 0.2725,
-      "dti_score": 0.967,
-      "dti_best_target": "ETS1",
+      "dti_score": 1.0,
+      "dti_best_target": "FGF2",
       "kg_group_score": 0.4007,
-      "structural_group_score": 0.967,
+      "structural_group_score": 1.0,
       "network_group_score": 0.5648999810218811,
       "txgnn_group_score": 0,
       "mr_group_score": 0.6513,
       "admet_multiplier": 0.9456,
-      "efficacy_score": 0.5849,
+      "efficacy_score": 0.5909,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 16,
@@ -672,19 +673,11 @@
       "mechanistic_hypothesis": "Hydrocortisone \u2014[treats]\u2192 Lupus",
       "kg_paths_text": "\u2022 Hydrocortisone \u2014[treats]\u2192 Lupus\n\u2022 Hydrocortisone \u2014[treats]\u2192 Lupus\n\u2022 Hydrocortisone \u2014[downregulates]\u2192 gene-7358 \u2014[is downregulated by]\u2192 DB00443 \u2014[treats]\u2192 Lupus",
       "validation_experiments": [],
-      "novelty_score": 0.299,
+      "novelty_score": 0.302,
       "novelty_level": "KNOWN",
       "is_known_treatment": true,
       "clinical_trials_total": 5,
       "clinical_trials": [
-        {
-          "nct_id": "NCT02756546",
-          "title": "Circulating MicroRNAs in Understanding Pathogenesis of Systemic Lupus Erythematosis",
-          "status": "COMPLETED",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "100",
-          "url": "https://clinicaltrials.gov/study/NCT02756546"
-        },
         {
           "nct_id": "NCT00849745",
           "title": "Nonmyeloablative Allo Stem Cell Transplant for Severe Autoimmune Diseases",
@@ -694,12 +687,20 @@
           "url": "https://clinicaltrials.gov/study/NCT00849745"
         },
         {
-          "nct_id": "NCT02558517",
-          "title": "Evaluation of the Discontinuation of Maintenance Corticosteroid Treatment in Quiescent Systemic Lupus",
-          "status": "UNKNOWN",
-          "phase": "PHASE3",
-          "enrollment": "136",
-          "url": "https://clinicaltrials.gov/study/NCT02558517"
+          "nct_id": "NCT02756546",
+          "title": "Circulating MicroRNAs in Understanding Pathogenesis of Systemic Lupus Erythematosis",
+          "status": "COMPLETED",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "100",
+          "url": "https://clinicaltrials.gov/study/NCT02756546"
+        },
+        {
+          "nct_id": "NCT06842316",
+          "title": "Effects of Phytocannabinoids on Immune Response and Autophagy During Chronic Immune-mediated Inflammatory Diseases",
+          "status": "RECRUITING",
+          "phase": "N/A",
+          "enrollment": "100",
+          "url": "https://clinicaltrials.gov/study/NCT06842316"
         },
         {
           "nct_id": "NCT05748899",
@@ -710,19 +711,19 @@
           "url": "https://clinicaltrials.gov/study/NCT05748899"
         },
         {
-          "nct_id": "NCT06842316",
-          "title": "Effects of Phytocannabinoids on Immune Response and Autophagy During Chronic Immune-mediated Inflammatory Diseases",
-          "status": "RECRUITING",
-          "phase": "N/A",
-          "enrollment": "100",
-          "url": "https://clinicaltrials.gov/study/NCT06842316"
+          "nct_id": "NCT02558517",
+          "title": "Evaluation of the Discontinuation of Maintenance Corticosteroid Treatment in Quiescent Systemic Lupus",
+          "status": "UNKNOWN",
+          "phase": "PHASE3",
+          "enrollment": "136",
+          "url": "https://clinicaltrials.gov/study/NCT02558517"
         }
       ],
       "trial_phases": {
         "PHASE1": 2,
         "PHASE2": 1,
-        "PHASE3": 1,
-        "NA": 1
+        "NA": 1,
+        "PHASE3": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -732,8 +733,10 @@
         "Supported by 4 independent AI pillars",
         "Strong FAERS signal: 7976 adverse event reports link drug to disease (79272 total reports)",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.65)"
+        "Moderate genetic evidence supporting causality (MR score: 0.65)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D008180",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -814,10 +817,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.657,
+        "triangulation_score": 0.659,
         "label": "silver-standard",
         "axis_values": {
-          "kg": 0.553,
+          "kg": 0.559,
           "docking": 0.878,
           "pharos": 0.0,
           "literature": 1.0
@@ -835,8 +838,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 1.011
       },
-      "disease_entity": "Disease::MESH:D008180",
-      "ensemble_prob": 0.8999,
+      "ensemble_prob": 0.7591,
       "ensemble_features": {
         "kg_score": 0.9979,
         "degree_penalty": 0.7532,
@@ -845,7 +847,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 3.1355
       },
-      "ensemble_rank": 3,
+      "ensemble_rank": 5,
       "docking": {
         "kcal_per_mol": -10.54,
         "target_symbol": "NR3C1",
@@ -864,7 +866,7 @@
       "drug_name": "histamine dihydrochloride",
       "drug_id": "DB05381",
       "disease_name": "Lupus",
-      "combined_score": 0.5443,
+      "combined_score": 0.5539,
       "pillars_hit": 4,
       "transe_rank": 10,
       "transe_score": -9.996,
@@ -883,15 +885,15 @@
       "admet_score": 0.6862,
       "admet_flags": "clean",
       "primekg_score": 0.2799,
-      "dti_score": 0.943,
-      "dti_best_target": "ETS1",
+      "dti_score": 1.0,
+      "dti_best_target": "PPARG",
       "kg_group_score": 0.4622,
-      "structural_group_score": 0.943,
+      "structural_group_score": 1.0,
       "network_group_score": 0.454800009727478,
       "txgnn_group_score": 0,
       "mr_group_score": 0.6968,
       "admet_multiplier": 0.9372,
-      "efficacy_score": 0.5808,
+      "efficacy_score": 0.591,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 21,
@@ -992,7 +994,7 @@
       "mechanistic_hypothesis": "histamine dihydrochloride \u2014[is a therapeutic for]\u2192 Lupus",
       "kg_paths_text": "\u2022 histamine dihydrochloride \u2014[is a therapeutic for]\u2192 Lupus\n\u2022 histamine dihydrochloride \u2014[is a therapeutic for]\u2192 MESH:D051437 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 Lupus\n\u2022 histamine dihydrochloride \u2014[is a therapeutic for]\u2192 MESH:D051437 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 Lupus",
       "validation_experiments": [],
-      "novelty_score": 0.555,
+      "novelty_score": 0.565,
       "novelty_level": "NOVEL",
       "is_known_treatment": true,
       "clinical_trials_total": 1,
@@ -1012,8 +1014,10 @@
         "1 clinical trial(s) found on ClinicalTrials.gov",
         "Supported by 4 independent AI pillars",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.70)"
+        "Moderate genetic evidence supporting causality (MR score: 0.70)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D008180",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1094,10 +1098,10 @@
           "pharos": false,
           "literature": false
         },
-        "triangulation_score": 0.42,
+        "triangulation_score": 0.423,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.544,
+          "kg": 0.554,
           "docking": 0.765,
           "pharos": 0.0,
           "literature": 0.0
@@ -1115,8 +1119,7 @@
         "tissue_specificity": 0.46,
         "context_modifier": 1.085
       },
-      "disease_entity": "Disease::MESH:D008180",
-      "ensemble_prob": 0.0547,
+      "ensemble_prob": 0.0376,
       "ensemble_features": {
         "kg_score": 0.9406,
         "degree_penalty": 0.8269,
@@ -1389,6 +1392,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.70)"
       ],
+      "disease_entity": "Disease::MESH:D008180",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1511,8 +1515,7 @@
         "tissue_specificity": 0.272,
         "context_modifier": 1.051
       },
-      "disease_entity": "Disease::MESH:D008180",
-      "ensemble_prob": 0.4744,
+      "ensemble_prob": 0.4252,
       "ensemble_features": {
         "kg_score": 0.9961,
         "degree_penalty": 0.7521,
@@ -1767,8 +1770,10 @@
         "High molecular similarity (1.00) to Dexamethasone",
         "Strong FAERS signal: 549 adverse event reports link drug to disease (32595 total reports)",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.72, 21 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.72, 21 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D008180",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -1870,8 +1875,7 @@
         "tissue_specificity": 0.813,
         "context_modifier": 1.128
       },
-      "disease_entity": "Disease::MESH:D008180",
-      "ensemble_prob": 0.8999,
+      "ensemble_prob": 0.7598,
       "ensemble_features": {
         "kg_score": 0.9973,
         "degree_penalty": 0.7572,
@@ -2210,6 +2214,7 @@
         "Supporting paper with 43 citations",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D008180",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2373,8 +2378,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.968
       },
-      "disease_entity": "Disease::MESH:D008180",
-      "ensemble_prob": 0.1099,
+      "ensemble_prob": 0.1993,
       "ensemble_features": {
         "kg_score": 0.9736,
         "degree_penalty": 0.7963,
@@ -2421,8 +2425,8 @@
       "admet_score": 0.7058,
       "admet_flags": "clean",
       "primekg_score": 0.2621,
-      "dti_score": 0.514,
-      "dti_best_target": "AFF1",
+      "dti_score": 0.5642,
+      "dti_best_target": "HMGB1",
       "kg_group_score": 0.1845,
       "structural_group_score": 0.9253,
       "network_group_score": 0.617900013923645,
@@ -2607,6 +2611,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.66)"
       ],
+      "disease_entity": "Disease::MESH:D008180",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2708,8 +2713,7 @@
         "tissue_specificity": 0.497,
         "context_modifier": 1.085
       },
-      "disease_entity": "Disease::MESH:D008180",
-      "ensemble_prob": 0.0854,
+      "ensemble_prob": 0.1822,
       "ensemble_features": {
         "kg_score": 0.9768,
         "degree_penalty": 0.7973,
@@ -2763,7 +2767,7 @@
       "admet_flags": "Skin_Reaction=0.85",
       "primekg_score": 0.2579,
       "dti_score": 1.0,
-      "dti_best_target": "CDA",
+      "dti_best_target": "SNRPD1",
       "kg_group_score": 0.2096,
       "structural_group_score": 1.0,
       "network_group_score": 0.5170999765396118,
@@ -2963,6 +2967,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.72, 18 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D008180",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -3064,8 +3069,7 @@
         "tissue_specificity": 0.422,
         "context_modifier": 1.081
       },
-      "disease_entity": "Disease::MESH:D008180",
-      "ensemble_prob": 0.9892,
+      "ensemble_prob": 0.9912,
       "ensemble_features": {
         "kg_score": 0.9992,
         "degree_penalty": 0.7515,
@@ -3074,7 +3078,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.1972
       },
-      "ensemble_rank": 1,
+      "ensemble_rank": 2,
       "docking": {
         "kcal_per_mol": -9.21,
         "target_symbol": "APP",
@@ -3120,7 +3124,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2641,
       "dti_score": 1.0,
-      "dti_best_target": "CDA",
+      "dti_best_target": "SNRPD1",
       "kg_group_score": 0.0973,
       "structural_group_score": 1.0,
       "network_group_score": 0.6618000268936157,
@@ -3223,6 +3227,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.59)"
       ],
+      "disease_entity": "Disease::MESH:D008180",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3324,8 +3329,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.945
       },
-      "disease_entity": "Disease::MESH:D008180",
-      "ensemble_prob": 0.7247,
+      "ensemble_prob": 0.6776,
       "ensemble_features": {
         "kg_score": 0.996,
         "degree_penalty": 0.7785,
@@ -3350,165 +3354,178 @@
       }
     },
     {
-      "drug_name": "Paclitaxel",
-      "drug_id": "DB01229",
+      "drug_name": "Hydroxychloroquine",
+      "drug_id": "DB01611",
       "disease_name": "Lupus",
-      "combined_score": 0.4809,
+      "combined_score": 0.4837,
       "pillars_hit": 4,
-      "transe_rank": 40,
-      "transe_score": -10.4089,
-      "pykeen_score": -12.0725,
+      "transe_rank": 25,
+      "transe_score": -10.221,
+      "pykeen_score": -12.2899,
       "pykeen_rank": 0,
       "txgnn_score": 0,
       "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
-      "mol_emb_similarity": 0.9334,
-      "mol_emb_similar_to": "Sirolimus",
-      "gene_sig_score": 1.4041,
-      "gene_sig_rank": 31,
-      "proximity_score": 0.6620000004768372,
-      "proximity_distance": 1.350000023841858,
-      "admet_score": 0.4859,
-      "admet_flags": "hERG=0.85",
-      "primekg_score": 0.2633,
-      "dti_score": 0.7469,
-      "dti_best_target": "CDA",
-      "kg_group_score": 0.3031,
-      "structural_group_score": 0.9334,
-      "network_group_score": 0.49540001153945923,
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.8820000290870667,
+      "proximity_distance": 0.4699999988079071,
+      "admet_score": 0.5085,
+      "admet_flags": "hERG=0.91",
+      "primekg_score": 0.2618,
+      "dti_score": 0.8487,
+      "dti_best_target": "FGF2",
+      "kg_group_score": 0.2329,
+      "structural_group_score": 0.8487,
+      "network_group_score": 0.6881999969482422,
       "txgnn_group_score": 0,
-      "mr_group_score": 0.6207,
-      "admet_multiplier": 0.8972,
-      "efficacy_score": 0.536,
+      "mr_group_score": 0.5855,
+      "admet_multiplier": 0.9017,
+      "efficacy_score": 0.5364,
       "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 20,
+      "shared_target_count": 3,
       "shared_targets": [
         "ALB",
-        "CD44",
-        "CDK1",
-        "CFLAR",
-        "CXCL8",
-        "ERCC8",
-        "ESR1",
-        "F3",
-        "FYN",
-        "HIF1A",
-        "IDO1",
-        "IL1B",
-        "MYC",
-        "PARP1",
-        "PCNA",
-        "PIK3CD",
-        "PPARG",
-        "PTGS2",
-        "STAT3",
-        "VIM"
+        "TLR7",
+        "TLR9"
       ],
-      "pubmed_total": 21,
-      "pubmed_treatment_total": 21,
-      "pubmed_repurposing_total": 0,
+      "pubmed_total": 3210,
+      "pubmed_treatment_total": 2904,
+      "pubmed_repurposing_total": 17,
       "key_papers": [
         {
-          "pmid": "27550571",
-          "title": "Dermatological adverse events with taxane chemotherapy.",
-          "authors": "Sibaud V, Leb\u0153uf NR, Roche H, et al.",
-          "journal": "European journal of dermatology : EJD",
-          "year": "2016",
-          "abstract_snippet": "Taxanes (docetaxel and paclitaxel) are among the most commonly prescribed anticancer drugs approved for the treatment of metastatic or locally advanced breast, non-small cell lung, prostate, gastric, head and neck, and ovarian cancers, as well as in the adjuvant setting for operable node-positive br...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/27550571/",
-          "total_results": 21
+          "pmid": "38587826",
+          "title": "Systemic Lupus Erythematosus: A Review.",
+          "authors": "Siegel CH, Sammaritano LR",
+          "journal": "JAMA",
+          "year": "2024",
+          "abstract_snippet": "IMPORTANCE: Systemic lupus erythematosus (SLE) is a chronic autoimmune disease characterized by inflammation and immune-mediated injury to multiple organ systems, including the mucocutaneous, musculoskeletal, hematologic, and kidney systems. Approximately 3.4 million people worldwide have received a...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38587826/",
+          "total_results": 3210
         },
         {
-          "pmid": "38259408",
-          "title": "Paclitaxel-Induced Cutaneous Lupus Erythematosus and Raynaud's Phenomenon.",
-          "authors": "Rusia K, Madke B, Kashikar Y, et al.",
-          "journal": "Cureus",
+          "pmid": "31677989",
+          "title": "Pregnancy and Systemic Lupus Erythematosus.",
+          "authors": "Petri M",
+          "journal": "Best practice & research. Clinical obstetrics & gynaecology",
+          "year": "2020",
+          "abstract_snippet": "As SLE onset is often in young adulthood, pregnancy is common and is usually successful. Pregnancy, though, is considered high-risk due to a combination of maternal (lupus flare, diabetes, pre-eclampsia) and fetal (miscarriage, intrauterine fetal demise, preterm birth, intrauterine growth restrictio...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31677989/"
+        },
+        {
+          "pmid": "37054414",
+          "title": "Systemic Lupus Erythematosus: Diagnosis and Treatment.",
+          "authors": "Lam NV, Brown JA, Sharma R",
+          "journal": "American family physician",
           "year": "2023",
-          "abstract_snippet": "Taxanes, in combination with platinum-based drugs, are considered the initial treatment option for certain types of cancer, including ovarian cancer. Here, we report the case of a 59-year-old woman who developed a malar rash on her face, a maculopapular rash on her forearms, and bluish discoloration...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38259408/"
+          "abstract_snippet": "Systemic lupus erythematosus (SLE) is an autoimmune disease that affects the cardiovascular, gastrointestinal, hematologic, integumentary, musculoskeletal, neuropsychiatric, pulmonary, renal, and reproductive systems. It is a chronic disease and may cause recurrent flare-ups without adequate treatme...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37054414/"
         },
         {
-          "pmid": "24155645",
-          "title": "Drug-induced subacute cutaneous lupus erythematosus associated with nab-paclitaxel therapy.",
-          "authors": "Lamond NW, Younis T, Purdy K, et al.",
-          "journal": "Current oncology (Toronto, Ont.)",
-          "year": "2013",
-          "abstract_snippet": "Drug-induced lupus erythematosus (dile) syndromes are documented complications of chemotherapeutic agents, including paclitaxel. Subacute cutaneous lupus erythematosus (scle) is a distinct dile syndrome presenting with characteristic annular or papulosquamous skin lesions in a photosensitive distrib...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/24155645/"
+          "pmid": "35210867",
+          "title": "Systemic Lupus Erythematosus Management in Pregnancy.",
+          "authors": "Dao KH, Bermas BL",
+          "journal": "International journal of women's health",
+          "year": "2022",
+          "abstract_snippet": "Systemic lupus erythematosus (SLE) affects reproductive aged women. Issues regarding family planning are an important part of SLE patient care. Women with SLE can flare during pregnancy, in particular those who have active disease at conception or prior history of renal disease. These flares can lea...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35210867/"
         },
         {
-          "pmid": "9848398",
-          "title": "Paclitaxel reduces anti-dsDNA antibody titer and BUN, prolonging survival in murine lupus.",
-          "authors": "Song YW, Kim HA, Baek HJ, et al.",
-          "journal": "International journal of immunopharmacology",
-          "year": "1998",
-          "abstract_snippet": "We evaluated the effect of paclitaxel on the severity of autoimmunity in the murine model of systemic lupus erythematosus (SLE), NZB x NZW F1 mice. Fifteen 20 week old (NZB x NZW) F1 female mice were given a dose of 10 mg/kg paclitaxel by the intraperitoneal route on three alternate days followed by...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/9848398/"
-        },
-        {
-          "pmid": "17584326",
-          "title": "Paclitaxel-induced cutaneous lupus erythematosus in patients with serum anti-SSA/Ro antibody.",
-          "authors": "Adachi A, Horikawa T",
-          "journal": "The Journal of dermatology",
-          "year": "2007",
-          "abstract_snippet": "Two women (aged 46 and 56 years) developed annular erythema on their sun-exposed skin, including their forearms and faces, after biweekly i.v. administration of paclitaxel for 3-4 months to treat breast cancer. Both cases showed interface changes of basal keratinocytes and high titers of serum anti-...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/17584326/"
+          "pmid": "27457513",
+          "title": "EULAR recommendations for women's health and the management of family planning, assisted reproduction, pregnancy and menopause in patients with systemic lupus erythematosus and/or antiphospholipid syndrome.",
+          "authors": "Andreoli L, Bertsias GK, Agmon-Levin N, et al.",
+          "journal": "Annals of the rheumatic diseases",
+          "year": "2017",
+          "abstract_snippet": "OBJECTIVES: Develop recommendations for women's health issues and family planning in systemic lupus erythematosus (SLE) and/or antiphospholipid syndrome (APS). METHODS: Systematic review of evidence followed by modified Delphi method to compile questions, elicit expert opinions and reach consensus. ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/27457513/",
+          "total_results": 2904
         }
       ],
-      "repurposing_papers": [],
+      "repurposing_papers": [
+        {
+          "pmid": "30563869",
+          "title": "REDD1/autophagy pathway promotes thromboinflammation and fibrosis in human systemic lupus erythematosus (SLE) through NETs decorated with tissue factor (TF) and interleukin-17A (IL-17A).",
+          "authors": "Frangou E, Chrysanthopoulou A, Mitsios A, et al.",
+          "journal": "Annals of the rheumatic diseases",
+          "year": "2019",
+          "abstract_snippet": "OBJECTIVES: The release of neutrophil extracellular traps (NETs) represents a novel neutrophil effector function in systemic lupus erythematosus (SLE) pathogenesis. However, the molecular mechanism underlying NET release and how NETs mediate end-organ injury in SLE remain elusive. METHODS: NET forma...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30563869/",
+          "total_results": 17
+        },
+        {
+          "pmid": "37530940",
+          "title": "Hydroxychloroquine in nephrology: current status and future directions.",
+          "authors": "Rao IR, Kolakemar A, Shenoy SV, et al.",
+          "journal": "Journal of nephrology",
+          "year": "2023",
+          "abstract_snippet": "Hydroxychloroquine is one of the oldest disease-modifying anti-rheumatic drugs in clinical use. The drug interferes with lysosomal activity and antigen presentation, inhibits autophagy, and decreases transcription of pro-inflammatory cytokines. Owing to its immunomodulatory, anti-inflammatory, anti-...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37530940/"
+        },
+        {
+          "pmid": "32232419",
+          "title": "Use of Hydroxychloroquine and Chloroquine During the COVID-19 Pandemic: What Every Clinician Should Know.",
+          "authors": "Yazdany J, Kim AHJ",
+          "journal": "Annals of internal medicine",
+          "year": "2020",
+          "abstract_snippet": "Two medications often used for treatment of immune-mediated conditions, hydroxychloroquine and chloroquine, have recently attracted widespread interest as potential therapies for coronavirus disease 2019. The authors of this commentary provide guidance for clinical decision making for patients with ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32232419/"
+        }
+      ],
       "semantic_scholar_papers": [
         {
-          "title": "Paclitaxel-induced lupus glomerulonephritis",
+          "title": "Hydroxychloroquine in patients with systemic lupus erythematosus: how much is enough?",
           "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/dad5d756b9ab5240992aef1a01af927981c2b2e2",
-          "authors": "Jamal Eddine Naji, Hicham Rafik, Mohamed Reda Elfarouki"
+          "citations": 6,
+          "url": "https://www.semanticscholar.org/paper/55f1ee2dad9cab09f817f3d2f75caa37e5bc5fd8",
+          "authors": "Guillermo Ruiz-Irastorza, Diana Paredes-Ruiz, Fernando Arizpe"
         },
         {
-          "title": "Paclitaxel-Induced Cutaneous Lupus Erythematosus and Raynaud's Phenomenon",
-          "year": 2023,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/7b74da396cc04cfd732b1651e6297613d98d3b34",
-          "authors": "Kaveri Rusia, Bhushan Madke, Yash Kashikar"
+          "title": "Hydroxychloroquine in Lupus Pregnancy and Risk of Preeclampsia",
+          "year": 2024,
+          "citations": 13,
+          "url": "https://www.semanticscholar.org/paper/9fc3b6f41bddde5724137dd0c094a1a6713ff9b3",
+          "authors": "A. Rector, Ivana Mari\u0107, Y. Chaichian"
         },
         {
-          "title": "Subacute cutaneous lupus erythematosus in a patient of pancreatic cancer secondary to novel albumin-bound paclitaxel chemotherapy",
-          "year": 2023,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/9f475143e1ccb4b633760c4280ea09e7ccb5ca2a",
-          "authors": "S. Sehgal, Manish Jain, Srishti Agrawal"
+          "title": "Hydroxychloroquine and Cardiovascular Events in Patients With Systemic Lupus Erythematosus",
+          "year": 2024,
+          "citations": 12,
+          "url": "https://www.semanticscholar.org/paper/4a0d2c3e0614c77bfd9cdc6139a38bed2e3badb2",
+          "authors": "Lamiae Grimaldi, T. Duchemin, Y. Hamon"
         },
         {
-          "title": "[A Case of Breast Cancer with Bone Marrow Metastasis in a Patient with a History of Systemic Lupus Erythematosus and Autoimmune Hemolytic Anemia].",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/fcd6f7cb6446959c67ffa744eff45c41ea16312d",
-          "authors": "Michiaki Tanaka, K. Kimura, Ayana Ikari"
+          "title": "Effect of hydroxychloroquine blood concentration on the efficacy and ocular toxicity of systemic lupus erythematosus",
+          "year": 2024,
+          "citations": 12,
+          "url": "https://www.semanticscholar.org/paper/b88b71a4935038964ec468c2d34a47d972737344",
+          "authors": "P. Liu, Shuilin Luo, Meng-Na Lv"
         },
         {
-          "title": "Carboplatin/doxorubicin-liposomal/paclitaxel",
-          "year": 2023,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/8dac3b3bb6b104c0871553837396689351471101",
-          "authors": ""
+          "title": "Hydroxychloroquine Dose and Hospitalizations for Active Lupus",
+          "year": 2024,
+          "citations": 10,
+          "url": "https://www.semanticscholar.org/paper/ed21b8bced8e1c85cb63d4e8f62b8ca645c161e5",
+          "authors": "Jaquelyn Nestor, Hyon K. Choi, C. Mancini"
         }
       ],
       "most_cited_paper": {
-        "title": "Paclitaxel-Induced Cutaneous Lupus Erythematosus and Raynaud's Phenomenon",
-        "year": 2023,
-        "citations": 1,
-        "url": "https://www.semanticscholar.org/paper/7b74da396cc04cfd732b1651e6297613d98d3b34",
-        "authors": "Kaveri Rusia, Bhushan Madke, Yash Kashikar"
+        "title": "Hydroxychloroquine in Lupus Pregnancy and Risk of Preeclampsia",
+        "year": 2024,
+        "citations": 13,
+        "url": "https://www.semanticscholar.org/paper/9fc3b6f41bddde5724137dd0c094a1a6713ff9b3",
+        "authors": "A. Rector, Ivana Mari\u0107, Y. Chaichian"
       },
-      "max_citations": 1,
-      "faers_signal": "moderate",
-      "faers_total_reports": 86251,
-      "faers_cooccurrences": 142,
-      "faers_interpretation": "142 FAERS reports mention both Paclitaxel and Lupus-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": true,
-      "signature_reversal_rank": 31,
+      "max_citations": 13,
+      "faers_signal": "strong",
+      "faers_total_reports": 108082,
+      "faers_cooccurrences": 21104,
+      "faers_interpretation": "21104 FAERS reports mention both Hydroxychloroquine and Lupus-related terms (19.5% of all Hydroxychloroquine reports). This suggests real-world clinical association.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
       "signature_top_reversers": [
         "saracatinib (1.502)",
         "PNU 74654 (1.478)",
@@ -3516,7 +3533,7 @@
         "CAM-9-026 BRD-K91442916 (1.452)",
         "ABT-751 (1.449)"
       ],
-      "signature_interpretation": "Paclitaxel ranks #31 out of 44 drugs for reversing the Lupus gene signature (30 up + 30 down genes). This suggests a mechanistic basis for treatment.",
+      "signature_interpretation": "Hydroxychloroquine was not found among the top 44 drugs that reverse the Lupus gene signature. Top reversers: saracatinib (1.502), PNU 74654 (1.478), HG-5-113-01 (1.452)",
       "ai_hypothesis": "of its anti-inflammatory and immunomodulatory properties.",
       "abstract_analyses": [
         {
@@ -3531,88 +3548,81 @@
         },
         {
           "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 1,
-          "negative_signals": 0,
-          "mechanism_signals": 0,
-          "extracted_entities": [
-            {
-              "entity": "drug",
-              "entity_group": "Disease_disorder",
-              "score": 0.9980000257492065
-            },
-            {
-              "entity": "induced lupus erythematosus (",
-              "entity_group": "Disease_disorder",
-              "score": 0.9990000128746033
-            },
-            {
-              "entity": "dile ) syndrome",
-              "entity_group": "Disease_disorder",
-              "score": 0.9169999957084656
-            },
-            {
-              "entity": "pac",
-              "entity_group": "Medication",
-              "score": 1.0
-            },
-            {
-              "entity": "##lita",
-              "entity_group": "Medication",
-              "score": 0.9950000047683716
-            },
-            {
-              "entity": "sub",
-              "entity_group": "Detailed_description",
-              "score": 1.0
-            },
-            {
-              "entity": "cut",
-              "entity_group": "Biological_structure",
-              "score": 1.0
-            },
-            {
-              "entity": "##aneous",
-              "entity_group": "Biological_structure",
-              "score": 0.7739999890327454
-            },
-            {
-              "entity": "lupus erythematosus",
-              "entity_group": "Disease_disorder",
-              "score": 0.9990000128746033
-            },
-            {
-              "entity": "sc",
-              "entity_group": "Disease_disorder",
-              "score": 0.9940000176429749
-            }
-          ]
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
         }
       ],
       "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
+      "failed_trial_phase": "Phase 3",
+      "failed_trial_count": 3,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.6207,
-      "mr_genetic_targets": 9,
-      "mechanistic_hypothesis": "Paclitaxel \u2014[downregulates]\u2192 gene-5111 \u2014[is a target of]\u2192 DB00945 \u2014[treats]\u2192 Lupus",
-      "kg_paths_text": "\u2022 Paclitaxel \u2014[downregulates]\u2192 gene-5111 \u2014[is a target of]\u2192 DB00945 \u2014[treats]\u2192 Lupus\n\u2022 Paclitaxel \u2014[downregulates]\u2192 gene-5111 \u2014[is a target of]\u2192 DB00945 \u2014[treats]\u2192 Lupus\n\u2022 Paclitaxel \u2014[downregulates]\u2192 gene-8520 \u2014[is downregulated by]\u2192 DB00620 \u2014[treats]\u2192 Lupus",
+      "mr_score": 0.5855,
+      "mr_genetic_targets": 2,
+      "mechanistic_hypothesis": "Hydroxychloroquine \u2014[treats]\u2192 Lupus",
+      "kg_paths_text": "\u2022 Hydroxychloroquine \u2014[treats]\u2192 Lupus\n\u2022 Hydroxychloroquine \u2014[treats]\u2192 Lupus\n\u2022 Hydroxychloroquine \u2014[is antagonized by]\u2192 gene-51284 \u2014[is linked to]\u2192 Lupus",
       "validation_experiments": [],
-      "novelty_score": 0.433,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
+      "novelty_score": 0.116,
+      "novelty_level": "ESTABLISHED",
+      "is_known_treatment": true,
+      "clinical_trials_total": 10,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT01549184",
+          "title": "Retrospective Analysis of the Safety and Efficacy of Hydroxychloroquine in Immune Thrombocytopenia",
+          "status": "COMPLETED",
+          "phase": "N/A",
+          "enrollment": "40",
+          "url": "https://clinicaltrials.gov/study/NCT01549184"
+        },
+        {
+          "nct_id": "NCT01379573",
+          "title": "Preventive Approach to Congenital Heart Block With Hydroxychloroquine",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "74",
+          "url": "https://clinicaltrials.gov/study/NCT01379573"
+        },
+        {
+          "nct_id": "NCT03802188",
+          "title": "Hydroxychloroquine in Systemic Lupus Erythematosus",
+          "status": "UNKNOWN",
+          "phase": "N/A",
+          "enrollment": "3700",
+          "url": "https://clinicaltrials.gov/study/NCT03802188"
+        },
+        {
+          "nct_id": "NCT02550964",
+          "title": "Incidence and Risk Factor of Hydroxychloroquine and Chloroquine Retinopathy",
+          "status": "UNKNOWN",
+          "phase": "N/A",
+          "enrollment": "124",
+          "url": "https://clinicaltrials.gov/study/NCT02550964"
+        },
+        {
+          "nct_id": "NCT01475149",
+          "title": "Effect of HCQ on AnxA5 Resistance Assay in Antiphospholipid (aPL) Positive Patients With and Without Systemic Lupus Erythematosus (SLE)",
+          "status": "COMPLETED",
+          "phase": "N/A",
+          "enrollment": "33",
+          "url": "https://clinicaltrials.gov/study/NCT01475149"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 3,
+        "PHASE1": 2
+      },
       "confidence": "HIGH",
       "confidence_reasons": [
-        "21 PubMed articles found",
+        "10 clinical trial(s) found on ClinicalTrials.gov",
+        "3210 PubMed articles on this drug-disease pair",
+        "17 article(s) specifically mention repurposing/repositioning",
         "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 142 adverse event reports mention drug-disease co-occurrence",
-        "Drug ranks #31 for reversing disease gene signature",
+        "Strong FAERS signal: 21104 adverse event reports link drug to disease (108082 total reports)",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.62)"
+        "Moderate genetic evidence supporting causality (MR score: 0.59)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D008180",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3623,7 +3633,7 @@
         "stage": 1
       },
       "ddi_warnings": {
-        "n_interactions": 1533,
+        "n_interactions": 1140,
         "has_warnings": true,
         "top_interactions": [
           {
@@ -3657,11 +3667,6 @@
             "severity": "high"
           },
           {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
             "drug_id": "DB00829",
             "drug_name": "Diazepam",
             "severity": "high"
@@ -3675,67 +3680,50 @@
             "drug_id": "DB00199",
             "drug_name": "Erythromycin",
             "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
           }
         ]
       },
       "pharmacogenomics": {
         "has_flags": true,
-        "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (ABCB1 / rs2032582)",
-        "cpic": [],
+        "highest_risk": "moderate",
+        "summary": "CPIC-C (G6PD) \u2022 PharmGKB-3 (MTR / rs1805087)",
+        "cpic": [
+          {
+            "gene": "G6PD",
+            "level": "C",
+            "guideline": "G6PD"
+          }
+        ],
         "pharmgkb": [
           {
-            "gene": "ABCB1",
-            "variant": "rs2032582",
+            "gene": "MTR",
+            "variant": "rs1805087",
             "level": "3",
             "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/655385856"
-          },
-          {
-            "gene": "CYP2C8",
-            "variant": "rs1113129",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/699639328"
-          },
-          {
-            "gene": "ABCB1",
-            "variant": "rs1045642",
-            "level": "4",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204258"
-          },
-          {
-            "gene": "FGD4",
-            "variant": "rs10771973",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1444700958"
-          },
-          {
-            "gene": "ERCC1",
-            "variant": "rs3212986",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1445401847"
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451634907"
           }
         ]
       },
       "triangulation": {
-        "n_axes_agree": 2,
+        "n_axes_agree": 3,
         "axes": {
           "kg": true,
-          "docking": false,
+          "docking": true,
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.443,
-        "label": "multi-axis",
+        "triangulation_score": 0.607,
+        "label": "silver-standard",
         "axis_values": {
-          "kg": 0.481,
-          "docking": 0.526,
+          "kg": 0.484,
+          "docking": 0.792,
           "pharos": 0.0,
-          "literature": 0.583
+          "literature": 1.0
         }
       },
       "tissue_context": {
@@ -3743,42 +3731,35 @@
           "Whole Blood",
           "Skin - Not Sun Exposed (Suprapubic)"
         ],
-        "n_genes": 20,
-        "n_expressed": 18,
-        "mean_tpm_in_tissue": 79.27,
-        "max_tpm_in_tissue": 526.32,
-        "tissue_specificity": 0.346,
-        "context_modifier": 1.063
+        "n_genes": 3,
+        "n_expressed": 2,
+        "mean_tpm_in_tissue": 3.23,
+        "max_tpm_in_tissue": 6.3,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.906
       },
-      "disease_entity": "Disease::MESH:D008180",
-      "ensemble_prob": 0.8623,
+      "ensemble_prob": 0.9819,
       "ensemble_features": {
-        "kg_score": 0.9982,
-        "degree_penalty": 0.7483,
-        "n_drug_targets": 25,
+        "kg_score": 0.9995,
+        "degree_penalty": 0.7803,
+        "n_drug_targets": 17,
         "is_fda_approved": 1,
         "n_disease_genes": 0,
-        "transe_rank_log": 2.9957
+        "transe_rank_log": 1.7918
       },
-      "ensemble_rank": 5,
+      "ensemble_rank": 3,
       "docking": {
-        "kcal_per_mol": -6.31,
-        "target_symbol": "FYN",
+        "kcal_per_mol": -9.5,
+        "target_symbol": "TLR9",
         "source": "chembl_bioactivity_proxy",
         "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
         "hit": true
       },
       "structural_alerts": {
         "has_pains": false,
-        "pains_families": [
-          ">",
-          "ISOLATED"
-        ],
-        "n_alerts": 2,
-        "alert_names": [
-          ">_2_ester_groups",
-          "isolated_alkene"
-        ]
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
       }
     }
   ],

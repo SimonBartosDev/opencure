@@ -1,13 +1,13 @@
 {
   "disease": "Parkinson's disease",
   "status": "completed",
-  "timestamp": "2026-04-19T16:56:55.544684",
-  "elapsed_seconds": 906.1,
+  "timestamp": "2026-05-07T22:44:38.248625",
+  "elapsed_seconds": 223.2,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
-    "MEDIUM": 1,
-    "HIGH": 9
+    "MEDIUM": 2,
+    "HIGH": 8
   },
   "pipeline_version": "v5",
   "data_manifest_hash": "2da2aa88f2457d1b",
@@ -143,6 +143,7 @@
         "Supporting paper with 84 citations",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D010300",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -243,15 +244,7 @@
         "tissue_specificity": 0.487,
         "context_modifier": 1.029
       },
-      "disease_entity": "Disease::MESH:D010300",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.0123,
+      "ensemble_prob": 0.0213,
       "ensemble_features": {
         "kg_score": 0.9482,
         "degree_penalty": 0.7738,
@@ -260,7 +253,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 6.3044
       },
-      "ensemble_rank": 7,
+      "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -272,6 +272,432 @@
           "Aliphatic_long_chain",
           "isolated_alkene"
         ]
+      }
+    },
+    {
+      "drug_name": "Nicotinamide",
+      "drug_id": "DB02701",
+      "disease_name": "Parkinson's disease",
+      "combined_score": 0.5410000085830688,
+      "pillars_hit": 4,
+      "transe_rank": 151,
+      "transe_score": -10.8118,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0.6538,
+      "similar_to": "Niacin",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.824999988079071,
+      "proximity_distance": 0.699999988079071,
+      "admet_score": 0.7766,
+      "admet_flags": "clean",
+      "primekg_score": 0.2616,
+      "dti_score": 0.834,
+      "dti_best_target": "PGF",
+      "kg_group_score": 0.1118,
+      "structural_group_score": 0.834,
+      "network_group_score": 0.7763000130653381,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.8864,
+      "admet_multiplier": 0.9553,
+      "efficacy_score": 0.5662999749183655,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 3,
+      "shared_targets": [
+        "BST1",
+        "MTOR",
+        "NNMT"
+      ],
+      "pubmed_total": 193,
+      "pubmed_treatment_total": 121,
+      "pubmed_repurposing_total": 2,
+      "key_papers": [
+        {
+          "pmid": "38016950",
+          "title": "NR-SAFE: a randomized, double-blind safety trial of high dose nicotinamide riboside in Parkinson's disease.",
+          "authors": "Berven H, Kverneng S, Sheard E, et al.",
+          "journal": "Nature communications",
+          "year": "2023",
+          "abstract_snippet": "Nicotinamide adenine dinucleotide (NAD) replenishment therapy using nicotinamide riboside (NR) shows promise for Parkinson's disease (PD) and other neurodegenerative disorders. However, the optimal dose of NR remains unknown, and doses exceeding 2000 mg daily have not been tested in humans. To evalu...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38016950/",
+          "total_results": 193
+        },
+        {
+          "pmid": "41016604",
+          "title": "Sirtuins in Parkinson's disease: Molecular mechanisms and pathophysiological roles.",
+          "authors": "Li X, Luo X, Cao X, et al.",
+          "journal": "Ageing research reviews",
+          "year": "2025",
+          "abstract_snippet": "Parkinson's disease (PD) is a progressive neurodegenerative disorder that is associated with mitochondrial dysfunction, oxidative stress, neuroinflammation, and abnormal protein aggregation. The silent information regulator 2 (Sir2) family of proteins, known as sirtuins (SIRT1 - SIRT7), is nicotinam...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41016604/"
+        },
+        {
+          "pmid": "22930493",
+          "title": "Vitamin D and Parkinson's disease.",
+          "authors": "Vinh Qu\u00f4c Luong K, Thi Ho\u00e0ng Nguy\u00ean L",
+          "journal": "Journal of neuroscience research",
+          "year": "2012",
+          "abstract_snippet": "Parkinson's disease (PD) is the second most common form of neurodegeneration among the elderly population. PD is clinically characterized by tremors, rigidity, slowness of movement, and postural imbalance. Interestingly, a significant association has been demonstrated between PD and low levels of vi...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22930493/"
+        },
+        {
+          "pmid": "39522252",
+          "title": "Cycloastragenol reduces microglial NLRP3 inflammasome activation in Parkinson's disease models by promoting autophagy and reducing Scrib-driven ROS.",
+          "authors": "Feng L, Lo H, Zheng J, et al.",
+          "journal": "Phytomedicine : international journal of phytotherapy and phytopharmacology",
+          "year": "2024",
+          "abstract_snippet": "BACKGROUND: In Parkinson's disease (PD), microglial autophagy is crucial for the maintenance of cellular redox homeostasis. Meanwhile, cycloastragenol (CAG), a triterpenoid saponin and the principal active component of Astragalus, reduces the activation of NLRP3 inflammasomes. Nevertheless, the spec...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39522252/"
+        },
+        {
+          "pmid": "39772392",
+          "title": "G6PD deficiency triggers dopamine loss and the initiation of Parkinson's disease pathogenesis.",
+          "authors": "Stykel MG, Siripala SV, Soubeyrand E, et al.",
+          "journal": "Cell reports",
+          "year": "2025",
+          "abstract_snippet": "Loss of dopaminergic neurons in Parkinson's disease (PD) is preceded by loss of synaptic dopamine (DA) and accumulation of proteinaceous aggregates. Linking these deficits is critical to restoring DA signaling in PD. Using murine and human pluripotent stem cell (hPSC) models of PD coupled with human...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39772392/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "33788167",
+          "title": "Evaluation of a Low-Toxicity PARP Inhibitor as a Neuroprotective Agent for Parkinson's Disease.",
+          "authors": "Puentes LN, Lengyel-Zhand Z, Reilly SW, et al.",
+          "journal": "Molecular neurobiology",
+          "year": "2021",
+          "abstract_snippet": "Repurposing PARP-1 inhibitors (PARPi) for non-oncological applications offers an attractive therapeutic strategy for pathological conditions characterized by PARP-1 hyperactivity. In the context of Parkinson's disease (PD), PARP-1 hyperactivity has been linked to neuronal death and disease progressi...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33788167/",
+          "total_results": 2
+        },
+        {
+          "pmid": "33749726",
+          "title": "Salvage NAD+ biosynthetic pathway enzymes moonlight as molecular chaperones to protect against proteotoxicity.",
+          "authors": "Pinkerton M, Ruetenik A, Bazylianska V, et al.",
+          "journal": "Human molecular genetics",
+          "year": "2021",
+          "abstract_snippet": "Human neurodegenerative proteinopathies are disorders associated with abnormal protein depositions in brain neurons. They include polyglutamine (polyQ) conditions such as Huntington's disease (HD) and \u03b1-synucleinopathies such as Parkinson's disease (PD). Overexpression of NMNAT/Nma1, an enzyme in th...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33749726/"
+        }
+      ],
+      "semantic_scholar_papers": [
+        {
+          "title": "G6PD deficiency triggers dopamine loss and the initiation of Parkinson's disease pathogenesis.",
+          "year": 2025,
+          "citations": 16,
+          "url": "https://www.semanticscholar.org/paper/d1b16a04277abef8697958c3c7ad22a9a0e2400c",
+          "authors": "Morgan G. Stykel, Shehani V. Siripala, Eric Soubeyrand"
+        },
+        {
+          "title": "The NADPARK study: A randomized phase I trial of nicotinamide riboside supplementation in Parkinson's disease.",
+          "year": 2022,
+          "citations": 222,
+          "url": "https://www.semanticscholar.org/paper/84882c0272eacd9884bdd21179fb6fcd6ddc2bb7",
+          "authors": "Brage Brakedal, Christian D\u00f6lle, F. Riemer"
+        },
+        {
+          "title": "TIGAR plays neuroprotective roles in MPP+/MPTP-induced Parkinson's disease by alleviating ferroptosis.",
+          "year": 2025,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/b0cd3b52d14f40fe60b977cf6a4d0189c9d375ca",
+          "authors": "Yi-chao Sheng, Jia-ni Huang, Wei-long Wu"
+        },
+        {
+          "title": "Sirtuins in Parkinson's Disease: Molecular Mechanisms and Pathophysiological Roles.",
+          "year": 2025,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/0afc545d7ab865d713befa1f85f755c15afc6e8a",
+          "authors": "Xiang Li, Xuequn Luo, Xueqin Cao"
+        },
+        {
+          "title": "Multi-omics characterization of improved cognitive functions in Parkinson\u2019s disease patients after the combined metabolic activator treatment: a randomized, double-blinded, placebo-controlled phase II trial",
+          "year": 2025,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/f8b0d18a7dc30baf0259d6526200e523602a1669",
+          "authors": "B. Yulu\u011f, O. Altay, Xiangyu Li"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "The NADPARK study: A randomized phase I trial of nicotinamide riboside supplementation in Parkinson's disease.",
+        "year": 2022,
+        "citations": 222,
+        "url": "https://www.semanticscholar.org/paper/84882c0272eacd9884bdd21179fb6fcd6ddc2bb7",
+        "authors": "Brage Brakedal, Christian D\u00f6lle, F. Riemer"
+      },
+      "max_citations": 222,
+      "faers_signal": "strong",
+      "faers_total_reports": 5953,
+      "faers_cooccurrences": 95,
+      "faers_interpretation": "95 FAERS reports mention both Nicotinamide and Parkinson's disease-related terms (1.6% of all Nicotinamide reports). This suggests real-world clinical association.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "HY-50767 (1.559)",
+        "6942543 (1.545)",
+        "linifanib (1.544)",
+        "GSK-J2 (1.532)",
+        "Bay 11-7821 (1.524)"
+      ],
+      "signature_interpretation": "Nicotinamide was not found among the top 33 drugs that reverse the Parkinson's disease gene signature. Top reversers: HY-50767 (1.559), 6942543 (1.545), linifanib (1.544)",
+      "ai_hypothesis": "of its antioxidant and anti-inflammatory properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 0,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "nicotinamide",
+              "entity_group": "Medication",
+              "score": 0.9919999837875366
+            },
+            {
+              "entity": "adenine dinucleotide ( nad",
+              "entity_group": "Medication",
+              "score": 0.9240000247955322
+            },
+            {
+              "entity": "##lenishment therapy",
+              "entity_group": "Therapeutic_procedure",
+              "score": 0.7860000133514404
+            },
+            {
+              "entity": "nico",
+              "entity_group": "Medication",
+              "score": 0.9290000200271606
+            },
+            {
+              "entity": "parkinson ' s disease",
+              "entity_group": "Disease_disorder",
+              "score": 0.9919999837875366
+            },
+            {
+              "entity": "exceeding",
+              "entity_group": "Dosage",
+              "score": 0.7210000157356262
+            },
+            {
+              "entity": "mg",
+              "entity_group": "Dosage",
+              "score": 0.8999999761581421
+            }
+          ]
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "Unknown",
+      "failed_trial_count": 1,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.8864,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Nicotinamide \u2014[is a therapeutic for]\u2192 MESH:D014376 \u2014[is treated by]\u2192 DB01234 \u2014[is a therapeutic for]\u2192 Parkinson's disease",
+      "kg_paths_text": "\u2022 Nicotinamide \u2014[is a therapeutic for]\u2192 MESH:D014376 \u2014[is treated by]\u2192 DB01234 \u2014[is a therapeutic for]\u2192 Parkinson's disease\n\u2022 Nicotinamide \u2014[is a therapeutic for]\u2192 MESH:D014376 \u2014[is treated by]\u2192 DB00959 \u2014[is a therapeutic for]\u2192 Parkinson's disease\n\u2022 Nicotinamide \u2014[is a therapeutic for]\u2192 MESH:D012559 \u2014[is treated by]\u2192 DB00376 \u2014[treats]\u2192 Parkinson's disease",
+      "validation_experiments": [],
+      "novelty_score": 0.16200000047683716,
+      "novelty_level": "ESTABLISHED",
+      "is_known_treatment": false,
+      "clinical_trials_total": 8,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT03568968",
+          "title": "A Randomized Controlled Trial of Nicotinamide Riboside Supplementation in Early Parkinson's Disease",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "410",
+          "url": "https://clinicaltrials.gov/study/NCT03568968"
+        },
+        {
+          "nct_id": "NCT03462680",
+          "title": "GPR109A and Parkinson's Disease: Role of Niacin in Outcome Measures",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "47",
+          "url": "https://clinicaltrials.gov/study/NCT03462680"
+        },
+        {
+          "nct_id": "NCT05589766",
+          "title": "N-DOSE: A Dose Optimization Trial of Nicotinamide Riboside in Parkinson's Disease",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "81",
+          "url": "https://clinicaltrials.gov/study/NCT05589766"
+        },
+        {
+          "nct_id": "NCT03808961",
+          "title": "Low Dose Niacin (Vitamin B3) for Parkinson's Disease",
+          "status": "TERMINATED",
+          "phase": "NA",
+          "enrollment": "7",
+          "url": "https://clinicaltrials.gov/study/NCT03808961"
+        },
+        {
+          "nct_id": "NCT04044131",
+          "title": "Metabolic Cofactor Supplementation in Alzheimer's Disease (AD) and Parkinson's Disease (PD) Patients",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "120",
+          "url": "https://clinicaltrials.gov/study/NCT04044131"
+        }
+      ],
+      "trial_phases": {
+        "PHASE3": 1,
+        "NA": 5,
+        "PHASE2": 2
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "8 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "193 PubMed articles on this drug-disease pair",
+        "2 article(s) specifically mention repurposing/repositioning",
+        "Supported by 4 independent AI pillars",
+        "High molecular similarity (0.65) to Niacin",
+        "Strong FAERS signal: 95 adverse event reports link drug to disease (5953 total reports)",
+        "Highly cited paper (222 citations): \"The NADPARK study: A randomized phase I trial of nicotinamid...\"",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.89, 1 genetic targets)"
+      ],
+      "disease_entity": "Disease::MESH:D010300",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 52,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00227",
+            "drug_name": "Lovastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00682",
+            "drug_name": "Warfarin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB08496",
+            "drug_name": "(R)-Warfarin",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB14055",
+            "drug_name": "(S)-Warfarin",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB08735",
+            "drug_name": "4-HYDROXY-3-[(1S,3R)-3-HYDROXY-1-PHENYLBUTYL]-2H-CHROMEN-2-ONE",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB08736",
+            "drug_name": "4-HYDROXY-3-[(1S,3S)-3-HYDROXY-1-PHENYLBUTYL]-2H-CHROMEN-2-ONE",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB01418",
+            "drug_name": "Acenocoumarol",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB00346",
+            "drug_name": "Alfuzosin",
+            "severity": "moderate"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.3880000114440918,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.5410000085830688,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.993
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 3,
+        "n_expressed": 2,
+        "mean_tpm_in_tissue": 21.64,
+        "max_tpm_in_tissue": 61.04,
+        "tissue_specificity": 0.23,
+        "context_modifier": 0.999
+      },
+      "ensemble_prob": 0.0072,
+      "ensemble_features": {
+        "kg_score": 0.8361,
+        "degree_penalty": 0.941,
+        "n_drug_targets": 13,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 7.4559
+      },
+      "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
       }
     },
     {
@@ -483,6 +909,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.91, 4 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D010300",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -619,15 +1046,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 1.03
       },
-      "disease_entity": "Disease::MESH:D010300",
-      "docking": {
-        "kcal_per_mol": -6.83,
-        "target_symbol": "ABL1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.9234,
+      "ensemble_prob": 0.9518,
       "ensemble_features": {
         "kg_score": 0.9987,
         "degree_penalty": 0.7483,
@@ -636,7 +1055,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.7081
       },
-      "ensemble_rank": 2,
+      "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": -6.83,
+        "target_symbol": "ABL1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -651,823 +1077,10 @@
       }
     },
     {
-      "drug_name": "Nicotinamide",
-      "drug_id": "DB02701",
-      "disease_name": "Parkinson's disease",
-      "combined_score": 0.5213000178337097,
-      "pillars_hit": 4,
-      "transe_rank": 151,
-      "transe_score": -10.8118,
-      "pykeen_score": 0,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0.6538,
-      "similar_to": "Niacin",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.824999988079071,
-      "proximity_distance": 0.699999988079071,
-      "admet_score": 0.7766,
-      "admet_flags": "clean",
-      "primekg_score": 0.2616,
-      "dti_score": 0.7197,
-      "dti_best_target": "SLC18A2",
-      "kg_group_score": 0.1118,
-      "structural_group_score": 0.7197,
-      "network_group_score": 0.7763000130653381,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.8864,
-      "admet_multiplier": 0.9553,
-      "efficacy_score": 0.5457000136375427,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 3,
-      "shared_targets": [
-        "BST1",
-        "MTOR",
-        "NNMT"
-      ],
-      "pubmed_total": 193,
-      "pubmed_treatment_total": 121,
-      "pubmed_repurposing_total": 2,
-      "key_papers": [
-        {
-          "pmid": "38016950",
-          "title": "NR-SAFE: a randomized, double-blind safety trial of high dose nicotinamide riboside in Parkinson's disease.",
-          "authors": "Berven H, Kverneng S, Sheard E, et al.",
-          "journal": "Nature communications",
-          "year": "2023",
-          "abstract_snippet": "Nicotinamide adenine dinucleotide (NAD) replenishment therapy using nicotinamide riboside (NR) shows promise for Parkinson's disease (PD) and other neurodegenerative disorders. However, the optimal dose of NR remains unknown, and doses exceeding 2000 mg daily have not been tested in humans. To evalu...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38016950/",
-          "total_results": 193
-        },
-        {
-          "pmid": "41016604",
-          "title": "Sirtuins in Parkinson's disease: Molecular mechanisms and pathophysiological roles.",
-          "authors": "Li X, Luo X, Cao X, et al.",
-          "journal": "Ageing research reviews",
-          "year": "2025",
-          "abstract_snippet": "Parkinson's disease (PD) is a progressive neurodegenerative disorder that is associated with mitochondrial dysfunction, oxidative stress, neuroinflammation, and abnormal protein aggregation. The silent information regulator 2 (Sir2) family of proteins, known as sirtuins (SIRT1 - SIRT7), is nicotinam...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41016604/"
-        },
-        {
-          "pmid": "22930493",
-          "title": "Vitamin D and Parkinson's disease.",
-          "authors": "Vinh Qu\u00f4c Luong K, Thi Ho\u00e0ng Nguy\u00ean L",
-          "journal": "Journal of neuroscience research",
-          "year": "2012",
-          "abstract_snippet": "Parkinson's disease (PD) is the second most common form of neurodegeneration among the elderly population. PD is clinically characterized by tremors, rigidity, slowness of movement, and postural imbalance. Interestingly, a significant association has been demonstrated between PD and low levels of vi...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/22930493/"
-        },
-        {
-          "pmid": "39522252",
-          "title": "Cycloastragenol reduces microglial NLRP3 inflammasome activation in Parkinson's disease models by promoting autophagy and reducing Scrib-driven ROS.",
-          "authors": "Feng L, Lo H, Zheng J, et al.",
-          "journal": "Phytomedicine : international journal of phytotherapy and phytopharmacology",
-          "year": "2024",
-          "abstract_snippet": "BACKGROUND: In Parkinson's disease (PD), microglial autophagy is crucial for the maintenance of cellular redox homeostasis. Meanwhile, cycloastragenol (CAG), a triterpenoid saponin and the principal active component of Astragalus, reduces the activation of NLRP3 inflammasomes. Nevertheless, the spec...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39522252/"
-        },
-        {
-          "pmid": "39772392",
-          "title": "G6PD deficiency triggers dopamine loss and the initiation of Parkinson's disease pathogenesis.",
-          "authors": "Stykel MG, Siripala SV, Soubeyrand E, et al.",
-          "journal": "Cell reports",
-          "year": "2025",
-          "abstract_snippet": "Loss of dopaminergic neurons in Parkinson's disease (PD) is preceded by loss of synaptic dopamine (DA) and accumulation of proteinaceous aggregates. Linking these deficits is critical to restoring DA signaling in PD. Using murine and human pluripotent stem cell (hPSC) models of PD coupled with human...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39772392/"
-        }
-      ],
-      "repurposing_papers": [
-        {
-          "pmid": "33788167",
-          "title": "Evaluation of a Low-Toxicity PARP Inhibitor as a Neuroprotective Agent for Parkinson's Disease.",
-          "authors": "Puentes LN, Lengyel-Zhand Z, Reilly SW, et al.",
-          "journal": "Molecular neurobiology",
-          "year": "2021",
-          "abstract_snippet": "Repurposing PARP-1 inhibitors (PARPi) for non-oncological applications offers an attractive therapeutic strategy for pathological conditions characterized by PARP-1 hyperactivity. In the context of Parkinson's disease (PD), PARP-1 hyperactivity has been linked to neuronal death and disease progressi...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33788167/",
-          "total_results": 2
-        },
-        {
-          "pmid": "33749726",
-          "title": "Salvage NAD+ biosynthetic pathway enzymes moonlight as molecular chaperones to protect against proteotoxicity.",
-          "authors": "Pinkerton M, Ruetenik A, Bazylianska V, et al.",
-          "journal": "Human molecular genetics",
-          "year": "2021",
-          "abstract_snippet": "Human neurodegenerative proteinopathies are disorders associated with abnormal protein depositions in brain neurons. They include polyglutamine (polyQ) conditions such as Huntington's disease (HD) and \u03b1-synucleinopathies such as Parkinson's disease (PD). Overexpression of NMNAT/Nma1, an enzyme in th...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33749726/"
-        }
-      ],
-      "semantic_scholar_papers": [
-        {
-          "title": "G6PD deficiency triggers dopamine loss and the initiation of Parkinson's disease pathogenesis.",
-          "year": 2025,
-          "citations": 16,
-          "url": "https://www.semanticscholar.org/paper/d1b16a04277abef8697958c3c7ad22a9a0e2400c",
-          "authors": "Morgan G. Stykel, Shehani V. Siripala, Eric Soubeyrand"
-        },
-        {
-          "title": "The NADPARK study: A randomized phase I trial of nicotinamide riboside supplementation in Parkinson's disease.",
-          "year": 2022,
-          "citations": 222,
-          "url": "https://www.semanticscholar.org/paper/84882c0272eacd9884bdd21179fb6fcd6ddc2bb7",
-          "authors": "Brage Brakedal, Christian D\u00f6lle, F. Riemer"
-        },
-        {
-          "title": "TIGAR plays neuroprotective roles in MPP+/MPTP-induced Parkinson's disease by alleviating ferroptosis.",
-          "year": 2025,
-          "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/b0cd3b52d14f40fe60b977cf6a4d0189c9d375ca",
-          "authors": "Yi-chao Sheng, Jia-ni Huang, Wei-long Wu"
-        },
-        {
-          "title": "Sirtuins in Parkinson's Disease: Molecular Mechanisms and Pathophysiological Roles.",
-          "year": 2025,
-          "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/0afc545d7ab865d713befa1f85f755c15afc6e8a",
-          "authors": "Xiang Li, Xuequn Luo, Xueqin Cao"
-        },
-        {
-          "title": "Multi-omics characterization of improved cognitive functions in Parkinson\u2019s disease patients after the combined metabolic activator treatment: a randomized, double-blinded, placebo-controlled phase II trial",
-          "year": 2025,
-          "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/f8b0d18a7dc30baf0259d6526200e523602a1669",
-          "authors": "B. Yulu\u011f, O. Altay, Xiangyu Li"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "The NADPARK study: A randomized phase I trial of nicotinamide riboside supplementation in Parkinson's disease.",
-        "year": 2022,
-        "citations": 222,
-        "url": "https://www.semanticscholar.org/paper/84882c0272eacd9884bdd21179fb6fcd6ddc2bb7",
-        "authors": "Brage Brakedal, Christian D\u00f6lle, F. Riemer"
-      },
-      "max_citations": 222,
-      "faers_signal": "strong",
-      "faers_total_reports": 5953,
-      "faers_cooccurrences": 95,
-      "faers_interpretation": "95 FAERS reports mention both Nicotinamide and Parkinson's disease-related terms (1.6% of all Nicotinamide reports). This suggests real-world clinical association.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "HY-50767 (1.559)",
-        "6942543 (1.545)",
-        "linifanib (1.544)",
-        "GSK-J2 (1.532)",
-        "Bay 11-7821 (1.524)"
-      ],
-      "signature_interpretation": "Nicotinamide was not found among the top 33 drugs that reverse the Parkinson's disease gene signature. Top reversers: HY-50767 (1.559), 6942543 (1.545), linifanib (1.544)",
-      "ai_hypothesis": "of its antioxidant and anti-inflammatory properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 0,
-          "negative_signals": 0,
-          "mechanism_signals": 0,
-          "extracted_entities": [
-            {
-              "entity": "nicotinamide",
-              "entity_group": "Medication",
-              "score": 0.9919999837875366
-            },
-            {
-              "entity": "adenine dinucleotide ( nad",
-              "entity_group": "Medication",
-              "score": 0.9240000247955322
-            },
-            {
-              "entity": "##lenishment therapy",
-              "entity_group": "Therapeutic_procedure",
-              "score": 0.7860000133514404
-            },
-            {
-              "entity": "nico",
-              "entity_group": "Medication",
-              "score": 0.9290000200271606
-            },
-            {
-              "entity": "parkinson ' s disease",
-              "entity_group": "Disease_disorder",
-              "score": 0.9919999837875366
-            },
-            {
-              "entity": "exceeding",
-              "entity_group": "Dosage",
-              "score": 0.7210000157356262
-            },
-            {
-              "entity": "mg",
-              "entity_group": "Dosage",
-              "score": 0.8999999761581421
-            }
-          ]
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "Unknown",
-      "failed_trial_count": 1,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.8864,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "Nicotinamide \u2014[is a therapeutic for]\u2192 MESH:D014376 \u2014[is treated by]\u2192 DB01234 \u2014[is a therapeutic for]\u2192 Parkinson's disease",
-      "kg_paths_text": "\u2022 Nicotinamide \u2014[is a therapeutic for]\u2192 MESH:D014376 \u2014[is treated by]\u2192 DB01234 \u2014[is a therapeutic for]\u2192 Parkinson's disease\n\u2022 Nicotinamide \u2014[is a therapeutic for]\u2192 MESH:D014376 \u2014[is treated by]\u2192 DB00959 \u2014[is a therapeutic for]\u2192 Parkinson's disease\n\u2022 Nicotinamide \u2014[is a therapeutic for]\u2192 MESH:D012559 \u2014[is treated by]\u2192 DB00376 \u2014[treats]\u2192 Parkinson's disease",
-      "validation_experiments": [],
-      "novelty_score": 0.15600000321865082,
-      "novelty_level": "ESTABLISHED",
-      "is_known_treatment": false,
-      "clinical_trials_total": 8,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT03816020",
-          "title": "NAD-supplementation in Drug na\u00efve Parkinson's Disease",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "30",
-          "url": "https://clinicaltrials.gov/study/NCT03816020"
-        },
-        {
-          "nct_id": "NCT03568968",
-          "title": "A Randomized Controlled Trial of Nicotinamide Riboside Supplementation in Early Parkinson's Disease",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "410",
-          "url": "https://clinicaltrials.gov/study/NCT03568968"
-        },
-        {
-          "nct_id": "NCT03462680",
-          "title": "GPR109A and Parkinson's Disease: Role of Niacin in Outcome Measures",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "47",
-          "url": "https://clinicaltrials.gov/study/NCT03462680"
-        },
-        {
-          "nct_id": "NCT05344404",
-          "title": "NR-SAFE: Safety of High-dose Nicotinamide Riboside (NR) in Parkinson's Disease",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "20",
-          "url": "https://clinicaltrials.gov/study/NCT05344404"
-        },
-        {
-          "nct_id": "NCT03808961",
-          "title": "Low Dose Niacin (Vitamin B3) for Parkinson's Disease",
-          "status": "TERMINATED",
-          "phase": "NA",
-          "enrollment": "7",
-          "url": "https://clinicaltrials.gov/study/NCT03808961"
-        }
-      ],
-      "trial_phases": {
-        "NA": 5,
-        "PHASE3": 1,
-        "PHASE2": 2
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "8 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
-        "193 PubMed articles on this drug-disease pair",
-        "2 article(s) specifically mention repurposing/repositioning",
-        "Supported by 4 independent AI pillars",
-        "High molecular similarity (0.65) to Niacin",
-        "Strong FAERS signal: 95 adverse event reports link drug to disease (5953 total reports)",
-        "Highly cited paper (222 citations): \"The NADPARK study: A randomized phase I trial of nicotinamid...\"",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.89, 1 genetic targets)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 52,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00227",
-            "drug_name": "Lovastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00682",
-            "drug_name": "Warfarin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB08496",
-            "drug_name": "(R)-Warfarin",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB14055",
-            "drug_name": "(S)-Warfarin",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB08735",
-            "drug_name": "4-HYDROXY-3-[(1S,3R)-3-HYDROXY-1-PHENYLBUTYL]-2H-CHROMEN-2-ONE",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB08736",
-            "drug_name": "4-HYDROXY-3-[(1S,3S)-3-HYDROXY-1-PHENYLBUTYL]-2H-CHROMEN-2-ONE",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB01418",
-            "drug_name": "Acenocoumarol",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB00346",
-            "drug_name": "Alfuzosin",
-            "severity": "moderate"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
-        "pharmgkb": []
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.38100001215934753,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.5210000276565552,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.993
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Whole Blood"
-        ],
-        "n_genes": 3,
-        "n_expressed": 2,
-        "mean_tpm_in_tissue": 21.64,
-        "max_tpm_in_tissue": 61.04,
-        "tissue_specificity": 0.23,
-        "context_modifier": 0.999
-      },
-      "disease_entity": "Disease::MESH:D010300",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.007,
-      "ensemble_features": {
-        "kg_score": 0.8361,
-        "degree_penalty": 0.941,
-        "n_drug_targets": 13,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 7.4559
-      },
-      "ensemble_rank": 8,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Acetylcysteine",
-      "drug_id": "DB06151",
-      "disease_name": "Parkinson's disease",
-      "combined_score": 0.5133000016212463,
-      "pillars_hit": 4,
-      "transe_rank": 27,
-      "transe_score": -10.2238,
-      "pykeen_score": -12.3315,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.7620000243186951,
-      "proximity_distance": 0.949999988079071,
-      "admet_score": 0.7052,
-      "admet_flags": "clean",
-      "primekg_score": 0.2532,
-      "dti_score": 0.5648,
-      "dti_best_target": "SLC18A2",
-      "kg_group_score": 0.3172,
-      "structural_group_score": 0.5648,
-      "network_group_score": 0.6640999913215637,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.878,
-      "admet_multiplier": 0.941,
-      "efficacy_score": 0.5454999804496765,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 12,
-      "shared_targets": [
-        "GRIN1",
-        "GRIN2A",
-        "GRIN2B",
-        "GRIN2D",
-        "GRIN3A",
-        "HIF1A",
-        "IL1A",
-        "MAPK14",
-        "MT-CO2",
-        "SOD2",
-        "TNF",
-        "TP53"
-      ],
-      "pubmed_total": 201,
-      "pubmed_treatment_total": 138,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "23665395",
-          "title": "Glutathione metabolism and Parkinson's disease.",
-          "authors": "Smeyne M, Smeyne RJ",
-          "journal": "Free radical biology & medicine",
-          "year": "2013",
-          "abstract_snippet": "It has been established that oxidative stress, defined as the condition in which the sum of free radicals in a cell exceeds the antioxidant capacity of the cell, contributes to the pathogenesis of Parkinson disease. Glutathione is a ubiquitous thiol tripeptide that acts alone or in concert with enzy...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/23665395/",
-          "total_results": 201
-        },
-        {
-          "pmid": "40712453",
-          "title": "Decoding Parkinson's Disease: The interplay of cell death pathways, oxidative stress, and therapeutic innovations.",
-          "authors": "Liu T, Kong X, Qiao J, et al.",
-          "journal": "Redox biology",
-          "year": "2025",
-          "abstract_snippet": "Parkinson's disease (PD), a complex neurodegenerative disorder characterized by selective loss of substantia nigra (SN) dopaminergic neurons, pathological aggregation of \u03b1-synuclein (\u03b1-syn), and chronic neuroinflammation, is fundamentally driven by redox imbalance and oxidative stress. Recent studie...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40712453/"
-        },
-        {
-          "pmid": "40794323",
-          "title": "Selenium and resveratrol attenuate rotenone-induced Parkinson's disease in zebrafish model.",
-          "authors": "Rahimmi A, Khademerfan M",
-          "journal": "Molecular biology reports",
-          "year": "2025",
-          "abstract_snippet": "ABRACTST: BACKGROUND AND AIMS: Parkinson's disease (PD) is a progressive neurodegenerative disorder characterized by the loss of dopaminergic neurons, leading to motor and non-motor symptoms. Oxidative stress and inflammation are key contributors to PD pathogenesis, yet current treatments primarily ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40794323/"
-        },
-        {
-          "pmid": "26651975",
-          "title": "Cysteine Network (CYSTEINET) Dysregulation in Parkinson's Disease: Role of N-acetylcysteine.",
-          "authors": "Mart\u00ednez-Banaclocha M",
-          "journal": "Current drug metabolism",
-          "year": "2016",
-          "abstract_snippet": "BACKGROUND: Reactive species have been regarded as by-products of cellular metabolism, which cause oxidative damage contributing to aging and neurodegenerative diseases. However, accumulated evidence support the notion that reactive species mediate intracellular and extracellular signals that regula...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/26651975/"
-        },
-        {
-          "pmid": "38731862",
-          "title": "Tyrosine Hydroxylase Inhibitors and Dopamine Receptor Agonists Combination Therapy for Parkinson's Disease.",
-          "authors": "Yi LX, Tan EK, Zhou ZD",
-          "journal": "International journal of molecular sciences",
-          "year": "2024",
-          "abstract_snippet": "There are currently no disease-modifying therapies for Parkinson's disease (PD), a progressive neurodegenerative disorder associated with dopaminergic neuronal loss. There is increasing evidence that endogenous dopamine (DA) can be a pathological factor in neurodegeneration in PD. Tyrosine hydroxyla...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38731862/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "N-acetylcysteine for Parkinson's disease: a translational systematic review of mechanistic and early clinical data.",
-          "year": 2025,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/dc1f0b6621f6bf588e2fadb935734b52e58c9f0b",
-          "authors": "Anas Mohammad, Mohammad Ibrahim, Moeez Akram"
-        },
-        {
-          "title": "Modulation of lncRNAs and oxidative stress related genes by N-acetylcysteine and S-methylcysteine in rotenone-induced Parkinson's disease",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/c0b6e8f62dbf708d0bb00a9dd3d29e6de21e7e2b",
-          "authors": "Sahar Yaqubi, B. Seyedalipour, Mohammad Karimian"
-        },
-        {
-          "title": "Current trends and future prospects of N-acetylcysteine utilizations in Parkinson's disease: A literature network analysis",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/fcd0364c3a5bc93a2a1d63205ec14e74a161c43f",
-          "authors": "M. Muthmainah, N. Wiyono, F. K. Syah"
-        },
-        {
-          "title": "Selenium and resveratrol attenuate rotenone-induced Parkinson\u2019s disease in zebrafish model",
-          "year": 2025,
-          "citations": 2,
-          "url": "https://www.semanticscholar.org/paper/20354337e550b1b025a2113565f6149c0f453108",
-          "authors": "Arman Rahimmi, M. Khademerfan"
-        },
-        {
-          "title": "Curcumin and N-Acetylcysteine Nanocarriers Alone or Combined with Deferoxamine Target the Mitochondria and Protect against Neurotoxicity and Oxidative Stress in a Co-Culture Model of Parkinson\u2019s Disease",
-          "year": 2023,
-          "citations": 14,
-          "url": "https://www.semanticscholar.org/paper/ef07fc95bf272df5f3d0fd295f0a0d5844a80638",
-          "authors": "Leah Mursaleen, S. Chan, B. Noble"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Curcumin and N-Acetylcysteine Nanocarriers Alone or Combined with Deferoxamine Target the Mitochondria and Protect against Neurotoxicity and Oxidative Stress in a Co-Culture Model of Parkinson\u2019s Disease",
-        "year": 2023,
-        "citations": 14,
-        "url": "https://www.semanticscholar.org/paper/ef07fc95bf272df5f3d0fd295f0a0d5844a80638",
-        "authors": "Leah Mursaleen, S. Chan, B. Noble"
-      },
-      "max_citations": 14,
-      "faers_signal": "strong",
-      "faers_total_reports": 10374,
-      "faers_cooccurrences": 150,
-      "faers_interpretation": "150 FAERS reports mention both Acetylcysteine and Parkinson's disease-related terms (1.4% of all Acetylcysteine reports). This suggests real-world clinical association.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "HY-50767 (1.559)",
-        "6942543 (1.545)",
-        "linifanib (1.544)",
-        "GSK-J2 (1.532)",
-        "Bay 11-7821 (1.524)"
-      ],
-      "signature_interpretation": "Acetylcysteine was not found among the top 33 drugs that reverse the Parkinson's disease gene signature. Top reversers: HY-50767 (1.559), 6942543 (1.545), linifanib (1.544)",
-      "ai_hypothesis": "of its antioxidant properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "Phase 1",
-      "failed_trial_count": 1,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.878,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "Acetylcysteine \u2014[downregulates]\u2192 gene-6192 \u2014[is downregulated by]\u2192 DB00392 \u2014[treats]\u2192 Parkinson's disease",
-      "kg_paths_text": "\u2022 Acetylcysteine \u2014[downregulates]\u2192 gene-6192 \u2014[is downregulated by]\u2192 DB00392 \u2014[treats]\u2192 Parkinson's disease\n\u2022 Acetylcysteine \u2014[downregulates]\u2192 gene-6192 \u2014[is downregulated by]\u2192 DB00190 \u2014[treats]\u2192 Parkinson's disease\n\u2022 Acetylcysteine \u2014[upregulates]\u2192 gene-1021 \u2014[activates]\u2192 gene-25 \u2014[is linked to]\u2192 Parkinson's disease",
-      "validation_experiments": [],
-      "novelty_score": 0.1850000023841858,
-      "novelty_level": "ESTABLISHED",
-      "is_known_treatment": false,
-      "clinical_trials_total": 10,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT01470027",
-          "title": "N-Acetylcysteine for Neuroprotection in Parkinson's Disease",
-          "status": "COMPLETED",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "50",
-          "url": "https://clinicaltrials.gov/study/NCT01470027"
-        },
-        {
-          "nct_id": "NCT07093944",
-          "title": "Randomized, Placebo-Controlled Trial of N-acetylcysteine In Parkinson's Disease Patients: A Pilot Study",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "42",
-          "url": "https://clinicaltrials.gov/study/NCT07093944"
-        },
-        {
-          "nct_id": "NCT02860338",
-          "title": "COMPARATIVE EFFECTIVENESS OF MCI and DEMENTIA TREATMENTS IN A COMMUNITY-BASED DEMENTIA PRACTICE",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "900",
-          "url": "https://clinicaltrials.gov/study/NCT02860338"
-        },
-        {
-          "nct_id": "NCT02445651",
-          "title": "Physiological Effects of Nutritional Support in Patients With Parkinson's Disease",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "51",
-          "url": "https://clinicaltrials.gov/study/NCT02445651"
-        },
-        {
-          "nct_id": "NCT02212678",
-          "title": "Repeated-Dose Oral N-acetylcysteine for the Treatment of Parkinson's Disease",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "8",
-          "url": "https://clinicaltrials.gov/study/NCT02212678"
-        }
-      ],
-      "trial_phases": {
-        "PHASE1": 3,
-        "PHASE2": 5,
-        "NA": 1,
-        "PHASE3": 1
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "10 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
-        "201 PubMed articles on this drug-disease pair",
-        "Supported by 4 independent AI pillars",
-        "Strong FAERS signal: 150 adverse event reports link drug to disease (10374 total reports)",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.88, 1 genetic targets)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "likely",
-        "dose_range": "trial",
-        "confidence": "medium",
-        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
-        "chembl_phase": 2.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 55,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00227",
-            "drug_name": "Lovastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00563",
-            "drug_name": "Methotrexate",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00175",
-            "drug_name": "Pravastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01098",
-            "drug_name": "Rosuvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00641",
-            "drug_name": "Simvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB13139",
-            "drug_name": "(-)-Salbutamol",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB06403",
-            "drug_name": "Ambrisentan",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB11586",
-            "drug_name": "Asunaprevir",
-            "severity": "moderate"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (TOLLIP / rs3750920)",
-        "cpic": [],
-        "pharmgkb": [
-          {
-            "gene": "TOLLIP",
-            "variant": "rs3750920",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1447982723"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.3799999952316284,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.5130000114440918,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 1.0
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Whole Blood"
-        ],
-        "n_genes": 12,
-        "n_expressed": 6,
-        "mean_tpm_in_tissue": 464.68,
-        "max_tpm_in_tissue": 5329.75,
-        "tissue_specificity": 0.0,
-        "context_modifier": 1.03
-      },
-      "disease_entity": "Disease::MESH:D010300",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.337,
-      "ensemble_features": {
-        "kg_score": 0.9817,
-        "degree_penalty": 0.8715,
-        "n_drug_targets": 0,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 5.2679
-      },
-      "ensemble_rank": 5,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [
-          "THIOL"
-        ],
-        "n_alerts": 2,
-        "alert_names": [
-          "thiol_2",
-          "thiol_warhead"
-        ]
-      }
-    },
-    {
       "drug_name": "Urea",
       "drug_id": "DB03904",
       "disease_name": "Parkinson's disease",
-      "combined_score": 0.511900007724762,
+      "combined_score": 0.5218999981880188,
       "pillars_hit": 4,
       "transe_rank": 39,
       "transe_score": -10.324,
@@ -1486,15 +1099,15 @@
       "admet_score": 0.7639,
       "admet_flags": "clean",
       "primekg_score": 0.2577,
-      "dti_score": 0.513,
-      "dti_best_target": "DCTN1",
+      "dti_score": 0.5714,
+      "dti_best_target": "PGF",
       "kg_group_score": 0.3577,
-      "structural_group_score": 0.513,
+      "structural_group_score": 0.5714,
       "network_group_score": 0.7099000215530396,
       "txgnn_group_score": 0,
       "mr_group_score": 0.7569,
       "admet_multiplier": 0.9528,
-      "efficacy_score": 0.5372999906539917,
+      "efficacy_score": 0.5478000044822693,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 5,
@@ -1649,7 +1262,7 @@
       "mechanistic_hypothesis": "Urea \u2014[is a therapeutic for]\u2192 Parkinson's disease",
       "kg_paths_text": "\u2022 Urea \u2014[is a therapeutic for]\u2192 Parkinson's disease\n\u2022 Urea \u2014[is a therapeutic for]\u2192 OMIM:168600 \u2014[is treated by]\u2192 DB01037 \u2014[treats]\u2192 Parkinson's disease\n\u2022 Urea \u2014[is a therapeutic for]\u2192 OMIM:168600 \u2014[is treated by]\u2192 DB01037 \u2014[treats]\u2192 Parkinson's disease",
       "validation_experiments": [],
-      "novelty_score": 0.3070000112056732,
+      "novelty_score": 0.31299999356269836,
       "novelty_level": "KNOWN",
       "is_known_treatment": true,
       "clinical_trials_total": 1,
@@ -1674,8 +1287,10 @@
         "Supported by 4 independent AI pillars",
         "Moderate FAERS signal: 26 adverse event reports mention drug-disease co-occurrence",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.76, 1 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.76, 1 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D010300",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1705,10 +1320,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.3790000081062317,
+        "triangulation_score": 0.382999986410141,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.5120000243186951,
+          "kg": 0.5220000147819519,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 1.0
@@ -1725,15 +1340,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.876
       },
-      "disease_entity": "Disease::MESH:D010300",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.0003,
+      "ensemble_prob": 0.0043,
       "ensemble_features": {
         "kg_score": 0.8301,
         "degree_penalty": 0.916,
@@ -1742,7 +1349,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 7.4916
       },
-      "ensemble_rank": 10,
+      "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1754,7 +1368,7 @@
       "drug_name": "L-Cysteine",
       "drug_id": "DB00151",
       "disease_name": "Parkinson's disease",
-      "combined_score": 0.5059,
+      "combined_score": 0.5028,
       "pillars_hit": 4,
       "transe_rank": 17,
       "transe_score": -10.1157,
@@ -1773,15 +1387,15 @@
       "admet_score": 0.6904,
       "admet_flags": "clean",
       "primekg_score": 0.2534,
-      "dti_score": 0.8087,
-      "dti_best_target": "KMT2D",
+      "dti_score": 0.7904,
+      "dti_best_target": "DCLK1",
       "kg_group_score": 0.1765,
-      "structural_group_score": 0.8087,
+      "structural_group_score": 0.7904,
       "network_group_score": 0.6184999942779541,
       "txgnn_group_score": 0,
       "mr_group_score": 0.8393,
       "admet_multiplier": 0.9381,
-      "efficacy_score": 0.5393,
+      "efficacy_score": 0.536,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 16,
@@ -2024,11 +1638,27 @@
       "mechanistic_hypothesis": "L-Cysteine \u2014[targets]\u2192 gene-2937 \u2014[is downregulated by]\u2192 Parkinson's disease",
       "kg_paths_text": "\u2022 L-Cysteine \u2014[targets]\u2192 gene-2937 \u2014[is downregulated by]\u2192 Parkinson's disease\n\u2022 L-Cysteine \u2014[is a therapeutic for]\u2192 MESH:D019636 \u2014[is treated by]\u2192 DB01037 \u2014[treats]\u2192 Parkinson's disease\n\u2022 L-Cysteine \u2014[is a therapeutic for]\u2192 MESH:D019636 \u2014[is treated by]\u2192 DB01037 \u2014[treats]\u2192 Parkinson's disease",
       "validation_experiments": [],
-      "novelty_score": 0.273,
+      "novelty_score": 0.272,
       "novelty_level": "KNOWN",
       "is_known_treatment": false,
       "clinical_trials_total": 9,
       "clinical_trials": [
+        {
+          "nct_id": "NCT04459052",
+          "title": "FDOPA PET and Nutritional Support in Parkinson's Disease",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "phase": "PHASE2",
+          "enrollment": "50",
+          "url": "https://clinicaltrials.gov/study/NCT04459052"
+        },
+        {
+          "nct_id": "NCT02212678",
+          "title": "Repeated-Dose Oral N-acetylcysteine for the Treatment of Parkinson's Disease",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "8",
+          "url": "https://clinicaltrials.gov/study/NCT02212678"
+        },
         {
           "nct_id": "NCT01470027",
           "title": "N-Acetylcysteine for Neuroprotection in Parkinson's Disease",
@@ -2038,41 +1668,25 @@
           "url": "https://clinicaltrials.gov/study/NCT01470027"
         },
         {
-          "nct_id": "NCT07093944",
-          "title": "Randomized, Placebo-Controlled Trial of N-acetylcysteine In Parkinson's Disease Patients: A Pilot Study",
+          "nct_id": "NCT01427517",
+          "title": "Intravenous N-acetylcysteine for the Treatment of Gaucher's Disease and Parkinson's Disease",
           "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "42",
-          "url": "https://clinicaltrials.gov/study/NCT07093944"
+          "phase": "PHASE1",
+          "enrollment": "9",
+          "url": "https://clinicaltrials.gov/study/NCT01427517"
         },
         {
-          "nct_id": "NCT02445651",
-          "title": "Physiological Effects of Nutritional Support in Patients With Parkinson's Disease",
+          "nct_id": "NCT05523791",
+          "title": "Whey Protein Supplementation in Patients With Parkinson's Disease",
           "status": "COMPLETED",
           "phase": "NA",
           "enrollment": "51",
-          "url": "https://clinicaltrials.gov/study/NCT02445651"
-        },
-        {
-          "nct_id": "NCT01662414",
-          "title": "Effect of Undenatured Cysteine-Rich Whey Protein Isolate (HMS 90\u00ae) in Patients With Parkinson's Disease",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "38",
-          "url": "https://clinicaltrials.gov/study/NCT01662414"
-        },
-        {
-          "nct_id": "NCT02212678",
-          "title": "Repeated-Dose Oral N-acetylcysteine for the Treatment of Parkinson's Disease",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "8",
-          "url": "https://clinicaltrials.gov/study/NCT02212678"
+          "url": "https://clinicaltrials.gov/study/NCT05523791"
         }
       ],
       "trial_phases": {
-        "PHASE1": 3,
         "PHASE2": 4,
+        "PHASE1": 3,
         "NA": 2,
         "PHASE4": 1
       },
@@ -2087,6 +1701,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.84, 2 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D010300",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2116,10 +1731,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.325,
+        "triangulation_score": 0.324,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.506,
+          "kg": 0.503,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 0.738
@@ -2136,15 +1751,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.96
       },
-      "disease_entity": "Disease::MESH:D010300",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.0014,
+      "ensemble_prob": 0.0101,
       "ensemble_features": {
         "kg_score": 0.8011,
         "degree_penalty": 0.8686,
@@ -2153,7 +1760,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 7.6492
       },
-      "ensemble_rank": 9,
+      "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -2189,8 +1803,8 @@
       "admet_score": 0.4937,
       "admet_flags": "hERG=0.96",
       "primekg_score": 0.2523,
-      "dti_score": 0.7744,
-      "dti_best_target": "SLC18A2",
+      "dti_score": 0.8136,
+      "dti_best_target": "PGF",
       "kg_group_score": 0.1456,
       "structural_group_score": 0.9418,
       "network_group_score": 0.6218000054359436,
@@ -2388,25 +2002,15 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.85, 1 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D010300",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
         "confidence": "high",
         "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
         "chembl_phase": 4.0,
-        "target_affinity": {
-          "cmax_over_ic50_ratio": 75.76,
-          "median_ic50_nM": 13.2,
-          "n_activities": 7,
-          "activity_types": [
-            "IC50",
-            "Kd",
-            "Ki"
-          ],
-          "mechanism_feasible": "yes",
-          "cmax_source": "generic fallback 1000 nM (per-drug Cmax TBD)"
-        },
-        "stage": 2
+        "target_affinity": {},
+        "stage": 1
       },
       "ddi_warnings": {
         "n_interactions": 1995,
@@ -2499,15 +2103,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.941
       },
-      "disease_entity": "Disease::MESH:D010300",
-      "docking": {
-        "kcal_per_mol": -10.76,
-        "target_symbol": "SLC18A2",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.7235,
+      "ensemble_prob": 0.6953,
       "ensemble_features": {
         "kg_score": 0.9966,
         "degree_penalty": 0.7537,
@@ -2517,6 +2113,13 @@
         "transe_rank_log": 3.6109
       },
       "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": -10.76,
+        "target_symbol": "SLC18A2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -2552,7 +2155,7 @@
       "admet_flags": "hERG=0.97",
       "primekg_score": 0.2561,
       "dti_score": 1.0,
-      "dti_best_target": "KHDC4",
+      "dti_best_target": "DCLK1",
       "kg_group_score": 0.2294,
       "structural_group_score": 1.0,
       "network_group_score": 0.5852000117301941,
@@ -2803,25 +2406,25 @@
       "clinical_trials_total": 2,
       "clinical_trials": [
         {
-          "nct_id": "NCT00062738",
-          "title": "Treatment of Depression in Parkinson's Disease Trial",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "52",
-          "url": "https://clinicaltrials.gov/study/NCT00062738"
-        },
-        {
           "nct_id": "NCT00086190",
           "title": "Study of Antidepressants in Parkinson's Disease",
           "status": "COMPLETED",
           "phase": "PHASE3",
           "enrollment": "115",
           "url": "https://clinicaltrials.gov/study/NCT00086190"
+        },
+        {
+          "nct_id": "NCT00062738",
+          "title": "Treatment of Depression in Parkinson's Disease Trial",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "52",
+          "url": "https://clinicaltrials.gov/study/NCT00062738"
         }
       ],
       "trial_phases": {
-        "PHASE2": 1,
-        "PHASE3": 1
+        "PHASE3": 1,
+        "PHASE2": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -2832,8 +2435,10 @@
         "Supported by 4 independent AI pillars",
         "Strong FAERS signal: 2165 adverse event reports link drug to disease (51761 total reports)",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.73, 2 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.73, 2 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D010300",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2996,15 +2601,7 @@
         "tissue_specificity": 0.347,
         "context_modifier": 1.008
       },
-      "disease_entity": "Disease::MESH:D010300",
-      "docking": {
-        "kcal_per_mol": -13.36,
-        "target_symbol": "SLC6A4",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.1181,
+      "ensemble_prob": 0.1893,
       "ensemble_features": {
         "kg_score": 0.9909,
         "degree_penalty": 0.7426,
@@ -3013,7 +2610,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 4.5747
       },
-      "ensemble_rank": 6,
+      "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": -13.36,
+        "target_symbol": "SLC6A4",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -3022,14 +2626,14 @@
       }
     },
     {
-      "drug_name": "Melatonin",
-      "drug_id": "DB01065",
+      "drug_name": "Acetylcysteine",
+      "drug_id": "DB06151",
       "disease_name": "Parkinson's disease",
-      "combined_score": 0.498,
+      "combined_score": 0.492000013589859,
       "pillars_hit": 4,
-      "transe_rank": 5,
-      "transe_score": -9.8735,
-      "pykeen_score": -12.0413,
+      "transe_rank": 27,
+      "transe_score": -10.2238,
+      "pykeen_score": -12.3315,
       "pykeen_rank": 0,
       "txgnn_score": 0,
       "txgnn_rank": 0,
@@ -3039,157 +2643,138 @@
       "mol_emb_similar_to": "",
       "gene_sig_score": 0,
       "gene_sig_rank": 0,
-      "proximity_score": 0.699999988079071,
-      "proximity_distance": 1.2000000476837158,
-      "admet_score": 0.4757,
+      "proximity_score": 0.7620000243186951,
+      "proximity_distance": 0.949999988079071,
+      "admet_score": 0.7052,
       "admet_flags": "clean",
-      "primekg_score": 0.2478,
-      "dti_score": 0.4765,
-      "dti_best_target": "SLC18A2",
-      "kg_group_score": 0.4933,
-      "structural_group_score": 0.4765,
-      "network_group_score": 0.5325000286102295,
+      "primekg_score": 0.2532,
+      "dti_score": 0.439,
+      "dti_best_target": "PGF",
+      "kg_group_score": 0.3172,
+      "structural_group_score": 0.439,
+      "network_group_score": 0.6640999913215637,
       "txgnn_group_score": 0,
-      "mr_group_score": 0.9386,
-      "admet_multiplier": 0.8951,
-      "efficacy_score": 0.5564,
+      "mr_group_score": 0.878,
+      "admet_multiplier": 0.941,
+      "efficacy_score": 0.5228000283241272,
       "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 26,
+      "shared_target_count": 12,
       "shared_targets": [
-        "ACHE",
-        "BCHE",
-        "BRD2",
-        "CA1",
-        "CALR",
-        "CREB1",
-        "GSK3B",
+        "GRIN1",
+        "GRIN2A",
+        "GRIN2B",
+        "GRIN2D",
+        "GRIN3A",
         "HIF1A",
-        "HRH3",
         "IL1A",
-        "INS",
-        "MAOB",
         "MAPK14",
         "MT-CO2",
-        "MTNR1A",
-        "MTNR1B",
-        "MTOR",
-        "NR3C1",
-        "NVL",
-        "PINK1"
+        "SOD2",
+        "TNF",
+        "TP53"
       ],
-      "pubmed_total": 362,
-      "pubmed_treatment_total": 290,
-      "pubmed_repurposing_total": 2,
+      "pubmed_total": 201,
+      "pubmed_treatment_total": 138,
+      "pubmed_repurposing_total": 0,
       "key_papers": [
         {
-          "pmid": "39437460",
-          "title": "Melatonin on sleep in Parkinson's disease: A randomized double blind placebo controlled trial.",
-          "authors": "Sugumaran R, Sai Krishna KS, Saibaba J, et al.",
-          "journal": "Sleep medicine",
+          "pmid": "23665395",
+          "title": "Glutathione metabolism and Parkinson's disease.",
+          "authors": "Smeyne M, Smeyne RJ",
+          "journal": "Free radical biology & medicine",
+          "year": "2013",
+          "abstract_snippet": "It has been established that oxidative stress, defined as the condition in which the sum of free radicals in a cell exceeds the antioxidant capacity of the cell, contributes to the pathogenesis of Parkinson disease. Glutathione is a ubiquitous thiol tripeptide that acts alone or in concert with enzy...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23665395/",
+          "total_results": 201
+        },
+        {
+          "pmid": "40712453",
+          "title": "Decoding Parkinson's Disease: The interplay of cell death pathways, oxidative stress, and therapeutic innovations.",
+          "authors": "Liu T, Kong X, Qiao J, et al.",
+          "journal": "Redox biology",
+          "year": "2025",
+          "abstract_snippet": "Parkinson's disease (PD), a complex neurodegenerative disorder characterized by selective loss of substantia nigra (SN) dopaminergic neurons, pathological aggregation of \u03b1-synuclein (\u03b1-syn), and chronic neuroinflammation, is fundamentally driven by redox imbalance and oxidative stress. Recent studie...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40712453/"
+        },
+        {
+          "pmid": "40794323",
+          "title": "Selenium and resveratrol attenuate rotenone-induced Parkinson's disease in zebrafish model.",
+          "authors": "Rahimmi A, Khademerfan M",
+          "journal": "Molecular biology reports",
+          "year": "2025",
+          "abstract_snippet": "ABRACTST: BACKGROUND AND AIMS: Parkinson's disease (PD) is a progressive neurodegenerative disorder characterized by the loss of dopaminergic neurons, leading to motor and non-motor symptoms. Oxidative stress and inflammation are key contributors to PD pathogenesis, yet current treatments primarily ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40794323/"
+        },
+        {
+          "pmid": "26651975",
+          "title": "Cysteine Network (CYSTEINET) Dysregulation in Parkinson's Disease: Role of N-acetylcysteine.",
+          "authors": "Mart\u00ednez-Banaclocha M",
+          "journal": "Current drug metabolism",
+          "year": "2016",
+          "abstract_snippet": "BACKGROUND: Reactive species have been regarded as by-products of cellular metabolism, which cause oxidative damage contributing to aging and neurodegenerative diseases. However, accumulated evidence support the notion that reactive species mediate intracellular and extracellular signals that regula...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26651975/"
+        },
+        {
+          "pmid": "38731862",
+          "title": "Tyrosine Hydroxylase Inhibitors and Dopamine Receptor Agonists Combination Therapy for Parkinson's Disease.",
+          "authors": "Yi LX, Tan EK, Zhou ZD",
+          "journal": "International journal of molecular sciences",
           "year": "2024",
-          "abstract_snippet": "BACKGROUND: Sleep disturbances are one of the most common non-motor symptoms in Idiopathic Parkinson's Disease (IPD) patients. However, the effect of melatonin on sleep problems in Parkinson's disease patients is unclear. AIMS AND OBJECTIVES: To study the effect of melatonin on sleep in IPD patients...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39437460/",
-          "total_results": 362
-        },
-        {
-          "pmid": "33029723",
-          "title": "Sleep Issues in Parkinson's Disease and Their Management.",
-          "authors": "Zuzu\u00e1rregui JRP, During EH",
-          "journal": "Neurotherapeutics : the journal of the American Society for Experimental NeuroTherapeutics",
-          "year": "2020",
-          "abstract_snippet": "Parkinson's disease (PD) is an alpha-synucleinopathy that leads to prominent motor symptoms including tremor, bradykinesia, and postural instability. Nonmotor symptoms including autonomic, neurocognitive, psychiatric symptoms, and sleep disturbances are also seen frequently in PD. The impact of PD o...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33029723/"
-        },
-        {
-          "pmid": "40068276",
-          "title": "Parkinson's disease: News on the action of melatonin.",
-          "authors": "Scorza FA, Wuo-Silva R, Finsterer J, et al.",
-          "journal": "Sleep medicine",
-          "year": "2025",
-          "abstract_snippet": "Melatonin has been shown to improve sleep quality in Parkinson's disease (PD) patients with good safety and tolerability. Beyond its neurological benefits, emerging evidence suggests that melatonin may exert cardioprotective effects, which could be relevant in the context of sudden unexpected death ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40068276/"
-        },
-        {
-          "pmid": "30166532",
-          "title": "REM sleep behaviour disorder.",
-          "authors": "Dauvilliers Y, Schenck CH, Postuma RB, et al.",
-          "journal": "Nature reviews. Disease primers",
-          "year": "2018",
-          "abstract_snippet": "Rapid eye movement (REM) sleep behaviour disorder (RBD) is a parasomnia that is characterized by loss of muscle atonia during REM sleep (known as REM sleep without atonia, or RSWA) and abnormal behaviours occurring during REM sleep, often as dream enactments that can cause injury. RBD is categorized...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30166532/"
+          "abstract_snippet": "There are currently no disease-modifying therapies for Parkinson's disease (PD), a progressive neurodegenerative disorder associated with dopaminergic neuronal loss. There is increasing evidence that endogenous dopamine (DA) can be a pathological factor in neurodegeneration in PD. Tyrosine hydroxyla...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38731862/"
         }
       ],
-      "repurposing_papers": [
-        {
-          "pmid": "41251938",
-          "title": "Agomelatine Targets Aquaporin-4 Polarization to Rescue Glymphatic Dysfunction in Parkinson's Disease.",
-          "authors": "Wang S, Wu D, Chen G, et al.",
-          "journal": "Neuroscience bulletin",
-          "year": "2025",
-          "abstract_snippet": "Melatonin deficiency in Parkinson's disease (PD) patients correlates with impaired glymphatic function as measured by diffusion tensor imaging along the perivascular space (DTI-ALPS) index, suggesting circadian-regulated waste clearance as a therapeutic target. Unlike previous studies focusing on ag...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41251938/",
-          "total_results": 2
-        },
-        {
-          "pmid": "40644656",
-          "title": "Association of Medication Use and 8-Year Mortality Risk in Patients With Parkinson Disease: Drug-Wide Trial Emulation.",
-          "authors": "Tuominen JA, Riise T, Romanowska J, et al.",
-          "journal": "Neurology",
-          "year": "2025",
-          "abstract_snippet": "BACKGROUND AND OBJECTIVES: There are currently no treatments that can halt or slow the progression of Parkinson disease (PD). The aim of this study was to identify new drug repurposing candidates for PD among existing prescription drugs that could be used to modify the disease course. METHODS: This ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40644656/"
-        }
-      ],
+      "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "Melatonin MT1 receptors regulate the Sirt1/Nrf2/Ho\u20101/Gpx4 pathway to prevent \u03b1\u2010synuclein\u2010induced ferroptosis in Parkinson's disease",
-          "year": 2024,
-          "citations": 70,
-          "url": "https://www.semanticscholar.org/paper/31f833ae2363f828d30c1129eefd38bce9341a7c",
-          "authors": "Qian-kun Lv, Kang-Xin Tao, Xiaoqin Yao"
+          "title": "N-acetylcysteine for Parkinson's disease: a translational systematic review of mechanistic and early clinical data.",
+          "year": 2025,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/dc1f0b6621f6bf588e2fadb935734b52e58c9f0b",
+          "authors": "Anas Mohammad, Mohammad Ibrahim, Moeez Akram"
         },
         {
-          "title": "Exploring the role of melatonin in managing sleep and motor symptoms in Parkinson\u2019s disease: a pooled analysis of double-blinded randomized controlled trials",
+          "title": "Modulation of lncRNAs and oxidative stress related genes by N-acetylcysteine and S-methylcysteine in rotenone-induced Parkinson's disease",
           "year": 2025,
-          "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/4f96a1607eb0395910f7c3e52cc171f0fd237f83",
-          "authors": "A. S. Badran, H. Khelifa, M. Gbreel"
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/c0b6e8f62dbf708d0bb00a9dd3d29e6de21e7e2b",
+          "authors": "Sahar Yaqubi, B. Seyedalipour, Mohammad Karimian"
         },
         {
-          "title": "Melatonin attenuates MPP+-induced autophagy via heat shock protein in the Parkinson\u2019s disease mouse model",
+          "title": "Current trends and future prospects of N-acetylcysteine utilizations in Parkinson's disease: A literature network analysis",
           "year": 2025,
-          "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/445a4d16a5d9d3fd6aec9e2bf3469939866dc704",
-          "authors": "Yinli Guo, Chengbo Liu"
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/fcd0364c3a5bc93a2a1d63205ec14e74a161c43f",
+          "authors": "M. Muthmainah, N. Wiyono, F. K. Syah"
         },
         {
-          "title": "The effect of melatonin on sleep quality and daytime sleepiness in Parkinson's disease: A systematic review and meta-analysis of randomized placebo-controlled trials.",
+          "title": "Selenium and resveratrol attenuate rotenone-induced Parkinson\u2019s disease in zebrafish model",
           "year": 2025,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/2d974820fb7a611446848d6865710ffea29ab3ad",
-          "authors": "Azzam Zrineh, Rami Akwan, Muhammad M. Elsharkawy"
+          "citations": 2,
+          "url": "https://www.semanticscholar.org/paper/20354337e550b1b025a2113565f6149c0f453108",
+          "authors": "Arman Rahimmi, M. Khademerfan"
         },
         {
-          "title": "Effects and Mechanisms of Melatonin Receptor Agonist and Antagonist on Disease Progression in a 6-OHDA-Induced Parkinson's Disease Rat Model.",
-          "year": 2025,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/7ab9e89ce5aac6091686f99460c28ba38dcaae77",
-          "authors": "Renxi Lin, Pengyang Liu, Weibin Lin"
+          "title": "Curcumin and N-Acetylcysteine Nanocarriers Alone or Combined with Deferoxamine Target the Mitochondria and Protect against Neurotoxicity and Oxidative Stress in a Co-Culture Model of Parkinson\u2019s Disease",
+          "year": 2023,
+          "citations": 14,
+          "url": "https://www.semanticscholar.org/paper/ef07fc95bf272df5f3d0fd295f0a0d5844a80638",
+          "authors": "Leah Mursaleen, S. Chan, B. Noble"
         }
       ],
       "most_cited_paper": {
-        "title": "Melatonin MT1 receptors regulate the Sirt1/Nrf2/Ho\u20101/Gpx4 pathway to prevent \u03b1\u2010synuclein\u2010induced ferroptosis in Parkinson's disease",
-        "year": 2024,
-        "citations": 70,
-        "url": "https://www.semanticscholar.org/paper/31f833ae2363f828d30c1129eefd38bce9341a7c",
-        "authors": "Qian-kun Lv, Kang-Xin Tao, Xiaoqin Yao"
+        "title": "Curcumin and N-Acetylcysteine Nanocarriers Alone or Combined with Deferoxamine Target the Mitochondria and Protect against Neurotoxicity and Oxidative Stress in a Co-Culture Model of Parkinson\u2019s Disease",
+        "year": 2023,
+        "citations": 14,
+        "url": "https://www.semanticscholar.org/paper/ef07fc95bf272df5f3d0fd295f0a0d5844a80638",
+        "authors": "Leah Mursaleen, S. Chan, B. Noble"
       },
-      "max_citations": 70,
+      "max_citations": 14,
       "faers_signal": "strong",
-      "faers_total_reports": 53144,
-      "faers_cooccurrences": 1339,
-      "faers_interpretation": "1339 FAERS reports mention both Melatonin and Parkinson's disease-related terms (2.5% of all Melatonin reports). This suggests real-world clinical association.",
+      "faers_total_reports": 10374,
+      "faers_cooccurrences": 150,
+      "faers_interpretation": "150 FAERS reports mention both Acetylcysteine and Parkinson's disease-related terms (1.4% of all Acetylcysteine reports). This suggests real-world clinical association.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -3199,57 +2784,13 @@
         "GSK-J2 (1.532)",
         "Bay 11-7821 (1.524)"
       ],
-      "signature_interpretation": "Melatonin was not found among the top 33 drugs that reverse the Parkinson's disease gene signature. Top reversers: HY-50767 (1.559), 6942543 (1.545), linifanib (1.544)",
-      "ai_hypothesis": "of its antioxidant and anti-inflammatory properties.",
+      "signature_interpretation": "Acetylcysteine was not found among the top 33 drugs that reverse the Parkinson's disease gene signature. Top reversers: HY-50767 (1.559), 6942543 (1.545), linifanib (1.544)",
+      "ai_hypothesis": "of its antioxidant properties.",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 0,
-          "negative_signals": 0,
-          "mechanism_signals": 0,
-          "extracted_entities": [
-            {
-              "entity": "sleep disturbances",
-              "entity_group": "Sign_symptom",
-              "score": 1.0
-            },
-            {
-              "entity": "non -",
-              "entity_group": "Detailed_description",
-              "score": 0.7639999985694885
-            },
-            {
-              "entity": "parkinson ' s disease (",
-              "entity_group": "Disease_disorder",
-              "score": 0.949999988079071
-            },
-            {
-              "entity": "ipd",
-              "entity_group": "Disease_disorder",
-              "score": 0.9769999980926514
-            },
-            {
-              "entity": "sleep problems",
-              "entity_group": "Sign_symptom",
-              "score": 0.9990000128746033
-            },
-            {
-              "entity": "parkinson ' s disease",
-              "entity_group": "Disease_disorder",
-              "score": 0.9909999966621399
-            },
-            {
-              "entity": "sleep",
-              "entity_group": "Sign_symptom",
-              "score": 0.9950000047683716
-            },
-            {
-              "entity": "ip",
-              "entity_group": "Disease_disorder",
-              "score": 1.0
-            }
-          ]
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
         },
         {
           "relation_type": "unclear",
@@ -3257,109 +2798,507 @@
           "reason": "Drug or disease not mentioned in abstract"
         },
         {
-          "relation_type": "treats",
-          "confidence": 0.7,
-          "positive_signals": 2,
-          "negative_signals": 0,
-          "mechanism_signals": 0,
-          "extracted_entities": [
-            {
-              "entity": "mel",
-              "entity_group": "Medication",
-              "score": 0.9900000095367432
-            },
-            {
-              "entity": "improve",
-              "entity_group": "Lab_value",
-              "score": 0.9980000257492065
-            },
-            {
-              "entity": "parkinson ' s disease",
-              "entity_group": "Disease_disorder",
-              "score": 0.8140000104904175
-            },
-            {
-              "entity": "sudden",
-              "entity_group": "Detailed_description",
-              "score": 0.9869999885559082
-            }
-          ]
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
         }
       ],
-      "has_failed_trial": true,
-      "failed_trial_phase": "Phase 3",
+      "has_failed_trial": false,
+      "failed_trial_phase": "Phase 1",
       "failed_trial_count": 1,
-      "failed_trial_penalty": 0.3,
-      "mr_score": 0.9386,
-      "mr_genetic_targets": 2,
-      "mechanistic_hypothesis": "Melatonin \u2014[is a therapeutic for]\u2192 Parkinson's disease",
-      "kg_paths_text": "\u2022 Melatonin \u2014[is a therapeutic for]\u2192 Parkinson's disease\n\u2022 Melatonin \u2014[upregulates]\u2192 gene-51031 \u2014[is downregulated by]\u2192 Parkinson's disease\n\u2022 Melatonin \u2014[downregulates]\u2192 gene-6382 \u2014[activates]\u2192 gene-3685 \u2014[is upregulated by]\u2192 Parkinson's disease",
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.878,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Acetylcysteine \u2014[downregulates]\u2192 gene-6192 \u2014[is downregulated by]\u2192 DB00392 \u2014[treats]\u2192 Parkinson's disease",
+      "kg_paths_text": "\u2022 Acetylcysteine \u2014[downregulates]\u2192 gene-6192 \u2014[is downregulated by]\u2192 DB00392 \u2014[treats]\u2192 Parkinson's disease\n\u2022 Acetylcysteine \u2014[downregulates]\u2192 gene-6192 \u2014[is downregulated by]\u2192 DB00190 \u2014[treats]\u2192 Parkinson's disease\n\u2022 Acetylcysteine \u2014[upregulates]\u2192 gene-1021 \u2014[activates]\u2192 gene-25 \u2014[is linked to]\u2192 Parkinson's disease",
       "validation_experiments": [],
-      "novelty_score": 0.269,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": true,
-      "clinical_trials_total": 5,
+      "novelty_score": 0.1770000010728836,
+      "novelty_level": "ESTABLISHED",
+      "is_known_treatment": false,
+      "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT02359448",
-          "title": "Melatonin for Nocturia in Parkinson's Disease",
-          "status": "UNKNOWN",
+          "nct_id": "NCT04459052",
+          "title": "FDOPA PET and Nutritional Support in Parkinson's Disease",
+          "status": "ACTIVE_NOT_RECRUITING",
           "phase": "PHASE2",
-          "enrollment": "20",
-          "url": "https://clinicaltrials.gov/study/NCT02359448"
+          "enrollment": "50",
+          "url": "https://clinicaltrials.gov/study/NCT04459052"
         },
         {
-          "nct_id": "NCT02768077",
-          "title": "Effect of Melatonin on Sleep Disturbances in Patients With Parkinson's Disease",
-          "status": "UNKNOWN",
-          "phase": "PHASE4",
-          "enrollment": "100",
-          "url": "https://clinicaltrials.gov/study/NCT02768077"
-        },
-        {
-          "nct_id": "NCT07375693",
-          "title": "Effect of Melatonin on Oxidative Stress Parameters in Levodopa-Treated Parkinson's Disease Patients",
-          "status": "ENROLLING_BY_INVITATION",
+          "nct_id": "NCT02212678",
+          "title": "Repeated-Dose Oral N-acetylcysteine for the Treatment of Parkinson's Disease",
+          "status": "COMPLETED",
           "phase": "PHASE2",
-          "enrollment": "70",
-          "url": "https://clinicaltrials.gov/study/NCT07375693"
+          "enrollment": "8",
+          "url": "https://clinicaltrials.gov/study/NCT02212678"
         },
         {
-          "nct_id": "NCT03258294",
-          "title": "Effect of Melatonin on Sleep Disturbances in Patients With Parkinson's Disease",
-          "status": "UNKNOWN",
-          "phase": "PHASE4",
-          "enrollment": "82",
-          "url": "https://clinicaltrials.gov/study/NCT03258294"
+          "nct_id": "NCT01470027",
+          "title": "N-Acetylcysteine for Neuroprotection in Parkinson's Disease",
+          "status": "COMPLETED",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "50",
+          "url": "https://clinicaltrials.gov/study/NCT01470027"
         },
         {
-          "nct_id": "NCT04287543",
-          "title": "Melatonin on Clock Genes in Parkinson's Disease",
-          "status": "WITHDRAWN",
-          "phase": "PHASE2, PHASE3",
-          "enrollment": "0",
-          "url": "https://clinicaltrials.gov/study/NCT04287543"
+          "nct_id": "NCT01427517",
+          "title": "Intravenous N-acetylcysteine for the Treatment of Gaucher's Disease and Parkinson's Disease",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "9",
+          "url": "https://clinicaltrials.gov/study/NCT01427517"
+        },
+        {
+          "nct_id": "NCT07093944",
+          "title": "Randomized, Placebo-Controlled Trial of N-acetylcysteine In Parkinson's Disease Patients: A Pilot Study",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "42",
+          "url": "https://clinicaltrials.gov/study/NCT07093944"
         }
       ],
       "trial_phases": {
-        "PHASE2": 3,
-        "PHASE4": 2,
+        "PHASE2": 5,
+        "PHASE1": 3,
+        "NA": 1,
         "PHASE3": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
-        "5 clinical trial(s) found on ClinicalTrials.gov",
+        "10 clinical trial(s) found on ClinicalTrials.gov",
         "Phase 3 trial exists",
-        "362 PubMed articles on this drug-disease pair",
-        "2 article(s) specifically mention repurposing/repositioning",
+        "201 PubMed articles on this drug-disease pair",
         "Supported by 4 independent AI pillars",
-        "WARNING: Drug FAILED Phase 3 trial(s) for this disease (1 terminated/withdrawn)",
-        "Strong FAERS signal: 1339 adverse event reports link drug to disease (53144 total reports)",
-        "Supporting paper with 70 citations",
-        "AI analysis of 1 abstract(s) found positive treatment signals",
+        "Strong FAERS signal: 150 adverse event reports link drug to disease (10374 total reports)",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.94, 2 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.88, 1 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D010300",
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 55,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00227",
+            "drug_name": "Lovastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00175",
+            "drug_name": "Pravastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01098",
+            "drug_name": "Rosuvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00641",
+            "drug_name": "Simvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB13139",
+            "drug_name": "(-)-Salbutamol",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB06403",
+            "drug_name": "Ambrisentan",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB11586",
+            "drug_name": "Asunaprevir",
+            "severity": "moderate"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (TOLLIP / rs3750920)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "TOLLIP",
+            "variant": "rs3750920",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1447982723"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.3720000088214874,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.492000013589859,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 12,
+        "n_expressed": 6,
+        "mean_tpm_in_tissue": 464.68,
+        "max_tpm_in_tissue": 5329.75,
+        "tissue_specificity": 0.0,
+        "context_modifier": 1.03
+      },
+      "ensemble_prob": 0.6,
+      "ensemble_features": {
+        "kg_score": 0.9817,
+        "degree_penalty": 0.8715,
+        "n_drug_targets": 0,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 5.2679
+      },
+      "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "THIOL"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "thiol_2",
+          "thiol_warhead"
+        ]
+      }
+    },
+    {
+      "drug_name": "Caffeine",
+      "drug_id": "DB00201",
+      "disease_name": "Parkinson's disease",
+      "combined_score": 0.49050000309944153,
+      "pillars_hit": 4,
+      "transe_rank": 46,
+      "transe_score": -10.4094,
+      "pykeen_score": -12.5217,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.7620000243186951,
+      "proximity_distance": 0.949999988079071,
+      "admet_score": 0.6926,
+      "admet_flags": "DILI=0.93",
+      "primekg_score": 0.2587,
+      "dti_score": 0.5021,
+      "dti_best_target": "PGF",
+      "kg_group_score": 0.3153,
+      "structural_group_score": 0.5021,
+      "network_group_score": 0.6086999773979187,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.878,
+      "admet_multiplier": 0.9385,
+      "efficacy_score": 0.5227000117301941,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 16,
+      "shared_targets": [
+        "ABCB1",
+        "ACHE",
+        "ADORA2A",
+        "ADORA2B",
+        "BCHE",
+        "CREB1",
+        "GRIN2A",
+        "HIF1A",
+        "INS",
+        "MAOB",
+        "MTOR",
+        "PIK3CB",
+        "PTH",
+        "TNF",
+        "TP53",
+        "VDR"
+      ],
+      "pubmed_total": 389,
+      "pubmed_treatment_total": 234,
+      "pubmed_repurposing_total": 3,
+      "key_papers": [
+        {
+          "pmid": "27751556",
+          "title": "The epidemiology of Parkinson's disease: risk factors and prevention.",
+          "authors": "Ascherio A, Schwarzschild MA",
+          "journal": "The Lancet. Neurology",
+          "year": "2016",
+          "abstract_snippet": "Since 2006, several longitudinal studies have assessed environmental or behavioural factors that seem to modify the risk of developing Parkinson's disease. Increased risk of Parkinson's disease has been associated with exposure to pesticides, consumption of dairy products, history of melanoma, and t...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/27751556/",
+          "total_results": 389
+        },
+        {
+          "pmid": "38879999",
+          "title": "Update: Protective and risk factors for Parkinson disease.",
+          "authors": "Grotewold N, Albin RL",
+          "journal": "Parkinsonism & related disorders",
+          "year": "2024",
+          "abstract_snippet": "We review the epidemiologic literature on potential protective and risk factors in Parkinson's Disease (PD). Prior research identified numerous possible protective and risk factors. Potential protective factors include tobacco abuse, physical activity, urate levels, NSAID use, calcium channel blocke...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38879999/"
+        },
+        {
+          "pmid": "35606622",
+          "title": "Life style and Parkinson's disease.",
+          "authors": "Reichmann H, Csoti I, Koschel J, et al.",
+          "journal": "Journal of neural transmission (Vienna, Austria : 1996)",
+          "year": "2022",
+          "abstract_snippet": "The question whether life style may impair the advent or course of the disease in patients with Parkinsonism is of great importance for patients and physicians alike. We present here comprehensive information on the influence of the environment, diet (especially caffeine, nicotine, alcohol, chocolat...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35606622/"
+        },
+        {
+          "pmid": "39168575",
+          "title": "Coffee and Parkinson's disease.",
+          "authors": "Asuku AO, Ayinla MT, Olajide TS, et al.",
+          "journal": "Progress in brain research",
+          "year": "2024",
+          "abstract_snippet": "Parkinson's disease (PD) is a prevalent neurodegenerative disease marked by dopaminergic neuronal loss and misfolded alpha-synuclein (\u03b1-syn) accumulation, which results in both motor and cognitive symptoms. Its occurrence grows with age, with a larger prevalence among males. Despite substantial stud...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39168575/"
+        },
+        {
+          "pmid": "37811009",
+          "title": "Parkinson's disease updates: Addressing the pathophysiology, risk factors, genetics, diagnosis, along with the medical and surgical treatment.",
+          "authors": "Prajjwal P, Flores Sanga HS, Acharya K, et al.",
+          "journal": "Annals of medicine and surgery (2012)",
+          "year": "2023",
+          "abstract_snippet": "After only Alzheimer's disease (AD), Parkinson's disease (PD) is the second most prevalent neurodegenerative disease. The incidence of this disease increases with age, especially for those above 70 years old. There are many risk factors that are well-established in the contribution to the developmen...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37811009/",
+          "total_results": 234
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "35970592",
+          "title": "What to Test in Parkinson Disease Prevention Trials? Repurposed, Low-Risk, and Gene-Targeted Drugs.",
+          "authors": "Crotty GF, Schwarzschild MA",
+          "journal": "Neurology",
+          "year": "2022",
+          "abstract_snippet": "Despite the sound epidemiologic and basic science rationales underpinning numerous \"disease modification\" trials in manifest Parkinson disease (PD), none has convincingly demonstrated that a treatment slows progression. Rapidly expanding knowledge of the genetic determinants and prodromal features o...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35970592/",
+          "total_results": 3
+        },
+        {
+          "pmid": "41161293",
+          "title": "Therapeutic innovation through drug repurposing: A multidimensional approach toward treating Parkinson's disease.",
+          "authors": "Sahoo SS, Paidesetty SK, Sahu PK, et al.",
+          "journal": "Bioorganic chemistry",
+          "year": "2025",
+          "abstract_snippet": "Parkinson's disease (PD) is the second most prevalent neurodegenerative disorder after Alzheimer's disease, primarily affecting the aging population. Despite the introduction of levodopa in the 1960s and significant progress in managing PD symptoms, no treatment has yet demonstrated neuroprotective ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41161293/"
+        },
+        {
+          "pmid": "30044870",
+          "title": "Biomarker repurposing: Therapeutic drug monitoring of serum theophylline offers a potential diagnostic biomarker of Parkinson's disease.",
+          "authors": "Ohmichi T, Kasai T, Kosaka T, et al.",
+          "journal": "PloS one",
+          "year": "2018",
+          "abstract_snippet": "Caffeine has been considered a neuroprotective agent against Parkinson's disease (PD). Recent metabolomic analysis showed that levels of caffeine and its metabolites were decreased in sera from patients with PD compared with those from healthy controls. We focused on theophylline, which is one of th...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30044870/"
+        }
+      ],
+      "semantic_scholar_papers": [
+        {
+          "title": "The epidemiology of Parkinson's disease: risk factors and prevention.",
+          "year": 2016,
+          "citations": 1483,
+          "url": "https://www.semanticscholar.org/paper/54689043cd633c1a453a6a028f536bb0330b732d",
+          "authors": "A. Ascherio, M. Schwarzschild"
+        },
+        {
+          "title": "Neuroprotective efficacy of berberine and caffeine against rotenone\u2010induced neuroinflammatory and oxidative disturbances associated with Parkinson\u2019s disease via inhibiting \u03b1-synuclein aggregation and boosting dopamine release",
+          "year": 2025,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/d426a6db23c0c061e1fc73f37f743996f51414de",
+          "authors": "Tasnim S. Waheeb, M. Abdulkader, D. Ghareeb"
+        },
+        {
+          "title": "Identification of metabolites reproducibly associated with Parkinson\u2019s Disease via meta-analysis and computational modelling",
+          "year": 2024,
+          "citations": 21,
+          "url": "https://www.semanticscholar.org/paper/04fcbfcbb661b67db9b110b6b8ef1dcf23561688",
+          "authors": "Xi Luo, Yanjun Liu, A. Balck"
+        },
+        {
+          "title": "Parkinson\u2019s Disease: Etiology, Neuropathology, and Pathogenesis",
+          "year": 2018,
+          "citations": 489,
+          "url": "https://www.semanticscholar.org/paper/3956fb40a5eff52fafaa49935c1a33a8f8d94c08",
+          "authors": "A. Kouli, K. Torsney, Wei-Li Kuan"
+        },
+        {
+          "title": "Interaction between Caffeine Consumption & Genetic susceptibility in Parkinson's disease: a systematic review.",
+          "year": 2024,
+          "citations": 10,
+          "url": "https://www.semanticscholar.org/paper/1b994e8cf6f339597dbe572c88d6eee13f6be78c",
+          "authors": "Yujuan Yang, Z. Zhou, L. Yi"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "The epidemiology of Parkinson's disease: risk factors and prevention.",
+        "year": 2016,
+        "citations": 1483,
+        "url": "https://www.semanticscholar.org/paper/54689043cd633c1a453a6a028f536bb0330b732d",
+        "authors": "A. Ascherio, M. Schwarzschild"
+      },
+      "max_citations": 1483,
+      "faers_signal": "strong",
+      "faers_total_reports": 24137,
+      "faers_cooccurrences": 319,
+      "faers_interpretation": "319 FAERS reports mention both Caffeine and Parkinson's disease-related terms (1.3% of all Caffeine reports). This suggests real-world clinical association.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "HY-50767 (1.559)",
+        "6942543 (1.545)",
+        "linifanib (1.544)",
+        "GSK-J2 (1.532)",
+        "Bay 11-7821 (1.524)"
+      ],
+      "signature_interpretation": "Caffeine was not found among the top 33 drugs that reverse the Parkinson's disease gene signature. Top reversers: HY-50767 (1.559), 6942543 (1.545), linifanib (1.544)",
+      "ai_hypothesis": "of its neuroprotective effects.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.878,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Caffeine \u2014[is a therapeutic for]\u2192 Parkinson's disease",
+      "kg_paths_text": "\u2022 Caffeine \u2014[is a therapeutic for]\u2192 Parkinson's disease\n\u2022 Caffeine \u2014[binds]\u2192 gene-5243 \u2014[is linked to]\u2192 Parkinson's disease\n\u2022 Caffeine \u2014[binds]\u2192 gene-1571 \u2014[is linked to]\u2192 Parkinson's disease",
+      "validation_experiments": [],
+      "novelty_score": 0.08799999952316284,
+      "novelty_level": "ESTABLISHED",
+      "is_known_treatment": true,
+      "clinical_trials_total": 6,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT03970798",
+          "title": "A Drug Interaction Study of KW-6356 With Midazolam, Caffeine, or Rosuvastatin",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "50",
+          "url": "https://clinicaltrials.gov/study/NCT03970798"
+        },
+        {
+          "nct_id": "NCT01190735",
+          "title": "Caffeine for Motor Manifestations of Parkinson's Disease",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "28",
+          "url": "https://clinicaltrials.gov/study/NCT01190735"
+        },
+        {
+          "nct_id": "NCT04453033",
+          "title": "DB RCT for Specialized Phototherapy in Parkinson's Disease.",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "phase": "NA",
+          "enrollment": "350",
+          "url": "https://clinicaltrials.gov/study/NCT04453033"
+        },
+        {
+          "nct_id": "NCT01738178",
+          "title": "Caffeine as a Therapy for Parkinson's Disease",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "119",
+          "url": "https://clinicaltrials.gov/study/NCT01738178"
+        },
+        {
+          "nct_id": "NCT00459420",
+          "title": "Caffeine for Excessive Daytime Somnolence in Parkinson's Disease",
+          "status": "COMPLETED",
+          "phase": "PHASE2, PHASE3",
+          "enrollment": "58",
+          "url": "https://clinicaltrials.gov/study/NCT00459420"
+        }
+      ],
+      "trial_phases": {
+        "PHASE1": 2,
+        "PHASE2": 2,
+        "NA": 1,
+        "PHASE3": 2
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "6 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "389 PubMed articles on this drug-disease pair",
+        "3 article(s) specifically mention repurposing/repositioning",
+        "Supported by 4 independent AI pillars",
+        "Strong FAERS signal: 319 adverse event reports link drug to disease (24137 total reports)",
+        "Highly cited paper (1483 citations): \"The epidemiology of Parkinson's disease: risk factors and pr...\"",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.88, 1 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D010300",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3370,27 +3309,17 @@
         "stage": 1
       },
       "ddi_warnings": {
-        "n_interactions": 1241,
+        "n_interactions": 644,
         "has_warnings": true,
         "top_interactions": [
           {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
             "drug_id": "DB00564",
             "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
             "severity": "high"
           },
           {
@@ -3409,6 +3338,11 @@
             "severity": "high"
           },
           {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          },
+          {
             "drug_id": "DB00783",
             "drug_name": "Estradiol",
             "severity": "high"
@@ -3422,29 +3356,76 @@
             "drug_id": "DB00502",
             "drug_name": "Haloperidol",
             "severity": "high"
+          },
+          {
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
           }
         ]
       },
       "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
-        "pharmgkb": []
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "CPIC-D (ADORA2A) \u2022 PharmGKB-3 (ADORA2A / rs2298383)",
+        "cpic": [
+          {
+            "gene": "ADORA2A",
+            "level": "D",
+            "guideline": ""
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "ADORA2A",
+            "variant": "rs2298383",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981201549"
+          },
+          {
+            "gene": "CYP1A2",
+            "variant": "rs762551",
+            "level": "3",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449163934"
+          },
+          {
+            "gene": "RYR1",
+            "variant": "rs186983396",
+            "level": "3",
+            "phenotype_category": "Other",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449166824"
+          },
+          {
+            "gene": "CYP1A2",
+            "variant": "rs762551",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449296290"
+          },
+          {
+            "gene": "CYP1A2",
+            "variant": "rs762551",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/655385388"
+          }
+        ]
       },
       "triangulation": {
-        "n_axes_agree": 3,
+        "n_axes_agree": 2,
         "axes": {
           "kg": true,
-          "docking": true,
+          "docking": false,
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.674,
-        "label": "silver-standard",
+        "triangulation_score": 0.546,
+        "label": "multi-axis",
         "axis_values": {
-          "kg": 0.498,
-          "docking": 1.0,
+          "kg": 0.491,
+          "docking": 0.583,
           "pharos": 0.0,
           "literature": 1.0
         }
@@ -3453,31 +3434,30 @@
         "tissues": [
           "Whole Blood"
         ],
-        "n_genes": 20,
-        "n_expressed": 13,
-        "mean_tpm_in_tissue": 290.6,
-        "max_tpm_in_tissue": 5329.75,
-        "tissue_specificity": 0.0,
-        "context_modifier": 1.03
+        "n_genes": 16,
+        "n_expressed": 11,
+        "mean_tpm_in_tissue": 8.02,
+        "max_tpm_in_tissue": 63.32,
+        "tissue_specificity": 0.155,
+        "context_modifier": 0.954
       },
-      "disease_entity": "Disease::MESH:D010300",
+      "ensemble_prob": 0.7135,
+      "ensemble_features": {
+        "kg_score": 0.9942,
+        "degree_penalty": 0.7988,
+        "n_drug_targets": 29,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.1271
+      },
+      "ensemble_rank": 2,
       "docking": {
-        "kcal_per_mol": -13.08,
-        "target_symbol": "MTNR1A",
+        "kcal_per_mol": -6.99,
+        "target_symbol": "ACHE",
         "source": "chembl_bioactivity_proxy",
         "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
         "hit": true
       },
-      "ensemble_prob": 0.6702,
-      "ensemble_features": {
-        "kg_score": 0.9967,
-        "degree_penalty": 0.7607,
-        "n_drug_targets": 16,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 3.5835
-      },
-      "ensemble_rank": 4,
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -3486,192 +3466,143 @@
       }
     },
     {
-      "drug_name": "Dopamine",
-      "drug_id": "DB00988",
+      "drug_name": "Guanosine-5'-Triphosphate",
+      "drug_id": "DB04137",
       "disease_name": "Parkinson's disease",
-      "combined_score": 0.4963,
+      "combined_score": 0.4851,
       "pillars_hit": 4,
-      "transe_rank": 1,
-      "transe_score": -9.5186,
-      "pykeen_score": -11.6478,
+      "transe_rank": 137,
+      "transe_score": -10.7797,
+      "pykeen_score": 0,
       "pykeen_rank": 0,
       "txgnn_score": 0,
       "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
+      "mol_similarity": 0.6875,
+      "similar_to": "Adenosine triphosphate",
       "mol_emb_similarity": 0,
       "mol_emb_similar_to": "",
       "gene_sig_score": 0,
       "gene_sig_rank": 0,
-      "proximity_score": 0.8119999766349792,
-      "proximity_distance": 0.75,
-      "admet_score": 0.6872,
-      "admet_flags": "Skin_Reaction=0.81",
-      "primekg_score": 0.2515,
-      "dti_score": 0.3847,
-      "dti_best_target": "SLC18A2",
-      "kg_group_score": 0.4255,
-      "structural_group_score": 0.3847,
-      "network_group_score": 0.6187000274658203,
+      "proximity_score": 0.699999988079071,
+      "proximity_distance": 1.2000000476837158,
+      "admet_score": 1.0,
+      "admet_flags": "clean",
+      "primekg_score": 0.2492,
+      "dti_score": 0.2515,
+      "dti_best_target": "PGF",
+      "kg_group_score": 0.0726,
+      "structural_group_score": 0.6875,
+      "network_group_score": 0.6344000101089478,
       "txgnn_group_score": 0,
-      "mr_group_score": 0.867,
-      "admet_multiplier": 0.9374,
-      "efficacy_score": 0.5294,
+      "mr_group_score": 0.7758,
+      "admet_multiplier": 1.0,
+      "efficacy_score": 0.4851,
       "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 36,
+      "shared_target_count": 9,
       "shared_targets": [
-        "ACHE",
-        "ADORA2A",
-        "ADRB1",
-        "ADRB2",
-        "CCK",
-        "CHRNA4",
-        "COMT",
-        "CREB1",
-        "DBH",
-        "DDC",
-        "DRD1",
-        "DRD2",
-        "DRD3",
-        "DRD4",
-        "DRD5",
-        "FYN",
+        "COPB2",
+        "DNM1L",
+        "EEF2",
         "GCH1",
-        "GRIA1",
-        "GRIN1",
-        "GSK3B"
+        "LRRK2",
+        "RAB7A",
+        "RAB9A",
+        "RAP2B",
+        "VPS35"
       ],
-      "pubmed_total": 22494,
-      "pubmed_treatment_total": 15870,
-      "pubmed_repurposing_total": 67,
+      "pubmed_total": 4,
+      "pubmed_treatment_total": 3,
+      "pubmed_repurposing_total": 0,
       "key_papers": [
         {
-          "pmid": "25904081",
-          "title": "Parkinson's disease.",
-          "authors": "Kalia LV, Lang AE",
-          "journal": "Lancet (London, England)",
-          "year": "2015",
-          "abstract_snippet": "Parkinson's disease is a neurological disorder with evolving layers of complexity. It has long been characterised by the classical motor features of parkinsonism associated with Lewy bodies and loss of dopaminergic neurons in the substantia nigra. However, the symptomatology of Parkinson's disease i...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/25904081/",
-          "total_results": 22494
+          "pmid": "24993787",
+          "title": "Novel LRRK2 GTP-binding inhibitors reduced degeneration in Parkinson's disease cell and mouse models.",
+          "authors": "Li T, Yang D, Zhong S, et al.",
+          "journal": "Human molecular genetics",
+          "year": "2014",
+          "abstract_snippet": "Mutations in the leucine-rich repeat kinase-2 (LRRK2) gene cause autosomal-dominant Parkinson's disease (PD) and contribute to sporadic PD. LRRK2 contains Guanosine-5'-triphosphate (GTP) binding, GTPase and kinase activities that have been implicated in the neuronal degeneration of PD pathogenesis, ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24993787/",
+          "total_results": 4
         },
         {
-          "pmid": "33248395",
-          "title": "Parkinson's disease and skin.",
-          "authors": "Niemann N, Billnitzer A, Jankovic J",
-          "journal": "Parkinsonism & related disorders",
-          "year": "2021",
-          "abstract_snippet": "Parkinson's disease is associated with a variety of dermatologic disorders and the study of skin may provide insights into pathophysiological mechanisms underlying this common neurodegenerative disorder. Skin disorders in patients with Parkinson's disease can be divided into two major groups: 1) non...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33248395/"
-        },
-        {
-          "pmid": "27401947",
-          "title": "The clinical symptoms of Parkinson's disease.",
-          "authors": "Sveinbjornsdottir S",
-          "journal": "Journal of neurochemistry",
-          "year": "2016",
-          "abstract_snippet": "In this review, the clinical features of Parkinson's disease, both motor and non-motor, are described in the context of the progression of the disease. Also briefly discussed are the major treatment strategies and their complications. Parkinson's disease is a slowly progressing neurodegenerative dis...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/27401947/"
-        },
-        {
-          "pmid": "36864664",
-          "title": "Impaired dopamine release in Parkinson's disease.",
-          "authors": "Cramb KML, Beccano-Kelly D, Cragg SJ, et al.",
+          "pmid": "20129936",
+          "title": "Optimized adeno-associated viral vector-mediated striatal DOPA delivery restores sensorimotor function and prevents dyskinesias in a model of advanced Parkinson's disease.",
+          "authors": "Bj\u00f6rklund T, Carlsson T, Cederfj\u00e4ll EA, et al.",
           "journal": "Brain : a journal of neurology",
-          "year": "2023",
-          "abstract_snippet": "Parkinson's disease is the second most common neurodegenerative disease and yet the early pathophysiological events of the condition and sequences of dysfunction remain unclear. The loss of dopaminergic neurons and reduced levels of striatal dopamine are descriptions used interchangeably as underlyi...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36864664/"
+          "year": "2010",
+          "abstract_snippet": "Viral vector-mediated gene transfer utilizing adeno-associated viral vectors has recently entered clinical testing as a novel tool for delivery of therapeutic agents to the brain. Clinical trials in Parkinson's disease using adeno-associated viral vector-based gene therapy have shown the safety of t...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20129936/"
         },
         {
-          "pmid": "33237660",
-          "title": "Dopamine transporter SPECT imaging in Parkinson\u2019s disease and parkinsonian disorders.",
-          "authors": "Akdemir \u00dc\u00d6, Bora Tok\u00e7aer A, Atay L\u00d6",
-          "journal": "Turkish journal of medical sciences",
-          "year": "2021",
-          "abstract_snippet": "The dopamine transporter (DAT) imaging provides an objective tool for the assessment of dopaminergic function of presynaptic terminals which is valuable for the differential diagnosis of parkinsonian disorders related to a striatal dopaminergic deficiency from movement disorders not related a striat...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33237660/"
+          "pmid": "20368163",
+          "title": "Dopamine gene therapy for Parkinson's disease in a nonhuman primate without associated dyskinesia.",
+          "authors": "Jarraya B, Boulet S, Ralph GS, et al.",
+          "journal": "Science translational medicine",
+          "year": "2009",
+          "abstract_snippet": "In Parkinson's disease, degeneration of specific neurons in the midbrain can cause severe motor deficits, including tremors and the inability to initiate movement. The standard treatment is administration of pharmacological agents that transiently increase concentrations of brain dopamine and thereb...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20368163/"
+        },
+        {
+          "pmid": "27810394",
+          "title": "Validation of a Na",
+          "authors": "No\u00ebl F, do Monte FM",
+          "journal": "Journal of pharmacological and toxicological methods",
+          "year": "2017",
+          "abstract_snippet": "INTRODUCTION: Determination of the intrinsic efficacy of ligands at the A METHODS: Three functional binding assays were compared with up to seven ligands with different efficacies: the GTP-shift method based on the decrease of affinity observed with agonists when GTP is added to the competition bind...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/27810394/"
         }
       ],
-      "repurposing_papers": [
-        {
-          "pmid": "27657053",
-          "title": "Protein Kinases and Parkinson's Disease.",
-          "authors": "Mehdi SJ, Rosas-Hernandez H, Cuevas E, et al.",
-          "journal": "International journal of molecular sciences",
-          "year": "2016",
-          "abstract_snippet": "Currently, the lack of new drug candidates for the treatment of major neurological disorders such as Parkinson's disease has intensified the search for drugs that can be repurposed or repositioned for such treatment. Typically, the search focuses on drugs that have been approved and are used clinica...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/27657053/",
-          "total_results": 67
-        },
-        {
-          "pmid": "37074485",
-          "title": "Phosphodiesterase-4 Inhibition in Parkinson's Disease: Molecular Insights and Therapeutic Potential.",
-          "authors": "Roy D, Balasubramanian S, Krishnamurthy PT, et al.",
-          "journal": "Cellular and molecular neurobiology",
-          "year": "2023",
-          "abstract_snippet": "Clinicians and researchers are exploring safer and novel treatment strategies for treating the ever-prevalent Parkinson's disease (PD) across the globe. Several therapeutic strategies are used clinically for PD, including dopamine replacement therapy, DA agonists, MAO-B blockers, COMT blockers, and ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37074485/"
-        },
-        {
-          "pmid": "39914809",
-          "title": "Drug Repositioning and Repurposing for Disease-Modifying Effects in Parkinson's Disease.",
-          "authors": "Jeong SH, Lee PH",
-          "journal": "Journal of movement disorders",
-          "year": "2025",
-          "abstract_snippet": "Parkinson's disease (PD) is the second most prevalent neurodegenerative disorder and is characterized by progressive dopaminergic and nondopaminergic neuronal loss and the presence of Lewy bodies, which are primarily composed of aggregated \u03b1-synuclein. Despite advancements in symptomatic therapies, ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39914809/"
-        }
-      ],
+      "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "Inhibition of PDE10A in a New Rat Model of Severe Dopamine Depletion Suggests New Approach to Non-Dopamine Parkinson\u2019s Disease Therapy",
-          "year": 2022,
-          "citations": 11,
-          "url": "https://www.semanticscholar.org/paper/7f16c1920d0185f03220ce6e1dde9f9fe2472c4d",
-          "authors": "I. Sukhanov, A. Dorotenko, Z. Fesenko"
+          "title": "Novel LRRK2 GTP-binding inhibitors reduced degeneration in Parkinson's disease cell and mouse models.",
+          "year": 2014,
+          "citations": 76,
+          "url": "https://www.semanticscholar.org/paper/c47672a319331f4c4bc55826dfa7f8c50b646337",
+          "authors": "Tianxia Li, Dejun Yang, Shijun Zhong"
         },
         {
-          "title": "Non-motor symptoms of Parkinson's disease: diagnosis and management.",
-          "year": 2006,
-          "citations": 2558,
-          "url": "https://www.semanticscholar.org/paper/5208e8161fe7562f8fc789163026bd251a641460",
-          "authors": "K. Chaudhuri, D. Healy, A. Schapira"
+          "title": "Optimized adeno-associated viral vector-mediated striatal DOPA delivery restores sensorimotor function and prevents dyskinesias in a model of advanced Parkinson's disease.",
+          "year": 2010,
+          "citations": 47,
+          "url": "https://www.semanticscholar.org/paper/ecad61f6a34f457e4363f55896e9f745f9473c2b",
+          "authors": "T. Bj\u00f6rklund, T. Carlsson, E. Cederfj\u00e4ll"
         },
         {
-          "title": "Uneven pattern of dopamine loss in the striatum of patients with idiopathic Parkinson's disease. Pathophysiologic and clinical implications.",
-          "year": 1988,
-          "citations": 2018,
-          "url": "https://www.semanticscholar.org/paper/4af2ba975c72eb976a434bf54b144af7f13207e8",
-          "authors": "S. Kish, K. Shannak, O. Hornykiewicz"
+          "title": "Signal transduction pathway activity compensates dopamine D\u2082/D\u2083 receptor density changes in Parkinson's disease: a preliminary comparative human brain receptor autoradiography study with [\u00b3H]raclopride and [\u00b3\u2075S]GTP\u03b3S.",
+          "year": 2012,
+          "citations": 2,
+          "url": "https://www.semanticscholar.org/paper/18ce245f3d4ff8d8bc40771fc2246130edc54e46",
+          "authors": "Szabolcs Farkas, K. Nagy, Zhisheng Jia"
         },
         {
-          "title": "Dopamine neurons derived from embryonic stem cells function in an animal model of Parkinson's disease",
-          "year": 2002,
-          "citations": 1665,
-          "url": "https://www.semanticscholar.org/paper/dc811b3e50ee902fbe6901404e16c01252dfffea",
-          "authors": "Jong-Hoon Kim, J. Auerbach, J. A. Rodr\u00edguez-G\u00f3mez"
+          "title": "Novel LRRK 2 GTP-binding inhibitors reduced degeneration in Parkinson \u2019 s disease cell and mouse models",
+          "year": 2014,
+          "citations": 12,
+          "url": "https://www.semanticscholar.org/paper/74a1b4974f899d6c926675e78de95ff48074000d",
+          "authors": "Tianxia Li, Dejun Yang, Shijun Zhong"
         },
         {
-          "title": "The substantia nigra of the human brain. II. Patterns of loss of dopamine-containing neurons in Parkinson's disease.",
-          "year": 1999,
-          "citations": 1730,
-          "url": "https://www.semanticscholar.org/paper/ff9495cfc05afd94a26a012bfa24255aa7c2105d",
-          "authors": "P. Damier, E. Hirsch, Y. Agid"
+          "title": "Structure and nucleotide-induced conformational dynamics of the Chlorobium tepidum Roco protein.",
+          "year": 2019,
+          "citations": 26,
+          "url": "https://www.semanticscholar.org/paper/11469916565238504dd81a24096547468de83e05",
+          "authors": "E. Deyaert, Margaux Leemans, R. Singh"
         }
       ],
       "most_cited_paper": {
-        "title": "Non-motor symptoms of Parkinson's disease: diagnosis and management.",
-        "year": 2006,
-        "citations": 2558,
-        "url": "https://www.semanticscholar.org/paper/5208e8161fe7562f8fc789163026bd251a641460",
-        "authors": "K. Chaudhuri, D. Healy, A. Schapira"
+        "title": "Novel LRRK2 GTP-binding inhibitors reduced degeneration in Parkinson's disease cell and mouse models.",
+        "year": 2014,
+        "citations": 76,
+        "url": "https://www.semanticscholar.org/paper/c47672a319331f4c4bc55826dfa7f8c50b646337",
+        "authors": "Tianxia Li, Dejun Yang, Shijun Zhong"
       },
-      "max_citations": 2558,
-      "faers_signal": "moderate",
-      "faers_total_reports": 5826,
-      "faers_cooccurrences": 34,
-      "faers_interpretation": "34 FAERS reports mention both Dopamine and Parkinson's disease-related terms. Limited but notable real-world signal.",
+      "max_citations": 76,
+      "faers_signal": "none",
+      "faers_total_reports": 0,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found for Guanosine-5'-Triphosphate",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -3681,45 +3612,65 @@
         "GSK-J2 (1.532)",
         "Bay 11-7821 (1.524)"
       ],
-      "signature_interpretation": "Dopamine was not found among the top 33 drugs that reverse the Parkinson's disease gene signature. Top reversers: HY-50767 (1.559), 6942543 (1.545), linifanib (1.544)",
+      "signature_interpretation": "Guanosine-5'-Triphosphate was not found among the top 33 drugs that reverse the Parkinson's disease gene signature. Top reversers: HY-50767 (1.559), 6942543 (1.545), linifanib (1.544)",
       "ai_hypothesis": "of its ability to increase dopamine levels in the brain.",
       "abstract_analyses": [
         {
-          "relation_type": "unclear",
-          "confidence": 0.3,
+          "relation_type": "mechanism_related",
+          "confidence": 0.5,
           "positive_signals": 0,
           "negative_signals": 0,
-          "mechanism_signals": 0,
+          "mechanism_signals": 2,
           "extracted_entities": [
             {
-              "entity": "parkinson ' s disease",
-              "entity_group": "Disease_disorder",
-              "score": 0.9990000128746033
-            },
-            {
-              "entity": "features",
-              "entity_group": "Detailed_description",
-              "score": 0.9800000190734863
-            },
-            {
-              "entity": "parkinsonism",
-              "entity_group": "Disease_disorder",
-              "score": 0.9789999723434448
-            },
-            {
-              "entity": "lewy bodies",
+              "entity": "mutations in the",
               "entity_group": "Sign_symptom",
+              "score": 0.7509999871253967
+            },
+            {
+              "entity": "leucine - rich repeat kinase - 2 (",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.7509999871253967
+            },
+            {
+              "entity": "lrrk2",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.7799999713897705
+            },
+            {
+              "entity": "autosomal - dominant parkinson ' s disease",
+              "entity_group": "Disease_disorder",
+              "score": 0.9929999709129333
+            },
+            {
+              "entity": "lrr",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.8289999961853027
+            },
+            {
+              "entity": "gu",
+              "entity_group": "Diagnostic_procedure",
               "score": 1.0
             },
             {
-              "entity": "loss",
-              "entity_group": "Sign_symptom",
-              "score": 0.9990000128746033
+              "entity": "##anosine - 5 ' - triphosphate (",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9340000152587891
             },
             {
-              "entity": "##paminergic neurons",
-              "entity_group": "Sign_symptom",
-              "score": 0.9309999942779541
+              "entity": "gtp",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9869999885559082
+            },
+            {
+              "entity": "gt",
+              "entity_group": "Diagnostic_procedure",
+              "score": 1.0
+            },
+            {
+              "entity": "##pase",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.875
             }
           ]
         },
@@ -3735,142 +3686,43 @@
         }
       ],
       "has_failed_trial": false,
-      "failed_trial_phase": "Phase 3",
-      "failed_trial_count": 10,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.867,
+      "mr_score": 0.7758,
       "mr_genetic_targets": 4,
-      "mechanistic_hypothesis": "Dopamine \u2014[is a therapeutic for]\u2192 Parkinson's disease",
-      "kg_paths_text": "\u2022 Dopamine \u2014[is a therapeutic for]\u2192 Parkinson's disease\n\u2022 Dopamine \u2014[is agonized by]\u2192 gene-1814 \u2014[is linked to]\u2192 Parkinson's disease\n\u2022 Dopamine \u2014[targets]\u2192 gene-3363 \u2014[is linked to]\u2192 Parkinson's disease",
+      "mechanistic_hypothesis": "Guanosine-5'-Triphosphate \u2014[is a therapeutic for]\u2192 MESH:D018589 \u2014[is treated by]\u2192 DB01233 \u2014[is a therapeutic for]\u2192 Parkinson's disease",
+      "kg_paths_text": "\u2022 Guanosine-5'-Triphosphate \u2014[is a therapeutic for]\u2192 MESH:D018589 \u2014[is treated by]\u2192 DB01233 \u2014[is a therapeutic for]\u2192 Parkinson's disease\n\u2022 Guanosine-5'-Triphosphate \u2014[is a therapeutic for]\u2192 MESH:D018589 \u2014[is treated by]\u2192 DB01233 \u2014[is a therapeutic for]\u2192 Parkinson's disease\n\u2022 Guanosine-5'-Triphosphate \u2014[is a therapeutic for]\u2192 MESH:D018589 \u2014[is treated by]\u2192 DB09341 \u2014[is a therapeutic for]\u2192 Parkinson's disease",
       "validation_experiments": [],
-      "novelty_score": 0.06,
-      "novelty_level": "ESTABLISHED",
-      "is_known_treatment": true,
-      "clinical_trials_total": 10,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT06618157",
-          "title": "Connectomic Guided DBS for Parkinson's Disease",
-          "status": "ENROLLING_BY_INVITATION",
-          "phase": "NA",
-          "enrollment": "20",
-          "url": "https://clinicaltrials.gov/study/NCT06618157"
-        },
-        {
-          "nct_id": "NCT03305809",
-          "title": "A Study of LY3154207 in Participants With Dementia Due to Lewy Body Dementia (LBD) Associated With Idiopathic Parkinson's Disease (PD) or Dementia With Lewy Bodies (DLB)",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "344",
-          "url": "https://clinicaltrials.gov/study/NCT03305809"
-        },
-        {
-          "nct_id": "NCT00153972",
-          "title": "Dopamine Turnover Rate as Surrogate Parameter for Diagnosis of Early Parkinson's Disease",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "39",
-          "url": "https://clinicaltrials.gov/study/NCT00153972"
-        },
-        {
-          "nct_id": "NCT02627664",
-          "title": "Study of Dysarthria, Swallowing Disorders and Respiratory in Parkinson's Disease",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "70",
-          "url": "https://clinicaltrials.gov/study/NCT02627664"
-        },
-        {
-          "nct_id": "NCT00855621",
-          "title": "Effects of Deep Brain Stimulation in Parkinson's Disease",
-          "status": "UNKNOWN",
-          "phase": "NA",
-          "enrollment": "70",
-          "url": "https://clinicaltrials.gov/study/NCT00855621"
-        }
-      ],
-      "trial_phases": {
-        "NA": 2,
-        "PHASE2": 2,
-        "PHASE4": 1,
-        "PHASE1": 2
-      },
-      "confidence": "HIGH",
+      "novelty_score": 0.553,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "MEDIUM",
       "confidence_reasons": [
-        "10 clinical trial(s) found on ClinicalTrials.gov",
-        "22494 PubMed articles on this drug-disease pair",
-        "67 article(s) specifically mention repurposing/repositioning",
+        "4 PubMed article(s) - limited literature",
         "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 34 adverse event reports mention drug-disease co-occurrence",
-        "Highly cited paper (2558 citations): \"Non-motor symptoms of Parkinson's disease: diagnosis and man...\"",
+        "High molecular similarity (0.69) to Adenosine triphosphate",
+        "Supporting paper with 76 citations",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.87, 4 genetic targets)",
-        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+        "Strong causal genetic evidence (MR score: 0.78, 4 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D010300",
       "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
+        "plausibility": "unknown",
+        "dose_range": "research",
+        "confidence": "low",
+        "rationale": "No ChEMBL clinical phase data available.",
+        "chembl_phase": null,
         "target_affinity": {},
         "stage": 1
       },
       "ddi_warnings": {
-        "n_interactions": 1295,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00783",
-            "drug_name": "Estradiol",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00502",
-            "drug_name": "Haloperidol",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00331",
-            "drug_name": "Metformin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00563",
-            "drug_name": "Methotrexate",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00213",
-            "drug_name": "Pantoprazole",
-            "severity": "high"
-          }
-        ]
+        "n_interactions": 0,
+        "has_warnings": false,
+        "top_interactions": []
       },
       "pharmacogenomics": {
         "has_flags": false,
@@ -3880,70 +3732,70 @@
         "pharmgkb": []
       },
       "triangulation": {
-        "n_axes_agree": 3,
+        "n_axes_agree": 2,
         "axes": {
           "kg": true,
           "docking": true,
           "pharos": false,
-          "literature": true
+          "literature": false
         },
-        "triangulation_score": 0.649,
-        "label": "silver-standard",
+        "triangulation_score": 0.454,
+        "label": "multi-axis",
         "axis_values": {
-          "kg": 0.496,
-          "docking": 0.918,
+          "kg": 0.485,
+          "docking": 0.745,
           "pharos": 0.0,
-          "literature": 1.0
+          "literature": 0.303
         }
       },
       "tissue_context": {
         "tissues": [
           "Whole Blood"
         ],
-        "n_genes": 20,
-        "n_expressed": 8,
-        "mean_tpm_in_tissue": 4.49,
-        "max_tpm_in_tissue": 24.26,
-        "tissue_specificity": 0.109,
-        "context_modifier": 0.93
+        "n_genes": 9,
+        "n_expressed": 9,
+        "mean_tpm_in_tissue": 113.3,
+        "max_tpm_in_tissue": 634.59,
+        "tissue_specificity": 0.296,
+        "context_modifier": 1.066
       },
-      "disease_entity": "Disease::MESH:D010300",
+      "ensemble_prob": 0.0005,
+      "ensemble_features": {
+        "kg_score": 0.8315,
+        "degree_penalty": 0.9062,
+        "n_drug_targets": 3,
+        "is_fda_approved": 0,
+        "n_disease_genes": 0,
+        "transe_rank_log": 7.4838
+      },
+      "ensemble_rank": 10,
       "docking": {
-        "kcal_per_mol": -11.02,
-        "target_symbol": "DRD3",
+        "kcal_per_mol": -8.94,
+        "target_symbol": "RAB7A",
         "source": "chembl_bioactivity_proxy",
         "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
         "hit": true
       },
-      "ensemble_prob": 0.9908,
-      "ensemble_features": {
-        "kg_score": 0.9999,
-        "degree_penalty": 0.7619,
-        "n_drug_targets": 31,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 0.6931
-      },
-      "ensemble_rank": 1,
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
-          "CATECHOL"
+          "GTE",
+          "PHOSPHOR"
         ],
         "n_alerts": 2,
         "alert_names": [
-          "catechol_A(92)",
-          "catechol"
+          "phosphor",
+          "gte_2_free_phos"
         ]
       }
     }
   ],
   "disease_entity": "Disease::MESH:D010300",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
     "n_disease_genes": 608,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
-  },
-  "ensemble_version": "v5",
-  "ensemble_model_path": "data/models/ensemble_v5.pkl"
+  }
 }

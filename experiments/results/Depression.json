@@ -1,8 +1,8 @@
 {
   "disease": "Depression",
   "status": "completed",
-  "timestamp": "2026-04-20T01:31:49.690126",
-  "elapsed_seconds": 669.4,
+  "timestamp": "2026-05-08T01:57:28.226970",
+  "elapsed_seconds": 126.6,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -15,7 +15,7 @@
       "drug_name": "Memantine",
       "drug_id": "DB01043",
       "disease_name": "Depression",
-      "combined_score": 0.585,
+      "combined_score": 0.568,
       "pillars_hit": 5,
       "transe_rank": 148,
       "transe_score": -10.5214,
@@ -34,15 +34,15 @@
       "admet_score": 0.799,
       "admet_flags": "clean",
       "primekg_score": 0.2529,
-      "dti_score": 0.2941,
-      "dti_best_target": "TACR1",
+      "dti_score": 0.1959,
+      "dti_best_target": "CDH7",
       "kg_group_score": 0.1762,
-      "structural_group_score": 0.2941,
+      "structural_group_score": 0.1959,
       "network_group_score": 0.5475000143051147,
       "txgnn_group_score": 0.67,
       "mr_group_score": 0.704,
       "admet_multiplier": 0.9598,
-      "efficacy_score": 0.6095,
+      "efficacy_score": 0.5918,
       "groups_hit": 5,
       "direct_relations": [],
       "shared_target_count": 11,
@@ -217,19 +217,11 @@
       "mechanistic_hypothesis": "Memantine \u2014[is a therapeutic for]\u2192 Depression",
       "kg_paths_text": "\u2022 Memantine \u2014[is a therapeutic for]\u2192 Depression\n\u2022 Memantine \u2014[targets]\u2192 gene-1813 \u2014[is a target of]\u2192 DB00934 \u2014[treats]\u2192 Depression\n\u2022 Memantine \u2014[targets]\u2192 gene-1813 \u2014[is a target of]\u2192 DB00934 \u2014[treats]\u2192 Depression",
       "validation_experiments": [],
-      "novelty_score": 0.211,
+      "novelty_score": 0.204,
       "novelty_level": "ESTABLISHED",
       "is_known_treatment": true,
       "clinical_trials_total": 10,
       "clinical_trials": [
-        {
-          "nct_id": "NCT07351773",
-          "title": "Ultrasound-Guided Stellate Ganglion Block for Alzheimer's Disease",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "40",
-          "url": "https://clinicaltrials.gov/study/NCT07351773"
-        },
         {
           "nct_id": "NCT00988663",
           "title": "The Impact of Memantine on Electroconvulsive Therapy (ECT): Will it Improve Response and Protect Against Cognitive Problems?",
@@ -237,6 +229,22 @@
           "phase": "NA",
           "enrollment": "0",
           "url": "https://clinicaltrials.gov/study/NCT00988663"
+        },
+        {
+          "nct_id": "NCT07560878",
+          "title": "Synaptic Mechanisms of Continuous Theta Burst Stimulation in Depression",
+          "status": "RECRUITING",
+          "phase": "EARLY_PHASE1",
+          "enrollment": "80",
+          "url": "https://clinicaltrials.gov/study/NCT07560878"
+        },
+        {
+          "nct_id": "NCT00368862",
+          "title": "Efficacy Study of Memantine Hydrochloride and Escitalopram for the Treatment of Co-Morbid Depression and Alcoholism.",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "80",
+          "url": "https://clinicaltrials.gov/study/NCT00368862"
         },
         {
           "nct_id": "NCT00183729",
@@ -247,28 +255,20 @@
           "url": "https://clinicaltrials.gov/study/NCT00183729"
         },
         {
-          "nct_id": "NCT00344682",
-          "title": "Memantine Augmentation of Antidepressants",
+          "nct_id": "NCT00186498",
+          "title": "Memantine to Reduce Neurocognitive Deficits Following Unilateral ECT for the Treatment of a Major Depression",
           "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "31",
-          "url": "https://clinicaltrials.gov/study/NCT00344682"
-        },
-        {
-          "nct_id": "NCT01392287",
-          "title": "Treatment Resistant Geriatric Depression in Primary Care",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "12",
-          "url": "https://clinicaltrials.gov/study/NCT01392287"
+          "phase": "NA",
+          "enrollment": "11",
+          "url": "https://clinicaltrials.gov/study/NCT00186498"
         }
       ],
       "trial_phases": {
         "NA": 3,
+        "EARLY_PHASE1": 1,
         "PHASE4": 4,
-        "PHASE1": 2,
-        "PHASE2": 1,
-        "PHASE3": 1
+        "PHASE3": 2,
+        "PHASE2": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -280,8 +280,10 @@
         "Strong FAERS signal: 323 adverse event reports link drug to disease (16174 total reports)",
         "Supporting paper with 24 citations",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.70, 4 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.70, 4 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D003866",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -370,10 +372,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.689,
+        "triangulation_score": 0.683,
         "label": "silver-standard",
         "axis_values": {
-          "kg": 0.585,
+          "kg": 0.568,
           "docking": 0.946,
           "pharos": 0.0,
           "literature": 1.0
@@ -391,8 +393,7 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.101
       },
-      "disease_entity": "Disease::MESH:D003866",
-      "ensemble_prob": 0.4836,
+      "ensemble_prob": 0.4615,
       "ensemble_features": {
         "kg_score": 0.9936,
         "degree_penalty": 0.7689,
@@ -401,7 +402,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 4.2195
       },
-      "ensemble_rank": 5,
+      "ensemble_rank": 4,
       "docking": {
         "kcal_per_mol": -11.35,
         "target_symbol": "ACHE",
@@ -602,12 +603,12 @@
       "clinical_trials_total": 3,
       "clinical_trials": [
         {
-          "nct_id": "NCT06199011",
-          "title": "Effect of Esketamine on Depressive Symptoms of Obese Patients Undergoing Laparoscopic Sleeve Gastrectomy",
-          "status": "UNKNOWN",
+          "nct_id": "NCT04565730",
+          "title": "Different Anesthesia Methods on Development of Postnatal Depression After Cesarean Delivery",
+          "status": "COMPLETED",
           "phase": "NA",
-          "enrollment": "400",
-          "url": "https://clinicaltrials.gov/study/NCT06199011"
+          "enrollment": "200",
+          "url": "https://clinicaltrials.gov/study/NCT04565730"
         },
         {
           "nct_id": "NCT07534475",
@@ -618,12 +619,12 @@
           "url": "https://clinicaltrials.gov/study/NCT07534475"
         },
         {
-          "nct_id": "NCT04565730",
-          "title": "Different Anesthesia Methods on Development of Postnatal Depression After Cesarean Delivery",
-          "status": "COMPLETED",
+          "nct_id": "NCT06199011",
+          "title": "Effect of Esketamine on Depressive Symptoms of Obese Patients Undergoing Laparoscopic Sleeve Gastrectomy",
+          "status": "UNKNOWN",
           "phase": "NA",
-          "enrollment": "200",
-          "url": "https://clinicaltrials.gov/study/NCT04565730"
+          "enrollment": "400",
+          "url": "https://clinicaltrials.gov/study/NCT06199011"
         }
       ],
       "trial_phases": {
@@ -638,6 +639,7 @@
         "Supporting paper with 29 citations",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D003866",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -775,8 +777,7 @@
         "tissue_specificity": 0.362,
         "context_modifier": 0.936
       },
-      "disease_entity": "Disease::MESH:D003866",
-      "ensemble_prob": 0.0577,
+      "ensemble_prob": 0.049,
       "ensemble_features": {
         "kg_score": 0.9506,
         "degree_penalty": 0.784,
@@ -830,7 +831,7 @@
       "admet_flags": "Skin_Reaction=0.84",
       "primekg_score": 0.2614,
       "dti_score": 1.0,
-      "dti_best_target": "TACR1",
+      "dti_best_target": "CDH7",
       "kg_group_score": 0.2075,
       "structural_group_score": 1.0,
       "network_group_score": 0.5435000061988831,
@@ -1036,12 +1037,28 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT06707012",
-          "title": "Efficacy of Metformin as an Adjunct to Standard Antidepressant Therapy in Treating Depression Among Obese Patients",
-          "status": "RECRUITING",
+          "nct_id": "NCT03380091",
+          "title": "Metformin, Vitamin D, and Depression in Polycystic Ovary Syndrome (PCOS) Trial",
+          "status": "TERMINATED",
           "phase": "PHASE4",
-          "enrollment": "140",
-          "url": "https://clinicaltrials.gov/study/NCT06707012"
+          "enrollment": "5",
+          "url": "https://clinicaltrials.gov/study/NCT03380091"
+        },
+        {
+          "nct_id": "NCT02069379",
+          "title": "Endogenous Opioid Activity and Affective State in Insulin Resistant Women",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "42",
+          "url": "https://clinicaltrials.gov/study/NCT02069379"
+        },
+        {
+          "nct_id": "NCT07244770",
+          "title": "The Effects of Some Antihyperglycemic Drugs on Cognitive Function and Risk of Depression of Diabetic Patients",
+          "status": "RECRUITING",
+          "phase": "N/A",
+          "enrollment": "300",
+          "url": "https://clinicaltrials.gov/study/NCT07244770"
         },
         {
           "nct_id": "NCT00682448",
@@ -1052,34 +1069,18 @@
           "url": "https://clinicaltrials.gov/study/NCT00682448"
         },
         {
-          "nct_id": "NCT00834652",
-          "title": "Adding an Insulin-Sensitizing Medication to Depression Treatment for People Who Are Depressed and Overweight",
-          "status": "COMPLETED",
+          "nct_id": "NCT06164535",
+          "title": "The Effects of DPPIs on Cognitive Function of Diabetic Patients",
+          "status": "UNKNOWN",
           "phase": "PHASE4",
-          "enrollment": "206",
-          "url": "https://clinicaltrials.gov/study/NCT00834652"
-        },
-        {
-          "nct_id": "NCT07007221",
-          "title": "Clinical Trials to Evaluate Metformin to Treat Depression in People Living With HIV",
-          "status": "NOT_YET_RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "600",
-          "url": "https://clinicaltrials.gov/study/NCT07007221"
-        },
-        {
-          "nct_id": "NCT01726764",
-          "title": "Interaction Between St John's Wort and Metformin?",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "20",
-          "url": "https://clinicaltrials.gov/study/NCT01726764"
+          "enrollment": "105",
+          "url": "https://clinicaltrials.gov/study/NCT06164535"
         }
       ],
       "trial_phases": {
-        "PHASE4": 5,
+        "PHASE4": 6,
+        "PHASE1": 2,
         "PHASE2": 1,
-        "PHASE1": 1,
         "NA": 1
       },
       "confidence": "HIGH",
@@ -1092,6 +1093,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.71, 4 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D003866",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1240,8 +1242,7 @@
         "tissue_specificity": 0.675,
         "context_modifier": 1.111
       },
-      "disease_entity": "Disease::MESH:D003866",
-      "ensemble_prob": 0.1043,
+      "ensemble_prob": 0.0746,
       "ensemble_features": {
         "kg_score": 0.9851,
         "degree_penalty": 0.7634,
@@ -1293,8 +1294,8 @@
       "admet_score": 0.7528,
       "admet_flags": "clean",
       "primekg_score": 0.2568,
-      "dti_score": 0.2734,
-      "dti_best_target": "EDN1",
+      "dti_score": 0.2693,
+      "dti_best_target": "DAOA",
       "kg_group_score": 0.0628,
       "structural_group_score": 1.0,
       "network_group_score": 0.5568000078201294,
@@ -1538,6 +1539,14 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
+          "nct_id": "NCT01478113",
+          "title": "Stimulant Enhancement of Well-Being Therapy for Depression",
+          "status": "TERMINATED",
+          "phase": "NA",
+          "enrollment": "5",
+          "url": "https://clinicaltrials.gov/study/NCT01478113"
+        },
+        {
           "nct_id": "NCT06967857",
           "title": "Clinical Trial to Investigate the Safety and Efficacy of Two Dexamfetamine Sulfate Formulations in Adults With ADHD and Moderate to Severe Depression",
           "status": "RECRUITING",
@@ -1546,43 +1555,35 @@
           "url": "https://clinicaltrials.gov/study/NCT06967857"
         },
         {
-          "nct_id": "NCT01436162",
-          "title": "Efficacy and Safety Study of SPD489 in Combination With an Antidepressant in the Treatment of Adults With Major Depressive Disorder",
+          "nct_id": "NCT02058693",
+          "title": "Adjunctive Mixed Salts Amphetamine for Depressed Adults With Incomplete Response to Current Antidepressant Therapy",
           "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "1105",
-          "url": "https://clinicaltrials.gov/study/NCT01436162"
+          "phase": "PHASE4",
+          "enrollment": "41",
+          "url": "https://clinicaltrials.gov/study/NCT02058693"
         },
         {
-          "nct_id": "NCT05535101",
-          "title": "Non-invasive Brain Stimulation in Patients With Methamphetamine Use Disorder",
-          "status": "UNKNOWN",
-          "phase": "NA",
-          "enrollment": "60",
-          "url": "https://clinicaltrials.gov/study/NCT05535101"
+          "nct_id": "NCT01863459",
+          "title": "Lisdexamfetamine Dimesylate in the Treatment of Adult ADHD With Anxiety Disorder Comorbidity",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "42",
+          "url": "https://clinicaltrials.gov/study/NCT01863459"
         },
         {
-          "nct_id": "NCT01131559",
-          "title": "Adjunctive Lisdexamfetamine (LDX) in Bipolar Depression",
+          "nct_id": "NCT00069927",
+          "title": "Adderall XR Compared With Concerta in Treating Young Cancer Patients With Memory, Attention, and Depression",
           "status": "TERMINATED",
-          "phase": "PHASE3",
-          "enrollment": "50",
-          "url": "https://clinicaltrials.gov/study/NCT01131559"
-        },
-        {
-          "nct_id": "NCT03221283",
-          "title": "The Application of Music Therapy in Female Amphetamine Use Disorder",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "40",
-          "url": "https://clinicaltrials.gov/study/NCT03221283"
+          "phase": "PHASE2",
+          "enrollment": "12",
+          "url": "https://clinicaltrials.gov/study/NCT00069927"
         }
       ],
       "trial_phases": {
-        "PHASE2": 2,
-        "PHASE3": 3,
         "NA": 3,
-        "PHASE4": 2
+        "PHASE2": 4,
+        "PHASE4": 2,
+        "PHASE3": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -1599,6 +1600,7 @@
         "Strong causal genetic evidence (MR score: 0.86, 1 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D003866",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1735,8 +1737,7 @@
         "tissue_specificity": 0.694,
         "context_modifier": 1.089
       },
-      "disease_entity": "Disease::MESH:D003866",
-      "ensemble_prob": 0.5357,
+      "ensemble_prob": 0.3979,
       "ensemble_features": {
         "kg_score": 0.9956,
         "degree_penalty": 0.7545,
@@ -1745,7 +1746,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 3.8501
       },
-      "ensemble_rank": 3,
+      "ensemble_rank": 5,
       "docking": {
         "kcal_per_mol": null,
         "target_symbol": null,
@@ -1784,7 +1785,7 @@
       "admet_flags": "hERG=0.95",
       "primekg_score": 0.2502,
       "dti_score": 1.0,
-      "dti_best_target": "TACR1",
+      "dti_best_target": "CDH7",
       "kg_group_score": 0.1781,
       "structural_group_score": 1.0,
       "network_group_score": 0.5986,
@@ -1981,20 +1982,20 @@
       "clinical_trials_total": 6,
       "clinical_trials": [
         {
-          "nct_id": "NCT00174603",
-          "title": "Treatment of Depression With Quetiapine",
-          "status": "TERMINATED",
-          "phase": "PHASE3",
-          "enrollment": "60",
-          "url": "https://clinicaltrials.gov/study/NCT00174603"
-        },
-        {
           "nct_id": "NCT00340379",
           "title": "Ziprasidone vs. Sertraline/Haloperidol in Psychotic Depression",
           "status": "COMPLETED",
           "phase": "PHASE2, PHASE3",
           "enrollment": "72",
           "url": "https://clinicaltrials.gov/study/NCT00340379"
+        },
+        {
+          "nct_id": "NCT00399776",
+          "title": "Bone Mineral Content and Bone Metabolism in Adolescents on Antipsychotic Therapy",
+          "status": "COMPLETED",
+          "phase": "N/A",
+          "enrollment": "60",
+          "url": "https://clinicaltrials.gov/study/NCT00399776"
         },
         {
           "nct_id": "NCT00174590",
@@ -2005,25 +2006,25 @@
           "url": "https://clinicaltrials.gov/study/NCT00174590"
         },
         {
-          "nct_id": "NCT02213900",
-          "title": "Preventing Post-Operative Delirium in Patients Undergoing a Pneumonectomy, Esophagectomy or Thoracotomy",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "135",
-          "url": "https://clinicaltrials.gov/study/NCT02213900"
+          "nct_id": "NCT02374567",
+          "title": "Pharmacovigilance in Gerontopsychiatric Patients",
+          "status": "TERMINATED",
+          "phase": "PHASE3",
+          "enrollment": "407",
+          "url": "https://clinicaltrials.gov/study/NCT02374567"
         },
         {
-          "nct_id": "NCT00399776",
-          "title": "Bone Mineral Content and Bone Metabolism in Adolescents on Antipsychotic Therapy",
-          "status": "COMPLETED",
-          "phase": "N/A",
+          "nct_id": "NCT00174603",
+          "title": "Treatment of Depression With Quetiapine",
+          "status": "TERMINATED",
+          "phase": "PHASE3",
           "enrollment": "60",
-          "url": "https://clinicaltrials.gov/study/NCT00399776"
+          "url": "https://clinicaltrials.gov/study/NCT00174603"
         }
       ],
       "trial_phases": {
-        "PHASE3": 4,
         "PHASE2": 1,
+        "PHASE3": 4,
         "PHASE4": 1
       },
       "confidence": "HIGH",
@@ -2040,6 +2041,7 @@
         "Strong causal genetic evidence (MR score: 0.72, 3 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D003866",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2188,8 +2190,7 @@
         "tissue_specificity": 0.101,
         "context_modifier": 0.943
       },
-      "disease_entity": "Disease::MESH:D003866",
-      "ensemble_prob": 0.8536,
+      "ensemble_prob": 0.8647,
       "ensemble_features": {
         "kg_score": 0.9983,
         "degree_penalty": 0.7482,
@@ -2236,8 +2237,8 @@
       "admet_score": 0.5927,
       "admet_flags": "hERG=0.78",
       "primekg_score": 0.2472,
-      "dti_score": 0.4969,
-      "dti_best_target": "ENDOU",
+      "dti_score": 0.501,
+      "dti_best_target": "CDH7",
       "kg_group_score": 0.2984,
       "structural_group_score": 0.9661,
       "network_group_score": 0.5892999768257141,
@@ -2468,22 +2469,6 @@
       "clinical_trials_total": 4,
       "clinical_trials": [
         {
-          "nct_id": "NCT00016666",
-          "title": "Clinical Trial of Propranolol for Seasonal Affective Disorder",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "70",
-          "url": "https://clinicaltrials.gov/study/NCT00016666"
-        },
-        {
-          "nct_id": "NCT01263197",
-          "title": "A Study of LY2216684 in Healthy Participants Receiving Albuterol or Propanolol",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "48",
-          "url": "https://clinicaltrials.gov/study/NCT01263197"
-        },
-        {
           "nct_id": "NCT05189977",
           "title": "A Trial to Assess the Effects of Prazosin or Propranolol on Blood Pressure in the Presence of Brexpiprazole/Sertraline",
           "status": "TERMINATED",
@@ -2492,17 +2477,33 @@
           "url": "https://clinicaltrials.gov/study/NCT05189977"
         },
         {
+          "nct_id": "NCT00016666",
+          "title": "Clinical Trial of Propranolol for Seasonal Affective Disorder",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "70",
+          "url": "https://clinicaltrials.gov/study/NCT00016666"
+        },
+        {
           "nct_id": "NCT01902966",
           "title": "Feasibility - Beta Adrenergic Blockade (BB) in Cervical Cancer (CX)",
           "status": "TERMINATED",
           "phase": "NA",
           "enrollment": "6",
           "url": "https://clinicaltrials.gov/study/NCT01902966"
+        },
+        {
+          "nct_id": "NCT01263197",
+          "title": "A Study of LY2216684 in Healthy Participants Receiving Albuterol or Propanolol",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "48",
+          "url": "https://clinicaltrials.gov/study/NCT01263197"
         }
       ],
       "trial_phases": {
-        "PHASE2": 1,
         "PHASE1": 2,
+        "PHASE2": 1,
         "NA": 1
       },
       "confidence": "HIGH",
@@ -2517,6 +2518,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.55)"
       ],
+      "disease_entity": "Disease::MESH:D003866",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2666,8 +2668,7 @@
         "tissue_specificity": 0.349,
         "context_modifier": 1.038
       },
-      "disease_entity": "Disease::MESH:D003866",
-      "ensemble_prob": 0.4982,
+      "ensemble_prob": 0.5055,
       "ensemble_features": {
         "kg_score": 0.9963,
         "degree_penalty": 0.7479,
@@ -2676,7 +2677,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 3.6889
       },
-      "ensemble_rank": 4,
+      "ensemble_rank": 3,
       "docking": {
         "kcal_per_mol": -12.44,
         "target_symbol": "ADRB2",
@@ -2715,7 +2716,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2562,
       "dti_score": 1.0,
-      "dti_best_target": "TACR1",
+      "dti_best_target": "CDH7",
       "kg_group_score": 0.1055,
       "structural_group_score": 1.0,
       "network_group_score": 0.6308000087738037,
@@ -2891,6 +2892,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.58)"
       ],
+      "disease_entity": "Disease::MESH:D003866",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2992,8 +2994,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.911
       },
-      "disease_entity": "Disease::MESH:D003866",
-      "ensemble_prob": 0.116,
+      "ensemble_prob": 0.0985,
       "ensemble_features": {
         "kg_score": 0.9705,
         "degree_penalty": 0.7886,
@@ -3041,7 +3042,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2566,
       "dti_score": 1.0,
-      "dti_best_target": "TACR1",
+      "dti_best_target": "CDH7",
       "kg_group_score": 0.2535,
       "structural_group_score": 1.0,
       "network_group_score": 0.4683000147342682,
@@ -3197,8 +3198,14 @@
       "faers_interpretation": "3370 FAERS reports mention both Estradiol and Depression-related terms (4.5% of all Estradiol reports). This suggests real-world clinical association.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
-      "signature_top_reversers": [],
-      "signature_interpretation": "Insufficient disease gene signature (0 up, 0 down genes)",
+      "signature_top_reversers": [
+        "PF-3758309 (1.424)",
+        "S1014 (1.401)",
+        "neratinib (1.395)",
+        "dasatinib (1.393)",
+        "tretinoin (1.391)"
+      ],
+      "signature_interpretation": "Estradiol was not found among the top 36 drugs that reverse the Depression gene signature. Top reversers: PF-3758309 (1.424), S1014 (1.401), neratinib (1.395)",
       "ai_hypothesis": "of its anti-inflammatory and anti-apoptotic properties.",
       "abstract_analyses": [
         {
@@ -3310,20 +3317,20 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT02255175",
-          "title": "Perimenopausal Effects of Estradiol on Reward Responsiveness",
+          "nct_id": "NCT00633360",
+          "title": "The Oral Contraceptive Pill for Premenstrual Worsening of Depression",
           "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "64",
-          "url": "https://clinicaltrials.gov/study/NCT02255175"
+          "phase": "NA",
+          "enrollment": "32",
+          "url": "https://clinicaltrials.gov/study/NCT00633360"
         },
         {
-          "nct_id": "NCT00089414",
-          "title": "Treatment of Menstrually Related Disorders With Continuous v. Interrupted Oral Contraceptives",
-          "status": "TERMINATED",
+          "nct_id": "NCT00001481",
+          "title": "The Role of Hormones in Postpartum Mood Disorders",
+          "status": "COMPLETED",
           "phase": "PHASE2",
-          "enrollment": "5",
-          "url": "https://clinicaltrials.gov/study/NCT00089414"
+          "enrollment": "74",
+          "url": "https://clinicaltrials.gov/study/NCT00001481"
         },
         {
           "nct_id": "NCT05282277",
@@ -3334,28 +3341,28 @@
           "url": "https://clinicaltrials.gov/study/NCT05282277"
         },
         {
-          "nct_id": "NCT01126801",
-          "title": "Effects of Estrogen and Hot Flashes on Mood in Postmenopausal Women",
+          "nct_id": "NCT00089414",
+          "title": "Treatment of Menstrually Related Disorders With Continuous v. Interrupted Oral Contraceptives",
           "status": "TERMINATED",
           "phase": "PHASE2",
-          "enrollment": "2",
-          "url": "https://clinicaltrials.gov/study/NCT01126801"
+          "enrollment": "5",
+          "url": "https://clinicaltrials.gov/study/NCT00089414"
         },
         {
-          "nct_id": "NCT03740009",
-          "title": "Effects of a Tissue Selective Estrogen Complex (TSEC) on Depression and the Neural Reward System in the Perimenopause\"",
+          "nct_id": "NCT00001259",
+          "title": "A Treatment Study for Premenstrual Syndrome (PMS)",
           "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "20",
-          "url": "https://clinicaltrials.gov/study/NCT03740009"
+          "phase": "PHASE1",
+          "enrollment": "60",
+          "url": "https://clinicaltrials.gov/study/NCT00001259"
         }
       ],
       "trial_phases": {
-        "PHASE4": 5,
-        "PHASE2": 3,
+        "NA": 2,
+        "PHASE2": 5,
+        "PHASE4": 2,
         "PHASE1": 1,
-        "PHASE3": 1,
-        "NA": 1
+        "PHASE3": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -3370,6 +3377,7 @@
         "Moderate genetic evidence supporting causality (MR score: 0.65)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D003866",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3479,8 +3487,7 @@
         "tissue_specificity": 0.319,
         "context_modifier": 1.032
       },
-      "disease_entity": "Disease::MESH:D003866",
-      "ensemble_prob": 0.9347,
+      "ensemble_prob": 0.989,
       "ensemble_features": {
         "kg_score": 0.9991,
         "degree_penalty": 0.7341,
@@ -3496,326 +3503,6 @@
         "source": "chembl_bioactivity_proxy",
         "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
         "hit": true
-      },
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Urea",
-      "drug_id": "DB03904",
-      "disease_name": "Depression",
-      "combined_score": 0.49619999527931213,
-      "pillars_hit": 4,
-      "transe_rank": 38,
-      "transe_score": -10.1727,
-      "pykeen_score": 0,
-      "pykeen_rank": 0,
-      "txgnn_score": 0.55,
-      "txgnn_rank": 45,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.7879999876022339,
-      "proximity_distance": 0.8500000238418579,
-      "admet_score": 0.7639,
-      "admet_flags": "clean",
-      "primekg_score": 0.257,
-      "dti_score": 0.6564,
-      "dti_best_target": "IFNG",
-      "kg_group_score": 0.1493,
-      "structural_group_score": 0.6564,
-      "network_group_score": 0.7218000292778015,
-      "txgnn_group_score": 0.55,
-      "mr_group_score": 0,
-      "admet_multiplier": 0.9528,
-      "efficacy_score": 0.520799994468689,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 12,
-      "shared_targets": [
-        "AGT",
-        "ALB",
-        "BCHE",
-        "C2",
-        "FGB",
-        "FN1",
-        "IL6",
-        "INS",
-        "LYZ",
-        "NOS2",
-        "PRNP",
-        "TNF"
-      ],
-      "pubmed_total": 1055,
-      "pubmed_treatment_total": 528,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "27533032",
-          "title": "Structure-based discovery of opioid analgesics with reduced side effects.",
-          "authors": "Manglik A, Lin H, Aryal DK, et al.",
-          "journal": "Nature",
-          "year": "2016",
-          "abstract_snippet": "Morphine is an alkaloid from the opium poppy used to treat pain. The potentially lethal side effects of morphine and related opioids-which include fatal respiratory depression-are thought to be mediated by \u03bc-opioid-receptor (\u03bcOR) signalling through the \u03b2-arrestin pathway or by actions at other recep...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/27533032/",
-          "total_results": 1055
-        },
-        {
-          "pmid": "39056112",
-          "title": "A high-fat diet induced depression-like phenotype ",
-          "authors": "Dong J, Zhang J, Cheng S, et al.",
-          "journal": "Food & function",
-          "year": "2024",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39056112/"
-        },
-        {
-          "pmid": "31734718",
-          "title": "Physiological functions of urea transporter B.",
-          "authors": "Yu L, Liu T, Fu S, et al.",
-          "journal": "Pflugers Archiv : European journal of physiology",
-          "year": "2019",
-          "abstract_snippet": "Urea transporters (UTs) are membrane proteins in the urea transporter protein A (UT-A) and urea transporter protein B (UT-B) families. UT-B is mainly expressed in endothelial cell membrane of the renal medulla and in other tissues, including the brain, heart, pancreas, colon, bladder, bone marrow, a...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/31734718/"
-        },
-        {
-          "pmid": "39057966",
-          "title": "Urea Level and Depression in Patients with Chronic Kidney Disease.",
-          "authors": "Levassort H, Boucquemont J, Lambert O, et al.",
-          "journal": "Toxins",
-          "year": "2024",
-          "abstract_snippet": "Depression is common in patients with chronic kidney disease (CKD). Experimental studies suggest the role of urea toxicity in depression. We assessed both the incidence of antidepressant prescriptions and depressive symptoms (measured by CESD (Center for Epidemiologic Depression) scale) in 2505 pati...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39057966/"
-        },
-        {
-          "pmid": "38858783",
-          "title": "Shared genetic effect of kidney function on bipolar and major depressive disorders: a large-scale genome-wide cross-trait analysis.",
-          "authors": "Yu S, Lin Y, Yang Y, et al.",
-          "journal": "Human genomics",
-          "year": "2024",
-          "abstract_snippet": "BACKGROUND: Epidemiological studies have revealed a significant association between impaired kidney function and certain mental disorders, particularly bipolar disorder (BIP) and major depressive disorder (MDD). However, the evidence regarding shared genetics and causality is limited due to residual...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38858783/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Urea Level and Depression in Patients with Chronic Kidney Disease",
-          "year": 2024,
-          "citations": 6,
-          "url": "https://www.semanticscholar.org/paper/bce2d9f3456c390eaaba54fd8ba45990570a11e8",
-          "authors": "H. Levassort, J. Boucquemont, O. Lambert"
-        },
-        {
-          "title": "Associations between urea nitrogen and risk of depression among subjects with and without type 2 diabetes: A nationwide population-based study",
-          "year": 2022,
-          "citations": 24,
-          "url": "https://www.semanticscholar.org/paper/f6a73125d00d8cacd0c805f599b732d045e6224e",
-          "authors": "Yafei Mao, Xinyuan Li, Shumin Zhu"
-        },
-        {
-          "title": "Development of indole-2-carbonyl piperazine urea derivatives as selective FAAH inhibitors for efficient treatment of depression and pain.",
-          "year": 2022,
-          "citations": 9,
-          "url": "https://www.semanticscholar.org/paper/7f124529bf5b17459a9633403aed5692b476d16e",
-          "authors": "Yanguo Shang, Minghui Wang, Qingjing Hao"
-        },
-        {
-          "title": "High urea induces depression and LTP impairment through mTOR signalling suppression caused by carbamylation",
-          "year": 2019,
-          "citations": 53,
-          "url": "https://www.semanticscholar.org/paper/8334f01b7000f95f7884ff6582cd36a876318e47",
-          "authors": "Hongkai Wang, Bo-yue Huang, Weiling Wang"
-        },
-        {
-          "title": "High urea promotes mitochondrial fission and functional impairments in astrocytes inducing anxiety-like behavior in chronic kidney disease mice",
-          "year": 2025,
-          "citations": 2,
-          "url": "https://www.semanticscholar.org/paper/3e91b66b9e807c40a4287a721621bf34b1168436",
-          "authors": "Xi Zhao, Shengyao Zhang, Meng-na Wu"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "High urea induces depression and LTP impairment through mTOR signalling suppression caused by carbamylation",
-        "year": 2019,
-        "citations": 53,
-        "url": "https://www.semanticscholar.org/paper/8334f01b7000f95f7884ff6582cd36a876318e47",
-        "authors": "Hongkai Wang, Bo-yue Huang, Weiling Wang"
-      },
-      "max_citations": 53,
-      "faers_signal": "strong",
-      "faers_total_reports": 3034,
-      "faers_cooccurrences": 62,
-      "faers_interpretation": "62 FAERS reports mention both Urea and Depression-related terms (2.0% of all Urea reports). This suggests real-world clinical association.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "PF-3758309 (1.424)",
-        "S1014 (1.401)",
-        "neratinib (1.395)",
-        "dasatinib (1.393)",
-        "tretinoin (1.391)"
-      ],
-      "signature_interpretation": "Urea was not found among the top 36 drugs that reverse the Depression gene signature. Top reversers: PF-3758309 (1.424), S1014 (1.401), neratinib (1.395)",
-      "ai_hypothesis": "of its antidepressant properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "Urea \u2014[is a therapeutic for]\u2192 MESH:D013226 \u2014[is treated by]\u2192 DB00186 \u2014[is a therapeutic for]\u2192 Depression",
-      "kg_paths_text": "\u2022 Urea \u2014[is a therapeutic for]\u2192 MESH:D013226 \u2014[is treated by]\u2192 DB00186 \u2014[is a therapeutic for]\u2192 Depression\n\u2022 Urea \u2014[is a therapeutic for]\u2192 MESH:D013226 \u2014[is treated by]\u2192 DB00313 \u2014[is a therapeutic for]\u2192 Depression\n\u2022 Urea \u2014[is a therapeutic for]\u2192 MESH:D013226 \u2014[is treated by]\u2192 DB00313 \u2014[is a therapeutic for]\u2192 Depression",
-      "validation_experiments": [],
-      "novelty_score": 0.1979999989271164,
-      "novelty_level": "ESTABLISHED",
-      "is_known_treatment": true,
-      "clinical_trials_total": 5,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT06167590",
-          "title": "Integrins and Protocadherins in Glutamatergic Circuits: Identification of Common Signaling Pathways and Molecular Targets in Anxiety and Major Depressive Disorders (GAPsy)",
-          "status": "UNKNOWN",
-          "phase": "NA",
-          "enrollment": "20",
-          "url": "https://clinicaltrials.gov/study/NCT06167590"
-        },
-        {
-          "nct_id": "NCT00978484",
-          "title": "A Head-to-head Comparison of Virtual Reality Treatment for Post Traumatic Stress Disorder",
-          "status": "UNKNOWN",
-          "phase": "PHASE3",
-          "enrollment": "150",
-          "url": "https://clinicaltrials.gov/study/NCT00978484"
-        },
-        {
-          "nct_id": "NCT06812221",
-          "title": "Efficacy of Sublingual 5-MeO-DMT for Reducing Anxiety and Depression in MCI",
-          "status": "COMPLETED",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "20",
-          "url": "https://clinicaltrials.gov/study/NCT06812221"
-        },
-        {
-          "nct_id": "NCT03642405",
-          "title": "Drug-induced Repolarization ECG Changes",
-          "status": "UNKNOWN",
-          "phase": "N/A",
-          "enrollment": "150",
-          "url": "https://clinicaltrials.gov/study/NCT03642405"
-        },
-        {
-          "nct_id": "NCT06816667",
-          "title": "Safety, Tolerability, and Efficacy of Sublingual Microdoses of 5-MeO-DMT for Depression and Anxiety",
-          "status": "COMPLETED",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "40",
-          "url": "https://clinicaltrials.gov/study/NCT06816667"
-        }
-      ],
-      "trial_phases": {
-        "NA": 1,
-        "PHASE3": 1,
-        "PHASE1": 2,
-        "PHASE2": 2
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "5 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
-        "1055 PubMed articles on this drug-disease pair",
-        "Supported by 4 independent AI pillars",
-        "Strong FAERS signal: 62 adverse event reports link drug to disease (3034 total reports)",
-        "Supporting paper with 53 citations",
-        "AI-generated hypothesis available",
-        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 0,
-        "has_warnings": false,
-        "top_interactions": []
-      },
-      "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
-        "pharmgkb": []
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.37400001287460327,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.4959999918937683,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 1.0
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Brain - Frontal Cortex (BA9)",
-          "Brain - Anterior cingulate cortex (BA24)"
-        ],
-        "n_genes": 12,
-        "n_expressed": 8,
-        "mean_tpm_in_tissue": 49.31,
-        "max_tpm_in_tissue": 405.54,
-        "tissue_specificity": 0.0,
-        "context_modifier": 1.003
-      },
-      "disease_entity": "Disease::MESH:D003866",
-      "ensemble_prob": 0.0003,
-      "ensemble_features": {
-        "kg_score": 0.8063,
-        "degree_penalty": 0.916,
-        "n_drug_targets": 1,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 7.6232
-      },
-      "ensemble_rank": 10,
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
       },
       "structural_alerts": {
         "has_pains": false,
@@ -4025,20 +3712,20 @@
       "clinical_trials_total": 2,
       "clinical_trials": [
         {
-          "nct_id": "NCT02943213",
-          "title": "Assessment of Intra-subject Variability in the Bioavailability of Chlorpromazine Hydrochloride",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "20",
-          "url": "https://clinicaltrials.gov/study/NCT02943213"
-        },
-        {
           "nct_id": "NCT03140475",
           "title": "Explorations of the Normal Neural Behavioral and Pathological Bases of Metacognition",
           "status": "COMPLETED",
           "phase": "N/A",
           "enrollment": "109",
           "url": "https://clinicaltrials.gov/study/NCT03140475"
+        },
+        {
+          "nct_id": "NCT02943213",
+          "title": "Assessment of Intra-subject Variability in the Bioavailability of Chlorpromazine Hydrochloride",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "20",
+          "url": "https://clinicaltrials.gov/study/NCT02943213"
         }
       ],
       "trial_phases": {
@@ -4054,6 +3741,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.71, 3 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D003866",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -4163,8 +3851,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.939
       },
-      "disease_entity": "Disease::MESH:D003866",
-      "ensemble_prob": 0.1711,
+      "ensemble_prob": 0.2788,
       "ensemble_features": {
         "kg_score": 0.9955,
         "degree_penalty": 0.7419,
@@ -4180,6 +3867,326 @@
         "source": "chembl_bioactivity_proxy",
         "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
         "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Urea",
+      "drug_id": "DB03904",
+      "disease_name": "Depression",
+      "combined_score": 0.4934999942779541,
+      "pillars_hit": 4,
+      "transe_rank": 38,
+      "transe_score": -10.1727,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0.55,
+      "txgnn_rank": 45,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.7879999876022339,
+      "proximity_distance": 0.8500000238418579,
+      "admet_score": 0.7639,
+      "admet_flags": "clean",
+      "primekg_score": 0.257,
+      "dti_score": 0.6405,
+      "dti_best_target": "DAOA",
+      "kg_group_score": 0.1493,
+      "structural_group_score": 0.6405,
+      "network_group_score": 0.7218000292778015,
+      "txgnn_group_score": 0.55,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9528,
+      "efficacy_score": 0.5180000066757202,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 12,
+      "shared_targets": [
+        "AGT",
+        "ALB",
+        "BCHE",
+        "C2",
+        "FGB",
+        "FN1",
+        "IL6",
+        "INS",
+        "LYZ",
+        "NOS2",
+        "PRNP",
+        "TNF"
+      ],
+      "pubmed_total": 1055,
+      "pubmed_treatment_total": 528,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "27533032",
+          "title": "Structure-based discovery of opioid analgesics with reduced side effects.",
+          "authors": "Manglik A, Lin H, Aryal DK, et al.",
+          "journal": "Nature",
+          "year": "2016",
+          "abstract_snippet": "Morphine is an alkaloid from the opium poppy used to treat pain. The potentially lethal side effects of morphine and related opioids-which include fatal respiratory depression-are thought to be mediated by \u03bc-opioid-receptor (\u03bcOR) signalling through the \u03b2-arrestin pathway or by actions at other recep...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/27533032/",
+          "total_results": 1055
+        },
+        {
+          "pmid": "39056112",
+          "title": "A high-fat diet induced depression-like phenotype ",
+          "authors": "Dong J, Zhang J, Cheng S, et al.",
+          "journal": "Food & function",
+          "year": "2024",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39056112/"
+        },
+        {
+          "pmid": "31734718",
+          "title": "Physiological functions of urea transporter B.",
+          "authors": "Yu L, Liu T, Fu S, et al.",
+          "journal": "Pflugers Archiv : European journal of physiology",
+          "year": "2019",
+          "abstract_snippet": "Urea transporters (UTs) are membrane proteins in the urea transporter protein A (UT-A) and urea transporter protein B (UT-B) families. UT-B is mainly expressed in endothelial cell membrane of the renal medulla and in other tissues, including the brain, heart, pancreas, colon, bladder, bone marrow, a...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31734718/"
+        },
+        {
+          "pmid": "39057966",
+          "title": "Urea Level and Depression in Patients with Chronic Kidney Disease.",
+          "authors": "Levassort H, Boucquemont J, Lambert O, et al.",
+          "journal": "Toxins",
+          "year": "2024",
+          "abstract_snippet": "Depression is common in patients with chronic kidney disease (CKD). Experimental studies suggest the role of urea toxicity in depression. We assessed both the incidence of antidepressant prescriptions and depressive symptoms (measured by CESD (Center for Epidemiologic Depression) scale) in 2505 pati...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39057966/"
+        },
+        {
+          "pmid": "38858783",
+          "title": "Shared genetic effect of kidney function on bipolar and major depressive disorders: a large-scale genome-wide cross-trait analysis.",
+          "authors": "Yu S, Lin Y, Yang Y, et al.",
+          "journal": "Human genomics",
+          "year": "2024",
+          "abstract_snippet": "BACKGROUND: Epidemiological studies have revealed a significant association between impaired kidney function and certain mental disorders, particularly bipolar disorder (BIP) and major depressive disorder (MDD). However, the evidence regarding shared genetics and causality is limited due to residual...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38858783/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Urea Level and Depression in Patients with Chronic Kidney Disease",
+          "year": 2024,
+          "citations": 6,
+          "url": "https://www.semanticscholar.org/paper/bce2d9f3456c390eaaba54fd8ba45990570a11e8",
+          "authors": "H. Levassort, J. Boucquemont, O. Lambert"
+        },
+        {
+          "title": "Associations between urea nitrogen and risk of depression among subjects with and without type 2 diabetes: A nationwide population-based study",
+          "year": 2022,
+          "citations": 24,
+          "url": "https://www.semanticscholar.org/paper/f6a73125d00d8cacd0c805f599b732d045e6224e",
+          "authors": "Yafei Mao, Xinyuan Li, Shumin Zhu"
+        },
+        {
+          "title": "Development of indole-2-carbonyl piperazine urea derivatives as selective FAAH inhibitors for efficient treatment of depression and pain.",
+          "year": 2022,
+          "citations": 9,
+          "url": "https://www.semanticscholar.org/paper/7f124529bf5b17459a9633403aed5692b476d16e",
+          "authors": "Yanguo Shang, Minghui Wang, Qingjing Hao"
+        },
+        {
+          "title": "High urea induces depression and LTP impairment through mTOR signalling suppression caused by carbamylation",
+          "year": 2019,
+          "citations": 53,
+          "url": "https://www.semanticscholar.org/paper/8334f01b7000f95f7884ff6582cd36a876318e47",
+          "authors": "Hongkai Wang, Bo-yue Huang, Weiling Wang"
+        },
+        {
+          "title": "High urea promotes mitochondrial fission and functional impairments in astrocytes inducing anxiety-like behavior in chronic kidney disease mice",
+          "year": 2025,
+          "citations": 2,
+          "url": "https://www.semanticscholar.org/paper/3e91b66b9e807c40a4287a721621bf34b1168436",
+          "authors": "Xi Zhao, Shengyao Zhang, Meng-na Wu"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "High urea induces depression and LTP impairment through mTOR signalling suppression caused by carbamylation",
+        "year": 2019,
+        "citations": 53,
+        "url": "https://www.semanticscholar.org/paper/8334f01b7000f95f7884ff6582cd36a876318e47",
+        "authors": "Hongkai Wang, Bo-yue Huang, Weiling Wang"
+      },
+      "max_citations": 53,
+      "faers_signal": "strong",
+      "faers_total_reports": 3034,
+      "faers_cooccurrences": 62,
+      "faers_interpretation": "62 FAERS reports mention both Urea and Depression-related terms (2.0% of all Urea reports). This suggests real-world clinical association.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "PF-3758309 (1.424)",
+        "S1014 (1.401)",
+        "neratinib (1.395)",
+        "dasatinib (1.393)",
+        "tretinoin (1.391)"
+      ],
+      "signature_interpretation": "Urea was not found among the top 36 drugs that reverse the Depression gene signature. Top reversers: PF-3758309 (1.424), S1014 (1.401), neratinib (1.395)",
+      "ai_hypothesis": "of its antidepressant properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Urea \u2014[is a therapeutic for]\u2192 MESH:D013226 \u2014[is treated by]\u2192 DB00186 \u2014[is a therapeutic for]\u2192 Depression",
+      "kg_paths_text": "\u2022 Urea \u2014[is a therapeutic for]\u2192 MESH:D013226 \u2014[is treated by]\u2192 DB00186 \u2014[is a therapeutic for]\u2192 Depression\n\u2022 Urea \u2014[is a therapeutic for]\u2192 MESH:D013226 \u2014[is treated by]\u2192 DB00313 \u2014[is a therapeutic for]\u2192 Depression\n\u2022 Urea \u2014[is a therapeutic for]\u2192 MESH:D013226 \u2014[is treated by]\u2192 DB00313 \u2014[is a therapeutic for]\u2192 Depression",
+      "validation_experiments": [],
+      "novelty_score": 0.12300000339746475,
+      "novelty_level": "ESTABLISHED",
+      "is_known_treatment": true,
+      "clinical_trials_total": 6,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT06812221",
+          "title": "Efficacy of Sublingual 5-MeO-DMT for Reducing Anxiety and Depression in MCI",
+          "status": "COMPLETED",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "20",
+          "url": "https://clinicaltrials.gov/study/NCT06812221"
+        },
+        {
+          "nct_id": "NCT06167590",
+          "title": "Integrins and Protocadherins in Glutamatergic Circuits: Identification of Common Signaling Pathways and Molecular Targets in Anxiety and Major Depressive Disorders (GAPsy)",
+          "status": "UNKNOWN",
+          "phase": "NA",
+          "enrollment": "20",
+          "url": "https://clinicaltrials.gov/study/NCT06167590"
+        },
+        {
+          "nct_id": "NCT00978484",
+          "title": "A Head-to-head Comparison of Virtual Reality Treatment for Post Traumatic Stress Disorder",
+          "status": "UNKNOWN",
+          "phase": "PHASE3",
+          "enrollment": "150",
+          "url": "https://clinicaltrials.gov/study/NCT00978484"
+        },
+        {
+          "nct_id": "NCT06816667",
+          "title": "Safety, Tolerability, and Efficacy of Sublingual Microdoses of 5-MeO-DMT for Depression and Anxiety",
+          "status": "COMPLETED",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "40",
+          "url": "https://clinicaltrials.gov/study/NCT06816667"
+        },
+        {
+          "nct_id": "NCT03642405",
+          "title": "Drug-induced Repolarization ECG Changes",
+          "status": "UNKNOWN",
+          "phase": "N/A",
+          "enrollment": "150",
+          "url": "https://clinicaltrials.gov/study/NCT03642405"
+        }
+      ],
+      "trial_phases": {
+        "PHASE1": 2,
+        "PHASE2": 2,
+        "NA": 1,
+        "PHASE3": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "6 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "1055 PubMed articles on this drug-disease pair",
+        "Supported by 4 independent AI pillars",
+        "Strong FAERS signal: 62 adverse event reports link drug to disease (3034 total reports)",
+        "Supporting paper with 53 citations",
+        "AI-generated hypothesis available",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D003866",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 0,
+        "has_warnings": false,
+        "top_interactions": []
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.37299999594688416,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.49399998784065247,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Brain - Frontal Cortex (BA9)",
+          "Brain - Anterior cingulate cortex (BA24)"
+        ],
+        "n_genes": 12,
+        "n_expressed": 8,
+        "mean_tpm_in_tissue": 49.31,
+        "max_tpm_in_tissue": 405.54,
+        "tissue_specificity": 0.0,
+        "context_modifier": 1.003
+      },
+      "ensemble_prob": 0.0046,
+      "ensemble_features": {
+        "kg_score": 0.8063,
+        "degree_penalty": 0.916,
+        "n_drug_targets": 1,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 7.6232
+      },
+      "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
       },
       "structural_alerts": {
         "has_pains": false,

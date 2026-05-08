@@ -1,8 +1,8 @@
 {
   "disease": "Asthma",
   "status": "completed",
-  "timestamp": "2026-04-20T00:32:26.853867",
-  "elapsed_seconds": 731.3,
+  "timestamp": "2026-05-08T01:45:20.315895",
+  "elapsed_seconds": 243.9,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -231,6 +231,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.68)"
       ],
+      "disease_entity": "Disease::MESH:D001249",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -331,8 +332,7 @@
         "tissue_specificity": 0.867,
         "context_modifier": 1.049
       },
-      "disease_entity": "Disease::MESH:D001249",
-      "ensemble_prob": 0.721,
+      "ensemble_prob": 0.6364,
       "ensemble_features": {
         "kg_score": 0.9933,
         "degree_penalty": 0.787,
@@ -341,7 +341,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 4.2767
       },
-      "ensemble_rank": 4,
+      "ensemble_rank": 6,
       "docking": {
         "kcal_per_mol": null,
         "target_symbol": null,
@@ -360,7 +360,7 @@
       "drug_name": "Cimetidine",
       "drug_id": "DB00501",
       "disease_name": "Asthma",
-      "combined_score": 0.6022,
+      "combined_score": 0.5922,
       "pillars_hit": 5,
       "transe_rank": 170,
       "transe_score": -10.6899,
@@ -379,15 +379,15 @@
       "admet_score": 0.5683,
       "admet_flags": "clean",
       "primekg_score": 0.264,
-      "dti_score": 0.2441,
-      "dti_best_target": "C3",
+      "dti_score": 0.1836,
+      "dti_best_target": "CRLF2",
       "kg_group_score": 0.0875,
-      "structural_group_score": 0.2441,
+      "structural_group_score": 0.1836,
       "network_group_score": 0.5425000190734863,
       "txgnn_group_score": 0.98,
       "mr_group_score": 0.7942,
       "admet_multiplier": 0.9137,
-      "efficacy_score": 0.6591,
+      "efficacy_score": 0.6482,
       "groups_hit": 5,
       "direct_relations": [],
       "shared_target_count": 4,
@@ -535,7 +535,7 @@
       "mechanistic_hypothesis": "Cimetidine \u2014[binds]\u2192 gene-8647 \u2014[is bound by]\u2192 DB01234 \u2014[treats]\u2192 Asthma",
       "kg_paths_text": "\u2022 Cimetidine \u2014[binds]\u2192 gene-8647 \u2014[is bound by]\u2192 DB01234 \u2014[treats]\u2192 Asthma\n\u2022 Cimetidine \u2014[binds]\u2192 gene-8647 \u2014[is bound by]\u2192 DB01234 \u2014[treats]\u2192 Asthma\n\u2022 Cimetidine \u2014[binds]\u2192 gene-8647 \u2014[is bound by]\u2192 DB01234 \u2014[treats]\u2192 Asthma",
       "validation_experiments": [],
-      "novelty_score": 0.47,
+      "novelty_score": 0.462,
       "novelty_level": "KNOWN",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -549,6 +549,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.79, 3 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D001249",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -629,10 +630,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.387,
+        "triangulation_score": 0.383,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.602,
+          "kg": 0.592,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 0.879
@@ -649,8 +650,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.918
       },
-      "disease_entity": "Disease::MESH:D001249",
-      "ensemble_prob": 0.0286,
+      "ensemble_prob": 0.0254,
       "ensemble_features": {
         "kg_score": 0.9683,
         "degree_penalty": 0.7619,
@@ -710,7 +710,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2573,
       "dti_score": 1.0,
-      "dti_best_target": "CCR8",
+      "dti_best_target": "TNFRSF8",
       "kg_group_score": 0.3436,
       "structural_group_score": 1.0,
       "network_group_score": 0.5823000073432922,
@@ -891,8 +891,10 @@
         "Moderate FAERS signal: 4 adverse event reports mention drug-disease co-occurrence",
         "Highly cited paper (117 citations): \"Response of blood gas tensions to aminophylline and isoprena...\"",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.76, 1 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.76, 1 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D001249",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -993,8 +995,7 @@
         "tissue_specificity": 0.844,
         "context_modifier": 1.125
       },
-      "disease_entity": "Disease::MESH:D001249",
-      "ensemble_prob": 0.9893,
+      "ensemble_prob": 0.9945,
       "ensemble_features": {
         "kg_score": 0.9996,
         "degree_penalty": 0.789,
@@ -1024,472 +1025,6 @@
       }
     },
     {
-      "drug_name": "Dexamethasone",
-      "drug_id": "DB01234",
-      "disease_name": "Asthma",
-      "combined_score": 0.5538,
-      "pillars_hit": 4,
-      "transe_rank": 1,
-      "transe_score": -9.4954,
-      "pykeen_score": -11.0082,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.675000011920929,
-      "proximity_distance": 1.2999999523162842,
-      "admet_score": 0.7109,
-      "admet_flags": "clean",
-      "primekg_score": 0.2585,
-      "dti_score": 0.8359,
-      "dti_best_target": "C3",
-      "kg_group_score": 0.4452,
-      "structural_group_score": 0.8359,
-      "network_group_score": 0.4968000054359436,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.8442,
-      "admet_multiplier": 0.9422,
-      "efficacy_score": 0.5877,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 48,
-      "shared_targets": [
-        "ADIPOQ",
-        "AGT",
-        "AICDA",
-        "ALOX5",
-        "AVP",
-        "BCL2L11",
-        "BDNF",
-        "BID",
-        "CD247",
-        "CRP",
-        "CXCR4",
-        "ESR1",
-        "ETS1",
-        "FOXO3",
-        "FOXP3",
-        "FPR1",
-        "GJA1",
-        "IFNA1",
-        "IGFBP3",
-        "IL10"
-      ],
-      "pubmed_total": 2053,
-      "pubmed_treatment_total": 1742,
-      "pubmed_repurposing_total": 2,
-      "key_papers": [
-        {
-          "pmid": "38460304",
-          "title": "Dexamethasone protects against asthma via regulating Hif-1\u03b1-glycolysis-lactate axis and protein lactylation.",
-          "authors": "Chen N, Xie QM, Song SM, et al.",
-          "journal": "International immunopharmacology",
-          "year": "2024",
-          "abstract_snippet": "PURPOSE: Asthma can not be eradicated till now and its control primarily relies on the application of corticosteroids. Recently, glycolytic reprogramming has been reportedly contributed to asthma, this study aimed to reveal whether the effect of corticosteroids on asthma control is related to their ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38460304/",
-          "total_results": 2053
-        },
-        {
-          "pmid": "34248632",
-          "title": "Allergic Asthma-Induced Cognitive Impairment is Alleviated by Dexamethasone.",
-          "authors": "Ren M, Feng M, Long Z, et al.",
-          "journal": "Frontiers in pharmacology",
-          "year": "2021",
-          "abstract_snippet": "Allergic asthma is a typical chronic inflammatory disease of respiratory tract. Clinical data shows that patients with allergic asthma have different degrees of cognitive dysfunction. The molecular mechanism underlying the pathogenesis of asthma-induced cognitive disorder is not yet well defined. De...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34248632/"
-        },
-        {
-          "pmid": "40734916",
-          "title": "",
-          "authors": "Zhang Y, Peng H, Li J, et al.",
-          "journal": "Chinese herbal medicines",
-          "year": "2025",
-          "abstract_snippet": "OBJECTIVE: To investigate the effect and mechanism of  METHODS: Components identification of HCE was conducted using ultra performance liquid chromatography-quadrupole-time of flight-mass spectrometry. Mice were sensitized with OVA to establish asthmatic model, and dexamethasone was used as positive...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40734916/"
-        },
-        {
-          "pmid": "32394644",
-          "title": "Dexamethasone or prednisolone for asthma exacerbations in children: A cost-effectiveness analysis.",
-          "authors": "Rodriguez-Martinez CE, Sossa-Brice\u00f1o MP, Castro-Rodriguez JA",
-          "journal": "Pediatric pulmonology",
-          "year": "2020",
-          "abstract_snippet": "OBJECTIVES: Although a short course (ie, 3 to 5 days) of orally administered prednisolone is a common and widely accepted practice among clinicians for administering systemic corticosteroids in pediatric acute asthma, oral dexamethasone for 1 to 2 days is an attractive alternative to prednisolone du...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/32394644/"
-        },
-        {
-          "pmid": "40222689",
-          "title": "Wuwei Shaji powder alleviates OVA-induced allergic asthma by protecting bronchial epithelial cells from ferroptosis via the S-sulfhydration of Keap1.",
-          "authors": "Zhao H, Zhang H, Shi J, et al.",
-          "journal": "Journal of ethnopharmacology",
-          "year": "2025",
-          "abstract_snippet": "ETHNOPHARMACOLOGICAL RELEVANCE: Asthma is a chronic inflammatory airway disease. Current treatments have limited efficacy and often cause severe side effects. Wuwei Shaji Powder (WSP), a traditional Mongolian remedy, is used for treating chronic pulmonary diseases, but its efficacy against asthma an...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40222689/"
-        }
-      ],
-      "repurposing_papers": [
-        {
-          "pmid": "33802355",
-          "title": "Drug Repurposing to Treat Glucocorticoid Resistance in Asthma.",
-          "authors": "Wang AL, Panganiban R, Qiu W, et al.",
-          "journal": "Journal of personalized medicine",
-          "year": "2021",
-          "abstract_snippet": "Corticosteroid resistance causes significant morbidity in asthma, and drug repurposing may identify timely and cost-effective adjunctive treatments for corticosteroid resistance. In 95 subjects from the Childhood Asthma Management Program (CAMP) and 19 subjects from the Severe Asthma Research Progra...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33802355/",
-          "total_results": 2
-        },
-        {
-          "pmid": "40352672",
-          "title": "Revisiting the role of steroidal therapeutics in the 21st century: an update on FDA approved steroidal drugs (2000-2024).",
-          "authors": "Singh R, Bansal R",
-          "journal": "RSC medicinal chemistry",
-          "year": "2025",
-          "abstract_snippet": "Steroids are biologically active polycyclic compounds that have garnered significant scientific attention due to their distinct physiochemical properties and diverse medical applications. Since their invention more than 90 years ago, steroids have remained the most important and necessary class of r...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40352672/"
-        }
-      ],
-      "semantic_scholar_papers": [
-        {
-          "title": "Dexamethasone protects against asthma via regulating Hif-1\u03b1-glycolysis-lactate axis and protein lactylation.",
-          "year": 2024,
-          "citations": 37,
-          "url": "https://www.semanticscholar.org/paper/776c1738535d436f24ff7be0f86fba0bbfe6d421",
-          "authors": "Ning Chen, Qiu-Meng Xie, Si-Ming Song"
-        },
-        {
-          "title": "A CONSORT\u2010guided, randomized controlled clinical trial of nebulized administration of dexamethasone and saline on lower airway cytokine mRNA expression in horses with moderate asthma",
-          "year": 2024,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/35e75e4114374378eb9283943b478a9688660879",
-          "authors": "Stephanie L Bond, R. L\u00e9guillette"
-        },
-        {
-          "title": "Dexamethasone protects against Aspergillus fumigatus-induced severe asthma via modulating pulmonary immunometabolism.",
-          "year": 2023,
-          "citations": 13,
-          "url": "https://www.semanticscholar.org/paper/9ba37fbc93058d19569e9e758da33d9b01e66cc3",
-          "authors": "Phyllis X. L. Gan, W. Liao, Hui Fang Lim"
-        },
-        {
-          "title": "Dexamethasone versus methylprednisolone for critical asthma: A single center, open\u2010label, parallel\u2010group clinical trial",
-          "year": 2023,
-          "citations": 11,
-          "url": "https://www.semanticscholar.org/paper/f011e47fa71abd6c0a1b49bc5ac3a09b7a9118f2",
-          "authors": "Meghan R. Roddy, A. Sellers, K. Darville"
-        },
-        {
-          "title": "Effects of Pre-Hospital Dexamethasone Administration on Outcomes of Patients with COPD and Asthma Exacerbation; a Cross-Sectional Study",
-          "year": 2023,
-          "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/f35af9f296b82f2206d552d2c1e90c27b555b315",
-          "authors": "Thongpitak Huabbangyang, Agasak Silakoon, C. Sangketchon"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Dexamethasone protects against asthma via regulating Hif-1\u03b1-glycolysis-lactate axis and protein lactylation.",
-        "year": 2024,
-        "citations": 37,
-        "url": "https://www.semanticscholar.org/paper/776c1738535d436f24ff7be0f86fba0bbfe6d421",
-        "authors": "Ning Chen, Qiu-Meng Xie, Si-Ming Song"
-      },
-      "max_citations": 37,
-      "faers_signal": "moderate",
-      "faers_total_reports": 312747,
-      "faers_cooccurrences": 1583,
-      "faers_interpretation": "1583 FAERS reports mention both Dexamethasone and Asthma-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "Mevastatin (1.475)",
-        "dasatinib (1.470)",
-        "maprotilline hcl (1.467)",
-        "HY-10234 (1.464)",
-        "BIBR1532 (1.457)"
-      ],
-      "signature_interpretation": "Dexamethasone was not found among the top 38 drugs that reverse the Asthma gene signature. Top reversers: Mevastatin (1.475), dasatinib (1.470), maprotilline hcl (1.467)",
-      "ai_hypothesis": "of its anti-inflammatory properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 0,
-          "negative_signals": 0,
-          "mechanism_signals": 1,
-          "extracted_entities": [
-            {
-              "entity": "hce",
-              "entity_group": "Disease_disorder",
-              "score": 0.7099999785423279
-            },
-            {
-              "entity": "ultra performance liquid chromatography - quadrupole - time",
-              "entity_group": "Detailed_description",
-              "score": 1.0
-            },
-            {
-              "entity": "mice",
-              "entity_group": "Diagnostic_procedure",
-              "score": 0.8450000286102295
-            },
-            {
-              "entity": "dexamethasone",
-              "entity_group": "Medication",
-              "score": 0.9990000128746033
-            }
-          ]
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "Phase 3",
-      "failed_trial_count": 4,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.8442,
-      "mr_genetic_targets": 35,
-      "mechanistic_hypothesis": "Dexamethasone \u2014[treats]\u2192 Asthma",
-      "kg_paths_text": "\u2022 Dexamethasone \u2014[treats]\u2192 Asthma\n\u2022 Dexamethasone \u2014[treats]\u2192 Asthma\n\u2022 Dexamethasone \u2014[downregulates]\u2192 gene-6461 \u2014[is downregulated by]\u2192 DB00744 \u2014[treats]\u2192 Asthma",
-      "validation_experiments": [],
-      "novelty_score": 0.133,
-      "novelty_level": "ESTABLISHED",
-      "is_known_treatment": true,
-      "clinical_trials_total": 10,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT07275593",
-          "title": "Dexamethasone Versus Prednisolone in Acute Exacerbation of Childhood Asthma",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "224",
-          "url": "https://clinicaltrials.gov/study/NCT07275593"
-        },
-        {
-          "nct_id": "NCT02192827",
-          "title": "Use of Dexamethasone in Pediatric Asthma Exacerbations",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "318",
-          "url": "https://clinicaltrials.gov/study/NCT02192827"
-        },
-        {
-          "nct_id": "NCT01326494",
-          "title": "Reducing the Acute Care Burden of Childhood Asthma on Health Services in British Columbia",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "92",
-          "url": "https://clinicaltrials.gov/study/NCT01326494"
-        },
-        {
-          "nct_id": "NCT03698630",
-          "title": "Single Dose Oral Dexamethasone Versus Multi-dose Prednisolone in the Treatment of Acute Exacerbations of Asthma in Children",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "250",
-          "url": "https://clinicaltrials.gov/study/NCT03698630"
-        },
-        {
-          "nct_id": "NCT07402707",
-          "title": "Dosing of Steroids for Acute Asthma Given in the Emergency Department - a Pilot Randomised Feasibility Trial of Dexamethasone in Children",
-          "status": "NOT_YET_RECRUITING",
-          "phase": "PHASE4",
-          "enrollment": "104",
-          "url": "https://clinicaltrials.gov/study/NCT07402707"
-        }
-      ],
-      "trial_phases": {
-        "NA": 1,
-        "PHASE3": 1,
-        "PHASE4": 5,
-        "PHASE1": 1,
-        "PHASE2": 2
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "10 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
-        "2053 PubMed articles on this drug-disease pair",
-        "2 article(s) specifically mention repurposing/repositioning",
-        "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 1583 adverse event reports mention drug-disease co-occurrence",
-        "Supporting paper with 37 citations",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.84, 35 genetic targets)",
-        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
-      ],
-      "dose_plausibility": {
-        "plausibility": "likely",
-        "dose_range": "trial",
-        "confidence": "medium",
-        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
-        "chembl_phase": 2.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1512,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (ABCB1 / rs1045642)",
-        "cpic": [],
-        "pharmgkb": [
-          {
-            "gene": "ABCB1",
-            "variant": "rs1045642",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204433"
-          },
-          {
-            "gene": "ABCB1",
-            "variant": "rs2032582",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981238041"
-          },
-          {
-            "gene": "CTLA4",
-            "variant": "rs4553808",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043880851"
-          },
-          {
-            "gene": "ABCB1",
-            "variant": "rs2229109",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449170621"
-          },
-          {
-            "gene": "GATA3",
-            "variant": "rs3824662",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1184512128"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 3,
-        "axes": {
-          "kg": true,
-          "docking": true,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.685,
-        "label": "silver-standard",
-        "axis_values": {
-          "kg": 0.554,
-          "docking": 0.97,
-          "pharos": 0.0,
-          "literature": 1.0
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Lung"
-        ],
-        "n_genes": 20,
-        "n_expressed": 14,
-        "mean_tpm_in_tissue": 32.15,
-        "max_tpm_in_tissue": 126.93,
-        "tissue_specificity": 0.513,
-        "context_modifier": 1.048
-      },
-      "disease_entity": "Disease::MESH:D001249",
-      "ensemble_prob": 0.9779,
-      "ensemble_features": {
-        "kg_score": 0.9999,
-        "degree_penalty": 0.736,
-        "n_drug_targets": 24,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 0.6931
-      },
-      "ensemble_rank": 3,
-      "docking": {
-        "kcal_per_mol": -11.64,
-        "target_symbol": "NR3C1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
       "drug_name": "Urea",
       "drug_id": "DB03904",
       "disease_name": "Asthma",
@@ -1513,7 +1048,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2625,
       "dti_score": 1.0,
-      "dti_best_target": "CCR8",
+      "dti_best_target": "TNFRSF8",
       "kg_group_score": 0.0689,
       "structural_group_score": 1.0,
       "network_group_score": 0.7218000292778015,
@@ -1693,12 +1228,12 @@
       "clinical_trials_total": 3,
       "clinical_trials": [
         {
-          "nct_id": "NCT02219048",
-          "title": "An Evaluation Of PF-03715455 In Moderate To Severe Uncontrolled Asthma",
-          "status": "TERMINATED",
-          "phase": "PHASE2",
-          "enrollment": "51",
-          "url": "https://clinicaltrials.gov/study/NCT02219048"
+          "nct_id": "NCT03164473",
+          "title": "Maintenance of Remission With Rituximab Versus Azathioprine for Newly-diagnosed or Relapsing Eosinophilic Granulomatosis With Polyangiitis.",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "98",
+          "url": "https://clinicaltrials.gov/study/NCT03164473"
         },
         {
           "nct_id": "NCT02532179",
@@ -1709,18 +1244,18 @@
           "url": "https://clinicaltrials.gov/study/NCT02532179"
         },
         {
-          "nct_id": "NCT03164473",
-          "title": "Maintenance of Remission With Rituximab Versus Azathioprine for Newly-diagnosed or Relapsing Eosinophilic Granulomatosis With Polyangiitis.",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "98",
-          "url": "https://clinicaltrials.gov/study/NCT03164473"
+          "nct_id": "NCT02219048",
+          "title": "An Evaluation Of PF-03715455 In Moderate To Severe Uncontrolled Asthma",
+          "status": "TERMINATED",
+          "phase": "PHASE2",
+          "enrollment": "51",
+          "url": "https://clinicaltrials.gov/study/NCT02219048"
         }
       ],
       "trial_phases": {
-        "PHASE2": 2,
+        "PHASE3": 1,
         "PHASE1": 1,
-        "PHASE3": 1
+        "PHASE2": 2
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -1734,6 +1269,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.90, 1 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D001249",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1783,8 +1319,7 @@
         "tissue_specificity": 0.189,
         "context_modifier": 1.002
       },
-      "disease_entity": "Disease::MESH:D001249",
-      "ensemble_prob": 0.0003,
+      "ensemble_prob": 0.0005,
       "ensemble_features": {
         "kg_score": 0.7913,
         "degree_penalty": 0.916,
@@ -1832,7 +1367,7 @@
       "admet_flags": "DILI=0.93",
       "primekg_score": 0.2613,
       "dti_score": 1.0,
-      "dti_best_target": "CCR8",
+      "dti_best_target": "TNFRSF8",
       "kg_group_score": 0.2854,
       "structural_group_score": 1.0,
       "network_group_score": 0.5496000051498413,
@@ -2049,12 +1584,12 @@
       "clinical_trials_total": 3,
       "clinical_trials": [
         {
-          "nct_id": "NCT03705325",
-          "title": "Evaluating Asthma Exacerbation-induced Changes in Lung Function With a Home-based Spirometer",
-          "status": "COMPLETED",
+          "nct_id": "NCT06902766",
+          "title": "Towards Digital Management of Paediatric Asthma",
+          "status": "RECRUITING",
           "phase": "NA",
-          "enrollment": "44",
-          "url": "https://clinicaltrials.gov/study/NCT03705325"
+          "enrollment": "50",
+          "url": "https://clinicaltrials.gov/study/NCT06902766"
         },
         {
           "nct_id": "NCT01057875",
@@ -2065,12 +1600,12 @@
           "url": "https://clinicaltrials.gov/study/NCT01057875"
         },
         {
-          "nct_id": "NCT06902766",
-          "title": "Towards Digital Management of Paediatric Asthma",
-          "status": "NOT_YET_RECRUITING",
+          "nct_id": "NCT03705325",
+          "title": "Evaluating Asthma Exacerbation-induced Changes in Lung Function With a Home-based Spirometer",
+          "status": "COMPLETED",
           "phase": "NA",
-          "enrollment": "50",
-          "url": "https://clinicaltrials.gov/study/NCT06902766"
+          "enrollment": "44",
+          "url": "https://clinicaltrials.gov/study/NCT03705325"
         }
       ],
       "trial_phases": {
@@ -2085,6 +1620,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.81, 2 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D001249",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2227,8 +1763,7 @@
         "tissue_specificity": 0.232,
         "context_modifier": 0.99
       },
-      "disease_entity": "Disease::MESH:D001249",
-      "ensemble_prob": 0.1717,
+      "ensemble_prob": 0.2291,
       "ensemble_features": {
         "kg_score": 0.9789,
         "degree_penalty": 0.7988,
@@ -2250,411 +1785,6 @@
         "pains_families": [],
         "n_alerts": 0,
         "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Epinephrine",
-      "drug_id": "DB00668",
-      "disease_name": "Asthma",
-      "combined_score": 0.5396,
-      "pillars_hit": 4,
-      "transe_rank": 3,
-      "transe_score": -9.7016,
-      "pykeen_score": -11.8164,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0.0154,
-      "gene_sig_rank": 39,
-      "proximity_score": 0.6880000233650208,
-      "proximity_distance": 1.25,
-      "admet_score": 0.7026,
-      "admet_flags": "clean",
-      "primekg_score": 0.2584,
-      "dti_score": 0.8861,
-      "dti_best_target": "C3",
-      "kg_group_score": 0.3477,
-      "structural_group_score": 0.8861,
-      "network_group_score": 0.5282999873161316,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.8109,
-      "admet_multiplier": 0.9405,
-      "efficacy_score": 0.5737,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 22,
-      "shared_targets": [
-        "ADRA1A",
-        "ADRA1B",
-        "ADRA1D",
-        "ADRA2A",
-        "ADRA2B",
-        "ADRA2C",
-        "ADRB1",
-        "ADRB2",
-        "ADRB3",
-        "AGT",
-        "ALOX15",
-        "AVP",
-        "CRP",
-        "FPR1",
-        "IGFBP3",
-        "IL10",
-        "IL1A",
-        "IL6",
-        "KCNMB2",
-        "NFKBIA"
-      ],
-      "pubmed_total": 1968,
-      "pubmed_treatment_total": 1584,
-      "pubmed_repurposing_total": 2,
-      "key_papers": [
-        {
-          "pmid": "29696025",
-          "title": "Adrenergic Signaling at the Interface of Allergic Asthma and Viral Infections.",
-          "authors": "A\u011fa\u00e7 D, Gill MA, Farrar JD",
-          "journal": "Frontiers in immunology",
-          "year": "2018",
-          "abstract_snippet": "Upper respiratory viral infections are a major etiologic instigator of allergic asthma, and they drive severe exacerbations of allergic inflammation in the lower airways of asthma sufferers. Rhinovirus (RV), in particular, is the main viral instigator of these pathologies. Asthma exacerbations due t...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29696025/",
-          "total_results": 1968
-        },
-        {
-          "pmid": "28539203",
-          "title": "The interplay between neuroendocrine activity and psychological stress-induced exacerbation of allergic asthma.",
-          "authors": "Miyasaka T, Dobashi-Okuyama K, Takahashi T, et al.",
-          "journal": "Allergology international : official journal of the Japanese Society of Allergology",
-          "year": "2018",
-          "abstract_snippet": "Psychological stress is recognized as a key factor in the exacerbation of allergic asthma, whereby brain responses to stress act as immunomodulators for asthma. In particular, stress-induced enhanced type 2 T-helper (Th2)-type lung inflammation is strongly associated with asthma pathogenesis. Psycho...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/28539203/"
-        },
-        {
-          "pmid": "3442767",
-          "title": "Nonprescription availability of theophylline, epinephrine and ephedrine for asthma.",
-          "authors": "Simons FE",
-          "journal": "CMAJ : Canadian Medical Association journal = journal de l'Association medicale canadienne",
-          "year": "1987",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/3442767/"
-        },
-        {
-          "pmid": "35181547",
-          "title": "Efficacy and Safety of House Dust Mite Sublingual Immunotherapy Tablet in Allergic Asthma: A Systematic Review of Randomized Controlled Trials.",
-          "authors": "Wongsa C, Phinyo P, Sompornrattanaphan M, et al.",
-          "journal": "The journal of allergy and clinical immunology. In practice",
-          "year": "2022",
-          "abstract_snippet": "BACKGROUND: House dust mite sublingual immunotherapy (HDM SLIT) effectively treats allergic rhinitis (AR). However, the evidence of HDM SLIT for allergic asthma remained limited. OBJECTIVE: To systematically review the efficacy and safety of HDM SLIT tablets in patients with allergic asthma. METHODS...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35181547/"
-        },
-        {
-          "pmid": "8118634",
-          "title": "Relationship of plasma epinephrine and circulating eosinophils to nocturnal asthma.",
-          "authors": "Bates ME, Clayton M, Calhoun W, et al.",
-          "journal": "American journal of respiratory and critical care medicine",
-          "year": "1994",
-          "abstract_snippet": "The mechanisms of nighttime airway obstruction are not fully established, but include circadian fluctuations in epinephrine and cortisol. To evaluate the relationship of circadian patterns in epinephrine and cortisol to nighttime airflow obstruction, 10 young adult asthma patients (ages 19 to 25 yr)...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/8118634/"
-        }
-      ],
-      "repurposing_papers": [
-        {
-          "pmid": "29906501",
-          "title": "Repurposing drugs as inhaled therapies in asthma.",
-          "authors": "Anderson SD",
-          "journal": "Advanced drug delivery reviews",
-          "year": "2018",
-          "abstract_snippet": "For the first 40\u202fyears of the 20th century treatment for asthma occurred in response to an asthma attack. The treatments were given by injection or orally and included the adrenergic agonists adrenalin/epinephrine and ephedrine and a phosphodiesterase inhibitor theophylline. Epinephrine became avail...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29906501/",
-          "total_results": 2
-        },
-        {
-          "pmid": "34857633",
-          "title": "Identification and characterization of an atypical G\u03b1s-biased \u03b2",
-          "authors": "Kim D, Tokmakova A, Lujan LK, et al.",
-          "journal": "Proceedings of the National Academy of Sciences of the United States of America",
-          "year": "2021",
-          "abstract_snippet": "G protein-coupled receptors display multifunctional signaling, offering the potential for agonist structures to promote conformational selectivity for biased outputs. For \u03b2",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34857633/"
-        }
-      ],
-      "semantic_scholar_papers": [
-        {
-          "title": "Cost-effectiveness of budesonide-formoterol versus inhaled epinephrine in United States adults with mild asthma.",
-          "year": 2023,
-          "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/93af2494a9c21a2a9f53ecda35f2cc2848eb98e3",
-          "authors": "Joseph Khoa Ho, M. Shaker, M. Greenhawt"
-        },
-        {
-          "title": "Pre-hospital epinephrine administration for treating anaphylaxis among those with co-morbid asthma: A scoping review.",
-          "year": 2023,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/bdddb51105fc27e30621d0a532c244716040063e",
-          "authors": "Billy Hong, K. Merrill, Michael A. Golding"
-        },
-        {
-          "title": "The Efficacy of Nebulized Epinephrine in Children with Acute Asthma: A Randomized Double-blind Trial",
-          "year": 2023,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/965ce54fcdfb2c6a32953f2f3aae651fad31e0df",
-          "authors": "Eva EN, Islam, MM, Hoq ME"
-        },
-        {
-          "title": "Corrigendum to \"Contextual community epinephrine prescribing: Is more always better?\" [Ann Allergy Asthma Immunol 131 (2023) 176-184].",
-          "year": 2023,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/eaf600ead47dbb92b6e4b0a9d1d1e052efeec0e0",
-          "authors": "Marcus S. Shaker, E. Abrams, J. Sublett"
-        },
-        {
-          "title": "Over\u2010the\u2010Counter Epinephrine for Asthma Treatment: Too Much Risk for Too Little Benefit",
-          "year": 2022,
-          "citations": 2,
-          "url": "https://www.semanticscholar.org/paper/5e8a6b27b66310b8cafdc41a9a199808582ee316",
-          "authors": "B. Gaynes"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Cost-effectiveness of budesonide-formoterol versus inhaled epinephrine in United States adults with mild asthma.",
-        "year": 2023,
-        "citations": 4,
-        "url": "https://www.semanticscholar.org/paper/93af2494a9c21a2a9f53ecda35f2cc2848eb98e3",
-        "authors": "Joseph Khoa Ho, M. Shaker, M. Greenhawt"
-      },
-      "max_citations": 4,
-      "faers_signal": "strong",
-      "faers_total_reports": 46064,
-      "faers_cooccurrences": 1231,
-      "faers_interpretation": "1231 FAERS reports mention both Epinephrine and Asthma-related terms (2.7% of all Epinephrine reports). This suggests real-world clinical association.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "Mevastatin (1.475)",
-        "dasatinib (1.470)",
-        "maprotilline hcl (1.467)",
-        "HY-10234 (1.464)",
-        "BIBR1532 (1.457)"
-      ],
-      "signature_interpretation": "Epinephrine was not found among the top 38 drugs that reverse the Asthma gene signature. Top reversers: Mevastatin (1.475), dasatinib (1.470), maprotilline hcl (1.467)",
-      "ai_hypothesis": "of its anti-inflammatory properties, it is important to understand the potential risks of Epinephrine.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "Phase 3",
-      "failed_trial_count": 8,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.8109,
-      "mr_genetic_targets": 5,
-      "mechanistic_hypothesis": "Epinephrine \u2014[is a therapeutic for]\u2192 Asthma",
-      "kg_paths_text": "\u2022 Epinephrine \u2014[is a therapeutic for]\u2192 Asthma\n\u2022 Epinephrine \u2014[palliates]\u2192 DOID:4481 \u2014[is treated by]\u2192 DB00471 \u2014[treats]\u2192 Asthma\n\u2022 Epinephrine \u2014[palliates]\u2192 DOID:4481 \u2014[is treated by]\u2192 DB00471 \u2014[treats]\u2192 Asthma",
-      "validation_experiments": [],
-      "novelty_score": 0.13,
-      "novelty_level": "ESTABLISHED",
-      "is_known_treatment": true,
-      "clinical_trials_total": 10,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT00238927",
-          "title": "Clinical Trial of Fluticasone Versus Placebo at the Onset of a Cold for Children With Asthma",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "150",
-          "url": "https://clinicaltrials.gov/study/NCT00238927"
-        },
-        {
-          "nct_id": "NCT06171932",
-          "title": "Comparison Of Efficacy Of Hydrocortisone And Methyl Prednisolone In Acute Severe Asthma",
-          "status": "UNKNOWN",
-          "phase": "N/A",
-          "enrollment": "60",
-          "url": "https://clinicaltrials.gov/study/NCT06171932"
-        },
-        {
-          "nct_id": "NCT07179952",
-          "title": "Efficacy and Safety of Slow Release Dehydroepiandrosterone (DHEA )",
-          "status": "NOT_YET_RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "30",
-          "url": "https://clinicaltrials.gov/study/NCT07179952"
-        },
-        {
-          "nct_id": "NCT04207840",
-          "title": "Study of Drug Exposure in Systemic Circulation of Primatene Mist by Oral Inhalation, Versus Epinephrine Injection by Intramuscular Injection and ProAir by Oral Inhalation in Healthy Individuals",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "28",
-          "url": "https://clinicaltrials.gov/study/NCT04207840"
-        },
-        {
-          "nct_id": "NCT01357642",
-          "title": "Epinephrine Inhalation Aerosol USP: For Evaluation Of Efficacy And Safety In Asthma Patients",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "373",
-          "url": "https://clinicaltrials.gov/study/NCT01357642"
-        }
-      ],
-      "trial_phases": {
-        "PHASE4": 2,
-        "PHASE2": 4,
-        "PHASE3": 2,
-        "NA": 1,
-        "PHASE1": 1
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "10 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
-        "1968 PubMed articles on this drug-disease pair",
-        "2 article(s) specifically mention repurposing/repositioning",
-        "Supported by 4 independent AI pillars",
-        "Strong FAERS signal: 1231 adverse event reports link drug to disease (46064 total reports)",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.81, 5 genetic targets)",
-        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1250,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00783",
-            "drug_name": "Estradiol",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00502",
-            "drug_name": "Haloperidol",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00227",
-            "drug_name": "Lovastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00331",
-            "drug_name": "Metformin",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
-        "pharmgkb": []
-      },
-      "triangulation": {
-        "n_axes_agree": 3,
-        "axes": {
-          "kg": true,
-          "docking": true,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.641,
-        "label": "silver-standard",
-        "axis_values": {
-          "kg": 0.54,
-          "docking": 0.842,
-          "pharos": 0.0,
-          "literature": 1.0
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Lung"
-        ],
-        "n_genes": 20,
-        "n_expressed": 16,
-        "mean_tpm_in_tissue": 35.12,
-        "max_tpm_in_tissue": 497.48,
-        "tissue_specificity": 0.629,
-        "context_modifier": 1.065
-      },
-      "disease_entity": "Disease::MESH:D001249",
-      "ensemble_prob": 0.9954,
-      "ensemble_features": {
-        "kg_score": 0.9997,
-        "degree_penalty": 0.7678,
-        "n_drug_targets": 16,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 1.3863
-      },
-      "ensemble_rank": 1,
-      "docking": {
-        "kcal_per_mol": -10.1,
-        "target_symbol": "ADRB3",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [
-          "CATECHOL"
-        ],
-        "n_alerts": 2,
-        "alert_names": [
-          "catechol_A(92)",
-          "catechol"
-        ]
       }
     },
     {
@@ -2681,7 +1811,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2566,
       "dti_score": 1.0,
-      "dti_best_target": "CCR8",
+      "dti_best_target": "TNFRSF8",
       "kg_group_score": 0.2785,
       "structural_group_score": 1.0,
       "network_group_score": 0.44929999113082886,
@@ -2897,20 +2027,28 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT05278065",
-          "title": "E-cigarettes for Harm Reduction in Adults With Asthma",
+          "nct_id": "NCT03062709",
+          "title": "A Study of Tobacco Smoke and Children With Respiratory Illnesses",
           "status": "COMPLETED",
           "phase": "NA",
-          "enrollment": "17",
-          "url": "https://clinicaltrials.gov/study/NCT05278065"
+          "enrollment": "3",
+          "url": "https://clinicaltrials.gov/study/NCT03062709"
         },
         {
-          "nct_id": "NCT01576718",
-          "title": "A Study of the Effectiveness and Safety of Different Doses of Fluticasone Propionate Taken From a Dry Powder Inhaler (Puffer) in Adolescents and Adults Who Have Asthma That is Not Controlled by High Dose Inhaled Corticosteroid Asthma Medications",
+          "nct_id": "NCT00862368",
+          "title": "Sustaining Smoking Cessation in Smokers With Kids With Asthma",
           "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "889",
-          "url": "https://clinicaltrials.gov/study/NCT01576718"
+          "phase": "PHASE3",
+          "enrollment": "573",
+          "url": "https://clinicaltrials.gov/study/NCT00862368"
+        },
+        {
+          "nct_id": "NCT03249428",
+          "title": "Cytisine vs Nicotine Replacement Therapy",
+          "status": "ENROLLING_BY_INVITATION",
+          "phase": "NA",
+          "enrollment": "200",
+          "url": "https://clinicaltrials.gov/study/NCT03249428"
         },
         {
           "nct_id": "NCT01728038",
@@ -2921,26 +2059,18 @@
           "url": "https://clinicaltrials.gov/study/NCT01728038"
         },
         {
-          "nct_id": "NCT03099811",
-          "title": "Financial Incentives to Reduce Pediatric Tobacco Smoke Exposures",
+          "nct_id": "NCT03099902",
+          "title": "Secondhand Smoking in Asthmatic Children",
           "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "147",
-          "url": "https://clinicaltrials.gov/study/NCT03099811"
-        },
-        {
-          "nct_id": "NCT03062709",
-          "title": "A Study of Tobacco Smoke and Children With Respiratory Illnesses",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "3",
-          "url": "https://clinicaltrials.gov/study/NCT03062709"
+          "phase": "N/A",
+          "enrollment": "90",
+          "url": "https://clinicaltrials.gov/study/NCT03099902"
         }
       ],
       "trial_phases": {
-        "NA": 6,
-        "PHASE2": 2,
-        "PHASE3": 1
+        "NA": 5,
+        "PHASE3": 1,
+        "PHASE2": 2
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -2955,6 +2085,7 @@
         "Strong causal genetic evidence (MR score: 0.79, 10 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D001249",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -3102,8 +2233,7 @@
         "tissue_specificity": 0.585,
         "context_modifier": 1.065
       },
-      "disease_entity": "Disease::MESH:D001249",
-      "ensemble_prob": 0.713,
+      "ensemble_prob": 0.6452,
       "ensemble_features": {
         "kg_score": 0.9964,
         "degree_penalty": 0.7641,
@@ -3116,6 +2246,469 @@
       "docking": {
         "kcal_per_mol": -11.91,
         "target_symbol": "CHRNA4",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Dexamethasone",
+      "drug_id": "DB01234",
+      "disease_name": "Asthma",
+      "combined_score": 0.534,
+      "pillars_hit": 4,
+      "transe_rank": 1,
+      "transe_score": -9.4954,
+      "pykeen_score": -11.0082,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.675000011920929,
+      "proximity_distance": 1.2999999523162842,
+      "admet_score": 0.7109,
+      "admet_flags": "clean",
+      "primekg_score": 0.2585,
+      "dti_score": 0.7194,
+      "dti_best_target": "ANGPT2",
+      "kg_group_score": 0.4452,
+      "structural_group_score": 0.7194,
+      "network_group_score": 0.4968000054359436,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.8442,
+      "admet_multiplier": 0.9422,
+      "efficacy_score": 0.5668,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 48,
+      "shared_targets": [
+        "ADIPOQ",
+        "AGT",
+        "AICDA",
+        "ALOX5",
+        "AVP",
+        "BCL2L11",
+        "BDNF",
+        "BID",
+        "CD247",
+        "CRP",
+        "CXCR4",
+        "ESR1",
+        "ETS1",
+        "FOXO3",
+        "FOXP3",
+        "FPR1",
+        "GJA1",
+        "IFNA1",
+        "IGFBP3",
+        "IL10"
+      ],
+      "pubmed_total": 2053,
+      "pubmed_treatment_total": 1742,
+      "pubmed_repurposing_total": 2,
+      "key_papers": [
+        {
+          "pmid": "38460304",
+          "title": "Dexamethasone protects against asthma via regulating Hif-1\u03b1-glycolysis-lactate axis and protein lactylation.",
+          "authors": "Chen N, Xie QM, Song SM, et al.",
+          "journal": "International immunopharmacology",
+          "year": "2024",
+          "abstract_snippet": "PURPOSE: Asthma can not be eradicated till now and its control primarily relies on the application of corticosteroids. Recently, glycolytic reprogramming has been reportedly contributed to asthma, this study aimed to reveal whether the effect of corticosteroids on asthma control is related to their ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38460304/",
+          "total_results": 2053
+        },
+        {
+          "pmid": "34248632",
+          "title": "Allergic Asthma-Induced Cognitive Impairment is Alleviated by Dexamethasone.",
+          "authors": "Ren M, Feng M, Long Z, et al.",
+          "journal": "Frontiers in pharmacology",
+          "year": "2021",
+          "abstract_snippet": "Allergic asthma is a typical chronic inflammatory disease of respiratory tract. Clinical data shows that patients with allergic asthma have different degrees of cognitive dysfunction. The molecular mechanism underlying the pathogenesis of asthma-induced cognitive disorder is not yet well defined. De...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34248632/"
+        },
+        {
+          "pmid": "40734916",
+          "title": "",
+          "authors": "Zhang Y, Peng H, Li J, et al.",
+          "journal": "Chinese herbal medicines",
+          "year": "2025",
+          "abstract_snippet": "OBJECTIVE: To investigate the effect and mechanism of  METHODS: Components identification of HCE was conducted using ultra performance liquid chromatography-quadrupole-time of flight-mass spectrometry. Mice were sensitized with OVA to establish asthmatic model, and dexamethasone was used as positive...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40734916/"
+        },
+        {
+          "pmid": "32394644",
+          "title": "Dexamethasone or prednisolone for asthma exacerbations in children: A cost-effectiveness analysis.",
+          "authors": "Rodriguez-Martinez CE, Sossa-Brice\u00f1o MP, Castro-Rodriguez JA",
+          "journal": "Pediatric pulmonology",
+          "year": "2020",
+          "abstract_snippet": "OBJECTIVES: Although a short course (ie, 3 to 5 days) of orally administered prednisolone is a common and widely accepted practice among clinicians for administering systemic corticosteroids in pediatric acute asthma, oral dexamethasone for 1 to 2 days is an attractive alternative to prednisolone du...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32394644/"
+        },
+        {
+          "pmid": "40222689",
+          "title": "Wuwei Shaji powder alleviates OVA-induced allergic asthma by protecting bronchial epithelial cells from ferroptosis via the S-sulfhydration of Keap1.",
+          "authors": "Zhao H, Zhang H, Shi J, et al.",
+          "journal": "Journal of ethnopharmacology",
+          "year": "2025",
+          "abstract_snippet": "ETHNOPHARMACOLOGICAL RELEVANCE: Asthma is a chronic inflammatory airway disease. Current treatments have limited efficacy and often cause severe side effects. Wuwei Shaji Powder (WSP), a traditional Mongolian remedy, is used for treating chronic pulmonary diseases, but its efficacy against asthma an...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40222689/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "33802355",
+          "title": "Drug Repurposing to Treat Glucocorticoid Resistance in Asthma.",
+          "authors": "Wang AL, Panganiban R, Qiu W, et al.",
+          "journal": "Journal of personalized medicine",
+          "year": "2021",
+          "abstract_snippet": "Corticosteroid resistance causes significant morbidity in asthma, and drug repurposing may identify timely and cost-effective adjunctive treatments for corticosteroid resistance. In 95 subjects from the Childhood Asthma Management Program (CAMP) and 19 subjects from the Severe Asthma Research Progra...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33802355/",
+          "total_results": 2
+        },
+        {
+          "pmid": "40352672",
+          "title": "Revisiting the role of steroidal therapeutics in the 21st century: an update on FDA approved steroidal drugs (2000-2024).",
+          "authors": "Singh R, Bansal R",
+          "journal": "RSC medicinal chemistry",
+          "year": "2025",
+          "abstract_snippet": "Steroids are biologically active polycyclic compounds that have garnered significant scientific attention due to their distinct physiochemical properties and diverse medical applications. Since their invention more than 90 years ago, steroids have remained the most important and necessary class of r...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40352672/"
+        }
+      ],
+      "semantic_scholar_papers": [
+        {
+          "title": "Dexamethasone protects against asthma via regulating Hif-1\u03b1-glycolysis-lactate axis and protein lactylation.",
+          "year": 2024,
+          "citations": 37,
+          "url": "https://www.semanticscholar.org/paper/776c1738535d436f24ff7be0f86fba0bbfe6d421",
+          "authors": "Ning Chen, Qiu-Meng Xie, Si-Ming Song"
+        },
+        {
+          "title": "A CONSORT\u2010guided, randomized controlled clinical trial of nebulized administration of dexamethasone and saline on lower airway cytokine mRNA expression in horses with moderate asthma",
+          "year": 2024,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/35e75e4114374378eb9283943b478a9688660879",
+          "authors": "Stephanie L Bond, R. L\u00e9guillette"
+        },
+        {
+          "title": "Dexamethasone protects against Aspergillus fumigatus-induced severe asthma via modulating pulmonary immunometabolism.",
+          "year": 2023,
+          "citations": 13,
+          "url": "https://www.semanticscholar.org/paper/9ba37fbc93058d19569e9e758da33d9b01e66cc3",
+          "authors": "Phyllis X. L. Gan, W. Liao, Hui Fang Lim"
+        },
+        {
+          "title": "Dexamethasone versus methylprednisolone for critical asthma: A single center, open\u2010label, parallel\u2010group clinical trial",
+          "year": 2023,
+          "citations": 11,
+          "url": "https://www.semanticscholar.org/paper/f011e47fa71abd6c0a1b49bc5ac3a09b7a9118f2",
+          "authors": "Meghan R. Roddy, A. Sellers, K. Darville"
+        },
+        {
+          "title": "Effects of Pre-Hospital Dexamethasone Administration on Outcomes of Patients with COPD and Asthma Exacerbation; a Cross-Sectional Study",
+          "year": 2023,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/f35af9f296b82f2206d552d2c1e90c27b555b315",
+          "authors": "Thongpitak Huabbangyang, Agasak Silakoon, C. Sangketchon"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Dexamethasone protects against asthma via regulating Hif-1\u03b1-glycolysis-lactate axis and protein lactylation.",
+        "year": 2024,
+        "citations": 37,
+        "url": "https://www.semanticscholar.org/paper/776c1738535d436f24ff7be0f86fba0bbfe6d421",
+        "authors": "Ning Chen, Qiu-Meng Xie, Si-Ming Song"
+      },
+      "max_citations": 37,
+      "faers_signal": "moderate",
+      "faers_total_reports": 312747,
+      "faers_cooccurrences": 1583,
+      "faers_interpretation": "1583 FAERS reports mention both Dexamethasone and Asthma-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "Mevastatin (1.475)",
+        "dasatinib (1.470)",
+        "maprotilline hcl (1.467)",
+        "HY-10234 (1.464)",
+        "BIBR1532 (1.457)"
+      ],
+      "signature_interpretation": "Dexamethasone was not found among the top 38 drugs that reverse the Asthma gene signature. Top reversers: Mevastatin (1.475), dasatinib (1.470), maprotilline hcl (1.467)",
+      "ai_hypothesis": "of its anti-inflammatory properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 0,
+          "negative_signals": 0,
+          "mechanism_signals": 1,
+          "extracted_entities": [
+            {
+              "entity": "hce",
+              "entity_group": "Disease_disorder",
+              "score": 0.7099999785423279
+            },
+            {
+              "entity": "ultra performance liquid chromatography - quadrupole - time",
+              "entity_group": "Detailed_description",
+              "score": 1.0
+            },
+            {
+              "entity": "mice",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.8450000286102295
+            },
+            {
+              "entity": "dexamethasone",
+              "entity_group": "Medication",
+              "score": 0.9990000128746033
+            }
+          ]
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "Phase 3",
+      "failed_trial_count": 4,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.8442,
+      "mr_genetic_targets": 35,
+      "mechanistic_hypothesis": "Dexamethasone \u2014[treats]\u2192 Asthma",
+      "kg_paths_text": "\u2022 Dexamethasone \u2014[treats]\u2192 Asthma\n\u2022 Dexamethasone \u2014[treats]\u2192 Asthma\n\u2022 Dexamethasone \u2014[downregulates]\u2192 gene-6461 \u2014[is downregulated by]\u2192 DB00744 \u2014[treats]\u2192 Asthma",
+      "validation_experiments": [],
+      "novelty_score": 0.128,
+      "novelty_level": "ESTABLISHED",
+      "is_known_treatment": true,
+      "clinical_trials_total": 10,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT03698630",
+          "title": "Single Dose Oral Dexamethasone Versus Multi-dose Prednisolone in the Treatment of Acute Exacerbations of Asthma in Children",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "250",
+          "url": "https://clinicaltrials.gov/study/NCT03698630"
+        },
+        {
+          "nct_id": "NCT02780479",
+          "title": "Steroids in Children Hospitalized With Asthma",
+          "status": "TERMINATED",
+          "phase": "PHASE4",
+          "enrollment": "6",
+          "url": "https://clinicaltrials.gov/study/NCT02780479"
+        },
+        {
+          "nct_id": "NCT06074185",
+          "title": "Treating Respiratory Emergencies in Children Study",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "44",
+          "url": "https://clinicaltrials.gov/study/NCT06074185"
+        },
+        {
+          "nct_id": "NCT07402707",
+          "title": "Dosing of Steroids for Acute Asthma Given in the Emergency Department - a Pilot Randomised Feasibility Trial of Dexamethasone in Children",
+          "status": "RECRUITING",
+          "phase": "PHASE4",
+          "enrollment": "104",
+          "url": "https://clinicaltrials.gov/study/NCT07402707"
+        },
+        {
+          "nct_id": "NCT05012033",
+          "title": "Evaluation of High Dose Prednisolone Pharmacokinetics in the Acute and Chronic Setting",
+          "status": "RECRUITING",
+          "phase": "N/A",
+          "enrollment": "120",
+          "url": "https://clinicaltrials.gov/study/NCT05012033"
+        }
+      ],
+      "trial_phases": {
+        "PHASE4": 5,
+        "PHASE2": 1,
+        "NA": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "10 clinical trial(s) found on ClinicalTrials.gov",
+        "2053 PubMed articles on this drug-disease pair",
+        "2 article(s) specifically mention repurposing/repositioning",
+        "Supported by 4 independent AI pillars",
+        "Moderate FAERS signal: 1583 adverse event reports mention drug-disease co-occurrence",
+        "Supporting paper with 37 citations",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.84, 35 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D001249",
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1512,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (ABCB1 / rs1045642)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "ABCB1",
+            "variant": "rs1045642",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204433"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs2032582",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981238041"
+          },
+          {
+            "gene": "CTLA4",
+            "variant": "rs4553808",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043880851"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs2229109",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449170621"
+          },
+          {
+            "gene": "GATA3",
+            "variant": "rs3824662",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1184512128"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.678,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.534,
+          "docking": 0.97,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Lung"
+        ],
+        "n_genes": 20,
+        "n_expressed": 14,
+        "mean_tpm_in_tissue": 32.15,
+        "max_tpm_in_tissue": 126.93,
+        "tissue_specificity": 0.513,
+        "context_modifier": 1.048
+      },
+      "ensemble_prob": 0.999,
+      "ensemble_features": {
+        "kg_score": 0.9999,
+        "degree_penalty": 0.736,
+        "n_drug_targets": 24,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 0.6931
+      },
+      "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": -11.64,
+        "target_symbol": "NR3C1",
         "source": "chembl_bioactivity_proxy",
         "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
         "hit": true
@@ -3326,20 +2919,20 @@
           "url": "https://clinicaltrials.gov/study/NCT00116103"
         },
         {
-          "nct_id": "NCT00189787",
-          "title": "Dose Response of Inhaled Tacrolimus in Patients With Moderate Persistent Asthma",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "370",
-          "url": "https://clinicaltrials.gov/study/NCT00189787"
-        },
-        {
           "nct_id": "NCT00189722",
           "title": "Inhaled Tacrolimus, Add-on to Inhaled Corticosteroids & Long Acting B2 Agonists in Moderate to Severe Persistent Asthma",
           "status": "COMPLETED",
           "phase": "PHASE2",
           "enrollment": "160",
           "url": "https://clinicaltrials.gov/study/NCT00189722"
+        },
+        {
+          "nct_id": "NCT00189787",
+          "title": "Dose Response of Inhaled Tacrolimus in Patients With Moderate Persistent Asthma",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "370",
+          "url": "https://clinicaltrials.gov/study/NCT00189787"
         }
       ],
       "trial_phases": {
@@ -3355,6 +2948,7 @@
         "Supporting paper with 44 citations",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D001249",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3502,8 +3096,7 @@
         "tissue_specificity": 0.482,
         "context_modifier": 1.088
       },
-      "disease_entity": "Disease::MESH:D001249",
-      "ensemble_prob": 0.0547,
+      "ensemble_prob": 0.0307,
       "ensemble_features": {
         "kg_score": 0.9813,
         "degree_penalty": 0.7479,
@@ -3534,14 +3127,14 @@
       }
     },
     {
-      "drug_name": "Metformin",
-      "drug_id": "DB00331",
+      "drug_name": "Epinephrine",
+      "drug_id": "DB00668",
       "disease_name": "Asthma",
-      "combined_score": 0.5215,
+      "combined_score": 0.5239,
       "pillars_hit": 4,
-      "transe_rank": 43,
-      "transe_score": -10.2584,
-      "pykeen_score": -12.0283,
+      "transe_rank": 3,
+      "transe_score": -9.7016,
+      "pykeen_score": -11.8164,
       "pykeen_rank": 0,
       "txgnn_score": 0,
       "txgnn_rank": 0,
@@ -3549,171 +3142,168 @@
       "similar_to": "",
       "mol_emb_similarity": 0,
       "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.699999988079071,
-      "proximity_distance": 1.2000000476837158,
-      "admet_score": 0.9006,
-      "admet_flags": "Skin_Reaction=0.84",
-      "primekg_score": 0.2626,
-      "dti_score": 0.7285,
-      "dti_best_target": "C3",
-      "kg_group_score": 0.3045,
-      "structural_group_score": 0.7285,
-      "network_group_score": 0.5343999862670898,
+      "gene_sig_score": 0.0154,
+      "gene_sig_rank": 39,
+      "proximity_score": 0.6880000233650208,
+      "proximity_distance": 1.25,
+      "admet_score": 0.7026,
+      "admet_flags": "clean",
+      "primekg_score": 0.2584,
+      "dti_score": 0.7936,
+      "dti_best_target": "TNFRSF8",
+      "kg_group_score": 0.3477,
+      "structural_group_score": 0.7936,
+      "network_group_score": 0.5282999873161316,
       "txgnn_group_score": 0,
-      "mr_group_score": 0.7867,
-      "admet_multiplier": 0.9801,
-      "efficacy_score": 0.5321,
+      "mr_group_score": 0.8109,
+      "admet_multiplier": 0.9405,
+      "efficacy_score": 0.5571,
       "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 14,
+      "shared_target_count": 22,
       "shared_targets": [
-        "ADIPOQ",
-        "CCND1",
+        "ADRA1A",
+        "ADRA1B",
+        "ADRA1D",
+        "ADRA2A",
+        "ADRA2B",
+        "ADRA2C",
+        "ADRB1",
+        "ADRB2",
+        "ADRB3",
+        "AGT",
+        "ALOX15",
+        "AVP",
         "CRP",
-        "DPP4",
-        "ESR1",
-        "FOXO3",
-        "HMGCR",
+        "FPR1",
+        "IGFBP3",
         "IL10",
+        "IL1A",
         "IL6",
-        "MMP2",
-        "MMP9",
-        "MYC",
-        "NAMPT",
-        "RETN"
+        "KCNMB2",
+        "NFKBIA"
       ],
-      "pubmed_total": 134,
-      "pubmed_treatment_total": 116,
-      "pubmed_repurposing_total": 4,
+      "pubmed_total": 1968,
+      "pubmed_treatment_total": 1584,
+      "pubmed_repurposing_total": 2,
       "key_papers": [
         {
-          "pmid": "35805869",
-          "title": "Metformin and the Development of Asthma in Patients with Type 2 Diabetes.",
-          "authors": "Yen FS, Hsu CC, Shih YH, et al.",
-          "journal": "International journal of environmental research and public health",
-          "year": "2022",
-          "abstract_snippet": "We conducted this study to compare the risks of asthma development and exacerbation between metformin users and nonusers. Overall, 57,743 propensity score-matched metformin users and nonusers were identified from Taiwan\u2019s National Health Insurance Research Database between 1 January 2000, and 31 Dec...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35805869/",
-          "total_results": 134
+          "pmid": "29696025",
+          "title": "Adrenergic Signaling at the Interface of Allergic Asthma and Viral Infections.",
+          "authors": "A\u011fa\u00e7 D, Gill MA, Farrar JD",
+          "journal": "Frontiers in immunology",
+          "year": "2018",
+          "abstract_snippet": "Upper respiratory viral infections are a major etiologic instigator of allergic asthma, and they drive severe exacerbations of allergic inflammation in the lower airways of asthma sufferers. Rhinovirus (RV), in particular, is the main viral instigator of these pathologies. Asthma exacerbations due t...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29696025/",
+          "total_results": 1968
         },
         {
-          "pmid": "40398255",
-          "title": "Metformin alleviates inflammatory responses in acute allergic asthma by inhibiting ILC2s function.",
-          "authors": "Liu H, Jing X, Yu L, et al.",
-          "journal": "International immunopharmacology",
-          "year": "2025",
-          "abstract_snippet": "Allergic asthma was a type 2 immunity-mediated airway inflammatory disorder, in which type 2 innate lymphoid cells (ILC2s) play a pivotal role in response to allergen sensitization eosinophil infiltration, mucus hypersecretion, and bronchial hyperresponsiveness were its hallmark features. Despite th...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40398255/"
+          "pmid": "28539203",
+          "title": "The interplay between neuroendocrine activity and psychological stress-induced exacerbation of allergic asthma.",
+          "authors": "Miyasaka T, Dobashi-Okuyama K, Takahashi T, et al.",
+          "journal": "Allergology international : official journal of the Japanese Society of Allergology",
+          "year": "2018",
+          "abstract_snippet": "Psychological stress is recognized as a key factor in the exacerbation of allergic asthma, whereby brain responses to stress act as immunomodulators for asthma. In particular, stress-induced enhanced type 2 T-helper (Th2)-type lung inflammation is strongly associated with asthma pathogenesis. Psycho...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28539203/"
         },
         {
-          "pmid": "33637087",
-          "title": "Metformin use and respiratory outcomes in asthma-COPD overlap.",
-          "authors": "Wu TD, Fawzy A, Kinney GL, et al.",
-          "journal": "Respiratory research",
-          "year": "2021",
-          "abstract_snippet": "BACKGROUND: Metformin is associated with improved respiratory outcomes in asthma; however, metformin in COPD and asthma-COPD overlap (ACO) remains unexplored. OBJECTIVE: To determine the association between metformin use and respiratory outcomes in COPD and ACO. STUDY DESIGN AND METHODS: Participant...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33637087/"
-        },
-        {
-          "pmid": "36521462",
-          "title": "Medication Safety in Breastfeeding.",
-          "authors": "Spencer JP, Thomas S, Trondsen Pawlowski RH",
-          "journal": "American family physician",
-          "year": "2022",
-          "abstract_snippet": "Breastfeeding is universally recognized as the preferred method of infant nutrition, but is sometimes abbreviated because of fear of harm to the infant from maternal medication. The amount of medication that enters breast milk varies based on the maternal serum concentration and the pharmacologic pr...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36521462/"
-        },
-        {
-          "pmid": "31415212",
-          "title": "Association of Metformin Initiation and Risk of Asthma Exacerbation. A Claims-based Cohort Study.",
-          "authors": "Wu TD, Keet CA, Fawzy A, et al.",
-          "journal": "Annals of the American Thoracic Society",
-          "year": "2019",
+          "pmid": "3442767",
+          "title": "Nonprescription availability of theophylline, epinephrine and ephedrine for asthma.",
+          "authors": "Simons FE",
+          "journal": "CMAJ : Canadian Medical Association journal = journal de l'Association medicale canadienne",
+          "year": "1987",
           "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/31415212/"
+          "url": "https://pubmed.ncbi.nlm.nih.gov/3442767/"
+        },
+        {
+          "pmid": "35181547",
+          "title": "Efficacy and Safety of House Dust Mite Sublingual Immunotherapy Tablet in Allergic Asthma: A Systematic Review of Randomized Controlled Trials.",
+          "authors": "Wongsa C, Phinyo P, Sompornrattanaphan M, et al.",
+          "journal": "The journal of allergy and clinical immunology. In practice",
+          "year": "2022",
+          "abstract_snippet": "BACKGROUND: House dust mite sublingual immunotherapy (HDM SLIT) effectively treats allergic rhinitis (AR). However, the evidence of HDM SLIT for allergic asthma remained limited. OBJECTIVE: To systematically review the efficacy and safety of HDM SLIT tablets in patients with allergic asthma. METHODS...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35181547/"
+        },
+        {
+          "pmid": "8118634",
+          "title": "Relationship of plasma epinephrine and circulating eosinophils to nocturnal asthma.",
+          "authors": "Bates ME, Clayton M, Calhoun W, et al.",
+          "journal": "American journal of respiratory and critical care medicine",
+          "year": "1994",
+          "abstract_snippet": "The mechanisms of nighttime airway obstruction are not fully established, but include circadian fluctuations in epinephrine and cortisol. To evaluate the relationship of circadian patterns in epinephrine and cortisol to nighttime airflow obstruction, 10 young adult asthma patients (ages 19 to 25 yr)...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/8118634/"
         }
       ],
       "repurposing_papers": [
         {
-          "pmid": "41376865",
-          "title": "Corticosteroid insensitivity in obese asthma: potential mechanisms and therapeutic perspectives.",
-          "authors": "To M, To Y",
-          "journal": "Frontiers in allergy",
-          "year": "2025",
-          "abstract_snippet": "Asthma is a heterogeneous condition influenced by multiple clinical and biological factors, and obesity has emerged as a major modifier that worsens symptoms and increases the risk of exacerbations. This review aimed to examine the mechanisms by which obesity contributes to reduced responsiveness to...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41376865/",
-          "total_results": 4
+          "pmid": "29906501",
+          "title": "Repurposing drugs as inhaled therapies in asthma.",
+          "authors": "Anderson SD",
+          "journal": "Advanced drug delivery reviews",
+          "year": "2018",
+          "abstract_snippet": "For the first 40\u202fyears of the 20th century treatment for asthma occurred in response to an asthma attack. The treatments were given by injection or orally and included the adrenergic agonists adrenalin/epinephrine and ephedrine and a phosphodiesterase inhibitor theophylline. Epinephrine became avail...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29906501/",
+          "total_results": 2
         },
         {
-          "pmid": "41304763",
-          "title": "Matrix Metalloproteinase-9 (MMP-9) as a Therapeutic Target: Insights into Molecular Pathways and Clinical Applications.",
-          "authors": "Wolosowicz M, Prokopiuk S, Kaminski TW",
-          "journal": "Pharmaceutics",
-          "year": "2025",
-          "abstract_snippet": "Matrix metalloproteinase-9 (MMP-9) is a zinc-dependent endopeptidase that plays a central role in extracellular matrix (ECM) remodeling, angiogenesis, immune cell trafficking, and cytokine activation. Dysregulated MMP-9 activity has been implicated in the pathogenesis of diverse conditions, includin...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41304763/"
-        },
-        {
-          "pmid": "41942589",
-          "title": "Targeting of MAPK-ERK1/2 signaling by metformin in asthma: an updated mechanistic insight.",
-          "authors": "Hassan ME, Al-Kuraishy HM, Alexiou A, et al.",
-          "journal": "Naunyn-Schmiedeberg's archives of pharmacology",
-          "year": "2026",
-          "abstract_snippet": "Asthma is a heterogeneous chronic inflammatory airway disease characterized by persistent inflammation, dysregulated immune signaling, and progressive airway remodeling. It has been shown that asthma pathogenesis involves multiple signaling pathways. It has been illustrated that the mitogen-activate...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41942589/"
+          "pmid": "34857633",
+          "title": "Identification and characterization of an atypical G\u03b1s-biased \u03b2",
+          "authors": "Kim D, Tokmakova A, Lujan LK, et al.",
+          "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+          "year": "2021",
+          "abstract_snippet": "G protein-coupled receptors display multifunctional signaling, offering the potential for agonist structures to promote conformational selectivity for biased outputs. For \u03b2",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34857633/"
         }
       ],
       "semantic_scholar_papers": [
         {
-          "title": "Metformin alleviates inflammatory responses in acute allergic asthma by inhibiting ILC2s function.",
-          "year": 2025,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/141c20944daf2b770a99c41fa826f2b5062f8a65",
-          "authors": "Hong Liu, Xiuli Jing, Lu Yu"
+          "title": "Cost-effectiveness of budesonide-formoterol versus inhaled epinephrine in United States adults with mild asthma.",
+          "year": 2023,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/93af2494a9c21a2a9f53ecda35f2cc2848eb98e3",
+          "authors": "Joseph Khoa Ho, M. Shaker, M. Greenhawt"
         },
         {
-          "title": "Metformin use & asthma outcomes in patients with concurrent diabetes & bronchial asthma: A systematic review & meta-analysis",
-          "year": 2025,
+          "title": "Pre-hospital epinephrine administration for treating anaphylaxis among those with co-morbid asthma: A scoping review.",
+          "year": 2023,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/bdddb51105fc27e30621d0a532c244716040063e",
+          "authors": "Billy Hong, K. Merrill, Michael A. Golding"
+        },
+        {
+          "title": "The Efficacy of Nebulized Epinephrine in Children with Acute Asthma: A Randomized Double-blind Trial",
+          "year": 2023,
           "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/2ee63bfe8ffc2d4f5bb21f262438819b49c530c8",
-          "authors": "A. Kamrul-Hasan, J. Pappachan, Parth Jethwani"
+          "url": "https://www.semanticscholar.org/paper/965ce54fcdfb2c6a32953f2f3aae651fad31e0df",
+          "authors": "Eva EN, Islam, MM, Hoq ME"
         },
         {
-          "title": "Metformin effects on respiratory and metabolic outcomes in asthma and metabolic syndrome: a double-blind, randomized, placebo-controlled clinical trial",
-          "year": 2025,
+          "title": "Corrigendum to \"Contextual community epinephrine prescribing: Is more always better?\" [Ann Allergy Asthma Immunol 131 (2023) 176-184].",
+          "year": 2023,
           "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/a9da68e57ac2c12d298830040ab4f772909e5b7f",
-          "authors": "Hossein Mehravaran, Adeleh Bahar, Fatemeh Hajimohammadi"
+          "url": "https://www.semanticscholar.org/paper/eaf600ead47dbb92b6e4b0a9d1d1e052efeec0e0",
+          "authors": "Marcus S. Shaker, E. Abrams, J. Sublett"
         },
         {
-          "title": "Metformin use is associated with reduced systemic steroid courses among pediatric asthma patients with diabetes or elevated blood glucose levels.",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/62e23e983500cee2323016a112c2fca8068e5888",
-          "authors": "E. Ararat, Deepa Rastogi, B. Martin"
-        },
-        {
-          "title": "Association of novel antihyperglycemic drugs versus metformin with decrease in asthma exacerbations.",
-          "year": 2024,
-          "citations": 14,
-          "url": "https://www.semanticscholar.org/paper/df6809034555171bcc293199423255258d151f9d",
-          "authors": "Y. Kimura, T. Jo, Norihiko Inoue"
+          "title": "Over\u2010the\u2010Counter Epinephrine for Asthma Treatment: Too Much Risk for Too Little Benefit",
+          "year": 2022,
+          "citations": 2,
+          "url": "https://www.semanticscholar.org/paper/5e8a6b27b66310b8cafdc41a9a199808582ee316",
+          "authors": "B. Gaynes"
         }
       ],
       "most_cited_paper": {
-        "title": "Association of novel antihyperglycemic drugs versus metformin with decrease in asthma exacerbations.",
-        "year": 2024,
-        "citations": 14,
-        "url": "https://www.semanticscholar.org/paper/df6809034555171bcc293199423255258d151f9d",
-        "authors": "Y. Kimura, T. Jo, Norihiko Inoue"
+        "title": "Cost-effectiveness of budesonide-formoterol versus inhaled epinephrine in United States adults with mild asthma.",
+        "year": 2023,
+        "citations": 4,
+        "url": "https://www.semanticscholar.org/paper/93af2494a9c21a2a9f53ecda35f2cc2848eb98e3",
+        "authors": "Joseph Khoa Ho, M. Shaker, M. Greenhawt"
       },
-      "max_citations": 14,
-      "faers_signal": "moderate",
-      "faers_total_reports": 419475,
-      "faers_cooccurrences": 3491,
-      "faers_interpretation": "3491 FAERS reports mention both Metformin and Asthma-related terms. Limited but notable real-world signal.",
+      "max_citations": 4,
+      "faers_signal": "strong",
+      "faers_total_reports": 46064,
+      "faers_cooccurrences": 1231,
+      "faers_interpretation": "1231 FAERS reports mention both Epinephrine and Asthma-related terms (2.7% of all Epinephrine reports). This suggests real-world clinical association.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -3723,43 +3313,9 @@
         "HY-10234 (1.464)",
         "BIBR1532 (1.457)"
       ],
-      "signature_interpretation": "Metformin was not found among the top 38 drugs that reverse the Asthma gene signature. Top reversers: Mevastatin (1.475), dasatinib (1.470), maprotilline hcl (1.467)",
-      "ai_hypothesis": "of its anti-inflammatory properties.",
+      "signature_interpretation": "Epinephrine was not found among the top 38 drugs that reverse the Asthma gene signature. Top reversers: Mevastatin (1.475), dasatinib (1.470), maprotilline hcl (1.467)",
+      "ai_hypothesis": "of its anti-inflammatory properties, it is important to understand the potential risks of Epinephrine.",
       "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 0,
-          "negative_signals": 0,
-          "mechanism_signals": 0,
-          "extracted_entities": [
-            {
-              "entity": "metformin",
-              "entity_group": "Medication",
-              "score": 0.9919999837875366
-            },
-            {
-              "entity": "non",
-              "entity_group": "Detailed_description",
-              "score": 0.847000002861023
-            },
-            {
-              "entity": "57, 743",
-              "entity_group": "Lab_value",
-              "score": 1.0
-            },
-            {
-              "entity": "propensity score",
-              "entity_group": "Lab_value",
-              "score": 0.8510000109672546
-            },
-            {
-              "entity": "matched",
-              "entity_group": "Lab_value",
-              "score": 0.7400000095367432
-            }
-          ]
-        },
         {
           "relation_type": "unclear",
           "confidence": 0.0,
@@ -3767,92 +3323,84 @@
         },
         {
           "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 1,
-          "negative_signals": 0,
-          "mechanism_signals": 0,
-          "extracted_entities": [
-            {
-              "entity": "metform",
-              "entity_group": "Medication",
-              "score": 0.8809999823570251
-            },
-            {
-              "entity": "improved",
-              "entity_group": "Lab_value",
-              "score": 1.0
-            },
-            {
-              "entity": "respiratory outcomes",
-              "entity_group": "Diagnostic_procedure",
-              "score": 0.9670000076293945
-            },
-            {
-              "entity": "cop",
-              "entity_group": "Disease_disorder",
-              "score": 0.9879999756813049
-            },
-            {
-              "entity": "met",
-              "entity_group": "Medication",
-              "score": 0.9990000128746033
-            }
-          ]
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
         }
       ],
       "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
+      "failed_trial_phase": "Phase 3",
+      "failed_trial_count": 8,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.7867,
-      "mr_genetic_targets": 10,
-      "mechanistic_hypothesis": "Metformin \u2014[is a therapeutic for]\u2192 Asthma",
-      "kg_paths_text": "\u2022 Metformin \u2014[is a therapeutic for]\u2192 Asthma\n\u2022 Metformin \u2014[downregulates]\u2192 gene-54205 \u2014[is a target of]\u2192 DB01017 \u2014[is a therapeutic for]\u2192 Asthma\n\u2022 Metformin \u2014[downregulates]\u2192 gene-54205 \u2014[is a target of]\u2192 DB01017 \u2014[is a therapeutic for]\u2192 Asthma",
+      "mr_score": 0.8109,
+      "mr_genetic_targets": 5,
+      "mechanistic_hypothesis": "Epinephrine \u2014[is a therapeutic for]\u2192 Asthma",
+      "kg_paths_text": "\u2022 Epinephrine \u2014[is a therapeutic for]\u2192 Asthma\n\u2022 Epinephrine \u2014[palliates]\u2192 DOID:4481 \u2014[is treated by]\u2192 DB00471 \u2014[treats]\u2192 Asthma\n\u2022 Epinephrine \u2014[palliates]\u2192 DOID:4481 \u2014[is treated by]\u2192 DB00471 \u2014[treats]\u2192 Asthma",
       "validation_experiments": [],
-      "novelty_score": 0.282,
-      "novelty_level": "KNOWN",
+      "novelty_score": 0.126,
+      "novelty_level": "ESTABLISHED",
       "is_known_treatment": true,
-      "clinical_trials_total": 3,
+      "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT06273072",
-          "title": "Metformin IN Asthma for Overweight and Obese Individuals (MINA)",
-          "status": "RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "100",
-          "url": "https://clinicaltrials.gov/study/NCT06273072"
+          "nct_id": "NCT01737892",
+          "title": "Assessment and Evaluation of Pharmacokinetic Profile of E004 in Healthy Adults",
+          "status": "TERMINATED",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "21",
+          "url": "https://clinicaltrials.gov/study/NCT01737892"
         },
         {
-          "nct_id": "NCT07446985",
-          "title": "Is There a Benefit From Addition of Physical Exercise to Diet Restriction/Limitation in PCOS Women With Asthma?",
-          "status": "RECRUITING",
-          "phase": "NA",
-          "enrollment": "40",
-          "url": "https://clinicaltrials.gov/study/NCT07446985"
+          "nct_id": "NCT05667727",
+          "title": "The Effect of Nebulized Epinephrine in Asthma Exacerbation in Pediatric Age Group With the Standard Treatment Compared to Standard Treatment Using Improvement PRAM Score as a Primary Outcome",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "30",
+          "url": "https://clinicaltrials.gov/study/NCT05667727"
         },
         {
-          "nct_id": "NCT04278404",
-          "title": "Pharmacokinetics, Pharmacodynamics, and Safety Profile of Understudied Drugs Administered to Children Per Standard of Care (POPS)",
-          "status": "RECRUITING",
-          "phase": "N/A",
-          "enrollment": "5000",
-          "url": "https://clinicaltrials.gov/study/NCT04278404"
+          "nct_id": "NCT00314574",
+          "title": "A Study of Omalizumab (Xolair) in Subjects With Moderate to Severe Persistent Asthma (EXTRA)",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "850",
+          "url": "https://clinicaltrials.gov/study/NCT00314574"
+        },
+        {
+          "nct_id": "NCT02658877",
+          "title": "Sputum-derived Cellular Targets After Xolair (Omalizumab)",
+          "status": "TERMINATED",
+          "phase": "PHASE4",
+          "enrollment": "3",
+          "url": "https://clinicaltrials.gov/study/NCT02658877"
+        },
+        {
+          "nct_id": "NCT00238927",
+          "title": "Clinical Trial of Fluticasone Versus Placebo at the Onset of a Cold for Children With Asthma",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "150",
+          "url": "https://clinicaltrials.gov/study/NCT00238927"
         }
       ],
       "trial_phases": {
-        "PHASE2": 1,
-        "NA": 1
+        "PHASE1": 2,
+        "PHASE2": 2,
+        "PHASE4": 4,
+        "PHASE3": 3
       },
       "confidence": "HIGH",
       "confidence_reasons": [
-        "3 clinical trial(s) found on ClinicalTrials.gov",
-        "134 PubMed articles on this drug-disease pair",
-        "4 article(s) specifically mention repurposing/repositioning",
+        "10 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "1968 PubMed articles on this drug-disease pair",
+        "2 article(s) specifically mention repurposing/repositioning",
         "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 3491 adverse event reports mention drug-disease co-occurrence",
+        "Strong FAERS signal: 1231 adverse event reports link drug to disease (46064 total reports)",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.79, 10 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.81, 5 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D001249",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3863,7 +3411,7 @@
         "stage": 1
       },
       "ddi_warnings": {
-        "n_interactions": 1266,
+        "n_interactions": 1250,
         "has_warnings": true,
         "top_interactions": [
           {
@@ -3912,108 +3460,60 @@
             "severity": "high"
           },
           {
-            "drug_id": "DB00563",
-            "drug_name": "Methotrexate",
+            "drug_id": "DB00331",
+            "drug_name": "Metformin",
             "severity": "high"
           }
         ]
       },
       "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "advisory",
-        "summary": "CPIC-D (C11orf65) \u2022 PharmGKB-3 (SLC22A1 / rs622342)",
-        "cpic": [
-          {
-            "gene": "C11orf65",
-            "level": "D",
-            "guideline": ""
-          },
-          {
-            "gene": "SLC47A2",
-            "level": "D",
-            "guideline": ""
-          }
-        ],
-        "pharmgkb": [
-          {
-            "gene": "SLC22A1",
-            "variant": "rs622342",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/655384809"
-          },
-          {
-            "gene": "KCNJ11",
-            "variant": "rs5219",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981238910"
-          },
-          {
-            "gene": "SLC22A1",
-            "variant": "rs2282143",
-            "level": "3",
-            "phenotype_category": "Metabolism/PK",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183697747"
-          },
-          {
-            "gene": "SLC22A2",
-            "variant": "rs316019",
-            "level": "3",
-            "phenotype_category": "Other",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183697752"
-          },
-          {
-            "gene": "SLC47A2",
-            "variant": "rs12943590",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183680560"
-          }
-        ]
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
       },
       "triangulation": {
-        "n_axes_agree": 2,
+        "n_axes_agree": 3,
         "axes": {
           "kg": true,
-          "docking": false,
+          "docking": true,
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.523,
-        "label": "multi-axis",
+        "triangulation_score": 0.636,
+        "label": "silver-standard",
         "axis_values": {
-          "kg": 0.521,
-          "docking": 0.517,
+          "kg": 0.524,
+          "docking": 0.842,
           "pharos": 0.0,
-          "literature": 0.925
+          "literature": 1.0
         }
       },
       "tissue_context": {
         "tissues": [
           "Lung"
         ],
-        "n_genes": 14,
-        "n_expressed": 12,
-        "mean_tpm_in_tissue": 60.02,
-        "max_tpm_in_tissue": 362.58,
-        "tissue_specificity": 0.722,
-        "context_modifier": 1.097
+        "n_genes": 20,
+        "n_expressed": 16,
+        "mean_tpm_in_tissue": 35.12,
+        "max_tpm_in_tissue": 497.48,
+        "tissue_specificity": 0.629,
+        "context_modifier": 1.065
       },
-      "disease_entity": "Disease::MESH:D001249",
-      "ensemble_prob": 0.4836,
+      "ensemble_prob": 0.9933,
       "ensemble_features": {
-        "kg_score": 0.9936,
-        "degree_penalty": 0.7634,
-        "n_drug_targets": 6,
+        "kg_score": 0.9997,
+        "degree_penalty": 0.7678,
+        "n_drug_targets": 16,
         "is_fda_approved": 1,
         "n_disease_genes": 0,
-        "transe_rank_log": 4.2341
+        "transe_rank_log": 1.3863
       },
-      "ensemble_rank": 6,
+      "ensemble_rank": 3,
       "docking": {
-        "kcal_per_mol": -6.2,
-        "target_symbol": "DPP4",
+        "kcal_per_mol": -10.1,
+        "target_symbol": "ADRB3",
         "source": "chembl_bioactivity_proxy",
         "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
         "hit": true
@@ -4021,13 +3521,421 @@
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
-          "IMINE"
+          "CATECHOL"
         ],
         "n_alerts": 2,
         "alert_names": [
-          "imine_1",
-          "imine_2"
+          "catechol_A(92)",
+          "catechol"
         ]
+      }
+    },
+    {
+      "drug_name": "Prednisolone",
+      "drug_id": "DB00860",
+      "disease_name": "Asthma",
+      "combined_score": 0.518,
+      "pillars_hit": 4,
+      "transe_rank": 10,
+      "transe_score": -9.8692,
+      "pykeen_score": -11.3208,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.8379999995231628,
+      "proximity_distance": 0.6499999761581421,
+      "admet_score": 0.7161,
+      "admet_flags": "clean",
+      "primekg_score": 0.2523,
+      "dti_score": 0.5856,
+      "dti_best_target": "ANGPT2",
+      "kg_group_score": 0.3669,
+      "structural_group_score": 0.5856,
+      "network_group_score": 0.640500009059906,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.8264,
+      "admet_multiplier": 0.9432,
+      "efficacy_score": 0.5492,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 9,
+      "shared_targets": [
+        "CRP",
+        "ESR1",
+        "IGFBP3",
+        "IL10",
+        "IL1A",
+        "IL1RN",
+        "IL6",
+        "NFKBIA",
+        "NR3C1"
+      ],
+      "pubmed_total": 1890,
+      "pubmed_treatment_total": 1777,
+      "pubmed_repurposing_total": 1,
+      "key_papers": [
+        {
+          "pmid": "33980337",
+          "title": "Long-term efficacy and safety of omalizumab in patients with allergic asthma: A real-life study.",
+          "authors": "Papaioannou AI, Mplizou M, Porpodis K, et al.",
+          "journal": "Allergy and asthma proceedings",
+          "year": "2021",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33980337/",
+          "total_results": 1890
+        },
+        {
+          "pmid": "8752496",
+          "title": "[Classification of bronchial asthma according to steroid and immunosuppressive treatment].",
+          "authors": "Nagasaka Y, Nakajima S",
+          "journal": "Nihon Kyobu Shikkan Gakkai zasshi",
+          "year": "1995",
+          "abstract_snippet": "In long-term management of bronchial asthma, severity is classified according to the need for steroid treatment. In mild asthma, no chronic steroid treatment is needed; bronchodilators alone can relieve symptoms. In patients with moderate asthma, continuous inhaled steroids are necessary. In severe ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/8752496/"
+        },
+        {
+          "pmid": "38376812",
+          "title": "N-acetyl cysteine augments adipose tissue-derived stem cell efficacy on inflammatory markers and regulatory T cell system balance in an allergic asthma model.",
+          "authors": "Radan M, Abol Nejadian F, Bayati V, et al.",
+          "journal": "The Journal of asthma : official journal of the Association for the Care of Asthma",
+          "year": "2024",
+          "abstract_snippet": "BACKGROUND: Allergic asthma is a destructive inflammatory process in the respiratory system. The anti-inflammatory and antioxidant effects of N-acetylcysteine (NAC) have been reported in patients with obstructive pulmonary disease. On the other hand, several studies have shown the modulatory effects...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38376812/"
+        },
+        {
+          "pmid": "11259239",
+          "title": "Crushed prednisolone tablets or oral solution for acute asthma?",
+          "authors": "Lucas-Bouwman ME, Roorda RJ, Jansman FG, et al.",
+          "journal": "Archives of disease in childhood",
+          "year": "2001",
+          "abstract_snippet": "In a randomised trial, treatment with prednisolone in two formulations (oral solution or crushed tablets) was compared in 78 young children with acute asthma. Prednisolone oral solution was better tolerated than crushed tablets (less vomiting, superior taste); clinical resolution was similar.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11259239/"
+        },
+        {
+          "pmid": "28284319",
+          "title": "Longterm clinical outcomes of omalizumab therapy in severe allergic asthma: Study of efficacy and safety.",
+          "authors": "Mansur AH, Srivastava S, Mitchell V, et al.",
+          "journal": "Respiratory medicine",
+          "year": "2017",
+          "abstract_snippet": "Omalizumab has been shown to be an effective add-on therapy for patients with uncontrolled severe persistent allergic asthma. There has been a steady accumulation of evidence on the long-term effectiveness of omalizumab; however, data on real-life outcomes beyond one year of treatment is limited. In...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28284319/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "41931526",
+          "title": "Using cell-specific late-phase asthma mRNA biomarkers to repurpose drugs that concurrently reverse disease signatures across multiple immune cell-types.",
+          "authors": "Zhang M, Kim YW, Yang CX, et al.",
+          "journal": "PLoS computational biology",
+          "year": "2026",
+          "abstract_snippet": "BACKGROUND: The allergen-induced late-phase asthmatic response (LAR) is used to study the mechanisms and treatment of asthma. We hypothesized that gene-expression (mRNA) biomarkers of the LAR may predict asthma exacerbations and severity. METHODS: Individuals with mild allergic asthma underwent inha...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41931526/",
+          "total_results": 1
+        }
+      ],
+      "semantic_scholar_papers": [
+        {
+          "title": "Airway proteomics reveals broad residual anti-inflammatory effects of prednisolone in mepolizumab-treated asthma.",
+          "year": 2024,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/a0e73c1e0710ec827a3d1e2f8b6463fe726dc2b4",
+          "authors": "I. Howell, Freda Yang, V. Brown"
+        },
+        {
+          "title": "Comparison of Outcome between Dexamethasone Versus Prednisolone Administration in Acute Moderate Asthma",
+          "year": 2023,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/4a237fd36529fb5f3ef8c62447c129d67f8a401f",
+          "authors": "N. Hussain, S. ., Asif Javed"
+        },
+        {
+          "title": "A randomised trial of prednisolone versus prednisolone and itraconazole in acute-stage allergic bronchopulmonary aspergillosis complicating asthma",
+          "year": 2021,
+          "citations": 57,
+          "url": "https://www.semanticscholar.org/paper/f8983a1c07cae097448f6fc27ebd7c6486defa49",
+          "authors": "R. Agarwal, V. Muthu, I. Sehgal"
+        },
+        {
+          "title": "Comparative effectiveness of oral dexamethasone vs. oral prednisolone for acute exacerbation of asthma: A randomized control trial",
+          "year": 2022,
+          "citations": 11,
+          "url": "https://www.semanticscholar.org/paper/897c49c0db8fbf41c442407cee20d575748fcfbf",
+          "authors": "Bhaskar Banoth, A. Verma, K. Bhalla"
+        },
+        {
+          "title": "Effectiveness of single dose oral dexamethasone versus multidose prednisolone for treatment of acute exacerbations of asthma among children",
+          "year": 2022,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/57e623a38b860fd47b299b43c5d17e2b12f85b19",
+          "authors": "Asma Tayyab, Alvina Asif, Shaista Qazi"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "A randomised trial of prednisolone versus prednisolone and itraconazole in acute-stage allergic bronchopulmonary aspergillosis complicating asthma",
+        "year": 2021,
+        "citations": 57,
+        "url": "https://www.semanticscholar.org/paper/f8983a1c07cae097448f6fc27ebd7c6486defa49",
+        "authors": "R. Agarwal, V. Muthu, I. Sehgal"
+      },
+      "max_citations": 57,
+      "faers_signal": "strong",
+      "faers_total_reports": 193614,
+      "faers_cooccurrences": 2287,
+      "faers_interpretation": "2287 FAERS reports mention both Prednisolone and Asthma-related terms (1.2% of all Prednisolone reports). This suggests real-world clinical association.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "Mevastatin (1.475)",
+        "dasatinib (1.470)",
+        "maprotilline hcl (1.467)",
+        "HY-10234 (1.464)",
+        "BIBR1532 (1.457)"
+      ],
+      "signature_interpretation": "Prednisolone was not found among the top 38 drugs that reverse the Asthma gene signature. Top reversers: Mevastatin (1.475), dasatinib (1.470), maprotilline hcl (1.467)",
+      "ai_hypothesis": "of its anti-inflammatory properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "Phase 3",
+      "failed_trial_count": 7,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.8264,
+      "mr_genetic_targets": 5,
+      "mechanistic_hypothesis": "Prednisolone \u2014[treats]\u2192 Asthma",
+      "kg_paths_text": "\u2022 Prednisolone \u2014[treats]\u2192 Asthma\n\u2022 Prednisolone \u2014[treats]\u2192 Asthma\n\u2022 Prednisolone \u2014[downregulates]\u2192 gene-6192 \u2014[is downregulated by]\u2192 DB01234 \u2014[treats]\u2192 Asthma",
+      "validation_experiments": [],
+      "novelty_score": 0.124,
+      "novelty_level": "ESTABLISHED",
+      "is_known_treatment": true,
+      "clinical_trials_total": 10,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT03698630",
+          "title": "Single Dose Oral Dexamethasone Versus Multi-dose Prednisolone in the Treatment of Acute Exacerbations of Asthma in Children",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "250",
+          "url": "https://clinicaltrials.gov/study/NCT03698630"
+        },
+        {
+          "nct_id": "NCT02780479",
+          "title": "Steroids in Children Hospitalized With Asthma",
+          "status": "TERMINATED",
+          "phase": "PHASE4",
+          "enrollment": "6",
+          "url": "https://clinicaltrials.gov/study/NCT02780479"
+        },
+        {
+          "nct_id": "NCT01272635",
+          "title": "Treatment of Preschool Children With Upper Respiratory Tract Illnesses Using Azythromycin and Lower Respiratory Tract Symptoms Using Oral Corticosteroids.",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "607",
+          "url": "https://clinicaltrials.gov/study/NCT01272635"
+        },
+        {
+          "nct_id": "NCT00331058",
+          "title": "Comparison Of Molecular Targets In Mild To Severe Asthmatics And Healthy Subjects",
+          "status": "TERMINATED",
+          "phase": "PHASE1",
+          "enrollment": "58",
+          "url": "https://clinicaltrials.gov/study/NCT00331058"
+        },
+        {
+          "nct_id": "NCT00327197",
+          "title": "Assessment Of Disease Pathology And Key Therapeutic Targets In Severe Asthma",
+          "status": "TERMINATED",
+          "phase": "PHASE1",
+          "enrollment": "47",
+          "url": "https://clinicaltrials.gov/study/NCT00327197"
+        }
+      ],
+      "trial_phases": {
+        "PHASE4": 3,
+        "PHASE3": 2,
+        "PHASE1": 2
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "10 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "1890 PubMed articles on this drug-disease pair",
+        "1 article(s) specifically mention repurposing/repositioning",
+        "Supported by 4 independent AI pillars",
+        "Strong FAERS signal: 2287 adverse event reports link drug to disease (193614 total reports)",
+        "Supporting paper with 57 citations",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.83, 5 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D001249",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1303,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (DSE;TSPYL1 / rs3828743)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "DSE;TSPYL1",
+            "variant": "rs3828743",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449576983"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs2229109",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1445402144"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs1045642",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1444704881"
+          },
+          {
+            "gene": "PNPLA3",
+            "variant": "rs738409",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1448632697"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.667,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.518,
+          "docking": 0.953,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Lung"
+        ],
+        "n_genes": 9,
+        "n_expressed": 8,
+        "mean_tpm_in_tissue": 67.04,
+        "max_tpm_in_tissue": 497.48,
+        "tissue_specificity": 0.662,
+        "context_modifier": 1.094
+      },
+      "ensemble_prob": 0.951,
+      "ensemble_features": {
+        "kg_score": 0.9993,
+        "degree_penalty": 0.7643,
+        "n_drug_targets": 19,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.0794
+      },
+      "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": -11.44,
+        "target_symbol": "IL6",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
       }
     }
   ],

@@ -1,14 +1,13 @@
 {
   "disease": "Melanoma",
   "status": "completed",
-  "timestamp": "2026-04-19T20:14:09.064314",
-  "elapsed_seconds": 964.1,
+  "timestamp": "2026-05-07T23:29:29.715782",
+  "elapsed_seconds": 267.8,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
-    "HIGH": 8,
-    "LOW": 1,
-    "MEDIUM": 1
+    "HIGH": 9,
+    "LOW": 1
   },
   "pipeline_version": "v5",
   "data_manifest_hash": "2da2aa88f2457d1b",
@@ -17,7 +16,7 @@
       "drug_name": "Bleomycin",
       "drug_id": "DB00290",
       "disease_name": "Melanoma",
-      "combined_score": 0.5720999836921692,
+      "combined_score": 0.5778999924659729,
       "pillars_hit": 4,
       "transe_rank": 37,
       "transe_score": -10.151,
@@ -36,15 +35,15 @@
       "admet_score": 1.0,
       "admet_flags": "clean",
       "primekg_score": 0.2532,
-      "dti_score": 0.9391,
-      "dti_best_target": "FFAR1",
+      "dti_score": 0.9713,
+      "dti_best_target": "PGF",
       "kg_group_score": 0.1917,
-      "structural_group_score": 0.9391,
+      "structural_group_score": 0.9713,
       "network_group_score": 0.666100025177002,
       "txgnn_group_score": 0,
       "mr_group_score": 0.8129,
       "admet_multiplier": 1.0,
-      "efficacy_score": 0.5720999836921692,
+      "efficacy_score": 0.5778999924659729,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 5,
@@ -199,18 +198,18 @@
       "mechanistic_hypothesis": "Bleomycin \u2014[is a therapeutic for]\u2192 Melanoma",
       "kg_paths_text": "\u2022 Bleomycin \u2014[is a therapeutic for]\u2192 Melanoma\n\u2022 Bleomycin \u2014[targets]\u2192 gene-3978 \u2014[is bound by]\u2192 gene-328 \u2014[is linked to]\u2192 Melanoma\n\u2022 Bleomycin \u2014[targets]\u2192 gene-3978 \u2014[is bound by]\u2192 gene-328 \u2014[is linked to]\u2192 Melanoma",
       "validation_experiments": [],
-      "novelty_score": 0.34299999475479126,
+      "novelty_score": 0.34700000286102295,
       "novelty_level": "KNOWN",
       "is_known_treatment": true,
       "clinical_trials_total": 5,
       "clinical_trials": [
         {
-          "nct_id": "NCT06753136",
-          "title": "Electrochemotherapy (ECT) in Patients With Primary Visceral Tumors and/or Secondary Visceral Localizations, of Any Histotype",
-          "status": "RECRUITING",
-          "phase": "NA",
-          "enrollment": "24",
-          "url": "https://clinicaltrials.gov/study/NCT06753136"
+          "nct_id": "NCT00006035",
+          "title": "Bleomycin With or Without Electroporation Therapy in Treating Patients With Stage III or Stage IV Melanoma",
+          "status": "UNKNOWN",
+          "phase": "PHASE1",
+          "enrollment": "",
+          "url": "https://clinicaltrials.gov/study/NCT00006035"
         },
         {
           "nct_id": "NCT07404605",
@@ -237,17 +236,17 @@
           "url": "https://clinicaltrials.gov/study/NCT06388252"
         },
         {
-          "nct_id": "NCT00006035",
-          "title": "Bleomycin With or Without Electroporation Therapy in Treating Patients With Stage III or Stage IV Melanoma",
-          "status": "UNKNOWN",
-          "phase": "PHASE1",
-          "enrollment": "",
-          "url": "https://clinicaltrials.gov/study/NCT00006035"
+          "nct_id": "NCT06753136",
+          "title": "Electrochemotherapy (ECT) in Patients With Primary Visceral Tumors and/or Secondary Visceral Localizations, of Any Histotype",
+          "status": "RECRUITING",
+          "phase": "NA",
+          "enrollment": "24",
+          "url": "https://clinicaltrials.gov/study/NCT06753136"
         }
       ],
       "trial_phases": {
-        "NA": 4,
-        "PHASE1": 1
+        "PHASE1": 1,
+        "NA": 4
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -258,8 +257,10 @@
         "Moderate FAERS signal: 14 adverse event reports mention drug-disease co-occurrence",
         "Supporting paper with 31 citations",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.81, 1 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.81, 1 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D008545",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -376,10 +377,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.4000000059604645,
+        "triangulation_score": 0.4020000100135803,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.5720000267028809,
+          "kg": 0.578000009059906,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 1.0
@@ -397,15 +398,7 @@
         "tissue_specificity": 0.402,
         "context_modifier": 1.047
       },
-      "disease_entity": "Disease::MESH:D008545",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.9845,
+      "ensemble_prob": 0.9884,
       "ensemble_features": {
         "kg_score": 0.9994,
         "degree_penalty": 0.7837,
@@ -415,6 +408,13 @@
         "transe_rank_log": 1.9459
       },
       "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -430,6 +430,436 @@
           "gte_7_aliphatic_OH",
           "sulfonium"
         ]
+      }
+    },
+    {
+      "drug_name": "Dexamethasone",
+      "drug_id": "DB01234",
+      "disease_name": "Melanoma",
+      "combined_score": 0.5645,
+      "pillars_hit": 4,
+      "transe_rank": 21,
+      "transe_score": -9.9834,
+      "pykeen_score": -11.5382,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.8119999766349792,
+      "proximity_distance": 0.75,
+      "admet_score": 0.7109,
+      "admet_flags": "clean",
+      "primekg_score": 0.2563,
+      "dti_score": 0.917,
+      "dti_best_target": "DDR1",
+      "kg_group_score": 0.4055,
+      "structural_group_score": 0.917,
+      "network_group_score": 0.597599983215332,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.7548,
+      "admet_multiplier": 0.9422,
+      "efficacy_score": 0.5992,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 161,
+      "shared_targets": [
+        "ABCB1",
+        "ABCC2",
+        "ABCC3",
+        "ABCG2",
+        "ADAM10",
+        "ADGRG1",
+        "ADIPOQ",
+        "AHR",
+        "AICDA",
+        "AQP1",
+        "AR",
+        "ARHGEF2",
+        "ARL6IP5",
+        "ASAH1",
+        "AURKB",
+        "BAG3",
+        "BCL2L11",
+        "BDNF",
+        "BNIP3",
+        "CAV1"
+      ],
+      "pubmed_total": 280,
+      "pubmed_treatment_total": 222,
+      "pubmed_repurposing_total": 1,
+      "key_papers": [
+        {
+          "pmid": "36672229",
+          "title": "Dexamethasone and OLT1177 Cooperate in the Reduction of Melanoma Growth by Inhibiting STAT3 Functions.",
+          "authors": "Dinarello A, Mills TS, Tengesdal IW, et al.",
+          "journal": "Cells",
+          "year": "2023",
+          "abstract_snippet": "The NLRP3 inflammasome is a multimolecular complex that processes inactive IL-1\u03b2 and IL-18 into proinflammatory cytokines. OLT1177 is an orally active small compound that specifically inhibits NLRP3. Here, B16F10 melanoma were implanted in mice and treated with OLT1177 as well as combined with the g...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36672229/",
+          "total_results": 280
+        },
+        {
+          "pmid": "30568305",
+          "title": "Neoantigen vaccine generates intratumoral T cell responses in phase Ib glioblastoma trial.",
+          "authors": "Keskin DB, Anandappa AJ, Sun J, et al.",
+          "journal": "Nature",
+          "year": "2019",
+          "abstract_snippet": "Neoantigens, which are derived from tumour-specific protein-coding mutations, are exempt from central tolerance, can generate robust immune responses",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30568305/"
+        },
+        {
+          "pmid": "33806305",
+          "title": "Dexamethasone Induces the Expression and Function of Tryptophan-2-3-Dioxygenase in SK-MEL-28 Melanoma Cells.",
+          "authors": "Cecchi M, Paccosi S, Silvano A, et al.",
+          "journal": "Pharmaceuticals (Basel, Switzerland)",
+          "year": "2021",
+          "abstract_snippet": "Tryptophan-2,3-dioxygenase (TDO) is one of the key tryptophan-catabolizing enzymes with immunoregulatory properties in cancer. Contrary to expectation, clinical trials showed that inhibitors of the ubiquitously expressed enzyme, indoleamine-2,3-dioxygenase-1 (IDO1), do not provide benefits in melano...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33806305/"
+        },
+        {
+          "pmid": "40214989",
+          "title": "Practice Variation in Perioperative Dexamethasone Use and Outcomes in Brain Metastasis Resection.",
+          "authors": "Wasilewski D, Araceli T, Rafaelian A, et al.",
+          "journal": "JAMA network open",
+          "year": "2025",
+          "abstract_snippet": "IMPORTANCE: Variations in perioperative dexamethasone dosing are common in brain metastasis resection, but their impact on patient outcomes remains unclear. OBJECTIVE: To evaluate the association between perioperative dexamethasone dosing and patient outcomes, focusing on overall survival (OS) and p...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40214989/"
+        },
+        {
+          "pmid": "21455635",
+          "title": "Glucocorticoid receptor expression and antiproliferative effect of dexamethasone on human melanoma cells.",
+          "authors": "Dobos J, Kenessey I, T\u00edm\u00e1r J, et al.",
+          "journal": "Pathology oncology research : POR",
+          "year": "2011",
+          "abstract_snippet": "Glucocorticoids, such as dexamethasone are widely used in cancer therapy and have cell type-specific pro- or antiapoptotic effects. We examined whether melanoma cells are sensitive to dexamethasone treatment. We have demonstrated for the first time that in human melanoma cell lines as well as in ben...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/21455635/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "28585089",
+          "title": "Combination of cationic dexamethasone derivative and STAT3 inhibitor (WP1066) for aggressive melanoma: a strategy for repurposing a phase I clinical trial drug.",
+          "authors": "Sau S, Mondal SK, Kashaw SK, et al.",
+          "journal": "Molecular and cellular biochemistry",
+          "year": "2017",
+          "abstract_snippet": "Glucocorticoid, such as dexamethasone (Dex) is often used along with chemotherapy to antagonize side effects of chemotherapy. However, sustained use of Dex frequently develops drug resistance in patients. As a strategy to re-induce drug sensitivity, we planned to modify Dex by chemically conjugating...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28585089/",
+          "total_results": 1
+        }
+      ],
+      "semantic_scholar_papers": [
+        {
+          "title": "Symptom management in melanoma associated retinopathy following intravitreal dexamethasone",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/c13815aa126c0717f9aa34a0046db56576daed66",
+          "authors": "Ameerah Ilyas, O. Mahroo, Jit Kai Tan"
+        },
+        {
+          "title": "Dexamethasone and OLT1177 Cooperate in the Reduction of Melanoma Growth by Inhibiting STAT3 Functions",
+          "year": 2023,
+          "citations": 9,
+          "url": "https://www.semanticscholar.org/paper/3a603f35f10db5dce214f27875afbae695c0024f",
+          "authors": "Alberto Dinarello, Taylor S. Mills, Isak W. Tengesdal"
+        },
+        {
+          "title": "Dexamethasone Promotes a Stem-Like Phenotype in Human Melanoma Cells via Tryptophan 2,3 Dioxygenase",
+          "year": 2022,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/8e79a64390630dd59e0d5d815ad066642c09413c",
+          "authors": "M. Cecchi, A. Mannini, A. Lapucci"
+        },
+        {
+          "title": "Dexamethasone Induces the Expression and Function of Tryptophan-2-3-Dioxygenase in SK-MEL-28 Melanoma Cells",
+          "year": 2021,
+          "citations": 10,
+          "url": "https://www.semanticscholar.org/paper/b898cc4d11a3d70643ebb7462045def68e4a9bd5",
+          "authors": "M. Cecchi, S. Paccosi, Angela Silvano"
+        },
+        {
+          "title": "Electroretinographic Findings in Melanoma-Associated Retinopathy Treated by Intravitreal Dexamethasone Implant.",
+          "year": 2021,
+          "citations": 10,
+          "url": "https://www.semanticscholar.org/paper/34ba045170e9db1c1b0c92bf50fc1022c74e1223",
+          "authors": "Abdullah Abou-Samra, Radouil Tzekov, Nicolas A. Yannuzzi"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Dexamethasone Induces the Expression and Function of Tryptophan-2-3-Dioxygenase in SK-MEL-28 Melanoma Cells",
+        "year": 2021,
+        "citations": 10,
+        "url": "https://www.semanticscholar.org/paper/b898cc4d11a3d70643ebb7462045def68e4a9bd5",
+        "authors": "M. Cecchi, S. Paccosi, Angela Silvano"
+      },
+      "max_citations": 10,
+      "faers_signal": "moderate",
+      "faers_total_reports": 317707,
+      "faers_cooccurrences": 508,
+      "faers_interpretation": "508 FAERS reports mention both Dexamethasone and Melanoma-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "TG101348 (1.516)",
+        "BISACODYL (1.514)",
+        "KIN001-220 (1.514)",
+        "NU-7441 (1.512)",
+        "\"\"\"4-(4-hydroxy-2,6-dimethylheptan-4-yl)-N,N-diphenyl-1H-1,2,3-triazole-1-carboxamide\"\"\" (1.509)"
+      ],
+      "signature_interpretation": "Dexamethasone was not found among the top 40 drugs that reverse the Melanoma gene signature. Top reversers: TG101348 (1.516), BISACODYL (1.514), KIN001-220 (1.514)",
+      "ai_hypothesis": "of its anti-inflammatory and anti-angiogenic properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": true,
+      "failed_trial_phase": "Phase 2",
+      "failed_trial_count": 3,
+      "failed_trial_penalty": 0.8999999999999999,
+      "mr_score": 0.7548,
+      "mr_genetic_targets": 8,
+      "mechanistic_hypothesis": "Dexamethasone \u2014[is a therapeutic for]\u2192 Melanoma",
+      "kg_paths_text": "\u2022 Dexamethasone \u2014[is a therapeutic for]\u2192 Melanoma\n\u2022 Dexamethasone \u2014[affects]\u2192 gene-650 \u2014[is activated by]\u2192 gene-657 \u2014[is downregulated by]\u2192 Melanoma\n\u2022 Dexamethasone \u2014[affects]\u2192 gene-650 \u2014[activates]\u2192 gene-860 \u2014[is upregulated by]\u2192 Melanoma",
+      "validation_experiments": [],
+      "novelty_score": 0.203,
+      "novelty_level": "ESTABLISHED",
+      "is_known_treatment": true,
+      "clinical_trials_total": 7,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT04001725",
+          "title": "Efficacy of metfOrmin in PrevenTIng Glucocorticoid-induced Diabetes in Patients With Brain Metastases",
+          "status": "UNKNOWN",
+          "phase": "PHASE2",
+          "enrollment": "110",
+          "url": "https://clinicaltrials.gov/study/NCT04001725"
+        },
+        {
+          "nct_id": "NCT02709889",
+          "title": "Rovalpituzumab Tesirine in Delta-Like Protein 3-Expressing Advanced Solid Tumors",
+          "status": "TERMINATED",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "200",
+          "url": "https://clinicaltrials.gov/study/NCT02709889"
+        },
+        {
+          "nct_id": "NCT00623766",
+          "title": "Evaluation of Tumor Response to Ipilimumab in the Treatment of Melanoma With Brain Metastases",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "99",
+          "url": "https://clinicaltrials.gov/study/NCT00623766"
+        },
+        {
+          "nct_id": "NCT02862145",
+          "title": "Pharmacodynamics Study of MRX34, MicroRNA Liposomal Injection in Melanoma Patients With Biopsy Accessible Lesions",
+          "status": "WITHDRAWN",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT02862145"
+        },
+        {
+          "nct_id": "NCT01471054",
+          "title": "Dexamethasone Intravitreal Implant for Treatment of Macular Edema After Plaque Radiotherapy of Uveal Melanoma",
+          "status": "TERMINATED",
+          "phase": "PHASE2",
+          "enrollment": "6",
+          "url": "https://clinicaltrials.gov/study/NCT01471054"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 6,
+        "PHASE1": 3
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "7 clinical trial(s) found on ClinicalTrials.gov",
+        "280 PubMed articles on this drug-disease pair",
+        "1 article(s) specifically mention repurposing/repositioning",
+        "Supported by 4 independent AI pillars",
+        "Note: Drug had early-phase trial failures for this disease",
+        "Moderate FAERS signal: 508 adverse event reports mention drug-disease co-occurrence",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.75, 8 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D008545",
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1512,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (ABCB1 / rs1045642)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "ABCB1",
+            "variant": "rs1045642",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204433"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs2032582",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981238041"
+          },
+          {
+            "gene": "CTLA4",
+            "variant": "rs4553808",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043880851"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs2229109",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449170621"
+          },
+          {
+            "gene": "GATA3",
+            "variant": "rs3824662",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1184512128"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.597,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.565,
+          "docking": 0.666,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Skin - Sun Exposed (Lower leg)",
+          "Skin - Not Sun Exposed (Suprapubic)"
+        ],
+        "n_genes": 20,
+        "n_expressed": 17,
+        "mean_tpm_in_tissue": 37.43,
+        "max_tpm_in_tissue": 219.77,
+        "tissue_specificity": 0.429,
+        "context_modifier": 1.044
+      },
+      "ensemble_prob": 0.8115,
+      "ensemble_features": {
+        "kg_score": 0.9974,
+        "degree_penalty": 0.736,
+        "n_drug_targets": 24,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 3.3322
+      },
+      "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": -7.99,
+        "target_symbol": "AR",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
       }
     },
     {
@@ -659,6 +1089,7 @@
         "Highly cited paper (270 citations): \"Multicenter Prospective Study of the Efficacy and Safety of ...\"",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D008545",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -807,15 +1238,7 @@
         "tissue_specificity": 0.364,
         "context_modifier": 0.971
       },
-      "disease_entity": "Disease::MESH:D008545",
-      "docking": {
-        "kcal_per_mol": -11.86,
-        "target_symbol": "MTOR",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.1949,
+      "ensemble_prob": 0.2615,
       "ensemble_features": {
         "kg_score": 0.9927,
         "degree_penalty": 0.7479,
@@ -825,6 +1248,13 @@
         "transe_rank_log": 4.3567
       },
       "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": -11.86,
+        "target_symbol": "MTOR",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -862,7 +1292,7 @@
       "admet_flags": "clean",
       "primekg_score": 0,
       "dti_score": 1.0,
-      "dti_best_target": "NIBAN2",
+      "dti_best_target": "CTBP1",
       "kg_group_score": 0.0678,
       "structural_group_score": 1.0,
       "network_group_score": 1.0,
@@ -1013,6 +1443,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.65)"
       ],
+      "disease_entity": "Disease::MESH:D008545",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "late-trial",
@@ -1084,14 +1515,6 @@
         "tissue_specificity": 0.807,
         "context_modifier": 1.087
       },
-      "disease_entity": "Disease::MESH:D008545",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
       "ensemble_prob": 0.0,
       "ensemble_features": {
         "kg_score": 0.7036,
@@ -1102,6 +1525,13 @@
         "transe_rank_log": 8.0481
       },
       "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -1113,6 +1543,458 @@
           "Michael_acceptor_1",
           "polyene",
           "polyene"
+        ]
+      }
+    },
+    {
+      "drug_name": "Carboplatin",
+      "drug_id": "DB00958",
+      "disease_name": "Melanoma",
+      "combined_score": 0.5508,
+      "pillars_hit": 4,
+      "transe_rank": 45,
+      "transe_score": -10.2148,
+      "pykeen_score": -12.0966,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.800000011920929,
+      "proximity_distance": 0.800000011920929,
+      "admet_score": 1.0,
+      "admet_flags": "clean",
+      "primekg_score": 0.2662,
+      "dti_score": 0.6983,
+      "dti_best_target": "PGF",
+      "kg_group_score": 0.3256,
+      "structural_group_score": 0.6983,
+      "network_group_score": 0.6251999735832214,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.7908,
+      "admet_multiplier": 1.0,
+      "efficacy_score": 0.5508,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 19,
+      "shared_targets": [
+        "ABCB1",
+        "ABCC2",
+        "ABCG2",
+        "BCL2",
+        "BRCA2",
+        "CSF3",
+        "EGFR",
+        "ELAVL1",
+        "ERBB2",
+        "GSTP1",
+        "HCFC1",
+        "IFNB1",
+        "IL1A",
+        "MTOR",
+        "PARP1",
+        "RB1",
+        "RUNX3",
+        "TP53",
+        "VEGFA"
+      ],
+      "pubmed_total": 312,
+      "pubmed_treatment_total": 295,
+      "pubmed_repurposing_total": 2,
+      "key_papers": [
+        {
+          "pmid": "26601864",
+          "title": "Chemotherapy for Melanoma.",
+          "authors": "Wilson MA, Schuchter LM",
+          "journal": "Cancer treatment and research",
+          "year": "2016",
+          "abstract_snippet": "Prior to the recent therapeutic advances, chemotherapy was the mainstay of treatment options for advanced-stage melanoma. A number of studies have investigated various chemotherapy combinations in order to expand on the clinical responses achieved with single-agent dacarbazine, but these have not de...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26601864/",
+          "total_results": 312
+        },
+        {
+          "pmid": "36923309",
+          "title": "Repurposing Azacitidine and Carboplatin to Prime Immune Checkpoint Blockade-resistant Melanoma for Anti-PD-L1 Rechallenge.",
+          "authors": "van der Westhuizen A, Lyle M, Graves MC, et al.",
+          "journal": "Cancer research communications",
+          "year": "2022",
+          "abstract_snippet": "PURPOSE: Drug repurposing offers the opportunity for chemotherapy to be used to reestablish sensitivity to immune checkpoint blockade (ICB) therapy. Here we investigated the clinical and translational aspects of an early phase II study of azacitidine and carboplatin priming for anti-PDL1 immunothera...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36923309/"
+        },
+        {
+          "pmid": "41732954",
+          "title": "A mixed inflammatory peripheral signature defines clinical outcomes in a phase II trial combining pembrolizumab with paclitaxel and carboplatin in melanoma.",
+          "authors": "Lambert C, Jamal R, Th\u00e9bault P, et al.",
+          "journal": "Oncoimmunology",
+          "year": "2026",
+          "abstract_snippet": "Checkpoint blockade of PD-1 with pembrolizumab provides long-term survival to a significant proportion of patients with metastatic melanoma. Pembrolizumab has been successfully used in combination with chemotherapy in non-small-cell lung cancer to increase the response rate. This phase II trial comb...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41732954/"
+        },
+        {
+          "pmid": "28717400",
+          "title": "Treatment of ",
+          "authors": "Boespflug A, Caramel J, Dalle S, et al.",
+          "journal": "Therapeutic advances in medical oncology",
+          "year": "2017",
+          "abstract_snippet": "The disease course of ",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28717400/"
+        },
+        {
+          "pmid": "35328140",
+          "title": "Multichamber Involvement of Metastatic Cardiac Melanoma.",
+          "authors": "Bonou MS, Diamantopoulos P, Mavrogeni S, et al.",
+          "journal": "Diagnostics (Basel, Switzerland)",
+          "year": "2022",
+          "abstract_snippet": "A 30-year-old man with a history of an in-situ melanoma of the forehead was referred for cardiac evaluation because of tachycardia and elevated levels of serum troponin. The transthoracic echocardiogram revealed multiple masses attached to the walls of both ventricles and the right atrium (RA). A la...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35328140/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "36923309",
+          "title": "Repurposing Azacitidine and Carboplatin to Prime Immune Checkpoint Blockade-resistant Melanoma for Anti-PD-L1 Rechallenge.",
+          "authors": "van der Westhuizen A, Lyle M, Graves MC, et al.",
+          "journal": "Cancer research communications",
+          "year": "2022",
+          "abstract_snippet": "PURPOSE: Drug repurposing offers the opportunity for chemotherapy to be used to reestablish sensitivity to immune checkpoint blockade (ICB) therapy. Here we investigated the clinical and translational aspects of an early phase II study of azacitidine and carboplatin priming for anti-PDL1 immunothera...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36923309/",
+          "total_results": 2
+        },
+        {
+          "pmid": "32569203",
+          "title": "Pilot early phase II study of decitabine and carboplatin in patients with advanced melanoma.",
+          "authors": "van der Westhuizen A, Knoblauch N, Graves MC, et al.",
+          "journal": "Medicine",
+          "year": "2020",
+          "abstract_snippet": "INTRODUCTION: Resistance to targeted and immune checkpoint blockade treatment remains a major problem in patients with advanced metastatic melanoma. To overcome this problem, there needs to be a decrease in burden of disease as well as re-establishing of immune sensitivity. The aim of this early pha...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32569203/"
+        }
+      ],
+      "semantic_scholar_papers": [
+        {
+          "title": "Weekly carboplatin plus paclitaxel chemotherapy in advanced melanoma patients resistant to anti-PD-1 inhibitors: a retrospective, monocentric experience",
+          "year": 2024,
+          "citations": 6,
+          "url": "https://www.semanticscholar.org/paper/460b2611770039edaba7c4a4175e021974051bf2",
+          "authors": "F. D. Di Pietro, D. Marinelli, S. Verkhovskaia"
+        },
+        {
+          "title": "Triptolide enhances carboplatin-induced apoptosis by inhibiting nucleotide excision repair (NER) activity in melanoma",
+          "year": 2023,
+          "citations": 17,
+          "url": "https://www.semanticscholar.org/paper/d8ec856e559fc36536114bbb306bb7683645d7b5",
+          "authors": "Geng Wang, Hongmin Guo, Yan Ren"
+        },
+        {
+          "title": "Successful treatment with carboplatin and paclitaxel in melanoma progression after immune-related adverse events.",
+          "year": 2023,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/67858c61f967889fa2f406f25ccd4e11c57b0288",
+          "authors": "\u00d6. D\u00fclgar, A. Saha, Kelly M. Elleson"
+        },
+        {
+          "title": "Randomized Phase II Study of Bevacizumab in Combination With Carboplatin Plus Paclitaxel in Patients With Previously Untreated Advanced Mucosal Melanoma.",
+          "year": 2021,
+          "citations": 44,
+          "url": "https://www.semanticscholar.org/paper/e94ed7ebaab072bb12ce60a5513d1c0de748bf02",
+          "authors": "Xieqiao Yan, X. Sheng, Z. Chi"
+        },
+        {
+          "title": "Repurposing Azacitidine and Carboplatin to Prime Immune Checkpoint Blockade\u2013resistant Melanoma for Anti-PD-L1 Rechallenge",
+          "year": 2022,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/cfefefa3109759dcd21e255e951ee801b2a4c5a0",
+          "authors": "A. van der Westhuizen, M. Lyle, M. Graves"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Randomized Phase II Study of Bevacizumab in Combination With Carboplatin Plus Paclitaxel in Patients With Previously Untreated Advanced Mucosal Melanoma.",
+        "year": 2021,
+        "citations": 44,
+        "url": "https://www.semanticscholar.org/paper/e94ed7ebaab072bb12ce60a5513d1c0de748bf02",
+        "authors": "Xieqiao Yan, X. Sheng, Z. Chi"
+      },
+      "max_citations": 44,
+      "faers_signal": "moderate",
+      "faers_total_reports": 124071,
+      "faers_cooccurrences": 88,
+      "faers_interpretation": "88 FAERS reports mention both Carboplatin and Melanoma-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "TG101348 (1.516)",
+        "BISACODYL (1.514)",
+        "KIN001-220 (1.514)",
+        "NU-7441 (1.512)",
+        "\"\"\"4-(4-hydroxy-2,6-dimethylheptan-4-yl)-N,N-diphenyl-1H-1,2,3-triazole-1-carboxamide\"\"\" (1.509)"
+      ],
+      "signature_interpretation": "Carboplatin was not found among the top 40 drugs that reverse the Melanoma gene signature. Top reversers: TG101348 (1.516), BISACODYL (1.514), KIN001-220 (1.514)",
+      "ai_hypothesis": "of its high efficacy and low toxicity.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "Phase 2",
+      "failed_trial_count": 4,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.7908,
+      "mr_genetic_targets": 5,
+      "mechanistic_hypothesis": "Carboplatin \u2014[is a therapeutic for]\u2192 Melanoma",
+      "kg_paths_text": "\u2022 Carboplatin \u2014[is a therapeutic for]\u2192 Melanoma\n\u2022 Carboplatin \u2014[binds]\u2192 gene-2950 \u2014[is linked to]\u2192 Melanoma\n\u2022 Carboplatin \u2014[binds]\u2192 gene-1244 \u2014[is linked to]\u2192 Melanoma",
+      "validation_experiments": [],
+      "novelty_score": 0.231,
+      "novelty_level": "ESTABLISHED",
+      "is_known_treatment": true,
+      "clinical_trials_total": 10,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT00110019",
+          "title": "Carboplatin and Paclitaxel With or Without Sorafenib Tosylate in Treating Patients With Stage III or Stage IV Melanoma That Cannot Be Removed by Surgery",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "823",
+          "url": "https://clinicaltrials.gov/study/NCT00110019"
+        },
+        {
+          "nct_id": "NCT04198766",
+          "title": "Study of INBRX-106 and INBRX-106 in Combination With Pembrolizumab (Keytruda\u00ae) in Subjects With Locally Advanced or Metastatic Solid Tumors (Hexavalent OX40 Agonist)",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "296",
+          "url": "https://clinicaltrials.gov/study/NCT04198766"
+        },
+        {
+          "nct_id": "NCT00003690",
+          "title": "Flavopiridol Plus Cisplatin or Carboplatin in Treating Patients With Advanced Solid Tumors",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "48",
+          "url": "https://clinicaltrials.gov/study/NCT00003690"
+        },
+        {
+          "nct_id": "NCT01676649",
+          "title": "Ipilimumab With Carboplatin and Paclitaxel in Patients With Unresectable Stage III and Stage IV Melanoma",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "phase": "PHASE2",
+          "enrollment": "30",
+          "url": "https://clinicaltrials.gov/study/NCT01676649"
+        },
+        {
+          "nct_id": "NCT07492680",
+          "title": "A Study of BMS-986504 Monotherapy and in Combination With Other Agents in Participants With Advanced and/or Metastatic Solid Tumors With Homozygous MTAP Deletion (MountainTAP-5)",
+          "status": "NOT_YET_RECRUITING",
+          "phase": "PHASE2",
+          "enrollment": "260",
+          "url": "https://clinicaltrials.gov/study/NCT07492680"
+        }
+      ],
+      "trial_phases": {
+        "PHASE3": 2,
+        "PHASE1": 2,
+        "PHASE2": 7
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "10 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "312 PubMed articles on this drug-disease pair",
+        "2 article(s) specifically mention repurposing/repositioning",
+        "Supported by 4 independent AI pillars",
+        "Moderate FAERS signal: 88 adverse event reports mention drug-disease co-occurrence",
+        "Supporting paper with 44 citations",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.79, 5 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D008545",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1126,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00773",
+            "drug_name": "Etoposide",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00331",
+            "drug_name": "Metformin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "moderate",
+        "summary": "CPIC-C (MTHFR) \u2022 PharmGKB-3 (ERCC1 / rs11615)",
+        "cpic": [
+          {
+            "gene": "MTHFR",
+            "level": "C",
+            "guideline": ""
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "ERCC1",
+            "variant": "rs11615",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/655386639"
+          },
+          {
+            "gene": "MTR",
+            "variant": "rs1805087",
+            "level": "3",
+            "phenotype_category": "Efficacy;Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981237713"
+          },
+          {
+            "gene": "AKT1",
+            "variant": "rs1130214",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183630276"
+          },
+          {
+            "gene": "VEGFA",
+            "variant": "rs9369421",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1446899860"
+          },
+          {
+            "gene": "VEGFA",
+            "variant": "rs9369421",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1446899866"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.393,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.551,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Skin - Sun Exposed (Lower leg)",
+          "Skin - Not Sun Exposed (Suprapubic)"
+        ],
+        "n_genes": 19,
+        "n_expressed": 15,
+        "mean_tpm_in_tissue": 68.77,
+        "max_tpm_in_tissue": 896.08,
+        "tissue_specificity": 0.744,
+        "context_modifier": 1.105
+      },
+      "ensemble_prob": 0.8333,
+      "ensemble_features": {
+        "kg_score": 0.9981,
+        "degree_penalty": 0.7815,
+        "n_drug_targets": 0,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 3.0445
+      },
+      "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "BETA-KETO/ANHYDRIDE",
+          "CONTAINS"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "beta-keto/anhydride",
+          "contains_metal"
         ]
       }
     },
@@ -1140,7 +2022,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.264,
       "dti_score": 1.0,
-      "dti_best_target": "NIBAN2",
+      "dti_best_target": "CTBP1",
       "kg_group_score": 0.2881,
       "structural_group_score": 1.0,
       "network_group_score": 0.5720999836921692,
@@ -1371,20 +2253,20 @@
       "clinical_trials_total": 3,
       "clinical_trials": [
         {
-          "nct_id": "NCT02068586",
-          "title": "Sunitinib Malate or Valproic Acid in Preventing Metastasis in Patients With High-Risk Uveal Melanoma",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "210",
-          "url": "https://clinicaltrials.gov/study/NCT02068586"
-        },
-        {
           "nct_id": "NCT04729543",
           "title": "MAGE-C2 TCR T Cell Trial to Treat Melanoma and Head and Neck Cancer",
           "status": "RECRUITING",
           "phase": "PHASE1, PHASE2",
           "enrollment": "20",
           "url": "https://clinicaltrials.gov/study/NCT04729543"
+        },
+        {
+          "nct_id": "NCT02068586",
+          "title": "Sunitinib Malate or Valproic Acid in Preventing Metastasis in Patients With High-Risk Uveal Melanoma",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "phase": "PHASE2",
+          "enrollment": "210",
+          "url": "https://clinicaltrials.gov/study/NCT02068586"
         },
         {
           "nct_id": "NCT00358319",
@@ -1396,8 +2278,8 @@
         }
       ],
       "trial_phases": {
-        "PHASE2": 3,
-        "PHASE1": 2
+        "PHASE1": 2,
+        "PHASE2": 3
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -1410,6 +2292,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.65)"
       ],
+      "disease_entity": "Disease::MESH:D008545",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1573,15 +2456,7 @@
         "tissue_specificity": 0.037,
         "context_modifier": 1.0
       },
-      "disease_entity": "Disease::MESH:D008545",
-      "docking": {
-        "kcal_per_mol": -5.18,
-        "target_symbol": "HDAC3",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.1949,
+      "ensemble_prob": 0.1099,
       "ensemble_features": {
         "kg_score": 0.9916,
         "degree_penalty": 0.7507,
@@ -1590,7 +2465,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 4.4998
       },
-      "ensemble_rank": 7,
+      "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": -5.18,
+        "target_symbol": "HDAC3",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1622,7 +2504,7 @@
       "admet_flags": "hERG=0.71",
       "primekg_score": 0.2557,
       "dti_score": 1.0,
-      "dti_best_target": "NIBAN2",
+      "dti_best_target": "CTBP1",
       "kg_group_score": 0.2683,
       "structural_group_score": 1.0,
       "network_group_score": 0.6535000205039978,
@@ -1839,6 +2721,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.72, 6 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D008545",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -2002,15 +2885,7 @@
         "tissue_specificity": 0.571,
         "context_modifier": 1.045
       },
-      "disease_entity": "Disease::MESH:D008545",
-      "docking": {
-        "kcal_per_mol": -6.26,
-        "target_symbol": "ABCB1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.4324,
+      "ensemble_prob": 0.48,
       "ensemble_features": {
         "kg_score": 0.9936,
         "degree_penalty": 0.7582,
@@ -2019,7 +2894,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 4.2341
       },
-      "ensemble_rank": 4,
+      "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": -6.26,
+        "target_symbol": "ABCB1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2050,8 +2932,8 @@
       "admet_score": 0.5917,
       "admet_flags": "Skin_Reaction=0.85",
       "primekg_score": 0.2518,
-      "dti_score": 0.3061,
-      "dti_best_target": "LGALS7",
+      "dti_score": 0.3103,
+      "dti_best_target": "CTBP1",
       "kg_group_score": 0.2883,
       "structural_group_score": 1.0,
       "network_group_score": 0.592199981212616,
@@ -2239,12 +3121,20 @@
       "clinical_trials_total": 7,
       "clinical_trials": [
         {
-          "nct_id": "NCT04305041",
-          "title": "Substudy 02A: Safety and Efficacy of Pembrolizumab in Combination With Investigational Agents in Participants With Programmed Cell-death 1 (PD-1) Refractory Melanoma (MK-3475-02A/KEYMAKER-U02)",
+          "nct_id": "NCT00003601",
+          "title": "Tretinoin With or Without Fenretinide in Treating Patients With Dysplastic Nevus Syndrome",
           "status": "COMPLETED",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "100",
-          "url": "https://clinicaltrials.gov/study/NCT04305041"
+          "phase": "PHASE2",
+          "enrollment": "38",
+          "url": "https://clinicaltrials.gov/study/NCT00003601"
+        },
+        {
+          "nct_id": "NCT02403778",
+          "title": "Ipilimumab and All-Trans Retinoic Acid Combination Treatment of Advanced Melanoma",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "10",
+          "url": "https://clinicaltrials.gov/study/NCT02403778"
         },
         {
           "nct_id": "NCT03200847",
@@ -2269,19 +3159,11 @@
           "phase": "PHASE1, PHASE2",
           "enrollment": "315",
           "url": "https://clinicaltrials.gov/study/NCT04305054"
-        },
-        {
-          "nct_id": "NCT04303169",
-          "title": "Substudy 02C: Safety and Efficacy of Pembrolizumab in Combination With Investigational Agents or Pembrolizumab Alone in Participants With Stage III Melanoma Who Are Candidates for Neoadjuvant Therapy (MK-3475-02C/KEYMAKER-U02)",
-          "status": "COMPLETED",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "146",
-          "url": "https://clinicaltrials.gov/study/NCT04303169"
         }
       ],
       "trial_phases": {
-        "PHASE1": 5,
-        "PHASE2": 7
+        "PHASE2": 7,
+        "PHASE1": 5
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -2294,6 +3176,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.76, 7 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D008545",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -2395,15 +3278,7 @@
         "tissue_specificity": 0.622,
         "context_modifier": 1.105
       },
-      "disease_entity": "Disease::MESH:D008545",
-      "docking": {
-        "kcal_per_mol": -10.77,
-        "target_symbol": "RARB",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.9892,
+      "ensemble_prob": 0.989,
       "ensemble_features": {
         "kg_score": 0.9995,
         "degree_penalty": 0.7515,
@@ -2413,6 +3288,13 @@
         "transe_rank_log": 1.7918
       },
       "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": -10.77,
+        "target_symbol": "RARB",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -2450,8 +3332,8 @@
       "admet_score": 0.7065,
       "admet_flags": "clean",
       "primekg_score": 0.2544,
-      "dti_score": 0.1066,
-      "dti_best_target": "FFAR1",
+      "dti_score": 0.2405,
+      "dti_best_target": "DDR1",
       "kg_group_score": 0.2337,
       "structural_group_score": 0.9641,
       "network_group_score": 0.6491000056266785,
@@ -2618,6 +3500,14 @@
       "clinical_trials_total": 4,
       "clinical_trials": [
         {
+          "nct_id": "NCT04305145",
+          "title": "Infliximab for Treatment of Immune Checkpoint Inhibitor Colitis",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "phase": "PHASE2",
+          "enrollment": "42",
+          "url": "https://clinicaltrials.gov/study/NCT04305145"
+        },
+        {
           "nct_id": "NCT00623766",
           "title": "Evaluation of Tumor Response to Ipilimumab in the Treatment of Melanoma With Brain Metastases",
           "status": "COMPLETED",
@@ -2640,14 +3530,6 @@
           "phase": "PHASE2",
           "enrollment": "0",
           "url": "https://clinicaltrials.gov/study/NCT02763761"
-        },
-        {
-          "nct_id": "NCT04305145",
-          "title": "Infliximab for Treatment of Immune Checkpoint Inhibitor Colitis",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "42",
-          "url": "https://clinicaltrials.gov/study/NCT04305145"
         }
       ],
       "trial_phases": {
@@ -2662,6 +3544,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.72, 3 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D008545",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -2771,15 +3654,7 @@
         "tissue_specificity": 0.452,
         "context_modifier": 1.081
       },
-      "disease_entity": "Disease::MESH:D008545",
-      "docking": {
-        "kcal_per_mol": -5.29,
-        "target_symbol": "ABCC2",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.2551,
+      "ensemble_prob": 0.195,
       "ensemble_features": {
         "kg_score": 0.9887,
         "degree_penalty": 0.7636,
@@ -2788,7 +3663,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 4.7875
       },
-      "ensemble_rank": 5,
+      "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": -5.29,
+        "target_symbol": "ABCC2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2820,7 +3702,7 @@
       "admet_flags": "hERG=0.78",
       "primekg_score": 0.2586,
       "dti_score": 1.0,
-      "dti_best_target": "NIBAN2",
+      "dti_best_target": "CTBP1",
       "kg_group_score": 0.1618,
       "structural_group_score": 1.0,
       "network_group_score": 0.8264999985694885,
@@ -3053,6 +3935,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.71, 3 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D008545",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3111,14 +3994,6 @@
         "tissue_specificity": 0.851,
         "context_modifier": 1.132
       },
-      "disease_entity": "Disease::MESH:D008545",
-      "docking": {
-        "kcal_per_mol": -8.44,
-        "target_symbol": "PPARA",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
       "ensemble_prob": 0.0,
       "ensemble_features": {
         "kg_score": 0.73,
@@ -3129,6 +4004,13 @@
         "transe_rank_log": 7.9547
       },
       "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": -8.44,
+        "target_symbol": "PPARA",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -3139,773 +4021,14 @@
           "quaternary_nitrogen_1"
         ]
       }
-    },
-    {
-      "drug_name": "Carboplatin",
-      "drug_id": "DB00958",
-      "disease_name": "Melanoma",
-      "combined_score": 0.5309,
-      "pillars_hit": 4,
-      "transe_rank": 45,
-      "transe_score": -10.2148,
-      "pykeen_score": -12.0966,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.800000011920929,
-      "proximity_distance": 0.800000011920929,
-      "admet_score": 1.0,
-      "admet_flags": "clean",
-      "primekg_score": 0.2662,
-      "dti_score": 0.5879,
-      "dti_best_target": "FFAR1",
-      "kg_group_score": 0.3256,
-      "structural_group_score": 0.5879,
-      "network_group_score": 0.6251999735832214,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.7908,
-      "admet_multiplier": 1.0,
-      "efficacy_score": 0.5309,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 19,
-      "shared_targets": [
-        "ABCB1",
-        "ABCC2",
-        "ABCG2",
-        "BCL2",
-        "BRCA2",
-        "CSF3",
-        "EGFR",
-        "ELAVL1",
-        "ERBB2",
-        "GSTP1",
-        "HCFC1",
-        "IFNB1",
-        "IL1A",
-        "MTOR",
-        "PARP1",
-        "RB1",
-        "RUNX3",
-        "TP53",
-        "VEGFA"
-      ],
-      "pubmed_total": 312,
-      "pubmed_treatment_total": 295,
-      "pubmed_repurposing_total": 2,
-      "key_papers": [
-        {
-          "pmid": "26601864",
-          "title": "Chemotherapy for Melanoma.",
-          "authors": "Wilson MA, Schuchter LM",
-          "journal": "Cancer treatment and research",
-          "year": "2016",
-          "abstract_snippet": "Prior to the recent therapeutic advances, chemotherapy was the mainstay of treatment options for advanced-stage melanoma. A number of studies have investigated various chemotherapy combinations in order to expand on the clinical responses achieved with single-agent dacarbazine, but these have not de...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/26601864/",
-          "total_results": 312
-        },
-        {
-          "pmid": "36923309",
-          "title": "Repurposing Azacitidine and Carboplatin to Prime Immune Checkpoint Blockade-resistant Melanoma for Anti-PD-L1 Rechallenge.",
-          "authors": "van der Westhuizen A, Lyle M, Graves MC, et al.",
-          "journal": "Cancer research communications",
-          "year": "2022",
-          "abstract_snippet": "PURPOSE: Drug repurposing offers the opportunity for chemotherapy to be used to reestablish sensitivity to immune checkpoint blockade (ICB) therapy. Here we investigated the clinical and translational aspects of an early phase II study of azacitidine and carboplatin priming for anti-PDL1 immunothera...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36923309/"
-        },
-        {
-          "pmid": "41732954",
-          "title": "A mixed inflammatory peripheral signature defines clinical outcomes in a phase II trial combining pembrolizumab with paclitaxel and carboplatin in melanoma.",
-          "authors": "Lambert C, Jamal R, Th\u00e9bault P, et al.",
-          "journal": "Oncoimmunology",
-          "year": "2026",
-          "abstract_snippet": "Checkpoint blockade of PD-1 with pembrolizumab provides long-term survival to a significant proportion of patients with metastatic melanoma. Pembrolizumab has been successfully used in combination with chemotherapy in non-small-cell lung cancer to increase the response rate. This phase II trial comb...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41732954/"
-        },
-        {
-          "pmid": "28717400",
-          "title": "Treatment of ",
-          "authors": "Boespflug A, Caramel J, Dalle S, et al.",
-          "journal": "Therapeutic advances in medical oncology",
-          "year": "2017",
-          "abstract_snippet": "The disease course of ",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/28717400/"
-        },
-        {
-          "pmid": "35328140",
-          "title": "Multichamber Involvement of Metastatic Cardiac Melanoma.",
-          "authors": "Bonou MS, Diamantopoulos P, Mavrogeni S, et al.",
-          "journal": "Diagnostics (Basel, Switzerland)",
-          "year": "2022",
-          "abstract_snippet": "A 30-year-old man with a history of an in-situ melanoma of the forehead was referred for cardiac evaluation because of tachycardia and elevated levels of serum troponin. The transthoracic echocardiogram revealed multiple masses attached to the walls of both ventricles and the right atrium (RA). A la...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35328140/"
-        }
-      ],
-      "repurposing_papers": [
-        {
-          "pmid": "36923309",
-          "title": "Repurposing Azacitidine and Carboplatin to Prime Immune Checkpoint Blockade-resistant Melanoma for Anti-PD-L1 Rechallenge.",
-          "authors": "van der Westhuizen A, Lyle M, Graves MC, et al.",
-          "journal": "Cancer research communications",
-          "year": "2022",
-          "abstract_snippet": "PURPOSE: Drug repurposing offers the opportunity for chemotherapy to be used to reestablish sensitivity to immune checkpoint blockade (ICB) therapy. Here we investigated the clinical and translational aspects of an early phase II study of azacitidine and carboplatin priming for anti-PDL1 immunothera...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36923309/",
-          "total_results": 2
-        },
-        {
-          "pmid": "32569203",
-          "title": "Pilot early phase II study of decitabine and carboplatin in patients with advanced melanoma.",
-          "authors": "van der Westhuizen A, Knoblauch N, Graves MC, et al.",
-          "journal": "Medicine",
-          "year": "2020",
-          "abstract_snippet": "INTRODUCTION: Resistance to targeted and immune checkpoint blockade treatment remains a major problem in patients with advanced metastatic melanoma. To overcome this problem, there needs to be a decrease in burden of disease as well as re-establishing of immune sensitivity. The aim of this early pha...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/32569203/"
-        }
-      ],
-      "semantic_scholar_papers": [
-        {
-          "title": "Weekly carboplatin plus paclitaxel chemotherapy in advanced melanoma patients resistant to anti-PD-1 inhibitors: a retrospective, monocentric experience",
-          "year": 2024,
-          "citations": 6,
-          "url": "https://www.semanticscholar.org/paper/460b2611770039edaba7c4a4175e021974051bf2",
-          "authors": "F. D. Di Pietro, D. Marinelli, S. Verkhovskaia"
-        },
-        {
-          "title": "Triptolide enhances carboplatin-induced apoptosis by inhibiting nucleotide excision repair (NER) activity in melanoma",
-          "year": 2023,
-          "citations": 17,
-          "url": "https://www.semanticscholar.org/paper/d8ec856e559fc36536114bbb306bb7683645d7b5",
-          "authors": "Geng Wang, Hongmin Guo, Yan Ren"
-        },
-        {
-          "title": "Successful treatment with carboplatin and paclitaxel in melanoma progression after immune-related adverse events.",
-          "year": 2023,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/67858c61f967889fa2f406f25ccd4e11c57b0288",
-          "authors": "\u00d6. D\u00fclgar, A. Saha, Kelly M. Elleson"
-        },
-        {
-          "title": "Randomized Phase II Study of Bevacizumab in Combination With Carboplatin Plus Paclitaxel in Patients With Previously Untreated Advanced Mucosal Melanoma.",
-          "year": 2021,
-          "citations": 44,
-          "url": "https://www.semanticscholar.org/paper/e94ed7ebaab072bb12ce60a5513d1c0de748bf02",
-          "authors": "Xieqiao Yan, X. Sheng, Z. Chi"
-        },
-        {
-          "title": "Repurposing Azacitidine and Carboplatin to Prime Immune Checkpoint Blockade\u2013resistant Melanoma for Anti-PD-L1 Rechallenge",
-          "year": 2022,
-          "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/cfefefa3109759dcd21e255e951ee801b2a4c5a0",
-          "authors": "A. van der Westhuizen, M. Lyle, M. Graves"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Randomized Phase II Study of Bevacizumab in Combination With Carboplatin Plus Paclitaxel in Patients With Previously Untreated Advanced Mucosal Melanoma.",
-        "year": 2021,
-        "citations": 44,
-        "url": "https://www.semanticscholar.org/paper/e94ed7ebaab072bb12ce60a5513d1c0de748bf02",
-        "authors": "Xieqiao Yan, X. Sheng, Z. Chi"
-      },
-      "max_citations": 44,
-      "faers_signal": "moderate",
-      "faers_total_reports": 124071,
-      "faers_cooccurrences": 88,
-      "faers_interpretation": "88 FAERS reports mention both Carboplatin and Melanoma-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "TG101348 (1.516)",
-        "BISACODYL (1.514)",
-        "KIN001-220 (1.514)",
-        "NU-7441 (1.512)",
-        "\"\"\"4-(4-hydroxy-2,6-dimethylheptan-4-yl)-N,N-diphenyl-1H-1,2,3-triazole-1-carboxamide\"\"\" (1.509)"
-      ],
-      "signature_interpretation": "Carboplatin was not found among the top 40 drugs that reverse the Melanoma gene signature. Top reversers: TG101348 (1.516), BISACODYL (1.514), KIN001-220 (1.514)",
-      "ai_hypothesis": "of its high efficacy and low toxicity.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "Phase 2",
-      "failed_trial_count": 4,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.7908,
-      "mr_genetic_targets": 5,
-      "mechanistic_hypothesis": "Carboplatin \u2014[is a therapeutic for]\u2192 Melanoma",
-      "kg_paths_text": "\u2022 Carboplatin \u2014[is a therapeutic for]\u2192 Melanoma\n\u2022 Carboplatin \u2014[binds]\u2192 gene-2950 \u2014[is linked to]\u2192 Melanoma\n\u2022 Carboplatin \u2014[binds]\u2192 gene-1244 \u2014[is linked to]\u2192 Melanoma",
-      "validation_experiments": [],
-      "novelty_score": 0.223,
-      "novelty_level": "ESTABLISHED",
-      "is_known_treatment": true,
-      "clinical_trials_total": 10,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT03645928",
-          "title": "Study of Autologous Tumor Infiltrating Lymphocytes in Patients With Solid Tumors",
-          "status": "RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "245",
-          "url": "https://clinicaltrials.gov/study/NCT03645928"
-        },
-        {
-          "nct_id": "NCT04452214",
-          "title": "A Study of the Safety and Tolerance of CAN04 and Pembrolizumab in Combination With and Without Carboplatin and Pemetrexed in Subjects With Solid Tumors",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "19",
-          "url": "https://clinicaltrials.gov/study/NCT04452214"
-        },
-        {
-          "nct_id": "NCT00568451",
-          "title": "Paclitaxel and Carboplatin or Temozolomide in Treating Patients With Stage IV Melanoma",
-          "status": "TERMINATED",
-          "phase": "PHASE2",
-          "enrollment": "12",
-          "url": "https://clinicaltrials.gov/study/NCT00568451"
-        },
-        {
-          "nct_id": "NCT07347444",
-          "title": "Iparomlimab and Tuvoraleimab Injection in Combination With Bevacizumab, Albumin-bound Paclitaxel, and Carboplatin as First- or Second-line Treatment for Patients With Advanced Acral and Mucosal Melanoma",
-          "status": "NOT_YET_RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "48",
-          "url": "https://clinicaltrials.gov/study/NCT07347444"
-        },
-        {
-          "nct_id": "NCT04993677",
-          "title": "A Study of SEA-CD40 Given With Other Drugs in Cancers",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "77",
-          "url": "https://clinicaltrials.gov/study/NCT04993677"
-        }
-      ],
-      "trial_phases": {
-        "PHASE2": 8,
-        "PHASE1": 2
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "10 clinical trial(s) found on ClinicalTrials.gov",
-        "312 PubMed articles on this drug-disease pair",
-        "2 article(s) specifically mention repurposing/repositioning",
-        "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 88 adverse event reports mention drug-disease co-occurrence",
-        "Supporting paper with 44 citations",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.79, 5 genetic targets)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1126,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00783",
-            "drug_name": "Estradiol",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00773",
-            "drug_name": "Etoposide",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00502",
-            "drug_name": "Haloperidol",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00331",
-            "drug_name": "Metformin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00563",
-            "drug_name": "Methotrexate",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "moderate",
-        "summary": "CPIC-C (MTHFR) \u2022 PharmGKB-3 (ERCC1 / rs11615)",
-        "cpic": [
-          {
-            "gene": "MTHFR",
-            "level": "C",
-            "guideline": ""
-          }
-        ],
-        "pharmgkb": [
-          {
-            "gene": "ERCC1",
-            "variant": "rs11615",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/655386639"
-          },
-          {
-            "gene": "MTR",
-            "variant": "rs1805087",
-            "level": "3",
-            "phenotype_category": "Efficacy;Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981237713"
-          },
-          {
-            "gene": "AKT1",
-            "variant": "rs1130214",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183630276"
-          },
-          {
-            "gene": "VEGFA",
-            "variant": "rs9369421",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1446899860"
-          },
-          {
-            "gene": "VEGFA",
-            "variant": "rs9369421",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1446899866"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.386,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.531,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 1.0
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Skin - Sun Exposed (Lower leg)",
-          "Skin - Not Sun Exposed (Suprapubic)"
-        ],
-        "n_genes": 19,
-        "n_expressed": 15,
-        "mean_tpm_in_tissue": 68.77,
-        "max_tpm_in_tissue": 896.08,
-        "tissue_specificity": 0.744,
-        "context_modifier": 1.105
-      },
-      "disease_entity": "Disease::MESH:D008545",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.9111,
-      "ensemble_features": {
-        "kg_score": 0.9981,
-        "degree_penalty": 0.7815,
-        "n_drug_targets": 0,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 3.0445
-      },
-      "ensemble_rank": 3,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [
-          "BETA-KETO/ANHYDRIDE",
-          "CONTAINS"
-        ],
-        "n_alerts": 2,
-        "alert_names": [
-          "beta-keto/anhydride",
-          "contains_metal"
-        ]
-      }
-    },
-    {
-      "drug_name": "Suramin",
-      "drug_id": "DB04786",
-      "disease_name": "Melanoma",
-      "combined_score": 0.5260999798774719,
-      "pillars_hit": 4,
-      "transe_rank": 35,
-      "transe_score": -10.1233,
-      "pykeen_score": -12.2637,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.7749999761581421,
-      "proximity_distance": 0.8999999761581421,
-      "admet_score": 1.0,
-      "admet_flags": "DILI=1.00",
-      "primekg_score": 0.2506,
-      "dti_score": 1.0,
-      "dti_best_target": "NIBAN2",
-      "kg_group_score": 0.2616,
-      "structural_group_score": 1.0,
-      "network_group_score": 0.7095000147819519,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.2587,
-      "admet_multiplier": 1.0,
-      "efficacy_score": 0.5260999798774719,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 24,
-      "shared_targets": [
-        "CCND3",
-        "CD4",
-        "CDH1",
-        "CDK1",
-        "CDKN1A",
-        "EGF",
-        "EGFR",
-        "EPCAM",
-        "FGF1",
-        "FGF2",
-        "HPSE",
-        "IFNG",
-        "KDR",
-        "MAPK1",
-        "P2RX7",
-        "PTX3",
-        "RNH1",
-        "SIRT1",
-        "SIRT2",
-        "SPARC"
-      ],
-      "pubmed_total": 34,
-      "pubmed_treatment_total": 27,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "17582610",
-          "title": "Suramin augments the antitumor and antimetastatic activity of pentoxifylline in B16F10 melanoma.",
-          "authors": "Dua P, Ingle A, Gude RP",
-          "journal": "International journal of cancer",
-          "year": "2007",
-          "abstract_snippet": "Rapid tumor growth and metastasis are 2 major problems associated with treatment of malignant melanoma. Therefore, drugs that can intervene these processes are of clinical importance. Pentoxifylline (PTX), a methyl xanthine derivative, has been shown to inhibit B16F10 melanoma tumor growth and metas...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/17582610/",
-          "total_results": 34
-        },
-        {
-          "pmid": "2033058",
-          "title": "Suramin. A potent inhibitor of melanoma heparanase and invasion.",
-          "authors": "Nakajima M, DeChavigny A, Johnson CE, et al.",
-          "journal": "The Journal of biological chemistry",
-          "year": "1991",
-          "abstract_snippet": "Suramin, a polysulfonated naphthylurea, has anti-reverse transcriptase and anti-proliferative activities and inhibits the binding of various growth factors to their cell surface receptors. This drug is used in the treatment of acquired immunodeficiency syndrome and several types of cancers. Increase...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/2033058/"
-        },
-        {
-          "pmid": "10547546",
-          "title": "Combining suramin and a chimeric toxin directed to basic fibroblast growth factor receptors increases therapeutic efficacy against human melanoma in an animal model.",
-          "authors": "Davol PA, Garza S, Frackelton AR",
-          "journal": "Cancer",
-          "year": "1999",
-          "abstract_snippet": "BACKGROUND: Suramin, which binds to and blocks autocrine and paracrine growth factors required for the proliferation of neoplastic cells, is a clinically effective antitumor agent against some human tumors; however, efficacy often is limited by toxicity. In this study, suramin treatment was combined...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/10547546/"
-        },
-        {
-          "pmid": "9615733",
-          "title": "Opposing effects of suramin and DL-alpha-difluoromethylornithine on polyamine metabolism contribute to a synergistic action on B16 melanoma cell growth in vitro.",
-          "authors": "Gritli-Linde A, Bj\u00f6rkman U, Delle U, et al.",
-          "journal": "Anticancer research",
-          "year": "1998",
-          "abstract_snippet": "Polyamines are crucial for normal and neoplastic cell growth. Treatment with the polyanionic drug suramin has pronounced antigrowth activity in several tumor cell lines, but its clinical use has been hampered by its toxicity. We have earlier shown that suramin affects cellular polyamine metabolism a...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/9615733/"
-        },
-        {
-          "pmid": "7763004",
-          "title": "Growth factors, cytokines and soluble forms of receptor molecules in cancer patients.",
-          "authors": "Zumkeller W, Schofield PN",
-          "journal": "Anticancer research",
-          "year": "1995",
-          "abstract_snippet": "A wide range of growth factors has been identified in recent years, some of which have been found to play a crucial role in neoplastic processes. Some tumours produce considerable amounts of these peptides and their requirement for growth factors is often much reduced leading to a degree of autonomy...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/7763004/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Suramin augments the antitumor and antimetastatic activity of pentoxifylline in B16F10 melanoma",
-          "year": 2007,
-          "citations": 30,
-          "url": "https://www.semanticscholar.org/paper/e57b8c0b0d9da9454f701aa12a4d11a7a4e951f9",
-          "authors": "Pooja Dua, A. Ingle, R. Gude"
-        },
-        {
-          "title": "Suramin. A potent inhibitor of melanoma heparanase and invasion.",
-          "year": 1991,
-          "citations": 179,
-          "url": "https://www.semanticscholar.org/paper/cf158c6b7dfc30f328decf55d1b1256bf36a7145",
-          "authors": "M. Nakajima, A. Dechavigny, C. Johnson"
-        },
-        {
-          "title": "Suramin inhibits laminin- and thrombospondin-mediated melanoma cell adhesion and migration and binding of these adhesive proteins to sulfatide.",
-          "year": 1990,
-          "citations": 46,
-          "url": "https://www.semanticscholar.org/paper/6e7c91f57207f6939d972c924f63499f58d6c7ad",
-          "authors": "V. Zabrenetzky, E. Kohn, D. Roberts"
-        },
-        {
-          "title": "Combining suramin and a chimeric toxin directed to basic fibroblast growth factor receptors increases therapeutic efficacy against human melanoma in an animal model",
-          "year": 1999,
-          "citations": 14,
-          "url": "https://www.semanticscholar.org/paper/a439acdf731470ae59fbe9b93e609fed5261eb5e",
-          "authors": "P. Davol, S. Garza, A. Frackelton"
-        },
-        {
-          "title": "Effects of suramin on polyamine metabolism in B16 murine melanoma cells.",
-          "year": 1998,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/f42f09c08c199417d4c7a07235ff9f5418fd7b1f",
-          "authors": "A. Gritli-Linde, U. Bj\u00f6rkman, U. Delle"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Suramin. A potent inhibitor of melanoma heparanase and invasion.",
-        "year": 1991,
-        "citations": 179,
-        "url": "https://www.semanticscholar.org/paper/cf158c6b7dfc30f328decf55d1b1256bf36a7145",
-        "authors": "M. Nakajima, A. Dechavigny, C. Johnson"
-      },
-      "max_citations": 179,
-      "faers_signal": "none",
-      "faers_total_reports": 17,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Suramin to Melanoma terms. Drug has 17 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "TG101348 (1.516)",
-        "BISACODYL (1.514)",
-        "KIN001-220 (1.514)",
-        "NU-7441 (1.512)",
-        "\"\"\"4-(4-hydroxy-2,6-dimethylheptan-4-yl)-N,N-diphenyl-1H-1,2,3-triazole-1-carboxamide\"\"\" (1.509)"
-      ],
-      "signature_interpretation": "Suramin was not found among the top 40 drugs that reverse the Melanoma gene signature. Top reversers: TG101348 (1.516), BISACODYL (1.514), KIN001-220 (1.514)",
-      "ai_hypothesis": "of its ability to inhibit the growth of melanoma cells.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.2587,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "Suramin \u2014[downregulates]\u2192 gene-1026 \u2014[is linked to]\u2192 Melanoma",
-      "kg_paths_text": "\u2022 Suramin \u2014[downregulates]\u2192 gene-1026 \u2014[is linked to]\u2192 Melanoma\n\u2022 Suramin \u2014[downregulates]\u2192 gene-1026 \u2014[is linked to]\u2192 Melanoma\n\u2022 Suramin \u2014[downregulates]\u2192 gene-1026 \u2014[inhibits]\u2192 gene-1871 \u2014[is upregulated by]\u2192 Melanoma",
-      "validation_experiments": [],
-      "novelty_score": 0.39500001072883606,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "MEDIUM",
-      "confidence_reasons": [
-        "34 PubMed articles found",
-        "Supported by 4 independent AI pillars",
-        "Highly cited paper (179 citations): \"Suramin. A potent inhibitor of melanoma heparanase and invas...\"",
-        "AI-generated hypothesis available"
-      ],
-      "dose_plausibility": {
-        "plausibility": "likely",
-        "dose_range": "late-trial",
-        "confidence": "medium",
-        "rationale": "Phase-3 investigational \u2014 dose range established in Phase-2 pharmacokinetic studies; efficacy trials ongoing or recently completed.",
-        "chembl_phase": 3.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 4,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00012",
-            "drug_name": "Darbepoetin alfa",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB00016",
-            "drug_name": "Epoetin alfa",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB09107",
-            "drug_name": "Methoxy PEG-epoetin beta",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB08894",
-            "drug_name": "Peginesatide",
-            "severity": "moderate"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
-        "pharmgkb": []
-      },
-      "triangulation": {
-        "n_axes_agree": 3,
-        "axes": {
-          "kg": true,
-          "docking": true,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.521,
-        "label": "silver-standard",
-        "axis_values": {
-          "kg": 0.526,
-          "docking": 0.676,
-          "pharos": 0.0,
-          "literature": 0.67
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Skin - Sun Exposed (Lower leg)",
-          "Skin - Not Sun Exposed (Suprapubic)"
-        ],
-        "n_genes": 20,
-        "n_expressed": 18,
-        "mean_tpm_in_tissue": 57.86,
-        "max_tpm_in_tissue": 367.87,
-        "tissue_specificity": 0.485,
-        "context_modifier": 1.067
-      },
-      "disease_entity": "Disease::MESH:D008545",
-      "docking": {
-        "kcal_per_mol": -8.11,
-        "target_symbol": "SIRT2",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.1272,
-      "ensemble_features": {
-        "kg_score": 0.9755,
-        "degree_penalty": 0.9155,
-        "n_drug_targets": 31,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 5.5568
-      },
-      "ensemble_rank": 8,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [
-          "GTE",
-          "SULFONIC"
-        ],
-        "n_alerts": 2,
-        "alert_names": [
-          "Sulfonic_acid_2",
-          "gte_2_sulfonic_acid"
-        ]
-      }
     }
   ],
   "disease_entity": "Disease::MESH:D008545",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
     "n_disease_genes": 1109,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
-  },
-  "ensemble_version": "v5",
-  "ensemble_model_path": "data/models/ensemble_v5.pkl"
+  }
 }

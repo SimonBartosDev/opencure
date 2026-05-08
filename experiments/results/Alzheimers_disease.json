@@ -1,8 +1,8 @@
 {
   "disease": "Alzheimer's disease",
   "status": "completed",
-  "timestamp": "2026-04-19T16:41:47.394851",
-  "elapsed_seconds": 1091.7,
+  "timestamp": "2026-05-07T22:40:53.052299",
+  "elapsed_seconds": 133.4,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -36,7 +36,7 @@
       "admet_flags": "Skin_Reaction=0.84",
       "primekg_score": 0.266,
       "dti_score": 1.0,
-      "dti_best_target": "ACSS3",
+      "dti_best_target": "AKAP6",
       "kg_group_score": 0.3386,
       "structural_group_score": 1.0,
       "network_group_score": 0.5916000008583069,
@@ -242,12 +242,12 @@
       "clinical_trials_total": 4,
       "clinical_trials": [
         {
-          "nct_id": "NCT04098666",
-          "title": "Metformin in Alzheimer's Dementia Prevention",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "phase": "PHASE2, PHASE3",
-          "enrollment": "326",
-          "url": "https://clinicaltrials.gov/study/NCT04098666"
+          "nct_id": "NCT00620191",
+          "title": "Metformin in Amnestic Mild Cognitive Impairment",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "80",
+          "url": "https://clinicaltrials.gov/study/NCT00620191"
         },
         {
           "nct_id": "NCT01965756",
@@ -258,20 +258,20 @@
           "url": "https://clinicaltrials.gov/study/NCT01965756"
         },
         {
+          "nct_id": "NCT04098666",
+          "title": "Metformin in Alzheimer's Dementia Prevention",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "phase": "PHASE2, PHASE3",
+          "enrollment": "326",
+          "url": "https://clinicaltrials.gov/study/NCT04098666"
+        },
+        {
           "nct_id": "NCT03757910",
           "title": "Brain Imaging in the Diabetes Prevention Program Outcomes Study",
           "status": "TERMINATED",
           "phase": "EARLY_PHASE1",
           "enrollment": "5",
           "url": "https://clinicaltrials.gov/study/NCT03757910"
-        },
-        {
-          "nct_id": "NCT00620191",
-          "title": "Metformin in Amnestic Mild Cognitive Impairment",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "80",
-          "url": "https://clinicaltrials.gov/study/NCT00620191"
         }
       ],
       "trial_phases": {
@@ -289,8 +289,10 @@
         "Strong FAERS signal: 5772 adverse event reports link drug to disease (419475 total reports)",
         "Supporting paper with 73 citations",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.73, 5 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.73, 5 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D000544",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -438,15 +440,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 1.03
       },
-      "disease_entity": "Disease::MESH:D000544",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.9249,
+      "ensemble_prob": 0.7894,
       "ensemble_features": {
         "kg_score": 0.9981,
         "degree_penalty": 0.7634,
@@ -455,7 +449,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 3.0445
       },
-      "ensemble_rank": 1,
+      "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -492,7 +493,7 @@
       "admet_flags": "Skin_Reaction=0.90",
       "primekg_score": 0.2596,
       "dti_score": 1.0,
-      "dti_best_target": "ACSS3",
+      "dti_best_target": "ACKR3",
       "kg_group_score": 0.2008,
       "structural_group_score": 1.0,
       "network_group_score": 0.6564000248908997,
@@ -729,12 +730,12 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT06180252",
-          "title": "PET Study of Acetylcholine Esterase Activity in Alzheimer's Disease",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "30",
-          "url": "https://clinicaltrials.gov/study/NCT06180252"
+          "nct_id": "NCT05413655",
+          "title": "A Study of Oral EX039 in Subjects with Mild Alzheimer's Disease",
+          "status": "RECRUITING",
+          "phase": "PHASE2",
+          "enrollment": "120",
+          "url": "https://clinicaltrials.gov/study/NCT05413655"
         },
         {
           "nct_id": "NCT00766363",
@@ -745,14 +746,6 @@
           "url": "https://clinicaltrials.gov/study/NCT00766363"
         },
         {
-          "nct_id": "NCT01073228",
-          "title": "Safety and Cognitive Function Study of EVP-6124 in Patients With Mild to Moderate Alzheimer's Disease",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "409",
-          "url": "https://clinicaltrials.gov/study/NCT01073228"
-        },
-        {
           "nct_id": "NCT01764243",
           "title": "Safety and Efficacy of MT-4666",
           "status": "COMPLETED",
@@ -761,17 +754,25 @@
           "url": "https://clinicaltrials.gov/study/NCT01764243"
         },
         {
-          "nct_id": "NCT05413655",
-          "title": "A Study of Oral EX039 in Subjects with Mild Alzheimer's Disease",
+          "nct_id": "NCT02327182",
+          "title": "Safety Study of MT-4666 in Subjects With Alzheimer's Disease",
+          "status": "TERMINATED",
+          "phase": "PHASE3",
+          "enrollment": "117",
+          "url": "https://clinicaltrials.gov/study/NCT02327182"
+        },
+        {
+          "nct_id": "NCT06995573",
+          "title": "A Study to Assess Safety and Tolerability and to Explore Efficacy of NSC001 in Mild to Moderate Alzheimer's Disease",
           "status": "RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "120",
-          "url": "https://clinicaltrials.gov/study/NCT05413655"
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "90",
+          "url": "https://clinicaltrials.gov/study/NCT06995573"
         }
       ],
       "trial_phases": {
-        "PHASE1": 3,
-        "PHASE2": 5,
+        "PHASE2": 4,
+        "PHASE1": 2,
         "PHASE3": 1
       },
       "confidence": "HIGH",
@@ -786,6 +787,7 @@
         "Strong causal genetic evidence (MR score: 0.73, 2 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D000544",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -894,15 +896,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.94
       },
-      "disease_entity": "Disease::MESH:D000544",
-      "docking": {
-        "kcal_per_mol": -5.68,
-        "target_symbol": "CHRNA7",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.5666,
+      "ensemble_prob": 0.5241,
       "ensemble_features": {
         "kg_score": 0.9927,
         "degree_penalty": 0.833,
@@ -912,6 +906,13 @@
         "transe_rank_log": 4.3567
       },
       "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": -5.68,
+        "target_symbol": "CHRNA7",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -947,7 +948,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.261,
       "dti_score": 1.0,
-      "dti_best_target": "ACSS3",
+      "dti_best_target": "AKAP6",
       "kg_group_score": 0.0779,
       "structural_group_score": 1.0,
       "network_group_score": 0.659500002861023,
@@ -1058,6 +1059,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.76, 3 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D000544",
       "dose_plausibility": {
         "plausibility": "unknown",
         "dose_range": "research",
@@ -1107,15 +1109,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.966
       },
-      "disease_entity": "Disease::MESH:D000544",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.0105,
+      "ensemble_prob": 0.0139,
       "ensemble_features": {
         "kg_score": 0.8483,
         "degree_penalty": 0.8655,
@@ -1125,6 +1119,13 @@
         "transe_rank_log": 7.3784
       },
       "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -1137,213 +1138,6 @@
           "phosphor",
           "quaternary_nitrogen_1",
           "gte_2_free_phos"
-        ]
-      }
-    },
-    {
-      "drug_name": "Aceneuramic Acid",
-      "drug_id": "DB11797",
-      "disease_name": "Alzheimer's disease",
-      "combined_score": 0.5387,
-      "pillars_hit": 4,
-      "transe_rank": 84,
-      "transe_score": -10.5166,
-      "pykeen_score": -12.2356,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.75,
-      "proximity_distance": 1.0,
-      "admet_score": 1.0,
-      "admet_flags": "clean",
-      "primekg_score": 0,
-      "dti_score": 0.6507,
-      "dti_best_target": "MTOR",
-      "kg_group_score": 0.2442,
-      "structural_group_score": 0.6507,
-      "network_group_score": 0.7412999868392944,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.7484,
-      "admet_multiplier": 1.0,
-      "efficacy_score": 0.5387,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 2,
-      "shared_targets": [
-        "APOE",
-        "NEU1"
-      ],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "CEST imaging combined with 1H-MRS reveal the neuroprotective effects of riluzole by improving neurotransmitter imbalances in Alzheimer\u2019s disease mice",
-          "year": 2025,
-          "citations": 13,
-          "url": "https://www.semanticscholar.org/paper/adf41c29a19224478c147f47c4f3d155abb9dd37",
-          "authors": "Yuanyu Shen, Xiaolei Zhang, Siqi Liu"
-        },
-        {
-          "title": "The neurobiological foundation of effective repetitive transcranial magnetic brain stimulation in Alzheimer's disease",
-          "year": 2025,
-          "citations": 13,
-          "url": "https://www.semanticscholar.org/paper/19a356b6709ec8360d8f4f63bc52c9f8cf2b97b4",
-          "authors": "Annibale Antonioni, A. Martorana, E. Santarnecchi"
-        },
-        {
-          "title": "Impairment of Tricarboxylic Acid Cycle (TCA) Cycle in Alzheimer's Disease: Mechanisms, Implications, and Potential Therapies",
-          "year": 2025,
-          "citations": 6,
-          "url": "https://www.semanticscholar.org/paper/1a25949de03a3ab169565d80e05938839f36e362",
-          "authors": "Gudimetla Susmitha Mohan, Rahul Kumar"
-        },
-        {
-          "title": "Multi-omics analyses identify gut microbiota-fecal metabolites-brain-cognition pathways in the Alzheimer\u2019s disease continuum",
-          "year": 2025,
-          "citations": 40,
-          "url": "https://www.semanticscholar.org/paper/cbd10de2f2d45f014201e2cda53764c6c98a5a7a",
-          "authors": "Han Zhao, Xia Zhou, Yu Song"
-        },
-        {
-          "title": "Protective effect of chlorogenic acid on cognitive impairment in rats with early Alzheimer's disease via Wnt signaling pathway",
-          "year": 2025,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/01dc9646de7d6b655b2c183322e514bfe6a7cab7",
-          "authors": "Lei Wang, Xuehua Wang, L. Hou"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Drug Repositioning for Diabetes Based on 'Omics' Data Mining",
-        "year": 2015,
-        "citations": 78,
-        "url": "https://www.semanticscholar.org/paper/47d62da6884b5412cadf8abf9374c518aae5b45f",
-        "authors": "Ming Zhang, Heng Luo, Z. Xi"
-      },
-      "max_citations": 78,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Aceneuramic Acid",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "TG-101348 (1.435)",
-        "PF-477736 (1.435)",
-        "PF 750 (1.433)",
-        "Importazole (1.431)",
-        "pelitinib (1.409)"
-      ],
-      "signature_interpretation": "Aceneuramic Acid was not found among the top 45 drugs that reverse the Alzheimer's disease gene signature. Top reversers: TG-101348 (1.435), PF-477736 (1.435), PF 750 (1.433)",
-      "ai_hypothesis": "of its ability to inhibit amyloid-beta aggregation and to increase the levels of the antioxidant glutathione.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.7484,
-      "mr_genetic_targets": 2,
-      "mechanistic_hypothesis": "Aceneuramic Acid \u2014[is a therapeutic for]\u2192 Alzheimer's disease",
-      "kg_paths_text": "\u2022 Aceneuramic Acid \u2014[is a therapeutic for]\u2192 Alzheimer's disease\n\u2022 Aceneuramic Acid \u2014[is a therapeutic for]\u2192 MESH:D014376 \u2014[is treated by]\u2192 DB01234 \u2014[is a therapeutic for]\u2192 Alzheimer's disease\n\u2022 Aceneuramic Acid \u2014[is a therapeutic for]\u2192 MESH:D056486 \u2014[is treated by]\u2192 MESH:D020160 \u2014[is a therapeutic for]\u2192 Alzheimer's disease",
-      "validation_experiments": [],
-      "novelty_score": 0.646,
-      "novelty_level": "BREAKTHROUGH",
-      "is_known_treatment": true,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "MEDIUM",
-      "confidence_reasons": [
-        "Supported by 4 independent AI pillars",
-        "Supporting paper with 78 citations",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.75, 2 genetic targets)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "likely",
-        "dose_range": "late-trial",
-        "confidence": "medium",
-        "rationale": "Phase-3 investigational \u2014 dose range established in Phase-2 pharmacokinetic studies; efficacy trials ongoing or recently completed.",
-        "chembl_phase": 3.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 0,
-        "has_warnings": false,
-        "top_interactions": []
-      },
-      "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
-        "pharmgkb": []
-      },
-      "triangulation": {
-        "n_axes_agree": 1,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": false
-        },
-        "triangulation_score": 0.189,
-        "label": "kg-only",
-        "axis_values": {
-          "kg": 0.539,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.0
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Whole Blood"
-        ],
-        "n_genes": 2,
-        "n_expressed": 2,
-        "mean_tpm_in_tissue": 19.92,
-        "max_tpm_in_tissue": 37.07,
-        "tissue_specificity": 0.0,
-        "context_modifier": 0.969
-      },
-      "disease_entity": "Disease::MESH:D000544",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.0,
-      "ensemble_features": {
-        "kg_score": 0.7339,
-        "degree_penalty": 0.9884,
-        "n_drug_targets": 0,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 7.9402
-      },
-      "ensemble_rank": 10,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [
-          "ALPHA",
-          "DIKETO"
-        ],
-        "n_alerts": 2,
-        "alert_names": [
-          "diketo_group",
-          "alpha_dicarbonyl"
         ]
       }
     },
@@ -1370,8 +1164,8 @@
       "admet_score": 1.0,
       "admet_flags": "hERG=0.92",
       "primekg_score": 0.2653,
-      "dti_score": 0.3547,
-      "dti_best_target": "COL18A1",
+      "dti_score": 0.3178,
+      "dti_best_target": "ACKR3",
       "kg_group_score": 0.0594,
       "structural_group_score": 0.9322,
       "network_group_score": 0.6705999970436096,
@@ -1616,6 +1410,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.79, 3 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D000544",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1716,15 +1511,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.854
       },
-      "disease_entity": "Disease::MESH:D000544",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.0397,
+      "ensemble_prob": 0.0213,
       "ensemble_features": {
         "kg_score": 0.9553,
         "degree_penalty": 0.7779,
@@ -1734,6 +1521,13 @@
         "transe_rank_log": 6.1591
       },
       "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -1770,8 +1564,8 @@
       "admet_score": 0.6543,
       "admet_flags": "clean",
       "primekg_score": 0.2647,
-      "dti_score": 0.1215,
-      "dti_best_target": "MTOR",
+      "dti_score": 0,
+      "dti_best_target": "",
       "kg_group_score": 0.3207,
       "structural_group_score": 0.9436,
       "network_group_score": 0.5932999849319458,
@@ -2025,20 +1819,12 @@
           "url": "https://clinicaltrials.gov/study/NCT06644573"
         },
         {
-          "nct_id": "NCT01640275",
-          "title": "Markers of Alzheimers Disease After Propofol or Isoflurane Anesthesia",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "105",
-          "url": "https://clinicaltrials.gov/study/NCT01640275"
-        },
-        {
-          "nct_id": "NCT01772537",
-          "title": "The Effects of Anesthesia on Patients Undergoing Surgery for Repair of a Thoracoabdominal Aneurysm.",
-          "status": "TERMINATED",
-          "phase": "NA",
-          "enrollment": "14",
-          "url": "https://clinicaltrials.gov/study/NCT01772537"
+          "nct_id": "NCT01870453",
+          "title": "Differential Effects of Various Anesthetic Agents on Cognitive Function in Patients With Alzheimer's Disease",
+          "status": "WITHDRAWN",
+          "phase": "N/A",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT01870453"
         },
         {
           "nct_id": "NCT01993836",
@@ -2047,6 +1833,14 @@
           "phase": "PHASE4",
           "enrollment": "191",
           "url": "https://clinicaltrials.gov/study/NCT01993836"
+        },
+        {
+          "nct_id": "NCT01640275",
+          "title": "Markers of Alzheimers Disease After Propofol or Isoflurane Anesthesia",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "105",
+          "url": "https://clinicaltrials.gov/study/NCT01640275"
         }
       ],
       "trial_phases": {
@@ -2066,6 +1860,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.68)"
       ],
+      "disease_entity": "Disease::MESH:D000544",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2202,15 +1997,7 @@
         "tissue_specificity": 0.089,
         "context_modifier": 0.957
       },
-      "disease_entity": "Disease::MESH:D000544",
-      "docking": {
-        "kcal_per_mol": -7.4,
-        "target_symbol": "PTGS1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.7855,
+      "ensemble_prob": 0.7598,
       "ensemble_features": {
         "kg_score": 0.9974,
         "degree_penalty": 0.753,
@@ -2220,6 +2007,573 @@
         "transe_rank_log": 3.3322
       },
       "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": -7.4,
+        "target_symbol": "PTGS1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Aceneuramic Acid",
+      "drug_id": "DB11797",
+      "disease_name": "Alzheimer's disease",
+      "combined_score": 0.51,
+      "pillars_hit": 4,
+      "transe_rank": 84,
+      "transe_score": -10.5166,
+      "pykeen_score": -12.2356,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.75,
+      "proximity_distance": 1.0,
+      "admet_score": 1.0,
+      "admet_flags": "clean",
+      "primekg_score": 0,
+      "dti_score": 0.491,
+      "dti_best_target": "IL1B",
+      "kg_group_score": 0.2442,
+      "structural_group_score": 0.491,
+      "network_group_score": 0.7412999868392944,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.7484,
+      "admet_multiplier": 1.0,
+      "efficacy_score": 0.51,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 2,
+      "shared_targets": [
+        "APOE",
+        "NEU1"
+      ],
+      "pubmed_total": 0,
+      "pubmed_treatment_total": 0,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "CEST imaging combined with 1H-MRS reveal the neuroprotective effects of riluzole by improving neurotransmitter imbalances in Alzheimer\u2019s disease mice",
+          "year": 2025,
+          "citations": 13,
+          "url": "https://www.semanticscholar.org/paper/adf41c29a19224478c147f47c4f3d155abb9dd37",
+          "authors": "Yuanyu Shen, Xiaolei Zhang, Siqi Liu"
+        },
+        {
+          "title": "The neurobiological foundation of effective repetitive transcranial magnetic brain stimulation in Alzheimer's disease",
+          "year": 2025,
+          "citations": 13,
+          "url": "https://www.semanticscholar.org/paper/19a356b6709ec8360d8f4f63bc52c9f8cf2b97b4",
+          "authors": "Annibale Antonioni, A. Martorana, E. Santarnecchi"
+        },
+        {
+          "title": "Impairment of Tricarboxylic Acid Cycle (TCA) Cycle in Alzheimer's Disease: Mechanisms, Implications, and Potential Therapies",
+          "year": 2025,
+          "citations": 6,
+          "url": "https://www.semanticscholar.org/paper/1a25949de03a3ab169565d80e05938839f36e362",
+          "authors": "Gudimetla Susmitha Mohan, Rahul Kumar"
+        },
+        {
+          "title": "Multi-omics analyses identify gut microbiota-fecal metabolites-brain-cognition pathways in the Alzheimer\u2019s disease continuum",
+          "year": 2025,
+          "citations": 40,
+          "url": "https://www.semanticscholar.org/paper/cbd10de2f2d45f014201e2cda53764c6c98a5a7a",
+          "authors": "Han Zhao, Xia Zhou, Yu Song"
+        },
+        {
+          "title": "Protective effect of chlorogenic acid on cognitive impairment in rats with early Alzheimer's disease via Wnt signaling pathway",
+          "year": 2025,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/01dc9646de7d6b655b2c183322e514bfe6a7cab7",
+          "authors": "Lei Wang, Xuehua Wang, L. Hou"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Drug Repositioning for Diabetes Based on 'Omics' Data Mining",
+        "year": 2015,
+        "citations": 78,
+        "url": "https://www.semanticscholar.org/paper/47d62da6884b5412cadf8abf9374c518aae5b45f",
+        "authors": "Ming Zhang, Heng Luo, Z. Xi"
+      },
+      "max_citations": 78,
+      "faers_signal": "none",
+      "faers_total_reports": 0,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found for Aceneuramic Acid",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "TG-101348 (1.435)",
+        "PF-477736 (1.435)",
+        "PF 750 (1.433)",
+        "Importazole (1.431)",
+        "pelitinib (1.409)"
+      ],
+      "signature_interpretation": "Aceneuramic Acid was not found among the top 45 drugs that reverse the Alzheimer's disease gene signature. Top reversers: TG-101348 (1.435), PF-477736 (1.435), PF 750 (1.433)",
+      "ai_hypothesis": "of its ability to inhibit amyloid-beta aggregation and to increase the levels of the antioxidant glutathione.",
+      "abstract_analyses": [],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.7484,
+      "mr_genetic_targets": 2,
+      "mechanistic_hypothesis": "Aceneuramic Acid \u2014[is a therapeutic for]\u2192 Alzheimer's disease",
+      "kg_paths_text": "\u2022 Aceneuramic Acid \u2014[is a therapeutic for]\u2192 Alzheimer's disease\n\u2022 Aceneuramic Acid \u2014[is a therapeutic for]\u2192 MESH:D014376 \u2014[is treated by]\u2192 DB01234 \u2014[is a therapeutic for]\u2192 Alzheimer's disease\n\u2022 Aceneuramic Acid \u2014[is a therapeutic for]\u2192 MESH:D056486 \u2014[is treated by]\u2192 MESH:D020160 \u2014[is a therapeutic for]\u2192 Alzheimer's disease",
+      "validation_experiments": [],
+      "novelty_score": 0.612,
+      "novelty_level": "BREAKTHROUGH",
+      "is_known_treatment": true,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "MEDIUM",
+      "confidence_reasons": [
+        "Supported by 4 independent AI pillars",
+        "Supporting paper with 78 citations",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.75, 2 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D000544",
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "late-trial",
+        "confidence": "medium",
+        "rationale": "Phase-3 investigational \u2014 dose range established in Phase-2 pharmacokinetic studies; efficacy trials ongoing or recently completed.",
+        "chembl_phase": 3.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 0,
+        "has_warnings": false,
+        "top_interactions": []
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.178,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.51,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 2,
+        "n_expressed": 2,
+        "mean_tpm_in_tissue": 19.92,
+        "max_tpm_in_tissue": 37.07,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.969
+      },
+      "ensemble_prob": 0.0,
+      "ensemble_features": {
+        "kg_score": 0.7339,
+        "degree_penalty": 0.9884,
+        "n_drug_targets": 0,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 7.9402
+      },
+      "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "ALPHA",
+          "DIKETO"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "diketo_group",
+          "alpha_dicarbonyl"
+        ]
+      }
+    },
+    {
+      "drug_name": "Tacrine",
+      "drug_id": "DB00382",
+      "disease_name": "Alzheimer's disease",
+      "combined_score": 0.5079,
+      "pillars_hit": 4,
+      "transe_rank": 105,
+      "transe_score": -10.5622,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.875,
+      "proximity_distance": 0.5,
+      "admet_score": 0.5808,
+      "admet_flags": "AMES=0.78",
+      "primekg_score": 0.2716,
+      "dti_score": 0.8463,
+      "dti_best_target": "DCLK1",
+      "kg_group_score": 0.1033,
+      "structural_group_score": 0.8463,
+      "network_group_score": 0.6969000101089478,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.9125,
+      "admet_multiplier": 0.9162,
+      "efficacy_score": 0.5544,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 7,
+      "shared_targets": [
+        "ACHE",
+        "APOE",
+        "APP",
+        "BCHE",
+        "FTO",
+        "GSK3B",
+        "SLC6A2"
+      ],
+      "pubmed_total": 1165,
+      "pubmed_treatment_total": 1105,
+      "pubmed_repurposing_total": 5,
+      "key_papers": [
+        {
+          "pmid": "29611473",
+          "title": "Tacrine-Natural-Product Hybrids for Alzheimer's Disease Therapy.",
+          "authors": "Oset-Gasque MJ, Marco-Contelles JL",
+          "journal": "Current medicinal chemistry",
+          "year": "2020",
+          "abstract_snippet": "Alzheimer's disease (AD) is a complex, neurodegenerative pathology showing, among others, high cholinergic and neurotransmitter deficits, oxidative stress, inflammation, A\u03b2-aggregation resulting in senile plaques formation, and hyperphosphorylation of tau-protein leading to neurofibrillary tangles. ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29611473/",
+          "total_results": 1165
+        },
+        {
+          "pmid": "36675233",
+          "title": "Tacrine-Based Hybrids: Past, Present, and Future.",
+          "authors": "Bubley A, Erofeev A, Gorelkin P, et al.",
+          "journal": "International journal of molecular sciences",
+          "year": "2023",
+          "abstract_snippet": "Alzheimer's disease (AD) is a neurodegenerative disorder which is characterized by \u03b2-amyloid (A\u03b2) aggregation, \u03c4-hyperphosphorylation, and loss of cholinergic neurons. The other important hallmarks of AD are oxidative stress, metal dyshomeostasis, inflammation, and cell cycle dysregulation. Multiple...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36675233/"
+        },
+        {
+          "pmid": "20345341",
+          "title": "Tacrine derivatives and Alzheimer's disease.",
+          "authors": "Tumiatti V, Minarini A, Bolognesi ML, et al.",
+          "journal": "Current medicinal chemistry",
+          "year": "2010",
+          "abstract_snippet": "To date, the pharmacotherapy of Alzheimer's disease (AD) has relied on acetylcholinesterase (AChE) inhibitors (AChEIs) and, more recently, an N-methyl-D-aspartate receptor (NMDAR) antagonist. AD is a multifactorial syndrome with several target proteins contributing to its etiology. \"Multi-target-dir...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20345341/"
+        },
+        {
+          "pmid": "8173360",
+          "title": "Tetrahydroaminoacridine and Alzheimer's disease.",
+          "authors": "Byrne EJ, Arie T",
+          "journal": "BMJ (Clinical research ed.)",
+          "year": "1994",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/8173360/"
+        },
+        {
+          "pmid": "29651948",
+          "title": "Therapeutic Potential of Multifunctional Tacrine Analogues.",
+          "authors": "Przyby\u0142owska M, Kowalski S, Dzierzbicka K, et al.",
+          "journal": "Current neuropharmacology",
+          "year": "2019",
+          "abstract_snippet": "Tacrine is a potent inhibitor of cholinesterases (acetylcholinesterase and butyrylcholinesterase) that shows limiting clinical application by liver toxicity. In spite of this, analogues of tacrine are considered as a model inhibitor of cholinesterases in the therapy of Alzheimer's disease. The inter...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29651948/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "39719518",
+          "title": "Molecular Signaling Pathways of Quercetin in Alzheimer's Disease: A Promising Arena.",
+          "authors": "Alsaleem MA, Al-Kuraishy HM, Al-Gareeb AI, et al.",
+          "journal": "Cellular and molecular neurobiology",
+          "year": "2024",
+          "abstract_snippet": "Alzheimer's disease (AD) is a neurodegenerative disease characterized by cognitive impairment and memory deficit. Even with extensive research and studies, presently, there is no effective treatment for the management of AD. Besides, most of drugs used in the treatment of AD did not avert the AD neu...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39719518/",
+          "total_results": 5
+        },
+        {
+          "pmid": "30183790",
+          "title": "Tacrine-deferiprone hybrids as multi-target-directed metal chelators against Alzheimer's disease: a two-in-one drug.",
+          "authors": "Chand K, Rajeshwari, Candeias E, et al.",
+          "journal": "Metallomics : integrated biometal science",
+          "year": "2018",
+          "abstract_snippet": "Alzheimer's disease (AD) is a severe age-dependent neurodegenerative disorder affecting several million people worldwide. So far, there is no adequate medication to prevent or slow down the progression of the disease, only medication with palliative effects allowing temporary symptomatic reliefs. As...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30183790/"
+        },
+        {
+          "pmid": "31760822",
+          "title": "Novel tacrine-benzofuran hybrids as potential multi-target drug candidates for the treatment of Alzheimer's Disease.",
+          "authors": "Fancellu G, Chand K, Tom\u00e1s D, et al.",
+          "journal": "Journal of enzyme inhibition and medicinal chemistry",
+          "year": "2020",
+          "abstract_snippet": "Pursuing the widespread interest on multi-target drugs to combat Alzheimer\u00b4s disease (AD), a new series of hybrids was designed and developed based on the repositioning of the well-known acetylcholinesterase (AChE) inhibitor, tacrine (TAC), by its coupling to benzofuran (BF) derivatives. The BF fram...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31760822/"
+        }
+      ],
+      "semantic_scholar_papers": [
+        {
+          "title": "Alzheimer\u2019s Disease Drug Design by Synthesis, Characterization, Enzyme Inhibition, In Silico, SAR Analysis and MM-GBSA Analysis of Schiff Bases Derivatives",
+          "year": 2025,
+          "citations": 11,
+          "url": "https://www.semanticscholar.org/paper/3abad9633b2325a048e65376a94d45c82c6133fc",
+          "authors": "Halis Karata\u015f, \u0130layda Bersu Kul, Meltem Aydin"
+        },
+        {
+          "title": "The potential role of aryl hydrocarbon receptor in Alzheimer's disease: Protective or detrimental.",
+          "year": 2025,
+          "citations": 9,
+          "url": "https://www.semanticscholar.org/paper/9169c8ee6b08f057577c4874b2cf3a0b457c22d3",
+          "authors": "H. Al-kuraishy, Thabat J Al-Maiahy, Ghassan M. Sulaiman"
+        },
+        {
+          "title": "Efficacy of acetylcholinesterase inhibitors in Alzheimer's disease.",
+          "year": 2020,
+          "citations": 846,
+          "url": "https://www.semanticscholar.org/paper/e8ad29b12da1896b4506335bce0db580ca6682ab",
+          "authors": "G. Marucci, M. Buccioni, D. D. Ben"
+        },
+        {
+          "title": "Role of mitogen-activated protein kinase inhibitors in Alzheimer's disease: Rouge of brain kinases.",
+          "year": 2025,
+          "citations": 7,
+          "url": "https://www.semanticscholar.org/paper/397018c78e01130a8c81966a094f6dddab9d0804",
+          "authors": "S. H. Almasoudi, H. Al-kuraishy, A. Al-Gareeb"
+        },
+        {
+          "title": "Current and future therapeutic strategies for Alzheimer\u2019s disease: an overview of drug development bottlenecks",
+          "year": 2023,
+          "citations": 116,
+          "url": "https://www.semanticscholar.org/paper/be901fd4ca4ed971c52dbac004a7a4c1cb7eba3e",
+          "authors": "Yong Peng, Hong Jin, Yaran Xue"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Efficacy of acetylcholinesterase inhibitors in Alzheimer's disease.",
+        "year": 2020,
+        "citations": 846,
+        "url": "https://www.semanticscholar.org/paper/e8ad29b12da1896b4506335bce0db580ca6682ab",
+        "authors": "G. Marucci, M. Buccioni, D. D. Ben"
+      },
+      "max_citations": 846,
+      "faers_signal": "none",
+      "faers_total_reports": 31,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Tacrine to Alzheimer's disease terms. Drug has 31 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "TG-101348 (1.435)",
+        "PF-477736 (1.435)",
+        "PF 750 (1.433)",
+        "Importazole (1.431)",
+        "pelitinib (1.409)"
+      ],
+      "signature_interpretation": "Tacrine was not found among the top 45 drugs that reverse the Alzheimer's disease gene signature. Top reversers: TG-101348 (1.435), PF-477736 (1.435), PF 750 (1.433)",
+      "ai_hypothesis": "of its cholinergic action.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.9125,
+      "mr_genetic_targets": 2,
+      "mechanistic_hypothesis": "Tacrine \u2014[is a therapeutic for]\u2192 Alzheimer's disease",
+      "kg_paths_text": "\u2022 Tacrine \u2014[is a therapeutic for]\u2192 Alzheimer's disease\n\u2022 Tacrine \u2014[is a therapeutic for]\u2192 MESH:D015658 \u2014[is treated by]\u2192 DB01043 \u2014[treats]\u2192 Alzheimer's disease\n\u2022 Tacrine \u2014[is a therapeutic for]\u2192 MESH:D015658 \u2014[is treated by]\u2192 DB01043 \u2014[treats]\u2192 Alzheimer's disease",
+      "validation_experiments": [],
+      "novelty_score": 0.274,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": true,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "1165 PubMed articles on this drug-disease pair",
+        "5 article(s) specifically mention repurposing/repositioning",
+        "Supported by 4 independent AI pillars",
+        "Highly cited paper (846 citations): \"Efficacy of acetylcholinesterase inhibitors in Alzheimer's d...\"",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.91, 2 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D000544",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 961,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.648,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.508,
+          "docking": 0.901,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 7,
+        "n_expressed": 4,
+        "mean_tpm_in_tissue": 4.19,
+        "max_tpm_in_tissue": 15.73,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.914
+      },
+      "ensemble_prob": 0.844,
+      "ensemble_features": {
+        "kg_score": 0.9967,
+        "degree_penalty": 0.7965,
+        "n_drug_targets": 42,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 3.5835
+      },
+      "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": -10.81,
+        "target_symbol": "APP",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2231,7 +2585,7 @@
       "drug_name": "Folic Acid",
       "drug_id": "DB00158",
       "disease_name": "Alzheimer's disease",
-      "combined_score": 0.5052,
+      "combined_score": 0.5076,
       "pillars_hit": 4,
       "transe_rank": 83,
       "transe_score": -10.514,
@@ -2250,15 +2604,15 @@
       "admet_score": 1.0,
       "admet_flags": "DILI=0.99",
       "primekg_score": 0.2647,
-      "dti_score": 0.7323,
-      "dti_best_target": "ACRV1",
+      "dti_score": 0.7457,
+      "dti_best_target": "CASP6",
       "kg_group_score": 0.2653,
-      "structural_group_score": 0.7323,
+      "structural_group_score": 0.7457,
       "network_group_score": 0.5939000248908997,
       "txgnn_group_score": 0,
       "mr_group_score": 0.5886,
       "admet_multiplier": 1.0,
-      "efficacy_score": 0.5052,
+      "efficacy_score": 0.5076,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 7,
@@ -2463,18 +2817,18 @@
       "mechanistic_hypothesis": "Folic Acid \u2014[is a therapeutic for]\u2192 Alzheimer's disease",
       "kg_paths_text": "\u2022 Folic Acid \u2014[is a therapeutic for]\u2192 Alzheimer's disease\n\u2022 Folic Acid \u2014[binds]\u2192 gene-10257 \u2014[is upregulated by]\u2192 Alzheimer's disease\n\u2022 Folic Acid \u2014[binds]\u2192 gene-4524 \u2014[is linked to]\u2192 Alzheimer's disease",
       "validation_experiments": [],
-      "novelty_score": 0.182,
+      "novelty_score": 0.183,
       "novelty_level": "ESTABLISHED",
       "is_known_treatment": true,
       "clinical_trials_total": 6,
       "clinical_trials": [
         {
-          "nct_id": "NCT01745198",
-          "title": "Effect of Cerefolin\u00ae/CerefolinNAC\u00ae on Biomarker Measurements",
+          "nct_id": "NCT00056225",
+          "title": "VITAL - VITamins to Slow ALzheimer's Disease (Homocysteine Study)",
           "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "121",
-          "url": "https://clinicaltrials.gov/study/NCT01745198"
+          "phase": "PHASE3",
+          "enrollment": "340",
+          "url": "https://clinicaltrials.gov/study/NCT00056225"
         },
         {
           "nct_id": "NCT01370954",
@@ -2493,25 +2847,25 @@
           "url": "https://clinicaltrials.gov/study/NCT01320527"
         },
         {
-          "nct_id": "NCT07200739",
-          "title": "Speech-Based Artificial Intelligence for Detection of Dementia in Danish Patients",
-          "status": "ENROLLING_BY_INVITATION",
-          "phase": "N/A",
-          "enrollment": "340",
-          "url": "https://clinicaltrials.gov/study/NCT07200739"
+          "nct_id": "NCT06169826",
+          "title": "Histidine Oral Supplementation as a Therapeutic Modality for Alzheimer's Disease",
+          "status": "WITHDRAWN",
+          "phase": "PHASE4",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT06169826"
         },
         {
-          "nct_id": "NCT00056225",
-          "title": "VITAL - VITamins to Slow ALzheimer's Disease (Homocysteine Study)",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "340",
-          "url": "https://clinicaltrials.gov/study/NCT00056225"
+          "nct_id": "NCT07200739",
+          "title": "Speech-Based Artificial Intelligence for Detection of Dementia in Danish Patients (DetectAI)",
+          "status": "NOT_YET_RECRUITING",
+          "phase": "N/A",
+          "enrollment": "440",
+          "url": "https://clinicaltrials.gov/study/NCT07200739"
         }
       ],
       "trial_phases": {
-        "PHASE2": 1,
         "PHASE3": 1,
+        "PHASE2": 1,
         "PHASE4": 1
       },
       "confidence": "HIGH",
@@ -2524,8 +2878,10 @@
         "Strong FAERS signal: 4527 adverse event reports link drug to disease (253612 total reports)",
         "Supporting paper with 96 citations",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.59)"
+        "Moderate genetic evidence supporting causality (MR score: 0.59)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D000544",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2642,10 +2998,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.377,
+        "triangulation_score": 0.378,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.505,
+          "kg": 0.508,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 1.0
@@ -2662,15 +3018,7 @@
         "tissue_specificity": 0.215,
         "context_modifier": 0.984
       },
-      "disease_entity": "Disease::MESH:D000544",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.189,
+      "ensemble_prob": 0.141,
       "ensemble_features": {
         "kg_score": 0.9796,
         "degree_penalty": 0.7918,
@@ -2680,357 +3028,13 @@
         "transe_rank_log": 5.3753
       },
       "ensemble_rank": 7,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Tacrine",
-      "drug_id": "DB00382",
-      "disease_name": "Alzheimer's disease",
-      "combined_score": 0.5013,
-      "pillars_hit": 4,
-      "transe_rank": 105,
-      "transe_score": -10.5622,
-      "pykeen_score": 0,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.875,
-      "proximity_distance": 0.5,
-      "admet_score": 0.5808,
-      "admet_flags": "AMES=0.78",
-      "primekg_score": 0.2716,
-      "dti_score": 0.8061,
-      "dti_best_target": "ACSS3",
-      "kg_group_score": 0.1033,
-      "structural_group_score": 0.8061,
-      "network_group_score": 0.6969000101089478,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.9125,
-      "admet_multiplier": 0.9162,
-      "efficacy_score": 0.5472,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 7,
-      "shared_targets": [
-        "ACHE",
-        "APOE",
-        "APP",
-        "BCHE",
-        "FTO",
-        "GSK3B",
-        "SLC6A2"
-      ],
-      "pubmed_total": 1165,
-      "pubmed_treatment_total": 1105,
-      "pubmed_repurposing_total": 5,
-      "key_papers": [
-        {
-          "pmid": "29611473",
-          "title": "Tacrine-Natural-Product Hybrids for Alzheimer's Disease Therapy.",
-          "authors": "Oset-Gasque MJ, Marco-Contelles JL",
-          "journal": "Current medicinal chemistry",
-          "year": "2020",
-          "abstract_snippet": "Alzheimer's disease (AD) is a complex, neurodegenerative pathology showing, among others, high cholinergic and neurotransmitter deficits, oxidative stress, inflammation, A\u03b2-aggregation resulting in senile plaques formation, and hyperphosphorylation of tau-protein leading to neurofibrillary tangles. ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29611473/",
-          "total_results": 1165
-        },
-        {
-          "pmid": "36675233",
-          "title": "Tacrine-Based Hybrids: Past, Present, and Future.",
-          "authors": "Bubley A, Erofeev A, Gorelkin P, et al.",
-          "journal": "International journal of molecular sciences",
-          "year": "2023",
-          "abstract_snippet": "Alzheimer's disease (AD) is a neurodegenerative disorder which is characterized by \u03b2-amyloid (A\u03b2) aggregation, \u03c4-hyperphosphorylation, and loss of cholinergic neurons. The other important hallmarks of AD are oxidative stress, metal dyshomeostasis, inflammation, and cell cycle dysregulation. Multiple...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36675233/"
-        },
-        {
-          "pmid": "20345341",
-          "title": "Tacrine derivatives and Alzheimer's disease.",
-          "authors": "Tumiatti V, Minarini A, Bolognesi ML, et al.",
-          "journal": "Current medicinal chemistry",
-          "year": "2010",
-          "abstract_snippet": "To date, the pharmacotherapy of Alzheimer's disease (AD) has relied on acetylcholinesterase (AChE) inhibitors (AChEIs) and, more recently, an N-methyl-D-aspartate receptor (NMDAR) antagonist. AD is a multifactorial syndrome with several target proteins contributing to its etiology. \"Multi-target-dir...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/20345341/"
-        },
-        {
-          "pmid": "8173360",
-          "title": "Tetrahydroaminoacridine and Alzheimer's disease.",
-          "authors": "Byrne EJ, Arie T",
-          "journal": "BMJ (Clinical research ed.)",
-          "year": "1994",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/8173360/"
-        },
-        {
-          "pmid": "29651948",
-          "title": "Therapeutic Potential of Multifunctional Tacrine Analogues.",
-          "authors": "Przyby\u0142owska M, Kowalski S, Dzierzbicka K, et al.",
-          "journal": "Current neuropharmacology",
-          "year": "2019",
-          "abstract_snippet": "Tacrine is a potent inhibitor of cholinesterases (acetylcholinesterase and butyrylcholinesterase) that shows limiting clinical application by liver toxicity. In spite of this, analogues of tacrine are considered as a model inhibitor of cholinesterases in the therapy of Alzheimer's disease. The inter...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29651948/"
-        }
-      ],
-      "repurposing_papers": [
-        {
-          "pmid": "39719518",
-          "title": "Molecular Signaling Pathways of Quercetin in Alzheimer's Disease: A Promising Arena.",
-          "authors": "Alsaleem MA, Al-Kuraishy HM, Al-Gareeb AI, et al.",
-          "journal": "Cellular and molecular neurobiology",
-          "year": "2024",
-          "abstract_snippet": "Alzheimer's disease (AD) is a neurodegenerative disease characterized by cognitive impairment and memory deficit. Even with extensive research and studies, presently, there is no effective treatment for the management of AD. Besides, most of drugs used in the treatment of AD did not avert the AD neu...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39719518/",
-          "total_results": 5
-        },
-        {
-          "pmid": "30183790",
-          "title": "Tacrine-deferiprone hybrids as multi-target-directed metal chelators against Alzheimer's disease: a two-in-one drug.",
-          "authors": "Chand K, Rajeshwari, Candeias E, et al.",
-          "journal": "Metallomics : integrated biometal science",
-          "year": "2018",
-          "abstract_snippet": "Alzheimer's disease (AD) is a severe age-dependent neurodegenerative disorder affecting several million people worldwide. So far, there is no adequate medication to prevent or slow down the progression of the disease, only medication with palliative effects allowing temporary symptomatic reliefs. As...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30183790/"
-        },
-        {
-          "pmid": "31760822",
-          "title": "Novel tacrine-benzofuran hybrids as potential multi-target drug candidates for the treatment of Alzheimer's Disease.",
-          "authors": "Fancellu G, Chand K, Tom\u00e1s D, et al.",
-          "journal": "Journal of enzyme inhibition and medicinal chemistry",
-          "year": "2020",
-          "abstract_snippet": "Pursuing the widespread interest on multi-target drugs to combat Alzheimer\u00b4s disease (AD), a new series of hybrids was designed and developed based on the repositioning of the well-known acetylcholinesterase (AChE) inhibitor, tacrine (TAC), by its coupling to benzofuran (BF) derivatives. The BF fram...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/31760822/"
-        }
-      ],
-      "semantic_scholar_papers": [
-        {
-          "title": "Alzheimer\u2019s Disease Drug Design by Synthesis, Characterization, Enzyme Inhibition, In Silico, SAR Analysis and MM-GBSA Analysis of Schiff Bases Derivatives",
-          "year": 2025,
-          "citations": 11,
-          "url": "https://www.semanticscholar.org/paper/3abad9633b2325a048e65376a94d45c82c6133fc",
-          "authors": "Halis Karata\u015f, \u0130layda Bersu Kul, Meltem Aydin"
-        },
-        {
-          "title": "The potential role of aryl hydrocarbon receptor in Alzheimer's disease: Protective or detrimental.",
-          "year": 2025,
-          "citations": 9,
-          "url": "https://www.semanticscholar.org/paper/9169c8ee6b08f057577c4874b2cf3a0b457c22d3",
-          "authors": "H. Al-kuraishy, Thabat J Al-Maiahy, Ghassan M. Sulaiman"
-        },
-        {
-          "title": "Efficacy of acetylcholinesterase inhibitors in Alzheimer's disease.",
-          "year": 2020,
-          "citations": 846,
-          "url": "https://www.semanticscholar.org/paper/e8ad29b12da1896b4506335bce0db580ca6682ab",
-          "authors": "G. Marucci, M. Buccioni, D. D. Ben"
-        },
-        {
-          "title": "Role of mitogen-activated protein kinase inhibitors in Alzheimer's disease: Rouge of brain kinases.",
-          "year": 2025,
-          "citations": 7,
-          "url": "https://www.semanticscholar.org/paper/397018c78e01130a8c81966a094f6dddab9d0804",
-          "authors": "S. H. Almasoudi, H. Al-kuraishy, A. Al-Gareeb"
-        },
-        {
-          "title": "Current and future therapeutic strategies for Alzheimer\u2019s disease: an overview of drug development bottlenecks",
-          "year": 2023,
-          "citations": 116,
-          "url": "https://www.semanticscholar.org/paper/be901fd4ca4ed971c52dbac004a7a4c1cb7eba3e",
-          "authors": "Yong Peng, Hong Jin, Yaran Xue"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Efficacy of acetylcholinesterase inhibitors in Alzheimer's disease.",
-        "year": 2020,
-        "citations": 846,
-        "url": "https://www.semanticscholar.org/paper/e8ad29b12da1896b4506335bce0db580ca6682ab",
-        "authors": "G. Marucci, M. Buccioni, D. D. Ben"
-      },
-      "max_citations": 846,
-      "faers_signal": "none",
-      "faers_total_reports": 31,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Tacrine to Alzheimer's disease terms. Drug has 31 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "TG-101348 (1.435)",
-        "PF-477736 (1.435)",
-        "PF 750 (1.433)",
-        "Importazole (1.431)",
-        "pelitinib (1.409)"
-      ],
-      "signature_interpretation": "Tacrine was not found among the top 45 drugs that reverse the Alzheimer's disease gene signature. Top reversers: TG-101348 (1.435), PF-477736 (1.435), PF 750 (1.433)",
-      "ai_hypothesis": "of its cholinergic action.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.9125,
-      "mr_genetic_targets": 2,
-      "mechanistic_hypothesis": "Tacrine \u2014[is a therapeutic for]\u2192 Alzheimer's disease",
-      "kg_paths_text": "\u2022 Tacrine \u2014[is a therapeutic for]\u2192 Alzheimer's disease\n\u2022 Tacrine \u2014[is a therapeutic for]\u2192 MESH:D015658 \u2014[is treated by]\u2192 DB01043 \u2014[treats]\u2192 Alzheimer's disease\n\u2022 Tacrine \u2014[is a therapeutic for]\u2192 MESH:D015658 \u2014[is treated by]\u2192 DB01043 \u2014[treats]\u2192 Alzheimer's disease",
-      "validation_experiments": [],
-      "novelty_score": 0.271,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": true,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "1165 PubMed articles on this drug-disease pair",
-        "5 article(s) specifically mention repurposing/repositioning",
-        "Supported by 4 independent AI pillars",
-        "Highly cited paper (846 citations): \"Efficacy of acetylcholinesterase inhibitors in Alzheimer's d...\"",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.91, 2 genetic targets)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 961,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
-        "pharmgkb": []
-      },
-      "triangulation": {
-        "n_axes_agree": 3,
-        "axes": {
-          "kg": true,
-          "docking": true,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.646,
-        "label": "silver-standard",
-        "axis_values": {
-          "kg": 0.501,
-          "docking": 0.901,
-          "pharos": 0.0,
-          "literature": 1.0
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Whole Blood"
-        ],
-        "n_genes": 7,
-        "n_expressed": 4,
-        "mean_tpm_in_tissue": 4.19,
-        "max_tpm_in_tissue": 15.73,
-        "tissue_specificity": 0.0,
-        "context_modifier": 0.914
-      },
-      "disease_entity": "Disease::MESH:D000544",
       "docking": {
-        "kcal_per_mol": -10.81,
-        "target_symbol": "APP",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
       },
-      "ensemble_prob": 0.8189,
-      "ensemble_features": {
-        "kg_score": 0.9967,
-        "degree_penalty": 0.7965,
-        "n_drug_targets": 42,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 3.5835
-      },
-      "ensemble_rank": 3,
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -3061,8 +3065,8 @@
       "admet_score": 0.4859,
       "admet_flags": "hERG=0.85",
       "primekg_score": 0.2662,
-      "dti_score": 0.4187,
-      "dti_best_target": "ETS1",
+      "dti_score": 0.4113,
+      "dti_best_target": "IL1B",
       "kg_group_score": 0.2456,
       "structural_group_score": 0.9334,
       "network_group_score": 0.5985999703407288,
@@ -3304,6 +3308,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.68)"
       ],
+      "disease_entity": "Disease::MESH:D000544",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3440,15 +3445,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.957
       },
-      "disease_entity": "Disease::MESH:D000544",
-      "docking": {
-        "kcal_per_mol": -6.83,
-        "target_symbol": "EGFR",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.8527,
+      "ensemble_prob": 0.9348,
       "ensemble_features": {
         "kg_score": 0.9986,
         "degree_penalty": 0.7483,
@@ -3457,7 +3454,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.7726
       },
-      "ensemble_rank": 2,
+      "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": -6.83,
+        "target_symbol": "EGFR",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -3495,7 +3499,7 @@
       "admet_flags": "hERG=0.75",
       "primekg_score": 0.2631,
       "dti_score": 1.0,
-      "dti_best_target": "ACSS3",
+      "dti_best_target": "AKAP6",
       "kg_group_score": 0.0817,
       "structural_group_score": 1.0,
       "network_group_score": 0.5831000208854675,
@@ -3669,6 +3673,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.80, 1 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D000544",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3795,15 +3800,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.858
       },
-      "disease_entity": "Disease::MESH:D000544",
-      "docking": {
-        "kcal_per_mol": -9.75,
-        "target_symbol": "DRD2",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.3105,
+      "ensemble_prob": 0.3202,
       "ensemble_features": {
         "kg_score": 0.9935,
         "degree_penalty": 0.7524,
@@ -3813,6 +3810,13 @@
         "transe_rank_log": 4.2485
       },
       "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": -9.75,
+        "target_symbol": "DRD2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -3826,11 +3830,11 @@
     }
   ],
   "disease_entity": "Disease::MESH:D000544",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
     "n_disease_genes": 662,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
-  },
-  "ensemble_version": "v5",
-  "ensemble_model_path": "data/models/ensemble_v5.pkl"
+  }
 }

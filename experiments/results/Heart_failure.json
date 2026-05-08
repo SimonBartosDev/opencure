@@ -1,8 +1,8 @@
 {
   "disease": "Heart failure",
   "status": "completed",
-  "timestamp": "2026-04-19T21:19:11.718687",
-  "elapsed_seconds": 832.4,
+  "timestamp": "2026-05-08T01:06:54.931342",
+  "elapsed_seconds": 141.4,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -16,7 +16,7 @@
       "drug_name": "Berberine",
       "drug_id": "DB04115",
       "disease_name": "Heart failure",
-      "combined_score": 0.5571,
+      "combined_score": 0.5575,
       "pillars_hit": 5,
       "transe_rank": 74,
       "transe_score": -10.3244,
@@ -35,15 +35,15 @@
       "admet_score": 0.5063,
       "admet_flags": "hERG=0.78",
       "primekg_score": 0.2574,
-      "dti_score": 0.4349,
-      "dti_best_target": "XBP1",
+      "dti_score": 0.4376,
+      "dti_best_target": "S100A12",
       "kg_group_score": 0.1099,
-      "structural_group_score": 0.4349,
+      "structural_group_score": 0.4376,
       "network_group_score": 0.6776999831199646,
       "txgnn_group_score": 0.66,
       "mr_group_score": 0.5442,
       "admet_multiplier": 0.9013,
-      "efficacy_score": 0.6181,
+      "efficacy_score": 0.6186,
       "groups_hit": 5,
       "direct_relations": [],
       "shared_target_count": 14,
@@ -253,8 +253,10 @@
         "Strong FAERS signal: 11 adverse event reports link drug to disease (816 total reports)",
         "Supporting paper with 90 citations",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.54)"
+        "Moderate genetic evidence supporting causality (MR score: 0.54)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D006333",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -313,14 +315,6 @@
         "tissue_specificity": 0.336,
         "context_modifier": 1.0
       },
-      "docking": {
-        "kcal_per_mol": -6.47,
-        "target_symbol": "BCHE",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D006333",
       "ensemble_prob": 0.0,
       "ensemble_features": {
         "kg_score": 0.7822,
@@ -331,6 +325,13 @@
         "transe_rank_log": 7.7402
       },
       "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": -6.47,
+        "target_symbol": "BCHE",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -366,7 +367,7 @@
       "admet_flags": "hERG=0.78",
       "primekg_score": 0.2501,
       "dti_score": 1.0,
-      "dti_best_target": "ATP2A2",
+      "dti_best_target": "WFDC2",
       "kg_group_score": 0.4022,
       "structural_group_score": 1.0,
       "network_group_score": 0.504800021648407,
@@ -539,14 +540,6 @@
       "clinical_trials_total": 4,
       "clinical_trials": [
         {
-          "nct_id": "NCT04767061",
-          "title": "Impact of Beta-blockers on Physical Function in HFpEF",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "9",
-          "url": "https://clinicaltrials.gov/study/NCT04767061"
-        },
-        {
           "nct_id": "NCT05585125",
           "title": "A Preliminary Study for INFORMED",
           "status": "ENROLLING_BY_INVITATION",
@@ -569,6 +562,14 @@
           "phase": "PHASE4",
           "enrollment": "9",
           "url": "https://clinicaltrials.gov/study/NCT04757584"
+        },
+        {
+          "nct_id": "NCT04767061",
+          "title": "Impact of Beta-blockers on Physical Function in HFpEF",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "9",
+          "url": "https://clinicaltrials.gov/study/NCT04767061"
         }
       ],
       "trial_phases": {
@@ -582,8 +583,10 @@
         "Moderate FAERS signal: 483 adverse event reports mention drug-disease co-occurrence",
         "Supporting paper with 52 citations",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.76, 2 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.76, 2 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D006333",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -733,15 +736,7 @@
         "tissue_specificity": 0.347,
         "context_modifier": 0.987
       },
-      "docking": {
-        "kcal_per_mol": -12.44,
-        "target_symbol": "ADRB2",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D006333",
-      "ensemble_prob": 0.5402,
+      "ensemble_prob": 0.5475,
       "ensemble_features": {
         "kg_score": 0.9967,
         "degree_penalty": 0.7479,
@@ -750,7 +745,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 3.5835
       },
-      "ensemble_rank": 6,
+      "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": -12.44,
+        "target_symbol": "ADRB2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -936,28 +938,12 @@
       "clinical_trials_total": 8,
       "clinical_trials": [
         {
-          "nct_id": "NCT06338306",
-          "title": "Tacrolimus and Personalized Therapy to Prevent Acute Rejection Episodes",
+          "nct_id": "NCT03386539",
+          "title": "Tacrolimus/Everolimus vs. Tacrolimus/MMF in Pediatric Heart Transplant Recipients Using the MATE Score",
           "status": "UNKNOWN",
-          "phase": "N/A",
-          "enrollment": "25",
-          "url": "https://clinicaltrials.gov/study/NCT06338306"
-        },
-        {
-          "nct_id": "NCT03099122",
-          "title": "A Study of Thymoglobuline\u00ae Induction Therapy in Adult Recipients of Donated After Cardiac Death Kidney Transplant",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "115",
-          "url": "https://clinicaltrials.gov/study/NCT03099122"
-        },
-        {
-          "nct_id": "NCT03373227",
-          "title": "Phase II Study Evaluating the Efficacy of Tacrolimus Extended Release Tablets to Twice Daily Tacrolimus Dosing Regimen",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "50",
-          "url": "https://clinicaltrials.gov/study/NCT03373227"
+          "phase": "PHASE3",
+          "enrollment": "211",
+          "url": "https://clinicaltrials.gov/study/NCT03386539"
         },
         {
           "nct_id": "NCT04380311",
@@ -968,19 +954,35 @@
           "url": "https://clinicaltrials.gov/study/NCT04380311"
         },
         {
+          "nct_id": "NCT03373227",
+          "title": "Phase II Study Evaluating the Efficacy of Tacrolimus Extended Release Tablets to Twice Daily Tacrolimus Dosing Regimen",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "50",
+          "url": "https://clinicaltrials.gov/study/NCT03373227"
+        },
+        {
           "nct_id": "NCT00369382",
           "title": "Study Of The Safety And Efficacy Of Conversion From A CNI To Sirolimus In Renally-Impaired Heart Transplant Recipients",
           "status": "COMPLETED",
           "phase": "PHASE4",
           "enrollment": "121",
           "url": "https://clinicaltrials.gov/study/NCT00369382"
+        },
+        {
+          "nct_id": "NCT03099122",
+          "title": "A Study of Thymoglobuline\u00ae Induction Therapy in Adult Recipients of Donated After Cardiac Death Kidney Transplant",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "115",
+          "url": "https://clinicaltrials.gov/study/NCT03099122"
         }
       ],
       "trial_phases": {
-        "PHASE4": 4,
-        "PHASE2": 1,
+        "PHASE3": 1,
         "NA": 1,
-        "PHASE3": 1
+        "PHASE2": 1,
+        "PHASE4": 4
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -992,6 +994,7 @@
         "Supporting paper with 23 citations",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D006333",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1140,15 +1143,7 @@
         "tissue_specificity": 0.12,
         "context_modifier": 1.012
       },
-      "docking": {
-        "kcal_per_mol": -12.01,
-        "target_symbol": "FKBP1A",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D006333",
-      "ensemble_prob": 0.0547,
+      "ensemble_prob": 0.0482,
       "ensemble_features": {
         "kg_score": 0.9845,
         "degree_penalty": 0.7479,
@@ -1157,7 +1152,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 5.1059
       },
-      "ensemble_rank": 8,
+      "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": -12.01,
+        "target_symbol": "FKBP1A",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -1352,6 +1354,7 @@
         "Highly cited paper (2076 citations): \"2021 ESC Guidelines for the diagnosis and treatment of acute...\"",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D006333",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -1453,15 +1456,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.903
       },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D006333",
-      "ensemble_prob": 0.0177,
+      "ensemble_prob": 0.0046,
       "ensemble_features": {
         "kg_score": 0.786,
         "degree_penalty": 0.8688,
@@ -1471,6 +1466,13 @@
         "transe_rank_log": 7.7227
       },
       "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1479,14 +1481,14 @@
       }
     },
     {
-      "drug_name": "Epinephrine",
-      "drug_id": "DB00668",
+      "drug_name": "Ethacrynic acid",
+      "drug_id": "DB00903",
       "disease_name": "Heart failure",
-      "combined_score": 0.5004,
+      "combined_score": 0.5077999830245972,
       "pillars_hit": 4,
-      "transe_rank": 15,
-      "transe_score": -9.8974,
-      "pykeen_score": -12.1028,
+      "transe_rank": 129,
+      "transe_score": -10.5266,
+      "pykeen_score": -12.2695,
       "pykeen_rank": 0,
       "txgnn_score": 0,
       "txgnn_rank": 0,
@@ -1494,148 +1496,128 @@
       "similar_to": "",
       "mol_emb_similarity": 0,
       "mol_emb_similar_to": "",
-      "gene_sig_score": 0.0246,
-      "gene_sig_rank": 28,
-      "proximity_score": 0.5879999995231628,
-      "proximity_distance": 1.649999976158142,
-      "admet_score": 0.7026,
-      "admet_flags": "clean",
-      "primekg_score": 0.2551,
-      "dti_score": 1.0,
-      "dti_best_target": "ATP2A2",
-      "kg_group_score": 0.273,
-      "structural_group_score": 1.0,
-      "network_group_score": 0.4514999985694885,
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.75,
+      "proximity_distance": 1.0,
+      "admet_score": 0.6505,
+      "admet_flags": "DILI=0.86",
+      "primekg_score": 0.2561,
+      "dti_score": 0.8697,
+      "dti_best_target": "HMGB1",
+      "kg_group_score": 0.1433,
+      "structural_group_score": 0.8697,
+      "network_group_score": 0.5835999846458435,
       "txgnn_group_score": 0,
-      "mr_group_score": 0.6234,
-      "admet_multiplier": 0.9405,
-      "efficacy_score": 0.5321,
+      "mr_group_score": 0.9125,
+      "admet_multiplier": 0.9301,
+      "efficacy_score": 0.5460000038146973,
       "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 20,
+      "shared_target_count": 7,
       "shared_targets": [
-        "ADRA1A",
-        "ADRA1B",
-        "ADRA1D",
-        "ADRA2A",
-        "ADRA2B",
-        "ADRA2C",
-        "ADRB1",
-        "ADRB2",
-        "ADRB3",
-        "BCHE",
-        "C20orf181",
-        "FGB",
-        "IL1A",
-        "INS",
-        "MAOA",
-        "MIR21",
-        "PLAT",
-        "RAP1A",
+        "ATP1A1",
+        "CDKN1A",
+        "GSTP1",
+        "HMOX1",
         "REN",
-        "VWF"
+        "SLC12A1",
+        "TOP2A"
       ],
-      "pubmed_total": 1053,
-      "pubmed_treatment_total": 680,
-      "pubmed_repurposing_total": 0,
+      "pubmed_total": 162,
+      "pubmed_treatment_total": 160,
+      "pubmed_repurposing_total": 1,
       "key_papers": [
         {
-          "pmid": "37547893",
-          "title": "Vasoplegia: A Review.",
-          "authors": "Ratnani I, Ochani RK, Shaikh A, et al.",
-          "journal": "Methodist DeBakey cardiovascular journal",
-          "year": "2023",
-          "abstract_snippet": "Vasoplegia is a condition characterized by persistent low systemic vascular resistance despite a normal or high cardiac index, resulting in profound and uncontrolled vasodilation. Vasoplegia may occur due to various conditions, including cardiac failure, sepsis, and post-cardiac surgery. In the card...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37547893/",
-          "total_results": 1053
+          "pmid": "38204501",
+          "title": "Diuretic Strategies in Acute Decompensated Heart Failure: A Narrative Review.",
+          "authors": "Wilson BJ, Bates D",
+          "journal": "The Canadian journal of hospital pharmacy",
+          "year": "2024",
+          "abstract_snippet": "BACKGROUND: Heart failure is a common condition with considerable associated costs, morbidity, and mortality. Patients often present to hospital with dyspnea and edema. Inadequate inpatient decongestion is an important contributor to high readmission rates. There is little evidence concerning diures...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38204501/",
+          "total_results": 162
         },
         {
-          "pmid": "2164898",
-          "title": "Adrenergic receptors: structure and function.",
-          "authors": "Graham RM",
-          "journal": "Cleveland Clinic journal of medicine",
-          "year": "1990",
-          "abstract_snippet": "Adrenergic receptors are cell surface glycoproteins that recognize and selectively bind the catecholamines, norepinephrine and epinephrine, which are released from sympathetic nerve endings and the adrenal medulla. By transducing the external catecholamine stimulus into an intracellular signal, thes...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/2164898/"
+          "pmid": "806229",
+          "title": "Magnesium deficiency and cardiac disorders.",
+          "authors": "Iseri LT, Freed J, Bures AR",
+          "journal": "The American journal of medicine",
+          "year": "1975",
+          "abstract_snippet": "Magnesium deficiency can occur in congestive heart failure, after diuresis with furoxemide, ethacrynic acid and mercurials, and with digitalis intoxication, diabetic acidosis, acute and chronic alcoholism, delerium tremens, cirrhosis, malabsorption syndromes, protracted postoperative cases, open hea...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/806229/"
         },
         {
-          "pmid": "12461324",
-          "title": "Angioedema in heart failure: occurrence with ACE inhibitors and safety of angiotensin receptor blocker therapy.",
-          "authors": "Sica DA, Black HR",
-          "journal": "Congestive heart failure (Greenwich, Conn.)",
-          "year": "2002",
-          "abstract_snippet": "Angioedema is a well-known side effect of treatment with an angiotensin-converting enzyme (ACE) inhibitor and one that we have been willing to accept in view of the incidence of the problem and the clear benefits of this class of agents in numerous clinical situations. Angioedema is also seen with a...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/12461324/"
-        },
-        {
-          "pmid": "2857062",
-          "title": "Neurohumoral mechanisms involved in congestive heart failure.",
-          "authors": "Francis GS",
-          "journal": "The American journal of cardiology",
-          "year": "1985",
-          "abstract_snippet": "Congestive heart failure (CHF) promotes an array of biologic changes that are largely designed to compensate for reduced flow. These include activation of the sympathetic nervous system and the renin-angiotensin system, as well as the release of arginine vasopressin. The ultimate expression of these...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/2857062/"
-        },
-        {
-          "pmid": "15513302",
-          "title": "Cardiac cachexia.",
-          "authors": "Anker SD, Steinborn W, Strassburg S",
-          "journal": "Annals of medicine",
-          "year": "2004",
-          "abstract_snippet": "Chronic heart failure (CHF) remains an important and increasing public health care problem. It is a complex syndrome affecting many body systems. Body wasting (i.e., cardiac cachexia) has long been recognised as a serious complication of CHF. Cardiac cachexia is associated with poor prognosis, indep...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/15513302/"
+          "pmid": "19142155",
+          "title": "The management of acute heart failure and diuretic therapy.",
+          "authors": "Somberg JC, Molnar J",
+          "journal": "American journal of therapeutics",
+          "year": "2009",
+          "abstract_snippet": "One million patients are hospitalized each year with acute decompensated heart failure, and up to 20% of these patients are rehospitalized within a month after the acute presentation. Acute heart failure (AHF) accounts for 50,000 deaths annually and is the most frequent reason for hospital admission...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19142155/"
         }
       ],
-      "repurposing_papers": [],
+      "repurposing_papers": [
+        {
+          "pmid": "29763317",
+          "title": "Chemoproteomic Profiling Reveals Ethacrynic Acid Targets Adenine Nucleotide Translocases to Impair Mitochondrial Function.",
+          "authors": "Ye Z, Zhang X, Zhu Y, et al.",
+          "journal": "Molecular pharmaceutics",
+          "year": "2018",
+          "abstract_snippet": "Ethacrynic acid (EA) is a diuretic drug that is widely used to treat high-blood pressure and swelling caused by congestive heart failure or kidney failure. It acts through noncovalent inhibition of the Na",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29763317/",
+          "total_results": 1
+        }
+      ],
       "semantic_scholar_papers": [
         {
-          "title": "OpiCa1-PEG-PLGA nanomicelles antagonize acute heart failure induced by the cocktail of epinephrine and caffeine",
+          "title": "Diuretic Strategies in Acute Decompensated Heart Failure: A Narrative Review.",
           "year": 2023,
-          "citations": 2,
-          "url": "https://www.semanticscholar.org/paper/1d58304ea56c8e3ae109290771a5a3c248ae2144",
-          "authors": "Jun Li, Fei Wang, Xinyan Liu"
+          "citations": 6,
+          "url": "https://www.semanticscholar.org/paper/9273b5ca8af5e0198dbfcb0eed3ee75500155a0a",
+          "authors": "B. J. Wilson, Duane E Bates"
         },
         {
-          "title": "Canonical or non\u2010canonical, all aspects of G protein\u2010coupled receptor kinase 2 in heart failure",
-          "year": 2025,
-          "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/ea3c0910ed2c730a782fa2191df1cfa068d01e3b",
-          "authors": "Abdullah Kaplan, Lana El-Samadi, Rana Zahreddine"
+          "title": "Hemodynamic effects of diuresis by ethacrynic acid in normal subjects and in patients with congestive heart failure.",
+          "year": 1968,
+          "citations": 27,
+          "url": "https://www.semanticscholar.org/paper/e0ce8b6d5f3fe50d536786013198113cce6b4086",
+          "authors": "A. Ram\u00edrez, W. Abelmann"
         },
         {
-          "title": "Effects of Renal Denervation on Gap Junction in High-Pacing-Induced Heart Failure Dogs",
-          "year": 2024,
-          "citations": 2,
-          "url": "https://www.semanticscholar.org/paper/9f3d61fb836dea7592182fbb22942ec7ef136869",
-          "authors": "Xiaoyan Liang, S. Shang, Zechen Bai"
+          "title": "The use of ethacrynic acid in infants and children with congestive heart failure.",
+          "year": 1968,
+          "citations": 13,
+          "url": "https://www.semanticscholar.org/paper/c42561974541b526a93ae5eb75f43e0f19458968",
+          "authors": "A. Sparrow, D. Friedberg, A. Nadas"
         },
         {
-          "title": "\u03b11-Adrenergic Receptors: Insights into Potential Therapeutic Opportunities for COVID-19, Heart Failure, and Alzheimer\u2019s Disease",
-          "year": 2023,
-          "citations": 19,
-          "url": "https://www.semanticscholar.org/paper/7bf17ed9b667c617a58ed37cd417ac8b103f9922",
-          "authors": "D. Perez"
+          "title": "Diuretic Action of Ethacrynic Acid in Congestive Heart Failure",
+          "year": 1963,
+          "citations": 24,
+          "url": "https://www.semanticscholar.org/paper/c6931eefa3e3a93e3985b8ed2f8e3ffbefb615d2",
+          "authors": "D. Daley, B. Evans"
         },
         {
-          "title": "Left Ventricular Noncompaction Combined With Epinephrine-Secreted Pheochromocytoma Inducing Heart Failure.",
-          "year": 2016,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/3b52d23b1d9e889778897c7893a97a4552413baa",
-          "authors": "Ling Han, Jingguang Luo, Xin Chen"
+          "title": "Ethacrynic Acid Can Be Effective for Refractory Congestive Heart Failure and Ascites",
+          "year": 2003,
+          "citations": 8,
+          "url": "https://www.semanticscholar.org/paper/758943255398c59d67fa4fb1733ca2a5f37db89b",
+          "authors": "J. Alisky, Thomas F Tuttle"
         }
       ],
       "most_cited_paper": {
-        "title": "Repurposing Cardiac Glycosides: Drugs for Heart Failure Surmounting Viruses",
-        "year": 2021,
-        "citations": 23,
-        "url": "https://www.semanticscholar.org/paper/e817274e576da2b4eba26ff01aefe614e3995a6c",
-        "authors": "Jan \u0160kubn\u00edk, J. Bej\u010dek, V. Pavl\u00ed\u010dkov\u00e1"
+        "title": "Hemodynamic effects of diuresis by ethacrynic acid in normal subjects and in patients with congestive heart failure.",
+        "year": 1968,
+        "citations": 27,
+        "url": "https://www.semanticscholar.org/paper/e0ce8b6d5f3fe50d536786013198113cce6b4086",
+        "authors": "A. Ram\u00edrez, W. Abelmann"
       },
-      "max_citations": 23,
-      "faers_signal": "moderate",
-      "faers_total_reports": 46064,
-      "faers_cooccurrences": 394,
-      "faers_interpretation": "394 FAERS reports mention both Epinephrine and Heart failure-related terms. Limited but notable real-world signal.",
+      "max_citations": 27,
+      "faers_signal": "strong",
+      "faers_total_reports": 321,
+      "faers_cooccurrences": 13,
+      "faers_interpretation": "13 FAERS reports mention both Ethacrynic acid and Heart failure-related terms (4.0% of all Ethacrynic acid reports). This suggests real-world clinical association.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -1645,8 +1627,8 @@
         "NAFRONYL OXALATE (1.446)",
         "pelitinib (1.441)"
       ],
-      "signature_interpretation": "Epinephrine was not found among the top 44 drugs that reverse the Heart failure gene signature. Top reversers: cefpodoxime proxetil (1.507), \"\"\"4-morpholino-N-phenyl-6-(pyrrolidin-1-yl)-1,3,5-triazin-2-amine hw-gc-act03\"\"\" (1.506), BYL719 (1.451)",
-      "ai_hypothesis": "of its anti-inflammatory and anti-apoptotic properties.",
+      "signature_interpretation": "Ethacrynic acid was not found among the top 44 drugs that reverse the Heart failure gene signature. Top reversers: cefpodoxime proxetil (1.507), \"\"\"4-morpholino-N-phenyl-6-(pyrrolidin-1-yl)-1,3,5-triazin-2-amine hw-gc-act03\"\"\" (1.506), BYL719 (1.451)",
+      "ai_hypothesis": "of its diuretic and natriuretic properties.",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
@@ -1655,8 +1637,62 @@
         },
         {
           "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
+          "confidence": 0.3,
+          "positive_signals": 0,
+          "negative_signals": 1,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "magnesium deficiency",
+              "entity_group": "Medication",
+              "score": 0.8560000061988831
+            },
+            {
+              "entity": "cong",
+              "entity_group": "Detailed_description",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "fur",
+              "entity_group": "Medication",
+              "score": 1.0
+            },
+            {
+              "entity": "##ox",
+              "entity_group": "Medication",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "##emi",
+              "entity_group": "Medication",
+              "score": 0.8640000224113464
+            },
+            {
+              "entity": "ethacrynic acid",
+              "entity_group": "Medication",
+              "score": 0.9769999980926514
+            },
+            {
+              "entity": "mer",
+              "entity_group": "Medication",
+              "score": 0.7860000133514404
+            },
+            {
+              "entity": "digital",
+              "entity_group": "Disease_disorder",
+              "score": 0.9210000038146973
+            },
+            {
+              "entity": "dia",
+              "entity_group": "History",
+              "score": 0.8579999804496765
+            },
+            {
+              "entity": "acute",
+              "entity_group": "History",
+              "score": 0.8190000057220459
+            }
+          ]
         },
         {
           "relation_type": "unclear",
@@ -1665,78 +1701,32 @@
         }
       ],
       "has_failed_trial": false,
-      "failed_trial_phase": "Unknown",
-      "failed_trial_count": 1,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.6234,
-      "mr_genetic_targets": 3,
-      "mechanistic_hypothesis": "Epinephrine \u2014[is a therapeutic for]\u2192 Heart failure",
-      "kg_paths_text": "\u2022 Epinephrine \u2014[is a therapeutic for]\u2192 Heart failure\n\u2022 Epinephrine \u2014[targets]\u2192 gene-146 \u2014[is a target of]\u2192 DB01136 \u2014[treats]\u2192 Heart failure\n\u2022 Epinephrine \u2014[targets]\u2192 gene-146 \u2014[is a target of]\u2192 DB01136 \u2014[treats]\u2192 Heart failure",
+      "mr_score": 0.9125,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Ethacrynic acid \u2014[is a therapeutic for]\u2192 Heart failure",
+      "kg_paths_text": "\u2022 Ethacrynic acid \u2014[is a therapeutic for]\u2192 Heart failure\n\u2022 Ethacrynic acid \u2014[downregulates]\u2192 gene-5111 \u2014[is a target of]\u2192 DB00945 \u2014[is a therapeutic for]\u2192 Heart failure\n\u2022 Ethacrynic acid \u2014[downregulates]\u2192 gene-5111 \u2014[is a target of]\u2192 DB00279 \u2014[is a therapeutic for]\u2192 Heart failure",
       "validation_experiments": [],
-      "novelty_score": 0.12,
-      "novelty_level": "ESTABLISHED",
+      "novelty_score": 0.3959999978542328,
+      "novelty_level": "KNOWN",
       "is_known_treatment": true,
-      "clinical_trials_total": 10,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT04682483",
-          "title": "Cardiogenic Shock Working Group Registry",
-          "status": "RECRUITING",
-          "phase": "N/A",
-          "enrollment": "5000",
-          "url": "https://clinicaltrials.gov/study/NCT04682483"
-        },
-        {
-          "nct_id": "NCT02617602",
-          "title": "Goal Directed Hemodynamic Management of Acute Heart Failure After Cardiac Surgery in Children",
-          "status": "UNKNOWN",
-          "phase": "PHASE3",
-          "enrollment": "40",
-          "url": "https://clinicaltrials.gov/study/NCT02617602"
-        },
-        {
-          "nct_id": "NCT02161445",
-          "title": "Systolic Time Intervals in the Diagnosis of Heart Failure in Emergency Departement",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "530",
-          "url": "https://clinicaltrials.gov/study/NCT02161445"
-        },
-        {
-          "nct_id": "NCT02228083",
-          "title": "Dental Anesthesia in Heart Failure Patients",
-          "status": "UNKNOWN",
-          "phase": "NA",
-          "enrollment": "70",
-          "url": "https://clinicaltrials.gov/study/NCT02228083"
-        },
-        {
-          "nct_id": "NCT07281014",
-          "title": "Unmitigated Aldosterone Signaling During Standard Clinical MRA Dosing",
-          "status": "RECRUITING",
-          "phase": "PHASE4",
-          "enrollment": "20",
-          "url": "https://clinicaltrials.gov/study/NCT07281014"
-        }
-      ],
-      "trial_phases": {
-        "PHASE3": 3,
-        "NA": 1,
-        "PHASE4": 3,
-        "PHASE2": 1
-      },
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
       "confidence": "HIGH",
       "confidence_reasons": [
-        "10 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
-        "1053 PubMed articles on this drug-disease pair",
+        "162 PubMed articles on this drug-disease pair",
+        "1 article(s) specifically mention repurposing/repositioning",
         "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 394 adverse event reports mention drug-disease co-occurrence",
-        "Supporting paper with 23 citations",
+        "Strong FAERS signal: 13 adverse event reports link drug to disease (321 total reports)",
+        "Supporting paper with 27 citations",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.62)",
+        "Strong causal genetic evidence (MR score: 0.91, 1 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D006333",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1747,32 +1737,22 @@
         "stage": 1
       },
       "ddi_warnings": {
-        "n_interactions": 1250,
+        "n_interactions": 1273,
         "has_warnings": true,
         "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
           {
             "drug_id": "DB00945",
             "drug_name": "Acetylsalicylic acid",
             "severity": "high"
           },
           {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
             "drug_id": "DB00564",
             "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
             "severity": "high"
           },
           {
@@ -1791,13 +1771,23 @@
             "severity": "high"
           },
           {
-            "drug_id": "DB00227",
-            "drug_name": "Lovastatin",
+            "drug_id": "DB00331",
+            "drug_name": "Metformin",
             "severity": "high"
           },
           {
-            "drug_id": "DB00331",
-            "drug_name": "Metformin",
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00959",
+            "drug_name": "Methylprednisolone",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00213",
+            "drug_name": "Pantoprazole",
             "severity": "high"
           }
         ]
@@ -1817,13 +1807,13 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.628,
+        "triangulation_score": 0.555,
         "label": "silver-standard",
         "axis_values": {
-          "kg": 0.5,
-          "docking": 0.842,
+          "kg": 0.508,
+          "docking": 0.618,
           "pharos": 0.0,
-          "literature": 1.0
+          "literature": 0.96
         }
       },
       "tissue_context": {
@@ -1831,40 +1821,42 @@
           "Heart - Left Ventricle",
           "Heart - Atrial Appendage"
         ],
-        "n_genes": 20,
-        "n_expressed": 12,
-        "mean_tpm_in_tissue": 9.12,
-        "max_tpm_in_tissue": 81.78,
-        "tissue_specificity": 0.065,
-        "context_modifier": 0.948
+        "n_genes": 7,
+        "n_expressed": 4,
+        "mean_tpm_in_tissue": 60.81,
+        "max_tpm_in_tissue": 248.92,
+        "tissue_specificity": 0.117,
+        "context_modifier": 1.025
       },
+      "ensemble_prob": 0.7951,
+      "ensemble_features": {
+        "kg_score": 0.9973,
+        "degree_penalty": 0.7781,
+        "n_drug_targets": 15,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 3.3673
+      },
+      "ensemble_rank": 3,
       "docking": {
-        "kcal_per_mol": -10.1,
-        "target_symbol": "ADRB3",
+        "kcal_per_mol": -7.42,
+        "target_symbol": "GSTP1",
         "source": "chembl_bioactivity_proxy",
         "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
         "hit": true
       },
-      "disease_entity": "Disease::MESH:D006333",
-      "ensemble_prob": 0.8808,
-      "ensemble_features": {
-        "kg_score": 0.9979,
-        "degree_penalty": 0.7678,
-        "n_drug_targets": 16,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 3.1355
-      },
-      "ensemble_rank": 2,
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
-          "CATECHOL"
+          "ACRYLATE",
+          "HALO",
+          "MICHAEL"
         ],
-        "n_alerts": 2,
+        "n_alerts": 3,
         "alert_names": [
-          "catechol_A(92)",
-          "catechol"
+          "Michael_acceptor_1",
+          "acrylate",
+          "halo_acrylate"
         ]
       }
     },
@@ -1872,7 +1864,7 @@
       "drug_name": "Metformin",
       "drug_id": "DB00331",
       "disease_name": "Heart failure",
-      "combined_score": 0.4965,
+      "combined_score": 0.5011,
       "pillars_hit": 4,
       "transe_rank": 24,
       "transe_score": -10.007,
@@ -1891,15 +1883,15 @@
       "admet_score": 0.9006,
       "admet_flags": "Skin_Reaction=0.84",
       "primekg_score": 0.2607,
-      "dti_score": 0.5679,
-      "dti_best_target": "CSRP3",
+      "dti_score": 0.5939,
+      "dti_best_target": "HMGB1",
       "kg_group_score": 0.3387,
-      "structural_group_score": 0.5679,
+      "structural_group_score": 0.5939,
       "network_group_score": 0.5343999862670898,
       "txgnn_group_score": 0,
       "mr_group_score": 0.7519,
       "admet_multiplier": 0.9801,
-      "efficacy_score": 0.5066,
+      "efficacy_score": 0.5112,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 72,
@@ -2112,51 +2104,50 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT01217307",
-          "title": "Metformin to Reduce Heart Failure After Myocardial Infarction",
-          "status": "COMPLETED",
-          "phase": "PHASE2, PHASE3",
-          "enrollment": "380",
-          "url": "https://clinicaltrials.gov/study/NCT01217307"
-        },
-        {
-          "nct_id": "NCT01573949",
-          "title": "A Pilot Study: Metformin Therapy in Heart Failure Patients With Early Diabetes or at High Risk of Developing Diabetes (Pre-Diabetes)",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "7",
-          "url": "https://clinicaltrials.gov/study/NCT01573949"
-        },
-        {
-          "nct_id": "NCT06080802",
-          "title": "The Effect of Addition of Metformin to SGLT2 In Diabetic Patients With Heart Failure With Preserved Ejection Fraction",
+          "nct_id": "NCT02797340",
+          "title": "Metformin Pharmacokinetics in Patients With Chronic and Acute Heart Failure",
           "status": "UNKNOWN",
-          "phase": "PHASE2, PHASE3",
-          "enrollment": "80",
-          "url": "https://clinicaltrials.gov/study/NCT06080802"
+          "phase": "PHASE4",
+          "enrollment": "110",
+          "url": "https://clinicaltrials.gov/study/NCT02797340"
         },
         {
-          "nct_id": "NCT03331861",
-          "title": "Metformin in Heart Failure Without Diabetes",
-          "status": "TERMINATED",
-          "phase": "PHASE2",
-          "enrollment": "6",
-          "url": "https://clinicaltrials.gov/study/NCT03331861"
-        },
-        {
-          "nct_id": "NCT05177588",
-          "title": "Efficacy of Metformin as add-on Therapy in Non-Diabetic Heart Failure Patients",
+          "nct_id": "NCT03514108",
+          "title": "DANHEART (H-HeFT and Met-HeFT)",
           "status": "COMPLETED",
           "phase": "PHASE4",
-          "enrollment": "70",
-          "url": "https://clinicaltrials.gov/study/NCT05177588"
+          "enrollment": "1100",
+          "url": "https://clinicaltrials.gov/study/NCT03514108"
+        },
+        {
+          "nct_id": "NCT05093959",
+          "title": "Metformin for Older Patients With Heart Failure With Preserved Ejection Fraction",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "86",
+          "url": "https://clinicaltrials.gov/study/NCT05093959"
+        },
+        {
+          "nct_id": "NCT00473876",
+          "title": "Metformin in Insulin Resistant Left Ventricular (LV) Dysfunction (TAYSIDE Trial)",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "62",
+          "url": "https://clinicaltrials.gov/study/NCT00473876"
+        },
+        {
+          "nct_id": "NCT03629340",
+          "title": "Metformin for Pulmonary Hypertension HFpEF",
+          "status": "RECRUITING",
+          "phase": "PHASE2",
+          "enrollment": "10",
+          "url": "https://clinicaltrials.gov/study/NCT03629340"
         }
       ],
       "trial_phases": {
+        "PHASE4": 4,
         "PHASE2": 4,
-        "PHASE3": 4,
-        "NA": 1,
-        "PHASE4": 3
+        "PHASE3": 2
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -2171,6 +2162,7 @@
         "Strong causal genetic evidence (MR score: 0.75, 10 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D006333",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2298,10 +2290,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.374,
+        "triangulation_score": 0.375,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.496,
+          "kg": 0.501,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 1.0
@@ -2319,15 +2311,7 @@
         "tissue_specificity": 0.753,
         "context_modifier": 1.12
       },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D006333",
-      "ensemble_prob": 0.5951,
+      "ensemble_prob": 0.4287,
       "ensemble_features": {
         "kg_score": 0.9951,
         "degree_penalty": 0.7634,
@@ -2336,7 +2320,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 3.9703
       },
-      "ensemble_rank": 5,
+      "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -2350,14 +2341,14 @@
       }
     },
     {
-      "drug_name": "Ethacrynic acid",
-      "drug_id": "DB00903",
+      "drug_name": "Epinephrine",
+      "drug_id": "DB00668",
       "disease_name": "Heart failure",
-      "combined_score": 0.4936999976634979,
+      "combined_score": 0.5004,
       "pillars_hit": 4,
-      "transe_rank": 129,
-      "transe_score": -10.5266,
-      "pykeen_score": -12.2695,
+      "transe_rank": 15,
+      "transe_score": -9.8974,
+      "pykeen_score": -12.1028,
       "pykeen_rank": 0,
       "txgnn_score": 0,
       "txgnn_rank": 0,
@@ -2365,128 +2356,148 @@
       "similar_to": "",
       "mol_emb_similarity": 0,
       "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.75,
-      "proximity_distance": 1.0,
-      "admet_score": 0.6505,
-      "admet_flags": "DILI=0.86",
-      "primekg_score": 0.2561,
-      "dti_score": 0.7851,
-      "dti_best_target": "XBP1",
-      "kg_group_score": 0.1433,
-      "structural_group_score": 0.7851,
-      "network_group_score": 0.5835999846458435,
+      "gene_sig_score": 0.0246,
+      "gene_sig_rank": 28,
+      "proximity_score": 0.5879999995231628,
+      "proximity_distance": 1.649999976158142,
+      "admet_score": 0.7026,
+      "admet_flags": "clean",
+      "primekg_score": 0.2551,
+      "dti_score": 1.0,
+      "dti_best_target": "WFDC2",
+      "kg_group_score": 0.273,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.4514999985694885,
       "txgnn_group_score": 0,
-      "mr_group_score": 0.9125,
-      "admet_multiplier": 0.9301,
-      "efficacy_score": 0.5307999849319458,
+      "mr_group_score": 0.6234,
+      "admet_multiplier": 0.9405,
+      "efficacy_score": 0.5321,
       "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 7,
+      "shared_target_count": 20,
       "shared_targets": [
-        "ATP1A1",
-        "CDKN1A",
-        "GSTP1",
-        "HMOX1",
+        "ADRA1A",
+        "ADRA1B",
+        "ADRA1D",
+        "ADRA2A",
+        "ADRA2B",
+        "ADRA2C",
+        "ADRB1",
+        "ADRB2",
+        "ADRB3",
+        "BCHE",
+        "C20orf181",
+        "FGB",
+        "IL1A",
+        "INS",
+        "MAOA",
+        "MIR21",
+        "PLAT",
+        "RAP1A",
         "REN",
-        "SLC12A1",
-        "TOP2A"
+        "VWF"
       ],
-      "pubmed_total": 162,
-      "pubmed_treatment_total": 160,
-      "pubmed_repurposing_total": 1,
+      "pubmed_total": 1053,
+      "pubmed_treatment_total": 680,
+      "pubmed_repurposing_total": 0,
       "key_papers": [
         {
-          "pmid": "38204501",
-          "title": "Diuretic Strategies in Acute Decompensated Heart Failure: A Narrative Review.",
-          "authors": "Wilson BJ, Bates D",
-          "journal": "The Canadian journal of hospital pharmacy",
-          "year": "2024",
-          "abstract_snippet": "BACKGROUND: Heart failure is a common condition with considerable associated costs, morbidity, and mortality. Patients often present to hospital with dyspnea and edema. Inadequate inpatient decongestion is an important contributor to high readmission rates. There is little evidence concerning diures...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38204501/",
-          "total_results": 162
+          "pmid": "37547893",
+          "title": "Vasoplegia: A Review.",
+          "authors": "Ratnani I, Ochani RK, Shaikh A, et al.",
+          "journal": "Methodist DeBakey cardiovascular journal",
+          "year": "2023",
+          "abstract_snippet": "Vasoplegia is a condition characterized by persistent low systemic vascular resistance despite a normal or high cardiac index, resulting in profound and uncontrolled vasodilation. Vasoplegia may occur due to various conditions, including cardiac failure, sepsis, and post-cardiac surgery. In the card...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37547893/",
+          "total_results": 1053
         },
         {
-          "pmid": "806229",
-          "title": "Magnesium deficiency and cardiac disorders.",
-          "authors": "Iseri LT, Freed J, Bures AR",
-          "journal": "The American journal of medicine",
-          "year": "1975",
-          "abstract_snippet": "Magnesium deficiency can occur in congestive heart failure, after diuresis with furoxemide, ethacrynic acid and mercurials, and with digitalis intoxication, diabetic acidosis, acute and chronic alcoholism, delerium tremens, cirrhosis, malabsorption syndromes, protracted postoperative cases, open hea...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/806229/"
+          "pmid": "2164898",
+          "title": "Adrenergic receptors: structure and function.",
+          "authors": "Graham RM",
+          "journal": "Cleveland Clinic journal of medicine",
+          "year": "1990",
+          "abstract_snippet": "Adrenergic receptors are cell surface glycoproteins that recognize and selectively bind the catecholamines, norepinephrine and epinephrine, which are released from sympathetic nerve endings and the adrenal medulla. By transducing the external catecholamine stimulus into an intracellular signal, thes...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/2164898/"
         },
         {
-          "pmid": "19142155",
-          "title": "The management of acute heart failure and diuretic therapy.",
-          "authors": "Somberg JC, Molnar J",
-          "journal": "American journal of therapeutics",
-          "year": "2009",
-          "abstract_snippet": "One million patients are hospitalized each year with acute decompensated heart failure, and up to 20% of these patients are rehospitalized within a month after the acute presentation. Acute heart failure (AHF) accounts for 50,000 deaths annually and is the most frequent reason for hospital admission...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/19142155/"
-        }
-      ],
-      "repurposing_papers": [
+          "pmid": "12461324",
+          "title": "Angioedema in heart failure: occurrence with ACE inhibitors and safety of angiotensin receptor blocker therapy.",
+          "authors": "Sica DA, Black HR",
+          "journal": "Congestive heart failure (Greenwich, Conn.)",
+          "year": "2002",
+          "abstract_snippet": "Angioedema is a well-known side effect of treatment with an angiotensin-converting enzyme (ACE) inhibitor and one that we have been willing to accept in view of the incidence of the problem and the clear benefits of this class of agents in numerous clinical situations. Angioedema is also seen with a...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/12461324/"
+        },
         {
-          "pmid": "29763317",
-          "title": "Chemoproteomic Profiling Reveals Ethacrynic Acid Targets Adenine Nucleotide Translocases to Impair Mitochondrial Function.",
-          "authors": "Ye Z, Zhang X, Zhu Y, et al.",
-          "journal": "Molecular pharmaceutics",
-          "year": "2018",
-          "abstract_snippet": "Ethacrynic acid (EA) is a diuretic drug that is widely used to treat high-blood pressure and swelling caused by congestive heart failure or kidney failure. It acts through noncovalent inhibition of the Na",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29763317/",
-          "total_results": 1
+          "pmid": "2857062",
+          "title": "Neurohumoral mechanisms involved in congestive heart failure.",
+          "authors": "Francis GS",
+          "journal": "The American journal of cardiology",
+          "year": "1985",
+          "abstract_snippet": "Congestive heart failure (CHF) promotes an array of biologic changes that are largely designed to compensate for reduced flow. These include activation of the sympathetic nervous system and the renin-angiotensin system, as well as the release of arginine vasopressin. The ultimate expression of these...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/2857062/"
+        },
+        {
+          "pmid": "15513302",
+          "title": "Cardiac cachexia.",
+          "authors": "Anker SD, Steinborn W, Strassburg S",
+          "journal": "Annals of medicine",
+          "year": "2004",
+          "abstract_snippet": "Chronic heart failure (CHF) remains an important and increasing public health care problem. It is a complex syndrome affecting many body systems. Body wasting (i.e., cardiac cachexia) has long been recognised as a serious complication of CHF. Cardiac cachexia is associated with poor prognosis, indep...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15513302/"
         }
       ],
+      "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "Diuretic Strategies in Acute Decompensated Heart Failure: A Narrative Review.",
+          "title": "OpiCa1-PEG-PLGA nanomicelles antagonize acute heart failure induced by the cocktail of epinephrine and caffeine",
           "year": 2023,
-          "citations": 6,
-          "url": "https://www.semanticscholar.org/paper/9273b5ca8af5e0198dbfcb0eed3ee75500155a0a",
-          "authors": "B. J. Wilson, Duane E Bates"
+          "citations": 2,
+          "url": "https://www.semanticscholar.org/paper/1d58304ea56c8e3ae109290771a5a3c248ae2144",
+          "authors": "Jun Li, Fei Wang, Xinyan Liu"
         },
         {
-          "title": "Hemodynamic effects of diuresis by ethacrynic acid in normal subjects and in patients with congestive heart failure.",
-          "year": 1968,
-          "citations": 27,
-          "url": "https://www.semanticscholar.org/paper/e0ce8b6d5f3fe50d536786013198113cce6b4086",
-          "authors": "A. Ram\u00edrez, W. Abelmann"
+          "title": "Canonical or non\u2010canonical, all aspects of G protein\u2010coupled receptor kinase 2 in heart failure",
+          "year": 2025,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/ea3c0910ed2c730a782fa2191df1cfa068d01e3b",
+          "authors": "Abdullah Kaplan, Lana El-Samadi, Rana Zahreddine"
         },
         {
-          "title": "The use of ethacrynic acid in infants and children with congestive heart failure.",
-          "year": 1968,
-          "citations": 13,
-          "url": "https://www.semanticscholar.org/paper/c42561974541b526a93ae5eb75f43e0f19458968",
-          "authors": "A. Sparrow, D. Friedberg, A. Nadas"
+          "title": "Effects of Renal Denervation on Gap Junction in High-Pacing-Induced Heart Failure Dogs",
+          "year": 2024,
+          "citations": 2,
+          "url": "https://www.semanticscholar.org/paper/9f3d61fb836dea7592182fbb22942ec7ef136869",
+          "authors": "Xiaoyan Liang, S. Shang, Zechen Bai"
         },
         {
-          "title": "Diuretic Action of Ethacrynic Acid in Congestive Heart Failure",
-          "year": 1963,
-          "citations": 24,
-          "url": "https://www.semanticscholar.org/paper/c6931eefa3e3a93e3985b8ed2f8e3ffbefb615d2",
-          "authors": "D. Daley, B. Evans"
+          "title": "\u03b11-Adrenergic Receptors: Insights into Potential Therapeutic Opportunities for COVID-19, Heart Failure, and Alzheimer\u2019s Disease",
+          "year": 2023,
+          "citations": 19,
+          "url": "https://www.semanticscholar.org/paper/7bf17ed9b667c617a58ed37cd417ac8b103f9922",
+          "authors": "D. Perez"
         },
         {
-          "title": "Ethacrynic Acid Can Be Effective for Refractory Congestive Heart Failure and Ascites",
-          "year": 2003,
-          "citations": 8,
-          "url": "https://www.semanticscholar.org/paper/758943255398c59d67fa4fb1733ca2a5f37db89b",
-          "authors": "J. Alisky, Thomas F Tuttle"
+          "title": "Left Ventricular Noncompaction Combined With Epinephrine-Secreted Pheochromocytoma Inducing Heart Failure.",
+          "year": 2016,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/3b52d23b1d9e889778897c7893a97a4552413baa",
+          "authors": "Ling Han, Jingguang Luo, Xin Chen"
         }
       ],
       "most_cited_paper": {
-        "title": "Hemodynamic effects of diuresis by ethacrynic acid in normal subjects and in patients with congestive heart failure.",
-        "year": 1968,
-        "citations": 27,
-        "url": "https://www.semanticscholar.org/paper/e0ce8b6d5f3fe50d536786013198113cce6b4086",
-        "authors": "A. Ram\u00edrez, W. Abelmann"
+        "title": "Repurposing Cardiac Glycosides: Drugs for Heart Failure Surmounting Viruses",
+        "year": 2021,
+        "citations": 23,
+        "url": "https://www.semanticscholar.org/paper/e817274e576da2b4eba26ff01aefe614e3995a6c",
+        "authors": "Jan \u0160kubn\u00edk, J. Bej\u010dek, V. Pavl\u00ed\u010dkov\u00e1"
       },
-      "max_citations": 27,
-      "faers_signal": "strong",
-      "faers_total_reports": 321,
-      "faers_cooccurrences": 13,
-      "faers_interpretation": "13 FAERS reports mention both Ethacrynic acid and Heart failure-related terms (4.0% of all Ethacrynic acid reports). This suggests real-world clinical association.",
+      "max_citations": 23,
+      "faers_signal": "moderate",
+      "faers_total_reports": 46064,
+      "faers_cooccurrences": 394,
+      "faers_interpretation": "394 FAERS reports mention both Epinephrine and Heart failure-related terms. Limited but notable real-world signal.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -2496,8 +2507,8 @@
         "NAFRONYL OXALATE (1.446)",
         "pelitinib (1.441)"
       ],
-      "signature_interpretation": "Ethacrynic acid was not found among the top 44 drugs that reverse the Heart failure gene signature. Top reversers: cefpodoxime proxetil (1.507), \"\"\"4-morpholino-N-phenyl-6-(pyrrolidin-1-yl)-1,3,5-triazin-2-amine hw-gc-act03\"\"\" (1.506), BYL719 (1.451)",
-      "ai_hypothesis": "of its diuretic and natriuretic properties.",
+      "signature_interpretation": "Epinephrine was not found among the top 44 drugs that reverse the Heart failure gene signature. Top reversers: cefpodoxime proxetil (1.507), \"\"\"4-morpholino-N-phenyl-6-(pyrrolidin-1-yl)-1,3,5-triazin-2-amine hw-gc-act03\"\"\" (1.506), BYL719 (1.451)",
+      "ai_hypothesis": "of its anti-inflammatory and anti-apoptotic properties.",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
@@ -2506,62 +2517,8 @@
         },
         {
           "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 0,
-          "negative_signals": 1,
-          "mechanism_signals": 0,
-          "extracted_entities": [
-            {
-              "entity": "magnesium deficiency",
-              "entity_group": "Medication",
-              "score": 0.8560000061988831
-            },
-            {
-              "entity": "cong",
-              "entity_group": "Detailed_description",
-              "score": 0.9990000128746033
-            },
-            {
-              "entity": "fur",
-              "entity_group": "Medication",
-              "score": 1.0
-            },
-            {
-              "entity": "##ox",
-              "entity_group": "Medication",
-              "score": 0.9990000128746033
-            },
-            {
-              "entity": "##emi",
-              "entity_group": "Medication",
-              "score": 0.8640000224113464
-            },
-            {
-              "entity": "ethacrynic acid",
-              "entity_group": "Medication",
-              "score": 0.9769999980926514
-            },
-            {
-              "entity": "mer",
-              "entity_group": "Medication",
-              "score": 0.7860000133514404
-            },
-            {
-              "entity": "digital",
-              "entity_group": "Disease_disorder",
-              "score": 0.9210000038146973
-            },
-            {
-              "entity": "dia",
-              "entity_group": "History",
-              "score": 0.8579999804496765
-            },
-            {
-              "entity": "acute",
-              "entity_group": "History",
-              "score": 0.8190000057220459
-            }
-          ]
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
         },
         {
           "relation_type": "unclear",
@@ -2570,30 +2527,79 @@
         }
       ],
       "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
+      "failed_trial_phase": "Unknown",
+      "failed_trial_count": 1,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.9125,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "Ethacrynic acid \u2014[is a therapeutic for]\u2192 Heart failure",
-      "kg_paths_text": "\u2022 Ethacrynic acid \u2014[is a therapeutic for]\u2192 Heart failure\n\u2022 Ethacrynic acid \u2014[downregulates]\u2192 gene-5111 \u2014[is a target of]\u2192 DB00945 \u2014[is a therapeutic for]\u2192 Heart failure\n\u2022 Ethacrynic acid \u2014[downregulates]\u2192 gene-5111 \u2014[is a target of]\u2192 DB00279 \u2014[is a therapeutic for]\u2192 Heart failure",
+      "mr_score": 0.6234,
+      "mr_genetic_targets": 3,
+      "mechanistic_hypothesis": "Epinephrine \u2014[is a therapeutic for]\u2192 Heart failure",
+      "kg_paths_text": "\u2022 Epinephrine \u2014[is a therapeutic for]\u2192 Heart failure\n\u2022 Epinephrine \u2014[targets]\u2192 gene-146 \u2014[is a target of]\u2192 DB01136 \u2014[treats]\u2192 Heart failure\n\u2022 Epinephrine \u2014[targets]\u2192 gene-146 \u2014[is a target of]\u2192 DB01136 \u2014[treats]\u2192 Heart failure",
       "validation_experiments": [],
-      "novelty_score": 0.38499999046325684,
-      "novelty_level": "KNOWN",
+      "novelty_score": 0.12,
+      "novelty_level": "ESTABLISHED",
       "is_known_treatment": true,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
+      "clinical_trials_total": 10,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT00953303",
+          "title": "The Effects of Glucocorticoids on Mortality and Renal Function in Patients With Acute Decompensated Heart Failure",
+          "status": "COMPLETED",
+          "phase": "PHASE2, PHASE3",
+          "enrollment": "102",
+          "url": "https://clinicaltrials.gov/study/NCT00953303"
+        },
+        {
+          "nct_id": "NCT02228083",
+          "title": "Dental Anesthesia in Heart Failure Patients",
+          "status": "UNKNOWN",
+          "phase": "NA",
+          "enrollment": "70",
+          "url": "https://clinicaltrials.gov/study/NCT02228083"
+        },
+        {
+          "nct_id": "NCT07281014",
+          "title": "Unmitigated Aldosterone Signaling During Standard Clinical MRA Dosing",
+          "status": "RECRUITING",
+          "phase": "PHASE4",
+          "enrollment": "20",
+          "url": "https://clinicaltrials.gov/study/NCT07281014"
+        },
+        {
+          "nct_id": "NCT05202938",
+          "title": "eMESH Struct. 2022-23",
+          "status": "UNKNOWN",
+          "phase": "N/A",
+          "enrollment": "32",
+          "url": "https://clinicaltrials.gov/study/NCT05202938"
+        },
+        {
+          "nct_id": "NCT01616069",
+          "title": "Assessment of Hemodynamic Response in Cardiopulmonary Bypass Graft After Cardiopulmonary Bypass Using Transesophegeal Echocardiography",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "81",
+          "url": "https://clinicaltrials.gov/study/NCT01616069"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 1,
+        "PHASE3": 3,
+        "NA": 1,
+        "PHASE4": 3
+      },
       "confidence": "HIGH",
       "confidence_reasons": [
-        "162 PubMed articles on this drug-disease pair",
-        "1 article(s) specifically mention repurposing/repositioning",
+        "10 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "1053 PubMed articles on this drug-disease pair",
         "Supported by 4 independent AI pillars",
-        "Strong FAERS signal: 13 adverse event reports link drug to disease (321 total reports)",
-        "Supporting paper with 27 citations",
+        "Moderate FAERS signal: 394 adverse event reports mention drug-disease co-occurrence",
+        "Supporting paper with 23 citations",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.91, 1 genetic targets)"
+        "Moderate genetic evidence supporting causality (MR score: 0.62)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D006333",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2604,22 +2610,32 @@
         "stage": 1
       },
       "ddi_warnings": {
-        "n_interactions": 1273,
+        "n_interactions": 1250,
         "has_warnings": true,
         "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
           {
             "drug_id": "DB00945",
             "drug_name": "Acetylsalicylic acid",
             "severity": "high"
           },
           {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
             "drug_id": "DB00564",
             "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
             "severity": "high"
           },
           {
@@ -2638,23 +2654,13 @@
             "severity": "high"
           },
           {
+            "drug_id": "DB00227",
+            "drug_name": "Lovastatin",
+            "severity": "high"
+          },
+          {
             "drug_id": "DB00331",
             "drug_name": "Metformin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00563",
-            "drug_name": "Methotrexate",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00959",
-            "drug_name": "Methylprednisolone",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00213",
-            "drug_name": "Pantoprazole",
             "severity": "high"
           }
         ]
@@ -2674,413 +2680,11 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.55,
+        "triangulation_score": 0.628,
         "label": "silver-standard",
         "axis_values": {
-          "kg": 0.494,
-          "docking": 0.618,
-          "pharos": 0.0,
-          "literature": 0.96
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Heart - Left Ventricle",
-          "Heart - Atrial Appendage"
-        ],
-        "n_genes": 7,
-        "n_expressed": 4,
-        "mean_tpm_in_tissue": 60.81,
-        "max_tpm_in_tissue": 248.92,
-        "tissue_specificity": 0.117,
-        "context_modifier": 1.025
-      },
-      "docking": {
-        "kcal_per_mol": -7.42,
-        "target_symbol": "GSTP1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D006333",
-      "ensemble_prob": 0.84,
-      "ensemble_features": {
-        "kg_score": 0.9973,
-        "degree_penalty": 0.7781,
-        "n_drug_targets": 15,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 3.3673
-      },
-      "ensemble_rank": 3,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [
-          "ACRYLATE",
-          "HALO",
-          "MICHAEL"
-        ],
-        "n_alerts": 3,
-        "alert_names": [
-          "Michael_acceptor_1",
-          "acrylate",
-          "halo_acrylate"
-        ]
-      }
-    },
-    {
-      "drug_name": "Epoprostenol",
-      "drug_id": "DB01240",
-      "disease_name": "Heart failure",
-      "combined_score": 0.4916999936103821,
-      "pillars_hit": 4,
-      "transe_rank": 27,
-      "transe_score": -10.0291,
-      "pykeen_score": -11.8437,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.7879999876022339,
-      "proximity_distance": 0.8500000238418579,
-      "admet_score": 0.7128,
-      "admet_flags": "clean",
-      "primekg_score": 0.2601,
-      "dti_score": 0.6511,
-      "dti_best_target": "CSF2",
-      "kg_group_score": 0.274,
-      "structural_group_score": 0.6511,
-      "network_group_score": 0.603600025177002,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.7682,
-      "admet_multiplier": 0.9426,
-      "efficacy_score": 0.5217000246047974,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 9,
-      "shared_targets": [
-        "ACE",
-        "CSF2",
-        "IL1A",
-        "IL4",
-        "INS",
-        "PLAT",
-        "PTGIR",
-        "PTGS2",
-        "REN"
-      ],
-      "pubmed_total": 329,
-      "pubmed_treatment_total": 306,
-      "pubmed_repurposing_total": 2,
-      "key_papers": [
-        {
-          "pmid": "35412560",
-          "title": "Diagnosis and Treatment of Pulmonary Arterial Hypertension: A Review.",
-          "authors": "Ruopp NF, Cockrill BA",
-          "journal": "JAMA",
-          "year": "2022",
-          "abstract_snippet": "IMPORTANCE: Pulmonary arterial hypertension (PAH) is a subtype of pulmonary hypertension (PH), characterized by pulmonary arterial remodeling. The prevalence of PAH is approximately 10.6 cases per 1 million adults in the US. Untreated, PAH progresses to right heart failure and death. OBSERVATIONS: P...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35412560/",
-          "total_results": 329
-        },
-        {
-          "pmid": "30967439",
-          "title": "Inhaled Iloprost Versus Epoprostenol in Heart Transplant Recipients.",
-          "authors": "Enomoto TM, Treggiari MM, Yanez ND, et al.",
-          "journal": "Respiratory care",
-          "year": "2019",
-          "abstract_snippet": "BACKGROUND: Acute right ventricular dysfunction is a challenging problem in the immediate postoperative period following orthotopic heart transplantation. There are no prior reports of the use of inhaled iloprost in the setting of acute right ventricular dysfunction and acute pulmonary hypertension....",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30967439/"
-        },
-        {
-          "pmid": "37401479",
-          "title": "Inhaled Epoprostenol Compared With Nitric Oxide for Right Ventricular Support After Major Cardiac Surgery.",
-          "authors": "Ghadimi K, Cappiello JL, Wright MC, et al.",
-          "journal": "Circulation",
-          "year": "2023",
-          "abstract_snippet": "BACKGROUND: Right ventricular failure (RVF) is a leading driver of morbidity and death after major cardiac surgery for advanced heart failure, including orthotopic heart transplantation and left ventricular assist device implantation. Inhaled pulmonary-selective vasodilators, such as inhaled epopros...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37401479/"
-        },
-        {
-          "pmid": "29277148",
-          "title": "Prostacyclins in Cardiac Surgery: Coming of Age.",
-          "authors": "Deshpande SP, Mazzeffi MA, Strauss E, et al.",
-          "journal": "Seminars in cardiothoracic and vascular anesthesia",
-          "year": "2018",
-          "abstract_snippet": "Prostacyclin (prostaglandin I",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29277148/"
-        },
-        {
-          "pmid": "34933375",
-          "title": "Pulmonary Hypertension and COVID-19.",
-          "authors": "Castiglione L, Droppa M",
-          "journal": "Hamostaseologie",
-          "year": "2022",
-          "abstract_snippet": "Coronavirus disease 2019 (COVID-19) is a primary respiratory infectious disease, which can result in pulmonary and cardiovascular complications. From its first appearance in the city of Wuhan (China), the infection spread worldwide, leading to its declaration as a pandemic on March 11, 2020. Clinica...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34933375/"
-        }
-      ],
-      "repurposing_papers": [
-        {
-          "pmid": "29886070",
-          "title": "Inhalation of repurposed drugs to treat pulmonary hypertension.",
-          "authors": "Gessler T",
-          "journal": "Advanced drug delivery reviews",
-          "year": "2018",
-          "abstract_snippet": "Pulmonary arterial hypertension (PAH) is a rare, but severe and life-threatening disease characterized by vasoconstriction and remodeling of the pulmonary arterioles, leading to progressive increase in pulmonary vascular resistance and ultimately to right-heart failure. In the last two decades, sign...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29886070/",
-          "total_results": 2
-        },
-        {
-          "pmid": "28530128",
-          "title": "In vivo Endocrine Secretion of Prostacyclin Following Expression of a Cyclooxygenase-1/Prostacyclin Fusion Protein in the Salivary Glands of Rats Via Nonviral Gene Therapy.",
-          "authors": "Wang Z, Benza RL, Zourelias L, et al.",
-          "journal": "Human gene therapy",
-          "year": "2017",
-          "abstract_snippet": "Pulmonary arterial hypertension (PAH) is a progressive disease that culminates in right heart failure and death. Prostacyclin (PGI2) and its derivatives are effective treatments for PAH when administered as continuous parenteral infusions. This treatment paradigm requires medical sophistication, and...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/28530128/"
-        }
-      ],
-      "semantic_scholar_papers": [
-        {
-          "title": "Thyroid Troubles: A Case of Acute Heart Failure Due to Epoprostenol-Induced Thyrotoxicosis",
-          "year": 2024,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/1d50143769382136c9cf16dc5992f7c3732c7032",
-          "authors": "M. Abdullah, A. Go, J. K. Mwangi"
-        },
-        {
-          "title": "Cardiovascular Effect of Epoprostenol and Intravenous Cardiac Drugs for Acute Heart Failure on Canine Pulmonary Hypertension",
-          "year": 2023,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/4c77db59ab891f8e00719cd494c019bcf7c9db43",
-          "authors": "Yunosuke Yuchi, R. Suzuki, Shuji Satomi"
-        },
-        {
-          "title": "Intravenous Epoprostenol for Acute Right Ventricular Failure After Heart Transplantation",
-          "year": 2020,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/746656553e4ff73ed79ee8500e062815205fb0d8",
-          "authors": "A. Arunachalam, A. Vest, D. DeNofrio"
-        },
-        {
-          "title": "Experience of Epoprostenol Infusion in Patients With Right Heart Failure Secondary to Pulmonary Hypertension",
-          "year": 2016,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/03008cdf0eb7ebdc6eef803ecd7d1000e1deeb6d",
-          "authors": "L. Fern\u00e1ndez, Juan Gomez, Natalia Arango"
-        },
-        {
-          "title": "Macrophage activating syndrome causing decompensated right heart failure",
-          "year": 2021,
-          "citations": 8,
-          "url": "https://www.semanticscholar.org/paper/53a84e07731a92910b4f5212e17e12a6adfb917f",
-          "authors": "M. Chizinga, S. Kalra, A. Innabi"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Repurposing Cardiac Glycosides: Drugs for Heart Failure Surmounting Viruses",
-        "year": 2021,
-        "citations": 23,
-        "url": "https://www.semanticscholar.org/paper/e817274e576da2b4eba26ff01aefe614e3995a6c",
-        "authors": "Jan \u0160kubn\u00edk, J. Bej\u010dek, V. Pavl\u00ed\u010dkov\u00e1"
-      },
-      "max_citations": 23,
-      "faers_signal": "strong",
-      "faers_total_reports": 4668,
-      "faers_cooccurrences": 231,
-      "faers_interpretation": "231 FAERS reports mention both Epoprostenol and Heart failure-related terms (4.9% of all Epoprostenol reports). This suggests real-world clinical association.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "cefpodoxime proxetil (1.507)",
-        "\"\"\"4-morpholino-N-phenyl-6-(pyrrolidin-1-yl)-1,3,5-triazin-2-amine hw-gc-act03\"\"\" (1.506)",
-        "BYL719 (1.451)",
-        "NAFRONYL OXALATE (1.446)",
-        "pelitinib (1.441)"
-      ],
-      "signature_interpretation": "Epoprostenol was not found among the top 44 drugs that reverse the Heart failure gene signature. Top reversers: cefpodoxime proxetil (1.507), \"\"\"4-morpholino-N-phenyl-6-(pyrrolidin-1-yl)-1,3,5-triazin-2-amine hw-gc-act03\"\"\" (1.506), BYL719 (1.451)",
-      "ai_hypothesis": "of its ability to increase cardiac output and decrease pulmonary vascular resistance.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "Phase 3",
-      "failed_trial_count": 1,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.7682,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "Epoprostenol \u2014[is a therapeutic for]\u2192 Heart failure",
-      "kg_paths_text": "\u2022 Epoprostenol \u2014[is a therapeutic for]\u2192 Heart failure\n\u2022 Epoprostenol \u2014[is a therapeutic for]\u2192 MESH:D020521 \u2014[is treated by]\u2192 DB00790 \u2014[treats]\u2192 Heart failure\n\u2022 Epoprostenol \u2014[is a therapeutic for]\u2192 MESH:D020521 \u2014[is treated by]\u2192 DB00790 \u2014[treats]\u2192 Heart failure",
-      "validation_experiments": [],
-      "novelty_score": 0.1770000010728836,
-      "novelty_level": "ESTABLISHED",
-      "is_known_treatment": true,
-      "clinical_trials_total": 6,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT01717209",
-          "title": "Inhaled Nitric Oxide and Inhaled Prostacyclin After Cardiac Surgery for Heart Transplant or LVAD Placement",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "14",
-          "url": "https://clinicaltrials.gov/study/NCT01717209"
-        },
-        {
-          "nct_id": "NCT05450328",
-          "title": "Inhaled Milrinone and Epoprostenol for the Prevention of Difficult Cardiac Pulmonary Bypass Separation",
-          "status": "NOT_YET_RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "141",
-          "url": "https://clinicaltrials.gov/study/NCT05450328"
-        },
-        {
-          "nct_id": "NCT00525707",
-          "title": "Tezosentan in Acute Heart Failure",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "735",
-          "url": "https://clinicaltrials.gov/study/NCT00525707"
-        },
-        {
-          "nct_id": "NCT00458276",
-          "title": "Study of the Efficacy and Safety of Tezosentan in Patients With Pre-operative Pulmonary Hypertension, Due to Left Heart Disease, Undergoing Open Heart Surgery",
-          "status": "TERMINATED",
-          "phase": "PHASE3",
-          "enrollment": "274",
-          "url": "https://clinicaltrials.gov/study/NCT00458276"
-        },
-        {
-          "nct_id": "NCT02220335",
-          "title": "Pulmonary Arterial Denervation in Patients With Pulmonary Hypertension Associated With the Left Heart Failure",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "98",
-          "url": "https://clinicaltrials.gov/study/NCT02220335"
-        }
-      ],
-      "trial_phases": {
-        "PHASE4": 1,
-        "PHASE2": 1,
-        "PHASE3": 3,
-        "NA": 1
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "6 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
-        "329 PubMed articles on this drug-disease pair",
-        "2 article(s) specifically mention repurposing/repositioning",
-        "Supported by 4 independent AI pillars",
-        "Strong FAERS signal: 231 adverse event reports link drug to disease (4668 total reports)",
-        "Supporting paper with 23 citations",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.77, 1 genetic targets)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1507,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00783",
-            "drug_name": "Estradiol",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00773",
-            "drug_name": "Etoposide",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00502",
-            "drug_name": "Haloperidol",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00331",
-            "drug_name": "Metformin",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
-        "pharmgkb": []
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.3720000088214874,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.492000013589859,
-          "docking": 0.0,
+          "kg": 0.5,
+          "docking": 0.842,
           "pharos": 0.0,
           "literature": 1.0
         }
@@ -3090,41 +2694,39 @@
           "Heart - Left Ventricle",
           "Heart - Atrial Appendage"
         ],
-        "n_genes": 9,
-        "n_expressed": 4,
-        "mean_tpm_in_tissue": 4.64,
-        "max_tpm_in_tissue": 18.4,
-        "tissue_specificity": 0.0,
-        "context_modifier": 0.917
+        "n_genes": 20,
+        "n_expressed": 12,
+        "mean_tpm_in_tissue": 9.12,
+        "max_tpm_in_tissue": 81.78,
+        "tissue_specificity": 0.065,
+        "context_modifier": 0.948
       },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D006333",
-      "ensemble_prob": 0.9198,
+      "ensemble_prob": 0.7534,
       "ensemble_features": {
-        "kg_score": 0.998,
-        "degree_penalty": 0.766,
-        "n_drug_targets": 0,
+        "kg_score": 0.9979,
+        "degree_penalty": 0.7678,
+        "n_drug_targets": 16,
         "is_fda_approved": 1,
         "n_disease_genes": 0,
-        "transe_rank_log": 3.091
+        "transe_rank_log": 3.1355
       },
-      "ensemble_rank": 1,
+      "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": -10.1,
+        "target_symbol": "ADRB3",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
-          "ALIPHATIC",
-          "ISOLATED"
+          "CATECHOL"
         ],
         "n_alerts": 2,
         "alert_names": [
-          "Aliphatic_long_chain",
-          "isolated_alkene"
+          "catechol_A(92)",
+          "catechol"
         ]
       }
     },
@@ -3151,8 +2753,8 @@
       "admet_score": 0.7047,
       "admet_flags": "clean",
       "primekg_score": 0.2544,
-      "dti_score": 0.4217,
-      "dti_best_target": "CSF2",
+      "dti_score": 0.3632,
+      "dti_best_target": "FABP4",
       "kg_group_score": 0.3333,
       "structural_group_score": 0.6875,
       "network_group_score": 0.552299976348877,
@@ -3362,8 +2964,10 @@
         "Moderate FAERS signal: 5 adverse event reports mention drug-disease co-occurrence",
         "Supporting paper with 23 citations",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.69)"
+        "Moderate genetic evidence supporting causality (MR score: 0.69)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D006333",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -3465,15 +3069,7 @@
         "tissue_specificity": 0.217,
         "context_modifier": 1.024
       },
-      "docking": {
-        "kcal_per_mol": -11.23,
-        "target_symbol": "ADRB1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D006333",
-      "ensemble_prob": 0.8299,
+      "ensemble_prob": 0.9083,
       "ensemble_features": {
         "kg_score": 0.9985,
         "degree_penalty": 0.789,
@@ -3482,7 +3078,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.8332
       },
-      "ensemble_rank": 4,
+      "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": -11.23,
+        "target_symbol": "ADRB1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -3492,6 +3095,407 @@
         "alert_names": [
           "catechol_A(92)",
           "catechol"
+        ]
+      }
+    },
+    {
+      "drug_name": "Epoprostenol",
+      "drug_id": "DB01240",
+      "disease_name": "Heart failure",
+      "combined_score": 0.48820000886917114,
+      "pillars_hit": 4,
+      "transe_rank": 27,
+      "transe_score": -10.0291,
+      "pykeen_score": -11.8437,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.7879999876022339,
+      "proximity_distance": 0.8500000238418579,
+      "admet_score": 0.7128,
+      "admet_flags": "clean",
+      "primekg_score": 0.2601,
+      "dti_score": 0.6305,
+      "dti_best_target": "HMGB1",
+      "kg_group_score": 0.274,
+      "structural_group_score": 0.6305,
+      "network_group_score": 0.603600025177002,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.7682,
+      "admet_multiplier": 0.9426,
+      "efficacy_score": 0.5178999900817871,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 9,
+      "shared_targets": [
+        "ACE",
+        "CSF2",
+        "IL1A",
+        "IL4",
+        "INS",
+        "PLAT",
+        "PTGIR",
+        "PTGS2",
+        "REN"
+      ],
+      "pubmed_total": 329,
+      "pubmed_treatment_total": 306,
+      "pubmed_repurposing_total": 2,
+      "key_papers": [
+        {
+          "pmid": "35412560",
+          "title": "Diagnosis and Treatment of Pulmonary Arterial Hypertension: A Review.",
+          "authors": "Ruopp NF, Cockrill BA",
+          "journal": "JAMA",
+          "year": "2022",
+          "abstract_snippet": "IMPORTANCE: Pulmonary arterial hypertension (PAH) is a subtype of pulmonary hypertension (PH), characterized by pulmonary arterial remodeling. The prevalence of PAH is approximately 10.6 cases per 1 million adults in the US. Untreated, PAH progresses to right heart failure and death. OBSERVATIONS: P...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35412560/",
+          "total_results": 329
+        },
+        {
+          "pmid": "30967439",
+          "title": "Inhaled Iloprost Versus Epoprostenol in Heart Transplant Recipients.",
+          "authors": "Enomoto TM, Treggiari MM, Yanez ND, et al.",
+          "journal": "Respiratory care",
+          "year": "2019",
+          "abstract_snippet": "BACKGROUND: Acute right ventricular dysfunction is a challenging problem in the immediate postoperative period following orthotopic heart transplantation. There are no prior reports of the use of inhaled iloprost in the setting of acute right ventricular dysfunction and acute pulmonary hypertension....",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30967439/"
+        },
+        {
+          "pmid": "37401479",
+          "title": "Inhaled Epoprostenol Compared With Nitric Oxide for Right Ventricular Support After Major Cardiac Surgery.",
+          "authors": "Ghadimi K, Cappiello JL, Wright MC, et al.",
+          "journal": "Circulation",
+          "year": "2023",
+          "abstract_snippet": "BACKGROUND: Right ventricular failure (RVF) is a leading driver of morbidity and death after major cardiac surgery for advanced heart failure, including orthotopic heart transplantation and left ventricular assist device implantation. Inhaled pulmonary-selective vasodilators, such as inhaled epopros...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37401479/"
+        },
+        {
+          "pmid": "29277148",
+          "title": "Prostacyclins in Cardiac Surgery: Coming of Age.",
+          "authors": "Deshpande SP, Mazzeffi MA, Strauss E, et al.",
+          "journal": "Seminars in cardiothoracic and vascular anesthesia",
+          "year": "2018",
+          "abstract_snippet": "Prostacyclin (prostaglandin I",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29277148/"
+        },
+        {
+          "pmid": "34933375",
+          "title": "Pulmonary Hypertension and COVID-19.",
+          "authors": "Castiglione L, Droppa M",
+          "journal": "Hamostaseologie",
+          "year": "2022",
+          "abstract_snippet": "Coronavirus disease 2019 (COVID-19) is a primary respiratory infectious disease, which can result in pulmonary and cardiovascular complications. From its first appearance in the city of Wuhan (China), the infection spread worldwide, leading to its declaration as a pandemic on March 11, 2020. Clinica...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34933375/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "29886070",
+          "title": "Inhalation of repurposed drugs to treat pulmonary hypertension.",
+          "authors": "Gessler T",
+          "journal": "Advanced drug delivery reviews",
+          "year": "2018",
+          "abstract_snippet": "Pulmonary arterial hypertension (PAH) is a rare, but severe and life-threatening disease characterized by vasoconstriction and remodeling of the pulmonary arterioles, leading to progressive increase in pulmonary vascular resistance and ultimately to right-heart failure. In the last two decades, sign...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29886070/",
+          "total_results": 2
+        },
+        {
+          "pmid": "28530128",
+          "title": "In vivo Endocrine Secretion of Prostacyclin Following Expression of a Cyclooxygenase-1/Prostacyclin Fusion Protein in the Salivary Glands of Rats Via Nonviral Gene Therapy.",
+          "authors": "Wang Z, Benza RL, Zourelias L, et al.",
+          "journal": "Human gene therapy",
+          "year": "2017",
+          "abstract_snippet": "Pulmonary arterial hypertension (PAH) is a progressive disease that culminates in right heart failure and death. Prostacyclin (PGI2) and its derivatives are effective treatments for PAH when administered as continuous parenteral infusions. This treatment paradigm requires medical sophistication, and...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28530128/"
+        }
+      ],
+      "semantic_scholar_papers": [
+        {
+          "title": "Thyroid Troubles: A Case of Acute Heart Failure Due to Epoprostenol-Induced Thyrotoxicosis",
+          "year": 2024,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/1d50143769382136c9cf16dc5992f7c3732c7032",
+          "authors": "M. Abdullah, A. Go, J. K. Mwangi"
+        },
+        {
+          "title": "Cardiovascular Effect of Epoprostenol and Intravenous Cardiac Drugs for Acute Heart Failure on Canine Pulmonary Hypertension",
+          "year": 2023,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/4c77db59ab891f8e00719cd494c019bcf7c9db43",
+          "authors": "Yunosuke Yuchi, R. Suzuki, Shuji Satomi"
+        },
+        {
+          "title": "Intravenous Epoprostenol for Acute Right Ventricular Failure After Heart Transplantation",
+          "year": 2020,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/746656553e4ff73ed79ee8500e062815205fb0d8",
+          "authors": "A. Arunachalam, A. Vest, D. DeNofrio"
+        },
+        {
+          "title": "Experience of Epoprostenol Infusion in Patients With Right Heart Failure Secondary to Pulmonary Hypertension",
+          "year": 2016,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/03008cdf0eb7ebdc6eef803ecd7d1000e1deeb6d",
+          "authors": "L. Fern\u00e1ndez, Juan Gomez, Natalia Arango"
+        },
+        {
+          "title": "Macrophage activating syndrome causing decompensated right heart failure",
+          "year": 2021,
+          "citations": 8,
+          "url": "https://www.semanticscholar.org/paper/53a84e07731a92910b4f5212e17e12a6adfb917f",
+          "authors": "M. Chizinga, S. Kalra, A. Innabi"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Repurposing Cardiac Glycosides: Drugs for Heart Failure Surmounting Viruses",
+        "year": 2021,
+        "citations": 23,
+        "url": "https://www.semanticscholar.org/paper/e817274e576da2b4eba26ff01aefe614e3995a6c",
+        "authors": "Jan \u0160kubn\u00edk, J. Bej\u010dek, V. Pavl\u00ed\u010dkov\u00e1"
+      },
+      "max_citations": 23,
+      "faers_signal": "strong",
+      "faers_total_reports": 4668,
+      "faers_cooccurrences": 231,
+      "faers_interpretation": "231 FAERS reports mention both Epoprostenol and Heart failure-related terms (4.9% of all Epoprostenol reports). This suggests real-world clinical association.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "cefpodoxime proxetil (1.507)",
+        "\"\"\"4-morpholino-N-phenyl-6-(pyrrolidin-1-yl)-1,3,5-triazin-2-amine hw-gc-act03\"\"\" (1.506)",
+        "BYL719 (1.451)",
+        "NAFRONYL OXALATE (1.446)",
+        "pelitinib (1.441)"
+      ],
+      "signature_interpretation": "Epoprostenol was not found among the top 44 drugs that reverse the Heart failure gene signature. Top reversers: cefpodoxime proxetil (1.507), \"\"\"4-morpholino-N-phenyl-6-(pyrrolidin-1-yl)-1,3,5-triazin-2-amine hw-gc-act03\"\"\" (1.506), BYL719 (1.451)",
+      "ai_hypothesis": "of its ability to increase cardiac output and decrease pulmonary vascular resistance.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "Phase 3",
+      "failed_trial_count": 1,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.7682,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Epoprostenol \u2014[is a therapeutic for]\u2192 Heart failure",
+      "kg_paths_text": "\u2022 Epoprostenol \u2014[is a therapeutic for]\u2192 Heart failure\n\u2022 Epoprostenol \u2014[is a therapeutic for]\u2192 MESH:D020521 \u2014[is treated by]\u2192 DB00790 \u2014[treats]\u2192 Heart failure\n\u2022 Epoprostenol \u2014[is a therapeutic for]\u2192 MESH:D020521 \u2014[is treated by]\u2192 DB00790 \u2014[treats]\u2192 Heart failure",
+      "validation_experiments": [],
+      "novelty_score": 0.17599999904632568,
+      "novelty_level": "ESTABLISHED",
+      "is_known_treatment": true,
+      "clinical_trials_total": 6,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT00525707",
+          "title": "Tezosentan in Acute Heart Failure",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "735",
+          "url": "https://clinicaltrials.gov/study/NCT00525707"
+        },
+        {
+          "nct_id": "NCT00524433",
+          "title": "Tezosentan in the Treatment of Acute Heart Failure",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "713",
+          "url": "https://clinicaltrials.gov/study/NCT00524433"
+        },
+        {
+          "nct_id": "NCT02220335",
+          "title": "Pulmonary Arterial Denervation in Patients With Pulmonary Hypertension Associated With the Left Heart Failure",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "98",
+          "url": "https://clinicaltrials.gov/study/NCT02220335"
+        },
+        {
+          "nct_id": "NCT05450328",
+          "title": "Inhaled Milrinone and Epoprostenol for the Prevention of Difficult Cardiac Pulmonary Bypass Separation",
+          "status": "NOT_YET_RECRUITING",
+          "phase": "PHASE2",
+          "enrollment": "141",
+          "url": "https://clinicaltrials.gov/study/NCT05450328"
+        },
+        {
+          "nct_id": "NCT00458276",
+          "title": "Study of the Efficacy and Safety of Tezosentan in Patients With Pre-operative Pulmonary Hypertension, Due to Left Heart Disease, Undergoing Open Heart Surgery",
+          "status": "TERMINATED",
+          "phase": "PHASE3",
+          "enrollment": "274",
+          "url": "https://clinicaltrials.gov/study/NCT00458276"
+        }
+      ],
+      "trial_phases": {
+        "PHASE3": 3,
+        "NA": 1,
+        "PHASE2": 1,
+        "PHASE4": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "6 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "329 PubMed articles on this drug-disease pair",
+        "2 article(s) specifically mention repurposing/repositioning",
+        "Supported by 4 independent AI pillars",
+        "Strong FAERS signal: 231 adverse event reports link drug to disease (4668 total reports)",
+        "Supporting paper with 23 citations",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.77, 1 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D006333",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1507,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00773",
+            "drug_name": "Etoposide",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00331",
+            "drug_name": "Metformin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.3709999918937683,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.4880000054836273,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Heart - Left Ventricle",
+          "Heart - Atrial Appendage"
+        ],
+        "n_genes": 9,
+        "n_expressed": 4,
+        "mean_tpm_in_tissue": 4.64,
+        "max_tpm_in_tissue": 18.4,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.917
+      },
+      "ensemble_prob": 0.7967,
+      "ensemble_features": {
+        "kg_score": 0.998,
+        "degree_penalty": 0.766,
+        "n_drug_targets": 0,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 3.091
+      },
+      "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "ALIPHATIC",
+          "ISOLATED"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "Aliphatic_long_chain",
+          "isolated_alkene"
         ]
       }
     },
@@ -3518,8 +3522,8 @@
       "admet_score": 0.728,
       "admet_flags": "clean",
       "primekg_score": 0.2655,
-      "dti_score": 0.2725,
-      "dti_best_target": "STAT3",
+      "dti_score": 0.2553,
+      "dti_best_target": "FABP4",
       "kg_group_score": 0.1036,
       "structural_group_score": 0.9826,
       "network_group_score": 0.555899977684021,
@@ -3692,12 +3696,12 @@
       "clinical_trials_total": 3,
       "clinical_trials": [
         {
-          "nct_id": "NCT05391620",
-          "title": "The Effect of the 3/7 vs 3X9 Method in Resistance Training on Metabolic Stress in Cardiac Rehabilitation",
+          "nct_id": "NCT01139697",
+          "title": "Hair Cortisol and Testosterone in Heart Failure",
           "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "25",
-          "url": "https://clinicaltrials.gov/study/NCT05391620"
+          "phase": "N/A",
+          "enrollment": "46",
+          "url": "https://clinicaltrials.gov/study/NCT01139697"
         },
         {
           "nct_id": "NCT04278404",
@@ -3708,12 +3712,12 @@
           "url": "https://clinicaltrials.gov/study/NCT04278404"
         },
         {
-          "nct_id": "NCT01139697",
-          "title": "Hair Cortisol and Testosterone in Heart Failure",
+          "nct_id": "NCT05391620",
+          "title": "The Effect of the 3/7 vs 3X9 Method in Resistance Training on Metabolic Stress in Cardiac Rehabilitation",
           "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "46",
-          "url": "https://clinicaltrials.gov/study/NCT01139697"
+          "phase": "NA",
+          "enrollment": "25",
+          "url": "https://clinicaltrials.gov/study/NCT05391620"
         }
       ],
       "trial_phases": {
@@ -3729,6 +3733,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.64)"
       ],
+      "disease_entity": "Disease::MESH:D006333",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -3830,15 +3835,7 @@
         "tissue_specificity": 0.048,
         "context_modifier": 0.947
       },
-      "docking": {
-        "kcal_per_mol": -12.7,
-        "target_symbol": "NR3C2",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D006333",
-      "ensemble_prob": 0.1297,
+      "ensemble_prob": 0.0482,
       "ensemble_features": {
         "kg_score": 0.9862,
         "degree_penalty": 0.7532,
@@ -3847,7 +3844,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 4.9904
       },
-      "ensemble_rank": 7,
+      "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": -12.7,
+        "target_symbol": "NR3C2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -3856,12 +3860,12 @@
       }
     }
   ],
+  "disease_entity": "Disease::MESH:D006333",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
     "n_disease_genes": 260,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
-  },
-  "disease_entity": "Disease::MESH:D006333",
-  "ensemble_version": "v5",
-  "ensemble_model_path": "data/models/ensemble_v5.pkl"
+  }
 }

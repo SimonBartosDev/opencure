@@ -1,8 +1,8 @@
 {
   "disease": "Colorectal cancer",
   "status": "completed",
-  "timestamp": "2026-04-19T19:19:48.559096",
-  "elapsed_seconds": 675.5,
+  "timestamp": "2026-05-07T23:14:24.228167",
+  "elapsed_seconds": 131.3,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -130,6 +130,7 @@
         "High molecular similarity (0.74) to Levothyroxine",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D015179",
       "dose_plausibility": {
         "plausibility": "uncertain",
         "dose_range": "investigational",
@@ -231,14 +232,6 @@
         "tissue_specificity": 0.542,
         "context_modifier": 1.095
       },
-      "disease_entity": "Disease::MESH:D015179",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
       "ensemble_prob": 0.0,
       "ensemble_features": {
         "kg_score": 0.7376,
@@ -249,6 +242,13 @@
         "transe_rank_log": 7.9262
       },
       "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -472,6 +472,7 @@
         "Moderate FAERS signal: 196 adverse event reports mention drug-disease co-occurrence",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D015179",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -620,15 +621,7 @@
         "tissue_specificity": 0.491,
         "context_modifier": 1.005
       },
-      "disease_entity": "Disease::MESH:D015179",
-      "docking": {
-        "kcal_per_mol": -11.86,
-        "target_symbol": "MTOR",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.1414,
+      "ensemble_prob": 0.1017,
       "ensemble_features": {
         "kg_score": 0.9884,
         "degree_penalty": 0.7479,
@@ -638,6 +631,13 @@
         "transe_rank_log": 4.8122
       },
       "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": -11.86,
+        "target_symbol": "MTOR",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -943,6 +943,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.69)"
       ],
+      "disease_entity": "Disease::MESH:D015179",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1052,15 +1053,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.961
       },
-      "disease_entity": "Disease::MESH:D015179",
-      "docking": {
-        "kcal_per_mol": -11.61,
-        "target_symbol": "AR",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.3911,
+      "ensemble_prob": 0.221,
       "ensemble_features": {
         "kg_score": 0.9917,
         "degree_penalty": 0.7473,
@@ -1069,7 +1062,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 4.4886
       },
-      "ensemble_rank": 4,
+      "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": -11.61,
+        "target_symbol": "AR",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1294,34 +1294,34 @@
           "url": "https://clinicaltrials.gov/study/NCT02039336"
         },
         {
-          "nct_id": "NCT04140526",
-          "title": "Safety, PK and Efficacy of ONC-392 in Monotherapy and in Combination of Anti-PD-1 in Advanced Solid Tumors and NSCLC",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "733",
-          "url": "https://clinicaltrials.gov/study/NCT04140526"
-        },
-        {
-          "nct_id": "NCT04306900",
-          "title": "TTX-030 in Combination With Immunotherapy and/or Chemotherapy in Subjects With Advanced Cancers",
+          "nct_id": "NCT05116891",
+          "title": "A Phase 1/2 Study of CAN04 in Combination With Different Chemotherapy Regimens in Subjects With Advanced Solid Tumors",
           "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "185",
-          "url": "https://clinicaltrials.gov/study/NCT04306900"
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "40",
+          "url": "https://clinicaltrials.gov/study/NCT05116891"
         },
         {
-          "nct_id": "NCT03228667",
-          "title": "QUILT-3.055: A Study of Combination Immunotherapies in Patients Who Have Previously Received Treatment With Immune Checkpoint Inhibitors",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "40",
-          "url": "https://clinicaltrials.gov/study/NCT03228667"
+          "nct_id": "NCT05084859",
+          "title": "A Study Evaluating the Safety, Pharmacokinetics, and Preliminary Efficacy of Orally Administered SM08502 Combined With Hormonal Therapy or Chemotherapy in Subjects With Advanced Solid Tumors",
+          "status": "TERMINATED",
+          "phase": "PHASE1",
+          "enrollment": "30",
+          "url": "https://clinicaltrials.gov/study/NCT05084859"
+        },
+        {
+          "nct_id": "NCT02479217",
+          "title": "Safety of Xeloda in Solid Tumours",
+          "status": "COMPLETED",
+          "phase": "N/A",
+          "enrollment": "1268",
+          "url": "https://clinicaltrials.gov/study/NCT02479217"
         }
       ],
       "trial_phases": {
         "PHASE3": 1,
-        "PHASE1": 4,
-        "PHASE2": 5
+        "PHASE1": 7,
+        "PHASE2": 3
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -1334,6 +1334,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.80, 7 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D015179",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1471,15 +1472,7 @@
         "tissue_specificity": 0.438,
         "context_modifier": 1.024
       },
-      "disease_entity": "Disease::MESH:D015179",
-      "docking": {
-        "kcal_per_mol": -5.29,
-        "target_symbol": "ABCC2",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.7888,
+      "ensemble_prob": 0.7859,
       "ensemble_features": {
         "kg_score": 0.9968,
         "degree_penalty": 0.7759,
@@ -1489,6 +1482,13 @@
         "transe_rank_log": 3.5553
       },
       "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": -5.29,
+        "target_symbol": "ABCC2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -1754,23 +1754,15 @@
       "novelty_score": 0.21,
       "novelty_level": "ESTABLISHED",
       "is_known_treatment": false,
-      "clinical_trials_total": 6,
+      "clinical_trials_total": 7,
       "clinical_trials": [
         {
-          "nct_id": "NCT04579380",
-          "title": "Basket Study of Tucatinib and Trastuzumab in Solid Tumors With HER2 Alterations",
+          "nct_id": "NCT04557449",
+          "title": "Study to Test the Safety and Tolerability of PF-07220060 in Participants With Advance Solid Tumors",
           "status": "ACTIVE_NOT_RECRUITING",
           "phase": "PHASE2",
-          "enrollment": "217",
-          "url": "https://clinicaltrials.gov/study/NCT04579380"
-        },
-        {
-          "nct_id": "NCT04812912",
-          "title": "Changes in Reproductive and Sexual Health in People With Early Onset Colorectal Cancer",
-          "status": "RECRUITING",
-          "phase": "N/A",
-          "enrollment": "120",
-          "url": "https://clinicaltrials.gov/study/NCT04812912"
+          "enrollment": "362",
+          "url": "https://clinicaltrials.gov/study/NCT04557449"
         },
         {
           "nct_id": "NCT07318805",
@@ -1781,12 +1773,12 @@
           "url": "https://clinicaltrials.gov/study/NCT07318805"
         },
         {
-          "nct_id": "NCT03169777",
-          "title": "QUILT-3.050: NANT Colorectal Cancer (CRC) Vaccine: Combination Immunotherapy in Subjects With Recurrent or Metastatic CRC",
-          "status": "WITHDRAWN",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "0",
-          "url": "https://clinicaltrials.gov/study/NCT03169777"
+          "nct_id": "NCT04812912",
+          "title": "Changes in Reproductive and Sexual Health in People With Early Onset Colorectal Cancer",
+          "status": "RECRUITING",
+          "phase": "N/A",
+          "enrollment": "120",
+          "url": "https://clinicaltrials.gov/study/NCT04812912"
         },
         {
           "nct_id": "NCT06625775",
@@ -1795,15 +1787,23 @@
           "phase": "PHASE1",
           "enrollment": "392",
           "url": "https://clinicaltrials.gov/study/NCT06625775"
+        },
+        {
+          "nct_id": "NCT07540572",
+          "title": "A Study to Investigate the Safety, Pharmacokinetics, and Preliminary Efficacy of IDE574 Therapy in Adult Participants With Advanced Solid Tumors",
+          "status": "RECRUITING",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "160",
+          "url": "https://clinicaltrials.gov/study/NCT07540572"
         }
       ],
       "trial_phases": {
-        "PHASE2": 3,
-        "PHASE1": 3
+        "PHASE2": 4,
+        "PHASE1": 4
       },
       "confidence": "HIGH",
       "confidence_reasons": [
-        "6 clinical trial(s) found on ClinicalTrials.gov",
+        "7 clinical trial(s) found on ClinicalTrials.gov",
         "320 PubMed articles on this drug-disease pair",
         "Supported by 4 independent AI pillars",
         "Moderate FAERS signal: 31 adverse event reports mention drug-disease co-occurrence",
@@ -1811,6 +1811,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.78, 19 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D015179",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1920,15 +1921,7 @@
         "tissue_specificity": 0.573,
         "context_modifier": 1.063
       },
-      "disease_entity": "Disease::MESH:D015179",
-      "docking": {
-        "kcal_per_mol": -12.23,
-        "target_symbol": "ESR1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.5617,
+      "ensemble_prob": 0.6388,
       "ensemble_features": {
         "kg_score": 0.9971,
         "degree_penalty": 0.7341,
@@ -1938,6 +1931,13 @@
         "transe_rank_log": 3.4657
       },
       "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": -12.23,
+        "target_symbol": "ESR1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2138,6 +2138,7 @@
         "Highly cited paper (679 citations): \"Wnt signaling in colorectal cancer: pathogenic role and ther...\"",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D015179",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2239,15 +2240,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.97
       },
-      "disease_entity": "Disease::MESH:D015179",
-      "docking": {
-        "kcal_per_mol": -6.47,
-        "target_symbol": "KCNH2",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.0003,
+      "ensemble_prob": 0.0012,
       "ensemble_features": {
         "kg_score": 0.8376,
         "degree_penalty": 0.7824,
@@ -2257,6 +2250,13 @@
         "transe_rank_log": 7.4466
       },
       "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": -6.47,
+        "target_symbol": "KCNH2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2424,6 +2424,7 @@
         "Highly cited paper (679 citations): \"Wnt signaling in colorectal cancer: pathogenic role and ther...\"",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D015179",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "late-trial",
@@ -2474,14 +2475,6 @@
         "tissue_specificity": 0.545,
         "context_modifier": 1.033
       },
-      "disease_entity": "Disease::MESH:D015179",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
       "ensemble_prob": 0.0,
       "ensemble_features": {
         "kg_score": 0.6811,
@@ -2492,6 +2485,13 @@
         "transe_rank_log": 8.1212
       },
       "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2719,14 +2719,6 @@
           "url": "https://clinicaltrials.gov/study/NCT06042816"
         },
         {
-          "nct_id": "NCT02958566",
-          "title": "Multimodal Narcotic Limited Perioperative Pain Control With Colorectal Surgery",
-          "status": "UNKNOWN",
-          "phase": "PHASE4",
-          "enrollment": "80",
-          "url": "https://clinicaltrials.gov/study/NCT02958566"
-        },
-        {
           "nct_id": "NCT06428409",
           "title": "A Clinical Study of MK-2870 Alone or With Other Treatments to Treat Gastrointestinal Cancers (MK-9999-02A)",
           "status": "RECRUITING",
@@ -2735,27 +2727,35 @@
           "url": "https://clinicaltrials.gov/study/NCT06428409"
         },
         {
-          "nct_id": "NCT01607905",
-          "title": "Safety Study of KPT-330 (Selinexor) in Patients With Advanced or Metastatic Solid Tumor Cancer",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "192",
-          "url": "https://clinicaltrials.gov/study/NCT01607905"
-        },
-        {
           "nct_id": "NCT03458689",
           "title": "Quadratus Lumborum Block Versus Transversus Abdominis Plane Block in Patients Undergoing Left Hemicolectomy",
           "status": "UNKNOWN",
           "phase": "NA",
           "enrollment": "75",
           "url": "https://clinicaltrials.gov/study/NCT03458689"
+        },
+        {
+          "nct_id": "NCT02958566",
+          "title": "Multimodal Narcotic Limited Perioperative Pain Control With Colorectal Surgery",
+          "status": "UNKNOWN",
+          "phase": "PHASE4",
+          "enrollment": "80",
+          "url": "https://clinicaltrials.gov/study/NCT02958566"
+        },
+        {
+          "nct_id": "NCT03570541",
+          "title": "TQL-block for Laparoscopic Hemicolectomy",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "69",
+          "url": "https://clinicaltrials.gov/study/NCT03570541"
         }
       ],
       "trial_phases": {
         "NA": 2,
-        "PHASE4": 2,
         "PHASE1": 2,
         "PHASE2": 1,
+        "PHASE4": 2,
         "PHASE3": 1
       },
       "confidence": "HIGH",
@@ -2770,6 +2770,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.66)"
       ],
+      "disease_entity": "Disease::MESH:D015179",
       "dose_plausibility": {
         "plausibility": "unknown",
         "dose_range": "research",
@@ -2907,15 +2908,7 @@
         "tissue_specificity": 0.558,
         "context_modifier": 1.097
       },
-      "disease_entity": "Disease::MESH:D015179",
-      "docking": {
-        "kcal_per_mol": -7.11,
-        "target_symbol": "CA2",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.2353,
+      "ensemble_prob": 0.2355,
       "ensemble_features": {
         "kg_score": 0.9933,
         "degree_penalty": 0.7596,
@@ -2924,7 +2917,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 4.2767
       },
-      "ensemble_rank": 5,
+      "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": -7.11,
+        "target_symbol": "CA2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -3061,6 +3061,7 @@
         "Supporting paper with 46 citations",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D015179",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "late-trial",
@@ -3111,14 +3112,6 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.15
       },
-      "disease_entity": "Disease::MESH:D015179",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
       "ensemble_prob": 0.0,
       "ensemble_features": {
         "kg_score": 0.6809,
@@ -3129,6 +3122,13 @@
         "transe_rank_log": 8.1221
       },
       "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -3342,7 +3342,7 @@
         }
       ],
       "has_failed_trial": false,
-      "failed_trial_phase": "Phase 3",
+      "failed_trial_phase": "Phase 2",
       "failed_trial_count": 10,
       "failed_trial_penalty": 1.0,
       "mr_score": 0.8129,
@@ -3356,51 +3356,50 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT00080951",
-          "title": "Irinotecan, Fluorouracil, Leucovorin, and Oxaliplatin as First-Line Therapy in Treating Patients With Metastatic Colorectal Cancer",
+          "nct_id": "NCT00048971",
+          "title": "Genetic Trial to Study Diarrhea in Patients With Stage III Colon Cancer Who Are Receiving Chemotherapy",
           "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "14",
-          "url": "https://clinicaltrials.gov/study/NCT00080951"
+          "phase": "N/A",
+          "enrollment": "308",
+          "url": "https://clinicaltrials.gov/study/NCT00048971"
         },
         {
-          "nct_id": "NCT03206151",
-          "title": "CMAB009 Combined With FOLFIRI First-line Treatment in Patients With RAS/BRAF Wild-type, Metastatic Colorectal Cancer",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "520",
-          "url": "https://clinicaltrials.gov/study/NCT03206151"
-        },
-        {
-          "nct_id": "NCT05678257",
-          "title": "A Study of NUC-3373 in Combination With Other Agents in Patients With Colorectal Cancer",
-          "status": "TERMINATED",
-          "phase": "PHASE2",
-          "enrollment": "180",
-          "url": "https://clinicaltrials.gov/study/NCT05678257"
-        },
-        {
-          "nct_id": "NCT05464030",
-          "title": "Anti-CEACAM5 ADC M9140 in Advanced Solid Tumors (PROCEADE-CRC-01)",
-          "status": "RECRUITING",
+          "nct_id": "NCT02870036",
+          "title": "Study to Evaluate the Safety, Tolerability, Preliminary Efficacy and Pharmacokinetics of Simmitecan Monotherapy and Combination in Patients With Advanced Solid Tumors",
+          "status": "UNKNOWN",
           "phase": "PHASE1",
-          "enrollment": "200",
-          "url": "https://clinicaltrials.gov/study/NCT05464030"
+          "enrollment": "243",
+          "url": "https://clinicaltrials.gov/study/NCT02870036"
         },
         {
-          "nct_id": "NCT06791512",
-          "title": "mFOLFOX6 + Bevacizumab + PD-1 Monoclonal Antibody Vs. mFOLFOX6 in Locally Advanced pMMR/MSS CRC",
-          "status": "RECRUITING",
+          "nct_id": "NCT02563002",
+          "title": "Study of Pembrolizumab (MK-3475) vs Standard Therapy in Participants With Microsatellite Instability-High (MSI-H) or Mismatch Repair Deficient (dMMR) Stage IV Colorectal Carcinoma (MK-3475-177/KEYNOTE-177)",
+          "status": "COMPLETED",
           "phase": "PHASE3",
-          "enrollment": "166",
-          "url": "https://clinicaltrials.gov/study/NCT06791512"
+          "enrollment": "307",
+          "url": "https://clinicaltrials.gov/study/NCT02563002"
+        },
+        {
+          "nct_id": "NCT05593328",
+          "title": "Study of Onvansertib in Combination With FOLFIRI and Bevacizumab Versus FOLFIRI and Bevacizumab for Second Line Treatment of Metastatic Colorectal Cancer in Participants With a Kirsten Rat Sarcoma Virus Gene (KRAS) or Neuroblastoma-RAS (NRAS) Mutation",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "23",
+          "url": "https://clinicaltrials.gov/study/NCT05593328"
+        },
+        {
+          "nct_id": "NCT01442935",
+          "title": "Chemotherapies Associated With Targeted Therapies on the Resection Rate of Hepatic Metastases",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "256",
+          "url": "https://clinicaltrials.gov/study/NCT01442935"
         }
       ],
       "trial_phases": {
-        "PHASE2": 6,
+        "PHASE1": 2,
         "PHASE3": 3,
-        "PHASE1": 1,
-        "PHASE4": 1
+        "PHASE2": 5
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -3415,6 +3414,7 @@
         "Strong causal genetic evidence (MR score: 0.81, 4 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D015179",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3558,15 +3558,7 @@
         "tissue_specificity": 0.16,
         "context_modifier": 0.934
       },
-      "disease_entity": "Disease::MESH:D015179",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.9545,
+      "ensemble_prob": 0.9511,
       "ensemble_features": {
         "kg_score": 0.9983,
         "degree_penalty": 0.8813,
@@ -3576,6 +3568,13 @@
         "transe_rank_log": 2.9444
       },
       "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -3589,11 +3588,11 @@
     }
   ],
   "disease_entity": "Disease::MESH:D015179",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
     "n_disease_genes": 1620,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
-  },
-  "ensemble_version": "v5",
-  "ensemble_model_path": "data/models/ensemble_v5.pkl"
+  }
 }

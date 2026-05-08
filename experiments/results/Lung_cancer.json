@@ -1,8 +1,8 @@
 {
   "disease": "Lung cancer",
   "status": "completed",
-  "timestamp": "2026-04-19T19:08:31.026191",
-  "elapsed_seconds": 793.1,
+  "timestamp": "2026-05-07T23:12:10.870112",
+  "elapsed_seconds": 147.0,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -15,7 +15,7 @@
       "drug_name": "Leucovorin",
       "drug_id": "DB00650",
       "disease_name": "Lung cancer",
-      "combined_score": 0.6174,
+      "combined_score": 0.6167,
       "pillars_hit": 4,
       "transe_rank": 73,
       "transe_score": -10.3719,
@@ -34,15 +34,15 @@
       "admet_score": 1.0,
       "admet_flags": "clean",
       "primekg_score": 0.2536,
-      "dti_score": 0.9991,
-      "dti_best_target": "NDRG2",
+      "dti_score": 0.995,
+      "dti_best_target": "DDR1",
       "kg_group_score": 0.2685,
-      "structural_group_score": 0.9991,
+      "structural_group_score": 0.995,
       "network_group_score": 0.7835000157356262,
       "txgnn_group_score": 0,
       "mr_group_score": 0.7582,
       "admet_multiplier": 1.0,
-      "efficacy_score": 0.6174,
+      "efficacy_score": 0.6167,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 5,
@@ -197,49 +197,49 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
+          "nct_id": "NCT05116891",
+          "title": "A Phase 1/2 Study of CAN04 in Combination With Different Chemotherapy Regimens in Subjects With Advanced Solid Tumors",
+          "status": "COMPLETED",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "40",
+          "url": "https://clinicaltrials.gov/study/NCT05116891"
+        },
+        {
+          "nct_id": "NCT05647122",
+          "title": "First in Human Study of AZD9592 in Solid Tumors",
+          "status": "RECRUITING",
+          "phase": "PHASE1",
+          "enrollment": "403",
+          "url": "https://clinicaltrials.gov/study/NCT05647122"
+        },
+        {
+          "nct_id": "NCT00227019",
+          "title": "Phase 2 Trial of Bevacizumab in Combination With Pemetrexed",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "16",
+          "url": "https://clinicaltrials.gov/study/NCT00227019"
+        },
+        {
+          "nct_id": "NCT01923987",
+          "title": "Short Course Radiotherapy Followed Intensive Chemotherapy With Delayed Surgery for Rectal Cancer With Synchronous Distant Metastasis",
+          "status": "UNKNOWN",
+          "phase": "PHASE2",
+          "enrollment": "39",
+          "url": "https://clinicaltrials.gov/study/NCT01923987"
+        },
+        {
           "nct_id": "NCT00343408",
           "title": "AZD2171 and Standard Combination Chemotherapy in Advanced Non-Small Cell Lung Cancer or Colorectal Cancer",
           "status": "COMPLETED",
           "phase": "PHASE1",
           "enrollment": "31",
           "url": "https://clinicaltrials.gov/study/NCT00343408"
-        },
-        {
-          "nct_id": "NCT06607185",
-          "title": "A Study of the Pan-KRAS Inhibitor LY4066434 in Participants With KRAS Mutant Solid Tumors",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "phase": "PHASE1",
-          "enrollment": "750",
-          "url": "https://clinicaltrials.gov/study/NCT06607185"
-        },
-        {
-          "nct_id": "NCT00557102",
-          "title": "Cetuximab and Combination Chemotherapy as First-Line Therapy in Treating Patients With Colorectal Cancer That Has Spread to the Liver and/or Lung",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "24",
-          "url": "https://clinicaltrials.gov/study/NCT00557102"
-        },
-        {
-          "nct_id": "NCT00019513",
-          "title": "Combination Chemotherapy in Treating Patients With Recurrent, Refractory, or Metastatic Solid Tumors or Lymphomas",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "108",
-          "url": "https://clinicaltrials.gov/study/NCT00019513"
-        },
-        {
-          "nct_id": "NCT07353827",
-          "title": "FOLFOX-HAIC Combined With Donafenib and Pucotenlimab as First-Line Treatment for Unresectable Intrahepatic Cholangiocarcinoma",
-          "status": "NOT_YET_RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "36",
-          "url": "https://clinicaltrials.gov/study/NCT07353827"
         }
       ],
       "trial_phases": {
-        "PHASE1": 7,
-        "PHASE2": 6,
+        "PHASE1": 5,
+        "PHASE2": 7,
         "PHASE3": 1
       },
       "confidence": "HIGH",
@@ -251,8 +251,10 @@
         "Moderate FAERS signal: 51 adverse event reports mention drug-disease co-occurrence",
         "Supporting paper with 34 citations",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.76, 3 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.76, 3 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D008175",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -395,15 +397,7 @@
         "tissue_specificity": 0.792,
         "context_modifier": 1.048
       },
-      "disease_entity": "Disease::MESH:D008175",
-      "docking": {
-        "kcal_per_mol": -7.68,
-        "target_symbol": "DHFR",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.9057,
+      "ensemble_prob": 0.8258,
       "ensemble_features": {
         "kg_score": 0.9954,
         "degree_penalty": 0.8813,
@@ -413,6 +407,13 @@
         "transe_rank_log": 3.912
       },
       "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": -7.68,
+        "target_symbol": "DHFR",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -448,7 +449,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2661,
       "dti_score": 1.0,
-      "dti_best_target": "G0S2",
+      "dti_best_target": "APOBEC3B",
       "kg_group_score": 0.4095,
       "structural_group_score": 1.0,
       "network_group_score": 0.5582000017166138,
@@ -562,12 +563,12 @@
       "clinical_trials_total": 5,
       "clinical_trials": [
         {
-          "nct_id": "NCT07286149",
-          "title": "A Clinical Study of MK-1084 With Other Treatments for Non-small Cell Lung Cancer (MK-3475-01F)",
-          "status": "RECRUITING",
+          "nct_id": "NCT03554473",
+          "title": "M7824 and Topotecan or Temozolomide in Relapsed Small Cell Lung Cancers",
+          "status": "COMPLETED",
           "phase": "PHASE1, PHASE2",
-          "enrollment": "190",
-          "url": "https://clinicaltrials.gov/study/NCT07286149"
+          "enrollment": "37",
+          "url": "https://clinicaltrials.gov/study/NCT03554473"
         },
         {
           "nct_id": "NCT06788912",
@@ -578,20 +579,20 @@
           "url": "https://clinicaltrials.gov/study/NCT06788912"
         },
         {
-          "nct_id": "NCT03554473",
-          "title": "M7824 and Topotecan or Temozolomide in Relapsed Small Cell Lung Cancers",
-          "status": "COMPLETED",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "37",
-          "url": "https://clinicaltrials.gov/study/NCT03554473"
-        },
-        {
           "nct_id": "NCT06305754",
           "title": "Sacituzumab Tirumotecan (MK-2870) Versus Pemetrexed and Carboplatin Combination Therapy in Participants With Epidermal Growth Factor (EGFR)-Mutated, Advanced Nonsquamous Non-small Cell Lung Cancer (NSCLC) Who Have Progressed on Prior EGFR Tyrosine Kinase Inhibitors (MK-2870-009)",
           "status": "RECRUITING",
           "phase": "PHASE3",
           "enrollment": "520",
           "url": "https://clinicaltrials.gov/study/NCT06305754"
+        },
+        {
+          "nct_id": "NCT07286149",
+          "title": "A Clinical Study of MK-1084 With Other Treatments for Non-small Cell Lung Cancer (MK-3475-01F)",
+          "status": "RECRUITING",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "190",
+          "url": "https://clinicaltrials.gov/study/NCT07286149"
         },
         {
           "nct_id": "NCT06789172",
@@ -613,8 +614,10 @@
         "Phase 3 trial exists",
         "Supported by 4 independent AI pillars",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.93, 1 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.93, 1 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D008175",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -715,15 +718,7 @@
         "tissue_specificity": 0.748,
         "context_modifier": 1.104
       },
-      "disease_entity": "Disease::MESH:D008175",
-      "docking": {
-        "kcal_per_mol": -5.69,
-        "target_symbol": "MIF",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.0488,
+      "ensemble_prob": 0.0321,
       "ensemble_features": {
         "kg_score": 0.9147,
         "degree_penalty": 0.8269,
@@ -733,6 +728,13 @@
         "transe_rank_log": 6.8035
       },
       "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": -5.69,
+        "target_symbol": "MIF",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -744,7 +746,7 @@
       "drug_name": "Eflornithine",
       "drug_id": "DB06243",
       "disease_name": "Lung cancer",
-      "combined_score": 0.5849999785423279,
+      "combined_score": 0.589900016784668,
       "pillars_hit": 5,
       "transe_rank": 70,
       "transe_score": -10.3445,
@@ -763,15 +765,15 @@
       "admet_score": 0.7131,
       "admet_flags": "clean",
       "primekg_score": 0.2448,
-      "dti_score": 0.3572,
-      "dti_best_target": "ZNF280A",
+      "dti_score": 0.386,
+      "dti_best_target": "DDR1",
       "kg_group_score": 0.2834,
-      "structural_group_score": 0.3572,
+      "structural_group_score": 0.386,
       "network_group_score": 0.9440000057220459,
       "txgnn_group_score": 0.03,
       "mr_group_score": 0.9337,
       "admet_multiplier": 0.9426,
-      "efficacy_score": 0.6205999851226807,
+      "efficacy_score": 0.6258000135421753,
       "groups_hit": 5,
       "direct_relations": [],
       "shared_target_count": 5,
@@ -920,19 +922,11 @@
       "mechanistic_hypothesis": "Eflornithine \u2014[is a therapeutic for]\u2192 Lung cancer",
       "kg_paths_text": "\u2022 Eflornithine \u2014[is a therapeutic for]\u2192 Lung cancer\n\u2022 Eflornithine \u2014[is a therapeutic for]\u2192 MESH:D064420 \u2014[is treated by]\u2192 DB00444 \u2014[is a therapeutic for]\u2192 Lung cancer\n\u2022 Eflornithine \u2014[is a therapeutic for]\u2192 MESH:D064420 \u2014[is treated by]\u2192 DB00140 \u2014[is a therapeutic for]\u2192 Lung cancer",
       "validation_experiments": [],
-      "novelty_score": 0.42100000381469727,
+      "novelty_score": 0.42500001192092896,
       "novelty_level": "KNOWN",
       "is_known_treatment": true,
       "clinical_trials_total": 2,
       "clinical_trials": [
-        {
-          "nct_id": "NCT05500508",
-          "title": "Oral AMXT 1501 Dicaprate in Combination With IV DFMO",
-          "status": "TERMINATED",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "15",
-          "url": "https://clinicaltrials.gov/study/NCT05500508"
-        },
         {
           "nct_id": "NCT06219174",
           "title": "Targeting ODC as an Immunotherapeutic Target in STK11 (LKB1) Pathway-Deficient NSCLC (DFMO)",
@@ -940,6 +934,14 @@
           "phase": "PHASE1, PHASE2",
           "enrollment": "45",
           "url": "https://clinicaltrials.gov/study/NCT06219174"
+        },
+        {
+          "nct_id": "NCT05500508",
+          "title": "Oral AMXT 1501 Dicaprate in Combination With IV DFMO",
+          "status": "TERMINATED",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "15",
+          "url": "https://clinicaltrials.gov/study/NCT05500508"
         }
       ],
       "trial_phases": {
@@ -954,8 +956,10 @@
         "CAUTION: Drug had terminated/withdrawn trials (Phase 2) for this disease",
         "Highly cited paper (173 citations): \"Lung cancer prediction by Deep Learning to identify benign l...\"",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.93, 1 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.93, 1 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D008175",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -985,10 +989,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.3490000069141388,
+        "triangulation_score": 0.35100001096725464,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.5849999785423279,
+          "kg": 0.5899999737739563,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 0.722
@@ -1005,15 +1009,7 @@
         "tissue_specificity": 0.947,
         "context_modifier": 1.144
       },
-      "disease_entity": "Disease::MESH:D008175",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.0029,
+      "ensemble_prob": 0.0043,
       "ensemble_features": {
         "kg_score": 0.8575,
         "degree_penalty": 1.0,
@@ -1023,6 +1019,13 @@
         "transe_rank_log": 7.3159
       },
       "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1054,7 +1057,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2494,
       "dti_score": 1.0,
-      "dti_best_target": "G0S2",
+      "dti_best_target": "APOBEC3B",
       "kg_group_score": 0.3485,
       "structural_group_score": 1.0,
       "network_group_score": 0.6344000101089478,
@@ -1305,51 +1308,51 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT06312137",
-          "title": "A Study to Assess Efficacy and Safety of Pembrolizumab With or Without Sacituzumab Tirumotecan (MK- 2870) in Adult Participants With Resectable Non Small Cell Lung Cancer (NSCLC) Not Achieving Pathological Complete Response (pCR) (MK-2870-019)",
-          "status": "RECRUITING",
-          "phase": "PHASE3",
-          "enrollment": "780",
-          "url": "https://clinicaltrials.gov/study/NCT06312137"
+          "nct_id": "NCT00215748",
+          "title": "Reduced Dexamethasone Pre-Medication Dose in Elderly Patients Receiving Weekly Docetaxel",
+          "status": "TERMINATED",
+          "phase": "PHASE2",
+          "enrollment": "40",
+          "url": "https://clinicaltrials.gov/study/NCT00215748"
         },
         {
-          "nct_id": "NCT01194453",
-          "title": "Pemetrexed Plus Cisplatin Versus Gemcitabine Plus Cisplatin for Advanced NSCLC Metastatic Non-small Cell Lung Cancer",
+          "nct_id": "NCT00293085",
+          "title": "An Open, Randomized, Multicentre, Phase II Pilot Study",
           "status": "COMPLETED",
           "phase": "PHASE2",
-          "enrollment": "288",
-          "url": "https://clinicaltrials.gov/study/NCT01194453"
+          "enrollment": "37",
+          "url": "https://clinicaltrials.gov/study/NCT00293085"
         },
         {
-          "nct_id": "NCT02445872",
-          "title": "Safety and Efficacy of Aprepitant for CINV in Patients With Lung Cancer Receiving Multiple-day Cisplatin Chemotherapy",
-          "status": "UNKNOWN",
-          "phase": "PHASE2",
-          "enrollment": "80",
-          "url": "https://clinicaltrials.gov/study/NCT02445872"
-        },
-        {
-          "nct_id": "NCT05070247",
-          "title": "A Study of TAK-500 With or Without Pembrolizumab in Adults With Select Locally Advanced or Metastatic Solid Tumors",
+          "nct_id": "NCT04786964",
+          "title": "Study of Pemetrexed+Platinum Chemotherapy With or Without Cosibelimab in First Line Metastatic Non-squamous NSCLC",
           "status": "TERMINATED",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "61",
-          "url": "https://clinicaltrials.gov/study/NCT05070247"
+          "phase": "PHASE3",
+          "enrollment": "25",
+          "url": "https://clinicaltrials.gov/study/NCT04786964"
         },
         {
-          "nct_id": "NCT04201769",
-          "title": "Dexamethasone-sparing Approach Including NEPA Against Emesis Caused by Cisplatin",
-          "status": "UNKNOWN",
-          "phase": "PHASE3",
-          "enrollment": "261",
-          "url": "https://clinicaltrials.gov/study/NCT04201769"
+          "nct_id": "NCT00227019",
+          "title": "Phase 2 Trial of Bevacizumab in Combination With Pemetrexed",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "16",
+          "url": "https://clinicaltrials.gov/study/NCT00227019"
+        },
+        {
+          "nct_id": "NCT03554473",
+          "title": "M7824 and Topotecan or Temozolomide in Relapsed Small Cell Lung Cancers",
+          "status": "COMPLETED",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "37",
+          "url": "https://clinicaltrials.gov/study/NCT03554473"
         }
       ],
       "trial_phases": {
-        "PHASE3": 3,
-        "PHASE2": 5,
-        "PHASE1": 1,
-        "NA": 2
+        "PHASE2": 6,
+        "PHASE3": 2,
+        "PHASE1": 3,
+        "PHASE4": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -1362,8 +1365,10 @@
         "Highly cited paper (2357 citations): \"Dexamethasone and supportive care with or without whole brai...\"",
         "AI analysis of 1 abstract(s) found positive treatment signals",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.78, 6 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.78, 6 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D008175",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -1500,15 +1505,7 @@
         "tissue_specificity": 0.931,
         "context_modifier": 1.142
       },
-      "disease_entity": "Disease::MESH:D008175",
-      "docking": {
-        "kcal_per_mol": -11.64,
-        "target_symbol": "NR3C1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.7099,
+      "ensemble_prob": 0.8161,
       "ensemble_features": {
         "kg_score": 0.9973,
         "degree_penalty": 0.736,
@@ -1518,404 +1515,13 @@
         "transe_rank_log": 3.4012
       },
       "ensemble_rank": 5,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Indomethacin",
-      "drug_id": "DB00328",
-      "disease_name": "Lung cancer",
-      "combined_score": 0.5667999982833862,
-      "pillars_hit": 4,
-      "transe_rank": 114,
-      "transe_score": -10.5739,
-      "pykeen_score": -12.3085,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0.052,
-      "gene_sig_rank": 16,
-      "proximity_score": 0.8379999995231628,
-      "proximity_distance": 0.6499999761581421,
-      "admet_score": 0.5619,
-      "admet_flags": "DILI=0.97",
-      "primekg_score": 0.257,
-      "dti_score": 1.0,
-      "dti_best_target": "CHEK1",
-      "kg_group_score": 0.305,
-      "structural_group_score": 1.0,
-      "network_group_score": 0.6247000098228455,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.9337,
-      "admet_multiplier": 0.9124,
-      "efficacy_score": 0.6212000250816345,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 43,
-      "shared_targets": [
-        "ABCB1",
-        "ABCC1",
-        "ABCC3",
-        "ABCC4",
-        "AGT",
-        "AVP",
-        "CDH1",
-        "CRH",
-        "CTNNB1",
-        "CXCL8",
-        "EDN1",
-        "EGF",
-        "EGFR",
-        "EIF2AK2",
-        "FN1",
-        "FOS",
-        "GDF15",
-        "GLO1",
-        "HGF",
-        "IL1A"
-      ],
-      "pubmed_total": 147,
-      "pubmed_treatment_total": 96,
-      "pubmed_repurposing_total": 1,
-      "key_papers": [
-        {
-          "pmid": "36109463",
-          "title": "Inhaled Indomethacin-Loaded Liposomes as Potential Therapeutics against Non-Small Cell Lung Cancer (NSCLC).",
-          "authors": "Sarvepalli S, Parvathaneni V, Chauhan G, et al.",
-          "journal": "Pharmaceutical research",
-          "year": "2022",
-          "abstract_snippet": "Most lung cancer instances are non-small cell lung cancers (NSCLC). As stated by recent literature, cycloxygenase-2 (COX-2) is upregulated in lung adenocarcinomas. COX-2 relates to enhanced cell proliferation and reduced apoptosis; both of which are essential for an invasive tumor growth and metasta...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36109463/",
-          "total_results": 147
-        },
-        {
-          "pmid": "25186613",
-          "title": "Interactions between neutrophils and non-small cell lung cancer cells: enhancement of tumor proliferation and inflammatory mediator synthesis.",
-          "authors": "Hattar K, Franz K, Ludwig M, et al.",
-          "journal": "Cancer immunology, immunotherapy : CII",
-          "year": "2014",
-          "abstract_snippet": "The inflammatory tumor microenvironment plays a crucial role in tumor progression. In lung cancer, both bacterial infections and neutrophilia are associated with a poor prognosis. In this study, we characterized the effect of isolated human neutrophils on proliferation of the non-small cell lung can...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/25186613/"
-        },
-        {
-          "pmid": "10741273",
-          "title": "The relationship between angiogenesis and the immune response in carcinogenesis and the progression of malignant disease.",
-          "authors": "O'Byrne KJ, Dalgleish AG, Browning MJ, et al.",
-          "journal": "European journal of cancer (Oxford, England : 1990)",
-          "year": "2000",
-          "abstract_snippet": "Recent studies have demonstrated that angiogenesis and suppressed cell-mediated immunity (CMI) play a central role in the pathogenesis of malignant disease facilitating tumour growth, invasion and metastasis. In the majority of tumours, the malignant process is preceded by a pathological condition o...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/10741273/"
-        },
-        {
-          "pmid": "29421569",
-          "title": "Design, synthesis and biological evaluation of hybrid nitroxide-based non-steroidal anti-inflammatory drugs.",
-          "authors": "Thomas K, Moody TW, Jensen RT, et al.",
-          "journal": "European journal of medicinal chemistry",
-          "year": "2018",
-          "abstract_snippet": "Dual-acting hybrid anti-oxidant/anti-inflammatory agents were developed employing the principle of pharmacophore hybridization. Hybrid agents were synthesized by combining stable anti-oxidant nitroxides with conventional non-steroidal anti-inflammatory drugs (NSAIDs). Several of the hybrid nitroxide...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29421569/"
-        },
-        {
-          "pmid": "9615719",
-          "title": "Non-small cell lung cancer cycloxygenase activity and proliferation are inhibited by non-steroidal antiinflammatory drugs.",
-          "authors": "Hida T, Leyton J, Makheja AN, et al.",
-          "journal": "Anticancer research",
-          "year": "1998",
-          "abstract_snippet": "The effects of non-steroidal antiinflammatory drugs (NSAIDs) on non-small cell lung cancer (NSCLC) were investigated. Arachidonic acid (AA) was metabolized to prostaglandin E2 (PGE2) in NSCLC cells. NSAIDs such as aspirin or indomethacin reduced PGE2 levels in NCI-H157 and H1264 cells, and the decre...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/9615719/"
-        }
-      ],
-      "repurposing_papers": [
-        {
-          "pmid": "36109463",
-          "title": "Inhaled Indomethacin-Loaded Liposomes as Potential Therapeutics against Non-Small Cell Lung Cancer (NSCLC).",
-          "authors": "Sarvepalli S, Parvathaneni V, Chauhan G, et al.",
-          "journal": "Pharmaceutical research",
-          "year": "2022",
-          "abstract_snippet": "Most lung cancer instances are non-small cell lung cancers (NSCLC). As stated by recent literature, cycloxygenase-2 (COX-2) is upregulated in lung adenocarcinomas. COX-2 relates to enhanced cell proliferation and reduced apoptosis; both of which are essential for an invasive tumor growth and metasta...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36109463/",
-          "total_results": 1
-        }
-      ],
-      "semantic_scholar_papers": [
-        {
-          "title": "Indomethacin Induces Spermidine/Spermine-N1-Acetyltransferase-1 via the Nucleolin-CDK1 Axis and Synergizes with the Polyamine Oxidase Inhibitor Methoctramine in Lung Cancer Cells",
-          "year": 2023,
-          "citations": 6,
-          "url": "https://www.semanticscholar.org/paper/d605ba2edc67a852d4d1bac347ac4ece4d28525f",
-          "authors": ""
-        },
-        {
-          "title": "Inhaled Indomethacin-Loaded Liposomes as Potential Therapeutics against Non-Small Cell Lung Cancer (NSCLC)",
-          "year": 2022,
-          "citations": 30,
-          "url": "https://www.semanticscholar.org/paper/55e53eecae59cd47c28b205a9a031fa0169b3a41",
-          "authors": "Sruthi Sarvepalli, Vineela Parvathaneni, G. Chauhan"
-        },
-        {
-          "title": "Searching for Drug Synergy Against Cancer Through Polyamine Metabolism Impairment: Insight Into the Metabolic Effect of Indomethacin on Lung Cancer Cells",
-          "year": 2020,
-          "citations": 21,
-          "url": "https://www.semanticscholar.org/paper/d4e50348153df897ad3e5cdca210933ace6721d9",
-          "authors": "F. L\u00f3pez-Contreras, M. Mu\u00f1oz-Uribe, Jorge P\u00e9rez-Laines"
-        },
-        {
-          "title": "Indomethacin sensitizes human lung cancer cells to DDP through autophagy activation in a mouse model",
-          "year": 2020,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/486178ea0c5ac087e490183fcb5710d2a99d166c",
-          "authors": "Yueying Zhang, Debao Liu, Tong-Shu Yang"
-        },
-        {
-          "title": "Single\u2010Component Dual\u2010Functional Autoboost Strategy by Dual Photodynamic and Cyclooxygenase\u20102 Inhibition for Lung Cancer and Spinal Metastasis",
-          "year": 2024,
-          "citations": 14,
-          "url": "https://www.semanticscholar.org/paper/b5e2824bbf496e9fb36593973e4c6156b6fdee58",
-          "authors": "Ben Wang, Zhenni Lu, Meng-Xiong Song"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Repositioning canakinumab for non-small cell lung cancer\u2014important lessons for drug repurposing in oncology",
-        "year": 2022,
-        "citations": 34,
-        "url": "https://www.semanticscholar.org/paper/2782a4dedd25af0065c62a87196a9b1e038fa7e1",
-        "authors": "M. Lythgoe, V. Prasad"
-      },
-      "max_citations": 34,
-      "faers_signal": "moderate",
-      "faers_total_reports": 12621,
-      "faers_cooccurrences": 24,
-      "faers_interpretation": "24 FAERS reports mention both Indomethacin and Lung cancer-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "KIN001-043 (1.493)",
-        "PF3845 (1.469)",
-        "3,5-dichloro-2-hydroxy-N-(2-methoxy-5-phenylphenyl)benzenesulfonamide (1.452)",
-        "YM-155 (1.440)",
-        "fostamatinib (1.431)"
-      ],
-      "signature_interpretation": "Indomethacin was not found among the top 46 drugs that reverse the Lung cancer gene signature. Top reversers: KIN001-043 (1.493), PF3845 (1.469), 3,5-dichloro-2-hydroxy-N-(2-methoxy-5-phenylphenyl)benzenesulfonamide (1.452)",
-      "ai_hypothesis": "of its anti-inflammatory properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": true,
-      "failed_trial_phase": "Phase 2",
-      "failed_trial_count": 2,
-      "failed_trial_penalty": 0.8999999999999999,
-      "mr_score": 0.9337,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "Indomethacin \u2014[downregulates]\u2192 gene-8914 \u2014[is linked to]\u2192 Lung cancer",
-      "kg_paths_text": "\u2022 Indomethacin \u2014[downregulates]\u2192 gene-8914 \u2014[is linked to]\u2192 Lung cancer\n\u2022 Indomethacin \u2014[downregulates]\u2192 gene-22796 \u2014[is bound by]\u2192 gene-9609 \u2014[is upregulated by]\u2192 Lung cancer\n\u2022 Indomethacin \u2014[downregulates]\u2192 gene-22796 \u2014[is bound by]\u2192 gene-9609 \u2014[is upregulated by]\u2192 Lung cancer",
-      "validation_experiments": [],
-      "novelty_score": 0.3400000035762787,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": false,
-      "clinical_trials_total": 3,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT05035407",
-          "title": "T Cell Receptor Gene Therapy Targeting KK-LC-1 for Gastric, Breast, Cervical, Lung and Other KK-LC-1 Positive Epithelial Cancers",
-          "status": "TERMINATED",
-          "phase": "PHASE1",
-          "enrollment": "36",
-          "url": "https://clinicaltrials.gov/study/NCT05035407"
-        },
-        {
-          "nct_id": "NCT04495894",
-          "title": "Pre-Incisional Ketorolac for Patients Undergoing Surgery for Non-Small Cell Lung Cancer and Renal Cell Carcinoma",
-          "status": "TERMINATED",
-          "phase": "PHASE2",
-          "enrollment": "68",
-          "url": "https://clinicaltrials.gov/study/NCT04495894"
-        },
-        {
-          "nct_id": "NCT01932918",
-          "title": "Antinociceptive Modalities on Ischemia Reperfusion Injury",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "142",
-          "url": "https://clinicaltrials.gov/study/NCT01932918"
-        }
-      ],
-      "trial_phases": {
-        "PHASE1": 1,
-        "PHASE2": 1
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "3 clinical trial(s) found on ClinicalTrials.gov",
-        "147 PubMed articles on this drug-disease pair",
-        "1 article(s) specifically mention repurposing/repositioning",
-        "Supported by 4 independent AI pillars",
-        "Note: Drug had early-phase trial failures for this disease",
-        "Moderate FAERS signal: 24 adverse event reports mention drug-disease co-occurrence",
-        "Supporting paper with 34 citations",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.93, 1 genetic targets)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 2093,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "moderate",
-        "summary": "CPIC-C (CYP2C9) \u2022 PharmGKB-3 (CYP2C9 / CYP2C9*1, CYP2C9*3)",
-        "cpic": [
-          {
-            "gene": "CYP2C9",
-            "level": "C",
-            "guideline": "CYP2C9 and NSAIDs"
-          }
-        ],
-        "pharmgkb": [
-          {
-            "gene": "CYP2C9",
-            "variant": "CYP2C9*1, CYP2C9*3",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451140140"
-          },
-          {
-            "gene": "LST1;LTA;TNF",
-            "variant": "rs1800629",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1452570052"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 3,
-        "axes": {
-          "kg": true,
-          "docking": true,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.636,
-        "label": "silver-standard",
-        "axis_values": {
-          "kg": 0.567,
-          "docking": 0.831,
-          "pharos": 0.0,
-          "literature": 0.942
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Lung"
-        ],
-        "n_genes": 20,
-        "n_expressed": 18,
-        "mean_tpm_in_tissue": 87.45,
-        "max_tpm_in_tissue": 919.51,
-        "tissue_specificity": 0.657,
-        "context_modifier": 1.104
-      },
-      "disease_entity": "Disease::MESH:D008175",
       "docking": {
-        "kcal_per_mol": -9.97,
-        "target_symbol": "CXCL8",
+        "kcal_per_mol": -11.64,
+        "target_symbol": "NR3C1",
         "source": "chembl_bioactivity_proxy",
         "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
         "hit": true
       },
-      "ensemble_prob": 0.2718,
-      "ensemble_features": {
-        "kg_score": 0.9943,
-        "degree_penalty": 0.7454,
-        "n_drug_targets": 53,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 4.1109
-      },
-      "ensemble_rank": 6,
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1927,7 +1533,7 @@
       "drug_name": "Fluorouracil",
       "drug_id": "DB00544",
       "disease_name": "Lung cancer",
-      "combined_score": 0.5651,
+      "combined_score": 0.5662,
       "pillars_hit": 4,
       "transe_rank": 16,
       "transe_score": -9.9236,
@@ -1946,15 +1552,15 @@
       "admet_score": 0.7145,
       "admet_flags": "clean",
       "primekg_score": 0.26,
-      "dti_score": 0.7743,
-      "dti_best_target": "G0S2",
+      "dti_score": 0.7805,
+      "dti_best_target": "APOBEC3B",
       "kg_group_score": 0.4318,
-      "structural_group_score": 0.7743,
+      "structural_group_score": 0.7805,
       "network_group_score": 0.6506999731063843,
       "txgnn_group_score": 0,
       "mr_group_score": 0.8126,
       "admet_multiplier": 0.9429,
-      "efficacy_score": 0.5993,
+      "efficacy_score": 0.6005,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 52,
@@ -2139,7 +1745,7 @@
         }
       ],
       "has_failed_trial": false,
-      "failed_trial_phase": "Phase 2",
+      "failed_trial_phase": "Phase 3",
       "failed_trial_count": 10,
       "failed_trial_penalty": 1.0,
       "mr_score": 0.8126,
@@ -2153,49 +1759,49 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT00343408",
-          "title": "AZD2171 and Standard Combination Chemotherapy in Advanced Non-Small Cell Lung Cancer or Colorectal Cancer",
+          "nct_id": "NCT00010023",
+          "title": "Capecitabine Combined With Cisplatin in Treating Patients With Locally Advanced or Metastatic Solid Tumors",
           "status": "COMPLETED",
           "phase": "PHASE1",
-          "enrollment": "31",
-          "url": "https://clinicaltrials.gov/study/NCT00343408"
+          "enrollment": "",
+          "url": "https://clinicaltrials.gov/study/NCT00010023"
         },
         {
-          "nct_id": "NCT06607185",
-          "title": "A Study of the Pan-KRAS Inhibitor LY4066434 in Participants With KRAS Mutant Solid Tumors",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "phase": "PHASE1",
-          "enrollment": "750",
-          "url": "https://clinicaltrials.gov/study/NCT06607185"
-        },
-        {
-          "nct_id": "NCT00557102",
-          "title": "Cetuximab and Combination Chemotherapy as First-Line Therapy in Treating Patients With Colorectal Cancer That Has Spread to the Liver and/or Lung",
+          "nct_id": "NCT05116891",
+          "title": "A Phase 1/2 Study of CAN04 in Combination With Different Chemotherapy Regimens in Subjects With Advanced Solid Tumors",
           "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "24",
-          "url": "https://clinicaltrials.gov/study/NCT00557102"
-        },
-        {
-          "nct_id": "NCT00054977",
-          "title": "Safety of GM-CT-01 With and Without 5-Fluorouracil in Patients With Solid Tumors",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
+          "phase": "PHASE1, PHASE2",
           "enrollment": "40",
-          "url": "https://clinicaltrials.gov/study/NCT00054977"
+          "url": "https://clinicaltrials.gov/study/NCT05116891"
         },
         {
-          "nct_id": "NCT00019513",
-          "title": "Combination Chemotherapy in Treating Patients With Recurrent, Refractory, or Metastatic Solid Tumors or Lymphomas",
-          "status": "COMPLETED",
+          "nct_id": "NCT05647122",
+          "title": "First in Human Study of AZD9592 in Solid Tumors",
+          "status": "RECRUITING",
           "phase": "PHASE1",
-          "enrollment": "108",
-          "url": "https://clinicaltrials.gov/study/NCT00019513"
+          "enrollment": "403",
+          "url": "https://clinicaltrials.gov/study/NCT05647122"
+        },
+        {
+          "nct_id": "NCT04999761",
+          "title": "AB122 Platform Study",
+          "status": "RECRUITING",
+          "phase": "PHASE1",
+          "enrollment": "917",
+          "url": "https://clinicaltrials.gov/study/NCT04999761"
+        },
+        {
+          "nct_id": "NCT03997968",
+          "title": "A Phase 1/2 Study of CYT-0851 in B-Cell Malignancies and Advanced Solid Tumors",
+          "status": "COMPLETED",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "169",
+          "url": "https://clinicaltrials.gov/study/NCT03997968"
         }
       ],
       "trial_phases": {
-        "PHASE1": 4,
-        "PHASE2": 6
+        "PHASE1": 7,
+        "PHASE2": 5
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -2209,6 +1815,7 @@
         "Strong causal genetic evidence (MR score: 0.81, 8 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D008175",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2354,7 +1961,7 @@
         "triangulation_score": 0.61,
         "label": "silver-standard",
         "axis_values": {
-          "kg": 0.565,
+          "kg": 0.566,
           "docking": 0.706,
           "pharos": 0.0,
           "literature": 1.0
@@ -2371,15 +1978,7 @@
         "tissue_specificity": 0.719,
         "context_modifier": 1.089
       },
-      "disease_entity": "Disease::MESH:D008175",
-      "docking": {
-        "kcal_per_mol": -8.47,
-        "target_symbol": "CYP19A1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.9452,
+      "ensemble_prob": 0.8919,
       "ensemble_features": {
         "kg_score": 0.9989,
         "degree_penalty": 0.7655,
@@ -2389,435 +1988,13 @@
         "transe_rank_log": 2.5649
       },
       "ensemble_rank": 3,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Folic Acid",
-      "drug_id": "DB00158",
-      "disease_name": "Lung cancer",
-      "combined_score": 0.565,
-      "pillars_hit": 4,
-      "transe_rank": 149,
-      "transe_score": -10.6898,
-      "pykeen_score": -12.216,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.8379999995231628,
-      "proximity_distance": 0.6499999761581421,
-      "admet_score": 1.0,
-      "admet_flags": "DILI=0.99",
-      "primekg_score": 0.2526,
-      "dti_score": 0.7924,
-      "dti_best_target": "CHEK1",
-      "kg_group_score": 0.2613,
-      "structural_group_score": 0.7924,
-      "network_group_score": 0.6636000275611877,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.8286,
-      "admet_multiplier": 1.0,
-      "efficacy_score": 0.565,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 21,
-      "shared_targets": [
-        "ABCC3",
-        "ABCC4",
-        "ABCG2",
-        "CCL2",
-        "CSF2",
-        "DCC",
-        "DHFR",
-        "DNMT1",
-        "EGFR",
-        "ERAL1",
-        "ERBB2",
-        "FOLR1",
-        "FOSL1",
-        "IGF1R",
-        "MAPK1",
-        "MTOR",
-        "SHMT1",
-        "STAT3",
-        "TF",
-        "TNF"
-      ],
-      "pubmed_total": 514,
-      "pubmed_treatment_total": 410,
-      "pubmed_repurposing_total": 1,
-      "key_papers": [
-        {
-          "pmid": "39375761",
-          "title": "Ultrasound-responsive nanocarriers with siRNA and Fe",
-          "authors": "Li M, Li Y, Zheng J, et al.",
-          "journal": "Journal of nanobiotechnology",
-          "year": "2024",
-          "abstract_snippet": "The immunosuppressive tumor microenvironment (TME) significantly inhibits the effective anti-tumor immune response, greatly affecting the efficacy of immunotherapy. Most tumor-associated macrophages (TAMs) belong to the M2 phenotype, which contributes significantly to the immunosuppressive effects i...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39375761/",
-          "total_results": 514
-        },
-        {
-          "pmid": "34741752",
-          "title": "Mechanisms, Management and Prevention of Pemetrexed-Related Toxicity.",
-          "authors": "de Rouw N, Piet B, Derijks HJ, et al.",
-          "journal": "Drug safety",
-          "year": "2021",
-          "abstract_snippet": "Pemetrexed is a cytostatic antifolate drug and a cornerstone in the treatment of lung cancer. Although generally well tolerated, a substantial part of the patient population experiences dose-limiting or even treatment-limiting toxicities. These include mucositis, skin problems, fatigue, renal toxici...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34741752/"
-        },
-        {
-          "pmid": "38256120",
-          "title": "Folate Receptor Alpha-A Novel Approach to Cancer Therapy.",
-          "authors": "Gonzalez T, Muminovic M, Nano O, et al.",
-          "journal": "International journal of molecular sciences",
-          "year": "2024",
-          "abstract_snippet": "Folate receptor \u03b1 (FR) was discovered many decades ago, along with drugs that target intracellular folate metabolism, such as pemetrexed and methotrexate. Folate is taken up by the cell via this receptor, which also targeted by many cancer agents due to the over-expression of the receptor by cancer ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38256120/"
-        },
-        {
-          "pmid": "15117980",
-          "title": "Randomized phase III trial of pemetrexed versus docetaxel in patients with non-small-cell lung cancer previously treated with chemotherapy.",
-          "authors": "Hanna N, Shepherd FA, Fossella FV, et al.",
-          "journal": "Journal of clinical oncology : official journal of the American Society of Clinical Oncology",
-          "year": "2004",
-          "abstract_snippet": "PURPOSE: To compare the efficacy and toxicity of pemetrexed versus docetaxel in patients with advanced non-small-cell lung cancer (NSCLC) previously treated with chemotherapy. PATIENTS AND METHODS: Eligible patients had a performance status 0 to 2, previous treatment with one prior chemotherapy regi...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/15117980/"
-        },
-        {
-          "pmid": "20017724",
-          "title": "The role of pemetrexed in lung cancer.",
-          "authors": "Wang D, He J",
-          "journal": "Current drug targets",
-          "year": "2010",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/20017724/"
-        }
-      ],
-      "repurposing_papers": [
-        {
-          "pmid": "36986861",
-          "title": "Development and Characterization of Folic Acid-Conjugated Amodiaquine-Loaded Nanoparticles-Efficacy in Cancer Treatment.",
-          "authors": "Parvathaneni V, Shukla SK, Gupta V",
-          "journal": "Pharmaceutics",
-          "year": "2023",
-          "abstract_snippet": "The objective of this study was to construct amodiaquine-loaded, folic acid-conjugated polymeric nanoparticles (FA-AQ NPs) to treat cancer that could be scaled to commercial production. In this study, folic acid (FA) was conjugated with a PLGA polymer followed by the formulation of drug-loaded NPs. ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36986861/",
-          "total_results": 1
-        }
-      ],
-      "semantic_scholar_papers": [
-        {
-          "title": "Folic Acid-Modified Milk Exosomes Delivering c-Kit siRNA Overcome EGFR-TKIs Resistance in Lung Cancer by Suppressing mTOR Signaling and Stemness",
-          "year": 2025,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/d832279789a40719dbdef1dfcc29b7385323b7d3",
-          "authors": "Zihan Xu, Li Wang, L. Tu"
-        },
-        {
-          "title": "Novel protocatechuic acid encapsulated bovine serum albumin functionalized folic acid nanoparticles for targeted therapy in urethane-induced lung cancer model",
-          "year": 2025,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/822bd0a0c642a1fd4ec2d6e072a618bf92b63271",
-          "authors": "Alaa I. Ibrahim, H. Sahyon, Adel M. Attia"
-        },
-        {
-          "title": "Is folic acid associated with lung cancer development? A cross-sectional study in NHANES",
-          "year": 2025,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/a1d7a4a47bfb6e9a093502c13ae0082e895367a1",
-          "authors": "Bin-Bin Li, Fei Xu, Xuxiang Lu"
-        },
-        {
-          "title": "Innovative fabrication of folic acid-conjugated curcumin cellulose nanofibers for targeted lung cancer therapy",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/ef8c96ce9c272ad75a3ad680b6fa6d9e4a8414dd",
-          "authors": "V. Chatap, Bhakti Patel, T. Patil"
-        },
-        {
-          "title": "A comparative study on inhibition of lung cancer cells by nanoemulsion, nanoliposome, nanogold and their folic acid conjugates prepared with collagen peptides from Taiwan tilapia skin.",
-          "year": 2024,
-          "citations": 12,
-          "url": "https://www.semanticscholar.org/paper/9347f321314ab7078c99d81a9b5e4df52cee2d5e",
-          "authors": "B. Inbaraj, Yu-Wen Lai, Bing-Huei Chen"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Computational Repositioning of the Anticonvulsant Topiramate for Inflammatory Bowel Disease",
-        "year": 2011,
-        "citations": 551,
-        "url": "https://www.semanticscholar.org/paper/65228a9f1b83b09af483779bb637fa6e037ae12f",
-        "authors": "J. Dudley, M. Sirota, M. Shenoy"
-      },
-      "max_citations": 551,
-      "faers_signal": "moderate",
-      "faers_total_reports": 253612,
-      "faers_cooccurrences": 1029,
-      "faers_interpretation": "1029 FAERS reports mention both Folic Acid and Lung cancer-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "KIN001-043 (1.493)",
-        "PF3845 (1.469)",
-        "3,5-dichloro-2-hydroxy-N-(2-methoxy-5-phenylphenyl)benzenesulfonamide (1.452)",
-        "YM-155 (1.440)",
-        "fostamatinib (1.431)"
-      ],
-      "signature_interpretation": "Folic Acid was not found among the top 46 drugs that reverse the Lung cancer gene signature. Top reversers: KIN001-043 (1.493), PF3845 (1.469), 3,5-dichloro-2-hydroxy-N-(2-methoxy-5-phenylphenyl)benzenesulfonamide (1.452)",
-      "ai_hypothesis": "of its anti-cancer properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "Phase 3",
-      "failed_trial_count": 10,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.8286,
-      "mr_genetic_targets": 2,
-      "mechanistic_hypothesis": "Folic Acid \u2014[is a therapeutic for]\u2192 Lung cancer",
-      "kg_paths_text": "\u2022 Folic Acid \u2014[is a therapeutic for]\u2192 Lung cancer\n\u2022 Folic Acid \u2014[binds]\u2192 gene-9429 \u2014[is linked to]\u2192 Lung cancer\n\u2022 Folic Acid \u2014[binds]\u2192 gene-9429 \u2014[is linked to]\u2192 Lung cancer",
-      "validation_experiments": [],
-      "novelty_score": 0.102,
-      "novelty_level": "ESTABLISHED",
-      "is_known_treatment": true,
-      "clinical_trials_total": 10,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT05012254",
-          "title": "Nivolumab and Ipilimumab Plus Chemotherapy for Patients With Stage IV Lung Cancer With Brain Metastases",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "71",
-          "url": "https://clinicaltrials.gov/study/NCT05012254"
-        },
-        {
-          "nct_id": "NCT00343408",
-          "title": "AZD2171 and Standard Combination Chemotherapy in Advanced Non-Small Cell Lung Cancer or Colorectal Cancer",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "31",
-          "url": "https://clinicaltrials.gov/study/NCT00343408"
-        },
-        {
-          "nct_id": "NCT03242993",
-          "title": "[18F]-AZAFOL AS POSITRON EMISSION TOMOGRAPHY (PET) TRACER in FR Positive Cancer Imaging",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "15",
-          "url": "https://clinicaltrials.gov/study/NCT03242993"
-        },
-        {
-          "nct_id": "NCT06607185",
-          "title": "A Study of the Pan-KRAS Inhibitor LY4066434 in Participants With KRAS Mutant Solid Tumors",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "phase": "PHASE1",
-          "enrollment": "750",
-          "url": "https://clinicaltrials.gov/study/NCT06607185"
-        },
-        {
-          "nct_id": "NCT01194453",
-          "title": "Pemetrexed Plus Cisplatin Versus Gemcitabine Plus Cisplatin for Advanced NSCLC Metastatic Non-small Cell Lung Cancer",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "288",
-          "url": "https://clinicaltrials.gov/study/NCT01194453"
-        }
-      ],
-      "trial_phases": {
-        "PHASE2": 6,
-        "PHASE1": 5
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "10 clinical trial(s) found on ClinicalTrials.gov",
-        "514 PubMed articles on this drug-disease pair",
-        "1 article(s) specifically mention repurposing/repositioning",
-        "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 1029 adverse event reports mention drug-disease co-occurrence",
-        "Highly cited paper (551 citations): \"Computational Repositioning of the Anticonvulsant Topiramate...\"",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.83, 2 genetic targets)",
-        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 845,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00783",
-            "drug_name": "Estradiol",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00502",
-            "drug_name": "Haloperidol",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00331",
-            "drug_name": "Metformin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00563",
-            "drug_name": "Methotrexate",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00338",
-            "drug_name": "Omeprazole",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (MTRR / rs1801394)",
-        "cpic": [],
-        "pharmgkb": [
-          {
-            "gene": "MTRR",
-            "variant": "rs1801394",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183491035"
-          },
-          {
-            "gene": "MTHFR",
-            "variant": "rs1801131",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204525"
-          },
-          {
-            "gene": "TLR4",
-            "variant": "rs4986790",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043880467"
-          },
-          {
-            "gene": "MTHFR",
-            "variant": "rs1801133",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183491364"
-          },
-          {
-            "gene": "MTR",
-            "variant": "rs1805087",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451634907"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.527,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.565,
-          "docking": 0.43,
-          "pharos": 0.0,
-          "literature": 1.0
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Lung"
-        ],
-        "n_genes": 20,
-        "n_expressed": 19,
-        "mean_tpm_in_tissue": 32.91,
-        "max_tpm_in_tissue": 172.98,
-        "tissue_specificity": 0.686,
-        "context_modifier": 1.07
-      },
-      "disease_entity": "Disease::MESH:D008175",
       "docking": {
-        "kcal_per_mol": -5.16,
-        "target_symbol": "TYMS",
+        "kcal_per_mol": -8.47,
+        "target_symbol": "CYP19A1",
         "source": "chembl_bioactivity_proxy",
         "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
         "hit": true
       },
-      "ensemble_prob": 0.1175,
-      "ensemble_features": {
-        "kg_score": 0.976,
-        "degree_penalty": 0.7918,
-        "n_drug_targets": 6,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 5.5373
-      },
-      "ensemble_rank": 8,
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2849,7 +2026,7 @@
       "admet_flags": "Skin_Reaction=0.85",
       "primekg_score": 0.2484,
       "dti_score": 1.0,
-      "dti_best_target": "G0S2",
+      "dti_best_target": "APOBEC3B",
       "kg_group_score": 0.3378,
       "structural_group_score": 1.0,
       "network_group_score": 0.6101999878883362,
@@ -3026,50 +2203,50 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT00617409",
-          "title": "To Immunize Patients With Extensive Stage SCLC Combined With Chemo With or Without All Trans Retinoic Acid",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "69",
-          "url": "https://clinicaltrials.gov/study/NCT00617409"
+          "nct_id": "NCT04919369",
+          "title": "All-Trans Retinoic Acid (ATRA) and Atezolizumab for the Treatment of Recurrent or Metastatic Non-Small Cell Lung Cancer",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "phase": "PHASE1",
+          "enrollment": "18",
+          "url": "https://clinicaltrials.gov/study/NCT04919369"
         },
         {
-          "nct_id": "NCT00005825",
-          "title": "Combination Chemotherapy in Treating Patients With Stage IIIB or Stage IV Non-small Cell Lung Cancer",
+          "nct_id": "NCT02712905",
+          "title": "An Open-Label, Dose-Escalation/Dose-Expansion Safety Study of INCB059872 in Subjects With Advanced Malignancies",
+          "status": "TERMINATED",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "116",
+          "url": "https://clinicaltrials.gov/study/NCT02712905"
+        },
+        {
+          "nct_id": "NCT01041833",
+          "title": "Effect of All-trans Retinoic Acid With Chemotherapy Based on Paclitaxel and Cisplatin As First-line Treatment of Patients With Advanced Non-small Cell Lung Cancer and Expression of RAR-alfa and RAR-beta as Response Biomarker",
           "status": "UNKNOWN",
-          "phase": "PHASE2",
-          "enrollment": "",
-          "url": "https://clinicaltrials.gov/study/NCT00005825"
+          "phase": "PHASE3",
+          "enrollment": "230",
+          "url": "https://clinicaltrials.gov/study/NCT01041833"
         },
         {
-          "nct_id": "NCT00514293",
-          "title": "Bexarotene, Tretinoin, and Combination Chemotherapy in Treating Patients With Stage III or Stage IV Non-Small Cell Lung Cancer",
-          "status": "UNKNOWN",
-          "phase": "PHASE2",
-          "enrollment": "39",
-          "url": "https://clinicaltrials.gov/study/NCT00514293"
-        },
-        {
-          "nct_id": "NCT01048645",
-          "title": "Effect of All-trans Retinoic Acid With Chemotherapy Based in Paclitaxel and Cisplatin as First Line Treatment of Patients With Advanced Non-small Cell Lung Cancer",
+          "nct_id": "NCT00601796",
+          "title": "Vaccine Therapy, Tretinoin, and Cyclophosphamide in Treating Patients With Metastatic Lung Cancer",
           "status": "COMPLETED",
           "phase": "PHASE2",
-          "enrollment": "107",
-          "url": "https://clinicaltrials.gov/study/NCT01048645"
+          "enrollment": "24",
+          "url": "https://clinicaltrials.gov/study/NCT00601796"
         },
         {
-          "nct_id": "NCT00062010",
-          "title": "Interferon Alfa, Isotretinoin, and Paclitaxel in Treating Patients With Recurrent Small Cell Lung Cancer",
+          "nct_id": "NCT00002586",
+          "title": "13-Cis Retinoic Acid With or Without Vitamin E for Prevention of Lung Cancer",
           "status": "COMPLETED",
           "phase": "PHASE2",
-          "enrollment": "37",
-          "url": "https://clinicaltrials.gov/study/NCT00062010"
+          "enrollment": "96",
+          "url": "https://clinicaltrials.gov/study/NCT00002586"
         }
       ],
       "trial_phases": {
-        "PHASE2": 8,
-        "PHASE1": 1,
-        "PHASE3": 1
+        "PHASE1": 2,
+        "PHASE2": 7,
+        "PHASE3": 2
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -3080,8 +2257,10 @@
         "Moderate FAERS signal: 8 adverse event reports mention drug-disease co-occurrence",
         "Supporting paper with 34 citations",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.76, 9 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.76, 9 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D008175",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -3182,15 +2361,7 @@
         "tissue_specificity": 0.885,
         "context_modifier": 1.136
       },
-      "disease_entity": "Disease::MESH:D008175",
-      "docking": {
-        "kcal_per_mol": -10.77,
-        "target_symbol": "RARB",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.9925,
+      "ensemble_prob": 0.9912,
       "ensemble_features": {
         "kg_score": 0.9996,
         "degree_penalty": 0.7515,
@@ -3200,6 +2371,13 @@
         "transe_rank_log": 1.6094
       },
       "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": -10.77,
+        "target_symbol": "RARB",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -3211,6 +2389,915 @@
           "Michael_acceptor_1",
           "polyene",
           "polyene"
+        ]
+      }
+    },
+    {
+      "drug_name": "Indomethacin",
+      "drug_id": "DB00328",
+      "disease_name": "Lung cancer",
+      "combined_score": 0.5414999723434448,
+      "pillars_hit": 4,
+      "transe_rank": 114,
+      "transe_score": -10.5739,
+      "pykeen_score": -12.3085,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0.052,
+      "gene_sig_rank": 16,
+      "proximity_score": 0.8379999995231628,
+      "proximity_distance": 0.6499999761581421,
+      "admet_score": 0.5619,
+      "admet_flags": "DILI=0.97",
+      "primekg_score": 0.257,
+      "dti_score": 0.8459,
+      "dti_best_target": "PGF",
+      "kg_group_score": 0.305,
+      "structural_group_score": 0.8459,
+      "network_group_score": 0.6247000098228455,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.9337,
+      "admet_multiplier": 0.9124,
+      "efficacy_score": 0.593500018119812,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 43,
+      "shared_targets": [
+        "ABCB1",
+        "ABCC1",
+        "ABCC3",
+        "ABCC4",
+        "AGT",
+        "AVP",
+        "CDH1",
+        "CRH",
+        "CTNNB1",
+        "CXCL8",
+        "EDN1",
+        "EGF",
+        "EGFR",
+        "EIF2AK2",
+        "FN1",
+        "FOS",
+        "GDF15",
+        "GLO1",
+        "HGF",
+        "IL1A"
+      ],
+      "pubmed_total": 147,
+      "pubmed_treatment_total": 96,
+      "pubmed_repurposing_total": 1,
+      "key_papers": [
+        {
+          "pmid": "36109463",
+          "title": "Inhaled Indomethacin-Loaded Liposomes as Potential Therapeutics against Non-Small Cell Lung Cancer (NSCLC).",
+          "authors": "Sarvepalli S, Parvathaneni V, Chauhan G, et al.",
+          "journal": "Pharmaceutical research",
+          "year": "2022",
+          "abstract_snippet": "Most lung cancer instances are non-small cell lung cancers (NSCLC). As stated by recent literature, cycloxygenase-2 (COX-2) is upregulated in lung adenocarcinomas. COX-2 relates to enhanced cell proliferation and reduced apoptosis; both of which are essential for an invasive tumor growth and metasta...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36109463/",
+          "total_results": 147
+        },
+        {
+          "pmid": "25186613",
+          "title": "Interactions between neutrophils and non-small cell lung cancer cells: enhancement of tumor proliferation and inflammatory mediator synthesis.",
+          "authors": "Hattar K, Franz K, Ludwig M, et al.",
+          "journal": "Cancer immunology, immunotherapy : CII",
+          "year": "2014",
+          "abstract_snippet": "The inflammatory tumor microenvironment plays a crucial role in tumor progression. In lung cancer, both bacterial infections and neutrophilia are associated with a poor prognosis. In this study, we characterized the effect of isolated human neutrophils on proliferation of the non-small cell lung can...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25186613/"
+        },
+        {
+          "pmid": "10741273",
+          "title": "The relationship between angiogenesis and the immune response in carcinogenesis and the progression of malignant disease.",
+          "authors": "O'Byrne KJ, Dalgleish AG, Browning MJ, et al.",
+          "journal": "European journal of cancer (Oxford, England : 1990)",
+          "year": "2000",
+          "abstract_snippet": "Recent studies have demonstrated that angiogenesis and suppressed cell-mediated immunity (CMI) play a central role in the pathogenesis of malignant disease facilitating tumour growth, invasion and metastasis. In the majority of tumours, the malignant process is preceded by a pathological condition o...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10741273/"
+        },
+        {
+          "pmid": "29421569",
+          "title": "Design, synthesis and biological evaluation of hybrid nitroxide-based non-steroidal anti-inflammatory drugs.",
+          "authors": "Thomas K, Moody TW, Jensen RT, et al.",
+          "journal": "European journal of medicinal chemistry",
+          "year": "2018",
+          "abstract_snippet": "Dual-acting hybrid anti-oxidant/anti-inflammatory agents were developed employing the principle of pharmacophore hybridization. Hybrid agents were synthesized by combining stable anti-oxidant nitroxides with conventional non-steroidal anti-inflammatory drugs (NSAIDs). Several of the hybrid nitroxide...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29421569/"
+        },
+        {
+          "pmid": "9615719",
+          "title": "Non-small cell lung cancer cycloxygenase activity and proliferation are inhibited by non-steroidal antiinflammatory drugs.",
+          "authors": "Hida T, Leyton J, Makheja AN, et al.",
+          "journal": "Anticancer research",
+          "year": "1998",
+          "abstract_snippet": "The effects of non-steroidal antiinflammatory drugs (NSAIDs) on non-small cell lung cancer (NSCLC) were investigated. Arachidonic acid (AA) was metabolized to prostaglandin E2 (PGE2) in NSCLC cells. NSAIDs such as aspirin or indomethacin reduced PGE2 levels in NCI-H157 and H1264 cells, and the decre...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/9615719/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "36109463",
+          "title": "Inhaled Indomethacin-Loaded Liposomes as Potential Therapeutics against Non-Small Cell Lung Cancer (NSCLC).",
+          "authors": "Sarvepalli S, Parvathaneni V, Chauhan G, et al.",
+          "journal": "Pharmaceutical research",
+          "year": "2022",
+          "abstract_snippet": "Most lung cancer instances are non-small cell lung cancers (NSCLC). As stated by recent literature, cycloxygenase-2 (COX-2) is upregulated in lung adenocarcinomas. COX-2 relates to enhanced cell proliferation and reduced apoptosis; both of which are essential for an invasive tumor growth and metasta...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36109463/",
+          "total_results": 1
+        }
+      ],
+      "semantic_scholar_papers": [
+        {
+          "title": "Indomethacin Induces Spermidine/Spermine-N1-Acetyltransferase-1 via the Nucleolin-CDK1 Axis and Synergizes with the Polyamine Oxidase Inhibitor Methoctramine in Lung Cancer Cells",
+          "year": 2023,
+          "citations": 6,
+          "url": "https://www.semanticscholar.org/paper/d605ba2edc67a852d4d1bac347ac4ece4d28525f",
+          "authors": ""
+        },
+        {
+          "title": "Inhaled Indomethacin-Loaded Liposomes as Potential Therapeutics against Non-Small Cell Lung Cancer (NSCLC)",
+          "year": 2022,
+          "citations": 30,
+          "url": "https://www.semanticscholar.org/paper/55e53eecae59cd47c28b205a9a031fa0169b3a41",
+          "authors": "Sruthi Sarvepalli, Vineela Parvathaneni, G. Chauhan"
+        },
+        {
+          "title": "Searching for Drug Synergy Against Cancer Through Polyamine Metabolism Impairment: Insight Into the Metabolic Effect of Indomethacin on Lung Cancer Cells",
+          "year": 2020,
+          "citations": 21,
+          "url": "https://www.semanticscholar.org/paper/d4e50348153df897ad3e5cdca210933ace6721d9",
+          "authors": "F. L\u00f3pez-Contreras, M. Mu\u00f1oz-Uribe, Jorge P\u00e9rez-Laines"
+        },
+        {
+          "title": "Indomethacin sensitizes human lung cancer cells to DDP through autophagy activation in a mouse model",
+          "year": 2020,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/486178ea0c5ac087e490183fcb5710d2a99d166c",
+          "authors": "Yueying Zhang, Debao Liu, Tong-Shu Yang"
+        },
+        {
+          "title": "Single\u2010Component Dual\u2010Functional Autoboost Strategy by Dual Photodynamic and Cyclooxygenase\u20102 Inhibition for Lung Cancer and Spinal Metastasis",
+          "year": 2024,
+          "citations": 14,
+          "url": "https://www.semanticscholar.org/paper/b5e2824bbf496e9fb36593973e4c6156b6fdee58",
+          "authors": "Ben Wang, Zhenni Lu, Meng-Xiong Song"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Repositioning canakinumab for non-small cell lung cancer\u2014important lessons for drug repurposing in oncology",
+        "year": 2022,
+        "citations": 34,
+        "url": "https://www.semanticscholar.org/paper/2782a4dedd25af0065c62a87196a9b1e038fa7e1",
+        "authors": "M. Lythgoe, V. Prasad"
+      },
+      "max_citations": 34,
+      "faers_signal": "moderate",
+      "faers_total_reports": 12621,
+      "faers_cooccurrences": 24,
+      "faers_interpretation": "24 FAERS reports mention both Indomethacin and Lung cancer-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "KIN001-043 (1.493)",
+        "PF3845 (1.469)",
+        "3,5-dichloro-2-hydroxy-N-(2-methoxy-5-phenylphenyl)benzenesulfonamide (1.452)",
+        "YM-155 (1.440)",
+        "fostamatinib (1.431)"
+      ],
+      "signature_interpretation": "Indomethacin was not found among the top 46 drugs that reverse the Lung cancer gene signature. Top reversers: KIN001-043 (1.493), PF3845 (1.469), 3,5-dichloro-2-hydroxy-N-(2-methoxy-5-phenylphenyl)benzenesulfonamide (1.452)",
+      "ai_hypothesis": "of its anti-inflammatory properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": true,
+      "failed_trial_phase": "Phase 2",
+      "failed_trial_count": 2,
+      "failed_trial_penalty": 0.8999999999999999,
+      "mr_score": 0.9337,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Indomethacin \u2014[downregulates]\u2192 gene-8914 \u2014[is linked to]\u2192 Lung cancer",
+      "kg_paths_text": "\u2022 Indomethacin \u2014[downregulates]\u2192 gene-8914 \u2014[is linked to]\u2192 Lung cancer\n\u2022 Indomethacin \u2014[downregulates]\u2192 gene-22796 \u2014[is bound by]\u2192 gene-9609 \u2014[is upregulated by]\u2192 Lung cancer\n\u2022 Indomethacin \u2014[downregulates]\u2192 gene-22796 \u2014[is bound by]\u2192 gene-9609 \u2014[is upregulated by]\u2192 Lung cancer",
+      "validation_experiments": [],
+      "novelty_score": 0.32499998807907104,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": false,
+      "clinical_trials_total": 3,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT05035407",
+          "title": "T Cell Receptor Gene Therapy Targeting KK-LC-1 for Gastric, Breast, Cervical, Lung and Other KK-LC-1 Positive Epithelial Cancers",
+          "status": "TERMINATED",
+          "phase": "PHASE1",
+          "enrollment": "36",
+          "url": "https://clinicaltrials.gov/study/NCT05035407"
+        },
+        {
+          "nct_id": "NCT04495894",
+          "title": "Pre-Incisional Ketorolac for Patients Undergoing Surgery for Non-Small Cell Lung Cancer and Renal Cell Carcinoma",
+          "status": "TERMINATED",
+          "phase": "PHASE2",
+          "enrollment": "68",
+          "url": "https://clinicaltrials.gov/study/NCT04495894"
+        },
+        {
+          "nct_id": "NCT01932918",
+          "title": "Antinociceptive Modalities on Ischemia Reperfusion Injury",
+          "status": "COMPLETED",
+          "phase": "N/A",
+          "enrollment": "142",
+          "url": "https://clinicaltrials.gov/study/NCT01932918"
+        }
+      ],
+      "trial_phases": {
+        "PHASE1": 1,
+        "PHASE2": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "3 clinical trial(s) found on ClinicalTrials.gov",
+        "147 PubMed articles on this drug-disease pair",
+        "1 article(s) specifically mention repurposing/repositioning",
+        "Supported by 4 independent AI pillars",
+        "Note: Drug had early-phase trial failures for this disease",
+        "Moderate FAERS signal: 24 adverse event reports mention drug-disease co-occurrence",
+        "Supporting paper with 34 citations",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.93, 1 genetic targets)"
+      ],
+      "disease_entity": "Disease::MESH:D008175",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 2093,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "moderate",
+        "summary": "CPIC-C (CYP2C9) \u2022 PharmGKB-3 (CYP2C9 / CYP2C9*1, CYP2C9*3)",
+        "cpic": [
+          {
+            "gene": "CYP2C9",
+            "level": "C",
+            "guideline": "CYP2C9 and NSAIDs"
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "CYP2C9",
+            "variant": "CYP2C9*1, CYP2C9*3",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451140140"
+          },
+          {
+            "gene": "LST1;LTA;TNF",
+            "variant": "rs1800629",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1452570052"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.627,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.541,
+          "docking": 0.831,
+          "pharos": 0.0,
+          "literature": 0.942
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Lung"
+        ],
+        "n_genes": 20,
+        "n_expressed": 18,
+        "mean_tpm_in_tissue": 87.45,
+        "max_tpm_in_tissue": 919.51,
+        "tissue_specificity": 0.657,
+        "context_modifier": 1.104
+      },
+      "ensemble_prob": 0.0985,
+      "ensemble_features": {
+        "kg_score": 0.9943,
+        "degree_penalty": 0.7454,
+        "n_drug_targets": 53,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.1109
+      },
+      "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": -9.97,
+        "target_symbol": "CXCL8",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Paclitaxel",
+      "drug_id": "DB01229",
+      "disease_name": "Lung cancer",
+      "combined_score": 0.5379,
+      "pillars_hit": 4,
+      "transe_rank": 7,
+      "transe_score": -9.7265,
+      "pykeen_score": -11.7776,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0.0345,
+      "gene_sig_rank": 22,
+      "proximity_score": 0.8379999995231628,
+      "proximity_distance": 0.6499999761581421,
+      "admet_score": 0.4859,
+      "admet_flags": "hERG=0.85",
+      "primekg_score": 0.2555,
+      "dti_score": 0.79,
+      "dti_best_target": "PGF",
+      "kg_group_score": 0.4333,
+      "structural_group_score": 0.79,
+      "network_group_score": 0.6270999908447266,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.8236,
+      "admet_multiplier": 0.8972,
+      "efficacy_score": 0.5995,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 88,
+      "shared_targets": [
+        "ABCB1",
+        "ABCB6",
+        "ABCC1",
+        "ABCC3",
+        "ABCC4",
+        "ABCG2",
+        "AKT1",
+        "AURKA",
+        "AXIN1",
+        "AXL",
+        "BAX",
+        "BCL2",
+        "CCL2",
+        "CCNB1",
+        "CD44",
+        "CDH1",
+        "CDK1",
+        "CDK2",
+        "CDK4",
+        "CDKN1A"
+      ],
+      "pubmed_total": 5530,
+      "pubmed_treatment_total": 5283,
+      "pubmed_repurposing_total": 17,
+      "key_papers": [
+        {
+          "pmid": "35811500",
+          "title": "KRAS-G12D mutation drives immune suppression and the primary resistance of anti-PD-1/PD-L1 immunotherapy in non-small cell lung cancer.",
+          "authors": "Liu C, Zheng S, Wang Z, et al.",
+          "journal": "Cancer communications (London, England)",
+          "year": "2022",
+          "abstract_snippet": "BACKGROUND: Although immune checkpoint inhibitors (ICIs) against programmed cell death protein 1 (PD-1) and its ligand PD-L1 have demonstrated potency towards treating patients with non-small cell lung carcinoma (NSCLC), the potential association between Kirsten rat sarcoma viral oncogene homolog (K...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35811500/",
+          "total_results": 5530
+        },
+        {
+          "pmid": "29910647",
+          "title": "Antiangiogenic therapies in non-small-cell lung cancer.",
+          "authors": "Alshangiti A, Chandhoke G, Ellis PM",
+          "journal": "Current oncology (Toronto, Ont.)",
+          "year": "2018",
+          "abstract_snippet": "Angiogenesis is frequent in non-small-cell lung cancer (nsclc) and is associated with more aggressive disease. Many clinical trials have evaluated the addition of antiangiogenic therapy to standard therapies for patients with nsclc. Bevacizumab, a monoclonal antibody directed against serum vascular ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29910647/"
+        },
+        {
+          "pmid": "34622571",
+          "title": "Efficacy and safety of apatinib alone or apatinib plus paclitaxel/docetaxel versus paclitaxel/docetaxel in the treatment of advanced non-small cell lung cancer: A meta-analysis.",
+          "authors": "Li Z, Liu Z, Wu Y, et al.",
+          "journal": "Thoracic cancer",
+          "year": "2021",
+          "abstract_snippet": "BACKGROUND: To investigate the efficacy and safety of apatinib alone or apatinib plus paclitaxel/docetaxel versus paclitaxel/docetaxel in the treatment of advanced non-small cell lung cancer (NSCLC) through pooling of open published data. METHODS: The electronic databases of Medline (1960-2021.5), C...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34622571/"
+        },
+        {
+          "pmid": "38228910",
+          "title": "Targeted inhibition of the HNF1A/SHH axis by triptolide overcomes paclitaxel resistance in non-small cell lung cancer.",
+          "authors": "Li LB, Yang LX, Liu L, et al.",
+          "journal": "Acta pharmacologica Sinica",
+          "year": "2024",
+          "abstract_snippet": "Paclitaxel resistance is associated with a poor prognosis in non-small cell lung cancer (NSCLC) patients, and currently, there is no promising drug for paclitaxel resistance. In this study, we investigated the molecular mechanisms underlying the chemoresistance in human NSCLC-derived cell lines. We ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38228910/"
+        },
+        {
+          "pmid": "34973080",
+          "title": "Carboplatin and nab-paclitaxel chemotherapy with or without atezolizumab as front-line management for treatment-na\u00efve metastatic nonsquamous non-small cell lung cancer with PD-L1 staining: a retrospective study.",
+          "authors": "Xu B, Cheng H, Li K, et al.",
+          "journal": "Journal of cancer research and clinical oncology",
+          "year": "2022",
+          "abstract_snippet": "PURPOSE: The aim of this retrospective review was to compare the efficacy and safety of the atezolizumab plus carboplatin and nab-paclitaxel regimen versus the carboplatin and nab-paclitaxel regimen as front-line management for treatment-na\u00efve, metastatic nonsquamous programmed death-ligand 1 (PD-L1...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34973080/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "39481798",
+          "title": "Mobocertinib antagonizes multidrug resistance in ABCB1- and ABCG2-overexpressing cancer cells: In vitro and in vivo studies.",
+          "authors": "Dong XD, Zhang M, Teng QX, et al.",
+          "journal": "Cancer letters",
+          "year": "2024",
+          "abstract_snippet": "Overexpression of ATP-binding cassette (ABC) transporters, particularly ABCB1 and ABCG2, strongly correlates with multidrug resistance (MDR), rendering cancer chemotherapy ineffective. Exploration and identification of novel inhibitors targeting ABCB1 and ABCG2 are necessary to overcome the related ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39481798/",
+          "total_results": 17
+        },
+        {
+          "pmid": "39626921",
+          "title": "Ivermectin Enhances Paclitaxel Efficacy by Overcoming Resistance Through Modulation of ",
+          "authors": "Hayashi A, Kamio K, Miyanaga A, et al.",
+          "journal": "Anticancer research",
+          "year": "2024",
+          "abstract_snippet": "BACKGROUND/AIM: Chemoresistance to paclitaxel (PTX) significantly ameliorates therapeutic efficacy in patients with non-small cell lung cancer (NSCLC), especially in advanced stages, deteriorating the progression free and overall survival rates. One of the critical mechanisms contributing to drug re...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39626921/"
+        },
+        {
+          "pmid": "39017606",
+          "title": "Targeting AKR1B10 by Drug Repurposing with Epalrestat Overcomes Chemoresistance in Non-Small Cell Lung Cancer Patient-Derived Tumor Organoids.",
+          "authors": "Suvilesh KN, Manjunath Y, Nussbaum YI, et al.",
+          "journal": "Clinical cancer research : an official journal of the American Association for Cancer Research",
+          "year": "2024",
+          "abstract_snippet": "PURPOSE: Systemic treatments given to patients with non-small cell lung cancer (NSCLC) are often ineffective due to drug resistance. In the present study, we investigated patient-derived tumor organoids (PDTO) and matched tumor tissues from surgically treated patients with NSCLC to identify drug rep...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39017606/"
+        }
+      ],
+      "semantic_scholar_papers": [
+        {
+          "title": "Paclitaxel-carboplatin alone or with bevacizumab for non-small-cell lung cancer.",
+          "year": 2006,
+          "citations": 5853,
+          "url": "https://www.semanticscholar.org/paper/1f1cd5e6590d16ff4e0ca4c0f0a87c16ab5d38f9",
+          "authors": "A. Sandler, R. Gray, M. Perry"
+        },
+        {
+          "title": "Randomized Phase II Trial Comparing Bevacizumab Plus Carboplatin and Paclitaxel With Carboplatin and Paclitaxel Alone in Previously Untreated Locally Advanced or Metastatic Non-Small-Cell Lung Cancer",
+          "year": 2023,
+          "citations": 746,
+          "url": "https://www.semanticscholar.org/paper/697dde32dbe2ac6d9cbae2275d835b645f0589ce",
+          "authors": "David H. Johnson, L. Fehrenbacher, W. Novotny"
+        },
+        {
+          "title": "Targeted inhibition of the HNF1A/SHH axis by triptolide overcomes paclitaxel resistance in non-small cell lung cancer",
+          "year": 2024,
+          "citations": 30,
+          "url": "https://www.semanticscholar.org/paper/cd939504c869ebbaaf62c08240728547eea731f3",
+          "authors": "Lingbing Li, Lingxiao Yang, Lei Liu"
+        },
+        {
+          "title": "Atezolizumab in combination with carboplatin plus nab-paclitaxel chemotherapy compared with chemotherapy alone as first-line treatment for metastatic non-squamous non-small-cell lung cancer (IMpower130): a multicentre, randomised, open-label, phase 3 trial.",
+          "year": 2019,
+          "citations": 1319,
+          "url": "https://www.semanticscholar.org/paper/5b85afc93112684f87e1e3d3fa2ccff223aedb5c",
+          "authors": "H. West, M. Mccleod, M. Hussein"
+        },
+        {
+          "title": "Inhalable CAR-T cell-derived exosomes as paclitaxel carriers for treating lung cancer",
+          "year": 2023,
+          "citations": 87,
+          "url": "https://www.semanticscholar.org/paper/e2dc0a338d94897d00c0eb0bb8bef7551994d752",
+          "authors": "Wei-Hong Zheng, Tianchuan Zhu, Lantian Tang"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Paclitaxel-carboplatin alone or with bevacizumab for non-small-cell lung cancer.",
+        "year": 2006,
+        "citations": 5853,
+        "url": "https://www.semanticscholar.org/paper/1f1cd5e6590d16ff4e0ca4c0f0a87c16ab5d38f9",
+        "authors": "A. Sandler, R. Gray, M. Perry"
+      },
+      "max_citations": 5853,
+      "faers_signal": "strong",
+      "faers_total_reports": 86251,
+      "faers_cooccurrences": 896,
+      "faers_interpretation": "896 FAERS reports mention both Paclitaxel and Lung cancer-related terms (1.0% of all Paclitaxel reports). This suggests real-world clinical association.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "KIN001-043 (1.493)",
+        "PF3845 (1.469)",
+        "3,5-dichloro-2-hydroxy-N-(2-methoxy-5-phenylphenyl)benzenesulfonamide (1.452)",
+        "YM-155 (1.440)",
+        "fostamatinib (1.431)"
+      ],
+      "signature_interpretation": "Paclitaxel was not found among the top 46 drugs that reverse the Lung cancer gene signature. Top reversers: KIN001-043 (1.493), PF3845 (1.469), 3,5-dichloro-2-hydroxy-N-(2-methoxy-5-phenylphenyl)benzenesulfonamide (1.452)",
+      "ai_hypothesis": "of its ability to induce apoptosis and inhibit cell proliferation.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "treats",
+          "confidence": 0.7,
+          "positive_signals": 2,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "apatinib",
+              "entity_group": "Medication",
+              "score": 0.9670000076293945
+            },
+            {
+              "entity": "ap",
+              "entity_group": "Medication",
+              "score": 1.0
+            },
+            {
+              "entity": "##atinib",
+              "entity_group": "Medication",
+              "score": 0.9929999709129333
+            },
+            {
+              "entity": "paclitaxel",
+              "entity_group": "Medication",
+              "score": 0.9179999828338623
+            },
+            {
+              "entity": "doc",
+              "entity_group": "Medication",
+              "score": 0.9639999866485596
+            },
+            {
+              "entity": "##etaxel",
+              "entity_group": "Medication",
+              "score": 0.9200000166893005
+            },
+            {
+              "entity": "docetaxel",
+              "entity_group": "Medication",
+              "score": 0.875
+            },
+            {
+              "entity": "non",
+              "entity_group": "Disease_disorder",
+              "score": 0.9110000133514404
+            },
+            {
+              "entity": "cell",
+              "entity_group": "Disease_disorder",
+              "score": 0.9419999718666077
+            },
+            {
+              "entity": "lung cancer",
+              "entity_group": "Disease_disorder",
+              "score": 0.9990000128746033
+            }
+          ]
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "Phase 3",
+      "failed_trial_count": 10,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.8236,
+      "mr_genetic_targets": 11,
+      "mechanistic_hypothesis": "Paclitaxel \u2014[is a therapeutic for]\u2192 Lung cancer",
+      "kg_paths_text": "\u2022 Paclitaxel \u2014[is a therapeutic for]\u2192 Lung cancer\n\u2022 Paclitaxel \u2014[downregulates]\u2192 gene-3692 \u2014[is a target of]\u2192 DB09130 \u2014[is a therapeutic for]\u2192 Lung cancer\n\u2022 Paclitaxel \u2014[downregulates]\u2192 gene-3692 \u2014[is a target of]\u2192 DB09130 \u2014[is a therapeutic for]\u2192 Lung cancer",
+      "validation_experiments": [],
+      "novelty_score": 0.032,
+      "novelty_level": "ESTABLISHED",
+      "is_known_treatment": true,
+      "clinical_trials_total": 10,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT03668496",
+          "title": "A Study of SHR-1210 in Combination With Carboplatin + Paclitaxel in Subjects With Squamous NSCLC",
+          "status": "UNKNOWN",
+          "phase": "PHASE3",
+          "enrollment": "390",
+          "url": "https://clinicaltrials.gov/study/NCT03668496"
+        },
+        {
+          "nct_id": "NCT02667743",
+          "title": "Paclitaxel Micelles for Injection / Paclitaxel Injection in Combination With Cisplatin for First-line Therapy of Advanced NSCLC",
+          "status": "UNKNOWN",
+          "phase": "PHASE3",
+          "enrollment": "454",
+          "url": "https://clinicaltrials.gov/study/NCT02667743"
+        },
+        {
+          "nct_id": "NCT02590003",
+          "title": "Single Agent Versus Combination Chemotherapy to Treat High-risk Elderly With Non-small Cell Lung Cancer",
+          "status": "TERMINATED",
+          "phase": "PHASE2",
+          "enrollment": "3",
+          "url": "https://clinicaltrials.gov/study/NCT02590003"
+        },
+        {
+          "nct_id": "NCT02879097",
+          "title": "Efficacy-Safety-Immunogenicity Study of CBT124&EU-sourced Avastin\u00ae in Stage 4 NSCLC",
+          "status": "UNKNOWN",
+          "phase": "PHASE3",
+          "enrollment": "200",
+          "url": "https://clinicaltrials.gov/study/NCT02879097"
+        },
+        {
+          "nct_id": "NCT06246110",
+          "title": "A Phase 2 Study of EIK1001 in Combo With Pembrolizumab and Chemotherapy in Patients With Stage 4 NSCLC",
+          "status": "RECRUITING",
+          "phase": "PHASE2",
+          "enrollment": "70",
+          "url": "https://clinicaltrials.gov/study/NCT06246110"
+        }
+      ],
+      "trial_phases": {
+        "PHASE3": 3,
+        "PHASE2": 5,
+        "PHASE4": 1,
+        "PHASE1": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "10 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "5530 PubMed articles on this drug-disease pair",
+        "17 article(s) specifically mention repurposing/repositioning",
+        "Supported by 4 independent AI pillars",
+        "Strong FAERS signal: 896 adverse event reports link drug to disease (86251 total reports)",
+        "Highly cited paper (5853 citations): \"Paclitaxel-carboplatin alone or with bevacizumab for non-sma...\"",
+        "AI analysis of 1 abstract(s) found positive treatment signals",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.82, 11 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D008175",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1533,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (ABCB1 / rs2032582)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "ABCB1",
+            "variant": "rs2032582",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/655385856"
+          },
+          {
+            "gene": "CYP2C8",
+            "variant": "rs1113129",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/699639328"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs1045642",
+            "level": "4",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204258"
+          },
+          {
+            "gene": "FGD4",
+            "variant": "rs10771973",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1444700958"
+          },
+          {
+            "gene": "ERCC1",
+            "variant": "rs3212986",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1445401847"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.665,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.538,
+          "docking": 0.923,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Lung"
+        ],
+        "n_genes": 20,
+        "n_expressed": 20,
+        "mean_tpm_in_tissue": 43.97,
+        "max_tpm_in_tissue": 201.49,
+        "tissue_specificity": 0.73,
+        "context_modifier": 1.086
+      },
+      "ensemble_prob": 0.9969,
+      "ensemble_features": {
+        "kg_score": 0.9999,
+        "degree_penalty": 0.7483,
+        "n_drug_targets": 25,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 0.6931
+      },
+      "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": -11.08,
+        "target_symbol": "TUBB3",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          ">",
+          "ISOLATED"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          ">_2_ester_groups",
+          "isolated_alkene"
         ]
       }
     },
@@ -3237,8 +3324,8 @@
       "admet_score": 0.9582,
       "admet_flags": "clean",
       "primekg_score": 0.2438,
-      "dti_score": 0.4876,
-      "dti_best_target": "CHEK1",
+      "dti_score": 0.556,
+      "dti_best_target": "DDR1",
       "kg_group_score": 0.1216,
       "structural_group_score": 0.9677,
       "network_group_score": 0.640999972820282,
@@ -3498,6 +3585,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.81, 3 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D008175",
       "dose_plausibility": {
         "plausibility": "unknown",
         "dose_range": "research",
@@ -3598,15 +3686,7 @@
         "tissue_specificity": 0.672,
         "context_modifier": 1.098
       },
-      "disease_entity": "Disease::MESH:D008175",
-      "docking": {
-        "kcal_per_mol": -9.26,
-        "target_symbol": "KLF5",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.137,
+      "ensemble_prob": 0.0835,
       "ensemble_features": {
         "kg_score": 0.9746,
         "degree_penalty": 0.7895,
@@ -3616,6 +3696,13 @@
         "transe_rank_log": 5.5947
       },
       "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": -9.26,
+        "target_symbol": "KLF5",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -3630,14 +3717,14 @@
       }
     },
     {
-      "drug_name": "Paclitaxel",
-      "drug_id": "DB01229",
+      "drug_name": "Folic Acid",
+      "drug_id": "DB00158",
       "disease_name": "Lung cancer",
-      "combined_score": 0.5362,
+      "combined_score": 0.5365,
       "pillars_hit": 4,
-      "transe_rank": 7,
-      "transe_score": -9.7265,
-      "pykeen_score": -11.7776,
+      "transe_rank": 149,
+      "transe_score": -10.6898,
+      "pykeen_score": -12.216,
       "pykeen_rank": 0,
       "txgnn_score": 0,
       "txgnn_rank": 0,
@@ -3645,177 +3732,159 @@
       "similar_to": "",
       "mol_emb_similarity": 0,
       "mol_emb_similar_to": "",
-      "gene_sig_score": 0.0345,
-      "gene_sig_rank": 22,
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
       "proximity_score": 0.8379999995231628,
       "proximity_distance": 0.6499999761581421,
-      "admet_score": 0.4859,
-      "admet_flags": "hERG=0.85",
-      "primekg_score": 0.2555,
-      "dti_score": 0.78,
-      "dti_best_target": "CHEK1",
-      "kg_group_score": 0.4333,
-      "structural_group_score": 0.78,
-      "network_group_score": 0.6270999908447266,
+      "admet_score": 1.0,
+      "admet_flags": "DILI=0.99",
+      "primekg_score": 0.2526,
+      "dti_score": 0.6345,
+      "dti_best_target": "PGF",
+      "kg_group_score": 0.2613,
+      "structural_group_score": 0.6345,
+      "network_group_score": 0.6636000275611877,
       "txgnn_group_score": 0,
-      "mr_group_score": 0.8236,
-      "admet_multiplier": 0.8972,
-      "efficacy_score": 0.5977,
+      "mr_group_score": 0.8286,
+      "admet_multiplier": 1.0,
+      "efficacy_score": 0.5365,
       "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 88,
+      "shared_target_count": 21,
       "shared_targets": [
-        "ABCB1",
-        "ABCB6",
-        "ABCC1",
         "ABCC3",
         "ABCC4",
         "ABCG2",
-        "AKT1",
-        "AURKA",
-        "AXIN1",
-        "AXL",
-        "BAX",
-        "BCL2",
         "CCL2",
-        "CCNB1",
-        "CD44",
-        "CDH1",
-        "CDK1",
-        "CDK2",
-        "CDK4",
-        "CDKN1A"
+        "CSF2",
+        "DCC",
+        "DHFR",
+        "DNMT1",
+        "EGFR",
+        "ERAL1",
+        "ERBB2",
+        "FOLR1",
+        "FOSL1",
+        "IGF1R",
+        "MAPK1",
+        "MTOR",
+        "SHMT1",
+        "STAT3",
+        "TF",
+        "TNF"
       ],
-      "pubmed_total": 5530,
-      "pubmed_treatment_total": 5283,
-      "pubmed_repurposing_total": 17,
+      "pubmed_total": 514,
+      "pubmed_treatment_total": 410,
+      "pubmed_repurposing_total": 1,
       "key_papers": [
         {
-          "pmid": "35811500",
-          "title": "KRAS-G12D mutation drives immune suppression and the primary resistance of anti-PD-1/PD-L1 immunotherapy in non-small cell lung cancer.",
-          "authors": "Liu C, Zheng S, Wang Z, et al.",
-          "journal": "Cancer communications (London, England)",
-          "year": "2022",
-          "abstract_snippet": "BACKGROUND: Although immune checkpoint inhibitors (ICIs) against programmed cell death protein 1 (PD-1) and its ligand PD-L1 have demonstrated potency towards treating patients with non-small cell lung carcinoma (NSCLC), the potential association between Kirsten rat sarcoma viral oncogene homolog (K...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35811500/",
-          "total_results": 5530
-        },
-        {
-          "pmid": "29910647",
-          "title": "Antiangiogenic therapies in non-small-cell lung cancer.",
-          "authors": "Alshangiti A, Chandhoke G, Ellis PM",
-          "journal": "Current oncology (Toronto, Ont.)",
-          "year": "2018",
-          "abstract_snippet": "Angiogenesis is frequent in non-small-cell lung cancer (nsclc) and is associated with more aggressive disease. Many clinical trials have evaluated the addition of antiangiogenic therapy to standard therapies for patients with nsclc. Bevacizumab, a monoclonal antibody directed against serum vascular ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29910647/"
-        },
-        {
-          "pmid": "34622571",
-          "title": "Efficacy and safety of apatinib alone or apatinib plus paclitaxel/docetaxel versus paclitaxel/docetaxel in the treatment of advanced non-small cell lung cancer: A meta-analysis.",
-          "authors": "Li Z, Liu Z, Wu Y, et al.",
-          "journal": "Thoracic cancer",
-          "year": "2021",
-          "abstract_snippet": "BACKGROUND: To investigate the efficacy and safety of apatinib alone or apatinib plus paclitaxel/docetaxel versus paclitaxel/docetaxel in the treatment of advanced non-small cell lung cancer (NSCLC) through pooling of open published data. METHODS: The electronic databases of Medline (1960-2021.5), C...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34622571/"
-        },
-        {
-          "pmid": "38228910",
-          "title": "Targeted inhibition of the HNF1A/SHH axis by triptolide overcomes paclitaxel resistance in non-small cell lung cancer.",
-          "authors": "Li LB, Yang LX, Liu L, et al.",
-          "journal": "Acta pharmacologica Sinica",
+          "pmid": "39375761",
+          "title": "Ultrasound-responsive nanocarriers with siRNA and Fe",
+          "authors": "Li M, Li Y, Zheng J, et al.",
+          "journal": "Journal of nanobiotechnology",
           "year": "2024",
-          "abstract_snippet": "Paclitaxel resistance is associated with a poor prognosis in non-small cell lung cancer (NSCLC) patients, and currently, there is no promising drug for paclitaxel resistance. In this study, we investigated the molecular mechanisms underlying the chemoresistance in human NSCLC-derived cell lines. We ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38228910/"
+          "abstract_snippet": "The immunosuppressive tumor microenvironment (TME) significantly inhibits the effective anti-tumor immune response, greatly affecting the efficacy of immunotherapy. Most tumor-associated macrophages (TAMs) belong to the M2 phenotype, which contributes significantly to the immunosuppressive effects i...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39375761/",
+          "total_results": 514
         },
         {
-          "pmid": "34973080",
-          "title": "Carboplatin and nab-paclitaxel chemotherapy with or without atezolizumab as front-line management for treatment-na\u00efve metastatic nonsquamous non-small cell lung cancer with PD-L1 staining: a retrospective study.",
-          "authors": "Xu B, Cheng H, Li K, et al.",
-          "journal": "Journal of cancer research and clinical oncology",
-          "year": "2022",
-          "abstract_snippet": "PURPOSE: The aim of this retrospective review was to compare the efficacy and safety of the atezolizumab plus carboplatin and nab-paclitaxel regimen versus the carboplatin and nab-paclitaxel regimen as front-line management for treatment-na\u00efve, metastatic nonsquamous programmed death-ligand 1 (PD-L1...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34973080/"
+          "pmid": "34741752",
+          "title": "Mechanisms, Management and Prevention of Pemetrexed-Related Toxicity.",
+          "authors": "de Rouw N, Piet B, Derijks HJ, et al.",
+          "journal": "Drug safety",
+          "year": "2021",
+          "abstract_snippet": "Pemetrexed is a cytostatic antifolate drug and a cornerstone in the treatment of lung cancer. Although generally well tolerated, a substantial part of the patient population experiences dose-limiting or even treatment-limiting toxicities. These include mucositis, skin problems, fatigue, renal toxici...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34741752/"
+        },
+        {
+          "pmid": "38256120",
+          "title": "Folate Receptor Alpha-A Novel Approach to Cancer Therapy.",
+          "authors": "Gonzalez T, Muminovic M, Nano O, et al.",
+          "journal": "International journal of molecular sciences",
+          "year": "2024",
+          "abstract_snippet": "Folate receptor \u03b1 (FR) was discovered many decades ago, along with drugs that target intracellular folate metabolism, such as pemetrexed and methotrexate. Folate is taken up by the cell via this receptor, which also targeted by many cancer agents due to the over-expression of the receptor by cancer ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38256120/"
+        },
+        {
+          "pmid": "15117980",
+          "title": "Randomized phase III trial of pemetrexed versus docetaxel in patients with non-small-cell lung cancer previously treated with chemotherapy.",
+          "authors": "Hanna N, Shepherd FA, Fossella FV, et al.",
+          "journal": "Journal of clinical oncology : official journal of the American Society of Clinical Oncology",
+          "year": "2004",
+          "abstract_snippet": "PURPOSE: To compare the efficacy and toxicity of pemetrexed versus docetaxel in patients with advanced non-small-cell lung cancer (NSCLC) previously treated with chemotherapy. PATIENTS AND METHODS: Eligible patients had a performance status 0 to 2, previous treatment with one prior chemotherapy regi...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15117980/"
+        },
+        {
+          "pmid": "20017724",
+          "title": "The role of pemetrexed in lung cancer.",
+          "authors": "Wang D, He J",
+          "journal": "Current drug targets",
+          "year": "2010",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20017724/"
         }
       ],
       "repurposing_papers": [
         {
-          "pmid": "39481798",
-          "title": "Mobocertinib antagonizes multidrug resistance in ABCB1- and ABCG2-overexpressing cancer cells: In vitro and in vivo studies.",
-          "authors": "Dong XD, Zhang M, Teng QX, et al.",
-          "journal": "Cancer letters",
-          "year": "2024",
-          "abstract_snippet": "Overexpression of ATP-binding cassette (ABC) transporters, particularly ABCB1 and ABCG2, strongly correlates with multidrug resistance (MDR), rendering cancer chemotherapy ineffective. Exploration and identification of novel inhibitors targeting ABCB1 and ABCG2 are necessary to overcome the related ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39481798/",
-          "total_results": 17
-        },
-        {
-          "pmid": "39626921",
-          "title": "Ivermectin Enhances Paclitaxel Efficacy by Overcoming Resistance Through Modulation of ",
-          "authors": "Hayashi A, Kamio K, Miyanaga A, et al.",
-          "journal": "Anticancer research",
-          "year": "2024",
-          "abstract_snippet": "BACKGROUND/AIM: Chemoresistance to paclitaxel (PTX) significantly ameliorates therapeutic efficacy in patients with non-small cell lung cancer (NSCLC), especially in advanced stages, deteriorating the progression free and overall survival rates. One of the critical mechanisms contributing to drug re...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39626921/"
-        },
-        {
-          "pmid": "39017606",
-          "title": "Targeting AKR1B10 by Drug Repurposing with Epalrestat Overcomes Chemoresistance in Non-Small Cell Lung Cancer Patient-Derived Tumor Organoids.",
-          "authors": "Suvilesh KN, Manjunath Y, Nussbaum YI, et al.",
-          "journal": "Clinical cancer research : an official journal of the American Association for Cancer Research",
-          "year": "2024",
-          "abstract_snippet": "PURPOSE: Systemic treatments given to patients with non-small cell lung cancer (NSCLC) are often ineffective due to drug resistance. In the present study, we investigated patient-derived tumor organoids (PDTO) and matched tumor tissues from surgically treated patients with NSCLC to identify drug rep...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39017606/"
+          "pmid": "36986861",
+          "title": "Development and Characterization of Folic Acid-Conjugated Amodiaquine-Loaded Nanoparticles-Efficacy in Cancer Treatment.",
+          "authors": "Parvathaneni V, Shukla SK, Gupta V",
+          "journal": "Pharmaceutics",
+          "year": "2023",
+          "abstract_snippet": "The objective of this study was to construct amodiaquine-loaded, folic acid-conjugated polymeric nanoparticles (FA-AQ NPs) to treat cancer that could be scaled to commercial production. In this study, folic acid (FA) was conjugated with a PLGA polymer followed by the formulation of drug-loaded NPs. ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36986861/",
+          "total_results": 1
         }
       ],
       "semantic_scholar_papers": [
         {
-          "title": "Paclitaxel-carboplatin alone or with bevacizumab for non-small-cell lung cancer.",
-          "year": 2006,
-          "citations": 5853,
-          "url": "https://www.semanticscholar.org/paper/1f1cd5e6590d16ff4e0ca4c0f0a87c16ab5d38f9",
-          "authors": "A. Sandler, R. Gray, M. Perry"
+          "title": "Folic Acid-Modified Milk Exosomes Delivering c-Kit siRNA Overcome EGFR-TKIs Resistance in Lung Cancer by Suppressing mTOR Signaling and Stemness",
+          "year": 2025,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/d832279789a40719dbdef1dfcc29b7385323b7d3",
+          "authors": "Zihan Xu, Li Wang, L. Tu"
         },
         {
-          "title": "Randomized Phase II Trial Comparing Bevacizumab Plus Carboplatin and Paclitaxel With Carboplatin and Paclitaxel Alone in Previously Untreated Locally Advanced or Metastatic Non-Small-Cell Lung Cancer",
-          "year": 2023,
-          "citations": 746,
-          "url": "https://www.semanticscholar.org/paper/697dde32dbe2ac6d9cbae2275d835b645f0589ce",
-          "authors": "David H. Johnson, L. Fehrenbacher, W. Novotny"
+          "title": "Novel protocatechuic acid encapsulated bovine serum albumin functionalized folic acid nanoparticles for targeted therapy in urethane-induced lung cancer model",
+          "year": 2025,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/822bd0a0c642a1fd4ec2d6e072a618bf92b63271",
+          "authors": "Alaa I. Ibrahim, H. Sahyon, Adel M. Attia"
         },
         {
-          "title": "Targeted inhibition of the HNF1A/SHH axis by triptolide overcomes paclitaxel resistance in non-small cell lung cancer",
+          "title": "Is folic acid associated with lung cancer development? A cross-sectional study in NHANES",
+          "year": 2025,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/a1d7a4a47bfb6e9a093502c13ae0082e895367a1",
+          "authors": "Bin-Bin Li, Fei Xu, Xuxiang Lu"
+        },
+        {
+          "title": "Innovative fabrication of folic acid-conjugated curcumin cellulose nanofibers for targeted lung cancer therapy",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/ef8c96ce9c272ad75a3ad680b6fa6d9e4a8414dd",
+          "authors": "V. Chatap, Bhakti Patel, T. Patil"
+        },
+        {
+          "title": "A comparative study on inhibition of lung cancer cells by nanoemulsion, nanoliposome, nanogold and their folic acid conjugates prepared with collagen peptides from Taiwan tilapia skin.",
           "year": 2024,
-          "citations": 30,
-          "url": "https://www.semanticscholar.org/paper/cd939504c869ebbaaf62c08240728547eea731f3",
-          "authors": "Lingbing Li, Lingxiao Yang, Lei Liu"
-        },
-        {
-          "title": "Atezolizumab in combination with carboplatin plus nab-paclitaxel chemotherapy compared with chemotherapy alone as first-line treatment for metastatic non-squamous non-small-cell lung cancer (IMpower130): a multicentre, randomised, open-label, phase 3 trial.",
-          "year": 2019,
-          "citations": 1319,
-          "url": "https://www.semanticscholar.org/paper/5b85afc93112684f87e1e3d3fa2ccff223aedb5c",
-          "authors": "H. West, M. Mccleod, M. Hussein"
-        },
-        {
-          "title": "Inhalable CAR-T cell-derived exosomes as paclitaxel carriers for treating lung cancer",
-          "year": 2023,
-          "citations": 87,
-          "url": "https://www.semanticscholar.org/paper/e2dc0a338d94897d00c0eb0bb8bef7551994d752",
-          "authors": "Wei-Hong Zheng, Tianchuan Zhu, Lantian Tang"
+          "citations": 12,
+          "url": "https://www.semanticscholar.org/paper/9347f321314ab7078c99d81a9b5e4df52cee2d5e",
+          "authors": "B. Inbaraj, Yu-Wen Lai, Bing-Huei Chen"
         }
       ],
       "most_cited_paper": {
-        "title": "Paclitaxel-carboplatin alone or with bevacizumab for non-small-cell lung cancer.",
-        "year": 2006,
-        "citations": 5853,
-        "url": "https://www.semanticscholar.org/paper/1f1cd5e6590d16ff4e0ca4c0f0a87c16ab5d38f9",
-        "authors": "A. Sandler, R. Gray, M. Perry"
+        "title": "Computational Repositioning of the Anticonvulsant Topiramate for Inflammatory Bowel Disease",
+        "year": 2011,
+        "citations": 551,
+        "url": "https://www.semanticscholar.org/paper/65228a9f1b83b09af483779bb637fa6e037ae12f",
+        "authors": "J. Dudley, M. Sirota, M. Shenoy"
       },
-      "max_citations": 5853,
-      "faers_signal": "strong",
-      "faers_total_reports": 86251,
-      "faers_cooccurrences": 896,
-      "faers_interpretation": "896 FAERS reports mention both Paclitaxel and Lung cancer-related terms (1.0% of all Paclitaxel reports). This suggests real-world clinical association.",
+      "max_citations": 551,
+      "faers_signal": "moderate",
+      "faers_total_reports": 253612,
+      "faers_cooccurrences": 1029,
+      "faers_interpretation": "1029 FAERS reports mention both Folic Acid and Lung cancer-related terms. Limited but notable real-world signal.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -3825,8 +3894,8 @@
         "YM-155 (1.440)",
         "fostamatinib (1.431)"
       ],
-      "signature_interpretation": "Paclitaxel was not found among the top 46 drugs that reverse the Lung cancer gene signature. Top reversers: KIN001-043 (1.493), PF3845 (1.469), 3,5-dichloro-2-hydroxy-N-(2-methoxy-5-phenylphenyl)benzenesulfonamide (1.452)",
-      "ai_hypothesis": "of its ability to induce apoptosis and inhibit cell proliferation.",
+      "signature_interpretation": "Folic Acid was not found among the top 46 drugs that reverse the Lung cancer gene signature. Top reversers: KIN001-043 (1.493), PF3845 (1.469), 3,5-dichloro-2-hydroxy-N-(2-methoxy-5-phenylphenyl)benzenesulfonamide (1.452)",
+      "ai_hypothesis": "of its anti-cancer properties.",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
@@ -3839,140 +3908,85 @@
           "reason": "Drug or disease not mentioned in abstract"
         },
         {
-          "relation_type": "treats",
-          "confidence": 0.7,
-          "positive_signals": 2,
-          "negative_signals": 0,
-          "mechanism_signals": 0,
-          "extracted_entities": [
-            {
-              "entity": "apatinib",
-              "entity_group": "Medication",
-              "score": 0.9670000076293945
-            },
-            {
-              "entity": "ap",
-              "entity_group": "Medication",
-              "score": 1.0
-            },
-            {
-              "entity": "##atinib",
-              "entity_group": "Medication",
-              "score": 0.9929999709129333
-            },
-            {
-              "entity": "paclitaxel",
-              "entity_group": "Medication",
-              "score": 0.9179999828338623
-            },
-            {
-              "entity": "doc",
-              "entity_group": "Medication",
-              "score": 0.9639999866485596
-            },
-            {
-              "entity": "##etaxel",
-              "entity_group": "Medication",
-              "score": 0.9200000166893005
-            },
-            {
-              "entity": "docetaxel",
-              "entity_group": "Medication",
-              "score": 0.875
-            },
-            {
-              "entity": "non",
-              "entity_group": "Disease_disorder",
-              "score": 0.9110000133514404
-            },
-            {
-              "entity": "cell",
-              "entity_group": "Disease_disorder",
-              "score": 0.9419999718666077
-            },
-            {
-              "entity": "lung cancer",
-              "entity_group": "Disease_disorder",
-              "score": 0.9990000128746033
-            }
-          ]
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
         }
       ],
       "has_failed_trial": false,
       "failed_trial_phase": "Phase 3",
       "failed_trial_count": 10,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.8236,
-      "mr_genetic_targets": 11,
-      "mechanistic_hypothesis": "Paclitaxel \u2014[is a therapeutic for]\u2192 Lung cancer",
-      "kg_paths_text": "\u2022 Paclitaxel \u2014[is a therapeutic for]\u2192 Lung cancer\n\u2022 Paclitaxel \u2014[downregulates]\u2192 gene-3692 \u2014[is a target of]\u2192 DB09130 \u2014[is a therapeutic for]\u2192 Lung cancer\n\u2022 Paclitaxel \u2014[downregulates]\u2192 gene-3692 \u2014[is a target of]\u2192 DB09130 \u2014[is a therapeutic for]\u2192 Lung cancer",
+      "mr_score": 0.8286,
+      "mr_genetic_targets": 2,
+      "mechanistic_hypothesis": "Folic Acid \u2014[is a therapeutic for]\u2192 Lung cancer",
+      "kg_paths_text": "\u2022 Folic Acid \u2014[is a therapeutic for]\u2192 Lung cancer\n\u2022 Folic Acid \u2014[binds]\u2192 gene-9429 \u2014[is linked to]\u2192 Lung cancer\n\u2022 Folic Acid \u2014[binds]\u2192 gene-9429 \u2014[is linked to]\u2192 Lung cancer",
       "validation_experiments": [],
-      "novelty_score": 0.032,
+      "novelty_score": 0.097,
       "novelty_level": "ESTABLISHED",
       "is_known_treatment": true,
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT07365319",
-          "title": "A Safety and Efficacy Study of EIK1001 in Combination With Pembrolizumab and Chemotherapy in Participants With Stage 4 Non-Small Cell Lung Cancer.",
-          "status": "NOT_YET_RECRUITING",
-          "phase": "PHASE2, PHASE3",
-          "enrollment": "750",
-          "url": "https://clinicaltrials.gov/study/NCT07365319"
+          "nct_id": "NCT05116891",
+          "title": "A Phase 1/2 Study of CAN04 in Combination With Different Chemotherapy Regimens in Subjects With Advanced Solid Tumors",
+          "status": "COMPLETED",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "40",
+          "url": "https://clinicaltrials.gov/study/NCT05116891"
         },
         {
-          "nct_id": "NCT03645928",
-          "title": "Study of Autologous Tumor Infiltrating Lymphocytes in Patients With Solid Tumors",
+          "nct_id": "NCT05647122",
+          "title": "First in Human Study of AZD9592 in Solid Tumors",
           "status": "RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "245",
-          "url": "https://clinicaltrials.gov/study/NCT03645928"
-        },
-        {
-          "nct_id": "NCT05286957",
-          "title": "MRD-guided Adjuvant Tislelizumab and Chemotherapy in Resected Stage IIA-IIIB NSCLC",
-          "status": "RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "60",
-          "url": "https://clinicaltrials.gov/study/NCT05286957"
-        },
-        {
-          "nct_id": "NCT07351565",
-          "title": "Chemotherapy Plus Pitavastatin Guided by Patient-Derived Tumor-like Cell Clusters in Refractory Non-Small Cell Lung Cancer",
-          "status": "NOT_YET_RECRUITING",
           "phase": "PHASE1",
-          "enrollment": "22",
-          "url": "https://clinicaltrials.gov/study/NCT07351565"
+          "enrollment": "403",
+          "url": "https://clinicaltrials.gov/study/NCT05647122"
         },
         {
-          "nct_id": "NCT03164616",
-          "title": "Study of Durvalumab + Tremelimumab With Chemotherapy or Durvalumab With Chemotherapy or Chemotherapy Alone for Patients With Lung Cancer (POSEIDON).",
-          "status": "ACTIVE_NOT_RECRUITING",
+          "nct_id": "NCT04786964",
+          "title": "Study of Pemetrexed+Platinum Chemotherapy With or Without Cosibelimab in First Line Metastatic Non-squamous NSCLC",
+          "status": "TERMINATED",
           "phase": "PHASE3",
-          "enrollment": "1186",
-          "url": "https://clinicaltrials.gov/study/NCT03164616"
+          "enrollment": "25",
+          "url": "https://clinicaltrials.gov/study/NCT04786964"
+        },
+        {
+          "nct_id": "NCT00859495",
+          "title": "Trimodal Lung-Sparing Treatment of Pleural Mesothelioma",
+          "status": "TERMINATED",
+          "phase": "PHASE2",
+          "enrollment": "9",
+          "url": "https://clinicaltrials.gov/study/NCT00859495"
+        },
+        {
+          "nct_id": "NCT00227019",
+          "title": "Phase 2 Trial of Bevacizumab in Combination With Pemetrexed",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "16",
+          "url": "https://clinicaltrials.gov/study/NCT00227019"
         }
       ],
       "trial_phases": {
-        "PHASE2": 6,
-        "PHASE3": 3,
-        "PHASE1": 1,
-        "PHASE4": 1
+        "PHASE1": 4,
+        "PHASE2": 5,
+        "PHASE3": 2
       },
       "confidence": "HIGH",
       "confidence_reasons": [
         "10 clinical trial(s) found on ClinicalTrials.gov",
         "Phase 3 trial exists",
-        "5530 PubMed articles on this drug-disease pair",
-        "17 article(s) specifically mention repurposing/repositioning",
+        "514 PubMed articles on this drug-disease pair",
+        "1 article(s) specifically mention repurposing/repositioning",
         "Supported by 4 independent AI pillars",
-        "Strong FAERS signal: 896 adverse event reports link drug to disease (86251 total reports)",
-        "Highly cited paper (5853 citations): \"Paclitaxel-carboplatin alone or with bevacizumab for non-sma...\"",
-        "AI analysis of 1 abstract(s) found positive treatment signals",
+        "Moderate FAERS signal: 1029 adverse event reports mention drug-disease co-occurrence",
+        "Highly cited paper (551 citations): \"Computational Repositioning of the Anticonvulsant Topiramate...\"",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.82, 11 genetic targets)",
+        "Strong causal genetic evidence (MR score: 0.83, 2 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D008175",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3983,7 +3997,7 @@
         "stage": 1
       },
       "ddi_warnings": {
-        "n_interactions": 1533,
+        "n_interactions": 845,
         "has_warnings": true,
         "top_interactions": [
           {
@@ -3997,28 +4011,8 @@
             "severity": "high"
           },
           {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
             "drug_id": "DB00564",
             "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
             "severity": "high"
           },
           {
@@ -4032,8 +4026,28 @@
             "severity": "high"
           },
           {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00331",
+            "drug_name": "Metformin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00338",
+            "drug_name": "Omeprazole",
             "severity": "high"
           }
         ]
@@ -4041,59 +4055,59 @@
       "pharmacogenomics": {
         "has_flags": true,
         "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (ABCB1 / rs2032582)",
+        "summary": "PharmGKB-3 (MTRR / rs1801394)",
         "cpic": [],
         "pharmgkb": [
           {
-            "gene": "ABCB1",
-            "variant": "rs2032582",
+            "gene": "MTRR",
+            "variant": "rs1801394",
             "level": "3",
             "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/655385856"
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183491035"
           },
           {
-            "gene": "CYP2C8",
-            "variant": "rs1113129",
+            "gene": "MTHFR",
+            "variant": "rs1801131",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204525"
+          },
+          {
+            "gene": "TLR4",
+            "variant": "rs4986790",
             "level": "3",
             "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/699639328"
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043880467"
           },
           {
-            "gene": "ABCB1",
-            "variant": "rs1045642",
-            "level": "4",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204258"
-          },
-          {
-            "gene": "FGD4",
-            "variant": "rs10771973",
+            "gene": "MTHFR",
+            "variant": "rs1801133",
             "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1444700958"
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183491364"
           },
           {
-            "gene": "ERCC1",
-            "variant": "rs3212986",
+            "gene": "MTR",
+            "variant": "rs1805087",
             "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1445401847"
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451634907"
           }
         ]
       },
       "triangulation": {
-        "n_axes_agree": 3,
+        "n_axes_agree": 2,
         "axes": {
           "kg": true,
-          "docking": true,
+          "docking": false,
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.665,
-        "label": "silver-standard",
+        "triangulation_score": 0.517,
+        "label": "multi-axis",
         "axis_values": {
           "kg": 0.536,
-          "docking": 0.923,
+          "docking": 0.43,
           "pharos": 0.0,
           "literature": 1.0
         }
@@ -4103,50 +4117,43 @@
           "Lung"
         ],
         "n_genes": 20,
-        "n_expressed": 20,
-        "mean_tpm_in_tissue": 43.97,
-        "max_tpm_in_tissue": 201.49,
-        "tissue_specificity": 0.73,
-        "context_modifier": 1.086
+        "n_expressed": 19,
+        "mean_tpm_in_tissue": 32.91,
+        "max_tpm_in_tissue": 172.98,
+        "tissue_specificity": 0.686,
+        "context_modifier": 1.07
       },
-      "disease_entity": "Disease::MESH:D008175",
+      "ensemble_prob": 0.0746,
+      "ensemble_features": {
+        "kg_score": 0.976,
+        "degree_penalty": 0.7918,
+        "n_drug_targets": 6,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 5.5373
+      },
+      "ensemble_rank": 8,
       "docking": {
-        "kcal_per_mol": -11.08,
-        "target_symbol": "TUBB3",
+        "kcal_per_mol": -5.16,
+        "target_symbol": "TYMS",
         "source": "chembl_bioactivity_proxy",
         "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
         "hit": true
       },
-      "ensemble_prob": 0.9954,
-      "ensemble_features": {
-        "kg_score": 0.9999,
-        "degree_penalty": 0.7483,
-        "n_drug_targets": 25,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 0.6931
-      },
-      "ensemble_rank": 1,
       "structural_alerts": {
         "has_pains": false,
-        "pains_families": [
-          ">",
-          "ISOLATED"
-        ],
-        "n_alerts": 2,
-        "alert_names": [
-          ">_2_ester_groups",
-          "isolated_alkene"
-        ]
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
       }
     }
   ],
   "disease_entity": "Disease::MESH:D008175",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
     "n_disease_genes": 924,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
-  },
-  "ensemble_version": "v5",
-  "ensemble_model_path": "data/models/ensemble_v5.pkl"
+  }
 }

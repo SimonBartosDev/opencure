@@ -1,14 +1,13 @@
 {
   "disease": "Amyotrophic lateral sclerosis",
   "status": "completed",
-  "timestamp": "2026-04-19T17:30:12.283514",
-  "elapsed_seconds": 1039.7,
+  "timestamp": "2026-05-07T22:50:00.355528",
+  "elapsed_seconds": 173.2,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
-    "HIGH": 7,
-    "MEDIUM": 2,
-    "LOW": 1
+    "HIGH": 9,
+    "MEDIUM": 1
   },
   "pipeline_version": "v5",
   "data_manifest_hash": "2da2aa88f2457d1b",
@@ -37,7 +36,7 @@
       "admet_flags": "clean",
       "primekg_score": 0,
       "dti_score": 1.0,
-      "dti_best_target": "HSFX1",
+      "dti_best_target": "DPP6",
       "kg_group_score": 0.1241,
       "structural_group_score": 1.0,
       "network_group_score": 0.6607000231742859,
@@ -135,20 +134,20 @@
       "clinical_trials_total": 2,
       "clinical_trials": [
         {
-          "nct_id": "NCT00877604",
-          "title": "Efficacy and Tolerability of Tauroursodeoxycholic Acid in Amyotrophic Lateral Sclerosis",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "34",
-          "url": "https://clinicaltrials.gov/study/NCT00877604"
-        },
-        {
           "nct_id": "NCT03843710",
           "title": "31P-MRS Imaging to Assess the Effects of CNM-Au8 on Impaired Neuronal Redox State in Amyotrophic Lateral Sclerosis (REPAIR-ALS)",
           "status": "WITHDRAWN",
           "phase": "PHASE2",
           "enrollment": "0",
           "url": "https://clinicaltrials.gov/study/NCT03843710"
+        },
+        {
+          "nct_id": "NCT00877604",
+          "title": "Efficacy and Tolerability of Tauroursodeoxycholic Acid in Amyotrophic Lateral Sclerosis",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "34",
+          "url": "https://clinicaltrials.gov/study/NCT00877604"
         }
       ],
       "trial_phases": {
@@ -163,6 +162,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.81, 2 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D000690",
       "dose_plausibility": {
         "plausibility": "unknown",
         "dose_range": "research",
@@ -214,15 +214,7 @@
         "tissue_specificity": 0.48,
         "context_modifier": 1.084
       },
-      "disease_entity": "Disease::MESH:D000690",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.0014,
+      "ensemble_prob": 0.0018,
       "ensemble_features": {
         "kg_score": 0.7999,
         "degree_penalty": 0.9279,
@@ -231,7 +223,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 7.6554
       },
-      "ensemble_rank": 8,
+      "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -271,7 +270,7 @@
       "admet_flags": "Skin_Reaction=0.81",
       "primekg_score": 0.258,
       "dti_score": 1.0,
-      "dti_best_target": "HSFX1",
+      "dti_best_target": "DPP6",
       "kg_group_score": 0.3355,
       "structural_group_score": 1.0,
       "network_group_score": 0.53329998254776,
@@ -502,6 +501,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.76, 4 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D000690",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -604,15 +604,7 @@
         "tissue_specificity": 0.393,
         "context_modifier": 1.048
       },
-      "disease_entity": "Disease::MESH:D000690",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.5741,
+      "ensemble_prob": 0.5971,
       "ensemble_features": {
         "kg_score": 0.9964,
         "degree_penalty": 0.7619,
@@ -621,7 +613,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 3.6636
       },
-      "ensemble_rank": 5,
+      "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -658,7 +657,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2547,
       "dti_score": 1.0,
-      "dti_best_target": "HSFX1",
+      "dti_best_target": "DPP6",
       "kg_group_score": 0.3048,
       "structural_group_score": 1.0,
       "network_group_score": 0.6679999828338623,
@@ -874,6 +873,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.63)"
       ],
+      "disease_entity": "Disease::MESH:D000690",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -936,14 +936,6 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.861
       },
-      "disease_entity": "Disease::MESH:D000690",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
       "ensemble_prob": 0.0,
       "ensemble_features": {
         "kg_score": 0.7038,
@@ -954,6 +946,13 @@
         "transe_rank_log": 8.0475
       },
       "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -985,7 +984,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2585,
       "dti_score": 1.0,
-      "dti_best_target": "HSFX1",
+      "dti_best_target": "DPP6",
       "kg_group_score": 0.2313,
       "structural_group_score": 1.0,
       "network_group_score": 0.48989999294281006,
@@ -1155,6 +1154,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.95, 1 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D000690",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1257,15 +1257,7 @@
         "tissue_specificity": 0.282,
         "context_modifier": 1.052
       },
-      "disease_entity": "Disease::MESH:D000690",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.1956,
+      "ensemble_prob": 0.15,
       "ensemble_features": {
         "kg_score": 0.9872,
         "degree_penalty": 0.7678,
@@ -1274,7 +1266,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 4.9127
       },
-      "ensemble_rank": 7,
+      "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -1479,20 +1478,33 @@
       "mechanistic_hypothesis": "Dexamethasone \u2014[downregulates]\u2192 gene-10417 \u2014[is downregulated by]\u2192 Amyotrophic lateral sclerosis",
       "kg_paths_text": "\u2022 Dexamethasone \u2014[downregulates]\u2192 gene-10417 \u2014[is downregulated by]\u2192 Amyotrophic lateral sclerosis\n\u2022 Dexamethasone \u2014[downregulates]\u2192 gene-1454 \u2014[is activated by]\u2192 gene-8864 \u2014[is downregulated by]\u2192 Amyotrophic lateral sclerosis\n\u2022 Dexamethasone \u2014[downregulates]\u2192 gene-1454 \u2014[is activated by]\u2192 gene-8864 \u2014[is downregulated by]\u2192 Amyotrophic lateral sclerosis",
       "validation_experiments": [],
-      "novelty_score": 0.544,
-      "novelty_level": "NOVEL",
+      "novelty_score": 0.448,
+      "novelty_level": "KNOWN",
       "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "MEDIUM",
+      "clinical_trials_total": 1,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT07539662",
+          "title": "Unrelated Umbilical Cord Blood Transplantation for the Treatment of Amyotrophic Lateral Sclerosis (ALS)",
+          "status": "ENROLLING_BY_INVITATION",
+          "phase": "NA",
+          "enrollment": "8",
+          "url": "https://clinicaltrials.gov/study/NCT07539662"
+        }
+      ],
+      "trial_phases": {
+        "NA": 1
+      },
+      "confidence": "HIGH",
       "confidence_reasons": [
+        "1 clinical trial(s) found on ClinicalTrials.gov",
         "68 PubMed articles on this drug-disease pair",
         "Supported by 4 independent AI pillars",
         "Supporting paper with 53 citations",
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.70)"
       ],
+      "disease_entity": "Disease::MESH:D000690",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -1631,15 +1643,7 @@
         "tissue_specificity": 0.642,
         "context_modifier": 1.107
       },
-      "disease_entity": "Disease::MESH:D000690",
-      "docking": {
-        "kcal_per_mol": -5.87,
-        "target_symbol": "ABCB1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.9616,
+      "ensemble_prob": 0.9914,
       "ensemble_features": {
         "kg_score": 0.9995,
         "degree_penalty": 0.736,
@@ -1649,6 +1653,13 @@
         "transe_rank_log": 1.7918
       },
       "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": -5.87,
+        "target_symbol": "ABCB1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1660,7 +1671,7 @@
       "drug_name": "Acetylcysteine",
       "drug_id": "DB06151",
       "disease_name": "Amyotrophic lateral sclerosis",
-      "combined_score": 0.5228,
+      "combined_score": 0.5277,
       "pillars_hit": 4,
       "transe_rank": 9,
       "transe_score": -10.3376,
@@ -1679,15 +1690,15 @@
       "admet_score": 0.7052,
       "admet_flags": "clean",
       "primekg_score": 0.2574,
-      "dti_score": 0.6746,
-      "dti_best_target": "TNFSF10",
+      "dti_score": 0.7036,
+      "dti_best_target": "RARA",
       "kg_group_score": 0.2849,
-      "structural_group_score": 0.6746,
+      "structural_group_score": 0.7036,
       "network_group_score": 0.6205000281333923,
       "txgnn_group_score": 0,
       "mr_group_score": 0.9255,
       "admet_multiplier": 0.941,
-      "efficacy_score": 0.5556,
+      "efficacy_score": 0.5608,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 8,
@@ -1850,19 +1861,11 @@
       "mechanistic_hypothesis": "Acetylcysteine \u2014[is a therapeutic for]\u2192 Amyotrophic lateral sclerosis",
       "kg_paths_text": "\u2022 Acetylcysteine \u2014[is a therapeutic for]\u2192 Amyotrophic lateral sclerosis\n\u2022 Acetylcysteine \u2014[targets]\u2192 gene-2903 \u2014[is bound by]\u2192 DB01043 \u2014[is a therapeutic for]\u2192 Amyotrophic lateral sclerosis\n\u2022 Acetylcysteine \u2014[targets]\u2192 gene-2903 \u2014[is bound by]\u2192 DB01043 \u2014[is a therapeutic for]\u2192 Amyotrophic lateral sclerosis",
       "validation_experiments": [],
-      "novelty_score": 0.376,
+      "novelty_score": 0.38,
       "novelty_level": "KNOWN",
       "is_known_treatment": true,
       "clinical_trials_total": 2,
       "clinical_trials": [
-        {
-          "nct_id": "NCT04557410",
-          "title": "Open Label Study: Treatment of ALS Fatigue With PolyMVA",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "12",
-          "url": "https://clinicaltrials.gov/study/NCT04557410"
-        },
         {
           "nct_id": "NCT07414212",
           "title": "Evaluation of the Combined Therapy of EH-301 and N-acetylcysteine Together With Riluzole in Amyotrophic Lateral Sclerosis (ALS)",
@@ -1870,6 +1873,14 @@
           "phase": "PHASE1, PHASE2",
           "enrollment": "90",
           "url": "https://clinicaltrials.gov/study/NCT07414212"
+        },
+        {
+          "nct_id": "NCT04557410",
+          "title": "Open Label Study: Treatment of ALS Fatigue With PolyMVA",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "12",
+          "url": "https://clinicaltrials.gov/study/NCT04557410"
         }
       ],
       "trial_phases": {
@@ -1885,8 +1896,10 @@
         "Moderate FAERS signal: 4 adverse event reports mention drug-disease co-occurrence",
         "Highly cited paper (181 citations): \"Randomized, double-blind, controlled trial of acetylcysteine...\"",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.93, 2 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.93, 2 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D000690",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -1975,10 +1988,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.339,
+        "triangulation_score": 0.34,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.523,
+          "kg": 0.528,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 0.778
@@ -1997,15 +2010,7 @@
         "tissue_specificity": 0.645,
         "context_modifier": 1.107
       },
-      "disease_entity": "Disease::MESH:D000690",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.9242,
+      "ensemble_prob": 0.8714,
       "ensemble_features": {
         "kg_score": 0.9967,
         "degree_penalty": 0.8715,
@@ -2015,6 +2020,13 @@
         "transe_rank_log": 3.5835
       },
       "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -2050,8 +2062,8 @@
       "admet_score": 0.6574,
       "admet_flags": "clean",
       "primekg_score": 0.2603,
-      "dti_score": 0.5342,
-      "dti_best_target": "S1PR1",
+      "dti_score": 0.658,
+      "dti_best_target": "RARA",
       "kg_group_score": 0.2919,
       "structural_group_score": 0.966,
       "network_group_score": 0.4860000014305115,
@@ -2233,6 +2245,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.73, 9 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D000690",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2343,15 +2356,7 @@
         "tissue_specificity": 0.641,
         "context_modifier": 1.107
       },
-      "disease_entity": "Disease::MESH:D000690",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.9768,
+      "ensemble_prob": 0.999,
       "ensemble_features": {
         "kg_score": 1.0,
         "degree_penalty": 0.7341,
@@ -2361,392 +2366,13 @@
         "transe_rank_log": 0.0
       },
       "ensemble_rank": 1,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Sertraline",
-      "drug_id": "DB01104",
-      "disease_name": "Amyotrophic lateral sclerosis",
-      "combined_score": 0.5134,
-      "pillars_hit": 5,
-      "transe_rank": 98,
-      "transe_score": -11.0317,
-      "pykeen_score": -12.541,
-      "pykeen_rank": 0,
-      "txgnn_score": 0.39,
-      "txgnn_rank": 61,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.699999988079071,
-      "proximity_distance": 1.2000000476837158,
-      "admet_score": 0.4451,
-      "admet_flags": "hERG=0.92",
-      "primekg_score": 0.2555,
-      "dti_score": 0.3642,
-      "dti_best_target": "S1PR1",
-      "kg_group_score": 0.1834,
-      "structural_group_score": 0.3642,
-      "network_group_score": 0.5286999940872192,
-      "txgnn_group_score": 0.39,
-      "mr_group_score": 0.8301,
-      "admet_multiplier": 0.889,
-      "efficacy_score": 0.5775,
-      "groups_hit": 5,
-      "direct_relations": [],
-      "shared_target_count": 7,
-      "shared_targets": [
-        "ABCB1",
-        "CRP",
-        "CYCS",
-        "GRN",
-        "SQSTM1",
-        "UBQLN2",
-        "VAPB"
-      ],
-      "pubmed_total": 12,
-      "pubmed_treatment_total": 11,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "36140348",
-          "title": "GJA1/CX43 High Expression Levels in the Cervical Spinal Cord of ALS Patients Correlate to Microglia-Mediated Neuroinflammatory Profile.",
-          "authors": "Vicario N, Castrogiovanni P, Imbesi R, et al.",
-          "journal": "Biomedicines",
-          "year": "2022",
-          "abstract_snippet": "Amyotrophic lateral sclerosis (ALS) is a progressive neurodegenerative disorder affecting motoneurons (MNs) with a fatal outcome. The typical degeneration of cortico-spinal, spinal, and bulbar MNs, observed in post-mortem biopsies, is associated with the activation of neuroimmune cells. GJA1, a memb...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36140348/",
-          "total_results": 12
-        },
-        {
-          "pmid": "17187269",
-          "title": "[Antidepressant effects of dopamine agonists. Experimental and clinical findings].",
-          "authors": "Lemke MR",
-          "journal": "Der Nervenarzt",
-          "year": "2007",
-          "abstract_snippet": "Results of preclinical and clinical studies implicate that, in addition to serotonin and norepinephrin, dopaminergic mechanisms play a role in the pathogenesis and treatment of depression. Newer antidepressants such as bupropion, sertraline, and venlafaxine act as partial inhibitors of presynaptic d...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/17187269/"
-        },
-        {
-          "pmid": "40482451",
-          "title": "Neuroinflammation to neurodegeneration: Boulevard of broken nerves.",
-          "authors": "Attiq A, Afzal S, Raman H, et al.",
-          "journal": "International immunopharmacology",
-          "year": "2025",
-          "abstract_snippet": "Neuroinflammation is caused by various factors, such as the activation of glial cells, the excessive release of chemokines and cytokines, and the accumulation of blood cells in the brain parenchyma. The inflammatory processes occur in acute and chronic phases, with traumatic brain injuries triggerin...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40482451/"
-        },
-        {
-          "pmid": "40187044",
-          "title": "Activating autophagy to eliminate toxic protein aggregates with small molecules in neurodegenerative diseases.",
-          "authors": "Fu Y, Zhang J, Qin R, et al.",
-          "journal": "Pharmacological reviews",
-          "year": "2025",
-          "abstract_snippet": "Neurodegenerative diseases (NDs), such as Alzheimer disease, Parkinson disease, Huntington disease, amyotrophic lateral sclerosis, and frontotemporal dementia, are well known to pose formidable challenges for their treatment due to their intricate pathogenesis and substantial variability among patie...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40187044/"
-        },
-        {
-          "pmid": "17538783",
-          "title": "Inappropriate sexual behaviour in a case of ALS and FTD: successful treatment with sertraline.",
-          "authors": "Anneser JM, Jox RJ, Borasio GD",
-          "journal": "Amyotrophic lateral sclerosis : official publication of the World Federation of Neurology Research Group on Motor Neuron Diseases",
-          "year": "2007",
-          "abstract_snippet": "In a subset of patients, ALS is associated with frontotemporal dysfunction (ALS-FTD). Clinically, ALS-FTD may present with a variable spectrum of cognitive and behavioural deficits. We report a 53-year-old ALS-FTD patient developing inappropriate sexual behaviour (ISB) manifesting as a vigorous sexu...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/17538783/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Neuroinflammation to neurodegeneration: Boulevard of broken nerves.",
-          "year": 2025,
-          "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/4ec668c4a89e82527fe04305d192c11bd988cbb8",
-          "authors": "Ali Attiq, Sheryar Afzal, Hemavalli Raman"
-        },
-        {
-          "title": "Galactorrhea Associated with Sertraline: a Case Report and Literature Review",
-          "year": 2015,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/11636384f1698a07a95294a5b308b2945bd11a7f",
-          "authors": "S. Ouanes, B. Van der Vaeren, I. Cromec"
-        },
-        {
-          "title": "Inappropriate sexual behaviour in a case of ALS and FTD: Successful treatment with sertraline",
-          "year": 2007,
-          "citations": 39,
-          "url": "https://www.semanticscholar.org/paper/7a4ad4892dcfc469ea13848a73004abba11d9d9f",
-          "authors": "J. Anneser, R. Jox, G. Borasio"
-        },
-        {
-          "title": "Poststroke Emotionalism with Dacrystic (Crying) Episodes \u2013 Making a Case for Risperidone",
-          "year": 2018,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/dfeffbbe0d716735af6331e2489162f783dc3d24",
-          "authors": "F. Imarhiagbe, OA Abidakun"
-        },
-        {
-          "title": "Amyotrophic lateral sclerosis estimated prevalence cases from 2022 to 2030, data from the national ALS Registry",
-          "year": 2025,
-          "citations": 31,
-          "url": "https://www.semanticscholar.org/paper/3d84f09f770cb72552b688f1c449b473c6e46f40",
-          "authors": "P. Mehta, J. Raymond, Theresa Nair"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Repurpose terbutaline sulfate for amyotrophic lateral sclerosis using electronic medical records",
-        "year": 2015,
-        "citations": 53,
-        "url": "https://www.semanticscholar.org/paper/07ad901d5efef7412a71bc775a493874e465feed",
-        "authors": "H. Paik, Ah\u2010Young Chung, Hae-Chul Park"
-      },
-      "max_citations": 53,
-      "faers_signal": "moderate",
-      "faers_total_reports": 139226,
-      "faers_cooccurrences": 20,
-      "faers_interpretation": "20 FAERS reports mention both Sertraline and Amyotrophic lateral sclerosis-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "S1252 (1.513)",
-        "S1053 (1.497)",
-        "celastrol (1.487)",
-        "trichostatin A (1.471)",
-        "Camptothecin (1.467)"
-      ],
-      "signature_interpretation": "Sertraline was not found among the top 35 drugs that reverse the Amyotrophic lateral sclerosis gene signature. Top reversers: S1252 (1.513), S1053 (1.497), celastrol (1.487)",
-      "ai_hypothesis": "of its ability to increase the expression of neurotrophic factors and to reduce the expression of pro-apoptotic proteins.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.8301,
-      "mr_genetic_targets": 6,
-      "mechanistic_hypothesis": "Sertraline \u2014[downregulates]\u2192 gene-9217 \u2014[is linked to]\u2192 Amyotrophic lateral sclerosis",
-      "kg_paths_text": "\u2022 Sertraline \u2014[downregulates]\u2192 gene-9217 \u2014[is linked to]\u2192 Amyotrophic lateral sclerosis\n\u2022 Sertraline \u2014[downregulates]\u2192 gene-332 \u2014[activates]\u2192 gene-22919 \u2014[is upregulated by]\u2192 Amyotrophic lateral sclerosis\n\u2022 Sertraline \u2014[downregulates]\u2192 gene-332 \u2014[activates]\u2192 gene-22919 \u2014[is upregulated by]\u2192 Amyotrophic lateral sclerosis",
-      "validation_experiments": [],
-      "novelty_score": 0.493,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "12 PubMed articles found",
-        "Supported by 5 independent AI pillars",
-        "Moderate FAERS signal: 20 adverse event reports mention drug-disease co-occurrence",
-        "Supporting paper with 53 citations",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.83, 6 genetic targets)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1614,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "high_risk",
-        "summary": "CPIC-C (HTR2A) \u2022 PharmGKB-3 (HTR1A / rs6295)",
-        "cpic": [
-          {
-            "gene": "HTR2A",
-            "level": "C",
-            "guideline": "CYP2D6, CYP2C19, CYP2B6, SLC6A4, HTR2A and Serotonin Reuptake Inhibitor Antidepressants"
-          },
-          {
-            "gene": "CYP2C19",
-            "level": "A",
-            "guideline": "CYP2D6, CYP2C19, CYP2B6, SLC6A4, HTR2A and Serotonin Reuptake Inhibitor Antidepressants"
-          },
-          {
-            "gene": "CYP2B6",
-            "level": "B",
-            "guideline": "CYP2D6, CYP2C19, CYP2B6, SLC6A4, HTR2A and Serotonin Reuptake Inhibitor Antidepressants"
-          },
-          {
-            "gene": "CYP2D6",
-            "level": "C",
-            "guideline": "CYP2D6, CYP2C19, CYP2B6, SLC6A4, HTR2A and Serotonin Reuptake Inhibitor Antidepressants"
-          },
-          {
-            "gene": "GRIK4",
-            "level": "C",
-            "guideline": ""
-          }
-        ],
-        "pharmgkb": [
-          {
-            "gene": "HTR1A",
-            "variant": "rs6295",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/655384772"
-          },
-          {
-            "gene": "SRP19",
-            "variant": "rs495794",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183590959"
-          },
-          {
-            "gene": "REEP5",
-            "variant": "rs153560",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183614696"
-          },
-          {
-            "gene": "",
-            "variant": "rs13432159",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183614721"
-          },
-          {
-            "gene": "HTR2A",
-            "variant": "rs6311",
-            "level": "4",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451407348"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.43,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.513,
-          "docking": 0.512,
-          "pharos": 0.0,
-          "literature": 0.484
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Brain - Spinal cord (cervical c-1)",
-          "Brain - Cortex",
-          "Muscle - Skeletal"
-        ],
-        "n_genes": 7,
-        "n_expressed": 6,
-        "mean_tpm_in_tissue": 53.77,
-        "max_tpm_in_tissue": 155.16,
-        "tissue_specificity": 0.236,
-        "context_modifier": 1.034
-      },
-      "disease_entity": "Disease::MESH:D000690",
       "docking": {
-        "kcal_per_mol": -6.14,
-        "target_symbol": "ABCB1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
       },
-      "ensemble_prob": 0.2447,
-      "ensemble_features": {
-        "kg_score": 0.9901,
-        "degree_penalty": 0.7553,
-        "n_drug_targets": 33,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 4.654
-      },
-      "ensemble_rank": 6,
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2758,7 +2384,7 @@
       "drug_name": "Melatonin",
       "drug_id": "DB01065",
       "disease_name": "Amyotrophic lateral sclerosis",
-      "combined_score": 0.5117,
+      "combined_score": 0.5133,
       "pillars_hit": 4,
       "transe_rank": 19,
       "transe_score": -10.5323,
@@ -2777,15 +2403,15 @@
       "admet_score": 0.4757,
       "admet_flags": "clean",
       "primekg_score": 0.2546,
-      "dti_score": 0.7767,
-      "dti_best_target": "S1PR1",
+      "dti_score": 0.7865,
+      "dti_best_target": "DPP6",
       "kg_group_score": 0.4616,
-      "structural_group_score": 0.7767,
+      "structural_group_score": 0.7865,
       "network_group_score": 0.5415999889373779,
       "txgnn_group_score": 0,
       "mr_group_score": 0.721,
       "admet_multiplier": 0.8951,
-      "efficacy_score": 0.5717,
+      "efficacy_score": 0.5734,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 10,
@@ -2988,7 +2614,7 @@
       "mechanistic_hypothesis": "Melatonin \u2014[is a therapeutic for]\u2192 Amyotrophic lateral sclerosis",
       "kg_paths_text": "\u2022 Melatonin \u2014[is a therapeutic for]\u2192 Amyotrophic lateral sclerosis\n\u2022 Melatonin \u2014[targets]\u2192 gene-438 \u2014[is downregulated by]\u2192 Amyotrophic lateral sclerosis\n\u2022 Melatonin \u2014[downregulates]\u2192 gene-4931 \u2014[is upregulated by]\u2192 Amyotrophic lateral sclerosis",
       "validation_experiments": [],
-      "novelty_score": 0.399,
+      "novelty_score": 0.4,
       "novelty_level": "KNOWN",
       "is_known_treatment": true,
       "clinical_trials_total": 1,
@@ -3013,8 +2639,10 @@
         "Moderate FAERS signal: 11 adverse event reports mention drug-disease co-occurrence",
         "Supporting paper with 53 citations",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.72, 4 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.72, 4 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D000690",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3098,7 +2726,7 @@
         "triangulation_score": 0.335,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.512,
+          "kg": 0.513,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 0.778
@@ -3117,15 +2745,7 @@
         "tissue_specificity": 0.646,
         "context_modifier": 1.108
       },
-      "disease_entity": "Disease::MESH:D000690",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.5775,
+      "ensemble_prob": 0.5469,
       "ensemble_features": {
         "kg_score": 0.9949,
         "degree_penalty": 0.7607,
@@ -3134,7 +2754,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 4.0073
       },
-      "ensemble_rank": 4,
+      "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -3143,14 +2770,14 @@
       }
     },
     {
-      "drug_name": "2'-Monophosphoadenosine 5'-Diphosphoribose",
-      "drug_id": "DB03461",
+      "drug_name": "Vitamin C",
+      "drug_id": "DB00126",
       "disease_name": "Amyotrophic lateral sclerosis",
-      "combined_score": 0.508,
+      "combined_score": 0.5120999813079834,
       "pillars_hit": 4,
-      "transe_rank": 148,
-      "transe_score": -11.2069,
-      "pykeen_score": 0,
+      "transe_rank": 35,
+      "transe_score": -10.7305,
+      "pykeen_score": -12.7346,
       "pykeen_rank": 0,
       "txgnn_score": 0,
       "txgnn_rank": 0,
@@ -3160,83 +2787,143 @@
       "mol_emb_similar_to": "",
       "gene_sig_score": 0,
       "gene_sig_rank": 0,
-      "proximity_score": 0.625,
-      "proximity_distance": 1.5,
-      "admet_score": 1.0,
+      "proximity_score": 0.6620000004768372,
+      "proximity_distance": 1.350000023841858,
+      "admet_score": 0.6936,
       "admet_flags": "clean",
-      "primekg_score": 0.2573,
-      "dti_score": 1.0,
-      "dti_best_target": "HSFX1",
-      "kg_group_score": 0.0659,
-      "structural_group_score": 1.0,
-      "network_group_score": 0.5408999919891357,
+      "primekg_score": 0.2558,
+      "dti_score": 0.546,
+      "dti_best_target": "RARA",
+      "kg_group_score": 0.3941,
+      "structural_group_score": 0.546,
+      "network_group_score": 0.5349000096321106,
       "txgnn_group_score": 0,
-      "mr_group_score": 0.6888,
-      "admet_multiplier": 1.0,
-      "efficacy_score": 0.508,
+      "mr_group_score": 0.9451,
+      "admet_multiplier": 0.9387,
+      "efficacy_score": 0.5454999804496765,
       "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 4,
+      "shared_target_count": 6,
       "shared_targets": [
-        "EDN1",
+        "CRP",
+        "CYCS",
         "INS",
-        "NFE2L2",
-        "SOD1"
+        "SOD1",
+        "TGFB1",
+        "TNFSF10"
       ],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
+      "pubmed_total": 51,
+      "pubmed_treatment_total": 31,
+      "pubmed_repurposing_total": 1,
+      "key_papers": [
+        {
+          "pmid": "34187257",
+          "title": "ALSUntangled #62: vitamin C.",
+          "authors": "Bedlack R, Barkhaus P, Carter G, et al.",
+          "journal": "Amyotrophic lateral sclerosis & frontotemporal degeneration",
+          "year": "2022",
+          "abstract_snippet": "Vitamin C is one of the most common supplements taken by people with ALS. As an antioxidant, it has a plausible mechanism for slowing disease progression and there are some flawed pre-clinical studies and case reports suggesting benefit. However, a small human trial showed no benefit. Given this neg...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34187257/",
+          "total_results": 51
+        },
+        {
+          "pmid": "39311717",
+          "title": "Low vitamin C status and hypermobility-related disorders in patients with bleeding disorder of unknown cause.",
+          "authors": "Lein\u00f8e E, Fridriksdottir H, Rasmussen A\u00d8, et al.",
+          "journal": "Haemophilia : the official journal of the World Federation of Hemophilia",
+          "year": "2024",
+          "abstract_snippet": "INTRODUCTION: Bleeding disorder of unknown cause (BDUC) is a challenging diagnosis that predominantly affects women. Previous investigations into connective tissue disorders (CTD) and vitamin C have not been conducted. AIM: To examine the association between hypermobility-related disorders, vitamin ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39311717/"
+        },
+        {
+          "pmid": "33350318",
+          "title": "Protection and controlled release of vitamin C by different micro/nanocarriers.",
+          "authors": "Comunian T, Babazadeh A, Rehman A, et al.",
+          "journal": "Critical reviews in food science and nutrition",
+          "year": "2022",
+          "abstract_snippet": "Ascorbic acid, known as vitamin C, is an important antioxidant and food ingredient, and highly sensitive to environmental conditions, which makes its incorporation into food, cosmetic and pharmaceutical products more difficult. The evaluation of its nano/microencapsulation enables the improvement of...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33350318/"
+        },
+        {
+          "pmid": "37891890",
+          "title": "Disorders of Endogenous and Exogenous Antioxidants in Neurological Diseases.",
+          "authors": "Korczowska-\u0141\u0105cka I, S\u0142owikowski B, Piekut T, et al.",
+          "journal": "Antioxidants (Basel, Switzerland)",
+          "year": "2023",
+          "abstract_snippet": "In diseases of the central nervous system, such as Alzheimer's disease (AD), Parkinson's disease (PD), stroke, amyotrophic lateral sclerosis (ALS), Huntington's disease (HD), and even epilepsy and migraine, oxidative stress load commonly surpasses endogenous antioxidative capacity. While oxidative p...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37891890/"
+        },
+        {
+          "pmid": "17253482",
+          "title": "Antioxidant treatment for amyotrophic lateral sclerosis / motor neuron disease.",
+          "authors": "Orrell RW, Lane RJ, Ross M",
+          "journal": "The Cochrane database of systematic reviews",
+          "year": "2007",
+          "abstract_snippet": "BACKGROUND: Free radical accumulation and oxidative stress have been proposed as contributing to the progression of amyotrophic lateral sclerosis (or motor neuron disease). A range of antioxidant medications are available, and have been studied. OBJECTIVES: To examine the effects of antioxidant medi...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17253482/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "33253353",
+          "title": "Drug repurposing for COVID-19: could vitamin C combined with glycyrrhizic acid be at play by the findings of Li et\u00a0al.'s database-based network pharmacology analysis?",
+          "authors": "Huang YX, Wang WX, Tang YP, et al.",
+          "journal": "Briefings in bioinformatics",
+          "year": "2021",
+          "abstract_snippet": "The outbreak and pandemic of SARS-CoV-2 in 2019 has caused a severe public health burden and will challenge global health for the future. The discovery and mechanistic investigation of drugs against Coronavirus disease 2019 (COVID-19) is in deadly demand. The paper published by Li and colleagues pro...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33253353/",
+          "total_results": 1
+        }
+      ],
       "semantic_scholar_papers": [
         {
-          "title": "Changes to Average Survival of Patients With Amyotrophic Lateral Sclerosis (1995\u20132018)",
+          "title": "Dietary Vitamin Intake and Blood Biomarkers in Relation to Muscle Activation in Amyotrophic Lateral Sclerosis: A Cross-Sectional Study",
           "year": 2025,
-          "citations": 14,
-          "url": "https://www.semanticscholar.org/paper/c48ba03b9cd83955af0919dfc8cfd9b168b0806d",
-          "authors": "R. Vasta, F. De Mattei, Salvatore Tafaro"
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/fbd8693f370ba6cbf074104471edfe7be21e12dd",
+          "authors": "J. E. de la Rubia Ort\u00ed, Guillermo Bargues-Navarro, Jes\u00fas Privado"
         },
         {
-          "title": "Pridopidine in Amyotrophic Lateral Sclerosis: The HEALEY ALS Platform Trial.",
-          "year": 2025,
-          "citations": 14,
-          "url": "https://www.semanticscholar.org/paper/d349bda6c0d53c4e58bf97ae6b0677efec03bd91",
-          "authors": "Douglas Hayden, Po-Ying Lai, R. Donahue"
+          "title": "Vitamin D in amyotrophic lateral sclerosis.",
+          "year": 2017,
+          "citations": 31,
+          "url": "https://www.semanticscholar.org/paper/031047ee2f8f015e3a91bf26f984f8c0c5407ba3",
+          "authors": "L. Libonati, E. Onesti, M. Gori"
         },
         {
-          "title": "Lysosomal Dysfunction in Amyotrophic Lateral Sclerosis: A Familial Case Linked to the p.G376D TARDBP Mutation",
-          "year": 2025,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/e5f747161b9b392ddef3fb644f85be64bba88298",
-          "authors": "R. Romano, Victoria Stefania Del Fiore, G. Ruotolo"
+          "title": "Amyotrophic Lateral Sclerosis: A Diet Review",
+          "year": 2021,
+          "citations": 22,
+          "url": "https://www.semanticscholar.org/paper/f99b5f2165a894e7d255e0579a3506b0385dbbe0",
+          "authors": "S. D\u2019Antona, M. Caramenti, D. Porro"
         },
         {
-          "title": "Efficacy of respiratory muscle training in improving pulmonary function and survival in patients with amyotrophic lateral sclerosis: a systematic review and meta-analysis",
-          "year": 2025,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/335fdfbb7eb70a48f1c28269165dab289455e201",
-          "authors": "Mar\u00eda Jes\u00fas Benzo-Iglesias, Patricia Rocamora-P\u00e9rez, Mar\u00eda \u00c1ngeles Valverde-Mart\u00ednez"
+          "title": "Vitamin D confers protection to motoneurons and is a prognostic factor of amyotrophic lateral sclerosis.",
+          "year": 2014,
+          "citations": 86,
+          "url": "https://www.semanticscholar.org/paper/557fec13282eade2a60450b7779003373e0ae6e7",
+          "authors": "W. Camu, Boris Tremblier, C. Plassot"
         },
         {
-          "title": "Exploring NEK1 genetic variability in Italian amyotrophic lateral sclerosis patients",
-          "year": 2025,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/ba8eda2c8a60dcd89f4b05937855c6473cbd73de",
-          "authors": "V. Pensato, S. Peverelli, C. Tiloca"
+          "title": "Vitamin D deficiency and its supplementation in patients with amyotrophic lateral sclerosis.",
+          "year": 2013,
+          "citations": 69,
+          "url": "https://www.semanticscholar.org/paper/47a826674313bfffa55ead7c435fae67a02f3a87",
+          "authors": "C. Karam, M. Barrett, T. Imperato"
         }
       ],
       "most_cited_paper": {
-        "title": "Changes to Average Survival of Patients With Amyotrophic Lateral Sclerosis (1995\u20132018)",
-        "year": 2025,
-        "citations": 14,
-        "url": "https://www.semanticscholar.org/paper/c48ba03b9cd83955af0919dfc8cfd9b168b0806d",
-        "authors": "R. Vasta, F. De Mattei, Salvatore Tafaro"
+        "title": "Vitamin D confers protection to motoneurons and is a prognostic factor of amyotrophic lateral sclerosis.",
+        "year": 2014,
+        "citations": 86,
+        "url": "https://www.semanticscholar.org/paper/557fec13282eade2a60450b7779003373e0ae6e7",
+        "authors": "W. Camu, Boris Tremblier, C. Plassot"
       },
-      "max_citations": 14,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for 2'-Monophosphoadenosine 5'-Diphosphoribose",
+      "max_citations": 86,
+      "faers_signal": "moderate",
+      "faers_total_reports": 96598,
+      "faers_cooccurrences": 6,
+      "faers_interpretation": "6 FAERS reports mention both Vitamin C and Amyotrophic lateral sclerosis-related terms. Limited but notable real-world signal.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -3246,66 +2933,144 @@
         "trichostatin A (1.471)",
         "Camptothecin (1.467)"
       ],
-      "signature_interpretation": "2'-Monophosphoadenosine 5'-Diphosphoribose was not found among the top 35 drugs that reverse the Amyotrophic lateral sclerosis gene signature. Top reversers: S1252 (1.513), S1053 (1.497), celastrol (1.487)",
-      "ai_hypothesis": "it is a substrate for the enzyme adenosine deaminase.",
-      "abstract_analyses": [],
+      "signature_interpretation": "Vitamin C was not found among the top 35 drugs that reverse the Amyotrophic lateral sclerosis gene signature. Top reversers: S1252 (1.513), S1053 (1.497), celastrol (1.487)",
+      "ai_hypothesis": "of its antioxidant properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
       "has_failed_trial": false,
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.6888,
-      "mr_genetic_targets": 4,
-      "mechanistic_hypothesis": "2'-Monophosphoadenosine 5'-Diphosphoribose \u2014[is a therapeutic for]\u2192 MESH:D019966 \u2014[is treated by]\u2192 DB00877 \u2014[is a therapeutic for]\u2192 Amyotrophic lateral sclerosis",
-      "kg_paths_text": "\u2022 2'-Monophosphoadenosine 5'-Diphosphoribose \u2014[is a therapeutic for]\u2192 MESH:D019966 \u2014[is treated by]\u2192 DB00877 \u2014[is a therapeutic for]\u2192 Amyotrophic lateral sclerosis\n\u2022 2'-Monophosphoadenosine 5'-Diphosphoribose \u2014[is a therapeutic for]\u2192 MESH:D019966 \u2014[is treated by]\u2192 DB11094 \u2014[is a therapeutic for]\u2192 Amyotrophic lateral sclerosis\n\u2022 2'-Monophosphoadenosine 5'-Diphosphoribose \u2014[is a therapeutic for]\u2192 MESH:D019966 \u2014[is treated by]\u2192 MESH:D008094 \u2014[is a therapeutic for]\u2192 Amyotrophic lateral sclerosis",
+      "mr_score": 0.9451,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Vitamin C \u2014[targets]\u2192 gene-10536 \u2014[is upregulated by]\u2192 Amyotrophic lateral sclerosis",
+      "kg_paths_text": "\u2022 Vitamin C \u2014[targets]\u2192 gene-10536 \u2014[is upregulated by]\u2192 Amyotrophic lateral sclerosis\n\u2022 Vitamin C \u2014[is a therapeutic for]\u2192 OMIM:168600 \u2014[is treated by]\u2192 DB01037 \u2014[is a therapeutic for]\u2192 Amyotrophic lateral sclerosis\n\u2022 Vitamin C \u2014[is a therapeutic for]\u2192 OMIM:168600 \u2014[is treated by]\u2192 DB01043 \u2014[is a therapeutic for]\u2192 Amyotrophic lateral sclerosis",
       "validation_experiments": [],
-      "novelty_score": 0.61,
-      "novelty_level": "BREAKTHROUGH",
+      "novelty_score": 0.5220000147819519,
+      "novelty_level": "EMERGING",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
       "clinical_trials": [],
       "trial_phases": {},
-      "confidence": "LOW",
+      "confidence": "HIGH",
       "confidence_reasons": [
+        "51 PubMed articles on this drug-disease pair",
+        "1 article(s) specifically mention repurposing/repositioning",
         "Supported by 4 independent AI pillars",
+        "Moderate FAERS signal: 6 adverse event reports mention drug-disease co-occurrence",
+        "Supporting paper with 86 citations",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.69)"
+        "Strong causal genetic evidence (MR score: 0.95, 1 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D000690",
       "dose_plausibility": {
-        "plausibility": "unknown",
-        "dose_range": "research",
-        "confidence": "low",
-        "rationale": "No ChEMBL clinical phase data available.",
-        "chembl_phase": null,
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
         "target_affinity": {},
         "stage": 1
       },
       "ddi_warnings": {
-        "n_interactions": 0,
-        "has_warnings": false,
-        "top_interactions": []
+        "n_interactions": 506,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          }
+        ]
       },
       "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
+        "has_flags": true,
+        "highest_risk": "moderate",
+        "summary": "CPIC-C (G6PD)",
+        "cpic": [
+          {
+            "gene": "G6PD",
+            "level": "C",
+            "guideline": "G6PD"
+          }
+        ],
         "pharmgkb": []
       },
       "triangulation": {
-        "n_axes_agree": 1,
+        "n_axes_agree": 2,
         "axes": {
           "kg": true,
           "docking": false,
           "pharos": false,
-          "literature": false
+          "literature": true
         },
-        "triangulation_score": 0.178,
-        "label": "kg-only",
+        "triangulation_score": 0.328000009059906,
+        "label": "multi-axis",
         "axis_values": {
-          "kg": 0.508,
+          "kg": 0.5120000243186951,
           "docking": 0.0,
           "pharos": 0.0,
-          "literature": 0.0
+          "literature": 0.745
         }
       },
       "tissue_context": {
@@ -3314,14 +3079,23 @@
           "Brain - Cortex",
           "Muscle - Skeletal"
         ],
-        "n_genes": 4,
-        "n_expressed": 3,
-        "mean_tpm_in_tissue": 87.06,
+        "n_genes": 6,
+        "n_expressed": 4,
+        "mean_tpm_in_tissue": 68.72,
         "max_tpm_in_tissue": 289.02,
-        "tissue_specificity": 0.412,
-        "context_modifier": 1.074
+        "tissue_specificity": 0.275,
+        "context_modifier": 1.049
       },
-      "disease_entity": "Disease::MESH:D000690",
+      "ensemble_prob": 0.0555,
+      "ensemble_features": {
+        "kg_score": 0.9638,
+        "degree_penalty": 0.808,
+        "n_drug_targets": 6,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 5.948
+      },
+      "ensemble_rank": 8,
       "docking": {
         "kcal_per_mol": null,
         "target_symbol": null,
@@ -3329,38 +3103,406 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "ensemble_prob": 0.0014,
-      "ensemble_features": {
-        "kg_score": 0.8318,
-        "degree_penalty": 0.8655,
-        "n_drug_targets": 1,
-        "is_fda_approved": 0,
-        "n_disease_genes": 0,
-        "transe_rank_log": 7.4821
-      },
-      "ensemble_rank": 9,
       "structural_alerts": {
         "has_pains": false,
-        "pains_families": [
-          "GTE",
-          "PHOSPHOR",
-          "QUATERNARY"
-        ],
-        "n_alerts": 3,
-        "alert_names": [
-          "phosphor",
-          "quaternary_nitrogen_1",
-          "gte_2_free_phos"
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Sertraline",
+      "drug_id": "DB01104",
+      "disease_name": "Amyotrophic lateral sclerosis",
+      "combined_score": 0.5098,
+      "pillars_hit": 5,
+      "transe_rank": 98,
+      "transe_score": -11.0317,
+      "pykeen_score": -12.541,
+      "pykeen_rank": 0,
+      "txgnn_score": 0.39,
+      "txgnn_rank": 61,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.699999988079071,
+      "proximity_distance": 1.2000000476837158,
+      "admet_score": 0.4451,
+      "admet_flags": "hERG=0.92",
+      "primekg_score": 0.2555,
+      "dti_score": 0.3416,
+      "dti_best_target": "DPP6",
+      "kg_group_score": 0.1834,
+      "structural_group_score": 0.3416,
+      "network_group_score": 0.5286999940872192,
+      "txgnn_group_score": 0.39,
+      "mr_group_score": 0.8301,
+      "admet_multiplier": 0.889,
+      "efficacy_score": 0.5734,
+      "groups_hit": 5,
+      "direct_relations": [],
+      "shared_target_count": 7,
+      "shared_targets": [
+        "ABCB1",
+        "CRP",
+        "CYCS",
+        "GRN",
+        "SQSTM1",
+        "UBQLN2",
+        "VAPB"
+      ],
+      "pubmed_total": 12,
+      "pubmed_treatment_total": 11,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "36140348",
+          "title": "GJA1/CX43 High Expression Levels in the Cervical Spinal Cord of ALS Patients Correlate to Microglia-Mediated Neuroinflammatory Profile.",
+          "authors": "Vicario N, Castrogiovanni P, Imbesi R, et al.",
+          "journal": "Biomedicines",
+          "year": "2022",
+          "abstract_snippet": "Amyotrophic lateral sclerosis (ALS) is a progressive neurodegenerative disorder affecting motoneurons (MNs) with a fatal outcome. The typical degeneration of cortico-spinal, spinal, and bulbar MNs, observed in post-mortem biopsies, is associated with the activation of neuroimmune cells. GJA1, a memb...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36140348/",
+          "total_results": 12
+        },
+        {
+          "pmid": "17187269",
+          "title": "[Antidepressant effects of dopamine agonists. Experimental and clinical findings].",
+          "authors": "Lemke MR",
+          "journal": "Der Nervenarzt",
+          "year": "2007",
+          "abstract_snippet": "Results of preclinical and clinical studies implicate that, in addition to serotonin and norepinephrin, dopaminergic mechanisms play a role in the pathogenesis and treatment of depression. Newer antidepressants such as bupropion, sertraline, and venlafaxine act as partial inhibitors of presynaptic d...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17187269/"
+        },
+        {
+          "pmid": "40482451",
+          "title": "Neuroinflammation to neurodegeneration: Boulevard of broken nerves.",
+          "authors": "Attiq A, Afzal S, Raman H, et al.",
+          "journal": "International immunopharmacology",
+          "year": "2025",
+          "abstract_snippet": "Neuroinflammation is caused by various factors, such as the activation of glial cells, the excessive release of chemokines and cytokines, and the accumulation of blood cells in the brain parenchyma. The inflammatory processes occur in acute and chronic phases, with traumatic brain injuries triggerin...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40482451/"
+        },
+        {
+          "pmid": "40187044",
+          "title": "Activating autophagy to eliminate toxic protein aggregates with small molecules in neurodegenerative diseases.",
+          "authors": "Fu Y, Zhang J, Qin R, et al.",
+          "journal": "Pharmacological reviews",
+          "year": "2025",
+          "abstract_snippet": "Neurodegenerative diseases (NDs), such as Alzheimer disease, Parkinson disease, Huntington disease, amyotrophic lateral sclerosis, and frontotemporal dementia, are well known to pose formidable challenges for their treatment due to their intricate pathogenesis and substantial variability among patie...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40187044/"
+        },
+        {
+          "pmid": "17538783",
+          "title": "Inappropriate sexual behaviour in a case of ALS and FTD: successful treatment with sertraline.",
+          "authors": "Anneser JM, Jox RJ, Borasio GD",
+          "journal": "Amyotrophic lateral sclerosis : official publication of the World Federation of Neurology Research Group on Motor Neuron Diseases",
+          "year": "2007",
+          "abstract_snippet": "In a subset of patients, ALS is associated with frontotemporal dysfunction (ALS-FTD). Clinically, ALS-FTD may present with a variable spectrum of cognitive and behavioural deficits. We report a 53-year-old ALS-FTD patient developing inappropriate sexual behaviour (ISB) manifesting as a vigorous sexu...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17538783/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Neuroinflammation to neurodegeneration: Boulevard of broken nerves.",
+          "year": 2025,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/4ec668c4a89e82527fe04305d192c11bd988cbb8",
+          "authors": "Ali Attiq, Sheryar Afzal, Hemavalli Raman"
+        },
+        {
+          "title": "Galactorrhea Associated with Sertraline: a Case Report and Literature Review",
+          "year": 2015,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/11636384f1698a07a95294a5b308b2945bd11a7f",
+          "authors": "S. Ouanes, B. Van der Vaeren, I. Cromec"
+        },
+        {
+          "title": "Inappropriate sexual behaviour in a case of ALS and FTD: Successful treatment with sertraline",
+          "year": 2007,
+          "citations": 39,
+          "url": "https://www.semanticscholar.org/paper/7a4ad4892dcfc469ea13848a73004abba11d9d9f",
+          "authors": "J. Anneser, R. Jox, G. Borasio"
+        },
+        {
+          "title": "Poststroke Emotionalism with Dacrystic (Crying) Episodes \u2013 Making a Case for Risperidone",
+          "year": 2018,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/dfeffbbe0d716735af6331e2489162f783dc3d24",
+          "authors": "F. Imarhiagbe, OA Abidakun"
+        },
+        {
+          "title": "Amyotrophic lateral sclerosis estimated prevalence cases from 2022 to 2030, data from the national ALS Registry",
+          "year": 2025,
+          "citations": 31,
+          "url": "https://www.semanticscholar.org/paper/3d84f09f770cb72552b688f1c449b473c6e46f40",
+          "authors": "P. Mehta, J. Raymond, Theresa Nair"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Repurpose terbutaline sulfate for amyotrophic lateral sclerosis using electronic medical records",
+        "year": 2015,
+        "citations": 53,
+        "url": "https://www.semanticscholar.org/paper/07ad901d5efef7412a71bc775a493874e465feed",
+        "authors": "H. Paik, Ah\u2010Young Chung, Hae-Chul Park"
+      },
+      "max_citations": 53,
+      "faers_signal": "moderate",
+      "faers_total_reports": 139226,
+      "faers_cooccurrences": 20,
+      "faers_interpretation": "20 FAERS reports mention both Sertraline and Amyotrophic lateral sclerosis-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "S1252 (1.513)",
+        "S1053 (1.497)",
+        "celastrol (1.487)",
+        "trichostatin A (1.471)",
+        "Camptothecin (1.467)"
+      ],
+      "signature_interpretation": "Sertraline was not found among the top 35 drugs that reverse the Amyotrophic lateral sclerosis gene signature. Top reversers: S1252 (1.513), S1053 (1.497), celastrol (1.487)",
+      "ai_hypothesis": "of its ability to increase the expression of neurotrophic factors and to reduce the expression of pro-apoptotic proteins.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.8301,
+      "mr_genetic_targets": 6,
+      "mechanistic_hypothesis": "Sertraline \u2014[downregulates]\u2192 gene-9217 \u2014[is linked to]\u2192 Amyotrophic lateral sclerosis",
+      "kg_paths_text": "\u2022 Sertraline \u2014[downregulates]\u2192 gene-9217 \u2014[is linked to]\u2192 Amyotrophic lateral sclerosis\n\u2022 Sertraline \u2014[downregulates]\u2192 gene-332 \u2014[activates]\u2192 gene-22919 \u2014[is upregulated by]\u2192 Amyotrophic lateral sclerosis\n\u2022 Sertraline \u2014[downregulates]\u2192 gene-332 \u2014[activates]\u2192 gene-22919 \u2014[is upregulated by]\u2192 Amyotrophic lateral sclerosis",
+      "validation_experiments": [],
+      "novelty_score": 0.489,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "12 PubMed articles found",
+        "Supported by 5 independent AI pillars",
+        "Moderate FAERS signal: 20 adverse event reports mention drug-disease co-occurrence",
+        "Supporting paper with 53 citations",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.83, 6 genetic targets)"
+      ],
+      "disease_entity": "Disease::MESH:D000690",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1614,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
         ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "high_risk",
+        "summary": "CPIC-C (HTR2A) \u2022 PharmGKB-3 (HTR1A / rs6295)",
+        "cpic": [
+          {
+            "gene": "HTR2A",
+            "level": "C",
+            "guideline": "CYP2D6, CYP2C19, CYP2B6, SLC6A4, HTR2A and Serotonin Reuptake Inhibitor Antidepressants"
+          },
+          {
+            "gene": "CYP2C19",
+            "level": "A",
+            "guideline": "CYP2D6, CYP2C19, CYP2B6, SLC6A4, HTR2A and Serotonin Reuptake Inhibitor Antidepressants"
+          },
+          {
+            "gene": "CYP2B6",
+            "level": "B",
+            "guideline": "CYP2D6, CYP2C19, CYP2B6, SLC6A4, HTR2A and Serotonin Reuptake Inhibitor Antidepressants"
+          },
+          {
+            "gene": "CYP2D6",
+            "level": "C",
+            "guideline": "CYP2D6, CYP2C19, CYP2B6, SLC6A4, HTR2A and Serotonin Reuptake Inhibitor Antidepressants"
+          },
+          {
+            "gene": "GRIK4",
+            "level": "C",
+            "guideline": ""
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "HTR1A",
+            "variant": "rs6295",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/655384772"
+          },
+          {
+            "gene": "SRP19",
+            "variant": "rs495794",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183590959"
+          },
+          {
+            "gene": "REEP5",
+            "variant": "rs153560",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183614696"
+          },
+          {
+            "gene": "",
+            "variant": "rs13432159",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183614721"
+          },
+          {
+            "gene": "HTR2A",
+            "variant": "rs6311",
+            "level": "4",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451407348"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.429,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.51,
+          "docking": 0.512,
+          "pharos": 0.0,
+          "literature": 0.484
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Brain - Spinal cord (cervical c-1)",
+          "Brain - Cortex",
+          "Muscle - Skeletal"
+        ],
+        "n_genes": 7,
+        "n_expressed": 6,
+        "mean_tpm_in_tissue": 53.77,
+        "max_tpm_in_tissue": 155.16,
+        "tissue_specificity": 0.236,
+        "context_modifier": 1.034
+      },
+      "ensemble_prob": 0.1446,
+      "ensemble_features": {
+        "kg_score": 0.9901,
+        "degree_penalty": 0.7553,
+        "n_drug_targets": 33,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.654
+      },
+      "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": -6.14,
+        "target_symbol": "ABCB1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
       }
     }
   ],
   "disease_entity": "Disease::MESH:D000690",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
     "n_disease_genes": 101,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
-  },
-  "ensemble_version": "v5",
-  "ensemble_model_path": "data/models/ensemble_v5.pkl"
+  }
 }

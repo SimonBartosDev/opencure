@@ -1,16 +1,405 @@
 {
   "disease": "Prostate cancer",
   "status": "completed",
-  "timestamp": "2026-04-19T19:47:41.681821",
-  "elapsed_seconds": 850.6,
+  "timestamp": "2026-05-07T23:21:36.944246",
+  "elapsed_seconds": 266.5,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
-    "HIGH": 10
+    "MEDIUM": 1,
+    "HIGH": 9
   },
   "pipeline_version": "v5",
   "data_manifest_hash": "2da2aa88f2457d1b",
   "candidates": [
+    {
+      "drug_name": "Cimetidine",
+      "drug_id": "DB00501",
+      "disease_name": "Prostate cancer",
+      "combined_score": 0.5927,
+      "pillars_hit": 5,
+      "transe_rank": 104,
+      "transe_score": -10.5046,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0.85,
+      "txgnn_rank": 15,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0.0131,
+      "gene_sig_rank": 43,
+      "proximity_score": 0.8379999995231628,
+      "proximity_distance": 0.6499999761581421,
+      "admet_score": 0.5683,
+      "admet_flags": "clean",
+      "primekg_score": 0.2578,
+      "dti_score": 0.2308,
+      "dti_best_target": "CA9",
+      "kg_group_score": 0.0793,
+      "structural_group_score": 0.2308,
+      "network_group_score": 0.6384999752044678,
+      "txgnn_group_score": 0.85,
+      "mr_group_score": 0.8176,
+      "admet_multiplier": 0.9137,
+      "efficacy_score": 0.6487,
+      "groups_hit": 5,
+      "direct_relations": [],
+      "shared_target_count": 12,
+      "shared_targets": [
+        "ABCB1",
+        "ABCC3",
+        "ABCC4",
+        "AGT",
+        "CALCA",
+        "CAT",
+        "HRH1",
+        "HRH2",
+        "IFNG",
+        "IL18",
+        "PRL",
+        "SELE"
+      ],
+      "pubmed_total": 9,
+      "pubmed_treatment_total": 4,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "16843010",
+          "title": "Cimetidine use and the risk for prostate cancer: results from the VITAL cohort study.",
+          "authors": "Velicer CM, Dublin S, White E",
+          "journal": "Annals of epidemiology",
+          "year": "2006",
+          "abstract_snippet": "PURPOSE: The histamine-2 (H(2)) blocker cimetidine may alter androgen, zinc, and prolactin levels, which could alter prostate cancer risk. Increased risk for men filling more than 20 cimetidine prescriptions was reported previously. We examined the association between cimetidine use and prostate can...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16843010/",
+          "total_results": 9
+        },
+        {
+          "pmid": "1738190",
+          "title": "Prostate cancer incidence in cimetidine users.",
+          "authors": "M\u00f8ller H, Mellemgaard A",
+          "journal": "Journal of the National Cancer Institute",
+          "year": "1992",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/1738190/"
+        },
+        {
+          "pmid": "10750671",
+          "title": "Cimetidine use and risk of prostate and breast cancer.",
+          "authors": "Rossing MA, Scholes D, Cushing-Haugen KL, et al.",
+          "journal": "Cancer epidemiology, biomarkers & prevention : a publication of the American Association for Cancer Research, cosponsored by the American Society of Preventive Oncology",
+          "year": "2000",
+          "abstract_snippet": "Histamine (H2) receptor antagonists, such as cimetidine and ranitidine, became available in the late 1970s and presently number among the most commonly used drugs. Cimetidine has been hypothesized to exert a cancer preventive effect on the prostate due to its ability to inhibit the binding of dihydr...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10750671/"
+        },
+        {
+          "pmid": "41584050",
+          "title": "Association Between Long-term Use of H",
+          "authors": "Wang SF, Liu YC, Nguyen PA, et al.",
+          "journal": "Journal of Cancer",
+          "year": "2026",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41584050/"
+        },
+        {
+          "pmid": "2399194",
+          "title": "Treatment of hormone-refractory stage D carcinoma of prostate with coumarin (1,2-benzopyrone) and cimetidine: a pilot study.",
+          "authors": "Marshall ME, Butler K, Hermansen D",
+          "journal": "The Prostate",
+          "year": "1990",
+          "abstract_snippet": "The combination of coumarin (1,2-benzopyrone) and cimetidine has been reported to render objective tumor regressions among patients with metastatic renal cell carcinoma and malignant melanoma. Subsequently, a pilot trial was conducted to evaluate this regimen for the treatment of stage D hormone-ref...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/2399194/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Association Between Long-term Use of H2 Receptor Antagonists and Prostate Cancer Risk: A Case-Control Study in Taiwan",
+          "year": 2026,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/5f94f97726ab14e42c808db2cedb4e36bab26d1d",
+          "authors": "Shao-Fu Wang, Yu-Chen Liu, Phung-Anh Nguyen"
+        },
+        {
+          "title": "Cimetidine use and the risk for prostate cancer: results from the VITAL cohort study.",
+          "year": 2006,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/becba3525b12d5cd3df793d0aba25071320ab3b1",
+          "authors": "C. Velicer, S. Dublin, E. White"
+        },
+        {
+          "title": "Prostate Cancer Incidence in Climetidine Users Prostate Cancer Incidence in Cimetidine Users",
+          "year": 1992,
+          "citations": 6,
+          "url": "https://www.semanticscholar.org/paper/77b0a51c319913ed5e9cd910f3e72d0d3a834dc3",
+          "authors": "H. M\u00f8ller, A. Mellemgaard"
+        },
+        {
+          "title": "Prostate cancer incidence in cimetidine users.",
+          "year": 1992,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/cba2de7dc945803b7d6f233718539d015802a733",
+          "authors": "H. M\u00f8ller, A. Mellemgaard"
+        },
+        {
+          "title": "Cimetidine: association with breast and prostate cancer not supported",
+          "year": 2000,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/2dad638490c7cb63227a641da2e2dd4f3ee44727",
+          "authors": ""
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Discovery of therapeutic agents for prostate cancer using genome-scale metabolic modeling and drug repositioning",
+        "year": 2019,
+        "citations": 75,
+        "url": "https://www.semanticscholar.org/paper/aefbf55b41c8e1799d128aed4ed8a969f41ba1a2",
+        "authors": "B. Turanli, Cheng Zhang, Woonghee Kim"
+      },
+      "max_citations": 75,
+      "faers_signal": "moderate",
+      "faers_total_reports": 6528,
+      "faers_cooccurrences": 4,
+      "faers_interpretation": "4 FAERS reports mention both Cimetidine and Prostate cancer-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "S1064 (1.540)",
+        "HKI-272 (1.516)",
+        "S1260 (1.513)",
+        "sunitinib (1.500)",
+        "JW-7-24-1 (1.498)"
+      ],
+      "signature_interpretation": "Cimetidine was not found among the top 40 drugs that reverse the Prostate cancer gene signature. Top reversers: S1064 (1.540), HKI-272 (1.516), S1260 (1.513)",
+      "ai_hypothesis": "of its ability to inhibit the growth of prostate cancer cells.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 0,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "his",
+              "entity_group": "Medication",
+              "score": 0.9440000057220459
+            },
+            {
+              "entity": "##tam",
+              "entity_group": "Medication",
+              "score": 0.9900000095367432
+            },
+            {
+              "entity": "##ine - 2",
+              "entity_group": "Medication",
+              "score": 0.8429999947547913
+            },
+            {
+              "entity": "cimetidine",
+              "entity_group": "Medication",
+              "score": 0.7979999780654907
+            },
+            {
+              "entity": "pro",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9929999709129333
+            },
+            {
+              "entity": "increased",
+              "entity_group": "Lab_value",
+              "score": 0.9440000057220459
+            },
+            {
+              "entity": "men",
+              "entity_group": "Sex",
+              "score": 0.9639999866485596
+            },
+            {
+              "entity": "filling",
+              "entity_group": "Clinical_event",
+              "score": 0.8019999861717224
+            },
+            {
+              "entity": "20",
+              "entity_group": "Dosage",
+              "score": 0.8190000057220459
+            },
+            {
+              "entity": "ci",
+              "entity_group": "Medication",
+              "score": 1.0
+            }
+          ]
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.8176,
+      "mr_genetic_targets": 2,
+      "mechanistic_hypothesis": "Cimetidine \u2014[downregulates]\u2192 gene-5300 \u2014[activates]\u2192 gene-5595 \u2014[is upregulated by]\u2192 Prostate cancer",
+      "kg_paths_text": "\u2022 Cimetidine \u2014[downregulates]\u2192 gene-5300 \u2014[activates]\u2192 gene-5595 \u2014[is upregulated by]\u2192 Prostate cancer\n\u2022 Cimetidine \u2014[downregulates]\u2192 gene-5300 \u2014[activates]\u2192 gene-5595 \u2014[is upregulated by]\u2192 Prostate cancer\n\u2022 Cimetidine \u2014[downregulates]\u2192 gene-51495 \u2014[is downregulated by]\u2192 DB00783 \u2014[treats]\u2192 Prostate cancer",
+      "validation_experiments": [],
+      "novelty_score": 0.676,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "MEDIUM",
+      "confidence_reasons": [
+        "9 PubMed article(s) - limited literature",
+        "Supported by 5 independent AI pillars",
+        "Moderate FAERS signal: 4 adverse event reports mention drug-disease co-occurrence",
+        "Supporting paper with 75 citations",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.82, 2 genetic targets)"
+      ],
+      "disease_entity": "Disease::MESH:D011471",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1670,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.51,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.593,
+          "docking": 0.718,
+          "pharos": 0.0,
+          "literature": 0.434
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Prostate"
+        ],
+        "n_genes": 12,
+        "n_expressed": 11,
+        "mean_tpm_in_tissue": 13.43,
+        "max_tpm_in_tissue": 52.8,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.954
+      },
+      "ensemble_prob": 0.1893,
+      "ensemble_features": {
+        "kg_score": 0.9876,
+        "degree_penalty": 0.7619,
+        "n_drug_targets": 23,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.8828
+      },
+      "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": -8.62,
+        "target_symbol": "HRH2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "ALIPHATIC",
+          "CYANATE",
+          "ENAMINE",
+          "IMIDAZOLE",
+          "IMINE"
+        ],
+        "n_alerts": 6,
+        "alert_names": [
+          "imidazole_B(2)",
+          "Aliphatic_long_chain",
+          "cyanate_/aminonitrile_/thiocyanate",
+          "enamine",
+          "imine_1"
+        ]
+      }
+    },
     {
       "drug_name": "Abarelix",
       "drug_id": "DB00106",
@@ -220,6 +609,14 @@
           "url": "https://clinicaltrials.gov/study/NCT00841113"
         },
         {
+          "nct_id": "NCT06379217",
+          "title": "NEPC Study: An Exploratory Safety and Efficacy Study With PSMA, SSTR2 and GRPR Targeted Radioligand Therapy in Metastatic Neuroendocrine Prostate Cancer.",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "phase": "PHASE1",
+          "enrollment": "31",
+          "url": "https://clinicaltrials.gov/study/NCT06379217"
+        },
+        {
           "nct_id": "NCT00100243",
           "title": "Study of Abarelix in Androgen-Independent Prostate Cancer Progressing After Agonist Therapy",
           "status": "COMPLETED",
@@ -234,21 +631,13 @@
           "phase": "PHASE4",
           "enrollment": "2000",
           "url": "https://clinicaltrials.gov/study/NCT00103623"
-        },
-        {
-          "nct_id": "NCT06379217",
-          "title": "NEPC Study: An Exploratory Safety and Efficacy Study With PSMA, SSTR2 and GRPR Targeted Radioligand Therapy in Metastatic Neuroendocrine Prostate Cancer.",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "phase": "PHASE1",
-          "enrollment": "31",
-          "url": "https://clinicaltrials.gov/study/NCT06379217"
         }
       ],
       "trial_phases": {
         "PHASE3": 1,
+        "PHASE1": 1,
         "PHASE2": 1,
-        "PHASE4": 1,
-        "PHASE1": 1
+        "PHASE4": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -260,6 +649,7 @@
         "Highly cited paper (154 citations): \"A phase 3, multicenter, open-label, randomized study of abar...\"",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D011471",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -309,14 +699,6 @@
         "tissue_specificity": 0.39,
         "context_modifier": 0.905
       },
-      "disease_entity": "Disease::MESH:D011471",
-      "docking": {
-        "kcal_per_mol": -11.84,
-        "target_symbol": "GNRHR",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
       "ensemble_prob": 0.0,
       "ensemble_features": {
         "kg_score": 0.7664,
@@ -327,6 +709,13 @@
         "transe_rank_log": 7.8104
       },
       "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": -11.84,
+        "target_symbol": "GNRHR",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -362,7 +751,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2464,
       "dti_score": 1.0,
-      "dti_best_target": "GSTM1",
+      "dti_best_target": "FLT3LG",
       "kg_group_score": 0.0641,
       "structural_group_score": 1.0,
       "network_group_score": 1.0,
@@ -560,6 +949,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.83, 1 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D011471",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -609,14 +999,6 @@
         "tissue_specificity": 0.67,
         "context_modifier": 1.081
       },
-      "disease_entity": "Disease::MESH:D011471",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
       "ensemble_prob": 0.0,
       "ensemble_features": {
         "kg_score": 0.7771,
@@ -627,6 +1009,454 @@
         "transe_rank_log": 7.7634
       },
       "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Valproic Acid",
+      "drug_id": "DB00313",
+      "disease_name": "Prostate cancer",
+      "combined_score": 0.5813,
+      "pillars_hit": 4,
+      "transe_rank": 60,
+      "transe_score": -10.3168,
+      "pykeen_score": -11.8503,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.8119999766349792,
+      "proximity_distance": 0.75,
+      "admet_score": 0.8244,
+      "admet_flags": "clean",
+      "primekg_score": 0.2605,
+      "dti_score": 1.0,
+      "dti_best_target": "CA9",
+      "kg_group_score": 0.3575,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.6096000075340271,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.741,
+      "admet_multiplier": 0.9649,
+      "efficacy_score": 0.6024,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 36,
+      "shared_targets": [
+        "ABCB1",
+        "AKT1",
+        "BCL2",
+        "CALCA",
+        "CDH1",
+        "CDKN1A",
+        "CLU",
+        "CXCR4",
+        "CYP24A1",
+        "CYP2B6",
+        "DNMT1",
+        "GH1",
+        "GSK3B",
+        "H3P16",
+        "HDAC1",
+        "HDAC2",
+        "HDAC9",
+        "HIF1A",
+        "LEP",
+        "MAPK1"
+      ],
+      "pubmed_total": 73,
+      "pubmed_treatment_total": 68,
+      "pubmed_repurposing_total": 5,
+      "key_papers": [
+        {
+          "pmid": "30039761",
+          "title": "Combination Therapies Using Metformin and/or Valproic Acid in Prostate Cancer: Possible Mechanistic Interactions.",
+          "authors": "Tran LNK, Kichenadasse G, Sykes PJ",
+          "journal": "Current cancer drug targets",
+          "year": "2019",
+          "abstract_snippet": "Prostate cancer (PCa) is the most frequent cancer in men. The evolution from local PCa to castration-resistant PCa, an end-stage of disease, is often associated with changes in genes such as p53, androgen receptor, PTEN, and ETS gene fusion products. Evidence is accumulating that repurposing of metf...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30039761/",
+          "total_results": 73
+        },
+        {
+          "pmid": "39550583",
+          "title": "Integrated proteomics and metabolomics analyses reveal new insights into the antitumor effects of valproic acid plus simvastatin combination in a prostate cancer xenograft model associated with downmodulation of YAP/TAZ signaling.",
+          "authors": "Iannelli F, Lombardi R, Costantini S, et al.",
+          "journal": "Cancer cell international",
+          "year": "2024",
+          "abstract_snippet": "BACKGROUND: Despite advancements in therapeutic approaches, including taxane-based chemotherapy and androgen receptor-targeting agents, metastatic castration-resistant prostate cancer (mCRPC) remains an incurable tumor, highlighting the need for novel strategies that can target the complexities of t...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39550583/"
+        },
+        {
+          "pmid": "34358096",
+          "title": "Hydralazine and Panobinostat Attenuate Malignant Properties of Prostate Cancer Cell Lines.",
+          "authors": "Pacheco MB, Camilo V, Lopes N, et al.",
+          "journal": "Pharmaceuticals (Basel, Switzerland)",
+          "year": "2021",
+          "abstract_snippet": "Among the well-established alterations contributing to prostate cancer (PCa) pathogenesis, epigenetics is an important player in its development and aggressive disease state. Moreover, since no curative therapies are available for advanced stage disease, there is an urgent need for novel therapeutic...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34358096/"
+        },
+        {
+          "pmid": "31908413",
+          "title": "Valproic Acid Addresses Neuroendocrine Differentiation of LNCaP Cells and Maintains Cell Survival.",
+          "authors": "Giordano F, Naimo GD, Nigro A, et al.",
+          "journal": "Drug design, development and therapy",
+          "year": "2019",
+          "abstract_snippet": "PURPOSE: Neuroendocrine differentiation of prostate cancer, induced by androgen deprivation therapy, is mainly related to advanced disease and poor clinical outcome. Genetic and epigenetic alterations are the key elements of the prostate carcinogenesis. A group of compounds able to induce changes in...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31908413/"
+        },
+        {
+          "pmid": "35202639",
+          "title": "Transforming growth factor-beta (TGF-\u03b2) in prostate cancer: A dual function mediator?",
+          "authors": "Mirzaei S, Paskeh MDA, Saghari Y, et al.",
+          "journal": "International journal of biological macromolecules",
+          "year": "2022",
+          "abstract_snippet": "Transforming growth factor-beta (TGF-\u03b2) is a member of a family of secreted cytokines with vital biological functions in cells. The abnormal expression of TGF-\u03b2 signaling is a common finding in pathological conditions, particularly cancer. Prostate cancer (PCa) is one of the leading causes of death ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35202639/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "30039761",
+          "title": "Combination Therapies Using Metformin and/or Valproic Acid in Prostate Cancer: Possible Mechanistic Interactions.",
+          "authors": "Tran LNK, Kichenadasse G, Sykes PJ",
+          "journal": "Current cancer drug targets",
+          "year": "2019",
+          "abstract_snippet": "Prostate cancer (PCa) is the most frequent cancer in men. The evolution from local PCa to castration-resistant PCa, an end-stage of disease, is often associated with changes in genes such as p53, androgen receptor, PTEN, and ETS gene fusion products. Evidence is accumulating that repurposing of metf...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30039761/",
+          "total_results": 5
+        },
+        {
+          "pmid": "39550583",
+          "title": "Integrated proteomics and metabolomics analyses reveal new insights into the antitumor effects of valproic acid plus simvastatin combination in a prostate cancer xenograft model associated with downmodulation of YAP/TAZ signaling.",
+          "authors": "Iannelli F, Lombardi R, Costantini S, et al.",
+          "journal": "Cancer cell international",
+          "year": "2024",
+          "abstract_snippet": "BACKGROUND: Despite advancements in therapeutic approaches, including taxane-based chemotherapy and androgen receptor-targeting agents, metastatic castration-resistant prostate cancer (mCRPC) remains an incurable tumor, highlighting the need for novel strategies that can target the complexities of t...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39550583/"
+        },
+        {
+          "pmid": "33032653",
+          "title": "Synergistic antitumor interaction of valproic acid and simvastatin sensitizes prostate cancer to docetaxel by targeting CSCs compartment via YAP inhibition.",
+          "authors": "Iannelli F, Roca MS, Lombardi R, et al.",
+          "journal": "Journal of experimental & clinical cancer research : CR",
+          "year": "2020",
+          "abstract_snippet": "BACKGROUND: Despite the introduction of several novel therapeutic approaches that improved survival, metastatic castration-resistant prostate cancer (mCRPC) remains an incurable disease. Herein we report the synergistic antitumor interaction between two well-known drugs used for years in clinical pr...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33032653/"
+        }
+      ],
+      "semantic_scholar_papers": [
+        {
+          "title": "Integrated proteomics and metabolomics analyses reveal new insights into the antitumor effects of valproic acid plus simvastatin combination in a prostate cancer xenograft model associated with downmodulation of YAP/TAZ signaling",
+          "year": 2024,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/d0adb15ba326745aaf69f2834817afe756ee03a2",
+          "authors": "Federica Iannelli, Rita Lombardi, S. Costantini"
+        },
+        {
+          "title": "Abstract 7097: Integrated proteomics and metabolomics reveals new insight into the synergistic interaction of valproic acid plus simvastatin in prostate cancer xenograft model associated with down-modulation of YAP and TAZ signaling",
+          "year": 2024,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/858b4ecf3637c6aeab3afbe113cc87f247c22a42",
+          "authors": "Federica Iannelli, Rita Lombardi, S. Costantini"
+        },
+        {
+          "title": "Synergistic antitumor interaction of valproic acid and simvastatin sensitizes prostate cancer to docetaxel by targeting CSCs compartment via YAP inhibition",
+          "year": 2020,
+          "citations": 48,
+          "url": "https://www.semanticscholar.org/paper/3a0fea58d4af87e36aea721adafaadeb32f6d4b2",
+          "authors": "Federica Iannelli, M. Roca, Rita Lombardi"
+        },
+        {
+          "title": "Inhibition of lipogenesis and induction of apoptosis by valproic acid in prostate cancer cells via the C/EBP\u03b1/SREBP-1 pathway.",
+          "year": 2020,
+          "citations": 18,
+          "url": "https://www.semanticscholar.org/paper/808e02fdc27c146ce90a21a16304a20837f2409d",
+          "authors": "Bo Pang, Juanjuan Zhang, Ji-hong Yuan"
+        },
+        {
+          "title": "Influence of the HDAC Inhibitor Valproic Acid on the Growth and Proliferation of Temsirolimus-Resistant Prostate Cancer Cells In Vitro",
+          "year": 2019,
+          "citations": 18,
+          "url": "https://www.semanticscholar.org/paper/da3d3880f5dd8216fe7b5d8644dc4beb1a8bda73",
+          "authors": "J. Makarevi\u0107, J. Rutz, E. Juengel"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Synergistic antitumor interaction of valproic acid and simvastatin sensitizes prostate cancer to docetaxel by targeting CSCs compartment via YAP inhibition",
+        "year": 2020,
+        "citations": 48,
+        "url": "https://www.semanticscholar.org/paper/3a0fea58d4af87e36aea721adafaadeb32f6d4b2",
+        "authors": "Federica Iannelli, M. Roca, Rita Lombardi"
+      },
+      "max_citations": 48,
+      "faers_signal": "moderate",
+      "faers_total_reports": 31999,
+      "faers_cooccurrences": 3,
+      "faers_interpretation": "3 FAERS reports mention both Valproic Acid and Prostate cancer-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "S1064 (1.540)",
+        "HKI-272 (1.516)",
+        "S1260 (1.513)",
+        "sunitinib (1.500)",
+        "JW-7-24-1 (1.498)"
+      ],
+      "signature_interpretation": "Valproic Acid was not found among the top 40 drugs that reverse the Prostate cancer gene signature. Top reversers: S1064 (1.540), HKI-272 (1.516), S1260 (1.513)",
+      "ai_hypothesis": "of its anti-proliferative and anti-apoptotic effects.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": true,
+      "failed_trial_phase": "Phase 2",
+      "failed_trial_count": 1,
+      "failed_trial_penalty": 0.6,
+      "mr_score": 0.741,
+      "mr_genetic_targets": 9,
+      "mechanistic_hypothesis": "Valproic Acid \u2014[is a therapeutic for]\u2192 Prostate cancer",
+      "kg_paths_text": "\u2022 Valproic Acid \u2014[is a therapeutic for]\u2192 Prostate cancer\n\u2022 Valproic Acid \u2014[binds]\u2192 gene-1562 \u2014[is linked to]\u2192 Prostate cancer\n\u2022 Valproic Acid \u2014[binds]\u2192 gene-1577 \u2014[is linked to]\u2192 Prostate cancer",
+      "validation_experiments": [],
+      "novelty_score": 0.488,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": true,
+      "clinical_trials_total": 1,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT00670046",
+          "title": "Valproic Acid in Treating Patients With Progressive, Non-Metastatic Prostate Cancer",
+          "status": "TERMINATED",
+          "phase": "PHASE2",
+          "enrollment": "15",
+          "url": "https://clinicaltrials.gov/study/NCT00670046"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "1 clinical trial(s) found on ClinicalTrials.gov",
+        "73 PubMed articles on this drug-disease pair",
+        "5 article(s) specifically mention repurposing/repositioning",
+        "Supported by 4 independent AI pillars",
+        "CAUTION: Drug had terminated/withdrawn trials (Phase 2) for this disease",
+        "Moderate FAERS signal: 3 adverse event reports mention drug-disease co-occurrence",
+        "Supporting paper with 48 citations",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.74, 9 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D011471",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1688,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "high_risk",
+        "summary": "CPIC-B (ABL2) \u2022 PharmGKB-3 (UGT1A10;UGT1A6;UGT1A7;UGT1A8;UGT1A9 / rs2070959)",
+        "cpic": [
+          {
+            "gene": "ABL2",
+            "level": "B",
+            "guideline": ""
+          },
+          {
+            "gene": "ASL",
+            "level": "B",
+            "guideline": ""
+          },
+          {
+            "gene": "ASS1",
+            "level": "B",
+            "guideline": ""
+          },
+          {
+            "gene": "CPS1",
+            "level": "B",
+            "guideline": ""
+          },
+          {
+            "gene": "NAGS",
+            "level": "B",
+            "guideline": ""
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "UGT1A10;UGT1A6;UGT1A7;UGT1A8;UGT1A9",
+            "variant": "rs2070959",
+            "level": "3",
+            "phenotype_category": "Dosage",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981188353"
+          },
+          {
+            "gene": "GABRA1",
+            "variant": "rs2279020",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183492030"
+          },
+          {
+            "gene": "SCN2A",
+            "variant": "rs17183814",
+            "level": "4",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183614578"
+          },
+          {
+            "gene": "POLG",
+            "variant": "rs3087374",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1445556405"
+          },
+          {
+            "gene": "UGT1A6",
+            "variant": "rs1105879",
+            "level": "3",
+            "phenotype_category": "Dosage",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981237878"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.516,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.581,
+          "docking": 0.501,
+          "pharos": 0.0,
+          "literature": 0.812
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Prostate"
+        ],
+        "n_genes": 19,
+        "n_expressed": 17,
+        "mean_tpm_in_tissue": 40.57,
+        "max_tpm_in_tissue": 274.57,
+        "tissue_specificity": 0.055,
+        "context_modifier": 1.002
+      },
+      "ensemble_prob": 0.3408,
+      "ensemble_features": {
+        "kg_score": 0.9964,
+        "degree_penalty": 0.7507,
+        "n_drug_targets": 17,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 3.6636
+      },
+      "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": -6.01,
+        "target_symbol": "HDAC1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -658,7 +1488,7 @@
       "admet_flags": "Skin_Reaction=0.85",
       "primekg_score": 0.2491,
       "dti_score": 1.0,
-      "dti_best_target": "GSTM1",
+      "dti_best_target": "FLT3LG",
       "kg_group_score": 0.3204,
       "structural_group_score": 1.0,
       "network_group_score": 0.6478000283241272,
@@ -892,8 +1722,10 @@
         "Moderate FAERS signal: 4 adverse event reports mention drug-disease co-occurrence",
         "Supporting paper with 90 citations",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.78, 25 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.78, 25 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D011471",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -994,15 +1826,7 @@
         "tissue_specificity": 0.362,
         "context_modifier": 1.064
       },
-      "disease_entity": "Disease::MESH:D011471",
-      "docking": {
-        "kcal_per_mol": -10.77,
-        "target_symbol": "RARB",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.994,
+      "ensemble_prob": 0.999,
       "ensemble_features": {
         "kg_score": 0.9998,
         "degree_penalty": 0.7515,
@@ -1012,6 +1836,13 @@
         "transe_rank_log": 1.0986
       },
       "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": -10.77,
+        "target_symbol": "RARB",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -1030,7 +1861,7 @@
       "drug_name": "MGI-114",
       "drug_id": "DB05786",
       "disease_name": "Prostate cancer",
-      "combined_score": 0.5485,
+      "combined_score": 0.5503,
       "pillars_hit": 4,
       "transe_rank": 162,
       "transe_score": -10.6634,
@@ -1049,15 +1880,15 @@
       "admet_score": 0.6436,
       "admet_flags": "clean",
       "primekg_score": 0.2399,
-      "dti_score": 0.9881,
-      "dti_best_target": "BAK1",
+      "dti_score": 0.9987,
+      "dti_best_target": "RPS7",
       "kg_group_score": 0.0707,
-      "structural_group_score": 0.9881,
+      "structural_group_score": 0.9987,
       "network_group_score": 0.9169999957084656,
       "txgnn_group_score": 0,
       "mr_group_score": 0.7444,
       "admet_multiplier": 0.9287,
-      "efficacy_score": 0.5906,
+      "efficacy_score": 0.5925,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 0,
@@ -1168,7 +1999,7 @@
       "mechanistic_hypothesis": "MGI-114 \u2014[is a therapeutic for]\u2192 MESH:D010051 \u2014[downregulates]\u2192 gene-5781 \u2014[is downregulated by]\u2192 Prostate cancer",
       "kg_paths_text": "\u2022 MGI-114 \u2014[is a therapeutic for]\u2192 MESH:D010051 \u2014[downregulates]\u2192 gene-5781 \u2014[is downregulated by]\u2192 Prostate cancer\n\u2022 MGI-114 \u2014[is a therapeutic for]\u2192 MESH:D010051 \u2014[upregulates]\u2192 gene-1605 \u2014[is linked to]\u2192 Prostate cancer\n\u2022 MGI-114 \u2014[is a therapeutic for]\u2192 MESH:D010051 \u2014[upregulates]\u2192 gene-6715 \u2014[is linked to]\u2192 Prostate cancer",
       "validation_experiments": [],
-      "novelty_score": 0.527,
+      "novelty_score": 0.528,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 2,
@@ -1201,6 +2032,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.74, 2 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D011471",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "late-trial",
@@ -1251,10 +2083,10 @@
           "pharos": false,
           "literature": false
         },
-        "triangulation_score": 0.233,
+        "triangulation_score": 0.234,
         "label": "kg-only",
         "axis_values": {
-          "kg": 0.548,
+          "kg": 0.55,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 0.207
@@ -1271,15 +2103,7 @@
         "tissue_specificity": 0.46,
         "context_modifier": 1.085
       },
-      "disease_entity": "Disease::MESH:D011471",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.0315,
+      "ensemble_prob": 0.0309,
       "ensemble_features": {
         "kg_score": 0.9012,
         "degree_penalty": 1.0,
@@ -1289,6 +2113,13 @@
         "transe_rank_log": 6.9499
       },
       "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1320,7 +2151,7 @@
       "admet_flags": "Skin_Reaction=0.87",
       "primekg_score": 0.2522,
       "dti_score": 1.0,
-      "dti_best_target": "NDRG2",
+      "dti_best_target": "ETS1",
       "kg_group_score": 0.1204,
       "structural_group_score": 1.0,
       "network_group_score": 0.8931999802589417,
@@ -1511,8 +2342,10 @@
         "Supported by 4 independent AI pillars",
         "Highly cited paper (162 citations): \"Treatment of prostate cancer in the rat with the synthetic r...\"",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.84, 2 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.84, 2 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D011471",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "late-trial",
@@ -1613,15 +2446,7 @@
         "tissue_specificity": 0.468,
         "context_modifier": 1.086
       },
-      "disease_entity": "Disease::MESH:D011471",
-      "docking": {
-        "kcal_per_mol": -7.05,
-        "target_symbol": "PSAP",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.7051,
+      "ensemble_prob": 0.7494,
       "ensemble_features": {
         "kg_score": 0.987,
         "degree_penalty": 0.9837,
@@ -1631,6 +2456,13 @@
         "transe_rank_log": 4.9273
       },
       "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": -7.05,
+        "target_symbol": "PSAP",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -1648,14 +2480,14 @@
       }
     },
     {
-      "drug_name": "Valproic Acid",
-      "drug_id": "DB00313",
+      "drug_name": "Tamoxifen",
+      "drug_id": "DB00675",
       "disease_name": "Prostate cancer",
-      "combined_score": 0.5411,
+      "combined_score": 0.5401,
       "pillars_hit": 4,
-      "transe_rank": 60,
-      "transe_score": -10.3168,
-      "pykeen_score": -11.8503,
+      "transe_rank": 2,
+      "transe_score": -9.6679,
+      "pykeen_score": -11.4684,
       "pykeen_rank": 0,
       "txgnn_score": 0,
       "txgnn_rank": 0,
@@ -1663,177 +2495,159 @@
       "similar_to": "",
       "mol_emb_similarity": 0,
       "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.8119999766349792,
-      "proximity_distance": 0.75,
-      "admet_score": 0.8244,
-      "admet_flags": "clean",
-      "primekg_score": 0.2605,
-      "dti_score": 0.7686,
-      "dti_best_target": "SLC18A2",
-      "kg_group_score": 0.3575,
-      "structural_group_score": 0.7686,
-      "network_group_score": 0.6096000075340271,
+      "gene_sig_score": 0.0239,
+      "gene_sig_rank": 29,
+      "proximity_score": 0.8999999761581421,
+      "proximity_distance": 0.4000000059604645,
+      "admet_score": 0.5915,
+      "admet_flags": "hERG=0.95",
+      "primekg_score": 0.2596,
+      "dti_score": 0.6858,
+      "dti_best_target": "CA9",
+      "kg_group_score": 0.4182,
+      "structural_group_score": 0.6858,
+      "network_group_score": 0.680899977684021,
       "txgnn_group_score": 0,
-      "mr_group_score": 0.741,
-      "admet_multiplier": 0.9649,
-      "efficacy_score": 0.5608,
+      "mr_group_score": 0.8268,
+      "admet_multiplier": 0.9183,
+      "efficacy_score": 0.5882,
       "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 36,
+      "shared_target_count": 102,
       "shared_targets": [
         "ABCB1",
+        "ABCC3",
+        "ABCC4",
+        "ABCG2",
+        "ADORA3",
+        "ADRA2A",
+        "ADRA2B",
         "AKT1",
+        "ALDH1A1",
+        "AR",
+        "AURKA",
+        "AURKB",
+        "AXL",
         "BCL2",
-        "CALCA",
-        "CDH1",
-        "CDKN1A",
-        "CLU",
-        "CXCR4",
-        "CYP24A1",
-        "CYP2B6",
-        "DNMT1",
-        "GH1",
-        "GSK3B",
-        "H3P16",
-        "HDAC1",
-        "HDAC2",
-        "HDAC9",
-        "HIF1A",
-        "LEP",
-        "MAPK1"
+        "BDKRB2",
+        "BRCA1",
+        "CALM1",
+        "CCL2",
+        "CCND1",
+        "CCNG2"
       ],
-      "pubmed_total": 73,
-      "pubmed_treatment_total": 68,
-      "pubmed_repurposing_total": 5,
+      "pubmed_total": 260,
+      "pubmed_treatment_total": 236,
+      "pubmed_repurposing_total": 3,
       "key_papers": [
         {
-          "pmid": "30039761",
-          "title": "Combination Therapies Using Metformin and/or Valproic Acid in Prostate Cancer: Possible Mechanistic Interactions.",
-          "authors": "Tran LNK, Kichenadasse G, Sykes PJ",
-          "journal": "Current cancer drug targets",
-          "year": "2019",
-          "abstract_snippet": "Prostate cancer (PCa) is the most frequent cancer in men. The evolution from local PCa to castration-resistant PCa, an end-stage of disease, is often associated with changes in genes such as p53, androgen receptor, PTEN, and ETS gene fusion products. Evidence is accumulating that repurposing of metf...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30039761/",
-          "total_results": 73
+          "pmid": "33375030",
+          "title": "Treatment of Men with Central Hypogonadism: Alternatives for Testosterone Replacement Therapy.",
+          "authors": "Ide V, Vanderschueren D, Antonio L",
+          "journal": "International journal of molecular sciences",
+          "year": "2020",
+          "abstract_snippet": "Central hypogonadism is a clinical condition, characterized by sexual symptoms and low serum testosterone levels, due to an impaired function of the hypothalamus or pituitary gland. Testosterone replacement therapy (TRT) is the standard treatment for hypogonadism, but it has some disadvantages. TRT ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33375030/",
+          "total_results": 260
         },
         {
-          "pmid": "39550583",
-          "title": "Integrated proteomics and metabolomics analyses reveal new insights into the antitumor effects of valproic acid plus simvastatin combination in a prostate cancer xenograft model associated with downmodulation of YAP/TAZ signaling.",
-          "authors": "Iannelli F, Lombardi R, Costantini S, et al.",
-          "journal": "Cancer cell international",
-          "year": "2024",
-          "abstract_snippet": "BACKGROUND: Despite advancements in therapeutic approaches, including taxane-based chemotherapy and androgen receptor-targeting agents, metastatic castration-resistant prostate cancer (mCRPC) remains an incurable tumor, highlighting the need for novel strategies that can target the complexities of t...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39550583/"
+          "pmid": "25097095",
+          "title": "Adverse effects of androgen deprivation therapy and strategies to mitigate them.",
+          "authors": "Nguyen PL, Alibhai SM, Basaria S, et al.",
+          "journal": "European urology",
+          "year": "2015",
+          "abstract_snippet": "CONTEXT: Androgen-deprivation therapy (ADT) is a key component of treatment for aggressive and advanced prostate cancer, but it has also been associated with adverse effects on bone, metabolic, cardiovascular, sexual, and cognitive health as well as body composition. OBJECTIVE: To review the current...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25097095/"
         },
         {
-          "pmid": "34358096",
-          "title": "Hydralazine and Panobinostat Attenuate Malignant Properties of Prostate Cancer Cell Lines.",
-          "authors": "Pacheco MB, Camilo V, Lopes N, et al.",
-          "journal": "Pharmaceuticals (Basel, Switzerland)",
-          "year": "2021",
-          "abstract_snippet": "Among the well-established alterations contributing to prostate cancer (PCa) pathogenesis, epigenetics is an important player in its development and aggressive disease state. Moreover, since no curative therapies are available for advanced stage disease, there is an urgent need for novel therapeutic...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34358096/"
-        },
-        {
-          "pmid": "31908413",
-          "title": "Valproic Acid Addresses Neuroendocrine Differentiation of LNCaP Cells and Maintains Cell Survival.",
-          "authors": "Giordano F, Naimo GD, Nigro A, et al.",
-          "journal": "Drug design, development and therapy",
-          "year": "2019",
-          "abstract_snippet": "PURPOSE: Neuroendocrine differentiation of prostate cancer, induced by androgen deprivation therapy, is mainly related to advanced disease and poor clinical outcome. Genetic and epigenetic alterations are the key elements of the prostate carcinogenesis. A group of compounds able to induce changes in...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/31908413/"
-        },
-        {
-          "pmid": "35202639",
-          "title": "Transforming growth factor-beta (TGF-\u03b2) in prostate cancer: A dual function mediator?",
-          "authors": "Mirzaei S, Paskeh MDA, Saghari Y, et al.",
-          "journal": "International journal of biological macromolecules",
-          "year": "2022",
-          "abstract_snippet": "Transforming growth factor-beta (TGF-\u03b2) is a member of a family of secreted cytokines with vital biological functions in cells. The abnormal expression of TGF-\u03b2 signaling is a common finding in pathological conditions, particularly cancer. Prostate cancer (PCa) is one of the leading causes of death ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35202639/"
+          "pmid": "23850393",
+          "title": "Treatment of gynecomastia in patients with prostate cancer and androgen deprivation.",
+          "authors": "Bautista-Vidal C, Barnoiu O, Garc\u00eda-Galisteo E, et al.",
+          "journal": "Actas urologicas espanolas",
+          "year": "2014",
+          "abstract_snippet": "CONTEXT: Gynecomastia, defined as benign proliferation of glandular breast tissue has a prevalence of 32% to 72% in the male. In the urology setting, it is associated to patients with prostate cancer and hormone treatment with a prevalence of 15% in the case of complete hormone blockage and 75% in m...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23850393/"
         }
       ],
       "repurposing_papers": [
         {
-          "pmid": "30039761",
-          "title": "Combination Therapies Using Metformin and/or Valproic Acid in Prostate Cancer: Possible Mechanistic Interactions.",
-          "authors": "Tran LNK, Kichenadasse G, Sykes PJ",
-          "journal": "Current cancer drug targets",
-          "year": "2019",
-          "abstract_snippet": "Prostate cancer (PCa) is the most frequent cancer in men. The evolution from local PCa to castration-resistant PCa, an end-stage of disease, is often associated with changes in genes such as p53, androgen receptor, PTEN, and ETS gene fusion products. Evidence is accumulating that repurposing of metf...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30039761/",
-          "total_results": 5
-        },
-        {
-          "pmid": "39550583",
-          "title": "Integrated proteomics and metabolomics analyses reveal new insights into the antitumor effects of valproic acid plus simvastatin combination in a prostate cancer xenograft model associated with downmodulation of YAP/TAZ signaling.",
-          "authors": "Iannelli F, Lombardi R, Costantini S, et al.",
-          "journal": "Cancer cell international",
-          "year": "2024",
-          "abstract_snippet": "BACKGROUND: Despite advancements in therapeutic approaches, including taxane-based chemotherapy and androgen receptor-targeting agents, metastatic castration-resistant prostate cancer (mCRPC) remains an incurable tumor, highlighting the need for novel strategies that can target the complexities of t...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39550583/"
-        },
-        {
-          "pmid": "33032653",
-          "title": "Synergistic antitumor interaction of valproic acid and simvastatin sensitizes prostate cancer to docetaxel by targeting CSCs compartment via YAP inhibition.",
-          "authors": "Iannelli F, Roca MS, Lombardi R, et al.",
-          "journal": "Journal of experimental & clinical cancer research : CR",
+          "pmid": "32474842",
+          "title": "Antitumor effects of ivermectin at clinically feasible concentrations support its clinical development as a repositioned cancer drug.",
+          "authors": "Juarez M, Schcolnik-Cabrera A, Dominguez-Gomez G, et al.",
+          "journal": "Cancer chemotherapy and pharmacology",
           "year": "2020",
-          "abstract_snippet": "BACKGROUND: Despite the introduction of several novel therapeutic approaches that improved survival, metastatic castration-resistant prostate cancer (mCRPC) remains an incurable disease. Herein we report the synergistic antitumor interaction between two well-known drugs used for years in clinical pr...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33032653/"
+          "abstract_snippet": "PURPOSE: Ivermectin is an antiparasitic drug that exhibits antitumor effects in preclinical studies, and as such is currently being repositioned for cancer treatment. However, divergences exist regarding its employed doses in preclinical works. Therefore, the aim of this study was to determine wheth...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32474842/",
+          "total_results": 3
+        },
+        {
+          "pmid": "36289913",
+          "title": "Portrait of Molecular Signaling and Putative Therapeutic Targets in Prostate Cancer with ",
+          "authors": "Shin YJ, Yun JW, Kim HS",
+          "journal": "Biomedicines",
+          "year": "2022",
+          "abstract_snippet": "Gene fusion between androgen receptor (AR) response genes and E26 transformation-specific (ETS) family members increases the gene expression of ETS family members, and promotes tumorigenesis in prostate cancer. However, the molecular features of ",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36289913/"
+        },
+        {
+          "pmid": "16556039",
+          "title": "A proposal for the repositioning of prophylactic breast radiotherapy of prostate cancer patients.",
+          "authors": "Ochel HJ",
+          "journal": "Future oncology (London, England)",
+          "year": "2005",
+          "abstract_snippet": "Patients with prostate cancer treated with small-molecular, nonsteroidal anti-androgens frequently develop mammalgia and gynecomastia. To avoid these unwanted effects, pretherapeutic radiation therapy of the male breasts is in common use. Recent findings on the effectivity of prevention and treatmen...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16556039/"
         }
       ],
       "semantic_scholar_papers": [
         {
-          "title": "Integrated proteomics and metabolomics analyses reveal new insights into the antitumor effects of valproic acid plus simvastatin combination in a prostate cancer xenograft model associated with downmodulation of YAP/TAZ signaling",
-          "year": 2024,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/d0adb15ba326745aaf69f2834817afe756ee03a2",
-          "authors": "Federica Iannelli, Rita Lombardi, S. Costantini"
+          "title": "Synthesis of Tamoxifen\u2010Artemisinin and Estrogen\u2010Artemisinin Hybrids Highly Potent Against Breast and Prostate Cancer",
+          "year": 2020,
+          "citations": 25,
+          "url": "https://www.semanticscholar.org/paper/54293043e1fb00a69b926d8d0f596246817d38bd",
+          "authors": "T. Fr\u00f6hlich, Christina Mai, Roman P. Bogautdinov"
         },
         {
-          "title": "Abstract 7097: Integrated proteomics and metabolomics reveals new insight into the synergistic interaction of valproic acid plus simvastatin in prostate cancer xenograft model associated with down-modulation of YAP and TAZ signaling",
-          "year": 2024,
+          "title": "Abstract 6546: Iron accumulation correlates with tumor progression in mouse models of prostate cancer",
+          "year": 2025,
           "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/858b4ecf3637c6aeab3afbe113cc87f247c22a42",
-          "authors": "Federica Iannelli, Rita Lombardi, S. Costantini"
+          "url": "https://www.semanticscholar.org/paper/de258b23492741370bdbf6805df2c32593b319f5",
+          "authors": "J. Rooks, C. Taylor, A. El-Kenawi"
         },
         {
-          "title": "Synergistic antitumor interaction of valproic acid and simvastatin sensitizes prostate cancer to docetaxel by targeting CSCs compartment via YAP inhibition",
-          "year": 2020,
-          "citations": 48,
-          "url": "https://www.semanticscholar.org/paper/3a0fea58d4af87e36aea721adafaadeb32f6d4b2",
-          "authors": "Federica Iannelli, M. Roca, Rita Lombardi"
+          "title": "[Management strategies for gynecomastia in patients with prostate cancer treated with androgen receptor pathway inhibitors].",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/8e70e0313d0c0a8704fb44137a5c072a67918c59",
+          "authors": "N. Vibert, V. Achard, Pierre Pouvreau"
         },
         {
-          "title": "Inhibition of lipogenesis and induction of apoptosis by valproic acid in prostate cancer cells via the C/EBP\u03b1/SREBP-1 pathway.",
-          "year": 2020,
-          "citations": 18,
-          "url": "https://www.semanticscholar.org/paper/808e02fdc27c146ce90a21a16304a20837f2409d",
-          "authors": "Bo Pang, Juanjuan Zhang, Ji-hong Yuan"
+          "title": "In Vitro Evaluation of the Effects of Tamoxifen on Prostate Cancer Cells",
+          "year": 2018,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/c1f9519fdad7e1df7ea1144e5dbc798594fc10f9",
+          "authors": "Gholamreza Shafiee, I. Khodadadi, R. Abbasalipourkabir"
         },
         {
-          "title": "Influence of the HDAC Inhibitor Valproic Acid on the Growth and Proliferation of Temsirolimus-Resistant Prostate Cancer Cells In Vitro",
-          "year": 2019,
-          "citations": 18,
-          "url": "https://www.semanticscholar.org/paper/da3d3880f5dd8216fe7b5d8644dc4beb1a8bda73",
-          "authors": "J. Makarevi\u0107, J. Rutz, E. Juengel"
+          "title": "ESS2 controls prostate cancer progression through recruitment of chromodomain helicase DNA binding protein 1",
+          "year": 2023,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/c59ff5adf71baa9b6fb73ce54afa7a6ae4eee4cc",
+          "authors": "Sayuri Takahashi, I. Takada, Ken-ichiro Hashimoto"
         }
       ],
       "most_cited_paper": {
-        "title": "Synergistic antitumor interaction of valproic acid and simvastatin sensitizes prostate cancer to docetaxel by targeting CSCs compartment via YAP inhibition",
-        "year": 2020,
-        "citations": 48,
-        "url": "https://www.semanticscholar.org/paper/3a0fea58d4af87e36aea721adafaadeb32f6d4b2",
-        "authors": "Federica Iannelli, M. Roca, Rita Lombardi"
+        "title": "Discovery of therapeutic agents for prostate cancer using genome-scale metabolic modeling and drug repositioning",
+        "year": 2019,
+        "citations": 75,
+        "url": "https://www.semanticscholar.org/paper/aefbf55b41c8e1799d128aed4ed8a969f41ba1a2",
+        "authors": "B. Turanli, Cheng Zhang, Woonghee Kim"
       },
-      "max_citations": 48,
+      "max_citations": 75,
       "faers_signal": "moderate",
-      "faers_total_reports": 31999,
-      "faers_cooccurrences": 3,
-      "faers_interpretation": "3 FAERS reports mention both Valproic Acid and Prostate cancer-related terms. Limited but notable real-world signal.",
+      "faers_total_reports": 22463,
+      "faers_cooccurrences": 8,
+      "faers_interpretation": "8 FAERS reports mention both Tamoxifen and Prostate cancer-related terms. Limited but notable real-world signal.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -1843,8 +2657,8 @@
         "sunitinib (1.500)",
         "JW-7-24-1 (1.498)"
       ],
-      "signature_interpretation": "Valproic Acid was not found among the top 40 drugs that reverse the Prostate cancer gene signature. Top reversers: S1064 (1.540), HKI-272 (1.516), S1260 (1.513)",
-      "ai_hypothesis": "of its anti-proliferative and anti-apoptotic effects.",
+      "signature_interpretation": "Tamoxifen was not found among the top 40 drugs that reverse the Prostate cancer gene signature. Top reversers: S1064 (1.540), HKI-272 (1.516), S1260 (1.513)",
+      "ai_hypothesis": "of its estrogenic properties.",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
@@ -1862,44 +2676,80 @@
           "reason": "Drug or disease not mentioned in abstract"
         }
       ],
-      "has_failed_trial": true,
-      "failed_trial_phase": "Phase 2",
-      "failed_trial_count": 1,
-      "failed_trial_penalty": 0.6,
-      "mr_score": 0.741,
-      "mr_genetic_targets": 9,
-      "mechanistic_hypothesis": "Valproic Acid \u2014[is a therapeutic for]\u2192 Prostate cancer",
-      "kg_paths_text": "\u2022 Valproic Acid \u2014[is a therapeutic for]\u2192 Prostate cancer\n\u2022 Valproic Acid \u2014[binds]\u2192 gene-1562 \u2014[is linked to]\u2192 Prostate cancer\n\u2022 Valproic Acid \u2014[binds]\u2192 gene-1577 \u2014[is linked to]\u2192 Prostate cancer",
+      "has_failed_trial": false,
+      "failed_trial_phase": "Phase 3",
+      "failed_trial_count": 3,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.8268,
+      "mr_genetic_targets": 18,
+      "mechanistic_hypothesis": "Tamoxifen \u2014[is a therapeutic for]\u2192 Prostate cancer",
+      "kg_paths_text": "\u2022 Tamoxifen \u2014[is a therapeutic for]\u2192 Prostate cancer\n\u2022 Tamoxifen \u2014[downregulates]\u2192 gene-60528 \u2014[is linked to]\u2192 Prostate cancer\n\u2022 Tamoxifen \u2014[downregulates]\u2192 gene-993 \u2014[is linked to]\u2192 Prostate cancer",
       "validation_experiments": [],
-      "novelty_score": 0.455,
-      "novelty_level": "KNOWN",
+      "novelty_score": 0.259,
+      "novelty_level": "ESTABLISHED",
       "is_known_treatment": true,
-      "clinical_trials_total": 1,
+      "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT00670046",
-          "title": "Valproic Acid in Treating Patients With Progressive, Non-Metastatic Prostate Cancer",
-          "status": "TERMINATED",
+          "nct_id": "NCT01050842",
+          "title": "Bicalutamide and Raloxifene in Treating Patients With Metastatic or Hormone-Refractory Prostate Cancer",
+          "status": "COMPLETED",
+          "phase": "EARLY_PHASE1",
+          "enrollment": "18",
+          "url": "https://clinicaltrials.gov/study/NCT01050842"
+        },
+        {
+          "nct_id": "NCT00020735",
+          "title": "Toremifene Followed by Radical Prostatectomy in Treating Patients With Stage I or Stage II Prostate Cancer",
+          "status": "COMPLETED",
           "phase": "PHASE2",
-          "enrollment": "15",
-          "url": "https://clinicaltrials.gov/study/NCT00670046"
+          "enrollment": "45",
+          "url": "https://clinicaltrials.gov/study/NCT00020735"
+        },
+        {
+          "nct_id": "NCT02382094",
+          "title": "Clinical Trial to Study Quality of Life in Prostate Cancer Patients by Randomizing Anti-androgen Versus Total Androgen Blockage Prior to Curative Intended Radiation Therapy",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "110",
+          "url": "https://clinicaltrials.gov/study/NCT02382094"
+        },
+        {
+          "nct_id": "NCT00233610",
+          "title": "Two Different Regimens of Nolvadex in Preventing Gynecomastia Induced by Casodex 150 mg in Patients With Prostate Cancer",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "180",
+          "url": "https://clinicaltrials.gov/study/NCT00233610"
+        },
+        {
+          "nct_id": "NCT00028353",
+          "title": "A Chemoprevention Study of an Investigational Drug in Men With High Grade Prostate Intraepithelial Neoplasia (PIN)",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "500",
+          "url": "https://clinicaltrials.gov/study/NCT00028353"
         }
       ],
       "trial_phases": {
-        "PHASE2": 1
+        "EARLY_PHASE1": 1,
+        "PHASE2": 5,
+        "PHASE3": 4
       },
       "confidence": "HIGH",
       "confidence_reasons": [
-        "1 clinical trial(s) found on ClinicalTrials.gov",
-        "73 PubMed articles on this drug-disease pair",
-        "5 article(s) specifically mention repurposing/repositioning",
+        "10 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "260 PubMed articles on this drug-disease pair",
+        "3 article(s) specifically mention repurposing/repositioning",
         "Supported by 4 independent AI pillars",
-        "CAUTION: Drug had terminated/withdrawn trials (Phase 2) for this disease",
-        "Moderate FAERS signal: 3 adverse event reports mention drug-disease co-occurrence",
-        "Supporting paper with 48 citations",
+        "Moderate FAERS signal: 8 adverse event reports mention drug-disease co-occurrence",
+        "Supporting paper with 75 citations",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.74, 9 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.83, 18 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D011471",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1910,7 +2760,7 @@
         "stage": 1
       },
       "ddi_warnings": {
-        "n_interactions": 1688,
+        "n_interactions": 1405,
         "has_warnings": true,
         "top_interactions": [
           {
@@ -1968,69 +2818,462 @@
       "pharmacogenomics": {
         "has_flags": true,
         "highest_risk": "high_risk",
-        "summary": "CPIC-B (ABL2) \u2022 PharmGKB-3 (UGT1A10;UGT1A6;UGT1A7;UGT1A8;UGT1A9 / rs2070959)",
+        "summary": "CPIC-A (CYP2D6) \u2022 PharmGKB-3 (ESR1 / rs9340799)",
         "cpic": [
           {
-            "gene": "ABL2",
-            "level": "B",
-            "guideline": ""
-          },
-          {
-            "gene": "ASL",
-            "level": "B",
-            "guideline": ""
-          },
-          {
-            "gene": "ASS1",
-            "level": "B",
-            "guideline": ""
-          },
-          {
-            "gene": "CPS1",
-            "level": "B",
-            "guideline": ""
-          },
-          {
-            "gene": "NAGS",
-            "level": "B",
-            "guideline": ""
+            "gene": "CYP2D6",
+            "level": "A",
+            "guideline": "CYP2D6 and Tamoxifen"
           }
         ],
         "pharmgkb": [
           {
-            "gene": "UGT1A10;UGT1A6;UGT1A7;UGT1A8;UGT1A9",
-            "variant": "rs2070959",
-            "level": "3",
-            "phenotype_category": "Dosage",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981188353"
-          },
-          {
-            "gene": "GABRA1",
-            "variant": "rs2279020",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183492030"
-          },
-          {
-            "gene": "SCN2A",
-            "variant": "rs17183814",
-            "level": "4",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183614578"
-          },
-          {
-            "gene": "POLG",
-            "variant": "rs3087374",
+            "gene": "ESR1",
+            "variant": "rs9340799",
             "level": "3",
             "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1445556405"
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/655385154"
           },
           {
-            "gene": "UGT1A6",
-            "variant": "rs1105879",
+            "gene": "CYP2D6",
+            "variant": "CYP2D6*1, CYP2D6*2, CYP2D6*3, CYP2D6*4, CYP2D6*5, CYP2D6*6, CYP2D6*7, CYP2D6*9, CYP2D6*10, CYP2D6*10x2, CYP2D6*11, CYP2D6*17, CYP2D6*21, CYP2D6*36, CYP2D6*41",
+            "level": "1A",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451285240"
+          },
+          {
+            "gene": "CYP2D6",
+            "variant": "CYP2D6*1, CYP2D6*2, CYP2D6*3, CYP2D6*4, CYP2D6*5, CYP2D6*6, CYP2D6*10, CYP2D6*17, CYP2D6*29, CYP2D6*35, CYP2D6*41",
+            "level": "1A",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/982029857"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs1045642",
             "level": "3",
-            "phenotype_category": "Dosage",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981237878"
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183697570"
+          },
+          {
+            "gene": "",
+            "variant": "rs10030044",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043858877"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.628,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.54,
+          "docking": 0.797,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Prostate"
+        ],
+        "n_genes": 20,
+        "n_expressed": 19,
+        "mean_tpm_in_tissue": 29.25,
+        "max_tpm_in_tissue": 139.03,
+        "tissue_specificity": 0.448,
+        "context_modifier": 1.037
+      },
+      "ensemble_prob": 0.999,
+      "ensemble_features": {
+        "kg_score": 0.9997,
+        "degree_penalty": 0.7565,
+        "n_drug_targets": 72,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 1.3863
+      },
+      "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": -9.56,
+        "target_symbol": "ESR1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "STILBENE"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "stilbene"
+        ]
+      }
+    },
+    {
+      "drug_name": "Temozolomide",
+      "drug_id": "DB00853",
+      "disease_name": "Prostate cancer",
+      "combined_score": 0.5392,
+      "pillars_hit": 4,
+      "transe_rank": 92,
+      "transe_score": -10.4642,
+      "pykeen_score": -11.9776,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.925000011920929,
+      "proximity_distance": 0.30000001192092896,
+      "admet_score": 0.6082,
+      "admet_flags": "DILI=0.97",
+      "primekg_score": 0.248,
+      "dti_score": 0.9617,
+      "dti_best_target": "CA9",
+      "kg_group_score": 0.2587,
+      "structural_group_score": 0.9617,
+      "network_group_score": 0.7188000082969666,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.69,
+      "admet_multiplier": 0.9216,
+      "efficacy_score": 0.585,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 13,
+      "shared_targets": [
+        "ABCC3",
+        "ABCC4",
+        "AIMP1",
+        "AKT1",
+        "CA2",
+        "CA9",
+        "CTNNB1",
+        "GJA1",
+        "HIF1A",
+        "MIR21",
+        "PRKAA2",
+        "SIRT1",
+        "TP53"
+      ],
+      "pubmed_total": 39,
+      "pubmed_treatment_total": 36,
+      "pubmed_repurposing_total": 1,
+      "key_papers": [
+        {
+          "pmid": "23746934",
+          "title": "Lycopene modulates growth and survival associated genes in prostate cancer.",
+          "authors": "Rafi MM, Kanakasabai S, Reyes MD, et al.",
+          "journal": "The Journal of nutritional biochemistry",
+          "year": "2013",
+          "abstract_snippet": "Lycopene is a fat soluble red-orange carotenoid pigment present in tomato that reduces the risk for prostate cancer, a common malignancy among men. However, the mechanism by which lycopene attenuates prostate cancer is not fully defined. In this study we examined the effect of lycopene on proliferat...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23746934/",
+          "total_results": 39
+        },
+        {
+          "pmid": "32123273",
+          "title": "Androgen Receptor and Poly(ADP-ribose) Glycohydrolase Inhibition Increases Efficiency of Androgen Ablation in Prostate Cancer Cells.",
+          "authors": "Zhang M, Lai Y, Vasquez JL, et al.",
+          "journal": "Scientific reports",
+          "year": "2020",
+          "abstract_snippet": "There is mounting evidence of androgen receptor signaling inducing genome instability and changing DNA repair capacity in prostate cancer cells. Expression of genes associated with base excision repair (BER) is increased with prostate cancer progression and correlates with poor prognosis. Poly(ADP-r...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32123273/"
+        },
+        {
+          "pmid": "31618686",
+          "title": "Repurposing antipsychotics of the diphenylbutylpiperidine class for cancer therapy.",
+          "authors": "Shaw V, Srivastava S, Srivastava SK",
+          "journal": "Seminars in cancer biology",
+          "year": "2021",
+          "abstract_snippet": "The recent development of high throughput compound screening has allowed drug repurposing to emerge as an effective avenue for discovering novel treatments for cancer. FDA-approved antipsychotic drugs fluspirilene, penfluridol, and pimozide are clinically used for the treatment of psychotic disorder...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31618686/"
+        },
+        {
+          "pmid": "10854140",
+          "title": "A phase II study of temozolomide in hormone-refractory prostate cancer.",
+          "authors": "van Brussel JP, Busstra MB, Lang MS, et al.",
+          "journal": "Cancer chemotherapy and pharmacology",
+          "year": "2000",
+          "abstract_snippet": "INTRODUCTION: Hormone-refractory disseminated prostate cancer is a major oncological problem. Preclinical studies with temozolomide, an oral alkylating agent, in prostate cancer have shown encouraging results. In phase I studies the safety of temozolomide in non-prostate cancer patients has been dem...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10854140/"
+        },
+        {
+          "pmid": "19946604",
+          "title": "High-resolution flow cytometry: a suitable tool for monitoring aneuploid prostate cancer cells after TMZ and TMZ-BioShuttle treatment.",
+          "authors": "Braun K, Ehemann V, Wiessler M, et al.",
+          "journal": "International journal of medical sciences",
+          "year": "2009",
+          "abstract_snippet": "If metastatic prostate cancer gets resistant to antiandrogen therapy, there are few treatment options, because prostate cancer is not very sensitive to cytostatic agents. Temozolomide (TMZ) as an orally applicable chemotherapeutic substance has been proven to be effective and well tolerated with occ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19946604/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "31618686",
+          "title": "Repurposing antipsychotics of the diphenylbutylpiperidine class for cancer therapy.",
+          "authors": "Shaw V, Srivastava S, Srivastava SK",
+          "journal": "Seminars in cancer biology",
+          "year": "2021",
+          "abstract_snippet": "The recent development of high throughput compound screening has allowed drug repurposing to emerge as an effective avenue for discovering novel treatments for cancer. FDA-approved antipsychotic drugs fluspirilene, penfluridol, and pimozide are clinically used for the treatment of psychotic disorder...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31618686/",
+          "total_results": 1
+        }
+      ],
+      "semantic_scholar_papers": [
+        {
+          "title": "A phase 1b/2 study of intermittent talazoparib plus temozolomide in patients with metastatic castration-resistant prostate cancer and no mutations in DNA damage response genes",
+          "year": 2025,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/7787b49d2db7a74344dfd4c1eac6e54dd07261df",
+          "authors": "K. Autio, Christos E. Kyriakopoulos, Paul Palyca"
+        },
+        {
+          "title": "A phase Ib/II study of intermittent talazoparib plus temozolomide in patients with metastatic castration-resistant prostate cancer (mCRPC) and no mutations in DNA damage repair (DDR).",
+          "year": 2023,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/251ec54f5f2c02c4e34aa60fb0c111f383d3fe10",
+          "authors": "K. Autio, C. Kyriakopoulos, Han Xiao"
+        },
+        {
+          "title": "Abstract B30: Talazoparib efficacy is enhanced by noncytotoxic doses of temozolomide-mediated DNA damage in prostate cancer cell lines",
+          "year": 2017,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/182fb009ea8e93f7d9dce048a287907ebbd2bca3",
+          "authors": "J. Lindquist, Vernon T. Phan, Eduardo Riquelme"
+        },
+        {
+          "title": "A Study of the Drugs Talazoparib and Temozolomide in Prostate Cancer",
+          "year": 2019,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/bfac9d69452d1a150c6cb1e22af057855fa4cc54",
+          "authors": ""
+        },
+        {
+          "title": "Talazoparib in combination with temozolomide enhances antitumor effects in prostate cancer",
+          "year": 2016,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/c4942b7f4477c658f933e190ac643badec4841e8",
+          "authors": "V. Phan, A. Protter, H. Uppal"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Discovery of therapeutic agents for prostate cancer using genome-scale metabolic modeling and drug repositioning",
+        "year": 2019,
+        "citations": 75,
+        "url": "https://www.semanticscholar.org/paper/aefbf55b41c8e1799d128aed4ed8a969f41ba1a2",
+        "authors": "B. Turanli, Cheng Zhang, Woonghee Kim"
+      },
+      "max_citations": 75,
+      "faers_signal": "weak",
+      "faers_total_reports": 17585,
+      "faers_cooccurrences": 2,
+      "faers_interpretation": "2 FAERS report(s) mention both Temozolomide and Prostate cancer-related terms. Minimal real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "S1064 (1.540)",
+        "HKI-272 (1.516)",
+        "S1260 (1.513)",
+        "sunitinib (1.500)",
+        "JW-7-24-1 (1.498)"
+      ],
+      "signature_interpretation": "Temozolomide was not found among the top 40 drugs that reverse the Prostate cancer gene signature. Top reversers: S1064 (1.540), HKI-272 (1.516), S1260 (1.513)",
+      "ai_hypothesis": "of its ability to inhibit DNA repair and its ability to induce apoptosis.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.69,
+      "mr_genetic_targets": 8,
+      "mechanistic_hypothesis": "Temozolomide \u2014[is a therapeutic for]\u2192 Prostate cancer",
+      "kg_paths_text": "\u2022 Temozolomide \u2014[is a therapeutic for]\u2192 Prostate cancer\n\u2022 Temozolomide \u2014[downregulates]\u2192 gene-51382 \u2014[is downregulated by]\u2192 DB00755 \u2014[is a therapeutic for]\u2192 Prostate cancer\n\u2022 Temozolomide \u2014[downregulates]\u2192 gene-51382 \u2014[is downregulated by]\u2192 DB00655 \u2014[is a therapeutic for]\u2192 Prostate cancer",
+      "validation_experiments": [],
+      "novelty_score": 0.453,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": true,
+      "clinical_trials_total": 5,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT04478279",
+          "title": "A Phase 1-2 Study of ST101 in Patients With Advanced Solid Tumors",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "125",
+          "url": "https://clinicaltrials.gov/study/NCT04478279"
+        },
+        {
+          "nct_id": "NCT05417594",
+          "title": "Study of AZD9574 as Monotherapy and in Combination With Anti-cancer Agents in Participants With Advanced Solid Malignancies",
+          "status": "RECRUITING",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "695",
+          "url": "https://clinicaltrials.gov/study/NCT05417594"
+        },
+        {
+          "nct_id": "NCT04430842",
+          "title": "Dose Escalation Study to Assess the Safety, Tolerability, Pharmacokinetics, and Pharmacodynamics of QBS10072S",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "15",
+          "url": "https://clinicaltrials.gov/study/NCT04430842"
+        },
+        {
+          "nct_id": "NCT04019327",
+          "title": "A Study of the Drugs Talazoparib and Temozolomide in Prostate Cancer",
+          "status": "COMPLETED",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "16",
+          "url": "https://clinicaltrials.gov/study/NCT04019327"
+        },
+        {
+          "nct_id": "NCT01085422",
+          "title": "A Study Combining ABT-888, Oral PARP Inhibitor, With Temozolomide in Patients With Metastatic Prostate Cancer",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "35",
+          "url": "https://clinicaltrials.gov/study/NCT01085422"
+        }
+      ],
+      "trial_phases": {
+        "PHASE1": 5,
+        "PHASE2": 3
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "5 clinical trial(s) found on ClinicalTrials.gov",
+        "39 PubMed articles found",
+        "1 article(s) specifically mention repurposing/repositioning",
+        "Supported by 4 independent AI pillars",
+        "Supporting paper with 75 citations",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.69)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D011471",
+      "dose_plausibility": {
+        "plausibility": "uncertain",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect. HOWEVER, at typical plasma concentrations the drug does NOT reach inhibitory levels for CA9 (Cmax/IC50 = 0.02x; need \u22651x for any effect, \u226510x for confident target engagement).",
+        "chembl_phase": 4.0,
+        "target_affinity": {
+          "cmax_over_ic50_ratio": 0.02,
+          "median_ic50_nM": 50000.0,
+          "n_activities": 1,
+          "activity_types": [
+            "Ki"
+          ],
+          "mechanism_feasible": "no",
+          "cmax_source": "generic fallback 1000 nM (per-drug Cmax TBD)"
+        },
+        "stage": 2
+      },
+      "ddi_warnings": {
+        "n_interactions": 1118,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00773",
+            "drug_name": "Etoposide",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00331",
+            "drug_name": "Metformin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (ABCB1 / rs2229109)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "ABCB1",
+            "variant": "rs2229109",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451126200"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs1128503",
+            "level": "3",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451417123"
           }
         ]
       },
@@ -2042,44 +3285,43 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.502,
+        "triangulation_score": 0.475,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.541,
-          "docking": 0.501,
+          "kg": 0.539,
+          "docking": 0.489,
           "pharos": 0.0,
-          "literature": 0.812
+          "literature": 0.696
         }
       },
       "tissue_context": {
         "tissues": [
           "Prostate"
         ],
-        "n_genes": 19,
-        "n_expressed": 17,
-        "mean_tpm_in_tissue": 40.57,
-        "max_tpm_in_tissue": 274.57,
-        "tissue_specificity": 0.055,
-        "context_modifier": 1.002
+        "n_genes": 13,
+        "n_expressed": 12,
+        "mean_tpm_in_tissue": 37.62,
+        "max_tpm_in_tissue": 137.34,
+        "tissue_specificity": 0.499,
+        "context_modifier": 1.052
       },
-      "disease_entity": "Disease::MESH:D011471",
+      "ensemble_prob": 0.8943,
+      "ensemble_features": {
+        "kg_score": 0.9985,
+        "degree_penalty": 0.777,
+        "n_drug_targets": 9,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.8332
+      },
+      "ensemble_rank": 3,
       "docking": {
-        "kcal_per_mol": -6.01,
-        "target_symbol": "HDAC1",
+        "kcal_per_mol": -5.87,
+        "target_symbol": "CA2",
         "source": "chembl_bioactivity_proxy",
         "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
         "hit": true
       },
-      "ensemble_prob": 0.4855,
-      "ensemble_features": {
-        "kg_score": 0.9964,
-        "degree_penalty": 0.7507,
-        "n_drug_targets": 17,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 3.6636
-      },
-      "ensemble_rank": 6,
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2091,7 +3333,7 @@
       "drug_name": "Carboplatin",
       "drug_id": "DB00958",
       "disease_name": "Prostate cancer",
-      "combined_score": 0.537,
+      "combined_score": 0.5365,
       "pillars_hit": 4,
       "transe_rank": 61,
       "transe_score": -10.3209,
@@ -2110,15 +3352,15 @@
       "admet_score": 1.0,
       "admet_flags": "clean",
       "primekg_score": 0.2621,
-      "dti_score": 0.6127,
-      "dti_best_target": "SOCS3",
+      "dti_score": 0.6097,
+      "dti_best_target": "ETS1",
       "kg_group_score": 0.2915,
-      "structural_group_score": 0.6127,
+      "structural_group_score": 0.6097,
       "network_group_score": 0.6940000057220459,
       "txgnn_group_score": 0,
       "mr_group_score": 0.767,
       "admet_multiplier": 1.0,
-      "efficacy_score": 0.537,
+      "efficacy_score": 0.5365,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 18,
@@ -2379,49 +3621,49 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT03076372",
-          "title": "A Study Evaluating MM-310 in Patients With Solid Tumors",
-          "status": "UNKNOWN",
+          "nct_id": "NCT01558492",
+          "title": "Carboplatin and Paclitaxel in Patients With Metastatic, Castrate-Resistant Prostate Cancer",
+          "status": "TERMINATED",
+          "phase": "PHASE2",
+          "enrollment": "3",
+          "url": "https://clinicaltrials.gov/study/NCT01558492"
+        },
+        {
+          "nct_id": "NCT03522064",
+          "title": "Bipolar Androgen Therapy + Carboplatin in mCRPC",
+          "status": "RECRUITING",
+          "phase": "PHASE2",
+          "enrollment": "30",
+          "url": "https://clinicaltrials.gov/study/NCT03522064"
+        },
+        {
+          "nct_id": "NCT00004074",
+          "title": "Interleukin-12 and Trastuzumab in Treating Patients With Cancer That Has High Levels of HER2/Neu",
+          "status": "COMPLETED",
           "phase": "PHASE1",
-          "enrollment": "34",
-          "url": "https://clinicaltrials.gov/study/NCT03076372"
+          "enrollment": "15",
+          "url": "https://clinicaltrials.gov/study/NCT00004074"
         },
         {
-          "nct_id": "NCT06738303",
-          "title": "Cabazitaxel +/- Carboplatin vs 177Lu-PSMA-617 in Metastatic Castrate-resistant Prostate Cancer",
-          "status": "RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "44",
-          "url": "https://clinicaltrials.gov/study/NCT06738303"
-        },
-        {
-          "nct_id": "NCT05563558",
-          "title": "Pembrolizumab, Carboplatin and Cabazitaxel in Aggressive Metastatic Castration Resistant Prostate Cancer (PEAPOD_FOS)",
-          "status": "RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "42",
-          "url": "https://clinicaltrials.gov/study/NCT05563558"
-        },
-        {
-          "nct_id": "NCT04038502",
-          "title": "Carboplatin or Olaparib for BRcA Deficient Prostate Cancer",
-          "status": "RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "100",
-          "url": "https://clinicaltrials.gov/study/NCT04038502"
-        },
-        {
-          "nct_id": "NCT02903160",
-          "title": "Prostate Cancer Intensive, Non-Cross Reactive Therapy (PRINT) for Castration Resistant Prostate Cancer (CRPC)",
+          "nct_id": "NCT00514540",
+          "title": "Carboplatin Plus Docetaxel (Taxotere) in Anaplastic Prostate Cancer",
           "status": "COMPLETED",
           "phase": "PHASE2",
-          "enrollment": "40",
-          "url": "https://clinicaltrials.gov/study/NCT02903160"
+          "enrollment": "121",
+          "url": "https://clinicaltrials.gov/study/NCT00514540"
+        },
+        {
+          "nct_id": "NCT00003690",
+          "title": "Flavopiridol Plus Cisplatin or Carboplatin in Treating Patients With Advanced Solid Tumors",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "48",
+          "url": "https://clinicaltrials.gov/study/NCT00003690"
         }
       ],
       "trial_phases": {
-        "PHASE1": 2,
         "PHASE2": 7,
+        "PHASE1": 2,
         "PHASE3": 1
       },
       "confidence": "HIGH",
@@ -2434,8 +3676,10 @@
         "Supporting paper with 75 citations",
         "AI analysis of 1 abstract(s) found positive treatment signals",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.77, 9 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.77, 9 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D011471",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2561,7 +3805,7 @@
         "triangulation_score": 0.388,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.537,
+          "kg": 0.536,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 1.0
@@ -2578,15 +3822,7 @@
         "tissue_specificity": 0.56,
         "context_modifier": 1.096
       },
-      "disease_entity": "Disease::MESH:D011471",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.8668,
+      "ensemble_prob": 0.7524,
       "ensemble_features": {
         "kg_score": 0.9974,
         "degree_penalty": 0.7815,
@@ -2595,7 +3831,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 3.3322
       },
-      "ensemble_rank": 3,
+      "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -2608,1185 +3851,14 @@
           "contains_metal"
         ]
       }
-    },
-    {
-      "drug_name": "Vincristine",
-      "drug_id": "DB00541",
-      "disease_name": "Prostate cancer",
-      "combined_score": 0.5364,
-      "pillars_hit": 4,
-      "transe_rank": 45,
-      "transe_score": -10.2187,
-      "pykeen_score": -12.2859,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0.8835,
-      "similar_to": "Vinblastine",
-      "mol_emb_similarity": 0.9996,
-      "mol_emb_similar_to": "Vinblastine",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.8999999761581421,
-      "proximity_distance": 0.4000000059604645,
-      "admet_score": 0.4686,
-      "admet_flags": "hERG=0.96",
-      "primekg_score": 0.258,
-      "dti_score": 0.1185,
-      "dti_best_target": "SLC18A2",
-      "kg_group_score": 0.2711,
-      "structural_group_score": 0.9996,
-      "network_group_score": 0.6929000020027161,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.7594,
-      "admet_multiplier": 0.8937,
-      "efficacy_score": 0.6002,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 78,
-      "shared_targets": [
-        "ABCB1",
-        "ABCC1",
-        "ABCC10",
-        "ABCC3",
-        "ABCG2",
-        "ACTN4",
-        "ADRB2",
-        "AGO2",
-        "AKR1C3",
-        "ATF3",
-        "AURKA",
-        "AXL",
-        "BCL2",
-        "BRCA1",
-        "CASP3",
-        "CDC25B",
-        "CDK1",
-        "CDK4",
-        "CDKN1A",
-        "CEBPA"
-      ],
-      "pubmed_total": 85,
-      "pubmed_treatment_total": 73,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "36891298",
-          "title": "Identification of a novel senescence-associated signature to predict biochemical recurrence and immune microenvironment for prostate cancer.",
-          "authors": "Han C, Deng Y, Yang B, et al.",
-          "journal": "Frontiers in immunology",
-          "year": "2023",
-          "abstract_snippet": "BACKGROUND: Prostate cancer (PCa) is an age-associated malignancy with high morbidity and mortality rate, posing a severe threat to public health. Cellular senescence, a specialized cell cycle arrest form, results in the secretion of various inflammatory mediators. In recent studies, senescence has ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36891298/",
-          "total_results": 85
-        },
-        {
-          "pmid": "39240303",
-          "title": "TET3 is expressed in prostate cancer tumor-associated macrophages and is associated with anti-androgen resistance.",
-          "authors": "Wei QJ, Liang HQ, Liang YW, et al.",
-          "journal": "Clinical & translational oncology : official publication of the Federation of Spanish Oncology Societies and of the National Cancer Institute of Mexico",
-          "year": "2025",
-          "abstract_snippet": "PURPOSE: The aim of this study is to investigate the expression of TET3 in prostate cancer and its effect on the efficacy of anti-androgen therapy (ADT). METHODS: The expression of TET3 in 1965 cases of prostate cancer and 493 cases of normal prostate tissues were analyzed. The CIBERSORT algorithm e...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39240303/"
-        },
-        {
-          "pmid": "26266099",
-          "title": "Concurrent chemoradiation for high-risk prostate cancer.",
-          "authors": "Cooper BT, Sanfilippo NJ",
-          "journal": "World journal of clinical oncology",
-          "year": "2015",
-          "abstract_snippet": "There are estimated to be 220800 cases of prostate cancer diagnosed in 2015, making up 26% of all cancer diagnoses. Fortunately, adenocarcinoma of the prostate is often a highly treatable malignancy. Even though the majority of prostate cancer patients present with localized disease, prostate cancer...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/26266099/"
-        },
-        {
-          "pmid": "32850387",
-          "title": "Phosphodiesterase Type 5 Inhibitors Synergize Vincristine in Killing Castration-Resistant Prostate Cancer Through Amplifying Mitotic Arrest Signaling.",
-          "authors": "Hsu JL, Leu WJ, Hsu LC, et al.",
-          "journal": "Frontiers in oncology",
-          "year": "2020",
-          "abstract_snippet": "Combination therapies that display cancer-killing activities through either coexistent targeting of several cellular factors or more efficient suppression of a specific pathway are generally used in cancer treatment. Sildenafil, a specific phosphodiesterase type 5 (PDE5) inhibitor, has been suggeste...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/32850387/"
-        },
-        {
-          "pmid": "38975633",
-          "title": "Co-delivery of oncolytic virus and chemotherapeutic modality: Vincristine against prostate cancer treatment: A potent viro-chemotherapeutic approach.",
-          "authors": "Anjum S, Naseer F, Ahmad T, et al.",
-          "journal": "Journal of medical virology",
-          "year": "2024",
-          "abstract_snippet": "Prostate cancer is a prevalent carcinoma among males, and conventional treatment options are often limited. Cytotoxic chemotherapy, despite its drawbacks, remains a mainstay. We propose a targeted co-delivery approach using nanoscale delivery units for Oncolytic measles virus (OMV) and vincristine (...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38975633/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "The Effectiveness of Lipids Derived From Pseudomonas Putida Bacteria in the Formulation of Nanoliposomes Enhances the Delivery of Vincristine for the Treatment of Prostate Cancer",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/cffd797824c2a56ec33d18b2abe1ca0b59bd3d18",
-          "authors": "Saba Jalilian, Mohammad Javad Hoseinifar, Zahra Asadi"
-        },
-        {
-          "title": "Co\u2010delivery of oncolytic virus and chemotherapeutic modality: Vincristine against prostate cancer treatment: A potent viro\u2010chemotherapeutic approach",
-          "year": 2024,
-          "citations": 12,
-          "url": "https://www.semanticscholar.org/paper/fb976d01802bb46b5e807026867eb14f98e9e5ea",
-          "authors": "Sadia Anjum, Faiza Naseer, Tahir Ahmad"
-        },
-        {
-          "title": "Evaluation of the anticancer potential of CD44 targeted vincristine nanoformulation in prostate cancer xenograft model: a multi-dynamic approach for advanced pharmacokinetic evaluation",
-          "year": 2023,
-          "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/83985ffeccb72a5cf31813a8ce6a6741650afb3c",
-          "authors": "Faiza Naseer, Kousain Kousar, M. Abduh"
-        },
-        {
-          "title": "Correction: Evaluation of the anticancer potential of CD44 targeted vincristine nanoformulation in prostate cancer xenograft model: a multi-dynamic approach for advanced pharmacokinetic evaluation",
-          "year": 2023,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/0784a1d62e2a0ced2f206c33abf44cd576902add",
-          "authors": "Faiza Naseer, Kousain Kousar, M. Abduh"
-        },
-        {
-          "title": "Formulation of surface-functionalized hyaluronic acid-coated thiolated chitosan nano-formulation for the delivery of vincristine in prostate cancer: A multifunctional targeted drug delivery approach",
-          "year": 2022,
-          "citations": 35,
-          "url": "https://www.semanticscholar.org/paper/4ff6e74e7077a029512c96ca60bd696588b3eca4",
-          "authors": "Faiza Naseer, Tahir Ahmad, Kousain Kousar"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Discovery of therapeutic agents for prostate cancer using genome-scale metabolic modeling and drug repositioning",
-        "year": 2019,
-        "citations": 75,
-        "url": "https://www.semanticscholar.org/paper/aefbf55b41c8e1799d128aed4ed8a969f41ba1a2",
-        "authors": "B. Turanli, Cheng Zhang, Woonghee Kim"
-      },
-      "max_citations": 75,
-      "faers_signal": "moderate",
-      "faers_total_reports": 101507,
-      "faers_cooccurrences": 95,
-      "faers_interpretation": "95 FAERS reports mention both Vincristine and Prostate cancer-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "S1064 (1.540)",
-        "HKI-272 (1.516)",
-        "S1260 (1.513)",
-        "sunitinib (1.500)",
-        "JW-7-24-1 (1.498)"
-      ],
-      "signature_interpretation": "Vincristine was not found among the top 40 drugs that reverse the Prostate cancer gene signature. Top reversers: S1064 (1.540), HKI-272 (1.516), S1260 (1.513)",
-      "ai_hypothesis": "of its anti-proliferative and anti-angiogenic properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.7594,
-      "mr_genetic_targets": 13,
-      "mechanistic_hypothesis": "Vincristine \u2014[downregulates]\u2192 gene-4176 \u2014[is linked to]\u2192 Prostate cancer",
-      "kg_paths_text": "\u2022 Vincristine \u2014[downregulates]\u2192 gene-4176 \u2014[is linked to]\u2192 Prostate cancer\n\u2022 Vincristine \u2014[downregulates]\u2192 gene-1759 \u2014[activates]\u2192 gene-5595 \u2014[is upregulated by]\u2192 Prostate cancer\n\u2022 Vincristine \u2014[downregulates]\u2192 gene-1759 \u2014[is activated by]\u2192 gene-6387 \u2014[is linked to]\u2192 Prostate cancer",
-      "validation_experiments": [],
-      "novelty_score": 0.515,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "85 PubMed articles on this drug-disease pair",
-        "Supported by 4 independent AI pillars",
-        "High molecular similarity (0.88) to Vinblastine",
-        "Moderate FAERS signal: 95 adverse event reports mention drug-disease co-occurrence",
-        "Supporting paper with 75 citations",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.76, 13 genetic targets)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1072,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (ABCB1 / rs1045642)",
-        "cpic": [],
-        "pharmgkb": [
-          {
-            "gene": "ABCB1",
-            "variant": "rs1045642",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204433"
-          },
-          {
-            "gene": "ABCB1",
-            "variant": "rs2032582",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981238041"
-          },
-          {
-            "gene": "ABCC3",
-            "variant": "rs4148416",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/982036556"
-          },
-          {
-            "gene": "ABCB1",
-            "variant": "rs1128503",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/982036604"
-          },
-          {
-            "gene": "ABCB1",
-            "variant": "rs4148737",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/982036595"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.356,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.536,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.84
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Prostate"
-        ],
-        "n_genes": 20,
-        "n_expressed": 20,
-        "mean_tpm_in_tissue": 30.67,
-        "max_tpm_in_tissue": 191.73,
-        "tissue_specificity": 0.48,
-        "context_modifier": 1.042
-      },
-      "disease_entity": "Disease::MESH:D011471",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.9726,
-      "ensemble_features": {
-        "kg_score": 0.9995,
-        "degree_penalty": 0.7698,
-        "n_drug_targets": 0,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 1.7918
-      },
-      "ensemble_rank": 2,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [
-          ">",
-          "ALDEHYDE",
-          "ISOLATED"
-        ],
-        "n_alerts": 3,
-        "alert_names": [
-          ">_2_ester_groups",
-          "aldehyde",
-          "isolated_alkene"
-        ]
-      }
-    },
-    {
-      "drug_name": "Temozolomide",
-      "drug_id": "DB00853",
-      "disease_name": "Prostate cancer",
-      "combined_score": 0.5347,
-      "pillars_hit": 4,
-      "transe_rank": 92,
-      "transe_score": -10.4642,
-      "pykeen_score": -11.9776,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.925000011920929,
-      "proximity_distance": 0.30000001192092896,
-      "admet_score": 0.6082,
-      "admet_flags": "DILI=0.97",
-      "primekg_score": 0.248,
-      "dti_score": 0.9346,
-      "dti_best_target": "SLC18A2",
-      "kg_group_score": 0.2587,
-      "structural_group_score": 0.9346,
-      "network_group_score": 0.7188000082969666,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.69,
-      "admet_multiplier": 0.9216,
-      "efficacy_score": 0.5802,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 13,
-      "shared_targets": [
-        "ABCC3",
-        "ABCC4",
-        "AIMP1",
-        "AKT1",
-        "CA2",
-        "CA9",
-        "CTNNB1",
-        "GJA1",
-        "HIF1A",
-        "MIR21",
-        "PRKAA2",
-        "SIRT1",
-        "TP53"
-      ],
-      "pubmed_total": 39,
-      "pubmed_treatment_total": 36,
-      "pubmed_repurposing_total": 1,
-      "key_papers": [
-        {
-          "pmid": "23746934",
-          "title": "Lycopene modulates growth and survival associated genes in prostate cancer.",
-          "authors": "Rafi MM, Kanakasabai S, Reyes MD, et al.",
-          "journal": "The Journal of nutritional biochemistry",
-          "year": "2013",
-          "abstract_snippet": "Lycopene is a fat soluble red-orange carotenoid pigment present in tomato that reduces the risk for prostate cancer, a common malignancy among men. However, the mechanism by which lycopene attenuates prostate cancer is not fully defined. In this study we examined the effect of lycopene on proliferat...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/23746934/",
-          "total_results": 39
-        },
-        {
-          "pmid": "32123273",
-          "title": "Androgen Receptor and Poly(ADP-ribose) Glycohydrolase Inhibition Increases Efficiency of Androgen Ablation in Prostate Cancer Cells.",
-          "authors": "Zhang M, Lai Y, Vasquez JL, et al.",
-          "journal": "Scientific reports",
-          "year": "2020",
-          "abstract_snippet": "There is mounting evidence of androgen receptor signaling inducing genome instability and changing DNA repair capacity in prostate cancer cells. Expression of genes associated with base excision repair (BER) is increased with prostate cancer progression and correlates with poor prognosis. Poly(ADP-r...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/32123273/"
-        },
-        {
-          "pmid": "31618686",
-          "title": "Repurposing antipsychotics of the diphenylbutylpiperidine class for cancer therapy.",
-          "authors": "Shaw V, Srivastava S, Srivastava SK",
-          "journal": "Seminars in cancer biology",
-          "year": "2021",
-          "abstract_snippet": "The recent development of high throughput compound screening has allowed drug repurposing to emerge as an effective avenue for discovering novel treatments for cancer. FDA-approved antipsychotic drugs fluspirilene, penfluridol, and pimozide are clinically used for the treatment of psychotic disorder...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/31618686/"
-        },
-        {
-          "pmid": "10854140",
-          "title": "A phase II study of temozolomide in hormone-refractory prostate cancer.",
-          "authors": "van Brussel JP, Busstra MB, Lang MS, et al.",
-          "journal": "Cancer chemotherapy and pharmacology",
-          "year": "2000",
-          "abstract_snippet": "INTRODUCTION: Hormone-refractory disseminated prostate cancer is a major oncological problem. Preclinical studies with temozolomide, an oral alkylating agent, in prostate cancer have shown encouraging results. In phase I studies the safety of temozolomide in non-prostate cancer patients has been dem...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/10854140/"
-        },
-        {
-          "pmid": "19946604",
-          "title": "High-resolution flow cytometry: a suitable tool for monitoring aneuploid prostate cancer cells after TMZ and TMZ-BioShuttle treatment.",
-          "authors": "Braun K, Ehemann V, Wiessler M, et al.",
-          "journal": "International journal of medical sciences",
-          "year": "2009",
-          "abstract_snippet": "If metastatic prostate cancer gets resistant to antiandrogen therapy, there are few treatment options, because prostate cancer is not very sensitive to cytostatic agents. Temozolomide (TMZ) as an orally applicable chemotherapeutic substance has been proven to be effective and well tolerated with occ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/19946604/"
-        }
-      ],
-      "repurposing_papers": [
-        {
-          "pmid": "31618686",
-          "title": "Repurposing antipsychotics of the diphenylbutylpiperidine class for cancer therapy.",
-          "authors": "Shaw V, Srivastava S, Srivastava SK",
-          "journal": "Seminars in cancer biology",
-          "year": "2021",
-          "abstract_snippet": "The recent development of high throughput compound screening has allowed drug repurposing to emerge as an effective avenue for discovering novel treatments for cancer. FDA-approved antipsychotic drugs fluspirilene, penfluridol, and pimozide are clinically used for the treatment of psychotic disorder...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/31618686/",
-          "total_results": 1
-        }
-      ],
-      "semantic_scholar_papers": [
-        {
-          "title": "A phase 1b/2 study of intermittent talazoparib plus temozolomide in patients with metastatic castration-resistant prostate cancer and no mutations in DNA damage response genes",
-          "year": 2025,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/7787b49d2db7a74344dfd4c1eac6e54dd07261df",
-          "authors": "K. Autio, Christos E. Kyriakopoulos, Paul Palyca"
-        },
-        {
-          "title": "A phase Ib/II study of intermittent talazoparib plus temozolomide in patients with metastatic castration-resistant prostate cancer (mCRPC) and no mutations in DNA damage repair (DDR).",
-          "year": 2023,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/251ec54f5f2c02c4e34aa60fb0c111f383d3fe10",
-          "authors": "K. Autio, C. Kyriakopoulos, Han Xiao"
-        },
-        {
-          "title": "Abstract B30: Talazoparib efficacy is enhanced by noncytotoxic doses of temozolomide-mediated DNA damage in prostate cancer cell lines",
-          "year": 2017,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/182fb009ea8e93f7d9dce048a287907ebbd2bca3",
-          "authors": "J. Lindquist, Vernon T. Phan, Eduardo Riquelme"
-        },
-        {
-          "title": "A Study of the Drugs Talazoparib and Temozolomide in Prostate Cancer",
-          "year": 2019,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/bfac9d69452d1a150c6cb1e22af057855fa4cc54",
-          "authors": ""
-        },
-        {
-          "title": "Talazoparib in combination with temozolomide enhances antitumor effects in prostate cancer",
-          "year": 2016,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/c4942b7f4477c658f933e190ac643badec4841e8",
-          "authors": "V. Phan, A. Protter, H. Uppal"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Discovery of therapeutic agents for prostate cancer using genome-scale metabolic modeling and drug repositioning",
-        "year": 2019,
-        "citations": 75,
-        "url": "https://www.semanticscholar.org/paper/aefbf55b41c8e1799d128aed4ed8a969f41ba1a2",
-        "authors": "B. Turanli, Cheng Zhang, Woonghee Kim"
-      },
-      "max_citations": 75,
-      "faers_signal": "weak",
-      "faers_total_reports": 17585,
-      "faers_cooccurrences": 2,
-      "faers_interpretation": "2 FAERS report(s) mention both Temozolomide and Prostate cancer-related terms. Minimal real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "S1064 (1.540)",
-        "HKI-272 (1.516)",
-        "S1260 (1.513)",
-        "sunitinib (1.500)",
-        "JW-7-24-1 (1.498)"
-      ],
-      "signature_interpretation": "Temozolomide was not found among the top 40 drugs that reverse the Prostate cancer gene signature. Top reversers: S1064 (1.540), HKI-272 (1.516), S1260 (1.513)",
-      "ai_hypothesis": "of its ability to inhibit DNA repair and its ability to induce apoptosis.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.69,
-      "mr_genetic_targets": 8,
-      "mechanistic_hypothesis": "Temozolomide \u2014[is a therapeutic for]\u2192 Prostate cancer",
-      "kg_paths_text": "\u2022 Temozolomide \u2014[is a therapeutic for]\u2192 Prostate cancer\n\u2022 Temozolomide \u2014[downregulates]\u2192 gene-51382 \u2014[is downregulated by]\u2192 DB00755 \u2014[is a therapeutic for]\u2192 Prostate cancer\n\u2022 Temozolomide \u2014[downregulates]\u2192 gene-51382 \u2014[is downregulated by]\u2192 DB00655 \u2014[is a therapeutic for]\u2192 Prostate cancer",
-      "validation_experiments": [],
-      "novelty_score": 0.353,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": true,
-      "clinical_trials_total": 6,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT04430842",
-          "title": "Dose Escalation Study to Assess the Safety, Tolerability, Pharmacokinetics, and Pharmacodynamics of QBS10072S",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "15",
-          "url": "https://clinicaltrials.gov/study/NCT04430842"
-        },
-        {
-          "nct_id": "NCT04478279",
-          "title": "A Phase 1-2 Study of ST101 in Patients With Advanced Solid Tumors",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "125",
-          "url": "https://clinicaltrials.gov/study/NCT04478279"
-        },
-        {
-          "nct_id": "NCT01085422",
-          "title": "A Study Combining ABT-888, Oral PARP Inhibitor, With Temozolomide in Patients With Metastatic Prostate Cancer",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "35",
-          "url": "https://clinicaltrials.gov/study/NCT01085422"
-        },
-        {
-          "nct_id": "NCT05417594",
-          "title": "Study of AZD9574 as Monotherapy and in Combination With Anti-cancer Agents in Participants With Advanced Solid Malignancies",
-          "status": "RECRUITING",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "695",
-          "url": "https://clinicaltrials.gov/study/NCT05417594"
-        },
-        {
-          "nct_id": "NCT06630325",
-          "title": "A Precision Medicine Approach (SMMART-ACT) for the Treatment of Patients With Advanced Sarcoma, Prostate, Breast, Ovarian or Pancreatic Cancer",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "30",
-          "url": "https://clinicaltrials.gov/study/NCT06630325"
-        }
-      ],
-      "trial_phases": {
-        "PHASE1": 5,
-        "PHASE2": 4
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "6 clinical trial(s) found on ClinicalTrials.gov",
-        "39 PubMed articles found",
-        "1 article(s) specifically mention repurposing/repositioning",
-        "Supported by 4 independent AI pillars",
-        "Supporting paper with 75 citations",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.69)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1118,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00783",
-            "drug_name": "Estradiol",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00773",
-            "drug_name": "Etoposide",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00502",
-            "drug_name": "Haloperidol",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00331",
-            "drug_name": "Metformin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00563",
-            "drug_name": "Methotrexate",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (ABCB1 / rs2229109)",
-        "cpic": [],
-        "pharmgkb": [
-          {
-            "gene": "ABCB1",
-            "variant": "rs2229109",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451126200"
-          },
-          {
-            "gene": "ABCB1",
-            "variant": "rs1128503",
-            "level": "3",
-            "phenotype_category": "Metabolism/PK",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451417123"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.473,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.535,
-          "docking": 0.489,
-          "pharos": 0.0,
-          "literature": 0.696
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Prostate"
-        ],
-        "n_genes": 13,
-        "n_expressed": 12,
-        "mean_tpm_in_tissue": 37.62,
-        "max_tpm_in_tissue": 137.34,
-        "tissue_specificity": 0.499,
-        "context_modifier": 1.052
-      },
-      "disease_entity": "Disease::MESH:D011471",
-      "docking": {
-        "kcal_per_mol": -5.87,
-        "target_symbol": "CA2",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.7826,
-      "ensemble_features": {
-        "kg_score": 0.9985,
-        "degree_penalty": 0.777,
-        "n_drug_targets": 9,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 2.8332
-      },
-      "ensemble_rank": 4,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Methylprednisolone",
-      "drug_id": "DB00959",
-      "disease_name": "Prostate cancer",
-      "combined_score": 0.5317,
-      "pillars_hit": 4,
-      "transe_rank": 108,
-      "transe_score": -10.5084,
-      "pykeen_score": -12.0209,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0.7049,
-      "similar_to": "Prednisolone",
-      "mol_emb_similarity": 0.9641,
-      "mol_emb_similar_to": "Dexamethasone",
-      "gene_sig_score": 0.02,
-      "gene_sig_rank": 33,
-      "proximity_score": 0.8880000114440918,
-      "proximity_distance": 0.44999998807907104,
-      "admet_score": 0.7065,
-      "admet_flags": "clean",
-      "primekg_score": 0.2517,
-      "dti_score": 0.2692,
-      "dti_best_target": "SLC18A2",
-      "kg_group_score": 0.1997,
-      "structural_group_score": 0.9641,
-      "network_group_score": 0.6780999898910522,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.705,
-      "admet_multiplier": 0.9413,
-      "efficacy_score": 0.5648,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 20,
-      "shared_targets": [
-        "ABCB1",
-        "ABCC3",
-        "ABCC4",
-        "ANXA1",
-        "CCL2",
-        "CEBPD",
-        "CSF3",
-        "CXCL8",
-        "CYP2B6",
-        "FOSL1",
-        "HMOX1",
-        "IL1B",
-        "LEP",
-        "NFKBIA",
-        "NR1I2",
-        "NR3C1",
-        "SERPINA3",
-        "SSBP2",
-        "TNF",
-        "ZFP36"
-      ],
-      "pubmed_total": 28,
-      "pubmed_treatment_total": 28,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "37900799",
-          "title": "Apalutamide-Induced Toxic Epidermal Necrolysis in a Caucasian Patient with Metastatic Castration-Sensitive Prostate Cancer: A Case Report and Review of the Literature.",
-          "authors": "Flynn CR, Liu SC, Byrne B, et al.",
-          "journal": "Case reports in oncology",
-          "year": "2023",
-          "abstract_snippet": "Apalutamide is a novel nonsteroidal androgen receptor inhibitor that has been shown to improve outcomes for patients with nonmetastatic castration-resistant prostate cancer and metastatic castration-sensitive prostate cancer when combined with androgen deprivation therapy. Apalutamide-induced skin r...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37900799/",
-          "total_results": 28
-        },
-        {
-          "pmid": "14633092",
-          "title": "Interstitial pneumonitis induced by bicalutamide and leuprorelin acetate for prostate cancer.",
-          "authors": "Shioi K, Yoshida M, Sakai N",
-          "journal": "International journal of urology : official journal of the Japanese Urological Association",
-          "year": "2003",
-          "abstract_snippet": "Maximal androgen blockade therapy is the standard endocrine treatment for advanced prostate cancer. We report here an unusual case of interstitial pneumonitis induced by bicalutamide and/or leuprorelin acetate treatment for metastatic prostate cancer.",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/14633092/"
-        },
-        {
-          "pmid": "29992622",
-          "title": "Development of an orthotopic canine prostate cancer model expressing human GRPr.",
-          "authors": "Tweedle MF, Ding H, Drost WT, et al.",
-          "journal": "The Prostate",
-          "year": "2018",
-          "abstract_snippet": "BACKGROUND: Ace-1 canine prostate cancer cells grow orthotopically in cyclosporine immunosuppressed laboratory beagles. We previously transfected (human Gastrin-Releasing Peptide Receptor, huGRPr) into Ace-1 cells and demonstrated receptor-targeted NIRF imaging with IR800-G-Abz4-t-BBN, an agonist to...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29992622/"
-        },
-        {
-          "pmid": "39008638",
-          "title": "Association Between Membranoproliferative Glomerulonephritis and Colorectal Cancer - A Case Report.",
-          "authors": "Severova G, Karanfilovski V, Naunovska L, et al.",
-          "journal": "Prilozi (Makedonska akademija na naukite i umetnostite. Oddelenie za medicinski nauki)",
-          "year": "2024",
-          "abstract_snippet": "Membranoproliferative glomerulonephritis (MPGN) is a rare glomerular disease characterized by mesangial hypercellularity and thickening of the glomerular basement membrane (GBM). MPGN can be idiopathic or associated with malignancy, systemic immune complex disorders and chronic infections. It has ra...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39008638/"
-        },
-        {
-          "pmid": "41970125",
-          "title": "Fatal Interstitial Pneumonitis During Combined Degarelix, Darolutamide, and Docetaxel Therapy for Metastatic Prostate Cancer.",
-          "authors": "Ito F, Kobayashi K, Hayashi G, et al.",
-          "journal": "Cureus",
-          "year": "2026",
-          "abstract_snippet": "Triplet therapy for metastatic hormone-sensitive prostate cancer improves survival but may rarely cause severe pulmonary toxicity. A 79-year-old man with low-volume metastatic prostate adenocarcinoma (PSA 613 ng/mL) received degarelix, darolutamide, and docetaxel. After the fifth docetaxel cycle, he...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41970125/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Safety and tolerability of relugolix in combination with abiraterone or apalutamide for treatment of advanced prostate cancer: Data from a 52-week clinical trial.",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/07263eb893f777d14e23606c210dc295ac8b7e70",
-          "authors": "Jose De La Cerda, Laurence Belkoff, K. Courtney"
-        },
-        {
-          "title": "Late-onset nmosd as a clinical clue to prostate cancer recurrence",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/8d9389a841671cd1d8b3d88bb02e57e9dcda5060",
-          "authors": "Yasmin Curi de Almeida, L. E. Requi\u00e3o, Louise Makarem Oliveira"
-        },
-        {
-          "title": "Anti-NXP2 edematous dermatomyositis associated with prostate cancer: a case report",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/351be5f9a41401c618006d6e8035aaa99f12fa4c",
-          "authors": "Roberto Navarro Rocha Filho, L. Oliveira, L. Bonatto"
-        },
-        {
-          "title": "Randomized phase 2 therapeutic equivalence study of abiraterone acetate fine particle formulation vs. originator abiraterone acetate in patients with metastatic castration-resistant prostate cancer: The STAAR study.",
-          "year": 2018,
-          "citations": 21,
-          "url": "https://www.semanticscholar.org/paper/f8ed47d6a40c155b8fb0de07c82904f8be2c102d",
-          "authors": "C. Stein, R. Levin, R. Given"
-        },
-        {
-          "title": "Multicenter extension and switch study evaluating the safety of long-term treatment with abiraterone acetate fine particle formulation (AAFP) in patients with metastatic castration-resistant prostate cancer (mCRPC): The STAAR-E study.",
-          "year": 2018,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/022a79e9b80cbbaa43a7ea5f9986df362ba32e00",
-          "authors": "R. Levin, R. Given, Paul Nemeth"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Discovery of therapeutic agents for prostate cancer using genome-scale metabolic modeling and drug repositioning",
-        "year": 2019,
-        "citations": 75,
-        "url": "https://www.semanticscholar.org/paper/aefbf55b41c8e1799d128aed4ed8a969f41ba1a2",
-        "authors": "B. Turanli, Cheng Zhang, Woonghee Kim"
-      },
-      "max_citations": 75,
-      "faers_signal": "moderate",
-      "faers_total_reports": 125031,
-      "faers_cooccurrences": 112,
-      "faers_interpretation": "112 FAERS reports mention both Methylprednisolone and Prostate cancer-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "S1064 (1.540)",
-        "HKI-272 (1.516)",
-        "S1260 (1.513)",
-        "sunitinib (1.500)",
-        "JW-7-24-1 (1.498)"
-      ],
-      "signature_interpretation": "Methylprednisolone was not found among the top 40 drugs that reverse the Prostate cancer gene signature. Top reversers: S1064 (1.540), HKI-272 (1.516), S1260 (1.513)",
-      "ai_hypothesis": "of its anti-inflammatory and anti-apoptotic properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "Phase 3",
-      "failed_trial_count": 6,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.705,
-      "mr_genetic_targets": 4,
-      "mechanistic_hypothesis": "Methylprednisolone \u2014[downregulates]\u2192 gene-8061 \u2014[is linked to]\u2192 Prostate cancer",
-      "kg_paths_text": "\u2022 Methylprednisolone \u2014[downregulates]\u2192 gene-8061 \u2014[is linked to]\u2192 Prostate cancer\n\u2022 Methylprednisolone \u2014[downregulates]\u2192 gene-3553 \u2014[is linked to]\u2192 Prostate cancer\n\u2022 Methylprednisolone \u2014[downregulates]\u2192 gene-10123 \u2014[is downregulated by]\u2192 DB00783 \u2014[treats]\u2192 Prostate cancer",
-      "validation_experiments": [],
-      "novelty_score": 0.287,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": false,
-      "clinical_trials_total": 10,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT06768255",
-          "title": "Phase III Study of Abiraterone Acetate (II) Versus Abiraterone Acetate in Patients with MCRPC",
-          "status": "NOT_YET_RECRUITING",
-          "phase": "PHASE3",
-          "enrollment": "400",
-          "url": "https://clinicaltrials.gov/study/NCT06768255"
-        },
-        {
-          "nct_id": "NCT03568656",
-          "title": "Study to Evaluate CCS1477 in Advanced Tumours",
-          "status": "COMPLETED",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "220",
-          "url": "https://clinicaltrials.gov/study/NCT03568656"
-        },
-        {
-          "nct_id": "NCT00554918",
-          "title": "Docetaxel and Prednisolone With or Without Zoledronic Acid and/or Strontium Chloride Sr 89 in Treating Patients With Prostate Cancer Metastatic to Bone That Has Not Responded to Hormone Therapy",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "300",
-          "url": "https://clinicaltrials.gov/study/NCT00554918"
-        },
-        {
-          "nct_id": "NCT00448734",
-          "title": "A Study of Picoplatin and Docetaxel in Subjects With Prostate Cancer",
-          "status": "UNKNOWN",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "95",
-          "url": "https://clinicaltrials.gov/study/NCT00448734"
-        },
-        {
-          "nct_id": "NCT00003682",
-          "title": "Methylprednisolone With or Without Doxorubicin in Treating Patients With Metastatic Prostate Cancer",
-          "status": "TERMINATED",
-          "phase": "PHASE3",
-          "enrollment": "160",
-          "url": "https://clinicaltrials.gov/study/NCT00003682"
-        }
-      ],
-      "trial_phases": {
-        "PHASE3": 2,
-        "PHASE1": 3,
-        "PHASE2": 6,
-        "PHASE4": 1
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "10 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
-        "28 PubMed articles found",
-        "Supported by 4 independent AI pillars",
-        "High molecular similarity (0.70) to Prednisolone",
-        "Moderate FAERS signal: 112 adverse event reports mention drug-disease co-occurrence",
-        "Supporting paper with 75 citations",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.70, 4 genetic targets)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "likely",
-        "dose_range": "trial",
-        "confidence": "medium",
-        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
-        "chembl_phase": 2.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1299,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (ABCB1 / rs1045642)",
-        "cpic": [],
-        "pharmgkb": [
-          {
-            "gene": "ABCB1",
-            "variant": "rs1045642",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1444704881"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 3,
-        "axes": {
-          "kg": true,
-          "docking": true,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.589,
-        "label": "silver-standard",
-        "axis_values": {
-          "kg": 0.532,
-          "docking": 0.921,
-          "pharos": 0.0,
-          "literature": 0.635
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Prostate"
-        ],
-        "n_genes": 20,
-        "n_expressed": 14,
-        "mean_tpm_in_tissue": 63.15,
-        "max_tpm_in_tissue": 468.88,
-        "tissue_specificity": 0.539,
-        "context_modifier": 1.077
-      },
-      "disease_entity": "Disease::MESH:D011471",
-      "docking": {
-        "kcal_per_mol": -11.05,
-        "target_symbol": "NR3C1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.2779,
-      "ensemble_features": {
-        "kg_score": 0.9922,
-        "degree_penalty": 0.7636,
-        "n_drug_targets": 8,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 4.4188
-      },
-      "ensemble_rank": 7,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
     }
   ],
   "disease_entity": "Disease::MESH:D011471",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
     "n_disease_genes": 1419,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
-  },
-  "ensemble_version": "v5",
-  "ensemble_model_path": "data/models/ensemble_v5.pkl"
+  }
 }

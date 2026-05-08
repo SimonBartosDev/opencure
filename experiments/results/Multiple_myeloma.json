@@ -1,8 +1,8 @@
 {
   "disease": "Multiple myeloma",
   "status": "completed",
-  "timestamp": "2026-04-19T21:05:17.334623",
-  "elapsed_seconds": 759.4,
+  "timestamp": "2026-05-07T23:39:41.887396",
+  "elapsed_seconds": 116.8,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -36,7 +36,7 @@
       "admet_flags": "clean",
       "primekg_score": 0,
       "dti_score": 1.0,
-      "dti_best_target": "SOCS1",
+      "dti_best_target": "FLT3LG",
       "kg_group_score": 0.4338,
       "structural_group_score": 1.0,
       "network_group_score": 0.5954999923706055,
@@ -206,12 +206,12 @@
       "clinical_trials_total": 6,
       "clinical_trials": [
         {
-          "nct_id": "NCT03878524",
-          "title": "Serial Measurements of Molecular and Architectural Responses to Therapy (SMMART) PRIME Trial",
-          "status": "TERMINATED",
-          "phase": "PHASE1",
-          "enrollment": "2",
-          "url": "https://clinicaltrials.gov/study/NCT03878524"
+          "nct_id": "NCT00003406",
+          "title": "Combination Chemotherapy Followed by Peripheral Stem Cell Transplantation in Treating Patients With Refractory Cancer",
+          "status": "COMPLETED",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "30",
+          "url": "https://clinicaltrials.gov/study/NCT00003406"
         },
         {
           "nct_id": "NCT00004036",
@@ -222,28 +222,28 @@
           "url": "https://clinicaltrials.gov/study/NCT00004036"
         },
         {
-          "nct_id": "NCT00060255",
-          "title": "High-Dose Chemotherapy, Total-Body Irradiation, and Autologous Stem Cell Transplantation or Bone Marrow Transplantation in Treating Patients With Hematologic Cancer or Solid Tumors",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "451",
-          "url": "https://clinicaltrials.gov/study/NCT00060255"
-        },
-        {
-          "nct_id": "NCT00003406",
-          "title": "Combination Chemotherapy Followed by Peripheral Stem Cell Transplantation in Treating Patients With Refractory Cancer",
-          "status": "COMPLETED",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "30",
-          "url": "https://clinicaltrials.gov/study/NCT00003406"
-        },
-        {
           "nct_id": "NCT00536601",
           "title": "High-Dose Chemotherapy With or Without Total-Body Irradiation Followed by Autologous Stem Cell Transplant in Treating Patients With Hematologic Cancer or Solid Tumors",
           "status": "COMPLETED",
           "phase": "NA",
           "enrollment": "174",
           "url": "https://clinicaltrials.gov/study/NCT00536601"
+        },
+        {
+          "nct_id": "NCT03878524",
+          "title": "Serial Measurements of Molecular and Architectural Responses to Therapy (SMMART) PRIME Trial",
+          "status": "TERMINATED",
+          "phase": "PHASE1",
+          "enrollment": "2",
+          "url": "https://clinicaltrials.gov/study/NCT03878524"
+        },
+        {
+          "nct_id": "NCT07341867",
+          "title": "Systemic Anti-Cancer Therapy Dose Modifications for Individuals With Duffy Null Phenotype",
+          "status": "NOT_YET_RECRUITING",
+          "phase": "PHASE1",
+          "enrollment": "90",
+          "url": "https://clinicaltrials.gov/study/NCT07341867"
         }
       ],
       "trial_phases": {
@@ -259,8 +259,10 @@
         "Moderate FAERS signal: 34 adverse event reports mention drug-disease co-occurrence",
         "Highly cited paper (104 citations): \"Targeting the ubiquitin-proteasome system for cancer treatme...\"",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.63)"
+        "Moderate genetic evidence supporting causality (MR score: 0.63)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D009101",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -404,15 +406,7 @@
         "tissue_specificity": 0.302,
         "context_modifier": 1.054
       },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D009101",
-      "ensemble_prob": 0.894,
+      "ensemble_prob": 0.9588,
       "ensemble_features": {
         "kg_score": 0.9986,
         "degree_penalty": 0.7815,
@@ -421,7 +415,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.7726
       },
-      "ensemble_rank": 3,
+      "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -673,8 +674,10 @@
         "Supported by 4 independent AI pillars",
         "CAUTION: Drug had terminated/withdrawn trials (Phase 2) for this disease",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.46)"
+        "Moderate genetic evidence supporting causality (MR score: 0.46)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D009101",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "late-trial",
@@ -725,15 +728,7 @@
         "tissue_specificity": 0.433,
         "context_modifier": 1.067
       },
-      "docking": {
-        "kcal_per_mol": -9.43,
-        "target_symbol": "ABCB1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D009101",
-      "ensemble_prob": 0.0627,
+      "ensemble_prob": 0.0482,
       "ensemble_features": {
         "kg_score": 0.9242,
         "degree_penalty": 0.8816,
@@ -743,6 +738,13 @@
         "transe_rank_log": 6.6859
       },
       "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": -9.43,
+        "target_symbol": "ABCB1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -780,8 +782,8 @@
       "admet_score": 0.6272,
       "admet_flags": "clean",
       "primekg_score": 0,
-      "dti_score": 0.1239,
-      "dti_best_target": "FLT1",
+      "dti_score": 0,
+      "dti_best_target": "",
       "kg_group_score": 0.6116,
       "structural_group_score": 0.6042,
       "network_group_score": 0.6115999817848206,
@@ -1023,28 +1025,28 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
+          "nct_id": "NCT03997968",
+          "title": "A Phase 1/2 Study of CYT-0851 in B-Cell Malignancies and Advanced Solid Tumors",
+          "status": "COMPLETED",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "169",
+          "url": "https://clinicaltrials.gov/study/NCT03997968"
+        },
+        {
+          "nct_id": "NCT00477035",
+          "title": "Post-transplant Autologous Cytokine-induced Killer (CIK) Cells for Treatment of High Risk Hematologic Malignancies",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "22",
+          "url": "https://clinicaltrials.gov/study/NCT00477035"
+        },
+        {
           "nct_id": "NCT02506959",
           "title": "Panobinostat, Gemcitabine Hydrochloride, Busulfan, and Melphalan Before Stem Cell Transplant in Treating Patients With Refractory or Relapsed Multiple Myeloma",
           "status": "COMPLETED",
           "phase": "PHASE2",
           "enrollment": "83",
           "url": "https://clinicaltrials.gov/study/NCT02506959"
-        },
-        {
-          "nct_id": "NCT03442673",
-          "title": "Chemotherapy and G-CSF for Mobilization",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "137",
-          "url": "https://clinicaltrials.gov/study/NCT03442673"
-        },
-        {
-          "nct_id": "NCT01237951",
-          "title": "High-Dose Gemcitabine, Busulfan and Melphalan With Hematopoietic-Cell Support for Patients With Poor-Risk Myeloma",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "75",
-          "url": "https://clinicaltrials.gov/study/NCT01237951"
         },
         {
           "nct_id": "NCT00410982",
@@ -1055,17 +1057,17 @@
           "url": "https://clinicaltrials.gov/study/NCT00410982"
         },
         {
-          "nct_id": "NCT03997968",
-          "title": "A Phase 1/2 Study of CYT-0851 in B-Cell Malignancies and Advanced Solid Tumors",
+          "nct_id": "NCT02791373",
+          "title": "Vinorelbine and Gemcitabine in Myeloma",
           "status": "COMPLETED",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "169",
-          "url": "https://clinicaltrials.gov/study/NCT03997968"
+          "phase": "PHASE2",
+          "enrollment": "136",
+          "url": "https://clinicaltrials.gov/study/NCT02791373"
         }
       ],
       "trial_phases": {
-        "PHASE2": 8,
-        "PHASE1": 4
+        "PHASE1": 5,
+        "PHASE2": 8
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -1080,6 +1082,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.56)"
       ],
+      "disease_entity": "Disease::MESH:D009101",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -1223,15 +1226,7 @@
         "tissue_specificity": 0.396,
         "context_modifier": 1.044
       },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D009101",
-      "ensemble_prob": 0.9193,
+      "ensemble_prob": 0.9806,
       "ensemble_features": {
         "kg_score": 0.9989,
         "degree_penalty": 0.7532,
@@ -1240,431 +1235,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.5649
       },
-      "ensemble_rank": 2,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Fluorouracil",
-      "drug_id": "DB00544",
-      "disease_name": "Multiple myeloma",
-      "combined_score": 0.5206,
-      "pillars_hit": 4,
-      "transe_rank": 26,
-      "transe_score": -10.0909,
-      "pykeen_score": -11.7132,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.6620000004768372,
-      "proximity_distance": 1.350000023841858,
-      "admet_score": 0.7145,
-      "admet_flags": "clean",
-      "primekg_score": 0,
-      "dti_score": 0.992,
-      "dti_best_target": "FLT1",
-      "kg_group_score": 0.5269,
-      "structural_group_score": 0.992,
-      "network_group_score": 0.5067999958992004,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.2703,
-      "admet_multiplier": 0.9429,
-      "efficacy_score": 0.5522,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 34,
-      "shared_targets": [
-        "ABCB1",
-        "ABCG2",
-        "AKT1",
-        "ANPEP",
-        "BAX",
-        "BCL2",
-        "CASP3",
-        "CASP8",
-        "CDKN1A",
-        "CHEK1",
-        "CTNNB1",
-        "EGFR",
-        "ERBB2",
-        "GJA1",
-        "H3P16",
-        "HSPA5",
-        "HSPB1",
-        "IFNA1",
-        "IFNG",
-        "IL1A"
-      ],
-      "pubmed_total": 70,
-      "pubmed_treatment_total": 65,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "25871384",
-          "title": "Multiple myeloma induces Mcl-1 expression and survival of myeloid-derived suppressor cells.",
-          "authors": "De Veirman K, Van Ginderachter JA, Lub S, et al.",
-          "journal": "Oncotarget",
-          "year": "2015",
-          "abstract_snippet": "Myeloid-derived suppressor cells (MDSC) are contributing to an immunosuppressive environment by their ability to inhibit T cell activity and thereby promoting cancer progression. An important feature of the incurable plasma cell malignancy Multiple Myeloma (MM) is immune dysfunction. MDSC were previ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/25871384/",
-          "total_results": 70
-        },
-        {
-          "pmid": "29129340",
-          "title": "Synchronous colorectal cancer and multiple myeloma with chest wall involvement: Is this a coincidence?",
-          "authors": "Li QL, Ma JA, Li HP, et al.",
-          "journal": "Current problems in cancer",
-          "year": "2017",
-          "abstract_snippet": "Multiple primary malignant neoplasms (MPMNs) are rare malignant neoplasms that simultaneously or successively occur in the same patient as 2 or more primary malignancies. Currently, an increasing number of cases are being reported. In general, MPMNs more commonly occur as 2 solid tumors or 2 hematol...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29129340/"
-        },
-        {
-          "pmid": "32566462",
-          "title": "Peripheral Artery Disease and Stroke.",
-          "authors": "Zito C, Manganaro R, Carerj S, et al.",
-          "journal": "Journal of cardiovascular echography",
-          "year": "2020",
-          "abstract_snippet": "Peripheral artery disease (PAD) and stroke can occur as vascular complication of anticancer treatment. Although the mechanisms, monitoring, and management of cardiotoxicities have received broad attention, vascular toxicities remain often underrecognized. In addition, the development of new chemothe...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/32566462/"
-        },
-        {
-          "pmid": "795453",
-          "title": "The treatment of plasma cell myeloma.",
-          "authors": "Bergsagel DE",
-          "journal": "British journal of haematology",
-          "year": "1976",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/795453/"
-        },
-        {
-          "pmid": "25672400",
-          "title": "Synergistic combination therapy with cotylenin\u00a0A and vincristine in multiple myeloma models.",
-          "authors": "Takahashi T, Honma Y, Miyake T, et al.",
-          "journal": "International journal of oncology",
-          "year": "2015",
-          "abstract_snippet": "Multiple myeloma is a malignant proliferative disease of plasma cells in the bone marrow and remains largely incurable. Cotylenin A, a fusicoccane diterpene glycoside with a complex sugar moiety, was isolated as a plant-growth regulator. Cotylenin A has been shown to inhibit the growth of various ca...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/25672400/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Abstract 5734: Targeting exportin 1 reduces cutaneous squamous cell carcinoma growth alone and in combination with 5-fluorouracil",
-          "year": 2026,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/47dc8048a8b3b5b2de2d7f5949d390ed9a8afda4",
-          "authors": "Moynul Islam, J. Rudd, L. Monga"
-        },
-        {
-          "title": "Multiple myeloma induces Mcl-1 expression and survival of myeloid-derived suppressor cells",
-          "year": 2015,
-          "citations": 69,
-          "url": "https://www.semanticscholar.org/paper/be4c2ba9c7773c8781c7ca22b0b23f5b943c9e1e",
-          "authors": "K. De Veirman, J. V. Van Ginderachter, Susanne Lub"
-        },
-        {
-          "title": "Synergistic combination therapy with cotylenin\u00a0A and vincristine in multiple myeloma models.",
-          "year": 2015,
-          "citations": 14,
-          "url": "https://www.semanticscholar.org/paper/60f009521fa274094d8611013ff1284d383cd2a8",
-          "authors": "Tsutomu Takahashi, Y. Honma, Takaaki Miyake"
-        },
-        {
-          "title": "Myeloid Derived Suppressor Cell Mediated AMPK Activation Regulates Multiple Myeloma Cell Survival",
-          "year": 2014,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/4a12f0e5ae6cfa62136612f59db11ca83d0dc213",
-          "authors": "K. D. Veirman, J. V. Ginderachter, I. Riet"
-        },
-        {
-          "title": "Differential effects of chemotherapeutic agents used to treat multiple myeloma on viability of colon cancer and colon cancer stem\u2010like cell lines (899.5)",
-          "year": 2014,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/35ae4ecd8b84448dc479f6153a02f13203ea421d",
-          "authors": "Kerry Lenzi, Hannah Velez, M. Knabb"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Targeting the ubiquitin-proteasome system for cancer treatment: discovering novel inhibitors from nature and drug repurposing",
-        "year": 2017,
-        "citations": 104,
-        "url": "https://www.semanticscholar.org/paper/6b7d3b53bc84f5a9f7e08aee2629388ddae688fd",
-        "authors": "C. Soave, Tracey Guerin, Jinbao Liu"
-      },
-      "max_citations": 104,
-      "faers_signal": "moderate",
-      "faers_total_reports": 85326,
-      "faers_cooccurrences": 33,
-      "faers_interpretation": "33 FAERS reports mention both Fluorouracil and Multiple myeloma-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "HLI 373 (1.501)",
-        "Caffeic acid phenethyl ester (1.466)",
-        "Retinoic acid (1.461)",
-        "saracatinib (1.454)",
-        "OXOTREMORINE SESQUIFUMARATE (1.451)"
-      ],
-      "signature_interpretation": "Fluorouracil was not found among the top 46 drugs that reverse the Multiple myeloma gene signature. Top reversers: HLI 373 (1.501), Caffeic acid phenethyl ester (1.466), Retinoic acid (1.461)",
-      "ai_hypothesis": "of its ability to inhibit the proliferation of myeloma cells.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "Phase 1",
-      "failed_trial_count": 1,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.2703,
-      "mr_genetic_targets": 2,
-      "mechanistic_hypothesis": "Fluorouracil \u2014[downregulates]\u2192 gene-2697 \u2014[is linked to]\u2192 Multiple myeloma",
-      "kg_paths_text": "\u2022 Fluorouracil \u2014[downregulates]\u2192 gene-2697 \u2014[is linked to]\u2192 Multiple myeloma\n\u2022 Fluorouracil \u2014[downregulates]\u2192 gene-2886 \u2014[is downregulated by]\u2192 DB01041 \u2014[treats]\u2192 Multiple myeloma\n\u2022 Fluorouracil \u2014[downregulates]\u2192 gene-2886 \u2014[is downregulated by]\u2192 DB01041 \u2014[treats]\u2192 Multiple myeloma",
-      "validation_experiments": [],
-      "novelty_score": 0.286,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": false,
-      "clinical_trials_total": 5,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT03878524",
-          "title": "Serial Measurements of Molecular and Architectural Responses to Therapy (SMMART) PRIME Trial",
-          "status": "TERMINATED",
-          "phase": "PHASE1",
-          "enrollment": "2",
-          "url": "https://clinicaltrials.gov/study/NCT03878524"
-        },
-        {
-          "nct_id": "NCT01183663",
-          "title": "Lenalidomide in Combination With Bevacizumab, Sorafenib, Temsirolimus, or 5-Fluorouracil, Leucovorin, Oxaliplatin (FOLFOX)",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "180",
-          "url": "https://clinicaltrials.gov/study/NCT01183663"
-        },
-        {
-          "nct_id": "NCT03997968",
-          "title": "A Phase 1/2 Study of CYT-0851 in B-Cell Malignancies and Advanced Solid Tumors",
-          "status": "COMPLETED",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "169",
-          "url": "https://clinicaltrials.gov/study/NCT03997968"
-        },
-        {
-          "nct_id": "NCT03607643",
-          "title": "A Study of the Efficacy of Cannabidiol in Patients With Multiple Myeloma, Glioblastoma Multiforme, and GI Malignancies",
-          "status": "UNKNOWN",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "160",
-          "url": "https://clinicaltrials.gov/study/NCT03607643"
-        },
-        {
-          "nct_id": "NCT00003331",
-          "title": "Combination Chemotherapy in Treating Patients With Advanced Cancer",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "30",
-          "url": "https://clinicaltrials.gov/study/NCT00003331"
-        }
-      ],
-      "trial_phases": {
-        "PHASE1": 5,
-        "PHASE2": 2
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "5 clinical trial(s) found on ClinicalTrials.gov",
-        "70 PubMed articles on this drug-disease pair",
-        "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 33 adverse event reports mention drug-disease co-occurrence",
-        "Highly cited paper (104 citations): \"Targeting the ubiquitin-proteasome system for cancer treatme...\"",
-        "AI-generated hypothesis available"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1216,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00783",
-            "drug_name": "Estradiol",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "high_risk",
-        "summary": "CPIC-A (DPYD) \u2022 PharmGKB-3 (GSTP1 / rs1695)",
-        "cpic": [
-          {
-            "gene": "DPYD",
-            "level": "A",
-            "guideline": "DPYD and Fluoropyrimidines"
-          },
-          {
-            "gene": "MTHFR",
-            "level": "C",
-            "guideline": ""
-          },
-          {
-            "gene": "GSTP1",
-            "level": "D",
-            "guideline": ""
-          },
-          {
-            "gene": "NQO1",
-            "level": "D",
-            "guideline": ""
-          },
-          {
-            "gene": "TYMS",
-            "level": "D",
-            "guideline": ""
-          }
-        ],
-        "pharmgkb": [
-          {
-            "gene": "GSTP1",
-            "variant": "rs1695",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/769171387"
-          },
-          {
-            "gene": "DPYD",
-            "variant": "rs2297595",
-            "level": "1A",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981201535"
-          },
-          {
-            "gene": "DPYD",
-            "variant": "rs1801265",
-            "level": "1A",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981201981"
-          },
-          {
-            "gene": "MTHFR",
-            "variant": "rs1801133",
-            "level": "4",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204912"
-          },
-          {
-            "gene": "LGR5",
-            "variant": "rs17109924",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1446903310"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.343,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.521,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.804
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Whole Blood",
-          "Spleen"
-        ],
-        "n_genes": 19,
-        "n_expressed": 16,
-        "mean_tpm_in_tissue": 49.02,
-        "max_tpm_in_tissue": 205.04,
-        "tissue_specificity": 0.081,
-        "context_modifier": 1.012
-      },
+      "ensemble_rank": 1,
       "docking": {
         "kcal_per_mol": null,
         "target_symbol": null,
@@ -1672,17 +1243,6 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D009101",
-      "ensemble_prob": 0.9244,
-      "ensemble_features": {
-        "kg_score": 0.9983,
-        "degree_penalty": 0.7655,
-        "n_drug_targets": 7,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 2.9444
-      },
-      "ensemble_rank": 1,
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1713,8 +1273,8 @@
       "admet_score": 0.7521,
       "admet_flags": "clean",
       "primekg_score": 0,
-      "dti_score": 0.1399,
-      "dti_best_target": "FLT1",
+      "dti_score": 0,
+      "dti_best_target": "",
       "kg_group_score": 0.3208,
       "structural_group_score": 0.9544,
       "network_group_score": 0.5321000218391418,
@@ -1961,6 +1521,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.55)"
       ],
+      "disease_entity": "Disease::MESH:D009101",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2070,15 +1631,7 @@
         "tissue_specificity": 0.6,
         "context_modifier": 1.092
       },
-      "docking": {
-        "kcal_per_mol": -7.69,
-        "target_symbol": "NR3C1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D009101",
-      "ensemble_prob": 0.3413,
+      "ensemble_prob": 0.2013,
       "ensemble_features": {
         "kg_score": 0.9911,
         "degree_penalty": 0.7473,
@@ -2087,449 +1640,19 @@
         "n_disease_genes": 0,
         "transe_rank_log": 4.5539
       },
-      "ensemble_rank": 5,
+      "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": -7.69,
+        "target_symbol": "NR3C1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
         "n_alerts": 0,
         "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Acetylcysteine",
-      "drug_id": "DB06151",
-      "disease_name": "Multiple myeloma",
-      "combined_score": 0.4987,
-      "pillars_hit": 4,
-      "transe_rank": 60,
-      "transe_score": -10.3326,
-      "pykeen_score": -12.3716,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.7120000123977661,
-      "proximity_distance": 1.149999976158142,
-      "admet_score": 0.7052,
-      "admet_flags": "clean",
-      "primekg_score": 0,
-      "dti_score": 0.8009,
-      "dti_best_target": "FLT1",
-      "kg_group_score": 0.3469,
-      "structural_group_score": 0.8009,
-      "network_group_score": 0.6205000281333923,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.5001,
-      "admet_multiplier": 0.941,
-      "efficacy_score": 0.53,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 24,
-      "shared_targets": [
-        "AKT1",
-        "ATM",
-        "BCL2",
-        "CASP3",
-        "CCL2",
-        "EGFR",
-        "HIF1A",
-        "HMOX1",
-        "HSPA1A",
-        "ICAM1",
-        "IKBKB",
-        "IL1A",
-        "IL6",
-        "JUND",
-        "MAPK1",
-        "MAPK14",
-        "MAPK8",
-        "MMP9",
-        "MT-CO2",
-        "NFE2L2"
-      ],
-      "pubmed_total": 56,
-      "pubmed_treatment_total": 43,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "28232202",
-          "title": "Regulation of STAT3 and NF-\u03baB activations by S-nitrosylation in multiple myeloma.",
-          "authors": "Kim J, Choi S, Saxena N, et al.",
-          "journal": "Free radical biology & medicine",
-          "year": "2017",
-          "abstract_snippet": "Numerous reports suggest that aberrant activations of STAT3 and NF-\u03baB promote survival and proliferation of multiple myeloma (MM) cells. In the present report, we demonstrate that a synthetic S-nitrosothiol compound, S-nitroso-N-acetylcysteine (SNAC), inhibits proliferation and survival of multiple ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/28232202/",
-          "total_results": 56
-        },
-        {
-          "pmid": "38737470",
-          "title": "Interleukin-33 increases the sensitivity of multiple myeloma cells to the proteasome inhibitor bortezomib through reactive oxygen species-mediated inhibition of nuclear factor kappa-B signal and stemness properties.",
-          "authors": "Shao R, Liu S, Liu W, et al.",
-          "journal": "MedComm",
-          "year": "2024",
-          "abstract_snippet": "The proteasome inhibitor bortezomib (BTZ) is the first-line therapy for multiple myeloma (MM). BTZ resistance largely limits its clinical application in MM. Interleukin-33 (IL-33) exerts antitumor effects through various mechanisms, including enhancing antitumor immunity and promoting the apoptosis ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38737470/"
-        },
-        {
-          "pmid": "19417148",
-          "title": "Darinaparsin induces a unique cellular response and is active in an arsenic trioxide-resistant myeloma cell line.",
-          "authors": "Matulis SM, Morales AA, Yehiayan L, et al.",
-          "journal": "Molecular cancer therapeutics",
-          "year": "2009",
-          "abstract_snippet": "Here, we report on the organic arsenical darinaparsin (ZIO-101, S-dimethylarsino-glutathione) and its anti-myeloma activity compared with inorganic arsenic trioxide. Darinaparsin induced apoptosis in multiple myeloma cell lines in a dose-dependent manner, and the addition of N-acetylcysteine, which ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/19417148/"
-        },
-        {
-          "pmid": "13679868",
-          "title": "Superoxide-dependent and -independent mitochondrial signaling during apoptosis in multiple myeloma cells.",
-          "authors": "Chauhan D, Li G, Sattler M, et al.",
-          "journal": "Oncogene",
-          "year": "2003",
-          "abstract_snippet": "Superoxide (O2-) radicals have been linked to apoptosis. Here, we show that 2-methoxyestradiol (2ME2)-induced apoptosis in multiple myeloma (MM) cells is associated with O2- generation, whereas dexamethasone (Dex)-induced apoptosis occurs without concurrent increase in O2-. In contrast, both these a...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/13679868/"
-        },
-        {
-          "pmid": "23640957",
-          "title": "Reactive oxygen species-mediated activation of AMP-activated protein kinase and c-Jun N-terminal kinase plays a critical role in beta-sitosterol-induced apoptosis in multiple myeloma U266 cells.",
-          "authors": "Sook SH, Lee HJ, Kim JH, et al.",
-          "journal": "Phytotherapy research : PTR",
-          "year": "2014",
-          "abstract_snippet": "Although beta-sitosterol has been well known to have anti-tumor activity in liver, lung, colon, stomach, breast and prostate cancers via cell cycle arrest and apoptosis induction, the underlying mechanism of anti-cancer effect of beta-sitosterol in multiple myeloma cells was never elucidated until n...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/23640957/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Abstract 4908: Study on Ca 2+-mediated regulation mechanisms on chemotherapy-induced peripheral neuropathy in multiple myeloma and non-Hodgkin lymphoma",
-          "year": 2023,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/b585355acd450c22ba261b378835b21dfb803154",
-          "authors": "Jinny Park, Jong-Suk Kim, Kwang-Hyun Park"
-        },
-        {
-          "title": "Regulation of STAT3 and NF\u2010&kgr;B activations by S\u2010nitrosylation in multiple myeloma",
-          "year": 2017,
-          "citations": 24,
-          "url": "https://www.semanticscholar.org/paper/d9b53bc6ee73b4e5a733957f4f0339997633c658",
-          "authors": "Jinsu Kim, Seungho Choi, N. Saxena"
-        },
-        {
-          "title": "Synergistic Activity of Carfilzomib and Panobinostat in Multiple Myeloma Cells via Modulation of ROS Generation and ERK1/2",
-          "year": 2015,
-          "citations": 26,
-          "url": "https://www.semanticscholar.org/paper/d272a78ff35518db06920900c160eb97e00bf992",
-          "authors": "Lu Gao, Minjie Gao, Guang Yang"
-        },
-        {
-          "title": "The glutathione synthesis inhibitor buthionine sulfoximine synergistically enhanced melphalan activity against preclinical models of multiple myeloma",
-          "year": 2014,
-          "citations": 114,
-          "url": "https://www.semanticscholar.org/paper/f2ec2564428cb146fcffd0ef64bceac563ba1f03",
-          "authors": "Ashujit Tagde, Harshabad Singh, Min H. Kang"
-        },
-        {
-          "title": "Interleukin-6 counteracts therapy-induced cellular oxidative stress in multiple myeloma by up-regulating manganese superoxide dismutase",
-          "year": 2012,
-          "citations": 43,
-          "url": "https://www.semanticscholar.org/paper/20921a7f5783f5925108f52f2e8eb559fb2d16bd",
-          "authors": "Charles O. Brown, Kelley Salem, B. Wagner"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "The glutathione synthesis inhibitor buthionine sulfoximine synergistically enhanced melphalan activity against preclinical models of multiple myeloma",
-        "year": 2014,
-        "citations": 114,
-        "url": "https://www.semanticscholar.org/paper/f2ec2564428cb146fcffd0ef64bceac563ba1f03",
-        "authors": "Ashujit Tagde, Harshabad Singh, Min H. Kang"
-      },
-      "max_citations": 114,
-      "faers_signal": "moderate",
-      "faers_total_reports": 10374,
-      "faers_cooccurrences": 6,
-      "faers_interpretation": "6 FAERS reports mention both Acetylcysteine and Multiple myeloma-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "HLI 373 (1.501)",
-        "Caffeic acid phenethyl ester (1.466)",
-        "Retinoic acid (1.461)",
-        "saracatinib (1.454)",
-        "OXOTREMORINE SESQUIFUMARATE (1.451)"
-      ],
-      "signature_interpretation": "Acetylcysteine was not found among the top 46 drugs that reverse the Multiple myeloma gene signature. Top reversers: HLI 373 (1.501), Caffeic acid phenethyl ester (1.466), Retinoic acid (1.461)",
-      "ai_hypothesis": "of its antioxidant properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 1,
-          "negative_signals": 0,
-          "mechanism_signals": 0,
-          "extracted_entities": [
-            {
-              "entity": "stat3",
-              "entity_group": "Diagnostic_procedure",
-              "score": 1.0
-            },
-            {
-              "entity": "nf - \u03bab",
-              "entity_group": "Diagnostic_procedure",
-              "score": 1.0
-            },
-            {
-              "entity": "multiple",
-              "entity_group": "Disease_disorder",
-              "score": 0.9990000128746033
-            },
-            {
-              "entity": "##eloma",
-              "entity_group": "Disease_disorder",
-              "score": 0.9539999961853027
-            },
-            {
-              "entity": "s - nitrosothiol",
-              "entity_group": "Medication",
-              "score": 0.7400000095367432
-            },
-            {
-              "entity": "s - nitroso - n - acetylcysteine",
-              "entity_group": "Diagnostic_procedure",
-              "score": 0.9829999804496765
-            }
-          ]
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 0,
-          "negative_signals": 0,
-          "mechanism_signals": 0,
-          "extracted_entities": [
-            {
-              "entity": "organic",
-              "entity_group": "Detailed_description",
-              "score": 1.0
-            },
-            {
-              "entity": "darinaparsin",
-              "entity_group": "Medication",
-              "score": 0.9539999961853027
-            },
-            {
-              "entity": "dimethy",
-              "entity_group": "Medication",
-              "score": 0.7990000247955322
-            },
-            {
-              "entity": "##larsino - glutathione",
-              "entity_group": "Medication",
-              "score": 0.9710000157356262
-            },
-            {
-              "entity": "anti - my",
-              "entity_group": "Sign_symptom",
-              "score": 0.9020000100135803
-            },
-            {
-              "entity": "inorganic",
-              "entity_group": "Detailed_description",
-              "score": 0.9279999732971191
-            },
-            {
-              "entity": "darina",
-              "entity_group": "Medication",
-              "score": 0.996999979019165
-            },
-            {
-              "entity": "##parsin",
-              "entity_group": "Medication",
-              "score": 0.996999979019165
-            },
-            {
-              "entity": "ap",
-              "entity_group": "Sign_symptom",
-              "score": 0.953000009059906
-            },
-            {
-              "entity": "##optosis",
-              "entity_group": "Disease_disorder",
-              "score": 0.9380000233650208
-            }
-          ]
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.5001,
-      "mr_genetic_targets": 2,
-      "mechanistic_hypothesis": "Acetylcysteine \u2014[palliates]\u2192 DOID:3083 \u2014[is treated by]\u2192 DB00471 \u2014[is a therapeutic for]\u2192 Multiple myeloma",
-      "kg_paths_text": "\u2022 Acetylcysteine \u2014[palliates]\u2192 DOID:3083 \u2014[is treated by]\u2192 DB00471 \u2014[is a therapeutic for]\u2192 Multiple myeloma\n\u2022 Acetylcysteine \u2014[palliates]\u2192 DOID:3083 \u2014[is treated by]\u2192 DB00635 \u2014[is a therapeutic for]\u2192 Multiple myeloma\n\u2022 Acetylcysteine \u2014[palliates]\u2192 DOID:3083 \u2014[is treated by]\u2192 DB00860 \u2014[is a therapeutic for]\u2192 Multiple myeloma",
-      "validation_experiments": [],
-      "novelty_score": 0.449,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "56 PubMed articles on this drug-disease pair",
-        "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 6 adverse event reports mention drug-disease co-occurrence",
-        "Highly cited paper (114 citations): \"The glutathione synthesis inhibitor buthionine sulfoximine s...\"",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.50)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "likely",
-        "dose_range": "trial",
-        "confidence": "medium",
-        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
-        "chembl_phase": 2.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 55,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00227",
-            "drug_name": "Lovastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00563",
-            "drug_name": "Methotrexate",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00175",
-            "drug_name": "Pravastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01098",
-            "drug_name": "Rosuvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00641",
-            "drug_name": "Simvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB13139",
-            "drug_name": "(-)-Salbutamol",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB06403",
-            "drug_name": "Ambrisentan",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB11586",
-            "drug_name": "Asunaprevir",
-            "severity": "moderate"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (TOLLIP / rs3750920)",
-        "cpic": [],
-        "pharmgkb": [
-          {
-            "gene": "TOLLIP",
-            "variant": "rs3750920",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1447982723"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.327,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.499,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.762
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Whole Blood",
-          "Spleen"
-        ],
-        "n_genes": 20,
-        "n_expressed": 19,
-        "mean_tpm_in_tissue": 1355.69,
-        "max_tpm_in_tissue": 24823.9,
-        "tissue_specificity": 0.09,
-        "context_modifier": 1.041
-      },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D009101",
-      "ensemble_prob": 0.0691,
-      "ensemble_features": {
-        "kg_score": 0.9116,
-        "degree_penalty": 0.8715,
-        "n_drug_targets": 0,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 6.8395
-      },
-      "ensemble_rank": 9,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [
-          "THIOL"
-        ],
-        "n_alerts": 2,
-        "alert_names": [
-          "thiol_2",
-          "thiol_warhead"
-        ]
       }
     },
     {
@@ -2555,8 +1678,8 @@
       "admet_score": 0.6427,
       "admet_flags": "clean",
       "primekg_score": 0,
-      "dti_score": 0.4148,
-      "dti_best_target": "FLT1",
+      "dti_score": 0.3375,
+      "dti_best_target": "APOBEC3B",
       "kg_group_score": 0.1619,
       "structural_group_score": 0.9509,
       "network_group_score": 0.6017000079154968,
@@ -2804,6 +1927,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.68)"
       ],
+      "disease_entity": "Disease::MESH:D009101",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2926,15 +2050,7 @@
         "tissue_specificity": 0.282,
         "context_modifier": 1.057
       },
-      "docking": {
-        "kcal_per_mol": -11.87,
-        "target_symbol": "NR3C1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D009101",
-      "ensemble_prob": 0.1764,
+      "ensemble_prob": 0.0835,
       "ensemble_features": {
         "kg_score": 0.9892,
         "degree_penalty": 0.7521,
@@ -2943,7 +2059,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 4.7449
       },
-      "ensemble_rank": 7,
+      "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": -11.87,
+        "target_symbol": "NR3C1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2975,7 +2098,7 @@
       "admet_flags": "hERG=0.95",
       "primekg_score": 0,
       "dti_score": 1.0,
-      "dti_best_target": "SOCS1",
+      "dti_best_target": "FLT3LG",
       "kg_group_score": 0.3185,
       "structural_group_score": 1.0,
       "network_group_score": 0.5583000183105469,
@@ -3173,6 +2296,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.46)"
       ],
+      "disease_entity": "Disease::MESH:D009101",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3316,15 +2440,7 @@
         "tissue_specificity": 0.145,
         "context_modifier": 1.015
       },
-      "docking": {
-        "kcal_per_mol": -8.09,
-        "target_symbol": "FYN",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D009101",
-      "ensemble_prob": 0.2185,
+      "ensemble_prob": 0.2531,
       "ensemble_features": {
         "kg_score": 0.9932,
         "degree_penalty": 0.7565,
@@ -3333,7 +2449,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 4.2905
       },
-      "ensemble_rank": 6,
+      "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": -8.09,
+        "target_symbol": "FYN",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -3343,6 +2466,448 @@
         "alert_names": [
           "stilbene"
         ]
+      }
+    },
+    {
+      "drug_name": "Fluorouracil",
+      "drug_id": "DB00544",
+      "disease_name": "Multiple myeloma",
+      "combined_score": 0.4929,
+      "pillars_hit": 4,
+      "transe_rank": 26,
+      "transe_score": -10.0909,
+      "pykeen_score": -11.7132,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.6620000004768372,
+      "proximity_distance": 1.350000023841858,
+      "admet_score": 0.7145,
+      "admet_flags": "clean",
+      "primekg_score": 0,
+      "dti_score": 0.8284,
+      "dti_best_target": "APOBEC3B",
+      "kg_group_score": 0.5269,
+      "structural_group_score": 0.8284,
+      "network_group_score": 0.5067999958992004,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.2703,
+      "admet_multiplier": 0.9429,
+      "efficacy_score": 0.5227,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 34,
+      "shared_targets": [
+        "ABCB1",
+        "ABCG2",
+        "AKT1",
+        "ANPEP",
+        "BAX",
+        "BCL2",
+        "CASP3",
+        "CASP8",
+        "CDKN1A",
+        "CHEK1",
+        "CTNNB1",
+        "EGFR",
+        "ERBB2",
+        "GJA1",
+        "H3P16",
+        "HSPA5",
+        "HSPB1",
+        "IFNA1",
+        "IFNG",
+        "IL1A"
+      ],
+      "pubmed_total": 70,
+      "pubmed_treatment_total": 65,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "25871384",
+          "title": "Multiple myeloma induces Mcl-1 expression and survival of myeloid-derived suppressor cells.",
+          "authors": "De Veirman K, Van Ginderachter JA, Lub S, et al.",
+          "journal": "Oncotarget",
+          "year": "2015",
+          "abstract_snippet": "Myeloid-derived suppressor cells (MDSC) are contributing to an immunosuppressive environment by their ability to inhibit T cell activity and thereby promoting cancer progression. An important feature of the incurable plasma cell malignancy Multiple Myeloma (MM) is immune dysfunction. MDSC were previ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25871384/",
+          "total_results": 70
+        },
+        {
+          "pmid": "29129340",
+          "title": "Synchronous colorectal cancer and multiple myeloma with chest wall involvement: Is this a coincidence?",
+          "authors": "Li QL, Ma JA, Li HP, et al.",
+          "journal": "Current problems in cancer",
+          "year": "2017",
+          "abstract_snippet": "Multiple primary malignant neoplasms (MPMNs) are rare malignant neoplasms that simultaneously or successively occur in the same patient as 2 or more primary malignancies. Currently, an increasing number of cases are being reported. In general, MPMNs more commonly occur as 2 solid tumors or 2 hematol...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29129340/"
+        },
+        {
+          "pmid": "32566462",
+          "title": "Peripheral Artery Disease and Stroke.",
+          "authors": "Zito C, Manganaro R, Carerj S, et al.",
+          "journal": "Journal of cardiovascular echography",
+          "year": "2020",
+          "abstract_snippet": "Peripheral artery disease (PAD) and stroke can occur as vascular complication of anticancer treatment. Although the mechanisms, monitoring, and management of cardiotoxicities have received broad attention, vascular toxicities remain often underrecognized. In addition, the development of new chemothe...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32566462/"
+        },
+        {
+          "pmid": "795453",
+          "title": "The treatment of plasma cell myeloma.",
+          "authors": "Bergsagel DE",
+          "journal": "British journal of haematology",
+          "year": "1976",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/795453/"
+        },
+        {
+          "pmid": "25672400",
+          "title": "Synergistic combination therapy with cotylenin\u00a0A and vincristine in multiple myeloma models.",
+          "authors": "Takahashi T, Honma Y, Miyake T, et al.",
+          "journal": "International journal of oncology",
+          "year": "2015",
+          "abstract_snippet": "Multiple myeloma is a malignant proliferative disease of plasma cells in the bone marrow and remains largely incurable. Cotylenin A, a fusicoccane diterpene glycoside with a complex sugar moiety, was isolated as a plant-growth regulator. Cotylenin A has been shown to inhibit the growth of various ca...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25672400/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Abstract 5734: Targeting exportin 1 reduces cutaneous squamous cell carcinoma growth alone and in combination with 5-fluorouracil",
+          "year": 2026,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/47dc8048a8b3b5b2de2d7f5949d390ed9a8afda4",
+          "authors": "Moynul Islam, J. Rudd, L. Monga"
+        },
+        {
+          "title": "Multiple myeloma induces Mcl-1 expression and survival of myeloid-derived suppressor cells",
+          "year": 2015,
+          "citations": 69,
+          "url": "https://www.semanticscholar.org/paper/be4c2ba9c7773c8781c7ca22b0b23f5b943c9e1e",
+          "authors": "K. De Veirman, J. V. Van Ginderachter, Susanne Lub"
+        },
+        {
+          "title": "Synergistic combination therapy with cotylenin\u00a0A and vincristine in multiple myeloma models.",
+          "year": 2015,
+          "citations": 14,
+          "url": "https://www.semanticscholar.org/paper/60f009521fa274094d8611013ff1284d383cd2a8",
+          "authors": "Tsutomu Takahashi, Y. Honma, Takaaki Miyake"
+        },
+        {
+          "title": "Myeloid Derived Suppressor Cell Mediated AMPK Activation Regulates Multiple Myeloma Cell Survival",
+          "year": 2014,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/4a12f0e5ae6cfa62136612f59db11ca83d0dc213",
+          "authors": "K. D. Veirman, J. V. Ginderachter, I. Riet"
+        },
+        {
+          "title": "Differential effects of chemotherapeutic agents used to treat multiple myeloma on viability of colon cancer and colon cancer stem\u2010like cell lines (899.5)",
+          "year": 2014,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/35ae4ecd8b84448dc479f6153a02f13203ea421d",
+          "authors": "Kerry Lenzi, Hannah Velez, M. Knabb"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Targeting the ubiquitin-proteasome system for cancer treatment: discovering novel inhibitors from nature and drug repurposing",
+        "year": 2017,
+        "citations": 104,
+        "url": "https://www.semanticscholar.org/paper/6b7d3b53bc84f5a9f7e08aee2629388ddae688fd",
+        "authors": "C. Soave, Tracey Guerin, Jinbao Liu"
+      },
+      "max_citations": 104,
+      "faers_signal": "moderate",
+      "faers_total_reports": 85326,
+      "faers_cooccurrences": 33,
+      "faers_interpretation": "33 FAERS reports mention both Fluorouracil and Multiple myeloma-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "HLI 373 (1.501)",
+        "Caffeic acid phenethyl ester (1.466)",
+        "Retinoic acid (1.461)",
+        "saracatinib (1.454)",
+        "OXOTREMORINE SESQUIFUMARATE (1.451)"
+      ],
+      "signature_interpretation": "Fluorouracil was not found among the top 46 drugs that reverse the Multiple myeloma gene signature. Top reversers: HLI 373 (1.501), Caffeic acid phenethyl ester (1.466), Retinoic acid (1.461)",
+      "ai_hypothesis": "of its ability to inhibit the proliferation of myeloma cells.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "Phase 1",
+      "failed_trial_count": 1,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.2703,
+      "mr_genetic_targets": 2,
+      "mechanistic_hypothesis": "Fluorouracil \u2014[downregulates]\u2192 gene-2697 \u2014[is linked to]\u2192 Multiple myeloma",
+      "kg_paths_text": "\u2022 Fluorouracil \u2014[downregulates]\u2192 gene-2697 \u2014[is linked to]\u2192 Multiple myeloma\n\u2022 Fluorouracil \u2014[downregulates]\u2192 gene-2886 \u2014[is downregulated by]\u2192 DB01041 \u2014[treats]\u2192 Multiple myeloma\n\u2022 Fluorouracil \u2014[downregulates]\u2192 gene-2886 \u2014[is downregulated by]\u2192 DB01041 \u2014[treats]\u2192 Multiple myeloma",
+      "validation_experiments": [],
+      "novelty_score": 0.271,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": false,
+      "clinical_trials_total": 5,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT03997968",
+          "title": "A Phase 1/2 Study of CYT-0851 in B-Cell Malignancies and Advanced Solid Tumors",
+          "status": "COMPLETED",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "169",
+          "url": "https://clinicaltrials.gov/study/NCT03997968"
+        },
+        {
+          "nct_id": "NCT03878524",
+          "title": "Serial Measurements of Molecular and Architectural Responses to Therapy (SMMART) PRIME Trial",
+          "status": "TERMINATED",
+          "phase": "PHASE1",
+          "enrollment": "2",
+          "url": "https://clinicaltrials.gov/study/NCT03878524"
+        },
+        {
+          "nct_id": "NCT01183663",
+          "title": "Lenalidomide in Combination With Bevacizumab, Sorafenib, Temsirolimus, or 5-Fluorouracil, Leucovorin, Oxaliplatin (FOLFOX)",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "180",
+          "url": "https://clinicaltrials.gov/study/NCT01183663"
+        },
+        {
+          "nct_id": "NCT00003331",
+          "title": "Combination Chemotherapy in Treating Patients With Advanced Cancer",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "30",
+          "url": "https://clinicaltrials.gov/study/NCT00003331"
+        },
+        {
+          "nct_id": "NCT03607643",
+          "title": "A Study of the Efficacy of Cannabidiol in Patients With Multiple Myeloma, Glioblastoma Multiforme, and GI Malignancies",
+          "status": "UNKNOWN",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "160",
+          "url": "https://clinicaltrials.gov/study/NCT03607643"
+        }
+      ],
+      "trial_phases": {
+        "PHASE1": 5,
+        "PHASE2": 2
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "5 clinical trial(s) found on ClinicalTrials.gov",
+        "70 PubMed articles on this drug-disease pair",
+        "Supported by 4 independent AI pillars",
+        "Moderate FAERS signal: 33 adverse event reports mention drug-disease co-occurrence",
+        "Highly cited paper (104 citations): \"Targeting the ubiquitin-proteasome system for cancer treatme...\"",
+        "AI-generated hypothesis available"
+      ],
+      "disease_entity": "Disease::MESH:D009101",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1216,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "high_risk",
+        "summary": "CPIC-A (DPYD) \u2022 PharmGKB-3 (GSTP1 / rs1695)",
+        "cpic": [
+          {
+            "gene": "DPYD",
+            "level": "A",
+            "guideline": "DPYD and Fluoropyrimidines"
+          },
+          {
+            "gene": "MTHFR",
+            "level": "C",
+            "guideline": ""
+          },
+          {
+            "gene": "GSTP1",
+            "level": "D",
+            "guideline": ""
+          },
+          {
+            "gene": "NQO1",
+            "level": "D",
+            "guideline": ""
+          },
+          {
+            "gene": "TYMS",
+            "level": "D",
+            "guideline": ""
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "GSTP1",
+            "variant": "rs1695",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/769171387"
+          },
+          {
+            "gene": "DPYD",
+            "variant": "rs2297595",
+            "level": "1A",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981201535"
+          },
+          {
+            "gene": "DPYD",
+            "variant": "rs1801265",
+            "level": "1A",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981201981"
+          },
+          {
+            "gene": "MTHFR",
+            "variant": "rs1801133",
+            "level": "4",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204912"
+          },
+          {
+            "gene": "LGR5",
+            "variant": "rs17109924",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1446903310"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.333,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.493,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.804
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood",
+          "Spleen"
+        ],
+        "n_genes": 19,
+        "n_expressed": 16,
+        "mean_tpm_in_tissue": 49.02,
+        "max_tpm_in_tissue": 205.04,
+        "tissue_specificity": 0.081,
+        "context_modifier": 1.012
+      },
+      "ensemble_prob": 0.7679,
+      "ensemble_features": {
+        "kg_score": 0.9983,
+        "degree_penalty": 0.7655,
+        "n_drug_targets": 7,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.9444
+      },
+      "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
       }
     },
     {
@@ -3651,6 +3216,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.45)"
       ],
+      "disease_entity": "Disease::MESH:D009101",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3788,15 +3354,7 @@
         "tissue_specificity": 0.12,
         "context_modifier": 1.003
       },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D009101",
-      "ensemble_prob": 0.771,
+      "ensemble_prob": 0.7048,
       "ensemble_features": {
         "kg_score": 0.9962,
         "degree_penalty": 0.7759,
@@ -3806,6 +3364,13 @@
         "transe_rank_log": 3.7136
       },
       "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -3816,6 +3381,443 @@
         "alert_names": [
           ">_2_ester_groups",
           "isolated_alkene"
+        ]
+      }
+    },
+    {
+      "drug_name": "Acetylcysteine",
+      "drug_id": "DB06151",
+      "disease_name": "Multiple myeloma",
+      "combined_score": 0.484,
+      "pillars_hit": 4,
+      "transe_rank": 60,
+      "transe_score": -10.3326,
+      "pykeen_score": -12.3716,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.7120000123977661,
+      "proximity_distance": 1.149999976158142,
+      "admet_score": 0.7052,
+      "admet_flags": "clean",
+      "primekg_score": 0,
+      "dti_score": 0.7138,
+      "dti_best_target": "ITGA8",
+      "kg_group_score": 0.3469,
+      "structural_group_score": 0.7138,
+      "network_group_score": 0.6205000281333923,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.5001,
+      "admet_multiplier": 0.941,
+      "efficacy_score": 0.5143,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 24,
+      "shared_targets": [
+        "AKT1",
+        "ATM",
+        "BCL2",
+        "CASP3",
+        "CCL2",
+        "EGFR",
+        "HIF1A",
+        "HMOX1",
+        "HSPA1A",
+        "ICAM1",
+        "IKBKB",
+        "IL1A",
+        "IL6",
+        "JUND",
+        "MAPK1",
+        "MAPK14",
+        "MAPK8",
+        "MMP9",
+        "MT-CO2",
+        "NFE2L2"
+      ],
+      "pubmed_total": 56,
+      "pubmed_treatment_total": 43,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "28232202",
+          "title": "Regulation of STAT3 and NF-\u03baB activations by S-nitrosylation in multiple myeloma.",
+          "authors": "Kim J, Choi S, Saxena N, et al.",
+          "journal": "Free radical biology & medicine",
+          "year": "2017",
+          "abstract_snippet": "Numerous reports suggest that aberrant activations of STAT3 and NF-\u03baB promote survival and proliferation of multiple myeloma (MM) cells. In the present report, we demonstrate that a synthetic S-nitrosothiol compound, S-nitroso-N-acetylcysteine (SNAC), inhibits proliferation and survival of multiple ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28232202/",
+          "total_results": 56
+        },
+        {
+          "pmid": "38737470",
+          "title": "Interleukin-33 increases the sensitivity of multiple myeloma cells to the proteasome inhibitor bortezomib through reactive oxygen species-mediated inhibition of nuclear factor kappa-B signal and stemness properties.",
+          "authors": "Shao R, Liu S, Liu W, et al.",
+          "journal": "MedComm",
+          "year": "2024",
+          "abstract_snippet": "The proteasome inhibitor bortezomib (BTZ) is the first-line therapy for multiple myeloma (MM). BTZ resistance largely limits its clinical application in MM. Interleukin-33 (IL-33) exerts antitumor effects through various mechanisms, including enhancing antitumor immunity and promoting the apoptosis ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38737470/"
+        },
+        {
+          "pmid": "19417148",
+          "title": "Darinaparsin induces a unique cellular response and is active in an arsenic trioxide-resistant myeloma cell line.",
+          "authors": "Matulis SM, Morales AA, Yehiayan L, et al.",
+          "journal": "Molecular cancer therapeutics",
+          "year": "2009",
+          "abstract_snippet": "Here, we report on the organic arsenical darinaparsin (ZIO-101, S-dimethylarsino-glutathione) and its anti-myeloma activity compared with inorganic arsenic trioxide. Darinaparsin induced apoptosis in multiple myeloma cell lines in a dose-dependent manner, and the addition of N-acetylcysteine, which ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19417148/"
+        },
+        {
+          "pmid": "13679868",
+          "title": "Superoxide-dependent and -independent mitochondrial signaling during apoptosis in multiple myeloma cells.",
+          "authors": "Chauhan D, Li G, Sattler M, et al.",
+          "journal": "Oncogene",
+          "year": "2003",
+          "abstract_snippet": "Superoxide (O2-) radicals have been linked to apoptosis. Here, we show that 2-methoxyestradiol (2ME2)-induced apoptosis in multiple myeloma (MM) cells is associated with O2- generation, whereas dexamethasone (Dex)-induced apoptosis occurs without concurrent increase in O2-. In contrast, both these a...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/13679868/"
+        },
+        {
+          "pmid": "23640957",
+          "title": "Reactive oxygen species-mediated activation of AMP-activated protein kinase and c-Jun N-terminal kinase plays a critical role in beta-sitosterol-induced apoptosis in multiple myeloma U266 cells.",
+          "authors": "Sook SH, Lee HJ, Kim JH, et al.",
+          "journal": "Phytotherapy research : PTR",
+          "year": "2014",
+          "abstract_snippet": "Although beta-sitosterol has been well known to have anti-tumor activity in liver, lung, colon, stomach, breast and prostate cancers via cell cycle arrest and apoptosis induction, the underlying mechanism of anti-cancer effect of beta-sitosterol in multiple myeloma cells was never elucidated until n...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23640957/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Abstract 4908: Study on Ca 2+-mediated regulation mechanisms on chemotherapy-induced peripheral neuropathy in multiple myeloma and non-Hodgkin lymphoma",
+          "year": 2023,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/b585355acd450c22ba261b378835b21dfb803154",
+          "authors": "Jinny Park, Jong-Suk Kim, Kwang-Hyun Park"
+        },
+        {
+          "title": "Regulation of STAT3 and NF\u2010&kgr;B activations by S\u2010nitrosylation in multiple myeloma",
+          "year": 2017,
+          "citations": 24,
+          "url": "https://www.semanticscholar.org/paper/d9b53bc6ee73b4e5a733957f4f0339997633c658",
+          "authors": "Jinsu Kim, Seungho Choi, N. Saxena"
+        },
+        {
+          "title": "Synergistic Activity of Carfilzomib and Panobinostat in Multiple Myeloma Cells via Modulation of ROS Generation and ERK1/2",
+          "year": 2015,
+          "citations": 26,
+          "url": "https://www.semanticscholar.org/paper/d272a78ff35518db06920900c160eb97e00bf992",
+          "authors": "Lu Gao, Minjie Gao, Guang Yang"
+        },
+        {
+          "title": "The glutathione synthesis inhibitor buthionine sulfoximine synergistically enhanced melphalan activity against preclinical models of multiple myeloma",
+          "year": 2014,
+          "citations": 114,
+          "url": "https://www.semanticscholar.org/paper/f2ec2564428cb146fcffd0ef64bceac563ba1f03",
+          "authors": "Ashujit Tagde, Harshabad Singh, Min H. Kang"
+        },
+        {
+          "title": "Interleukin-6 counteracts therapy-induced cellular oxidative stress in multiple myeloma by up-regulating manganese superoxide dismutase",
+          "year": 2012,
+          "citations": 43,
+          "url": "https://www.semanticscholar.org/paper/20921a7f5783f5925108f52f2e8eb559fb2d16bd",
+          "authors": "Charles O. Brown, Kelley Salem, B. Wagner"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "The glutathione synthesis inhibitor buthionine sulfoximine synergistically enhanced melphalan activity against preclinical models of multiple myeloma",
+        "year": 2014,
+        "citations": 114,
+        "url": "https://www.semanticscholar.org/paper/f2ec2564428cb146fcffd0ef64bceac563ba1f03",
+        "authors": "Ashujit Tagde, Harshabad Singh, Min H. Kang"
+      },
+      "max_citations": 114,
+      "faers_signal": "moderate",
+      "faers_total_reports": 10374,
+      "faers_cooccurrences": 6,
+      "faers_interpretation": "6 FAERS reports mention both Acetylcysteine and Multiple myeloma-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "HLI 373 (1.501)",
+        "Caffeic acid phenethyl ester (1.466)",
+        "Retinoic acid (1.461)",
+        "saracatinib (1.454)",
+        "OXOTREMORINE SESQUIFUMARATE (1.451)"
+      ],
+      "signature_interpretation": "Acetylcysteine was not found among the top 46 drugs that reverse the Multiple myeloma gene signature. Top reversers: HLI 373 (1.501), Caffeic acid phenethyl ester (1.466), Retinoic acid (1.461)",
+      "ai_hypothesis": "of its antioxidant properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 1,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "stat3",
+              "entity_group": "Diagnostic_procedure",
+              "score": 1.0
+            },
+            {
+              "entity": "nf - \u03bab",
+              "entity_group": "Diagnostic_procedure",
+              "score": 1.0
+            },
+            {
+              "entity": "multiple",
+              "entity_group": "Disease_disorder",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "##eloma",
+              "entity_group": "Disease_disorder",
+              "score": 0.9539999961853027
+            },
+            {
+              "entity": "s - nitrosothiol",
+              "entity_group": "Medication",
+              "score": 0.7400000095367432
+            },
+            {
+              "entity": "s - nitroso - n - acetylcysteine",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9829999804496765
+            }
+          ]
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 0,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "organic",
+              "entity_group": "Detailed_description",
+              "score": 1.0
+            },
+            {
+              "entity": "darinaparsin",
+              "entity_group": "Medication",
+              "score": 0.9539999961853027
+            },
+            {
+              "entity": "dimethy",
+              "entity_group": "Medication",
+              "score": 0.7990000247955322
+            },
+            {
+              "entity": "##larsino - glutathione",
+              "entity_group": "Medication",
+              "score": 0.9710000157356262
+            },
+            {
+              "entity": "anti - my",
+              "entity_group": "Sign_symptom",
+              "score": 0.9020000100135803
+            },
+            {
+              "entity": "inorganic",
+              "entity_group": "Detailed_description",
+              "score": 0.9279999732971191
+            },
+            {
+              "entity": "darina",
+              "entity_group": "Medication",
+              "score": 0.996999979019165
+            },
+            {
+              "entity": "##parsin",
+              "entity_group": "Medication",
+              "score": 0.996999979019165
+            },
+            {
+              "entity": "ap",
+              "entity_group": "Sign_symptom",
+              "score": 0.953000009059906
+            },
+            {
+              "entity": "##optosis",
+              "entity_group": "Disease_disorder",
+              "score": 0.9380000233650208
+            }
+          ]
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.5001,
+      "mr_genetic_targets": 2,
+      "mechanistic_hypothesis": "Acetylcysteine \u2014[palliates]\u2192 DOID:3083 \u2014[is treated by]\u2192 DB00471 \u2014[is a therapeutic for]\u2192 Multiple myeloma",
+      "kg_paths_text": "\u2022 Acetylcysteine \u2014[palliates]\u2192 DOID:3083 \u2014[is treated by]\u2192 DB00471 \u2014[is a therapeutic for]\u2192 Multiple myeloma\n\u2022 Acetylcysteine \u2014[palliates]\u2192 DOID:3083 \u2014[is treated by]\u2192 DB00635 \u2014[is a therapeutic for]\u2192 Multiple myeloma\n\u2022 Acetylcysteine \u2014[palliates]\u2192 DOID:3083 \u2014[is treated by]\u2192 DB00860 \u2014[is a therapeutic for]\u2192 Multiple myeloma",
+      "validation_experiments": [],
+      "novelty_score": 0.436,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "56 PubMed articles on this drug-disease pair",
+        "Supported by 4 independent AI pillars",
+        "Moderate FAERS signal: 6 adverse event reports mention drug-disease co-occurrence",
+        "Highly cited paper (114 citations): \"The glutathione synthesis inhibitor buthionine sulfoximine s...\"",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.50)"
+      ],
+      "disease_entity": "Disease::MESH:D009101",
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 55,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00227",
+            "drug_name": "Lovastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00175",
+            "drug_name": "Pravastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01098",
+            "drug_name": "Rosuvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00641",
+            "drug_name": "Simvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB13139",
+            "drug_name": "(-)-Salbutamol",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB06403",
+            "drug_name": "Ambrisentan",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB11586",
+            "drug_name": "Asunaprevir",
+            "severity": "moderate"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (TOLLIP / rs3750920)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "TOLLIP",
+            "variant": "rs3750920",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1447982723"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.322,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.484,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.762
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood",
+          "Spleen"
+        ],
+        "n_genes": 20,
+        "n_expressed": 19,
+        "mean_tpm_in_tissue": 1355.69,
+        "max_tpm_in_tissue": 24823.9,
+        "tissue_specificity": 0.09,
+        "context_modifier": 1.041
+      },
+      "ensemble_prob": 0.0772,
+      "ensemble_features": {
+        "kg_score": 0.9116,
+        "degree_penalty": 0.8715,
+        "n_drug_targets": 0,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 6.8395
+      },
+      "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "THIOL"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "thiol_2",
+          "thiol_warhead"
         ]
       }
     },
@@ -3843,7 +3845,7 @@
       "admet_flags": "hERG=0.96",
       "primekg_score": 0,
       "dti_score": 1.0,
-      "dti_best_target": "SOCS1",
+      "dti_best_target": "FLT3LG",
       "kg_group_score": 0.0912,
       "structural_group_score": 1.0,
       "network_group_score": 0.791,
@@ -3976,6 +3978,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.43)"
       ],
+      "disease_entity": "Disease::MESH:D009101",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "late-trial",
@@ -4077,15 +4080,7 @@
         "tissue_specificity": 0.261,
         "context_modifier": 0.997
       },
-      "docking": {
-        "kcal_per_mol": -12.65,
-        "target_symbol": "KIT",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D009101",
-      "ensemble_prob": 0.0879,
+      "ensemble_prob": 0.1302,
       "ensemble_features": {
         "kg_score": 0.9445,
         "degree_penalty": 0.9646,
@@ -4094,7 +4089,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 6.3733
       },
-      "ensemble_rank": 8,
+      "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": -12.65,
+        "target_symbol": "KIT",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -4107,12 +4109,12 @@
       }
     }
   ],
+  "disease_entity": "Disease::MESH:D009101",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
     "n_disease_genes": 567,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
-  },
-  "disease_entity": "Disease::MESH:D009101",
-  "ensemble_version": "v5",
-  "ensemble_model_path": "data/models/ensemble_v5.pkl"
+  }
 }

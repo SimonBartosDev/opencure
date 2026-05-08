@@ -1,8 +1,8 @@
 {
   "disease": "Hypertension",
   "status": "completed",
-  "timestamp": "2026-04-19T21:58:03.170590",
-  "elapsed_seconds": 844.8,
+  "timestamp": "2026-05-08T01:14:39.454898",
+  "elapsed_seconds": 116.2,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -16,7 +16,7 @@
       "drug_name": "Cimetidine",
       "drug_id": "DB00501",
       "disease_name": "Hypertension",
-      "combined_score": 0.6209,
+      "combined_score": 0.6225,
       "pillars_hit": 5,
       "transe_rank": 170,
       "transe_score": -10.3661,
@@ -35,15 +35,15 @@
       "admet_score": 0.5683,
       "admet_flags": "clean",
       "primekg_score": 0.271,
-      "dti_score": 0.3287,
-      "dti_best_target": "XDH",
+      "dti_score": 0.3385,
+      "dti_best_target": "CALM2",
       "kg_group_score": 0.105,
-      "structural_group_score": 0.3287,
+      "structural_group_score": 0.3385,
       "network_group_score": 0.609499990940094,
       "txgnn_group_score": 0.98,
       "mr_group_score": 0.7111,
       "admet_multiplier": 0.9137,
-      "efficacy_score": 0.6796,
+      "efficacy_score": 0.6813,
       "groups_hit": 5,
       "direct_relations": [],
       "shared_target_count": 9,
@@ -196,7 +196,7 @@
       "mechanistic_hypothesis": "Cimetidine \u2014[binds]\u2192 gene-8647 \u2014[is bound by]\u2192 DB00661 \u2014[treats]\u2192 Hypertension",
       "kg_paths_text": "\u2022 Cimetidine \u2014[binds]\u2192 gene-8647 \u2014[is bound by]\u2192 DB00661 \u2014[treats]\u2192 Hypertension\n\u2022 Cimetidine \u2014[binds]\u2192 gene-8647 \u2014[is bound by]\u2192 DB00661 \u2014[treats]\u2192 Hypertension\n\u2022 Cimetidine \u2014[binds]\u2192 gene-8647 \u2014[is bound by]\u2192 DB00206 \u2014[treats]\u2192 Hypertension",
       "validation_experiments": [],
-      "novelty_score": 0.447,
+      "novelty_score": 0.448,
       "novelty_level": "KNOWN",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -211,6 +211,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.71, 4 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D006973",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -294,7 +295,7 @@
         "triangulation_score": 0.393,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.621,
+          "kg": 0.622,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 0.878
@@ -313,15 +314,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.946
       },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D006973",
-      "ensemble_prob": 0.0286,
+      "ensemble_prob": 0.0254,
       "ensemble_features": {
         "kg_score": 0.9699,
         "degree_penalty": 0.7619,
@@ -331,6 +324,13 @@
         "transe_rank_log": 5.7652
       },
       "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -373,8 +373,8 @@
       "admet_score": 0.7376,
       "admet_flags": "clean",
       "primekg_score": 0.2705,
-      "dti_score": 0.1725,
-      "dti_best_target": "CYP11A1",
+      "dti_score": 0.2039,
+      "dti_best_target": "ADRB1",
       "kg_group_score": 0.4194,
       "structural_group_score": 0.9337,
       "network_group_score": 0.6983000040054321,
@@ -570,51 +570,51 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT02426099",
-          "title": "Efficacy of Spironolactone in Cameroonian Diabetic Patients With Resistant Hypertension",
+          "nct_id": "NCT00857909",
+          "title": "The Effect of Amiloride and Spironolactone in Healthy Persons",
           "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "17",
-          "url": "https://clinicaltrials.gov/study/NCT02426099"
+          "phase": "PHASE1",
+          "enrollment": "30",
+          "url": "https://clinicaltrials.gov/study/NCT00857909"
         },
         {
-          "nct_id": "NCT05222191",
-          "title": "Spironolactone in CKD Enabled by Chlorthalidone: PILOT",
-          "status": "UNKNOWN",
-          "phase": "PHASE2",
-          "enrollment": "24",
-          "url": "https://clinicaltrials.gov/study/NCT05222191"
-        },
-        {
-          "nct_id": "NCT07041281",
-          "title": "Spironolactone to Improve Pregnancy-Associated Hypertension Trajectories",
+          "nct_id": "NCT01712620",
+          "title": "Spironolactone for Pulmonary Arterial Hypertension",
           "status": "RECRUITING",
           "phase": "PHASE2",
-          "enrollment": "204",
-          "url": "https://clinicaltrials.gov/study/NCT07041281"
+          "enrollment": "70",
+          "url": "https://clinicaltrials.gov/study/NCT01712620"
         },
         {
-          "nct_id": "NCT00429897",
-          "title": "Double Blind Crossover Comparison of Diuretics in the Young",
-          "status": "UNKNOWN",
-          "phase": "NA",
-          "enrollment": "30",
-          "url": "https://clinicaltrials.gov/study/NCT00429897"
+          "nct_id": "NCT02907749",
+          "title": "Spironolactone on Fibrosis Progrssion-Portal Hypertension(FP-PH)in Cirrhosis",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "96",
+          "url": "https://clinicaltrials.gov/study/NCT02907749"
         },
         {
-          "nct_id": "NCT01643434",
-          "title": "Resistant Hypertension Optimal Treatment",
+          "nct_id": "NCT01062763",
+          "title": "The Effect of Spironolactone on Blood Pressure in Type-2 Diabetics With Resistant Hypertension",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "119",
+          "url": "https://clinicaltrials.gov/study/NCT01062763"
+        },
+        {
+          "nct_id": "NCT01271374",
+          "title": "Changes in Endothelial Function and Biomarkers in African Americans (AA) With Metabolic Syndrome",
           "status": "UNKNOWN",
           "phase": "PHASE4",
-          "enrollment": "2000",
-          "url": "https://clinicaltrials.gov/study/NCT01643434"
+          "enrollment": "80",
+          "url": "https://clinicaltrials.gov/study/NCT01271374"
         }
       ],
       "trial_phases": {
-        "PHASE4": 2,
-        "PHASE2": 4,
-        "NA": 2,
-        "PHASE3": 2
+        "PHASE1": 1,
+        "PHASE2": 1,
+        "PHASE4": 5,
+        "PHASE3": 3
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -629,6 +629,7 @@
         "Strong causal genetic evidence (MR score: 0.81, 7 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D006973",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -773,15 +774,7 @@
         "tissue_specificity": 0.059,
         "context_modifier": 0.964
       },
-      "docking": {
-        "kcal_per_mol": -10.87,
-        "target_symbol": "NR3C2",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D006973",
-      "ensemble_prob": 0.994,
+      "ensemble_prob": 0.9946,
       "ensemble_features": {
         "kg_score": 0.9996,
         "degree_penalty": 0.7759,
@@ -791,6 +784,13 @@
         "transe_rank_log": 1.6094
       },
       "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": -10.87,
+        "target_symbol": "NR3C2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -801,6 +801,346 @@
           "thioester",
           "thioester"
         ]
+      }
+    },
+    {
+      "drug_name": "Urea",
+      "drug_id": "DB03904",
+      "disease_name": "Hypertension",
+      "combined_score": 0.5806,
+      "pillars_hit": 4,
+      "transe_rank": 25,
+      "transe_score": -9.7622,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.8880000114440918,
+      "proximity_distance": 0.44999998807907104,
+      "admet_score": 0.7639,
+      "admet_flags": "clean",
+      "primekg_score": 0.2673,
+      "dti_score": 1.0,
+      "dti_best_target": "ADRB1",
+      "kg_group_score": 0.1791,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.8133999705314636,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.8129,
+      "admet_multiplier": 0.9528,
+      "efficacy_score": 0.6094,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 13,
+      "shared_targets": [
+        "AGT",
+        "ALPP",
+        "AQP1",
+        "CRP",
+        "DNAH8",
+        "GPT",
+        "IL6",
+        "INS",
+        "MYH14",
+        "PLG",
+        "PTH",
+        "REN",
+        "TNF"
+      ],
+      "pubmed_total": 4355,
+      "pubmed_treatment_total": 2778,
+      "pubmed_repurposing_total": 1,
+      "key_papers": [
+        {
+          "pmid": "25140012",
+          "title": "The evolution of blood pressure and the rise of mankind.",
+          "authors": "Schulte K, Kunter U, Moeller MJ",
+          "journal": "Nephrology, dialysis, transplantation : official publication of the European Dialysis and Transplant Association - European Renal Association",
+          "year": "2015",
+          "abstract_snippet": "Why is it that only human beings continuously perform acts of heroism? Looking back at our evolutionary history can offer us some potentially useful insight. This review highlights some of the major steps in our evolution-more specifically, the evolution of high blood pressure. When we were fish, th...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25140012/",
+          "total_results": 4355
+        },
+        {
+          "pmid": "15891429",
+          "title": "Idiopathic pulmonary arterial hypertension in children.",
+          "authors": "Rosenzweig EB, Barst RJ",
+          "journal": "Current opinion in pediatrics",
+          "year": "2005",
+          "abstract_snippet": "PURPOSE OF REVIEW: Until recently, the diagnosis of idiopathic pulmonary arterial hypertension was virtually a death sentence, particularly for children. Although there is no cure for idiopathic pulmonary arterial hypertension, recent medical advances have dramatically changed the course of this dis...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15891429/"
+        },
+        {
+          "pmid": "22547360",
+          "title": "[Glomerulonephritis and vasculitis as causes of arterial hypertension].",
+          "authors": "Eicken S, Gugger M, Marti HP",
+          "journal": "Therapeutische Umschau. Revue therapeutique",
+          "year": "2012",
+          "abstract_snippet": "The various types of glomerulonephritis, including many forms of vasculitis, are responsible for about 15% of cases of end-stage renal disease (ESRD). Arterial hypertension represents a frequent finding in patients suffering from glomerulonephritis or vasculitis and hypertension also serves as an in...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22547360/"
+        },
+        {
+          "pmid": "34760940",
+          "title": "Novel Prognostic Predictor for Primary Pulmonary Hypertension: Focus on Blood Urea Nitrogen.",
+          "authors": "Hu B, Xu G, Jin X, et al.",
+          "journal": "Frontiers in cardiovascular medicine",
+          "year": "2021",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34760940/"
+        },
+        {
+          "pmid": "30961665",
+          "title": "High blood pressure, a red flag for the neonatal manifestation of urea cycle disorders.",
+          "authors": "Teufel U, Burgard P, Meyburg J, et al.",
+          "journal": "Orphanet journal of rare diseases",
+          "year": "2019",
+          "abstract_snippet": "BACKGROUND: Neonatal manifestation of life-threatening hyperammonemic encephalopathy in urea cycle disorders (UCD) is often misdiagnosed as neonatal sepsis, resulting in significantly delayed start of specific treatment and poor outcome. The major aim of this study was to identify specific initial s...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30961665/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "41588644",
+          "title": "Possible therapeutic repositioning of valproic acid: From epileptic seizures to acute kidney injury.",
+          "authors": "Alves-Bezerra D, Negreiros LB, Pereira-Ac\u00e1cio A, et al.",
+          "journal": "British journal of clinical pharmacology",
+          "year": "2026",
+          "abstract_snippet": "AIMS: Valproic acid is an inhibitor of histone deacetylases (HDACs) and is used for the treatment of epileptic seizures. The drug (sodium valproate) has antihypertensive effects, and HDACs modulate renal Na METHODS: AKI due to ischemia followed by reperfusion (I/R) was induced by clamping of the ren...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41588644/",
+          "total_results": 1
+        }
+      ],
+      "semantic_scholar_papers": [
+        {
+          "title": "Novel Prognostic Predictor for Primary Pulmonary Hypertension: Focus on Blood Urea Nitrogen",
+          "year": 2021,
+          "citations": 15,
+          "url": "https://www.semanticscholar.org/paper/50fc7d856b1e59c371acf009ebd21d56947874c1",
+          "authors": "Bo Hu, Guangtao Xu, Xin Jin"
+        },
+        {
+          "title": "Homocysteine level is positively and independently associated with serum creatinine and urea nitrogen levels in old male patients with hypertension",
+          "year": 2020,
+          "citations": 24,
+          "url": "https://www.semanticscholar.org/paper/3167ab5ad656062afe1bbd27f4c66186b2604645",
+          "authors": "Qianhong Yang, Youwei Lu, Yanhua Deng"
+        },
+        {
+          "title": "Metabolic reprogramming of the urea cycle pathway in experimental pulmonary arterial hypertension rats induced by monocrotaline",
+          "year": 2018,
+          "citations": 40,
+          "url": "https://www.semanticscholar.org/paper/26eba4aef57b48d88e5a7ac225cad29cacc7dfe7",
+          "authors": "Haikuo Zheng, Jun-Han Zhao, Yi Yan"
+        },
+        {
+          "title": "Polymorphisms in urea cycle enzyme genes are associated with persistent pulmonary hypertension of the newborn",
+          "year": 2018,
+          "citations": 27,
+          "url": "https://www.semanticscholar.org/paper/16874b7b2b760a93b677405f98e1920d34bca579",
+          "authors": "D. Kaluarachchi, Caitlin J. Smith, J. Klein"
+        },
+        {
+          "title": "Assessment and Correlation of Urea and Creatinine Levels in Saliva and Serum of Patients with Chronic Kidney Disease, Diabetes and Hypertension- A Research Study.",
+          "year": 2016,
+          "citations": 154,
+          "url": "https://www.semanticscholar.org/paper/a193963f886cad0c57159d1016f0c4cf7af5fcd3",
+          "authors": "D. Pandya, Anil Kumar Nagrajappa, K. Ravi"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Assessment and Correlation of Urea and Creatinine Levels in Saliva and Serum of Patients with Chronic Kidney Disease, Diabetes and Hypertension- A Research Study.",
+        "year": 2016,
+        "citations": 154,
+        "url": "https://www.semanticscholar.org/paper/a193963f886cad0c57159d1016f0c4cf7af5fcd3",
+        "authors": "D. Pandya, Anil Kumar Nagrajappa, K. Ravi"
+      },
+      "max_citations": 154,
+      "faers_signal": "strong",
+      "faers_total_reports": 3034,
+      "faers_cooccurrences": 148,
+      "faers_interpretation": "148 FAERS reports mention both Urea and Hypertension-related terms (4.9% of all Urea reports). This suggests real-world clinical association.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "A-1065 (1.445)",
+        "everolimus (1.434)",
+        "1391-0741 (1.429)",
+        "S1452 (1.414)",
+        "MLS-0226420 (1.412)"
+      ],
+      "signature_interpretation": "Urea was not found among the top 35 drugs that reverse the Hypertension gene signature. Top reversers: A-1065 (1.445), everolimus (1.434), 1391-0741 (1.429)",
+      "ai_hypothesis": "of its ability to increase the excretion of urea.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "Phase 2",
+      "failed_trial_count": 2,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.8129,
+      "mr_genetic_targets": 6,
+      "mechanistic_hypothesis": "Urea \u2014[is a therapeutic for]\u2192 Hypertension",
+      "kg_paths_text": "\u2022 Urea \u2014[is a therapeutic for]\u2192 Hypertension\n\u2022 Urea \u2014[is a therapeutic for]\u2192 MESH:D058186 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Hypertension\n\u2022 Urea \u2014[is a therapeutic for]\u2192 MESH:D058186 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Hypertension",
+      "validation_experiments": [],
+      "novelty_score": 0.07,
+      "novelty_level": "ESTABLISHED",
+      "is_known_treatment": true,
+      "clinical_trials_total": 10,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT00847899",
+          "title": "Evaluation of Soluble Epoxide Hydrolase (s-EH) Inhibitor in Patients With Mild to Moderate Hypertension and Impaired Glucose Tolerance",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "150",
+          "url": "https://clinicaltrials.gov/study/NCT00847899"
+        },
+        {
+          "nct_id": "NCT00270478",
+          "title": "Hydroxyurea and Erythropoietin to Treat Sickle Cell Anemia",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "7",
+          "url": "https://clinicaltrials.gov/study/NCT00270478"
+        },
+        {
+          "nct_id": "NCT00696982",
+          "title": "The Effect of Sitagliptin on Hypertension, Arterial Stiffness, Oxidative Stress and Inflammation",
+          "status": "UNKNOWN",
+          "phase": "NA",
+          "enrollment": "60",
+          "url": "https://clinicaltrials.gov/study/NCT00696982"
+        },
+        {
+          "nct_id": "NCT01714609",
+          "title": "The Effect of Sorafenib on Portal Pressure",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "10",
+          "url": "https://clinicaltrials.gov/study/NCT01714609"
+        },
+        {
+          "nct_id": "NCT01950585",
+          "title": "Hydroxyurea in Pulmonary Arterial Hypertension",
+          "status": "WITHDRAWN",
+          "phase": "EARLY_PHASE1",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT01950585"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 4,
+        "PHASE1": 3,
+        "NA": 1,
+        "EARLY_PHASE1": 1,
+        "PHASE4": 2
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "10 clinical trial(s) found on ClinicalTrials.gov",
+        "4355 PubMed articles on this drug-disease pair",
+        "1 article(s) specifically mention repurposing/repositioning",
+        "Supported by 4 independent AI pillars",
+        "Strong FAERS signal: 148 adverse event reports link drug to disease (3034 total reports)",
+        "Highly cited paper (154 citations): \"Assessment and Correlation of Urea and Creatinine Levels in ...\"",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.81, 6 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D006973",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 0,
+        "has_warnings": false,
+        "top_interactions": []
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.403,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.581,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Artery - Aorta",
+          "Artery - Tibial",
+          "Kidney - Cortex"
+        ],
+        "n_genes": 13,
+        "n_expressed": 7,
+        "mean_tpm_in_tissue": 131.11,
+        "max_tpm_in_tissue": 1545.2,
+        "tissue_specificity": 0.744,
+        "context_modifier": 1.119
+      },
+      "ensemble_prob": 0.0118,
+      "ensemble_features": {
+        "kg_score": 0.8524,
+        "degree_penalty": 0.916,
+        "n_drug_targets": 1,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 7.3512
+      },
+      "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
       }
     },
     {
@@ -826,8 +1166,8 @@
       "admet_score": 1.0,
       "admet_flags": "DILI=0.90",
       "primekg_score": 0.2648,
-      "dti_score": 0.316,
-      "dti_best_target": "XDH",
+      "dti_score": 0.3263,
+      "dti_best_target": "LEPR",
       "kg_group_score": 0.2264,
       "structural_group_score": 0.941,
       "network_group_score": 0.6998999714851379,
@@ -1042,6 +1382,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.76, 6 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D006973",
       "dose_plausibility": {
         "plausibility": "unknown",
         "dose_range": "research",
@@ -1093,15 +1434,7 @@
         "tissue_specificity": 0.892,
         "context_modifier": 1.137
       },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D006973",
-      "ensemble_prob": 0.0029,
+      "ensemble_prob": 0.0118,
       "ensemble_features": {
         "kg_score": 0.8627,
         "degree_penalty": 0.9031,
@@ -1110,7 +1443,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 7.2786
       },
-      "ensemble_rank": 8,
+      "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -1145,8 +1485,8 @@
       "admet_score": 1.0,
       "admet_flags": "clean",
       "primekg_score": 0.2605,
-      "dti_score": 0.4822,
-      "dti_best_target": "CYP11A1",
+      "dti_score": 0.6114,
+      "dti_best_target": "ADRB1",
       "kg_group_score": 0.0723,
       "structural_group_score": 0.8687,
       "network_group_score": 0.95169997215271,
@@ -1326,12 +1666,36 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT04472312",
-          "title": "Portal Pressure Effects of Phlebotomy Combined to Vasopressin Use in Cirrhotic Patients Undergoing Liver Transplantation",
+          "nct_id": "NCT01247090",
+          "title": "Study of the Effect of Intradialytic Vasopressin on Chronic Hypertension in Patients With End Stage Renal Disease",
           "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "60",
-          "url": "https://clinicaltrials.gov/study/NCT04472312"
+          "phase": "PHASE2",
+          "enrollment": "12",
+          "url": "https://clinicaltrials.gov/study/NCT01247090"
+        },
+        {
+          "nct_id": "NCT05439460",
+          "title": "Management of Acute Pulmonary Hypertensive Crisis in Children With Known Pulmonary Arterial Hypertension",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "15",
+          "url": "https://clinicaltrials.gov/study/NCT05439460"
+        },
+        {
+          "nct_id": "NCT01370096",
+          "title": "Vasopressin and Inhaled Prostacyclin in Pediatric Pulmonary Hypertension",
+          "status": "TERMINATED",
+          "phase": "PHASE2",
+          "enrollment": "3",
+          "url": "https://clinicaltrials.gov/study/NCT01370096"
+        },
+        {
+          "nct_id": "NCT00369694",
+          "title": "Short Course Terlipressin for Control of Acute Variceal Bleeding",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "130",
+          "url": "https://clinicaltrials.gov/study/NCT00369694"
         },
         {
           "nct_id": "NCT00223717",
@@ -1340,36 +1704,13 @@
           "phase": "PHASE1",
           "enrollment": "152",
           "url": "https://clinicaltrials.gov/study/NCT00223717"
-        },
-        {
-          "nct_id": "NCT00534677",
-          "title": "The Safety & Efficacy of Terlipressin vs Octreotide for the Control of Variceal Bleed",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "320",
-          "url": "https://clinicaltrials.gov/study/NCT00534677"
-        },
-        {
-          "nct_id": "NCT02119884",
-          "title": "Hemodynamic Effects of Terlipressin and High Dose Octreotide",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "88",
-          "url": "https://clinicaltrials.gov/study/NCT02119884"
-        },
-        {
-          "nct_id": "NCT07438925",
-          "title": "Copeptin Concentration Measured in Plasma Samples and Intradialytic Blood Pressure Variation",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "phase": "N/A",
-          "enrollment": "71",
-          "url": "https://clinicaltrials.gov/study/NCT07438925"
         }
       ],
       "trial_phases": {
+        "PHASE2": 2,
+        "PHASE4": 4,
         "PHASE1": 1,
-        "PHASE4": 5,
-        "NA": 2
+        "NA": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -1384,6 +1725,7 @@
         "Strong causal genetic evidence (MR score: 0.77, 3 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D006973",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1486,15 +1828,7 @@
         "tissue_specificity": 0.335,
         "context_modifier": 1.032
       },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D006973",
-      "ensemble_prob": 0.2626,
+      "ensemble_prob": 0.345,
       "ensemble_features": {
         "kg_score": 0.9498,
         "degree_penalty": 0.9721,
@@ -1503,7 +1837,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 6.2748
       },
-      "ensemble_rank": 6,
+      "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -1544,7 +1885,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.265,
       "dti_score": 1.0,
-      "dti_best_target": "MTOR",
+      "dti_best_target": "MYOD1",
       "kg_group_score": 0.2311,
       "structural_group_score": 1.0,
       "network_group_score": 0.6917999982833862,
@@ -1718,14 +2059,6 @@
           "url": "https://clinicaltrials.gov/study/NCT03640312"
         },
         {
-          "nct_id": "NCT01109043",
-          "title": "Bisoprolol in Hypertension: Effect on Concomitant Elevated Heart Rate",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "351",
-          "url": "https://clinicaltrials.gov/study/NCT01109043"
-        },
-        {
           "nct_id": "NCT05288400",
           "title": "Evaluation of the Clinical Efficacy and Safety of Amlodipine 5mg/ Bisoprolol Fumarate 5mg /Perindopril Arginine 5mg Fixed-dose Combination in Capsule and Free Monotherapy at the Same Dose in Patients With Uncontrolled Essential Hypertension.",
           "status": "COMPLETED",
@@ -1734,12 +2067,20 @@
           "url": "https://clinicaltrials.gov/study/NCT05288400"
         },
         {
-          "nct_id": "NCT05880056",
-          "title": "Study of Bisoprolol (Nerkardou - Nerhadou International) 5 and 10 mg Oral Dissolvable Film (ODF) Treatment in Egyptian Patients With Essential Hypertension",
-          "status": "RECRUITING",
+          "nct_id": "NCT02364089",
+          "title": "Surgery of Subclinical Cortisol Secreting Adrenal Incidentalomas",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "78",
+          "url": "https://clinicaltrials.gov/study/NCT02364089"
+        },
+        {
+          "nct_id": "NCT03276598",
+          "title": "A Study on Molecular Genetics of Drug Responsiveness in Essential Hypertension",
+          "status": "COMPLETED",
           "phase": "PHASE4",
-          "enrollment": "406",
-          "url": "https://clinicaltrials.gov/study/NCT05880056"
+          "enrollment": "233",
+          "url": "https://clinicaltrials.gov/study/NCT03276598"
         },
         {
           "nct_id": "NCT00684489",
@@ -1752,9 +2093,9 @@
       ],
       "trial_phases": {
         "PHASE2": 1,
-        "PHASE3": 1,
-        "PHASE4": 4,
-        "NA": 1
+        "PHASE3": 2,
+        "NA": 2,
+        "PHASE4": 5
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -1768,6 +2109,7 @@
         "Strong causal genetic evidence (MR score: 0.89, 2 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D006973",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1911,15 +2253,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.899
       },
-      "docking": {
-        "kcal_per_mol": -9.01,
-        "target_symbol": "ADRB2",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D006973",
-      "ensemble_prob": 0.6946,
+      "ensemble_prob": 0.8381,
       "ensemble_features": {
         "kg_score": 0.9971,
         "degree_penalty": 0.7594,
@@ -1929,6 +2263,13 @@
         "transe_rank_log": 3.4657
       },
       "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": -9.01,
+        "target_symbol": "ADRB2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -1963,8 +2304,8 @@
       "admet_score": 0.7109,
       "admet_flags": "clean",
       "primekg_score": 0.265,
-      "dti_score": 0.3913,
-      "dti_best_target": "MTOR",
+      "dti_score": 0.3941,
+      "dti_best_target": "ADRB1",
       "kg_group_score": 0.3232,
       "structural_group_score": 0.9713,
       "network_group_score": 0.6166999936103821,
@@ -2219,55 +2560,54 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT05766085",
-          "title": "Cortisol Secretion, Sensitivity and Activity and Hypertension",
-          "status": "UNKNOWN",
-          "phase": "N/A",
-          "enrollment": "290",
-          "url": "https://clinicaltrials.gov/study/NCT05766085"
-        },
-        {
-          "nct_id": "NCT06200727",
-          "title": "Platelet-rich Fibrin(PRF) Membrane in Ophthalmic Diseases",
-          "status": "UNKNOWN",
+          "nct_id": "NCT06852924",
+          "title": "Inhaled Nitric Oxide for High Amplitude Pulmonary Edema (HAPE)",
+          "status": "RECRUITING",
           "phase": "NA",
-          "enrollment": "170",
-          "url": "https://clinicaltrials.gov/study/NCT06200727"
+          "enrollment": "100",
+          "url": "https://clinicaltrials.gov/study/NCT06852924"
         },
         {
-          "nct_id": "NCT02767219",
-          "title": "The Use of Bevacizumab as a Modulator of Wound Healing Following Trabeculectomy Surgery",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "6",
-          "url": "https://clinicaltrials.gov/study/NCT02767219"
-        },
-        {
-          "nct_id": "NCT01228149",
-          "title": "COSOPT-S\u00ae Treatment Versus Acetazolamide Before Trabeculectomy",
+          "nct_id": "NCT02873806",
+          "title": "Two Trabecular Micro-bypass Stents & Postoperative Travoprost to Treat Glaucoma Subjects on Two Hypotensive Agents",
           "status": "COMPLETED",
           "phase": "PHASE4",
-          "enrollment": "62",
-          "url": "https://clinicaltrials.gov/study/NCT01228149"
+          "enrollment": "53",
+          "url": "https://clinicaltrials.gov/study/NCT02873806"
         },
         {
-          "nct_id": "NCT03927118",
-          "title": "Effect of Dexamethasone Implant on Optic Disc",
+          "nct_id": "NCT04295122",
+          "title": "Comparing the Effectiveness of Phacoemulsification + ECP Laser and Phacoemulsification Alone for Glaucoma Patients",
+          "status": "UNKNOWN",
+          "phase": "PHASE4",
+          "enrollment": "160",
+          "url": "https://clinicaltrials.gov/study/NCT04295122"
+        },
+        {
+          "nct_id": "NCT01789437",
+          "title": "Diameters and Wall-to-lumen Ratio of Retinal Arterioles in Patients With Retinal Vein Occlusion.",
           "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "43",
-          "url": "https://clinicaltrials.gov/study/NCT03927118"
+          "phase": "NA",
+          "enrollment": "30",
+          "url": "https://clinicaltrials.gov/study/NCT01789437"
+        },
+        {
+          "nct_id": "NCT03751059",
+          "title": "NSAID vs Steroid in Trabeculectomy Wound Management",
+          "status": "UNKNOWN",
+          "phase": "PHASE4",
+          "enrollment": "150",
+          "url": "https://clinicaltrials.gov/study/NCT03751059"
         }
       ],
       "trial_phases": {
-        "NA": 4,
-        "PHASE3": 1,
-        "PHASE4": 2
+        "NA": 3,
+        "PHASE4": 5,
+        "PHASE2": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
         "10 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
         "2609 PubMed articles on this drug-disease pair",
         "10 article(s) specifically mention repurposing/repositioning",
         "Supported by 4 independent AI pillars",
@@ -2278,6 +2618,7 @@
         "Strong causal genetic evidence (MR score: 0.85, 26 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D006973",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -2416,15 +2757,7 @@
         "tissue_specificity": 0.701,
         "context_modifier": 1.114
       },
-      "docking": {
-        "kcal_per_mol": -10.22,
-        "target_symbol": "NR3C2",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D006973",
-      "ensemble_prob": 0.3911,
+      "ensemble_prob": 0.3833,
       "ensemble_features": {
         "kg_score": 0.9941,
         "degree_penalty": 0.736,
@@ -2434,6 +2767,13 @@
         "transe_rank_log": 4.1431
       },
       "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": -10.22,
+        "target_symbol": "NR3C2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2631,6 +2971,7 @@
         "Supporting paper with 54 citations",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D006973",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -2733,15 +3074,7 @@
         "tissue_specificity": 0.002,
         "context_modifier": 0.912
       },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D006973",
-      "ensemble_prob": 0.0003,
+      "ensemble_prob": 0.0005,
       "ensemble_features": {
         "kg_score": 0.7329,
         "degree_penalty": 0.8688,
@@ -2751,6 +3084,13 @@
         "transe_rank_log": 7.9441
       },
       "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2781,8 +3121,8 @@
       "admet_score": 0.6974,
       "admet_flags": "clean",
       "primekg_score": 0.2698,
-      "dti_score": 0.8198,
-      "dti_best_target": "XDH",
+      "dti_score": 0.8493,
+      "dti_best_target": "CALM2",
       "kg_group_score": 0.2127,
       "structural_group_score": 0.927,
       "network_group_score": 0.7267000079154968,
@@ -2947,8 +3287,10 @@
         "Supported by 4 independent AI pillars",
         "Supporting paper with 67 citations",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.89, 1 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.89, 1 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D006973",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3051,15 +3393,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.891
       },
-      "docking": {
-        "kcal_per_mol": -8.47,
-        "target_symbol": "ADRB1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D006973",
-      "ensemble_prob": 0.4688,
+      "ensemble_prob": 0.4207,
       "ensemble_features": {
         "kg_score": 0.9931,
         "degree_penalty": 0.7823,
@@ -3069,345 +3403,13 @@
         "transe_rank_log": 4.3041
       },
       "ensemble_rank": 3,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Urea",
-      "drug_id": "DB03904",
-      "disease_name": "Hypertension",
-      "combined_score": 0.5618,
-      "pillars_hit": 4,
-      "transe_rank": 25,
-      "transe_score": -9.7622,
-      "pykeen_score": 0,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.8880000114440918,
-      "proximity_distance": 0.44999998807907104,
-      "admet_score": 0.7639,
-      "admet_flags": "clean",
-      "primekg_score": 0.2673,
-      "dti_score": 0.8902,
-      "dti_best_target": "XDH",
-      "kg_group_score": 0.1791,
-      "structural_group_score": 0.8902,
-      "network_group_score": 0.8133999705314636,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.8129,
-      "admet_multiplier": 0.9528,
-      "efficacy_score": 0.5896,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 13,
-      "shared_targets": [
-        "AGT",
-        "ALPP",
-        "AQP1",
-        "CRP",
-        "DNAH8",
-        "GPT",
-        "IL6",
-        "INS",
-        "MYH14",
-        "PLG",
-        "PTH",
-        "REN",
-        "TNF"
-      ],
-      "pubmed_total": 4355,
-      "pubmed_treatment_total": 2778,
-      "pubmed_repurposing_total": 1,
-      "key_papers": [
-        {
-          "pmid": "25140012",
-          "title": "The evolution of blood pressure and the rise of mankind.",
-          "authors": "Schulte K, Kunter U, Moeller MJ",
-          "journal": "Nephrology, dialysis, transplantation : official publication of the European Dialysis and Transplant Association - European Renal Association",
-          "year": "2015",
-          "abstract_snippet": "Why is it that only human beings continuously perform acts of heroism? Looking back at our evolutionary history can offer us some potentially useful insight. This review highlights some of the major steps in our evolution-more specifically, the evolution of high blood pressure. When we were fish, th...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/25140012/",
-          "total_results": 4355
-        },
-        {
-          "pmid": "15891429",
-          "title": "Idiopathic pulmonary arterial hypertension in children.",
-          "authors": "Rosenzweig EB, Barst RJ",
-          "journal": "Current opinion in pediatrics",
-          "year": "2005",
-          "abstract_snippet": "PURPOSE OF REVIEW: Until recently, the diagnosis of idiopathic pulmonary arterial hypertension was virtually a death sentence, particularly for children. Although there is no cure for idiopathic pulmonary arterial hypertension, recent medical advances have dramatically changed the course of this dis...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/15891429/"
-        },
-        {
-          "pmid": "22547360",
-          "title": "[Glomerulonephritis and vasculitis as causes of arterial hypertension].",
-          "authors": "Eicken S, Gugger M, Marti HP",
-          "journal": "Therapeutische Umschau. Revue therapeutique",
-          "year": "2012",
-          "abstract_snippet": "The various types of glomerulonephritis, including many forms of vasculitis, are responsible for about 15% of cases of end-stage renal disease (ESRD). Arterial hypertension represents a frequent finding in patients suffering from glomerulonephritis or vasculitis and hypertension also serves as an in...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/22547360/"
-        },
-        {
-          "pmid": "34760940",
-          "title": "Novel Prognostic Predictor for Primary Pulmonary Hypertension: Focus on Blood Urea Nitrogen.",
-          "authors": "Hu B, Xu G, Jin X, et al.",
-          "journal": "Frontiers in cardiovascular medicine",
-          "year": "2021",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34760940/"
-        },
-        {
-          "pmid": "30961665",
-          "title": "High blood pressure, a red flag for the neonatal manifestation of urea cycle disorders.",
-          "authors": "Teufel U, Burgard P, Meyburg J, et al.",
-          "journal": "Orphanet journal of rare diseases",
-          "year": "2019",
-          "abstract_snippet": "BACKGROUND: Neonatal manifestation of life-threatening hyperammonemic encephalopathy in urea cycle disorders (UCD) is often misdiagnosed as neonatal sepsis, resulting in significantly delayed start of specific treatment and poor outcome. The major aim of this study was to identify specific initial s...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30961665/"
-        }
-      ],
-      "repurposing_papers": [
-        {
-          "pmid": "41588644",
-          "title": "Possible therapeutic repositioning of valproic acid: From epileptic seizures to acute kidney injury.",
-          "authors": "Alves-Bezerra D, Negreiros LB, Pereira-Ac\u00e1cio A, et al.",
-          "journal": "British journal of clinical pharmacology",
-          "year": "2026",
-          "abstract_snippet": "AIMS: Valproic acid is an inhibitor of histone deacetylases (HDACs) and is used for the treatment of epileptic seizures. The drug (sodium valproate) has antihypertensive effects, and HDACs modulate renal Na METHODS: AKI due to ischemia followed by reperfusion (I/R) was induced by clamping of the ren...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41588644/",
-          "total_results": 1
-        }
-      ],
-      "semantic_scholar_papers": [
-        {
-          "title": "Novel Prognostic Predictor for Primary Pulmonary Hypertension: Focus on Blood Urea Nitrogen",
-          "year": 2021,
-          "citations": 15,
-          "url": "https://www.semanticscholar.org/paper/50fc7d856b1e59c371acf009ebd21d56947874c1",
-          "authors": "Bo Hu, Guangtao Xu, Xin Jin"
-        },
-        {
-          "title": "Homocysteine level is positively and independently associated with serum creatinine and urea nitrogen levels in old male patients with hypertension",
-          "year": 2020,
-          "citations": 24,
-          "url": "https://www.semanticscholar.org/paper/3167ab5ad656062afe1bbd27f4c66186b2604645",
-          "authors": "Qianhong Yang, Youwei Lu, Yanhua Deng"
-        },
-        {
-          "title": "Metabolic reprogramming of the urea cycle pathway in experimental pulmonary arterial hypertension rats induced by monocrotaline",
-          "year": 2018,
-          "citations": 40,
-          "url": "https://www.semanticscholar.org/paper/26eba4aef57b48d88e5a7ac225cad29cacc7dfe7",
-          "authors": "Haikuo Zheng, Jun-Han Zhao, Yi Yan"
-        },
-        {
-          "title": "Polymorphisms in urea cycle enzyme genes are associated with persistent pulmonary hypertension of the newborn",
-          "year": 2018,
-          "citations": 27,
-          "url": "https://www.semanticscholar.org/paper/16874b7b2b760a93b677405f98e1920d34bca579",
-          "authors": "D. Kaluarachchi, Caitlin J. Smith, J. Klein"
-        },
-        {
-          "title": "Assessment and Correlation of Urea and Creatinine Levels in Saliva and Serum of Patients with Chronic Kidney Disease, Diabetes and Hypertension- A Research Study.",
-          "year": 2016,
-          "citations": 154,
-          "url": "https://www.semanticscholar.org/paper/a193963f886cad0c57159d1016f0c4cf7af5fcd3",
-          "authors": "D. Pandya, Anil Kumar Nagrajappa, K. Ravi"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Assessment and Correlation of Urea and Creatinine Levels in Saliva and Serum of Patients with Chronic Kidney Disease, Diabetes and Hypertension- A Research Study.",
-        "year": 2016,
-        "citations": 154,
-        "url": "https://www.semanticscholar.org/paper/a193963f886cad0c57159d1016f0c4cf7af5fcd3",
-        "authors": "D. Pandya, Anil Kumar Nagrajappa, K. Ravi"
-      },
-      "max_citations": 154,
-      "faers_signal": "strong",
-      "faers_total_reports": 3034,
-      "faers_cooccurrences": 148,
-      "faers_interpretation": "148 FAERS reports mention both Urea and Hypertension-related terms (4.9% of all Urea reports). This suggests real-world clinical association.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "A-1065 (1.445)",
-        "everolimus (1.434)",
-        "1391-0741 (1.429)",
-        "S1452 (1.414)",
-        "MLS-0226420 (1.412)"
-      ],
-      "signature_interpretation": "Urea was not found among the top 35 drugs that reverse the Hypertension gene signature. Top reversers: A-1065 (1.445), everolimus (1.434), 1391-0741 (1.429)",
-      "ai_hypothesis": "of its ability to increase the excretion of urea.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "Phase 2",
-      "failed_trial_count": 2,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.8129,
-      "mr_genetic_targets": 6,
-      "mechanistic_hypothesis": "Urea \u2014[is a therapeutic for]\u2192 Hypertension",
-      "kg_paths_text": "\u2022 Urea \u2014[is a therapeutic for]\u2192 Hypertension\n\u2022 Urea \u2014[is a therapeutic for]\u2192 MESH:D058186 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Hypertension\n\u2022 Urea \u2014[is a therapeutic for]\u2192 MESH:D058186 \u2014[is treated by]\u2192 DB00678 \u2014[treats]\u2192 Hypertension",
-      "validation_experiments": [],
-      "novelty_score": 0.067,
-      "novelty_level": "ESTABLISHED",
-      "is_known_treatment": true,
-      "clinical_trials_total": 10,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT02145611",
-          "title": "Vildagliptin vs. Glibenclamide in Endothelial Function in Type 2 Diabetes and Hypertension",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "50",
-          "url": "https://clinicaltrials.gov/study/NCT02145611"
-        },
-        {
-          "nct_id": "NCT00452218",
-          "title": "Sorafenib Study: Dosing in Patients With Pulmonary Arterial Hypertension (PAH)",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "12",
-          "url": "https://clinicaltrials.gov/study/NCT00452218"
-        },
-        {
-          "nct_id": "NCT00847899",
-          "title": "Evaluation of Soluble Epoxide Hydrolase (s-EH) Inhibitor in Patients With Mild to Moderate Hypertension and Impaired Glucose Tolerance",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "150",
-          "url": "https://clinicaltrials.gov/study/NCT00847899"
-        },
-        {
-          "nct_id": "NCT03089333",
-          "title": "Effects of SGLT2 Inhibitor on Hemodynamic Parameters in Resistant Hypertensive Subjects",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "16",
-          "url": "https://clinicaltrials.gov/study/NCT03089333"
-        },
-        {
-          "nct_id": "NCT00696982",
-          "title": "The Effect of Sitagliptin on Hypertension, Arterial Stiffness, Oxidative Stress and Inflammation",
-          "status": "UNKNOWN",
-          "phase": "NA",
-          "enrollment": "60",
-          "url": "https://clinicaltrials.gov/study/NCT00696982"
-        }
-      ],
-      "trial_phases": {
-        "PHASE4": 3,
-        "PHASE1": 1,
-        "PHASE2": 2,
-        "NA": 2
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "10 clinical trial(s) found on ClinicalTrials.gov",
-        "4355 PubMed articles on this drug-disease pair",
-        "1 article(s) specifically mention repurposing/repositioning",
-        "Supported by 4 independent AI pillars",
-        "Strong FAERS signal: 148 adverse event reports link drug to disease (3034 total reports)",
-        "Highly cited paper (154 citations): \"Assessment and Correlation of Urea and Creatinine Levels in ...\"",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.81, 6 genetic targets)",
-        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 0,
-        "has_warnings": false,
-        "top_interactions": []
-      },
-      "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
-        "pharmgkb": []
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.397,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.562,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 1.0
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Artery - Aorta",
-          "Artery - Tibial",
-          "Kidney - Cortex"
-        ],
-        "n_genes": 13,
-        "n_expressed": 7,
-        "mean_tpm_in_tissue": 131.11,
-        "max_tpm_in_tissue": 1545.2,
-        "tissue_specificity": 0.744,
-        "context_modifier": 1.119
-      },
       "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
+        "kcal_per_mol": -8.47,
+        "target_symbol": "ADRB1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
       },
-      "disease_entity": "Disease::MESH:D006973",
-      "ensemble_prob": 0.0018,
-      "ensemble_features": {
-        "kg_score": 0.8524,
-        "degree_penalty": 0.916,
-        "n_drug_targets": 1,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 7.3512
-      },
-      "ensemble_rank": 9,
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -3438,8 +3440,8 @@
       "admet_score": 0.6804,
       "admet_flags": "clean",
       "primekg_score": 0.2689,
-      "dti_score": 0.1651,
-      "dti_best_target": "XDH",
+      "dti_score": 0.2636,
+      "dti_best_target": "ADRB1",
       "kg_group_score": 0.1071,
       "structural_group_score": 0.9798,
       "network_group_score": 0.6101999878883362,
@@ -3600,28 +3602,20 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT04835233",
-          "title": "Management of Hypertension in the Early Postpartum: a Randomized Controlled Trial",
+          "nct_id": "NCT00117546",
+          "title": "Cardiovascular and Autonomic Reactivity in Women With a History of Pre-eclampsia",
+          "status": "UNKNOWN",
+          "phase": "PHASE4",
+          "enrollment": "35",
+          "url": "https://clinicaltrials.gov/study/NCT00117546"
+        },
+        {
+          "nct_id": "NCT06618521",
+          "title": "Effect of Pilates Exercise Versus Circuit Exercise Training on Gestational Hypertension",
           "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "180",
-          "url": "https://clinicaltrials.gov/study/NCT04835233"
-        },
-        {
-          "nct_id": "NCT07044232",
-          "title": "NICardipine for Fast Achievement of Systolic BP Targets in ICH",
-          "status": "NOT_YET_RECRUITING",
-          "phase": "PHASE4",
-          "enrollment": "88",
-          "url": "https://clinicaltrials.gov/study/NCT07044232"
-        },
-        {
-          "nct_id": "NCT00329511",
-          "title": "A Comparison of Compliance Between Clonidine Patch and Methyldopa for the Treatment of Chronic Hypertension in Pregnancy",
-          "status": "WITHDRAWN",
           "phase": "NA",
-          "enrollment": "0",
-          "url": "https://clinicaltrials.gov/study/NCT00329511"
+          "enrollment": "69",
+          "url": "https://clinicaltrials.gov/study/NCT06618521"
         },
         {
           "nct_id": "NCT00223717",
@@ -3638,12 +3632,21 @@
           "phase": "NA",
           "enrollment": "52",
           "url": "https://clinicaltrials.gov/study/NCT00684489"
+        },
+        {
+          "nct_id": "NCT04835233",
+          "title": "Management of Hypertension in the Early Postpartum: a Randomized Controlled Trial",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "180",
+          "url": "https://clinicaltrials.gov/study/NCT04835233"
         }
       ],
       "trial_phases": {
-        "PHASE4": 4,
-        "NA": 4,
-        "PHASE1": 1
+        "PHASE4": 3,
+        "NA": 2,
+        "PHASE1": 2,
+        "PHASE2": 2
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -3656,6 +3659,7 @@
         "Strong causal genetic evidence (MR score: 0.76, 2 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D006973",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3758,15 +3762,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.969
       },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D006973",
-      "ensemble_prob": 0.2779,
+      "ensemble_prob": 0.3231,
       "ensemble_features": {
         "kg_score": 0.991,
         "degree_penalty": 0.7743,
@@ -3775,7 +3771,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 4.5643
       },
-      "ensemble_rank": 5,
+      "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -3789,12 +3792,12 @@
       }
     }
   ],
+  "disease_entity": "Disease::MESH:D006973",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
     "n_disease_genes": 514,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
-  },
-  "disease_entity": "Disease::MESH:D006973",
-  "ensemble_version": "v5",
-  "ensemble_model_path": "data/models/ensemble_v5.pkl"
+  }
 }

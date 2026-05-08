@@ -1,8 +1,8 @@
 {
   "disease": "Cystic fibrosis",
   "status": "completed",
-  "timestamp": "2026-04-19T18:19:35.872259",
-  "elapsed_seconds": 1053.6,
+  "timestamp": "2026-05-07T23:00:08.567872",
+  "elapsed_seconds": 209.2,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -168,6 +168,7 @@
         "Supporting paper with 72 citations",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D003550",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -229,15 +230,7 @@
         "tissue_specificity": 0.49,
         "context_modifier": 1.089
       },
-      "disease_entity": "Disease::MESH:D003550",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.0003,
+      "ensemble_prob": 0.0005,
       "ensemble_features": {
         "kg_score": 0.8283,
         "degree_penalty": 1.0,
@@ -247,6 +240,13 @@
         "transe_rank_log": 7.5022
       },
       "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -262,7 +262,7 @@
       "drug_name": "Dexamethasone",
       "drug_id": "DB01234",
       "disease_name": "Cystic fibrosis",
-      "combined_score": 0.5458,
+      "combined_score": 0.5347,
       "pillars_hit": 4,
       "transe_rank": 13,
       "transe_score": -10.0667,
@@ -281,15 +281,15 @@
       "admet_score": 0.7109,
       "admet_flags": "clean",
       "primekg_score": 0.2574,
-      "dti_score": 0.859,
-      "dti_best_target": "AGER",
+      "dti_score": 0.7933,
+      "dti_best_target": "TLR4",
       "kg_group_score": 0.4242,
-      "structural_group_score": 0.859,
+      "structural_group_score": 0.7933,
       "network_group_score": 0.47839999198913574,
       "txgnn_group_score": 0,
       "mr_group_score": 0.8196,
       "admet_multiplier": 0.9422,
-      "efficacy_score": 0.5793,
+      "efficacy_score": 0.5675,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 34,
@@ -464,7 +464,7 @@
       "mechanistic_hypothesis": "Dexamethasone \u2014[is a therapeutic for]\u2192 Cystic fibrosis",
       "kg_paths_text": "\u2022 Dexamethasone \u2014[is a therapeutic for]\u2192 Cystic fibrosis\n\u2022 Dexamethasone \u2014[affects]\u2192 gene-5328 \u2014[is a target of]\u2192 DB00594 \u2014[is a therapeutic for]\u2192 Cystic fibrosis\n\u2022 Dexamethasone \u2014[affects]\u2192 gene-5328 \u2014[is a target of]\u2192 DB00594 \u2014[is a therapeutic for]\u2192 Cystic fibrosis",
       "validation_experiments": [],
-      "novelty_score": 0.426,
+      "novelty_score": 0.417,
       "novelty_level": "KNOWN",
       "is_known_treatment": true,
       "clinical_trials_total": 0,
@@ -478,8 +478,10 @@
         "Moderate FAERS signal: 35 adverse event reports mention drug-disease co-occurrence",
         "Supporting paper with 72 citations",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.82, 5 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.82, 5 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D003550",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -596,10 +598,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.681,
+        "triangulation_score": 0.677,
         "label": "silver-standard",
         "axis_values": {
-          "kg": 0.546,
+          "kg": 0.535,
           "docking": 0.97,
           "pharos": 0.0,
           "literature": 0.993
@@ -617,15 +619,7 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.15
       },
-      "disease_entity": "Disease::MESH:D003550",
-      "docking": {
-        "kcal_per_mol": -11.64,
-        "target_symbol": "NR3C1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.9754,
+      "ensemble_prob": 0.9937,
       "ensemble_features": {
         "kg_score": 0.9996,
         "degree_penalty": 0.736,
@@ -635,6 +629,13 @@
         "transe_rank_log": 1.6094
       },
       "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": -11.64,
+        "target_symbol": "NR3C1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -666,7 +667,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2552,
       "dti_score": 1.0,
-      "dti_best_target": "CHI3L1",
+      "dti_best_target": "NFE2L2",
       "kg_group_score": 0.3021,
       "structural_group_score": 1.0,
       "network_group_score": 0.46709999442100525,
@@ -848,8 +849,10 @@
         "Moderate FAERS signal: 25 adverse event reports mention drug-disease co-occurrence",
         "Supporting paper with 72 citations",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.60)"
+        "Moderate genetic evidence supporting causality (MR score: 0.60)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D003550",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -959,15 +962,7 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.15
       },
-      "disease_entity": "Disease::MESH:D003550",
-      "docking": {
-        "kcal_per_mol": -8.14,
-        "target_symbol": "PGR",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.8999,
+      "ensemble_prob": 0.8294,
       "ensemble_features": {
         "kg_score": 0.9983,
         "degree_penalty": 0.7473,
@@ -976,7 +971,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.9444
       },
-      "ensemble_rank": 3,
+      "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": -8.14,
+        "target_symbol": "PGR",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1189,6 +1191,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.59)"
       ],
+      "disease_entity": "Disease::MESH:D003550",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -1290,15 +1293,7 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.15
       },
-      "disease_entity": "Disease::MESH:D003550",
-      "docking": {
-        "kcal_per_mol": -10.54,
-        "target_symbol": "NR3C1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.9994,
+      "ensemble_prob": 0.999,
       "ensemble_features": {
         "kg_score": 1.0,
         "degree_penalty": 0.7532,
@@ -1308,6 +1303,13 @@
         "transe_rank_log": 0.0
       },
       "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": -10.54,
+        "target_symbol": "NR3C1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1339,7 +1341,7 @@
       "admet_flags": "hERG=0.80",
       "primekg_score": 0.262,
       "dti_score": 1.0,
-      "dti_best_target": "CHI3L1",
+      "dti_best_target": "NFE2L2",
       "kg_group_score": 0.1824,
       "structural_group_score": 1.0,
       "network_group_score": 0.5414999723434448,
@@ -1510,6 +1512,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.82, 2 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D003550",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1611,15 +1614,7 @@
         "tissue_specificity": 0.652,
         "context_modifier": 1.089
       },
-      "disease_entity": "Disease::MESH:D003550",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.0608,
+      "ensemble_prob": 0.0768,
       "ensemble_features": {
         "kg_score": 0.9627,
         "degree_penalty": 0.8022,
@@ -1629,6 +1624,13 @@
         "transe_rank_log": 5.9789
       },
       "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -1666,7 +1668,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2595,
       "dti_score": 1.0,
-      "dti_best_target": "CHI3L1",
+      "dti_best_target": "NFE2L2",
       "kg_group_score": 0.1203,
       "structural_group_score": 1.0,
       "network_group_score": 0.4799000024795532,
@@ -1888,6 +1890,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.77, 4 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D003550",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1997,15 +2000,7 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.15
       },
-      "disease_entity": "Disease::MESH:D003550",
-      "docking": {
-        "kcal_per_mol": -11.55,
-        "target_symbol": "PGR",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.8623,
+      "ensemble_prob": 0.8174,
       "ensemble_features": {
         "kg_score": 0.9978,
         "degree_penalty": 0.7522,
@@ -2014,7 +2009,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 3.1781
       },
-      "ensemble_rank": 4,
+      "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": -11.55,
+        "target_symbol": "PGR",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2045,8 +2047,8 @@
       "admet_score": 0.9582,
       "admet_flags": "clean",
       "primekg_score": 0.2489,
-      "dti_score": 0.4879,
-      "dti_best_target": "AGER",
+      "dti_score": 0.4714,
+      "dti_best_target": "ENPP3",
       "kg_group_score": 0.0897,
       "structural_group_score": 0.956,
       "network_group_score": 0.4934000074863434,
@@ -2264,6 +2266,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.69)"
       ],
+      "disease_entity": "Disease::MESH:D003550",
       "dose_plausibility": {
         "plausibility": "unknown",
         "dose_range": "research",
@@ -2365,15 +2368,7 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.15
       },
-      "disease_entity": "Disease::MESH:D003550",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.0547,
+      "ensemble_prob": 0.0416,
       "ensemble_features": {
         "kg_score": 0.9628,
         "degree_penalty": 0.7895,
@@ -2383,6 +2378,13 @@
         "transe_rank_log": 5.9738
       },
       "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -2419,8 +2421,8 @@
       "admet_score": 0.7058,
       "admet_flags": "clean",
       "primekg_score": 0.2558,
-      "dti_score": 0.5488,
-      "dti_best_target": "AGER",
+      "dti_score": 0.455,
+      "dti_best_target": "TLR4",
       "kg_group_score": 0.3375,
       "structural_group_score": 0.7273,
       "network_group_score": 0.5278000235557556,
@@ -2606,6 +2608,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.59)"
       ],
+      "disease_entity": "Disease::MESH:D003550",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2707,15 +2710,7 @@
         "tissue_specificity": 0.557,
         "context_modifier": 1.081
       },
-      "disease_entity": "Disease::MESH:D003550",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.8477,
+      "ensemble_prob": 0.9797,
       "ensemble_features": {
         "kg_score": 0.9986,
         "degree_penalty": 0.7973,
@@ -2724,7 +2719,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.7726
       },
-      "ensemble_rank": 5,
+      "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -2762,7 +2764,7 @@
       "admet_flags": "DILI=0.86",
       "primekg_score": 0.253,
       "dti_score": 1.0,
-      "dti_best_target": "CHI3L1",
+      "dti_best_target": "NFE2L2",
       "kg_group_score": 0.1744,
       "structural_group_score": 1.0,
       "network_group_score": 0.5069000124931335,
@@ -2946,6 +2948,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.61)"
       ],
+      "disease_entity": "Disease::MESH:D003550",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3083,15 +3086,7 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.15
       },
-      "disease_entity": "Disease::MESH:D003550",
-      "docking": {
-        "kcal_per_mol": -6.18,
-        "target_symbol": "PPARA",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.4644,
+      "ensemble_prob": 0.4198,
       "ensemble_features": {
         "kg_score": 0.992,
         "degree_penalty": 0.7657,
@@ -3100,7 +3095,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 4.4427
       },
-      "ensemble_rank": 7,
+      "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": -6.18,
+        "target_symbol": "PPARA",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -3132,7 +3134,7 @@
       "admet_flags": "DILI=0.96",
       "primekg_score": 0.2594,
       "dti_score": 1.0,
-      "dti_best_target": "CHI3L1",
+      "dti_best_target": "NFE2L2",
       "kg_group_score": 0.1753,
       "structural_group_score": 1.0,
       "network_group_score": 0.4659000039100647,
@@ -3302,6 +3304,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.61)"
       ],
+      "disease_entity": "Disease::MESH:D003550",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3403,15 +3406,7 @@
         "tissue_specificity": 0.166,
         "context_modifier": 0.926
       },
-      "disease_entity": "Disease::MESH:D003550",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.5056,
+      "ensemble_prob": 0.3231,
       "ensemble_features": {
         "kg_score": 0.9904,
         "degree_penalty": 0.7764,
@@ -3420,7 +3415,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 4.625
       },
-      "ensemble_rank": 6,
+      "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -3434,11 +3436,11 @@
     }
   ],
   "disease_entity": "Disease::MESH:D003550",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
     "n_disease_genes": 178,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
-  },
-  "ensemble_version": "v5",
-  "ensemble_model_path": "data/models/ensemble_v5.pkl"
+  }
 }

@@ -1,54 +1,62 @@
 {
   "disease": "Ehlers-Danlos syndrome",
   "status": "completed",
-  "timestamp": "2026-04-19T15:52:25.879045",
-  "elapsed_seconds": 1304.4,
-  "total_searched": 50,
-  "evidence_generated": 10,
+  "timestamp": "2026-05-07T18:12:39.874605",
+  "elapsed_seconds": 251.4,
+  "total_searched": 3,
+  "evidence_generated": 3,
   "confidence_counts": {
-    "MEDIUM": 6,
-    "HIGH": 3,
-    "LOW": 1
+    "LOW": 1,
+    "MEDIUM": 1,
+    "HIGH": 1
   },
   "pipeline_version": "v5",
   "data_manifest_hash": "2da2aa88f2457d1b",
   "candidates": [
     {
-      "drug_name": "Liotrix",
-      "drug_id": "DB01583",
+      "drug_name": "Tetracaine",
+      "drug_id": "DB09085",
       "disease_name": "Ehlers-Danlos syndrome",
-      "combined_score": 0.4480000138282776,
-      "pillars_hit": 4,
-      "transe_rank": 76,
-      "transe_score": -12.7969,
+      "combined_score": 0.1907,
+      "pillars_hit": 2,
+      "transe_rank": 2877,
+      "transe_score": -14.4871,
       "pykeen_score": 0,
       "pykeen_rank": 0,
       "txgnn_score": 0,
       "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
+      "mol_similarity": 0.2143,
+      "similar_to": "Celiprolol",
       "mol_emb_similarity": 0,
       "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.25,
-      "proximity_distance": 3.0,
-      "admet_score": 1.0,
-      "admet_flags": "DILI=0.96",
-      "primekg_score": 0.249,
-      "dti_score": 0.9511,
-      "dti_best_target": "COL1A1",
-      "kg_group_score": 0.1348,
-      "structural_group_score": 0.9511,
-      "network_group_score": 0.20239999890327454,
+      "gene_sig_score": 0.1452,
+      "gene_sig_rank": 6,
+      "proximity_score": 0,
+      "proximity_distance": 0,
+      "admet_score": 0.634,
+      "admet_flags": "hERG=0.76",
+      "primekg_score": 0,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": -13.7627,
+      "structural_group_score": 0.2143,
+      "network_group_score": 0.836,
       "txgnn_group_score": 0,
-      "mr_group_score": 0.6839,
-      "admet_multiplier": 1.0,
-      "efficacy_score": 0.4480000138282776,
-      "groups_hit": 4,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9268,
+      "efficacy_score": 0.2058,
+      "groups_hit": 2,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
+      "shared_target_count": 7,
+      "shared_targets": [
+        "SCN1A",
+        "SCN2A",
+        "SCN3A",
+        "SCN5A",
+        "SCN7A",
+        "SCN8A",
+        "SCN9A"
+      ],
       "pubmed_total": 0,
       "pubmed_treatment_total": 0,
       "pubmed_repurposing_total": 0,
@@ -65,14 +73,14 @@
         {
           "title": "Diagnosis and management of vascular Ehlers-Danlos syndrome: Experience of the UK national diagnostic service, Sheffield",
           "year": 2023,
-          "citations": 44,
+          "citations": 46,
           "url": "https://www.semanticscholar.org/paper/b0af1981bdc39638171780f3cbd8affa7f0d4fb2",
           "authors": "J. Bowen, Monica Hernandez, Diana S. Johnson"
         },
         {
           "title": "Comorbidity, misdiagnoses, and the diagnostic odyssey in patients with hypermobile Ehlers-Danlos syndrome",
           "year": 2023,
-          "citations": 35,
+          "citations": 36,
           "url": "https://www.semanticscholar.org/paper/0600db8702be60d16933902348aecd5e4b93a4db",
           "authors": "C. Halverson, Shan Cao, Susan M. Perkins"
         },
@@ -84,11 +92,11 @@
           "authors": "Mackenzie Garreth Brittain, Sarah C. Flanagan, Lindsey N. Foreman"
         },
         {
-          "title": "Characterization of bleeding symptoms in Ehlers-Danlos syndrome.",
+          "title": "COL1A1 and COL1A2 variants in Ehlers\u2010Danlos syndrome phenotypes and COL1\u2010related overlap disorder",
           "year": 2023,
-          "citations": 18,
-          "url": "https://www.semanticscholar.org/paper/98bcc067f0e2aced33a6fed8bbfaf3e4dc48aa0a",
-          "authors": "Mariia Kumskova, G. Flora, J. Staber"
+          "citations": 13,
+          "url": "https://www.semanticscholar.org/paper/c5b8400769d7827e5c926a2b44096f3dcf4ade7a",
+          "authors": "Elise R Venable, Dacre R T Knight, Emily Thoreson"
         }
       ],
       "most_cited_paper": {
@@ -100,9 +108,9 @@
       },
       "max_citations": 306,
       "faers_signal": "none",
-      "faers_total_reports": 14,
+      "faers_total_reports": 910,
       "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Liotrix to Ehlers-Danlos syndrome terms. Drug has 14 total reports.",
+      "faers_interpretation": "No FAERS reports found linking Tetracaine to Ehlers-Danlos syndrome terms. Drug has 910 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -112,1318 +120,91 @@
         "PHA-665752 (1.518)",
         "dasatinib (1.506)"
       ],
-      "signature_interpretation": "Liotrix was not found among the top 40 drugs that reverse the Ehlers-Danlos syndrome gene signature. Top reversers: BI-2536 (1.562), Chemistry 2804 (1.548), tanespimycin (1.529)",
-      "ai_hypothesis": "it is a safe and well-tolerated treatment.",
+      "signature_interpretation": "Tetracaine was not found among the top 40 drugs that reverse the Ehlers-Danlos syndrome gene signature. Top reversers: BI-2536 (1.562), Chemistry 2804 (1.548), tanespimycin (1.529)",
+      "ai_hypothesis": "",
       "abstract_analyses": [],
       "has_failed_trial": false,
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.6839,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "Liotrix \u2014[is metabolized by]\u2192 gene-1576 \u2014[is is related to by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome",
-      "kg_paths_text": "\u2022 Liotrix \u2014[is metabolized by]\u2192 gene-1576 \u2014[is is related to by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome",
-      "validation_experiments": [],
-      "novelty_score": 0.48399999737739563,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "MEDIUM",
-      "confidence_reasons": [
-        "Supported by 4 independent AI pillars",
-        "Highly cited paper (306 citations): \"Ehlers-Danlos Syndrome...\"",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.68)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 643,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00783",
-            "drug_name": "Estradiol",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00227",
-            "drug_name": "Lovastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00331",
-            "drug_name": "Metformin",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
-        "pharmgkb": []
-      },
-      "triangulation": {
-        "n_axes_agree": 1,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": false
-        },
-        "triangulation_score": 0.15700000524520874,
-        "label": "kg-only",
-        "axis_values": {
-          "kg": 0.4480000138282776,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.0
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Skin - Not Sun Exposed (Suprapubic)"
-        ],
-        "n_genes": 28,
-        "n_expressed": 17,
-        "mean_tpm_in_tissue": 26.97,
-        "max_tpm_in_tissue": 180.27,
-        "tissue_specificity": 0.265,
-        "context_modifier": 1.012
-      },
-      "disease_entity": "Disease::MESH:D004535",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.955,
-      "ensemble_features": {
-        "kg_score": 0.9982,
-        "degree_penalty": 0.8096,
-        "n_drug_targets": 0,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 2.9957
-      },
-      "ensemble_rank": 2,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [
-          "GTE",
-          "IODINE"
-        ],
-        "n_alerts": 3,
-        "alert_names": [
-          "iodine",
-          "gte_3_iodine",
-          "gte_7_total_hal"
-        ]
-      }
-    },
-    {
-      "drug_name": "Carvedilol",
-      "drug_id": "DB01136",
-      "disease_name": "Ehlers-Danlos syndrome",
-      "combined_score": 0.4350000023841858,
-      "pillars_hit": 4,
-      "transe_rank": 22,
-      "transe_score": -12.488,
-      "pykeen_score": -13.3099,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0.2308,
-      "similar_to": "Celiprolol",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.30000001192092896,
-      "proximity_distance": 2.799999952316284,
-      "admet_score": 0.2901,
-      "admet_flags": "hERG=0.98",
-      "primekg_score": 0.2518,
-      "dti_score": 1.0,
-      "dti_best_target": "B3GALT6",
-      "kg_group_score": 0.3158,
-      "structural_group_score": 1.0,
-      "network_group_score": 0.22750000655651093,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.6839,
-      "admet_multiplier": 0.858,
-      "efficacy_score": 0.5070000290870667,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 1,
-      "pubmed_treatment_total": 1,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "35257704",
-          "title": "Photodegradation of 5-flurouracil, carvedilol, para-chlorophenol and methimazole with 3D MnWO",
-          "authors": "Balasurya S, Okla MK, Alaraidh IA, et al.",
-          "journal": "Chemosphere",
-          "year": "2022",
-          "abstract_snippet": "The present study focused on the photocatalytic degradation of 5-Flurouracil (FU), carvedilol (Car), para-chlorophenol (PCP) and methimazole (Met) under visible light irradiation by MnWO",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35257704/",
-          "total_results": 1
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Ehlers-Danlos Syndrome",
-          "year": 2022,
-          "citations": 306,
-          "url": "https://www.semanticscholar.org/paper/8d3bec221fded6c217d759cab17ce9a4bd9e702a",
-          "authors": "Larry W. Moreland"
-        },
-        {
-          "title": "Comorbidity, misdiagnoses, and the diagnostic odyssey in patients with hypermobile Ehlers-Danlos syndrome",
-          "year": 2023,
-          "citations": 35,
-          "url": "https://www.semanticscholar.org/paper/0600db8702be60d16933902348aecd5e4b93a4db",
-          "authors": "C. Halverson, Shan Cao, Susan M. Perkins"
-        },
-        {
-          "title": "Diagnosis and management of vascular Ehlers-Danlos syndrome: Experience of the UK national diagnostic service, Sheffield",
-          "year": 2023,
-          "citations": 44,
-          "url": "https://www.semanticscholar.org/paper/b0af1981bdc39638171780f3cbd8affa7f0d4fb2",
-          "authors": "J. Bowen, Monica Hernandez, Diana S. Johnson"
-        },
-        {
-          "title": "Physical therapy interventions in generalized hypermobility spectrum disorder and hypermobile Ehlers-Danlos syndrome: a scoping review",
-          "year": 2023,
-          "citations": 16,
-          "url": "https://www.semanticscholar.org/paper/364ed492ea7ba153f3d2d6f89783556c23ae437e",
-          "authors": "Mackenzie Garreth Brittain, Sarah C. Flanagan, Lindsey N. Foreman"
-        },
-        {
-          "title": "COL1A1 and COL1A2 variants in Ehlers\u2010Danlos syndrome phenotypes and COL1\u2010related overlap disorder",
-          "year": 2023,
-          "citations": 13,
-          "url": "https://www.semanticscholar.org/paper/c5b8400769d7827e5c926a2b44096f3dcf4ade7a",
-          "authors": "Elise R Venable, Dacre R T Knight, Emily Thoreson"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Ehlers-Danlos Syndrome",
-        "year": 2022,
-        "citations": 306,
-        "url": "https://www.semanticscholar.org/paper/8d3bec221fded6c217d759cab17ce9a4bd9e702a",
-        "authors": "Larry W. Moreland"
-      },
-      "max_citations": 306,
-      "faers_signal": "none",
-      "faers_total_reports": 99131,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Carvedilol to Ehlers-Danlos syndrome terms. Drug has 99131 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "BI-2536 (1.562)",
-        "Chemistry 2804 (1.548)",
-        "tanespimycin (1.529)",
-        "PHA-665752 (1.518)",
-        "dasatinib (1.506)"
-      ],
-      "signature_interpretation": "Carvedilol was not found among the top 40 drugs that reverse the Ehlers-Danlos syndrome gene signature. Top reversers: BI-2536 (1.562), Chemistry 2804 (1.548), tanespimycin (1.529)",
-      "ai_hypothesis": "of its anti-inflammatory and anti-fibrotic properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.6839,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "Carvedilol \u2014[treats]\u2192 MESH:D006333 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome",
-      "kg_paths_text": "\u2022 Carvedilol \u2014[treats]\u2192 MESH:D006333 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome\n\u2022 Carvedilol \u2014[treats]\u2192 MESH:D006973 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome\n\u2022 Carvedilol \u2014[is antagonized by]\u2192 gene-155 \u2014[is a target of]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome",
-      "validation_experiments": [],
-      "novelty_score": 0.4440000057220459,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "MEDIUM",
-      "confidence_reasons": [
-        "1 PubMed article(s) - limited literature",
-        "Supported by 4 independent AI pillars",
-        "Highly cited paper (306 citations): \"Ehlers-Danlos Syndrome...\"",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.68)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1744,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00783",
-            "drug_name": "Estradiol",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "moderate",
-        "summary": "CPIC-C (GRK5) \u2022 PharmGKB-3 (ADRB1 / rs1801252)",
-        "cpic": [
-          {
-            "gene": "GRK5",
-            "level": "C",
-            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
-          },
-          {
-            "gene": "ADRB2",
-            "level": "C",
-            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
-          },
-          {
-            "gene": "ADRB1",
-            "level": "C",
-            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
-          },
-          {
-            "gene": "CYP2D6",
-            "level": "C",
-            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
-          },
-          {
-            "gene": "ADRA2C",
-            "level": "C",
-            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
-          }
-        ],
-        "pharmgkb": [
-          {
-            "gene": "ADRB1",
-            "variant": "rs1801252",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451397981"
-          },
-          {
-            "gene": "ADRB1",
-            "variant": "rs1801253",
-            "level": "3",
-            "phenotype_category": "Dosage",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451398000"
-          },
-          {
-            "gene": "UGT1A1",
-            "variant": "rs4148323",
-            "level": "3",
-            "phenotype_category": "Other",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183698813"
-          },
-          {
-            "gene": "CYP2D6",
-            "variant": "CYP2D6*1, CYP2D6*2, CYP2D6*3, CYP2D6*4, CYP2D6*5, CYP2D6*6, CYP2D6*10",
-            "level": "3",
-            "phenotype_category": "Metabolism/PK",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183615480"
-          },
-          {
-            "gene": "ADRB2",
-            "variant": "rs1042714",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/613979021"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 1,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": false
-        },
-        "triangulation_score": 0.17800000309944153,
-        "label": "kg-only",
-        "axis_values": {
-          "kg": 0.4350000023841858,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.131
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Skin - Not Sun Exposed (Suprapubic)"
-        ],
-        "n_genes": 28,
-        "n_expressed": 17,
-        "mean_tpm_in_tissue": 26.97,
-        "max_tpm_in_tissue": 180.27,
-        "tissue_specificity": 0.265,
-        "context_modifier": 1.012
-      },
-      "disease_entity": "Disease::MESH:D004535",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.9949,
-      "ensemble_features": {
-        "kg_score": 0.9998,
-        "degree_penalty": 0.7583,
-        "n_drug_targets": 39,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 1.0986
-      },
-      "ensemble_rank": 1,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [
-          "ALIPHATIC"
-        ],
-        "n_alerts": 1,
-        "alert_names": [
-          "Aliphatic_long_chain"
-        ]
-      }
-    },
-    {
-      "drug_name": "Vitamin C",
-      "drug_id": "DB00126",
-      "disease_name": "Ehlers-Danlos syndrome",
-      "combined_score": 0.415,
-      "pillars_hit": 4,
-      "transe_rank": 3,
-      "transe_score": -11.9231,
-      "pykeen_score": 0,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.3370000123977661,
-      "proximity_distance": 2.6500000953674316,
-      "admet_score": 0.6936,
-      "admet_flags": "clean",
-      "primekg_score": 0.2487,
-      "dti_score": 0.3848,
-      "dti_best_target": "B3GALT6",
-      "kg_group_score": 0.3709,
-      "structural_group_score": 0.3848,
-      "network_group_score": 0.27230000495910645,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.8374,
-      "admet_multiplier": 0.9387,
-      "efficacy_score": 0.4421,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 1,
-      "shared_targets": [
-        "PLOD1"
-      ],
-      "pubmed_total": 26,
-      "pubmed_treatment_total": 17,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "39311717",
-          "title": "Low vitamin C status and hypermobility-related disorders in patients with bleeding disorder of unknown cause.",
-          "authors": "Lein\u00f8e E, Fridriksdottir H, Rasmussen A\u00d8, et al.",
-          "journal": "Haemophilia : the official journal of the World Federation of Hemophilia",
-          "year": "2024",
-          "abstract_snippet": "INTRODUCTION: Bleeding disorder of unknown cause (BDUC) is a challenging diagnosis that predominantly affects women. Previous investigations into connective tissue disorders (CTD) and vitamin C have not been conducted. AIM: To examine the association between hypermobility-related disorders, vitamin ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39311717/",
-          "total_results": 26
-        },
-        {
-          "pmid": "15607555",
-          "title": "A novel therapeutic strategy for Ehlers-Danlos syndrome based on nutritional supplements.",
-          "authors": "Mantle D, Wilkins RM, Preedy V",
-          "journal": "Medical hypotheses",
-          "year": "2005",
-          "abstract_snippet": "Ehlers-Danlos syndrome is a rare disorder, comprising a group of related inherited disorders of connective tissue, resulting from underlying abnormalities in the synthesis and metabolism of collagen. This proposal is specifically concerned with Ehlers-Danlos syndrome classic type (formerly Types I-I...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/15607555/"
-        },
-        {
-          "pmid": "33851936",
-          "title": "Vascular Ehlers-Danlos Syndrome: Treatment of a Complex Abdominal Wound with Vitamin C and Mesenchymal Stromal Cells.",
-          "authors": "Prentice DA, Pearson WA, Fogarty J",
-          "journal": "Advances in skin & wound care",
-          "year": "2021",
-          "abstract_snippet": "Vascular Ehlers-Danlos syndrome (EDSv) can present with life-threatening surgical complications. The article describes the case of a patient with EDSv who developed total abdominal wound dehiscence and multiple enterocutaneous fistulas. Treatment with IV allogeneic mesenchymal stromal cells (MSCs) a...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33851936/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Vascular Ehlers-Danlos Syndrome: Treatment of a Complex Abdominal Wound with Vitamin C and Mesenchymal Stromal Cells",
-          "year": 2021,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/28627ccb1a1172f085e8238d29d05521dc73dc1a",
-          "authors": "D. Prentice, W. Pearson, J. Fogarty"
-        },
-        {
-          "title": "Nutrient intake, dietary patterns and relationship to symptoms and comorbidities in hypermobile Ehlers-Danlos syndrome.",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/39b404beff98e6e3e4e14653ef6868df63873db2",
-          "authors": "Rabia Topan, Shraya Pandya, Paula Chance"
-        },
-        {
-          "title": "Clinical and molecular features of first two-sibling-Cambodian girls with musculocontractural Ehlers-Danlos syndrome",
-          "year": 2024,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/864e70a06922579069f514d59a1cf0c6705684df",
-          "authors": "Chean Soph\u00e2l, Try Lytheang, Arthaporn Khongkraparn"
-        },
-        {
-          "title": "Lasers & topical vitamin C: scars in ehlers-danlos",
-          "year": 2022,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/ff1ff718b0d31accfd752aa3ff15c55dd88f3ef5",
-          "authors": "Gabriella Alvarez, Nathan H Leisenring, Martin Nunez"
-        },
-        {
-          "title": "Multiple fractures in infants who have Ehlers-Danlos/hypermobility syndrome and or vitamin D deficiency: A case series of 72 infants whose parents were accused of child abuse and neglect",
-          "year": 2017,
-          "citations": 45,
-          "url": "https://www.semanticscholar.org/paper/ffe2d4d31299c129fd25c9bc95155ece1889f36a",
-          "authors": "M. Holick, A. Hossein-Nezhad, F. Tabatabaei"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Multiple fractures in infants who have Ehlers-Danlos/hypermobility syndrome and or vitamin D deficiency: A case series of 72 infants whose parents were accused of child abuse and neglect",
-        "year": 2017,
-        "citations": 45,
-        "url": "https://www.semanticscholar.org/paper/ffe2d4d31299c129fd25c9bc95155ece1889f36a",
-        "authors": "M. Holick, A. Hossein-Nezhad, F. Tabatabaei"
-      },
-      "max_citations": 45,
-      "faers_signal": "moderate",
-      "faers_total_reports": 94708,
-      "faers_cooccurrences": 14,
-      "faers_interpretation": "14 FAERS reports mention both Vitamin C and Ehlers-Danlos syndrome-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "BI-2536 (1.562)",
-        "Chemistry 2804 (1.548)",
-        "tanespimycin (1.529)",
-        "PHA-665752 (1.518)",
-        "dasatinib (1.506)"
-      ],
-      "signature_interpretation": "Vitamin C was not found among the top 40 drugs that reverse the Ehlers-Danlos syndrome gene signature. Top reversers: BI-2536 (1.562), Chemistry 2804 (1.548), tanespimycin (1.529)",
-      "ai_hypothesis": "of its antioxidant properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.8374,
-      "mr_genetic_targets": 2,
-      "mechanistic_hypothesis": "Vitamin C \u2014[is a therapeutic for]\u2192 MESH:D006973 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome",
-      "kg_paths_text": "\u2022 Vitamin C \u2014[is a therapeutic for]\u2192 MESH:D006973 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome\n\u2022 Vitamin C \u2014[is a therapeutic for]\u2192 MESH:D006333 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome\n\u2022 Vitamin C \u2014[is a therapeutic for]\u2192 MESH:D003324 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome",
-      "validation_experiments": [],
-      "novelty_score": 0.398,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "26 PubMed articles found",
-        "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 14 adverse event reports mention drug-disease co-occurrence",
-        "Supporting paper with 45 citations",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.84, 2 genetic targets)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 506,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00783",
-            "drug_name": "Estradiol",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "moderate",
-        "summary": "CPIC-C (G6PD)",
-        "cpic": [
-          {
-            "gene": "G6PD",
-            "level": "C",
-            "guideline": "G6PD"
-          }
-        ],
-        "pharmgkb": []
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.27,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.415,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.621
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Skin - Not Sun Exposed (Suprapubic)"
-        ],
-        "n_genes": 1,
-        "n_expressed": 1,
-        "mean_tpm_in_tissue": 37.72,
-        "max_tpm_in_tissue": 37.72,
-        "tissue_specificity": 0.322,
-        "context_modifier": 1.031
-      },
-      "disease_entity": "Disease::MESH:D004535",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.7427,
-      "ensemble_features": {
-        "kg_score": 0.9943,
-        "degree_penalty": 0.808,
-        "n_drug_targets": 6,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 4.1109
-      },
-      "ensemble_rank": 5,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Testosterone",
-      "drug_id": "DB00624",
-      "disease_name": "Ehlers-Danlos syndrome",
-      "combined_score": 0.4140999913215637,
-      "pillars_hit": 4,
-      "transe_rank": 177,
-      "transe_score": -12.9829,
-      "pykeen_score": 0,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.2750000059604645,
-      "proximity_distance": 2.9000000953674316,
-      "admet_score": 0.7521,
-      "admet_flags": "clean",
-      "primekg_score": 0.2494,
-      "dti_score": 0.8769,
-      "dti_best_target": "COL1A1",
-      "kg_group_score": 0.1368,
-      "structural_group_score": 0.8769,
-      "network_group_score": 0.20550000667572021,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.6839,
-      "admet_multiplier": 0.9504,
-      "efficacy_score": 0.435699999332428,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 264,
-      "pubmed_treatment_total": 176,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "37052052",
-          "title": "Hungry runners - low energy availability in male endurance athletes and its impact on performance and testosterone: mini-review.",
-          "authors": "Cupka M, Sedliak M",
-          "journal": "European journal of translational myology",
-          "year": "2023",
-          "abstract_snippet": "Low Energy Availability (LEA) arises from the inability to cover energy needs and requirements of training or normal physiological functions. This value differs from the energy balance, which takes into account the total daily energy intake compared to all the energy expended, regardless of the amou...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37052052/",
-          "total_results": 264
-        },
-        {
-          "pmid": "37505071",
-          "title": "The constructive and destructive impact of autophagy on both genders' reproducibility, a comprehensive review.",
-          "authors": "Samare-Najaf M, Neisy A, Samareh A, et al.",
-          "journal": "Autophagy",
-          "year": "2023",
-          "abstract_snippet": "Reproduction is characterized by a series of massive renovations at molecular, cellular, and tissue levels. Recent studies have strongly tended to reveal the involvement of basic molecular pathways such as autophagy, a highly conserved eukaryotic cellular recycling, during reproductive processes. Th...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37505071/"
-        },
-        {
-          "pmid": "35163140",
-          "title": "Endocrine Disruptors and Prostate Cancer.",
-          "authors": "Corti M, Lorenzetti S, Ubaldi A, et al.",
-          "journal": "International journal of molecular sciences",
-          "year": "2022",
-          "abstract_snippet": "The role of endocrine disruptors (EDs) in the human prostate gland is an overlooked issue even though the prostate is essential for male fertility. From experimental models, it is known that EDs can influence several molecular mechanisms involved in prostate homeostasis and diseases, including prost...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35163140/"
-        },
-        {
-          "pmid": "33598893",
-          "title": "Insights into the Regulation on Proliferation and Differentiation of Stem Leydig Cells.",
-          "authors": "Liu ZJ, Liu YH, Huang SY, et al.",
-          "journal": "Stem cell reviews and reports",
-          "year": "2021",
-          "abstract_snippet": "Male hypogonadism is a clinical syndrome caused by testosterone deficiency. Hypogonadism can be caused by testicular disease (primary hypogonadism) or hypothalamic-pituitary dysfunction (secondary hypogonadism). The present strategy for treating hypogonadism is the administration of exogenous testos...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33598893/"
-        },
-        {
-          "pmid": "39915874",
-          "title": "Enucleated bone marrow-derived mesenchymal stromal cells regulate immune microenvironment and promote testosterone production through efferocytosis.",
-          "authors": "Sun L, Huang J, Wang X, et al.",
-          "journal": "Reproductive biology and endocrinology : RB&E",
-          "year": "2025",
-          "abstract_snippet": "BACKGROUND: Testosterone deficiency (TD) occurs most frequently in older men and can cause many health problems. Testosterone replacement therapy (TRT) is widely used to treat TD, but this regimen can lead to a series of side effects. Stem cell therapy has been wildly studied in vitro. However, due ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39915874/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Ehlers-Danlos Syndrome",
-          "year": 2022,
-          "citations": 306,
-          "url": "https://www.semanticscholar.org/paper/8d3bec221fded6c217d759cab17ce9a4bd9e702a",
-          "authors": "Larry W. Moreland"
-        },
-        {
-          "title": "Comorbidity, misdiagnoses, and the diagnostic odyssey in patients with hypermobile Ehlers-Danlos syndrome",
-          "year": 2023,
-          "citations": 35,
-          "url": "https://www.semanticscholar.org/paper/0600db8702be60d16933902348aecd5e4b93a4db",
-          "authors": "C. Halverson, Shan Cao, Susan M. Perkins"
-        },
-        {
-          "title": "Diagnosis and management of vascular Ehlers-Danlos syndrome: Experience of the UK national diagnostic service, Sheffield",
-          "year": 2023,
-          "citations": 44,
-          "url": "https://www.semanticscholar.org/paper/b0af1981bdc39638171780f3cbd8affa7f0d4fb2",
-          "authors": "J. Bowen, Monica Hernandez, Diana S. Johnson"
-        },
-        {
-          "title": "COL1A1 and COL1A2 variants in Ehlers\u2010Danlos syndrome phenotypes and COL1\u2010related overlap disorder",
-          "year": 2023,
-          "citations": 13,
-          "url": "https://www.semanticscholar.org/paper/c5b8400769d7827e5c926a2b44096f3dcf4ade7a",
-          "authors": "Elise R Venable, Dacre R T Knight, Emily Thoreson"
-        },
-        {
-          "title": "Characterization of bleeding symptoms in Ehlers-Danlos syndrome.",
-          "year": 2023,
-          "citations": 18,
-          "url": "https://www.semanticscholar.org/paper/98bcc067f0e2aced33a6fed8bbfaf3e4dc48aa0a",
-          "authors": "Mariia Kumskova, G. Flora, J. Staber"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Ehlers-Danlos Syndrome",
-        "year": 2022,
-        "citations": 306,
-        "url": "https://www.semanticscholar.org/paper/8d3bec221fded6c217d759cab17ce9a4bd9e702a",
-        "authors": "Larry W. Moreland"
-      },
-      "max_citations": 306,
-      "faers_signal": "weak",
-      "faers_total_reports": 30252,
-      "faers_cooccurrences": 1,
-      "faers_interpretation": "1 FAERS report(s) mention both Testosterone and Ehlers-Danlos syndrome-related terms. Minimal real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "BI-2536 (1.562)",
-        "Chemistry 2804 (1.548)",
-        "tanespimycin (1.529)",
-        "PHA-665752 (1.518)",
-        "dasatinib (1.506)"
-      ],
-      "signature_interpretation": "Testosterone was not found among the top 40 drugs that reverse the Ehlers-Danlos syndrome gene signature. Top reversers: BI-2536 (1.562), Chemistry 2804 (1.548), tanespimycin (1.529)",
-      "ai_hypothesis": "of its anabolic effects.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.6839,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "Testosterone \u2014[is a therapeutic for]\u2192 MESH:D029424 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome",
-      "kg_paths_text": "\u2022 Testosterone \u2014[is a therapeutic for]\u2192 MESH:D029424 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome\n\u2022 Testosterone \u2014[is a therapeutic for]\u2192 MESH:D006333 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome\n\u2022 Testosterone \u2014[is a therapeutic for]\u2192 MESH:D003324 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome",
-      "validation_experiments": [],
-      "novelty_score": 0.2980000078678131,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "264 PubMed articles on this drug-disease pair",
-        "Supported by 4 independent AI pillars",
-        "Highly cited paper (306 citations): \"Ehlers-Danlos Syndrome...\"",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.68)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1511,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (UGT1A4 / UGT1A4*1a, UGT1A4*3a)",
-        "cpic": [],
-        "pharmgkb": [
-          {
-            "gene": "UGT1A4",
-            "variant": "UGT1A4*1a, UGT1A4*3a",
-            "level": "3",
-            "phenotype_category": "Metabolism/PK",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1447980857"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.3449999988079071,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.414000004529953,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 1.0
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Skin - Not Sun Exposed (Suprapubic)"
-        ],
-        "n_genes": 28,
-        "n_expressed": 17,
-        "mean_tpm_in_tissue": 26.97,
-        "max_tpm_in_tissue": 180.27,
-        "tissue_specificity": 0.265,
-        "context_modifier": 1.012
-      },
-      "disease_entity": "Disease::MESH:D004535",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.0476,
-      "ensemble_features": {
-        "kg_score": 0.9749,
-        "degree_penalty": 0.7473,
-        "n_drug_targets": 24,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 5.5835
-      },
-      "ensemble_rank": 9,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Ebselen",
-      "drug_id": "DB12610",
-      "disease_name": "Ehlers-Danlos syndrome",
-      "combined_score": 0.4009000062942505,
-      "pillars_hit": 4,
-      "transe_rank": 149,
-      "transe_score": -12.9428,
-      "pykeen_score": 0,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.30000001192092896,
-      "proximity_distance": 2.799999952316284,
-      "admet_score": 0.5421,
-      "admet_flags": "DILI=0.92",
-      "primekg_score": 0.2533,
-      "dti_score": 0.9731,
-      "dti_best_target": "COL1A1",
-      "kg_group_score": 0.0614,
-      "structural_group_score": 0.9731,
-      "network_group_score": 0.24120000004768372,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.6839,
-      "admet_multiplier": 0.9084,
-      "efficacy_score": 0.44130000472068787,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 1,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "36599035",
-          "title": "Electrochemical-enhanced nanoscale oxygen-vacancy CuFe",
-          "authors": "Wang Z, Meng L, Luo T",
-          "journal": "Environmental technology",
-          "year": "2024",
-          "abstract_snippet": "To enhance the catalytic activity of CuFe",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36599035/",
-          "total_results": 1
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Ehlers-Danlos Syndrome",
-          "year": 2022,
-          "citations": 306,
-          "url": "https://www.semanticscholar.org/paper/8d3bec221fded6c217d759cab17ce9a4bd9e702a",
-          "authors": "Larry W. Moreland"
-        },
-        {
-          "title": "Comorbidity, misdiagnoses, and the diagnostic odyssey in patients with hypermobile Ehlers-Danlos syndrome",
-          "year": 2023,
-          "citations": 35,
-          "url": "https://www.semanticscholar.org/paper/0600db8702be60d16933902348aecd5e4b93a4db",
-          "authors": "C. Halverson, Shan Cao, Susan M. Perkins"
-        },
-        {
-          "title": "Diagnosis and management of vascular Ehlers-Danlos syndrome: Experience of the UK national diagnostic service, Sheffield",
-          "year": 2023,
-          "citations": 44,
-          "url": "https://www.semanticscholar.org/paper/b0af1981bdc39638171780f3cbd8affa7f0d4fb2",
-          "authors": "J. Bowen, Monica Hernandez, Diana S. Johnson"
-        },
-        {
-          "title": "COL1A1 and COL1A2 variants in Ehlers\u2010Danlos syndrome phenotypes and COL1\u2010related overlap disorder",
-          "year": 2023,
-          "citations": 13,
-          "url": "https://www.semanticscholar.org/paper/c5b8400769d7827e5c926a2b44096f3dcf4ade7a",
-          "authors": "Elise R Venable, Dacre R T Knight, Emily Thoreson"
-        },
-        {
-          "title": "Physical therapy interventions in generalized hypermobility spectrum disorder and hypermobile Ehlers-Danlos syndrome: a scoping review",
-          "year": 2023,
-          "citations": 16,
-          "url": "https://www.semanticscholar.org/paper/364ed492ea7ba153f3d2d6f89783556c23ae437e",
-          "authors": "Mackenzie Garreth Brittain, Sarah C. Flanagan, Lindsey N. Foreman"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Ehlers-Danlos Syndrome",
-        "year": 2022,
-        "citations": 306,
-        "url": "https://www.semanticscholar.org/paper/8d3bec221fded6c217d759cab17ce9a4bd9e702a",
-        "authors": "Larry W. Moreland"
-      },
-      "max_citations": 306,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Ebselen",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "BI-2536 (1.562)",
-        "Chemistry 2804 (1.548)",
-        "tanespimycin (1.529)",
-        "PHA-665752 (1.518)",
-        "dasatinib (1.506)"
-      ],
-      "signature_interpretation": "Ebselen was not found among the top 40 drugs that reverse the Ehlers-Danlos syndrome gene signature. Top reversers: BI-2536 (1.562), Chemistry 2804 (1.548), tanespimycin (1.529)",
-      "ai_hypothesis": "of its antioxidant properties.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.6839,
-      "mr_genetic_targets": 1,
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
       "mechanistic_hypothesis": "",
       "kg_paths_text": "",
       "validation_experiments": [],
-      "novelty_score": 0.4090000092983246,
+      "novelty_score": 0.172,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
       "clinical_trials": [],
       "trial_phases": {},
-      "confidence": "MEDIUM",
+      "confidence": "LOW",
       "confidence_reasons": [
-        "1 PubMed article(s) - limited literature",
-        "Supported by 4 independent AI pillars",
-        "Highly cited paper (306 citations): \"Ehlers-Danlos Syndrome...\"",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.68)"
+        "Supported by 2 independent AI pillars",
+        "Highly cited paper (306 citations): \"Ehlers-Danlos Syndrome...\""
       ],
+      "disease_entity": "Disease::MESH:D004535",
       "dose_plausibility": {
-        "plausibility": "likely",
-        "dose_range": "late-trial",
-        "confidence": "medium",
-        "rationale": "Phase-3 investigational \u2014 dose range established in Phase-2 pharmacokinetic studies; efficacy trials ongoing or recently completed.",
-        "chembl_phase": 3.0,
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
         "target_affinity": {},
         "stage": 1
       },
       "ddi_warnings": {
-        "n_interactions": 887,
+        "n_interactions": 81,
         "has_warnings": true,
         "top_interactions": [
           {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
             "severity": "high"
           },
           {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
+            "drug_id": "DB14672",
+            "drug_name": "(+-)-Oxazepam acetate",
+            "severity": "moderate"
           },
           {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
+            "drug_id": "DB15197",
+            "drug_name": "1-(2-fluorophenyl)-3-[(3S)-2-oxo-5-phenyl-1,3-dihydro-1,4-benzodiazepin-3-yl]urea",
+            "severity": "moderate"
           },
           {
-            "drug_id": "DB00502",
-            "drug_name": "Haloperidol",
-            "severity": "high"
+            "drug_id": "DB14715",
+            "drug_name": "1-(7-Bromo-5-(2-chlorophenyl)-2,3-dihydro-2-oxo-1H-1,4-benzodiazepin-3-yl) butanedioate",
+            "severity": "moderate"
           },
           {
-            "drug_id": "DB00563",
-            "drug_name": "Methotrexate",
-            "severity": "high"
+            "drug_id": "DB00546",
+            "drug_name": "Adinazolam",
+            "severity": "moderate"
           },
           {
-            "drug_id": "DB00959",
-            "drug_name": "Methylprednisolone",
-            "severity": "high"
+            "drug_id": "DB00802",
+            "drug_name": "Alfentanil",
+            "severity": "moderate"
           },
           {
-            "drug_id": "DB00860",
-            "drug_name": "Prednisolone",
-            "severity": "high"
+            "drug_id": "DB11371",
+            "drug_name": "Alphaxalone",
+            "severity": "moderate"
           },
           {
-            "drug_id": "DB01032",
-            "drug_name": "Probenecid",
-            "severity": "high"
+            "drug_id": "DB00404",
+            "drug_name": "Alprazolam",
+            "severity": "moderate"
           },
           {
-            "drug_id": "DB00682",
-            "drug_name": "Warfarin",
-            "severity": "high"
+            "drug_id": "DB00913",
+            "drug_name": "Anileridine",
+            "severity": "moderate"
           },
           {
-            "drug_id": "DB14068",
-            "drug_name": "(+)-Niguldipine",
+            "drug_id": "DB14719",
+            "drug_name": "Bentazepam",
             "severity": "moderate"
           }
         ]
@@ -1438,104 +219,171 @@
       "triangulation": {
         "n_axes_agree": 1,
         "axes": {
-          "kg": true,
-          "docking": false,
+          "kg": false,
+          "docking": true,
           "pharos": false,
           "literature": false
         },
-        "triangulation_score": 0.16599999368190765,
+        "triangulation_score": 0.314,
         "label": "kg-only",
         "axis_values": {
-          "kg": 0.4009999930858612,
-          "docking": 0.0,
+          "kg": 0.191,
+          "docking": 0.825,
           "pharos": 0.0,
-          "literature": 0.131
+          "literature": 0.0
         }
       },
       "tissue_context": {
         "tissues": [
           "Skin - Not Sun Exposed (Suprapubic)"
         ],
-        "n_genes": 28,
-        "n_expressed": 17,
-        "mean_tpm_in_tissue": 26.97,
-        "max_tpm_in_tissue": 180.27,
-        "tissue_specificity": 0.265,
-        "context_modifier": 1.012
+        "n_genes": 7,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 0.53,
+        "max_tpm_in_tissue": 2.41,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.867
       },
-      "disease_entity": "Disease::MESH:D004535",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.0585,
+      "ensemble_prob": 0.0,
       "ensemble_features": {
-        "kg_score": 0.9711,
-        "degree_penalty": 0.804,
-        "n_drug_targets": 37,
+        "kg_score": 0.6295,
+        "degree_penalty": 0.95,
+        "n_drug_targets": 13,
         "is_fda_approved": 1,
         "n_disease_genes": 0,
-        "transe_rank_log": 5.7236
+        "transe_rank_log": 8.2713
       },
-      "ensemble_rank": 8,
+      "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": -9.9,
+        "target_symbol": "SCN7A",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
-          "CONTAINS",
-          "HEAVY"
+          "ALIPHATIC"
         ],
-        "n_alerts": 2,
+        "n_alerts": 1,
         "alert_names": [
-          "heavy_metal",
-          "contains_metal"
+          "Aliphatic_long_chain"
         ]
       }
     },
     {
-      "drug_name": "Captopril",
-      "drug_id": "DB01197",
+      "drug_name": "Propranolol",
+      "drug_id": "DB00571",
       "disease_name": "Ehlers-Danlos syndrome",
-      "combined_score": 0.38679999113082886,
-      "pillars_hit": 4,
-      "transe_rank": 15,
-      "transe_score": -12.3782,
+      "combined_score": 0.0595,
+      "pillars_hit": 2,
+      "transe_rank": 47,
+      "transe_score": -12.6541,
       "pykeen_score": 0,
       "pykeen_rank": 0,
       "txgnn_score": 0,
       "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
+      "mol_similarity": 0.2769,
+      "similar_to": "Celiprolol",
       "mol_emb_similarity": 0,
       "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.42500001192092896,
-      "proximity_distance": 2.299999952316284,
-      "admet_score": 0.7328,
-      "admet_flags": "clean",
-      "primekg_score": 0.2499,
-      "dti_score": 0.8875,
-      "dti_best_target": "PLOD1",
-      "kg_group_score": 0.191,
-      "structural_group_score": 0.8875,
-      "network_group_score": 0.32839998602867126,
+      "gene_sig_score": 0.0121,
+      "gene_sig_rank": 45,
+      "proximity_score": 0,
+      "proximity_distance": 0,
+      "admet_score": 0.5927,
+      "admet_flags": "hERG=0.78",
+      "primekg_score": 0,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": -9.4636,
+      "structural_group_score": 0.2769,
+      "network_group_score": 0.0748,
       "txgnn_group_score": 0,
-      "mr_group_score": 0.6839,
-      "admet_multiplier": 0.813,
-      "efficacy_score": 0.4758000075817108,
-      "groups_hit": 4,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9185,
+      "efficacy_score": 0.0648,
+      "groups_hit": 2,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
+      "shared_target_count": 1,
+      "shared_targets": [
+        "SCN5A"
+      ],
+      "pubmed_total": 13,
+      "pubmed_treatment_total": 9,
       "pubmed_repurposing_total": 0,
-      "key_papers": [],
+      "key_papers": [
+        {
+          "pmid": "35245290",
+          "title": "Comparative therapeutic strategies for preventing aortic rupture in a mouse model of vascular Ehlers-Danlos syndrome.",
+          "authors": "Legrand A, Guery C, Faugeroux J, et al.",
+          "journal": "PLoS genetics",
+          "year": "2022",
+          "abstract_snippet": "Vascular Ehlers-Danlos syndrome is a rare inherited disorder caused by genetic variants in type III collagen. Its prognosis is especially hampered by unpredictable arterial ruptures and there is no therapeutic consensus. We created a knock-in Col3a1+/G182R mouse model and performed a complete geneti...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35245290/",
+          "total_results": 13
+        },
+        {
+          "pmid": "29909001",
+          "title": "[Postural tachycardia syndrome (PoTS): An up-to-date].",
+          "authors": "Astudillo L, Laure A, Fabry V, et al.",
+          "journal": "La Revue de medecine interne",
+          "year": "2018",
+          "abstract_snippet": "Postural tachycardia syndrome (PoTS) is a multifactorial syndrome defined by an increase in heart rate \u226530bpm, within 10minutes of standing (or during a head up tilt test to at least 60\u00b0), in absence of orthostatic hypotension. It is associated with symptoms of cerebral hypoperfusion that are worse ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29909001/"
+        },
+        {
+          "pmid": "38057728",
+          "title": "Clinical effectiveness of pharmacological interventions for managing chronic migraine in adults: a systematic review and network meta-analysis.",
+          "authors": "Naghdi S, Underwood M, Madan J, et al.",
+          "journal": "The journal of headache and pain",
+          "year": "2023",
+          "abstract_snippet": "BACKGROUND: Chronic migraine can be a profoundly disabling disorder that may be treated with preventive medications. However, uncertainty remains as to which preventive medication is the most effective. We present a network meta-analysis to determine the effectiveness and rank of preventive drugs fo...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38057728/"
+        },
+        {
+          "pmid": "23122672",
+          "title": "Postural tachycardia syndrome: a heterogeneous and multifactorial disorder.",
+          "authors": "Benarroch EE",
+          "journal": "Mayo Clinic proceedings",
+          "year": "2012",
+          "abstract_snippet": "Postural tachycardia syndrome (POTS) is defined by a heart rate increment of 30 beats/min or more within 10 minutes of standing or head-up tilt in the absence of orthostatic hypotension; the standing heart rate is often 120 beats/min or higher. POTS manifests with symptoms of cerebral hypoperfusion ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23122672/"
+        },
+        {
+          "pmid": "6993166",
+          "title": "Mitral valve prolapse.",
+          "authors": "Schlant RC, Felner JM, Miklozek CL, et al.",
+          "journal": "Disease-a-month : DM",
+          "year": "1980",
+          "abstract_snippet": "Mitral valve prolapse (MVP) now is a commonly recognized syndrome with an apparent prevalence of approximately 4-6%. It appears to occur more frequently in females and occasionally it is familial. In most instances, the syndrome is idiopathic, although it occurs in association with many other condit...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/6993166/"
+        }
+      ],
       "repurposing_papers": [],
       "semantic_scholar_papers": [
+        {
+          "title": "Comparative therapeutic strategies for preventing aortic rupture in a mouse model of vascular Ehlers-Danlos syndrome",
+          "year": 2021,
+          "citations": 10,
+          "url": "https://www.semanticscholar.org/paper/0cb55f6ec753da7a7d10856e493b419a5a959290",
+          "authors": "A. Legrand, Charline Guery, J. Faugeroux"
+        },
+        {
+          "title": "Vascular Risk Reduction in Patients with Ehlers-Danlos Syndrome",
+          "year": 2010,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/22ae399a0debfa18b8f6bf8af3ac2e3ba5b37ef0",
+          "authors": "B. Meyer"
+        },
+        {
+          "title": "[Postural tachycardia syndrome (PoTS): An up-to-date].",
+          "year": 2018,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/372ec408c62c7020fe915145961fb521e5d057fa",
+          "authors": "Leonardo Astudillo, A. Laure, Vincent Fabry"
+        },
         {
           "title": "Ehlers-Danlos Syndrome",
           "year": 2022,
@@ -1544,32 +392,11 @@
           "authors": "Larry W. Moreland"
         },
         {
-          "title": "Comorbidity, misdiagnoses, and the diagnostic odyssey in patients with hypermobile Ehlers-Danlos syndrome",
-          "year": 2023,
-          "citations": 35,
-          "url": "https://www.semanticscholar.org/paper/0600db8702be60d16933902348aecd5e4b93a4db",
-          "authors": "C. Halverson, Shan Cao, Susan M. Perkins"
-        },
-        {
           "title": "Diagnosis and management of vascular Ehlers-Danlos syndrome: Experience of the UK national diagnostic service, Sheffield",
           "year": 2023,
-          "citations": 44,
+          "citations": 46,
           "url": "https://www.semanticscholar.org/paper/b0af1981bdc39638171780f3cbd8affa7f0d4fb2",
           "authors": "J. Bowen, Monica Hernandez, Diana S. Johnson"
-        },
-        {
-          "title": "COL1A1 and COL1A2 variants in Ehlers\u2010Danlos syndrome phenotypes and COL1\u2010related overlap disorder",
-          "year": 2023,
-          "citations": 13,
-          "url": "https://www.semanticscholar.org/paper/c5b8400769d7827e5c926a2b44096f3dcf4ade7a",
-          "authors": "Elise R Venable, Dacre R T Knight, Emily Thoreson"
-        },
-        {
-          "title": "Characterization of bleeding symptoms in Ehlers-Danlos syndrome.",
-          "year": 2023,
-          "citations": 18,
-          "url": "https://www.semanticscholar.org/paper/98bcc067f0e2aced33a6fed8bbfaf3e4dc48aa0a",
-          "authors": "Mariia Kumskova, G. Flora, J. Staber"
         }
       ],
       "most_cited_paper": {
@@ -1580,10 +407,10 @@
         "authors": "Larry W. Moreland"
       },
       "max_citations": 306,
-      "faers_signal": "none",
-      "faers_total_reports": 10044,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Captopril to Ehlers-Danlos syndrome terms. Drug has 10044 total reports.",
+      "faers_signal": "moderate",
+      "faers_total_reports": 61033,
+      "faers_cooccurrences": 10,
+      "faers_interpretation": "10 FAERS reports mention both Propranolol and Ehlers-Danlos syndrome-related terms. Limited but notable real-world signal.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -1593,19 +420,35 @@
         "PHA-665752 (1.518)",
         "dasatinib (1.506)"
       ],
-      "signature_interpretation": "Captopril was not found among the top 40 drugs that reverse the Ehlers-Danlos syndrome gene signature. Top reversers: BI-2536 (1.562), Chemistry 2804 (1.548), tanespimycin (1.529)",
-      "ai_hypothesis": "it inhibits the angiotensin-converting enzyme.",
-      "abstract_analyses": [],
+      "signature_interpretation": "Propranolol was not found among the top 40 drugs that reverse the Ehlers-Danlos syndrome gene signature. Top reversers: BI-2536 (1.562), Chemistry 2804 (1.548), tanespimycin (1.529)",
+      "ai_hypothesis": "",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
       "has_failed_trial": false,
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.6839,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "Captopril \u2014[treats]\u2192 MESH:D006973 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome",
-      "kg_paths_text": "\u2022 Captopril \u2014[treats]\u2192 MESH:D006973 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome\n\u2022 Captopril \u2014[treats]\u2192 MESH:D006333 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome\n\u2022 Captopril \u2014[treats]\u2192 MESH:D006973 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome",
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Propranolol \u2014[treats]\u2192 MESH:D006973 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome",
+      "kg_paths_text": "\u2022 Propranolol \u2014[treats]\u2192 MESH:D006973 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome\n\u2022 Propranolol \u2014[treats]\u2192 MESH:D003324 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome\n\u2022 Propranolol \u2014[treats]\u2192 MESH:D000787 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome",
       "validation_experiments": [],
-      "novelty_score": 0.4180000126361847,
+      "novelty_score": 0.045,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -1613,22 +456,428 @@
       "trial_phases": {},
       "confidence": "MEDIUM",
       "confidence_reasons": [
-        "Supported by 4 independent AI pillars",
-        "Highly cited paper (306 citations): \"Ehlers-Danlos Syndrome...\"",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.68)"
+        "13 PubMed articles found",
+        "Supported by 2 independent AI pillars",
+        "Moderate FAERS signal: 10 adverse event reports mention drug-disease co-occurrence",
+        "Highly cited paper (306 citations): \"Ehlers-Danlos Syndrome...\""
       ],
+      "disease_entity": "Disease::MESH:D004535",
       "dose_plausibility": {
-        "plausibility": "unknown",
-        "dose_range": "research",
-        "confidence": "low",
-        "rationale": "No ChEMBL clinical phase data available.",
-        "chembl_phase": null,
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
         "target_affinity": {},
         "stage": 1
       },
       "ddi_warnings": {
-        "n_interactions": 1241,
+        "n_interactions": 2135,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "moderate",
+        "summary": "CPIC-C (ADRB2) \u2022 PharmGKB-3 (COMT / rs4680)",
+        "cpic": [
+          {
+            "gene": "ADRB2",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "ADRA2C",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "CYP2D6",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "ADRB1",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "GRK4",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "COMT",
+            "variant": "rs4680",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451359886"
+          },
+          {
+            "gene": "CYP2D6",
+            "variant": "CYP2D6*1, CYP2D6*10",
+            "level": "4",
+            "phenotype_category": "Other",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183700477"
+          },
+          {
+            "gene": "ADRB2",
+            "variant": "rs1042713",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1447959515"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": false,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.314,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.059,
+          "docking": 0.646,
+          "pharos": 0.0,
+          "literature": 0.498
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Skin - Not Sun Exposed (Suprapubic)"
+        ],
+        "n_genes": 1,
+        "n_expressed": 0,
+        "mean_tpm_in_tissue": 0.27,
+        "max_tpm_in_tissue": 0.27,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.859
+      },
+      "ensemble_prob": 0.0768,
+      "ensemble_features": {
+        "kg_score": 0.9918,
+        "degree_penalty": 0.7479,
+        "n_drug_targets": 55,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.4773
+      },
+      "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": -7.75,
+        "target_symbol": "SCN5A",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Lidocaine",
+      "drug_id": "DB00281",
+      "disease_name": "Ehlers-Danlos syndrome",
+      "combined_score": 0.0521,
+      "pillars_hit": 2,
+      "transe_rank": 835,
+      "transe_score": -13.5047,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0.2031,
+      "similar_to": "Celiprolol",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0.0125,
+      "gene_sig_rank": 44,
+      "proximity_score": 0,
+      "proximity_distance": 0,
+      "admet_score": 0.7212,
+      "admet_flags": "clean",
+      "primekg_score": 0,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": -10.4869,
+      "structural_group_score": 0.2031,
+      "network_group_score": 0.0932,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9442,
+      "efficacy_score": 0.0552,
+      "groups_hit": 2,
+      "direct_relations": [],
+      "shared_target_count": 6,
+      "shared_targets": [
+        "SCN10A",
+        "SCN2A",
+        "SCN3A",
+        "SCN4A",
+        "SCN5A",
+        "SCN9A"
+      ],
+      "pubmed_total": 28,
+      "pubmed_treatment_total": 16,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "37898719",
+          "title": "Hypersensitivity of myelinated A-fibers via toll-like receptor 5 promotes mechanical allodynia in tenascin-X-deficient mice associated with Ehlers-Danlos syndrome.",
+          "authors": "Kamada H, Emura K, Yamamoto R, et al.",
+          "journal": "Scientific reports",
+          "year": "2023",
+          "abstract_snippet": "Deficiency of an extracellular matrix glycoprotein tenascin-X (TNX) leads to a human heritable disorder Ehlers-Danlos syndrome, and TNX-deficient patients complain of chronic joint pain, myalgia, paresthesia, and axonal polyneuropathy. We previously reported that TNX-deficient (Tnxb",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37898719/",
+          "total_results": 28
+        },
+        {
+          "pmid": "37859915",
+          "title": "Anesthetic Management of an Obstetric Patient With Ehlers-Danlos and Wolff-Parkinson-White Syndromes.",
+          "authors": "Biladeau SK, Bocard B, Grell R",
+          "journal": "Cureus",
+          "year": "2023",
+          "abstract_snippet": "A 31-year-old, primigravida, nullipara (G1P0) female with a past medical history of\u00a0Ehlers-Danlos Syndrome (EDS), newly diagnosed Wolff-Parkinson-White Syndrome (WPW), and fetal breech presentation initially presented at 36+5 weeks gestation for an external cephalic version (ECV). The patient noted ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37859915/"
+        },
+        {
+          "pmid": "37491286",
+          "title": "Perioperative opioid-minimization approach as a useful protocol in the management of patients with Ehlers-Danlos syndrome-hypermobility type, craniocervical instability and severe chronic pain who are to undergo occipito-cervical fixation.",
+          "authors": "Ram\u00edrez-Paesano C, Rodiera Clarens C, Sharp Segovia A, et al.",
+          "journal": "Orphanet journal of rare diseases",
+          "year": "2023",
+          "abstract_snippet": "Patients suffering from connective tissue disorders like Ehlers-Danlos syndrome hypermobility type/joint hypermobility syndrome (EDS-HT/JHS) may be affected by craniocervical instability (CCI). These patients experience myalgic encephalomyelitis, chronic fatigue, depression, extreme occipital-cervic...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37491286/"
+        },
+        {
+          "pmid": "41775498",
+          "title": "Patients with Ehlers-Danlos syndrome experience reduced effectiveness of lidocaine local anesthetic: a randomized cross-over clinical trial.",
+          "authors": "Bourne KM, Thai S, Lei LY, et al.",
+          "journal": "Regional anesthesia and pain medicine",
+          "year": "2026",
+          "abstract_snippet": "BACKGROUND: The Ehlers-Danlos syndromes (EDS) are a collection of heritable connective tissue disorders. Local anesthetic resistance is commonly reported by patients with EDS, but there is little clinical evidence to support this finding. We hypothesized that patients with EDS would have increased a...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41775498/"
+        },
+        {
+          "pmid": "30819520",
+          "title": "Randomized Trial of Intravenous Lidocaine Versus Hydromorphone for Acute Abdominal Pain in the Emergency Department.",
+          "authors": "Chinn E, Friedman BW, Naeem F, et al.",
+          "journal": "Annals of emergency medicine",
+          "year": "2019",
+          "abstract_snippet": "STUDY OBJECTIVE: We compare the efficacy and safety of intravenous lidocaine with that of hydromorphone for the treatment of acute abdominal pain in the emergency department (ED). METHODS: This was a randomized, double-blind, clinical trial conducted in 2 EDs in the Bronx, NY. Adults weighing 60 to ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30819520/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Efficacy of Lidocaine Infusion in the Management of Chronic Myofascial Pain and Intractable Migrainous Headache in a Patient With Hypermobile Ehlers-Danlos Syndrome: A Case Report",
+          "year": 2026,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/015059b1dbd234a2f351badb5223dec09686ae00",
+          "authors": "Roy Sebastian, Thelma Wright, Seung J Lee"
+        },
+        {
+          "title": "2\u2010Chloroprocaine vs. Lidocaine in a Patient With Hypermobile Ehlers\u2013Danlos Syndrome and a History of Local Anesthetic Resistance: A Case Report",
+          "year": 2026,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/4dc62240de9851a38c08ce845924e76d1f3696a3",
+          "authors": "Jayanth Dasika, Zachary B. Deutch, A. Hoefnagel"
+        },
+        {
+          "title": "Patients with Ehlers-Danlos syndrome experience reduced effectiveness of lidocaine local anesthetic: a randomized cross-over clinical trial",
+          "year": 2026,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/3f84531577a418d547c9d9a1751906557e661fc0",
+          "authors": "K. Bourne, Serra Thai, L. Lei"
+        },
+        {
+          "title": "Hypersensitivity of myelinated A-fibers via toll-like receptor 5 promotes mechanical allodynia in tenascin-X-deficient mice associated with Ehlers\u2013Danlos syndrome",
+          "year": 2023,
+          "citations": 7,
+          "url": "https://www.semanticscholar.org/paper/758e07d5cc8927ec0440f3209b66a0bd2928c3f9",
+          "authors": "Hiroki Kamada, Kousuke Emura, Rikuto Yamamoto"
+        },
+        {
+          "title": "Perioperative opioid-minimization approach as a useful protocol in the management of patients with Ehlers\u2013Danlos syndrome-hypermobility type, craniocervical instability and severe chronic pain who are to undergo occipito-cervical fixation",
+          "year": 2023,
+          "citations": 2,
+          "url": "https://www.semanticscholar.org/paper/bc2a8f63453d16629a2e834c0c0cc6a4425b7da8",
+          "authors": "C. Ram\u00edrez-Paesano, Claudia Rodiera Clarens, Allan Sharp Segovia"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Hypersensitivity of myelinated A-fibers via toll-like receptor 5 promotes mechanical allodynia in tenascin-X-deficient mice associated with Ehlers\u2013Danlos syndrome",
+        "year": 2023,
+        "citations": 7,
+        "url": "https://www.semanticscholar.org/paper/758e07d5cc8927ec0440f3209b66a0bd2928c3f9",
+        "authors": "Hiroki Kamada, Kousuke Emura, Rikuto Yamamoto"
+      },
+      "max_citations": 7,
+      "faers_signal": "moderate",
+      "faers_total_reports": 78983,
+      "faers_cooccurrences": 12,
+      "faers_interpretation": "12 FAERS reports mention both Lidocaine and Ehlers-Danlos syndrome-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "BI-2536 (1.562)",
+        "Chemistry 2804 (1.548)",
+        "tanespimycin (1.529)",
+        "PHA-665752 (1.518)",
+        "dasatinib (1.506)"
+      ],
+      "signature_interpretation": "Lidocaine was not found among the top 40 drugs that reverse the Ehlers-Danlos syndrome gene signature. Top reversers: BI-2536 (1.562), Chemistry 2804 (1.548), tanespimycin (1.529)",
+      "ai_hypothesis": "",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Lidocaine \u2014[is a therapeutic for]\u2192 MESH:D029424 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome",
+      "kg_paths_text": "\u2022 Lidocaine \u2014[is a therapeutic for]\u2192 MESH:D029424 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome\n\u2022 Lidocaine \u2014[is a therapeutic for]\u2192 MESH:D006973 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome\n\u2022 Lidocaine \u2014[is a therapeutic for]\u2192 MESH:D006333 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome",
+      "validation_experiments": [],
+      "novelty_score": 0.034,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": false,
+      "clinical_trials_total": 4,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT05279937",
+          "title": "The Ultrasound-Guided Dextrose Prolotherapy in Ehlers-Danlos Syndrome Patients",
+          "status": "NOT_YET_RECRUITING",
+          "phase": "PHASE3",
+          "enrollment": "40",
+          "url": "https://clinicaltrials.gov/study/NCT05279937"
+        },
+        {
+          "nct_id": "NCT06336473",
+          "title": "Evaluation of the Effects of Cross Linking on the Biomechanical Characteristics of Skin Samples From Patients With Classic or Hypermobile Ehlers-Danlos Syndrome",
+          "status": "NOT_YET_RECRUITING",
+          "phase": "NA",
+          "enrollment": "28",
+          "url": "https://clinicaltrials.gov/study/NCT06336473"
+        },
+        {
+          "nct_id": "NCT05603741",
+          "title": "Local Anesthetic Response in Ehlers-Danlos Syndrome (EDS) and Healthy Volunteers",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "phase": "PHASE4",
+          "enrollment": "155",
+          "url": "https://clinicaltrials.gov/study/NCT05603741"
+        },
+        {
+          "nct_id": "NCT04036305",
+          "title": "Local Anesthetic Response in Ehlers-Danlos Syndrome (EDS) and Healthy Volunteers",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "phase": "N/A",
+          "enrollment": "230",
+          "url": "https://clinicaltrials.gov/study/NCT04036305"
+        }
+      ],
+      "trial_phases": {
+        "PHASE3": 1,
+        "NA": 1,
+        "PHASE4": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "4 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "28 PubMed articles found",
+        "Supported by 2 independent AI pillars",
+        "Moderate FAERS signal: 12 adverse event reports mention drug-disease co-occurrence"
+      ],
+      "disease_entity": "Disease::MESH:D004535",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1055,
         "has_warnings": true,
         "top_interactions": [
           {
@@ -1685,1377 +934,76 @@
       },
       "pharmacogenomics": {
         "has_flags": true,
-        "highest_risk": "moderate",
-        "summary": "CPIC-D (ACE) \u2022 PharmGKB-3 (ACE / rs4291)",
+        "highest_risk": "",
+        "summary": "CPIC-B/C (G6PD)",
         "cpic": [
           {
-            "gene": "ACE",
-            "level": "D",
+            "gene": "G6PD",
+            "level": "B/C",
             "guideline": ""
           }
         ],
-        "pharmgkb": [
-          {
-            "gene": "ACE",
-            "variant": "rs4291",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1448259106"
-          },
-          {
-            "gene": "ACE2",
-            "variant": "rs2106809",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183612731"
-          },
-          {
-            "gene": "AGTR1",
-            "variant": "rs5186",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043858965"
-          },
-          {
-            "gene": "ACE",
-            "variant": "rs1799752",
-            "level": "2A",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/982047862"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 0,
-        "axes": {
-          "kg": false,
-          "docking": false,
-          "pharos": false,
-          "literature": false
-        },
-        "triangulation_score": 0.13500000536441803,
-        "label": "",
-        "axis_values": {
-          "kg": 0.3869999945163727,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.0
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Skin - Not Sun Exposed (Suprapubic)"
-        ],
-        "n_genes": 28,
-        "n_expressed": 17,
-        "mean_tpm_in_tissue": 26.97,
-        "max_tpm_in_tissue": 180.27,
-        "tissue_specificity": 0.265,
-        "context_modifier": 1.012
-      },
-      "disease_entity": "Disease::MESH:D004535",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.8223,
-      "ensemble_features": {
-        "kg_score": 0.9986,
-        "degree_penalty": 0.7728,
-        "n_drug_targets": 24,
-        "is_fda_approved": 0,
-        "n_disease_genes": 0,
-        "transe_rank_log": 2.7726
-      },
-      "ensemble_rank": 4,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [
-          "THIOL"
-        ],
-        "n_alerts": 1,
-        "alert_names": [
-          "thiol_2"
-        ]
-      }
-    },
-    {
-      "drug_name": "Atenolol",
-      "drug_id": "DB00335",
-      "disease_name": "Ehlers-Danlos syndrome",
-      "combined_score": 0.3808000087738037,
-      "pillars_hit": 4,
-      "transe_rank": 57,
-      "transe_score": -12.7273,
-      "pykeen_score": 0,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0.2687,
-      "similar_to": "Celiprolol",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.3499999940395355,
-      "proximity_distance": 2.5999999046325684,
-      "admet_score": 0.7129,
-      "admet_flags": "clean",
-      "primekg_score": 0.2512,
-      "dti_score": 0.6761,
-      "dti_best_target": "PLOD1",
-      "kg_group_score": 0.1027,
-      "structural_group_score": 0.6761,
-      "network_group_score": 0.2702000141143799,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.6839,
-      "admet_multiplier": 0.9426,
-      "efficacy_score": 0.40400001406669617,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 2,
-      "pubmed_treatment_total": 2,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "35501038",
-          "title": "An assessment of the current medical management of thoracic aortic disease: A patient-centered scoping literature review.",
-          "authors": "Pena RCF, Hofmann Bowman MA, Ahmad M, et al.",
-          "journal": "Seminars in vascular surgery",
-          "year": "2022",
-          "abstract_snippet": "Thoracic aortic aneurysm and dissection are complex diagnoses that require management by multidisciplinary providers using a variety of medical therapies, surgical interventions, and lifestyle modifications. Pharmacological agents, such as \u03b2-blockers (atenolol) and angiotensin II type 1 receptor blo...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35501038/",
-          "total_results": 2
-        },
-        {
-          "pmid": "21195580",
-          "title": "[Classification and etiology of acute aortic syndromes].",
-          "authors": "Vincentelli A, Juthier F, Banfi C, et al.",
-          "journal": "Presse medicale (Paris, France : 1983)",
-          "year": "2011",
-          "abstract_snippet": "Acute aortic syndrome are significantly involved in \"sudden death\" and in-hospital mortality remains high close to 30%, survivors are lifelong at risk for remaining aorta complication such as thoraco-abdominal aneurysm or new aorta dissection or aortic rupture. Classifications are useful tools to de...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/21195580/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Ehlers-Danlos Syndrome",
-          "year": 2022,
-          "citations": 306,
-          "url": "https://www.semanticscholar.org/paper/8d3bec221fded6c217d759cab17ce9a4bd9e702a",
-          "authors": "Larry W. Moreland"
-        },
-        {
-          "title": "Comorbidity, misdiagnoses, and the diagnostic odyssey in patients with hypermobile Ehlers-Danlos syndrome",
-          "year": 2023,
-          "citations": 35,
-          "url": "https://www.semanticscholar.org/paper/0600db8702be60d16933902348aecd5e4b93a4db",
-          "authors": "C. Halverson, Shan Cao, Susan M. Perkins"
-        },
-        {
-          "title": "Diagnosis and management of vascular Ehlers-Danlos syndrome: Experience of the UK national diagnostic service, Sheffield",
-          "year": 2023,
-          "citations": 44,
-          "url": "https://www.semanticscholar.org/paper/b0af1981bdc39638171780f3cbd8affa7f0d4fb2",
-          "authors": "J. Bowen, Monica Hernandez, Diana S. Johnson"
-        },
-        {
-          "title": "COL1A1 and COL1A2 variants in Ehlers\u2010Danlos syndrome phenotypes and COL1\u2010related overlap disorder",
-          "year": 2023,
-          "citations": 13,
-          "url": "https://www.semanticscholar.org/paper/c5b8400769d7827e5c926a2b44096f3dcf4ade7a",
-          "authors": "Elise R Venable, Dacre R T Knight, Emily Thoreson"
-        },
-        {
-          "title": "Physical therapy interventions in generalized hypermobility spectrum disorder and hypermobile Ehlers-Danlos syndrome: a scoping review",
-          "year": 2023,
-          "citations": 16,
-          "url": "https://www.semanticscholar.org/paper/364ed492ea7ba153f3d2d6f89783556c23ae437e",
-          "authors": "Mackenzie Garreth Brittain, Sarah C. Flanagan, Lindsey N. Foreman"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Ehlers-Danlos Syndrome",
-        "year": 2022,
-        "citations": 306,
-        "url": "https://www.semanticscholar.org/paper/8d3bec221fded6c217d759cab17ce9a4bd9e702a",
-        "authors": "Larry W. Moreland"
-      },
-      "max_citations": 306,
-      "faers_signal": "moderate",
-      "faers_total_reports": 126816,
-      "faers_cooccurrences": 8,
-      "faers_interpretation": "8 FAERS reports mention both Atenolol and Ehlers-Danlos syndrome-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "BI-2536 (1.562)",
-        "Chemistry 2804 (1.548)",
-        "tanespimycin (1.529)",
-        "PHA-665752 (1.518)",
-        "dasatinib (1.506)"
-      ],
-      "signature_interpretation": "Atenolol was not found among the top 40 drugs that reverse the Ehlers-Danlos syndrome gene signature. Top reversers: BI-2536 (1.562), Chemistry 2804 (1.548), tanespimycin (1.529)",
-      "ai_hypothesis": "of its effect on collagen synthesis.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.6839,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "Atenolol \u2014[treats]\u2192 MESH:D006973 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome",
-      "kg_paths_text": "\u2022 Atenolol \u2014[treats]\u2192 MESH:D006973 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome\n\u2022 Atenolol \u2014[treats]\u2192 MESH:D006333 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome\n\u2022 Atenolol \u2014[treats]\u2192 MESH:D000787 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome",
-      "validation_experiments": [],
-      "novelty_score": 0.3880000114440918,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "MEDIUM",
-      "confidence_reasons": [
-        "2 PubMed article(s) - limited literature",
-        "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 8 adverse event reports mention drug-disease co-occurrence",
-        "Highly cited paper (306 citations): \"Ehlers-Danlos Syndrome...\"",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.68)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1365,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00502",
-            "drug_name": "Haloperidol",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00227",
-            "drug_name": "Lovastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00331",
-            "drug_name": "Metformin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00338",
-            "drug_name": "Omeprazole",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "moderate",
-        "summary": "CPIC-C (GRK5) \u2022 PharmGKB-3 ( / rs35123024)",
-        "cpic": [
-          {
-            "gene": "GRK5",
-            "level": "C",
-            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
-          },
-          {
-            "gene": "GRK4",
-            "level": "C",
-            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
-          },
-          {
-            "gene": "ADRA2C",
-            "level": "C",
-            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
-          },
-          {
-            "gene": "ADRB1",
-            "level": "C",
-            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
-          }
-        ],
-        "pharmgkb": [
-          {
-            "gene": "",
-            "variant": "rs35123024",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449576301"
-          },
-          {
-            "gene": "EDN1",
-            "variant": "rs5370",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183564259"
-          },
-          {
-            "gene": "GNB3",
-            "variant": "rs2301339",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183533972"
-          },
-          {
-            "gene": "GNB3",
-            "variant": "rs11064426",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183614807"
-          },
-          {
-            "gene": "GNB3",
-            "variant": "rs5443",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043880792"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 0,
-        "axes": {
-          "kg": false,
-          "docking": false,
-          "pharos": false,
-          "literature": false
-        },
-        "triangulation_score": 0.17499999701976776,
-        "label": "",
-        "axis_values": {
-          "kg": 0.38100001215934753,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.207
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Skin - Not Sun Exposed (Suprapubic)"
-        ],
-        "n_genes": 28,
-        "n_expressed": 17,
-        "mean_tpm_in_tissue": 26.97,
-        "max_tpm_in_tissue": 180.27,
-        "tissue_specificity": 0.265,
-        "context_modifier": 1.012
-      },
-      "disease_entity": "Disease::MESH:D004535",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.4889,
-      "ensemble_features": {
-        "kg_score": 0.9938,
-        "degree_penalty": 0.772,
-        "n_drug_targets": 9,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 4.1897
-      },
-      "ensemble_rank": 7,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Dexamethasone",
-      "drug_id": "DB01234",
-      "disease_name": "Ehlers-Danlos syndrome",
-      "combined_score": 0.3693,
-      "pillars_hit": 4,
-      "transe_rank": 11,
-      "transe_score": -12.3035,
-      "pykeen_score": 0,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.30000001192092896,
-      "proximity_distance": 2.799999952316284,
-      "admet_score": 0.7109,
-      "admet_flags": "clean",
-      "primekg_score": 0.2533,
-      "dti_score": 0.4559,
-      "dti_best_target": "PLOD1",
-      "kg_group_score": 0.2853,
-      "structural_group_score": 0.4559,
-      "network_group_score": 0.2207999974489212,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.6294,
-      "admet_multiplier": 0.9422,
-      "efficacy_score": 0.392,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 3,
-      "shared_targets": [
-        "SMAD3",
-        "TGFB2",
-        "TGFBR2"
-      ],
-      "pubmed_total": 42,
-      "pubmed_treatment_total": 33,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "40467067",
-          "title": "Adoption of Dexamethasone for Asthma Exacerbations.",
-          "authors": "Ramgopal S, Michelson KA",
-          "journal": "Pediatrics",
-          "year": "2025",
-          "abstract_snippet": "BACKGROUND: Previous work has demonstrated that dexamethasone has similar efficacy to prednisolone/prednisone for the management of asthma exacerbations. We sought to evaluate trends in the use of dexamethasone for asthma among children discharged from the emergency department (ED) and to evaluate t...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40467067/",
-          "total_results": 42
-        },
-        {
-          "pmid": "11370731",
-          "title": "Opposite effects of dexamethasone and ACTH on the adrenal cortex response to ethane dimethanesulphonate (EDS).",
-          "authors": "Ple\u0107as B, Pesi\u0107 VP, Mirkovi\u0107 D, et al.",
-          "journal": "Experimental and toxicologic pathology : official journal of the Gesellschaft fur Toxikologische Pathologie",
-          "year": "2001",
-          "abstract_snippet": "Recently we have reported that ethane dimethane-sulphonate (EDS), the Leydig cell cytotoxin, caused marked atrophy of the adrenal cortex of adult male rats. The aim of this work was to examine whether a 9-day treatment with dexamethasone (0.25 mg/kg/d) or ACTH (40 IU/kg/d), which started 4 days prio...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/11370731/"
-        },
-        {
-          "pmid": "27766191",
-          "title": "Vertebral Column Resection for Kyphoscoliosis in a Patient with Ehlers-Danlos Syndrome: An Intraoperative Neurophysiological Monitoring Alert.",
-          "authors": "Jahangiri FR, Al Eissa S, Sayegh S, et al.",
-          "journal": "Cureus",
-          "year": "2016",
-          "abstract_snippet": "A 16-year-old male patient with Ehler-Danlos syndrome (EDS) and a back deformity since birth presented with severe kyphoscoliosis. The patient was neurologically intact but had respiratory and cardiac insufficiencies. A two-stage vertebral column resection (VCR) at T9-T10 with multiple level fusion ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/27766191/"
-        },
-        {
-          "pmid": "33598893",
-          "title": "Insights into the Regulation on Proliferation and Differentiation of Stem Leydig Cells.",
-          "authors": "Liu ZJ, Liu YH, Huang SY, et al.",
-          "journal": "Stem cell reviews and reports",
-          "year": "2021",
-          "abstract_snippet": "Male hypogonadism is a clinical syndrome caused by testosterone deficiency. Hypogonadism can be caused by testicular disease (primary hypogonadism) or hypothalamic-pituitary dysfunction (secondary hypogonadism). The present strategy for treating hypogonadism is the administration of exogenous testos...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33598893/"
-        },
-        {
-          "pmid": "8186768",
-          "title": "Correction of the defective extracellular matrix of Ehlers-Danlos syndrome skin fibroblasts by dexamethasone.",
-          "authors": "Moro L, Colombi M, Zoppi N, et al.",
-          "journal": "Cell biology international",
-          "year": "1994",
-          "abstract_snippet": "Skin fibroblasts derived from Ehlers-Danlos syndrome (EDS) patients lack an organized extracellular matrix (ECM) of fibronectin (FN) and often show an accumulation of cytoplasmic FN. The treatment of EDS cells of different types (I to VIII) with 10(-7) M dexamethasone (dex), as well as cocultivation...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/8186768/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "EFFECT OF DEXAMETHASONE ON THE ASSEMBLY OF THE MATRIX OF FIBRONECTIN AND ON ITS RECEPTORS ORGANIZATION IN EHLERS\u2010DANLOS SYNDROME SKIN FIBROBLASTS",
-          "year": 1998,
-          "citations": 14,
-          "url": "https://www.semanticscholar.org/paper/31d47d44d9f9680c4081a1309a95245a0e4da9bb",
-          "authors": "N. Zoppi, Annalisa Ghinelli, R. Gardella"
-        },
-        {
-          "title": "Correction of the defective extracellular matrix of Ehlers\u2010Danlos syndrome skin fibroblasts by dexamethasone.",
-          "year": 1994,
-          "citations": 8,
-          "url": "https://www.semanticscholar.org/paper/f521cd2019543af60329eb1f60466e5611ce62e3",
-          "authors": "L. Moro, M. Colombi, N. Zoppi"
-        },
-        {
-          "title": "Dexamethasone\u2010induced healing of chronic leg ulcers in a patient with defective organization of the extracellular matrix of fibronectin",
-          "year": 2000,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/018b71f2fee0f9d8a0769654a0c9f84b6c073cfc",
-          "authors": "G. De panfilis, A. Ghidini, S. Graifemberghi"
-        },
-        {
-          "title": "Ehlers-Danlos Syndrome",
-          "year": 2022,
-          "citations": 306,
-          "url": "https://www.semanticscholar.org/paper/8d3bec221fded6c217d759cab17ce9a4bd9e702a",
-          "authors": "Larry W. Moreland"
-        },
-        {
-          "title": "Comorbidity, misdiagnoses, and the diagnostic odyssey in patients with hypermobile Ehlers-Danlos syndrome",
-          "year": 2023,
-          "citations": 35,
-          "url": "https://www.semanticscholar.org/paper/0600db8702be60d16933902348aecd5e4b93a4db",
-          "authors": "C. Halverson, Shan Cao, Susan M. Perkins"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Ehlers-Danlos Syndrome",
-        "year": 2022,
-        "citations": 306,
-        "url": "https://www.semanticscholar.org/paper/8d3bec221fded6c217d759cab17ce9a4bd9e702a",
-        "authors": "Larry W. Moreland"
-      },
-      "max_citations": 306,
-      "faers_signal": "weak",
-      "faers_total_reports": 312747,
-      "faers_cooccurrences": 1,
-      "faers_interpretation": "1 FAERS report(s) mention both Dexamethasone and Ehlers-Danlos syndrome-related terms. Minimal real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "BI-2536 (1.562)",
-        "Chemistry 2804 (1.548)",
-        "tanespimycin (1.529)",
-        "PHA-665752 (1.518)",
-        "dasatinib (1.506)"
-      ],
-      "signature_interpretation": "Dexamethasone was not found among the top 40 drugs that reverse the Ehlers-Danlos syndrome gene signature. Top reversers: BI-2536 (1.562), Chemistry 2804 (1.548), tanespimycin (1.529)",
-      "ai_hypothesis": "of its anti-inflammatory and anti-fibrotic properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.6294,
-      "mr_genetic_targets": 7,
-      "mechanistic_hypothesis": "Dexamethasone \u2014[treats]\u2192 MESH:D001249 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome",
-      "kg_paths_text": "\u2022 Dexamethasone \u2014[treats]\u2192 MESH:D001249 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome\n\u2022 Dexamethasone \u2014[treats]\u2192 MESH:D001249 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome\n\u2022 Dexamethasone \u2014[is a therapeutic for]\u2192 MESH:D029424 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome",
-      "validation_experiments": [],
-      "novelty_score": 0.332,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "MEDIUM",
-      "confidence_reasons": [
-        "42 PubMed articles found",
-        "Supported by 4 independent AI pillars",
-        "Highly cited paper (306 citations): \"Ehlers-Danlos Syndrome...\"",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.63)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "likely",
-        "dose_range": "trial",
-        "confidence": "medium",
-        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
-        "chembl_phase": 2.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1512,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (ABCB1 / rs1045642)",
-        "cpic": [],
-        "pharmgkb": [
-          {
-            "gene": "ABCB1",
-            "variant": "rs1045642",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204433"
-          },
-          {
-            "gene": "ABCB1",
-            "variant": "rs2032582",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981238041"
-          },
-          {
-            "gene": "CTLA4",
-            "variant": "rs4553808",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043880851"
-          },
-          {
-            "gene": "ABCB1",
-            "variant": "rs2229109",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449170621"
-          },
-          {
-            "gene": "GATA3",
-            "variant": "rs3824662",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1184512128"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 1,
-        "axes": {
-          "kg": false,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.271,
-        "label": "kg-only",
-        "axis_values": {
-          "kg": 0.369,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.709
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Skin - Not Sun Exposed (Suprapubic)"
-        ],
-        "n_genes": 3,
-        "n_expressed": 3,
-        "mean_tpm_in_tissue": 29.29,
-        "max_tpm_in_tissue": 57.0,
-        "tissue_specificity": 0.294,
-        "context_modifier": 1.018
-      },
-      "disease_entity": "Disease::MESH:D004535",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.8478,
-      "ensemble_features": {
-        "kg_score": 0.9988,
-        "degree_penalty": 0.736,
-        "n_drug_targets": 24,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 2.6391
-      },
-      "ensemble_rank": 3,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Estriol",
-      "drug_id": "DB04573",
-      "disease_name": "Ehlers-Danlos syndrome",
-      "combined_score": 0.3666999936103821,
-      "pillars_hit": 4,
-      "transe_rank": 74,
-      "transe_score": -12.7853,
-      "pykeen_score": 0,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.42500001192092896,
-      "proximity_distance": 2.299999952316284,
-      "admet_score": 0.6635,
-      "admet_flags": "clean",
-      "primekg_score": 0.2527,
-      "dti_score": 0.4167,
-      "dti_best_target": "PLOD1",
-      "kg_group_score": 0.0921,
-      "structural_group_score": 0.4167,
-      "network_group_score": 0.3346000015735626,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.8547,
-      "admet_multiplier": 0.9327,
-      "efficacy_score": 0.39309999346733093,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 15,
-      "pubmed_treatment_total": 5,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "38116777",
-          "title": "Endocrine Disruptors and Estrogens in Human Prostatic Tissue.",
-          "authors": "Vitku J, Skodova T, Varausova A, et al.",
-          "journal": "Physiological research",
-          "year": "2023",
-          "abstract_snippet": "Endocrine disruptors (EDs) are ubiquitous substances both in the environment and everyday products that interfere with the hormonal system. Growing evidence demonstrates their adverse effects on the organism, including the reproductive system and the prostate, owing to their (anti)estrogenic or anti...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38116777/",
-          "total_results": 15
-        },
-        {
-          "pmid": "31121510",
-          "title": "Attenuation, transport, and management of estrogens: A review.",
-          "authors": "Zhao X, Grimes KL, Colosi LM, et al.",
-          "journal": "Chemosphere",
-          "year": "2019",
-          "abstract_snippet": "Overabundance of endocrine disruptors (EDs), such as steroid estrogens, in the natural environment disrupts hormone synthesis in aquatic organisms. Livestock and wastewater outflows contribute measurable quantities of steroid estrogens into the environment where they are picked up and transported vi...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/31121510/"
-        },
-        {
-          "pmid": "37742964",
-          "title": "The environmental occurrence, fate, and risks of 25 endocrine disruptors in Slovenian waters.",
-          "authors": "Grobin A, Ro\u0161kar R, Trontelj J",
-          "journal": "The Science of the total environment",
-          "year": "2024",
-          "abstract_snippet": "Natural hormones, synthetic steroids and bisphenols are among the most active endocrine disruptors (EDs) in the aquatic environment, with great potential for causing adverse effects in aquatic organisms and humans. In this study, a focused group of 25 potent estrogenic and other ED compounds were si...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37742964/"
-        },
-        {
-          "pmid": "37269613",
-          "title": "Derivatized versus non-derivatized LC-MS/MS techniques for the analysis of estrogens and estrogen-like endocrine disruptors in human plasma.",
-          "authors": "Vitku J, Horackova L, Kolatorova L, et al.",
-          "journal": "Ecotoxicology and environmental safety",
-          "year": "2023",
-          "abstract_snippet": "Bisphenols, parabens, alkylphenols and triclosan are anthropogenic substances with a phenolic group that have been introduced to the environment in recent decades. As they possess hormone-like effects, they have been termed endocrine disruptors (EDs), and can interfere with steroid pathways in organ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37269613/"
-        },
-        {
-          "pmid": "35550961",
-          "title": "Biosynthesis of silver nanoparticles using three different fruit extracts: Characterization, formation mechanism and estrogen removal.",
-          "authors": "Weng X, Yang K, Owens G, et al.",
-          "journal": "Journal of environmental management",
-          "year": "2022",
-          "abstract_snippet": "Plant-mediated synthesis of silver nanoparticles (Ag NPs) is a green and economically viable method, which can offer numerous benefits over traditional chemical and physical methods. In this paper, three fruit extracts (tomato, orange, and grapefruit) served simultaneously as stabilizing and reducin...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35550961/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Ehlers-Danlos Syndrome",
-          "year": 2022,
-          "citations": 306,
-          "url": "https://www.semanticscholar.org/paper/8d3bec221fded6c217d759cab17ce9a4bd9e702a",
-          "authors": "Larry W. Moreland"
-        },
-        {
-          "title": "Comorbidity, misdiagnoses, and the diagnostic odyssey in patients with hypermobile Ehlers-Danlos syndrome",
-          "year": 2023,
-          "citations": 35,
-          "url": "https://www.semanticscholar.org/paper/0600db8702be60d16933902348aecd5e4b93a4db",
-          "authors": "C. Halverson, Shan Cao, Susan M. Perkins"
-        },
-        {
-          "title": "Diagnosis and management of vascular Ehlers-Danlos syndrome: Experience of the UK national diagnostic service, Sheffield",
-          "year": 2023,
-          "citations": 44,
-          "url": "https://www.semanticscholar.org/paper/b0af1981bdc39638171780f3cbd8affa7f0d4fb2",
-          "authors": "J. Bowen, Monica Hernandez, Diana S. Johnson"
-        },
-        {
-          "title": "Physical therapy interventions in generalized hypermobility spectrum disorder and hypermobile Ehlers-Danlos syndrome: a scoping review",
-          "year": 2023,
-          "citations": 16,
-          "url": "https://www.semanticscholar.org/paper/364ed492ea7ba153f3d2d6f89783556c23ae437e",
-          "authors": "Mackenzie Garreth Brittain, Sarah C. Flanagan, Lindsey N. Foreman"
-        },
-        {
-          "title": "Characterization of bleeding symptoms in Ehlers-Danlos syndrome.",
-          "year": 2023,
-          "citations": 18,
-          "url": "https://www.semanticscholar.org/paper/98bcc067f0e2aced33a6fed8bbfaf3e4dc48aa0a",
-          "authors": "Mariia Kumskova, G. Flora, J. Staber"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Ehlers-Danlos Syndrome",
-        "year": 2022,
-        "citations": 306,
-        "url": "https://www.semanticscholar.org/paper/8d3bec221fded6c217d759cab17ce9a4bd9e702a",
-        "authors": "Larry W. Moreland"
-      },
-      "max_citations": 306,
-      "faers_signal": "none",
-      "faers_total_reports": 1823,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Estriol to Ehlers-Danlos syndrome terms. Drug has 1823 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "BI-2536 (1.562)",
-        "Chemistry 2804 (1.548)",
-        "tanespimycin (1.529)",
-        "PHA-665752 (1.518)",
-        "dasatinib (1.506)"
-      ],
-      "signature_interpretation": "Estriol was not found among the top 40 drugs that reverse the Ehlers-Danlos syndrome gene signature. Top reversers: BI-2536 (1.562), Chemistry 2804 (1.548), tanespimycin (1.529)",
-      "ai_hypothesis": "of its anti-inflammatory and anti-fibrotic effects.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.8547,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.33000001311302185,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "15 PubMed articles found",
-        "Supported by 4 independent AI pillars",
-        "Highly cited paper (306 citations): \"Ehlers-Danlos Syndrome...\"",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.85, 1 genetic targets)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 912,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
         "pharmgkb": []
       },
       "triangulation": {
-        "n_axes_agree": 1,
+        "n_axes_agree": 2,
         "axes": {
           "kg": false,
-          "docking": false,
+          "docking": true,
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.2329999953508377,
-        "label": "kg-only",
+        "triangulation_score": 0.34,
+        "label": "multi-axis",
         "axis_values": {
-          "kg": 0.367000013589859,
-          "docking": 0.0,
+          "kg": 0.052,
+          "docking": 0.648,
           "pharos": 0.0,
-          "literature": 0.523
+          "literature": 0.635
         }
       },
       "tissue_context": {
         "tissues": [
           "Skin - Not Sun Exposed (Suprapubic)"
         ],
-        "n_genes": 28,
-        "n_expressed": 17,
-        "mean_tpm_in_tissue": 26.97,
-        "max_tpm_in_tissue": 180.27,
-        "tissue_specificity": 0.265,
-        "context_modifier": 1.012
+        "n_genes": 6,
+        "n_expressed": 0,
+        "mean_tpm_in_tissue": 0.3,
+        "max_tpm_in_tissue": 0.73,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.86
       },
-      "disease_entity": "Disease::MESH:D004535",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.688,
+      "ensemble_prob": 0.0046,
       "ensemble_features": {
-        "kg_score": 0.9959,
-        "degree_penalty": 0.7872,
-        "n_drug_targets": 13,
+        "kg_score": 0.8816,
+        "degree_penalty": 0.7765,
+        "n_drug_targets": 14,
         "is_fda_approved": 1,
         "n_disease_genes": 0,
-        "transe_rank_log": 3.7842
+        "transe_rank_log": 7.1309
       },
-      "ensemble_rank": 6,
+      "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": -7.78,
+        "target_symbol": "SCN4A",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
         "n_alerts": 0,
         "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Linoleic Acid",
-      "drug_id": "DB14104",
-      "disease_name": "Ehlers-Danlos syndrome",
-      "combined_score": 0.36340001225471497,
-      "pillars_hit": 4,
-      "transe_rank": 187,
-      "transe_score": -13.0084,
-      "pykeen_score": 0,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.5,
-      "proximity_distance": 2.0,
-      "admet_score": 0.6973,
-      "admet_flags": "Skin_Reaction=0.85",
-      "primekg_score": 0,
-      "dti_score": 0.3823,
-      "dti_best_target": "CHST14",
-      "kg_group_score": 0.0617,
-      "structural_group_score": 0.3823,
-      "network_group_score": 0.5,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.6839,
-      "admet_multiplier": 0.9395,
-      "efficacy_score": 0.38679999113082886,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 5,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "37103211",
-          "title": "Characterization of ",
-          "authors": "S\u00e1nchez-Hern\u00e1ndez E, Mart\u00edn-Ramos P, Ni\u00f1o-S\u00e1nchez J, et al.",
-          "journal": "Insects",
-          "year": "2023",
-          "abstract_snippet": "The western conifer seed bug (",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37103211/",
-          "total_results": 5
-        },
-        {
-          "pmid": "41519315",
-          "title": "Genipin-functionalized magnetic materials: a sustainable and innovative method for immobilizing proteases to produce antioxidant peptides.",
-          "authors": "Santos JB, P\u00f3rfirio MCP, Santos MPF, et al.",
-          "journal": "International journal of biological macromolecules",
-          "year": "2026",
-          "abstract_snippet": "The use of enzymes in the food industry continues to expand, although challenges that still limit their large-scale applications like stability, reuse, and contamination. Enzyme immobilization on magnetic nanoparticles (MNPs) is an efficient strategy to overcome these limitations, enabling greater s...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41519315/"
-        },
-        {
-          "pmid": "38826546",
-          "title": "Fabrication of a Biocompatible Nanoantimicrobial Suture for Rapid Wound Healing after Surgery.",
-          "authors": "Baygar T, Ugur A, Karaca IR, et al.",
-          "journal": "ACS omega",
-          "year": "2024",
-          "abstract_snippet": "Suture-associated infections on surgical sites are known to be related to the surface characteristics of the sutures. The present study aimed to fabricate a novel functional suture for surgical procedures and characterize its antioxidative, antimicrobial, and in vitro wound healing properties. St Jo...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38826546/"
-        },
-        {
-          "pmid": "33691298",
-          "title": "Hierarchical multi-layered scaffolds based on electrofluidodynamic processes for tissue engineering.",
-          "authors": "Piegat A, Niemczyk A, Boccaccini AR, et al.",
-          "journal": "Biomedical materials (Bristol, England)",
-          "year": "2021",
-          "abstract_snippet": "The aim of this study was to obtain hierarchical scaffolds combining 3D printing and two electrofluidodynamic methods. The multi-layered scaffold is composed by 3D printed struts, electrospun fibers obtained from poly(",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33691298/"
-        },
-        {
-          "pmid": "30699243",
-          "title": "Spatial distribution mapping of molecules in the grains of different rice landraces, using desorption electrospray ionization mass spectrometry.",
-          "authors": "Suganya A, Deb D, Pradeep T",
-          "journal": "Rapid communications in mass spectrometry : RCM",
-          "year": "2019",
-          "abstract_snippet": "RATIONALE: Documentation of the metabolite profiles of rice landraces is essential as most of them have been lost due to the conventional practices of cultivation. Therefore, application of mass spectrometry imaging (MSI) will be an appropriate analytical platform for molecular profiling, as it can ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30699243/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Essential Fatty Acid Deficiency (EFAD) in a Patient with Vascular Ehlers Danlos Syndrome (EDS-4) (P12-053-19).",
-          "year": 2019,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/2f4f6328b4787d9ea1887f4225afae7aa016ba21",
-          "authors": "M. Rothkopf"
-        },
-        {
-          "title": "Correction: The chemical chaperone 4-phenylbutyric acid rescues molecular cell defects of COL3A1 mutations that cause vascular Ehlers Danlos Syndrome",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/c4124fea236e090c990aee5f3db1e548cbc4c5f2",
-          "authors": "Ramla Omar, M. Lee, Laura Gonzalez-Trueba"
-        },
-        {
-          "title": "The chemical chaperone 4-phenylbutyric acid rescues molecular cell defects of COL3A1 mutations that cause vascular Ehlers Danlos Syndrome",
-          "year": 2024,
-          "citations": 6,
-          "url": "https://www.semanticscholar.org/paper/93234ac4fe6ac73ed810f13c5925c507c100c7ca",
-          "authors": "Ramla Omar, M. Lee, Laura Gonzalez-Trueba"
-        },
-        {
-          "title": "Impact of vascular Ehlers-Danlos Syndrome-associated Gly substitutions on structure, function, and mechanics using bacterial collagen.",
-          "year": 2024,
-          "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/657efbebe88bc13f4c34d91bbac25f79f9b52a2d",
-          "authors": "Sonal Gahlawat, Jan Siess, N. Losada"
-        },
-        {
-          "title": "Pulmonary Mycobacterium avium complex infection with vascular Ehlers\u2013Danlos syndrome: A case report",
-          "year": 2024,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/36b84757e5685691b8e1c48955d761cf633be183",
-          "authors": "Ken Okamura, R. Noro, Toru Tanaka"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "The chemical chaperone 4-phenylbutyric acid rescues molecular cell defects of COL3A1 mutations that cause vascular Ehlers Danlos Syndrome",
-        "year": 2024,
-        "citations": 6,
-        "url": "https://www.semanticscholar.org/paper/93234ac4fe6ac73ed810f13c5925c507c100c7ca",
-        "authors": "Ramla Omar, M. Lee, Laura Gonzalez-Trueba"
-      },
-      "max_citations": 6,
-      "faers_signal": "none",
-      "faers_total_reports": 283,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Linoleic Acid to Ehlers-Danlos syndrome terms. Drug has 283 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "BI-2536 (1.562)",
-        "Chemistry 2804 (1.548)",
-        "tanespimycin (1.529)",
-        "PHA-665752 (1.518)",
-        "dasatinib (1.506)"
-      ],
-      "signature_interpretation": "Linoleic Acid was not found among the top 40 drugs that reverse the Ehlers-Danlos syndrome gene signature. Top reversers: BI-2536 (1.562), Chemistry 2804 (1.548), tanespimycin (1.529)",
-      "ai_hypothesis": "of its anti-inflammatory and anti-fibrotic properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.6839,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "Linoleic Acid \u2014[is a therapeutic for]\u2192 MESH:D029424 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome",
-      "kg_paths_text": "\u2022 Linoleic Acid \u2014[is a therapeutic for]\u2192 MESH:D029424 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome\n\u2022 Linoleic Acid \u2014[is a therapeutic for]\u2192 MESH:D006973 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome\n\u2022 Linoleic Acid \u2014[is a therapeutic for]\u2192 MESH:D002318 \u2014[is treated by]\u2192 DB04846 \u2014[is a therapeutic for]\u2192 Ehlers-Danlos syndrome",
-      "validation_experiments": [],
-      "novelty_score": 0.414000004529953,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "5 PubMed article(s) - limited literature",
-        "Supported by 4 independent AI pillars",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.68)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "likely",
-        "dose_range": "trial",
-        "confidence": "medium",
-        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
-        "chembl_phase": 2.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 0,
-        "has_warnings": false,
-        "top_interactions": []
-      },
-      "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
-        "pharmgkb": []
-      },
-      "triangulation": {
-        "n_axes_agree": 0,
-        "axes": {
-          "kg": false,
-          "docking": false,
-          "pharos": false,
-          "literature": false
-        },
-        "triangulation_score": 0.19499999284744263,
-        "label": "",
-        "axis_values": {
-          "kg": 0.3630000054836273,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.338
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Skin - Not Sun Exposed (Suprapubic)"
-        ],
-        "n_genes": 28,
-        "n_expressed": 17,
-        "mean_tpm_in_tissue": 26.97,
-        "max_tpm_in_tissue": 180.27,
-        "tissue_specificity": 0.265,
-        "context_modifier": 1.012
-      },
-      "disease_entity": "Disease::MESH:D004535",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.0,
-      "ensemble_features": {
-        "kg_score": 0.7083,
-        "degree_penalty": 1.0,
-        "n_drug_targets": 19,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 8.032
-      },
-      "ensemble_rank": 10,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [
-          "ALIPHATIC",
-          "ISOLATED"
-        ],
-        "n_alerts": 2,
-        "alert_names": [
-          "Aliphatic_long_chain",
-          "isolated_alkene"
-        ]
       }
     }
   ],
   "disease_entity": "Disease::MESH:D004535",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
     "n_disease_genes": 28,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
-  },
-  "ensemble_version": "v5",
-  "ensemble_model_path": "data/models/ensemble_v5.pkl"
+  }
 }

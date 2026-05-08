@@ -1,8 +1,8 @@
 {
   "disease": "Sepsis",
   "status": "completed",
-  "timestamp": "2026-04-19T18:46:06.460996",
-  "elapsed_seconds": 819.8,
+  "timestamp": "2026-05-07T23:06:55.922385",
+  "elapsed_seconds": 175.9,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -265,6 +265,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.57)"
       ],
+      "disease_entity": "Disease::MESH:D018805",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -401,15 +402,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.963
       },
-      "disease_entity": "Disease::MESH:D018805",
-      "docking": {
-        "kcal_per_mol": -11.64,
-        "target_symbol": "NR3C1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.9525,
+      "ensemble_prob": 0.9852,
       "ensemble_features": {
         "kg_score": 0.9991,
         "degree_penalty": 0.736,
@@ -418,7 +411,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.3026
       },
-      "ensemble_rank": 2,
+      "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": -11.64,
+        "target_symbol": "NR3C1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -549,6 +549,7 @@
         "Highly cited paper (13284 citations): \"Developing a New Definition and Assessing New Clinical Crite...\"",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D018805",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -598,14 +599,6 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.978
       },
-      "disease_entity": "Disease::MESH:D018805",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
       "ensemble_prob": 0.0,
       "ensemble_features": {
         "kg_score": 0.4664,
@@ -616,6 +609,13 @@
         "transe_rank_log": 8.6359
       },
       "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -836,6 +836,7 @@
         "Supporting paper with 99 citations",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D018805",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -983,15 +984,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.978
       },
-      "disease_entity": "Disease::MESH:D018805",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.0397,
+      "ensemble_prob": 0.0307,
       "ensemble_features": {
         "kg_score": 0.9747,
         "degree_penalty": 0.7479,
@@ -1000,7 +993,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 5.591
       },
-      "ensemble_rank": 7,
+      "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -1038,7 +1038,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2537,
       "dti_score": 1.0,
-      "dti_best_target": "HIF1A",
+      "dti_best_target": "CAV1",
       "kg_group_score": 0.4801,
       "structural_group_score": 1.0,
       "network_group_score": 0.6669999957084656,
@@ -1223,20 +1223,28 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT07172932",
-          "title": "ANTIBIOTIC-RESISTANT ENTEROBACTERALES BLOODSTREAM INFECTIONS AND RISK FACTORS IN PATIENTS ADMITTED TO THE INTENSIVE CARE UNIT",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "314",
-          "url": "https://clinicaltrials.gov/study/NCT07172932"
+          "nct_id": "NCT07089186",
+          "title": "Study to Assess the Efficacy and Safety of Meropenem and Pralurbactam in Carbapenem-Resistant Enterobacteriaceae Infections",
+          "status": "RECRUITING",
+          "phase": "PHASE3",
+          "enrollment": "80",
+          "url": "https://clinicaltrials.gov/study/NCT07089186"
         },
         {
-          "nct_id": "NCT05833412",
-          "title": "Molecular Early Sepsis Identification Study",
-          "status": "UNKNOWN",
-          "phase": "N/A",
-          "enrollment": "120",
-          "url": "https://clinicaltrials.gov/study/NCT05833412"
+          "nct_id": "NCT04882085",
+          "title": "Efficacy and Safety of CAZ-AVI in the Treatment of Infections Due to Carbapenem-resistant G- Pathogens in Chinese Adults",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "60",
+          "url": "https://clinicaltrials.gov/study/NCT04882085"
+        },
+        {
+          "nct_id": "NCT03894046",
+          "title": "Study to Evaluate the Efficacy and Safety of Intravenous Sulbactam-ETX2514 in the Treatment of Patients With Infections Caused by Acinetobacter Baumannii-calcoaceticus Complex",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "207",
+          "url": "https://clinicaltrials.gov/study/NCT03894046"
         },
         {
           "nct_id": "NCT01511224",
@@ -1247,26 +1255,17 @@
           "url": "https://clinicaltrials.gov/study/NCT01511224"
         },
         {
-          "nct_id": "NCT01793012",
-          "title": "Drug Monitoring of Antibiotics in Critical Care Patients",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "186",
-          "url": "https://clinicaltrials.gov/study/NCT01793012"
-        },
-        {
-          "nct_id": "NCT01577862",
-          "title": "Colistin and Rifampicin for MDR-Acinetobacter",
+          "nct_id": "NCT02389036",
+          "title": "Selective Decontamination of the Digestive Tract in Intensive Care Unit Patients",
           "status": "COMPLETED",
           "phase": "PHASE3",
-          "enrollment": "210",
-          "url": "https://clinicaltrials.gov/study/NCT01577862"
+          "enrollment": "20010",
+          "url": "https://clinicaltrials.gov/study/NCT02389036"
         }
       ],
       "trial_phases": {
-        "PHASE3": 2,
-        "PHASE4": 1,
-        "NA": 1
+        "PHASE3": 3,
+        "PHASE4": 3
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -1280,6 +1279,7 @@
         "AI-generated hypothesis available",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D018805",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1335,15 +1335,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.978
       },
-      "disease_entity": "Disease::MESH:D018805",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.0656,
+      "ensemble_prob": 0.0695,
       "ensemble_features": {
         "kg_score": 0.9154,
         "degree_penalty": 1.0,
@@ -1353,6 +1345,13 @@
         "transe_rank_log": 6.7957
       },
       "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -1388,7 +1387,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2528,
       "dti_score": 1.0,
-      "dti_best_target": "HIF1A",
+      "dti_best_target": "CAV1",
       "kg_group_score": 0.3206,
       "structural_group_score": 1.0,
       "network_group_score": 0.6029000282287598,
@@ -1555,51 +1554,50 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT04876430",
-          "title": "Best Available Therapy With or Without Meropenem for Bloodstream Infections by Enterobacterales With High Level of Resistance to Carbapenems",
-          "status": "TERMINATED",
-          "phase": "PHASE2, PHASE3",
-          "enrollment": "13",
-          "url": "https://clinicaltrials.gov/study/NCT04876430"
-        },
-        {
-          "nct_id": "NCT05443854",
-          "title": "Impact of Aminoglycosides-based Antibiotics Combination and Protective Isolation on Outcomes in Critically-ill Neutropenic Patients With Sepsis: (Combination-Lock01)",
-          "status": "UNKNOWN",
+          "nct_id": "NCT07089186",
+          "title": "Study to Assess the Efficacy and Safety of Meropenem and Pralurbactam in Carbapenem-Resistant Enterobacteriaceae Infections",
+          "status": "RECRUITING",
           "phase": "PHASE3",
-          "enrollment": "340",
-          "url": "https://clinicaltrials.gov/study/NCT05443854"
+          "enrollment": "80",
+          "url": "https://clinicaltrials.gov/study/NCT07089186"
         },
         {
-          "nct_id": "NCT06419296",
-          "title": "Mortality of MBL-producing Enterobacteriaceae Bacteremias with the Combined Use of Ceftazidime-avibactam and Aztreonam Vs. Other Active Antibiotics. a Multicenter Target Trial Emulation.",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "265",
-          "url": "https://clinicaltrials.gov/study/NCT06419296"
-        },
-        {
-          "nct_id": "NCT03147807",
-          "title": "BetaLACTA\u00ae Test for Early De-escalation of Empirical Carbapenems in Pulmonary, Urinary and Bloodstream Infections in ICU",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "75",
-          "url": "https://clinicaltrials.gov/study/NCT03147807"
-        },
-        {
-          "nct_id": "NCT02365272",
-          "title": "Pharmacokinetic/Pharmacodynamic Evaluation Amikacin in Critically Ill Patients Admitted at the Emergency Department",
+          "nct_id": "NCT04882085",
+          "title": "Efficacy and Safety of CAZ-AVI in the Treatment of Infections Due to Carbapenem-resistant G- Pathogens in Chinese Adults",
           "status": "COMPLETED",
           "phase": "PHASE4",
-          "enrollment": "100",
-          "url": "https://clinicaltrials.gov/study/NCT02365272"
+          "enrollment": "60",
+          "url": "https://clinicaltrials.gov/study/NCT04882085"
+        },
+        {
+          "nct_id": "NCT01867138",
+          "title": "Neonatal Suspected Sepsis Treated With Cefazolin or Vancomycin",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "109",
+          "url": "https://clinicaltrials.gov/study/NCT01867138"
+        },
+        {
+          "nct_id": "NCT01431326",
+          "title": "Pharmacokinetics of Understudied Drugs Administered to Children Per Standard of Care",
+          "status": "COMPLETED",
+          "phase": "N/A",
+          "enrollment": "3520",
+          "url": "https://clinicaltrials.gov/study/NCT01431326"
+        },
+        {
+          "nct_id": "NCT04178148",
+          "title": "Personalized Dose Optimization of Amikacin Guided by Pharmacokinetic Modeling Software in Patients With Septic Shock",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "180",
+          "url": "https://clinicaltrials.gov/study/NCT04178148"
         }
       ],
       "trial_phases": {
-        "PHASE2": 1,
         "PHASE3": 2,
-        "NA": 3,
-        "PHASE4": 2
+        "PHASE4": 3,
+        "NA": 3
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -1612,6 +1610,7 @@
         "AI-generated hypothesis available",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D018805",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1726,15 +1725,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.978
       },
-      "disease_entity": "Disease::MESH:D018805",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.9435,
+      "ensemble_prob": 0.989,
       "ensemble_features": {
         "kg_score": 0.9987,
         "degree_penalty": 0.8038,
@@ -1743,7 +1734,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.7081
       },
-      "ensemble_rank": 3,
+      "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -1760,7 +1758,7 @@
       "drug_name": "Methylprednisolone",
       "drug_id": "DB00959",
       "disease_name": "Sepsis",
-      "combined_score": 0.4115000069141388,
+      "combined_score": 0.40700000524520874,
       "pillars_hit": 4,
       "transe_rank": 79,
       "transe_score": -10.5816,
@@ -1779,15 +1777,15 @@
       "admet_score": 0.7065,
       "admet_flags": "clean",
       "primekg_score": 0.2556,
-      "dti_score": 0.7937,
-      "dti_best_target": "HIF1A",
+      "dti_score": 0.7671,
+      "dti_best_target": "GPR18",
       "kg_group_score": 0.2736,
-      "structural_group_score": 0.7937,
+      "structural_group_score": 0.7671,
       "network_group_score": 0.5153999924659729,
       "txgnn_group_score": 0,
       "mr_group_score": 0.152,
       "admet_multiplier": 0.9413,
-      "efficacy_score": 0.43709999322891235,
+      "efficacy_score": 0.4323999881744385,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 4,
@@ -1935,18 +1933,26 @@
       "mechanistic_hypothesis": "Methylprednisolone \u2014[is a therapeutic for]\u2192 Sepsis",
       "kg_paths_text": "\u2022 Methylprednisolone \u2014[is a therapeutic for]\u2192 Sepsis\n\u2022 Methylprednisolone \u2014[is agonized by]\u2192 gene-2908 \u2014[is linked to]\u2192 Sepsis\n\u2022 Methylprednisolone \u2014[is agonized by]\u2192 gene-2908 \u2014[is an agonist of]\u2192 DB00741 \u2014[is a therapeutic for]\u2192 Sepsis",
       "validation_experiments": [],
-      "novelty_score": 0.12300000339746475,
+      "novelty_score": 0.12200000137090683,
       "novelty_level": "ESTABLISHED",
       "is_known_treatment": true,
       "clinical_trials_total": 6,
       "clinical_trials": [
         {
-          "nct_id": "NCT07511582",
-          "title": "Corticosteroids in Hyperinflammatory Phenotype of Critical Illness",
-          "status": "NOT_YET_RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "150",
-          "url": "https://clinicaltrials.gov/study/NCT07511582"
+          "nct_id": "NCT01431326",
+          "title": "Pharmacokinetics of Understudied Drugs Administered to Children Per Standard of Care",
+          "status": "COMPLETED",
+          "phase": "N/A",
+          "enrollment": "3520",
+          "url": "https://clinicaltrials.gov/study/NCT01431326"
+        },
+        {
+          "nct_id": "NCT01275638",
+          "title": "The Effect of Moderate-Dose Steroid Therapy in Sepsis",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "55",
+          "url": "https://clinicaltrials.gov/study/NCT01275638"
         },
         {
           "nct_id": "NCT03152474",
@@ -1957,34 +1963,26 @@
           "url": "https://clinicaltrials.gov/study/NCT03152474"
         },
         {
-          "nct_id": "NCT01431326",
-          "title": "Pharmacokinetics of Understudied Drugs Administered to Children Per Standard of Care",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "3520",
-          "url": "https://clinicaltrials.gov/study/NCT01431326"
-        },
-        {
-          "nct_id": "NCT00842933",
-          "title": "Adrenal Insufficiency in Septic Shock",
-          "status": "TERMINATED",
-          "phase": "PHASE4",
-          "enrollment": "32",
-          "url": "https://clinicaltrials.gov/study/NCT00842933"
-        },
-        {
           "nct_id": "NCT06472219",
           "title": "PREDICATE Trial For Respiratory Tract Infections",
           "status": "RECRUITING",
           "phase": "PHASE3",
           "enrollment": "1300",
           "url": "https://clinicaltrials.gov/study/NCT06472219"
+        },
+        {
+          "nct_id": "NCT07511582",
+          "title": "Corticosteroids in Hyperinflammatory Phenotype of Critical Illness",
+          "status": "NOT_YET_RECRUITING",
+          "phase": "PHASE2",
+          "enrollment": "150",
+          "url": "https://clinicaltrials.gov/study/NCT07511582"
         }
       ],
       "trial_phases": {
-        "PHASE2": 1,
         "PHASE4": 3,
-        "PHASE3": 1
+        "PHASE3": 1,
+        "PHASE2": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -1996,6 +1994,7 @@
         "AI-generated hypothesis available",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D018805",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -2084,10 +2083,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.62,
+        "triangulation_score": 0.619,
         "label": "silver-standard",
         "axis_values": {
-          "kg": 0.412,
+          "kg": 0.407,
           "docking": 0.921,
           "pharos": 0.0,
           "literature": 1.0
@@ -2104,15 +2103,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.984
       },
-      "disease_entity": "Disease::MESH:D018805",
-      "docking": {
-        "kcal_per_mol": -11.05,
-        "target_symbol": "NR3C1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.5692,
+      "ensemble_prob": 0.451,
       "ensemble_features": {
         "kg_score": 0.9953,
         "degree_penalty": 0.7636,
@@ -2122,6 +2113,13 @@
         "transe_rank_log": 3.9318
       },
       "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": -11.05,
+        "target_symbol": "NR3C1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2287,6 +2285,7 @@
         "Highly cited paper (7258 citations): \"Surviving Sepsis Campaign: International Guidelines for Mana...\"",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D018805",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "late-trial",
@@ -2336,14 +2335,6 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.868
       },
-      "disease_entity": "Disease::MESH:D018805",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
       "ensemble_prob": 0.0,
       "ensemble_features": {
         "kg_score": 0.722,
@@ -2354,6 +2345,13 @@
         "transe_rank_log": 7.9841
       },
       "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2365,7 +2363,7 @@
       "drug_name": "Gemcitabine",
       "drug_id": "DB00441",
       "disease_name": "Sepsis",
-      "combined_score": 0.4043999910354614,
+      "combined_score": 0.4052000045776367,
       "pillars_hit": 4,
       "transe_rank": 191,
       "transe_score": -10.9314,
@@ -2384,15 +2382,15 @@
       "admet_score": 0.6272,
       "admet_flags": "clean",
       "primekg_score": 0.2527,
-      "dti_score": 0.9954,
-      "dti_best_target": "HIF1A",
+      "dti_score": 1.0,
+      "dti_best_target": "CAV1",
       "kg_group_score": 0.1635,
-      "structural_group_score": 0.9954,
+      "structural_group_score": 1.0,
       "network_group_score": 0.4706999957561493,
       "txgnn_group_score": 0,
       "mr_group_score": 0.152,
       "admet_multiplier": 0.9254,
-      "efficacy_score": 0.43700000643730164,
+      "efficacy_score": 0.43779999017715454,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 5,
@@ -2555,6 +2553,7 @@
         "Supporting paper with 24 citations",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D018805",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -2677,10 +2676,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.3230000138282776,
+        "triangulation_score": 0.3240000009536743,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.40400001406669617,
+          "kg": 0.4050000011920929,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 0.909
@@ -2697,15 +2696,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.957
       },
-      "disease_entity": "Disease::MESH:D018805",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.0397,
+      "ensemble_prob": 0.0673,
       "ensemble_features": {
         "kg_score": 0.9769,
         "degree_penalty": 0.7532,
@@ -2714,7 +2705,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 5.5013
       },
-      "ensemble_rank": 8,
+      "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2927,6 +2925,7 @@
         "Highly cited paper (5213 citations): \"Global, regional, and national sepsis incidence and mortalit...\"",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D018805",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3027,15 +3026,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.879
       },
-      "disease_entity": "Disease::MESH:D018805",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.0552,
+      "ensemble_prob": 0.0673,
       "ensemble_features": {
         "kg_score": 0.9806,
         "degree_penalty": 0.7743,
@@ -3044,7 +3035,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 5.3279
       },
-      "ensemble_rank": 6,
+      "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -3299,50 +3297,52 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT02424734",
-          "title": "Safety, Tolerability and Efficacy of Ceftaroline in Paediatrics With Late-Onset Sepsis",
+          "nct_id": "NCT00816790",
+          "title": "Standard Vs Adjusted Dosing of Piperacillin/Tazobactam in Acute Renal Failure and Septic Shock",
           "status": "TERMINATED",
-          "phase": "PHASE2",
-          "enrollment": "11",
-          "url": "https://clinicaltrials.gov/study/NCT02424734"
+          "phase": "PHASE4",
+          "enrollment": "20",
+          "url": "https://clinicaltrials.gov/study/NCT00816790"
         },
         {
-          "nct_id": "NCT00487019",
-          "title": "Management of Early Onset Neonatal Septicaemia: Selection of Optimal Antibacterial Regimen for Empiric Treatment",
+          "nct_id": "NCT00873327",
+          "title": "Pharmacokinetics and Safety of Piperacillin-tazobactam in Neonates",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "32",
+          "url": "https://clinicaltrials.gov/study/NCT00873327"
+        },
+        {
+          "nct_id": "NCT01333982",
+          "title": "Neonatal Sepsis, Evaluation, Bangladesh",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "20000",
+          "url": "https://clinicaltrials.gov/study/NCT01333982"
+        },
+        {
+          "nct_id": "NCT01431326",
+          "title": "Pharmacokinetics of Understudied Drugs Administered to Children Per Standard of Care",
           "status": "COMPLETED",
           "phase": "N/A",
-          "enrollment": "281",
-          "url": "https://clinicaltrials.gov/study/NCT00487019"
+          "enrollment": "3520",
+          "url": "https://clinicaltrials.gov/study/NCT01431326"
         },
         {
-          "nct_id": "NCT05224401",
-          "title": "Pivmecillinam With Amoxicillin/Clavulanic Acid for Step Down Oral Therapy in ESBL UTIs",
-          "status": "RECRUITING",
-          "phase": "PHASE3",
-          "enrollment": "330",
-          "url": "https://clinicaltrials.gov/study/NCT05224401"
-        },
-        {
-          "nct_id": "NCT05565222",
-          "title": "Piperacillin-tazobactam and Temocillin as Carbapenem-alternatives for the Treatment of Severe Infections Due to Extended-spectrum Beta-lactamase-Producing Gram-negative Enterobacteriaceae in the Intensive Care Unit",
-          "status": "RECRUITING",
-          "phase": "PHASE3",
-          "enrollment": "600",
-          "url": "https://clinicaltrials.gov/study/NCT05565222"
-        },
-        {
-          "nct_id": "NCT02784821",
-          "title": "Antibiotic \"Dysbiosis\" in Preterm Infants",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "98",
-          "url": "https://clinicaltrials.gov/study/NCT02784821"
+          "nct_id": "NCT02783404",
+          "title": "An Oral Amoxicillin-Clavulanate Regimen to Prevent Bacteremia Following Dental Procedures",
+          "status": "TERMINATED",
+          "phase": "PHASE4",
+          "enrollment": "40",
+          "url": "https://clinicaltrials.gov/study/NCT02783404"
         }
       ],
       "trial_phases": {
-        "PHASE2": 3,
-        "PHASE3": 5,
-        "PHASE4": 2
+        "PHASE4": 5,
+        "PHASE1": 1,
+        "NA": 1,
+        "PHASE2": 1,
+        "PHASE3": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -3355,6 +3355,7 @@
         "AI-generated hypothesis available",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D018805",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3455,15 +3456,7 @@
         "tissue_specificity": 0.367,
         "context_modifier": 1.001
       },
-      "disease_entity": "Disease::MESH:D018805",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.9965,
+      "ensemble_prob": 0.9958,
       "ensemble_features": {
         "kg_score": 0.9999,
         "degree_penalty": 0.7946,
@@ -3473,6 +3466,13 @@
         "transe_rank_log": 0.6931
       },
       "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -3486,11 +3486,11 @@
     }
   ],
   "disease_entity": "Disease::MESH:D018805",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
     "n_disease_genes": 78,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
-  },
-  "ensemble_version": "v5",
-  "ensemble_model_path": "data/models/ensemble_v5.pkl"
+  }
 }

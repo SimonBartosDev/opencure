@@ -1,158 +1,109 @@
 {
   "disease": "Malaria",
   "status": "completed",
-  "timestamp": "2026-04-19T12:30:03.420847",
-  "elapsed_seconds": 794.2,
-  "total_searched": 50,
-  "evidence_generated": 10,
+  "timestamp": "2026-05-07T14:29:38.290510",
+  "elapsed_seconds": 251.5,
+  "total_searched": 5,
+  "evidence_generated": 5,
   "confidence_counts": {
-    "LOW": 5,
-    "HIGH": 3,
-    "MEDIUM": 2
+    "LOW": 5
   },
   "pipeline_version": "v5",
   "data_manifest_hash": "2da2aa88f2457d1b",
   "candidates": [
     {
-      "drug_name": "Cimetidine",
-      "drug_id": "DB00501",
+      "drug_name": "Oxaprozin",
+      "drug_id": "DB00991",
       "disease_name": "Malaria",
-      "combined_score": 0.5508000254631042,
-      "pillars_hit": 4,
-      "transe_rank": 51,
-      "transe_score": -10.807,
+      "combined_score": 0.2546,
+      "pillars_hit": 2,
+      "transe_rank": 2387,
+      "transe_score": -12.6415,
       "pykeen_score": 0,
       "pykeen_rank": 0,
-      "txgnn_score": 0.86,
-      "txgnn_rank": 14,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.75,
-      "proximity_distance": 1.0,
-      "admet_score": 0.5683,
-      "admet_flags": "clean",
-      "primekg_score": 0.2671,
-      "dti_score": 0.9296,
-      "dti_best_target": "ITPRIP",
-      "kg_group_score": 0.1282,
-      "structural_group_score": 0.9296,
-      "network_group_score": 0.571399986743927,
-      "txgnn_group_score": 0.86,
+      "mol_emb_similarity": 0.9292,
+      "mol_emb_similar_to": "Clotrimazole",
+      "gene_sig_score": 0.0546,
+      "gene_sig_rank": 15,
+      "proximity_score": 0,
+      "proximity_distance": 0,
+      "admet_score": 0.6202,
+      "admet_flags": "DILI=0.94",
+      "primekg_score": 0,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": -9.7725,
+      "structural_group_score": 0.9292,
+      "network_group_score": 0.5411,
+      "txgnn_group_score": 0,
       "mr_group_score": 0,
-      "admet_multiplier": 0.9137,
-      "efficacy_score": 0.6029000282287598,
-      "groups_hit": 4,
+      "admet_multiplier": 0.924,
+      "efficacy_score": 0.2755,
+      "groups_hit": 2,
       "direct_relations": [],
       "shared_target_count": 2,
       "shared_targets": [
-        "CYP2D6",
-        "IL2"
+        "PTGS1",
+        "PTGS2"
       ],
-      "pubmed_total": 5,
-      "pubmed_treatment_total": 4,
+      "pubmed_total": 0,
+      "pubmed_treatment_total": 0,
       "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "2557804",
-          "title": "The effect of pentostam and cimetidine on the development of leishmaniasis (Leishmania mexicana amazonensis) and concomitant malaria (Plasmodium yoelii).",
-          "authors": "Coleman RE, Edman JD, Semprevivo LH",
-          "journal": "Annals of tropical medicine and parasitology",
-          "year": "1989",
-          "abstract_snippet": "BALB/c mice were infected with Leishmania mexicana amazonensis and/or Plasmodium yoelii in order to determine the impact of multiple parasitic infection on the efficacy of chemotherapeutic agents. Uninfected, P. yoelii-infected, L.m. amazonensis-infected, and L.m. amazonensis and P. yoelii-infected ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/2557804/",
-          "total_results": 5
-        },
-        {
-          "pmid": "25677644",
-          "title": "Spasmogenic effects of Sclerocarya birrea stem bark aqueous extract on rat isolated uterine horns.",
-          "authors": "Mawoza T, Tagwireyi D, Nhachi C",
-          "journal": "Journal of ethnopharmacology",
-          "year": "2015",
-          "abstract_snippet": "ETHNOPHARMACOLOGICAL RELEVANCE: Sclerocarya birrea (Anacardiaceae), popularly known as \"marula\", is used as a traditional remedy for allegedly treating dysmenorrhoea and a host of other ailments such as malaria, fever, diarrhoea, dysentery, stomach disorders, headaches and to facilitate childbirth. ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/25677644/"
-        },
-        {
-          "pmid": "2888439",
-          "title": "Plasmodium berghei-infected mice: lack of effect of meclizine and cimetidine on the development of pulmonary oedema.",
-          "authors": "Martins MA, Silva PM, Henriques MG, et al.",
-          "journal": "Annals of tropical medicine and parasitology",
-          "year": "1986",
-          "abstract_snippet": "The involvement of histaminergic mechanisms in the pathogenesis of pulmonary oedema observed in Plasmodium berghei-infected mice was investigated. Histamine concentrations in plasma and whole blood of infected and normal mice were determined by radioenzymatic assay during the seven days of the infec...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/2888439/"
-        },
-        {
-          "pmid": "14519046",
-          "title": "Dapsone-induced acute pancreatitis.",
-          "authors": "Jha SH, Reddy JA, Dave JK",
-          "journal": "The Annals of pharmacotherapy",
-          "year": "2003",
-          "abstract_snippet": "OBJECTIVE: To report a case of acute pancreatitis associated with dapsone use. CASE SUMMARY: An 87-year-old white man was prescribed dapsone for dermatitis herpetiformis. Four weeks later, he developed acute abdominal pain requiring hospitalization. The patient had elevated serum amylase and lipase ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/14519046/"
-        },
-        {
-          "pmid": "8328780",
-          "title": "Enhancement of drug susceptibility in Plasmodium falciparum in vitro and Plasmodium berghei in vivo by mixed-function oxidase inhibitors.",
-          "authors": "Ndifor AM, Howells RE, Bray PG, et al.",
-          "journal": "Antimicrobial agents and chemotherapy",
-          "year": "1993",
-          "abstract_snippet": "A number of compounds, as exemplified by verapamil and desipramine, have been shown to enhance the susceptibility of resistant malaria parasites to chloroquine. The mechanism by which these agents reverse resistance is still controversial but is though to involve alterations in drug transport causin...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/8328780/"
-        }
-      ],
+      "key_papers": [],
       "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "The effect of pentostam and cimetidine on the development of leishmaniasis (Leishmania mexicana amazonensis) and concomitant malaria (Plasmodium yoelii).",
-          "year": 1989,
-          "citations": 12,
-          "url": "https://www.semanticscholar.org/paper/d9abe71b1a26b14255bb3cc9c1bc4e1836897a0a",
-          "authors": "R. Coleman, J. Edman, L. Semprevivo"
+          "title": "Accuracy of diagnosis among clinical malaria patients: comparing microscopy, RDT and a highly sensitive quantitative PCR looking at the implications for submicroscopic infections",
+          "year": 2023,
+          "citations": 87,
+          "url": "https://www.semanticscholar.org/paper/8c5f8d9db113d46924fa2b1028980f02e4a449c1",
+          "authors": "Stephen Opoku Afriyie, T. Addison, Y. Gebre"
         },
         {
-          "title": "Cimetidine could help beat malaria",
-          "year": 1993,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/b8ea0b4b26f3f5b9094f5d7a5f1ba07a4951df9d",
-          "authors": ""
+          "title": "Impact of insecticide resistance on malaria vector competence: a literature review",
+          "year": 2023,
+          "citations": 85,
+          "url": "https://www.semanticscholar.org/paper/6f81f8baf3e622dead50d65a819428a50750d4fe",
+          "authors": "P. F. Suh, Emmanuel Elanga-Ndille, Magellan Tchouakui"
         },
         {
-          "title": "Anti-malaria effects of cimitidine. I. Inhibitory effects of cimetidine on Plasmodium falciparum in vitro",
-          "year": 1996,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/cf31f1e7e1f460ade1c1927bef2bc0f68b13641c",
-          "authors": "Li Ruizi, Guo Hong, Wang SaiMei"
+          "title": "Climate change and malaria: some recent trends of malaria incidence rates and average annual temperature in selected sub-Saharan African countries from 2000 to 2018",
+          "year": 2023,
+          "citations": 76,
+          "url": "https://www.semanticscholar.org/paper/469709495c88ff25a7c416f46438235d1c89d9ec",
+          "authors": "W. Leal Filho, Julia May, Marta May"
         },
         {
-          "title": "Anti-malaria effects of cimetidine. IV. Comparison of contents of 4 kinds of elements in sera of mice infected with Plasmodium spp",
-          "year": 1998,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/0c9fb7189f7aaee53cf2dd4a4f7423b90ed996c7",
-          "authors": "Guo Hong, Z. Junqing, Lin QiongLian"
+          "title": "Severe malaria",
+          "year": 2022,
+          "citations": 128,
+          "url": "https://www.semanticscholar.org/paper/e18d8f785a8af10acf060b87efafd6ae08626a7f",
+          "authors": "N. J. White"
         },
         {
-          "title": "Incidence of Side Efect Quinine in Malaria Patients in Bontang Public Hospital, East Kalimantan",
-          "year": 2015,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/2a610328af4ea21b99ea327b7f591d61ba677c8a",
-          "authors": "Nita Ristiawati"
+          "title": "The economic burden of malaria: a systematic review",
+          "year": 2022,
+          "citations": 107,
+          "url": "https://www.semanticscholar.org/paper/c69acbd608487c06b559ae60f7966a4155b0281a",
+          "authors": "M. Andrade, K. Noronha, B. C. Diniz"
         }
       ],
       "most_cited_paper": {
-        "title": "The effect of pentostam and cimetidine on the development of leishmaniasis (Leishmania mexicana amazonensis) and concomitant malaria (Plasmodium yoelii).",
-        "year": 1989,
-        "citations": 12,
-        "url": "https://www.semanticscholar.org/paper/d9abe71b1a26b14255bb3cc9c1bc4e1836897a0a",
-        "authors": "R. Coleman, J. Edman, L. Semprevivo"
+        "title": "Severe malaria",
+        "year": 2022,
+        "citations": 128,
+        "url": "https://www.semanticscholar.org/paper/e18d8f785a8af10acf060b87efafd6ae08626a7f",
+        "authors": "N. J. White"
       },
-      "max_citations": 12,
+      "max_citations": 128,
       "faers_signal": "none",
-      "faers_total_reports": 6461,
+      "faers_total_reports": 919,
       "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Cimetidine to Malaria terms. Drug has 6461 total reports.",
+      "faers_interpretation": "No FAERS reports found linking Oxaprozin to Malaria terms. Drug has 919 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -162,35 +113,19 @@
         "curcumin (1.542)",
         "HO-013 (1.535)"
       ],
-      "signature_interpretation": "Cimetidine was not found among the top 27 drugs that reverse the Malaria gene signature. Top reversers: T7765 (1.561), Chemistry 2804 (1.549), crizotinib (1.547)",
-      "ai_hypothesis": "of its anti-malarial properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
+      "signature_interpretation": "Oxaprozin was not found among the top 27 drugs that reverse the Malaria gene signature. Top reversers: T7765 (1.561), Chemistry 2804 (1.549), crizotinib (1.547)",
+      "ai_hypothesis": "",
+      "abstract_analyses": [],
       "has_failed_trial": false,
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
       "mr_score": 0,
       "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "Cimetidine \u2014[binds]\u2192 gene-1571 \u2014[is bound by]\u2192 DB00359 \u2014[treats]\u2192 Malaria",
-      "kg_paths_text": "\u2022 Cimetidine \u2014[binds]\u2192 gene-1571 \u2014[is bound by]\u2192 DB00359 \u2014[treats]\u2192 Malaria\n\u2022 Cimetidine \u2014[binds]\u2192 gene-1576 \u2014[is bound by]\u2192 DB00608 \u2014[treats]\u2192 Malaria\n\u2022 Cimetidine \u2014[binds]\u2192 gene-1576 \u2014[is bound by]\u2192 DB00608 \u2014[treats]\u2192 Malaria",
+      "mechanistic_hypothesis": "Oxaprozin \u2014[treats]\u2192 MESH:D001172 \u2014[is treated by]\u2192 DB01611 \u2014[treats]\u2192 Malaria",
+      "kg_paths_text": "\u2022 Oxaprozin \u2014[treats]\u2192 MESH:D001172 \u2014[is treated by]\u2192 DB01611 \u2014[treats]\u2192 Malaria\n\u2022 Oxaprozin \u2014[treats]\u2192 MESH:D001172 \u2014[is treated by]\u2192 DB01611 \u2014[treats]\u2192 Malaria\n\u2022 Oxaprozin \u2014[treats]\u2192 MESH:D001172 \u2014[is treated by]\u2192 DB00608 \u2014[treats]\u2192 Malaria",
       "validation_experiments": [],
-      "novelty_score": 0.5230000019073486,
+      "novelty_score": 0.229,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -198,10 +133,10 @@
       "trial_phases": {},
       "confidence": "LOW",
       "confidence_reasons": [
-        "5 PubMed article(s) - limited literature",
-        "Supported by 4 independent AI pillars",
-        "AI-generated hypothesis available"
+        "Supported by 2 independent AI pillars",
+        "Highly cited paper (128 citations): \"Severe malaria...\""
       ],
+      "disease_entity": "Disease::MESH:D008288",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -212,7 +147,258 @@
         "stage": 1
       },
       "ddi_warnings": {
-        "n_interactions": 1670,
+        "n_interactions": 1412,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00331",
+            "drug_name": "Metformin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00959",
+            "drug_name": "Methylprednisolone",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": false,
+          "docking": true,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.327,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.255,
+          "docking": 0.792,
+          "pharos": 0.0,
+          "literature": 0.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood",
+          "Liver",
+          "Spleen"
+        ],
+        "n_genes": 2,
+        "n_expressed": 2,
+        "mean_tpm_in_tissue": 9.07,
+        "max_tpm_in_tissue": 13.75,
+        "tissue_specificity": 0.085,
+        "context_modifier": 0.95
+      },
+      "ensemble_prob": 0.0012,
+      "ensemble_features": {
+        "kg_score": 0.8417,
+        "degree_penalty": 0.773,
+        "n_drug_targets": 16,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 7.4212
+      },
+      "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": -9.5,
+        "target_symbol": "PTGS2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Curcumin sulfate",
+      "drug_id": "DB14635",
+      "disease_name": "Malaria",
+      "combined_score": 0.2326,
+      "pillars_hit": 2,
+      "transe_rank": 3068,
+      "transe_score": -12.9703,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0.7561,
+      "similar_to": "Curcumin",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 1.5144,
+      "gene_sig_rank": 13,
+      "proximity_score": 0,
+      "proximity_distance": 0,
+      "admet_score": 0.5152,
+      "admet_flags": "clean",
+      "primekg_score": 0,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": -10.6471,
+      "structural_group_score": 0.7561,
+      "network_group_score": 0.6075,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.903,
+      "efficacy_score": 0.2576,
+      "groups_hit": 2,
+      "direct_relations": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "CYP2D6"
+      ],
+      "pubmed_total": 0,
+      "pubmed_treatment_total": 0,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Development of Curcumin nanophytosomes surface functionalized with Chondroitin sulfate a for treating k1 Plasmodium falciparum drug-resistant malaria",
+          "year": 2023,
+          "citations": 9,
+          "url": "https://www.semanticscholar.org/paper/f32bd578565ca294ba600147cba0dc6105fce871",
+          "authors": "E. Bhargav, K. Koteshwara, Y. Padmanabha Reddy"
+        },
+        {
+          "title": "Encapsulation of Curcumin in Casein-Dextran Sulfate Nanocomplexes for Enhanced Acid Stability and Bioaccessibility",
+          "year": 2025,
+          "citations": 12,
+          "url": "https://www.semanticscholar.org/paper/542c32d667f5f36fbd6e19e1d77b76c7cfd17f92",
+          "authors": "Hyejung Lee, Qixin Zhong"
+        },
+        {
+          "title": "Dextran sulfate-coated curcumin nanocrystals for the treatment of DSS-induced ulcerative colitis in mice.",
+          "year": 2025,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/66a28db9e1c4d9bb85c273236de89a5c005caf5d",
+          "authors": "Yunmei Li, Huilin Ma, Huan Shi"
+        },
+        {
+          "title": "Loading curcumin in shellac/sodium dodecyl sulfate composite nanocapsules with the pH-cycle method to improve acid stability and bioaccessibility.",
+          "year": 2025,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/49d6bb9c400b0a7343ed8303a6a0ea0c0ca0fee5",
+          "authors": "N. G\u00fczel, Qixin Zhong"
+        },
+        {
+          "title": "Short-term results of curcumin, quercetin, hyaluronic acid and chondroitin sulfate (Ialuril Soft Gels\u00ae) in the management of chronic prostatitis/primary prostate pain syndrome: a single-center prospective study",
+          "year": 2025,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/de491452b5d713cf78149b52ca9679c124083fcb",
+          "authors": "V. Iacovelli, M. Vittori, M. Carilli"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Encapsulation of Curcumin in Casein-Dextran Sulfate Nanocomplexes for Enhanced Acid Stability and Bioaccessibility",
+        "year": 2025,
+        "citations": 12,
+        "url": "https://www.semanticscholar.org/paper/542c32d667f5f36fbd6e19e1d77b76c7cfd17f92",
+        "authors": "Hyejung Lee, Qixin Zhong"
+      },
+      "max_citations": 12,
+      "faers_signal": "none",
+      "faers_total_reports": 0,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found for Curcumin sulfate",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "T7765 (1.561)",
+        "Chemistry 2804 (1.549)",
+        "crizotinib (1.547)",
+        "curcumin (1.542)",
+        "HO-013 (1.535)"
+      ],
+      "signature_interpretation": "Curcumin sulfate was not found among the top 27 drugs that reverse the Malaria gene signature. Top reversers: T7765 (1.561), Chemistry 2804 (1.549), crizotinib (1.547)",
+      "ai_hypothesis": "",
+      "abstract_analyses": [],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Curcumin sulfate \u2014[is metabolized by]\u2192 gene-1544 \u2014[is bound by]\u2192 DB01087 \u2014[treats]\u2192 Malaria",
+      "kg_paths_text": "\u2022 Curcumin sulfate \u2014[is metabolized by]\u2192 gene-1544 \u2014[is bound by]\u2192 DB01087 \u2014[treats]\u2192 Malaria\n\u2022 Curcumin sulfate \u2014[is metabolized by]\u2192 gene-1544 \u2014[is bound by]\u2192 DB01087 \u2014[treats]\u2192 Malaria\n\u2022 Curcumin sulfate \u2014[is metabolized by]\u2192 gene-1544 \u2014[is bound by]\u2192 DB01087 \u2014[treats]\u2192 Malaria",
+      "validation_experiments": [],
+      "novelty_score": 0.233,
+      "novelty_level": "BREAKTHROUGH",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "LOW",
+      "confidence_reasons": [
+        "Supported by 2 independent AI pillars",
+        "High molecular similarity (0.76) to Curcumin"
+      ],
+      "disease_entity": "Disease::MESH:D008288",
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "late-trial",
+        "confidence": "medium",
+        "rationale": "Phase-3 investigational \u2014 dose range established in Phase-2 pharmacokinetic studies; efficacy trials ongoing or recently completed.",
+        "chembl_phase": 3.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 674,
         "has_warnings": true,
         "top_interactions": [
           {
@@ -275,282 +461,17 @@
         "pharmgkb": []
       },
       "triangulation": {
-        "n_axes_agree": 1,
+        "n_axes_agree": 0,
         "axes": {
-          "kg": true,
+          "kg": false,
           "docking": false,
           "pharos": false,
           "literature": false
         },
-        "triangulation_score": 0.401,
-        "label": "kg-only",
+        "triangulation_score": 0.081,
+        "label": "",
         "axis_values": {
-          "kg": 0.551,
-          "docking": 0.468,
-          "pharos": 0.0,
-          "literature": 0.338
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Whole Blood",
-          "Liver",
-          "Spleen"
-        ],
-        "n_genes": 2,
-        "n_expressed": 1,
-        "mean_tpm_in_tissue": 107.78,
-        "max_tpm_in_tissue": 215.32,
-        "tissue_specificity": 1.0,
-        "context_modifier": 1.15
-      },
-      "ensemble_prob": 0.3342,
-      "ensemble_features": {
-        "kg_score": 0.9902,
-        "degree_penalty": 0.7619,
-        "n_drug_targets": 23,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 4.6444
-      },
-      "ensemble_rank": 5,
-      "docking": {
-        "kcal_per_mol": -5.62,
-        "target_symbol": "CYP2D6",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D008288",
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [
-          "ALIPHATIC",
-          "CYANATE",
-          "ENAMINE",
-          "IMIDAZOLE",
-          "IMINE"
-        ],
-        "n_alerts": 6,
-        "alert_names": [
-          "imidazole_B(2)",
-          "Aliphatic_long_chain",
-          "cyanate_/aminonitrile_/thiocyanate",
-          "enamine",
-          "imine_1"
-        ]
-      }
-    },
-    {
-      "drug_name": "Levothyroxine",
-      "drug_id": "DB00451",
-      "disease_name": "Malaria",
-      "combined_score": 0.4936,
-      "pillars_hit": 4,
-      "transe_rank": 84,
-      "transe_score": -10.9506,
-      "pykeen_score": 0,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.675000011920929,
-      "proximity_distance": 1.2999999523162842,
-      "admet_score": 1.0,
-      "admet_flags": "clean",
-      "primekg_score": 0.2637,
-      "dti_score": 1.0,
-      "dti_best_target": "LRFN1",
-      "kg_group_score": 0.2648,
-      "structural_group_score": 1.0,
-      "network_group_score": 0.5275999903678894,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.2793,
-      "admet_multiplier": 1.0,
-      "efficacy_score": 0.4936,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 1,
-      "shared_targets": [
-        "CRP"
-      ],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Hypothyro\u00efdie grave associ\u00e9e \u00e0 la prise prophylactique de chloroquine chez une patiente trait\u00e9e avec la l\u00e9vothyroxine",
-          "year": 2011,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/f6c733638d3f88c1293723371ce7c7b0c32fcd7e",
-          "authors": "V. Leclerc, Jo\u00eblle Flamand-Villeneuve"
-        },
-        {
-          "title": "Accuracy of diagnosis among clinical malaria patients: comparing microscopy, RDT and a highly sensitive quantitative PCR looking at the implications for submicroscopic infections",
-          "year": 2023,
-          "citations": 86,
-          "url": "https://www.semanticscholar.org/paper/8c5f8d9db113d46924fa2b1028980f02e4a449c1",
-          "authors": "Stephen Opoku Afriyie, T. Addison, Y. Gebre"
-        },
-        {
-          "title": "Impact of insecticide resistance on malaria vector competence: a literature review",
-          "year": 2023,
-          "citations": 83,
-          "url": "https://www.semanticscholar.org/paper/6f81f8baf3e622dead50d65a819428a50750d4fe",
-          "authors": "P. F. Suh, Emmanuel Elanga-Ndille, Magellan Tchouakui"
-        },
-        {
-          "title": "Climate change and malaria: some recent trends of malaria incidence rates and average annual temperature in selected sub-Saharan African countries from 2000 to 2018",
-          "year": 2023,
-          "citations": 74,
-          "url": "https://www.semanticscholar.org/paper/469709495c88ff25a7c416f46438235d1c89d9ec",
-          "authors": "W. Leal Filho, Julia May, Marta May"
-        },
-        {
-          "title": "Malaria profile and socioeconomic predictors among under-five children: an analysis of 11 sub-Saharan African countries",
-          "year": 2023,
-          "citations": 46,
-          "url": "https://www.semanticscholar.org/paper/64030da0b4280324c8d94996a716d2c2d0424275",
-          "authors": "S. Anjorin, E. Okolie, S. Yaya"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Accuracy of diagnosis among clinical malaria patients: comparing microscopy, RDT and a highly sensitive quantitative PCR looking at the implications for submicroscopic infections",
-        "year": 2023,
-        "citations": 86,
-        "url": "https://www.semanticscholar.org/paper/8c5f8d9db113d46924fa2b1028980f02e4a449c1",
-        "authors": "Stephen Opoku Afriyie, T. Addison, Y. Gebre"
-      },
-      "max_citations": 86,
-      "faers_signal": "moderate",
-      "faers_total_reports": 290489,
-      "faers_cooccurrences": 4,
-      "faers_interpretation": "4 FAERS reports mention both Levothyroxine and Malaria-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "T7765 (1.561)",
-        "Chemistry 2804 (1.549)",
-        "crizotinib (1.547)",
-        "curcumin (1.542)",
-        "HO-013 (1.535)"
-      ],
-      "signature_interpretation": "Levothyroxine was not found among the top 27 drugs that reverse the Malaria gene signature. Top reversers: T7765 (1.561), Chemistry 2804 (1.549), crizotinib (1.547)",
-      "ai_hypothesis": "it is a thyroid hormone that is essential for the normal functioning of the immune system.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.2793,
-      "mr_genetic_targets": 2,
-      "mechanistic_hypothesis": "Levothyroxine \u2014[downregulates]\u2192 gene-991 \u2014[activates]\u2192 gene-6249 \u2014[is upregulated by]\u2192 Malaria",
-      "kg_paths_text": "\u2022 Levothyroxine \u2014[downregulates]\u2192 gene-991 \u2014[activates]\u2192 gene-6249 \u2014[is upregulated by]\u2192 Malaria\n\u2022 Levothyroxine \u2014[downregulates]\u2192 gene-991 \u2014[activates]\u2192 gene-79902 \u2014[is downregulated by]\u2192 Malaria\n\u2022 Levothyroxine \u2014[downregulates]\u2192 gene-991 \u2014[is activated by]\u2192 gene-5501 \u2014[is downregulated by]\u2192 Malaria",
-      "validation_experiments": [],
-      "novelty_score": 0.494,
-      "novelty_level": "BREAKTHROUGH",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 4 adverse event reports mention drug-disease co-occurrence",
-        "Supporting paper with 86 citations",
-        "AI-generated hypothesis available"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1038,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00783",
-            "drug_name": "Estradiol",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
-        "pharmgkb": []
-      },
-      "triangulation": {
-        "n_axes_agree": 1,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": false
-        },
-        "triangulation_score": 0.173,
-        "label": "kg-only",
-        "axis_values": {
-          "kg": 0.494,
+          "kg": 0.233,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 0.0
@@ -564,21 +485,21 @@
         ],
         "n_genes": 1,
         "n_expressed": 1,
-        "mean_tpm_in_tissue": 5683.19,
-        "max_tpm_in_tissue": 5683.19,
+        "mean_tpm_in_tissue": 215.32,
+        "max_tpm_in_tissue": 215.32,
         "tissue_specificity": 1.0,
         "context_modifier": 1.15
       },
-      "ensemble_prob": 0.6463,
+      "ensemble_prob": 0.0005,
       "ensemble_features": {
-        "kg_score": 0.9971,
-        "degree_penalty": 0.7817,
-        "n_drug_targets": 11,
+        "kg_score": 0.7955,
+        "degree_penalty": 0.8209,
+        "n_drug_targets": 0,
         "is_fda_approved": 1,
         "n_disease_genes": 0,
-        "transe_rank_log": 3.4657
+        "transe_rank_log": 7.6769
       },
-      "ensemble_rank": 3,
+      "ensemble_rank": 4,
       "docking": {
         "kcal_per_mol": null,
         "target_symbol": null,
@@ -586,161 +507,113 @@
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
       },
-      "disease_entity": "Disease::MESH:D008288",
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
-          "GTE",
-          "IODINE"
+          "BETA-KETO/ANHYDRIDE",
+          "MICHAEL",
+          "SULFONIC"
         ],
-        "n_alerts": 2,
+        "n_alerts": 3,
         "alert_names": [
-          "iodine",
-          "gte_3_iodine"
+          "beta-keto/anhydride",
+          "Michael_acceptor_1",
+          "Sulfonic_acid_2"
         ]
       }
     },
     {
-      "drug_name": "Digoxin",
-      "drug_id": "DB00390",
+      "drug_name": "Framycetin",
+      "drug_id": "DB00452",
       "disease_name": "Malaria",
-      "combined_score": 0.4925999939441681,
-      "pillars_hit": 4,
-      "transe_rank": 212,
-      "transe_score": -11.2201,
-      "pykeen_score": -12.7221,
+      "combined_score": 0.2299,
+      "pillars_hit": 2,
+      "transe_rank": 1908,
+      "transe_score": -12.3975,
+      "pykeen_score": 0,
       "pykeen_rank": 0,
-      "txgnn_score": 0.56,
-      "txgnn_rank": 44,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
-      "mol_emb_similarity": 0.9668,
+      "mol_emb_similarity": 0.9552,
       "mol_emb_similar_to": "Azithromycin",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.625,
-      "proximity_distance": 1.5,
-      "admet_score": 0.58,
-      "admet_flags": "hERG=0.74",
-      "primekg_score": 0.2622,
+      "gene_sig_score": 0.025,
+      "gene_sig_rank": 28,
+      "proximity_score": 0,
+      "proximity_distance": 0,
+      "admet_score": 0.735,
+      "admet_flags": "clean",
+      "primekg_score": 0,
       "dti_score": 0,
       "dti_best_target": "",
-      "kg_group_score": 0.1861,
-      "structural_group_score": 0.9668,
-      "network_group_score": 0.4702000021934509,
-      "txgnn_group_score": 0.56,
+      "kg_group_score": -9.9849,
+      "structural_group_score": 0.9552,
+      "network_group_score": 0.3544,
+      "txgnn_group_score": 0,
       "mr_group_score": 0,
-      "admet_multiplier": 0.916,
-      "efficacy_score": 0.5378000140190125,
-      "groups_hit": 4,
+      "admet_multiplier": 0.947,
+      "efficacy_score": 0.2428,
+      "groups_hit": 2,
       "direct_relations": [],
-      "shared_target_count": 3,
+      "shared_target_count": 1,
       "shared_targets": [
-        "ICAM1",
-        "IL6",
-        "PTGS2"
+        "TRPV1"
       ],
-      "pubmed_total": 9,
-      "pubmed_treatment_total": 7,
+      "pubmed_total": 0,
+      "pubmed_treatment_total": 0,
       "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "23291634",
-          "title": "Ex vivo and in vivo investigations of the effects of extracts of Vernonia amygdalina, Carica papaya and Tapinanthus sessilifolius on digoxin transport and pharmacokinetics: assessing the significance on rat intestinal P-glycoprotein efflux.",
-          "authors": "Oga EF, Sekine S, Horie T",
-          "journal": "Drug metabolism and pharmacokinetics",
-          "year": "2013",
-          "abstract_snippet": "Vernonia amygdalina (VA), Carica papaya (CP), and Tapinanthus sessilifolius (ML) are widely used in some countries as medicinal herbs to treat ailments including malaria, cancer, and diabetes. We previously reported the inhibitory effects of these herbs on permeability glycoprotein (P-gp) in Caco-2 ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/23291634/",
-          "total_results": 9
-        },
-        {
-          "pmid": "1126207",
-          "title": "Congenital atrial flutter.",
-          "authors": "Feigl A, Feigl D, Shem-Tov A, et al.",
-          "journal": "Chest",
-          "year": "1975",
-          "abstract_snippet": "Two cases of congenital atrial flutter, one of which was documented electrocardiographically before birth, are reported. In both patients sinus rhythm was restored with digoxin treatment; in one patient the transition was preceded by various arrhythmias. No cardiac malformation was found in either c...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/1126207/"
-        },
-        {
-          "pmid": "33361302",
-          "title": "Multiple Single-Nucleotide Polymorphism Detection for Antimalarial Pyrimethamine Resistance via Allele-Specific PCR Coupled with Gold Nanoparticle-Based Lateral Flow Biosensor.",
-          "authors": "Jiang T, Huang Y, Cheng W, et al.",
-          "journal": "Antimicrobial agents and chemotherapy",
-          "year": "2021",
-          "abstract_snippet": "Molecular genotyping holds tremendous potential to detect antimalarial drug resistance (ADR) related to single nucleotide polymorphisms (SNPs). However, it relies on the use of complicated procedures and expensive instruments. Thus, rapid point-of-care testing (POCT) molecular tools are urgently nee...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33361302/"
-        },
-        {
-          "pmid": "4270576",
-          "title": "Generalised pustular drug rash.",
-          "authors": "Macmillan AL",
-          "journal": "Dermatologica",
-          "year": "1973",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/4270576/"
-        },
-        {
-          "pmid": "31572056",
-          "title": "Imported ",
-          "authors": "Khan FY",
-          "journal": "Journal of family & community medicine",
-          "year": "2019",
-          "abstract_snippet": "Myocarditis as a result of malaria infection is uncommon. However, we report a case of a Pakistani emigrant who presented with respiratory distress, fever, chills, and nausea at the emergency room. The patient had traveled to visit his relatives in Pakistan without receiving antimalarial chemoprophy...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/31572056/"
-        }
-      ],
+      "key_papers": [],
       "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "Comparative kinetics of digoxin sensitive (NAK) ATPase and Ca 2+ ATPase in symptomatic and asymptomatic patients with faciparum malaria",
-          "year": 2007,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/819c47d6dcd665c5bcd12b6d1ca62eaf8639f5ac",
-          "authors": "B. Iwalokun, T. Adewole, B. Afolabi"
+          "title": "Accuracy of diagnosis among clinical malaria patients: comparing microscopy, RDT and a highly sensitive quantitative PCR looking at the implications for submicroscopic infections",
+          "year": 2023,
+          "citations": 87,
+          "url": "https://www.semanticscholar.org/paper/8c5f8d9db113d46924fa2b1028980f02e4a449c1",
+          "authors": "Stephen Opoku Afriyie, T. Addison, Y. Gebre"
         },
         {
-          "title": "Imported Plasmodium vivax malaria complicated by reversible myocarditis",
-          "year": 2019,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/278fc9f92cdbc21653881e661294d7aff6fccf8e",
-          "authors": "F. Khan"
+          "title": "Impact of insecticide resistance on malaria vector competence: a literature review",
+          "year": 2023,
+          "citations": 85,
+          "url": "https://www.semanticscholar.org/paper/6f81f8baf3e622dead50d65a819428a50750d4fe",
+          "authors": "P. F. Suh, Emmanuel Elanga-Ndille, Magellan Tchouakui"
         },
         {
-          "title": "P-glycoprotein mediated efflux in Caco-2 cell monolayers: the influence of herbals on digoxin transport.",
-          "year": 2012,
-          "citations": 52,
-          "url": "https://www.semanticscholar.org/paper/852c5d347068404899c77b9613b83c48c61fca59",
-          "authors": "E. Oga, Shuichi Sekine, Y. Shitara"
+          "title": "Climate change and malaria: some recent trends of malaria incidence rates and average annual temperature in selected sub-Saharan African countries from 2000 to 2018",
+          "year": 2023,
+          "citations": 76,
+          "url": "https://www.semanticscholar.org/paper/469709495c88ff25a7c416f46438235d1c89d9ec",
+          "authors": "W. Leal Filho, Julia May, Marta May"
         },
         {
-          "title": "Ex vivo and in vivo investigations of the effects of extracts of Vernonia amygdalina, Carica papaya and Tapinanthus sessilifolius on digoxin transport and pharmacokinetics: assessing the significance on rat intestinal P-glycoprotein efflux.",
-          "year": 2013,
-          "citations": 14,
-          "url": "https://www.semanticscholar.org/paper/b1200f3282873f9f8dcbdf081ce5d0dc7da207dd",
-          "authors": "E. Oga, Shuichi Sekine, T. Horie"
+          "title": "Malaria profile and socioeconomic predictors among under-five children: an analysis of 11 sub-Saharan African countries",
+          "year": 2023,
+          "citations": 46,
+          "url": "https://www.semanticscholar.org/paper/64030da0b4280324c8d94996a716d2c2d0424275",
+          "authors": "S. Anjorin, E. Okolie, S. Yaya"
         },
         {
-          "title": "Anti-mitotic Activity of Methanolic Extract of Thevetia peruviana fruits",
-          "year": 2024,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/c098eb29e0f14160c8cfcf801a8784c275d14040",
-          "authors": "L. Kanthal, Suman Pattanayak, Susmita Roy"
+          "title": "Integrated malaria prevention in low- and middle-income countries: a systematic review",
+          "year": 2023,
+          "citations": 39,
+          "url": "https://www.semanticscholar.org/paper/3ec0bb01a1c23bb7baf9369fccd53bafc8dc29d2",
+          "authors": "D. Musoke, Edwinah Atusingwize, Carol Namata"
         }
       ],
       "most_cited_paper": {
-        "title": "P-glycoprotein mediated efflux in Caco-2 cell monolayers: the influence of herbals on digoxin transport.",
-        "year": 2012,
-        "citations": 52,
-        "url": "https://www.semanticscholar.org/paper/852c5d347068404899c77b9613b83c48c61fca59",
-        "authors": "E. Oga, Shuichi Sekine, Y. Shitara"
+        "title": "Accuracy of diagnosis among clinical malaria patients: comparing microscopy, RDT and a highly sensitive quantitative PCR looking at the implications for submicroscopic infections",
+        "year": 2023,
+        "citations": 87,
+        "url": "https://www.semanticscholar.org/paper/8c5f8d9db113d46924fa2b1028980f02e4a449c1",
+        "authors": "Stephen Opoku Afriyie, T. Addison, Y. Gebre"
       },
-      "max_citations": 52,
-      "faers_signal": "moderate",
-      "faers_total_reports": 63200,
-      "faers_cooccurrences": 3,
-      "faers_interpretation": "3 FAERS reports mention both Digoxin and Malaria-related terms. Limited but notable real-world signal.",
+      "max_citations": 87,
+      "faers_signal": "none",
+      "faers_total_reports": 748,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Framycetin to Malaria terms. Drug has 748 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -750,18 +623,335 @@
         "curcumin (1.542)",
         "HO-013 (1.535)"
       ],
-      "signature_interpretation": "Digoxin was not found among the top 27 drugs that reverse the Malaria gene signature. Top reversers: T7765 (1.561), Chemistry 2804 (1.549), crizotinib (1.547)",
-      "ai_hypothesis": "of its anti-malarial properties.",
+      "signature_interpretation": "Framycetin was not found among the top 27 drugs that reverse the Malaria gene signature. Top reversers: T7765 (1.561), Chemistry 2804 (1.549), crizotinib (1.547)",
+      "ai_hypothesis": "",
+      "abstract_analyses": [],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Framycetin \u2014[treats]\u2192 MESH:D007239 \u2014[is treated by]\u2192 DB00205 \u2014[treats]\u2192 Malaria",
+      "kg_paths_text": "\u2022 Framycetin \u2014[treats]\u2192 MESH:D007239 \u2014[is treated by]\u2192 DB00205 \u2014[treats]\u2192 Malaria\n\u2022 Framycetin \u2014[treats]\u2192 MESH:D007239 \u2014[is treated by]\u2192 DB00205 \u2014[treats]\u2192 Malaria\n\u2022 Framycetin \u2014[treats]\u2192 MESH:D007239 \u2014[is treated by]\u2192 DB00608 \u2014[treats]\u2192 Malaria",
+      "validation_experiments": [],
+      "novelty_score": 0.23,
+      "novelty_level": "BREAKTHROUGH",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "LOW",
+      "confidence_reasons": [
+        "Supported by 2 independent AI pillars",
+        "Supporting paper with 87 citations"
+      ],
+      "disease_entity": "Disease::MESH:D008288",
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "late-trial",
+        "confidence": "medium",
+        "rationale": "Phase-3 investigational \u2014 dose range established in Phase-2 pharmacokinetic studies; efficacy trials ongoing or recently completed.",
+        "chembl_phase": 3.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 836,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00331",
+            "drug_name": "Metformin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00213",
+            "drug_name": "Pantoprazole",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01032",
+            "drug_name": "Probenecid",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": false,
+          "docking": true,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.299,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.23,
+          "docking": 0.728,
+          "pharos": 0.0,
+          "literature": 0.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood",
+          "Liver",
+          "Spleen"
+        ],
+        "n_genes": 1,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 14.02,
+        "max_tpm_in_tissue": 14.02,
+        "tissue_specificity": 0.387,
+        "context_modifier": 1.002
+      },
+      "ensemble_prob": 0.0213,
+      "ensemble_features": {
+        "kg_score": 0.9177,
+        "degree_penalty": 0.8054,
+        "n_drug_targets": 6,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 6.7673
+      },
+      "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": -8.74,
+        "target_symbol": "TRPV1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "GTE"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "gte_4_basic_N",
+          "gte_7_aliphatic_OH"
+        ]
+      }
+    },
+    {
+      "drug_name": "Acetylsalicylic acid",
+      "drug_id": "DB00945",
+      "disease_name": "Malaria",
+      "combined_score": 0.2112,
+      "pillars_hit": 2,
+      "transe_rank": 124,
+      "transe_score": -11.0522,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0.9538,
+      "mol_emb_similar_to": "Acetaminophen",
+      "gene_sig_score": 0.0371,
+      "gene_sig_rank": 21,
+      "proximity_score": 0,
+      "proximity_distance": 0,
+      "admet_score": 0.7398,
+      "admet_flags": "clean",
+      "primekg_score": 0,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": -8.2454,
+      "structural_group_score": 0.9538,
+      "network_group_score": 0.4327,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.8179,
+      "efficacy_score": 0.2582,
+      "groups_hit": 2,
+      "direct_relations": [],
+      "shared_target_count": 9,
+      "shared_targets": [
+        "CD36",
+        "CRP",
+        "HAMP",
+        "IL2",
+        "IL6",
+        "NOS2",
+        "PTGS1",
+        "PTGS2",
+        "TGFB1"
+      ],
+      "pubmed_total": 8,
+      "pubmed_treatment_total": 6,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "39300444",
+          "title": "Acetylsalicylic acid and dihydroartemisinin combined therapy on experimental malaria-associated acute lung injury: analysis of lung function and the inflammatory process.",
+          "authors": "de Oliveira HD, Batista CN, Lima MN, et al.",
+          "journal": "Malaria journal",
+          "year": "2024",
+          "abstract_snippet": "BACKGROUND: Severe malaria can cause respiratory symptoms, which may lead to malaria-acute lung injury (MA-ALI) due to inflammation and damage to the blood-gas barrier. Patients with severe malaria also often present thrombocytopenia, and the use of acetylsalicylic acid (ASA), a commonly used non-st...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39300444/",
+          "total_results": 8
+        },
+        {
+          "pmid": "1951871",
+          "title": "Neither heparin nor acetylsalicylic acid influence the clinical course in human Plasmodium falciparum malaria: a prospective randomized study.",
+          "authors": "Hemmer CJ, Kern P, Holst FG, et al.",
+          "journal": "The American journal of tropical medicine and hygiene",
+          "year": "1991",
+          "abstract_snippet": "Procoagulant alterations and thrombocytopenia in falciparum malaria correlate with parasitemia, serum levels of tumor necrosis factor alpha (TNF alpha), and clinical severity. Thus, heparin or acetylsalicylic acid (ASA), which are used frequently to prevent thrombosis and (in the case of ASA) to con...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/1951871/"
+        },
+        {
+          "pmid": "34786155",
+          "title": "Age and genotype dependent erythropoietin protection in COVID-19.",
+          "authors": "Papadopoulos KI, Sutheesophon W, Manipalviratn S, et al.",
+          "journal": "World journal of stem cells",
+          "year": "2021",
+          "abstract_snippet": "Erythropoietin (EPO) is the main mediator of erythropoiesis and an important tissue protective hormone that appears to mediate an ancestral neuroprotective innate immune response mechanism at an early age. When the young brain is threatened-prematurity, neonatal hyperbilirubinemia, malaria- EPO is h...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34786155/"
+        },
+        {
+          "pmid": "38130405",
+          "title": "Antinociceptive and antiinflammatory activities of crude leave extract and solvent fractions of ",
+          "authors": "Tadege G, Sirak B, Abebe D, et al.",
+          "journal": "Frontiers in pharmacology",
+          "year": "2023",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38130405/"
+        },
+        {
+          "pmid": "25473801",
+          "title": "Anti-inflammatory effects of aqueous extract of Mangifera indica in Wistar rats.",
+          "authors": "Oluwole OG, Esume C",
+          "journal": "Journal of basic and clinical physiology and pharmacology",
+          "year": "2015",
+          "abstract_snippet": "BACKGROUND: Recent studies in standard laboratories have indicated that a typical mango stem bark aqueous extract (Magnifera indica Linn) possess anti-malaria and anti-fever properties. Recent information also exists in the literature, suggesting its potency as a very effective anti-inflammatory pla...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25473801/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Acetylsalicylic acid and dihydroartemisinin combined therapy on experimental malaria-associated acute lung injury: analysis of lung function and the inflammatory process",
+          "year": 2024,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/0827ded24152100ffa5c1519e940b8bb8354ecdc",
+          "authors": "Helena D\u2019Anuncia\u00e7\u00e3o de Oliveira, C. N. Batista, M. Lima"
+        },
+        {
+          "title": "Neither heparin nor acetylsalicylic acid influence the clinical course in human Plasmodium falciparum malaria: a prospective randomized study.",
+          "year": 1991,
+          "citations": 57,
+          "url": "https://www.semanticscholar.org/paper/78083daf81d500463bc3195b5d7eb4dc21886870",
+          "authors": "C. Hemmer, P. Kern, F. Holst"
+        },
+        {
+          "title": "Effects of ASA and DHA therapy on malaria associated ARDS",
+          "year": 2018,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/6a11751c771e27fa4cd9ff2528a384d0e49f9a86",
+          "authors": "H. Oliveira, C. Batista, M. Lima"
+        },
+        {
+          "title": "CONTRIBUTORY PHARMACOLOGICAL EFFECTS OF AZADIRACHTA INDICA LEAF IN THE TREATMENT OF MALARIA",
+          "year": 1999,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/fedbe8796ec4ffa2fd879e377317b56e7fcc47bf",
+          "authors": "E. Iwalewa, K. Mohammed, O. Omotola"
+        },
+        {
+          "title": "Anti-inflammatory effects of aqueous extract of Mangifera indica in Wistar rats",
+          "year": 2015,
+          "citations": 10,
+          "url": "https://www.semanticscholar.org/paper/ac077b55667af6dc5a06c90376bbae7a8b783aa7",
+          "authors": "O. Oluwole, C. Esume"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Neither heparin nor acetylsalicylic acid influence the clinical course in human Plasmodium falciparum malaria: a prospective randomized study.",
+        "year": 1991,
+        "citations": 57,
+        "url": "https://www.semanticscholar.org/paper/78083daf81d500463bc3195b5d7eb4dc21886870",
+        "authors": "C. Hemmer, P. Kern, F. Holst"
+      },
+      "max_citations": 57,
+      "faers_signal": "weak",
+      "faers_total_reports": 93274,
+      "faers_cooccurrences": 1,
+      "faers_interpretation": "1 FAERS report(s) mention both Acetylsalicylic acid and Malaria-related terms. Minimal real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "T7765 (1.561)",
+        "Chemistry 2804 (1.549)",
+        "crizotinib (1.547)",
+        "curcumin (1.542)",
+        "HO-013 (1.535)"
+      ],
+      "signature_interpretation": "Acetylsalicylic acid was not found among the top 27 drugs that reverse the Malaria gene signature. Top reversers: T7765 (1.561), Chemistry 2804 (1.549), crizotinib (1.547)",
+      "ai_hypothesis": "",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
+          "confidence": 0.3,
+          "positive_signals": 0,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": []
         },
         {
           "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
+          "confidence": 0.3,
+          "positive_signals": 0,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": []
         },
         {
           "relation_type": "unclear",
@@ -775,10 +965,10 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0,
       "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "Digoxin \u2014[downregulates]\u2192 gene-1808 \u2014[is a target of]\u2192 DB11638 \u2014[is a therapeutic for]\u2192 Malaria",
-      "kg_paths_text": "\u2022 Digoxin \u2014[downregulates]\u2192 gene-1808 \u2014[is a target of]\u2192 DB11638 \u2014[is a therapeutic for]\u2192 Malaria\n\u2022 Digoxin \u2014[downregulates]\u2192 gene-4190 \u2014[is a target of]\u2192 DB11638 \u2014[is a therapeutic for]\u2192 Malaria\n\u2022 Digoxin \u2014[downregulates]\u2192 gene-231 \u2014[is a target of]\u2192 DB00143 \u2014[is a therapeutic for]\u2192 Malaria",
+      "mechanistic_hypothesis": "Acetylsalicylic acid \u2014[binds]\u2192 gene-1557 \u2014[is bound by]\u2192 DB01234 \u2014[is a therapeutic for]\u2192 Malaria",
+      "kg_paths_text": "\u2022 Acetylsalicylic acid \u2014[binds]\u2192 gene-1557 \u2014[is bound by]\u2192 DB01234 \u2014[is a therapeutic for]\u2192 Malaria\n\u2022 Acetylsalicylic acid \u2014[binds]\u2192 gene-1557 \u2014[is bound by]\u2192 DB00468 \u2014[is a therapeutic for]\u2192 Malaria\n\u2022 Acetylsalicylic acid \u2014[binds]\u2192 gene-1557 \u2014[is bound by]\u2192 DB00257 \u2014[is a therapeutic for]\u2192 Malaria",
       "validation_experiments": [],
-      "novelty_score": 0.46799999475479126,
+      "novelty_score": 0.201,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -786,798 +976,11 @@
       "trial_phases": {},
       "confidence": "LOW",
       "confidence_reasons": [
-        "9 PubMed article(s) - limited literature",
-        "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 3 adverse event reports mention drug-disease co-occurrence",
-        "Supporting paper with 52 citations",
-        "AI-generated hypothesis available"
+        "8 PubMed article(s) - limited literature",
+        "Supported by 2 independent AI pillars",
+        "Supporting paper with 57 citations"
       ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1711,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "moderate",
-        "summary": "CPIC-C (ABCB1) \u2022 PharmGKB-3 (NOS3 / rs1799983)",
-        "cpic": [
-          {
-            "gene": "ABCB1",
-            "level": "C",
-            "guideline": ""
-          }
-        ],
-        "pharmgkb": [
-          {
-            "gene": "NOS3",
-            "variant": "rs1799983",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1444700983"
-          },
-          {
-            "gene": "ABCB1",
-            "variant": "rs2032582",
-            "level": "3",
-            "phenotype_category": "Other",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981238108"
-          },
-          {
-            "gene": "ABCB1",
-            "variant": "rs1128503",
-            "level": "3",
-            "phenotype_category": "Other",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183615535"
-          },
-          {
-            "gene": "ABCB1",
-            "variant": "rs1045642",
-            "level": "3",
-            "phenotype_category": "Metabolism/PK",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204372"
-          },
-          {
-            "gene": "ADRB2",
-            "variant": "rs1042713",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1447960179"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 1,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": false
-        },
-        "triangulation_score": 0.2590000033378601,
-        "label": "kg-only",
-        "axis_values": {
-          "kg": 0.49300000071525574,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.434
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Whole Blood",
-          "Liver",
-          "Spleen"
-        ],
-        "n_genes": 3,
-        "n_expressed": 3,
-        "mean_tpm_in_tissue": 22.9,
-        "max_tpm_in_tissue": 60.76,
-        "tissue_specificity": 0.596,
-        "context_modifier": 1.045
-      },
-      "ensemble_prob": 0.0307,
-      "ensemble_features": {
-        "kg_score": 0.9842,
-        "degree_penalty": 0.7524,
-        "n_drug_targets": 13,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 5.124
-      },
-      "ensemble_rank": 10,
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
       "disease_entity": "Disease::MESH:D008288",
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [
-          "SAPONINE"
-        ],
-        "n_alerts": 1,
-        "alert_names": [
-          "saponine_derivative"
-        ]
-      }
-    },
-    {
-      "drug_name": "Erythromycin",
-      "drug_id": "DB00199",
-      "disease_name": "Malaria",
-      "combined_score": 0.4758,
-      "pillars_hit": 4,
-      "transe_rank": 85,
-      "transe_score": -10.9514,
-      "pykeen_score": -12.4513,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0.7816,
-      "similar_to": "Azithromycin",
-      "mol_emb_similarity": 0.9986,
-      "mol_emb_similar_to": "Azithromycin",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.7620000243186951,
-      "proximity_distance": 0.949999988079071,
-      "admet_score": 0.6369,
-      "admet_flags": "clean",
-      "primekg_score": 0.2587,
-      "dti_score": 0.5246,
-      "dti_best_target": "FAXC",
-      "kg_group_score": 0.2895,
-      "structural_group_score": 0.9986,
-      "network_group_score": 0.595300018787384,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.2793,
-      "admet_multiplier": 0.9274,
-      "efficacy_score": 0.5131,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 2,
-      "shared_targets": [
-        "CXCL8",
-        "IL6"
-      ],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 44,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "38676494",
-          "title": "A Review of the Association between Infections, Seizures, and Drugs.",
-          "authors": "Tolou-Ghamari Z",
-          "journal": "Central nervous system agents in medicinal chemistry",
-          "year": "2025",
-          "abstract_snippet": "BACKGROUND: Seizures are a common presenting symptom of the central nervous system (CNS) and could occur from infections (such as toxins) or drugs. OBJECTIVE: The aim of this study was to present a systematic review of the association between infections, seizures, and drugs. METHODS: From their ince...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38676494/",
-          "total_results": 44
-        },
-        {
-          "pmid": "23208707",
-          "title": "Chemobiosynthesis of new antimalarial macrolides.",
-          "authors": "Goodman CD, Useglio M, Peir\u00fa S, et al.",
-          "journal": "Antimicrobial agents and chemotherapy",
-          "year": "2013",
-          "abstract_snippet": "We have synthesized new derivatives of the macrolide antibiotics erythromycin and azithromycin. Novel deoxysugar moieties were attached to these standard antibiotics by biotransformation using a heterologous host. The resulting compounds were tested against several standard laboratory and clinically...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/23208707/"
-        },
-        {
-          "pmid": "16172491",
-          "title": "Efficacy of trimethoprim-sulfamethoxazole compared with sulfadoxine-pyrimethamine plus erythromycin for the treatment of uncomplicated malaria in children with integrated management of childhood illness dual classifications of malaria and pneumonia.",
-          "authors": "Hamel MJ, Holtz T, Mkandala C, et al.",
-          "journal": "The American journal of tropical medicine and hygiene",
-          "year": "2005",
-          "abstract_snippet": "In Malawi, trimethoprim-sulfamethoxazole (TS) is the recommended first-line treatment for children with Integrated Management of Childhood Illness dual classifications of malaria and pneumonia, and sulfadoxine-pyrimethyamine (SP) plus five days of treatment with erythromycin (SP plus E) is the recom...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/16172491/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "The contribution of gut bacteria to insecticide resistance and the life histories of the major malaria vector Anopheles arabiensis (Diptera: Culicidae)",
-          "year": 2019,
-          "citations": 69,
-          "url": "https://www.semanticscholar.org/paper/ce5c9f1179f5ca364d74836d21bdd6eaf50ffd4a",
-          "authors": "Kirsten Barnard, A. Jeanrenaud, B. Brooke"
-        },
-        {
-          "title": "Efficacy of trimethoprim-sulfamethoxazole compared with sulfadoxine-pyrimethamine plus erythromycin for the treatment of uncomplicated malaria in children with integrated management of childhood illness dual classifications of malaria and pneumonia.",
-          "year": 2005,
-          "citations": 30,
-          "url": "https://www.semanticscholar.org/paper/0cdd5e86609d2518735fd499f201fcba8dbc2e60",
-          "authors": "M. Hamel, T. Holtz, C. Mkandala"
-        },
-        {
-          "title": "Intravenous amodiaquine and oral amodiaquine/erythromycin in the treatment of chloroquine-resistant falciparum malaria.",
-          "year": 1985,
-          "citations": 33,
-          "url": "https://www.semanticscholar.org/paper/c3f305e28793b901dcbe9e9a1ec0814220add3ad",
-          "authors": "S. Looareesuwan, N. White, Yupin Benjasurat"
-        },
-        {
-          "title": "Failure of chloroquine-erythromycin and chloroquine-tetracycline combinations in treatment of chloroquine-resistant falciparum malaria in eastern Thailand.",
-          "year": 1984,
-          "citations": 27,
-          "url": "https://www.semanticscholar.org/paper/1b3d00e9d34c7f853855b1e399714471f8ea06e5",
-          "authors": "R. Phillips, J. Karbwang, N. White"
-        },
-        {
-          "title": "The chemotherapy of rodent malaria, XXIV. The blood schizontocidal action of erythromycin upon Plasmodium berghei.",
-          "year": 1976,
-          "citations": 31,
-          "url": "https://www.semanticscholar.org/paper/3880fe90f09a01bc68b041be4cba12f9d53c0a47",
-          "authors": "D. Warhurst, B. Robinson, W. Peters"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "The contribution of gut bacteria to insecticide resistance and the life histories of the major malaria vector Anopheles arabiensis (Diptera: Culicidae)",
-        "year": 2019,
-        "citations": 69,
-        "url": "https://www.semanticscholar.org/paper/ce5c9f1179f5ca364d74836d21bdd6eaf50ffd4a",
-        "authors": "Kirsten Barnard, A. Jeanrenaud, B. Brooke"
-      },
-      "max_citations": 69,
-      "faers_signal": "weak",
-      "faers_total_reports": 20102,
-      "faers_cooccurrences": 2,
-      "faers_interpretation": "2 FAERS report(s) mention both Erythromycin and Malaria-related terms. Minimal real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "T7765 (1.561)",
-        "Chemistry 2804 (1.549)",
-        "crizotinib (1.547)",
-        "curcumin (1.542)",
-        "HO-013 (1.535)"
-      ],
-      "signature_interpretation": "Erythromycin was not found among the top 27 drugs that reverse the Malaria gene signature. Top reversers: T7765 (1.561), Chemistry 2804 (1.549), crizotinib (1.547)",
-      "ai_hypothesis": "it is a potent inhibitor of the parasite's growth.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 1,
-          "negative_signals": 0,
-          "mechanism_signals": 0,
-          "extracted_entities": [
-            {
-              "entity": "trimethoprim -",
-              "entity_group": "Medication",
-              "score": 0.9599999785423279
-            },
-            {
-              "entity": "sul",
-              "entity_group": "Medication",
-              "score": 0.9990000128746033
-            },
-            {
-              "entity": "##methoxazole",
-              "entity_group": "Medication",
-              "score": 0.890999972820282
-            },
-            {
-              "entity": "ts",
-              "entity_group": "Medication",
-              "score": 0.9980000257492065
-            },
-            {
-              "entity": "malaria",
-              "entity_group": "Disease_disorder",
-              "score": 0.9829999804496765
-            },
-            {
-              "entity": "sulfadoxine - pyrimethyamine",
-              "entity_group": "Medication",
-              "score": 0.9829999804496765
-            },
-            {
-              "entity": "sp",
-              "entity_group": "Medication",
-              "score": 0.9629999995231628
-            },
-            {
-              "entity": "five days",
-              "entity_group": "Duration",
-              "score": 0.9940000176429749
-            },
-            {
-              "entity": "er",
-              "entity_group": "Medication",
-              "score": 0.9509999752044678
-            },
-            {
-              "entity": "##ythromycin",
-              "entity_group": "Medication",
-              "score": 0.9769999980926514
-            }
-          ]
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "Phase 3",
-      "failed_trial_count": 5,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.2793,
-      "mr_genetic_targets": 2,
-      "mechanistic_hypothesis": "Erythromycin \u2014[downregulates]\u2192 gene-79902 \u2014[is downregulated by]\u2192 Malaria",
-      "kg_paths_text": "\u2022 Erythromycin \u2014[downregulates]\u2192 gene-79902 \u2014[is downregulated by]\u2192 Malaria\n\u2022 Erythromycin \u2014[binds]\u2192 gene-1576 \u2014[is bound by]\u2192 gene-2939 \u2014[is upregulated by]\u2192 Malaria\n\u2022 Erythromycin \u2014[binds]\u2192 gene-1576 \u2014[is bound by]\u2192 gene-27306 \u2014[is linked to]\u2192 Malaria",
-      "validation_experiments": [],
-      "novelty_score": 0.333,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": false,
-      "clinical_trials_total": 10,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT07436104",
-          "title": "Mortality Control Program for Economically Productive Age Group in Tribal Area of Melghat.",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "72564",
-          "url": "https://clinicaltrials.gov/study/NCT07436104"
-        },
-        {
-          "nct_id": "NCT00074841",
-          "title": "Trial of Azithromycin Plus Chloroquine Versus Sulfadoxine-Pyrimethamine Plus Chloroquine for the Treatment of Uncomplicated Malaria in India",
-          "status": "COMPLETED",
-          "phase": "PHASE2, PHASE3",
-          "enrollment": "230",
-          "url": "https://clinicaltrials.gov/study/NCT00074841"
-        },
-        {
-          "nct_id": "NCT00379821",
-          "title": "Chloroquine Alone or in Combination for Malaria in Children in Malawi",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "640",
-          "url": "https://clinicaltrials.gov/study/NCT00379821"
-        },
-        {
-          "nct_id": "NCT00677833",
-          "title": "Azithromycin Plus Chloroquine Versus Artemether-Lumefantrine For The Treatment Of Uncomplicated P. Falciparum Malaria In Children In Africa",
-          "status": "COMPLETED",
-          "phase": "PHASE2, PHASE3",
-          "enrollment": "361",
-          "url": "https://clinicaltrials.gov/study/NCT00677833"
-        },
-        {
-          "nct_id": "NCT02527005",
-          "title": "A Comparative Study of Azithromycin and S-P as Prophylaxis in Pregnant HIV+ Patients",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "140",
-          "url": "https://clinicaltrials.gov/study/NCT02527005"
-        }
-      ],
-      "trial_phases": {
-        "PHASE4": 2,
-        "PHASE2": 4,
-        "PHASE3": 4,
-        "PHASE1": 2
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "10 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
-        "Supported by 4 independent AI pillars",
-        "High molecular similarity (0.78) to Azithromycin",
-        "Supporting paper with 69 citations",
-        "AI-generated hypothesis available"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1088,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00783",
-            "drug_name": "Estradiol",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "high_risk",
-        "summary": "CPIC-B (G6PD) \u2022 PharmGKB-3 (CYP3A4 / rs35599367)",
-        "cpic": [
-          {
-            "gene": "G6PD",
-            "level": "B",
-            "guideline": ""
-          }
-        ],
-        "pharmgkb": [
-          {
-            "gene": "CYP3A4",
-            "variant": "rs35599367",
-            "level": "3",
-            "phenotype_category": "Other",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/982031125"
-          },
-          {
-            "gene": "ABCC2",
-            "variant": "rs717620",
-            "level": "3",
-            "phenotype_category": "Other",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043858887"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 1,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": false
-        },
-        "triangulation_score": 0.167,
-        "label": "kg-only",
-        "axis_values": {
-          "kg": 0.476,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.0
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Whole Blood",
-          "Liver",
-          "Spleen"
-        ],
-        "n_genes": 2,
-        "n_expressed": 2,
-        "mean_tpm_in_tissue": 10.5,
-        "max_tpm_in_tissue": 17.46,
-        "tissue_specificity": 0.517,
-        "context_modifier": 1.007
-      },
-      "ensemble_prob": 0.057,
-      "ensemble_features": {
-        "kg_score": 0.9712,
-        "degree_penalty": 0.7812,
-        "n_drug_targets": 21,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 5.7203
-      },
-      "ensemble_rank": 8,
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D008288",
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Ouabain",
-      "drug_id": "DB01092",
-      "disease_name": "Malaria",
-      "combined_score": 0.4358,
-      "pillars_hit": 4,
-      "transe_rank": 129,
-      "transe_score": -11.0592,
-      "pykeen_score": 0,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0.9544,
-      "mol_emb_similar_to": "Azithromycin",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.6880000233650208,
-      "proximity_distance": 1.25,
-      "admet_score": 0.9582,
-      "admet_flags": "clean",
-      "primekg_score": 0.2537,
-      "dti_score": 0.4129,
-      "dti_best_target": "LRFN1",
-      "kg_group_score": 0.1066,
-      "structural_group_score": 0.9544,
-      "network_group_score": 0.5430999994277954,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.2793,
-      "admet_multiplier": 0.9707,
-      "efficacy_score": 0.449,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 3,
-      "shared_targets": [
-        "ICAM1",
-        "IL6",
-        "PTGS2"
-      ],
-      "pubmed_total": 10,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "2175223",
-          "title": "Ion metabolism in malaria-infected erythrocytes.",
-          "authors": "Tanabe K",
-          "journal": "Blood cells",
-          "year": "1990",
-          "abstract_snippet": "Malaria parasites of the genus Plasmodium spend much of their asexual life cycle inside the erythrocytes of their vertebrate hosts. Parasites presumably have to exploit metabolic and transport mechanisms to adapt themselves to the host erythrocyte's physicochemical environment. This review surveys t...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/2175223/",
-          "total_results": 10
-        },
-        {
-          "pmid": "1998699",
-          "title": "Characteristics of 86Rb+ transport in human erythrocytes infected with Plasmodium falciparum.",
-          "authors": "Kirk K, Ashworth KJ, Elford BC, et al.",
-          "journal": "Biochimica et biophysica acta",
-          "year": "1991",
-          "abstract_snippet": "Human red cells infected in vitro with Plasmodium falciparum showed a significant increase in the rate of both ouabain-sensitive and ouabain-insensitive 86Rb+ influx. The increase in ouabain-insensitive 86Rb+ influx was due, in part, to increased transport via a bumetanide-sensitive system and, in p...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/1998699/"
-        },
-        {
-          "pmid": "1898345",
-          "title": "Enhanced choline and Rb+ transport in human erythrocytes infected with the malaria parasite Plasmodium falciparum.",
-          "authors": "Kirk K, Wong HY, Elford BC, et al.",
-          "journal": "The Biochemical journal",
-          "year": "1991",
-          "abstract_snippet": "Human erythrocytes infected in vitro with the malaria parasite Plasmodium falciparum showed a markedly increased rate of choline influx compared with normal cells. Choline transport into uninfected cells (cultured in parallel with infected cells) obeyed Michaelis-Menten kinetics (Km approximately 11...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/1898345/"
-        },
-        {
-          "pmid": "23414762",
-          "title": "Na(+) regulation in the malaria parasite Plasmodium falciparum involves the cation ATPase PfATP4 and is a target of the spiroindolone antimalarials.",
-          "authors": "Spillman NJ, Allen RJ, McNamara CW, et al.",
-          "journal": "Cell host & microbe",
-          "year": "2013",
-          "abstract_snippet": "The malaria parasite Plasmodium falciparum establishes in the host erythrocyte plasma membrane new permeability pathways that mediate nutrient uptake into the infected cell. These pathways simultaneously allow Na(+) influx, causing [Na(+)] in the infected erythrocyte cytosol to increase to high leve...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/23414762/"
-        },
-        {
-          "pmid": "15811526",
-          "title": "ATPase activity of purified plasma membranes and digestive vacuoles from Plasmodium falciparum.",
-          "authors": "Elandalloussi LM, Adams B, Smith PJ",
-          "journal": "Molecular and biochemical parasitology",
-          "year": "2005",
-          "abstract_snippet": "The ATPase activity of the human malaria parasite, Plasmodium falciparum was investigated using two experimental systems, (i) digestive vacuoles, and (ii) purified plasma membranes isolated from a chloroquine-sensitive and a chloroquine-resistant strain. No correlation between the level of ATPase ac...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/15811526/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Enhanced choline and Rb+ transport in human erythrocytes infected with the malaria parasite Plasmodium falciparum.",
-          "year": 1991,
-          "citations": 46,
-          "url": "https://www.semanticscholar.org/paper/ccd40fbeeca2278b3c8770366b3a4b9091c8a161",
-          "authors": "K. Kirk, H. Wong, B. Elford"
-        },
-        {
-          "title": "Analyses of bioactive compounds in fiddleheads of Pteridium aquilinum L. Kuhn collected from Khana, Southern Nigeria, using gas chromatography-flame ionization detector",
-          "year": 2020,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/77d29ed7dcbc34655d1af5f593ccc28fbad04888",
-          "authors": "B. Nwiloh, C. Monago-Ighorodje, Grace Nnenna Onwubiko"
-        },
-        {
-          "title": "Growth of Plasmodium falciparum in sodium-enriched human erythrocytes.",
-          "year": 1986,
-          "citations": 19,
-          "url": "https://www.semanticscholar.org/paper/0702fd5d74fac52757a3521a60f9a2e99c095f28",
-          "authors": "K. Tanabe, A. Izumo, K. Kageyama"
-        },
-        {
-          "title": "ATPase activity of purified plasma membranes and digestive vacuoles from Plasmodium falciparum.",
-          "year": 2005,
-          "citations": 10,
-          "url": "https://www.semanticscholar.org/paper/5fd791bdfef878aafca493e693b249ebc415dec7",
-          "authors": "Laurence M. Elandalloussi, B. Adams, Peter J. Smith"
-        },
-        {
-          "title": "The future of plant-derived chemicals as contraceptive agents",
-          "year": 1985,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/663c30aacde0ad86c3dabf8eba3a8fa70039fda7",
-          "authors": "N. R. Farnsworthv, A. Bingel"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Enhanced choline and Rb+ transport in human erythrocytes infected with the malaria parasite Plasmodium falciparum.",
-        "year": 1991,
-        "citations": 46,
-        "url": "https://www.semanticscholar.org/paper/ccd40fbeeca2278b3c8770366b3a4b9091c8a161",
-        "authors": "K. Kirk, H. Wong, B. Elford"
-      },
-      "max_citations": 46,
-      "faers_signal": "none",
-      "faers_total_reports": 2,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Ouabain to Malaria terms. Drug has 2 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "T7765 (1.561)",
-        "Chemistry 2804 (1.549)",
-        "crizotinib (1.547)",
-        "curcumin (1.542)",
-        "HO-013 (1.535)"
-      ],
-      "signature_interpretation": "Ouabain was not found among the top 27 drugs that reverse the Malaria gene signature. Top reversers: T7765 (1.561), Chemistry 2804 (1.549), crizotinib (1.547)",
-      "ai_hypothesis": "of its ability to inhibit the Na + / K + ATPase.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.2793,
-      "mr_genetic_targets": 2,
-      "mechanistic_hypothesis": "Ouabain \u2014[downregulates]\u2192 gene-1465 \u2014[is a target of]\u2192 DB11638 \u2014[is a therapeutic for]\u2192 Malaria",
-      "kg_paths_text": "\u2022 Ouabain \u2014[downregulates]\u2192 gene-1465 \u2014[is a target of]\u2192 DB11638 \u2014[is a therapeutic for]\u2192 Malaria\n\u2022 Ouabain \u2014[downregulates]\u2192 gene-55272 \u2014[activates]\u2192 gene-6203 \u2014[is downregulated by]\u2192 Malaria\n\u2022 Ouabain \u2014[downregulates]\u2192 gene-55272 \u2014[activates]\u2192 gene-6202 \u2014[is downregulated by]\u2192 Malaria",
-      "validation_experiments": [],
-      "novelty_score": 0.414,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "10 PubMed article(s) - limited literature",
-        "Supported by 4 independent AI pillars",
-        "Supporting paper with 46 citations",
-        "AI-generated hypothesis available"
-      ],
       "dose_plausibility": {
         "plausibility": "unknown",
         "dose_range": "research",
@@ -1588,17 +991,17 @@
         "stage": 1
       },
       "ddi_warnings": {
-        "n_interactions": 545,
+        "n_interactions": 2062,
         "has_warnings": true,
         "top_interactions": [
           {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
             "severity": "high"
           },
           {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
             "severity": "high"
           },
           {
@@ -1609,6 +1012,16 @@
           {
             "drug_id": "DB01264",
             "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
             "severity": "high"
           },
           {
@@ -1627,18 +1040,8 @@
             "severity": "high"
           },
           {
-            "drug_id": "DB00227",
-            "drug_name": "Lovastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00563",
-            "drug_name": "Methotrexate",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00213",
-            "drug_name": "Pantoprazole",
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
             "severity": "high"
           }
         ]
@@ -1649,427 +1052,22 @@
         "summary": "",
         "cpic": [],
         "pharmgkb": []
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.243,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.436,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.452
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Whole Blood",
-          "Liver",
-          "Spleen"
-        ],
-        "n_genes": 3,
-        "n_expressed": 3,
-        "mean_tpm_in_tissue": 22.9,
-        "max_tpm_in_tissue": 60.76,
-        "tissue_specificity": 0.596,
-        "context_modifier": 1.045
-      },
-      "ensemble_prob": 0.0565,
-      "ensemble_features": {
-        "kg_score": 0.9683,
-        "degree_penalty": 0.7895,
-        "n_drug_targets": 6,
-        "is_fda_approved": 0,
-        "n_disease_genes": 0,
-        "transe_rank_log": 5.8141
-      },
-      "ensemble_rank": 9,
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D008288",
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [
-          "GTE",
-          "SAPONINE"
-        ],
-        "n_alerts": 2,
-        "alert_names": [
-          "saponine_derivative",
-          "gte_7_aliphatic_OH"
-        ]
-      }
-    },
-    {
-      "drug_name": "Mycophenolate mofetil",
-      "drug_id": "DB00688",
-      "disease_name": "Malaria",
-      "combined_score": 0.4327000081539154,
-      "pillars_hit": 4,
-      "transe_rank": 149,
-      "transe_score": -11.1088,
-      "pykeen_score": -12.3398,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.75,
-      "proximity_distance": 1.0,
-      "admet_score": 0.4793,
-      "admet_flags": "hERG=0.86",
-      "primekg_score": 0.2527,
-      "dti_score": 0.7487,
-      "dti_best_target": "ZNF787",
-      "kg_group_score": 0.3019,
-      "structural_group_score": 0.7487,
-      "network_group_score": 0.5644999742507935,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.399,
-      "admet_multiplier": 0.8959,
-      "efficacy_score": 0.4830000102519989,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 1,
-      "shared_targets": [
-        "PTGS2"
-      ],
-      "pubmed_total": 4,
-      "pubmed_treatment_total": 4,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "31085155",
-          "title": "Proposal of treatment algorithm for immune thromocytopenia in adult patients of a hematology service at a referral center in Northeastern Brazil.",
-          "authors": "Ribeiro RA, Galiza Neto GC, Furtado ADS, et al.",
-          "journal": "Hematology, transfusion and cell therapy",
-          "year": "2019",
-          "abstract_snippet": "INTRODUCTION: The management of adult (\u226518 years) immune thrombocytopenia patients relies on platelet count, the risk of bleeding and presence of bleeding. OBJECTIVE: Confirming the diagnosis of immune thrombocytopenia and the start of therapy, our hematology service, a referral center, favors the e...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/31085155/",
-          "total_results": 4
-        },
-        {
-          "pmid": "27546479",
-          "title": "Tacrolimus prevents murine cerebral malaria.",
-          "authors": "Bao LQ, Nhi DM, Huy NT, et al.",
-          "journal": "Immunology",
-          "year": "2017",
-          "abstract_snippet": "Tacrolimus and mycophenolate mofetil are immunosuppressants frequently used in human organ transplantation. Tacrolimus is also reported to inhibit Plasmodium falciparum growth in\u00a0vitro. Here, we report that tacrolimus prevented the death from cerebral malaria of Plasmodium berghei ANKA-infected C57B...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/27546479/"
-        },
-        {
-          "pmid": "21987142",
-          "title": "Linear IgA/IgG bullous dermatosis: successful treatment with dapsone and mycophenolate mofetil.",
-          "authors": "Passos L, Rabelo RF, Matsuo C, et al.",
-          "journal": "Anais brasileiros de dermatologia",
-          "year": "2011",
-          "abstract_snippet": "A 21-year-old female presenting linear IgA and IgG disease initially responded well to dapsone therapy. However, the treatment with dapsone was withdrawn due to severe anemia induced by malaria, which led to worsening of the clinical picture. Although prednisone and methylprednisolone were tried, th...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/21987142/"
-        },
-        {
-          "pmid": "18246245",
-          "title": "Transfusion-transmitted malaria in a kidney transplant recipient. How safe is our blood transfusion?",
-          "authors": "Alkhunaizi AM, Al-Tawfiq JA, Al-Shawaf MH",
-          "journal": "Saudi medical journal",
-          "year": "2008",
-          "abstract_snippet": "A 51-year-old male patient with living, unrelated kidney transplantation in Iran in June 2001, developed Plasmodium falciparum P. falciparum infection. He was maintained on cyclosporine A, mycophenolate mofetil, and prednisone. In August 2005, he was admitted to a medical facility in the local commu...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/18246245/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Ciclosporin/mycophenolate-mofetil/steroids",
-          "year": 2021,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/3e1e6fb7ba6e4fe361fef0882e3d7040da9e6c2d",
-          "authors": ""
-        },
-        {
-          "title": "Linear IgA/IgG bullous dermatosis: successful treatment with dapsone and mycophenolate mofetil.",
-          "year": 2011,
-          "citations": 9,
-          "url": "https://www.semanticscholar.org/paper/c7a1140edec8ba1bf8570e29b777fba44f0c49e8",
-          "authors": "L. Passos, R. Rabelo, C. Matsuo"
-        },
-        {
-          "title": "Tacrolimus prevents murine cerebral malaria",
-          "year": 2017,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/000962d09b6a40f45b668245a4d09604fb22fa99",
-          "authors": "L. Bao, D. M. Nhi, N. Huy"
-        },
-        {
-          "title": "Transfusion-transmitted malaria in a kidney transplant recipient. How safe is our blood transfusion?",
-          "year": 2008,
-          "citations": 15,
-          "url": "https://www.semanticscholar.org/paper/cc78bca734202a158e6b03851c817fc8cee22aed",
-          "authors": "A. M. Alkhunaizi, J. Al-Tawfiq, Mohannad H Al-Shawaf"
-        },
-        {
-          "title": "Mixed Plasmodium falciparum and Plasmodium vivax malaria in orthotopic liver transplant recipient.",
-          "year": 2009,
-          "citations": 11,
-          "url": "https://www.semanticscholar.org/paper/333323caf7baae37068676d1eeb06d0e3853d166",
-          "authors": "A. Seth, P. Puri, A. Chandra"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Identification of Alpha-Adrenergic Agonists as\u00a0Potential Therapeutic Agents for Dermatomyositis through Drug-Repurposing Using Public Expression Datasets.",
-        "year": 2016,
-        "citations": 16,
-        "url": "https://www.semanticscholar.org/paper/68d3cd20561dc4d8f2a8fde6526c54877c4f9477",
-        "authors": "H. G. Cho, D. Fiorentino, Matthew A. Lewis"
-      },
-      "max_citations": 16,
-      "faers_signal": "moderate",
-      "faers_total_reports": 102152,
-      "faers_cooccurrences": 21,
-      "faers_interpretation": "21 FAERS reports mention both Mycophenolate mofetil and Malaria-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "T7765 (1.561)",
-        "Chemistry 2804 (1.549)",
-        "crizotinib (1.547)",
-        "curcumin (1.542)",
-        "HO-013 (1.535)"
-      ],
-      "signature_interpretation": "Mycophenolate mofetil was not found among the top 27 drugs that reverse the Malaria gene signature. Top reversers: T7765 (1.561), Chemistry 2804 (1.549), crizotinib (1.547)",
-      "ai_hypothesis": "of its anti-inflammatory and immunosuppressive properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "treats",
-          "confidence": 0.7,
-          "positive_signals": 2,
-          "negative_signals": 0,
-          "mechanism_signals": 0,
-          "extracted_entities": [
-            {
-              "entity": "tacr",
-              "entity_group": "Medication",
-              "score": 0.9950000047683716
-            },
-            {
-              "entity": "##olimus",
-              "entity_group": "Medication",
-              "score": 0.8840000033378601
-            },
-            {
-              "entity": "my",
-              "entity_group": "Medication",
-              "score": 1.0
-            },
-            {
-              "entity": "##co",
-              "entity_group": "Medication",
-              "score": 0.9990000128746033
-            },
-            {
-              "entity": "##phenolate mofetil",
-              "entity_group": "Medication",
-              "score": 0.9610000252723694
-            },
-            {
-              "entity": "##uppress",
-              "entity_group": "Medication",
-              "score": 0.8560000061988831
-            },
-            {
-              "entity": "tacrolimus",
-              "entity_group": "Medication",
-              "score": 0.902999997138977
-            },
-            {
-              "entity": "##oli",
-              "entity_group": "Medication",
-              "score": 0.7260000109672546
-            },
-            {
-              "entity": "cerebral",
-              "entity_group": "Biological_structure",
-              "score": 0.8289999961853027
-            },
-            {
-              "entity": "malaria",
-              "entity_group": "Disease_disorder",
-              "score": 0.9980000257492065
-            }
-          ]
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.399,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "Mycophenolate mofetil \u2014[downregulates]\u2192 gene-890 \u2014[inhibits]\u2192 gene-8881 \u2014[is downregulated by]\u2192 Malaria",
-      "kg_paths_text": "\u2022 Mycophenolate mofetil \u2014[downregulates]\u2192 gene-890 \u2014[inhibits]\u2192 gene-8881 \u2014[is downregulated by]\u2192 Malaria\n\u2022 Mycophenolate mofetil \u2014[downregulates]\u2192 gene-890 \u2014[inhibits]\u2192 gene-51433 \u2014[is downregulated by]\u2192 Malaria\n\u2022 Mycophenolate mofetil \u2014[downregulates]\u2192 gene-890 \u2014[inhibits]\u2192 gene-8881 \u2014[is downregulated by]\u2192 Malaria",
-      "validation_experiments": [],
-      "novelty_score": 0.3889999985694885,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "MEDIUM",
-      "confidence_reasons": [
-        "4 PubMed article(s) - limited literature",
-        "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 21 adverse event reports mention drug-disease co-occurrence",
-        "AI analysis of 1 abstract(s) found positive treatment signals",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.40)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1628,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (IMPDH1 / rs2278294)",
-        "cpic": [],
-        "pharmgkb": [
-          {
-            "gene": "IMPDH1",
-            "variant": "rs2278294",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981201408"
-          },
-          {
-            "gene": "IMPDH1",
-            "variant": "rs2278294",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981201424"
-          },
-          {
-            "gene": "SLCO1B3",
-            "variant": "rs4149117",
-            "level": "3",
-            "phenotype_category": "Dosage;Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981201770"
-          },
-          {
-            "gene": "SLCO1B3",
-            "variant": "rs7311358",
-            "level": "3",
-            "phenotype_category": "Other",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043880098"
-          },
-          {
-            "gene": "UGT1A9",
-            "variant": "rs72551330",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043859386"
-          }
-        ]
       },
       "triangulation": {
         "n_axes_agree": 1,
         "axes": {
-          "kg": true,
-          "docking": false,
+          "kg": false,
+          "docking": true,
           "pharos": false,
           "literature": false
         },
-        "triangulation_score": 0.21199999749660492,
+        "triangulation_score": 0.377,
         "label": "kg-only",
         "axis_values": {
-          "kg": 0.43299999833106995,
-          "docking": 0.0,
+          "kg": 0.211,
+          "docking": 0.735,
           "pharos": 0.0,
-          "literature": 0.303
+          "literature": 0.414
         }
       },
       "tissue_context": {
@@ -2078,1310 +1076,135 @@
           "Liver",
           "Spleen"
         ],
-        "n_genes": 1,
-        "n_expressed": 1,
-        "mean_tpm_in_tissue": 4.39,
-        "max_tpm_in_tissue": 4.39,
-        "tissue_specificity": 0.317,
-        "context_modifier": 0.954
-      },
-      "ensemble_prob": 0.1178,
-      "ensemble_features": {
-        "kg_score": 0.9914,
-        "degree_penalty": 0.7527,
-        "n_drug_targets": 4,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 4.5218
-      },
-      "ensemble_rank": 6,
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D008288",
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [
-          "ISOLATED"
-        ],
-        "n_alerts": 1,
-        "alert_names": [
-          "isolated_alkene"
-        ]
-      }
-    },
-    {
-      "drug_name": "Dexamethasone",
-      "drug_id": "DB01234",
-      "disease_name": "Malaria",
-      "combined_score": 0.42820000648498535,
-      "pillars_hit": 4,
-      "transe_rank": 28,
-      "transe_score": -10.6629,
-      "pykeen_score": -12.5508,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.7250000238418579,
-      "proximity_distance": 1.100000023841858,
-      "admet_score": 0.7109,
-      "admet_flags": "clean",
-      "primekg_score": 0.2614,
-      "dti_score": 0.876,
-      "dti_best_target": "ITPRIP",
-      "kg_group_score": 0.3002,
-      "structural_group_score": 0.876,
-      "network_group_score": 0.5335999727249146,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.0998,
-      "admet_multiplier": 0.9422,
-      "efficacy_score": 0.4544000029563904,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 13,
-      "shared_targets": [
-        "CRP",
-        "CXCL8",
-        "CYP2D6",
-        "ICAM1",
-        "IFNAR1",
-        "IL2",
-        "IL2RA",
-        "IL6",
-        "MMP1",
-        "NOS2",
-        "PTGS2",
-        "TGFB1",
-        "TREM1"
-      ],
-      "pubmed_total": 106,
-      "pubmed_treatment_total": 97,
-      "pubmed_repurposing_total": 2,
-      "key_papers": [
-        {
-          "pmid": "21329300",
-          "title": "Effect of malaria infection and dexamethasone on spleen morphology and histology.",
-          "authors": "Rungruang T, Chaweeborisuit P, Klosek SK",
-          "journal": "The Southeast Asian journal of tropical medicine and public health",
-          "year": "2010",
-          "abstract_snippet": "The purpose of this study was to determine the histopathological changes of the spleen caused by parasite infection and steroid use to investigate pathological effects due to infection in ICR mice. The mice were divided into 5 groups: non-malaria infected mice served as controls, mice with parasite ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/21329300/",
-          "total_results": 106
-        },
-        {
-          "pmid": "19454095",
-          "title": "Malaria: severe, life-threatening.",
-          "authors": "Omari AA, Garner P",
-          "journal": "BMJ clinical evidence",
-          "year": "2007",
-          "abstract_snippet": "INTRODUCTION: Severe malaria mainly affects children under 5 years old, non-immune travellers, migrants to malarial areas, and people living in areas with unstable or seasonal malaria. Cerebral malaria, causing encephalopathy and coma, is fatal in around 20% of children and adults, and neurological ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/19454095/"
-        },
-        {
-          "pmid": "31599872",
-          "title": "Advice for travelers.",
-          "authors": "",
-          "journal": "The Medical letter on drugs and therapeutics",
-          "year": "2019",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/31599872/"
-        },
-        {
-          "pmid": "21375787",
-          "title": "Malaria: severe, life-threatening.",
-          "authors": "Sheehy SH, Angus BJ",
-          "journal": "BMJ clinical evidence",
-          "year": "2011",
-          "abstract_snippet": "INTRODUCTION: Severe malaria mainly affects children under 5 years old, non-immune travellers, migrants to malarial areas, and people living in areas with unstable or seasonal malaria. Cerebral malaria, causing encephalopathy and coma, is fatal in around 20% of children and adults, and neurological ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/21375787/"
-        },
-        {
-          "pmid": "6326550",
-          "title": "Malaria and the nervous system.",
-          "authors": "Osuntokun BO",
-          "journal": "African journal of medicine and medical sciences",
-          "year": "1983",
-          "abstract_snippet": "The neurological complications of malaria--an almost universal problem although it occurs mainly in the tropics--constitute the commonest cause of death and morbidity. These complications usually occur in P. falciparum infections and in those who are non-immune, such as children, pregnant women and ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/6326550/"
-        }
-      ],
-      "repurposing_papers": [
-        {
-          "pmid": "32705976",
-          "title": "",
-          "authors": "Kapepula PM, Kabengele JK, Kingombe M, et al.",
-          "journal": "The American journal of tropical medicine and hygiene",
-          "year": "2020",
-          "abstract_snippet": "The world is currently facing a novel COVID-19 pandemic caused by SARS-CoV-2 that, as of July 12, 2020, has caused a reported 12,322,395 cases and 556,335 deaths. To date, only two treatments, remdesivir and dexamethasone, have demonstrated clinical efficacy through randomized controlled trials (RCT...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/32705976/",
-          "total_results": 2
-        },
-        {
-          "pmid": "33724123",
-          "title": "Does hydroxychloroquine still have any role in the COVID-19 pandemic?",
-          "authors": "Schilling WH, White NJ",
-          "journal": "Expert opinion on pharmacotherapy",
-          "year": "2021",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33724123/"
-        }
-      ],
-      "semantic_scholar_papers": [
-        {
-          "title": "Biochemical association between essential trace elements and susceptibility to malaria in outbred mice after inhibition with dexamethasone or induction with lipopolysaccharide",
-          "year": 2016,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/4c9ddc59bde7f1f72d88473b12f2eb7ad6fe73e1",
-          "authors": "M. Modaresinejad, H. Nahrevanian, S. Khatami"
-        },
-        {
-          "title": "Hydroxychloroquine can reduce fetal growth restriction in a dexamethasone-induced rat model.",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/2ca84f4003be2601c949c701b1b8e7a5a7a97a90",
-          "authors": "Minji Choi, Jae Ryoung Hwang, J. Sung"
-        },
-        {
-          "title": "Hyperthermia in a Patient with Relapse Malaria: A Case Report",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/f4eef77fb2c920fd13fbf20fe01538cf58122617",
-          "authors": "Shafira Aulia Mujahidah, Eka Afrima Sari, Sandra Pebrianti"
-        },
-        {
-          "title": "Immunobiochemical Study of Host During Malaria Infection via Nitric Oxide Pathway after Modulation by Lipopolysaccharide and Dexamethasone in Mice Model",
-          "year": 2015,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/9c6cafa97c2f7dc448358abd173468bd8fdd1f2e",
-          "authors": "Mehrnoush Modaresine, H. Nahrevania, S. Khatami"
-        },
-        {
-          "title": "Immunopathology and dexamethasone therapy in a new model for malaria-associated acute respiratory distress syndrome",
-          "year": 2013,
-          "citations": 12,
-          "url": "https://www.semanticscholar.org/paper/dcad35cc78942f3c029e60e68aa35e0ee18fa2ef",
-          "authors": "A. Chadambuka, B. Mabaera, M. Tshimanga"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Immunopathology and dexamethasone therapy in a new model for malaria-associated acute respiratory distress syndrome",
-        "year": 2013,
-        "citations": 12,
-        "url": "https://www.semanticscholar.org/paper/dcad35cc78942f3c029e60e68aa35e0ee18fa2ef",
-        "authors": "A. Chadambuka, B. Mabaera, M. Tshimanga"
-      },
-      "max_citations": 12,
-      "faers_signal": "moderate",
-      "faers_total_reports": 312747,
-      "faers_cooccurrences": 9,
-      "faers_interpretation": "9 FAERS reports mention both Dexamethasone and Malaria-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "T7765 (1.561)",
-        "Chemistry 2804 (1.549)",
-        "crizotinib (1.547)",
-        "curcumin (1.542)",
-        "HO-013 (1.535)"
-      ],
-      "signature_interpretation": "Dexamethasone was not found among the top 27 drugs that reverse the Malaria gene signature. Top reversers: T7765 (1.561), Chemistry 2804 (1.549), crizotinib (1.547)",
-      "ai_hypothesis": "of its anti-inflammatory properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.0998,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "Dexamethasone \u2014[is a therapeutic for]\u2192 Malaria",
-      "kg_paths_text": "\u2022 Dexamethasone \u2014[is a therapeutic for]\u2192 Malaria\n\u2022 Dexamethasone \u2014[downregulates]\u2192 gene-1454 \u2014[activates]\u2192 gene-83732 \u2014[is downregulated by]\u2192 Malaria\n\u2022 Dexamethasone \u2014[downregulates]\u2192 gene-1454 \u2014[is activated by]\u2192 gene-79897 \u2014[is downregulated by]\u2192 Malaria",
-      "validation_experiments": [],
-      "novelty_score": 0.30000001192092896,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": true,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "106 PubMed articles on this drug-disease pair",
-        "2 article(s) specifically mention repurposing/repositioning",
-        "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 9 adverse event reports mention drug-disease co-occurrence",
-        "AI-generated hypothesis available"
-      ],
-      "dose_plausibility": {
-        "plausibility": "likely",
-        "dose_range": "trial",
-        "confidence": "medium",
-        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
-        "chembl_phase": 2.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1512,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (ABCB1 / rs1045642)",
-        "cpic": [],
-        "pharmgkb": [
-          {
-            "gene": "ABCB1",
-            "variant": "rs1045642",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204433"
-          },
-          {
-            "gene": "ABCB1",
-            "variant": "rs2032582",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981238041"
-          },
-          {
-            "gene": "CTLA4",
-            "variant": "rs4553808",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043880851"
-          },
-          {
-            "gene": "ABCB1",
-            "variant": "rs2229109",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449170621"
-          },
-          {
-            "gene": "GATA3",
-            "variant": "rs3824662",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1184512128"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.32600000500679016,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.42800000309944153,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.881
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Whole Blood",
-          "Liver",
-          "Spleen"
-        ],
-        "n_genes": 13,
-        "n_expressed": 11,
-        "mean_tpm_in_tissue": 496.25,
+        "n_genes": 9,
+        "n_expressed": 7,
+        "mean_tpm_in_tissue": 746.19,
         "max_tpm_in_tissue": 5683.19,
         "tissue_specificity": 1.0,
         "context_modifier": 1.15
       },
-      "ensemble_prob": 0.8068,
+      "ensemble_prob": 0.1104,
       "ensemble_features": {
-        "kg_score": 0.9973,
-        "degree_penalty": 0.736,
-        "n_drug_targets": 24,
-        "is_fda_approved": 1,
+        "kg_score": 0.9871,
+        "degree_penalty": 0.746,
+        "n_drug_targets": 13,
+        "is_fda_approved": 0,
         "n_disease_genes": 0,
-        "transe_rank_log": 3.3673
+        "transe_rank_log": 4.92
       },
       "ensemble_rank": 1,
       "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
+        "kcal_per_mol": -8.82,
+        "target_symbol": "PTGS1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
       },
-      "disease_entity": "Disease::MESH:D008288",
       "structural_alerts": {
         "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Clarithromycin",
-      "drug_id": "DB01211",
-      "disease_name": "Malaria",
-      "combined_score": 0.4088999927043915,
-      "pillars_hit": 4,
-      "transe_rank": 8,
-      "transe_score": -10.3679,
-      "pykeen_score": -12.1612,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0.7386,
-      "similar_to": "Azithromycin",
-      "mol_emb_similarity": 0.9986,
-      "mol_emb_similar_to": "Azithromycin",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.75,
-      "proximity_distance": 1.0,
-      "admet_score": 0.6165,
-      "admet_flags": "clean",
-      "primekg_score": 0.2676,
-      "dti_score": 1.0,
-      "dti_best_target": "LRFN1",
-      "kg_group_score": 0.4099,
-      "structural_group_score": 1.0,
-      "network_group_score": 0.5828999876976013,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.399,
-      "admet_multiplier": 0.7316,
-      "efficacy_score": 0.558899998664856,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 3,
-      "shared_targets": [
-        "CD36",
-        "CXCL8",
-        "ICAM1"
-      ],
-      "pubmed_total": 13,
-      "pubmed_treatment_total": 11,
-      "pubmed_repurposing_total": 2,
-      "key_papers": [
-        {
-          "pmid": "41413430",
-          "title": "Buruli ulcer.",
-          "authors": "Yotsu RR, Simmonds RE, de Souza DK, et al.",
-          "journal": "Nature reviews. Disease primers",
-          "year": "2025",
-          "abstract_snippet": "Buruli ulcer is a slowly progressive\u00a0necrotizing disease\u00a0of the skin caused by Mycobacterium ulcerans, recognized by WHO as a neglected tropical disease. Around 2,000 cases are reported annually, but underdiagnosis and under-reporting probably obscure the true burden. A major advance in the understa...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41413430/",
-          "total_results": 13
-        },
-        {
-          "pmid": "38676494",
-          "title": "A Review of the Association between Infections, Seizures, and Drugs.",
-          "authors": "Tolou-Ghamari Z",
-          "journal": "Central nervous system agents in medicinal chemistry",
-          "year": "2025",
-          "abstract_snippet": "BACKGROUND: Seizures are a common presenting symptom of the central nervous system (CNS) and could occur from infections (such as toxins) or drugs. OBJECTIVE: The aim of this study was to present a systematic review of the association between infections, seizures, and drugs. METHODS: From their ince...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38676494/"
-        },
-        {
-          "pmid": "9109159",
-          "title": "Future indications for macrolides.",
-          "authors": "Tarlow MJ, Block SL, Harris J, et al.",
-          "journal": "The Pediatric infectious disease journal",
-          "year": "1997",
-          "abstract_snippet": "The antimicrobial spectrum of azithromycin and clarithromycin suggests a number of further uses for these newer macrolides. Favorable clinical and bacteriologic responses have been reported with both antibiotics in children with community-acquired pneumonia. Response rates were high for overall pati...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/9109159/"
-        },
-        {
-          "pmid": "23137860",
-          "title": "Antimalarial interaction of quinine and quinidine with clarithromycin.",
-          "authors": "Pandey SK, Dwivedi H, Singh S, et al.",
-          "journal": "Parasitology",
-          "year": "2013",
-          "abstract_snippet": "Quinine (QN) and quinidine (QND) have been commonly used as effective and affordable antimalarials for over many years. Quinine primarily is used for severe malaria treatment. However, plasmodia resistance to these drugs and poor patient compliance limits their administration to the patients. The de...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/23137860/"
-        },
-        {
-          "pmid": "24946829",
-          "title": "Management of BU-HIV co-infection.",
-          "authors": "O'Brien DP, Ford N, Vitoria M, et al.",
-          "journal": "Tropical medicine & international health : TM & IH",
-          "year": "2014",
-          "abstract_snippet": "BACKGROUND: Buruli Ulcer (BU)-HIV co-infection is an important emerging management challenge for BU disease. Limited by paucity of scientific studies, guidance for management of this co-infection has been lacking. METHODS: Initiated by WHO, a panel of experts in BU and HIV management developed guida...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/24946829/"
-        }
-      ],
-      "repurposing_papers": [
-        {
-          "pmid": "35544099",
-          "title": "Searching for new therapeutic options for the uncommon pathogen Mycobacterium chimaera: an open drug discovery approach.",
-          "authors": "Cantillon D, Goff A, Taylor S, et al.",
-          "journal": "The Lancet. Microbe",
-          "year": "2022",
-          "abstract_snippet": "BACKGROUND: Mycobacterium chimaera is a slowly growing non-tuberculous mycobacterium associated with outbreaks of fatal infections in patients after cardiac surgery, and it is increasingly being detected in patients with chronic lung conditions. M chimaera can cause disseminated disease, osteomyelit...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35544099/",
-          "total_results": 2
-        },
-        {
-          "pmid": "32095613",
-          "title": "The importance of being parasiticidal\u2026 an update on drug development for the treatment of alveolar echinococcosis.",
-          "authors": "Lundstr\u00f6m-Stadelmann B, Rufener R, Ritler D, et al.",
-          "journal": "Food and waterborne parasitology",
-          "year": "2019",
-          "abstract_snippet": "The lethal disease alveolar echinococcosis (AE) is caused by the metacestode stage of the fox tapeworm ",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/32095613/"
-        }
-      ],
-      "semantic_scholar_papers": [
-        {
-          "title": "Alteration of Early-Phase Piperaquine Disposition by Concurrent Administration of Clarithromycin in Healthy Volunteers",
-          "year": 2024,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/457ff67f2bac2380dfead4186b2b5a0b5b1ed323",
-          "authors": "Ademisoye Aa, Soyinka Jo, Igbinoba Si"
-        },
-        {
-          "title": "Validation of Putative Apicoplast-Targeting Drugs Using a Chemical Supplementation Assay in Cultured Human Malaria Parasites",
-          "year": 2017,
-          "citations": 55,
-          "url": "https://www.semanticscholar.org/paper/c08bd8dd5e1cabf880312b83bfa0f224bd00b0f0",
-          "authors": "Taher Uddin, G. McFadden, C. Goodman"
-        },
-        {
-          "title": "Discovery and structure\u2013activity relationship analysis of 2-Pyridyl Thieno[3,2-d]pyrimidine derivatives as promising therapeutic candidates for the treatment of Buruli ulcer",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/c1bfd7239767fb98de08a90d92f038be1a8f402e",
-          "authors": "Rodrigue Keumoe, Rufin Marie Toghueo Kouipou, Eugenie Aim\u00e9e Madiesse Kemgne"
-        },
-        {
-          "title": "Antimalarial interaction of quinine and quinidine with clarithromycin",
-          "year": 2012,
-          "citations": 11,
-          "url": "https://www.semanticscholar.org/paper/646dacfc3502ceddbce764df19de46294f48b1f7",
-          "authors": "S. Pandey, Hemlata Dwivedi, Sarika Singh"
-        },
-        {
-          "title": "Clarithromycin, a cytochrome P450 inhibitor, can reverse mefloquine resistance in Plasmodium yoelii nigeriensis- infected Swiss mice",
-          "year": 2011,
-          "citations": 9,
-          "url": "https://www.semanticscholar.org/paper/f86df583203f04a1594efc032b23ce7dcbbe4638",
-          "authors": "R. Tripathi, S. Pandey, Amber Rizvi"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Validation of Putative Apicoplast-Targeting Drugs Using a Chemical Supplementation Assay in Cultured Human Malaria Parasites",
-        "year": 2017,
-        "citations": 55,
-        "url": "https://www.semanticscholar.org/paper/c08bd8dd5e1cabf880312b83bfa0f224bd00b0f0",
-        "authors": "Taher Uddin, G. McFadden, C. Goodman"
-      },
-      "max_citations": 55,
-      "faers_signal": "weak",
-      "faers_total_reports": 36490,
-      "faers_cooccurrences": 1,
-      "faers_interpretation": "1 FAERS report(s) mention both Clarithromycin and Malaria-related terms. Minimal real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "T7765 (1.561)",
-        "Chemistry 2804 (1.549)",
-        "crizotinib (1.547)",
-        "curcumin (1.542)",
-        "HO-013 (1.535)"
-      ],
-      "signature_interpretation": "Clarithromycin was not found among the top 27 drugs that reverse the Malaria gene signature. Top reversers: T7765 (1.561), Chemistry 2804 (1.549), crizotinib (1.547)",
-      "ai_hypothesis": "of its high efficacy and low toxicity.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.399,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "Clarithromycin \u2014[downregulates]\u2192 gene-23406 \u2014[is upregulated by]\u2192 Malaria",
-      "kg_paths_text": "\u2022 Clarithromycin \u2014[downregulates]\u2192 gene-23406 \u2014[is upregulated by]\u2192 Malaria\n\u2022 Clarithromycin \u2014[downregulates]\u2192 gene-9093 \u2014[is downregulated by]\u2192 DB00608 \u2014[treats]\u2192 Malaria\n\u2022 Clarithromycin \u2014[downregulates]\u2192 gene-9093 \u2014[is downregulated by]\u2192 DB00608 \u2014[treats]\u2192 Malaria",
-      "validation_experiments": [],
-      "novelty_score": 0.3479999899864197,
-      "novelty_level": "EMERGING",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "MEDIUM",
-      "confidence_reasons": [
-        "13 PubMed articles found",
-        "2 article(s) specifically mention repurposing/repositioning",
-        "Supported by 4 independent AI pillars",
-        "High molecular similarity (0.74) to Azithromycin",
-        "Supporting paper with 55 citations",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.40)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "unknown",
-        "dose_range": "research",
-        "confidence": "low",
-        "rationale": "No ChEMBL clinical phase data available.",
-        "chembl_phase": null,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1018,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00783",
-            "drug_name": "Estradiol",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
-        "pharmgkb": []
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.24300000071525574,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.4090000092983246,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.498
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Whole Blood",
-          "Liver",
-          "Spleen"
+        "pains_families": [
+          "PHENOL"
         ],
-        "n_genes": 3,
-        "n_expressed": 3,
-        "mean_tpm_in_tissue": 61.6,
-        "max_tpm_in_tissue": 106.58,
-        "tissue_specificity": 0.598,
-        "context_modifier": 1.083
-      },
-      "ensemble_prob": 0.7357,
-      "ensemble_features": {
-        "kg_score": 0.9966,
-        "degree_penalty": 0.7772,
-        "n_drug_targets": 10,
-        "is_fda_approved": 0,
-        "n_disease_genes": 0,
-        "transe_rank_log": 3.6109
-      },
-      "ensemble_rank": 2,
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D008288",
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
+        "n_alerts": 1,
+        "alert_names": [
+          "phenol_ester"
+        ]
       }
     },
     {
-      "drug_name": "Testosterone",
-      "drug_id": "DB00624",
+      "drug_name": "3,4-Dihydroxycinnamic Acid",
+      "drug_id": "DB01880",
       "disease_name": "Malaria",
-      "combined_score": 0.4081999957561493,
-      "pillars_hit": 4,
-      "transe_rank": 64,
-      "transe_score": -10.8629,
+      "combined_score": 0.1679,
+      "pillars_hit": 2,
+      "transe_rank": 782,
+      "transe_score": -11.7838,
       "pykeen_score": 0,
       "pykeen_rank": 0,
       "txgnn_score": 0,
       "txgnn_rank": 0,
-      "mol_similarity": 0.4426,
-      "similar_to": "Cortisone",
+      "mol_similarity": 0.4474,
+      "similar_to": "Curcumin",
       "mol_emb_similarity": 0,
       "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.6499999761581421,
-      "proximity_distance": 1.399999976158142,
-      "admet_score": 0.7521,
+      "gene_sig_score": 0.029,
+      "gene_sig_rank": 25,
+      "proximity_score": 0,
+      "proximity_distance": 0,
+      "admet_score": 0.6513,
       "admet_flags": "clean",
-      "primekg_score": 0.2569,
-      "dti_score": 0.9572,
-      "dti_best_target": "PDCD7",
-      "kg_group_score": 0.1805,
-      "structural_group_score": 0.9572,
-      "network_group_score": 0.48579999804496765,
+      "primekg_score": 0,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": -11.7838,
+      "structural_group_score": 0.4474,
+      "network_group_score": 0.5,
       "txgnn_group_score": 0,
-      "mr_group_score": 0.0998,
-      "admet_multiplier": 0.9504,
-      "efficacy_score": 0.429500013589859,
-      "groups_hit": 4,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9303,
+      "efficacy_score": 0.1805,
+      "groups_hit": 2,
       "direct_relations": [],
-      "shared_target_count": 7,
+      "shared_target_count": 3,
       "shared_targets": [
-        "C1QBP",
-        "CRP",
-        "HAMP",
-        "IL6",
         "MMP1",
-        "NOS2",
-        "TGFB1"
-      ],
-      "pubmed_total": 77,
-      "pubmed_treatment_total": 37,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "33862049",
-          "title": "Relationships between avian malaria resilience and corticosterone, testosterone and prolactin in a Hawaiian songbird.",
-          "authors": "Names GR, Krause JS, Schultz EM, et al.",
-          "journal": "General and comparative endocrinology",
-          "year": "2021",
-          "abstract_snippet": "Glucocorticoids, androgens, and prolactin regulate metabolism and reproduction, but they also play critical roles in immunomodulation. Since the introduction of avian malaria to Hawaii a century ago, low elevation populations of the Hawaii Amakihi (Chlorodrepanis virens) that have experienced strong...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33862049/",
-          "total_results": 77
-        },
-        {
-          "pmid": "37384220",
-          "title": "Immunomodulatory effects of testosterone and letrozole during ",
-          "authors": "Nolasco-P\u00e9rez TJ, Cervantes-Candelas LA, Buend\u00eda-Gonz\u00e1lez FO, et al.",
-          "journal": "Frontiers in cellular and infection microbiology",
-          "year": "2023",
-          "abstract_snippet": "INTRODUCTION: Malaria is one of the leading health problems globally. Plasmodium infection causes pronounced sexual dimorphism, and the lethality and severity are more remarkable in males than in females. To study the role of testosterone in the susceptibility and mortality of males in malaria, it i...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37384220/"
-        },
-        {
-          "pmid": "25056943",
-          "title": "Testosterone persistently dysregulates hepatic expression of Tlr6 and Tlr8 induced by Plasmodium chabaudi malaria.",
-          "authors": "Al-Quraishy S, Dkhil MA, Abdel-Baki AA, et al.",
-          "journal": "Parasitology research",
-          "year": "2014",
-          "abstract_snippet": "Testosterone (T) is known to induce persistent susceptibility to Plasmodium chabaudi malaria. Pathogens recognizing Toll-like receptors (TLRs), though potentially important against malaria, have not yet been examined for their T-sensitivity. Here, we investigate effects of T and P. chabaudi on mRNA ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/25056943/"
-        },
-        {
-          "pmid": "11960632",
-          "title": "Testosterone signaling in T cells and macrophages.",
-          "authors": "Wunderlich F, Benten WP, Lieberherr M, et al.",
-          "journal": "Steroids",
-          "year": "2002",
-          "abstract_snippet": "This review summarizes data about non-genomic actions of testosterone on murine malaria, T cells and macrophages produced by our group during the last 15 years. In C57BL/10 mice, testosterone induces a lethal outcome of blood stage infections with Plasmodium chabaudi which normally takes a self-heal...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/11960632/"
-        },
-        {
-          "pmid": "40332798",
-          "title": "Testosterone Modulates Oxidative Stress in a Sexually Dimorphic Manner in CBA/Ca Mice Infected with ",
-          "authors": "Nolasco-P\u00e9rez TJ, Salazar-Casta\u00f1\u00f3n VH, Cervantes-Candelas LA, et al.",
-          "journal": "International journal of molecular sciences",
-          "year": "2025",
-          "abstract_snippet": "Malaria, the deadliest parasitic disease in the world, is sexually dimorphic, inflammatory, and oxidative. Males experience more severe symptoms and mortality than females do; therefore, the roles of 17\u03b2-estradiol and testosterone in this phenomenon have been studied. Both hormones affect oxidative ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40332798/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Relationships between avian malaria resilience and corticosterone, testosterone and prolactin in a Hawaiian songbird.",
-          "year": 2021,
-          "citations": 13,
-          "url": "https://www.semanticscholar.org/paper/8b8a83691548b1fdde0fe44756bb48881ec7ecec",
-          "authors": "G. R. Names, Jesse S. Krause, E. M. Schultz"
-        },
-        {
-          "title": "News at a glance: Testosterone study shakeup, new malaria preventative, and minibrains with \u2018eyes\u2019",
-          "year": 2021,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/0a1ae2440c80202cb54407a22a67643a53de4228",
-          "authors": ""
-        },
-        {
-          "title": "Testosterone and malaria infection",
-          "year": 2017,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/0f83030063d1b19a780622f305da77883957629b",
-          "authors": "M. Dkhil"
-        },
-        {
-          "title": "Testosterone Modulates Oxidative Stress in a Sexually Dimorphic Manner in CBA/Ca Mice Infected with Plasmodium berghei ANKA",
-          "year": 2025,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/0eca9739afc50933799e5ec71d3978d22cdda8d6",
-          "authors": "Teresita de Jes\u00fas Nolasco-P\u00e9rez, V\u00edctor H. Salazar-Casta\u00f1\u00f3n, L. A. Cervantes-Candelas"
-        },
-        {
-          "title": "Testosterone persistently dysregulates hepatic expression of Tlr6 and Tlr8 induced by Plasmodium chabaudi malaria",
-          "year": 2014,
-          "citations": 7,
-          "url": "https://www.semanticscholar.org/paper/145e64d3cb46e9a0118e10888ec984b1b49d59f2",
-          "authors": "S. Al-Quraishy, M. Dkhil, A. Abdel-Baki"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Relationships between avian malaria resilience and corticosterone, testosterone and prolactin in a Hawaiian songbird.",
-        "year": 2021,
-        "citations": 13,
-        "url": "https://www.semanticscholar.org/paper/8b8a83691548b1fdde0fe44756bb48881ec7ecec",
-        "authors": "G. R. Names, Jesse S. Krause, E. M. Schultz"
-      },
-      "max_citations": 13,
-      "faers_signal": "none",
-      "faers_total_reports": 30252,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Testosterone to Malaria terms. Drug has 30252 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "T7765 (1.561)",
-        "Chemistry 2804 (1.549)",
-        "crizotinib (1.547)",
-        "curcumin (1.542)",
-        "HO-013 (1.535)"
-      ],
-      "signature_interpretation": "Testosterone was not found among the top 27 drugs that reverse the Malaria gene signature. Top reversers: T7765 (1.561), Chemistry 2804 (1.549), crizotinib (1.547)",
-      "ai_hypothesis": "of its anti-malarial properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 0,
-          "negative_signals": 0,
-          "mechanism_signals": 0,
-          "extracted_entities": [
-            {
-              "entity": "malaria",
-              "entity_group": "Disease_disorder",
-              "score": 1.0
-            },
-            {
-              "entity": "pl",
-              "entity_group": "Disease_disorder",
-              "score": 0.9990000128746033
-            },
-            {
-              "entity": "##as",
-              "entity_group": "Disease_disorder",
-              "score": 0.9990000128746033
-            },
-            {
-              "entity": "##dium",
-              "entity_group": "Disease_disorder",
-              "score": 0.9919999837875366
-            },
-            {
-              "entity": "infection",
-              "entity_group": "Disease_disorder",
-              "score": 0.8859999775886536
-            },
-            {
-              "entity": "severity",
-              "entity_group": "Severity",
-              "score": 0.8389999866485596
-            },
-            {
-              "entity": "testosterone",
-              "entity_group": "Diagnostic_procedure",
-              "score": 0.9950000047683716
-            }
-          ]
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 1,
-          "negative_signals": 0,
-          "mechanism_signals": 1,
-          "extracted_entities": [
-            {
-              "entity": "testosterone",
-              "entity_group": "Diagnostic_procedure",
-              "score": 0.9990000128746033
-            },
-            {
-              "entity": "pathogen",
-              "entity_group": "Coreference",
-              "score": 0.7879999876022339
-            },
-            {
-              "entity": "- like receptors",
-              "entity_group": "Sign_symptom",
-              "score": 0.8410000205039978
-            }
-          ]
-        }
-      ],
-      "has_failed_trial": true,
-      "failed_trial_phase": "Phase 3",
-      "failed_trial_count": 1,
-      "failed_trial_penalty": 0.3,
-      "mr_score": 0.0998,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "Testosterone \u2014[downregulates]\u2192 gene-5438 \u2014[binds]\u2192 gene-79035 \u2014[is upregulated by]\u2192 Malaria",
-      "kg_paths_text": "\u2022 Testosterone \u2014[downregulates]\u2192 gene-5438 \u2014[binds]\u2192 gene-79035 \u2014[is upregulated by]\u2192 Malaria\n\u2022 Testosterone \u2014[downregulates]\u2192 gene-5438 \u2014[binds]\u2192 gene-64859 \u2014[is upregulated by]\u2192 Malaria\n\u2022 Testosterone \u2014[downregulates]\u2192 gene-5438 \u2014[binds]\u2192 gene-1387 \u2014[is downregulated by]\u2192 Malaria",
-      "validation_experiments": [],
-      "novelty_score": 0.28600001335144043,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": false,
-      "clinical_trials_total": 1,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT00442403",
-          "title": "Safety and Efficacy of Chloroquine Associated With Dehydroepiandrosterone Sulphate to Treat Uncomplicated Falciparum Malaria",
-          "status": "SUSPENDED",
-          "phase": "PHASE3",
-          "enrollment": "200",
-          "url": "https://clinicaltrials.gov/study/NCT00442403"
-        }
-      ],
-      "trial_phases": {
-        "PHASE3": 1
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "1 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
-        "77 PubMed articles on this drug-disease pair",
-        "Supported by 4 independent AI pillars",
-        "WARNING: Drug FAILED Phase 3 trial(s) for this disease (1 terminated/withdrawn)",
-        "AI-generated hypothesis available"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1511,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (UGT1A4 / UGT1A4*1a, UGT1A4*3a)",
-        "cpic": [],
-        "pharmgkb": [
-          {
-            "gene": "UGT1A4",
-            "variant": "UGT1A4*1a, UGT1A4*3a",
-            "level": "3",
-            "phenotype_category": "Metabolism/PK",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1447980857"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.3070000112056732,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.40799999237060547,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.822
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Whole Blood",
-          "Liver",
-          "Spleen"
-        ],
-        "n_genes": 7,
-        "n_expressed": 6,
-        "mean_tpm_in_tissue": 953.83,
-        "max_tpm_in_tissue": 5683.19,
-        "tissue_specificity": 1.0,
-        "context_modifier": 1.15
-      },
-      "ensemble_prob": 0.6224,
-      "ensemble_features": {
-        "kg_score": 0.9956,
-        "degree_penalty": 0.7473,
-        "n_drug_targets": 24,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 3.8501
-      },
-      "ensemble_rank": 4,
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D008288",
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Indomethacin",
-      "drug_id": "DB00328",
-      "disease_name": "Malaria",
-      "combined_score": 0.4067,
-      "pillars_hit": 4,
-      "transe_rank": 105,
-      "transe_score": -11.0084,
-      "pykeen_score": -12.2207,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0.0539,
-      "gene_sig_rank": 15,
-      "proximity_score": 0.699999988079071,
-      "proximity_distance": 1.2000000476837158,
-      "admet_score": 0.5619,
-      "admet_flags": "DILI=0.97",
-      "primekg_score": 0.2651,
-      "dti_score": 0.546,
-      "dti_best_target": "FAXC",
-      "kg_group_score": 0.4049,
-      "structural_group_score": 0.546,
-      "network_group_score": 0.5217999815940857,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.2793,
-      "admet_multiplier": 0.9124,
-      "efficacy_score": 0.4458,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 8,
-      "shared_targets": [
-        "CXCL8",
-        "IL2",
-        "IL6",
-        "MMP1",
-        "NOS2",
         "PTGS1",
-        "PTGS2",
-        "TGFB1"
+        "PTGS2"
       ],
-      "pubmed_total": 32,
-      "pubmed_treatment_total": 19,
+      "pubmed_total": 0,
+      "pubmed_treatment_total": 0,
       "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "7979622",
-          "title": "Antipyretic efficacy of indomethacin and acetaminophen in uncomplicated falciparum malaria.",
-          "authors": "Wilairatana P, Looareesuwan S",
-          "journal": "Annals of tropical medicine and parasitology",
-          "year": "1994",
-          "abstract_snippet": "The efficacy of indomethacin and acetaminophen as antipyretics was compared in 43 febrile patients with uncomplicated falciparum malaria. Each patient was randomly assigned to receive low oral doses of indomethacin (25 mg three times a day) or acetaminophen (1000 mg four times a day) as well as mefl...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/7979622/",
-          "total_results": 32
-        },
-        {
-          "pmid": "10386159",
-          "title": "Platelet membrane protein CD36.",
-          "authors": "Ikeda H",
-          "journal": "[Hokkaido igaku zasshi] The Hokkaido journal of medical science",
-          "year": "1999",
-          "abstract_snippet": "CD36 is one of the major glycoproteins of platelets and known as GPIV. Besides platelets, CD36 is distributed in megakaryocytes, monocytes, capillary endothelium and mammary epithelial cells. In vitro analyses, CD36 is reported to act as receptors to a variety of ligands including collagen, thrombos...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/10386159/"
-        },
-        {
-          "pmid": "796419",
-          "title": "Mouse malaria nephropathy.",
-          "authors": "George CR, Parbtani A, Cameron JS",
-          "journal": "The Journal of pathology",
-          "year": "1976",
-          "abstract_snippet": "Mice were infected with 1X 107 Plasmodium berghei Yoelii parasites intraperitoneally. Circulating parasite, malaria antibody and C3 concentrations were measures: parasitaemia and hypocomplementaemia were transient, but the antibody response was persistent. Animals were sacrificed at intervals and th...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/796419/"
-        },
-        {
-          "pmid": "34662665",
-          "title": "Chinese sumac (Rhus chinensis Mill.) fruits alleviate indomethacin-induced gastric ulcer in mice by improving oxidative stress, inflammation and apoptosis.",
-          "authors": "Ma N, Sun Y, Yi J, et al.",
-          "journal": "Journal of ethnopharmacology",
-          "year": "2022",
-          "abstract_snippet": "ETHNOPHARMACOLOGICAL RELEVANCE: According to traditional Chinese medicine and a previous literature, many parts of Chinese sumac (Rhus chinensis Mill.), including fruits, are used as traditional herb to prevent or cure many diseases, such as inflammation, diarrhea, malaria, and other acute or chroni...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34662665/"
-        },
-        {
-          "pmid": "1343709",
-          "title": "Cytokines and dysregulation of the immune response in human malaria.",
-          "authors": "Alves MF, Santos-Neto LL, Junqueira MI, et al.",
-          "journal": "Memorias do Instituto Oswaldo Cruz",
-          "year": "1992",
-          "abstract_snippet": "The dysregulation of the immune response by malaria parasite has been considered as a possible constraint to the effectiveness of malaria vaccination. In spite of the important role interleukin-1 (IL-1) plays on the immunoregulation, and its ability to mimic various features of clinical malaria, rep...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/1343709/"
-        }
-      ],
+      "key_papers": [],
       "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "Discovery of small molecules with anthelmintic potential in the Medicines for Malaria Venture\u2019s COVID and Global Health Priority Boxes using an infrared-based assay for Caenorhabditis elegans motility",
-          "year": 2025,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/356e04e323691863f0b961af9b2e2ee32c5c8750",
-          "authors": "Yujie Uli Sun, Lawrence J Liu, Conor R. Caffrey"
+          "title": "Antioxidant activity of caffeic acid (3,4-dihydroxycinnamic acid).",
+          "year": 2006,
+          "citations": 1150,
+          "url": "https://www.semanticscholar.org/paper/718aba173ef94ab51a222b5225db07aaa0d56f65",
+          "authors": "I. G\u00fcl\u00e7in"
         },
         {
-          "title": "Discovery of anthelmintic small molecules in the Medicines for Malaria Venture\u2019s COVID and Global Health Priority Boxes using an infrared-based assay for Caenorhabditis elegans motility",
-          "year": 2023,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/c8bda47c00b997bfbf8721ef05600df9409e5fff",
-          "authors": "Yujie Uli Sun, Lawrence J Liu, Conor R. Caffrey"
+          "title": "Lanthanum-based metal organic framework (La-MOF) use of 3,4-dihydroxycinnamic acid as drug delivery system linkers in human breast cancer therapy",
+          "year": 2022,
+          "citations": 21,
+          "url": "https://www.semanticscholar.org/paper/49eb323e78a49f6d067330dcc43043bc282cbbe1",
+          "authors": "Moosareza Safinejad, Amir Rigi, M. Zeraati"
         },
         {
-          "title": "Chinese sumac (Rhus chinensis Mill.) fruits alleviate indomethacin-induced gastric ulcer in mice by improving oxidative stress, inflammation and apoptosis.",
+          "title": "Green Synthesis and Mechanism Analysis of a New Metal-Organic Framework Constructed from Al (III) and 3,4-Dihydroxycinnamic Acid Extracted from Satureja hortensis and its anticancerous activities",
           "year": 2021,
-          "citations": 38,
-          "url": "https://www.semanticscholar.org/paper/a573fb0e7fe093957f93addd9097a09e81b2c5aa",
-          "authors": "Nan Ma, Yilin Sun, Junjie Yi"
+          "citations": 11,
+          "url": "https://www.semanticscholar.org/paper/88b03e38eabb592d35098d24af17a27829269f13",
+          "authors": "M. Zeraati, Vali Alizadeh, S. Chupradit"
         },
         {
-          "title": "Suppression of in\u2013vitro lymphoproliferative responses in acute malaria patients can be partially reversed by indomethacin",
-          "year": 1989,
-          "citations": 29,
-          "url": "https://www.semanticscholar.org/paper/2720d25e378de34829dddb3de5f0bdf62b0714f5",
-          "authors": "E. Riley, C. MacLennan, D. Kwiatkowski"
+          "title": "Electrochemical oxidation of trans-3,4-dihydroxycinnamic acid at PbO2 electrodes: direct electrolysis and ozone mediated reactions compared",
+          "year": 2000,
+          "citations": 102,
+          "url": "https://www.semanticscholar.org/paper/f83be9a449e3150dd42e04d2b6ce7a6b3eabfe51",
+          "authors": "R. Amadelli, A. De Battisti, D. Girenko"
         },
         {
-          "title": "Antipyretic efficacy of indomethacin and acetaminophen in uncomplicated falciparum malaria.",
-          "year": 1994,
-          "citations": 9,
-          "url": "https://www.semanticscholar.org/paper/a37c687e528d81d1cd55f1f2c3288305c70debe2",
-          "authors": "P. Wilairatana, S. Looareesuwan"
+          "title": "Structure\u2013hepatoprotective activity relationship of 3,4\u2010dihydroxycinnamic acid (caffeic acid) derivatives",
+          "year": 2001,
+          "citations": 63,
+          "url": "https://www.semanticscholar.org/paper/331d9c06445f5a09511127a6e1686ddee662383d",
+          "authors": "V. P\u00e9rez-Alvarez, B. Ra, P. Muriel"
         }
       ],
       "most_cited_paper": {
-        "title": "Chinese sumac (Rhus chinensis Mill.) fruits alleviate indomethacin-induced gastric ulcer in mice by improving oxidative stress, inflammation and apoptosis.",
-        "year": 2021,
-        "citations": 38,
-        "url": "https://www.semanticscholar.org/paper/a573fb0e7fe093957f93addd9097a09e81b2c5aa",
-        "authors": "Nan Ma, Yilin Sun, Junjie Yi"
+        "title": "Antioxidant activity of caffeic acid (3,4-dihydroxycinnamic acid).",
+        "year": 2006,
+        "citations": 1150,
+        "url": "https://www.semanticscholar.org/paper/718aba173ef94ab51a222b5225db07aaa0d56f65",
+        "authors": "I. G\u00fcl\u00e7in"
       },
-      "max_citations": 38,
+      "max_citations": 1150,
       "faers_signal": "none",
-      "faers_total_reports": 12621,
+      "faers_total_reports": 0,
       "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Indomethacin to Malaria terms. Drug has 12621 total reports.",
+      "faers_interpretation": "No FAERS reports found for 3,4-Dihydroxycinnamic Acid",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -3391,89 +1214,19 @@
         "curcumin (1.542)",
         "HO-013 (1.535)"
       ],
-      "signature_interpretation": "Indomethacin was not found among the top 27 drugs that reverse the Malaria gene signature. Top reversers: T7765 (1.561), Chemistry 2804 (1.549), crizotinib (1.547)",
-      "ai_hypothesis": "of its anti-inflammatory properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 1,
-          "negative_signals": 0,
-          "mechanism_signals": 0,
-          "extracted_entities": [
-            {
-              "entity": "indo",
-              "entity_group": "Medication",
-              "score": 1.0
-            },
-            {
-              "entity": "##met",
-              "entity_group": "Medication",
-              "score": 0.9990000128746033
-            },
-            {
-              "entity": "##hacin",
-              "entity_group": "Medication",
-              "score": 0.8960000276565552
-            },
-            {
-              "entity": "ace",
-              "entity_group": "Medication",
-              "score": 1.0
-            },
-            {
-              "entity": "##taminophen",
-              "entity_group": "Medication",
-              "score": 0.9620000123977661
-            },
-            {
-              "entity": "antipy",
-              "entity_group": "Therapeutic_procedure",
-              "score": 0.8149999976158142
-            },
-            {
-              "entity": "falciparum",
-              "entity_group": "Disease_disorder",
-              "score": 0.9639999866485596
-            },
-            {
-              "entity": "low",
-              "entity_group": "Lab_value",
-              "score": 0.8460000157356262
-            },
-            {
-              "entity": "oral",
-              "entity_group": "Administration",
-              "score": 0.7910000085830688
-            },
-            {
-              "entity": "indomet",
-              "entity_group": "Medication",
-              "score": 0.9120000004768372
-            }
-          ]
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
+      "signature_interpretation": "3,4-Dihydroxycinnamic Acid was not found among the top 27 drugs that reverse the Malaria gene signature. Top reversers: T7765 (1.561), Chemistry 2804 (1.549), crizotinib (1.547)",
+      "ai_hypothesis": "",
+      "abstract_analyses": [],
       "has_failed_trial": false,
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.2793,
-      "mr_genetic_targets": 2,
-      "mechanistic_hypothesis": "Indomethacin \u2014[binds]\u2192 gene-8714 \u2014[is upregulated by]\u2192 Malaria",
-      "kg_paths_text": "\u2022 Indomethacin \u2014[binds]\u2192 gene-8714 \u2014[is upregulated by]\u2192 Malaria\n\u2022 Indomethacin \u2014[binds]\u2192 gene-9376 \u2014[is bound by]\u2192 DB00254 \u2014[treats]\u2192 Malaria\n\u2022 Indomethacin \u2014[binds]\u2192 gene-1559 \u2014[is bound by]\u2192 DB00359 \u2014[treats]\u2192 Malaria",
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "3,4-Dihydroxycinnamic Acid \u2014[is associated with]\u2192 MESH:D003920 \u2014[is treated by]\u2192 DB01611 \u2014[treats]\u2192 Malaria",
+      "kg_paths_text": "\u2022 3,4-Dihydroxycinnamic Acid \u2014[is associated with]\u2192 MESH:D003920 \u2014[is treated by]\u2192 DB01611 \u2014[treats]\u2192 Malaria\n\u2022 3,4-Dihydroxycinnamic Acid \u2014[is associated with]\u2192 MESH:D003920 \u2014[is treated by]\u2192 DB01611 \u2014[treats]\u2192 Malaria\n\u2022 3,4-Dihydroxycinnamic Acid \u2014[is associated with]\u2192 MESH:D003920 \u2014[is treated by]\u2192 DB00608 \u2014[treats]\u2192 Malaria",
       "validation_experiments": [],
-      "novelty_score": 0.346,
+      "novelty_score": 0.143,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -3481,119 +1234,46 @@
       "trial_phases": {},
       "confidence": "LOW",
       "confidence_reasons": [
-        "32 PubMed articles found",
-        "Supported by 4 independent AI pillars",
-        "Supporting paper with 38 citations",
-        "AI-generated hypothesis available"
+        "Supported by 2 independent AI pillars",
+        "Highly cited paper (1150 citations): \"Antioxidant activity of caffeic acid (3,4-dihydroxycinnamic ...\""
       ],
+      "disease_entity": "Disease::MESH:D008288",
       "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
+        "plausibility": "likely",
+        "dose_range": "late-trial",
+        "confidence": "medium",
+        "rationale": "Phase-3 investigational \u2014 dose range established in Phase-2 pharmacokinetic studies; efficacy trials ongoing or recently completed.",
+        "chembl_phase": 3.0,
         "target_affinity": {},
         "stage": 1
       },
       "ddi_warnings": {
-        "n_interactions": 2093,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          }
-        ]
+        "n_interactions": 0,
+        "has_warnings": false,
+        "top_interactions": []
       },
       "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "moderate",
-        "summary": "CPIC-C (CYP2C9) \u2022 PharmGKB-3 (CYP2C9 / CYP2C9*1, CYP2C9*3)",
-        "cpic": [
-          {
-            "gene": "CYP2C9",
-            "level": "C",
-            "guideline": "CYP2C9 and NSAIDs"
-          }
-        ],
-        "pharmgkb": [
-          {
-            "gene": "CYP2C9",
-            "variant": "CYP2C9*1, CYP2C9*3",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451140140"
-          },
-          {
-            "gene": "LST1;LTA;TNF",
-            "variant": "rs1800629",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1452570052"
-          }
-        ]
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
       },
       "triangulation": {
-        "n_axes_agree": 3,
+        "n_axes_agree": 1,
         "axes": {
-          "kg": true,
+          "kg": false,
           "docking": true,
           "pharos": false,
-          "literature": true
+          "literature": false
         },
-        "triangulation_score": 0.523,
-        "label": "silver-standard",
+        "triangulation_score": 0.285,
+        "label": "kg-only",
         "axis_values": {
-          "kg": 0.407,
-          "docking": 0.831,
+          "kg": 0.168,
+          "docking": 0.753,
           "pharos": 0.0,
-          "literature": 0.659
+          "literature": 0.0
         }
       },
       "tissue_context": {
@@ -3602,45 +1282,51 @@
           "Liver",
           "Spleen"
         ],
-        "n_genes": 8,
-        "n_expressed": 6,
-        "mean_tpm_in_tissue": 43.63,
-        "max_tpm_in_tissue": 306.45,
-        "tissue_specificity": 0.806,
-        "context_modifier": 1.095
+        "n_genes": 3,
+        "n_expressed": 3,
+        "mean_tpm_in_tissue": 7.05,
+        "max_tpm_in_tissue": 13.75,
+        "tissue_specificity": 0.101,
+        "context_modifier": 0.943
       },
-      "ensemble_prob": 0.0983,
+      "ensemble_prob": 0.0,
       "ensemble_features": {
-        "kg_score": 0.9906,
-        "degree_penalty": 0.7454,
-        "n_drug_targets": 53,
+        "kg_score": 0.613,
+        "degree_penalty": 1.0,
+        "n_drug_targets": 44,
         "is_fda_approved": 1,
         "n_disease_genes": 0,
-        "transe_rank_log": 4.6052
+        "transe_rank_log": 8.3148
       },
-      "ensemble_rank": 7,
+      "ensemble_rank": 5,
       "docking": {
-        "kcal_per_mol": -9.97,
-        "target_symbol": "CXCL8",
+        "kcal_per_mol": -9.04,
+        "target_symbol": "MMP1",
         "source": "chembl_bioactivity_proxy",
         "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
         "hit": true
       },
-      "disease_entity": "Disease::MESH:D008288",
       "structural_alerts": {
         "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
+        "pains_families": [
+          "CATECHOL",
+          "MICHAEL"
+        ],
+        "n_alerts": 3,
+        "alert_names": [
+          "catechol_A(92)",
+          "catechol",
+          "Michael_acceptor_1"
+        ]
       }
     }
   ],
+  "disease_entity": "Disease::MESH:D008288",
   "ensemble_version": "v5",
   "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
     "n_disease_genes": 57,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
-  },
-  "disease_entity": "Disease::MESH:D008288"
+  }
 }

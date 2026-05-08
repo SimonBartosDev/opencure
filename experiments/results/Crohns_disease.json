@@ -1,8 +1,8 @@
 {
   "disease": "Crohn's disease",
   "status": "completed",
-  "timestamp": "2026-04-19T23:25:17.911857",
-  "elapsed_seconds": 782.5,
+  "timestamp": "2026-05-08T01:31:34.044780",
+  "elapsed_seconds": 175.3,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -35,15 +35,15 @@
       "admet_score": 0.824,
       "admet_flags": "DILI=0.91",
       "primekg_score": 0.2686,
-      "dti_score": 0.41,
-      "dti_best_target": "CSF2",
+      "dti_score": 0.4098,
+      "dti_best_target": "TLR4",
       "kg_group_score": 0.1101,
-      "structural_group_score": 0.41,
+      "structural_group_score": 0.4098,
       "network_group_score": 0.875,
       "txgnn_group_score": 0.95,
       "mr_group_score": 0.5483,
       "admet_multiplier": 0.9648,
-      "efficacy_score": 0.7175999879837036,
+      "efficacy_score": 0.7174999713897705,
       "groups_hit": 5,
       "direct_relations": [],
       "shared_target_count": 1,
@@ -138,6 +138,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.55)"
       ],
+      "disease_entity": "Disease::MESH:D003424",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "late-trial",
@@ -187,8 +188,7 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.084
       },
-      "disease_entity": "Disease::MESH:D003424",
-      "ensemble_prob": 0.0003,
+      "ensemble_prob": 0.0043,
       "ensemble_features": {
         "kg_score": 0.814,
         "degree_penalty": 1.0,
@@ -235,8 +235,8 @@
       "admet_score": 0.54,
       "admet_flags": "hERG=0.83",
       "primekg_score": 0.2636,
-      "dti_score": 0.2796,
-      "dti_best_target": "CHI3L1",
+      "dti_score": 0.2905,
+      "dti_best_target": "TLR4",
       "kg_group_score": 0.053,
       "structural_group_score": 0.925,
       "network_group_score": 0.4300000071525574,
@@ -406,14 +406,6 @@
       "clinical_trials_total": 3,
       "clinical_trials": [
         {
-          "nct_id": "NCT01570348",
-          "title": "Crohn's Allogeneic Transplant Study",
-          "status": "TERMINATED",
-          "phase": "PHASE2",
-          "enrollment": "2",
-          "url": "https://clinicaltrials.gov/study/NCT01570348"
-        },
-        {
           "nct_id": "NCT01233570",
           "title": "Topical Tacrolimus 0.1% Ointment For Treatment Of Cutaneous Crohn's Disease",
           "status": "COMPLETED",
@@ -428,6 +420,14 @@
           "phase": "PHASE2",
           "enrollment": "0",
           "url": "https://clinicaltrials.gov/study/NCT04154735"
+        },
+        {
+          "nct_id": "NCT01570348",
+          "title": "Crohn's Allogeneic Transplant Study",
+          "status": "TERMINATED",
+          "phase": "PHASE2",
+          "enrollment": "2",
+          "url": "https://clinicaltrials.gov/study/NCT01570348"
         }
       ],
       "trial_phases": {
@@ -444,6 +444,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.58)"
       ],
+      "disease_entity": "Disease::MESH:D003424",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -591,8 +592,7 @@
         "tissue_specificity": 0.606,
         "context_modifier": 1.103
       },
-      "disease_entity": "Disease::MESH:D003424",
-      "ensemble_prob": 0.4263,
+      "ensemble_prob": 0.3984,
       "ensemble_features": {
         "kg_score": 0.996,
         "degree_penalty": 0.7479,
@@ -626,7 +626,7 @@
       "drug_name": "Cimetidine",
       "drug_id": "DB00501",
       "disease_name": "Crohn's disease",
-      "combined_score": 0.6062,
+      "combined_score": 0.603,
       "pillars_hit": 5,
       "transe_rank": 60,
       "transe_score": -11.1877,
@@ -645,15 +645,15 @@
       "admet_score": 0.5683,
       "admet_flags": "clean",
       "primekg_score": 0.2707,
-      "dti_score": 0.5098,
-      "dti_best_target": "CSF2",
+      "dti_score": 0.4901,
+      "dti_best_target": "TLR4",
       "kg_group_score": 0.1137,
-      "structural_group_score": 0.5098,
+      "structural_group_score": 0.4901,
       "network_group_score": 0.42820000648498535,
       "txgnn_group_score": 0.99,
       "mr_group_score": 0.599,
       "admet_multiplier": 0.9137,
-      "efficacy_score": 0.6635,
+      "efficacy_score": 0.6599,
       "groups_hit": 5,
       "direct_relations": [],
       "shared_target_count": 4,
@@ -845,7 +845,7 @@
       "mechanistic_hypothesis": "Cimetidine \u2014[is a therapeutic for]\u2192 MESH:D051437 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 Crohn's disease",
       "kg_paths_text": "\u2022 Cimetidine \u2014[is a therapeutic for]\u2192 MESH:D051437 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 Crohn's disease\n\u2022 Cimetidine \u2014[is a therapeutic for]\u2192 MESH:D051437 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 Crohn's disease\n\u2022 Cimetidine \u2014[is a therapeutic for]\u2192 MESH:D051437 \u2014[is treated by]\u2192 DB00741 \u2014[treats]\u2192 Crohn's disease",
       "validation_experiments": [],
-      "novelty_score": 0.509,
+      "novelty_score": 0.507,
       "novelty_level": "KNOWN",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -859,6 +859,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.60)"
       ],
+      "disease_entity": "Disease::MESH:D003424",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -939,10 +940,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.314,
+        "triangulation_score": 0.313,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.606,
+          "kg": 0.603,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 0.511
@@ -959,8 +960,7 @@
         "tissue_specificity": 0.73,
         "context_modifier": 1.028
       },
-      "disease_entity": "Disease::MESH:D003424",
-      "ensemble_prob": 0.5618,
+      "ensemble_prob": 0.4835,
       "ensemble_features": {
         "kg_score": 0.9947,
         "degree_penalty": 0.7619,
@@ -969,7 +969,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 4.0431
       },
-      "ensemble_rank": 6,
+      "ensemble_rank": 7,
       "docking": {
         "kcal_per_mol": null,
         "target_symbol": null,
@@ -1020,7 +1020,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2761,
       "dti_score": 1.0,
-      "dti_best_target": "CHI3L1",
+      "dti_best_target": "CTLA4",
       "kg_group_score": 0.4394,
       "structural_group_score": 1.0,
       "network_group_score": 0.385699987411499,
@@ -1186,14 +1186,6 @@
       "clinical_trials_total": 4,
       "clinical_trials": [
         {
-          "nct_id": "NCT02872506",
-          "title": "Comparing the Quality of Life of Terminal Ileitis Patients With Crohn's Disease Treated With Anti-TNF or Surgical Resection",
-          "status": "WITHDRAWN",
-          "phase": "NA",
-          "enrollment": "0",
-          "url": "https://clinicaltrials.gov/study/NCT02872506"
-        },
-        {
           "nct_id": "NCT02056418",
           "title": "Effects of Enteral Nutrition and Corticosteroid on Intestinal Flora in Induction Remission of Crohn Disease in Adult",
           "status": "UNKNOWN",
@@ -1202,25 +1194,33 @@
           "url": "https://clinicaltrials.gov/study/NCT02056418"
         },
         {
-          "nct_id": "NCT05284136",
-          "title": "Exclusion Diet vs corticosteroIds in patientS With activE Crohn's Disease",
-          "status": "UNKNOWN",
-          "phase": "PHASE2, PHASE3",
-          "enrollment": "80",
-          "url": "https://clinicaltrials.gov/study/NCT05284136"
-        },
-        {
           "nct_id": "NCT01095042",
           "title": "Cognition and Emotion in the SII and IBD",
           "status": "COMPLETED",
           "phase": "NA",
           "enrollment": "120",
           "url": "https://clinicaltrials.gov/study/NCT01095042"
+        },
+        {
+          "nct_id": "NCT02872506",
+          "title": "Comparing the Quality of Life of Terminal Ileitis Patients With Crohn's Disease Treated With Anti-TNF or Surgical Resection",
+          "status": "WITHDRAWN",
+          "phase": "NA",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT02872506"
+        },
+        {
+          "nct_id": "NCT05284136",
+          "title": "Exclusion Diet vs corticosteroIds in patientS With activE Crohn's Disease",
+          "status": "UNKNOWN",
+          "phase": "PHASE2, PHASE3",
+          "enrollment": "80",
+          "url": "https://clinicaltrials.gov/study/NCT05284136"
         }
       ],
       "trial_phases": {
-        "NA": 2,
         "PHASE4": 1,
+        "NA": 2,
         "PHASE2": 1,
         "PHASE3": 1
       },
@@ -1234,8 +1234,10 @@
         "Note: Drug had early-phase trial failures for this disease",
         "Highly cited paper (740 citations): \"Discovery and Preclinical Validation of Drug Indications Usi...\"",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.75, 9 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.75, 9 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D003424",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -1336,8 +1338,7 @@
         "tissue_specificity": 0.416,
         "context_modifier": 1.053
       },
-      "disease_entity": "Disease::MESH:D003424",
-      "ensemble_prob": 0.9845,
+      "ensemble_prob": 0.9809,
       "ensemble_features": {
         "kg_score": 0.9991,
         "degree_penalty": 0.7532,
@@ -1346,7 +1347,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.3026
       },
-      "ensemble_rank": 3,
+      "ensemble_rank": 4,
       "docking": {
         "kcal_per_mol": -10.54,
         "target_symbol": "NR3C1",
@@ -1384,8 +1385,8 @@
       "admet_score": 0.7109,
       "admet_flags": "clean",
       "primekg_score": 0.2644,
-      "dti_score": 0.5039,
-      "dti_best_target": "CSF2",
+      "dti_score": 0.5281,
+      "dti_best_target": "TLR4",
       "kg_group_score": 0.4421,
       "structural_group_score": 0.9509,
       "network_group_score": 0.4047999978065491,
@@ -1589,27 +1590,27 @@
           "url": "https://clinicaltrials.gov/study/NCT07385131"
         },
         {
-          "nct_id": "NCT03723447",
-          "title": "Intraoperative TAP Block With Bupivacaine/Dexamethasone Against Liposomal Bupivacaine (Exparel\u00ae)",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "102",
-          "url": "https://clinicaltrials.gov/study/NCT03723447"
-        },
-        {
           "nct_id": "NCT01277289",
           "title": "Intra-erythrocyte Dexamethasone Versus Placebo in Patients With Steroid-dependent Crohn's Disease",
           "status": "TERMINATED",
           "phase": "PHASE3",
           "enrollment": "51",
           "url": "https://clinicaltrials.gov/study/NCT01277289"
+        },
+        {
+          "nct_id": "NCT03723447",
+          "title": "Intraoperative TAP Block With Bupivacaine/Dexamethasone Against Liposomal Bupivacaine (Exparel\u00ae)",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "102",
+          "url": "https://clinicaltrials.gov/study/NCT03723447"
         }
       ],
       "trial_phases": {
         "PHASE1": 1,
         "PHASE2": 1,
-        "PHASE4": 1,
-        "PHASE3": 1
+        "PHASE3": 1,
+        "PHASE4": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -1620,8 +1621,10 @@
         "Supported by 4 independent AI pillars",
         "Highly cited paper (551 citations): \"Computational Repositioning of the Anticonvulsant Topiramate...\"",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.74, 38 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.74, 38 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D003424",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -1758,8 +1761,7 @@
         "tissue_specificity": 0.336,
         "context_modifier": 1.042
       },
-      "disease_entity": "Disease::MESH:D003424",
-      "ensemble_prob": 0.9616,
+      "ensemble_prob": 0.9914,
       "ensemble_features": {
         "kg_score": 0.9995,
         "degree_penalty": 0.736,
@@ -1768,7 +1770,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 1.7918
       },
-      "ensemble_rank": 4,
+      "ensemble_rank": 1,
       "docking": {
         "kcal_per_mol": -11.64,
         "target_symbol": "NR3C1",
@@ -1806,8 +1808,8 @@
       "admet_score": 1.0,
       "admet_flags": "DILI=0.99",
       "primekg_score": 0.2678,
-      "dti_score": 0.7284,
-      "dti_best_target": "IFNG",
+      "dti_score": 0.715,
+      "dti_best_target": "MMP9",
       "kg_group_score": 0.2969,
       "structural_group_score": 0.9051,
       "network_group_score": 0.4846000075340271,
@@ -1980,12 +1982,12 @@
       "clinical_trials_total": 3,
       "clinical_trials": [
         {
-          "nct_id": "NCT06059989",
-          "title": "InDuctIon TREatment with SubCuTaneous Infliximab for Crohn's Disease",
-          "status": "RECRUITING",
+          "nct_id": "NCT02772965",
+          "title": "Low Dose Oral Methotrexate in Pediatric Crohn's Disease Patients Initiating Anti-Tumor Necrosis Factor (Anti-TNF) Therapy",
+          "status": "COMPLETED",
           "phase": "PHASE3",
-          "enrollment": "158",
-          "url": "https://clinicaltrials.gov/study/NCT06059989"
+          "enrollment": "306",
+          "url": "https://clinicaltrials.gov/study/NCT02772965"
         },
         {
           "nct_id": "NCT02852694",
@@ -1996,12 +1998,12 @@
           "url": "https://clinicaltrials.gov/study/NCT02852694"
         },
         {
-          "nct_id": "NCT02772965",
-          "title": "Low Dose Oral Methotrexate in Pediatric Crohn's Disease Patients Initiating Anti-Tumor Necrosis Factor (Anti-TNF) Therapy",
-          "status": "COMPLETED",
+          "nct_id": "NCT06059989",
+          "title": "InDuctIon TREatment with SubCuTaneous Infliximab for Crohn's Disease",
+          "status": "RECRUITING",
           "phase": "PHASE3",
-          "enrollment": "306",
-          "url": "https://clinicaltrials.gov/study/NCT02772965"
+          "enrollment": "158",
+          "url": "https://clinicaltrials.gov/study/NCT06059989"
         }
       ],
       "trial_phases": {
@@ -2020,6 +2022,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.71, 2 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D003424",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2156,8 +2159,7 @@
         "tissue_specificity": 0.479,
         "context_modifier": 1.028
       },
-      "disease_entity": "Disease::MESH:D003424",
-      "ensemble_prob": 0.1175,
+      "ensemble_prob": 0.1196,
       "ensemble_features": {
         "kg_score": 0.9773,
         "degree_penalty": 0.7918,
@@ -2205,7 +2207,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2665,
       "dti_score": 1.0,
-      "dti_best_target": "CHI3L1",
+      "dti_best_target": "CTLA4",
       "kg_group_score": 0.2754,
       "structural_group_score": 1.0,
       "network_group_score": 0.550599992275238,
@@ -2370,6 +2372,22 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
+          "nct_id": "NCT03261206",
+          "title": "Stopping Aminosalicylate Therapy in Inactive Crohn's Disease",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "phase": "PHASE4",
+          "enrollment": "334",
+          "url": "https://clinicaltrials.gov/study/NCT03261206"
+        },
+        {
+          "nct_id": "NCT05386290",
+          "title": "A Multicentered Prospective Cohort Study of Chinese IBD Patients",
+          "status": "UNKNOWN",
+          "phase": "N/A",
+          "enrollment": "200",
+          "url": "https://clinicaltrials.gov/study/NCT05386290"
+        },
+        {
           "nct_id": "NCT01514240",
           "title": "Phase III Study of D9421-C 9 mg in Patients With Active Crohn's Disease in Japan",
           "status": "COMPLETED",
@@ -2378,42 +2396,26 @@
           "url": "https://clinicaltrials.gov/study/NCT01514240"
         },
         {
-          "nct_id": "NCT03553472",
-          "title": "Identifying Young Inflammatory Bowel Disease Patients at Risk for Herpes Zoster",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "97",
-          "url": "https://clinicaltrials.gov/study/NCT03553472"
-        },
-        {
-          "nct_id": "NCT00862121",
-          "title": "A Study With Pentasa in Patients With Active Crohn's Disease",
-          "status": "TERMINATED",
-          "phase": "PHASE3",
-          "enrollment": "20",
-          "url": "https://clinicaltrials.gov/study/NCT00862121"
-        },
-        {
-          "nct_id": "NCT01696942",
-          "title": "Cimzia Versus Mesalamine for Crohn's Recurrence",
-          "status": "TERMINATED",
-          "phase": "PHASE4",
-          "enrollment": "10",
-          "url": "https://clinicaltrials.gov/study/NCT01696942"
-        },
-        {
           "nct_id": "NCT01505855",
           "title": "Efficacy Study of Pneumococcal Vaccination in Crohn's Disease",
           "status": "COMPLETED",
           "phase": "PHASE4",
           "enrollment": "197",
           "url": "https://clinicaltrials.gov/study/NCT01505855"
+        },
+        {
+          "nct_id": "NCT00300118",
+          "title": "Oral Budesonide vs. Oral Mesalazine in Active Crohn's Disease (CD)",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "311",
+          "url": "https://clinicaltrials.gov/study/NCT00300118"
         }
       ],
       "trial_phases": {
-        "PHASE3": 2,
-        "PHASE4": 4,
-        "NA": 1
+        "PHASE4": 3,
+        "PHASE3": 4,
+        "PHASE2": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -2423,8 +2425,10 @@
         "Supported by 4 independent AI pillars",
         "Highly cited paper (740 citations): \"Discovery and Preclinical Validation of Drug Indications Usi...\"",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.78, 3 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.78, 3 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D003424",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2531,8 +2535,7 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.115
       },
-      "disease_entity": "Disease::MESH:D003424",
-      "ensemble_prob": 0.9433,
+      "ensemble_prob": 0.989,
       "ensemble_features": {
         "kg_score": 0.9988,
         "degree_penalty": 0.7595,
@@ -2541,7 +2544,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.6391
       },
-      "ensemble_rank": 5,
+      "ensemble_rank": 2,
       "docking": {
         "kcal_per_mol": -7.0,
         "target_symbol": "PTGS2",
@@ -2586,7 +2589,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2671,
       "dti_score": 1.0,
-      "dti_best_target": "CHI3L1",
+      "dti_best_target": "CTLA4",
       "kg_group_score": 0.3258,
       "structural_group_score": 1.0,
       "network_group_score": 0.48330000042915344,
@@ -2817,6 +2820,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.53)"
       ],
+      "disease_entity": "Disease::MESH:D003424",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2938,8 +2942,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.856
       },
-      "disease_entity": "Disease::MESH:D003424",
-      "ensemble_prob": 0.5398,
+      "ensemble_prob": 0.6991,
       "ensemble_features": {
         "kg_score": 0.9919,
         "degree_penalty": 0.8219,
@@ -2948,7 +2951,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 4.4543
       },
-      "ensemble_rank": 7,
+      "ensemble_rank": 6,
       "docking": {
         "kcal_per_mol": null,
         "target_symbol": null,
@@ -2992,8 +2995,8 @@
       "admet_score": 0.7065,
       "admet_flags": "clean",
       "primekg_score": 0.2642,
-      "dti_score": 0.6603,
-      "dti_best_target": "IFNG",
+      "dti_score": 0.6427,
+      "dti_best_target": "CARD8",
       "kg_group_score": 0.3572,
       "structural_group_score": 0.9505,
       "network_group_score": 0.4772999882698059,
@@ -3154,36 +3157,36 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT00796250",
-          "title": "Efficacy of Infliximab in the Treatment of Patients Affected by Corticodependent Crohn's Disease (P02732)",
-          "status": "TERMINATED",
-          "phase": "PHASE3",
-          "enrollment": "9",
-          "url": "https://clinicaltrials.gov/study/NCT00796250"
-        },
-        {
-          "nct_id": "NCT02517684",
-          "title": "Top-down Infliximab Study in Kids With Crohn's Disease",
-          "status": "COMPLETED",
+          "nct_id": "NCT01752790",
+          "title": "Efficacy and Safety of Top-down Therapy in Pediatric Crohn's Disease",
+          "status": "WITHDRAWN",
           "phase": "PHASE4",
-          "enrollment": "100",
-          "url": "https://clinicaltrials.gov/study/NCT02517684"
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT01752790"
         },
         {
-          "nct_id": "NCT04921033",
-          "title": "Exclusive Enteral Nutrition in Patients With Ileocaecal Crohn's Disease",
-          "status": "UNKNOWN",
-          "phase": "PHASE3",
-          "enrollment": "256",
-          "url": "https://clinicaltrials.gov/study/NCT04921033"
-        },
-        {
-          "nct_id": "NCT00955123",
-          "title": "Effects of Prednisolone and Infliximab on the Regulation of Urea Synthesis in Active Inflammatory Bowel Disease",
+          "nct_id": "NCT05587673",
+          "title": "High Dose Steroid Therapy to Treat Flares in Patients With Inflammatory Bowel Disease (IBD)",
           "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "40",
-          "url": "https://clinicaltrials.gov/study/NCT00955123"
+          "phase": "PHASE1",
+          "enrollment": "3",
+          "url": "https://clinicaltrials.gov/study/NCT05587673"
+        },
+        {
+          "nct_id": "NCT04224558",
+          "title": "Stem Cell Transplantation in Crohn's Disease",
+          "status": "RECRUITING",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "15",
+          "url": "https://clinicaltrials.gov/study/NCT04224558"
+        },
+        {
+          "nct_id": "NCT06953791",
+          "title": "Comparison of Quality of Life During a Flare of Crohn's Disease Treated With Prednisolone or aCDED With PEN in Adult Patients",
+          "status": "RECRUITING",
+          "phase": "PHASE2",
+          "enrollment": "52",
+          "url": "https://clinicaltrials.gov/study/NCT06953791"
         },
         {
           "nct_id": "NCT03219359",
@@ -3195,23 +3198,22 @@
         }
       ],
       "trial_phases": {
-        "PHASE3": 3,
-        "PHASE4": 2,
-        "PHASE2": 3,
+        "PHASE4": 5,
         "PHASE1": 2,
-        "NA": 1
+        "PHASE2": 3
       },
       "confidence": "HIGH",
       "confidence_reasons": [
         "10 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
         "161 PubMed articles on this drug-disease pair",
         "Supported by 4 independent AI pillars",
         "High molecular similarity (0.70) to Prednisolone",
         "Highly cited paper (551 citations): \"Computational Repositioning of the Anticonvulsant Topiramate...\"",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.76, 4 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.76, 4 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D003424",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -3320,8 +3322,7 @@
         "tissue_specificity": 0.327,
         "context_modifier": 0.975
       },
-      "disease_entity": "Disease::MESH:D003424",
-      "ensemble_prob": 0.9892,
+      "ensemble_prob": 0.989,
       "ensemble_features": {
         "kg_score": 0.9994,
         "degree_penalty": 0.7636,
@@ -3330,7 +3331,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 1.9459
       },
-      "ensemble_rank": 1,
+      "ensemble_rank": 3,
       "docking": {
         "kcal_per_mol": -11.05,
         "target_symbol": "NR3C1",
@@ -3369,7 +3370,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.265,
       "dti_score": 1.0,
-      "dti_best_target": "CHI3L1",
+      "dti_best_target": "CTLA4",
       "kg_group_score": 0.3129,
       "structural_group_score": 1.0,
       "network_group_score": 0.4602999985218048,
@@ -3539,20 +3540,28 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT05542355",
-          "title": "EXL01 in the Maintenance of Steroid-induced Clinical Response/Remission in Participants With Mild to Moderate Crohn's Disease",
-          "status": "TERMINATED",
-          "phase": "PHASE1",
-          "enrollment": "8",
-          "url": "https://clinicaltrials.gov/study/NCT05542355"
+          "nct_id": "NCT01444092",
+          "title": "Safety Study of Entocort for Children With Crohn's Disease",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "123",
+          "url": "https://clinicaltrials.gov/study/NCT01444092"
         },
         {
-          "nct_id": "NCT04233463",
-          "title": "The Effect of Oral Polymeric Diet Enriched With TGF-beta 2 (Modulen) on Clinical Response and Mucosal Healing in Adult Patients With Newly Diagnosed Crohn's Disease",
-          "status": "UNKNOWN",
-          "phase": "NA",
+          "nct_id": "NCT01086553",
+          "title": "9 mg Budesonide Once Daily (OD) Versus 3 mg Budesonide Three Times Daily (TID) in Active Crohn's Disease",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "471",
+          "url": "https://clinicaltrials.gov/study/NCT01086553"
+        },
+        {
+          "nct_id": "NCT02619552",
+          "title": "Impact of Medical Treatment on Sexual Function in Patients With Crohn's Disease",
+          "status": "COMPLETED",
+          "phase": "N/A",
           "enrollment": "50",
-          "url": "https://clinicaltrials.gov/study/NCT04233463"
+          "url": "https://clinicaltrials.gov/study/NCT02619552"
         },
         {
           "nct_id": "NCT01453946",
@@ -3563,27 +3572,18 @@
           "url": "https://clinicaltrials.gov/study/NCT01453946"
         },
         {
-          "nct_id": "NCT04921033",
-          "title": "Exclusive Enteral Nutrition in Patients With Ileocaecal Crohn's Disease",
-          "status": "UNKNOWN",
-          "phase": "PHASE3",
-          "enrollment": "256",
-          "url": "https://clinicaltrials.gov/study/NCT04921033"
-        },
-        {
-          "nct_id": "NCT01444092",
-          "title": "Safety Study of Entocort for Children With Crohn's Disease",
+          "nct_id": "NCT00109473",
+          "title": "Trial of Growth Hormone Therapy in Pediatric Crohn's Disease",
           "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "123",
-          "url": "https://clinicaltrials.gov/study/NCT01444092"
+          "phase": "PHASE2",
+          "enrollment": "22",
+          "url": "https://clinicaltrials.gov/study/NCT00109473"
         }
       ],
       "trial_phases": {
-        "PHASE1": 2,
-        "NA": 1,
         "PHASE3": 4,
-        "PHASE2": 1,
+        "PHASE2": 2,
+        "PHASE1": 2,
         "PHASE4": 1
       },
       "confidence": "HIGH",
@@ -3594,8 +3594,10 @@
         "Supported by 4 independent AI pillars",
         "Highly cited paper (740 citations): \"Discovery and Preclinical Validation of Drug Indications Usi...\"",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.76, 10 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.76, 10 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D003424",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3717,8 +3719,7 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.125
       },
-      "disease_entity": "Disease::MESH:D003424",
-      "ensemble_prob": 0.9892,
+      "ensemble_prob": 0.9712,
       "ensemble_features": {
         "kg_score": 0.9993,
         "degree_penalty": 0.7521,
@@ -3727,7 +3728,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.0794
       },
-      "ensemble_rank": 2,
+      "ensemble_rank": 5,
       "docking": {
         "kcal_per_mol": -11.87,
         "target_symbol": "NR3C1",

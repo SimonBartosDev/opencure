@@ -1,13 +1,13 @@
 {
   "disease": "Endometriosis",
   "status": "completed",
-  "timestamp": "2026-04-20T01:20:38.318414",
-  "elapsed_seconds": 743.6,
+  "timestamp": "2026-05-08T01:55:19.637547",
+  "elapsed_seconds": 229.5,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
-    "HIGH": 8,
-    "MEDIUM": 2
+    "HIGH": 7,
+    "MEDIUM": 3
   },
   "pipeline_version": "v5",
   "data_manifest_hash": "2da2aa88f2457d1b",
@@ -16,7 +16,7 @@
       "drug_name": "Danazol",
       "drug_id": "DB01406",
       "disease_name": "Endometriosis",
-      "combined_score": 0.5697,
+      "combined_score": 0.551,
       "pillars_hit": 4,
       "transe_rank": 10,
       "transe_score": -10.2502,
@@ -35,15 +35,15 @@
       "admet_score": 0.5493,
       "admet_flags": "clean",
       "primekg_score": 0.2548,
-      "dti_score": 0.9628,
-      "dti_best_target": "CTSD",
+      "dti_score": 0.8488,
+      "dti_best_target": "COX2",
       "kg_group_score": 0.521,
-      "structural_group_score": 0.9628,
+      "structural_group_score": 0.8488,
       "network_group_score": 0.6506999731063843,
       "txgnn_group_score": 0,
       "mr_group_score": 0.6162,
       "admet_multiplier": 0.9099,
-      "efficacy_score": 0.6261,
+      "efficacy_score": 0.6056,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 11,
@@ -317,35 +317,11 @@
       "mechanistic_hypothesis": "Danazol \u2014[treats]\u2192 Endometriosis",
       "kg_paths_text": "\u2022 Danazol \u2014[treats]\u2192 Endometriosis\n\u2022 Danazol \u2014[treats]\u2192 Endometriosis\n\u2022 Danazol \u2014[downregulates]\u2192 gene-4175 \u2014[is downregulated by]\u2192 DB00717 \u2014[treats]\u2192 Endometriosis",
       "validation_experiments": [],
-      "novelty_score": 0.308,
+      "novelty_score": 0.298,
       "novelty_level": "KNOWN",
       "is_known_treatment": true,
       "clinical_trials_total": 5,
       "clinical_trials": [
-        {
-          "nct_id": "NCT05697471",
-          "title": "Comparisons of the Therapeutic Effects of Dienogest and Danazol on Endometriosis",
-          "status": "UNKNOWN",
-          "phase": "PHASE3",
-          "enrollment": "120",
-          "url": "https://clinicaltrials.gov/study/NCT05697471"
-        },
-        {
-          "nct_id": "NCT00758953",
-          "title": "Pain Associated With Endometriosis",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "66",
-          "url": "https://clinicaltrials.gov/study/NCT00758953"
-        },
-        {
-          "nct_id": "NCT01779232",
-          "title": "Danazol Treatment in Endometriosis Women Before IVF",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "150",
-          "url": "https://clinicaltrials.gov/study/NCT01779232"
-        },
         {
           "nct_id": "NCT03352076",
           "title": "Study to Determine Intraperitoneal,Tissue, Serum Concentrations of VML-0501 Following Five Days of Daily Vaginal Single Dose of VML-0501 (100 mg Danazol), in Comparison to Oral Danazol Capsules Daily 600 mg), in Women With Signs and Symptoms of Endometriosis Undergoing Laparoscopy",
@@ -361,11 +337,35 @@
           "phase": "PHASE2",
           "enrollment": "60",
           "url": "https://clinicaltrials.gov/study/NCT07183787"
+        },
+        {
+          "nct_id": "NCT05697471",
+          "title": "Comparisons of the Therapeutic Effects of Dienogest and Danazol on Endometriosis",
+          "status": "UNKNOWN",
+          "phase": "PHASE3",
+          "enrollment": "120",
+          "url": "https://clinicaltrials.gov/study/NCT05697471"
+        },
+        {
+          "nct_id": "NCT01779232",
+          "title": "Danazol Treatment in Endometriosis Women Before IVF",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "150",
+          "url": "https://clinicaltrials.gov/study/NCT01779232"
+        },
+        {
+          "nct_id": "NCT00758953",
+          "title": "Pain Associated With Endometriosis",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "66",
+          "url": "https://clinicaltrials.gov/study/NCT00758953"
         }
       ],
       "trial_phases": {
-        "PHASE3": 1,
         "PHASE2": 3,
+        "PHASE3": 1,
         "PHASE4": 1
       },
       "confidence": "HIGH",
@@ -380,6 +380,7 @@
         "Moderate genetic evidence supporting causality (MR score: 0.62)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D004715",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -460,10 +461,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.633,
+        "triangulation_score": 0.626,
         "label": "silver-standard",
         "axis_values": {
-          "kg": 0.57,
+          "kg": 0.551,
           "docking": 0.777,
           "pharos": 0.0,
           "literature": 1.0
@@ -480,8 +481,7 @@
         "tissue_specificity": 0.77,
         "context_modifier": 1.091
       },
-      "disease_entity": "Disease::MESH:D004715",
-      "ensemble_prob": 0.8689,
+      "ensemble_prob": 0.8277,
       "ensemble_features": {
         "kg_score": 0.9962,
         "degree_penalty": 0.8134,
@@ -490,7 +490,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 3.7136
       },
-      "ensemble_rank": 7,
+      "ensemble_rank": 6,
       "docking": {
         "kcal_per_mol": -9.33,
         "target_symbol": "PGR",
@@ -510,14 +510,14 @@
       }
     },
     {
-      "drug_name": "Progesterone",
-      "drug_id": "DB00396",
+      "drug_name": "Estradiol",
+      "drug_id": "DB00783",
       "disease_name": "Endometriosis",
-      "combined_score": 0.5415,
+      "combined_score": 0.5424,
       "pillars_hit": 4,
-      "transe_rank": 1,
-      "transe_score": -9.347,
-      "pykeen_score": -11.8634,
+      "transe_rank": 2,
+      "transe_score": -9.734,
+      "pykeen_score": -11.4015,
       "pykeen_rank": 0,
       "txgnn_score": 0,
       "txgnn_rank": 0,
@@ -525,168 +525,148 @@
       "similar_to": "",
       "mol_emb_similarity": 0,
       "mol_emb_similar_to": "",
-      "gene_sig_score": 0.1087,
-      "gene_sig_rank": 8,
-      "proximity_score": 0.6880000233650208,
-      "proximity_distance": 1.25,
-      "admet_score": 0.7543,
+      "gene_sig_score": 0.1304,
+      "gene_sig_rank": 7,
+      "proximity_score": 0.6499999761581421,
+      "proximity_distance": 1.399999976158142,
+      "admet_score": 0.6574,
       "admet_flags": "clean",
-      "primekg_score": 0.2553,
-      "dti_score": 0.8884,
-      "dti_best_target": "CTSD",
-      "kg_group_score": 0.3834,
-      "structural_group_score": 0.8884,
-      "network_group_score": 0.6319,
+      "primekg_score": 0.2527,
+      "dti_score": 0.8731,
+      "dti_best_target": "KIT",
+      "kg_group_score": 0.3708,
+      "structural_group_score": 0.8731,
+      "network_group_score": 0.6313,
       "txgnn_group_score": 0,
-      "mr_group_score": 0.5821,
-      "admet_multiplier": 0.9509,
-      "efficacy_score": 0.5694,
+      "mr_group_score": 0.7079,
+      "admet_multiplier": 0.9315,
+      "efficacy_score": 0.5823,
       "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 36,
+      "shared_target_count": 46,
       "shared_targets": [
+        "ACE",
         "AKT1",
         "AR",
-        "CDKN2A",
+        "C2",
+        "CASP3",
+        "CD44",
         "COMT",
+        "CSF1",
+        "CTNNB1",
         "CTSD",
         "CXCL12",
+        "CYP19A1",
         "CYP1A1",
+        "CYP2B6",
         "EPO",
         "ESR1",
         "ESR2",
         "FOS",
         "GNRH1",
-        "GNRH2",
-        "GNRHR",
-        "HLA-G",
-        "HOXA10",
-        "HSD17B2",
-        "ICAM1",
-        "IFI27",
-        "IGF1"
+        "GNRH2"
       ],
-      "pubmed_total": 2022,
-      "pubmed_treatment_total": 1384,
-      "pubmed_repurposing_total": 2,
+      "pubmed_total": 1629,
+      "pubmed_treatment_total": 1212,
+      "pubmed_repurposing_total": 0,
       "key_papers": [
         {
-          "pmid": "30994890",
-          "title": "Endometriosis.",
-          "authors": "Bulun SE, Yilmaz BD, Sison C, et al.",
-          "journal": "Endocrine reviews",
-          "year": "2019",
-          "abstract_snippet": "Pelvic endometriosis is a complex syndrome characterized by an estrogen-dependent chronic inflammatory process that affects primarily pelvic tissues, including the ovaries. It is caused when shed endometrial tissue travels retrograde into the lower abdominal cavity. Endometriosis is the most common ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30994890/",
-          "total_results": 2022
+          "pmid": "40983106",
+          "title": "Estradiol regulates MBOAT1-mediated ferroptosis and participates in the progression of endometriosis.",
+          "authors": "Fang YQ, Li YH, Li JY, et al.",
+          "journal": "The journal of obstetrics and gynaecology research",
+          "year": "2025",
+          "abstract_snippet": "AIM: Endometriosis is an estrogen-dependent disease with unclear pathogenesis. Recent evidence suggests that ferroptosis plays an important role in the development of endometriosis. In this study, we aimed to explore whether membrane-bound O-acyltransferase domain-containing 1 (MBOAT1) is a key fact...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40983106/",
+          "total_results": 1629
         },
         {
-          "pmid": "37108154",
-          "title": "Progesterone Resistance in Endometriosis: Current Evidence and Putative Mechanisms.",
-          "authors": "Zhang P, Wang G",
-          "journal": "International journal of molecular sciences",
-          "year": "2023",
-          "abstract_snippet": "Endometriosis is an estrogen-dependent disease characterized by the growth of endometrial-like tissue outside the uterus. Progestins are currently the most commonly used treatment for endometriosis because of their excellent therapeutic effects and limited side effects. However, progestins have been...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37108154/"
-        },
-        {
-          "pmid": "34498837",
-          "title": "Estrogen and progesterone receptors in endometriosis.",
-          "authors": "Guimar\u00e3es Ferreira LR, Cavalcanti T, Zomer M, et al.",
-          "journal": "Minerva obstetrics and gynecology",
-          "year": "2022",
-          "abstract_snippet": "BACKGROUND: This study aims to identify the presence of estrogen and progesterone hormone receptors in endometriosis implants and to determine whether hormone treatment influences the receptors in these implants. METHODS: Cross-sectional study with historical data collection. The analysis was conduc...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34498837/"
-        },
-        {
-          "pmid": "31387263",
-          "title": "Progesterone and Estrogen Signaling in the Endometrium: What Goes Wrong in Endometriosis?",
-          "authors": "Marquardt RM, Kim TH, Shin JH, et al.",
-          "journal": "International journal of molecular sciences",
-          "year": "2019",
-          "abstract_snippet": "In the healthy endometrium, progesterone and estrogen signaling coordinate in a tightly regulated, dynamic interplay to drive a normal menstrual cycle and promote an embryo-receptive state to allow implantation during the window of receptivity. It is well-established that progesterone and estrogen a...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/31387263/"
-        },
-        {
-          "pmid": "38854774",
-          "title": "Progesterone resistance in endometriosis: A pathophysiological perspective and potential treatment alternatives.",
-          "authors": "Tang HC, Lin TC, Wu MH, et al.",
-          "journal": "Reproductive medicine and biology",
+          "pmid": "38968535",
+          "title": "Comparison of dienogest or combinations with ethinylestradiol/estradiol valerate on the pain score of women with endometriosis: A prospective cohort study.",
+          "authors": "Yurtkal A, Oncul M",
+          "journal": "Medicine",
           "year": "2024",
-          "abstract_snippet": "BACKGROUND: Endometriosis is a common gynecological disease affecting women of reproductive age. Patients with endometriosis frequently experience severe chronic pain and have higher chances to experience infertility. Progesterone resistance is a major problem that develops during the medical treatm...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38854774/"
-        }
-      ],
-      "repurposing_papers": [
-        {
-          "pmid": "28828592",
-          "title": "Drug delivery for the treatment of endometriosis and uterine fibroids.",
-          "authors": "Friend DR",
-          "journal": "Drug delivery and translational research",
-          "year": "2017",
-          "abstract_snippet": "Endometriosis and uterine fibroids (also known as uterine leiomyomas) are serious medical conditions affecting large numbers of women worldwide. Many women are asymptomatic but those with symptoms require medical intervention to relieve chronic pain and dysmenorrhea and to address infertility. Drug ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/28828592/",
-          "total_results": 2
+          "abstract_snippet": "Endometriosis is one of the most frequent gynecologic disorders. The pathognomonic symptom of endometriosis is pelvic pain. The recommended pain medications are oral hormonal contraceptives, progestin therapy, danazol, gonadotropin-releasing hormone analogs, nonsteroidal anti-inflammatory drugs, and...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38968535/"
         },
         {
-          "pmid": "29893860",
-          "title": "Is it time for a paradigm shift in drug research and development in endometriosis/adenomyosis?",
-          "authors": "Guo SW, Groothuis PG",
-          "journal": "Human reproduction update",
-          "year": "2018",
-          "abstract_snippet": "BACKGROUND: The drug research and development (R&D) for endometriosis/adenomyosis has been painfully slow. Most completed clinical trials on endometriosis did not publish their results, and presumably failed. While few published trials did report how they foundered, the reasons why they failed are o...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29893860/"
+          "pmid": "38435758",
+          "title": "Oral GnRH Antagonists in Combination with Estradiol and Norethindrone Acetate for Pain Relief Associated with Endometriosis: A Review of Evidence of a Novel Class of Hormonal Agents.",
+          "authors": "Othman ER, Al-Hendy A, Mostafa R, et al.",
+          "journal": "International journal of women's health",
+          "year": "2024",
+          "abstract_snippet": "Current medical treatment options for endometriosis associated pains are inadequate. Evidence on effects of nonsteroidal anti-inflammatory drugs is scarce. Around one third of patients are not responsive to oral contraceptives or progestins due to progesterone resistance. Gonadotropin-releasing horm...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38435758/"
+        },
+        {
+          "pmid": "38592603",
+          "title": "Relugolix/Estradiol/Norethisterone Acetate: A Review in Endometriosis-Associated Pain.",
+          "authors": "Blair HA",
+          "journal": "Drugs",
+          "year": "2024",
+          "abstract_snippet": "An oral fixed-dose combination of relugolix/estradiol/norethisterone (also known as norethindrone) acetate [Myfembree",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38592603/"
+        },
+        {
+          "pmid": "33274686",
+          "title": "Serum anti-Mullerian hormone, prolactin and estradiol concentrations in infertile women with endometriosis.",
+          "authors": "Pedachenko N, Anagnostis P, Shemelko T, et al.",
+          "journal": "Gynecological endocrinology : the official journal of the International Society of Gynecological Endocrinology",
+          "year": "2021",
+          "abstract_snippet": "OBJECTIVE: Endometriosis is a benign gynecological disease, which significantly impairs fertility. However, the contribution of specific hormonal parameters to the proper diagnosis of endometriosis in infertility states has not been adequately determined. The aim of this study was to compare ant-Mul...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33274686/"
         }
       ],
+      "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "Construction organoid model of ovarian endometriosis and the function of estrogen and progesterone in the model",
+          "title": "Estradiol Promotes Endometriosis Progression Via the ER\u03b2/QKI /circSMAD2 Axis.",
           "year": 2025,
-          "citations": 13,
-          "url": "https://www.semanticscholar.org/paper/cebc63ec8c939d0e914b3d624604e10a6a28cd2b",
-          "authors": "Ruiqi Zhang, Yu\u2019e Yang, Ruyue Li"
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/6dd7fdeca240386f69f863a63bbda2171b3b0615",
+          "authors": "Yuan-Yuan Peng, Wenqian Xiong, Haitang He"
         },
         {
-          "title": "Single\u2010cell transcriptomic atlas of different endometriosis indicating that an interaction between endometriosis\u2010associated mesothelial cells (EAMCs) and ectopic stromal cells may influence progesterone resistance",
+          "title": "Estradiol regulates MBOAT1\u2010mediated ferroptosis and participates in the progression of endometriosis",
           "year": 2025,
-          "citations": 6,
-          "url": "https://www.semanticscholar.org/paper/86e7eeaa10e1d03720005c019195a2dd148191a0",
-          "authors": "Shengdi Hou, Jing Zhang, Zhiqiang Zhang"
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/c4cde3a09e10f572f5b9108675fa5c017e6cc56d",
+          "authors": "Yu-Qing Fang, Yan-hui Li, Jingyi Li"
         },
         {
-          "title": "Progesterone resistance in endometriosis: A pathophysiological perspective and potential treatment alternatives",
+          "title": "Oral GnRH Antagonists in Combination with Estradiol and Norethindrone Acetate for Pain Relief Associated with Endometriosis: A Review of Evidence of a Novel Class of Hormonal Agents",
           "year": 2024,
-          "citations": 16,
-          "url": "https://www.semanticscholar.org/paper/c38fff1b55061165f6d79f6320f678a92425bdff",
-          "authors": "Hsiao Tang, Tin-Chien Lin, Meng-Hsing Wu"
+          "citations": 14,
+          "url": "https://www.semanticscholar.org/paper/1b42651f00ce56a77dc354d90460bed823298b80",
+          "authors": "Essam-Edin R Othman, Ayman Al-Hendy, Radwa G. Mostafa"
         },
         {
-          "title": "Progesterone levels do not differ between patients with or without endometriosis/adenomyosis both in those who conceive after hormone replacement therapy-frozen embryo transfer cycles and those who do not.",
+          "title": "Relugolix/Estradiol/Norethisterone Acetate: A Review in Endometriosis-Associated Pain",
           "year": 2024,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/5216e6ec3aac623bd35598c8b7e14600e89107a0",
-          "authors": "M. Bourdon, M. Sorel, C. Maignien"
+          "citations": 14,
+          "url": "https://www.semanticscholar.org/paper/40e5ad06ac4df33bd76626315b1aac4761562315",
+          "authors": "Hannah A. Blair"
         },
         {
-          "title": "Exploring the Role of MicroRNAs in Progesterone and Estrogen Receptor Expression in Endometriosis",
+          "title": "Comparison of the clinical efficacy of dienogest and drospirone/ethinyl estradiol in the treatment of ovarian endometriosis cysts",
           "year": 2024,
-          "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/8f2925461d440022ba35ef6f63e932cf2ba5d89f",
-          "authors": "Jing-Xian Hon, Norhazlina Abdul Wahab, A. Karim"
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/d285d9ad57c82eb8c28b8dd31b76293bff526896",
+          "authors": "Qian Xiao, Liwei Hong, C. Li"
         }
       ],
       "most_cited_paper": {
-        "title": "Progesterone resistance in endometriosis: A pathophysiological perspective and potential treatment alternatives",
+        "title": "Oral GnRH Antagonists in Combination with Estradiol and Norethindrone Acetate for Pain Relief Associated with Endometriosis: A Review of Evidence of a Novel Class of Hormonal Agents",
         "year": 2024,
-        "citations": 16,
-        "url": "https://www.semanticscholar.org/paper/c38fff1b55061165f6d79f6320f678a92425bdff",
-        "authors": "Hsiao Tang, Tin-Chien Lin, Meng-Hsing Wu"
+        "citations": 14,
+        "url": "https://www.semanticscholar.org/paper/1b42651f00ce56a77dc354d90460bed823298b80",
+        "authors": "Essam-Edin R Othman, Ayman Al-Hendy, Radwa G. Mostafa"
       },
-      "max_citations": 16,
+      "max_citations": 14,
       "faers_signal": "moderate",
-      "faers_total_reports": 19292,
-      "faers_cooccurrences": 31,
-      "faers_interpretation": "31 FAERS reports mention both Progesterone and Endometriosis-related terms. Limited but notable real-world signal.",
+      "faers_total_reports": 75392,
+      "faers_cooccurrences": 98,
+      "faers_interpretation": "98 FAERS reports mention both Estradiol and Endometriosis-related terms. Limited but notable real-world signal.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -696,7 +676,7 @@
         "dasatinib (1.508)",
         "saracatinib (1.495)"
       ],
-      "signature_interpretation": "Progesterone was not found among the top 42 drugs that reverse the Endometriosis gene signature. Top reversers: 2858522 (1.524), ST4028268 (1.515), NCGC00183235-01 (1.508)",
+      "signature_interpretation": "Estradiol was not found among the top 42 drugs that reverse the Endometriosis gene signature. Top reversers: 2858522 (1.524), ST4028268 (1.515), NCGC00183235-01 (1.508)",
       "ai_hypothesis": "of its anti-inflammatory and anti-angiogenic properties.",
       "abstract_analyses": [
         {
@@ -711,112 +691,84 @@
         },
         {
           "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 1,
-          "negative_signals": 0,
-          "mechanism_signals": 1,
-          "extracted_entities": [
-            {
-              "entity": "##one",
-              "entity_group": "Medication",
-              "score": 0.8130000233650208
-            },
-            {
-              "entity": "end",
-              "entity_group": "Coreference",
-              "score": 0.7919999957084656
-            },
-            {
-              "entity": "##ome",
-              "entity_group": "Coreference",
-              "score": 0.9440000057220459
-            },
-            {
-              "entity": "##tri",
-              "entity_group": "Coreference",
-              "score": 0.7269999980926514
-            },
-            {
-              "entity": "##osis",
-              "entity_group": "Coreference",
-              "score": 0.7739999890327454
-            }
-          ]
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
         }
       ],
       "has_failed_trial": false,
       "failed_trial_phase": "Phase 3",
-      "failed_trial_count": 5,
+      "failed_trial_count": 6,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.5821,
-      "mr_genetic_targets": 11,
-      "mechanistic_hypothesis": "Progesterone \u2014[is a therapeutic for]\u2192 Endometriosis",
-      "kg_paths_text": "\u2022 Progesterone \u2014[is a therapeutic for]\u2192 Endometriosis\n\u2022 Progesterone \u2014[downregulates]\u2192 gene-4609 \u2014[is downregulated by]\u2192 DB00717 \u2014[treats]\u2192 Endometriosis\n\u2022 Progesterone \u2014[downregulates]\u2192 gene-4609 \u2014[is downregulated by]\u2192 DB00717 \u2014[treats]\u2192 Endometriosis",
+      "mr_score": 0.7079,
+      "mr_genetic_targets": 14,
+      "mechanistic_hypothesis": "Estradiol \u2014[is a therapeutic for]\u2192 Endometriosis",
+      "kg_paths_text": "\u2022 Estradiol \u2014[is a therapeutic for]\u2192 Endometriosis\n\u2022 Estradiol \u2014[downregulates]\u2192 gene-6657 \u2014[is linked to]\u2192 Endometriosis\n\u2022 Estradiol \u2014[downregulates]\u2192 gene-8349 \u2014[is upregulated by]\u2192 DB00367 \u2014[treats]\u2192 Endometriosis",
       "validation_experiments": [],
-      "novelty_score": 0.162,
+      "novelty_score": 0.163,
       "novelty_level": "ESTABLISHED",
       "is_known_treatment": true,
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT00958412",
-          "title": "Study Evaluating the Safety and Efficacy of Proellex\u00ae in the Treatment of Endometriosis-extension Study",
-          "status": "TERMINATED",
+          "nct_id": "NCT06101303",
+          "title": "Endometriosis Pain",
+          "status": "RECRUITING",
+          "phase": "N/A",
+          "enrollment": "120",
+          "url": "https://clinicaltrials.gov/study/NCT06101303"
+        },
+        {
+          "nct_id": "NCT07509411",
+          "title": "Anti-TNF\u03b1 Therapy for Improving Pregnancy Rates in Endometriosis Patients With Failed ICSI",
+          "status": "ACTIVE_NOT_RECRUITING",
           "phase": "PHASE2",
-          "enrollment": "18",
-          "url": "https://clinicaltrials.gov/study/NCT00958412"
+          "enrollment": "145",
+          "url": "https://clinicaltrials.gov/study/NCT07509411"
         },
         {
-          "nct_id": "NCT04527003",
-          "title": "Cannabidiol and Management of Endometriosis Pain",
-          "status": "TERMINATED",
-          "phase": "PHASE3",
-          "enrollment": "12",
-          "url": "https://clinicaltrials.gov/study/NCT04527003"
-        },
-        {
-          "nct_id": "NCT01056042",
-          "title": "Efficacy of Injectable Contraceptive and Oral Contraceptive Administered After Surgical Treatment of Endometriosis With Pain",
+          "nct_id": "NCT02400801",
+          "title": "Gonadotropin-releasing Hormone (GnRH) Downregulation Versus Oral Anticonception Prior to ART in Postoperative Endometriosis Patients",
           "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "112",
-          "url": "https://clinicaltrials.gov/study/NCT01056042"
-        },
-        {
-          "nct_id": "NCT02158845",
-          "title": "Levonorgestrel-releasing Intrauterine System in Patients With Endometriosis",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "44",
-          "url": "https://clinicaltrials.gov/study/NCT02158845"
-        },
-        {
-          "nct_id": "NCT07078435",
-          "title": "Innate Immunity, MIcrobiota and Inovative Treatments in Endometriosis",
-          "status": "NOT_YET_RECRUITING",
           "phase": "NA",
-          "enrollment": "40",
-          "url": "https://clinicaltrials.gov/study/NCT07078435"
+          "enrollment": "166",
+          "url": "https://clinicaltrials.gov/study/NCT02400801"
+        },
+        {
+          "nct_id": "NCT03232281",
+          "title": "Study to Compare the Oestradiol Suppression, Clinical Efficacy and Safety of Two Formulations of Triptorelin (Triptorelin Pamoate PR 3-month and Triptorelin Acetate PR 1-month) in Chinese Subjects With Endometriosis",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "300",
+          "url": "https://clinicaltrials.gov/study/NCT03232281"
+        },
+        {
+          "nct_id": "NCT02599077",
+          "title": "Impact vs. Dienogest: A Combined Oral Contraceptive in the Size of Endometriomas",
+          "status": "SUSPENDED",
+          "phase": "PHASE2, PHASE3",
+          "enrollment": "50",
+          "url": "https://clinicaltrials.gov/study/NCT02599077"
         }
       ],
       "trial_phases": {
-        "PHASE2": 2,
-        "PHASE3": 2,
+        "PHASE2": 3,
+        "NA": 2,
+        "PHASE3": 3,
         "PHASE4": 2,
-        "NA": 1
+        "EARLY_PHASE1": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
         "10 clinical trial(s) found on ClinicalTrials.gov",
         "Phase 3 trial exists",
-        "2022 PubMed articles on this drug-disease pair",
-        "2 article(s) specifically mention repurposing/repositioning",
+        "1629 PubMed articles on this drug-disease pair",
         "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 31 adverse event reports mention drug-disease co-occurrence",
+        "Moderate FAERS signal: 98 adverse event reports mention drug-disease co-occurrence",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.58)",
+        "Strong causal genetic evidence (MR score: 0.71, 14 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D004715",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -827,7 +779,7 @@
         "stage": 1
       },
       "ddi_warnings": {
-        "n_interactions": 1310,
+        "n_interactions": 2120,
         "has_warnings": true,
         "top_interactions": [
           {
@@ -885,15 +837,15 @@
       "pharmacogenomics": {
         "has_flags": true,
         "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (CYP2C19 / CYP2C19*1, CYP2C19*2, CYP2C19*17)",
+        "summary": "PharmGKB-3 ( / rs11849538)",
         "cpic": [],
         "pharmgkb": [
           {
-            "gene": "CYP2C19",
-            "variant": "CYP2C19*1, CYP2C19*2, CYP2C19*17",
+            "gene": "",
+            "variant": "rs11849538",
             "level": "3",
-            "phenotype_category": "Metabolism/PK",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451132040"
+            "phenotype_category": "Other",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1444704861"
           }
         ]
       },
@@ -905,11 +857,11 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.678,
+        "triangulation_score": 0.69,
         "label": "silver-standard",
         "axis_values": {
-          "kg": 0.541,
-          "docking": 0.963,
+          "kg": 0.542,
+          "docking": 1.0,
           "pharos": 0.0,
           "literature": 1.0
         }
@@ -919,26 +871,25 @@
           "Uterus"
         ],
         "n_genes": 20,
-        "n_expressed": 15,
-        "mean_tpm_in_tissue": 51.38,
+        "n_expressed": 16,
+        "mean_tpm_in_tissue": 60.93,
         "max_tpm_in_tissue": 375.16,
-        "tissue_specificity": 0.544,
-        "context_modifier": 1.07
+        "tissue_specificity": 0.569,
+        "context_modifier": 1.079
       },
-      "disease_entity": "Disease::MESH:D004715",
-      "ensemble_prob": 0.9954,
+      "ensemble_prob": 0.999,
       "ensemble_features": {
-        "kg_score": 1.0,
-        "degree_penalty": 0.7522,
-        "n_drug_targets": 28,
+        "kg_score": 0.9999,
+        "degree_penalty": 0.7341,
+        "n_drug_targets": 36,
         "is_fda_approved": 1,
         "n_disease_genes": 0,
-        "transe_rank_log": 0.0
+        "transe_rank_log": 0.6931
       },
       "ensemble_rank": 1,
       "docking": {
-        "kcal_per_mol": -11.55,
-        "target_symbol": "PGR",
+        "kcal_per_mol": -12.23,
+        "target_symbol": "ESR1",
         "source": "chembl_bioactivity_proxy",
         "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
         "hit": true
@@ -974,7 +925,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2568,
       "dti_score": 1.0,
-      "dti_best_target": "CTSD",
+      "dti_best_target": "KIT",
       "kg_group_score": 0.3702,
       "structural_group_score": 1.0,
       "network_group_score": 0.4593000113964081,
@@ -1204,6 +1155,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.72, 2 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D004715",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1366,8 +1318,7 @@
         "tissue_specificity": 0.136,
         "context_modifier": 1.046
       },
-      "disease_entity": "Disease::MESH:D004715",
-      "ensemble_prob": 0.7855,
+      "ensemble_prob": 0.6769,
       "ensemble_features": {
         "kg_score": 0.9974,
         "degree_penalty": 0.7655,
@@ -1414,8 +1365,8 @@
       "admet_score": 0.7109,
       "admet_flags": "clean",
       "primekg_score": 0.2482,
-      "dti_score": 0.6034,
-      "dti_best_target": "CTSD",
+      "dti_score": 0.5945,
+      "dti_best_target": "KIT",
       "kg_group_score": 0.3819,
       "structural_group_score": 0.9567,
       "network_group_score": 0.5703999996185303,
@@ -1613,6 +1564,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.60)"
       ],
+      "disease_entity": "Disease::MESH:D004715",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -1749,8 +1701,7 @@
         "tissue_specificity": 0.514,
         "context_modifier": 1.073
       },
-      "disease_entity": "Disease::MESH:D004715",
-      "ensemble_prob": 0.6566,
+      "ensemble_prob": 0.7116,
       "ensemble_features": {
         "kg_score": 0.997,
         "degree_penalty": 0.736,
@@ -1759,390 +1710,10 @@
         "n_disease_genes": 0,
         "transe_rank_log": 3.4965
       },
-      "ensemble_rank": 9,
+      "ensemble_rank": 7,
       "docking": {
         "kcal_per_mol": -8.51,
         "target_symbol": "PLA2G2A",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Testosterone",
-      "drug_id": "DB00624",
-      "disease_name": "Endometriosis",
-      "combined_score": 0.5344,
-      "pillars_hit": 4,
-      "transe_rank": 5,
-      "transe_score": -10.0222,
-      "pykeen_score": -11.8994,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0.0909,
-      "gene_sig_rank": 9,
-      "proximity_score": 0.7120000123977661,
-      "proximity_distance": 1.149999976158142,
-      "admet_score": 0.7521,
-      "admet_flags": "clean",
-      "primekg_score": 0.2478,
-      "dti_score": 0.7945,
-      "dti_best_target": "CTSD",
-      "kg_group_score": 0.4388,
-      "structural_group_score": 0.7945,
-      "network_group_score": 0.6128,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.5797,
-      "admet_multiplier": 0.9504,
-      "efficacy_score": 0.5622,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 25,
-      "shared_targets": [
-        "AKT1",
-        "AR",
-        "CYP19A1",
-        "CYP1A1",
-        "CYP2B6",
-        "EPO",
-        "ESR1",
-        "ESR2",
-        "FGF2",
-        "GNRH1",
-        "GNRH2",
-        "HOXA10",
-        "IGF1",
-        "IL1A",
-        "IL1B",
-        "IL5",
-        "MIF",
-        "MMP2",
-        "NOS2",
-        "PGR"
-      ],
-      "pubmed_total": 282,
-      "pubmed_treatment_total": 211,
-      "pubmed_repurposing_total": 1,
-      "key_papers": [
-        {
-          "pmid": "38049874",
-          "title": "Polygenic risk score phenome-wide association study reveals an association between endometriosis and testosterone.",
-          "authors": "McGrath IM, Montgomery GW, et al.",
-          "journal": "BMC medicine",
-          "year": "2023",
-          "abstract_snippet": "BACKGROUND: Endometriosis affects 1 in 9 women, yet it is poorly understood with long diagnostic delays, invasive diagnoses, and poor treatment outcomes. Characterised by the presence of endometrial-like tissue outside of the uterus, its main symptoms are pain and infertility. Endometriosis often co...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38049874/",
-          "total_results": 282
-        },
-        {
-          "pmid": "37266579",
-          "title": "Vitamin D and infertility.",
-          "authors": "Simpson S, Pal L",
-          "journal": "Current opinion in obstetrics & gynecology",
-          "year": "2023",
-          "abstract_snippet": "PURPOSE OF REVIEW: Vitamin D deficiency has been implicated as a contributing factor to a spectrum of reproductive health burden, including difficulty conceiving, pathogenesis of gynaecological disorders such as uterine fibroids and endometriosis, to metabolic and endocrine burden of polycystic ovar...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37266579/"
-        },
-        {
-          "pmid": "36303965",
-          "title": "Androgens, Endometriosis and Pain.",
-          "authors": "Evans SF, Hull ML, Hutchinson MR, et al.",
-          "journal": "Frontiers in reproductive health",
-          "year": "2021",
-          "abstract_snippet": "The intriguing relationship between androgens, endometriosis and chronic pain continues to unfold. Determining this relationship is of crucial importance to gynecologists managing people with these conditions, as common treatments dramatically alter her hormonal profiles, with both intended and unin...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36303965/"
-        },
-        {
-          "pmid": "33506934",
-          "title": "The use of D-chiro-Inositol in clinical practice.",
-          "authors": "Gambioli R, Forte G, Aragona C, et al.",
-          "journal": "European review for medical and pharmacological sciences",
-          "year": "2021",
-          "abstract_snippet": "OBJECTIVE: D-chiro-Inositol has been widely used in clinical practice to induce ovulation in women with polycystic ovary syndrome. Only recent evidence established that this molecule acts through two different mechanisms, with potentially different outcomes. On the one hand, under a metabolic perspe...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33506934/"
-        },
-        {
-          "pmid": "38112066",
-          "title": "Considerations for hormonal therapy in migraine patients: a critical review of current practice.",
-          "authors": "van Lohuizen R, Paungarttner J, Lampl C, et al.",
-          "journal": "Expert review of neurotherapeutics",
-          "year": "2023",
-          "abstract_snippet": "INTRODUCTION: Migraine, a neurovascular headache disorder, is a leading cause of disability worldwide. Within the multifaceted pathophysiology of migraine, hormonal fluctuations play an evident triggering and exacerbating role, pointing toward the need for identification and proper usage of both exi...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38112066/"
-        }
-      ],
-      "repurposing_papers": [
-        {
-          "pmid": "37622483",
-          "title": "Suppression of hypothalamic-pituitary-gonadal function by linzagolix in benign prostatic hyperplasia and polycystic ovary syndrome animal models.",
-          "authors": "Tezuka M, Yonekubo-Awaka S, Tamai Y, et al.",
-          "journal": "Clinical and experimental pharmacology & physiology",
-          "year": "2023",
-          "abstract_snippet": "The hypothalamic-pituitary-gonadal (HPG) axis is an important regulatory mechanism involved primarily in the development and regulation of the reproductive systems. The suppression of the HPG axis by gonadotropin-releasing hormone (GnRH) analogues is expected to be effective for the treatment of sex...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37622483/",
-          "total_results": 1
-        }
-      ],
-      "semantic_scholar_papers": [
-        {
-          "title": "Lower testosterone as a cause of endometriosis",
-          "year": 2024,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/a7b756ec47ad9278ea23aeb61fa098dcb9df7193",
-          "authors": "B. J. Crespi, N. Dinsdale"
-        },
-        {
-          "title": "Polygenic risk score phenome-wide association study reveals an association between endometriosis and testosterone",
-          "year": 2023,
-          "citations": 13,
-          "url": "https://www.semanticscholar.org/paper/12f1991ab4d04005fe31a68e8d160318ed3d2b79",
-          "authors": "Isabelle M. McGrath, G. Montgomery, S. Mortlock"
-        },
-        {
-          "title": "Prenatal Origins of Endometriosis Pathology and Pain: Reviewing the Evidence of a Role for Low Testosterone",
-          "year": 2023,
-          "citations": 10,
-          "url": "https://www.semanticscholar.org/paper/9698872b6938d4cd7afb467e36eaf9df98183550",
-          "authors": "B. Crespi, S. Evans"
-        },
-        {
-          "title": "Correction to: The combined impact of testosterone and Western-style diet on endometriosis severity and progression in rhesus macaques",
-          "year": 2023,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/e7b1e0a20ff05e8ff0a0d82a58c6250694d2ee28",
-          "authors": "C. Bishop, D. Takahashi, Fangzhou Luo"
-        },
-        {
-          "title": "The combined impact of testosterone and Western-style diet on endometriosis severity and progression in rhesus macaques",
-          "year": 2022,
-          "citations": 14,
-          "url": "https://www.semanticscholar.org/paper/9e340495399cb3cb335633862e1da023eb0e623a",
-          "authors": "C. Bishop, D. Takahashi, Fangzhou Luo"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "The combined impact of testosterone and Western-style diet on endometriosis severity and progression in rhesus macaques",
-        "year": 2022,
-        "citations": 14,
-        "url": "https://www.semanticscholar.org/paper/9e340495399cb3cb335633862e1da023eb0e623a",
-        "authors": "C. Bishop, D. Takahashi, Fangzhou Luo"
-      },
-      "max_citations": 14,
-      "faers_signal": "moderate",
-      "faers_total_reports": 30252,
-      "faers_cooccurrences": 3,
-      "faers_interpretation": "3 FAERS reports mention both Testosterone and Endometriosis-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "2858522 (1.524)",
-        "ST4028268 (1.515)",
-        "NCGC00183235-01 (1.508)",
-        "dasatinib (1.508)",
-        "saracatinib (1.495)"
-      ],
-      "signature_interpretation": "Testosterone was not found among the top 42 drugs that reverse the Endometriosis gene signature. Top reversers: 2858522 (1.524), ST4028268 (1.515), NCGC00183235-01 (1.508)",
-      "ai_hypothesis": "of its anti-inflammatory and anti-angiogenic properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.5797,
-      "mr_genetic_targets": 10,
-      "mechanistic_hypothesis": "Testosterone \u2014[is a therapeutic for]\u2192 Endometriosis",
-      "kg_paths_text": "\u2022 Testosterone \u2014[is a therapeutic for]\u2192 Endometriosis\n\u2022 Testosterone \u2014[downregulates]\u2192 gene-5438 \u2014[is downregulated by]\u2192 DB01406 \u2014[treats]\u2192 Endometriosis\n\u2022 Testosterone \u2014[downregulates]\u2192 gene-5438 \u2014[is downregulated by]\u2192 DB01406 \u2014[treats]\u2192 Endometriosis",
-      "validation_experiments": [],
-      "novelty_score": 0.353,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": true,
-      "clinical_trials_total": 3,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT06785129",
-          "title": "Endometriosis and Migraine",
-          "status": "RECRUITING",
-          "phase": "N/A",
-          "enrollment": "120",
-          "url": "https://clinicaltrials.gov/study/NCT06785129"
-        },
-        {
-          "nct_id": "NCT05951452",
-          "title": "The Developmental Origins of Endometriosis",
-          "status": "RECRUITING",
-          "phase": "N/A",
-          "enrollment": "40",
-          "url": "https://clinicaltrials.gov/study/NCT05951452"
-        },
-        {
-          "nct_id": "NCT06101303",
-          "title": "Endometriosis Pain",
-          "status": "RECRUITING",
-          "phase": "N/A",
-          "enrollment": "120",
-          "url": "https://clinicaltrials.gov/study/NCT06101303"
-        }
-      ],
-      "trial_phases": {},
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "3 clinical trial(s) found on ClinicalTrials.gov",
-        "282 PubMed articles on this drug-disease pair",
-        "1 article(s) specifically mention repurposing/repositioning",
-        "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 3 adverse event reports mention drug-disease co-occurrence",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.58)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1511,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (UGT1A4 / UGT1A4*1a, UGT1A4*3a)",
-        "cpic": [],
-        "pharmgkb": [
-          {
-            "gene": "UGT1A4",
-            "variant": "UGT1A4*1a, UGT1A4*3a",
-            "level": "3",
-            "phenotype_category": "Metabolism/PK",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1447980857"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 3,
-        "axes": {
-          "kg": true,
-          "docking": true,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.677,
-        "label": "silver-standard",
-        "axis_values": {
-          "kg": 0.534,
-          "docking": 0.967,
-          "pharos": 0.0,
-          "literature": 1.0
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Uterus"
-        ],
-        "n_genes": 20,
-        "n_expressed": 12,
-        "mean_tpm_in_tissue": 37.06,
-        "max_tpm_in_tissue": 363.55,
-        "tissue_specificity": 0.938,
-        "context_modifier": 1.105
-      },
-      "disease_entity": "Disease::MESH:D004715",
-      "ensemble_prob": 0.9582,
-      "ensemble_features": {
-        "kg_score": 0.9991,
-        "degree_penalty": 0.7473,
-        "n_drug_targets": 24,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 2.3979
-      },
-      "ensemble_rank": 5,
-      "docking": {
-        "kcal_per_mol": -11.61,
-        "target_symbol": "AR",
         "source": "chembl_bioactivity_proxy",
         "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
         "hit": true
@@ -2177,8 +1748,8 @@
       "admet_score": 0.5915,
       "admet_flags": "hERG=0.95",
       "primekg_score": 0.258,
-      "dti_score": 0.7057,
-      "dti_best_target": "CTSD",
+      "dti_score": 0.763,
+      "dti_best_target": "KIT",
       "kg_group_score": 0.4439,
       "structural_group_score": 0.908,
       "network_group_score": 0.6052,
@@ -2376,6 +1947,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.56)"
       ],
+      "disease_entity": "Disease::MESH:D004715",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2518,8 +2090,7 @@
         "tissue_specificity": 0.495,
         "context_modifier": 1.069
       },
-      "disease_entity": "Disease::MESH:D004715",
-      "ensemble_prob": 0.9846,
+      "ensemble_prob": 0.9958,
       "ensemble_features": {
         "kg_score": 0.9994,
         "degree_penalty": 0.7565,
@@ -2548,14 +2119,14 @@
       }
     },
     {
-      "drug_name": "Estradiol",
-      "drug_id": "DB00783",
+      "drug_name": "Testosterone",
+      "drug_id": "DB00624",
       "disease_name": "Endometriosis",
-      "combined_score": 0.5241,
+      "combined_score": 0.5323,
       "pillars_hit": 4,
-      "transe_rank": 2,
-      "transe_score": -9.734,
-      "pykeen_score": -11.4015,
+      "transe_rank": 5,
+      "transe_score": -10.0222,
+      "pykeen_score": -11.8994,
       "pykeen_rank": 0,
       "txgnn_score": 0,
       "txgnn_rank": 0,
@@ -2563,148 +2134,159 @@
       "similar_to": "",
       "mol_emb_similarity": 0,
       "mol_emb_similar_to": "",
-      "gene_sig_score": 0.1304,
-      "gene_sig_rank": 7,
-      "proximity_score": 0.6499999761581421,
-      "proximity_distance": 1.399999976158142,
-      "admet_score": 0.6574,
+      "gene_sig_score": 0.0909,
+      "gene_sig_rank": 9,
+      "proximity_score": 0.7120000123977661,
+      "proximity_distance": 1.149999976158142,
+      "admet_score": 0.7521,
       "admet_flags": "clean",
-      "primekg_score": 0.2527,
-      "dti_score": 0.764,
-      "dti_best_target": "CTSD",
-      "kg_group_score": 0.3708,
-      "structural_group_score": 0.764,
-      "network_group_score": 0.6313,
+      "primekg_score": 0.2478,
+      "dti_score": 0.7826,
+      "dti_best_target": "KIT",
+      "kg_group_score": 0.4388,
+      "structural_group_score": 0.7826,
+      "network_group_score": 0.6128,
       "txgnn_group_score": 0,
-      "mr_group_score": 0.7079,
-      "admet_multiplier": 0.9315,
-      "efficacy_score": 0.5627,
+      "mr_group_score": 0.5797,
+      "admet_multiplier": 0.9504,
+      "efficacy_score": 0.5601,
       "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 46,
+      "shared_target_count": 25,
       "shared_targets": [
-        "ACE",
         "AKT1",
         "AR",
-        "C2",
-        "CASP3",
-        "CD44",
-        "COMT",
-        "CSF1",
-        "CTNNB1",
-        "CTSD",
-        "CXCL12",
         "CYP19A1",
         "CYP1A1",
         "CYP2B6",
         "EPO",
         "ESR1",
         "ESR2",
-        "FOS",
+        "FGF2",
         "GNRH1",
-        "GNRH2"
+        "GNRH2",
+        "HOXA10",
+        "IGF1",
+        "IL1A",
+        "IL1B",
+        "IL5",
+        "MIF",
+        "MMP2",
+        "NOS2",
+        "PGR"
       ],
-      "pubmed_total": 1629,
-      "pubmed_treatment_total": 1212,
-      "pubmed_repurposing_total": 0,
+      "pubmed_total": 282,
+      "pubmed_treatment_total": 211,
+      "pubmed_repurposing_total": 1,
       "key_papers": [
         {
-          "pmid": "40983106",
-          "title": "Estradiol regulates MBOAT1-mediated ferroptosis and participates in the progression of endometriosis.",
-          "authors": "Fang YQ, Li YH, Li JY, et al.",
-          "journal": "The journal of obstetrics and gynaecology research",
-          "year": "2025",
-          "abstract_snippet": "AIM: Endometriosis is an estrogen-dependent disease with unclear pathogenesis. Recent evidence suggests that ferroptosis plays an important role in the development of endometriosis. In this study, we aimed to explore whether membrane-bound O-acyltransferase domain-containing 1 (MBOAT1) is a key fact...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40983106/",
-          "total_results": 1629
+          "pmid": "38049874",
+          "title": "Polygenic risk score phenome-wide association study reveals an association between endometriosis and testosterone.",
+          "authors": "McGrath IM, Montgomery GW, et al.",
+          "journal": "BMC medicine",
+          "year": "2023",
+          "abstract_snippet": "BACKGROUND: Endometriosis affects 1 in 9 women, yet it is poorly understood with long diagnostic delays, invasive diagnoses, and poor treatment outcomes. Characterised by the presence of endometrial-like tissue outside of the uterus, its main symptoms are pain and infertility. Endometriosis often co...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38049874/",
+          "total_results": 282
         },
         {
-          "pmid": "38968535",
-          "title": "Comparison of dienogest or combinations with ethinylestradiol/estradiol valerate on the pain score of women with endometriosis: A prospective cohort study.",
-          "authors": "Yurtkal A, Oncul M",
-          "journal": "Medicine",
-          "year": "2024",
-          "abstract_snippet": "Endometriosis is one of the most frequent gynecologic disorders. The pathognomonic symptom of endometriosis is pelvic pain. The recommended pain medications are oral hormonal contraceptives, progestin therapy, danazol, gonadotropin-releasing hormone analogs, nonsteroidal anti-inflammatory drugs, and...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38968535/"
+          "pmid": "37266579",
+          "title": "Vitamin D and infertility.",
+          "authors": "Simpson S, Pal L",
+          "journal": "Current opinion in obstetrics & gynecology",
+          "year": "2023",
+          "abstract_snippet": "PURPOSE OF REVIEW: Vitamin D deficiency has been implicated as a contributing factor to a spectrum of reproductive health burden, including difficulty conceiving, pathogenesis of gynaecological disorders such as uterine fibroids and endometriosis, to metabolic and endocrine burden of polycystic ovar...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37266579/"
         },
         {
-          "pmid": "38435758",
-          "title": "Oral GnRH Antagonists in Combination with Estradiol and Norethindrone Acetate for Pain Relief Associated with Endometriosis: A Review of Evidence of a Novel Class of Hormonal Agents.",
-          "authors": "Othman ER, Al-Hendy A, Mostafa R, et al.",
-          "journal": "International journal of women's health",
-          "year": "2024",
-          "abstract_snippet": "Current medical treatment options for endometriosis associated pains are inadequate. Evidence on effects of nonsteroidal anti-inflammatory drugs is scarce. Around one third of patients are not responsive to oral contraceptives or progestins due to progesterone resistance. Gonadotropin-releasing horm...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38435758/"
-        },
-        {
-          "pmid": "38592603",
-          "title": "Relugolix/Estradiol/Norethisterone Acetate: A Review in Endometriosis-Associated Pain.",
-          "authors": "Blair HA",
-          "journal": "Drugs",
-          "year": "2024",
-          "abstract_snippet": "An oral fixed-dose combination of relugolix/estradiol/norethisterone (also known as norethindrone) acetate [Myfembree",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38592603/"
-        },
-        {
-          "pmid": "33274686",
-          "title": "Serum anti-Mullerian hormone, prolactin and estradiol concentrations in infertile women with endometriosis.",
-          "authors": "Pedachenko N, Anagnostis P, Shemelko T, et al.",
-          "journal": "Gynecological endocrinology : the official journal of the International Society of Gynecological Endocrinology",
+          "pmid": "36303965",
+          "title": "Androgens, Endometriosis and Pain.",
+          "authors": "Evans SF, Hull ML, Hutchinson MR, et al.",
+          "journal": "Frontiers in reproductive health",
           "year": "2021",
-          "abstract_snippet": "OBJECTIVE: Endometriosis is a benign gynecological disease, which significantly impairs fertility. However, the contribution of specific hormonal parameters to the proper diagnosis of endometriosis in infertility states has not been adequately determined. The aim of this study was to compare ant-Mul...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33274686/"
+          "abstract_snippet": "The intriguing relationship between androgens, endometriosis and chronic pain continues to unfold. Determining this relationship is of crucial importance to gynecologists managing people with these conditions, as common treatments dramatically alter her hormonal profiles, with both intended and unin...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36303965/"
+        },
+        {
+          "pmid": "33506934",
+          "title": "The use of D-chiro-Inositol in clinical practice.",
+          "authors": "Gambioli R, Forte G, Aragona C, et al.",
+          "journal": "European review for medical and pharmacological sciences",
+          "year": "2021",
+          "abstract_snippet": "OBJECTIVE: D-chiro-Inositol has been widely used in clinical practice to induce ovulation in women with polycystic ovary syndrome. Only recent evidence established that this molecule acts through two different mechanisms, with potentially different outcomes. On the one hand, under a metabolic perspe...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33506934/"
+        },
+        {
+          "pmid": "38112066",
+          "title": "Considerations for hormonal therapy in migraine patients: a critical review of current practice.",
+          "authors": "van Lohuizen R, Paungarttner J, Lampl C, et al.",
+          "journal": "Expert review of neurotherapeutics",
+          "year": "2023",
+          "abstract_snippet": "INTRODUCTION: Migraine, a neurovascular headache disorder, is a leading cause of disability worldwide. Within the multifaceted pathophysiology of migraine, hormonal fluctuations play an evident triggering and exacerbating role, pointing toward the need for identification and proper usage of both exi...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38112066/"
         }
       ],
-      "repurposing_papers": [],
+      "repurposing_papers": [
+        {
+          "pmid": "37622483",
+          "title": "Suppression of hypothalamic-pituitary-gonadal function by linzagolix in benign prostatic hyperplasia and polycystic ovary syndrome animal models.",
+          "authors": "Tezuka M, Yonekubo-Awaka S, Tamai Y, et al.",
+          "journal": "Clinical and experimental pharmacology & physiology",
+          "year": "2023",
+          "abstract_snippet": "The hypothalamic-pituitary-gonadal (HPG) axis is an important regulatory mechanism involved primarily in the development and regulation of the reproductive systems. The suppression of the HPG axis by gonadotropin-releasing hormone (GnRH) analogues is expected to be effective for the treatment of sex...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37622483/",
+          "total_results": 1
+        }
+      ],
       "semantic_scholar_papers": [
         {
-          "title": "Estradiol Promotes Endometriosis Progression Via the ER\u03b2/QKI /circSMAD2 Axis.",
-          "year": 2025,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/6dd7fdeca240386f69f863a63bbda2171b3b0615",
-          "authors": "Yuan-Yuan Peng, Wenqian Xiong, Haitang He"
-        },
-        {
-          "title": "Estradiol regulates MBOAT1\u2010mediated ferroptosis and participates in the progression of endometriosis",
-          "year": 2025,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/c4cde3a09e10f572f5b9108675fa5c017e6cc56d",
-          "authors": "Yu-Qing Fang, Yan-hui Li, Jingyi Li"
-        },
-        {
-          "title": "Oral GnRH Antagonists in Combination with Estradiol and Norethindrone Acetate for Pain Relief Associated with Endometriosis: A Review of Evidence of a Novel Class of Hormonal Agents",
+          "title": "Lower testosterone as a cause of endometriosis",
           "year": 2024,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/a7b756ec47ad9278ea23aeb61fa098dcb9df7193",
+          "authors": "B. J. Crespi, N. Dinsdale"
+        },
+        {
+          "title": "Polygenic risk score phenome-wide association study reveals an association between endometriosis and testosterone",
+          "year": 2023,
+          "citations": 13,
+          "url": "https://www.semanticscholar.org/paper/12f1991ab4d04005fe31a68e8d160318ed3d2b79",
+          "authors": "Isabelle M. McGrath, G. Montgomery, S. Mortlock"
+        },
+        {
+          "title": "Prenatal Origins of Endometriosis Pathology and Pain: Reviewing the Evidence of a Role for Low Testosterone",
+          "year": 2023,
+          "citations": 10,
+          "url": "https://www.semanticscholar.org/paper/9698872b6938d4cd7afb467e36eaf9df98183550",
+          "authors": "B. Crespi, S. Evans"
+        },
+        {
+          "title": "Correction to: The combined impact of testosterone and Western-style diet on endometriosis severity and progression in rhesus macaques",
+          "year": 2023,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/e7b1e0a20ff05e8ff0a0d82a58c6250694d2ee28",
+          "authors": "C. Bishop, D. Takahashi, Fangzhou Luo"
+        },
+        {
+          "title": "The combined impact of testosterone and Western-style diet on endometriosis severity and progression in rhesus macaques",
+          "year": 2022,
           "citations": 14,
-          "url": "https://www.semanticscholar.org/paper/1b42651f00ce56a77dc354d90460bed823298b80",
-          "authors": "Essam-Edin R Othman, Ayman Al-Hendy, Radwa G. Mostafa"
-        },
-        {
-          "title": "Relugolix/Estradiol/Norethisterone Acetate: A Review in Endometriosis-Associated Pain",
-          "year": 2024,
-          "citations": 14,
-          "url": "https://www.semanticscholar.org/paper/40e5ad06ac4df33bd76626315b1aac4761562315",
-          "authors": "Hannah A. Blair"
-        },
-        {
-          "title": "Comparison of the clinical efficacy of dienogest and drospirone/ethinyl estradiol in the treatment of ovarian endometriosis cysts",
-          "year": 2024,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/d285d9ad57c82eb8c28b8dd31b76293bff526896",
-          "authors": "Qian Xiao, Liwei Hong, C. Li"
+          "url": "https://www.semanticscholar.org/paper/9e340495399cb3cb335633862e1da023eb0e623a",
+          "authors": "C. Bishop, D. Takahashi, Fangzhou Luo"
         }
       ],
       "most_cited_paper": {
-        "title": "Oral GnRH Antagonists in Combination with Estradiol and Norethindrone Acetate for Pain Relief Associated with Endometriosis: A Review of Evidence of a Novel Class of Hormonal Agents",
-        "year": 2024,
+        "title": "The combined impact of testosterone and Western-style diet on endometriosis severity and progression in rhesus macaques",
+        "year": 2022,
         "citations": 14,
-        "url": "https://www.semanticscholar.org/paper/1b42651f00ce56a77dc354d90460bed823298b80",
-        "authors": "Essam-Edin R Othman, Ayman Al-Hendy, Radwa G. Mostafa"
+        "url": "https://www.semanticscholar.org/paper/9e340495399cb3cb335633862e1da023eb0e623a",
+        "authors": "C. Bishop, D. Takahashi, Fangzhou Luo"
       },
       "max_citations": 14,
       "faers_signal": "moderate",
-      "faers_total_reports": 75392,
-      "faers_cooccurrences": 98,
-      "faers_interpretation": "98 FAERS reports mention both Estradiol and Endometriosis-related terms. Limited but notable real-world signal.",
+      "faers_total_reports": 30252,
+      "faers_cooccurrences": 3,
+      "faers_interpretation": "3 FAERS reports mention both Testosterone and Endometriosis-related terms. Limited but notable real-world signal.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -2714,7 +2296,7 @@
         "dasatinib (1.508)",
         "saracatinib (1.495)"
       ],
-      "signature_interpretation": "Estradiol was not found among the top 42 drugs that reverse the Endometriosis gene signature. Top reversers: 2858522 (1.524), ST4028268 (1.515), NCGC00183235-01 (1.508)",
+      "signature_interpretation": "Testosterone was not found among the top 42 drugs that reverse the Endometriosis gene signature. Top reversers: 2858522 (1.524), ST4028268 (1.515), NCGC00183235-01 (1.508)",
       "ai_hypothesis": "of its anti-inflammatory and anti-angiogenic properties.",
       "abstract_analyses": [
         {
@@ -2734,76 +2316,57 @@
         }
       ],
       "has_failed_trial": false,
-      "failed_trial_phase": "Phase 3",
-      "failed_trial_count": 6,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.7079,
-      "mr_genetic_targets": 14,
-      "mechanistic_hypothesis": "Estradiol \u2014[is a therapeutic for]\u2192 Endometriosis",
-      "kg_paths_text": "\u2022 Estradiol \u2014[is a therapeutic for]\u2192 Endometriosis\n\u2022 Estradiol \u2014[downregulates]\u2192 gene-6657 \u2014[is linked to]\u2192 Endometriosis\n\u2022 Estradiol \u2014[downregulates]\u2192 gene-8349 \u2014[is upregulated by]\u2192 DB00367 \u2014[treats]\u2192 Endometriosis",
+      "mr_score": 0.5797,
+      "mr_genetic_targets": 10,
+      "mechanistic_hypothesis": "Testosterone \u2014[is a therapeutic for]\u2192 Endometriosis",
+      "kg_paths_text": "\u2022 Testosterone \u2014[is a therapeutic for]\u2192 Endometriosis\n\u2022 Testosterone \u2014[downregulates]\u2192 gene-5438 \u2014[is downregulated by]\u2192 DB01406 \u2014[treats]\u2192 Endometriosis\n\u2022 Testosterone \u2014[downregulates]\u2192 gene-5438 \u2014[is downregulated by]\u2192 DB01406 \u2014[treats]\u2192 Endometriosis",
       "validation_experiments": [],
-      "novelty_score": 0.157,
-      "novelty_level": "ESTABLISHED",
+      "novelty_score": 0.351,
+      "novelty_level": "KNOWN",
       "is_known_treatment": true,
-      "clinical_trials_total": 10,
+      "clinical_trials_total": 3,
       "clinical_trials": [
         {
-          "nct_id": "NCT03232281",
-          "title": "Study to Compare the Oestradiol Suppression, Clinical Efficacy and Safety of Two Formulations of Triptorelin (Triptorelin Pamoate PR 3-month and Triptorelin Acetate PR 1-month) in Chinese Subjects With Endometriosis",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "300",
-          "url": "https://clinicaltrials.gov/study/NCT03232281"
-        },
-        {
-          "nct_id": "NCT04942015",
-          "title": "Honghuaruyi Wan for Endometriosis Dysmenorrhea",
-          "status": "UNKNOWN",
-          "phase": "PHASE4",
-          "enrollment": "164",
-          "url": "https://clinicaltrials.gov/study/NCT04942015"
-        },
-        {
-          "nct_id": "NCT02086318",
-          "title": "A New Algorithm to Predict Ovarian Age",
-          "status": "UNKNOWN",
-          "phase": "N/A",
-          "enrollment": "720",
-          "url": "https://clinicaltrials.gov/study/NCT02086318"
-        },
-        {
-          "nct_id": "NCT00212342",
-          "title": "Efficacy and Safety Study of Low Dose Oral Contraceptive Pill to Treat Dysmenorrhea",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "100",
-          "url": "https://clinicaltrials.gov/study/NCT00212342"
-        },
-        {
-          "nct_id": "NCT05862272",
-          "title": "A Phase 3B Study to Evaluate Bone Mineral Density With Long-Term Use of Relugolix Combination Tablet in Women With Uterine Fibroids or Endometriosis",
+          "nct_id": "NCT06101303",
+          "title": "Endometriosis Pain",
           "status": "RECRUITING",
-          "phase": "PHASE3",
-          "enrollment": "1000",
-          "url": "https://clinicaltrials.gov/study/NCT05862272"
+          "phase": "N/A",
+          "enrollment": "120",
+          "url": "https://clinicaltrials.gov/study/NCT06101303"
+        },
+        {
+          "nct_id": "NCT05951452",
+          "title": "The Developmental Origins of Endometriosis",
+          "status": "RECRUITING",
+          "phase": "N/A",
+          "enrollment": "40",
+          "url": "https://clinicaltrials.gov/study/NCT05951452"
+        },
+        {
+          "nct_id": "NCT06785129",
+          "title": "Endometriosis and Migraine",
+          "status": "RECRUITING",
+          "phase": "N/A",
+          "enrollment": "120",
+          "url": "https://clinicaltrials.gov/study/NCT06785129"
         }
       ],
-      "trial_phases": {
-        "PHASE3": 4,
-        "PHASE4": 3,
-        "PHASE2": 1
-      },
+      "trial_phases": {},
       "confidence": "HIGH",
       "confidence_reasons": [
-        "10 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
-        "1629 PubMed articles on this drug-disease pair",
+        "3 clinical trial(s) found on ClinicalTrials.gov",
+        "282 PubMed articles on this drug-disease pair",
+        "1 article(s) specifically mention repurposing/repositioning",
         "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 98 adverse event reports mention drug-disease co-occurrence",
+        "Moderate FAERS signal: 3 adverse event reports mention drug-disease co-occurrence",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.71, 14 genetic targets)",
+        "Moderate genetic evidence supporting causality (MR score: 0.58)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D004715",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2814,7 +2377,7 @@
         "stage": 1
       },
       "ddi_warnings": {
-        "n_interactions": 2120,
+        "n_interactions": 1511,
         "has_warnings": true,
         "top_interactions": [
           {
@@ -2872,15 +2435,15 @@
       "pharmacogenomics": {
         "has_flags": true,
         "highest_risk": "advisory",
-        "summary": "PharmGKB-3 ( / rs11849538)",
+        "summary": "PharmGKB-3 (UGT1A4 / UGT1A4*1a, UGT1A4*3a)",
         "cpic": [],
         "pharmgkb": [
           {
-            "gene": "",
-            "variant": "rs11849538",
+            "gene": "UGT1A4",
+            "variant": "UGT1A4*1a, UGT1A4*3a",
             "level": "3",
-            "phenotype_category": "Other",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1444704861"
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1447980857"
           }
         ]
       },
@@ -2892,11 +2455,11 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.683,
+        "triangulation_score": 0.677,
         "label": "silver-standard",
         "axis_values": {
-          "kg": 0.524,
-          "docking": 1.0,
+          "kg": 0.532,
+          "docking": 0.967,
           "pharos": 0.0,
           "literature": 1.0
         }
@@ -2906,26 +2469,25 @@
           "Uterus"
         ],
         "n_genes": 20,
-        "n_expressed": 16,
-        "mean_tpm_in_tissue": 60.93,
-        "max_tpm_in_tissue": 375.16,
-        "tissue_specificity": 0.569,
-        "context_modifier": 1.079
+        "n_expressed": 12,
+        "mean_tpm_in_tissue": 37.06,
+        "max_tpm_in_tissue": 363.55,
+        "tissue_specificity": 0.938,
+        "context_modifier": 1.105
       },
-      "disease_entity": "Disease::MESH:D004715",
-      "ensemble_prob": 0.9768,
+      "ensemble_prob": 0.9521,
       "ensemble_features": {
-        "kg_score": 0.9999,
-        "degree_penalty": 0.7341,
-        "n_drug_targets": 36,
+        "kg_score": 0.9991,
+        "degree_penalty": 0.7473,
+        "n_drug_targets": 24,
         "is_fda_approved": 1,
         "n_disease_genes": 0,
-        "transe_rank_log": 0.6931
+        "transe_rank_log": 2.3979
       },
-      "ensemble_rank": 3,
+      "ensemble_rank": 4,
       "docking": {
-        "kcal_per_mol": -12.23,
-        "target_symbol": "ESR1",
+        "kcal_per_mol": -11.61,
+        "target_symbol": "AR",
         "source": "chembl_bioactivity_proxy",
         "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
         "hit": true
@@ -2961,7 +2523,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2562,
       "dti_score": 1.0,
-      "dti_best_target": "MTOR",
+      "dti_best_target": "IGSF8",
       "kg_group_score": 0.3395,
       "structural_group_score": 1.0,
       "network_group_score": 0.555899977684021,
@@ -3142,6 +2704,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.52)"
       ],
+      "disease_entity": "Disease::MESH:D004715",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -3242,8 +2805,7 @@
         "tissue_specificity": 0.127,
         "context_modifier": 1.045
       },
-      "disease_entity": "Disease::MESH:D004715",
-      "ensemble_prob": 0.2607,
+      "ensemble_prob": 0.1893,
       "ensemble_features": {
         "kg_score": 0.9905,
         "degree_penalty": 0.7532,
@@ -3252,7 +2814,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 4.6151
       },
-      "ensemble_rank": 10,
+      "ensemble_rank": 9,
       "docking": {
         "kcal_per_mol": null,
         "target_symbol": null,
@@ -3290,8 +2852,8 @@
       "admet_score": 0.6529,
       "admet_flags": "clean",
       "primekg_score": 0.2572,
-      "dti_score": 0.1052,
-      "dti_best_target": "HIF1A",
+      "dti_score": 0.3416,
+      "dti_best_target": "KIT",
       "kg_group_score": 0.1844,
       "structural_group_score": 1.0,
       "network_group_score": 0.6758999824523926,
@@ -3388,30 +2950,6 @@
       "clinical_trials_total": 5,
       "clinical_trials": [
         {
-          "nct_id": "NCT02480647",
-          "title": "Clinical Trial the Use of Levonorgestrel-releasing Intrauterine System Versus Etonogestrel Implant in Endometriosis",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "100",
-          "url": "https://clinicaltrials.gov/study/NCT02480647"
-        },
-        {
-          "nct_id": "NCT02158845",
-          "title": "Levonorgestrel-releasing Intrauterine System in Patients With Endometriosis",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "44",
-          "url": "https://clinicaltrials.gov/study/NCT02158845"
-        },
-        {
-          "nct_id": "NCT02203331",
-          "title": "Bay98-7196, Dose Finding / POC Study",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "319",
-          "url": "https://clinicaltrials.gov/study/NCT02203331"
-        },
-        {
           "nct_id": "NCT02545452",
           "title": "Effect of Concomitant Use of an Antimycotic, an Antibiotic, a Spermicide or Tampons on Pharmacokinetics of Anastrozole and Levonorgestrel Released From Intra-vaginal Ring",
           "status": "COMPLETED",
@@ -3426,13 +2964,37 @@
           "phase": "PHASE2, PHASE3",
           "enrollment": "50",
           "url": "https://clinicaltrials.gov/study/NCT02599077"
+        },
+        {
+          "nct_id": "NCT02158845",
+          "title": "Levonorgestrel-releasing Intrauterine System in Patients With Endometriosis",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "44",
+          "url": "https://clinicaltrials.gov/study/NCT02158845"
+        },
+        {
+          "nct_id": "NCT02480647",
+          "title": "Clinical Trial the Use of Levonorgestrel-releasing Intrauterine System Versus Etonogestrel Implant in Endometriosis",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "100",
+          "url": "https://clinicaltrials.gov/study/NCT02480647"
+        },
+        {
+          "nct_id": "NCT02203331",
+          "title": "Bay98-7196, Dose Finding / POC Study",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "319",
+          "url": "https://clinicaltrials.gov/study/NCT02203331"
         }
       ],
       "trial_phases": {
-        "PHASE4": 2,
-        "PHASE2": 2,
         "PHASE1": 1,
-        "PHASE3": 1
+        "PHASE2": 2,
+        "PHASE3": 1,
+        "PHASE4": 2
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -3442,8 +3004,10 @@
         "High molecular similarity (1.00) to Levonorgestrel",
         "Highly cited paper (1126 citations): \"ESHRE guideline: endometriosis...\"",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.65)"
+        "Moderate genetic evidence supporting causality (MR score: 0.65)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D004715",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3544,8 +3108,7 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.111
       },
-      "disease_entity": "Disease::MESH:D004715",
-      "ensemble_prob": 0.9652,
+      "ensemble_prob": 0.9537,
       "ensemble_features": {
         "kg_score": 0.9983,
         "degree_penalty": 0.8449,
@@ -3554,7 +3117,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.9444
       },
-      "ensemble_rank": 4,
+      "ensemble_rank": 3,
       "docking": {
         "kcal_per_mol": null,
         "target_symbol": null,
@@ -3596,8 +3159,8 @@
       "admet_score": 0.713,
       "admet_flags": "clean",
       "primekg_score": 0.2495,
-      "dti_score": 0.3259,
-      "dti_best_target": "CTSD",
+      "dti_score": 0.4095,
+      "dti_best_target": "KIT",
       "kg_group_score": 0.1119,
       "structural_group_score": 0.9762,
       "network_group_score": 0.6869000196456909,
@@ -3772,6 +3335,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.74, 1 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D004715",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3908,8 +3472,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.852
       },
-      "disease_entity": "Disease::MESH:D004715",
-      "ensemble_prob": 0.9433,
+      "ensemble_prob": 0.9214,
       "ensemble_features": {
         "kg_score": 0.9963,
         "degree_penalty": 0.8863,
@@ -3918,10 +3481,365 @@
         "n_disease_genes": 0,
         "transe_rank_log": 3.6889
       },
-      "ensemble_rank": 6,
+      "ensemble_rank": 5,
       "docking": {
         "kcal_per_mol": -10.36,
         "target_symbol": "CYP19A1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Indomethacin",
+      "drug_id": "DB00328",
+      "disease_name": "Endometriosis",
+      "combined_score": 0.5159,
+      "pillars_hit": 4,
+      "transe_rank": 70,
+      "transe_score": -10.8792,
+      "pykeen_score": -12.5129,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0.1091,
+      "gene_sig_rank": 8,
+      "proximity_score": 0.6380000114440918,
+      "proximity_distance": 1.4500000476837158,
+      "admet_score": 0.5619,
+      "admet_flags": "DILI=0.97",
+      "primekg_score": 0.2562,
+      "dti_score": 1.0,
+      "dti_best_target": "IGSF8",
+      "kg_group_score": 0.3653,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.6261,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.4589,
+      "admet_multiplier": 0.9124,
+      "efficacy_score": 0.5654,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 19,
+      "shared_targets": [
+        "ACE",
+        "AR",
+        "C2",
+        "CTNNB1",
+        "EPO",
+        "FOS",
+        "GDF15",
+        "IL11",
+        "IL1A",
+        "IL1B",
+        "MMP2",
+        "MMP3",
+        "MT-CO2",
+        "NOS2",
+        "PLA2G2A",
+        "POMC",
+        "PTGS1",
+        "PTGS2",
+        "TIMP1"
+      ],
+      "pubmed_total": 22,
+      "pubmed_treatment_total": 19,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "1295281",
+          "title": "Indomethacin and fertility in experimental endometriosis.",
+          "authors": "Dargenio R, Corbucci MG, Lamanna MA, et al.",
+          "journal": "Acta Europaea fertilitatis",
+          "year": "1992",
+          "abstract_snippet": "Clinical and experimental evidence showed an increased concentration of prostaglandins in peritoneal fluid in cases of endometriosis. The aim of this study was to verify whether an antiprostaglandin drug can restore fertility in cases of endometriosis. For this reason endometriosis was induced in 4 ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/1295281/",
+          "total_results": 22
+        },
+        {
+          "pmid": "22969722",
+          "title": "Telemetric assessment of referred vaginal hyperalgesia and the effect of indomethacin in a rat model of endometriosis.",
+          "authors": "Dmitrieva N, Faircloth EK, Pyatok S, et al.",
+          "journal": "Frontiers in pharmacology",
+          "year": "2012",
+          "abstract_snippet": "Symptoms of endometriosis (ENDO), among others, include pelvic/abdominal and muscle pain. Non-steroidal anti-inflammatory agents are first-line treatment for this pain. Similar to women, rats with surgically induced ENDO, but not its surgical control, exhibit vaginal hyperalgesia, which in rats is e...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22969722/"
+        },
+        {
+          "pmid": "6344540",
+          "title": "Prostaglandins and endometriosis.",
+          "authors": "Ylikorkala O, Viinikka L",
+          "journal": "Acta obstetricia et gynecologica Scandinavica. Supplement",
+          "year": "1983",
+          "abstract_snippet": "To study the production of prostacyclin (PGI2) and thromboxane A2 (TxA2) in endometriosis in vitro, samples of endometriotic tissue taken during operation from 6 women were superfused for 4.5 hours in 95% O2/5% CO2 at 37 degrees C, and the stable metabolites of PGI2 (=6-keto-PGF1 alpha), and TxA2 (=...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/6344540/"
+        },
+        {
+          "pmid": "31546014",
+          "title": "Aldo-keto reductase 1C3-Assessment as a new target for the treatment of endometriosis.",
+          "authors": "Ri\u017ener TL, Penning TM",
+          "journal": "Pharmacological research",
+          "year": "2020",
+          "abstract_snippet": "Endometriosis is a common gynecological disorder, which is treated surgically and/ or pharmacologically with an unmet clinical need for new therapeutics. A completed phase I trial and a recent phase II trial that investigated the steroidal aldo-keto reductase 1C3 (AKR1C3) inhibitor BAY1128688 in end...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31546014/"
+        },
+        {
+          "pmid": "531232",
+          "title": "Prostaglandin biosynthesis inhibitors and endometriosis.",
+          "authors": "Kauppila A, Puolakka J, Ylikorkala O",
+          "journal": "Prostaglandins",
+          "year": "1979",
+          "abstract_snippet": "Prostaglandins (PGs) may be involved in the development of the symptoms of endometriosis. Therefore 18 patients with pelvic endometriosis were treated in placebo controlled double-blind trial with different prostaglandin biosynthesis inhibitors. These drugs were: acetylsalicylic acid (0.5 g x 3) exe...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/531232/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Telemetric Assessment of Referred Vaginal Hyperalgesia and the Effect of Indomethacin in a Rat Model of Endometriosis",
+          "year": 2012,
+          "citations": 13,
+          "url": "https://www.semanticscholar.org/paper/e4f7d679663b7eb0a4739d27f8ea346c578cf4e2",
+          "authors": "N. Dmitrieva, E. Faircloth, Stephen Pyatok"
+        },
+        {
+          "title": "Huayu Sanjie Enema Liquid Relieves Pain in Endometriosis Model Rats by Inhibiting Inflammation, Peripheral Sensitization, and Pelvic Adhesion",
+          "year": 2022,
+          "citations": 8,
+          "url": "https://www.semanticscholar.org/paper/1877b200ec00a5373bd24aab5ea49315c0c1b7e4",
+          "authors": "Chun-hua Zong, Lu Sun, Xin Xu"
+        },
+        {
+          "title": "Indomethacin and fertility in experimental endometriosis.",
+          "year": 1992,
+          "citations": 10,
+          "url": "https://www.semanticscholar.org/paper/caf64d106a7d5c160bf51b5a4c05584db0b3868b",
+          "authors": "R. Dargenio, Corbucci Mg, Lamanna Ma"
+        },
+        {
+          "title": "Experimental endometriosis and fertility: compared effects of an antigonadotropin (danazol) and an antiprostaglandin (indomethacin).",
+          "year": 1984,
+          "citations": 2,
+          "url": "https://www.semanticscholar.org/paper/deb5eda2fa1d7de8566d81c7b143c404480ebe21",
+          "authors": "R. Dargenio, A. Golan, R. Winston"
+        },
+        {
+          "title": "Nonsteroidal antiinflammatory drugs differentially suppress endometriosis in a murine model.",
+          "year": 2005,
+          "citations": 98,
+          "url": "https://www.semanticscholar.org/paper/8673796a4b35741d008fad920c7eae4c7e3060c9",
+          "authors": "J. Efstathiou, David A. Sampson, Z. Levine"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Nonsteroidal antiinflammatory drugs differentially suppress endometriosis in a murine model.",
+        "year": 2005,
+        "citations": 98,
+        "url": "https://www.semanticscholar.org/paper/8673796a4b35741d008fad920c7eae4c7e3060c9",
+        "authors": "J. Efstathiou, David A. Sampson, Z. Levine"
+      },
+      "max_citations": 98,
+      "faers_signal": "moderate",
+      "faers_total_reports": 12728,
+      "faers_cooccurrences": 5,
+      "faers_interpretation": "5 FAERS reports mention both Indomethacin and Endometriosis-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "2858522 (1.524)",
+        "ST4028268 (1.515)",
+        "NCGC00183235-01 (1.508)",
+        "dasatinib (1.508)",
+        "saracatinib (1.495)"
+      ],
+      "signature_interpretation": "Indomethacin was not found among the top 42 drugs that reverse the Endometriosis gene signature. Top reversers: 2858522 (1.524), ST4028268 (1.515), NCGC00183235-01 (1.508)",
+      "ai_hypothesis": "of its anti-inflammatory and anti-proliferative effects.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.4589,
+      "mr_genetic_targets": 2,
+      "mechanistic_hypothesis": "Indomethacin \u2014[targets]\u2192 gene-5320 \u2014[is associated with]\u2192 Endometriosis",
+      "kg_paths_text": "\u2022 Indomethacin \u2014[targets]\u2192 gene-5320 \u2014[is associated with]\u2192 Endometriosis\n\u2022 Indomethacin \u2014[is agonized by]\u2192 gene-5468 \u2014[is a target of]\u2192 DB11672 \u2014[is a therapeutic for]\u2192 Endometriosis\n\u2022 Indomethacin \u2014[is agonized by]\u2192 gene-5468 \u2014[is a target of]\u2192 DB11672 \u2014[is a therapeutic for]\u2192 Endometriosis",
+      "validation_experiments": [],
+      "novelty_score": 0.439,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "MEDIUM",
+      "confidence_reasons": [
+        "22 PubMed articles found",
+        "Supported by 4 independent AI pillars",
+        "Moderate FAERS signal: 5 adverse event reports mention drug-disease co-occurrence",
+        "Supporting paper with 98 citations",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.46)"
+      ],
+      "disease_entity": "Disease::MESH:D004715",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 2093,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "moderate",
+        "summary": "CPIC-C (CYP2C9) \u2022 PharmGKB-3 (CYP2C9 / CYP2C9*1, CYP2C9*3)",
+        "cpic": [
+          {
+            "gene": "CYP2C9",
+            "level": "C",
+            "guideline": "CYP2C9 and NSAIDs"
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "CYP2C9",
+            "variant": "CYP2C9*1, CYP2C9*3",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451140140"
+          },
+          {
+            "gene": "LST1;LTA;TNF",
+            "variant": "rs1800629",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1452570052"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.599,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.516,
+          "docking": 1.0,
+          "pharos": 0.0,
+          "literature": 0.591
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Uterus"
+        ],
+        "n_genes": 19,
+        "n_expressed": 14,
+        "mean_tpm_in_tissue": 1001.6,
+        "max_tpm_in_tissue": 17969.8,
+        "tissue_specificity": 0.141,
+        "context_modifier": 1.047
+      },
+      "ensemble_prob": 0.096,
+      "ensemble_features": {
+        "kg_score": 0.9923,
+        "degree_penalty": 0.7454,
+        "n_drug_targets": 53,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.4067
+      },
+      "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": -13.45,
+        "target_symbol": "AR",
         "source": "chembl_bioactivity_proxy",
         "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
         "hit": true

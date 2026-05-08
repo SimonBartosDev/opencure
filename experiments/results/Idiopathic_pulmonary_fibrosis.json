@@ -1,8 +1,8 @@
 {
   "disease": "Idiopathic pulmonary fibrosis",
   "status": "completed",
-  "timestamp": "2026-04-19T18:02:00.278309",
-  "elapsed_seconds": 924.0,
+  "timestamp": "2026-05-07T22:56:37.388102",
+  "elapsed_seconds": 143.4,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -17,7 +17,7 @@
       "drug_name": "histamine dihydrochloride",
       "drug_id": "DB05381",
       "disease_name": "Idiopathic pulmonary fibrosis",
-      "combined_score": 0.5556,
+      "combined_score": 0.5542,
       "pillars_hit": 4,
       "transe_rank": 3,
       "transe_score": -10.341,
@@ -36,15 +36,15 @@
       "admet_score": 0.6862,
       "admet_flags": "clean",
       "primekg_score": 0.2722,
-      "dti_score": 0.989,
-      "dti_best_target": "S1PR1",
+      "dti_score": 0.981,
+      "dti_best_target": "SWSAP1",
       "kg_group_score": 0.5322,
-      "structural_group_score": 0.989,
+      "structural_group_score": 0.981,
       "network_group_score": 0.4754999876022339,
       "txgnn_group_score": 0,
       "mr_group_score": 0.5775,
       "admet_multiplier": 0.9372,
-      "efficacy_score": 0.5928,
+      "efficacy_score": 0.5914,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 14,
@@ -139,7 +139,7 @@
       "mechanistic_hypothesis": "histamine dihydrochloride \u2014[is a therapeutic for]\u2192 MESH:D014376 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 Idiopathic pulmonary fibrosis",
       "kg_paths_text": "\u2022 histamine dihydrochloride \u2014[is a therapeutic for]\u2192 MESH:D014376 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 Idiopathic pulmonary fibrosis\n\u2022 histamine dihydrochloride \u2014[is a therapeutic for]\u2192 MESH:D014376 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 Idiopathic pulmonary fibrosis\n\u2022 histamine dihydrochloride \u2014[is a therapeutic for]\u2192 MESH:D014376 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 Idiopathic pulmonary fibrosis",
       "validation_experiments": [],
-      "novelty_score": 0.667,
+      "novelty_score": 0.665,
       "novelty_level": "BREAKTHROUGH",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -152,6 +152,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.58)"
       ],
+      "disease_entity": "Disease::MESH:D054990",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -232,10 +233,10 @@
           "pharos": false,
           "literature": false
         },
-        "triangulation_score": 0.337,
+        "triangulation_score": 0.336,
         "label": "kg-only",
         "axis_values": {
-          "kg": 0.556,
+          "kg": 0.554,
           "docking": 0.474,
           "pharos": 0.0,
           "literature": 0.0
@@ -252,15 +253,7 @@
         "tissue_specificity": 0.809,
         "context_modifier": 1.07
       },
-      "disease_entity": "Disease::MESH:D054990",
-      "docking": {
-        "kcal_per_mol": -5.69,
-        "target_symbol": "MIF",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.0833,
+      "ensemble_prob": 0.0768,
       "ensemble_features": {
         "kg_score": 0.959,
         "degree_penalty": 0.8269,
@@ -269,7 +262,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 6.073
       },
-      "ensemble_rank": 8,
+      "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": -5.69,
+        "target_symbol": "MIF",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -499,6 +499,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.58)"
       ],
+      "disease_entity": "Disease::MESH:D054990",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -635,15 +636,7 @@
         "tissue_specificity": 0.839,
         "context_modifier": 1.115
       },
-      "disease_entity": "Disease::MESH:D054990",
-      "docking": {
-        "kcal_per_mol": -11.64,
-        "target_symbol": "NR3C1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.9754,
+      "ensemble_prob": 0.9937,
       "ensemble_features": {
         "kg_score": 0.9996,
         "degree_penalty": 0.736,
@@ -652,7 +645,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 1.6094
       },
-      "ensemble_rank": 2,
+      "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": -11.64,
+        "target_symbol": "NR3C1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -664,7 +664,7 @@
       "drug_name": "Melatonin",
       "drug_id": "DB01065",
       "disease_name": "Idiopathic pulmonary fibrosis",
-      "combined_score": 0.5121,
+      "combined_score": 0.5111,
       "pillars_hit": 4,
       "transe_rank": 83,
       "transe_score": -11.0025,
@@ -683,15 +683,15 @@
       "admet_score": 0.4757,
       "admet_flags": "clean",
       "primekg_score": 0.2499,
-      "dti_score": 0.8122,
-      "dti_best_target": "S1PR1",
+      "dti_score": 0.8063,
+      "dti_best_target": "ANGPTL2",
       "kg_group_score": 0.3692,
-      "structural_group_score": 0.8122,
+      "structural_group_score": 0.8063,
       "network_group_score": 0.5325000286102295,
       "txgnn_group_score": 0,
       "mr_group_score": 0.8471,
       "admet_multiplier": 0.8951,
-      "efficacy_score": 0.5721,
+      "efficacy_score": 0.571,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 9,
@@ -844,7 +844,7 @@
       "mechanistic_hypothesis": "Melatonin \u2014[downregulates]\u2192 gene-4931 \u2014[is downregulated by]\u2192 Idiopathic pulmonary fibrosis",
       "kg_paths_text": "\u2022 Melatonin \u2014[downregulates]\u2192 gene-4931 \u2014[is downregulated by]\u2192 Idiopathic pulmonary fibrosis\n\u2022 Melatonin \u2014[upregulates]\u2192 gene-4125 \u2014[is upregulated by]\u2192 Idiopathic pulmonary fibrosis\n\u2022 Melatonin \u2014[downregulates]\u2192 gene-6382 \u2014[is activated by]\u2192 gene-1277 \u2014[is upregulated by]\u2192 Idiopathic pulmonary fibrosis",
       "validation_experiments": [],
-      "novelty_score": 0.492,
+      "novelty_score": 0.491,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -859,6 +859,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.85, 2 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D054990",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -942,7 +943,7 @@
         "triangulation_score": 0.316,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.512,
+          "kg": 0.511,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 0.686
@@ -959,15 +960,7 @@
         "tissue_specificity": 0.654,
         "context_modifier": 1.08
       },
-      "disease_entity": "Disease::MESH:D054990",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.019,
+      "ensemble_prob": 0.0213,
       "ensemble_features": {
         "kg_score": 0.9547,
         "degree_penalty": 0.7607,
@@ -977,6 +970,13 @@
         "transe_rank_log": 6.1717
       },
       "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1008,7 +1008,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2582,
       "dti_score": 1.0,
-      "dti_best_target": "GIMAP2",
+      "dti_best_target": "MYOF",
       "kg_group_score": 0.2965,
       "structural_group_score": 1.0,
       "network_group_score": 0.49549999833106995,
@@ -1189,6 +1189,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.63)"
       ],
+      "disease_entity": "Disease::MESH:D054990",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1297,15 +1298,7 @@
         "tissue_specificity": 0.704,
         "context_modifier": 1.084
       },
-      "disease_entity": "Disease::MESH:D054990",
-      "docking": {
-        "kcal_per_mol": -6.17,
-        "target_symbol": "NR3C1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.872,
+      "ensemble_prob": 0.9839,
       "ensemble_features": {
         "kg_score": 0.9989,
         "degree_penalty": 0.7341,
@@ -1314,7 +1307,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.5649
       },
-      "ensemble_rank": 6,
+      "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": -6.17,
+        "target_symbol": "NR3C1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1346,7 +1346,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.262,
       "dti_score": 1.0,
-      "dti_best_target": "GIMAP2",
+      "dti_best_target": "DCLK1",
       "kg_group_score": 0.433,
       "structural_group_score": 1.0,
       "network_group_score": 0.5450000166893005,
@@ -1518,6 +1518,7 @@
         "Highly cited paper (4243 citations): \"American Thoracic Society Documents An Official ATS / ERS / ...\"",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D054990",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1680,15 +1681,7 @@
         "tissue_specificity": 0.726,
         "context_modifier": 1.084
       },
-      "disease_entity": "Disease::MESH:D054990",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.9545,
+      "ensemble_prob": 0.9023,
       "ensemble_features": {
         "kg_score": 0.9991,
         "degree_penalty": 0.7655,
@@ -1697,7 +1690,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.3979
       },
-      "ensemble_rank": 3,
+      "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1729,7 +1729,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2491,
       "dti_score": 1.0,
-      "dti_best_target": "GIMAP2",
+      "dti_best_target": "DCLK1",
       "kg_group_score": 0.288,
       "structural_group_score": 1.0,
       "network_group_score": 0.6611999869346619,
@@ -1928,20 +1928,20 @@
       "clinical_trials_total": 3,
       "clinical_trials": [
         {
-          "nct_id": "NCT06265532",
-          "title": "Collagen-targeted Positron Emission Tomography (PET) Imaging for Assessment of EGCG Effect",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "12",
-          "url": "https://clinicaltrials.gov/study/NCT06265532"
-        },
-        {
           "nct_id": "NCT03928847",
           "title": "Fibroblast Specific Inhibition of LOXL2 and TGFbeta1 Signaling in Patients With Pulmonary Fibrosis.",
           "status": "COMPLETED",
           "phase": "EARLY_PHASE1",
           "enrollment": "35",
           "url": "https://clinicaltrials.gov/study/NCT03928847"
+        },
+        {
+          "nct_id": "NCT06265532",
+          "title": "Collagen-targeted Positron Emission Tomography (PET) Imaging for Assessment of EGCG Effect",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "12",
+          "url": "https://clinicaltrials.gov/study/NCT06265532"
         },
         {
           "nct_id": "NCT05195918",
@@ -1953,8 +1953,8 @@
         }
       ],
       "trial_phases": {
-        "PHASE1": 2,
-        "EARLY_PHASE1": 1
+        "EARLY_PHASE1": 1,
+        "PHASE1": 2
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -1963,8 +1963,10 @@
         "Supported by 4 independent AI pillars",
         "Supporting paper with 61 citations",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.60)"
+        "Moderate genetic evidence supporting causality (MR score: 0.60)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D054990",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "late-trial",
@@ -2014,15 +2016,7 @@
         "tissue_specificity": 0.764,
         "context_modifier": 1.084
       },
-      "disease_entity": "Disease::MESH:D054990",
-      "docking": {
-        "kcal_per_mol": -9.43,
-        "target_symbol": "ABCB1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.0003,
+      "ensemble_prob": 0.0068,
       "ensemble_features": {
         "kg_score": 0.8664,
         "degree_penalty": 0.8816,
@@ -2032,6 +2026,13 @@
         "transe_rank_log": 7.2513
       },
       "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": -9.43,
+        "target_symbol": "ABCB1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -2047,311 +2048,10 @@
       }
     },
     {
-      "drug_name": "Topotecan",
-      "drug_id": "DB01030",
-      "disease_name": "Idiopathic pulmonary fibrosis",
-      "combined_score": 0.5027,
-      "pillars_hit": 4,
-      "transe_rank": 72,
-      "transe_score": -10.9689,
-      "pykeen_score": -12.7453,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.7120000123977661,
-      "proximity_distance": 1.149999976158142,
-      "admet_score": 0.9136,
-      "admet_flags": "AMES=0.87",
-      "primekg_score": 0.2555,
-      "dti_score": 0.789,
-      "dti_best_target": "S1PR1",
-      "kg_group_score": 0.2468,
-      "structural_group_score": 0.789,
-      "network_group_score": 0.5375000238418579,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.669,
-      "admet_multiplier": 0.9827,
-      "efficacy_score": 0.5116,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 6,
-      "shared_targets": [
-        "ABCB1",
-        "CDH1",
-        "FBLN1",
-        "FGFR3",
-        "SFTPA2",
-        "TERT"
-      ],
-      "pubmed_total": 2,
-      "pubmed_treatment_total": 2,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "30442501",
-          "title": "Interleukin 2 with anti-GD2 antibody ch14.18/CHO (dinutuximab beta) in patients with high-risk neuroblastoma (HR-NBL1/SIOPEN): a multicentre, randomised, phase 3 trial.",
-          "authors": "Ladenstein R, P\u00f6tschger U, Valteau-Couanet D, et al.",
-          "journal": "The Lancet. Oncology",
-          "year": "2018",
-          "abstract_snippet": "BACKGROUND: Immunotherapy with the chimeric anti-GD2 monoclonal antibody dinutuximab, combined with alternating granulocyte-macrophage colony-stimulating factor and intravenous interleukin-2 (IL-2), improves survival in patients with high-risk neuroblastoma. We aimed to assess event-free survival af...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30442501/",
-          "total_results": 2
-        },
-        {
-          "pmid": "16949700",
-          "title": "Diffuse alveolar damage after a single dose of topotecan in a patient with pulmonary fibrosis and small cell lung cancer.",
-          "authors": "Maitland ML, Wilcox R, Hogarth DK, et al.",
-          "journal": "Lung cancer (Amsterdam, Netherlands)",
-          "year": "2006",
-          "abstract_snippet": "Drug-induced pulmonary toxicities of anticancer agents have been well described, but the pathophysiology of agents typically used in advanced disease has not been well studied. Symptoms of pulmonary drug toxicity in advanced lung cancer patients may frequently be attributed to disease progression, p...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/16949700/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Nerandomilast in Patients with Idiopathic Pulmonary Fibrosis.",
-          "year": 2025,
-          "citations": 66,
-          "url": "https://www.semanticscholar.org/paper/44d32f761d1f926f198cf9ad620115cdf59798f2",
-          "authors": "Luca Richeldi, A. Azuma, Vincent Cottin"
-        },
-        {
-          "title": "Idiopathic pulmonary fibrosis.",
-          "year": 2014,
-          "citations": 3838,
-          "url": "https://www.semanticscholar.org/paper/3d70780bd070209a4df59982b68de988438ede88",
-          "authors": "S. Rosselot"
-        },
-        {
-          "title": "Incidence and prevalence of idiopathic pulmonary fibrosis: a systematic literature review and meta-analysis",
-          "year": 2025,
-          "citations": 19,
-          "url": "https://www.semanticscholar.org/paper/bf904c1791ca65b24adf33129f5b1d236143926c",
-          "authors": "N. Golchin, Aditya Patel, J. Scheuring"
-        },
-        {
-          "title": "American Thoracic Society Documents An Official ATS / ERS / JRS / ALAT Statement : Idiopathic Pulmonary Fibrosis : Evidence-based Guidelines for Diagnosis and Management",
-          "year": 2011,
-          "citations": 4243,
-          "url": "https://www.semanticscholar.org/paper/451b19eff2002c79517369c66b970e0cf5bfff81",
-          "authors": "G. Raghu, H. Collard, J. Egan"
-        },
-        {
-          "title": "Diagnosis of Idiopathic Pulmonary Fibrosis. An Official ATS/ERS/JRS/ALAT Clinical Practice Guideline",
-          "year": 2018,
-          "citations": 3080,
-          "url": "https://www.semanticscholar.org/paper/d6f3a08c5237b2bc783200a475fd8d8355d3e274",
-          "authors": "G. Raghu, M. R\u00e9my-Jardin, J. Myers"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "American Thoracic Society Documents An Official ATS / ERS / JRS / ALAT Statement : Idiopathic Pulmonary Fibrosis : Evidence-based Guidelines for Diagnosis and Management",
-        "year": 2011,
-        "citations": 4243,
-        "url": "https://www.semanticscholar.org/paper/451b19eff2002c79517369c66b970e0cf5bfff81",
-        "authors": "G. Raghu, H. Collard, J. Egan"
-      },
-      "max_citations": 4243,
-      "faers_signal": "moderate",
-      "faers_total_reports": 5510,
-      "faers_cooccurrences": 15,
-      "faers_interpretation": "15 FAERS reports mention both Topotecan and Idiopathic pulmonary fibrosis-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "NCGC00183216-01 (1.596)",
-        "MENADIONE (1.565)",
-        "LASALOCID SODIUM (1.541)",
-        "curcumin (1.533)",
-        "\"\"\"3-cyclohexyl-6-{4-[3-(trifluoromethyl)phenyl]piperazin-1-yl}pyrimidine-2,4(1H,3H)-dione\"\"\" (1.523)"
-      ],
-      "signature_interpretation": "Topotecan was not found among the top 31 drugs that reverse the Idiopathic pulmonary fibrosis gene signature. Top reversers: NCGC00183216-01 (1.596), MENADIONE (1.565), LASALOCID SODIUM (1.541)",
-      "ai_hypothesis": "of its anti-inflammatory and anti-fibrotic properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.669,
-      "mr_genetic_targets": 8,
-      "mechanistic_hypothesis": "Topotecan \u2014[downregulates]\u2192 gene-5525 \u2014[activates]\u2192 gene-79003 \u2014[is downregulated by]\u2192 Idiopathic pulmonary fibrosis",
-      "kg_paths_text": "\u2022 Topotecan \u2014[downregulates]\u2192 gene-5525 \u2014[activates]\u2192 gene-79003 \u2014[is downregulated by]\u2192 Idiopathic pulmonary fibrosis\n\u2022 Topotecan \u2014[downregulates]\u2192 gene-5525 \u2014[activates]\u2192 gene-79003 \u2014[is downregulated by]\u2192 Idiopathic pulmonary fibrosis\n\u2022 Topotecan \u2014[downregulates]\u2192 gene-5525 \u2014[activates]\u2192 gene-79003 \u2014[is downregulated by]\u2192 Idiopathic pulmonary fibrosis",
-      "validation_experiments": [],
-      "novelty_score": 0.452,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "MEDIUM",
-      "confidence_reasons": [
-        "2 PubMed article(s) - limited literature",
-        "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 15 adverse event reports mention drug-disease co-occurrence",
-        "Highly cited paper (4243 citations): \"American Thoracic Society Documents An Official ATS / ERS / ...\"",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.67)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1577,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (ABCG2 / rs4148157)",
-        "cpic": [],
-        "pharmgkb": [
-          {
-            "gene": "ABCG2",
-            "variant": "rs4148157",
-            "level": "3",
-            "phenotype_category": "Metabolism/PK",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1447981313"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 1,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": false
-        },
-        "triangulation_score": 0.217,
-        "label": "kg-only",
-        "axis_values": {
-          "kg": 0.503,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.207
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Lung"
-        ],
-        "n_genes": 6,
-        "n_expressed": 5,
-        "mean_tpm_in_tissue": 366.2,
-        "max_tpm_in_tissue": 1834.72,
-        "tissue_specificity": 1.0,
-        "context_modifier": 1.15
-      },
-      "disease_entity": "Disease::MESH:D054990",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.9249,
-      "ensemble_features": {
-        "kg_score": 0.9977,
-        "degree_penalty": 0.7549,
-        "n_drug_targets": 8,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 3.2189
-      },
-      "ensemble_rank": 4,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [
-          "MANNICH"
-        ],
-        "n_alerts": 1,
-        "alert_names": [
-          "mannich_A(296)"
-        ]
-      }
-    },
-    {
       "drug_name": "Cyclic Adenosine Monophosphate",
       "drug_id": "DB02527",
       "disease_name": "Idiopathic pulmonary fibrosis",
-      "combined_score": 0.4994,
+      "combined_score": 0.5052,
       "pillars_hit": 4,
       "transe_rank": 64,
       "transe_score": -10.9461,
@@ -2370,15 +2070,15 @@
       "admet_score": 1.0,
       "admet_flags": "DILI=0.90",
       "primekg_score": 0.253,
-      "dti_score": 0.8319,
-      "dti_best_target": "GPR87",
+      "dti_score": 0.8643,
+      "dti_best_target": "SWSAP1",
       "kg_group_score": 0.2203,
-      "structural_group_score": 0.8319,
+      "structural_group_score": 0.8643,
       "network_group_score": 0.48410001397132874,
       "txgnn_group_score": 0,
       "mr_group_score": 0.6515,
       "admet_multiplier": 1.0,
-      "efficacy_score": 0.4994,
+      "efficacy_score": 0.5052,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 20,
@@ -2542,7 +2242,7 @@
       "mechanistic_hypothesis": "Cyclic Adenosine Monophosphate \u2014[is a therapeutic for]\u2192 MESH:D013224 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 Idiopathic pulmonary fibrosis",
       "kg_paths_text": "\u2022 Cyclic Adenosine Monophosphate \u2014[is a therapeutic for]\u2192 MESH:D013224 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 Idiopathic pulmonary fibrosis\n\u2022 Cyclic Adenosine Monophosphate \u2014[is a therapeutic for]\u2192 MESH:D013224 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 Idiopathic pulmonary fibrosis\n\u2022 Cyclic Adenosine Monophosphate \u2014[is a therapeutic for]\u2192 MESH:D007674 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 Idiopathic pulmonary fibrosis",
       "validation_experiments": [],
-      "novelty_score": 0.509,
+      "novelty_score": 0.515,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -2555,6 +2255,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.65)"
       ],
+      "disease_entity": "Disease::MESH:D054990",
       "dose_plausibility": {
         "plausibility": "unknown",
         "dose_range": "research",
@@ -2635,10 +2336,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.298,
+        "triangulation_score": 0.3,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.499,
+          "kg": 0.505,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 0.614
@@ -2655,15 +2356,7 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.15
       },
-      "disease_entity": "Disease::MESH:D054990",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.1328,
+      "ensemble_prob": 0.0501,
       "ensemble_features": {
         "kg_score": 0.933,
         "degree_penalty": 0.791,
@@ -2672,7 +2365,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 6.5624
       },
-      "ensemble_rank": 7,
+      "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -2681,6 +2381,307 @@
         "n_alerts": 1,
         "alert_names": [
           "phosphor"
+        ]
+      }
+    },
+    {
+      "drug_name": "Topotecan",
+      "drug_id": "DB01030",
+      "disease_name": "Idiopathic pulmonary fibrosis",
+      "combined_score": 0.4994,
+      "pillars_hit": 4,
+      "transe_rank": 72,
+      "transe_score": -10.9689,
+      "pykeen_score": -12.7453,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.7120000123977661,
+      "proximity_distance": 1.149999976158142,
+      "admet_score": 0.9136,
+      "admet_flags": "AMES=0.87",
+      "primekg_score": 0.2555,
+      "dti_score": 0.7704,
+      "dti_best_target": "ANGPTL2",
+      "kg_group_score": 0.2468,
+      "structural_group_score": 0.7704,
+      "network_group_score": 0.5375000238418579,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.669,
+      "admet_multiplier": 0.9827,
+      "efficacy_score": 0.5082,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 6,
+      "shared_targets": [
+        "ABCB1",
+        "CDH1",
+        "FBLN1",
+        "FGFR3",
+        "SFTPA2",
+        "TERT"
+      ],
+      "pubmed_total": 2,
+      "pubmed_treatment_total": 2,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "30442501",
+          "title": "Interleukin 2 with anti-GD2 antibody ch14.18/CHO (dinutuximab beta) in patients with high-risk neuroblastoma (HR-NBL1/SIOPEN): a multicentre, randomised, phase 3 trial.",
+          "authors": "Ladenstein R, P\u00f6tschger U, Valteau-Couanet D, et al.",
+          "journal": "The Lancet. Oncology",
+          "year": "2018",
+          "abstract_snippet": "BACKGROUND: Immunotherapy with the chimeric anti-GD2 monoclonal antibody dinutuximab, combined with alternating granulocyte-macrophage colony-stimulating factor and intravenous interleukin-2 (IL-2), improves survival in patients with high-risk neuroblastoma. We aimed to assess event-free survival af...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30442501/",
+          "total_results": 2
+        },
+        {
+          "pmid": "16949700",
+          "title": "Diffuse alveolar damage after a single dose of topotecan in a patient with pulmonary fibrosis and small cell lung cancer.",
+          "authors": "Maitland ML, Wilcox R, Hogarth DK, et al.",
+          "journal": "Lung cancer (Amsterdam, Netherlands)",
+          "year": "2006",
+          "abstract_snippet": "Drug-induced pulmonary toxicities of anticancer agents have been well described, but the pathophysiology of agents typically used in advanced disease has not been well studied. Symptoms of pulmonary drug toxicity in advanced lung cancer patients may frequently be attributed to disease progression, p...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16949700/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Nerandomilast in Patients with Idiopathic Pulmonary Fibrosis.",
+          "year": 2025,
+          "citations": 66,
+          "url": "https://www.semanticscholar.org/paper/44d32f761d1f926f198cf9ad620115cdf59798f2",
+          "authors": "Luca Richeldi, A. Azuma, Vincent Cottin"
+        },
+        {
+          "title": "Idiopathic pulmonary fibrosis.",
+          "year": 2014,
+          "citations": 3838,
+          "url": "https://www.semanticscholar.org/paper/3d70780bd070209a4df59982b68de988438ede88",
+          "authors": "S. Rosselot"
+        },
+        {
+          "title": "Incidence and prevalence of idiopathic pulmonary fibrosis: a systematic literature review and meta-analysis",
+          "year": 2025,
+          "citations": 19,
+          "url": "https://www.semanticscholar.org/paper/bf904c1791ca65b24adf33129f5b1d236143926c",
+          "authors": "N. Golchin, Aditya Patel, J. Scheuring"
+        },
+        {
+          "title": "American Thoracic Society Documents An Official ATS / ERS / JRS / ALAT Statement : Idiopathic Pulmonary Fibrosis : Evidence-based Guidelines for Diagnosis and Management",
+          "year": 2011,
+          "citations": 4243,
+          "url": "https://www.semanticscholar.org/paper/451b19eff2002c79517369c66b970e0cf5bfff81",
+          "authors": "G. Raghu, H. Collard, J. Egan"
+        },
+        {
+          "title": "Diagnosis of Idiopathic Pulmonary Fibrosis. An Official ATS/ERS/JRS/ALAT Clinical Practice Guideline",
+          "year": 2018,
+          "citations": 3080,
+          "url": "https://www.semanticscholar.org/paper/d6f3a08c5237b2bc783200a475fd8d8355d3e274",
+          "authors": "G. Raghu, M. R\u00e9my-Jardin, J. Myers"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "American Thoracic Society Documents An Official ATS / ERS / JRS / ALAT Statement : Idiopathic Pulmonary Fibrosis : Evidence-based Guidelines for Diagnosis and Management",
+        "year": 2011,
+        "citations": 4243,
+        "url": "https://www.semanticscholar.org/paper/451b19eff2002c79517369c66b970e0cf5bfff81",
+        "authors": "G. Raghu, H. Collard, J. Egan"
+      },
+      "max_citations": 4243,
+      "faers_signal": "moderate",
+      "faers_total_reports": 5510,
+      "faers_cooccurrences": 15,
+      "faers_interpretation": "15 FAERS reports mention both Topotecan and Idiopathic pulmonary fibrosis-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "NCGC00183216-01 (1.596)",
+        "MENADIONE (1.565)",
+        "LASALOCID SODIUM (1.541)",
+        "curcumin (1.533)",
+        "\"\"\"3-cyclohexyl-6-{4-[3-(trifluoromethyl)phenyl]piperazin-1-yl}pyrimidine-2,4(1H,3H)-dione\"\"\" (1.523)"
+      ],
+      "signature_interpretation": "Topotecan was not found among the top 31 drugs that reverse the Idiopathic pulmonary fibrosis gene signature. Top reversers: NCGC00183216-01 (1.596), MENADIONE (1.565), LASALOCID SODIUM (1.541)",
+      "ai_hypothesis": "of its anti-inflammatory and anti-fibrotic properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.669,
+      "mr_genetic_targets": 8,
+      "mechanistic_hypothesis": "Topotecan \u2014[downregulates]\u2192 gene-5525 \u2014[activates]\u2192 gene-79003 \u2014[is downregulated by]\u2192 Idiopathic pulmonary fibrosis",
+      "kg_paths_text": "\u2022 Topotecan \u2014[downregulates]\u2192 gene-5525 \u2014[activates]\u2192 gene-79003 \u2014[is downregulated by]\u2192 Idiopathic pulmonary fibrosis\n\u2022 Topotecan \u2014[downregulates]\u2192 gene-5525 \u2014[activates]\u2192 gene-79003 \u2014[is downregulated by]\u2192 Idiopathic pulmonary fibrosis\n\u2022 Topotecan \u2014[downregulates]\u2192 gene-5525 \u2014[activates]\u2192 gene-79003 \u2014[is downregulated by]\u2192 Idiopathic pulmonary fibrosis",
+      "validation_experiments": [],
+      "novelty_score": 0.449,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "MEDIUM",
+      "confidence_reasons": [
+        "2 PubMed article(s) - limited literature",
+        "Supported by 4 independent AI pillars",
+        "Moderate FAERS signal: 15 adverse event reports mention drug-disease co-occurrence",
+        "Highly cited paper (4243 citations): \"American Thoracic Society Documents An Official ATS / ERS / ...\"",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.67)"
+      ],
+      "disease_entity": "Disease::MESH:D054990",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1577,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (ABCG2 / rs4148157)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "ABCG2",
+            "variant": "rs4148157",
+            "level": "3",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1447981313"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.216,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.499,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.207
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Lung"
+        ],
+        "n_genes": 6,
+        "n_expressed": 5,
+        "mean_tpm_in_tissue": 366.2,
+        "max_tpm_in_tissue": 1834.72,
+        "tissue_specificity": 1.0,
+        "context_modifier": 1.15
+      },
+      "ensemble_prob": 0.7591,
+      "ensemble_features": {
+        "kg_score": 0.9977,
+        "degree_penalty": 0.7549,
+        "n_drug_targets": 8,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 3.2189
+      },
+      "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "MANNICH"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "mannich_A(296)"
         ]
       }
     },
@@ -2708,7 +2709,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2592,
       "dti_score": 1.0,
-      "dti_best_target": "GIMAP2",
+      "dti_best_target": "DCLK1",
       "kg_group_score": 0.3218,
       "structural_group_score": 1.0,
       "network_group_score": 0.5461000204086304,
@@ -2886,6 +2887,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.37)"
       ],
+      "disease_entity": "Disease::MESH:D054990",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -2986,15 +2988,7 @@
         "tissue_specificity": 0.805,
         "context_modifier": 1.079
       },
-      "disease_entity": "Disease::MESH:D054990",
-      "docking": {
-        "kcal_per_mol": -10.54,
-        "target_symbol": "NR3C1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.9845,
+      "ensemble_prob": 0.9809,
       "ensemble_features": {
         "kg_score": 0.9991,
         "degree_penalty": 0.7532,
@@ -3003,7 +2997,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.3026
       },
-      "ensemble_rank": 1,
+      "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": -10.54,
+        "target_symbol": "NR3C1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -3034,8 +3035,8 @@
       "admet_score": 0.7521,
       "admet_flags": "clean",
       "primekg_score": 0.2512,
-      "dti_score": 0.1957,
-      "dti_best_target": "S1PR1",
+      "dti_score": 0.1589,
+      "dti_best_target": "FCGRT",
       "kg_group_score": 0.3907,
       "structural_group_score": 0.9544,
       "network_group_score": 0.48579999804496765,
@@ -3225,6 +3226,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.34)"
       ],
+      "disease_entity": "Disease::MESH:D054990",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3333,15 +3335,7 @@
         "tissue_specificity": 0.737,
         "context_modifier": 1.075
       },
-      "disease_entity": "Disease::MESH:D054990",
-      "docking": {
-        "kcal_per_mol": -7.69,
-        "target_symbol": "NR3C1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.8999,
+      "ensemble_prob": 0.7913,
       "ensemble_features": {
         "kg_score": 0.9982,
         "degree_penalty": 0.7473,
@@ -3351,6 +3345,13 @@
         "transe_rank_log": 2.9957
       },
       "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": -7.69,
+        "target_symbol": "NR3C1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -3360,11 +3361,11 @@
     }
   ],
   "disease_entity": "Disease::MESH:D054990",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
     "n_disease_genes": 78,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
-  },
-  "ensemble_version": "v5",
-  "ensemble_model_path": "data/models/ensemble_v5.pkl"
+  }
 }

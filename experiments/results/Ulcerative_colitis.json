@@ -1,13 +1,13 @@
 {
   "disease": "Ulcerative colitis",
   "status": "completed",
-  "timestamp": "2026-04-19T23:35:53.810274",
-  "elapsed_seconds": 633.9,
+  "timestamp": "2026-05-08T01:34:03.626109",
+  "elapsed_seconds": 147.6,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
-    "HIGH": 8,
-    "MEDIUM": 2
+    "HIGH": 9,
+    "MEDIUM": 1
   },
   "pipeline_version": "v5",
   "data_manifest_hash": "2da2aa88f2457d1b",
@@ -36,7 +36,7 @@
       "admet_flags": "DILI=0.91",
       "primekg_score": 0.2607,
       "dti_score": 1.0,
-      "dti_best_target": "ELANE",
+      "dti_best_target": "ANGPTL2",
       "kg_group_score": 0.3232,
       "structural_group_score": 1.0,
       "network_group_score": 0.9380000233650208,
@@ -211,8 +211,10 @@
         "19 PubMed articles found",
         "Supported by 4 independent AI pillars",
         "Highly cited paper (740 citations): \"Discovery and Preclinical Validation of Drug Indications Usi...\"",
-        "AI-generated hypothesis available"
+        "AI-generated hypothesis available",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D003093",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "late-trial",
@@ -263,8 +265,7 @@
         "tissue_specificity": 0.096,
         "context_modifier": 0.889
       },
-      "disease_entity": "Disease::MESH:D003093",
-      "ensemble_prob": 0.0087,
+      "ensemble_prob": 0.0106,
       "ensemble_features": {
         "kg_score": 0.8465,
         "degree_penalty": 1.0,
@@ -280,447 +281,6 @@
         "source": "not_wired",
         "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
         "hit": false
-      },
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Dexamethasone",
-      "drug_id": "DB01234",
-      "disease_name": "Ulcerative colitis",
-      "combined_score": 0.5551,
-      "pillars_hit": 4,
-      "transe_rank": 1,
-      "transe_score": -10.0324,
-      "pykeen_score": -11.1519,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0.02,
-      "gene_sig_rank": 33,
-      "proximity_score": 0.75,
-      "proximity_distance": 1.0,
-      "admet_score": 0.7109,
-      "admet_flags": "clean",
-      "primekg_score": 0.2558,
-      "dti_score": 0.8628,
-      "dti_best_target": "S1PR1",
-      "kg_group_score": 0.4516,
-      "structural_group_score": 0.8628,
-      "network_group_score": 0.5519999861717224,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.7368,
-      "admet_multiplier": 0.9422,
-      "efficacy_score": 0.5891,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 42,
-      "shared_targets": [
-        "AHR",
-        "ALB",
-        "ALOX5",
-        "CD14",
-        "CDH1",
-        "CTNNB1",
-        "CYP2D6",
-        "F3",
-        "FASLG",
-        "FOSL1",
-        "HGF",
-        "HLA-G",
-        "HMOX1",
-        "HNF4A",
-        "IFNG",
-        "IL1B",
-        "IL2RA",
-        "MAPK1",
-        "MAPK14",
-        "MIF"
-      ],
-      "pubmed_total": 292,
-      "pubmed_treatment_total": 238,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "33996408",
-          "title": "Biological drug and drug delivery-mediated immunotherapy.",
-          "authors": "Xiao Q, Li X, Li Y, et al.",
-          "journal": "Acta pharmaceutica Sinica. B",
-          "year": "2021",
-          "abstract_snippet": "The initiation and development of major inflammatory diseases, ",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33996408/",
-          "total_results": 292
-        },
-        {
-          "pmid": "37537405",
-          "title": "Ionically bridged dexamethasone sodium phosphate-zinc-PLGA nanocomplex in alginate microgel for the local treatment of ulcerative colitis.",
-          "authors": "Saparbayeva A, Lee J, Hlaing SP, et al.",
-          "journal": "Archives of pharmacal research",
-          "year": "2023",
-          "abstract_snippet": "Colon-targeted oral drug delivery systems comprising nanoparticles and microparticles have emerged as promising tools for the treatment of ulcerative colitis (UC) because they minimize side effects and maximize the local drug concentration. Dexamethasone sodium phosphate (DSP) is a potent anti-infla...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37537405/"
-        },
-        {
-          "pmid": "30416352",
-          "title": "Evaluation of anti-ulcer and ulcerative colitis of ",
-          "authors": "Alothman EA, Awaad AS, Safhi AA, et al.",
-          "journal": "Saudi pharmaceutical journal : SPJ : the official publication of the Saudi Pharmaceutical Society",
-          "year": "2018",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30416352/"
-        },
-        {
-          "pmid": "34335965",
-          "title": "Twist1 contributes to developing and sustaining corticosteroid resistance in ulcerative colitis.",
-          "authors": "Liu C, Mo LH, Feng BS, et al.",
-          "journal": "Theranostics",
-          "year": "2021",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34335965/"
-        },
-        {
-          "pmid": "40233710",
-          "title": "Orally-deliverable liposome-microgel complexes dynamically remodel intestinal environment to enhance probiotic ulcerative colitis therapy via TLR4 inhibition and tryptophan metabolic crosstalk.",
-          "authors": "Fu Y, Wang T, Ge X, et al.",
-          "journal": "Biomaterials",
-          "year": "2025",
-          "abstract_snippet": "Probiotics emerges as a promising option for ulcerative colitis (UC) treatment, but its application remains challenging due to insufficient colon-targeted delivery efficiency and survival against the inflammation-associated intestinal oxidative stress. To address these issues, here we report a supra...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40233710/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Anti-inflammatory effect of pirfenidone compared to dexamethasone in ulcerative colitis model induced by acetic acid in rats: involvement of miR-146a and TLR4/NF-\u03baB signaling",
-          "year": 2025,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/6b4240b5cf4e7d1e37608b0d3b26cc4a2da0b9d8",
-          "authors": "Hanna Wanas, D. M. Mekawy, R. M. Raafat Hamed"
-        },
-        {
-          "title": "Mucoadhesive Nanoparticles Enhance the Therapeutic Effect of Dexamethasone on Experimental Ulcerative Colitis by the Local Administration as an Enema",
-          "year": 2023,
-          "citations": 15,
-          "url": "https://www.semanticscholar.org/paper/1d3b4dfe0c2e9fd659dc8980ad31bd741b60fff9",
-          "authors": "K. Dong, Shujing Deng, B. He"
-        },
-        {
-          "title": "Ionically bridged dexamethasone sodium phosphate\u2013zinc\u2013PLGA nanocomplex in alginate microgel for the local treatment of ulcerative colitis",
-          "year": 2023,
-          "citations": 9,
-          "url": "https://www.semanticscholar.org/paper/c14f64d05f8ead92d8de595d20d82a8359872304",
-          "authors": "A. Saparbayeva, Juho Lee, S. Hlaing"
-        },
-        {
-          "title": "Design and Characterization of Dexamethasone Loaded Microsponges for the Management of Ulcerative Colitis.",
-          "year": 2023,
-          "citations": 10,
-          "url": "https://www.semanticscholar.org/paper/6b54d09ddb7da7880ce4cecb27b25c0c34223957",
-          "authors": "Samet \u00d6zdemir, Burcu \u00dcner, J. Baranauskaite"
-        },
-        {
-          "title": "Evaluation of Anti\u2010Inflammatory and Antioxidant Effects of Ferulic Acid and Quinic Acid on Acetic Acid\u2010Induced Ulcerative Colitis in Rats",
-          "year": 2025,
-          "citations": 16,
-          "url": "https://www.semanticscholar.org/paper/23af1cac475dd8346f45be940db55b60ee440f6d",
-          "authors": "Mahsa Ekhtiar, Maryam Ghasemi-Dehnoo, F. Azadegan-Dehkordi"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Discovery and Preclinical Validation of Drug Indications Using Compendia of Public Gene Expression Data",
-        "year": 2011,
-        "citations": 740,
-        "url": "https://www.semanticscholar.org/paper/b2b8f9ae9c48f7183fb2e52ed014ba5f048a8ad4",
-        "authors": "M. Sirota, J. Dudley, Jeewon Kim"
-      },
-      "max_citations": 740,
-      "faers_signal": "weak",
-      "faers_total_reports": 312747,
-      "faers_cooccurrences": 1,
-      "faers_interpretation": "1 FAERS report(s) mention both Dexamethasone and Ulcerative colitis-related terms. Minimal real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "Prostaglandin E2 (1.504)",
-        "YM-155 (1.483)",
-        "FLUVASTATIN (1.468)",
-        "XMD-885 (1.442)",
-        "crizotinib (1.429)"
-      ],
-      "signature_interpretation": "Dexamethasone was not found among the top 36 drugs that reverse the Ulcerative colitis gene signature. Top reversers: Prostaglandin E2 (1.504), YM-155 (1.483), FLUVASTATIN (1.468)",
-      "ai_hypothesis": "of its anti-inflammatory properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "treats",
-          "confidence": 0.8,
-          "positive_signals": 3,
-          "negative_signals": 0,
-          "mechanism_signals": 1,
-          "extracted_entities": [
-            {
-              "entity": "colon",
-              "entity_group": "Detailed_description",
-              "score": 1.0
-            },
-            {
-              "entity": "targeted",
-              "entity_group": "Detailed_description",
-              "score": 0.7559999823570251
-            },
-            {
-              "entity": "oral",
-              "entity_group": "Administration",
-              "score": 0.949999988079071
-            },
-            {
-              "entity": "nanoparticles",
-              "entity_group": "Detailed_description",
-              "score": 0.9940000176429749
-            },
-            {
-              "entity": "microparticles",
-              "entity_group": "Detailed_description",
-              "score": 0.9990000128746033
-            },
-            {
-              "entity": "ul",
-              "entity_group": "Disease_disorder",
-              "score": 1.0
-            },
-            {
-              "entity": "##cerative colitis",
-              "entity_group": "Disease_disorder",
-              "score": 0.9890000224113464
-            },
-            {
-              "entity": "uc",
-              "entity_group": "Disease_disorder",
-              "score": 0.9990000128746033
-            },
-            {
-              "entity": "dexamethasone sodium phosphate",
-              "entity_group": "Medication",
-              "score": 0.9890000224113464
-            },
-            {
-              "entity": "dsp",
-              "entity_group": "Medication",
-              "score": 0.8309999704360962
-            }
-          ]
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.7368,
-      "mr_genetic_targets": 31,
-      "mechanistic_hypothesis": "Dexamethasone \u2014[treats]\u2192 Ulcerative colitis",
-      "kg_paths_text": "\u2022 Dexamethasone \u2014[treats]\u2192 Ulcerative colitis\n\u2022 Dexamethasone \u2014[treats]\u2192 Ulcerative colitis\n\u2022 Dexamethasone \u2014[downregulates]\u2192 gene-7043 \u2014[inhibits]\u2192 gene-5371 \u2014[is upregulated by]\u2192 Ulcerative colitis",
-      "validation_experiments": [],
-      "novelty_score": 0.266,
-      "novelty_level": "ESTABLISHED",
-      "is_known_treatment": true,
-      "clinical_trials_total": 2,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT07385131",
-          "title": "Prophylactic Dexamethasone Before Infliximab in Moderate-to-Severe IBD",
-          "status": "RECRUITING",
-          "phase": "N/A",
-          "enrollment": "300",
-          "url": "https://clinicaltrials.gov/study/NCT07385131"
-        },
-        {
-          "nct_id": "NCT01171807",
-          "title": "Erythrocytes-Mediated Delivery Of Dexamethasone 21-Phosphate In Steroid-Dependent Ulcerative Colitis",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "33",
-          "url": "https://clinicaltrials.gov/study/NCT01171807"
-        }
-      ],
-      "trial_phases": {
-        "PHASE2": 1
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "2 clinical trial(s) found on ClinicalTrials.gov",
-        "292 PubMed articles on this drug-disease pair",
-        "Supported by 4 independent AI pillars",
-        "Highly cited paper (740 citations): \"Discovery and Preclinical Validation of Drug Indications Usi...\"",
-        "AI analysis of 1 abstract(s) found positive treatment signals",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.74, 31 genetic targets)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "likely",
-        "dose_range": "trial",
-        "confidence": "medium",
-        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
-        "chembl_phase": 2.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1512,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (ABCB1 / rs1045642)",
-        "cpic": [],
-        "pharmgkb": [
-          {
-            "gene": "ABCB1",
-            "variant": "rs1045642",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204433"
-          },
-          {
-            "gene": "ABCB1",
-            "variant": "rs2032582",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981238041"
-          },
-          {
-            "gene": "CTLA4",
-            "variant": "rs4553808",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043880851"
-          },
-          {
-            "gene": "ABCB1",
-            "variant": "rs2229109",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449170621"
-          },
-          {
-            "gene": "GATA3",
-            "variant": "rs3824662",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1184512128"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 3,
-        "axes": {
-          "kg": true,
-          "docking": true,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.685,
-        "label": "silver-standard",
-        "axis_values": {
-          "kg": 0.555,
-          "docking": 0.97,
-          "pharos": 0.0,
-          "literature": 1.0
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Colon - Sigmoid",
-          "Colon - Transverse"
-        ],
-        "n_genes": 20,
-        "n_expressed": 17,
-        "mean_tpm_in_tissue": 22.55,
-        "max_tpm_in_tissue": 114.6,
-        "tissue_specificity": 0.074,
-        "context_modifier": 0.982
-      },
-      "disease_entity": "Disease::MESH:D003093",
-      "ensemble_prob": 0.9817,
-      "ensemble_features": {
-        "kg_score": 1.0,
-        "degree_penalty": 0.736,
-        "n_drug_targets": 24,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 0.0
-      },
-      "ensemble_rank": 2,
-      "docking": {
-        "kcal_per_mol": -11.64,
-        "target_symbol": "NR3C1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
       },
       "structural_alerts": {
         "has_pains": false,
@@ -983,12 +543,12 @@
       "clinical_trials_total": 7,
       "clinical_trials": [
         {
-          "nct_id": "NCT06867042",
-          "title": "Tacrolimus Lipid Suspension for Enema in Adult Subjects with Mild to Moderately Active Left-sided/Distal Ulcerative Colitis Who Had an Inadequate Response to the Treatment",
-          "status": "NOT_YET_RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "150",
-          "url": "https://clinicaltrials.gov/study/NCT06867042"
+          "nct_id": "NCT00347048",
+          "title": "Tacrolimus (FK506) Study in Moderate to Severe Refractory Ulcerative Colitis Patients",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "62",
+          "url": "https://clinicaltrials.gov/study/NCT00347048"
         },
         {
           "nct_id": "NCT06126835",
@@ -999,20 +559,12 @@
           "url": "https://clinicaltrials.gov/study/NCT06126835"
         },
         {
-          "nct_id": "NCT01418131",
-          "title": "Rectal Tacrolimus in the Treatment of Resistant Ulcerative Proctitis",
+          "nct_id": "NCT00643071",
+          "title": "Tacrolimus (FK506) P-III, Open-label Study in Refractory Ulcerative Colitis Patients",
           "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "21",
-          "url": "https://clinicaltrials.gov/study/NCT01418131"
-        },
-        {
-          "nct_id": "NCT02954159",
-          "title": "Vedolizumab Monotherapy Vs Combination Therapy With Tacrolimus in UC",
-          "status": "TERMINATED",
           "phase": "PHASE3",
-          "enrollment": "4",
-          "url": "https://clinicaltrials.gov/study/NCT02954159"
+          "enrollment": "32",
+          "url": "https://clinicaltrials.gov/study/NCT00643071"
         },
         {
           "nct_id": "NCT01536535",
@@ -1021,12 +573,20 @@
           "phase": "PHASE4",
           "enrollment": "431",
           "url": "https://clinicaltrials.gov/study/NCT01536535"
+        },
+        {
+          "nct_id": "NCT06867042",
+          "title": "Tacrolimus Lipid Suspension for Enema in Adult Subjects with Mild to Moderately Active Left-sided/Distal Ulcerative Colitis Who Had an Inadequate Response to the Treatment",
+          "status": "NOT_YET_RECRUITING",
+          "phase": "PHASE2",
+          "enrollment": "150",
+          "url": "https://clinicaltrials.gov/study/NCT06867042"
         }
       ],
       "trial_phases": {
-        "PHASE2": 1,
+        "PHASE3": 3,
         "PHASE4": 2,
-        "PHASE3": 3
+        "PHASE2": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -1038,6 +598,7 @@
         "Highly cited paper (740 citations): \"Discovery and Preclinical Validation of Drug Indications Usi...\"",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D003093",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1186,8 +747,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.996
       },
-      "disease_entity": "Disease::MESH:D003093",
-      "ensemble_prob": 0.2422,
+      "ensemble_prob": 0.2074,
       "ensemble_features": {
         "kg_score": 0.9919,
         "degree_penalty": 0.7479,
@@ -1218,149 +778,163 @@
       }
     },
     {
-      "drug_name": "Cimetidine",
-      "drug_id": "DB00501",
+      "drug_name": "Dexamethasone",
+      "drug_id": "DB01234",
       "disease_name": "Ulcerative colitis",
-      "combined_score": 0.5523,
-      "pillars_hit": 5,
-      "transe_rank": 49,
-      "transe_score": -10.6989,
-      "pykeen_score": 0,
+      "combined_score": 0.5432,
+      "pillars_hit": 4,
+      "transe_rank": 1,
+      "transe_score": -10.0324,
+      "pykeen_score": -11.1519,
       "pykeen_rank": 0,
-      "txgnn_score": 0.99,
-      "txgnn_rank": 1,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
       "mol_emb_similarity": 0,
       "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.7620000243186951,
-      "proximity_distance": 0.949999988079071,
-      "admet_score": 0.5683,
+      "gene_sig_score": 0.02,
+      "gene_sig_rank": 33,
+      "proximity_score": 0.75,
+      "proximity_distance": 1.0,
+      "admet_score": 0.7109,
       "admet_flags": "clean",
-      "primekg_score": 0.2617,
-      "dti_score": 0.1216,
-      "dti_best_target": "S1PR1",
-      "kg_group_score": 0.1192,
-      "structural_group_score": 0.1216,
-      "network_group_score": 0.5806000232696533,
-      "txgnn_group_score": 0.99,
-      "mr_group_score": 0.4593,
-      "admet_multiplier": 0.9137,
-      "efficacy_score": 0.6045,
-      "groups_hit": 5,
+      "primekg_score": 0.2558,
+      "dti_score": 0.7926,
+      "dti_best_target": "PCK1",
+      "kg_group_score": 0.4516,
+      "structural_group_score": 0.7926,
+      "network_group_score": 0.5519999861717224,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.7368,
+      "admet_multiplier": 0.9422,
+      "efficacy_score": 0.5765,
+      "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 6,
+      "shared_target_count": 42,
       "shared_targets": [
+        "AHR",
         "ALB",
+        "ALOX5",
+        "CD14",
+        "CDH1",
+        "CTNNB1",
         "CYP2D6",
+        "F3",
+        "FASLG",
+        "FOSL1",
+        "HGF",
+        "HLA-G",
+        "HMOX1",
+        "HNF4A",
         "IFNG",
-        "SELE",
-        "SLC22A4",
-        "SST"
+        "IL1B",
+        "IL2RA",
+        "MAPK1",
+        "MAPK14",
+        "MIF"
       ],
-      "pubmed_total": 10,
-      "pubmed_treatment_total": 9,
+      "pubmed_total": 292,
+      "pubmed_treatment_total": 238,
       "pubmed_repurposing_total": 0,
       "key_papers": [
         {
-          "pmid": "7087859",
-          "title": "Cimetidine-induced acute ulcerative colitis.",
-          "authors": "Collins JP",
-          "journal": "The Medical journal of Australia",
-          "year": "1982",
+          "pmid": "33996408",
+          "title": "Biological drug and drug delivery-mediated immunotherapy.",
+          "authors": "Xiao Q, Li X, Li Y, et al.",
+          "journal": "Acta pharmaceutica Sinica. B",
+          "year": "2021",
+          "abstract_snippet": "The initiation and development of major inflammatory diseases, ",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33996408/",
+          "total_results": 292
+        },
+        {
+          "pmid": "37537405",
+          "title": "Ionically bridged dexamethasone sodium phosphate-zinc-PLGA nanocomplex in alginate microgel for the local treatment of ulcerative colitis.",
+          "authors": "Saparbayeva A, Lee J, Hlaing SP, et al.",
+          "journal": "Archives of pharmacal research",
+          "year": "2023",
+          "abstract_snippet": "Colon-targeted oral drug delivery systems comprising nanoparticles and microparticles have emerged as promising tools for the treatment of ulcerative colitis (UC) because they minimize side effects and maximize the local drug concentration. Dexamethasone sodium phosphate (DSP) is a potent anti-infla...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37537405/"
+        },
+        {
+          "pmid": "30416352",
+          "title": "Evaluation of anti-ulcer and ulcerative colitis of ",
+          "authors": "Alothman EA, Awaad AS, Safhi AA, et al.",
+          "journal": "Saudi pharmaceutical journal : SPJ : the official publication of the Saudi Pharmaceutical Society",
+          "year": "2018",
           "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/7087859/",
-          "total_results": 10
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30416352/"
         },
         {
-          "pmid": "2170550",
-          "title": "Pouchitis and gastric hyposecretion: cause or effect?",
-          "authors": "Dub\u00e9 S, Heyen F",
-          "journal": "International journal of colorectal disease",
-          "year": "1990",
-          "abstract_snippet": "Pouchitis is a well recognized entity but its aetiology is still controversial. The aim of this study is to determine if gastric acidity has a role in the physiopathology of this problem. In a series of 70 consecutive patients with pelvic reservoir (65 mucosal ulcerative colitis (UC), 5 familial ade...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/2170550/"
+          "pmid": "34335965",
+          "title": "Twist1 contributes to developing and sustaining corticosteroid resistance in ulcerative colitis.",
+          "authors": "Liu C, Mo LH, Feng BS, et al.",
+          "journal": "Theranostics",
+          "year": "2021",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34335965/"
         },
         {
-          "pmid": "6679515",
-          "title": "Pharmacokinetics of cimetidine in patients with unresponsive duodenal ulcer.",
-          "authors": "Rovati V, Foschi D, Benvenuti C, et al.",
-          "journal": "International journal of clinical pharmacology research",
-          "year": "1983",
-          "abstract_snippet": "The pharmacokinetics of cimetidine after an oral dose of 400 mg were measured in 18 patients with duodenal ulcer, 9 refractory and 9 responders. The peak plasma concentration of cimetidine (2.13 +/- 0.17 micrograms/ml vs 1.43 +/- 0.04 micrograms/ml), the area under the plasma concentration curve (A....",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/6679515/"
-        },
-        {
-          "pmid": "35391498",
-          "title": "Do medication prescription patterns follow guidelines in a cohort of women with interstitial cystitis/bladder pain syndrome?",
-          "authors": "Tholemeier LN, Bresee C, De Hoedt AM, et al.",
-          "journal": "Neurourology and urodynamics",
-          "year": "2022",
-          "abstract_snippet": "OBJECTIVE: To describe prescription prevalence of oral bladder pain medications among women with interstitial cystitis/bladder pain syndrome (IC/BPS) and to compare with current treatment guidelines. METHODS: We sampled female patients with an ICD-9/10 diagnosis of IC/BPS (595.1/N30.10) by querying ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35391498/"
-        },
-        {
-          "pmid": "15573930",
-          "title": "Protective effect of lafutidine, a novel histamine H2-receptor antagonist, on dextran sulfate sodium-induced colonic inflammation through capsaicin-sensitive afferent neurons in rats.",
-          "authors": "Okayama M, Tsubouchi R, Kato S, et al.",
-          "journal": "Digestive diseases and sciences",
-          "year": "2004",
-          "abstract_snippet": "Lafutidine, a histamine H2-receptor antagonist, exhibits gastric mucosal protective action mediated by capsaicin-sensitive afferent neurons, in addition to a potent antisecretory effect. In this study we examined the effect of lafutidine on dextran sulfate Na (DSS)-induced ulcerative colitis in rats...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/15573930/"
+          "pmid": "40233710",
+          "title": "Orally-deliverable liposome-microgel complexes dynamically remodel intestinal environment to enhance probiotic ulcerative colitis therapy via TLR4 inhibition and tryptophan metabolic crosstalk.",
+          "authors": "Fu Y, Wang T, Ge X, et al.",
+          "journal": "Biomaterials",
+          "year": "2025",
+          "abstract_snippet": "Probiotics emerges as a promising option for ulcerative colitis (UC) treatment, but its application remains challenging due to insufficient colon-targeted delivery efficiency and survival against the inflammation-associated intestinal oxidative stress. To address these issues, here we report a supra...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40233710/"
         }
       ],
       "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "Cimetidine\u2010induced acute ulcerative colitis",
-          "year": 1982,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/8ea0b646dba0845e557e07fc866320adb3649dcf",
-          "authors": "J. Collins"
+          "title": "Anti-inflammatory effect of pirfenidone compared to dexamethasone in ulcerative colitis model induced by acetic acid in rats: involvement of miR-146a and TLR4/NF-\u03baB signaling",
+          "year": 2025,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/6b4240b5cf4e7d1e37608b0d3b26cc4a2da0b9d8",
+          "authors": "Hanna Wanas, D. M. Mekawy, R. M. Raafat Hamed"
         },
         {
-          "title": "Systematic Analysis of Efficiency and Safety of Dexamethasone and Cimetidine in the Treatment of Gastroenteritis",
-          "year": 2019,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/76e27bf3737a0635668b98485a784056148aeca6",
-          "authors": "J. A, W. B, T. C."
+          "title": "Mucoadhesive Nanoparticles Enhance the Therapeutic Effect of Dexamethasone on Experimental Ulcerative Colitis by the Local Administration as an Enema",
+          "year": 2023,
+          "citations": 15,
+          "url": "https://www.semanticscholar.org/paper/1d3b4dfe0c2e9fd659dc8980ad31bd741b60fff9",
+          "authors": "K. Dong, Shujing Deng, B. He"
         },
         {
-          "title": "Nicotine for pyoderma gangrenosum.",
-          "year": 1998,
-          "citations": 44,
-          "url": "https://www.semanticscholar.org/paper/d9217f76e446d5fe7389d489baa7f1e87ca79321",
-          "authors": "Ronni Wolf, V. Ruocco"
+          "title": "Ionically bridged dexamethasone sodium phosphate\u2013zinc\u2013PLGA nanocomplex in alginate microgel for the local treatment of ulcerative colitis",
+          "year": 2023,
+          "citations": 9,
+          "url": "https://www.semanticscholar.org/paper/c14f64d05f8ead92d8de595d20d82a8359872304",
+          "authors": "A. Saparbayeva, Juho Lee, S. Hlaing"
         },
         {
-          "title": "Acute liver damage induced by mesalazine enteric-coated tablets",
-          "year": 2018,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/0c1ee4a29d604bdfed491537740e3dc888510024",
-          "authors": "F. Yuan"
+          "title": "Design and Characterization of Dexamethasone Loaded Microsponges for the Management of Ulcerative Colitis.",
+          "year": 2023,
+          "citations": 10,
+          "url": "https://www.semanticscholar.org/paper/6b54d09ddb7da7880ce4cecb27b25c0c34223957",
+          "authors": "Samet \u00d6zdemir, Burcu \u00dcner, J. Baranauskaite"
         },
         {
-          "title": "Protective Effect of Lafutidine, a Novel Histamine H2-Receptor Antagonist, on Dextran Sulfate Sodium-Induced Colonic Inflammation Through Capsaicin-Sensitive Afferent Neurons in Rats",
-          "year": 2004,
-          "citations": 32,
-          "url": "https://www.semanticscholar.org/paper/fd016b78e2a2f4ec713a855c48a3c9c28b305f23",
-          "authors": "Mitsuaki Okayama, R. Tsubouchi, S. Kato"
+          "title": "Evaluation of Anti\u2010Inflammatory and Antioxidant Effects of Ferulic Acid and Quinic Acid on Acetic Acid\u2010Induced Ulcerative Colitis in Rats",
+          "year": 2025,
+          "citations": 16,
+          "url": "https://www.semanticscholar.org/paper/23af1cac475dd8346f45be940db55b60ee440f6d",
+          "authors": "Mahsa Ekhtiar, Maryam Ghasemi-Dehnoo, F. Azadegan-Dehkordi"
         }
       ],
       "most_cited_paper": {
-        "title": "Computational Repositioning of the Anticonvulsant Topiramate for Inflammatory Bowel Disease",
+        "title": "Discovery and Preclinical Validation of Drug Indications Using Compendia of Public Gene Expression Data",
         "year": 2011,
-        "citations": 551,
-        "url": "https://www.semanticscholar.org/paper/65228a9f1b83b09af483779bb637fa6e037ae12f",
-        "authors": "J. Dudley, M. Sirota, M. Shenoy"
+        "citations": 740,
+        "url": "https://www.semanticscholar.org/paper/b2b8f9ae9c48f7183fb2e52ed014ba5f048a8ad4",
+        "authors": "M. Sirota, J. Dudley, Jeewon Kim"
       },
-      "max_citations": 551,
-      "faers_signal": "none",
-      "faers_total_reports": 6461,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Cimetidine to Ulcerative colitis terms. Drug has 6461 total reports.",
+      "max_citations": 740,
+      "faers_signal": "weak",
+      "faers_total_reports": 312747,
+      "faers_cooccurrences": 1,
+      "faers_interpretation": "1 FAERS report(s) mention both Dexamethasone and Ulcerative colitis-related terms. Minimal real-world signal.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -1370,7 +944,7 @@
         "XMD-885 (1.442)",
         "crizotinib (1.429)"
       ],
-      "signature_interpretation": "Cimetidine was not found among the top 36 drugs that reverse the Ulcerative colitis gene signature. Top reversers: Prostaglandin E2 (1.504), YM-155 (1.483), FLUVASTATIN (1.468)",
+      "signature_interpretation": "Dexamethasone was not found among the top 36 drugs that reverse the Ulcerative colitis gene signature. Top reversers: Prostaglandin E2 (1.504), YM-155 (1.483), FLUVASTATIN (1.468)",
       "ai_hypothesis": "of its anti-inflammatory properties.",
       "abstract_analyses": [
         {
@@ -1379,45 +953,122 @@
           "reason": "Drug or disease not mentioned in abstract"
         },
         {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
+          "relation_type": "treats",
+          "confidence": 0.8,
+          "positive_signals": 3,
+          "negative_signals": 0,
+          "mechanism_signals": 1,
+          "extracted_entities": [
+            {
+              "entity": "colon",
+              "entity_group": "Detailed_description",
+              "score": 1.0
+            },
+            {
+              "entity": "targeted",
+              "entity_group": "Detailed_description",
+              "score": 0.7559999823570251
+            },
+            {
+              "entity": "oral",
+              "entity_group": "Administration",
+              "score": 0.949999988079071
+            },
+            {
+              "entity": "nanoparticles",
+              "entity_group": "Detailed_description",
+              "score": 0.9940000176429749
+            },
+            {
+              "entity": "microparticles",
+              "entity_group": "Detailed_description",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "ul",
+              "entity_group": "Disease_disorder",
+              "score": 1.0
+            },
+            {
+              "entity": "##cerative colitis",
+              "entity_group": "Disease_disorder",
+              "score": 0.9890000224113464
+            },
+            {
+              "entity": "uc",
+              "entity_group": "Disease_disorder",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "dexamethasone sodium phosphate",
+              "entity_group": "Medication",
+              "score": 0.9890000224113464
+            },
+            {
+              "entity": "dsp",
+              "entity_group": "Medication",
+              "score": 0.8309999704360962
+            }
+          ]
         }
       ],
       "has_failed_trial": false,
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.4593,
-      "mr_genetic_targets": 3,
-      "mechanistic_hypothesis": "Cimetidine \u2014[binds]\u2192 gene-8647 \u2014[is bound by]\u2192 DB01234 \u2014[treats]\u2192 Ulcerative colitis",
-      "kg_paths_text": "\u2022 Cimetidine \u2014[binds]\u2192 gene-8647 \u2014[is bound by]\u2192 DB01234 \u2014[treats]\u2192 Ulcerative colitis\n\u2022 Cimetidine \u2014[binds]\u2192 gene-8647 \u2014[is bound by]\u2192 DB01234 \u2014[treats]\u2192 Ulcerative colitis\n\u2022 Cimetidine \u2014[binds]\u2192 gene-8647 \u2014[is bound by]\u2192 DB01234 \u2014[treats]\u2192 Ulcerative colitis",
+      "mr_score": 0.7368,
+      "mr_genetic_targets": 31,
+      "mechanistic_hypothesis": "Dexamethasone \u2014[treats]\u2192 Ulcerative colitis",
+      "kg_paths_text": "\u2022 Dexamethasone \u2014[treats]\u2192 Ulcerative colitis\n\u2022 Dexamethasone \u2014[treats]\u2192 Ulcerative colitis\n\u2022 Dexamethasone \u2014[downregulates]\u2192 gene-7043 \u2014[inhibits]\u2192 gene-5371 \u2014[is upregulated by]\u2192 Ulcerative colitis",
       "validation_experiments": [],
-      "novelty_score": 0.442,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "MEDIUM",
-      "confidence_reasons": [
-        "10 PubMed article(s) - limited literature",
-        "Supported by 5 independent AI pillars",
-        "Highly cited paper (551 citations): \"Computational Repositioning of the Anticonvulsant Topiramate...\"",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.46)"
+      "novelty_score": 0.261,
+      "novelty_level": "ESTABLISHED",
+      "is_known_treatment": true,
+      "clinical_trials_total": 2,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT01171807",
+          "title": "Erythrocytes-Mediated Delivery Of Dexamethasone 21-Phosphate In Steroid-Dependent Ulcerative Colitis",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "33",
+          "url": "https://clinicaltrials.gov/study/NCT01171807"
+        },
+        {
+          "nct_id": "NCT07385131",
+          "title": "Prophylactic Dexamethasone Before Infliximab in Moderate-to-Severe IBD",
+          "status": "RECRUITING",
+          "phase": "N/A",
+          "enrollment": "300",
+          "url": "https://clinicaltrials.gov/study/NCT07385131"
+        }
       ],
+      "trial_phases": {
+        "PHASE2": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "2 clinical trial(s) found on ClinicalTrials.gov",
+        "292 PubMed articles on this drug-disease pair",
+        "Supported by 4 independent AI pillars",
+        "Highly cited paper (740 citations): \"Discovery and Preclinical Validation of Drug Indications Usi...\"",
+        "AI analysis of 1 abstract(s) found positive treatment signals",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.74, 31 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D003093",
       "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
         "target_affinity": {},
         "stage": 1
       },
       "ddi_warnings": {
-        "n_interactions": 1670,
+        "n_interactions": 1512,
         "has_warnings": true,
         "top_interactions": [
           {
@@ -1473,27 +1124,63 @@
         ]
       },
       "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (ABCB1 / rs1045642)",
         "cpic": [],
-        "pharmgkb": []
+        "pharmgkb": [
+          {
+            "gene": "ABCB1",
+            "variant": "rs1045642",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204433"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs2032582",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981238041"
+          },
+          {
+            "gene": "CTLA4",
+            "variant": "rs4553808",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043880851"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs2229109",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449170621"
+          },
+          {
+            "gene": "GATA3",
+            "variant": "rs3824662",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1184512128"
+          }
+        ]
       },
       "triangulation": {
-        "n_axes_agree": 2,
+        "n_axes_agree": 3,
         "axes": {
           "kg": true,
-          "docking": false,
+          "docking": true,
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.424,
-        "label": "multi-axis",
+        "triangulation_score": 0.681,
+        "label": "silver-standard",
         "axis_values": {
-          "kg": 0.552,
-          "docking": 0.468,
+          "kg": 0.543,
+          "docking": 0.97,
           "pharos": 0.0,
-          "literature": 0.452
+          "literature": 1.0
         }
       },
       "tissue_context": {
@@ -1501,55 +1188,42 @@
           "Colon - Sigmoid",
           "Colon - Transverse"
         ],
-        "n_genes": 6,
-        "n_expressed": 4,
-        "mean_tpm_in_tissue": 3.3,
-        "max_tpm_in_tissue": 12.97,
-        "tissue_specificity": 0.0,
-        "context_modifier": 0.907
+        "n_genes": 20,
+        "n_expressed": 17,
+        "mean_tpm_in_tissue": 22.55,
+        "max_tpm_in_tissue": 114.6,
+        "tissue_specificity": 0.074,
+        "context_modifier": 0.982
       },
-      "disease_entity": "Disease::MESH:D003093",
-      "ensemble_prob": 0.5003,
+      "ensemble_prob": 0.999,
       "ensemble_features": {
-        "kg_score": 0.9941,
-        "degree_penalty": 0.7619,
-        "n_drug_targets": 23,
+        "kg_score": 1.0,
+        "degree_penalty": 0.736,
+        "n_drug_targets": 24,
         "is_fda_approved": 1,
         "n_disease_genes": 0,
-        "transe_rank_log": 4.1431
+        "transe_rank_log": 0.0
       },
-      "ensemble_rank": 5,
+      "ensemble_rank": 1,
       "docking": {
-        "kcal_per_mol": -5.62,
-        "target_symbol": "CYP2D6",
+        "kcal_per_mol": -11.64,
+        "target_symbol": "NR3C1",
         "source": "chembl_bioactivity_proxy",
         "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
         "hit": true
       },
       "structural_alerts": {
         "has_pains": false,
-        "pains_families": [
-          "ALIPHATIC",
-          "CYANATE",
-          "ENAMINE",
-          "IMIDAZOLE",
-          "IMINE"
-        ],
-        "n_alerts": 6,
-        "alert_names": [
-          "imidazole_B(2)",
-          "Aliphatic_long_chain",
-          "cyanate_/aminonitrile_/thiocyanate",
-          "enamine",
-          "imine_1"
-        ]
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
       }
     },
     {
       "drug_name": "Cyclic Adenosine Monophosphate",
       "drug_id": "DB02527",
       "disease_name": "Ulcerative colitis",
-      "combined_score": 0.5432,
+      "combined_score": 0.5336,
       "pillars_hit": 4,
       "transe_rank": 46,
       "transe_score": -10.6811,
@@ -1568,15 +1242,15 @@
       "admet_score": 1.0,
       "admet_flags": "DILI=0.90",
       "primekg_score": 0.2522,
-      "dti_score": 0.9326,
-      "dti_best_target": "S1PR1",
+      "dti_score": 0.8793,
+      "dti_best_target": "TMEM59",
       "kg_group_score": 0.2172,
-      "structural_group_score": 0.9326,
+      "structural_group_score": 0.8793,
       "network_group_score": 0.5536999702453613,
       "txgnn_group_score": 0,
       "mr_group_score": 0.7353,
       "admet_multiplier": 1.0,
-      "efficacy_score": 0.5432,
+      "efficacy_score": 0.5336,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 28,
@@ -1735,7 +1409,7 @@
       "mechanistic_hypothesis": "Cyclic Adenosine Monophosphate \u2014[is a therapeutic for]\u2192 MESH:D015473 \u2014[is treated by]\u2192 DB01033 \u2014[treats]\u2192 Ulcerative colitis",
       "kg_paths_text": "\u2022 Cyclic Adenosine Monophosphate \u2014[is a therapeutic for]\u2192 MESH:D015473 \u2014[is treated by]\u2192 DB01033 \u2014[treats]\u2192 Ulcerative colitis\n\u2022 Cyclic Adenosine Monophosphate \u2014[is a therapeutic for]\u2192 MESH:D015473 \u2014[is treated by]\u2192 DB01033 \u2014[treats]\u2192 Ulcerative colitis\n\u2022 Cyclic Adenosine Monophosphate \u2014[is a therapeutic for]\u2192 MESH:D016584 \u2014[is treated by]\u2192 DB00741 \u2014[treats]\u2192 Ulcerative colitis",
       "validation_experiments": [],
-      "novelty_score": 0.554,
+      "novelty_score": 0.544,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -1749,6 +1423,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.74, 17 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D003093",
       "dose_plausibility": {
         "plausibility": "unknown",
         "dose_range": "research",
@@ -1829,10 +1504,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.317,
+        "triangulation_score": 0.314,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.543,
+          "kg": 0.534,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 0.635
@@ -1850,8 +1525,7 @@
         "tissue_specificity": 0.566,
         "context_modifier": 1.098
       },
-      "disease_entity": "Disease::MESH:D003093",
-      "ensemble_prob": 0.1072,
+      "ensemble_prob": 0.0746,
       "ensemble_features": {
         "kg_score": 0.9517,
         "degree_penalty": 0.791,
@@ -1903,7 +1577,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2537,
       "dti_score": 1.0,
-      "dti_best_target": "ELANE",
+      "dti_best_target": "BTBD3",
       "kg_group_score": 0.2779,
       "structural_group_score": 1.0,
       "network_group_score": 0.6431999802589417,
@@ -2072,25 +1746,25 @@
       "clinical_trials_total": 2,
       "clinical_trials": [
         {
-          "nct_id": "NCT01020708",
-          "title": "Study of the Safety and Tolerability of ALTH12 Versus Mesalamine Enema in Subjects With Left-Sided Ulcerative Colitis",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "9",
-          "url": "https://clinicaltrials.gov/study/NCT01020708"
-        },
-        {
           "nct_id": "NCT01586533",
           "title": "Study of the Safety and Efficacy of Zoenasa\u00ae Versus Mesalamine Enema in Subjects With Left-Sided Ulcerative Colitis",
           "status": "UNKNOWN",
           "phase": "PHASE2",
           "enrollment": "120",
           "url": "https://clinicaltrials.gov/study/NCT01586533"
+        },
+        {
+          "nct_id": "NCT01020708",
+          "title": "Study of the Safety and Tolerability of ALTH12 Versus Mesalamine Enema in Subjects With Left-Sided Ulcerative Colitis",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "9",
+          "url": "https://clinicaltrials.gov/study/NCT01020708"
         }
       ],
       "trial_phases": {
-        "PHASE1": 1,
-        "PHASE2": 1
+        "PHASE2": 1,
+        "PHASE1": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -2101,6 +1775,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.57)"
       ],
+      "disease_entity": "Disease::MESH:D003093",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -2210,8 +1885,7 @@
         "tissue_specificity": 0.572,
         "context_modifier": 1.099
       },
-      "disease_entity": "Disease::MESH:D003093",
-      "ensemble_prob": 0.259,
+      "ensemble_prob": 0.2116,
       "ensemble_features": {
         "kg_score": 0.9527,
         "degree_penalty": 0.8715,
@@ -2264,7 +1938,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2529,
       "dti_score": 1.0,
-      "dti_best_target": "ELANE",
+      "dti_best_target": "BTBD3",
       "kg_group_score": 0.3559,
       "structural_group_score": 1.0,
       "network_group_score": 0.5252000093460083,
@@ -2429,12 +2103,12 @@
       "clinical_trials_total": 4,
       "clinical_trials": [
         {
-          "nct_id": "NCT01929668",
-          "title": "Comparison of 4L Polyethylene Glycol and 2L Polyethylene Glycol With Ascorbic Acid in Inactive UC Patients",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "114",
-          "url": "https://clinicaltrials.gov/study/NCT01929668"
+          "nct_id": "NCT03581149",
+          "title": "Tolerability and Efficacy of Sodium Picosulfate/Magnesium Citrate Versus PEG/Ascorbic Acid in Ulcerative Colitis Patients",
+          "status": "UNKNOWN",
+          "phase": "PHASE4",
+          "enrollment": "68",
+          "url": "https://clinicaltrials.gov/study/NCT03581149"
         },
         {
           "nct_id": "NCT05225545",
@@ -2445,26 +2119,26 @@
           "url": "https://clinicaltrials.gov/study/NCT05225545"
         },
         {
-          "nct_id": "NCT03581149",
-          "title": "Tolerability and Efficacy of Sodium Picosulfate/Magnesium Citrate Versus PEG/Ascorbic Acid in Ulcerative Colitis Patients",
-          "status": "UNKNOWN",
-          "phase": "PHASE4",
-          "enrollment": "68",
-          "url": "https://clinicaltrials.gov/study/NCT03581149"
-        },
-        {
           "nct_id": "NCT00621257",
           "title": "Vitamin D Levels in Children With IBD",
           "status": "TERMINATED",
           "phase": "NA",
           "enrollment": "134",
           "url": "https://clinicaltrials.gov/study/NCT00621257"
+        },
+        {
+          "nct_id": "NCT01929668",
+          "title": "Comparison of 4L Polyethylene Glycol and 2L Polyethylene Glycol With Ascorbic Acid in Inactive UC Patients",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "114",
+          "url": "https://clinicaltrials.gov/study/NCT01929668"
         }
       ],
       "trial_phases": {
-        "NA": 2,
+        "PHASE4": 1,
         "PHASE3": 1,
-        "PHASE4": 1
+        "NA": 2
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -2474,8 +2148,10 @@
         "Supported by 4 independent AI pillars",
         "Note: Drug had early-phase trial failures for this disease",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.56)"
+        "Moderate genetic evidence supporting causality (MR score: 0.56)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D003093",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2583,8 +2259,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.961
       },
-      "disease_entity": "Disease::MESH:D003093",
-      "ensemble_prob": 0.0308,
+      "ensemble_prob": 0.0363,
       "ensemble_features": {
         "kg_score": 0.9425,
         "degree_penalty": 0.808,
@@ -2631,8 +2306,8 @@
       "admet_score": 0.7521,
       "admet_flags": "clean",
       "primekg_score": 0.2529,
-      "dti_score": 0.6208,
-      "dti_best_target": "S1PR1",
+      "dti_score": 0.595,
+      "dti_best_target": "PCK1",
       "kg_group_score": 0.2039,
       "structural_group_score": 0.9643,
       "network_group_score": 0.5515000224113464,
@@ -2826,6 +2501,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.74, 11 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D003093",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2935,8 +2611,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.97
       },
-      "disease_entity": "Disease::MESH:D003093",
-      "ensemble_prob": 0.8189,
+      "ensemble_prob": 0.6736,
       "ensemble_features": {
         "kg_score": 0.9973,
         "degree_penalty": 0.7473,
@@ -2945,7 +2620,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 3.4012
       },
-      "ensemble_rank": 4,
+      "ensemble_rank": 5,
       "docking": {
         "kcal_per_mol": -8.08,
         "target_symbol": "SIGMAR1",
@@ -2964,7 +2639,7 @@
       "drug_name": "Budesonide",
       "drug_id": "DB01222",
       "disease_name": "Ulcerative colitis",
-      "combined_score": 0.5192,
+      "combined_score": 0.5191,
       "pillars_hit": 4,
       "transe_rank": 23,
       "transe_score": -10.4865,
@@ -2983,10 +2658,10 @@
       "admet_score": 0.6427,
       "admet_flags": "clean",
       "primekg_score": 0.2564,
-      "dti_score": 0.8538,
-      "dti_best_target": "COL18A1",
+      "dti_score": 0.8536,
+      "dti_best_target": "PCK1",
       "kg_group_score": 0.2986,
-      "structural_group_score": 0.8538,
+      "structural_group_score": 0.8536,
       "network_group_score": 0.5730999708175659,
       "txgnn_group_score": 0,
       "mr_group_score": 0.7743,
@@ -3207,50 +2882,49 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT04314375",
-          "title": "Study to Evaluate the Safety, Efficacy, and Pharmacokinetics of Budesonide Extended-release Tablets in Pediatric Subjects Aged 5 to 17 Years With Active, Mild to Moderate Ulcerative Colitis",
-          "status": "RECRUITING",
-          "phase": "PHASE4",
-          "enrollment": "70",
-          "url": "https://clinicaltrials.gov/study/NCT04314375"
+          "nct_id": "NCT05341401",
+          "title": "Budesonide Multimatrix(MMX) Versus Prednisolone in Management of Mild to Moderate Ulcerative Colitis",
+          "status": "UNKNOWN",
+          "phase": "PHASE2, PHASE3",
+          "enrollment": "100",
+          "url": "https://clinicaltrials.gov/study/NCT05341401"
         },
         {
-          "nct_id": "NCT01008410",
-          "title": "Efficacy and Safety of Budesonide Foam for Participants With Active Mild to Moderate Ulcerative Proctitis or Proctosigmoiditis",
+          "nct_id": "NCT02550418",
+          "title": "Budesonide 9 mg Capsules in Active UC",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "60",
+          "url": "https://clinicaltrials.gov/study/NCT02550418"
+        },
+        {
+          "nct_id": "NCT02910245",
+          "title": "Mercaptopurine Therapy in Ulcerative Colitis",
+          "status": "UNKNOWN",
+          "phase": "PHASE3",
+          "enrollment": "136",
+          "url": "https://clinicaltrials.gov/study/NCT02910245"
+        },
+        {
+          "nct_id": "NCT00747110",
+          "title": "Budesonide Capsules Versus Mesalazine Granules in Active Ulcerative Colitis (UC)",
           "status": "COMPLETED",
           "phase": "PHASE3",
-          "enrollment": "265",
-          "url": "https://clinicaltrials.gov/study/NCT01008410"
+          "enrollment": "343",
+          "url": "https://clinicaltrials.gov/study/NCT00747110"
         },
         {
-          "nct_id": "NCT05976802",
-          "title": "Dose Ranging Study to Evaluate the Safety, Efficacy, and Pharmacokinetics of Budesonide Rectal Foam in Pediatric Patients Aged 5 to 17 Years With Active, Mild to Moderate Distal Ulcerative Colitis",
-          "status": "NOT_YET_RECRUITING",
-          "phase": "PHASE4",
-          "enrollment": "100",
-          "url": "https://clinicaltrials.gov/study/NCT05976802"
-        },
-        {
-          "nct_id": "NCT01349673",
-          "title": "The Safety and Tolerability of Budesonide Foam in Participants With Active Ulcerative Proctitis or Proctosigmoiditis",
-          "status": "TERMINATED",
+          "nct_id": "NCT03412682",
+          "title": "To Evaluate the Efficacy and Safety of FE 999315 in Japanese Subjects With Mild to Moderate Active Ulcerative Colitis",
+          "status": "COMPLETED",
           "phase": "PHASE3",
-          "enrollment": "114",
-          "url": "https://clinicaltrials.gov/study/NCT01349673"
-        },
-        {
-          "nct_id": "NCT00805285",
-          "title": "The Use of Oral Budesonide and Rectal Hydrocortisone for the Treatment of Active Ulcerative Colitis",
-          "status": "TERMINATED",
-          "phase": "PHASE2",
-          "enrollment": "1",
-          "url": "https://clinicaltrials.gov/study/NCT00805285"
+          "enrollment": "274",
+          "url": "https://clinicaltrials.gov/study/NCT03412682"
         }
       ],
       "trial_phases": {
-        "PHASE4": 2,
-        "PHASE3": 6,
-        "PHASE2": 2
+        "PHASE2": 3,
+        "PHASE3": 8
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -3262,8 +2936,10 @@
         "Highly cited paper (551 citations): \"Computational Repositioning of the Anticonvulsant Topiramate...\"",
         "AI analysis of 1 abstract(s) found positive treatment signals",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.77, 8 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.77, 8 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D003093",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3386,8 +3062,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.951
       },
-      "disease_entity": "Disease::MESH:D003093",
-      "ensemble_prob": 0.9954,
+      "ensemble_prob": 0.9722,
       "ensemble_features": {
         "kg_score": 0.9996,
         "degree_penalty": 0.7521,
@@ -3396,7 +3071,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 1.6094
       },
-      "ensemble_rank": 1,
+      "ensemble_rank": 3,
       "docking": {
         "kcal_per_mol": -11.87,
         "target_symbol": "NR3C1",
@@ -3412,10 +3087,352 @@
       }
     },
     {
+      "drug_name": "Tretinoin",
+      "drug_id": "DB00755",
+      "disease_name": "Ulcerative colitis",
+      "combined_score": 0.5151,
+      "pillars_hit": 4,
+      "transe_rank": 44,
+      "transe_score": -10.6774,
+      "pykeen_score": -12.1692,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.7120000123977661,
+      "proximity_distance": 1.149999976158142,
+      "admet_score": 0.5917,
+      "admet_flags": "Skin_Reaction=0.85",
+      "primekg_score": 0.2535,
+      "dti_score": 1.0,
+      "dti_best_target": "BTBD3",
+      "kg_group_score": 0.2426,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.535099983215332,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.7546,
+      "admet_multiplier": 0.9183,
+      "efficacy_score": 0.5609,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 31,
+      "shared_targets": [
+        "ADORA3",
+        "ALB",
+        "CDH1",
+        "CDKN2A",
+        "CTNNB1",
+        "F3",
+        "FASLG",
+        "GATA3",
+        "HIF1A",
+        "HMOX1",
+        "IFNG",
+        "IL1B",
+        "MAPK1",
+        "MMP1",
+        "MMP13",
+        "NFE2L2",
+        "ODC1",
+        "PPARG",
+        "RORC",
+        "S100A4"
+      ],
+      "pubmed_total": 45,
+      "pubmed_treatment_total": 32,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "37983567",
+          "title": "Lactobacillus Intestinalis Primes Epithelial Cells to Suppress Colitis-Related Th17 Response by Host-Microbe Retinoic Acid Biosynthesis.",
+          "authors": "Wang QW, Jia DJ, He JM, et al.",
+          "journal": "Advanced science (Weinheim, Baden-Wurttemberg, Germany)",
+          "year": "2023",
+          "abstract_snippet": "Gut microbiome is integral to the pathogenesis of ulcerative colitis. A novel probiotic Lactobacillus intestinalis (L. intestinalis) exerts a protective effect against dextran sodium sulfate-induced colitis in mice. Based on flow cytometry, colitis-associated Th17 cells are the target of L. intestin...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37983567/",
+          "total_results": 45
+        },
+        {
+          "pmid": "40319662",
+          "title": "Clostridium butyricum-induced balance in colonic retinol metabolism and short-chain fatty acid levels inhibit IgA-related mucosal immunity and relieve colitis developments.",
+          "authors": "Xu J, Xu H, Li J, et al.",
+          "journal": "Microbiological research",
+          "year": "2025",
+          "abstract_snippet": "Gut microbiota and their metabolites play a significant role in inflammatory bowel disease. Here, we attempted to determine the anti-inflammatory role of the probiotic Clostridium. butyricum (CB) in inflammatory bowel disease and identify the exact immune mechanism. The clinical significance of Clos...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40319662/"
+        },
+        {
+          "pmid": "39218970",
+          "title": "Suppression of ferroptosis by vitamin A or radical-trapping antioxidants is essential for neuronal development.",
+          "authors": "Tschuck J, Padmanabhan Nair V, Galhoz A, et al.",
+          "journal": "Nature communications",
+          "year": "2024",
+          "abstract_snippet": "The development of functional neurons is a complex orchestration of multiple signaling pathways controlling cell proliferation and differentiation. Because the balance of antioxidants is important for neuronal survival and development, we hypothesized that ferroptosis must be suppressed to gain neur...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39218970/"
+        },
+        {
+          "pmid": "39734222",
+          "title": "Live Akkermansia muciniphila boosts dendritic cell retinoic acid synthesis to modulate IL-22 activity and mitigate colitis in mice.",
+          "authors": "Liu H, Huang R, Shen B, et al.",
+          "journal": "Microbiome",
+          "year": "2024",
+          "abstract_snippet": "BACKGROUND: The interplay between gut microbiota and immune responses is crucial in ulcerative colitis (UC). Though Akkermansia muciniphila (Akk) shows therapeutic potential, the mechanisms remain unclear. This study sought to investigate differences in therapeutic efficacy among different forms or ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39734222/"
+        },
+        {
+          "pmid": "19477911",
+          "title": "All-trans retinoic acid down-regulates inflammatory responses by shifting the Treg/Th17 profile in human ulcerative and murine colitis.",
+          "authors": "Bai A, Lu N, Guo Y, et al.",
+          "journal": "Journal of leukocyte biology",
+          "year": "2009",
+          "abstract_snippet": "IBD is characterized by uncontrolled immune responses in inflamed mucosa, with dominance of IL-17-producing cells and deficiency of Treg cells. The aim of this study was to explore the effect and mechanisms of RA, the ligand of RARalpha, on immune responses in human and murine colitis. Colonic biops...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19477911/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Therapeutic Effects of Tretinoin and Caffeine-Treated Bone Marrow-Derived Mesenchymal Stem Cell on Immunological Features of Ulcerative Colitis: An Animal Model Study",
+          "year": 2024,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/e0dc6618a2ad87bfd59d0f9e34d72bd5e62207f2",
+          "authors": "Behnaz Movaffaghbani, Hadi Esmaeili Gouvarchinghaleh, Mahdieh Farzanehpour"
+        },
+        {
+          "title": "Obefazimod in patients with moderate-to-severely active ulcerative colitis: efficacy and safety analysis from the 96-week open-label maintenance phase 2b study",
+          "year": 2025,
+          "citations": 11,
+          "url": "https://www.semanticscholar.org/paper/69e2a98a4ede8e8063323850ca02879f45b690f9",
+          "authors": "S. Vermeire, J. Nitcheu, P. Gineste"
+        },
+        {
+          "title": "Janus kinase inhibitors in the management of acute severe ulcerative colitis: a comprehensive review.",
+          "year": 2025,
+          "citations": 11,
+          "url": "https://www.semanticscholar.org/paper/4652a252d498726c8478a12766f5865e2b8939ea",
+          "authors": "J. P. Gisbert, Mar\u00eda Chaparro"
+        },
+        {
+          "title": "What Is Ulcerative Colitis?",
+          "year": 2024,
+          "citations": 116,
+          "url": "https://www.semanticscholar.org/paper/3f9ef9cd8d5436f1c5e8506d9430a209fd9106d0",
+          "authors": "Rebecca A Voelker"
+        },
+        {
+          "title": "Safety of Ustekinumab in Inflammatory Bowel Disease: Pooled Safety Analysis Through 5 Years in Crohn\u2019s Disease and 4 Years in Ulcerative Colitis",
+          "year": 2024,
+          "citations": 34,
+          "url": "https://www.semanticscholar.org/paper/078f70f177693fd6bfdd7ba697f88c2e259a867e",
+          "authors": "Subrata Ghosh, B. Feagan, E. Ott"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Discovery and Preclinical Validation of Drug Indications Using Compendia of Public Gene Expression Data",
+        "year": 2011,
+        "citations": 741,
+        "url": "https://www.semanticscholar.org/paper/b2b8f9ae9c48f7183fb2e52ed014ba5f048a8ad4",
+        "authors": "M. Sirota, J. Dudley, Jeewon Kim"
+      },
+      "max_citations": 741,
+      "faers_signal": "none",
+      "faers_total_reports": 6835,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Tretinoin to Ulcerative colitis terms. Drug has 6835 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "Prostaglandin E2 (1.504)",
+        "YM-155 (1.483)",
+        "FLUVASTATIN (1.468)",
+        "XMD-885 (1.442)",
+        "crizotinib (1.429)"
+      ],
+      "signature_interpretation": "Tretinoin was not found among the top 36 drugs that reverse the Ulcerative colitis gene signature. Top reversers: Prostaglandin E2 (1.504), YM-155 (1.483), FLUVASTATIN (1.468)",
+      "ai_hypothesis": "of its anti-inflammatory properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.7546,
+      "mr_genetic_targets": 22,
+      "mechanistic_hypothesis": "Tretinoin \u2014[inhibits]\u2192 gene-5300 \u2014[is downregulated by]\u2192 DB00244 \u2014[treats]\u2192 Ulcerative colitis",
+      "kg_paths_text": "\u2022 Tretinoin \u2014[inhibits]\u2192 gene-5300 \u2014[is downregulated by]\u2192 DB00244 \u2014[treats]\u2192 Ulcerative colitis\n\u2022 Tretinoin \u2014[inhibits]\u2192 gene-5300 \u2014[is downregulated by]\u2192 DB00244 \u2014[treats]\u2192 Ulcerative colitis\n\u2022 Tretinoin \u2014[inhibits]\u2192 gene-5300 \u2014[is downregulated by]\u2192 DB01222 \u2014[treats]\u2192 Ulcerative colitis",
+      "validation_experiments": [],
+      "novelty_score": 0.433,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "45 PubMed articles found",
+        "Supported by 4 independent AI pillars",
+        "Highly cited paper (741 citations): \"Discovery and Preclinical Validation of Drug Indications Usi...\"",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.75, 22 genetic targets)"
+      ],
+      "disease_entity": "Disease::MESH:D003093",
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1092,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.538,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.515,
+          "docking": 0.71,
+          "pharos": 0.0,
+          "literature": 0.722
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Colon - Sigmoid",
+          "Colon - Transverse"
+        ],
+        "n_genes": 20,
+        "n_expressed": 13,
+        "mean_tpm_in_tissue": 35.72,
+        "max_tpm_in_tissue": 226.37,
+        "tissue_specificity": 0.158,
+        "context_modifier": 1.009
+      },
+      "ensemble_prob": 0.9857,
+      "ensemble_features": {
+        "kg_score": 0.9986,
+        "degree_penalty": 0.7515,
+        "n_drug_targets": 32,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.7726
+      },
+      "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": -8.52,
+        "target_symbol": "MAPK1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "MICHAEL",
+          "POLYENE"
+        ],
+        "n_alerts": 3,
+        "alert_names": [
+          "Michael_acceptor_1",
+          "polyene",
+          "polyene"
+        ]
+      }
+    },
+    {
       "drug_name": "Prednisolone",
       "drug_id": "DB00860",
       "disease_name": "Ulcerative colitis",
-      "combined_score": 0.5168,
+      "combined_score": 0.5139,
       "pillars_hit": 4,
       "transe_rank": 14,
       "transe_score": -10.3865,
@@ -3434,15 +3451,15 @@
       "admet_score": 0.7161,
       "admet_flags": "clean",
       "primekg_score": 0.251,
-      "dti_score": 0.6293,
-      "dti_best_target": "S1PR1",
+      "dti_score": 0.6125,
+      "dti_best_target": "ANGPTL2",
       "kg_group_score": 0.3597,
-      "structural_group_score": 0.6293,
+      "structural_group_score": 0.6125,
       "network_group_score": 0.6588000059127808,
       "txgnn_group_score": 0,
       "mr_group_score": 0.7528,
       "admet_multiplier": 0.9432,
-      "efficacy_score": 0.5479,
+      "efficacy_score": 0.5449,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 5,
@@ -3656,34 +3673,42 @@
       "mechanistic_hypothesis": "Prednisolone \u2014[treats]\u2192 Ulcerative colitis",
       "kg_paths_text": "\u2022 Prednisolone \u2014[treats]\u2192 Ulcerative colitis\n\u2022 Prednisolone \u2014[treats]\u2192 Ulcerative colitis\n\u2022 Prednisolone \u2014[downregulates]\u2192 gene-6192 \u2014[is downregulated by]\u2192 DB01234 \u2014[treats]\u2192 Ulcerative colitis",
       "validation_experiments": [],
-      "novelty_score": 0.155,
+      "novelty_score": 0.154,
       "novelty_level": "ESTABLISHED",
       "is_known_treatment": true,
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT07472309",
-          "title": "Effectiveness and Safety of Upadacitinib for Acute Severe Ulcerative Colitis",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "81",
-          "url": "https://clinicaltrials.gov/study/NCT07472309"
-        },
-        {
-          "nct_id": "NCT05867329",
-          "title": "Feasibility Pilot Sequential Multiple Assignment Randomized Trial (SMART) for Acute Severe Ulcerative Colitis",
+          "nct_id": "NCT07546097",
+          "title": "Comparative Effectiveness of Upadacitinib vs Corticosteroids as First-Line Therapy for Acute Severe Ulcerative Colitis\uff08UPFRONT\uff09",
           "status": "RECRUITING",
           "phase": "PHASE4",
-          "enrollment": "162",
-          "url": "https://clinicaltrials.gov/study/NCT05867329"
+          "enrollment": "46",
+          "url": "https://clinicaltrials.gov/study/NCT07546097"
         },
         {
-          "nct_id": "NCT07257588",
-          "title": "The Efficacy of Hyperbaric Oxygen-assisted Treatment for ASUC and Refractory IBD",
-          "status": "ENROLLING_BY_INVITATION",
-          "phase": "NA",
-          "enrollment": "44",
-          "url": "https://clinicaltrials.gov/study/NCT07257588"
+          "nct_id": "NCT05341401",
+          "title": "Budesonide Multimatrix(MMX) Versus Prednisolone in Management of Mild to Moderate Ulcerative Colitis",
+          "status": "UNKNOWN",
+          "phase": "PHASE2, PHASE3",
+          "enrollment": "100",
+          "url": "https://clinicaltrials.gov/study/NCT05341401"
+        },
+        {
+          "nct_id": "NCT05587673",
+          "title": "High Dose Steroid Therapy to Treat Flares in Patients With Inflammatory Bowel Disease (IBD)",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "3",
+          "url": "https://clinicaltrials.gov/study/NCT05587673"
+        },
+        {
+          "nct_id": "NCT02921555",
+          "title": "Endovenous Corticosteroid Pulses in Moderate Ulcerative Colitis",
+          "status": "TERMINATED",
+          "phase": "PHASE4",
+          "enrollment": "75",
+          "url": "https://clinicaltrials.gov/study/NCT02921555"
         },
         {
           "nct_id": "NCT00984568",
@@ -3692,21 +3717,14 @@
           "phase": "PHASE3",
           "enrollment": "28",
           "url": "https://clinicaltrials.gov/study/NCT00984568"
-        },
-        {
-          "nct_id": "NCT07258771",
-          "title": "Upadacitinib Combined With Corticosteroids vs Corticosteroid Monotherapy Induction for Inpatients and Outpatients With Acute Severe Ulcerative Colitis",
-          "status": "RECRUITING",
-          "phase": "PHASE4",
-          "enrollment": "110",
-          "url": "https://clinicaltrials.gov/study/NCT07258771"
         }
       ],
       "trial_phases": {
-        "PHASE4": 4,
-        "NA": 2,
-        "PHASE3": 1,
-        "PHASE1": 1
+        "PHASE4": 3,
+        "PHASE2": 2,
+        "PHASE3": 2,
+        "PHASE1": 1,
+        "NA": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -3721,6 +3739,7 @@
         "Strong causal genetic evidence (MR score: 0.75, 4 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D003093",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3830,10 +3849,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.658,
+        "triangulation_score": 0.657,
         "label": "silver-standard",
         "axis_values": {
-          "kg": 0.517,
+          "kg": 0.514,
           "docking": 0.922,
           "pharos": 0.0,
           "literature": 1.0
@@ -3851,8 +3870,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.913
       },
-      "disease_entity": "Disease::MESH:D003093",
-      "ensemble_prob": 0.9545,
+      "ensemble_prob": 0.8987,
       "ensemble_features": {
         "kg_score": 0.9991,
         "degree_penalty": 0.7643,
@@ -3861,7 +3879,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.3979
       },
-      "ensemble_rank": 3,
+      "ensemble_rank": 4,
       "docking": {
         "kcal_per_mol": -11.07,
         "target_symbol": "NR3C1",

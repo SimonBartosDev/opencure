@@ -1,8 +1,8 @@
 {
   "disease": "Liver cirrhosis",
   "status": "completed",
-  "timestamp": "2026-04-19T23:01:47.932936",
-  "elapsed_seconds": 988.7,
+  "timestamp": "2026-05-08T01:25:14.334384",
+  "elapsed_seconds": 148.3,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -36,7 +36,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2529,
       "dti_score": 1.0,
-      "dti_best_target": "CSF2",
+      "dti_best_target": "NFE2L2",
       "kg_group_score": 0.4518,
       "structural_group_score": 1.0,
       "network_group_score": 0.5152000188827515,
@@ -221,20 +221,20 @@
           "url": "https://clinicaltrials.gov/study/NCT05286814"
         },
         {
-          "nct_id": "NCT02073435",
-          "title": "A2ALL-Patients Safety System Improvements in Living Donor Liver Transplantation",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "177",
-          "url": "https://clinicaltrials.gov/study/NCT02073435"
-        },
-        {
           "nct_id": "NCT01311167",
           "title": "Treatment of Sodium Retention in Liver Cirrhosis With Dexamethasone",
           "status": "TERMINATED",
           "phase": "PHASE3",
           "enrollment": "2",
           "url": "https://clinicaltrials.gov/study/NCT01311167"
+        },
+        {
+          "nct_id": "NCT02073435",
+          "title": "A2ALL-Patients Safety System Improvements in Living Donor Liver Transplantation",
+          "status": "COMPLETED",
+          "phase": "N/A",
+          "enrollment": "177",
+          "url": "https://clinicaltrials.gov/study/NCT02073435"
         }
       ],
       "trial_phases": {
@@ -248,8 +248,10 @@
         "107 PubMed articles on this drug-disease pair",
         "Supported by 4 independent AI pillars",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.62)"
+        "Moderate genetic evidence supporting causality (MR score: 0.62)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D008103",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -386,8 +388,7 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.15
       },
-      "disease_entity": "Disease::MESH:D008103",
-      "ensemble_prob": 0.9616,
+      "ensemble_prob": 0.9914,
       "ensemble_features": {
         "kg_score": 0.9995,
         "degree_penalty": 0.736,
@@ -435,7 +436,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.25,
       "dti_score": 1.0,
-      "dti_best_target": "CSF2",
+      "dti_best_target": "NFE2L2",
       "kg_group_score": 0.2473,
       "structural_group_score": 1.0,
       "network_group_score": 0.48750001192092896,
@@ -617,6 +618,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.79, 4 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D008103",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -764,8 +766,7 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.15
       },
-      "disease_entity": "Disease::MESH:D008103",
-      "ensemble_prob": 0.6864,
+      "ensemble_prob": 0.5446,
       "ensemble_features": {
         "kg_score": 0.9951,
         "degree_penalty": 0.7641,
@@ -793,7 +794,7 @@
       "drug_name": "Urea",
       "drug_id": "DB03904",
       "disease_name": "Liver cirrhosis",
-      "combined_score": 0.5360999703407288,
+      "combined_score": 0.5350000262260437,
       "pillars_hit": 4,
       "transe_rank": 28,
       "transe_score": -10.2144,
@@ -812,15 +813,15 @@
       "admet_score": 0.7639,
       "admet_flags": "clean",
       "primekg_score": 0.258,
-      "dti_score": 0.5287,
-      "dti_best_target": "CSF2",
+      "dti_score": 0.5221,
+      "dti_best_target": "ITGB1",
       "kg_group_score": 0.1725,
-      "structural_group_score": 0.5287,
+      "structural_group_score": 0.5221,
       "network_group_score": 0.6980000138282776,
       "txgnn_group_score": 0.84,
       "mr_group_score": 0,
       "admet_multiplier": 0.9528,
-      "efficacy_score": 0.5626999735832214,
+      "efficacy_score": 0.5615000128746033,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 9,
@@ -999,12 +1000,28 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT00364819",
-          "title": "Initial Study of Rituximab to Treat Primary Biliary Cirrhosis",
+          "nct_id": "NCT05663944",
+          "title": "REpurposing SirolimUS in Compensated Advanced Chronic Liver Disease. the RESUS Proof of Concept Study",
           "status": "COMPLETED",
-          "phase": "PHASE1, PHASE2",
+          "phase": "PHASE2",
+          "enrollment": "41",
+          "url": "https://clinicaltrials.gov/study/NCT05663944"
+        },
+        {
+          "nct_id": "NCT01714609",
+          "title": "The Effect of Sorafenib on Portal Pressure",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "10",
+          "url": "https://clinicaltrials.gov/study/NCT01714609"
+        },
+        {
+          "nct_id": "NCT00767468",
+          "title": "Sorafenib in Treating Patients With Locally Advanced or Metastatic Liver Cancer and Cirrhosis",
+          "status": "TERMINATED",
+          "phase": "PHASE1",
           "enrollment": "6",
-          "url": "https://clinicaltrials.gov/study/NCT00364819"
+          "url": "https://clinicaltrials.gov/study/NCT00767468"
         },
         {
           "nct_id": "NCT01264705",
@@ -1015,33 +1032,18 @@
           "url": "https://clinicaltrials.gov/study/NCT01264705"
         },
         {
-          "nct_id": "NCT04051853",
-          "title": "Sorafenib PK in Patients With Advanced HCC and Child-Pugh B",
-          "status": "TERMINATED",
-          "phase": "PHASE2",
-          "enrollment": "5",
-          "url": "https://clinicaltrials.gov/study/NCT04051853"
-        },
-        {
-          "nct_id": "NCT04986137",
-          "title": "Fractional Excretion of Urea for the Differential Diagnosis of Acute Kidney Injury in Cirrhosis",
+          "nct_id": "NCT03675633",
+          "title": "Fractional Excretion of Urea for the Differential Diagnosis of Acute Kidney Injury in Liver Cirrhosis",
           "status": "UNKNOWN",
           "phase": "N/A",
           "enrollment": "100",
-          "url": "https://clinicaltrials.gov/study/NCT04986137"
-        },
-        {
-          "nct_id": "NCT05663944",
-          "title": "REpurposing SirolimUS in Compensated Advanced Chronic Liver Disease. the RESUS Proof of Concept Study",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "41",
-          "url": "https://clinicaltrials.gov/study/NCT05663944"
+          "url": "https://clinicaltrials.gov/study/NCT03675633"
         }
       ],
       "trial_phases": {
-        "PHASE1": 3,
-        "PHASE2": 4,
+        "PHASE2": 5,
+        "PHASE1": 2,
+        "NA": 1,
         "PHASE3": 1
       },
       "confidence": "HIGH",
@@ -1054,6 +1056,7 @@
         "AI-generated hypothesis available",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D008103",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1083,10 +1086,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.3880000114440918,
+        "triangulation_score": 0.3869999945163727,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.5360000133514404,
+          "kg": 0.5350000262260437,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 1.0
@@ -1103,8 +1106,7 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.15
       },
-      "disease_entity": "Disease::MESH:D008103",
-      "ensemble_prob": 0.007,
+      "ensemble_prob": 0.0213,
       "ensemble_features": {
         "kg_score": 0.8783,
         "degree_penalty": 0.916,
@@ -1113,7 +1115,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 7.1585
       },
-      "ensemble_rank": 9,
+      "ensemble_rank": 8,
       "docking": {
         "kcal_per_mol": null,
         "target_symbol": null,
@@ -1151,8 +1153,8 @@
       "admet_score": 0.7521,
       "admet_flags": "clean",
       "primekg_score": 0.2487,
-      "dti_score": 0.3659,
-      "dti_best_target": "CSF2",
+      "dti_score": 0.3504,
+      "dti_best_target": "ACHE",
       "kg_group_score": 0.3379,
       "structural_group_score": 0.9544,
       "network_group_score": 0.46709999442100525,
@@ -1329,12 +1331,12 @@
       "clinical_trials_total": 4,
       "clinical_trials": [
         {
-          "nct_id": "NCT03995251",
-          "title": "Efficacy and Safety of Testosterone Therapy in Improving Sarcopenia in Men With Cirrhosis.",
-          "status": "UNKNOWN",
-          "phase": "NA",
-          "enrollment": "100",
-          "url": "https://clinicaltrials.gov/study/NCT03995251"
+          "nct_id": "NCT04874350",
+          "title": "A Study to Assess the Efficacy, Safety, and Tolerability of Oral LPCN 1148 in Male Subjects With Cirrhosis of the Liver and Sarcopenia",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "30",
+          "url": "https://clinicaltrials.gov/study/NCT04874350"
         },
         {
           "nct_id": "NCT05051293",
@@ -1345,25 +1347,25 @@
           "url": "https://clinicaltrials.gov/study/NCT05051293"
         },
         {
-          "nct_id": "NCT04874350",
-          "title": "A Study to Assess the Efficacy, Safety, and Tolerability of Oral LPCN 1148 in Male Subjects With Cirrhosis of the Liver and Sarcopenia",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "30",
-          "url": "https://clinicaltrials.gov/study/NCT04874350"
-        },
-        {
           "nct_id": "NCT03167749",
           "title": "Effect of Liver Cirrhosis on Semen Parameters and Reproductive Hormones",
           "status": "UNKNOWN",
           "phase": "N/A",
           "enrollment": "90",
           "url": "https://clinicaltrials.gov/study/NCT03167749"
+        },
+        {
+          "nct_id": "NCT03995251",
+          "title": "Efficacy and Safety of Testosterone Therapy in Improving Sarcopenia in Men With Cirrhosis.",
+          "status": "UNKNOWN",
+          "phase": "NA",
+          "enrollment": "100",
+          "url": "https://clinicaltrials.gov/study/NCT03995251"
         }
       ],
       "trial_phases": {
-        "NA": 1,
-        "PHASE2": 1
+        "PHASE2": 1,
+        "NA": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -1374,6 +1376,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.67)"
       ],
+      "disease_entity": "Disease::MESH:D008103",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1482,8 +1485,7 @@
         "tissue_specificity": 0.632,
         "context_modifier": 1.106
       },
-      "disease_entity": "Disease::MESH:D008103",
-      "ensemble_prob": 0.6962,
+      "ensemble_prob": 0.5576,
       "ensemble_features": {
         "kg_score": 0.9966,
         "degree_penalty": 0.7473,
@@ -1505,6 +1507,341 @@
         "pains_families": [],
         "n_alerts": 0,
         "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Cimetidine",
+      "drug_id": "DB00501",
+      "disease_name": "Liver cirrhosis",
+      "combined_score": 0.4887999892234802,
+      "pillars_hit": 4,
+      "transe_rank": 31,
+      "transe_score": -10.2456,
+      "pykeen_score": -12.0737,
+      "pykeen_rank": 0,
+      "txgnn_score": 0.99,
+      "txgnn_rank": 1,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.7379999756813049,
+      "proximity_distance": 1.0499999523162842,
+      "admet_score": 0.5683,
+      "admet_flags": "clean",
+      "primekg_score": 0.2574,
+      "dti_score": 0.145,
+      "dti_best_target": "NFE2L2",
+      "kg_group_score": 0.3146,
+      "structural_group_score": 0.145,
+      "network_group_score": 0.5623000264167786,
+      "txgnn_group_score": 0.99,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9137,
+      "efficacy_score": 0.5350000262260437,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 10,
+      "shared_targets": [
+        "ACHE",
+        "AGT",
+        "CALCA",
+        "CAT",
+        "CYP2E1",
+        "IFNA1",
+        "IFNG",
+        "IL2",
+        "PRL",
+        "SST"
+      ],
+      "pubmed_total": 68,
+      "pubmed_treatment_total": 51,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "2530866",
+          "title": "The pharmacokinetic profile of amlodipine.",
+          "authors": "Abernethy DR",
+          "journal": "American heart journal",
+          "year": "1989",
+          "abstract_snippet": "Amlodipine, a dihydropyridine calcium antagonist, was synthesized in an attempt to develop a compound with a pharmacokinetic profile characteristic of this class, which would also have an increased oral bioavailability and extended clearance time. A single intravenous dose of 10 mg resulted in an ab...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/2530866/",
+          "total_results": 68
+        },
+        {
+          "pmid": "6734697",
+          "title": "Pharmacokinetics of cimetidine in advanced cirrhosis.",
+          "authors": "Grahn\u00e9n A, Jameson S, L\u00f6\u00f6f L, et al.",
+          "journal": "European journal of clinical pharmacology",
+          "year": "1984",
+          "abstract_snippet": "The effect of impaired liver function on the pharmacokinetics of cimetidine was studied in 8 patients with advanced cirrhosis given single doses of 100 mg i.v. and 400 mg p.o. on separate days. Compared to a control group of 10 healthy volunteers, the total renal and nonrenal clearance was significa...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/6734697/"
+        },
+        {
+          "pmid": "1764869",
+          "title": "Clinical pharmacokinetics of famotidine.",
+          "authors": "Echizen H, Ishizaki T",
+          "journal": "Clinical pharmacokinetics",
+          "year": "1991",
+          "abstract_snippet": "Famotidine is a potent histamine H2-receptor antagonist widely used in the treatment and prevention of peptic ulcer disease. After intravenous administration the plasma famotidine concentration-time profile exhibits a biexponential decay, with a distribution half-life of about 0.18 to 0.5h and an el...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/1764869/"
+        },
+        {
+          "pmid": "9784933",
+          "title": "Clinical pharmacokinetics of nisoldipine coat-core.",
+          "authors": "Heinig R",
+          "journal": "Clinical pharmacokinetics",
+          "year": "1998",
+          "abstract_snippet": "Nisoldipine, a calcium antagonist of the dihydropyridine type, is the active ingredient of the controlled release nisoldipine coat-core (CC) formulation. In humans, the absorption from nisoldipine CC occurs across the entire gastrointestinal tract with an increase in bioavailability in the colon bec...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/9784933/"
+        },
+        {
+          "pmid": "10589372",
+          "title": "Clinical pharmacokinetics of mexiletine.",
+          "authors": "Labb\u00e9 L, Turgeon J",
+          "journal": "Clinical pharmacokinetics",
+          "year": "1999",
+          "abstract_snippet": "Mexiletine, a class Ib antiarrhythmic agent, is rapidly and completely absorbed following oral administration with a bioavailability of about 90%. Peak plasma concentrations following oral administration occur within 1 to 4 hours and a linear relationship between dose and plasma concentration is obs...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10589372/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Activity Of Monooxygenase And Nitrergic Systems In Liver Microsomes Under The Action Of Drug Metabolism Inhibitors In Animals With Acute Toxic Hepatitis And Cirrhosis Of The Liver",
+          "year": 2026,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/e53673b150a090989c352188fa68d6f08221b8e7",
+          "authors": "Saida Sayfullayeva"
+        },
+        {
+          "title": "Cimetidine prevents and partially reverses CCl4\u2010induced liver cirrhosis",
+          "year": 1994,
+          "citations": 17,
+          "url": "https://www.semanticscholar.org/paper/4980a7e3abb8d72d8479b5844ce323c38551abc5",
+          "authors": "P. Muriel, E. Mera, C. Castillo"
+        },
+        {
+          "title": "Oral and intravenous pharmacokinetics of cimetidine in liver cirrhosis.",
+          "year": 1982,
+          "citations": 7,
+          "url": "https://www.semanticscholar.org/paper/c4570730d4ad207db4093f55717d4d4de2aee4bb",
+          "authors": "L. Okolics\u00e0nyi, M. Venuti, R. Orlando"
+        },
+        {
+          "title": "Blood levels of cimetidine in patients with liver cirrhosis.",
+          "year": 1983,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/f979d0b79c7949ac115e4a591fb20b1ff0197dbd",
+          "authors": "G. Bianchi porro, M. Lazzaroni, E. Lodola"
+        },
+        {
+          "title": "Prolactin and thyrotropin secretin in alcoholic liver cirrhosis: study of the variations induced by TRH, metoclopramide and cimetidine.",
+          "year": 1981,
+          "citations": 6,
+          "url": "https://www.semanticscholar.org/paper/9f968676b6e5356483ff361596766dd4bf816049",
+          "authors": "G. Monza, M. Lampertico, A. Ferrari"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Cimetidine prevents and partially reverses CCl4\u2010induced liver cirrhosis",
+        "year": 1994,
+        "citations": 17,
+        "url": "https://www.semanticscholar.org/paper/4980a7e3abb8d72d8479b5844ce323c38551abc5",
+        "authors": "P. Muriel, E. Mera, C. Castillo"
+      },
+      "max_citations": 17,
+      "faers_signal": "none",
+      "faers_total_reports": 6461,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Cimetidine to Liver cirrhosis terms. Drug has 6461 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "V-AMA37 (1.523)",
+        "vorinostat (1.500)",
+        "HY-11001 (1.498)",
+        "roscovitine (1.483)",
+        "N9-isoproplyolomoucine (1.482)"
+      ],
+      "signature_interpretation": "Cimetidine was not found among the top 40 drugs that reverse the Liver cirrhosis gene signature. Top reversers: V-AMA37 (1.523), vorinostat (1.500), HY-11001 (1.498)",
+      "ai_hypothesis": "of its anti-inflammatory and antioxidant properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Cimetidine \u2014[is a therapeutic for]\u2192 Liver cirrhosis",
+      "kg_paths_text": "\u2022 Cimetidine \u2014[is a therapeutic for]\u2192 Liver cirrhosis\n\u2022 Cimetidine \u2014[is antagonized by]\u2192 gene-3274 \u2014[antagonizes]\u2192 DB00927 \u2014[is a therapeutic for]\u2192 Liver cirrhosis\n\u2022 Cimetidine \u2014[is antagonized by]\u2192 gene-3274 \u2014[antagonizes]\u2192 DB00863 \u2014[is a therapeutic for]\u2192 Liver cirrhosis",
+      "validation_experiments": [],
+      "novelty_score": 0.41499999165534973,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": true,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "MEDIUM",
+      "confidence_reasons": [
+        "68 PubMed articles on this drug-disease pair",
+        "Supported by 4 independent AI pillars",
+        "AI-generated hypothesis available",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D008103",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1670,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.3310000002384186,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.48899999260902405,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.798
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Liver"
+        ],
+        "n_genes": 10,
+        "n_expressed": 6,
+        "mean_tpm_in_tissue": 374.35,
+        "max_tpm_in_tissue": 2550.87,
+        "tissue_specificity": 0.997,
+        "context_modifier": 1.15
+      },
+      "ensemble_prob": 0.802,
+      "ensemble_features": {
+        "kg_score": 0.9977,
+        "degree_penalty": 0.7619,
+        "n_drug_targets": 23,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 3.2189
+      },
+      "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "ALIPHATIC",
+          "CYANATE",
+          "ENAMINE",
+          "IMIDAZOLE",
+          "IMINE"
+        ],
+        "n_alerts": 6,
+        "alert_names": [
+          "imidazole_B(2)",
+          "Aliphatic_long_chain",
+          "cyanate_/aminonitrile_/thiocyanate",
+          "enamine",
+          "imine_1"
+        ]
       }
     },
     {
@@ -1691,25 +2028,25 @@
       "clinical_trials_total": 2,
       "clinical_trials": [
         {
-          "nct_id": "NCT02414880",
-          "title": "Sugammadex Versus Neostigmine in Patients With Liver Cirrhosis Undergoing Liver Resection",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "60",
-          "url": "https://clinicaltrials.gov/study/NCT02414880"
-        },
-        {
           "nct_id": "NCT06909942",
           "title": "Association of Sarcopenia With Rocuronium Use in Liver Transplant Recipients",
           "status": "COMPLETED",
           "phase": "NA",
           "enrollment": "3",
           "url": "https://clinicaltrials.gov/study/NCT06909942"
+        },
+        {
+          "nct_id": "NCT02414880",
+          "title": "Sugammadex Versus Neostigmine in Patients With Liver Cirrhosis Undergoing Liver Resection",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "60",
+          "url": "https://clinicaltrials.gov/study/NCT02414880"
         }
       ],
       "trial_phases": {
-        "PHASE4": 1,
-        "NA": 1
+        "NA": 1,
+        "PHASE4": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -1719,6 +2056,7 @@
         "Supporting paper with 86 citations",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D008103",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1855,8 +2193,7 @@
         "tissue_specificity": 0.373,
         "context_modifier": 0.945
       },
-      "disease_entity": "Disease::MESH:D008103",
-      "ensemble_prob": 0.0098,
+      "ensemble_prob": 0.0175,
       "ensemble_features": {
         "kg_score": 0.9025,
         "degree_penalty": 0.784,
@@ -1865,7 +2202,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 6.9373
       },
-      "ensemble_rank": 8,
+      "ensemble_rank": 9,
       "docking": {
         "kcal_per_mol": null,
         "target_symbol": null,
@@ -1883,340 +2220,6 @@
         "alert_names": [
           "isolated_alkene",
           "quaternary_nitrogen_2"
-        ]
-      }
-    },
-    {
-      "drug_name": "Cimetidine",
-      "drug_id": "DB00501",
-      "disease_name": "Liver cirrhosis",
-      "combined_score": 0.4860999882221222,
-      "pillars_hit": 4,
-      "transe_rank": 31,
-      "transe_score": -10.2456,
-      "pykeen_score": -12.0737,
-      "pykeen_rank": 0,
-      "txgnn_score": 0.99,
-      "txgnn_rank": 1,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.7379999756813049,
-      "proximity_distance": 1.0499999523162842,
-      "admet_score": 0.5683,
-      "admet_flags": "clean",
-      "primekg_score": 0.2574,
-      "dti_score": 0.1288,
-      "dti_best_target": "IGHE",
-      "kg_group_score": 0.3146,
-      "structural_group_score": 0.1288,
-      "network_group_score": 0.5623000264167786,
-      "txgnn_group_score": 0.99,
-      "mr_group_score": 0,
-      "admet_multiplier": 0.9137,
-      "efficacy_score": 0.5321000218391418,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 10,
-      "shared_targets": [
-        "ACHE",
-        "AGT",
-        "CALCA",
-        "CAT",
-        "CYP2E1",
-        "IFNA1",
-        "IFNG",
-        "IL2",
-        "PRL",
-        "SST"
-      ],
-      "pubmed_total": 68,
-      "pubmed_treatment_total": 51,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "2530866",
-          "title": "The pharmacokinetic profile of amlodipine.",
-          "authors": "Abernethy DR",
-          "journal": "American heart journal",
-          "year": "1989",
-          "abstract_snippet": "Amlodipine, a dihydropyridine calcium antagonist, was synthesized in an attempt to develop a compound with a pharmacokinetic profile characteristic of this class, which would also have an increased oral bioavailability and extended clearance time. A single intravenous dose of 10 mg resulted in an ab...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/2530866/",
-          "total_results": 68
-        },
-        {
-          "pmid": "6734697",
-          "title": "Pharmacokinetics of cimetidine in advanced cirrhosis.",
-          "authors": "Grahn\u00e9n A, Jameson S, L\u00f6\u00f6f L, et al.",
-          "journal": "European journal of clinical pharmacology",
-          "year": "1984",
-          "abstract_snippet": "The effect of impaired liver function on the pharmacokinetics of cimetidine was studied in 8 patients with advanced cirrhosis given single doses of 100 mg i.v. and 400 mg p.o. on separate days. Compared to a control group of 10 healthy volunteers, the total renal and nonrenal clearance was significa...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/6734697/"
-        },
-        {
-          "pmid": "1764869",
-          "title": "Clinical pharmacokinetics of famotidine.",
-          "authors": "Echizen H, Ishizaki T",
-          "journal": "Clinical pharmacokinetics",
-          "year": "1991",
-          "abstract_snippet": "Famotidine is a potent histamine H2-receptor antagonist widely used in the treatment and prevention of peptic ulcer disease. After intravenous administration the plasma famotidine concentration-time profile exhibits a biexponential decay, with a distribution half-life of about 0.18 to 0.5h and an el...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/1764869/"
-        },
-        {
-          "pmid": "9784933",
-          "title": "Clinical pharmacokinetics of nisoldipine coat-core.",
-          "authors": "Heinig R",
-          "journal": "Clinical pharmacokinetics",
-          "year": "1998",
-          "abstract_snippet": "Nisoldipine, a calcium antagonist of the dihydropyridine type, is the active ingredient of the controlled release nisoldipine coat-core (CC) formulation. In humans, the absorption from nisoldipine CC occurs across the entire gastrointestinal tract with an increase in bioavailability in the colon bec...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/9784933/"
-        },
-        {
-          "pmid": "10589372",
-          "title": "Clinical pharmacokinetics of mexiletine.",
-          "authors": "Labb\u00e9 L, Turgeon J",
-          "journal": "Clinical pharmacokinetics",
-          "year": "1999",
-          "abstract_snippet": "Mexiletine, a class Ib antiarrhythmic agent, is rapidly and completely absorbed following oral administration with a bioavailability of about 90%. Peak plasma concentrations following oral administration occur within 1 to 4 hours and a linear relationship between dose and plasma concentration is obs...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/10589372/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Activity Of Monooxygenase And Nitrergic Systems In Liver Microsomes Under The Action Of Drug Metabolism Inhibitors In Animals With Acute Toxic Hepatitis And Cirrhosis Of The Liver",
-          "year": 2026,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/e53673b150a090989c352188fa68d6f08221b8e7",
-          "authors": "Saida Sayfullayeva"
-        },
-        {
-          "title": "Cimetidine prevents and partially reverses CCl4\u2010induced liver cirrhosis",
-          "year": 1994,
-          "citations": 17,
-          "url": "https://www.semanticscholar.org/paper/4980a7e3abb8d72d8479b5844ce323c38551abc5",
-          "authors": "P. Muriel, E. Mera, C. Castillo"
-        },
-        {
-          "title": "Oral and intravenous pharmacokinetics of cimetidine in liver cirrhosis.",
-          "year": 1982,
-          "citations": 7,
-          "url": "https://www.semanticscholar.org/paper/c4570730d4ad207db4093f55717d4d4de2aee4bb",
-          "authors": "L. Okolics\u00e0nyi, M. Venuti, R. Orlando"
-        },
-        {
-          "title": "Blood levels of cimetidine in patients with liver cirrhosis.",
-          "year": 1983,
-          "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/f979d0b79c7949ac115e4a591fb20b1ff0197dbd",
-          "authors": "G. Bianchi porro, M. Lazzaroni, E. Lodola"
-        },
-        {
-          "title": "Prolactin and thyrotropin secretin in alcoholic liver cirrhosis: study of the variations induced by TRH, metoclopramide and cimetidine.",
-          "year": 1981,
-          "citations": 6,
-          "url": "https://www.semanticscholar.org/paper/9f968676b6e5356483ff361596766dd4bf816049",
-          "authors": "G. Monza, M. Lampertico, A. Ferrari"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Cimetidine prevents and partially reverses CCl4\u2010induced liver cirrhosis",
-        "year": 1994,
-        "citations": 17,
-        "url": "https://www.semanticscholar.org/paper/4980a7e3abb8d72d8479b5844ce323c38551abc5",
-        "authors": "P. Muriel, E. Mera, C. Castillo"
-      },
-      "max_citations": 17,
-      "faers_signal": "none",
-      "faers_total_reports": 6461,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Cimetidine to Liver cirrhosis terms. Drug has 6461 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "V-AMA37 (1.523)",
-        "vorinostat (1.500)",
-        "HY-11001 (1.498)",
-        "roscovitine (1.483)",
-        "N9-isoproplyolomoucine (1.482)"
-      ],
-      "signature_interpretation": "Cimetidine was not found among the top 40 drugs that reverse the Liver cirrhosis gene signature. Top reversers: V-AMA37 (1.523), vorinostat (1.500), HY-11001 (1.498)",
-      "ai_hypothesis": "of its anti-inflammatory and antioxidant properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "Cimetidine \u2014[is a therapeutic for]\u2192 Liver cirrhosis",
-      "kg_paths_text": "\u2022 Cimetidine \u2014[is a therapeutic for]\u2192 Liver cirrhosis\n\u2022 Cimetidine \u2014[is antagonized by]\u2192 gene-3274 \u2014[antagonizes]\u2192 DB00927 \u2014[is a therapeutic for]\u2192 Liver cirrhosis\n\u2022 Cimetidine \u2014[is antagonized by]\u2192 gene-3274 \u2014[antagonizes]\u2192 DB00863 \u2014[is a therapeutic for]\u2192 Liver cirrhosis",
-      "validation_experiments": [],
-      "novelty_score": 0.4129999876022339,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": true,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "MEDIUM",
-      "confidence_reasons": [
-        "68 PubMed articles on this drug-disease pair",
-        "Supported by 4 independent AI pillars",
-        "AI-generated hypothesis available"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1670,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
-        "pharmgkb": []
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.33000001311302185,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.4860000014305115,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.798
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Liver"
-        ],
-        "n_genes": 10,
-        "n_expressed": 6,
-        "mean_tpm_in_tissue": 374.35,
-        "max_tpm_in_tissue": 2550.87,
-        "tissue_specificity": 0.997,
-        "context_modifier": 1.15
-      },
-      "disease_entity": "Disease::MESH:D008103",
-      "ensemble_prob": 0.8172,
-      "ensemble_features": {
-        "kg_score": 0.9977,
-        "degree_penalty": 0.7619,
-        "n_drug_targets": 23,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 3.2189
-      },
-      "ensemble_rank": 3,
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [
-          "ALIPHATIC",
-          "CYANATE",
-          "ENAMINE",
-          "IMIDAZOLE",
-          "IMINE"
-        ],
-        "n_alerts": 6,
-        "alert_names": [
-          "imidazole_B(2)",
-          "Aliphatic_long_chain",
-          "cyanate_/aminonitrile_/thiocyanate",
-          "enamine",
-          "imine_1"
         ]
       }
     },
@@ -2243,8 +2246,8 @@
       "admet_score": 0.6574,
       "admet_flags": "clean",
       "primekg_score": 0.2542,
-      "dti_score": 0.2662,
-      "dti_best_target": "CSF2",
+      "dti_score": 0.2499,
+      "dti_best_target": "ITGB1",
       "kg_group_score": 0.2581,
       "structural_group_score": 0.9483,
       "network_group_score": 0.4124999940395355,
@@ -2433,6 +2436,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.68)"
       ],
+      "disease_entity": "Disease::MESH:D008103",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2541,8 +2545,7 @@
         "tissue_specificity": 0.957,
         "context_modifier": 1.13
       },
-      "disease_entity": "Disease::MESH:D008103",
-      "ensemble_prob": 0.9519,
+      "ensemble_prob": 0.989,
       "ensemble_features": {
         "kg_score": 0.9994,
         "degree_penalty": 0.7341,
@@ -2590,7 +2593,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.259,
       "dti_score": 1.0,
-      "dti_best_target": "CSF2",
+      "dti_best_target": "NFE2L2",
       "kg_group_score": 0.2412,
       "structural_group_score": 1.0,
       "network_group_score": 0.4302000105381012,
@@ -2756,6 +2759,14 @@
       "clinical_trials_total": 4,
       "clinical_trials": [
         {
+          "nct_id": "NCT06739252",
+          "title": "Perioperative Treatment of High-risk Resectable CCA With HAIC Plus A+T: Neobrave CCA",
+          "status": "TERMINATED",
+          "phase": "PHASE2",
+          "enrollment": "1",
+          "url": "https://clinicaltrials.gov/study/NCT06739252"
+        },
+        {
           "nct_id": "NCT07353827",
           "title": "FOLFOX-HAIC Combined With Donafenib and Pucotenlimab as First-Line Treatment for Unresectable Intrahepatic Cholangiocarcinoma",
           "status": "NOT_YET_RECRUITING",
@@ -2778,14 +2789,6 @@
           "phase": "PHASE3",
           "enrollment": "138",
           "url": "https://clinicaltrials.gov/study/NCT07328919"
-        },
-        {
-          "nct_id": "NCT06739252",
-          "title": "Perioperative Treatment of High-risk Resectable CCA With HAIC Plus A+T: Neobrave CCA",
-          "status": "TERMINATED",
-          "phase": "PHASE2",
-          "enrollment": "1",
-          "url": "https://clinicaltrials.gov/study/NCT06739252"
         }
       ],
       "trial_phases": {
@@ -2800,8 +2803,10 @@
         "Supported by 4 independent AI pillars",
         "CAUTION: Drug had terminated/withdrawn trials (Phase 2) for this disease",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.54)"
+        "Moderate genetic evidence supporting causality (MR score: 0.54)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D008103",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2964,8 +2969,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.942
       },
-      "disease_entity": "Disease::MESH:D008103",
-      "ensemble_prob": 0.2779,
+      "ensemble_prob": 0.2732,
       "ensemble_features": {
         "kg_score": 0.9925,
         "degree_penalty": 0.7655,
@@ -2987,6 +2991,279 @@
         "pains_families": [],
         "n_alerts": 0,
         "alert_names": []
+      }
+    },
+    {
+      "drug_name": "(+)-Ursolic Acid",
+      "drug_id": "DB15588",
+      "disease_name": "Liver cirrhosis",
+      "combined_score": 0.47780001163482666,
+      "pillars_hit": 4,
+      "transe_rank": 32,
+      "transe_score": -10.2502,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.8270000219345093,
+      "proximity_distance": 0.6899999976158142,
+      "admet_score": 0.6785,
+      "admet_flags": "hERG=0.75",
+      "primekg_score": 0,
+      "dti_score": 0.5017,
+      "dti_best_target": "ACHE",
+      "kg_group_score": 0.1658,
+      "structural_group_score": 0.5017,
+      "network_group_score": 0.8270000219345093,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.7563,
+      "admet_multiplier": 0.9357,
+      "efficacy_score": 0.5105999708175659,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 5,
+      "shared_targets": [
+        "CXCL8",
+        "ICAM1",
+        "MMP9",
+        "NR3C1",
+        "STAT3"
+      ],
+      "pubmed_total": 19,
+      "pubmed_treatment_total": 18,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "40541646",
+          "title": "Ursolic acid alleviates liver fibrosis by regulating Hepatic stellate cell activation via the Notch3/NOX4 pathway.",
+          "authors": "Zhang W, Zhang Y, Liu L, et al.",
+          "journal": "Chemico-biological interactions",
+          "year": "2025",
+          "abstract_snippet": "BACKGROUND: Mutual regulation exists between the Notch and Nicotinamide adenine dinucleotide phosphate oxidase 4 (NOX4) signaling pathways, both of which are significant drivers of liver fibrosis. It remains uncertain whether there is a reciprocal regulatory relationship between them in hepatic fibr...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40541646/",
+          "total_results": 19
+        },
+        {
+          "pmid": "39500482",
+          "title": "Exploring the mechanism of ursolic acid in preventing liver fibrosis and improving intestinal microbiota based on NOX2/NLRP3 inflammasome signaling pathway.",
+          "authors": "Liu Q, Liu LX, Li BM, et al.",
+          "journal": "Chemico-biological interactions",
+          "year": "2025",
+          "abstract_snippet": "Early-stage liver fibrosis can be reversed; however, the underlying mechanisms remain incompletely understood. The intestinal tract hosts a substantial and diverse microbiota involved in various physiological activities and is closely linked to chronic liver disease. Previous studies have indicated ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39500482/"
+        },
+        {
+          "pmid": "39351056",
+          "title": "",
+          "authors": "Koriem KMM",
+          "journal": "World journal of gastroenterology",
+          "year": "2024",
+          "abstract_snippet": "In this editorial, we comment on the recent article by Huang ",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39351056/"
+        },
+        {
+          "pmid": "36252479",
+          "title": "Ursolic acid alleviates Kupffer cells pyroptosis in liver fibrosis by the NOX2/NLRP3 inflammasome signaling pathway.",
+          "authors": "Wan Y, Zhang W, Huang C, et al.",
+          "journal": "International immunopharmacology",
+          "year": "2022",
+          "abstract_snippet": "Pyroptosis has an important role in liver inflammation and fibrosis. The role of KC pyroptosis in liver fibrosis was unclear. Ursolic acid (UA) has antifibrotic effects, but study on the effect and mechanism of UA on KC pyroptosis in liver fibrosis has not been reported. Therefore, we induced KC pyr...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36252479/"
+        },
+        {
+          "pmid": "29672850",
+          "title": "Ursolic acid ameliorates CCl4-induced liver fibrosis through the NOXs/ROS pathway.",
+          "authors": "Gan D, Zhang W, Huang C, et al.",
+          "journal": "Journal of cellular physiology",
+          "year": "2018",
+          "abstract_snippet": "Liver fibrosis is a reversible wound-healing response that occurs after liver injury. NADPH oxidases (NOXs) and reactive oxygen species (ROS) which are expressed in hepatocytes (HCs), hepatic stellate cells (HSCs), and Kupffer cells (KCs) play an important role in the development of hepatic fibrosis...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29672850/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Suppression of oxidative stress and improvement of liver functions in mice by ursolic acid via LKB1\u2010AMP\u2010activated protein kinase signaling",
+          "year": 2015,
+          "citations": 50,
+          "url": "https://www.semanticscholar.org/paper/44375c4a9c46b3c2b2b33a87ebb64530ccef322f",
+          "authors": "Yongbing Yang, Zhanxue Zhao, Yuan-Yuan Liu"
+        },
+        {
+          "title": "Synthesis and evaluation of pentacyclic triterpenoids conjugates as novel HBV entry inhibitors targeting NTCP receptor.",
+          "year": 2024,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/ed3dd05c8f23b2aaff572f63addffcbf053cc060",
+          "authors": "Yixin Chen, Meitao Duan, Xiangwan Wang"
+        },
+        {
+          "title": "Ursolic acid targets secreted phosphoprotein 1 to regulate Th17 cells against metabolic dysfunction-associated steatotic liver disease",
+          "year": 2024,
+          "citations": 40,
+          "url": "https://www.semanticscholar.org/paper/17d3e3b478c115077731d5c36620343adfa2f201",
+          "authors": "Yiyuan Zheng, Lina Zhao, Zhekun Xiong"
+        },
+        {
+          "title": "Ursolic Acid Ameliorates Alcoholic Liver Injury through Attenuating Oxidative Stress-Mediated Ferroptosis and Modulating Gut Microbiota.",
+          "year": 2024,
+          "citations": 23,
+          "url": "https://www.semanticscholar.org/paper/6b0e80c20fe7861eec3d84796fda3a699498c18b",
+          "authors": "Liangfu Zhou, Miao Xiao, Yuxin Li"
+        },
+        {
+          "title": "Ursolic Acid Regulates Immune Balance, Modulates Gut Microbial Metabolism, and Improves Liver Health in Mice",
+          "year": 2024,
+          "citations": 9,
+          "url": "https://www.semanticscholar.org/paper/49e1c4a8c1fe1f4bf7acd2dfdc3cce9a94da9bee",
+          "authors": "Man Zhao, Yali Cui, Fengxia Wang"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Suppression of oxidative stress and improvement of liver functions in mice by ursolic acid via LKB1\u2010AMP\u2010activated protein kinase signaling",
+        "year": 2015,
+        "citations": 50,
+        "url": "https://www.semanticscholar.org/paper/44375c4a9c46b3c2b2b33a87ebb64530ccef322f",
+        "authors": "Yongbing Yang, Zhanxue Zhao, Yuan-Yuan Liu"
+      },
+      "max_citations": 50,
+      "faers_signal": "none",
+      "faers_total_reports": 14,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking (+)-Ursolic Acid to Liver cirrhosis terms. Drug has 14 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "V-AMA37 (1.523)",
+        "vorinostat (1.500)",
+        "HY-11001 (1.498)",
+        "roscovitine (1.483)",
+        "N9-isoproplyolomoucine (1.482)"
+      ],
+      "signature_interpretation": "(+)-Ursolic Acid was not found among the top 40 drugs that reverse the Liver cirrhosis gene signature. Top reversers: V-AMA37 (1.523), vorinostat (1.500), HY-11001 (1.498)",
+      "ai_hypothesis": "of its anti-inflammatory and antioxidant properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.7563,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "(+)-Ursolic Acid \u2014[is a therapeutic for]\u2192 MESH:D001749 \u2014[is treated by]\u2192 MESH:D016898 \u2014[is a therapeutic for]\u2192 Liver cirrhosis",
+      "kg_paths_text": "\u2022 (+)-Ursolic Acid \u2014[is a therapeutic for]\u2192 MESH:D001749 \u2014[is treated by]\u2192 MESH:D016898 \u2014[is a therapeutic for]\u2192 Liver cirrhosis\n\u2022 (+)-Ursolic Acid \u2014[is a therapeutic for]\u2192 MESH:D001749 \u2014[is treated by]\u2192 DB00661 \u2014[is a therapeutic for]\u2192 Liver cirrhosis\n\u2022 (+)-Ursolic Acid \u2014[is a therapeutic for]\u2192 MESH:D001749 \u2014[is treated by]\u2192 DB04216 \u2014[is a therapeutic for]\u2192 Liver cirrhosis",
+      "validation_experiments": [],
+      "novelty_score": 0.4869999885559082,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": true,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "MEDIUM",
+      "confidence_reasons": [
+        "19 PubMed articles found",
+        "Supported by 4 independent AI pillars",
+        "Supporting paper with 50 citations",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.76, 1 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D008103",
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 0,
+        "has_warnings": false,
+        "top_interactions": []
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.2800000011920929,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.4779999852180481,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.565
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Liver"
+        ],
+        "n_genes": 5,
+        "n_expressed": 5,
+        "mean_tpm_in_tissue": 22.28,
+        "max_tpm_in_tissue": 84.35,
+        "tissue_specificity": 0.412,
+        "context_modifier": 1.022
+      },
+      "ensemble_prob": 0.0,
+      "ensemble_features": {
+        "kg_score": 0.7185,
+        "degree_penalty": 1.0,
+        "n_drug_targets": 40,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 7.9967
+      },
+      "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "ISOLATED"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "isolated_alkene"
+        ]
       }
     },
     {
@@ -3013,7 +3290,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2556,
       "dti_score": 1.0,
-      "dti_best_target": "CSF2",
+      "dti_best_target": "NFE2L2",
       "kg_group_score": 0.1923,
       "structural_group_score": 1.0,
       "network_group_score": 0.4702000021934509,
@@ -3198,6 +3475,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.52)"
       ],
+      "disease_entity": "Disease::MESH:D008103",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3306,8 +3584,7 @@
         "tissue_specificity": 0.979,
         "context_modifier": 1.123
       },
-      "disease_entity": "Disease::MESH:D008103",
-      "ensemble_prob": 0.1181,
+      "ensemble_prob": 0.1524,
       "ensemble_features": {
         "kg_score": 0.9901,
         "degree_penalty": 0.7522,
@@ -3329,278 +3606,6 @@
         "pains_families": [],
         "n_alerts": 0,
         "alert_names": []
-      }
-    },
-    {
-      "drug_name": "(+)-Ursolic Acid",
-      "drug_id": "DB15588",
-      "disease_name": "Liver cirrhosis",
-      "combined_score": 0.4742000102996826,
-      "pillars_hit": 4,
-      "transe_rank": 32,
-      "transe_score": -10.2502,
-      "pykeen_score": 0,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.8270000219345093,
-      "proximity_distance": 0.6899999976158142,
-      "admet_score": 0.6785,
-      "admet_flags": "hERG=0.75",
-      "primekg_score": 0,
-      "dti_score": 0.4808,
-      "dti_best_target": "STAT3",
-      "kg_group_score": 0.1658,
-      "structural_group_score": 0.4808,
-      "network_group_score": 0.8270000219345093,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.7563,
-      "admet_multiplier": 0.9357,
-      "efficacy_score": 0.5067999958992004,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 5,
-      "shared_targets": [
-        "CXCL8",
-        "ICAM1",
-        "MMP9",
-        "NR3C1",
-        "STAT3"
-      ],
-      "pubmed_total": 19,
-      "pubmed_treatment_total": 18,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "40541646",
-          "title": "Ursolic acid alleviates liver fibrosis by regulating Hepatic stellate cell activation via the Notch3/NOX4 pathway.",
-          "authors": "Zhang W, Zhang Y, Liu L, et al.",
-          "journal": "Chemico-biological interactions",
-          "year": "2025",
-          "abstract_snippet": "BACKGROUND: Mutual regulation exists between the Notch and Nicotinamide adenine dinucleotide phosphate oxidase 4 (NOX4) signaling pathways, both of which are significant drivers of liver fibrosis. It remains uncertain whether there is a reciprocal regulatory relationship between them in hepatic fibr...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40541646/",
-          "total_results": 19
-        },
-        {
-          "pmid": "39500482",
-          "title": "Exploring the mechanism of ursolic acid in preventing liver fibrosis and improving intestinal microbiota based on NOX2/NLRP3 inflammasome signaling pathway.",
-          "authors": "Liu Q, Liu LX, Li BM, et al.",
-          "journal": "Chemico-biological interactions",
-          "year": "2025",
-          "abstract_snippet": "Early-stage liver fibrosis can be reversed; however, the underlying mechanisms remain incompletely understood. The intestinal tract hosts a substantial and diverse microbiota involved in various physiological activities and is closely linked to chronic liver disease. Previous studies have indicated ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39500482/"
-        },
-        {
-          "pmid": "39351056",
-          "title": "",
-          "authors": "Koriem KMM",
-          "journal": "World journal of gastroenterology",
-          "year": "2024",
-          "abstract_snippet": "In this editorial, we comment on the recent article by Huang ",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39351056/"
-        },
-        {
-          "pmid": "36252479",
-          "title": "Ursolic acid alleviates Kupffer cells pyroptosis in liver fibrosis by the NOX2/NLRP3 inflammasome signaling pathway.",
-          "authors": "Wan Y, Zhang W, Huang C, et al.",
-          "journal": "International immunopharmacology",
-          "year": "2022",
-          "abstract_snippet": "Pyroptosis has an important role in liver inflammation and fibrosis. The role of KC pyroptosis in liver fibrosis was unclear. Ursolic acid (UA) has antifibrotic effects, but study on the effect and mechanism of UA on KC pyroptosis in liver fibrosis has not been reported. Therefore, we induced KC pyr...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36252479/"
-        },
-        {
-          "pmid": "29672850",
-          "title": "Ursolic acid ameliorates CCl4-induced liver fibrosis through the NOXs/ROS pathway.",
-          "authors": "Gan D, Zhang W, Huang C, et al.",
-          "journal": "Journal of cellular physiology",
-          "year": "2018",
-          "abstract_snippet": "Liver fibrosis is a reversible wound-healing response that occurs after liver injury. NADPH oxidases (NOXs) and reactive oxygen species (ROS) which are expressed in hepatocytes (HCs), hepatic stellate cells (HSCs), and Kupffer cells (KCs) play an important role in the development of hepatic fibrosis...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29672850/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Suppression of oxidative stress and improvement of liver functions in mice by ursolic acid via LKB1\u2010AMP\u2010activated protein kinase signaling",
-          "year": 2015,
-          "citations": 50,
-          "url": "https://www.semanticscholar.org/paper/44375c4a9c46b3c2b2b33a87ebb64530ccef322f",
-          "authors": "Yongbing Yang, Zhanxue Zhao, Yuan-Yuan Liu"
-        },
-        {
-          "title": "Synthesis and evaluation of pentacyclic triterpenoids conjugates as novel HBV entry inhibitors targeting NTCP receptor.",
-          "year": 2024,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/ed3dd05c8f23b2aaff572f63addffcbf053cc060",
-          "authors": "Yixin Chen, Meitao Duan, Xiangwan Wang"
-        },
-        {
-          "title": "Ursolic acid targets secreted phosphoprotein 1 to regulate Th17 cells against metabolic dysfunction-associated steatotic liver disease",
-          "year": 2024,
-          "citations": 40,
-          "url": "https://www.semanticscholar.org/paper/17d3e3b478c115077731d5c36620343adfa2f201",
-          "authors": "Yiyuan Zheng, Lina Zhao, Zhekun Xiong"
-        },
-        {
-          "title": "Ursolic Acid Ameliorates Alcoholic Liver Injury through Attenuating Oxidative Stress-Mediated Ferroptosis and Modulating Gut Microbiota.",
-          "year": 2024,
-          "citations": 23,
-          "url": "https://www.semanticscholar.org/paper/6b0e80c20fe7861eec3d84796fda3a699498c18b",
-          "authors": "Liangfu Zhou, Miao Xiao, Yuxin Li"
-        },
-        {
-          "title": "Ursolic Acid Regulates Immune Balance, Modulates Gut Microbial Metabolism, and Improves Liver Health in Mice",
-          "year": 2024,
-          "citations": 9,
-          "url": "https://www.semanticscholar.org/paper/49e1c4a8c1fe1f4bf7acd2dfdc3cce9a94da9bee",
-          "authors": "Man Zhao, Yali Cui, Fengxia Wang"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Suppression of oxidative stress and improvement of liver functions in mice by ursolic acid via LKB1\u2010AMP\u2010activated protein kinase signaling",
-        "year": 2015,
-        "citations": 50,
-        "url": "https://www.semanticscholar.org/paper/44375c4a9c46b3c2b2b33a87ebb64530ccef322f",
-        "authors": "Yongbing Yang, Zhanxue Zhao, Yuan-Yuan Liu"
-      },
-      "max_citations": 50,
-      "faers_signal": "none",
-      "faers_total_reports": 14,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking (+)-Ursolic Acid to Liver cirrhosis terms. Drug has 14 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "V-AMA37 (1.523)",
-        "vorinostat (1.500)",
-        "HY-11001 (1.498)",
-        "roscovitine (1.483)",
-        "N9-isoproplyolomoucine (1.482)"
-      ],
-      "signature_interpretation": "(+)-Ursolic Acid was not found among the top 40 drugs that reverse the Liver cirrhosis gene signature. Top reversers: V-AMA37 (1.523), vorinostat (1.500), HY-11001 (1.498)",
-      "ai_hypothesis": "of its anti-inflammatory and antioxidant properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.7563,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "(+)-Ursolic Acid \u2014[is a therapeutic for]\u2192 MESH:D001749 \u2014[is treated by]\u2192 MESH:D016898 \u2014[is a therapeutic for]\u2192 Liver cirrhosis",
-      "kg_paths_text": "\u2022 (+)-Ursolic Acid \u2014[is a therapeutic for]\u2192 MESH:D001749 \u2014[is treated by]\u2192 MESH:D016898 \u2014[is a therapeutic for]\u2192 Liver cirrhosis\n\u2022 (+)-Ursolic Acid \u2014[is a therapeutic for]\u2192 MESH:D001749 \u2014[is treated by]\u2192 DB00661 \u2014[is a therapeutic for]\u2192 Liver cirrhosis\n\u2022 (+)-Ursolic Acid \u2014[is a therapeutic for]\u2192 MESH:D001749 \u2014[is treated by]\u2192 DB04216 \u2014[is a therapeutic for]\u2192 Liver cirrhosis",
-      "validation_experiments": [],
-      "novelty_score": 0.48399999737739563,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": true,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "MEDIUM",
-      "confidence_reasons": [
-        "19 PubMed articles found",
-        "Supported by 4 independent AI pillars",
-        "Supporting paper with 50 citations",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.76, 1 genetic targets)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "likely",
-        "dose_range": "trial",
-        "confidence": "medium",
-        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
-        "chembl_phase": 2.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 0,
-        "has_warnings": false,
-        "top_interactions": []
-      },
-      "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
-        "pharmgkb": []
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.27900001406669617,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.4740000069141388,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.565
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Liver"
-        ],
-        "n_genes": 5,
-        "n_expressed": 5,
-        "mean_tpm_in_tissue": 22.28,
-        "max_tpm_in_tissue": 84.35,
-        "tissue_specificity": 0.412,
-        "context_modifier": 1.022
-      },
-      "disease_entity": "Disease::MESH:D008103",
-      "ensemble_prob": 0.0,
-      "ensemble_features": {
-        "kg_score": 0.7185,
-        "degree_penalty": 1.0,
-        "n_drug_targets": 40,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 7.9967
-      },
-      "ensemble_rank": 10,
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [
-          "ISOLATED"
-        ],
-        "n_alerts": 1,
-        "alert_names": [
-          "isolated_alkene"
-        ]
       }
     }
   ],

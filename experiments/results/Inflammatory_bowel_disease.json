@@ -1,8 +1,8 @@
 {
   "disease": "Inflammatory bowel disease",
   "status": "completed",
-  "timestamp": "2026-04-20T00:20:13.518027",
-  "elapsed_seconds": 939.4,
+  "timestamp": "2026-05-08T01:41:14.354406",
+  "elapsed_seconds": 162.8,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -35,8 +35,8 @@
       "admet_score": 1.0,
       "admet_flags": "DILI=0.99",
       "primekg_score": 0.2591,
-      "dti_score": 0.4272,
-      "dti_best_target": "STAT3",
+      "dti_score": 0.4117,
+      "dti_best_target": "HSPD1",
       "kg_group_score": 0.3136,
       "structural_group_score": 0.9563,
       "network_group_score": 0.5242000222206116,
@@ -204,28 +204,20 @@
           "url": "https://clinicaltrials.gov/study/NCT03860012"
         },
         {
-          "nct_id": "NCT02774057",
-          "title": "Trial of Captafer\u00ae vs. Oral Iron Sulfate in the Treatment of Iron Deficiency Anemia in Patients With IBD",
-          "status": "UNKNOWN",
+          "nct_id": "NCT01588990",
+          "title": "A Translational Study of Bevacizumab in Participants With Metastatic Colorectal Cancer",
+          "status": "COMPLETED",
           "phase": "PHASE4",
-          "enrollment": "20",
-          "url": "https://clinicaltrials.gov/study/NCT02774057"
+          "enrollment": "128",
+          "url": "https://clinicaltrials.gov/study/NCT01588990"
         },
         {
-          "nct_id": "NCT04160767",
-          "title": "Celiac Disease and Vitamin Status: Evaluation of the Effect of Supplementation With a Probiotic (VIVOMIXX\u00ae) in a Cohoort of Celiac Patients",
-          "status": "UNKNOWN",
-          "phase": "PHASE4",
-          "enrollment": "90",
-          "url": "https://clinicaltrials.gov/study/NCT04160767"
-        },
-        {
-          "nct_id": "NCT06059989",
-          "title": "InDuctIon TREatment with SubCuTaneous Infliximab for Crohn's Disease",
-          "status": "RECRUITING",
-          "phase": "PHASE3",
-          "enrollment": "158",
-          "url": "https://clinicaltrials.gov/study/NCT06059989"
+          "nct_id": "NCT01393405",
+          "title": "Methotrexate in Induction and Maintenance of Steroid Free Remission in Ulcerative Colitis",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "179",
+          "url": "https://clinicaltrials.gov/study/NCT01393405"
         },
         {
           "nct_id": "NCT02852694",
@@ -234,12 +226,20 @@
           "phase": "PHASE4",
           "enrollment": "192",
           "url": "https://clinicaltrials.gov/study/NCT02852694"
+        },
+        {
+          "nct_id": "NCT02774057",
+          "title": "Trial of Captafer\u00ae vs. Oral Iron Sulfate in the Treatment of Iron Deficiency Anemia in Patients With IBD",
+          "status": "UNKNOWN",
+          "phase": "PHASE4",
+          "enrollment": "20",
+          "url": "https://clinicaltrials.gov/study/NCT02774057"
         }
       ],
       "trial_phases": {
         "PHASE4": 5,
-        "PHASE3": 1,
-        "PHASE2": 1
+        "PHASE2": 1,
+        "PHASE3": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -253,6 +253,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.78, 3 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D015212",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -390,8 +391,7 @@
         "tissue_specificity": 0.501,
         "context_modifier": 1.052
       },
-      "disease_entity": "Disease::MESH:D015212",
-      "ensemble_prob": 0.1169,
+      "ensemble_prob": 0.1083,
       "ensemble_features": {
         "kg_score": 0.9764,
         "degree_penalty": 0.7918,
@@ -400,7 +400,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 5.5215
       },
-      "ensemble_rank": 8,
+      "ensemble_rank": 7,
       "docking": {
         "kcal_per_mol": null,
         "target_symbol": null,
@@ -439,7 +439,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.262,
       "dti_score": 1.0,
-      "dti_best_target": "IRF4",
+      "dti_best_target": "ICOS",
       "kg_group_score": 0.2551,
       "structural_group_score": 1.0,
       "network_group_score": 0.5960000157356262,
@@ -648,6 +648,14 @@
       "clinical_trials_total": 5,
       "clinical_trials": [
         {
+          "nct_id": "NCT00355602",
+          "title": "Antibiotics for the Treatment of Ulcerative Colitis",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "40",
+          "url": "https://clinicaltrials.gov/study/NCT00355602"
+        },
+        {
           "nct_id": "NCT02784821",
           "title": "Antibiotic \"Dysbiosis\" in Preterm Infants",
           "status": "COMPLETED",
@@ -664,14 +672,6 @@
           "url": "https://clinicaltrials.gov/study/NCT03986996"
         },
         {
-          "nct_id": "NCT02345733",
-          "title": "Use of a Novel Diet (UC DIET) for Treatment of Mild to Moderate Active Pediatric Ulcerative Colitis",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "20",
-          "url": "https://clinicaltrials.gov/study/NCT02345733"
-        },
-        {
           "nct_id": "NCT02217722",
           "title": "Use of the Ulcerative Colitis Diet for Induction of Remission",
           "status": "TERMINATED",
@@ -680,18 +680,18 @@
           "url": "https://clinicaltrials.gov/study/NCT02217722"
         },
         {
-          "nct_id": "NCT00355602",
-          "title": "Antibiotics for the Treatment of Ulcerative Colitis",
+          "nct_id": "NCT02345733",
+          "title": "Use of a Novel Diet (UC DIET) for Treatment of Mild to Moderate Active Pediatric Ulcerative Colitis",
           "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "40",
-          "url": "https://clinicaltrials.gov/study/NCT00355602"
+          "phase": "PHASE4",
+          "enrollment": "20",
+          "url": "https://clinicaltrials.gov/study/NCT02345733"
         }
       ],
       "trial_phases": {
+        "NA": 2,
         "PHASE2": 2,
-        "PHASE4": 1,
-        "NA": 2
+        "PHASE4": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -703,6 +703,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.74, 4 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D015212",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -804,8 +805,7 @@
         "tissue_specificity": 0.954,
         "context_modifier": 1.097
       },
-      "disease_entity": "Disease::MESH:D015212",
-      "ensemble_prob": 0.2388,
+      "ensemble_prob": 0.1903,
       "ensemble_features": {
         "kg_score": 0.9803,
         "degree_penalty": 0.7946,
@@ -814,7 +814,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 5.3423
       },
-      "ensemble_rank": 7,
+      "ensemble_rank": 6,
       "docking": {
         "kcal_per_mol": null,
         "target_symbol": null,
@@ -834,14 +834,14 @@
       }
     },
     {
-      "drug_name": "Prednisolone",
-      "drug_id": "DB00860",
+      "drug_name": "Dexamethasone",
+      "drug_id": "DB01234",
       "disease_name": "Inflammatory bowel disease",
-      "combined_score": 0.5353,
+      "combined_score": 0.5387,
       "pillars_hit": 4,
-      "transe_rank": 10,
-      "transe_score": -10.2353,
-      "pykeen_score": -12.3512,
+      "transe_rank": 2,
+      "transe_score": -9.9599,
+      "pykeen_score": -11.8273,
       "pykeen_rank": 0,
       "txgnn_score": 0,
       "txgnn_rank": 0,
@@ -851,139 +851,143 @@
       "mol_emb_similar_to": "",
       "gene_sig_score": 0.02,
       "gene_sig_rank": 33,
-      "proximity_score": 0.7879999876022339,
-      "proximity_distance": 0.8500000238418579,
-      "admet_score": 0.7161,
+      "proximity_score": 0.7250000238418579,
+      "proximity_distance": 1.100000023841858,
+      "admet_score": 0.7109,
       "admet_flags": "clean",
-      "primekg_score": 0.2529,
-      "dti_score": 0.8251,
-      "dti_best_target": "TACR1",
-      "kg_group_score": 0.3487,
-      "structural_group_score": 0.8251,
-      "network_group_score": 0.6022999882698059,
+      "primekg_score": 0.2584,
+      "dti_score": 0.7968,
+      "dti_best_target": "COX2",
+      "kg_group_score": 0.4317,
+      "structural_group_score": 0.7968,
+      "network_group_score": 0.5335999727249146,
       "txgnn_group_score": 0,
-      "mr_group_score": 0.7427,
-      "admet_multiplier": 0.9432,
-      "efficacy_score": 0.5675,
+      "mr_group_score": 0.7578,
+      "admet_multiplier": 0.9422,
+      "efficacy_score": 0.5717,
       "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 7,
+      "shared_target_count": 48,
       "shared_targets": [
+        "ALOX5",
         "CCL2",
-        "IL2",
-        "LEP",
-        "MUC1",
-        "NR3C1",
-        "POMC",
-        "TNF"
+        "CCL5",
+        "CD14",
+        "CEBPB",
+        "CSF1",
+        "CSF3",
+        "CTLA4",
+        "CXCR4",
+        "DNMT3A",
+        "ETS1",
+        "FCGR1A",
+        "FN1",
+        "FOS",
+        "FOXP3",
+        "GH1",
+        "IFNG",
+        "IL11",
+        "IL17A",
+        "IL2"
       ],
-      "pubmed_total": 1633,
-      "pubmed_treatment_total": 1559,
-      "pubmed_repurposing_total": 2,
+      "pubmed_total": 393,
+      "pubmed_treatment_total": 360,
+      "pubmed_repurposing_total": 1,
       "key_papers": [
         {
-          "pmid": "31562236",
-          "title": "British Society of Gastroenterology consensus guidelines on the management of inflammatory bowel disease in adults.",
-          "authors": "Lamb CA, Kennedy NA, Raine T, et al.",
+          "pmid": "33996408",
+          "title": "Biological drug and drug delivery-mediated immunotherapy.",
+          "authors": "Xiao Q, Li X, Li Y, et al.",
+          "journal": "Acta pharmaceutica Sinica. B",
+          "year": "2021",
+          "abstract_snippet": "The initiation and development of major inflammatory diseases, ",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33996408/",
+          "total_results": 393
+        },
+        {
+          "pmid": "28877980",
+          "title": "NAD metabolism fuels human and mouse intestinal inflammation.",
+          "authors": "Gerner RR, Klepsch V, Macheiner S, et al.",
           "journal": "Gut",
-          "year": "2019",
-          "abstract_snippet": "Ulcerative colitis and Crohn's disease are the principal forms of inflammatory bowel disease. Both represent chronic inflammation of the gastrointestinal tract, which displays heterogeneity in inflammatory and symptomatic burden between patients and within individuals over time. Optimal management r...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/31562236/",
-          "total_results": 1633
+          "year": "2018",
+          "abstract_snippet": "OBJECTIVE: Nicotinamide phosphoribosyltransferase (NAMPT, also referred to as pre-B cell colony-enhancing factor or visfatin) is critically required for the maintenance of cellular nicotinamide adenine dinucleotide (NAD) supply catalysing the rate-limiting step of the NAD  DESIGN: We investigated th...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28877980/"
         },
         {
-          "pmid": "8819801",
-          "title": "Budesonide in inflammatory bowel disease.",
-          "authors": "Lamers CB, Wagtmans MJ, van der Sluys Veer A, et al.",
-          "journal": "The Netherlands journal of medicine",
-          "year": "1996",
-          "abstract_snippet": "Due to its immunomodulatory and anti-inflammatory properties glucocorticosteroids have proved to be highly efficacious in patients with inflammatory bowel disease. However, because of the risk of side-effects, the dose and duration of therapy with systemically acting glucocorticosteroids have to be ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/8819801/"
+          "pmid": "29377966",
+          "title": "[Oral manifestations of Crohn's disease].",
+          "authors": "Tan CXW, de Boer NKH, Brand HS",
+          "journal": "Nederlands tijdschrift voor tandheelkunde",
+          "year": "2018",
+          "abstract_snippet": "Gastrointestinal symptoms are predominant in Crohn's disease. Oral manifestations may also occur. The prevalence of oral manifestations varies between 0.5% and 37%. The manifestations may coincide with or precede gastrointestinal symptoms, and can be subdivided into specific and non-specific lesions...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29377966/"
         },
         {
-          "pmid": "16944997",
-          "title": "Budesonide for ulcerative colitis.",
-          "authors": "Mar\u00edn-Jim\u00e9nez I, Pe\u00f1a AS",
-          "journal": "Revista espanola de enfermedades digestivas",
-          "year": "2006",
-          "abstract_snippet": "In this review, we examined studies published on oral and topical formulations of budesonide (Entocort and Budenofalk, in Spain: Entocord and Intestifalk) for the treatment of ulcerative colitis. This glycocorticosteroid has a potent local action and an important first-pass liver metabolism. It has ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/16944997/"
+          "pmid": "35562628",
+          "title": "COVID-19 and corticosteroids: a narrative review.",
+          "authors": "El-Saber Batiha G, Al-Gareeb AI, Saad HM, et al.",
+          "journal": "Inflammopharmacology",
+          "year": "2022",
+          "abstract_snippet": "It has been reported that corticosteroid therapy was effective in the management of severe acute respiratory syndrome (SARS) and the Middle East Respiratory Syndrome (MERS), and recently in coronavirus disease 2019 (COVID-19). Corticosteroids are potent anti-inflammatory drugs that mitigate the risk...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35562628/"
         },
         {
-          "pmid": "11919030",
-          "title": "Feline inflammatory bowel disease: a review.",
-          "authors": "Willard MD",
-          "journal": "Journal of feline medicine and surgery",
-          "year": "1999",
-          "abstract_snippet": "Inflammatory bowel disease (IBD), while a popular diagnosis, may not occur as commonly as it is diagnosed. It is a diagnosis of exclusion, meaning that it is important to eliminate diseases that mimick it. Dietary intolerance or allergy in particular, can have the same clinical and histologic appear...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/11919030/"
-        },
-        {
-          "pmid": "782236",
-          "title": "Pharmacotherapy of inflammatory bowel disease.",
-          "authors": "Gardner RC",
-          "journal": "American journal of hospital pharmacy",
-          "year": "1976",
-          "abstract_snippet": "The etiology, pharmacotherapy and management of the two major types of inflammatory bowel disease--ulcerative colitis and Crohn's disease--are reviewed. Sulfasalazine and topical corticosteroids (i.e., hydrocortisone, hydrocortisone acetate or methylprednisolone acetate) are effective in many patien...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/782236/"
+          "pmid": "37537405",
+          "title": "Ionically bridged dexamethasone sodium phosphate-zinc-PLGA nanocomplex in alginate microgel for the local treatment of ulcerative colitis.",
+          "authors": "Saparbayeva A, Lee J, Hlaing SP, et al.",
+          "journal": "Archives of pharmacal research",
+          "year": "2023",
+          "abstract_snippet": "Colon-targeted oral drug delivery systems comprising nanoparticles and microparticles have emerged as promising tools for the treatment of ulcerative colitis (UC) because they minimize side effects and maximize the local drug concentration. Dexamethasone sodium phosphate (DSP) is a potent anti-infla...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37537405/"
         }
       ],
       "repurposing_papers": [
         {
-          "pmid": "41214861",
-          "title": "Comparative Efficacy of Donepezil and Lamotrigine in Modulating NF\u03baB, PPAR\u03b3, and NLRP3 Inflammasome Pathways in Experimental Colitis.",
-          "authors": "Abdeltwab Desoky NS, Ahmed MAE, Aboulhoda BE, et al.",
-          "journal": "Archiv der Pharmazie",
+          "pmid": "40929958",
+          "title": "Integrative multi-omics identifies S100A8/IGFBP5/CTSK/S100P as dual diagnostic biomarkers and therapeutic targets in Crohn's disease: from computational discovery to preclinical validation.",
+          "authors": "Wu J, Nie H, Wang H, et al.",
+          "journal": "International immunopharmacology",
           "year": "2025",
-          "abstract_snippet": "Ulcerative colitis (UC) is a persistent inflammatory bowel disorder characterized by systemic inflammation and oxidative stress. This study compared the therapeutic potential of lamotrigine and donepezil in an acetic acid (AA)-induced UC rat model. Fifty-six male Wistar rats were divided into seven ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41214861/",
-          "total_results": 2
-        },
-        {
-          "pmid": "21849664",
-          "title": "Computational repositioning of the anticonvulsant topiramate for inflammatory bowel disease.",
-          "authors": "Dudley JT, Sirota M, Shenoy M, et al.",
-          "journal": "Science translational medicine",
-          "year": "2011",
-          "abstract_snippet": "Inflammatory bowel disease (IBD) is a chronic inflammatory disorder of the gastrointestinal tract for which there are few safe and effective therapeutic options for long-term treatment and disease maintenance. Here, we applied a computational approach to discover new drug therapies for IBD in silico...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/21849664/"
+          "abstract_snippet": "Crohn's disease (CD) is a chronic inflammatory bowel condition that significantly impairs patients' quality of life. With no cure currently available, the need to discover novel biomarkers and develop effective therapeutic strategies is paramount. This study used a comprehensive machine learning app...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40929958/",
+          "total_results": 1
         }
       ],
       "semantic_scholar_papers": [
         {
-          "title": "3D-printed prednisolone phosphate suppositories with tunable dose and rapid release for the treatment of inflammatory bowel disease.",
+          "title": "Keratin/alginate microspheres as a novel pH-dependent polymer for colon-targeted delivery of dexamethasone for the management of inflammatory bowel disease",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/c573d77a44d5512df8782b072166b3878d20c13f",
+          "authors": "O. Meko, S. Eraga, M. Arhewoh"
+        },
+        {
+          "title": "Formulation of various polysaccharides-based multicoated tablets containing dexamethasone and probiotics for inflammatory bowel disease",
           "year": 2023,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/44bcac49221417736733445be636bddb9fcdfd93",
+          "authors": "R. Iswandana, Kurnia Sari Setio Putri, Hani Nur Anisa"
+        },
+        {
+          "title": "Randomized Controlled Trial: Perioperative Dexamethasone Reduces Excessive Postoperative Inflammatory Response and Ileus After Surgery for Inflammatory Bowel Disease.",
+          "year": 2021,
+          "citations": 18,
+          "url": "https://www.semanticscholar.org/paper/13a1455ce0f0fa5662668fa055dca771861780d5",
+          "authors": "Tenghui Zhang, Yi Xu, Yao Yao"
+        },
+        {
+          "title": "Orally Administrated Precision Nanomedicine for Restoring the Intestinal Barrier and Alleviating Inflammation in Treatment of Inflammatory Bowel Disease.",
+          "year": 2025,
           "citations": 13,
-          "url": "https://www.semanticscholar.org/paper/5b58a567c091213dc0107b89ae6913fc9d130c55",
-          "authors": "L.I. Kocabas, S. Ayyoubi, M. Tajqurishi"
+          "url": "https://www.semanticscholar.org/paper/0d32c1e1675cfa1adc88b9bdf6d2f3474afd02b5",
+          "authors": "Ding Wang, Qi Jiang, Peirong Li"
         },
         {
-          "title": "Comparing adipose-derived mesenchymal stem cells with prednisolone for the treatment of feline inflammatory bowel disease",
-          "year": 2022,
+          "title": "Multifunctional Double-Loaded Oral Nanoplatform for Computed Tomography Imaging-Guided and Integrated Treatment of Inflammatory Bowel Disease.",
+          "year": 2025,
           "citations": 11,
-          "url": "https://www.semanticscholar.org/paper/4628a49e1a12f13346188af2ae2e397e3f946d85",
-          "authors": "T. Webb, C. Webb"
-        },
-        {
-          "title": "The IGF system in patients with inflammatory bowel disease treated with prednisolone or infliximab: potential role of the stanniocalcin-2 / PAPP-A / IGFBP-4 axis",
-          "year": 2019,
-          "citations": 17,
-          "url": "https://www.semanticscholar.org/paper/e49210ff019edd1bb1394136ab87d2f43340b523",
-          "authors": "R. Hjortebjerg, K. Thomsen, J\u2205rgen Agnholt"
-        },
-        {
-          "title": "Effects of Adding Dexpanthenol to Prednisolone in an Experimental Model of Inflammatory Bowel Disease",
-          "year": 2020,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/750956a63158a211ce6b5f07488c9cd3c408b600",
-          "authors": "Seyedeh Mehrnaz Motatabzadeh, Seyed Meysam Abtahi Froushani"
-        },
-        {
-          "title": "Differences in the Adverse Event Burden of Corticosteroid Use in Inflammatory Bowel Disease as Reported Between Adverse Event Reporting Systems and a Patient Questionnaire.",
-          "year": 2024,
-          "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/5da5e3f7ce9a4acab3a9b29a56809e1fc40903bf",
-          "authors": "Eman Al Sulais, Edouard Louis, B. Bokemeyer"
+          "url": "https://www.semanticscholar.org/paper/b93cc2ca2ba7a04228ec269ed518150911ef5843",
+          "authors": "Yaoting He, Ziyang Jin, Yifan Wang"
         }
       ],
       "most_cited_paper": {
@@ -995,9 +999,9 @@
       },
       "max_citations": 551,
       "faers_signal": "moderate",
-      "faers_total_reports": 190318,
-      "faers_cooccurrences": 101,
-      "faers_interpretation": "101 FAERS reports mention both Prednisolone and Inflammatory bowel disease-related terms. Limited but notable real-world signal.",
+      "faers_total_reports": 312747,
+      "faers_cooccurrences": 11,
+      "faers_interpretation": "11 FAERS reports mention both Dexamethasone and Inflammatory bowel disease-related terms. Limited but notable real-world signal.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -1007,7 +1011,7 @@
         "KU 0060648 trihydrochloride (1.405)",
         "PFI-1 (1.399)"
       ],
-      "signature_interpretation": "Prednisolone was not found among the top 35 drugs that reverse the Inflammatory bowel disease gene signature. Top reversers: T5247673 (1.423), linsitinib (1.414), Paclitaxel (1.412)",
+      "signature_interpretation": "Dexamethasone was not found among the top 35 drugs that reverse the Inflammatory bowel disease gene signature. Top reversers: T5247673 (1.423), linsitinib (1.414), Paclitaxel (1.412)",
       "ai_hypothesis": "of its anti-inflammatory properties.",
       "abstract_analyses": [
         {
@@ -1028,90 +1032,91 @@
       ],
       "has_failed_trial": false,
       "failed_trial_phase": "Phase 3",
-      "failed_trial_count": 7,
+      "failed_trial_count": 2,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.7427,
-      "mr_genetic_targets": 8,
-      "mechanistic_hypothesis": "Prednisolone \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease",
-      "kg_paths_text": "\u2022 Prednisolone \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease\n\u2022 Prednisolone \u2014[is agonized by]\u2192 gene-2908 \u2014[is linked to]\u2192 Inflammatory bowel disease\n\u2022 Prednisolone \u2014[is agonized by]\u2192 gene-4306 \u2014[is an agonist of]\u2192 DB01234 \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease",
+      "mr_score": 0.7578,
+      "mr_genetic_targets": 50,
+      "mechanistic_hypothesis": "Dexamethasone \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease",
+      "kg_paths_text": "\u2022 Dexamethasone \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease\n\u2022 Dexamethasone \u2014[inhibits]\u2192 gene-3589 \u2014[is associated with]\u2192 Inflammatory bowel disease\n\u2022 Dexamethasone \u2014[affects]\u2192 gene-650 \u2014[is affected by]\u2192 DB00641 \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease",
       "validation_experiments": [],
-      "novelty_score": 0.032,
+      "novelty_score": 0.129,
       "novelty_level": "ESTABLISHED",
       "is_known_treatment": true,
-      "clinical_trials_total": 10,
+      "clinical_trials_total": 9,
       "clinical_trials": [
         {
-          "nct_id": "NCT07472309",
-          "title": "Effectiveness and Safety of Upadacitinib for Acute Severe Ulcerative Colitis",
+          "nct_id": "NCT03456752",
+          "title": "Perioperative Dexamethasone on Postoperative Outcome in IBD",
           "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "302",
+          "url": "https://clinicaltrials.gov/study/NCT03456752"
+        },
+        {
+          "nct_id": "NCT06842316",
+          "title": "Effects of Phytocannabinoids on Immune Response and Autophagy During Chronic Immune-mediated Inflammatory Diseases",
+          "status": "RECRUITING",
           "phase": "N/A",
-          "enrollment": "81",
-          "url": "https://clinicaltrials.gov/study/NCT07472309"
-        },
-        {
-          "nct_id": "NCT07257588",
-          "title": "The Efficacy of Hyperbaric Oxygen-assisted Treatment for ASUC and Refractory IBD",
-          "status": "ENROLLING_BY_INVITATION",
-          "phase": "NA",
-          "enrollment": "44",
-          "url": "https://clinicaltrials.gov/study/NCT07257588"
-        },
-        {
-          "nct_id": "NCT00984568",
-          "title": "Conventional Step-Up Versus Infliximab Monotherapy in Patients With Ulcerative Colitis (P05553)",
-          "status": "TERMINATED",
-          "phase": "PHASE3",
-          "enrollment": "28",
-          "url": "https://clinicaltrials.gov/study/NCT00984568"
-        },
-        {
-          "nct_id": "NCT00796250",
-          "title": "Efficacy of Infliximab in the Treatment of Patients Affected by Corticodependent Crohn's Disease (P02732)",
-          "status": "TERMINATED",
-          "phase": "PHASE3",
-          "enrollment": "9",
-          "url": "https://clinicaltrials.gov/study/NCT00796250"
-        },
-        {
-          "nct_id": "NCT02517684",
-          "title": "Top-down Infliximab Study in Kids With Crohn's Disease",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
           "enrollment": "100",
-          "url": "https://clinicaltrials.gov/study/NCT02517684"
+          "url": "https://clinicaltrials.gov/study/NCT06842316"
+        },
+        {
+          "nct_id": "NCT01171807",
+          "title": "Erythrocytes-Mediated Delivery Of Dexamethasone 21-Phosphate In Steroid-Dependent Ulcerative Colitis",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "33",
+          "url": "https://clinicaltrials.gov/study/NCT01171807"
+        },
+        {
+          "nct_id": "NCT05432934",
+          "title": "Transversus Abdominis Plane Blocks With and Without Dexamethasone",
+          "status": "UNKNOWN",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "60",
+          "url": "https://clinicaltrials.gov/study/NCT05432934"
+        },
+        {
+          "nct_id": "NCT07385131",
+          "title": "Prophylactic Dexamethasone Before Infliximab in Moderate-to-Severe IBD",
+          "status": "RECRUITING",
+          "phase": "N/A",
+          "enrollment": "300",
+          "url": "https://clinicaltrials.gov/study/NCT07385131"
         }
       ],
       "trial_phases": {
-        "NA": 1,
-        "PHASE3": 3,
+        "PHASE2": 3,
+        "PHASE1": 1,
+        "PHASE3": 1,
         "PHASE4": 2,
-        "PHASE2": 1,
-        "PHASE1": 1
+        "NA": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
-        "10 clinical trial(s) found on ClinicalTrials.gov",
+        "9 clinical trial(s) found on ClinicalTrials.gov",
         "Phase 3 trial exists",
-        "1633 PubMed articles on this drug-disease pair",
-        "2 article(s) specifically mention repurposing/repositioning",
+        "393 PubMed articles on this drug-disease pair",
+        "1 article(s) specifically mention repurposing/repositioning",
         "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 101 adverse event reports mention drug-disease co-occurrence",
+        "Moderate FAERS signal: 11 adverse event reports mention drug-disease co-occurrence",
         "Highly cited paper (551 citations): \"Computational Repositioning of the Anticonvulsant Topiramate...\"",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.74, 8 genetic targets)",
+        "Strong causal genetic evidence (MR score: 0.76, 50 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D015212",
       "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
         "target_affinity": {},
         "stage": 1
       },
       "ddi_warnings": {
-        "n_interactions": 1303,
+        "n_interactions": 1512,
         "has_warnings": true,
         "top_interactions": [
           {
@@ -1169,36 +1174,43 @@
       "pharmacogenomics": {
         "has_flags": true,
         "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (DSE;TSPYL1 / rs3828743)",
+        "summary": "PharmGKB-3 (ABCB1 / rs1045642)",
         "cpic": [],
         "pharmgkb": [
           {
-            "gene": "DSE;TSPYL1",
-            "variant": "rs3828743",
+            "gene": "ABCB1",
+            "variant": "rs1045642",
             "level": "3",
             "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449576983"
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204433"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs2032582",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981238041"
+          },
+          {
+            "gene": "CTLA4",
+            "variant": "rs4553808",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043880851"
           },
           {
             "gene": "ABCB1",
             "variant": "rs2229109",
             "level": "3",
             "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1445402144"
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449170621"
           },
           {
-            "gene": "ABCB1",
-            "variant": "rs1045642",
+            "gene": "GATA3",
+            "variant": "rs3824662",
             "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1444704881"
-          },
-          {
-            "gene": "PNPLA3",
-            "variant": "rs738409",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1448632697"
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1184512128"
           }
         ]
       },
@@ -1210,11 +1222,11 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.664,
+        "triangulation_score": 0.68,
         "label": "silver-standard",
         "axis_values": {
-          "kg": 0.535,
-          "docking": 0.922,
+          "kg": 0.539,
+          "docking": 0.97,
           "pharos": 0.0,
           "literature": 1.0
         }
@@ -1224,26 +1236,25 @@
           "Colon - Transverse",
           "Small Intestine - Terminal Ileum"
         ],
-        "n_genes": 7,
-        "n_expressed": 5,
-        "mean_tpm_in_tissue": 14.58,
-        "max_tpm_in_tissue": 55.43,
+        "n_genes": 20,
+        "n_expressed": 14,
+        "mean_tpm_in_tissue": 41.78,
+        "max_tpm_in_tissue": 185.28,
         "tissue_specificity": 0.0,
-        "context_modifier": 0.957
+        "context_modifier": 0.996
       },
-      "disease_entity": "Disease::MESH:D015212",
-      "ensemble_prob": 0.9811,
+      "ensemble_prob": 0.9969,
       "ensemble_features": {
-        "kg_score": 0.9993,
-        "degree_penalty": 0.7643,
-        "n_drug_targets": 19,
+        "kg_score": 0.9998,
+        "degree_penalty": 0.736,
+        "n_drug_targets": 24,
         "is_fda_approved": 1,
         "n_disease_genes": 0,
-        "transe_rank_log": 2.0794
+        "transe_rank_log": 1.0986
       },
       "ensemble_rank": 1,
       "docking": {
-        "kcal_per_mol": -11.07,
+        "kcal_per_mol": -11.64,
         "target_symbol": "NR3C1",
         "source": "chembl_bioactivity_proxy",
         "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
@@ -1279,8 +1290,8 @@
       "admet_score": 0.7521,
       "admet_flags": "clean",
       "primekg_score": 0.2563,
-      "dti_score": 0.8127,
-      "dti_best_target": "TACR1",
+      "dti_score": 0.7712,
+      "dti_best_target": "COX2",
       "kg_group_score": 0.3124,
       "structural_group_score": 0.9544,
       "network_group_score": 0.48579999804496765,
@@ -1474,6 +1485,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.77, 16 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D015212",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1583,8 +1595,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.961
       },
-      "disease_entity": "Disease::MESH:D015212",
-      "ensemble_prob": 0.654,
+      "ensemble_prob": 0.5156,
       "ensemble_features": {
         "kg_score": 0.9965,
         "degree_penalty": 0.7473,
@@ -1606,822 +1617,6 @@
         "pains_families": [],
         "n_alerts": 0,
         "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Dexamethasone",
-      "drug_id": "DB01234",
-      "disease_name": "Inflammatory bowel disease",
-      "combined_score": 0.5343,
-      "pillars_hit": 4,
-      "transe_rank": 2,
-      "transe_score": -9.9599,
-      "pykeen_score": -11.8273,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0.02,
-      "gene_sig_rank": 33,
-      "proximity_score": 0.7250000238418579,
-      "proximity_distance": 1.100000023841858,
-      "admet_score": 0.7109,
-      "admet_flags": "clean",
-      "primekg_score": 0.2584,
-      "dti_score": 0.7709,
-      "dti_best_target": "NTSR1",
-      "kg_group_score": 0.4317,
-      "structural_group_score": 0.7709,
-      "network_group_score": 0.5335999727249146,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.7578,
-      "admet_multiplier": 0.9422,
-      "efficacy_score": 0.5671,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 48,
-      "shared_targets": [
-        "ALOX5",
-        "CCL2",
-        "CCL5",
-        "CD14",
-        "CEBPB",
-        "CSF1",
-        "CSF3",
-        "CTLA4",
-        "CXCR4",
-        "DNMT3A",
-        "ETS1",
-        "FCGR1A",
-        "FN1",
-        "FOS",
-        "FOXP3",
-        "GH1",
-        "IFNG",
-        "IL11",
-        "IL17A",
-        "IL2"
-      ],
-      "pubmed_total": 393,
-      "pubmed_treatment_total": 360,
-      "pubmed_repurposing_total": 1,
-      "key_papers": [
-        {
-          "pmid": "33996408",
-          "title": "Biological drug and drug delivery-mediated immunotherapy.",
-          "authors": "Xiao Q, Li X, Li Y, et al.",
-          "journal": "Acta pharmaceutica Sinica. B",
-          "year": "2021",
-          "abstract_snippet": "The initiation and development of major inflammatory diseases, ",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33996408/",
-          "total_results": 393
-        },
-        {
-          "pmid": "28877980",
-          "title": "NAD metabolism fuels human and mouse intestinal inflammation.",
-          "authors": "Gerner RR, Klepsch V, Macheiner S, et al.",
-          "journal": "Gut",
-          "year": "2018",
-          "abstract_snippet": "OBJECTIVE: Nicotinamide phosphoribosyltransferase (NAMPT, also referred to as pre-B cell colony-enhancing factor or visfatin) is critically required for the maintenance of cellular nicotinamide adenine dinucleotide (NAD) supply catalysing the rate-limiting step of the NAD  DESIGN: We investigated th...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/28877980/"
-        },
-        {
-          "pmid": "29377966",
-          "title": "[Oral manifestations of Crohn's disease].",
-          "authors": "Tan CXW, de Boer NKH, Brand HS",
-          "journal": "Nederlands tijdschrift voor tandheelkunde",
-          "year": "2018",
-          "abstract_snippet": "Gastrointestinal symptoms are predominant in Crohn's disease. Oral manifestations may also occur. The prevalence of oral manifestations varies between 0.5% and 37%. The manifestations may coincide with or precede gastrointestinal symptoms, and can be subdivided into specific and non-specific lesions...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29377966/"
-        },
-        {
-          "pmid": "35562628",
-          "title": "COVID-19 and corticosteroids: a narrative review.",
-          "authors": "El-Saber Batiha G, Al-Gareeb AI, Saad HM, et al.",
-          "journal": "Inflammopharmacology",
-          "year": "2022",
-          "abstract_snippet": "It has been reported that corticosteroid therapy was effective in the management of severe acute respiratory syndrome (SARS) and the Middle East Respiratory Syndrome (MERS), and recently in coronavirus disease 2019 (COVID-19). Corticosteroids are potent anti-inflammatory drugs that mitigate the risk...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35562628/"
-        },
-        {
-          "pmid": "37537405",
-          "title": "Ionically bridged dexamethasone sodium phosphate-zinc-PLGA nanocomplex in alginate microgel for the local treatment of ulcerative colitis.",
-          "authors": "Saparbayeva A, Lee J, Hlaing SP, et al.",
-          "journal": "Archives of pharmacal research",
-          "year": "2023",
-          "abstract_snippet": "Colon-targeted oral drug delivery systems comprising nanoparticles and microparticles have emerged as promising tools for the treatment of ulcerative colitis (UC) because they minimize side effects and maximize the local drug concentration. Dexamethasone sodium phosphate (DSP) is a potent anti-infla...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37537405/"
-        }
-      ],
-      "repurposing_papers": [
-        {
-          "pmid": "40929958",
-          "title": "Integrative multi-omics identifies S100A8/IGFBP5/CTSK/S100P as dual diagnostic biomarkers and therapeutic targets in Crohn's disease: from computational discovery to preclinical validation.",
-          "authors": "Wu J, Nie H, Wang H, et al.",
-          "journal": "International immunopharmacology",
-          "year": "2025",
-          "abstract_snippet": "Crohn's disease (CD) is a chronic inflammatory bowel condition that significantly impairs patients' quality of life. With no cure currently available, the need to discover novel biomarkers and develop effective therapeutic strategies is paramount. This study used a comprehensive machine learning app...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40929958/",
-          "total_results": 1
-        }
-      ],
-      "semantic_scholar_papers": [
-        {
-          "title": "Keratin/alginate microspheres as a novel pH-dependent polymer for colon-targeted delivery of dexamethasone for the management of inflammatory bowel disease",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/c573d77a44d5512df8782b072166b3878d20c13f",
-          "authors": "O. Meko, S. Eraga, M. Arhewoh"
-        },
-        {
-          "title": "Formulation of various polysaccharides-based multicoated tablets containing dexamethasone and probiotics for inflammatory bowel disease",
-          "year": 2023,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/44bcac49221417736733445be636bddb9fcdfd93",
-          "authors": "R. Iswandana, Kurnia Sari Setio Putri, Hani Nur Anisa"
-        },
-        {
-          "title": "Randomized Controlled Trial: Perioperative Dexamethasone Reduces Excessive Postoperative Inflammatory Response and Ileus After Surgery for Inflammatory Bowel Disease.",
-          "year": 2021,
-          "citations": 18,
-          "url": "https://www.semanticscholar.org/paper/13a1455ce0f0fa5662668fa055dca771861780d5",
-          "authors": "Tenghui Zhang, Yi Xu, Yao Yao"
-        },
-        {
-          "title": "Orally Administrated Precision Nanomedicine for Restoring the Intestinal Barrier and Alleviating Inflammation in Treatment of Inflammatory Bowel Disease.",
-          "year": 2025,
-          "citations": 13,
-          "url": "https://www.semanticscholar.org/paper/0d32c1e1675cfa1adc88b9bdf6d2f3474afd02b5",
-          "authors": "Ding Wang, Qi Jiang, Peirong Li"
-        },
-        {
-          "title": "Multifunctional Double-Loaded Oral Nanoplatform for Computed Tomography Imaging-Guided and Integrated Treatment of Inflammatory Bowel Disease.",
-          "year": 2025,
-          "citations": 11,
-          "url": "https://www.semanticscholar.org/paper/b93cc2ca2ba7a04228ec269ed518150911ef5843",
-          "authors": "Yaoting He, Ziyang Jin, Yifan Wang"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Computational Repositioning of the Anticonvulsant Topiramate for Inflammatory Bowel Disease",
-        "year": 2011,
-        "citations": 551,
-        "url": "https://www.semanticscholar.org/paper/65228a9f1b83b09af483779bb637fa6e037ae12f",
-        "authors": "J. Dudley, M. Sirota, M. Shenoy"
-      },
-      "max_citations": 551,
-      "faers_signal": "moderate",
-      "faers_total_reports": 312747,
-      "faers_cooccurrences": 11,
-      "faers_interpretation": "11 FAERS reports mention both Dexamethasone and Inflammatory bowel disease-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "T5247673 (1.423)",
-        "linsitinib (1.414)",
-        "Paclitaxel (1.412)",
-        "KU 0060648 trihydrochloride (1.405)",
-        "PFI-1 (1.399)"
-      ],
-      "signature_interpretation": "Dexamethasone was not found among the top 35 drugs that reverse the Inflammatory bowel disease gene signature. Top reversers: T5247673 (1.423), linsitinib (1.414), Paclitaxel (1.412)",
-      "ai_hypothesis": "of its anti-inflammatory properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "Phase 3",
-      "failed_trial_count": 2,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.7578,
-      "mr_genetic_targets": 50,
-      "mechanistic_hypothesis": "Dexamethasone \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease",
-      "kg_paths_text": "\u2022 Dexamethasone \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease\n\u2022 Dexamethasone \u2014[inhibits]\u2192 gene-3589 \u2014[is associated with]\u2192 Inflammatory bowel disease\n\u2022 Dexamethasone \u2014[affects]\u2192 gene-650 \u2014[is affected by]\u2192 DB00641 \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease",
-      "validation_experiments": [],
-      "novelty_score": 0.128,
-      "novelty_level": "ESTABLISHED",
-      "is_known_treatment": true,
-      "clinical_trials_total": 9,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT05432934",
-          "title": "Transversus Abdominis Plane Blocks With and Without Dexamethasone",
-          "status": "UNKNOWN",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "60",
-          "url": "https://clinicaltrials.gov/study/NCT05432934"
-        },
-        {
-          "nct_id": "NCT07385131",
-          "title": "Prophylactic Dexamethasone Before Infliximab in Moderate-to-Severe IBD",
-          "status": "RECRUITING",
-          "phase": "N/A",
-          "enrollment": "300",
-          "url": "https://clinicaltrials.gov/study/NCT07385131"
-        },
-        {
-          "nct_id": "NCT03723447",
-          "title": "Intraoperative TAP Block With Bupivacaine/Dexamethasone Against Liposomal Bupivacaine (Exparel\u00ae)",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "102",
-          "url": "https://clinicaltrials.gov/study/NCT03723447"
-        },
-        {
-          "nct_id": "NCT01277289",
-          "title": "Intra-erythrocyte Dexamethasone Versus Placebo in Patients With Steroid-dependent Crohn's Disease",
-          "status": "TERMINATED",
-          "phase": "PHASE3",
-          "enrollment": "51",
-          "url": "https://clinicaltrials.gov/study/NCT01277289"
-        },
-        {
-          "nct_id": "NCT04791566",
-          "title": "Preoperative High-dose Dexamethasone and Emergency Laparotomy",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "120",
-          "url": "https://clinicaltrials.gov/study/NCT04791566"
-        }
-      ],
-      "trial_phases": {
-        "PHASE1": 1,
-        "PHASE2": 3,
-        "PHASE4": 2,
-        "PHASE3": 1,
-        "NA": 1
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "9 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
-        "393 PubMed articles on this drug-disease pair",
-        "1 article(s) specifically mention repurposing/repositioning",
-        "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 11 adverse event reports mention drug-disease co-occurrence",
-        "Highly cited paper (551 citations): \"Computational Repositioning of the Anticonvulsant Topiramate...\"",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.76, 50 genetic targets)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "likely",
-        "dose_range": "trial",
-        "confidence": "medium",
-        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
-        "chembl_phase": 2.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1512,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (ABCB1 / rs1045642)",
-        "cpic": [],
-        "pharmgkb": [
-          {
-            "gene": "ABCB1",
-            "variant": "rs1045642",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204433"
-          },
-          {
-            "gene": "ABCB1",
-            "variant": "rs2032582",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981238041"
-          },
-          {
-            "gene": "CTLA4",
-            "variant": "rs4553808",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043880851"
-          },
-          {
-            "gene": "ABCB1",
-            "variant": "rs2229109",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449170621"
-          },
-          {
-            "gene": "GATA3",
-            "variant": "rs3824662",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1184512128"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 3,
-        "axes": {
-          "kg": true,
-          "docking": true,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.678,
-        "label": "silver-standard",
-        "axis_values": {
-          "kg": 0.534,
-          "docking": 0.97,
-          "pharos": 0.0,
-          "literature": 1.0
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Colon - Transverse",
-          "Small Intestine - Terminal Ileum"
-        ],
-        "n_genes": 20,
-        "n_expressed": 14,
-        "mean_tpm_in_tissue": 41.78,
-        "max_tpm_in_tissue": 185.28,
-        "tissue_specificity": 0.0,
-        "context_modifier": 0.996
-      },
-      "disease_entity": "Disease::MESH:D015212",
-      "ensemble_prob": 0.9695,
-      "ensemble_features": {
-        "kg_score": 0.9998,
-        "degree_penalty": 0.736,
-        "n_drug_targets": 24,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 1.0986
-      },
-      "ensemble_rank": 2,
-      "docking": {
-        "kcal_per_mol": -11.64,
-        "target_symbol": "NR3C1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Leucovorin",
-      "drug_id": "DB00650",
-      "disease_name": "Inflammatory bowel disease",
-      "combined_score": 0.5299999713897705,
-      "pillars_hit": 4,
-      "transe_rank": 171,
-      "transe_score": -11.102,
-      "pykeen_score": 0,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.722000002861023,
-      "proximity_distance": 1.1100000143051147,
-      "admet_score": 1.0,
-      "admet_flags": "clean",
-      "primekg_score": 0.2572,
-      "dti_score": 0.9413,
-      "dti_best_target": "NTSR1",
-      "kg_group_score": 0.0616,
-      "structural_group_score": 0.9413,
-      "network_group_score": 0.6363000273704529,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.7858,
-      "admet_multiplier": 1.0,
-      "efficacy_score": 0.5299999713897705,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 1,
-      "shared_targets": [
-        "CSF3"
-      ],
-      "pubmed_total": 24,
-      "pubmed_treatment_total": 23,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "35236714",
-          "title": "Extracorporeal Treatment for Methotrexate Poisoning: Systematic Review and Recommendations from the EXTRIP Workgroup.",
-          "authors": "Ghannoum M, Roberts DM, Goldfarb DS, et al.",
-          "journal": "Clinical journal of the American Society of Nephrology : CJASN",
-          "year": "2022",
-          "abstract_snippet": "Methotrexate is used in the treatment of many malignancies, rheumatological diseases, and inflammatory bowel disease. Toxicity from use is associated with severe morbidity and mortality. Rescue treatments include intravenous hydration, folinic acid, and, in some centers, glucarpidase. We conducted s...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35236714/",
-          "total_results": 24
-        },
-        {
-          "pmid": "19828998",
-          "title": "Vulvar mucinous adenocarcinoma associated with Crohn's disease: report of two cases.",
-          "authors": "Matsuo K, Chi DS, Eno ML, et al.",
-          "journal": "Gynecologic and obstetric investigation",
-          "year": "2009",
-          "abstract_snippet": "BACKGROUND: Rectovaginal fistula in long-standing Crohn's disease is possibly associated with malignant transformation to mucinous adenocarcinoma of the vagina. However, there have been no previously reported cases documenting vulvar cancer in association with rectovaginal fistula in Crohn's disease...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/19828998/"
-        },
-        {
-          "pmid": "26771865",
-          "title": "Efficacy and safety analysis of chemotherapy for advanced colitis-associated colorectal cancer in Japan.",
-          "authors": "Nio K, Higashi D, Kumagai H, et al.",
-          "journal": "Anti-cancer drugs",
-          "year": "2016",
-          "abstract_snippet": "Chemotherapy for advanced colitis-associated colorectal cancer (CAC) has been insufficiently evaluated. The goal of this study was to clarify the efficacy and safety of chemotherapy for CAC in Japan. CAC patients who were treated with chemotherapy between 2005 and 2015 were retrospectively examined....",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/26771865/"
-        },
-        {
-          "pmid": "32798155",
-          "title": "Systemic Chemotherapy for Metastatic Colitis-Associated Cancer Has a Worse Outcome Than Sporadic Colorectal Cancer: Matched Case Cohort Analysis.",
-          "authors": "Yaeger R, Paroder V, Bates DDB, et al.",
-          "journal": "Clinical colorectal cancer",
-          "year": "2020",
-          "abstract_snippet": "BACKGROUND: Colitis-associated cancers (CAC) are a catastrophic complication of inflammatory bowel disease; at diagnosis, CAC is frequently at an advanced stage. Although the genomic alterations (GA) in CAC are different from sporadic colorectal cancer (CRC), the same systemic therapies are used. We...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/32798155/"
-        },
-        {
-          "pmid": "25253971",
-          "title": "Hepatoid adenocarcinoma of the colon in a patient with inflammatory bowel disease.",
-          "authors": "Chen Y, Schaeffer DF, Yoshida EM",
-          "journal": "World journal of gastroenterology",
-          "year": "2014",
-          "abstract_snippet": "A case is presented of a 36-year-old male with primary sclerosing cholangitis-associated inflammatory bowel disease (PSC-IBD) and two synchronous stage 1 adenocarcinomata of the colon, who was initially treated with a subtotal colectomy with ileostomy. One year later, the patient presented with exte...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/25253971/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Hepatoid adenocarcinoma of the colon in a patient with inflammatory bowel disease.",
-          "year": 2014,
-          "citations": 24,
-          "url": "https://www.semanticscholar.org/paper/338ef7b9fc8e18fb4c5698210237affec29bfc4d",
-          "authors": "Yuanyuan Chen, D. Schaeffer, E. Yoshida"
-        },
-        {
-          "title": "Systemic treatment of patients who have colorectal cancer and inflammatory bowel disease.",
-          "year": 2006,
-          "citations": 16,
-          "url": "https://www.semanticscholar.org/paper/5fa4ead24834cd8054382bb9b08620c1b12f2875",
-          "authors": "W. Goessling, R. Mayer"
-        },
-        {
-          "title": "Acute methotrexate ingestions in adults: A review on ever-rising consumption of methotrexate since 1980s",
-          "year": 2015,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/eb092d0ed60950ba27a43eabdc5ed5e863d73109",
-          "authors": "Ranjita Santra(Dhali), S. Choudhury"
-        },
-        {
-          "title": "Does Radiation Prevent 5-Fluorouracil-Induced Colitis in the Early Phase of Radiochemotherapy?",
-          "year": 2007,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/591211ef6f8ed2348d170ceb11d7988f433f9abe",
-          "authors": "H. Rischke, F. Momm, M. Henke"
-        },
-        {
-          "title": "Worldwide incidence and prevalence of inflammatory bowel disease in the 21st century: a systematic review of population-based studies.",
-          "year": 2017,
-          "citations": 4731,
-          "url": "https://www.semanticscholar.org/paper/d0b692c7f2985cc39fa1513906482dc58f885b3c",
-          "authors": "S. Ng, H. Shi, N. Hamidi"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Worldwide incidence and prevalence of inflammatory bowel disease in the 21st century: a systematic review of population-based studies.",
-        "year": 2017,
-        "citations": 4731,
-        "url": "https://www.semanticscholar.org/paper/d0b692c7f2985cc39fa1513906482dc58f885b3c",
-        "authors": "S. Ng, H. Shi, N. Hamidi"
-      },
-      "max_citations": 4731,
-      "faers_signal": "moderate",
-      "faers_total_reports": 42770,
-      "faers_cooccurrences": 9,
-      "faers_interpretation": "9 FAERS reports mention both Leucovorin and Inflammatory bowel disease-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "T5247673 (1.423)",
-        "linsitinib (1.414)",
-        "Paclitaxel (1.412)",
-        "KU 0060648 trihydrochloride (1.405)",
-        "PFI-1 (1.399)"
-      ],
-      "signature_interpretation": "Leucovorin was not found among the top 35 drugs that reverse the Inflammatory bowel disease gene signature. Top reversers: T5247673 (1.423), linsitinib (1.414), Paclitaxel (1.412)",
-      "ai_hypothesis": "of its anti-inflammatory properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.7858,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "Leucovorin \u2014[is a therapeutic for]\u2192 MESH:D015470 \u2014[is treated by]\u2192 DB00352 \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease",
-      "kg_paths_text": "\u2022 Leucovorin \u2014[is a therapeutic for]\u2192 MESH:D015470 \u2014[is treated by]\u2192 DB00352 \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease\n\u2022 Leucovorin \u2014[is a therapeutic for]\u2192 MESH:D064420 \u2014[is treated by]\u2192 DB14104 \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease\n\u2022 Leucovorin \u2014[is a therapeutic for]\u2192 MESH:D064420 \u2014[is treated by]\u2192 DB00635 \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease",
-      "validation_experiments": [],
-      "novelty_score": 0.3499999940395355,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": false,
-      "clinical_trials_total": 2,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT07241247",
-          "title": "Evaluation the of Role of Vitamin D Supplement on Tumor Response, Inflammation and Apoptosis in Patients With Stage II or III Colorectal Cancer Receiving Chemotherapy.",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "44",
-          "url": "https://clinicaltrials.gov/study/NCT07241247"
-        },
-        {
-          "nct_id": "NCT01588990",
-          "title": "A Translational Study of Bevacizumab in Participants With Metastatic Colorectal Cancer",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "128",
-          "url": "https://clinicaltrials.gov/study/NCT01588990"
-        }
-      ],
-      "trial_phases": {
-        "PHASE4": 2
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "2 clinical trial(s) found on ClinicalTrials.gov",
-        "24 PubMed articles found",
-        "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 9 adverse event reports mention drug-disease co-occurrence",
-        "Highly cited paper (4731 citations): \"Worldwide incidence and prevalence of inflammatory bowel dis...\"",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.79, 1 genetic targets)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 150,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00783",
-            "drug_name": "Estradiol",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00563",
-            "drug_name": "Methotrexate",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00213",
-            "drug_name": "Pantoprazole",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00175",
-            "drug_name": "Pravastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01032",
-            "drug_name": "Probenecid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01098",
-            "drug_name": "Rosuvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01685",
-            "drug_name": "4-[5-Pyridin-4-Yl-1h-[1,2,4]Triazol-3-Yl]-Pyridine-2-Carbonitrile",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB01629",
-            "drug_name": "5-Fluorouridine",
-            "severity": "moderate"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "moderate",
-        "summary": "CPIC-C (MTHFR) \u2022 PharmGKB-3 (SELE / rs3917412)",
-        "cpic": [
-          {
-            "gene": "MTHFR",
-            "level": "C",
-            "guideline": ""
-          }
-        ],
-        "pharmgkb": [
-          {
-            "gene": "SELE",
-            "variant": "rs3917412",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1447814450"
-          },
-          {
-            "gene": "MTHFR",
-            "variant": "rs1801131",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204864"
-          },
-          {
-            "gene": "ERCC2",
-            "variant": "rs13181",
-            "level": "3",
-            "phenotype_category": "Efficacy;Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981237959"
-          },
-          {
-            "gene": "SHMT1",
-            "variant": "rs1979277",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043880841"
-          },
-          {
-            "gene": "ERCC1",
-            "variant": "rs11615",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183615268"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.3070000112056732,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.5299999713897705,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.607
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Colon - Transverse",
-          "Small Intestine - Terminal Ileum"
-        ],
-        "n_genes": 1,
-        "n_expressed": 0,
-        "mean_tpm_in_tissue": 0.61,
-        "max_tpm_in_tissue": 0.61,
-        "tissue_specificity": 0.018,
-        "context_modifier": 0.871
-      },
-      "disease_entity": "Disease::MESH:D015212",
-      "ensemble_prob": 0.2454,
-      "ensemble_features": {
-        "kg_score": 0.9725,
-        "degree_penalty": 0.8813,
-        "n_drug_targets": 4,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 5.6733
-      },
-      "ensemble_rank": 6,
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [
-          "ALDEHYDE"
-        ],
-        "n_alerts": 1,
-        "alert_names": [
-          "aldehyde"
-        ]
       }
     },
     {
@@ -2447,8 +1642,8 @@
       "admet_score": 0.4859,
       "admet_flags": "hERG=0.85",
       "primekg_score": 0.261,
-      "dti_score": 0.8839,
-      "dti_best_target": "TACR1",
+      "dti_score": 0.7003,
+      "dti_best_target": "COX2",
       "kg_group_score": 0.2499,
       "structural_group_score": 0.9334,
       "network_group_score": 0.7034,
@@ -2645,6 +1840,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.78, 22 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D015212",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2782,8 +1978,7 @@
         "tissue_specificity": 0.591,
         "context_modifier": 1.101
       },
-      "disease_entity": "Disease::MESH:D015212",
-      "ensemble_prob": 0.4855,
+      "ensemble_prob": 0.3231,
       "ensemble_features": {
         "kg_score": 0.9941,
         "degree_penalty": 0.7483,
@@ -2814,219 +2009,6 @@
       }
     },
     {
-      "drug_name": "2'-Monophosphoadenosine 5'-Diphosphoribose",
-      "drug_id": "DB03461",
-      "disease_name": "Inflammatory bowel disease",
-      "combined_score": 0.5264,
-      "pillars_hit": 4,
-      "transe_rank": 27,
-      "transe_score": -10.5101,
-      "pykeen_score": 0,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.5619999766349792,
-      "proximity_distance": 1.75,
-      "admet_score": 1.0,
-      "admet_flags": "clean",
-      "primekg_score": 0.2527,
-      "dti_score": 0.9775,
-      "dti_best_target": "NTSR1",
-      "kg_group_score": 0.1538,
-      "structural_group_score": 0.9775,
-      "network_group_score": 0.4864000082015991,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.7652,
-      "admet_multiplier": 1.0,
-      "efficacy_score": 0.5264,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 5,
-      "shared_targets": [
-        "DUOX2",
-        "FN1",
-        "IFNG",
-        "PDGFB",
-        "TNF"
-      ],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "AGA Clinical Practice Update on Diet and Nutritional Therapies in Patients With Inflammatory Bowel Disease: Expert Review.",
-          "year": 2024,
-          "citations": 224,
-          "url": "https://www.semanticscholar.org/paper/ec2a57dc31a42ec3883b3f4f92e4a43406a38c80",
-          "authors": "Jana G. Hashash, Jaclyn R Elkins, James D. Lewis"
-        },
-        {
-          "title": "Applications of generative artificial intelligence in inflammatory bowel disease: A systematic review.",
-          "year": 2025,
-          "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/42ede1c8a9ef0896fb6b17cd6031cc25b17487da",
-          "authors": "F. Lusetti, S. Maimaris, G.P. La Rosa"
-        },
-        {
-          "title": "Statin Use is Associated With Lower Odds of IBD-Related Surgery Among Patients With Moderate-to-Severe Inflammatory Bowel Disease.",
-          "year": 2025,
-          "citations": 2,
-          "url": "https://www.semanticscholar.org/paper/697ee2a4977a0b1223fd7cad6c3766d9b9145f11",
-          "authors": "J. Claytor, P. Rajauria, J. Peraza"
-        },
-        {
-          "title": "Black and Latino/a Participants With Inflammatory Bowel Disease Are More Likely to Be at Risk for Post-Traumatic Stress Than Their White Counterparts: A Matched Control Comparison Study.",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/6eebe3435ca46c15d933d66ed8957f731ba829dd",
-          "authors": "Sara H Marchese, H. Raza, Sandra Naffouj"
-        },
-        {
-          "title": "Survey of Patient Satisfaction and Willingness to Pay for Shared Decision-Making Implemented by Pharmacists for Patients with Inflammatory Bowel Disease",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/695abfbc9ab00073b28133facb7b9b2df6533d4e",
-          "authors": "Momoko Konaka, Ikkou Hirata, Hiroki Oba"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "AGA Clinical Practice Update on Diet and Nutritional Therapies in Patients With Inflammatory Bowel Disease: Expert Review.",
-        "year": 2024,
-        "citations": 224,
-        "url": "https://www.semanticscholar.org/paper/ec2a57dc31a42ec3883b3f4f92e4a43406a38c80",
-        "authors": "Jana G. Hashash, Jaclyn R Elkins, James D. Lewis"
-      },
-      "max_citations": 224,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for 2'-Monophosphoadenosine 5'-Diphosphoribose",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "T5247673 (1.423)",
-        "linsitinib (1.414)",
-        "Paclitaxel (1.412)",
-        "KU 0060648 trihydrochloride (1.405)",
-        "PFI-1 (1.399)"
-      ],
-      "signature_interpretation": "2'-Monophosphoadenosine 5'-Diphosphoribose was not found among the top 35 drugs that reverse the Inflammatory bowel disease gene signature. Top reversers: T5247673 (1.423), linsitinib (1.414), Paclitaxel (1.412)",
-      "ai_hypothesis": "of its anti-inflammatory properties.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.7652,
-      "mr_genetic_targets": 5,
-      "mechanistic_hypothesis": "2'-Monophosphoadenosine 5'-Diphosphoribose \u2014[is a therapeutic for]\u2192 MESH:D019966 \u2014[is treated by]\u2192 DB00877 \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease",
-      "kg_paths_text": "\u2022 2'-Monophosphoadenosine 5'-Diphosphoribose \u2014[is a therapeutic for]\u2192 MESH:D019966 \u2014[is treated by]\u2192 DB00877 \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease\n\u2022 2'-Monophosphoadenosine 5'-Diphosphoribose \u2014[is a therapeutic for]\u2192 MESH:D019966 \u2014[is treated by]\u2192 DB11094 \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease\n\u2022 2'-Monophosphoadenosine 5'-Diphosphoribose \u2014[is a therapeutic for]\u2192 MESH:D019966 \u2014[is treated by]\u2192 DB00860 \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease",
-      "validation_experiments": [],
-      "novelty_score": 0.569,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "MEDIUM",
-      "confidence_reasons": [
-        "Supported by 4 independent AI pillars",
-        "Highly cited paper (224 citations): \"AGA Clinical Practice Update on Diet and Nutritional Therapi...\"",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.77, 5 genetic targets)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "unknown",
-        "dose_range": "research",
-        "confidence": "low",
-        "rationale": "No ChEMBL clinical phase data available.",
-        "chembl_phase": null,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 0,
-        "has_warnings": false,
-        "top_interactions": []
-      },
-      "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
-        "pharmgkb": []
-      },
-      "triangulation": {
-        "n_axes_agree": 1,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": false
-        },
-        "triangulation_score": 0.184,
-        "label": "kg-only",
-        "axis_values": {
-          "kg": 0.526,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.0
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Colon - Transverse",
-          "Small Intestine - Terminal Ileum"
-        ],
-        "n_genes": 5,
-        "n_expressed": 4,
-        "mean_tpm_in_tissue": 40.23,
-        "max_tpm_in_tissue": 185.28,
-        "tissue_specificity": 0.0,
-        "context_modifier": 0.995
-      },
-      "disease_entity": "Disease::MESH:D015212",
-      "ensemble_prob": 0.1158,
-      "ensemble_features": {
-        "kg_score": 0.9191,
-        "degree_penalty": 0.8655,
-        "n_drug_targets": 1,
-        "is_fda_approved": 0,
-        "n_disease_genes": 0,
-        "transe_rank_log": 6.7511
-      },
-      "ensemble_rank": 9,
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [
-          "GTE",
-          "PHOSPHOR",
-          "QUATERNARY"
-        ],
-        "n_alerts": 3,
-        "alert_names": [
-          "phosphor",
-          "quaternary_nitrogen_1",
-          "gte_2_free_phos"
-        ]
-      }
-    },
-    {
       "drug_name": "Betamethasone",
       "drug_id": "DB00443",
       "disease_name": "Inflammatory bowel disease",
@@ -3049,8 +2031,8 @@
       "admet_score": 0.7132,
       "admet_flags": "clean",
       "primekg_score": 0.2563,
-      "dti_score": 0.3431,
-      "dti_best_target": "NTSR1",
+      "dti_score": 0.342,
+      "dti_best_target": "COX2",
       "kg_group_score": 0.1794,
       "structural_group_score": 1.0,
       "network_group_score": 0.5967000126838684,
@@ -3239,6 +2221,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.76, 29 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D015212",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -3340,8 +2323,7 @@
         "tissue_specificity": 0.371,
         "context_modifier": 1.02
       },
-      "disease_entity": "Disease::MESH:D015212",
-      "ensemble_prob": 0.9525,
+      "ensemble_prob": 0.8788,
       "ensemble_features": {
         "kg_score": 0.9981,
         "degree_penalty": 0.7572,
@@ -3366,10 +2348,433 @@
       }
     },
     {
+      "drug_name": "Prednisolone",
+      "drug_id": "DB00860",
+      "disease_name": "Inflammatory bowel disease",
+      "combined_score": 0.5213,
+      "pillars_hit": 4,
+      "transe_rank": 10,
+      "transe_score": -10.2353,
+      "pykeen_score": -12.3512,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0.02,
+      "gene_sig_rank": 33,
+      "proximity_score": 0.7879999876022339,
+      "proximity_distance": 0.8500000238418579,
+      "admet_score": 0.7161,
+      "admet_flags": "clean",
+      "primekg_score": 0.2529,
+      "dti_score": 0.7425,
+      "dti_best_target": "COX2",
+      "kg_group_score": 0.3487,
+      "structural_group_score": 0.7425,
+      "network_group_score": 0.6022999882698059,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.7427,
+      "admet_multiplier": 0.9432,
+      "efficacy_score": 0.5527,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 7,
+      "shared_targets": [
+        "CCL2",
+        "IL2",
+        "LEP",
+        "MUC1",
+        "NR3C1",
+        "POMC",
+        "TNF"
+      ],
+      "pubmed_total": 1633,
+      "pubmed_treatment_total": 1559,
+      "pubmed_repurposing_total": 2,
+      "key_papers": [
+        {
+          "pmid": "31562236",
+          "title": "British Society of Gastroenterology consensus guidelines on the management of inflammatory bowel disease in adults.",
+          "authors": "Lamb CA, Kennedy NA, Raine T, et al.",
+          "journal": "Gut",
+          "year": "2019",
+          "abstract_snippet": "Ulcerative colitis and Crohn's disease are the principal forms of inflammatory bowel disease. Both represent chronic inflammation of the gastrointestinal tract, which displays heterogeneity in inflammatory and symptomatic burden between patients and within individuals over time. Optimal management r...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31562236/",
+          "total_results": 1633
+        },
+        {
+          "pmid": "8819801",
+          "title": "Budesonide in inflammatory bowel disease.",
+          "authors": "Lamers CB, Wagtmans MJ, van der Sluys Veer A, et al.",
+          "journal": "The Netherlands journal of medicine",
+          "year": "1996",
+          "abstract_snippet": "Due to its immunomodulatory and anti-inflammatory properties glucocorticosteroids have proved to be highly efficacious in patients with inflammatory bowel disease. However, because of the risk of side-effects, the dose and duration of therapy with systemically acting glucocorticosteroids have to be ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/8819801/"
+        },
+        {
+          "pmid": "16944997",
+          "title": "Budesonide for ulcerative colitis.",
+          "authors": "Mar\u00edn-Jim\u00e9nez I, Pe\u00f1a AS",
+          "journal": "Revista espanola de enfermedades digestivas",
+          "year": "2006",
+          "abstract_snippet": "In this review, we examined studies published on oral and topical formulations of budesonide (Entocort and Budenofalk, in Spain: Entocord and Intestifalk) for the treatment of ulcerative colitis. This glycocorticosteroid has a potent local action and an important first-pass liver metabolism. It has ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16944997/"
+        },
+        {
+          "pmid": "11919030",
+          "title": "Feline inflammatory bowel disease: a review.",
+          "authors": "Willard MD",
+          "journal": "Journal of feline medicine and surgery",
+          "year": "1999",
+          "abstract_snippet": "Inflammatory bowel disease (IBD), while a popular diagnosis, may not occur as commonly as it is diagnosed. It is a diagnosis of exclusion, meaning that it is important to eliminate diseases that mimick it. Dietary intolerance or allergy in particular, can have the same clinical and histologic appear...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11919030/"
+        },
+        {
+          "pmid": "782236",
+          "title": "Pharmacotherapy of inflammatory bowel disease.",
+          "authors": "Gardner RC",
+          "journal": "American journal of hospital pharmacy",
+          "year": "1976",
+          "abstract_snippet": "The etiology, pharmacotherapy and management of the two major types of inflammatory bowel disease--ulcerative colitis and Crohn's disease--are reviewed. Sulfasalazine and topical corticosteroids (i.e., hydrocortisone, hydrocortisone acetate or methylprednisolone acetate) are effective in many patien...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/782236/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "41214861",
+          "title": "Comparative Efficacy of Donepezil and Lamotrigine in Modulating NF\u03baB, PPAR\u03b3, and NLRP3 Inflammasome Pathways in Experimental Colitis.",
+          "authors": "Abdeltwab Desoky NS, Ahmed MAE, Aboulhoda BE, et al.",
+          "journal": "Archiv der Pharmazie",
+          "year": "2025",
+          "abstract_snippet": "Ulcerative colitis (UC) is a persistent inflammatory bowel disorder characterized by systemic inflammation and oxidative stress. This study compared the therapeutic potential of lamotrigine and donepezil in an acetic acid (AA)-induced UC rat model. Fifty-six male Wistar rats were divided into seven ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41214861/",
+          "total_results": 2
+        },
+        {
+          "pmid": "21849664",
+          "title": "Computational repositioning of the anticonvulsant topiramate for inflammatory bowel disease.",
+          "authors": "Dudley JT, Sirota M, Shenoy M, et al.",
+          "journal": "Science translational medicine",
+          "year": "2011",
+          "abstract_snippet": "Inflammatory bowel disease (IBD) is a chronic inflammatory disorder of the gastrointestinal tract for which there are few safe and effective therapeutic options for long-term treatment and disease maintenance. Here, we applied a computational approach to discover new drug therapies for IBD in silico...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/21849664/"
+        }
+      ],
+      "semantic_scholar_papers": [
+        {
+          "title": "3D-printed prednisolone phosphate suppositories with tunable dose and rapid release for the treatment of inflammatory bowel disease.",
+          "year": 2023,
+          "citations": 13,
+          "url": "https://www.semanticscholar.org/paper/5b58a567c091213dc0107b89ae6913fc9d130c55",
+          "authors": "L.I. Kocabas, S. Ayyoubi, M. Tajqurishi"
+        },
+        {
+          "title": "Comparing adipose-derived mesenchymal stem cells with prednisolone for the treatment of feline inflammatory bowel disease",
+          "year": 2022,
+          "citations": 11,
+          "url": "https://www.semanticscholar.org/paper/4628a49e1a12f13346188af2ae2e397e3f946d85",
+          "authors": "T. Webb, C. Webb"
+        },
+        {
+          "title": "The IGF system in patients with inflammatory bowel disease treated with prednisolone or infliximab: potential role of the stanniocalcin-2 / PAPP-A / IGFBP-4 axis",
+          "year": 2019,
+          "citations": 17,
+          "url": "https://www.semanticscholar.org/paper/e49210ff019edd1bb1394136ab87d2f43340b523",
+          "authors": "R. Hjortebjerg, K. Thomsen, J\u2205rgen Agnholt"
+        },
+        {
+          "title": "Effects of Adding Dexpanthenol to Prednisolone in an Experimental Model of Inflammatory Bowel Disease",
+          "year": 2020,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/750956a63158a211ce6b5f07488c9cd3c408b600",
+          "authors": "Seyedeh Mehrnaz Motatabzadeh, Seyed Meysam Abtahi Froushani"
+        },
+        {
+          "title": "Differences in the Adverse Event Burden of Corticosteroid Use in Inflammatory Bowel Disease as Reported Between Adverse Event Reporting Systems and a Patient Questionnaire.",
+          "year": 2024,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/5da5e3f7ce9a4acab3a9b29a56809e1fc40903bf",
+          "authors": "Eman Al Sulais, Edouard Louis, B. Bokemeyer"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Computational Repositioning of the Anticonvulsant Topiramate for Inflammatory Bowel Disease",
+        "year": 2011,
+        "citations": 551,
+        "url": "https://www.semanticscholar.org/paper/65228a9f1b83b09af483779bb637fa6e037ae12f",
+        "authors": "J. Dudley, M. Sirota, M. Shenoy"
+      },
+      "max_citations": 551,
+      "faers_signal": "moderate",
+      "faers_total_reports": 190318,
+      "faers_cooccurrences": 101,
+      "faers_interpretation": "101 FAERS reports mention both Prednisolone and Inflammatory bowel disease-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "T5247673 (1.423)",
+        "linsitinib (1.414)",
+        "Paclitaxel (1.412)",
+        "KU 0060648 trihydrochloride (1.405)",
+        "PFI-1 (1.399)"
+      ],
+      "signature_interpretation": "Prednisolone was not found among the top 35 drugs that reverse the Inflammatory bowel disease gene signature. Top reversers: T5247673 (1.423), linsitinib (1.414), Paclitaxel (1.412)",
+      "ai_hypothesis": "of its anti-inflammatory properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "Phase 3",
+      "failed_trial_count": 7,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.7427,
+      "mr_genetic_targets": 8,
+      "mechanistic_hypothesis": "Prednisolone \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease",
+      "kg_paths_text": "\u2022 Prednisolone \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease\n\u2022 Prednisolone \u2014[is agonized by]\u2192 gene-2908 \u2014[is linked to]\u2192 Inflammatory bowel disease\n\u2022 Prednisolone \u2014[is agonized by]\u2192 gene-4306 \u2014[is an agonist of]\u2192 DB01234 \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease",
+      "validation_experiments": [],
+      "novelty_score": 0.031,
+      "novelty_level": "ESTABLISHED",
+      "is_known_treatment": true,
+      "clinical_trials_total": 10,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT05341401",
+          "title": "Budesonide Multimatrix(MMX) Versus Prednisolone in Management of Mild to Moderate Ulcerative Colitis",
+          "status": "UNKNOWN",
+          "phase": "PHASE2, PHASE3",
+          "enrollment": "100",
+          "url": "https://clinicaltrials.gov/study/NCT05341401"
+        },
+        {
+          "nct_id": "NCT05587673",
+          "title": "High Dose Steroid Therapy to Treat Flares in Patients With Inflammatory Bowel Disease (IBD)",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "3",
+          "url": "https://clinicaltrials.gov/study/NCT05587673"
+        },
+        {
+          "nct_id": "NCT02921555",
+          "title": "Endovenous Corticosteroid Pulses in Moderate Ulcerative Colitis",
+          "status": "TERMINATED",
+          "phase": "PHASE4",
+          "enrollment": "75",
+          "url": "https://clinicaltrials.gov/study/NCT02921555"
+        },
+        {
+          "nct_id": "NCT00984568",
+          "title": "Conventional Step-Up Versus Infliximab Monotherapy in Patients With Ulcerative Colitis (P05553)",
+          "status": "TERMINATED",
+          "phase": "PHASE3",
+          "enrollment": "28",
+          "url": "https://clinicaltrials.gov/study/NCT00984568"
+        },
+        {
+          "nct_id": "NCT04224558",
+          "title": "Stem Cell Transplantation in Crohn's Disease",
+          "status": "RECRUITING",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "15",
+          "url": "https://clinicaltrials.gov/study/NCT04224558"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 4,
+        "PHASE3": 2,
+        "PHASE1": 2,
+        "PHASE4": 2,
+        "NA": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "10 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "1633 PubMed articles on this drug-disease pair",
+        "2 article(s) specifically mention repurposing/repositioning",
+        "Supported by 4 independent AI pillars",
+        "Moderate FAERS signal: 101 adverse event reports mention drug-disease co-occurrence",
+        "Highly cited paper (551 citations): \"Computational Repositioning of the Anticonvulsant Topiramate...\"",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.74, 8 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D015212",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1303,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (DSE;TSPYL1 / rs3828743)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "DSE;TSPYL1",
+            "variant": "rs3828743",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449576983"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs2229109",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1445402144"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs1045642",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1444704881"
+          },
+          {
+            "gene": "PNPLA3",
+            "variant": "rs738409",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1448632697"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.659,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.521,
+          "docking": 0.922,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Colon - Transverse",
+          "Small Intestine - Terminal Ileum"
+        ],
+        "n_genes": 7,
+        "n_expressed": 5,
+        "mean_tpm_in_tissue": 14.58,
+        "max_tpm_in_tissue": 55.43,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.957
+      },
+      "ensemble_prob": 0.951,
+      "ensemble_features": {
+        "kg_score": 0.9993,
+        "degree_penalty": 0.7643,
+        "n_drug_targets": 19,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.0794
+      },
+      "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": -11.07,
+        "target_symbol": "NR3C1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
       "drug_name": "Recoflavone",
       "drug_id": "DB12058",
       "disease_name": "Inflammatory bowel disease",
-      "combined_score": 0.5171999931335449,
+      "combined_score": 0.517799973487854,
       "pillars_hit": 4,
       "transe_rank": 7,
       "transe_score": -10.1792,
@@ -3388,15 +2793,15 @@
       "admet_score": 0.5817,
       "admet_flags": "DILI=0.98",
       "primekg_score": 0,
-      "dti_score": 0.4972,
-      "dti_best_target": "NTSR1",
+      "dti_score": 0.5007,
+      "dti_best_target": "COX2",
       "kg_group_score": 0.4736,
-      "structural_group_score": 0.4972,
+      "structural_group_score": 0.5007,
       "network_group_score": 0.75,
       "txgnn_group_score": 0,
       "mr_group_score": 0.7103,
       "admet_multiplier": 0.9163,
-      "efficacy_score": 0.5644000172615051,
+      "efficacy_score": 0.5651000142097473,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 0,
@@ -3551,8 +2956,10 @@
         "Supported by 4 independent AI pillars",
         "Highly cited paper (6349 citations): \"Inflammatory bowel disease....\"",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.71, 1 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.71, 1 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D015212",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "late-trial",
@@ -3582,10 +2989,10 @@
           "pharos": false,
           "literature": false
         },
-        "triangulation_score": 0.2590000033378601,
+        "triangulation_score": 0.25999999046325684,
         "label": "kg-only",
         "axis_values": {
-          "kg": 0.5170000195503235,
+          "kg": 0.5180000066757202,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 0.392
@@ -3603,8 +3010,7 @@
         "tissue_specificity": 0.562,
         "context_modifier": 1.097
       },
-      "disease_entity": "Disease::MESH:D015212",
-      "ensemble_prob": 0.0146,
+      "ensemble_prob": 0.0213,
       "ensemble_features": {
         "kg_score": 0.8759,
         "degree_penalty": 1.0,
@@ -3614,6 +3020,503 @@
         "transe_rank_log": 7.1778
       },
       "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "2'-Monophosphoadenosine 5'-Diphosphoribose",
+      "drug_id": "DB03461",
+      "disease_name": "Inflammatory bowel disease",
+      "combined_score": 0.5164,
+      "pillars_hit": 4,
+      "transe_rank": 27,
+      "transe_score": -10.5101,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.5619999766349792,
+      "proximity_distance": 1.75,
+      "admet_score": 1.0,
+      "admet_flags": "clean",
+      "primekg_score": 0.2527,
+      "dti_score": 0.9216,
+      "dti_best_target": "COX2",
+      "kg_group_score": 0.1538,
+      "structural_group_score": 0.9216,
+      "network_group_score": 0.4864000082015991,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.7652,
+      "admet_multiplier": 1.0,
+      "efficacy_score": 0.5164,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 5,
+      "shared_targets": [
+        "DUOX2",
+        "FN1",
+        "IFNG",
+        "PDGFB",
+        "TNF"
+      ],
+      "pubmed_total": 0,
+      "pubmed_treatment_total": 0,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "AGA Clinical Practice Update on Diet and Nutritional Therapies in Patients With Inflammatory Bowel Disease: Expert Review.",
+          "year": 2024,
+          "citations": 224,
+          "url": "https://www.semanticscholar.org/paper/ec2a57dc31a42ec3883b3f4f92e4a43406a38c80",
+          "authors": "Jana G. Hashash, Jaclyn R Elkins, James D. Lewis"
+        },
+        {
+          "title": "Applications of generative artificial intelligence in inflammatory bowel disease: A systematic review.",
+          "year": 2025,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/42ede1c8a9ef0896fb6b17cd6031cc25b17487da",
+          "authors": "F. Lusetti, S. Maimaris, G.P. La Rosa"
+        },
+        {
+          "title": "Statin Use is Associated With Lower Odds of IBD-Related Surgery Among Patients With Moderate-to-Severe Inflammatory Bowel Disease.",
+          "year": 2025,
+          "citations": 2,
+          "url": "https://www.semanticscholar.org/paper/697ee2a4977a0b1223fd7cad6c3766d9b9145f11",
+          "authors": "J. Claytor, P. Rajauria, J. Peraza"
+        },
+        {
+          "title": "Black and Latino/a Participants With Inflammatory Bowel Disease Are More Likely to Be at Risk for Post-Traumatic Stress Than Their White Counterparts: A Matched Control Comparison Study.",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/6eebe3435ca46c15d933d66ed8957f731ba829dd",
+          "authors": "Sara H Marchese, H. Raza, Sandra Naffouj"
+        },
+        {
+          "title": "Survey of Patient Satisfaction and Willingness to Pay for Shared Decision-Making Implemented by Pharmacists for Patients with Inflammatory Bowel Disease",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/695abfbc9ab00073b28133facb7b9b2df6533d4e",
+          "authors": "Momoko Konaka, Ikkou Hirata, Hiroki Oba"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "AGA Clinical Practice Update on Diet and Nutritional Therapies in Patients With Inflammatory Bowel Disease: Expert Review.",
+        "year": 2024,
+        "citations": 224,
+        "url": "https://www.semanticscholar.org/paper/ec2a57dc31a42ec3883b3f4f92e4a43406a38c80",
+        "authors": "Jana G. Hashash, Jaclyn R Elkins, James D. Lewis"
+      },
+      "max_citations": 224,
+      "faers_signal": "none",
+      "faers_total_reports": 0,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found for 2'-Monophosphoadenosine 5'-Diphosphoribose",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "T5247673 (1.423)",
+        "linsitinib (1.414)",
+        "Paclitaxel (1.412)",
+        "KU 0060648 trihydrochloride (1.405)",
+        "PFI-1 (1.399)"
+      ],
+      "signature_interpretation": "2'-Monophosphoadenosine 5'-Diphosphoribose was not found among the top 35 drugs that reverse the Inflammatory bowel disease gene signature. Top reversers: T5247673 (1.423), linsitinib (1.414), Paclitaxel (1.412)",
+      "ai_hypothesis": "of its anti-inflammatory properties.",
+      "abstract_analyses": [],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.7652,
+      "mr_genetic_targets": 5,
+      "mechanistic_hypothesis": "2'-Monophosphoadenosine 5'-Diphosphoribose \u2014[is a therapeutic for]\u2192 MESH:D019966 \u2014[is treated by]\u2192 DB00877 \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease",
+      "kg_paths_text": "\u2022 2'-Monophosphoadenosine 5'-Diphosphoribose \u2014[is a therapeutic for]\u2192 MESH:D019966 \u2014[is treated by]\u2192 DB00877 \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease\n\u2022 2'-Monophosphoadenosine 5'-Diphosphoribose \u2014[is a therapeutic for]\u2192 MESH:D019966 \u2014[is treated by]\u2192 DB11094 \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease\n\u2022 2'-Monophosphoadenosine 5'-Diphosphoribose \u2014[is a therapeutic for]\u2192 MESH:D019966 \u2014[is treated by]\u2192 DB00860 \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease",
+      "validation_experiments": [],
+      "novelty_score": 0.558,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "MEDIUM",
+      "confidence_reasons": [
+        "Supported by 4 independent AI pillars",
+        "Highly cited paper (224 citations): \"AGA Clinical Practice Update on Diet and Nutritional Therapi...\"",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.77, 5 genetic targets)"
+      ],
+      "disease_entity": "Disease::MESH:D015212",
+      "dose_plausibility": {
+        "plausibility": "unknown",
+        "dose_range": "research",
+        "confidence": "low",
+        "rationale": "No ChEMBL clinical phase data available.",
+        "chembl_phase": null,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 0,
+        "has_warnings": false,
+        "top_interactions": []
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.181,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.516,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Colon - Transverse",
+          "Small Intestine - Terminal Ileum"
+        ],
+        "n_genes": 5,
+        "n_expressed": 4,
+        "mean_tpm_in_tissue": 40.23,
+        "max_tpm_in_tissue": 185.28,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.995
+      },
+      "ensemble_prob": 0.0895,
+      "ensemble_features": {
+        "kg_score": 0.9191,
+        "degree_penalty": 0.8655,
+        "n_drug_targets": 1,
+        "is_fda_approved": 0,
+        "n_disease_genes": 0,
+        "transe_rank_log": 6.7511
+      },
+      "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "GTE",
+          "PHOSPHOR",
+          "QUATERNARY"
+        ],
+        "n_alerts": 3,
+        "alert_names": [
+          "phosphor",
+          "quaternary_nitrogen_1",
+          "gte_2_free_phos"
+        ]
+      }
+    },
+    {
+      "drug_name": "histamine dihydrochloride",
+      "drug_id": "DB05381",
+      "disease_name": "Inflammatory bowel disease",
+      "combined_score": 0.5151,
+      "pillars_hit": 4,
+      "transe_rank": 18,
+      "transe_score": -10.389,
+      "pykeen_score": -12.6574,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.6000000238418579,
+      "proximity_distance": 1.600000023841858,
+      "admet_score": 0.6862,
+      "admet_flags": "clean",
+      "primekg_score": 0.2728,
+      "dti_score": 0.7702,
+      "dti_best_target": "COX2",
+      "kg_group_score": 0.3923,
+      "structural_group_score": 0.7702,
+      "network_group_score": 0.49619999527931213,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.7574,
+      "admet_multiplier": 0.9372,
+      "efficacy_score": 0.5496,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 24,
+      "shared_targets": [
+        "C3",
+        "C5AR1",
+        "CAMP",
+        "CCL2",
+        "CCL5",
+        "CD14",
+        "DEFB4A",
+        "ETS1",
+        "FOS",
+        "GH1",
+        "GUSB",
+        "IFNG",
+        "IL11",
+        "IL2",
+        "MAPK14",
+        "MT-CO2",
+        "MUC2",
+        "ODC1",
+        "POMC",
+        "PTGS2"
+      ],
+      "pubmed_total": 0,
+      "pubmed_treatment_total": 0,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Inflammatory Bowel Disease: Crosstalk between Histamine, Immunity, and Disease",
+          "year": 2023,
+          "citations": 35,
+          "url": "https://www.semanticscholar.org/paper/335f18212bf416cab0692c4f211f6e0177d3b5c7",
+          "authors": "K. Dvornikova, O. N. Platonova, E. Bystrova"
+        },
+        {
+          "title": "Probiotics in inflammatory bowel disease: microbial modulation and therapeutic prospects.",
+          "year": 2025,
+          "citations": 43,
+          "url": "https://www.semanticscholar.org/paper/8394c1c4549793bb3e52b35b3efd701e821b5433",
+          "authors": "Omar P. Vallejos, S. Bueno, A. Kalergis"
+        },
+        {
+          "title": "Adverse Food Reactions in Inflammatory Bowel Disease: State of the Art and Future Perspectives",
+          "year": 2024,
+          "citations": 7,
+          "url": "https://www.semanticscholar.org/paper/be38961deb5e52306b97ffaa38c8e5836b8fa523",
+          "authors": "I. Capobianco, Federica di Vincenzo, P. Puca"
+        },
+        {
+          "title": "Proton pump inhibitors and the risk of inflammatory bowel disease: population-based cohort study",
+          "year": 2023,
+          "citations": 20,
+          "url": "https://www.semanticscholar.org/paper/f198360683219c5a7ee2d440869ac1ba9f150da8",
+          "authors": "D. Abrahami, R. Pradhan, H. Yin"
+        },
+        {
+          "title": "Histamine Receptor 2 is Required to Suppress Innate Immune Responses to Bacterial Ligands in Patients with Inflammatory Bowel Disease",
+          "year": 2016,
+          "citations": 38,
+          "url": "https://www.semanticscholar.org/paper/644bb14d6f9248989616364ef342e763eada940b",
+          "authors": "S. Smoli\u0144ska, D. Groeger, N. R. P\u00e9rez"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Probiotics in inflammatory bowel disease: microbial modulation and therapeutic prospects.",
+        "year": 2025,
+        "citations": 43,
+        "url": "https://www.semanticscholar.org/paper/8394c1c4549793bb3e52b35b3efd701e821b5433",
+        "authors": "Omar P. Vallejos, S. Bueno, A. Kalergis"
+      },
+      "max_citations": 43,
+      "faers_signal": "none",
+      "faers_total_reports": 15,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking histamine dihydrochloride to Inflammatory bowel disease terms. Drug has 15 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "T5247673 (1.423)",
+        "linsitinib (1.414)",
+        "Paclitaxel (1.412)",
+        "KU 0060648 trihydrochloride (1.405)",
+        "PFI-1 (1.399)"
+      ],
+      "signature_interpretation": "histamine dihydrochloride was not found among the top 35 drugs that reverse the Inflammatory bowel disease gene signature. Top reversers: T5247673 (1.423), linsitinib (1.414), Paclitaxel (1.412)",
+      "ai_hypothesis": "of its ability to inhibit the production of proinflammatory cytokines.",
+      "abstract_analyses": [],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.7574,
+      "mr_genetic_targets": 16,
+      "mechanistic_hypothesis": "histamine dihydrochloride \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease",
+      "kg_paths_text": "\u2022 histamine dihydrochloride \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease\n\u2022 histamine dihydrochloride \u2014[is a therapeutic for]\u2192 MESH:D015470 \u2014[is treated by]\u2192 DB00352 \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease\n\u2022 histamine dihydrochloride \u2014[is a therapeutic for]\u2192 MESH:D014376 \u2014[is treated by]\u2192 DB00860 \u2014[is a therapeutic for]\u2192 Inflammatory bowel disease",
+      "validation_experiments": [],
+      "novelty_score": 0.525,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": true,
+      "clinical_trials_total": 1,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT07064707",
+          "title": "Rupatadine in Patients With Ulcerative Colitis",
+          "status": "RECRUITING",
+          "phase": "PHASE2",
+          "enrollment": "60",
+          "url": "https://clinicaltrials.gov/study/NCT07064707"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "1 clinical trial(s) found on ClinicalTrials.gov",
+        "Supported by 4 independent AI pillars",
+        "Supporting paper with 43 citations",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.76, 16 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D015212",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 96,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00331",
+            "drug_name": "Metformin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01032",
+            "drug_name": "Probenecid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00787",
+            "drug_name": "Aciclovir",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB08838",
+            "drug_name": "Agmatine",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB00915",
+            "drug_name": "Amantadine",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB00594",
+            "drug_name": "Amiloride",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB00345",
+            "drug_name": "Aminohippurate",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB01118",
+            "drug_name": "Amiodarone",
+            "severity": "moderate"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.18,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.515,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Colon - Transverse",
+          "Small Intestine - Terminal Ileum"
+        ],
+        "n_genes": 20,
+        "n_expressed": 16,
+        "mean_tpm_in_tissue": 2601.63,
+        "max_tpm_in_tissue": 51118.7,
+        "tissue_specificity": 0.572,
+        "context_modifier": 1.099
+      },
+      "ensemble_prob": 0.0376,
+      "ensemble_features": {
+        "kg_score": 0.9422,
+        "degree_penalty": 0.8269,
+        "n_drug_targets": 13,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 6.4151
+      },
+      "ensemble_rank": 9,
       "docking": {
         "kcal_per_mol": null,
         "target_symbol": null,

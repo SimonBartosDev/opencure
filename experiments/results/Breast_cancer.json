@@ -1,8 +1,8 @@
 {
   "disease": "Breast cancer",
   "status": "completed",
-  "timestamp": "2026-04-19T18:55:15.923726",
-  "elapsed_seconds": 547.4,
+  "timestamp": "2026-05-07T23:09:41.816278",
+  "elapsed_seconds": 163.9,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -16,7 +16,7 @@
       "drug_name": "(2R)-2-(7-carbamoyl-1H-benzimidazol-2-yl)-2-methylpyrrolidinium",
       "drug_id": "DB07232",
       "disease_name": "Breast cancer",
-      "combined_score": 0.6144,
+      "combined_score": 0.6424,
       "pillars_hit": 4,
       "transe_rank": 114,
       "transe_score": -10.4378,
@@ -35,15 +35,15 @@
       "admet_score": 1.0,
       "admet_flags": "clean",
       "primekg_score": 0.2542,
-      "dti_score": 0.8447,
-      "dti_best_target": "SRARP",
+      "dti_score": 1.0,
+      "dti_best_target": "DDR1",
       "kg_group_score": 0.2287,
-      "structural_group_score": 0.8447,
+      "structural_group_score": 1.0,
       "network_group_score": 0.8999999761581421,
       "txgnn_group_score": 0,
       "mr_group_score": 0.8345,
       "admet_multiplier": 1.0,
-      "efficacy_score": 0.6144,
+      "efficacy_score": 0.6424,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 7,
@@ -131,7 +131,7 @@
       "mechanistic_hypothesis": "(2R)-2-(7-carbamoyl-1H-benzimidazol-2-yl)-2-methylpyrrolidinium \u2014[is a therapeutic for]\u2192 Breast cancer",
       "kg_paths_text": "\u2022 (2R)-2-(7-carbamoyl-1H-benzimidazol-2-yl)-2-methylpyrrolidinium \u2014[is a therapeutic for]\u2192 Breast cancer\n\u2022 (2R)-2-(7-carbamoyl-1H-benzimidazol-2-yl)-2-methylpyrrolidinium \u2014[is a therapeutic for]\u2192 MESH:D015179 \u2014[upregulates]\u2192 gene-23212 \u2014[is linked to]\u2192 Breast cancer\n\u2022 (2R)-2-(7-carbamoyl-1H-benzimidazol-2-yl)-2-methylpyrrolidinium \u2014[is a therapeutic for]\u2192 MESH:D015179 \u2014[upregulates]\u2192 gene-9446 \u2014[is linked to]\u2192 Breast cancer",
       "validation_experiments": [],
-      "novelty_score": 0.737,
+      "novelty_score": 0.771,
       "novelty_level": "BREAKTHROUGH",
       "is_known_treatment": true,
       "clinical_trials_total": 0,
@@ -142,8 +142,10 @@
         "Supported by 4 independent AI pillars",
         "Supporting paper with 40 citations",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.83, 6 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.83, 6 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D001943",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -194,10 +196,10 @@
           "pharos": false,
           "literature": false
         },
-        "triangulation_score": 0.498,
+        "triangulation_score": 0.508,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.614,
+          "kg": 0.642,
           "docking": 0.943,
           "pharos": 0.0,
           "literature": 0.0
@@ -214,15 +216,7 @@
         "tissue_specificity": 0.527,
         "context_modifier": 1.029
       },
-      "disease_entity": "Disease::MESH:D001943",
-      "docking": {
-        "kcal_per_mol": -11.31,
-        "target_symbol": "PARP1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.1178,
+      "ensemble_prob": 0.1057,
       "ensemble_features": {
         "kg_score": 0.9379,
         "degree_penalty": 1.0,
@@ -231,7 +225,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 6.4862
       },
-      "ensemble_rank": 8,
+      "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": -11.31,
+        "target_symbol": "PARP1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -243,7 +244,7 @@
       "drug_name": "Curcumin",
       "drug_id": "DB11672",
       "disease_name": "Breast cancer",
-      "combined_score": 0.6009,
+      "combined_score": 0.6056,
       "pillars_hit": 5,
       "transe_rank": 11,
       "transe_score": -9.793,
@@ -262,15 +263,15 @@
       "admet_score": 0.4043,
       "admet_flags": "Skin_Reaction=0.82",
       "primekg_score": 0.2471,
-      "dti_score": 0.5134,
-      "dti_best_target": "LGALS7",
+      "dti_score": 0.543,
+      "dti_best_target": "CTBP1",
       "kg_group_score": 0.3045,
-      "structural_group_score": 0.5134,
+      "structural_group_score": 0.543,
       "network_group_score": 0.7200000286102295,
       "txgnn_group_score": 0.48,
       "mr_group_score": 0.7607,
       "admet_multiplier": 0.8809,
-      "efficacy_score": 0.6822,
+      "efficacy_score": 0.6876,
       "groups_hit": 5,
       "direct_relations": [],
       "shared_target_count": 162,
@@ -502,57 +503,57 @@
       "mechanistic_hypothesis": "Curcumin \u2014[is a therapeutic for]\u2192 MESH:D051436 \u2014[is treated by]\u2192 DB00351 \u2014[treats]\u2192 Breast cancer",
       "kg_paths_text": "\u2022 Curcumin \u2014[is a therapeutic for]\u2192 MESH:D051436 \u2014[is treated by]\u2192 DB00351 \u2014[treats]\u2192 Breast cancer\n\u2022 Curcumin \u2014[is a therapeutic for]\u2192 MESH:D051436 \u2014[is treated by]\u2192 DB00351 \u2014[treats]\u2192 Breast cancer\n\u2022 Curcumin \u2014[is a therapeutic for]\u2192 OMIM:168600 \u2014[is treated by]\u2192 DB01235 \u2014[is a therapeutic for]\u2192 Breast cancer",
       "validation_experiments": [],
-      "novelty_score": 0.18,
+      "novelty_score": 0.182,
       "novelty_level": "ESTABLISHED",
       "is_known_treatment": true,
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT01740323",
-          "title": "Phase II Study of Curcumin vs Placebo for Chemotherapy-Treated Breast Cancer Patients Undergoing Radiotherapy",
-          "status": "COMPLETED",
+          "nct_id": "NCT00852332",
+          "title": "Docetaxel With or Without a Phytochemical in Treating Patients With Breast Cancer",
+          "status": "TERMINATED",
           "phase": "PHASE2",
-          "enrollment": "30",
-          "url": "https://clinicaltrials.gov/study/NCT01740323"
+          "enrollment": "42",
+          "url": "https://clinicaltrials.gov/study/NCT00852332"
         },
         {
-          "nct_id": "NCT02556632",
-          "title": "Prophylactic Topical Agents in Reducing Radiation-Induced Dermatitis in Patients With Non-inflammatory Breast Cancer",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "191",
-          "url": "https://clinicaltrials.gov/study/NCT02556632"
+          "nct_id": "NCT03865992",
+          "title": "Curcumin in Reducing Joint Pain in Breast Cancer Survivors With Aromatase Inhibitor-Induced Joint Disease",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "phase": "NA",
+          "enrollment": "42",
+          "url": "https://clinicaltrials.gov/study/NCT03865992"
         },
         {
-          "nct_id": "NCT01042938",
-          "title": "Curcumin for the Prevention of Radiation-induced Dermatitis in Breast Cancer Patients",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "35",
-          "url": "https://clinicaltrials.gov/study/NCT01042938"
-        },
-        {
-          "nct_id": "NCT01246973",
-          "title": "Oral Curcumin for Radiation Dermatitis",
-          "status": "COMPLETED",
-          "phase": "PHASE2, PHASE3",
-          "enrollment": "686",
-          "url": "https://clinicaltrials.gov/study/NCT01246973"
-        },
-        {
-          "nct_id": "NCT05966441",
-          "title": "Role of Curcumin in Paclitaxel Induced PN",
+          "nct_id": "NCT03847623",
+          "title": "Effect of Preoperative Curcumin in Breast Cancer Patients",
           "status": "UNKNOWN",
-          "phase": "PHASE2",
-          "enrollment": "80",
-          "url": "https://clinicaltrials.gov/study/NCT05966441"
+          "phase": "NA",
+          "enrollment": "30",
+          "url": "https://clinicaltrials.gov/study/NCT03847623"
+        },
+        {
+          "nct_id": "NCT03980509",
+          "title": "A \"Window Trial\" on Curcumin for Invasive Breast Cancer Primary Tumors",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "22",
+          "url": "https://clinicaltrials.gov/study/NCT03980509"
+        },
+        {
+          "nct_id": "NCT05306002",
+          "title": "Nutritional Intervention and DNA Damage of Patients With HBOC",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "34",
+          "url": "https://clinicaltrials.gov/study/NCT05306002"
         }
       ],
       "trial_phases": {
-        "PHASE2": 5,
-        "PHASE3": 1,
+        "PHASE2": 4,
+        "NA": 5,
         "PHASE1": 1,
-        "NA": 4
+        "PHASE3": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -568,6 +569,7 @@
         "Strong causal genetic evidence (MR score: 0.76, 20 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D001943",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "late-trial",
@@ -656,10 +658,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.679,
+        "triangulation_score": 0.681,
         "label": "silver-standard",
         "axis_values": {
-          "kg": 0.601,
+          "kg": 0.606,
           "docking": 0.897,
           "pharos": 0.0,
           "literature": 1.0
@@ -676,15 +678,7 @@
         "tissue_specificity": 0.6,
         "context_modifier": 1.089
       },
-      "disease_entity": "Disease::MESH:D001943",
-      "docking": {
-        "kcal_per_mol": -10.76,
-        "target_symbol": "F3",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.0545,
+      "ensemble_prob": 0.0361,
       "ensemble_features": {
         "kg_score": 0.9757,
         "degree_penalty": 0.7784,
@@ -694,6 +688,13 @@
         "transe_rank_log": 5.5491
       },
       "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": -10.76,
+        "target_symbol": "F3",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -937,49 +938,50 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT03045393",
-          "title": "Mirvetuximab Soravtansine (IMG853) in Folate Receptor Alpha-expressing TNBC",
-          "status": "WITHDRAWN",
-          "phase": "PHASE1",
-          "enrollment": "0",
-          "url": "https://clinicaltrials.gov/study/NCT03045393"
-        },
-        {
-          "nct_id": "NCT01606241",
-          "title": "Vaccine Therapy and Cyclophosphamide in Treating Patients With Stage II-III Breast or Stage II-IV Ovarian, Primary Peritoneal, or Fallopian Tube Cancer",
+          "nct_id": "NCT04024254",
+          "title": "A Study of Serum Folate Levels in Patients Treated With Olaparib",
           "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "24",
-          "url": "https://clinicaltrials.gov/study/NCT01606241"
+          "phase": "PHASE4",
+          "enrollment": "10",
+          "url": "https://clinicaltrials.gov/study/NCT04024254"
         },
         {
-          "nct_id": "NCT00044785",
-          "title": "Phase I Study of PN401, Fluorouracil, Leucovorin and CPT-11 in Patients With Solid Tumors",
-          "status": "TERMINATED",
-          "phase": "PHASE1",
-          "enrollment": "24",
-          "url": "https://clinicaltrials.gov/study/NCT00044785"
+          "nct_id": "NCT01118624",
+          "title": "Study of Pralatrexate in Female Patients With Previously-treated Breast Cancer",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "22",
+          "url": "https://clinicaltrials.gov/study/NCT01118624"
         },
         {
-          "nct_id": "NCT06547840",
-          "title": "A Study of MOv18 IgE in Patients With Solid Tumours That Express Folate Receptor Alpha",
+          "nct_id": "NCT05564377",
+          "title": "Targeted Therapy Directed by Genetic Testing in Treating Patients With Locally Advanced or Advanced Solid Tumors, The ComboMATCH Screening Trial",
+          "status": "RECRUITING",
+          "phase": "PHASE2",
+          "enrollment": "2900",
+          "url": "https://clinicaltrials.gov/study/NCT05564377"
+        },
+        {
+          "nct_id": "NCT03554109",
+          "title": "QUILT-3.057: NANT Neoadjuvant Triple- Negative Breast Cancer (TNBC) Vaccine",
+          "status": "WITHDRAWN",
+          "phase": "PHASE2",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT03554109"
+        },
+        {
+          "nct_id": "NCT07318805",
+          "title": "A Study to Learn About the Study Medicine Called PF-08032562 in People With Advanced or Metastatic Solid Tumors",
           "status": "RECRUITING",
           "phase": "PHASE1",
-          "enrollment": "45",
-          "url": "https://clinicaltrials.gov/study/NCT06547840"
-        },
-        {
-          "nct_id": "NCT01937507",
-          "title": "Hepatic Artery Infusion With FOLFOX in Liver Metastasis From Breast Cancer",
-          "status": "TERMINATED",
-          "phase": "PHASE2",
-          "enrollment": "2",
-          "url": "https://clinicaltrials.gov/study/NCT01937507"
+          "enrollment": "260",
+          "url": "https://clinicaltrials.gov/study/NCT07318805"
         }
       ],
       "trial_phases": {
-        "PHASE1": 8,
+        "PHASE4": 1,
         "PHASE2": 3,
+        "PHASE1": 5,
         "PHASE3": 1
       },
       "confidence": "HIGH",
@@ -994,6 +996,7 @@
         "Strong causal genetic evidence (MR score: 0.70, 4 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D001943",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1130,15 +1133,7 @@
         "tissue_specificity": 0.442,
         "context_modifier": 1.032
       },
-      "disease_entity": "Disease::MESH:D001943",
-      "docking": {
-        "kcal_per_mol": -5.84,
-        "target_symbol": "AKR1B1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.1175,
+      "ensemble_prob": 0.1196,
       "ensemble_features": {
         "kg_score": 0.9774,
         "degree_penalty": 0.7918,
@@ -1147,7 +1142,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 5.4765
       },
-      "ensemble_rank": 9,
+      "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": -5.84,
+        "target_symbol": "AKR1B1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1159,7 +1161,7 @@
       "drug_name": "Testosterone Propionate",
       "drug_id": "DB01420",
       "disease_name": "Breast cancer",
-      "combined_score": 0.547,
+      "combined_score": 0.5929,
       "pillars_hit": 5,
       "transe_rank": 151,
       "transe_score": -10.5377,
@@ -1178,15 +1180,15 @@
       "admet_score": 0.7554,
       "admet_flags": "clean",
       "primekg_score": 0.2604,
-      "dti_score": 0.2085,
-      "dti_best_target": "FFAR1",
+      "dti_score": 0.4769,
+      "dti_best_target": "DDR1",
       "kg_group_score": 0.0989,
-      "structural_group_score": 0.2085,
+      "structural_group_score": 0.4769,
       "network_group_score": 0.7264999747276306,
       "txgnn_group_score": 0.52,
       "mr_group_score": 0.6875,
       "admet_multiplier": 0.9511,
-      "efficacy_score": 0.5751,
+      "efficacy_score": 0.6234,
       "groups_hit": 5,
       "direct_relations": [],
       "shared_target_count": 28,
@@ -1399,19 +1401,11 @@
       "mechanistic_hypothesis": "Testosterone Propionate \u2014[is a therapeutic for]\u2192 Breast cancer",
       "kg_paths_text": "\u2022 Testosterone Propionate \u2014[is a therapeutic for]\u2192 Breast cancer\n\u2022 Testosterone Propionate \u2014[downregulates]\u2192 gene-10131 \u2014[is linked to]\u2192 Breast cancer\n\u2022 Testosterone Propionate \u2014[downregulates]\u2192 gene-10131 \u2014[is downregulated by]\u2192 DB00675 \u2014[treats]\u2192 Breast cancer",
       "validation_experiments": [],
-      "novelty_score": 0.459,
+      "novelty_score": 0.498,
       "novelty_level": "KNOWN",
       "is_known_treatment": true,
       "clinical_trials_total": 3,
       "clinical_trials": [
-        {
-          "nct_id": "NCT00612742",
-          "title": "Safety and Efficacy of LibiGel\u00ae for Treatment of Hypoactive Sexual Desire Disorder in Postmenopausal Women",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "3656",
-          "url": "https://clinicaltrials.gov/study/NCT00612742"
-        },
         {
           "nct_id": "NCT00080756",
           "title": "Deslorelin Combined With Low-Dose Add-Back Estradiol and Testosterone in Preventing Breast Cancer in Premenopausal Women Who Are at High Risk for This Disease",
@@ -1419,6 +1413,14 @@
           "phase": "PHASE2",
           "enrollment": "11",
           "url": "https://clinicaltrials.gov/study/NCT00080756"
+        },
+        {
+          "nct_id": "NCT00612742",
+          "title": "Safety and Efficacy of LibiGel\u00ae for Treatment of Hypoactive Sexual Desire Disorder in Postmenopausal Women",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "3656",
+          "url": "https://clinicaltrials.gov/study/NCT00612742"
         },
         {
           "nct_id": "NCT01122342",
@@ -1430,8 +1432,8 @@
         }
       ],
       "trial_phases": {
-        "PHASE3": 1,
         "PHASE2": 2,
+        "PHASE3": 1,
         "PHASE1": 1
       },
       "confidence": "HIGH",
@@ -1442,8 +1444,10 @@
         "Supported by 5 independent AI pillars",
         "Supporting paper with 80 citations",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.69)"
+        "Moderate genetic evidence supporting causality (MR score: 0.69)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D001943",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1524,10 +1528,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.61,
+        "triangulation_score": 0.626,
         "label": "silver-standard",
         "axis_values": {
-          "kg": 0.547,
+          "kg": 0.593,
           "docking": 0.915,
           "pharos": 0.0,
           "literature": 0.718
@@ -1544,15 +1548,7 @@
         "tissue_specificity": 0.627,
         "context_modifier": 1.079
       },
-      "disease_entity": "Disease::MESH:D001943",
-      "docking": {
-        "kcal_per_mol": -10.98,
-        "target_symbol": "AR",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.6003,
+      "ensemble_prob": 0.6759,
       "ensemble_features": {
         "kg_score": 0.9943,
         "degree_penalty": 0.7746,
@@ -1561,12 +1557,515 @@
         "n_disease_genes": 0,
         "transe_rank_log": 4.1109
       },
-      "ensemble_rank": 5,
+      "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": -10.98,
+        "target_symbol": "AR",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
         "n_alerts": 0,
         "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Carboplatin",
+      "drug_id": "DB00958",
+      "disease_name": "Breast cancer",
+      "combined_score": 0.571,
+      "pillars_hit": 4,
+      "transe_rank": 47,
+      "transe_score": -10.1878,
+      "pykeen_score": -11.6772,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.8880000114440918,
+      "proximity_distance": 0.44999998807907104,
+      "admet_score": 1.0,
+      "admet_flags": "clean",
+      "primekg_score": 0.2596,
+      "dti_score": 0.7211,
+      "dti_best_target": "DDR1",
+      "kg_group_score": 0.3098,
+      "structural_group_score": 0.7211,
+      "network_group_score": 0.6940000057220459,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.8332,
+      "admet_multiplier": 1.0,
+      "efficacy_score": 0.571,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 26,
+      "shared_targets": [
+        "ABCB1",
+        "ABCC2",
+        "ABCG2",
+        "ATP7A",
+        "BCL2",
+        "BRCA2",
+        "COL11A2",
+        "CSF2",
+        "EGFR",
+        "ELAVL1",
+        "ERBB2",
+        "ERCC1",
+        "GSTP1",
+        "GSTT1",
+        "IFNB1",
+        "MT2A",
+        "MTOR",
+        "MUC16",
+        "NQO1",
+        "PARP1"
+      ],
+      "pubmed_total": 1729,
+      "pubmed_treatment_total": 1662,
+      "pubmed_repurposing_total": 4,
+      "key_papers": [
+        {
+          "pmid": "35838204",
+          "title": "Immunotherapy and breast cancer: an overview.",
+          "authors": "Mezni E, Behi K, Gon\u00e7alves A",
+          "journal": "Current opinion in oncology",
+          "year": "2022",
+          "abstract_snippet": "PURPOSE OF REVIEW: Recently, immune checkpoint inhibitors (ICI) have demonstrated survival benefits in triple-negative breast cancer (TNBC) patients, treated in both the advanced and the early settings. RECENT FINDINGS: As monotherapy, ICI failed to demonstrate a superiority over chemotherapy in pre...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35838204/",
+          "total_results": 1729
+        },
+        {
+          "pmid": "40619388",
+          "title": "THEM6 modulates carboplatin sensitivity by regulating ferroptosis through FDFT1 in triple-negative breast cancer.",
+          "authors": "Zeng Y, Xu Z, Huang J, et al.",
+          "journal": "Breast cancer research : BCR",
+          "year": "2025",
+          "abstract_snippet": "BACKGROUND: Triple-negative breast cancer (TNBC) is an aggressive subtype with poor prognosis, as chemotherapy resistance leads to relapse in many patients. Carboplatin addition improves treatment response, but challenges persist. METHODS: To identify novel targets for TNBC, we analyzed differential...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40619388/"
+        },
+        {
+          "pmid": "24794243",
+          "title": "Neoadjuvant carboplatin in patients with triple-negative and HER2-positive early breast cancer (GeparSixto; GBG 66): a randomised phase 2 trial.",
+          "authors": "von Minckwitz G, Schneeweiss A, Loibl S, et al.",
+          "journal": "The Lancet. Oncology",
+          "year": "2014",
+          "abstract_snippet": "BACKGROUND: Preclinical data suggest that triple-negative breast cancers are sensitive to interstrand crosslinking agents, and that synergy may exist for the combination of a taxane, trastuzumab, and a platinum salt for HER2-positive breast cancer. We therefore aimed to assess the efficacy of the ad...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24794243/"
+        },
+        {
+          "pmid": "37612624",
+          "title": "Neoadjuvant immunotherapy and chemotherapy regimens for the treatment of high-risk, early-stage triple-negative breast cancer: a systematic review and network meta-analysis.",
+          "authors": "Cortes J, Haiderali A, Huang M, et al.",
+          "journal": "BMC cancer",
+          "year": "2023",
+          "abstract_snippet": "BACKGROUND: Patients with triple-negative breast cancer (TNBC) are generally younger and more likely to experience disease recurrence and have the shortest survival among all breast cancer patients. Recently, neoadjuvant delivery of the programmed cell death protein-1 inhibitor pembrolizumab plus ch...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37612624/"
+        },
+        {
+          "pmid": "25960722",
+          "title": "Familial breast cancer - targeted therapy in secondary and tertiary prevention.",
+          "authors": "Kast K, Rhiem K",
+          "journal": "Breast care (Basel, Switzerland)",
+          "year": "2015",
+          "abstract_snippet": "The introduction of an increasing number of individualized molecular targeted therapies into clinical routine mirrors their importance in modern cancer prevention and treatment. Well-known examples for targeted agents are the monoclonal antibody trastuzumab and the selective estrogen receptor modula...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25960722/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "38286854",
+          "title": "Repurposing proteasome inhibitors for improved treatment of triple-negative breast cancer.",
+          "authors": "Larsson P, Pettersson D, Olsson M, et al.",
+          "journal": "Cell death discovery",
+          "year": "2024",
+          "abstract_snippet": "Triple-negative breast cancer (TNBC) is associated with poor prognosis and limited treatment options due to the lack of important receptors (estrogen receptor [ER], progesterone receptor [PR], and human epidermal growth factor receptor 2 [HER2]) used for targeted therapy. However, high-throughput in...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38286854/",
+          "total_results": 4
+        },
+        {
+          "pmid": "38157193",
+          "title": "Decitabine induces IRF7-mediated immune responses in p53-mutated triple-negative breast cancer: a clinical and translational study.",
+          "authors": "Wang H, Wang Z, Wang Z, et al.",
+          "journal": "Frontiers of medicine",
+          "year": "2024",
+          "abstract_snippet": "p53 is mutated in half of cancer cases. However, no p53-targeting drugs have been approved. Here, we reposition decitabine for triple-negative breast cancer (TNBC), a subtype with frequent p53 mutations and extremely poor prognosis. In a retrospective study on tissue microarrays with 132 TNBC cases,...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38157193/"
+        },
+        {
+          "pmid": "28389407",
+          "title": "D-penicillamine combined with inhibitors of hydroperoxide metabolism enhances lung and breast cancer cell responses to radiation and carboplatin via H",
+          "authors": "Sciegienka SJ, Solst SR, Falls KC, et al.",
+          "journal": "Free radical biology & medicine",
+          "year": "2017",
+          "abstract_snippet": "D-penicillamine (DPEN), a copper chelator, has been used in the treatment of Wilson's disease, cystinuria, and rheumatoid arthritis. Recent evidence suggests that DPEN in combination with biologically relevant copper (Cu) concentrations generates H",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28389407/"
+        }
+      ],
+      "semantic_scholar_papers": [
+        {
+          "title": "De-escalated neoadjuvant taxane plus trastuzumab and pertuzumab with or without carboplatin in HER2-positive early breast cancer (neoCARHP): A multicentre, open-label, randomised, phase 3 trial.",
+          "year": 2025,
+          "citations": 16,
+          "url": "https://www.semanticscholar.org/paper/3ffb39622b9960e7601a66e0ee25996898b7b18e",
+          "authors": "Hong Gao, Wei Li, Zhi-Yong Wu"
+        },
+        {
+          "title": "Co-delivery of carboplatin and doxorubicin using ZIF-8 coated chitosan-poly(N-isopropyl acrylamide) nanoparticles through a dual pH/thermo responsive strategy to breast cancer cells.",
+          "year": 2024,
+          "citations": 28,
+          "url": "https://www.semanticscholar.org/paper/46deb201937e72a2c1f997078e9ced09b4d47985",
+          "authors": "Narges Dashti, Vajihe Akbari, J. Varshosaz"
+        },
+        {
+          "title": "De-escalated neoadjuvant weekly nab-paclitaxel with trastuzumab and pertuzumab versus docetaxel, carboplatin, trastuzumab, and pertuzumab in patients with HER2-positive early breast cancer (HELEN-006): a multicentre, randomised, phase 3 trial.",
+          "year": 2024,
+          "citations": 22,
+          "url": "https://www.semanticscholar.org/paper/87cde1bec6529264d934d40b3eabb45f9402d679",
+          "authors": "Xiuchun Chen, De-Chuang Jiao, J. Qiao"
+        },
+        {
+          "title": "Veliparib with carboplatin and paclitaxel in BRCA-mutated advanced breast cancer (BROCADE3): Final overall survival results from a randomized phase 3 trial.",
+          "year": 2024,
+          "citations": 16,
+          "url": "https://www.semanticscholar.org/paper/5fd5ec1e4638edbe52f38678e5673b252b74c08f",
+          "authors": "V. Di\u00e9ras, H. Han, H. Wildiers"
+        },
+        {
+          "title": "Improving Cancer Therapy: Design, Synthesis, and Evaluation of Carboplatin-Based Nanoliposomes against Breast Cancer Cell Lines",
+          "year": 2024,
+          "citations": 12,
+          "url": "https://www.semanticscholar.org/paper/0574fb422cd88614b9b876c6d79eca634fb1265f",
+          "authors": "Seyedeh Negin Hadisadegh, Parizad Ghanbarikondori, Armin Sedighi"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Co-delivery of carboplatin and doxorubicin using ZIF-8 coated chitosan-poly(N-isopropyl acrylamide) nanoparticles through a dual pH/thermo responsive strategy to breast cancer cells.",
+        "year": 2024,
+        "citations": 28,
+        "url": "https://www.semanticscholar.org/paper/46deb201937e72a2c1f997078e9ced09b4d47985",
+        "authors": "Narges Dashti, Vajihe Akbari, J. Varshosaz"
+      },
+      "max_citations": 28,
+      "faers_signal": "moderate",
+      "faers_total_reports": 124071,
+      "faers_cooccurrences": 666,
+      "faers_interpretation": "666 FAERS reports mention both Carboplatin and Breast cancer-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "WR 216174 (1.435)",
+        "CTB (1.420)",
+        "Halcinonide (1.416)",
+        "ALW-II-38-3 (1.409)",
+        "(+)-JQ1 (1.401)"
+      ],
+      "signature_interpretation": "Carboplatin was not found among the top 38 drugs that reverse the Breast cancer gene signature. Top reversers: WR 216174 (1.435), CTB (1.420), Halcinonide (1.416)",
+      "ai_hypothesis": "of its ability to induce apoptosis and to inhibit angiogenesis.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "treats",
+          "confidence": 0.7,
+          "positive_signals": 2,
+          "negative_signals": 0,
+          "mechanism_signals": 1,
+          "extracted_entities": [
+            {
+              "entity": "breast",
+              "entity_group": "Disease_disorder",
+              "score": 0.9819999933242798
+            },
+            {
+              "entity": "tn",
+              "entity_group": "Disease_disorder",
+              "score": 0.9980000257492065
+            },
+            {
+              "entity": "##bc",
+              "entity_group": "Disease_disorder",
+              "score": 0.8489999771118164
+            },
+            {
+              "entity": "chemotherapy",
+              "entity_group": "Medication",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "car",
+              "entity_group": "Medication",
+              "score": 1.0
+            },
+            {
+              "entity": "##platin",
+              "entity_group": "Medication",
+              "score": 0.7269999980926514
+            }
+          ]
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "Phase 3",
+      "failed_trial_count": 10,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.8332,
+      "mr_genetic_targets": 12,
+      "mechanistic_hypothesis": "Carboplatin \u2014[is a therapeutic for]\u2192 Breast cancer",
+      "kg_paths_text": "\u2022 Carboplatin \u2014[is a therapeutic for]\u2192 Breast cancer\n\u2022 Carboplatin \u2014[binds]\u2192 gene-2950 \u2014[is linked to]\u2192 Breast cancer\n\u2022 Carboplatin \u2014[binds]\u2192 gene-538 \u2014[is linked to]\u2192 Breast cancer",
+      "validation_experiments": [],
+      "novelty_score": 0.137,
+      "novelty_level": "ESTABLISHED",
+      "is_known_treatment": true,
+      "clinical_trials_total": 10,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT02341911",
+          "title": "Gemcitabine Plus Cisplatin Versus Gemcitabine Plus Carboplatin in Triple Negative Breast Cancer (TNBC)",
+          "status": "UNKNOWN",
+          "phase": "PHASE2",
+          "enrollment": "150",
+          "url": "https://clinicaltrials.gov/study/NCT02341911"
+        },
+        {
+          "nct_id": "NCT00004092",
+          "title": "Combination Chemotherapy in Treating Patients With High-Risk Breast Cancer",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "72",
+          "url": "https://clinicaltrials.gov/study/NCT00004092"
+        },
+        {
+          "nct_id": "NCT03161353",
+          "title": "Chemotherapy-free Trastuzumab and Pertuzumab in HER2-positive Breast Cancer: FDG-PET Response-adapted Strategy.",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "phase": "PHASE2",
+          "enrollment": "377",
+          "url": "https://clinicaltrials.gov/study/NCT03161353"
+        },
+        {
+          "nct_id": "NCT00367471",
+          "title": "Combination Of Lapatinib With Carboplatin, Paclitaxel, and With or Without Trastuzumab In Metastatic Breast Cancer.",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "31",
+          "url": "https://clinicaltrials.gov/study/NCT00367471"
+        },
+        {
+          "nct_id": "NCT00520975",
+          "title": "Bevacizumab in Treating Patients With Metastatic Breast Cancer That Overexpresses HER-2/NEU",
+          "status": "TERMINATED",
+          "phase": "PHASE3",
+          "enrollment": "96",
+          "url": "https://clinicaltrials.gov/study/NCT00520975"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 7,
+        "PHASE1": 2,
+        "PHASE3": 2
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "10 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "1729 PubMed articles on this drug-disease pair",
+        "4 article(s) specifically mention repurposing/repositioning",
+        "Supported by 4 independent AI pillars",
+        "Moderate FAERS signal: 666 adverse event reports mention drug-disease co-occurrence",
+        "Supporting paper with 28 citations",
+        "AI analysis of 1 abstract(s) found positive treatment signals",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.83, 12 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D001943",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1126,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00773",
+            "drug_name": "Etoposide",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00331",
+            "drug_name": "Metformin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "moderate",
+        "summary": "CPIC-C (MTHFR) \u2022 PharmGKB-3 (ERCC1 / rs11615)",
+        "cpic": [
+          {
+            "gene": "MTHFR",
+            "level": "C",
+            "guideline": ""
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "ERCC1",
+            "variant": "rs11615",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/655386639"
+          },
+          {
+            "gene": "MTR",
+            "variant": "rs1805087",
+            "level": "3",
+            "phenotype_category": "Efficacy;Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981237713"
+          },
+          {
+            "gene": "AKT1",
+            "variant": "rs1130214",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183630276"
+          },
+          {
+            "gene": "VEGFA",
+            "variant": "rs9369421",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1446899860"
+          },
+          {
+            "gene": "VEGFA",
+            "variant": "rs9369421",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1446899866"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.4,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.571,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Breast - Mammary Tissue"
+        ],
+        "n_genes": 19,
+        "n_expressed": 15,
+        "mean_tpm_in_tissue": 68.67,
+        "max_tpm_in_tissue": 629.11,
+        "tissue_specificity": 0.574,
+        "context_modifier": 1.084
+      },
+      "ensemble_prob": 0.6515,
+      "ensemble_features": {
+        "kg_score": 0.9969,
+        "degree_penalty": 0.7815,
+        "n_drug_targets": 0,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 3.5264
+      },
+      "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "BETA-KETO/ANHYDRIDE",
+          "CONTAINS"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "beta-keto/anhydride",
+          "contains_metal"
+        ]
       }
     },
     {
@@ -1593,7 +2092,7 @@
       "admet_flags": "Skin_Reaction=0.85",
       "primekg_score": 0.2479,
       "dti_score": 1.0,
-      "dti_best_target": "G0S2",
+      "dti_best_target": "CTBP1",
       "kg_group_score": 0.2403,
       "structural_group_score": 1.0,
       "network_group_score": 0.6388000249862671,
@@ -1781,20 +2280,12 @@
       "clinical_trials_total": 8,
       "clinical_trials": [
         {
-          "nct_id": "NCT06636981",
-          "title": "All Trans Retinoic Acid Combined with Toripalimab+Chemotherapy for Locally Advanced Inoperable or Metastatic Triple Negative Breast Cancer\uff1aa Multi-center, Multi-cohort Phase II Trial",
+          "nct_id": "NCT06731140",
+          "title": "Reverse HER2-negative Immune Resistant Breast Cancer",
           "status": "RECRUITING",
           "phase": "PHASE2",
-          "enrollment": "129",
-          "url": "https://clinicaltrials.gov/study/NCT06636981"
-        },
-        {
-          "nct_id": "NCT06097546",
-          "title": "Serum Retinoic Acid Induced Protein 14 (RAI14) and Metastasis Associated Cancer Colon -1 (MACC-1) in Breast Cancer",
-          "status": "UNKNOWN",
-          "phase": "N/A",
-          "enrollment": "90",
-          "url": "https://clinicaltrials.gov/study/NCT06097546"
+          "enrollment": "10",
+          "url": "https://clinicaltrials.gov/study/NCT06731140"
         },
         {
           "nct_id": "NCT03878524",
@@ -1805,6 +2296,14 @@
           "url": "https://clinicaltrials.gov/study/NCT03878524"
         },
         {
+          "nct_id": "NCT00001504",
+          "title": "A Phase I Trial of Tamoxifen and 9-Cis-Retinoic Acid in Breast Cancer Patients",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "18",
+          "url": "https://clinicaltrials.gov/study/NCT00001504"
+        },
+        {
           "nct_id": "NCT05016349",
           "title": "Investigating the Potential Role of a Novel Quadrate Combination Therapy Mifepristone(Antiprogestrone), Tamoxifen, Retinoic Acid and Cannabidiol ( Selective Cyp 26 Inhibitor) for Treating Early Breast Cancer.",
           "status": "UNKNOWN",
@@ -1813,12 +2312,12 @@
           "url": "https://clinicaltrials.gov/study/NCT05016349"
         },
         {
-          "nct_id": "NCT04113863",
-          "title": "Evaluation of ATRA Activity in Combination With Anastrozole in Pre-operative Phase of Operable Early Breast Cancer",
-          "status": "TERMINATED",
+          "nct_id": "NCT06636981",
+          "title": "All Trans Retinoic Acid Combined with Toripalimab+Chemotherapy for Locally Advanced Inoperable or Metastatic Triple Negative Breast Cancer\uff1aa Multi-center, Multi-cohort Phase II Trial",
+          "status": "RECRUITING",
           "phase": "PHASE2",
-          "enrollment": "76",
-          "url": "https://clinicaltrials.gov/study/NCT04113863"
+          "enrollment": "129",
+          "url": "https://clinicaltrials.gov/study/NCT06636981"
         }
       ],
       "trial_phases": {
@@ -1840,6 +2339,7 @@
         "Strong causal genetic evidence (MR score: 0.83, 19 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D001943",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -1940,15 +2440,7 @@
         "tissue_specificity": 0.774,
         "context_modifier": 1.123
       },
-      "disease_entity": "Disease::MESH:D001943",
-      "docking": {
-        "kcal_per_mol": -10.77,
-        "target_symbol": "RARB",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.8193,
+      "ensemble_prob": 0.8943,
       "ensemble_features": {
         "kg_score": 0.9985,
         "degree_penalty": 0.7515,
@@ -1957,7 +2449,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.8332
       },
-      "ensemble_rank": 3,
+      "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": -10.77,
+        "target_symbol": "RARB",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -1996,7 +2495,7 @@
       "admet_flags": "AMES=0.98",
       "primekg_score": 0.2503,
       "dti_score": 1.0,
-      "dti_best_target": "G0S2",
+      "dti_best_target": "CTBP1",
       "kg_group_score": 0.2662,
       "structural_group_score": 1.0,
       "network_group_score": 0.7009000182151794,
@@ -2202,14 +2701,6 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT00002544",
-          "title": "Mitoxantrone With or Without Docetaxel in Treating Women With Metastatic Breast Cancer",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "300",
-          "url": "https://clinicaltrials.gov/study/NCT00002544"
-        },
-        {
           "nct_id": "NCT00003068",
           "title": "High-Dose Chemotherapy and Autologous Blood Cell Transplantation in Treating Patients With Primary, Locally Advanced, or Stage IV Breast Cancer",
           "status": "COMPLETED",
@@ -2218,20 +2709,20 @@
           "url": "https://clinicaltrials.gov/study/NCT00003068"
         },
         {
-          "nct_id": "NCT00003032",
-          "title": "High Dose Chemotherapy Plus Peripheral Stem Cell Transplantation Compared With Standard Therapy in Treating Women With Metastatic or Recurrent Breast Cancer",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "224",
-          "url": "https://clinicaltrials.gov/study/NCT00003032"
+          "nct_id": "NCT00002498",
+          "title": "Combination Chemotherapy Compared With Mitoxantrone in Treating Older Patients With Advanced Breast Cancer",
+          "status": "UNKNOWN",
+          "phase": "PHASE2",
+          "enrollment": "",
+          "url": "https://clinicaltrials.gov/study/NCT00002498"
         },
         {
-          "nct_id": "NCT04927481",
-          "title": "A Study of Mitoxantrone Hydrochloride Liposome Injection in Patients With Advanced HER2 Negative Breast Cancer",
-          "status": "TERMINATED",
+          "nct_id": "NCT02596373",
+          "title": "A Study of Mitoxantrone Hydrochloride Liposome Injection in Advanced Recurrent or Metastatic Breast Cancer",
+          "status": "UNKNOWN",
           "phase": "PHASE2",
-          "enrollment": "28",
-          "url": "https://clinicaltrials.gov/study/NCT04927481"
+          "enrollment": "60",
+          "url": "https://clinicaltrials.gov/study/NCT02596373"
         },
         {
           "nct_id": "NCT00010075",
@@ -2240,11 +2731,20 @@
           "phase": "PHASE2",
           "enrollment": "",
           "url": "https://clinicaltrials.gov/study/NCT00010075"
+        },
+        {
+          "nct_id": "NCT05582499",
+          "title": "Fudan University Shanghai Cancer Center Breast Cancer Precision Platform Series Study- Neoadjuvant Therapy",
+          "status": "RECRUITING",
+          "phase": "PHASE2",
+          "enrollment": "716",
+          "url": "https://clinicaltrials.gov/study/NCT05582499"
         }
       ],
       "trial_phases": {
-        "PHASE3": 3,
-        "PHASE2": 7
+        "PHASE2": 7,
+        "PHASE3": 2,
+        "NA": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -2258,6 +2758,7 @@
         "Strong causal genetic evidence (MR score: 0.81, 19 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D001943",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2394,15 +2895,7 @@
         "tissue_specificity": 0.469,
         "context_modifier": 1.073
       },
-      "disease_entity": "Disease::MESH:D001943",
-      "docking": {
-        "kcal_per_mol": -11.97,
-        "target_symbol": "ABCC1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.6522,
+      "ensemble_prob": 0.7086,
       "ensemble_features": {
         "kg_score": 0.996,
         "degree_penalty": 0.7686,
@@ -2411,7 +2904,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 3.7612
       },
-      "ensemble_rank": 4,
+      "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": -11.97,
+        "target_symbol": "ABCC1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -2433,7 +2933,7 @@
       "drug_name": "Tamoxifen",
       "drug_id": "DB00675",
       "disease_name": "Breast cancer",
-      "combined_score": 0.5401,
+      "combined_score": 0.5362,
       "pillars_hit": 4,
       "transe_rank": 1,
       "transe_score": -9.4374,
@@ -2452,15 +2952,15 @@
       "admet_score": 0.5915,
       "admet_flags": "hERG=0.95",
       "primekg_score": 0.258,
-      "dti_score": 0.6986,
-      "dti_best_target": "FFAR1",
+      "dti_score": 0.6748,
+      "dti_best_target": "APOBEC3B",
       "kg_group_score": 0.3928,
-      "structural_group_score": 0.6986,
+      "structural_group_score": 0.6748,
       "network_group_score": 0.6998000144958496,
       "txgnn_group_score": 0,
       "mr_group_score": 0.8283,
       "admet_multiplier": 0.9183,
-      "efficacy_score": 0.5882,
+      "efficacy_score": 0.5839,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 130,
@@ -2713,54 +3213,54 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT00003992",
-          "title": "Chemotherapy Plus Monoclonal Antibody Therapy in Treating Women With Stage II or Stage IIIA Breast Cancer That Overexpresses HER2",
+          "nct_id": "NCT02040857",
+          "title": "Palbociclib in Combination With Adjuvant Endocrine Therapy for Hormone Receptor Positive, HER2 Negative Invasive Breast Cancer",
           "status": "COMPLETED",
           "phase": "PHASE2",
-          "enrollment": "200",
-          "url": "https://clinicaltrials.gov/study/NCT00003992"
+          "enrollment": "162",
+          "url": "https://clinicaltrials.gov/study/NCT02040857"
         },
         {
-          "nct_id": "NCT00097344",
-          "title": "The CAT Study: Atamestane Plus Toremifene Versus Letrozole in Advanced Breast Cancer",
-          "status": "TERMINATED",
-          "phase": "PHASE3",
-          "enrollment": "842",
-          "url": "https://clinicaltrials.gov/study/NCT00097344"
-        },
-        {
-          "nct_id": "NCT00814034",
-          "title": "Coagulation Parameters in Postmenopausal Breast Cancer Patients Under Adjuvant Hormonal Therapy",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "306",
-          "url": "https://clinicaltrials.gov/study/NCT00814034"
-        },
-        {
-          "nct_id": "NCT04129216",
-          "title": "The Effects of Short-term Preoperative Treatment With Hormonal Therapy on Gene Profiles in Breast Cancer",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "30",
-          "url": "https://clinicaltrials.gov/study/NCT04129216"
-        },
-        {
-          "nct_id": "NCT06440967",
-          "title": "A Study to Confirm if Fezolinetant Helps Reduce Hot Flashes in Women With Breast Cancer Who Are Having Hormone Therapy",
+          "nct_id": "NCT03161353",
+          "title": "Chemotherapy-free Trastuzumab and Pertuzumab in HER2-positive Breast Cancer: FDG-PET Response-adapted Strategy.",
           "status": "ACTIVE_NOT_RECRUITING",
-          "phase": "PHASE3",
-          "enrollment": "984",
-          "url": "https://clinicaltrials.gov/study/NCT06440967"
+          "phase": "PHASE2",
+          "enrollment": "377",
+          "url": "https://clinicaltrials.gov/study/NCT03161353"
+        },
+        {
+          "nct_id": "NCT06120595",
+          "title": "Intervention Study Based on Real-world Data to Improve Quality of Life After Breast Cancer Treatment, the REBECCA-2 Study",
+          "status": "UNKNOWN",
+          "phase": "NA",
+          "enrollment": "81",
+          "url": "https://clinicaltrials.gov/study/NCT06120595"
+        },
+        {
+          "nct_id": "NCT00349011",
+          "title": "Genetic Counseling for Menopausal Therapy Decision-Making for Women at Increased Risk for Breast Cancer",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "60",
+          "url": "https://clinicaltrials.gov/study/NCT00349011"
+        },
+        {
+          "nct_id": "NCT00040014",
+          "title": "Open Label, Multicenter, Randomized, Controlled Study of IM or Oral Exemestane (Aromasin) in Postmenopausal Women",
+          "status": "TERMINATED",
+          "phase": "PHASE2",
+          "enrollment": "100",
+          "url": "https://clinicaltrials.gov/study/NCT00040014"
         }
       ],
       "trial_phases": {
-        "PHASE2": 4,
-        "PHASE3": 4
+        "PHASE2": 7,
+        "NA": 3,
+        "PHASE1": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
         "10 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
         "17833 PubMed articles on this drug-disease pair",
         "52 article(s) specifically mention repurposing/repositioning",
         "Supported by 4 independent AI pillars",
@@ -2770,6 +3270,7 @@
         "Strong causal genetic evidence (MR score: 0.83, 17 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D001943",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2892,10 +3393,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.628,
+        "triangulation_score": 0.627,
         "label": "silver-standard",
         "axis_values": {
-          "kg": 0.54,
+          "kg": 0.536,
           "docking": 0.797,
           "pharos": 0.0,
           "literature": 1.0
@@ -2912,15 +3413,7 @@
         "tissue_specificity": 0.383,
         "context_modifier": 1.026
       },
-      "disease_entity": "Disease::MESH:D001943",
-      "docking": {
-        "kcal_per_mol": -9.56,
-        "target_symbol": "ESR1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.9862,
+      "ensemble_prob": 1.0,
       "ensemble_features": {
         "kg_score": 0.9999,
         "degree_penalty": 0.7565,
@@ -2930,6 +3423,13 @@
         "transe_rank_log": 0.6931
       },
       "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": -9.56,
+        "target_symbol": "ESR1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -2945,7 +3445,7 @@
       "drug_name": "Suramin",
       "drug_id": "DB04786",
       "disease_name": "Breast cancer",
-      "combined_score": 0.5347,
+      "combined_score": 0.5309,
       "pillars_hit": 4,
       "transe_rank": 8,
       "transe_score": -9.7178,
@@ -2964,15 +3464,15 @@
       "admet_score": 1.0,
       "admet_flags": "DILI=1.00",
       "primekg_score": 0.2448,
-      "dti_score": 0.5573,
-      "dti_best_target": "NDRG2",
+      "dti_score": 0.5363,
+      "dti_best_target": "PPARGC1A",
       "kg_group_score": 0.2073,
-      "structural_group_score": 0.5573,
+      "structural_group_score": 0.5363,
       "network_group_score": 0.8240000009536743,
       "txgnn_group_score": 0,
       "mr_group_score": 0.7852,
       "admet_multiplier": 1.0,
-      "efficacy_score": 0.5347,
+      "efficacy_score": 0.5309,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 45,
@@ -3200,19 +3700,11 @@
       "mechanistic_hypothesis": "Suramin \u2014[is a therapeutic for]\u2192 Breast cancer",
       "kg_paths_text": "\u2022 Suramin \u2014[is a therapeutic for]\u2192 Breast cancer\n\u2022 Suramin \u2014[downregulates]\u2192 gene-1026 \u2014[is linked to]\u2192 Breast cancer\n\u2022 Suramin \u2014[downregulates]\u2192 gene-1026 \u2014[is downregulated by]\u2192 DB00970 \u2014[is a therapeutic for]\u2192 Breast cancer",
       "validation_experiments": [],
-      "novelty_score": 0.449,
+      "novelty_score": 0.446,
       "novelty_level": "KNOWN",
       "is_known_treatment": true,
       "clinical_trials_total": 2,
       "clinical_trials": [
-        {
-          "nct_id": "NCT00054028",
-          "title": "Suramin and Paclitaxel in Treating Women With Stage IIIB-IV Breast Cancer",
-          "status": "COMPLETED",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "31",
-          "url": "https://clinicaltrials.gov/study/NCT00054028"
-        },
         {
           "nct_id": "NCT00003038",
           "title": "Combination Chemotherapy With Suramin Plus Doxorubicin in Treating Patients With Advanced Solid Tumors",
@@ -3220,6 +3712,14 @@
           "phase": "PHASE1",
           "enrollment": "",
           "url": "https://clinicaltrials.gov/study/NCT00003038"
+        },
+        {
+          "nct_id": "NCT00054028",
+          "title": "Suramin and Paclitaxel in Treating Women With Stage IIIB-IV Breast Cancer",
+          "status": "COMPLETED",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "31",
+          "url": "https://clinicaltrials.gov/study/NCT00054028"
         }
       ],
       "trial_phases": {
@@ -3235,8 +3735,10 @@
         "Supporting paper with 51 citations",
         "AI analysis of 1 abstract(s) found positive treatment signals",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.79, 5 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.79, 5 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D001943",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "late-trial",
@@ -3287,10 +3789,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.536,
+        "triangulation_score": 0.535,
         "label": "silver-standard",
         "axis_values": {
-          "kg": 0.535,
+          "kg": 0.531,
           "docking": 0.67,
           "pharos": 0.0,
           "literature": 0.741
@@ -3307,15 +3809,7 @@
         "tissue_specificity": 0.504,
         "context_modifier": 1.056
       },
-      "disease_entity": "Disease::MESH:D001943",
-      "docking": {
-        "kcal_per_mol": -8.04,
-        "target_symbol": "NR1I2",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.3277,
+      "ensemble_prob": 0.582,
       "ensemble_features": {
         "kg_score": 0.9862,
         "degree_penalty": 0.9155,
@@ -3324,7 +3818,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 4.9904
       },
-      "ensemble_rank": 7,
+      "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": -8.04,
+        "target_symbol": "NR1I2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -3362,7 +3863,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2472,
       "dti_score": 1.0,
-      "dti_best_target": "G0S2",
+      "dti_best_target": "CTBP1",
       "kg_group_score": 0.0677,
       "structural_group_score": 1.0,
       "network_group_score": 0.8493000268936157,
@@ -3578,6 +4079,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.87, 2 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D001943",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3678,15 +4180,7 @@
         "tissue_specificity": 0.469,
         "context_modifier": 1.028
       },
-      "disease_entity": "Disease::MESH:D001943",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.3953,
+      "ensemble_prob": 0.5354,
       "ensemble_features": {
         "kg_score": 0.9801,
         "degree_penalty": 0.9553,
@@ -3695,7 +4189,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 5.3519
       },
-      "ensemble_rank": 6,
+      "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -3709,510 +4210,14 @@
           "polyene"
         ]
       }
-    },
-    {
-      "drug_name": "Carboplatin",
-      "drug_id": "DB00958",
-      "disease_name": "Breast cancer",
-      "combined_score": 0.522,
-      "pillars_hit": 4,
-      "transe_rank": 47,
-      "transe_score": -10.1878,
-      "pykeen_score": -11.6772,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.8880000114440918,
-      "proximity_distance": 0.44999998807907104,
-      "admet_score": 1.0,
-      "admet_flags": "clean",
-      "primekg_score": 0.2596,
-      "dti_score": 0.4489,
-      "dti_best_target": "XDH",
-      "kg_group_score": 0.3098,
-      "structural_group_score": 0.4489,
-      "network_group_score": 0.6940000057220459,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.8332,
-      "admet_multiplier": 1.0,
-      "efficacy_score": 0.522,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 26,
-      "shared_targets": [
-        "ABCB1",
-        "ABCC2",
-        "ABCG2",
-        "ATP7A",
-        "BCL2",
-        "BRCA2",
-        "COL11A2",
-        "CSF2",
-        "EGFR",
-        "ELAVL1",
-        "ERBB2",
-        "ERCC1",
-        "GSTP1",
-        "GSTT1",
-        "IFNB1",
-        "MT2A",
-        "MTOR",
-        "MUC16",
-        "NQO1",
-        "PARP1"
-      ],
-      "pubmed_total": 1729,
-      "pubmed_treatment_total": 1662,
-      "pubmed_repurposing_total": 4,
-      "key_papers": [
-        {
-          "pmid": "35838204",
-          "title": "Immunotherapy and breast cancer: an overview.",
-          "authors": "Mezni E, Behi K, Gon\u00e7alves A",
-          "journal": "Current opinion in oncology",
-          "year": "2022",
-          "abstract_snippet": "PURPOSE OF REVIEW: Recently, immune checkpoint inhibitors (ICI) have demonstrated survival benefits in triple-negative breast cancer (TNBC) patients, treated in both the advanced and the early settings. RECENT FINDINGS: As monotherapy, ICI failed to demonstrate a superiority over chemotherapy in pre...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35838204/",
-          "total_results": 1729
-        },
-        {
-          "pmid": "40619388",
-          "title": "THEM6 modulates carboplatin sensitivity by regulating ferroptosis through FDFT1 in triple-negative breast cancer.",
-          "authors": "Zeng Y, Xu Z, Huang J, et al.",
-          "journal": "Breast cancer research : BCR",
-          "year": "2025",
-          "abstract_snippet": "BACKGROUND: Triple-negative breast cancer (TNBC) is an aggressive subtype with poor prognosis, as chemotherapy resistance leads to relapse in many patients. Carboplatin addition improves treatment response, but challenges persist. METHODS: To identify novel targets for TNBC, we analyzed differential...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40619388/"
-        },
-        {
-          "pmid": "24794243",
-          "title": "Neoadjuvant carboplatin in patients with triple-negative and HER2-positive early breast cancer (GeparSixto; GBG 66): a randomised phase 2 trial.",
-          "authors": "von Minckwitz G, Schneeweiss A, Loibl S, et al.",
-          "journal": "The Lancet. Oncology",
-          "year": "2014",
-          "abstract_snippet": "BACKGROUND: Preclinical data suggest that triple-negative breast cancers are sensitive to interstrand crosslinking agents, and that synergy may exist for the combination of a taxane, trastuzumab, and a platinum salt for HER2-positive breast cancer. We therefore aimed to assess the efficacy of the ad...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/24794243/"
-        },
-        {
-          "pmid": "37612624",
-          "title": "Neoadjuvant immunotherapy and chemotherapy regimens for the treatment of high-risk, early-stage triple-negative breast cancer: a systematic review and network meta-analysis.",
-          "authors": "Cortes J, Haiderali A, Huang M, et al.",
-          "journal": "BMC cancer",
-          "year": "2023",
-          "abstract_snippet": "BACKGROUND: Patients with triple-negative breast cancer (TNBC) are generally younger and more likely to experience disease recurrence and have the shortest survival among all breast cancer patients. Recently, neoadjuvant delivery of the programmed cell death protein-1 inhibitor pembrolizumab plus ch...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37612624/"
-        },
-        {
-          "pmid": "25960722",
-          "title": "Familial breast cancer - targeted therapy in secondary and tertiary prevention.",
-          "authors": "Kast K, Rhiem K",
-          "journal": "Breast care (Basel, Switzerland)",
-          "year": "2015",
-          "abstract_snippet": "The introduction of an increasing number of individualized molecular targeted therapies into clinical routine mirrors their importance in modern cancer prevention and treatment. Well-known examples for targeted agents are the monoclonal antibody trastuzumab and the selective estrogen receptor modula...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/25960722/"
-        }
-      ],
-      "repurposing_papers": [
-        {
-          "pmid": "38286854",
-          "title": "Repurposing proteasome inhibitors for improved treatment of triple-negative breast cancer.",
-          "authors": "Larsson P, Pettersson D, Olsson M, et al.",
-          "journal": "Cell death discovery",
-          "year": "2024",
-          "abstract_snippet": "Triple-negative breast cancer (TNBC) is associated with poor prognosis and limited treatment options due to the lack of important receptors (estrogen receptor [ER], progesterone receptor [PR], and human epidermal growth factor receptor 2 [HER2]) used for targeted therapy. However, high-throughput in...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38286854/",
-          "total_results": 4
-        },
-        {
-          "pmid": "38157193",
-          "title": "Decitabine induces IRF7-mediated immune responses in p53-mutated triple-negative breast cancer: a clinical and translational study.",
-          "authors": "Wang H, Wang Z, Wang Z, et al.",
-          "journal": "Frontiers of medicine",
-          "year": "2024",
-          "abstract_snippet": "p53 is mutated in half of cancer cases. However, no p53-targeting drugs have been approved. Here, we reposition decitabine for triple-negative breast cancer (TNBC), a subtype with frequent p53 mutations and extremely poor prognosis. In a retrospective study on tissue microarrays with 132 TNBC cases,...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38157193/"
-        },
-        {
-          "pmid": "28389407",
-          "title": "D-penicillamine combined with inhibitors of hydroperoxide metabolism enhances lung and breast cancer cell responses to radiation and carboplatin via H",
-          "authors": "Sciegienka SJ, Solst SR, Falls KC, et al.",
-          "journal": "Free radical biology & medicine",
-          "year": "2017",
-          "abstract_snippet": "D-penicillamine (DPEN), a copper chelator, has been used in the treatment of Wilson's disease, cystinuria, and rheumatoid arthritis. Recent evidence suggests that DPEN in combination with biologically relevant copper (Cu) concentrations generates H",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/28389407/"
-        }
-      ],
-      "semantic_scholar_papers": [
-        {
-          "title": "De-escalated neoadjuvant taxane plus trastuzumab and pertuzumab with or without carboplatin in HER2-positive early breast cancer (neoCARHP): A multicentre, open-label, randomised, phase 3 trial.",
-          "year": 2025,
-          "citations": 16,
-          "url": "https://www.semanticscholar.org/paper/3ffb39622b9960e7601a66e0ee25996898b7b18e",
-          "authors": "Hong Gao, Wei Li, Zhi-Yong Wu"
-        },
-        {
-          "title": "Co-delivery of carboplatin and doxorubicin using ZIF-8 coated chitosan-poly(N-isopropyl acrylamide) nanoparticles through a dual pH/thermo responsive strategy to breast cancer cells.",
-          "year": 2024,
-          "citations": 28,
-          "url": "https://www.semanticscholar.org/paper/46deb201937e72a2c1f997078e9ced09b4d47985",
-          "authors": "Narges Dashti, Vajihe Akbari, J. Varshosaz"
-        },
-        {
-          "title": "De-escalated neoadjuvant weekly nab-paclitaxel with trastuzumab and pertuzumab versus docetaxel, carboplatin, trastuzumab, and pertuzumab in patients with HER2-positive early breast cancer (HELEN-006): a multicentre, randomised, phase 3 trial.",
-          "year": 2024,
-          "citations": 22,
-          "url": "https://www.semanticscholar.org/paper/87cde1bec6529264d934d40b3eabb45f9402d679",
-          "authors": "Xiuchun Chen, De-Chuang Jiao, J. Qiao"
-        },
-        {
-          "title": "Veliparib with carboplatin and paclitaxel in BRCA-mutated advanced breast cancer (BROCADE3): Final overall survival results from a randomized phase 3 trial.",
-          "year": 2024,
-          "citations": 16,
-          "url": "https://www.semanticscholar.org/paper/5fd5ec1e4638edbe52f38678e5673b252b74c08f",
-          "authors": "V. Di\u00e9ras, H. Han, H. Wildiers"
-        },
-        {
-          "title": "Improving Cancer Therapy: Design, Synthesis, and Evaluation of Carboplatin-Based Nanoliposomes against Breast Cancer Cell Lines",
-          "year": 2024,
-          "citations": 12,
-          "url": "https://www.semanticscholar.org/paper/0574fb422cd88614b9b876c6d79eca634fb1265f",
-          "authors": "Seyedeh Negin Hadisadegh, Parizad Ghanbarikondori, Armin Sedighi"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Co-delivery of carboplatin and doxorubicin using ZIF-8 coated chitosan-poly(N-isopropyl acrylamide) nanoparticles through a dual pH/thermo responsive strategy to breast cancer cells.",
-        "year": 2024,
-        "citations": 28,
-        "url": "https://www.semanticscholar.org/paper/46deb201937e72a2c1f997078e9ced09b4d47985",
-        "authors": "Narges Dashti, Vajihe Akbari, J. Varshosaz"
-      },
-      "max_citations": 28,
-      "faers_signal": "moderate",
-      "faers_total_reports": 124071,
-      "faers_cooccurrences": 666,
-      "faers_interpretation": "666 FAERS reports mention both Carboplatin and Breast cancer-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "WR 216174 (1.435)",
-        "CTB (1.420)",
-        "Halcinonide (1.416)",
-        "ALW-II-38-3 (1.409)",
-        "(+)-JQ1 (1.401)"
-      ],
-      "signature_interpretation": "Carboplatin was not found among the top 38 drugs that reverse the Breast cancer gene signature. Top reversers: WR 216174 (1.435), CTB (1.420), Halcinonide (1.416)",
-      "ai_hypothesis": "of its ability to induce apoptosis and to inhibit angiogenesis.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "treats",
-          "confidence": 0.7,
-          "positive_signals": 2,
-          "negative_signals": 0,
-          "mechanism_signals": 1,
-          "extracted_entities": [
-            {
-              "entity": "breast",
-              "entity_group": "Disease_disorder",
-              "score": 0.9819999933242798
-            },
-            {
-              "entity": "tn",
-              "entity_group": "Disease_disorder",
-              "score": 0.9980000257492065
-            },
-            {
-              "entity": "##bc",
-              "entity_group": "Disease_disorder",
-              "score": 0.8489999771118164
-            },
-            {
-              "entity": "chemotherapy",
-              "entity_group": "Medication",
-              "score": 0.9990000128746033
-            },
-            {
-              "entity": "car",
-              "entity_group": "Medication",
-              "score": 1.0
-            },
-            {
-              "entity": "##platin",
-              "entity_group": "Medication",
-              "score": 0.7269999980926514
-            }
-          ]
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "Phase 3",
-      "failed_trial_count": 10,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.8332,
-      "mr_genetic_targets": 12,
-      "mechanistic_hypothesis": "Carboplatin \u2014[is a therapeutic for]\u2192 Breast cancer",
-      "kg_paths_text": "\u2022 Carboplatin \u2014[is a therapeutic for]\u2192 Breast cancer\n\u2022 Carboplatin \u2014[binds]\u2192 gene-2950 \u2014[is linked to]\u2192 Breast cancer\n\u2022 Carboplatin \u2014[binds]\u2192 gene-538 \u2014[is linked to]\u2192 Breast cancer",
-      "validation_experiments": [],
-      "novelty_score": 0.125,
-      "novelty_level": "ESTABLISHED",
-      "is_known_treatment": true,
-      "clinical_trials_total": 10,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT04329065",
-          "title": "Concurrent WOKVAC Vaccination, Chemotherapy, and HER2-Targeted Monoclonal Antibody Therapy Before Surgery for the Treatment of Patients With Breast Cancer",
-          "status": "RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "25",
-          "url": "https://clinicaltrials.gov/study/NCT04329065"
-        },
-        {
-          "nct_id": "NCT02784795",
-          "title": "A Study of LY3039478 in Participants With Advanced or Metastatic Solid Tumors",
-          "status": "TERMINATED",
-          "phase": "PHASE1",
-          "enrollment": "94",
-          "url": "https://clinicaltrials.gov/study/NCT02784795"
-        },
-        {
-          "nct_id": "NCT05438706",
-          "title": "A Clinical Study of the Efficacy and Safety of Chidamide in Combination With Camrelizumab and Carboplatin or Capecitabine in the Second and Third Line Treatment of Relapsed/Metastatic Triple-negative Breast Cancer",
-          "status": "UNKNOWN",
-          "phase": "PHASE2",
-          "enrollment": "70",
-          "url": "https://clinicaltrials.gov/study/NCT05438706"
-        },
-        {
-          "nct_id": "NCT04143906",
-          "title": "Vinorelbine/Carboplatin Versus Gemcitabine/Carboplatin in Metastatic Breast Cancer",
-          "status": "UNKNOWN",
-          "phase": "PHASE2",
-          "enrollment": "200",
-          "url": "https://clinicaltrials.gov/study/NCT04143906"
-        },
-        {
-          "nct_id": "NCT06845319",
-          "title": "Anthracycline-Free Neoadjuvant Chemoimmunotherapy for Triple Negative Breast Cancer Patients",
-          "status": "RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "43",
-          "url": "https://clinicaltrials.gov/study/NCT06845319"
-        }
-      ],
-      "trial_phases": {
-        "PHASE2": 7,
-        "PHASE1": 2,
-        "PHASE3": 1
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "10 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
-        "1729 PubMed articles on this drug-disease pair",
-        "4 article(s) specifically mention repurposing/repositioning",
-        "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 666 adverse event reports mention drug-disease co-occurrence",
-        "Supporting paper with 28 citations",
-        "AI analysis of 1 abstract(s) found positive treatment signals",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.83, 12 genetic targets)",
-        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1126,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00783",
-            "drug_name": "Estradiol",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00773",
-            "drug_name": "Etoposide",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00502",
-            "drug_name": "Haloperidol",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00331",
-            "drug_name": "Metformin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00563",
-            "drug_name": "Methotrexate",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "moderate",
-        "summary": "CPIC-C (MTHFR) \u2022 PharmGKB-3 (ERCC1 / rs11615)",
-        "cpic": [
-          {
-            "gene": "MTHFR",
-            "level": "C",
-            "guideline": ""
-          }
-        ],
-        "pharmgkb": [
-          {
-            "gene": "ERCC1",
-            "variant": "rs11615",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/655386639"
-          },
-          {
-            "gene": "MTR",
-            "variant": "rs1805087",
-            "level": "3",
-            "phenotype_category": "Efficacy;Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981237713"
-          },
-          {
-            "gene": "AKT1",
-            "variant": "rs1130214",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183630276"
-          },
-          {
-            "gene": "VEGFA",
-            "variant": "rs9369421",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1446899860"
-          },
-          {
-            "gene": "VEGFA",
-            "variant": "rs9369421",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1446899866"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.383,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.522,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 1.0
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Breast - Mammary Tissue"
-        ],
-        "n_genes": 19,
-        "n_expressed": 15,
-        "mean_tpm_in_tissue": 68.67,
-        "max_tpm_in_tissue": 629.11,
-        "tissue_specificity": 0.574,
-        "context_modifier": 1.084
-      },
-      "disease_entity": "Disease::MESH:D001943",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.8564,
-      "ensemble_features": {
-        "kg_score": 0.9969,
-        "degree_penalty": 0.7815,
-        "n_drug_targets": 0,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 3.5264
-      },
-      "ensemble_rank": 2,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [
-          "BETA-KETO/ANHYDRIDE",
-          "CONTAINS"
-        ],
-        "n_alerts": 2,
-        "alert_names": [
-          "beta-keto/anhydride",
-          "contains_metal"
-        ]
-      }
     }
   ],
   "disease_entity": "Disease::MESH:D001943",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
     "n_disease_genes": 2432,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
-  },
-  "ensemble_version": "v5",
-  "ensemble_model_path": "data/models/ensemble_v5.pkl"
+  }
 }

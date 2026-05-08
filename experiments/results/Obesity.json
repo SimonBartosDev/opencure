@@ -1,8 +1,8 @@
 {
   "disease": "Obesity",
   "status": "completed",
-  "timestamp": "2026-04-19T22:32:17.757669",
-  "elapsed_seconds": 554.0,
+  "timestamp": "2026-05-08T01:20:39.161716",
+  "elapsed_seconds": 115.2,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -17,7 +17,7 @@
       "drug_name": "Cimetidine",
       "drug_id": "DB00501",
       "disease_name": "Obesity",
-      "combined_score": 0.6924,
+      "combined_score": 0.6993,
       "pillars_hit": 5,
       "transe_rank": 163,
       "transe_score": -10.6861,
@@ -36,15 +36,15 @@
       "admet_score": 0.5683,
       "admet_flags": "clean",
       "primekg_score": 0.2625,
-      "dti_score": 0.852,
-      "dti_best_target": "SOCS1",
+      "dti_score": 0.8941,
+      "dti_best_target": "ADRB1",
       "kg_group_score": 0.1574,
-      "structural_group_score": 0.852,
+      "structural_group_score": 0.8941,
       "network_group_score": 0.6003999710083008,
       "txgnn_group_score": 0.99,
       "mr_group_score": 0.5147,
       "admet_multiplier": 0.9137,
-      "efficacy_score": 0.7578,
+      "efficacy_score": 0.7654,
       "groups_hit": 5,
       "direct_relations": [],
       "shared_target_count": 7,
@@ -195,7 +195,7 @@
       "mechanistic_hypothesis": "Cimetidine \u2014[binds]\u2192 gene-1571 \u2014[is linked to]\u2192 Obesity",
       "kg_paths_text": "\u2022 Cimetidine \u2014[binds]\u2192 gene-1571 \u2014[is linked to]\u2192 Obesity\n\u2022 Cimetidine \u2014[binds]\u2192 gene-1571 \u2014[is linked to]\u2192 Obesity\n\u2022 Cimetidine \u2014[binds]\u2192 gene-1571 \u2014[is bound by]\u2192 DB01156 \u2014[treats]\u2192 Obesity",
       "validation_experiments": [],
-      "novelty_score": 0.665,
+      "novelty_score": 0.671,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -210,6 +210,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.51)"
       ],
+      "disease_entity": "Disease::MESH:D009765",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -290,10 +291,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.382,
+        "triangulation_score": 0.385,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.692,
+          "kg": 0.699,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 0.7
@@ -312,15 +313,7 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.15
       },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D009765",
-      "ensemble_prob": 0.0566,
+      "ensemble_prob": 0.0772,
       "ensemble_features": {
         "kg_score": 0.9761,
         "degree_penalty": 0.7619,
@@ -330,6 +323,13 @@
         "transe_rank_log": 5.5334
       },
       "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -353,7 +353,7 @@
       "drug_name": "Naltrexone",
       "drug_id": "DB00704",
       "disease_name": "Obesity",
-      "combined_score": 0.5988,
+      "combined_score": 0.6089,
       "pillars_hit": 5,
       "transe_rank": 149,
       "transe_score": -10.6488,
@@ -372,15 +372,15 @@
       "admet_score": 0.6305,
       "admet_flags": "clean",
       "primekg_score": 0.267,
-      "dti_score": 0.896,
-      "dti_best_target": "SOCS1",
+      "dti_score": 0.9565,
+      "dti_best_target": "ADRB1",
       "kg_group_score": 0.0769,
-      "structural_group_score": 0.896,
+      "structural_group_score": 0.9565,
       "network_group_score": 0.7017999887466431,
       "txgnn_group_score": 0.33,
       "mr_group_score": 0.6873,
       "admet_multiplier": 0.9261,
-      "efficacy_score": 0.6466,
+      "efficacy_score": 0.6574,
       "groups_hit": 5,
       "direct_relations": [],
       "shared_target_count": 8,
@@ -543,58 +543,58 @@
       "mechanistic_hypothesis": "Naltrexone \u2014[treats]\u2192 Obesity",
       "kg_paths_text": "\u2022 Naltrexone \u2014[treats]\u2192 Obesity\n\u2022 Naltrexone \u2014[treats]\u2192 Obesity\n\u2022 Naltrexone \u2014[downregulates]\u2192 gene-3486 \u2014[is linked to]\u2192 Obesity",
       "validation_experiments": [],
-      "novelty_score": 0.251,
+      "novelty_score": 0.256,
       "novelty_level": "ESTABLISHED",
       "is_known_treatment": true,
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT03581630",
-          "title": "Effects of Mediterranean Diet and Naltrexone/Bupropion Treatment in Obese Breast Cancer Patients",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "72",
-          "url": "https://clinicaltrials.gov/study/NCT03581630"
-        },
-        {
-          "nct_id": "NCT00624858",
-          "title": "A Study of Naltrexone SR/ Bupropion SR in Overweight or Obese Subjects With Major Depression",
+          "nct_id": "NCT00711477",
+          "title": "A Study Using Functional Magnetic Resonance Imaging (fMRI) to Assess the Effects of Naltrexone SR/ Bupropion SR Therapy in Overweight or Obese Subjects",
           "status": "COMPLETED",
           "phase": "PHASE2",
-          "enrollment": "25",
-          "url": "https://clinicaltrials.gov/study/NCT00624858"
+          "enrollment": "46",
+          "url": "https://clinicaltrials.gov/study/NCT00711477"
         },
         {
-          "nct_id": "NCT03374956",
-          "title": "Individualized Obesity Pharmacotherapy",
-          "status": "COMPLETED",
+          "nct_id": "NCT07224087",
+          "title": "Development of a MHBC Intervention for Weight Loss and Smoking Cessation for Pre-Bariatric Surgery Patients",
+          "status": "RECRUITING",
+          "phase": "PHASE1",
+          "enrollment": "20",
+          "url": "https://clinicaltrials.gov/study/NCT07224087"
+        },
+        {
+          "nct_id": "NCT04531176",
+          "title": "EMI-EHP Weight Management and Type 2 Diabetes Pragmatic Trial",
+          "status": "TERMINATED",
+          "phase": "PHASE4",
+          "enrollment": "74",
+          "url": "https://clinicaltrials.gov/study/NCT04531176"
+        },
+        {
+          "nct_id": "NCT01601704",
+          "title": "Cardiovascular Outcomes Study of Naltrexone SR/Bupropion SR in Overweight and Obese Subjects With Cardiovascular Risk Factors (The Light Study)",
+          "status": "TERMINATED",
           "phase": "PHASE3",
-          "enrollment": "193",
-          "url": "https://clinicaltrials.gov/study/NCT03374956"
+          "enrollment": "8910",
+          "url": "https://clinicaltrials.gov/study/NCT01601704"
         },
         {
-          "nct_id": "NCT04399395",
-          "title": "Naltrexone/Bupropion (Mysimba) to Optimize Weight Outcomes After Obesity Surgery",
-          "status": "WITHDRAWN",
+          "nct_id": "NCT04902625",
+          "title": "Use of Mysimba in Patients With Weight Regain After Bariatric Surgery",
+          "status": "UNKNOWN",
           "phase": "PHASE4",
-          "enrollment": "0",
-          "url": "https://clinicaltrials.gov/study/NCT04399395"
-        },
-        {
-          "nct_id": "NCT03799198",
-          "title": "Real World Effectiveness of Combining an Employer-based Weight Management Program With Medication for Chronic Weight Management in Employees With Obesity",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "200",
-          "url": "https://clinicaltrials.gov/study/NCT03799198"
+          "enrollment": "116",
+          "url": "https://clinicaltrials.gov/study/NCT04902625"
         }
       ],
       "trial_phases": {
-        "NA": 1,
-        "PHASE2": 2,
-        "PHASE3": 1,
-        "PHASE4": 5,
-        "EARLY_PHASE1": 1
+        "PHASE2": 1,
+        "PHASE1": 1,
+        "PHASE4": 4,
+        "PHASE3": 3,
+        "NA": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -608,6 +608,7 @@
         "Moderate genetic evidence supporting causality (MR score: 0.69)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D009765",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -735,10 +736,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.71,
+        "triangulation_score": 0.713,
         "label": "silver-standard",
         "axis_values": {
-          "kg": 0.599,
+          "kg": 0.609,
           "docking": 1.0,
           "pharos": 0.0,
           "literature": 1.0
@@ -757,15 +758,7 @@
         "tissue_specificity": 0.162,
         "context_modifier": 1.031
       },
-      "docking": {
-        "kcal_per_mol": -12.62,
-        "target_symbol": "OPRM1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D009765",
-      "ensemble_prob": 0.108,
+      "ensemble_prob": 0.1083,
       "ensemble_features": {
         "kg_score": 0.9792,
         "degree_penalty": 0.7904,
@@ -775,6 +768,13 @@
         "transe_rank_log": 5.3936
       },
       "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": -12.62,
+        "target_symbol": "OPRM1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -786,7 +786,7 @@
       "drug_name": "Berberine",
       "drug_id": "DB04115",
       "disease_name": "Obesity",
-      "combined_score": 0.5896,
+      "combined_score": 0.5835,
       "pillars_hit": 5,
       "transe_rank": 32,
       "transe_score": -10.1296,
@@ -805,15 +805,15 @@
       "admet_score": 0.5063,
       "admet_flags": "hERG=0.78",
       "primekg_score": 0.2595,
-      "dti_score": 0.731,
-      "dti_best_target": "MTOR",
+      "dti_score": 0.6936,
+      "dti_best_target": "LEPR",
       "kg_group_score": 0.1559,
-      "structural_group_score": 0.731,
+      "structural_group_score": 0.6936,
       "network_group_score": 0.7346000075340271,
       "txgnn_group_score": 0.37,
       "mr_group_score": 0.7019,
       "admet_multiplier": 0.9013,
-      "efficacy_score": 0.6542,
+      "efficacy_score": 0.6474,
       "groups_hit": 5,
       "direct_relations": [],
       "shared_target_count": 18,
@@ -1000,35 +1000,11 @@
       "mechanistic_hypothesis": "Berberine \u2014[is a therapeutic for]\u2192 Obesity",
       "kg_paths_text": "\u2022 Berberine \u2014[is a therapeutic for]\u2192 Obesity\n\u2022 Berberine \u2014[is a therapeutic for]\u2192 MESH:D065626 \u2014[is treated by]\u2192 MESH:D015525 \u2014[is a therapeutic for]\u2192 Obesity\n\u2022 Berberine \u2014[is a therapeutic for]\u2192 MESH:D065626 \u2014[is treated by]\u2192 MESH:D014810 \u2014[is a therapeutic for]\u2192 Obesity",
       "validation_experiments": [],
-      "novelty_score": 0.283,
+      "novelty_score": 0.28,
       "novelty_level": "ESTABLISHED",
       "is_known_treatment": true,
       "clinical_trials_total": 9,
       "clinical_trials": [
-        {
-          "nct_id": "NCT05720299",
-          "title": "A Clinical Study to Evaluate the Effects of Akkermansia Muciniphila and Berberine on Prediabetes Among Obese Subjects.",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "110",
-          "url": "https://clinicaltrials.gov/study/NCT05720299"
-        },
-        {
-          "nct_id": "NCT07440147",
-          "title": "Effects of Akkermansia Muciniphila and Berberine Supplementation on Insulin Sensitivity in Night-shift Workers",
-          "status": "RECRUITING",
-          "phase": "NA",
-          "enrollment": "200",
-          "url": "https://clinicaltrials.gov/study/NCT07440147"
-        },
-        {
-          "nct_id": "NCT06426966",
-          "title": "Gymnema Sylvestre vs Berberine in Obesity Gene Expression of Adipokines",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "50",
-          "url": "https://clinicaltrials.gov/study/NCT06426966"
-        },
         {
           "nct_id": "NCT05749874",
           "title": "Effects of Berberine on Preventing Cardiovascular Disease and Diabetes Mellitus",
@@ -1044,11 +1020,35 @@
           "phase": "PHASE4",
           "enrollment": "337",
           "url": "https://clinicaltrials.gov/study/NCT05647915"
+        },
+        {
+          "nct_id": "NCT03097965",
+          "title": "Safety Evaluation of a Lifestyle Modification Program In.Form 1.1",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "44",
+          "url": "https://clinicaltrials.gov/study/NCT03097965"
+        },
+        {
+          "nct_id": "NCT05523024",
+          "title": "Effect of Probiotics or Berberine in Hepatic Steatosis Markers, Cardiometabolic and Microbiotic Profile in NAFL.",
+          "status": "UNKNOWN",
+          "phase": "NA",
+          "enrollment": "140",
+          "url": "https://clinicaltrials.gov/study/NCT05523024"
+        },
+        {
+          "nct_id": "NCT06426966",
+          "title": "Gymnema Sylvestre vs Berberine in Obesity Gene Expression of Adipokines",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "50",
+          "url": "https://clinicaltrials.gov/study/NCT06426966"
         }
       ],
       "trial_phases": {
-        "NA": 7,
-        "PHASE4": 2
+        "PHASE4": 2,
+        "NA": 7
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -1058,8 +1058,10 @@
         "Supported by 5 independent AI pillars",
         "Moderate FAERS signal: 3 adverse event reports mention drug-disease co-occurrence",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.70, 5 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.70, 5 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D009765",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1097,10 +1099,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.617,
+        "triangulation_score": 0.615,
         "label": "silver-standard",
         "axis_values": {
-          "kg": 0.59,
+          "kg": 0.584,
           "docking": 0.703,
           "pharos": 0.0,
           "literature": 1.0
@@ -1119,14 +1121,6 @@
         "tissue_specificity": 0.47,
         "context_modifier": 1.086
       },
-      "docking": {
-        "kcal_per_mol": -8.44,
-        "target_symbol": "PPARA",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D009765",
       "ensemble_prob": 0.0,
       "ensemble_features": {
         "kg_score": 0.7542,
@@ -1137,6 +1131,13 @@
         "transe_rank_log": 7.861
       },
       "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": -8.44,
+        "target_symbol": "PPARA",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -1171,8 +1172,8 @@
       "admet_score": 0.7109,
       "admet_flags": "clean",
       "primekg_score": 0.2579,
-      "dti_score": 0.3115,
-      "dti_best_target": "MTOR",
+      "dti_score": 0.3754,
+      "dti_best_target": "ADRB1",
       "kg_group_score": 0.4281,
       "structural_group_score": 0.9641,
       "network_group_score": 0.597599983215332,
@@ -1378,28 +1379,20 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT01303809",
-          "title": "Enhanced Recovery After Laparoscopic Sleeve Gastrectomy - a Randomised Controlled Trial",
-          "status": "COMPLETED",
+          "nct_id": "NCT01156519",
+          "title": "Contribution of Salivary Cortisol in the Detection of Infra-clinic Cortisol Adenoma (ACIC)",
+          "status": "TERMINATED",
           "phase": "NA",
-          "enrollment": "106",
-          "url": "https://clinicaltrials.gov/study/NCT01303809"
+          "enrollment": "514",
+          "url": "https://clinicaltrials.gov/study/NCT01156519"
         },
         {
-          "nct_id": "NCT01422096",
-          "title": "Effect of Short Term Ovarian Suppression on Androgen Overproduction in Overweight Girls With Androgen Excess",
-          "status": "WITHDRAWN",
-          "phase": "EARLY_PHASE1",
-          "enrollment": "0",
-          "url": "https://clinicaltrials.gov/study/NCT01422096"
-        },
-        {
-          "nct_id": "NCT04538820",
-          "title": "Dexamethasone Dose for Postoperative Nausea and Vomiting Prophylaxis in Obese Patients",
-          "status": "UNKNOWN",
-          "phase": "PHASE4",
-          "enrollment": "150",
-          "url": "https://clinicaltrials.gov/study/NCT04538820"
+          "nct_id": "NCT04996784",
+          "title": "Pharmacokinetics of Dexamethasone in COVID-19 Obese Patients",
+          "status": "COMPLETED",
+          "phase": "N/A",
+          "enrollment": "30",
+          "url": "https://clinicaltrials.gov/study/NCT04996784"
         },
         {
           "nct_id": "NCT05759637",
@@ -1410,19 +1403,26 @@
           "url": "https://clinicaltrials.gov/study/NCT05759637"
         },
         {
-          "nct_id": "NCT01422733",
-          "title": "Effect of Longer-term Adrenal Suppression Using Low Dose Hydrocortisone on Androgen Overproduction",
+          "nct_id": "NCT01421797",
+          "title": "Evaluation of Adrenal Androgens in Normal and Obese Girls After Suppression and Stimulation",
+          "status": "UNKNOWN",
+          "phase": "NA",
+          "enrollment": "84",
+          "url": "https://clinicaltrials.gov/study/NCT01421797"
+        },
+        {
+          "nct_id": "NCT01422707",
+          "title": "Effect of Short Term Adrenal Suppression on Androgen Overproduction in Overweight Girls With Androgen Excess",
           "status": "WITHDRAWN",
           "phase": "EARLY_PHASE1",
           "enrollment": "0",
-          "url": "https://clinicaltrials.gov/study/NCT01422733"
+          "url": "https://clinicaltrials.gov/study/NCT01422707"
         }
       ],
       "trial_phases": {
         "NA": 5,
-        "EARLY_PHASE1": 2,
-        "PHASE4": 1,
-        "PHASE1": 1
+        "EARLY_PHASE1": 1,
+        "PHASE4": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -1435,6 +1435,7 @@
         "Strong causal genetic evidence (MR score: 0.77, 21 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D009765",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -1573,15 +1574,7 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.15
       },
-      "docking": {
-        "kcal_per_mol": -11.64,
-        "target_symbol": "NR3C1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D009765",
-      "ensemble_prob": 0.9754,
+      "ensemble_prob": 0.9937,
       "ensemble_features": {
         "kg_score": 0.9996,
         "degree_penalty": 0.736,
@@ -1591,6 +1584,13 @@
         "transe_rank_log": 1.6094
       },
       "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": -11.64,
+        "target_symbol": "NR3C1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1829,20 +1829,28 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT04612998",
-          "title": "Combined Spinal Epidural Anesthesia in Obese Patients Undergoing Cesarean Surgery",
+          "nct_id": "NCT02048215",
+          "title": "Effect on Energy Metabolism at Cellular Level of Diet Plus Treatment With Ephedrine and Caffeine in Obesity",
           "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "100",
-          "url": "https://clinicaltrials.gov/study/NCT04612998"
+          "phase": "PHASE3",
+          "enrollment": "13",
+          "url": "https://clinicaltrials.gov/study/NCT02048215"
         },
         {
-          "nct_id": "NCT00377975",
-          "title": "\"Pecos\" B-adrenergic and PPAR-G Stimulation Upregulates Lipid Metabolism in Human Subcutaneous Fat",
+          "nct_id": "NCT00179023",
+          "title": "The Autonomic Nervous System and Obesity",
           "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "96",
-          "url": "https://clinicaltrials.gov/study/NCT00377975"
+          "phase": "PHASE1",
+          "enrollment": "128",
+          "url": "https://clinicaltrials.gov/study/NCT00179023"
+        },
+        {
+          "nct_id": "NCT01596907",
+          "title": "Treatment of Low Metabolic Rate Following Bariatric Surgery",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "218",
+          "url": "https://clinicaltrials.gov/study/NCT01596907"
         },
         {
           "nct_id": "NCT02236962",
@@ -1853,27 +1861,19 @@
           "url": "https://clinicaltrials.gov/study/NCT02236962"
         },
         {
-          "nct_id": "NCT02048215",
-          "title": "Effect on Energy Metabolism at Cellular Level of Diet Plus Treatment With Ephedrine and Caffeine in Obesity",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "13",
-          "url": "https://clinicaltrials.gov/study/NCT02048215"
-        },
-        {
-          "nct_id": "NCT01710722",
-          "title": "The Effect of Leptin A-200, Caffeine/Ephedrine and Their Combination Upon Weight Loss and Body Composition in Man",
+          "nct_id": "NCT01015794",
+          "title": "Activation of Cervical and Upper Thoracic Brown Adipose Tissue in Humans Via Beta-adrenergic Stimulation",
           "status": "COMPLETED",
           "phase": "NA",
-          "enrollment": "45",
-          "url": "https://clinicaltrials.gov/study/NCT01710722"
+          "enrollment": "25",
+          "url": "https://clinicaltrials.gov/study/NCT01015794"
         }
       ],
       "trial_phases": {
-        "NA": 7,
-        "PHASE2": 1,
         "PHASE3": 1,
-        "PHASE1": 1
+        "PHASE1": 1,
+        "NA": 7,
+        "PHASE2": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -1886,6 +1886,7 @@
         "Supporting paper with 28 citations",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D009765",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1988,15 +1989,7 @@
         "tissue_specificity": 0.812,
         "context_modifier": 1.057
       },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D009765",
-      "ensemble_prob": 0.4176,
+      "ensemble_prob": 0.4252,
       "ensemble_features": {
         "kg_score": 0.9842,
         "degree_penalty": 0.787,
@@ -2006,6 +1999,13 @@
         "transe_rank_log": 5.124
       },
       "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2275,14 +2275,6 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT04728399",
-          "title": "Soy Peptide, Conjugated Linoleic Acid, Overweight or Obese, Body Composition",
-          "status": "UNKNOWN",
-          "phase": "NA",
-          "enrollment": "120",
-          "url": "https://clinicaltrials.gov/study/NCT04728399"
-        },
-        {
           "nct_id": "NCT00347373",
           "title": "Effect of Conjugated Linoleic Acid Supplement on Body Composition",
           "status": "COMPLETED",
@@ -2291,33 +2283,41 @@
           "url": "https://clinicaltrials.gov/study/NCT00347373"
         },
         {
-          "nct_id": "NCT02063802",
-          "title": "Metformin vs Conjugated Linoleic Acid and an Intervention Program With Healthy Habits in Obese Children",
-          "status": "UNKNOWN",
-          "phase": "PHASE2",
-          "enrollment": "120",
-          "url": "https://clinicaltrials.gov/study/NCT02063802"
-        },
-        {
-          "nct_id": "NCT04641494",
-          "title": "The Effect of CLA on Obesity, Lung Functions, Lipid Profile and Inflammation in Women With BMI\u226525",
+          "nct_id": "NCT00721617",
+          "title": "FFA Hypertension and Inflammation in Lean and Obese Subjects",
           "status": "COMPLETED",
           "phase": "NA",
-          "enrollment": "58",
-          "url": "https://clinicaltrials.gov/study/NCT04641494"
+          "enrollment": "12",
+          "url": "https://clinicaltrials.gov/study/NCT00721617"
         },
         {
-          "nct_id": "NCT03915808",
-          "title": "The Effects of Supplementation of Conjugated Linoleic Acid on Body Fat Reduction",
+          "nct_id": "NCT02496936",
+          "title": "Acute Effects of Fats on Satiety and Energy Needs",
           "status": "COMPLETED",
           "phase": "NA",
-          "enrollment": "66",
-          "url": "https://clinicaltrials.gov/study/NCT03915808"
+          "enrollment": "23",
+          "url": "https://clinicaltrials.gov/study/NCT02496936"
+        },
+        {
+          "nct_id": "NCT01503047",
+          "title": "Conjugated Linoleic Acid (1:1 Isomer Mixture) Intake in Overweight People",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "50",
+          "url": "https://clinicaltrials.gov/study/NCT01503047"
+        },
+        {
+          "nct_id": "NCT02028975",
+          "title": "Search for Biological Markers of Orosensory Perception of Fatty Acids in Healthy Subjects and Possible Modifications in Patients With Type 2 Diabetes and in Obese Non-diabetic Patients.",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "81",
+          "url": "https://clinicaltrials.gov/study/NCT02028975"
         }
       ],
       "trial_phases": {
         "NA": 9,
-        "PHASE2": 1
+        "PHASE4": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -2330,6 +2330,7 @@
         "Strong causal genetic evidence (MR score: 0.77, 2 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D009765",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -2381,15 +2382,7 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.15
       },
-      "docking": {
-        "kcal_per_mol": -8.14,
-        "target_symbol": "PPARA",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D009765",
-      "ensemble_prob": 0.0063,
+      "ensemble_prob": 0.0181,
       "ensemble_features": {
         "kg_score": 0.8635,
         "degree_penalty": 1.0,
@@ -2398,7 +2391,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 7.2731
       },
-      "ensemble_rank": 8,
+      "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": -8.14,
+        "target_symbol": "PPARA",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -2676,50 +2676,50 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT00479609",
-          "title": "Testosterone Therapy in Men With Low Testosterone Levels and Metabolic Syndrome or Early Stages of Type 2 Diabetes",
-          "status": "UNKNOWN",
-          "phase": "PHASE3",
-          "enrollment": "176",
-          "url": "https://clinicaltrials.gov/study/NCT00479609"
-        },
-        {
-          "nct_id": "NCT02672592",
-          "title": "Effects of Interleukin-1 Beta on Low Testosterone Levels in Men With Obesity and Metabolic Syndrome",
+          "nct_id": "NCT06489457",
+          "title": "The Effects of Semaglutide vs Testosterone Replacement Therapy on Functional Hypogonadism and Sperm Quality in Men With Type 2 Diabetes Mellitus and Obesity",
           "status": "COMPLETED",
           "phase": "PHASE3",
-          "enrollment": "70",
-          "url": "https://clinicaltrials.gov/study/NCT02672592"
+          "enrollment": "25",
+          "url": "https://clinicaltrials.gov/study/NCT06489457"
         },
         {
-          "nct_id": "NCT00694733",
-          "title": "Regulation of Cortisol Metabolism and Fat Patterning",
-          "status": "UNKNOWN",
-          "phase": "NA",
-          "enrollment": "140",
-          "url": "https://clinicaltrials.gov/study/NCT00694733"
-        },
-        {
-          "nct_id": "NCT03150225",
-          "title": "Physical Exercise for Men With Andropause",
-          "status": "UNKNOWN",
-          "phase": "NA",
-          "enrollment": "58",
-          "url": "https://clinicaltrials.gov/study/NCT03150225"
-        },
-        {
-          "nct_id": "NCT01616732",
-          "title": "Testosterone and Weight Loss",
+          "nct_id": "NCT00487734",
+          "title": "Effect of Testosterone Replacement on Insulin Resistance",
           "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "100",
-          "url": "https://clinicaltrials.gov/study/NCT01616732"
+          "phase": "PHASE4",
+          "enrollment": "19",
+          "url": "https://clinicaltrials.gov/study/NCT00487734"
+        },
+        {
+          "nct_id": "NCT03412136",
+          "title": "The Acute Effect of Protein or Carbohydrate Intake on Testosterone Levels and Food Intake in Children and Adolescent Boys",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "34",
+          "url": "https://clinicaltrials.gov/study/NCT03412136"
+        },
+        {
+          "nct_id": "NCT03256292",
+          "title": "Long-term Lifestyle Change and Testosterone Replacement",
+          "status": "COMPLETED",
+          "phase": "N/A",
+          "enrollment": "38",
+          "url": "https://clinicaltrials.gov/study/NCT03256292"
+        },
+        {
+          "nct_id": "NCT00562341",
+          "title": "Effect of Lap-Band Induced Weight Loss on Serum PSA Levels",
+          "status": "WITHDRAWN",
+          "phase": "N/A",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT00562341"
         }
       ],
       "trial_phases": {
         "PHASE3": 2,
-        "NA": 3,
-        "PHASE2": 2
+        "PHASE4": 1,
+        "NA": 3
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -2733,6 +2733,7 @@
         "Strong causal genetic evidence (MR score: 0.73, 11 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D009765",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2843,15 +2844,7 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.15
       },
-      "docking": {
-        "kcal_per_mol": -11.11,
-        "target_symbol": "SHBG",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D009765",
-      "ensemble_prob": 0.9954,
+      "ensemble_prob": 0.9969,
       "ensemble_features": {
         "kg_score": 0.9999,
         "degree_penalty": 0.7473,
@@ -2861,6 +2854,13 @@
         "transe_rank_log": 0.6931
       },
       "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": -11.11,
+        "target_symbol": "SHBG",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2993,6 +2993,7 @@
         "Highly cited paper (1717 citations): \"High Prevalence of Obesity in Severe Acute Respiratory Syndr...\"",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D009765",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3044,14 +3045,6 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.853
       },
-      "docking": {
-        "kcal_per_mol": -11.84,
-        "target_symbol": "GNRHR",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D009765",
       "ensemble_prob": 0.0,
       "ensemble_features": {
         "kg_score": 0.5366,
@@ -3062,6 +3055,13 @@
         "transe_rank_log": 8.4949
       },
       "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": -11.84,
+        "target_symbol": "GNRHR",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -3096,8 +3096,8 @@
       "admet_score": 1.0,
       "admet_flags": "clean",
       "primekg_score": 0.2585,
-      "dti_score": 0.1972,
-      "dti_best_target": "SOCS1",
+      "dti_score": 0.2624,
+      "dti_best_target": "ADRB1",
       "kg_group_score": 0.1263,
       "structural_group_score": 0.8795,
       "network_group_score": 0.7139999866485596,
@@ -3219,6 +3219,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.80, 1 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D009765",
       "dose_plausibility": {
         "plausibility": "unknown",
         "dose_range": "research",
@@ -3270,15 +3271,7 @@
         "tissue_specificity": 0.43,
         "context_modifier": 1.078
       },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D009765",
-      "ensemble_prob": 0.0123,
+      "ensemble_prob": 0.0181,
       "ensemble_features": {
         "kg_score": 0.8618,
         "degree_penalty": 0.8655,
@@ -3287,7 +3280,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 7.2855
       },
-      "ensemble_rank": 7,
+      "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -3326,8 +3326,8 @@
       "admet_score": 0.7161,
       "admet_flags": "clean",
       "primekg_score": 0.2547,
-      "dti_score": 0.3371,
-      "dti_best_target": "MTOR",
+      "dti_score": 0.3876,
+      "dti_best_target": "ADRB1",
       "kg_group_score": 0.2142,
       "structural_group_score": 0.9412,
       "network_group_score": 0.6970000267028809,
@@ -3503,6 +3503,14 @@
       "clinical_trials_total": 5,
       "clinical_trials": [
         {
+          "nct_id": "NCT00624416",
+          "title": "Association of Beta-2 Adrenergic Agonist and Corticosteroid Injection in the Treatment of Lipomas",
+          "status": "COMPLETED",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "10",
+          "url": "https://clinicaltrials.gov/study/NCT00624416"
+        },
+        {
           "nct_id": "NCT02760316",
           "title": "A Study to Assess the Safety, Tolerability, Pharmacokinetics and Pharmacodynamics of Multiple Ascending Doses of AZD9567.",
           "status": "COMPLETED",
@@ -3517,14 +3525,6 @@
           "phase": "NA",
           "enrollment": "24",
           "url": "https://clinicaltrials.gov/study/NCT04315350"
-        },
-        {
-          "nct_id": "NCT00624416",
-          "title": "Association of Beta-2 Adrenergic Agonist and Corticosteroid Injection in the Treatment of Lipomas",
-          "status": "COMPLETED",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "10",
-          "url": "https://clinicaltrials.gov/study/NCT00624416"
         },
         {
           "nct_id": "NCT00900445",
@@ -3545,8 +3545,8 @@
       ],
       "trial_phases": {
         "PHASE1": 2,
-        "NA": 1,
-        "PHASE2": 1
+        "PHASE2": 1,
+        "NA": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -3558,6 +3558,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.75, 3 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D009765",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3689,15 +3690,7 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.15
       },
-      "docking": {
-        "kcal_per_mol": -11.44,
-        "target_symbol": "IL6",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D009765",
-      "ensemble_prob": 0.1839,
+      "ensemble_prob": 0.1526,
       "ensemble_features": {
         "kg_score": 0.9852,
         "degree_penalty": 0.7643,
@@ -3707,6 +3700,13 @@
         "transe_rank_log": 5.0562
       },
       "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": -11.44,
+        "target_symbol": "IL6",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -3715,12 +3715,12 @@
       }
     }
   ],
+  "disease_entity": "Disease::MESH:D009765",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
     "n_disease_genes": 497,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
-  },
-  "disease_entity": "Disease::MESH:D009765",
-  "ensemble_version": "v5",
-  "ensemble_model_path": "data/models/ensemble_v5.pkl"
+  }
 }

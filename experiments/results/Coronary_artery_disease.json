@@ -1,8 +1,8 @@
 {
   "disease": "Coronary artery disease",
   "status": "completed",
-  "timestamp": "2026-04-19T21:32:34.509912",
-  "elapsed_seconds": 800.8,
+  "timestamp": "2026-05-08T01:09:17.236233",
+  "elapsed_seconds": 140.3,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -16,7 +16,7 @@
       "drug_name": "Cimetidine",
       "drug_id": "DB00501",
       "disease_name": "Coronary artery disease",
-      "combined_score": 0.719,
+      "combined_score": 0.7217,
       "pillars_hit": 5,
       "transe_rank": 191,
       "transe_score": -10.9414,
@@ -35,15 +35,15 @@
       "admet_score": 0.5683,
       "admet_flags": "clean",
       "primekg_score": 0.2572,
-      "dti_score": 0.9557,
-      "dti_best_target": "COL18A1",
+      "dti_score": 0.9719,
+      "dti_best_target": "PGF",
       "kg_group_score": 0.0602,
-      "structural_group_score": 0.9557,
+      "structural_group_score": 0.9719,
       "network_group_score": 0.5523999929428101,
       "txgnn_group_score": 0.99,
       "mr_group_score": 0.8105,
       "admet_multiplier": 0.9137,
-      "efficacy_score": 0.7869,
+      "efficacy_score": 0.7899,
       "groups_hit": 5,
       "direct_relations": [],
       "shared_target_count": 2,
@@ -189,7 +189,7 @@
       "mechanistic_hypothesis": "Cimetidine \u2014[binds]\u2192 gene-8647 \u2014[is bound by]\u2192 DB00175 \u2014[treats]\u2192 Coronary artery disease",
       "kg_paths_text": "\u2022 Cimetidine \u2014[binds]\u2192 gene-8647 \u2014[is bound by]\u2192 DB00175 \u2014[treats]\u2192 Coronary artery disease\n\u2022 Cimetidine \u2014[binds]\u2192 gene-8647 \u2014[is bound by]\u2192 DB00175 \u2014[treats]\u2192 Coronary artery disease\n\u2022 Cimetidine \u2014[binds]\u2192 gene-8647 \u2014[is a target of]\u2192 DB00171 \u2014[is a therapeutic for]\u2192 Coronary artery disease",
       "validation_experiments": [],
-      "novelty_score": 0.604,
+      "novelty_score": 0.606,
       "novelty_level": "KNOWN",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -204,6 +204,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.81, 6 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D003324",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -284,10 +285,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.37,
+        "triangulation_score": 0.371,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.719,
+          "kg": 0.722,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 0.591
@@ -305,15 +306,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.922
       },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D003324",
-      "ensemble_prob": 0.0226,
+      "ensemble_prob": 0.0254,
       "ensemble_features": {
         "kg_score": 0.9665,
         "degree_penalty": 0.7619,
@@ -323,6 +316,13 @@
         "transe_rank_log": 5.8693
       },
       "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -366,7 +366,7 @@
       "admet_flags": "DILI=0.97",
       "primekg_score": 0.2603,
       "dti_score": 1.0,
-      "dti_best_target": "ANGPTL3",
+      "dti_best_target": "GATA2",
       "kg_group_score": 0.4296,
       "structural_group_score": 1.0,
       "network_group_score": 0.5127999782562256,
@@ -564,8 +564,10 @@
         "Moderate FAERS signal: 51 adverse event reports mention drug-disease co-occurrence",
         "Highly cited paper (191 citations): \"Coronary vasoconstrictor effect of indomethacin in patients ...\"",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.79, 10 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.79, 10 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D003324",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -688,15 +690,7 @@
         "tissue_specificity": 0.085,
         "context_modifier": 1.04
       },
-      "docking": {
-        "kcal_per_mol": -9.56,
-        "target_symbol": "PTGS1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D003324",
-      "ensemble_prob": 0.2541,
+      "ensemble_prob": 0.1615,
       "ensemble_features": {
         "kg_score": 0.9947,
         "degree_penalty": 0.7454,
@@ -706,6 +700,13 @@
         "transe_rank_log": 4.0431
       },
       "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": -9.56,
+        "target_symbol": "PTGS1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -836,6 +837,7 @@
         "High molecular similarity (0.94) to Adenosine triphosphate",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D003324",
       "dose_plausibility": {
         "plausibility": "unknown",
         "dose_range": "research",
@@ -886,14 +888,6 @@
         "tissue_specificity": 0.259,
         "context_modifier": 1.061
       },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D003324",
       "ensemble_prob": 0.0,
       "ensemble_features": {
         "kg_score": 0.5011,
@@ -904,6 +898,13 @@
         "transe_rank_log": 8.5686
       },
       "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -1059,6 +1060,7 @@
         "Highly cited paper (2930 citations): \"Inflammation, Atherosclerosis and Coronary Artery Disease...\"",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D003324",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -1160,15 +1162,7 @@
         "tissue_specificity": 0.259,
         "context_modifier": 1.061
       },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D003324",
-      "ensemble_prob": 0.0003,
+      "ensemble_prob": 0.0005,
       "ensemble_features": {
         "kg_score": 0.6606,
         "degree_penalty": 0.8688,
@@ -1178,6 +1172,13 @@
         "transe_rank_log": 8.1837
       },
       "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1209,7 +1210,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2511,
       "dti_score": 1.0,
-      "dti_best_target": "ANGPTL3",
+      "dti_best_target": "COX2",
       "kg_group_score": 0.2135,
       "structural_group_score": 1.0,
       "network_group_score": 0.6218000054359436,
@@ -1393,6 +1394,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.79, 5 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D003324",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -1494,15 +1496,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.988
       },
-      "docking": {
-        "kcal_per_mol": -10.35,
-        "target_symbol": "ADRB2",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D003324",
-      "ensemble_prob": 0.6658,
+      "ensemble_prob": 0.6364,
       "ensemble_features": {
         "kg_score": 0.995,
         "degree_penalty": 0.789,
@@ -1512,6 +1506,13 @@
         "transe_rank_log": 3.989
       },
       "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": -10.35,
+        "target_symbol": "ADRB2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -1548,7 +1549,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2598,
       "dti_score": 1.0,
-      "dti_best_target": "ANGPTL3",
+      "dti_best_target": "GATA2",
       "kg_group_score": 0.2927,
       "structural_group_score": 1.0,
       "network_group_score": 0.47780001163482666,
@@ -1710,12 +1711,20 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT01502904",
-          "title": "Neointimal Coverage After Implantation of Biolimus Eluting Stent With Biodegradable Polymer: Optical Coherence Tomographic Assessment According to the Treatment of Dyslipidemia and Hypertension and the Types of Implanted Drug-eluting Stents",
+          "nct_id": "NCT05285085",
+          "title": "Real World Evidence Study of Statin Use in Brazil",
+          "status": "COMPLETED",
+          "phase": "N/A",
+          "enrollment": "2133900",
+          "url": "https://clinicaltrials.gov/study/NCT05285085"
+        },
+        {
+          "nct_id": "NCT01715714",
+          "title": "Statin Recapture Therapy Before Coronary Artery Bypass Grafting",
           "status": "COMPLETED",
           "phase": "PHASE4",
-          "enrollment": "120",
-          "url": "https://clinicaltrials.gov/study/NCT01502904"
+          "enrollment": "2630",
+          "url": "https://clinicaltrials.gov/study/NCT01715714"
         },
         {
           "nct_id": "NCT01293097",
@@ -1726,38 +1735,32 @@
           "url": "https://clinicaltrials.gov/study/NCT01293097"
         },
         {
-          "nct_id": "NCT02155530",
-          "title": "COmparison and Modification in Neointimal Pattern Assessed by Optical Coherence Tomography With High Versus Moderate Efficacy Statin Treatment After Drug Eluting Stent Implantation: COMPASS Trial",
+          "nct_id": "NCT00000461",
+          "title": "Harvard Atherosclerosis Reversibility Project (HARP)",
           "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "30",
-          "url": "https://clinicaltrials.gov/study/NCT02155530"
+          "phase": "PHASE2",
+          "enrollment": "",
+          "url": "https://clinicaltrials.gov/study/NCT00000461"
         },
         {
-          "nct_id": "NCT05251129",
-          "title": "Statin InTensity to Prevent Coronary Artery Vasculopathy After Heart Transplantation",
-          "status": "WITHDRAWN",
-          "phase": "NA",
-          "enrollment": "0",
-          "url": "https://clinicaltrials.gov/study/NCT05251129"
-        },
-        {
-          "nct_id": "NCT00039663",
-          "title": "Endothelial Dysfunction as a Risk Factor in HIV Study",
+          "nct_id": "NCT01563731",
+          "title": "Optimal Blood Pressure and Cholesterol Targets for Preventing Recurrent Stroke in Hypertensives",
           "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "75",
-          "url": "https://clinicaltrials.gov/study/NCT00039663"
+          "phase": "PHASE4",
+          "enrollment": "200",
+          "url": "https://clinicaltrials.gov/study/NCT01563731"
         }
       ],
       "trial_phases": {
-        "PHASE4": 6,
-        "NA": 2,
-        "PHASE1": 1
+        "PHASE4": 5,
+        "PHASE2": 1,
+        "NA": 1,
+        "PHASE3": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
         "10 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
         "864 PubMed articles on this drug-disease pair",
         "Supported by 4 independent AI pillars",
         "Moderate FAERS signal: 337 adverse event reports mention drug-disease co-occurrence",
@@ -1766,6 +1769,7 @@
         "Strong causal genetic evidence (MR score: 0.84, 11 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D003324",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1929,15 +1933,7 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.15
       },
-      "docking": {
-        "kcal_per_mol": -10.27,
-        "target_symbol": "HMGCR",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D003324",
-      "ensemble_prob": 0.9433,
+      "ensemble_prob": 0.926,
       "ensemble_features": {
         "kg_score": 0.9981,
         "degree_penalty": 0.7963,
@@ -1947,6 +1943,13 @@
         "transe_rank_log": 3.0445
       },
       "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": -10.27,
+        "target_symbol": "HMGCR",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2144,20 +2147,20 @@
           "url": "https://clinicaltrials.gov/study/NCT00299221"
         },
         {
-          "nct_id": "NCT01122719",
-          "title": "Brazilian and Italian Evaluation of Safety Using Tacrolimus-eluting Stent With Short-term Dual Antiplatelet Regimen",
-          "status": "TERMINATED",
-          "phase": "NA",
-          "enrollment": "16",
-          "url": "https://clinicaltrials.gov/study/NCT01122719"
-        },
-        {
           "nct_id": "NCT01612299",
           "title": "Effects of Zortress\u00ae + Tacrolimus vs. Standard Immunosuppression on Progression of Coronary Artery Calcifications and Bone Disease in de Novo Renal Transplant Recipients",
           "status": "WITHDRAWN",
           "phase": "NA",
           "enrollment": "0",
           "url": "https://clinicaltrials.gov/study/NCT01612299"
+        },
+        {
+          "nct_id": "NCT01122719",
+          "title": "Brazilian and Italian Evaluation of Safety Using Tacrolimus-eluting Stent With Short-term Dual Antiplatelet Regimen",
+          "status": "TERMINATED",
+          "phase": "NA",
+          "enrollment": "16",
+          "url": "https://clinicaltrials.gov/study/NCT01122719"
         }
       ],
       "trial_phases": {
@@ -2173,6 +2176,7 @@
         "Moderate FAERS signal: 120 adverse event reports mention drug-disease co-occurrence",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D003324",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2321,15 +2325,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.888
       },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D003324",
-      "ensemble_prob": 0.0397,
+      "ensemble_prob": 0.0307,
       "ensemble_features": {
         "kg_score": 0.9757,
         "degree_penalty": 0.7479,
@@ -2339,6 +2335,13 @@
         "transe_rank_log": 5.5491
       },
       "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -2376,7 +2379,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2521,
       "dti_score": 1.0,
-      "dti_best_target": "ANGPTL3",
+      "dti_best_target": "GATA2",
       "kg_group_score": 0.1191,
       "structural_group_score": 1.0,
       "network_group_score": 0.5982999801635742,
@@ -2537,12 +2540,12 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT02271178",
-          "title": "Multi-cap for Increase Adherence After Acute Myocardial Infarction",
-          "status": "TERMINATED",
-          "phase": "PHASE3",
-          "enrollment": "100",
-          "url": "https://clinicaltrials.gov/study/NCT02271178"
+          "nct_id": "NCT00241904",
+          "title": "Reducing Total Cardiovascular Risk in an Urban Community",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "525",
+          "url": "https://clinicaltrials.gov/study/NCT00241904"
         },
         {
           "nct_id": "NCT03596385",
@@ -2553,35 +2556,34 @@
           "url": "https://clinicaltrials.gov/study/NCT03596385"
         },
         {
-          "nct_id": "NCT02623569",
-          "title": "To Assess the Anti-anginal Safety and Efficacy of Ivabradine in Subjects With Stable\uff0cSymptomatic Chronic Angina",
+          "nct_id": "NCT01397994",
+          "title": "Study to Assess Efficacy of Nicorandil+Atenolol vs Atenolol in Treatment of Chronic Stable Angina.",
           "status": "UNKNOWN",
-          "phase": "PHASE2",
-          "enrollment": "336",
-          "url": "https://clinicaltrials.gov/study/NCT02623569"
+          "phase": "PHASE4",
+          "enrollment": "40",
+          "url": "https://clinicaltrials.gov/study/NCT01397994"
         },
         {
-          "nct_id": "NCT01499511",
-          "title": "Anglo-Scandinavian Cardiac Outcomes Trial: Post Trial Follow-Up Study",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "1718",
-          "url": "https://clinicaltrials.gov/study/NCT01499511"
+          "nct_id": "NCT07268170",
+          "title": "Heart Rate Control Before Cardiac Computed Tomography in Adults for the Evaluation of Coronary Artery Disease",
+          "status": "ENROLLING_BY_INVITATION",
+          "phase": "PHASE2, PHASE3",
+          "enrollment": "350",
+          "url": "https://clinicaltrials.gov/study/NCT07268170"
         },
         {
-          "nct_id": "NCT00202566",
-          "title": "Efficacy and Safety of Ivabradine on Top of Atenolol in Stable Angina Pectoris",
+          "nct_id": "NCT01295047",
+          "title": "Comparison of Medical Therapies in Marfan Syndrome.",
           "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "750",
-          "url": "https://clinicaltrials.gov/study/NCT00202566"
+          "phase": "PHASE4",
+          "enrollment": "18",
+          "url": "https://clinicaltrials.gov/study/NCT01295047"
         }
       ],
       "trial_phases": {
-        "PHASE3": 3,
-        "PHASE4": 3,
-        "PHASE2": 1,
-        "NA": 1
+        "PHASE4": 7,
+        "PHASE2": 2,
+        "PHASE3": 2
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -2592,8 +2594,10 @@
         "Moderate FAERS signal: 950 adverse event reports mention drug-disease co-occurrence",
         "Supporting paper with 26 citations",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.86, 4 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.86, 4 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D003324",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2752,15 +2756,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.888
       },
-      "docking": {
-        "kcal_per_mol": -6.85,
-        "target_symbol": "ADRB2",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D003324",
-      "ensemble_prob": 0.8202,
+      "ensemble_prob": 0.7591,
       "ensemble_features": {
         "kg_score": 0.9979,
         "degree_penalty": 0.772,
@@ -2770,6 +2766,13 @@
         "transe_rank_log": 3.1355
       },
       "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": -6.85,
+        "target_symbol": "ADRB2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2800,8 +2803,8 @@
       "admet_score": 0.7026,
       "admet_flags": "clean",
       "primekg_score": 0.2511,
-      "dti_score": 0.3886,
-      "dti_best_target": "CSF2",
+      "dti_score": 0.3922,
+      "dti_best_target": "COX2",
       "kg_group_score": 0.2837,
       "structural_group_score": 0.9475,
       "network_group_score": 0.48989999294281006,
@@ -2954,12 +2957,36 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT02591771",
-          "title": "Study of Multistep Pharmacological and Invasive Management for Cardiogenic Shock",
+          "nct_id": "NCT03800264",
+          "title": "Bisoprolol Versus Corticosteroid and Bisoprolol Combination for Prophylaxis Against Atrial Fibrillation After on Pump Coronary Artery Bypass Surgery",
           "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "24",
-          "url": "https://clinicaltrials.gov/study/NCT02591771"
+          "phase": "PHASE4",
+          "enrollment": "176",
+          "url": "https://clinicaltrials.gov/study/NCT03800264"
+        },
+        {
+          "nct_id": "NCT00682487",
+          "title": "Hair Cortisol and the Risk of Acute Myocardial Infarction",
+          "status": "COMPLETED",
+          "phase": "N/A",
+          "enrollment": "120",
+          "url": "https://clinicaltrials.gov/study/NCT00682487"
+        },
+        {
+          "nct_id": "NCT00189124",
+          "title": "Dehydroepiandrosterone (DHEA) in Systemic Lupus Erythematosus (SLE) for Coronary Artery Disease (CAD) Prevention",
+          "status": "COMPLETED",
+          "phase": "PHASE2, PHASE3",
+          "enrollment": "13",
+          "url": "https://clinicaltrials.gov/study/NCT00189124"
+        },
+        {
+          "nct_id": "NCT03371784",
+          "title": "The Effect of Glucocorticoid Therapy on Left Ventricular Remodelling in Acute Myocardial Infarction (RECONSIDER)",
+          "status": "UNKNOWN",
+          "phase": "PHASE2, PHASE3",
+          "enrollment": "77",
+          "url": "https://clinicaltrials.gov/study/NCT03371784"
         },
         {
           "nct_id": "NCT03773822",
@@ -2968,37 +2995,13 @@
           "phase": "PHASE3",
           "enrollment": "380",
           "url": "https://clinicaltrials.gov/study/NCT03773822"
-        },
-        {
-          "nct_id": "NCT02785224",
-          "title": "Arterial Pressure and Stress-Dose Steroids in Cardiac Arrest.",
-          "status": "WITHDRAWN",
-          "phase": "N/A",
-          "enrollment": "0",
-          "url": "https://clinicaltrials.gov/study/NCT02785224"
-        },
-        {
-          "nct_id": "NCT06376318",
-          "title": "Shock and Acute Conditions OutcOmes Platform",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "phase": "N/A",
-          "enrollment": "1000",
-          "url": "https://clinicaltrials.gov/study/NCT06376318"
-        },
-        {
-          "nct_id": "NCT07035106",
-          "title": "I-WEAR: Evaluating Wearables and Health Summaries in ICU Survivors",
-          "status": "RECRUITING",
-          "phase": "NA",
-          "enrollment": "60",
-          "url": "https://clinicaltrials.gov/study/NCT07035106"
         }
       ],
       "trial_phases": {
-        "PHASE2": 2,
-        "PHASE3": 2,
-        "NA": 3,
-        "PHASE4": 1
+        "PHASE4": 2,
+        "PHASE2": 3,
+        "PHASE3": 4,
+        "NA": 2
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -3012,6 +3015,7 @@
         "Strong causal genetic evidence (MR score: 0.80, 9 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D003324",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3113,15 +3117,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.874
       },
-      "docking": {
-        "kcal_per_mol": -8.47,
-        "target_symbol": "ADRB2",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D003324",
-      "ensemble_prob": 0.654,
+      "ensemble_prob": 0.4471,
       "ensemble_features": {
         "kg_score": 0.9948,
         "degree_penalty": 0.7678,
@@ -3131,6 +3127,13 @@
         "transe_rank_log": 4.0254
       },
       "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": -8.47,
+        "target_symbol": "ADRB2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -3166,8 +3169,8 @@
       "admet_score": 0.7109,
       "admet_flags": "clean",
       "primekg_score": 0.2525,
-      "dti_score": 0.9224,
-      "dti_best_target": "HIF1A",
+      "dti_score": 0.9208,
+      "dti_best_target": "FABP4",
       "kg_group_score": 0.2213,
       "structural_group_score": 0.9506,
       "network_group_score": 0.5335999727249146,
@@ -3363,6 +3366,14 @@
           "url": "https://clinicaltrials.gov/study/NCT05635227"
         },
         {
+          "nct_id": "NCT05487508",
+          "title": "Efficacy of Dexamethasone to Improve Clinical Outcomes in Coronary Artery Bypass Patients",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "120",
+          "url": "https://clinicaltrials.gov/study/NCT05487508"
+        },
+        {
           "nct_id": "NCT04849117",
           "title": "Effect of Bilateral Transversus Thoracis Muscle Plane Block in Patients Undergoing Coronary Artery Bypass Graft Surgery.",
           "status": "COMPLETED",
@@ -3379,20 +3390,12 @@
           "url": "https://clinicaltrials.gov/study/NCT04278404"
         },
         {
-          "nct_id": "NCT00190099",
-          "title": "Dexamethasone-Eluting Stent in Acute Coronary Syndrome to Prevent Restenosis",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "40",
-          "url": "https://clinicaltrials.gov/study/NCT00190099"
-        },
-        {
-          "nct_id": "NCT05487508",
-          "title": "Efficacy of Dexamethasone to Improve Clinical Outcomes in Coronary Artery Bypass Patients",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "120",
-          "url": "https://clinicaltrials.gov/study/NCT05487508"
+          "nct_id": "NCT03859102",
+          "title": "Enhanced Recovery After Cardiac Surgery",
+          "status": "UNKNOWN",
+          "phase": "NA",
+          "enrollment": "80",
+          "url": "https://clinicaltrials.gov/study/NCT03859102"
         }
       ],
       "trial_phases": {
@@ -3410,6 +3413,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.82, 32 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D003324",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -3547,15 +3551,7 @@
         "tissue_specificity": 0.645,
         "context_modifier": 1.107
       },
-      "docking": {
-        "kcal_per_mol": -4.27,
-        "target_symbol": "PLA2G1B",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D003324",
-      "ensemble_prob": 0.1655,
+      "ensemble_prob": 0.1515,
       "ensemble_features": {
         "kg_score": 0.9866,
         "degree_penalty": 0.736,
@@ -3565,6 +3561,13 @@
         "transe_rank_log": 4.9558
       },
       "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": -4.27,
+        "target_symbol": "PLA2G1B",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -3573,12 +3576,12 @@
       }
     }
   ],
+  "disease_entity": "Disease::MESH:D003324",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
     "n_disease_genes": 141,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
-  },
-  "disease_entity": "Disease::MESH:D003324",
-  "ensemble_version": "v5",
-  "ensemble_model_path": "data/models/ensemble_v5.pkl"
+  }
 }

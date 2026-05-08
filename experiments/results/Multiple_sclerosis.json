@@ -1,8 +1,8 @@
 {
   "disease": "Multiple sclerosis",
   "status": "completed",
-  "timestamp": "2026-04-19T17:46:34.217401",
-  "elapsed_seconds": 979.9,
+  "timestamp": "2026-05-07T22:54:11.936358",
+  "elapsed_seconds": 249.6,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -16,7 +16,7 @@
       "drug_name": "Berberine",
       "drug_id": "DB04115",
       "disease_name": "Multiple sclerosis",
-      "combined_score": 0.6025999784469604,
+      "combined_score": 0.5848000049591064,
       "pillars_hit": 5,
       "transe_rank": 124,
       "transe_score": -10.7092,
@@ -35,15 +35,15 @@
       "admet_score": 0.5063,
       "admet_flags": "hERG=0.78",
       "primekg_score": 0.2537,
-      "dti_score": 0.6909,
-      "dti_best_target": "S1PR1",
+      "dti_score": 0.5808,
+      "dti_best_target": "ITGAM",
       "kg_group_score": 0.081,
-      "structural_group_score": 0.6909,
+      "structural_group_score": 0.5808,
       "network_group_score": 0.6657999753952026,
       "txgnn_group_score": 0.66,
       "mr_group_score": 0.6381,
       "admet_multiplier": 0.9013,
-      "efficacy_score": 0.6686999797821045,
+      "efficacy_score": 0.6488999724388123,
       "groups_hit": 5,
       "direct_relations": [],
       "shared_target_count": 14,
@@ -201,7 +201,7 @@
       "mechanistic_hypothesis": "Berberine \u2014[is a therapeutic for]\u2192 Multiple sclerosis",
       "kg_paths_text": "\u2022 Berberine \u2014[is a therapeutic for]\u2192 Multiple sclerosis\n\u2022 Berberine \u2014[is a therapeutic for]\u2192 MESH:D050197 \u2014[is treated by]\u2192 DB00563 \u2014[treats]\u2192 Multiple sclerosis\n\u2022 Berberine \u2014[is a therapeutic for]\u2192 MESH:D050197 \u2014[is treated by]\u2192 DB00563 \u2014[treats]\u2192 Multiple sclerosis",
       "validation_experiments": [],
-      "novelty_score": 0.5059999823570251,
+      "novelty_score": 0.4909999966621399,
       "novelty_level": "KNOWN",
       "is_known_treatment": true,
       "clinical_trials_total": 0,
@@ -213,8 +213,10 @@
         "Supported by 5 independent AI pillars",
         "Supporting paper with 27 citations",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.64)"
+        "Moderate genetic evidence supporting causality (MR score: 0.64)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D009103",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -252,10 +254,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.622,
+        "triangulation_score": 0.616,
         "label": "silver-standard",
         "axis_values": {
-          "kg": 0.603,
+          "kg": 0.585,
           "docking": 0.703,
           "pharos": 0.0,
           "literature": 1.0
@@ -273,14 +275,6 @@
         "tissue_specificity": 0.25,
         "context_modifier": 1.028
       },
-      "disease_entity": "Disease::MESH:D009103",
-      "docking": {
-        "kcal_per_mol": -8.44,
-        "target_symbol": "PPARA",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
       "ensemble_prob": 0.0,
       "ensemble_features": {
         "kg_score": 0.7251,
@@ -291,6 +285,13 @@
         "transe_rank_log": 7.9728
       },
       "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": -8.44,
+        "target_symbol": "PPARA",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -306,7 +307,7 @@
       "drug_name": "histamine dihydrochloride",
       "drug_id": "DB05381",
       "disease_name": "Multiple sclerosis",
-      "combined_score": 0.5318,
+      "combined_score": 0.5317,
       "pillars_hit": 4,
       "transe_rank": 6,
       "transe_score": -9.9542,
@@ -325,15 +326,15 @@
       "admet_score": 0.6862,
       "admet_flags": "clean",
       "primekg_score": 0.2734,
-      "dti_score": 0.6166,
-      "dti_best_target": "GPR17",
+      "dti_score": 0.6163,
+      "dti_best_target": "CTNNB1",
       "kg_group_score": 0.6015,
-      "structural_group_score": 0.6166,
+      "structural_group_score": 0.6163,
       "network_group_score": 0.49619999527931213,
       "txgnn_group_score": 0,
       "mr_group_score": 0.7121,
       "admet_multiplier": 0.9372,
-      "efficacy_score": 0.5674,
+      "efficacy_score": 0.5673,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 22,
@@ -457,12 +458,20 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT04544436",
-          "title": "A Study to Evaluate the Efficacy, Safety and Pharmacokinetics (PK) of a Higher Dose of Ocrelizumab in Adults With Relapsing Multiple Sclerosis (RMS)",
+          "nct_id": "NCT03266965",
+          "title": "Histaminergic Basis of Central Fatigue in Multiple Sclerosis - A Novel Approach",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "18",
+          "url": "https://clinicaltrials.gov/study/NCT03266965"
+        },
+        {
+          "nct_id": "NCT04548999",
+          "title": "A Study to Evaluate the Efficacy, Safety and Pharmacokinetics (PK) of a Higher Dose of Ocrelizumab in Adults With Primary Progressive Multiple Sclerosis (PPMS)",
           "status": "ACTIVE_NOT_RECRUITING",
           "phase": "PHASE3",
-          "enrollment": "864",
-          "url": "https://clinicaltrials.gov/study/NCT04544436"
+          "enrollment": "769",
+          "url": "https://clinicaltrials.gov/study/NCT04548999"
         },
         {
           "nct_id": "NCT07501520",
@@ -473,14 +482,6 @@
           "url": "https://clinicaltrials.gov/study/NCT07501520"
         },
         {
-          "nct_id": "NCT02688985",
-          "title": "Study to Explore the Mechanism of Action of Ocrelizumab and B-Cell Biology in Participants With Relapsing Multiple Sclerosis (RMS) or Primary Progressive Multiple Sclerosis (PPMS)",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "131",
-          "url": "https://clinicaltrials.gov/study/NCT02688985"
-        },
-        {
           "nct_id": "NCT00988988",
           "title": "The Effects of Ethyl-Alpha-Guanido-Methyl Ethanoate on Skin Reactions From Glatiramer Acetate Injections",
           "status": "WITHDRAWN",
@@ -489,19 +490,19 @@
           "url": "https://clinicaltrials.gov/study/NCT00988988"
         },
         {
-          "nct_id": "NCT03266965",
-          "title": "Histaminergic Basis of Central Fatigue in Multiple Sclerosis - A Novel Approach",
+          "nct_id": "NCT02688985",
+          "title": "Study to Explore the Mechanism of Action of Ocrelizumab and B-Cell Biology in Participants With Relapsing Multiple Sclerosis (RMS) or Primary Progressive Multiple Sclerosis (PPMS)",
           "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "18",
-          "url": "https://clinicaltrials.gov/study/NCT03266965"
+          "phase": "PHASE3",
+          "enrollment": "131",
+          "url": "https://clinicaltrials.gov/study/NCT02688985"
         }
       ],
       "trial_phases": {
+        "PHASE1": 1,
         "PHASE3": 4,
         "NA": 1,
         "PHASE4": 1,
-        "PHASE1": 1,
         "PHASE2": 3
       },
       "confidence": "HIGH",
@@ -512,8 +513,10 @@
         "Supported by 4 independent AI pillars",
         "Supporting paper with 24 citations",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.71, 2 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.71, 2 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D009103",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -615,15 +618,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.926
       },
-      "disease_entity": "Disease::MESH:D009103",
-      "docking": {
-        "kcal_per_mol": -9.18,
-        "target_symbol": "HRH1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.0679,
+      "ensemble_prob": 0.0768,
       "ensemble_features": {
         "kg_score": 0.9502,
         "degree_penalty": 0.8269,
@@ -633,6 +628,13 @@
         "transe_rank_log": 6.2653
       },
       "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": -9.18,
+        "target_symbol": "HRH1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -853,20 +855,20 @@
       "clinical_trials_total": 2,
       "clinical_trials": [
         {
-          "nct_id": "NCT04302870",
-          "title": "Motor Neurone Disease - Systematic Multi-Arm Adaptive Randomised Trial",
-          "status": "RECRUITING",
-          "phase": "PHASE2, PHASE3",
-          "enrollment": "1150",
-          "url": "https://clinicaltrials.gov/study/NCT04302870"
-        },
-        {
           "nct_id": "NCT00298662",
           "title": "Combination Therapy of Betaseron-Prograf in Multiple Sclerosis",
           "status": "UNKNOWN",
           "phase": "PHASE2",
           "enrollment": "30",
           "url": "https://clinicaltrials.gov/study/NCT00298662"
+        },
+        {
+          "nct_id": "NCT04302870",
+          "title": "Motor Neurone Disease - Systematic Multi-Arm Adaptive Randomised Trial",
+          "status": "RECRUITING",
+          "phase": "PHASE2, PHASE3",
+          "enrollment": "1150",
+          "url": "https://clinicaltrials.gov/study/NCT04302870"
         }
       ],
       "trial_phases": {
@@ -884,6 +886,7 @@
         "Supporting paper with 27 citations",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D009103",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1032,15 +1035,7 @@
         "tissue_specificity": 0.574,
         "context_modifier": 1.028
       },
-      "disease_entity": "Disease::MESH:D009103",
-      "docking": {
-        "kcal_per_mol": -11.86,
-        "target_symbol": "MTOR",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.234,
+      "ensemble_prob": 0.1718,
       "ensemble_features": {
         "kg_score": 0.9904,
         "degree_penalty": 0.7479,
@@ -1049,7 +1044,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 4.625
       },
-      "ensemble_rank": 5,
+      "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": -11.86,
+        "target_symbol": "MTOR",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -1087,7 +1089,7 @@
       "admet_flags": "hERG=0.71",
       "primekg_score": 0.2526,
       "dti_score": 1.0,
-      "dti_best_target": "ELANE",
+      "dti_best_target": "SPARCL1",
       "kg_group_score": 0.289,
       "structural_group_score": 1.0,
       "network_group_score": 0.5397999882698059,
@@ -1293,6 +1295,14 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
+          "nct_id": "NCT00242268",
+          "title": "A Safety Study of Combination Treatment With Avonex and Zocor in Relapsing Remitting Multiple Sclerosis",
+          "status": "UNKNOWN",
+          "phase": "PHASE3",
+          "enrollment": "30",
+          "url": "https://clinicaltrials.gov/study/NCT00242268"
+        },
+        {
           "nct_id": "NCT00492765",
           "title": "Simvastatin as an Add-on Treatment to Interferon-beta-1a for the Treatment of Relapsing-Remitting Multiple Sclerosis",
           "status": "COMPLETED",
@@ -1301,43 +1311,35 @@
           "url": "https://clinicaltrials.gov/study/NCT00492765"
         },
         {
-          "nct_id": "NCT03896217",
-          "title": "Simvastatin in Secondary Progressive Multiple Sclerosis",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "40",
-          "url": "https://clinicaltrials.gov/study/NCT03896217"
-        },
-        {
-          "nct_id": "NCT03387670",
-          "title": "Multiple Sclerosis-Simvastatin Trial 2",
-          "status": "COMPLETED",
+          "nct_id": "NCT00429442",
+          "title": "Simvastatin as an add-on Treatment to Copaxone for the Treatment of Relapsing Multiple Sclerosis",
+          "status": "WITHDRAWN",
           "phase": "PHASE3",
-          "enrollment": "964",
-          "url": "https://clinicaltrials.gov/study/NCT03387670"
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT00429442"
         },
         {
-          "nct_id": "NCT00647348",
-          "title": "Investigation of Simvastatin in Secondary Progressive Multiple Sclerosis",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "140",
-          "url": "https://clinicaltrials.gov/study/NCT00647348"
+          "nct_id": "NCT04178980",
+          "title": "Role of Simvastatin in Relapsing-Remitting Multiple Sclerosis",
+          "status": "UNKNOWN",
+          "phase": "PHASE1",
+          "enrollment": "60",
+          "url": "https://clinicaltrials.gov/study/NCT04178980"
         },
         {
-          "nct_id": "NCT02061397",
-          "title": "Safety of Simvastatin in LAM and TSC",
-          "status": "COMPLETED",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "10",
-          "url": "https://clinicaltrials.gov/study/NCT02061397"
+          "nct_id": "NCT00261326",
+          "title": "Simvastatin Treatment of Patients With Acute Optic Neuritis",
+          "status": "UNKNOWN",
+          "phase": "PHASE3",
+          "enrollment": "64",
+          "url": "https://clinicaltrials.gov/study/NCT00261326"
         }
       ],
       "trial_phases": {
-        "PHASE4": 2,
-        "PHASE2": 3,
         "PHASE3": 4,
-        "PHASE1": 2
+        "PHASE4": 2,
+        "PHASE1": 2,
+        "PHASE2": 3
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -1349,8 +1351,10 @@
         "Moderate FAERS signal: 758 adverse event reports mention drug-disease co-occurrence",
         "Supporting paper with 36 citations",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.60)"
+        "Moderate genetic evidence supporting causality (MR score: 0.60)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D009103",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -1514,15 +1518,7 @@
         "tissue_specificity": 0.386,
         "context_modifier": 1.044
       },
-      "disease_entity": "Disease::MESH:D009103",
-      "docking": {
-        "kcal_per_mol": -10.37,
-        "target_symbol": "HMGCR",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.6004,
+      "ensemble_prob": 0.6806,
       "ensemble_features": {
         "kg_score": 0.9961,
         "degree_penalty": 0.7582,
@@ -1531,7 +1527,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 3.7377
       },
-      "ensemble_rank": 1,
+      "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": -10.37,
+        "target_symbol": "HMGCR",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1543,7 +1546,7 @@
       "drug_name": "Fluorouracil",
       "drug_id": "DB00544",
       "disease_name": "Multiple sclerosis",
-      "combined_score": 0.5044,
+      "combined_score": 0.4997,
       "pillars_hit": 4,
       "transe_rank": 91,
       "transe_score": -10.6305,
@@ -1562,15 +1565,15 @@
       "admet_score": 0.7145,
       "admet_flags": "clean",
       "primekg_score": 0.2576,
-      "dti_score": 0.944,
-      "dti_best_target": "S1PR1",
+      "dti_score": 0.9161,
+      "dti_best_target": "GRIA3",
       "kg_group_score": 0.2519,
-      "structural_group_score": 0.944,
+      "structural_group_score": 0.9161,
       "network_group_score": 0.48840001225471497,
       "txgnn_group_score": 0,
       "mr_group_score": 0.696,
       "admet_multiplier": 0.9429,
-      "efficacy_score": 0.535,
+      "efficacy_score": 0.53,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 13,
@@ -1747,7 +1750,7 @@
       "mechanistic_hypothesis": "Fluorouracil \u2014[binds]\u2192 gene-1558 \u2014[is a target of]\u2192 DB00951 \u2014[is a therapeutic for]\u2192 Multiple sclerosis",
       "kg_paths_text": "\u2022 Fluorouracil \u2014[binds]\u2192 gene-1558 \u2014[is a target of]\u2192 DB00951 \u2014[is a therapeutic for]\u2192 Multiple sclerosis\n\u2022 Fluorouracil \u2014[binds]\u2192 gene-1558 \u2014[is a target of]\u2192 DB00951 \u2014[is a therapeutic for]\u2192 Multiple sclerosis\n\u2022 Fluorouracil \u2014[binds]\u2192 gene-1558 \u2014[is a target of]\u2192 DB00951 \u2014[is a therapeutic for]\u2192 Multiple sclerosis",
       "validation_experiments": [],
-      "novelty_score": 0.393,
+      "novelty_score": 0.39,
       "novelty_level": "KNOWN",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -1763,6 +1766,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.70)"
       ],
+      "disease_entity": "Disease::MESH:D009103",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1905,10 +1909,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.377,
+        "triangulation_score": 0.375,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.504,
+          "kg": 0.5,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 1.0
@@ -1926,15 +1930,7 @@
         "tissue_specificity": 0.334,
         "context_modifier": 1.028
       },
-      "disease_entity": "Disease::MESH:D009103",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.1905,
+      "ensemble_prob": 0.109,
       "ensemble_features": {
         "kg_score": 0.9881,
         "degree_penalty": 0.7655,
@@ -1944,6 +1940,13 @@
         "transe_rank_log": 4.8442
       },
       "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1974,8 +1977,8 @@
       "admet_score": 0.6427,
       "admet_flags": "clean",
       "primekg_score": 0.2537,
-      "dti_score": 0.4266,
-      "dti_best_target": "ELANE",
+      "dti_score": 0.4171,
+      "dti_best_target": "GRIA3",
       "kg_group_score": 0.2045,
       "structural_group_score": 0.9509,
       "network_group_score": 0.5641000270843506,
@@ -2175,6 +2178,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.57)"
       ],
+      "disease_entity": "Disease::MESH:D009103",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2297,15 +2301,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.931
       },
-      "disease_entity": "Disease::MESH:D009103",
-      "docking": {
-        "kcal_per_mol": -11.87,
-        "target_symbol": "NR3C1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.5395,
+      "ensemble_prob": 0.571,
       "ensemble_features": {
         "kg_score": 0.9968,
         "degree_penalty": 0.7521,
@@ -2314,7 +2310,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 3.5553
       },
-      "ensemble_rank": 2,
+      "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": -11.87,
+        "target_symbol": "NR3C1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2326,7 +2329,7 @@
       "drug_name": "Triptolide",
       "drug_id": "DB12025",
       "disease_name": "Multiple sclerosis",
-      "combined_score": 0.4817,
+      "combined_score": 0.4826,
       "pillars_hit": 4,
       "transe_rank": 150,
       "transe_score": -10.7771,
@@ -2345,15 +2348,15 @@
       "admet_score": 0.5958,
       "admet_flags": "clean",
       "primekg_score": 0.261,
-      "dti_score": 0.7653,
-      "dti_best_target": "TNFSF10",
+      "dti_score": 0.7709,
+      "dti_best_target": "ITGAM",
       "kg_group_score": 0.269,
-      "structural_group_score": 0.7653,
+      "structural_group_score": 0.7709,
       "network_group_score": 0.6417999863624573,
       "txgnn_group_score": 0,
       "mr_group_score": 0.6046,
       "admet_multiplier": 0.9192,
-      "efficacy_score": 0.5241,
+      "efficacy_score": 0.5251,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 5,
@@ -2516,6 +2519,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.60)"
       ],
+      "disease_entity": "Disease::MESH:D009103",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "late-trial",
@@ -2599,7 +2603,7 @@
         "triangulation_score": 0.598,
         "label": "silver-standard",
         "axis_values": {
-          "kg": 0.482,
+          "kg": 0.483,
           "docking": 0.842,
           "pharos": 0.0,
           "literature": 0.883
@@ -2617,15 +2621,7 @@
         "tissue_specificity": 0.231,
         "context_modifier": 1.006
       },
-      "disease_entity": "Disease::MESH:D009103",
-      "docking": {
-        "kcal_per_mol": -10.1,
-        "target_symbol": "PTGS2",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.337,
+      "ensemble_prob": 0.6865,
       "ensemble_features": {
         "kg_score": 0.9823,
         "degree_penalty": 0.8144,
@@ -2634,7 +2630,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 5.2364
       },
-      "ensemble_rank": 4,
+      "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": -10.1,
+        "target_symbol": "PTGS2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -2647,392 +2650,10 @@
       }
     },
     {
-      "drug_name": "Folic Acid",
-      "drug_id": "DB00158",
-      "disease_name": "Multiple sclerosis",
-      "combined_score": 0.4792,
-      "pillars_hit": 4,
-      "transe_rank": 54,
-      "transe_score": -10.4545,
-      "pykeen_score": -12.227,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.7379999756813049,
-      "proximity_distance": 1.0499999523162842,
-      "admet_score": 1.0,
-      "admet_flags": "DILI=0.99",
-      "primekg_score": 0.2539,
-      "dti_score": 0.5125,
-      "dti_best_target": "S1PR1",
-      "kg_group_score": 0.3358,
-      "structural_group_score": 0.5125,
-      "network_group_score": 0.5843999981880188,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.5741,
-      "admet_multiplier": 1.0,
-      "efficacy_score": 0.4792,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 9,
-      "shared_targets": [
-        "DHFR",
-        "FGB",
-        "FOSL1",
-        "IGF2",
-        "INS",
-        "MTHFR",
-        "MTOR",
-        "SHMT1",
-        "STAT3"
-      ],
-      "pubmed_total": 782,
-      "pubmed_treatment_total": 317,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "29532755",
-          "title": "Homocysteine and Hyperhomocysteinaemia.",
-          "authors": "Zaric BL, Obradovic M, Bajic V, et al.",
-          "journal": "Current medicinal chemistry",
-          "year": "2019",
-          "abstract_snippet": "Homocysteine (Hcy) is a thiol group containing the amino acid, which naturally occurs in all humans. Hcy is degraded in the body through two metabolic pathways, while a minor part is excreted through kidneys. The chemical reactions that are necessary for degradation of Hcy require the presence of fo...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29532755/",
-          "total_results": 782
-        },
-        {
-          "pmid": "17052662",
-          "title": "Vitamin B12, folic acid, and the nervous system.",
-          "authors": "Reynolds E",
-          "journal": "The Lancet. Neurology",
-          "year": "2006",
-          "abstract_snippet": "There are many reasons for reviewing the neurology of vitamin-B12 and folic-acid deficiencies together, including the intimate relation between the metabolism of the two vitamins, their morphologically indistinguishable megaloblastic anaemias, and their overlapping neuropsychiatric syndromes and neu...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/17052662/"
-        },
-        {
-          "pmid": "39596358",
-          "title": "Hyperhomocysteinemia and Disease-Is 10 \u03bcmol/L a Suitable New Threshold Limit?",
-          "authors": "Marroncini G, Martinelli S, Menchetti S, et al.",
-          "journal": "International journal of molecular sciences",
-          "year": "2024",
-          "abstract_snippet": "Hyperhomocysteinemia (HHcy) is a medical condition characterized by an abnormally high level of homocysteine (Hcy) in the blood. Homocysteine is a toxic sulfur-containing amino acid that is produced during the metabolism of methionine. Under normal circumstances, Hcy is recycled back to methionine v...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39596358/"
-        },
-        {
-          "pmid": "24381825",
-          "title": "Multiple sclerosis.",
-          "authors": "Gaby A",
-          "journal": "Global advances in health and medicine",
-          "year": "2013",
-          "abstract_snippet": "Multiple sclerosis (MS) is a chronic progressive demyelinating disease of the central nervous system. Common manifestations include paresthesias, diplopia, loss of vision, numbness or weakness of the limbs, bowel or bladder dysfunction, spasticity, ataxia, fatigue, and mental changes. Four main patt...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/24381825/"
-        },
-        {
-          "pmid": "40284190",
-          "title": "Homocysteine, Nutrition, and Gut Microbiota: A Comprehensive Review of Current Evidence and Insights.",
-          "authors": "Agostini D, Bartolacci A, Rotondo R, et al.",
-          "journal": "Nutrients",
-          "year": "2025",
-          "abstract_snippet": "Homocysteine, a sulfur-containing amino acid, is an intermediate product during the metabolism of methionine, a vital amino acid. An elevated concentration of homocysteine in the plasma, named hyperhomocysteinemia, has been significantly related to the onset of several diseases, including diabetes, ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40284190/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Relationship between serum levels of folic acid and homocysteine with cognitive impairment in patients diagnosed with multiple sclerosis",
-          "year": 2024,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/b85841af073ab4870a46f545d59fddb1e13b8592",
-          "authors": "Azadeh Imani Kashan, Z. Mirzaasgari, Shabnam Nouri Shirazi"
-        },
-        {
-          "title": "The Effect Of Vitamin B12 and Folic Acid on Multiple Sclerosis in Mice",
-          "year": 2021,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/8cb3aa7f9e8981cca25d7453e62bde4ccc6848dd",
-          "authors": "S. Parchizadeh, Behrooz Salehi-Eskandari"
-        },
-        {
-          "title": "The Effect of Vitamin B12 and Folic Acid Supplementation on Serum Homocysteine, Anemia Status and Quality of Life of Patients with Multiple Sclerosis",
-          "year": 2019,
-          "citations": 29,
-          "url": "https://www.semanticscholar.org/paper/7509995145fe24a8854bffc6610f8f20906ba29c",
-          "authors": "Ehsan Nozari, S. Ghavamzadeh, N. Razazian"
-        },
-        {
-          "title": "Effect of Methylprednisolone and Interferon Treatment on Blood Vitamin B12, Folic Acid and Homocysteine Levels in Patients with Multiple Sclerosis",
-          "year": 2019,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/d90e665f412be2eb6cfe71aeba844cd479c4694c",
-          "authors": "Mesrure K\u00f6seo\u011flu, I. Midi, Tulay Cevlik"
-        },
-        {
-          "title": "The effect of Vitamin B12 and Folic acid supplementation on quality of life of Relapsing-Remitting Multiple Sclerosis patients",
-          "year": 2019,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/c7a8eb71fb42947a39f998bf935241041527c168",
-          "authors": "Ehsan Nozari, S. Ghavamzadeh, N. Razazian"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "The Effect of Vitamin B12 and Folic Acid Supplementation on Serum Homocysteine, Anemia Status and Quality of Life of Patients with Multiple Sclerosis",
-        "year": 2019,
-        "citations": 29,
-        "url": "https://www.semanticscholar.org/paper/7509995145fe24a8854bffc6610f8f20906ba29c",
-        "authors": "Ehsan Nozari, S. Ghavamzadeh, N. Razazian"
-      },
-      "max_citations": 29,
-      "faers_signal": "moderate",
-      "faers_total_reports": 253612,
-      "faers_cooccurrences": 830,
-      "faers_interpretation": "830 FAERS reports mention both Folic Acid and Multiple sclerosis-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "Salermide (1.472)",
-        "3194 (1.466)",
-        "3739601 (1.455)",
-        "S-8599 (1.449)",
-        "AS605240 (1.445)"
-      ],
-      "signature_interpretation": "Folic Acid was not found among the top 34 drugs that reverse the Multiple sclerosis gene signature. Top reversers: Salermide (1.472), 3194 (1.466), 3739601 (1.455)",
-      "ai_hypothesis": "of its antioxidant properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.5741,
-      "mr_genetic_targets": 4,
-      "mechanistic_hypothesis": "Folic Acid \u2014[is a therapeutic for]\u2192 Multiple sclerosis",
-      "kg_paths_text": "\u2022 Folic Acid \u2014[is a therapeutic for]\u2192 Multiple sclerosis\n\u2022 Folic Acid \u2014[is a therapeutic for]\u2192 MESH:D064420 \u2014[is treated by]\u2192 DB06637 \u2014[treats]\u2192 Multiple sclerosis\n\u2022 Folic Acid \u2014[is a therapeutic for]\u2192 MESH:D064420 \u2014[is treated by]\u2192 DB06637 \u2014[treats]\u2192 Multiple sclerosis",
-      "validation_experiments": [],
-      "novelty_score": 0.259,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": true,
-      "clinical_trials_total": 2,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT03109288",
-          "title": "Targeting Residual Activity By Precision, Biomarker-Guided Combination Therapies of Multiple Sclerosis (TRAP-MS)",
-          "status": "RECRUITING",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "250",
-          "url": "https://clinicaltrials.gov/study/NCT03109288"
-        },
-        {
-          "nct_id": "NCT01381354",
-          "title": "Nutrition, Neuromuscular Electrical Stimulation (NMES) and Secondary Progressive Multiple Sclerosis (SPMS)",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "38",
-          "url": "https://clinicaltrials.gov/study/NCT01381354"
-        }
-      ],
-      "trial_phases": {
-        "PHASE1": 2,
-        "PHASE2": 1
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "2 clinical trial(s) found on ClinicalTrials.gov",
-        "782 PubMed articles on this drug-disease pair",
-        "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 830 adverse event reports mention drug-disease co-occurrence",
-        "Supporting paper with 29 citations",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.57)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 845,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00783",
-            "drug_name": "Estradiol",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00502",
-            "drug_name": "Haloperidol",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00331",
-            "drug_name": "Metformin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00563",
-            "drug_name": "Methotrexate",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00338",
-            "drug_name": "Omeprazole",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (MTRR / rs1801394)",
-        "cpic": [],
-        "pharmgkb": [
-          {
-            "gene": "MTRR",
-            "variant": "rs1801394",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183491035"
-          },
-          {
-            "gene": "MTHFR",
-            "variant": "rs1801131",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204525"
-          },
-          {
-            "gene": "TLR4",
-            "variant": "rs4986790",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043880467"
-          },
-          {
-            "gene": "MTHFR",
-            "variant": "rs1801133",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183491364"
-          },
-          {
-            "gene": "MTR",
-            "variant": "rs1805087",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451634907"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.368,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.479,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 1.0
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Brain - Cortex",
-          "Brain - Cerebellum"
-        ],
-        "n_genes": 9,
-        "n_expressed": 6,
-        "mean_tpm_in_tissue": 12.05,
-        "max_tpm_in_tissue": 33.87,
-        "tissue_specificity": 0.0,
-        "context_modifier": 0.95
-      },
-      "disease_entity": "Disease::MESH:D009103",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.2128,
-      "ensemble_features": {
-        "kg_score": 0.9827,
-        "degree_penalty": 0.7918,
-        "n_drug_targets": 6,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 5.2095
-      },
-      "ensemble_rank": 6,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
       "drug_name": "Curcumin",
       "drug_id": "DB11672",
       "disease_name": "Multiple sclerosis",
-      "combined_score": 0.478,
+      "combined_score": 0.4759,
       "pillars_hit": 4,
       "transe_rank": 19,
       "transe_score": -10.1855,
@@ -3051,15 +2672,15 @@
       "admet_score": 0.4043,
       "admet_flags": "Skin_Reaction=0.82",
       "primekg_score": 0.2519,
-      "dti_score": 0.8115,
-      "dti_best_target": "S1PR1",
+      "dti_score": 0.7981,
+      "dti_best_target": "GRIA3",
       "kg_group_score": 0.3913,
-      "structural_group_score": 0.8115,
+      "structural_group_score": 0.7981,
       "network_group_score": 0.5447999835014343,
       "txgnn_group_score": 0,
       "mr_group_score": 0.5986,
       "admet_multiplier": 0.8809,
-      "efficacy_score": 0.5427,
+      "efficacy_score": 0.5402,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 35,
@@ -3243,7 +2864,7 @@
       "mechanistic_hypothesis": "Curcumin \u2014[is a therapeutic for]\u2192 MESH:D050197 \u2014[is treated by]\u2192 DB00563 \u2014[treats]\u2192 Multiple sclerosis",
       "kg_paths_text": "\u2022 Curcumin \u2014[is a therapeutic for]\u2192 MESH:D050197 \u2014[is treated by]\u2192 DB00563 \u2014[treats]\u2192 Multiple sclerosis\n\u2022 Curcumin \u2014[is a therapeutic for]\u2192 MESH:D050197 \u2014[is treated by]\u2192 DB00563 \u2014[treats]\u2192 Multiple sclerosis\n\u2022 Curcumin \u2014[is a therapeutic for]\u2192 MESH:D043183 \u2014[is treated by]\u2192 DB00715 \u2014[is a therapeutic for]\u2192 Multiple sclerosis",
       "validation_experiments": [],
-      "novelty_score": 0.287,
+      "novelty_score": 0.286,
       "novelty_level": "KNOWN",
       "is_known_treatment": false,
       "clinical_trials_total": 2,
@@ -3281,6 +2902,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.60)"
       ],
+      "disease_entity": "Disease::MESH:D009103",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "late-trial",
@@ -3369,10 +2991,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.548,
+        "triangulation_score": 0.547,
         "label": "silver-standard",
         "axis_values": {
-          "kg": 0.478,
+          "kg": 0.476,
           "docking": 0.603,
           "pharos": 0.0,
           "literature": 1.0
@@ -3390,15 +3012,7 @@
         "tissue_specificity": 0.281,
         "context_modifier": 1.032
       },
-      "disease_entity": "Disease::MESH:D009103",
-      "docking": {
-        "kcal_per_mol": -7.23,
-        "target_symbol": "DYRK1B",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.0282,
+      "ensemble_prob": 0.0361,
       "ensemble_features": {
         "kg_score": 0.9701,
         "degree_penalty": 0.7784,
@@ -3408,6 +3022,13 @@
         "transe_rank_log": 5.7557
       },
       "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": -7.23,
+        "target_symbol": "DYRK1B",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -3422,14 +3043,14 @@
       }
     },
     {
-      "drug_name": "Ketamine",
-      "drug_id": "DB01221",
+      "drug_name": "Folic Acid",
+      "drug_id": "DB00158",
       "disease_name": "Multiple sclerosis",
-      "combined_score": 0.4690999984741211,
+      "combined_score": 0.4722,
       "pillars_hit": 4,
-      "transe_rank": 49,
-      "transe_score": -10.4281,
-      "pykeen_score": -12.1722,
+      "transe_rank": 54,
+      "transe_score": -10.4545,
+      "pykeen_score": -12.227,
       "pykeen_rank": 0,
       "txgnn_score": 0,
       "txgnn_rank": 0,
@@ -3441,173 +3062,133 @@
       "gene_sig_rank": 0,
       "proximity_score": 0.7379999756813049,
       "proximity_distance": 1.0499999523162842,
-      "admet_score": 0.7025,
-      "admet_flags": "clean",
-      "primekg_score": 0.2467,
-      "dti_score": 0.7327,
-      "dti_best_target": "S1PR1",
-      "kg_group_score": 0.2901,
-      "structural_group_score": 0.7327,
-      "network_group_score": 0.5561000108718872,
+      "admet_score": 1.0,
+      "admet_flags": "DILI=0.99",
+      "primekg_score": 0.2539,
+      "dti_score": 0.4734,
+      "dti_best_target": "GRIA3",
+      "kg_group_score": 0.3358,
+      "structural_group_score": 0.4734,
+      "network_group_score": 0.5843999981880188,
       "txgnn_group_score": 0,
-      "mr_group_score": 0.5543,
-      "admet_multiplier": 0.9405,
-      "efficacy_score": 0.49880000948905945,
+      "mr_group_score": 0.5741,
+      "admet_multiplier": 1.0,
+      "efficacy_score": 0.4722,
       "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 23,
+      "shared_target_count": 9,
       "shared_targets": [
-        "ABCB1",
-        "CDK5",
-        "CREB1",
-        "CRH",
-        "FOS",
-        "GRIN1",
-        "GRIN2A",
-        "GRIN2B",
-        "GRIN2C",
-        "GRIN2D",
-        "GRIN3A",
-        "GRIN3B",
-        "HSPA4",
-        "ITGAM",
+        "DHFR",
+        "FGB",
+        "FOSL1",
+        "IGF2",
+        "INS",
+        "MTHFR",
         "MTOR",
-        "NOS3",
-        "POMC",
-        "PTGS1",
-        "SCN4A",
-        "SLC6A2"
+        "SHMT1",
+        "STAT3"
       ],
-      "pubmed_total": 871,
-      "pubmed_treatment_total": 358,
-      "pubmed_repurposing_total": 3,
+      "pubmed_total": 782,
+      "pubmed_treatment_total": 317,
+      "pubmed_repurposing_total": 0,
       "key_papers": [
         {
-          "pmid": "35779628",
-          "title": "(R)-ketamine as prophylactic and therapeutic drug for neurological disorders: Beyond depression.",
-          "authors": "Wang X, Yang J, Hashimoto K",
-          "journal": "Neuroscience and biobehavioral reviews",
-          "year": "2022",
-          "abstract_snippet": "Neurological disorders are the leading cause of disability and the second leading cause of death worldwide. The increasing social and economic burdens of neurological disorders are driven by global population growth and aging. Depression is a common psychiatric symptom in numerous neurological disor...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35779628/",
-          "total_results": 871
+          "pmid": "29532755",
+          "title": "Homocysteine and Hyperhomocysteinaemia.",
+          "authors": "Zaric BL, Obradovic M, Bajic V, et al.",
+          "journal": "Current medicinal chemistry",
+          "year": "2019",
+          "abstract_snippet": "Homocysteine (Hcy) is a thiol group containing the amino acid, which naturally occurs in all humans. Hcy is degraded in the body through two metabolic pathways, while a minor part is excreted through kidneys. The chemical reactions that are necessary for degradation of Hcy require the presence of fo...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29532755/",
+          "total_results": 782
         },
         {
-          "pmid": "40441625",
-          "title": "Economic evaluation of subcutaneous ketamine injections for treatment resistant depression: A randomised, double-blind, active-controlled trial - The KADS study.",
-          "authors": "Chatterton ML, Perez JK, Thai T, et al.",
-          "journal": "Journal of affective disorders",
-          "year": "2025",
-          "abstract_snippet": "BACKGROUND: Ketamine is effective for treatment resistant depression (TRD); but cost-effectiveness evidence remains limited. AIMS: To evaluate the cost-effectiveness of subcutaneous ketamine for TRD from health sector and societal perspectives. METHODS: A cost-utility analysis alongside the KADS ran...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40441625/"
+          "pmid": "17052662",
+          "title": "Vitamin B12, folic acid, and the nervous system.",
+          "authors": "Reynolds E",
+          "journal": "The Lancet. Neurology",
+          "year": "2006",
+          "abstract_snippet": "There are many reasons for reviewing the neurology of vitamin-B12 and folic-acid deficiencies together, including the intimate relation between the metabolism of the two vitamins, their morphologically indistinguishable megaloblastic anaemias, and their overlapping neuropsychiatric syndromes and neu...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17052662/"
         },
         {
-          "pmid": "36398998",
-          "title": "Enantioselective CE-MS analysis of ketamine metabolites in urine.",
-          "authors": "Sandbaumh\u00fcter FA, Aerts JT, Theurillat R, et al.",
-          "journal": "Electrophoresis",
-          "year": "2023",
-          "abstract_snippet": "The chiral drug ketamine has long-lasting antidepressant effects with a fast onset and is also suitable to treat patients with therapy-resistant depression. The metabolite hydroxynorketamine (HNK) plays an important role in the antidepressant mechanism of action. Hydroxylation at the cyclohexanone r...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36398998/"
-        },
-        {
-          "pmid": "40368261",
-          "title": "Demyelination in psychiatric and neurological disorders: Mechanisms, clinical impact, and novel therapeutic strategies.",
-          "authors": "Murayama R, Cai Y, Nakamura H, et al.",
-          "journal": "Neuroscience and biobehavioral reviews",
-          "year": "2025",
-          "abstract_snippet": "Demyelination, defined as the loss of myelin sheaths around neuronal axons, is increasingly recognized as a key factor in a broad range of psychiatric and neurological disorders, including schizophrenia, major depressive disorder, bipolar disorder, post-traumatic stress disorder, autism spectrum dis...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40368261/"
-        },
-        {
-          "pmid": "38666026",
-          "title": "Exploring the multifaceted potential of (R)-ketamine beyond antidepressant applications.",
-          "authors": "Zhang S, Pu Y, Liu J, et al.",
-          "journal": "Frontiers in pharmacology",
+          "pmid": "39596358",
+          "title": "Hyperhomocysteinemia and Disease-Is 10 \u03bcmol/L a Suitable New Threshold Limit?",
+          "authors": "Marroncini G, Martinelli S, Menchetti S, et al.",
+          "journal": "International journal of molecular sciences",
           "year": "2024",
-          "abstract_snippet": "(",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38666026/"
+          "abstract_snippet": "Hyperhomocysteinemia (HHcy) is a medical condition characterized by an abnormally high level of homocysteine (Hcy) in the blood. Homocysteine is a toxic sulfur-containing amino acid that is produced during the metabolism of methionine. Under normal circumstances, Hcy is recycled back to methionine v...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39596358/"
+        },
+        {
+          "pmid": "24381825",
+          "title": "Multiple sclerosis.",
+          "authors": "Gaby A",
+          "journal": "Global advances in health and medicine",
+          "year": "2013",
+          "abstract_snippet": "Multiple sclerosis (MS) is a chronic progressive demyelinating disease of the central nervous system. Common manifestations include paresthesias, diplopia, loss of vision, numbness or weakness of the limbs, bowel or bladder dysfunction, spasticity, ataxia, fatigue, and mental changes. Four main patt...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24381825/"
+        },
+        {
+          "pmid": "40284190",
+          "title": "Homocysteine, Nutrition, and Gut Microbiota: A Comprehensive Review of Current Evidence and Insights.",
+          "authors": "Agostini D, Bartolacci A, Rotondo R, et al.",
+          "journal": "Nutrients",
+          "year": "2025",
+          "abstract_snippet": "Homocysteine, a sulfur-containing amino acid, is an intermediate product during the metabolism of methionine, a vital amino acid. An elevated concentration of homocysteine in the plasma, named hyperhomocysteinemia, has been significantly related to the onset of several diseases, including diabetes, ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40284190/"
         }
       ],
-      "repurposing_papers": [
-        {
-          "pmid": "40855006",
-          "title": "Next-generation precision medicine for pain.",
-          "authors": "Bhagar R, Le-Niculescu H, Corey SC, et al.",
-          "journal": "Molecular psychiatry",
-          "year": "2026",
-          "abstract_snippet": "Chronic pain remains a massive problem in society in general, and in mental health patients in particular, being strongly bi-directionally connected to mental health. Lack of widespread use of objective information has hampered treatment and prevention efforts. Pain is a spectrum of severity, from t...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40855006/",
-          "total_results": 3
-        },
-        {
-          "pmid": "39242534",
-          "title": "Next-generation precision medicine for suicidality prevention.",
-          "authors": "Bhagar R, Gill SS, Le-Niculescu H, et al.",
-          "journal": "Translational psychiatry",
-          "year": "2024",
-          "abstract_snippet": "Suicidality remains a clear and present danger in society in general, and for mental health patients in particular. Lack of widespread use of objective and/or quantitative information has hampered treatment and prevention efforts. Suicidality is a spectrum of severity from vague thoughts that life i...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39242534/"
-        },
-        {
-          "pmid": "26720055",
-          "title": "A Large Retrospective Cohort of Patients Receiving Intravenous Olanzapine in the Emergency Department.",
-          "authors": "Martel ML, Klein LR, Rivard RL, et al.",
-          "journal": "Academic emergency medicine : official journal of the Society for Academic Emergency Medicine",
-          "year": "2016",
-          "abstract_snippet": "BACKGROUND: Olanzapine is an atypical antipsychotic with similar pharmacologic properties to droperidol. Due to the current droperidol shortage, the authors' clinical practice has been to substitute olanzapine for droperidol in many situations. At this time, olanzapine is U.S. Food and Drug Administ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/26720055/"
-        }
-      ],
+      "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "Low-dose ketamine infusion for the treatment of multiple sclerosis fatigue (INKLING-MS): Study protocol for a randomized, double-blind, active placebo-controlled phase II trial.",
-          "year": 2023,
-          "citations": 2,
-          "url": "https://www.semanticscholar.org/paper/716940446ce03bb18321fba8653bb41cb456cf29",
-          "authors": "M. Ghajarzadeh, S. Roman, Lauren Vega"
+          "title": "Relationship between serum levels of folic acid and homocysteine with cognitive impairment in patients diagnosed with multiple sclerosis",
+          "year": 2024,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/b85841af073ab4870a46f545d59fddb1e13b8592",
+          "authors": "Azadeh Imani Kashan, Z. Mirzaasgari, Shabnam Nouri Shirazi"
         },
         {
-          "title": "Pilot randomized active-placebo-controlled trial of low-dose ketamine for the treatment of multiple sclerosis\u2013related fatigue",
-          "year": 2020,
-          "citations": 12,
-          "url": "https://www.semanticscholar.org/paper/b7ec1545af3cfd3eb74a1d692793492c352a8d1c",
-          "authors": "K. Fitzgerald, Bridget Morris, Aurash J. Soroosh"
-        },
-        {
-          "title": "Silent Synapses in Multiple Sclerosis: From Synaptic Dysfunction to Reactivation\u2010Based Therapies\u2014A Narrative Review of Cognitive and Neuroplasticity Outcomes",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/db7c7ed604fd6f787106700eeb439bc6200af552",
-          "authors": "Z. Alatawi"
-        },
-        {
-          "title": "Faculty Opinions recommendation of Pilot randomized active-placebo-controlled trial of low-dose ketamine for the treatment of multiple sclerosis-related fatigue.",
+          "title": "The Effect Of Vitamin B12 and Folic Acid on Multiple Sclerosis in Mice",
           "year": 2021,
           "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/4d6ec93bef8a3a2d5dd58d5f5cd2968618f72109",
-          "authors": "J. Chataway, N. John"
+          "url": "https://www.semanticscholar.org/paper/8cb3aa7f9e8981cca25d7453e62bde4ccc6848dd",
+          "authors": "S. Parchizadeh, Behrooz Salehi-Eskandari"
         },
         {
-          "title": "Ketamine Therapy for Treatment-resistant Depression in a Patient with Multiple Sclerosis: A Case Report.",
-          "year": 2017,
-          "citations": 7,
-          "url": "https://www.semanticscholar.org/paper/75daaabf4fc96af3c9ec3a7b19d3ae1f5f5a0cf7",
-          "authors": "Michael Messer, I. Haller"
+          "title": "The Effect of Vitamin B12 and Folic Acid Supplementation on Serum Homocysteine, Anemia Status and Quality of Life of Patients with Multiple Sclerosis",
+          "year": 2019,
+          "citations": 29,
+          "url": "https://www.semanticscholar.org/paper/7509995145fe24a8854bffc6610f8f20906ba29c",
+          "authors": "Ehsan Nozari, S. Ghavamzadeh, N. Razazian"
+        },
+        {
+          "title": "Effect of Methylprednisolone and Interferon Treatment on Blood Vitamin B12, Folic Acid and Homocysteine Levels in Patients with Multiple Sclerosis",
+          "year": 2019,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/d90e665f412be2eb6cfe71aeba844cd479c4694c",
+          "authors": "Mesrure K\u00f6seo\u011flu, I. Midi, Tulay Cevlik"
+        },
+        {
+          "title": "The effect of Vitamin B12 and Folic acid supplementation on quality of life of Relapsing-Remitting Multiple Sclerosis patients",
+          "year": 2019,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/c7a8eb71fb42947a39f998bf935241041527c168",
+          "authors": "Ehsan Nozari, S. Ghavamzadeh, N. Razazian"
         }
       ],
       "most_cited_paper": {
-        "title": "Drug repurposing: a nexus of innovation, science, and potential",
-        "year": 2023,
-        "citations": 27,
-        "url": "https://www.semanticscholar.org/paper/8350e8a900b0f6eec2d84a0501ee8b27c11a0fc7",
-        "authors": "M. D. De Rosa, Rituraj Purohit, A. Garc\u00eda\u2010Sosa"
+        "title": "The Effect of Vitamin B12 and Folic Acid Supplementation on Serum Homocysteine, Anemia Status and Quality of Life of Patients with Multiple Sclerosis",
+        "year": 2019,
+        "citations": 29,
+        "url": "https://www.semanticscholar.org/paper/7509995145fe24a8854bffc6610f8f20906ba29c",
+        "authors": "Ehsan Nozari, S. Ghavamzadeh, N. Razazian"
       },
-      "max_citations": 27,
+      "max_citations": 29,
       "faers_signal": "moderate",
-      "faers_total_reports": 14759,
-      "faers_cooccurrences": 20,
-      "faers_interpretation": "20 FAERS reports mention both Ketamine and Multiple sclerosis-related terms. Limited but notable real-world signal.",
+      "faers_total_reports": 253612,
+      "faers_cooccurrences": 830,
+      "faers_interpretation": "830 FAERS reports mention both Folic Acid and Multiple sclerosis-related terms. Limited but notable real-world signal.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -3617,8 +3198,8 @@
         "S-8599 (1.449)",
         "AS605240 (1.445)"
       ],
-      "signature_interpretation": "Ketamine was not found among the top 34 drugs that reverse the Multiple sclerosis gene signature. Top reversers: Salermide (1.472), 3194 (1.466), 3739601 (1.455)",
-      "ai_hypothesis": "of its anti-inflammatory and neuroprotective properties.",
+      "signature_interpretation": "Folic Acid was not found among the top 34 drugs that reverse the Multiple sclerosis gene signature. Top reversers: Salermide (1.472), 3194 (1.466), 3739601 (1.455)",
+      "ai_hypothesis": "of its antioxidant properties.",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
@@ -3640,57 +3221,49 @@
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.5543,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "Ketamine \u2014[binds]\u2192 gene-5243 \u2014[is linked to]\u2192 Multiple sclerosis",
-      "kg_paths_text": "\u2022 Ketamine \u2014[binds]\u2192 gene-5243 \u2014[is linked to]\u2192 Multiple sclerosis\n\u2022 Ketamine \u2014[targets]\u2192 gene-1813 \u2014[is a target of]\u2192 DB01043 \u2014[is a therapeutic for]\u2192 Multiple sclerosis\n\u2022 Ketamine \u2014[targets]\u2192 gene-1813 \u2014[antagonizes]\u2192 DB00363 \u2014[is a therapeutic for]\u2192 Multiple sclerosis",
+      "mr_score": 0.5741,
+      "mr_genetic_targets": 4,
+      "mechanistic_hypothesis": "Folic Acid \u2014[is a therapeutic for]\u2192 Multiple sclerosis",
+      "kg_paths_text": "\u2022 Folic Acid \u2014[is a therapeutic for]\u2192 Multiple sclerosis\n\u2022 Folic Acid \u2014[is a therapeutic for]\u2192 MESH:D064420 \u2014[is treated by]\u2192 DB06637 \u2014[treats]\u2192 Multiple sclerosis\n\u2022 Folic Acid \u2014[is a therapeutic for]\u2192 MESH:D064420 \u2014[is treated by]\u2192 DB06637 \u2014[treats]\u2192 Multiple sclerosis",
       "validation_experiments": [],
-      "novelty_score": 0.2809999883174896,
+      "novelty_score": 0.255,
       "novelty_level": "KNOWN",
-      "is_known_treatment": false,
-      "clinical_trials_total": 3,
+      "is_known_treatment": true,
+      "clinical_trials_total": 2,
       "clinical_trials": [
         {
-          "nct_id": "NCT06064162",
-          "title": "Ketamine for MS Fatigue",
+          "nct_id": "NCT01381354",
+          "title": "Nutrition, Neuromuscular Electrical Stimulation (NMES) and Secondary Progressive Multiple Sclerosis (SPMS)",
           "status": "COMPLETED",
-          "phase": "EARLY_PHASE1",
-          "enrollment": "21",
-          "url": "https://clinicaltrials.gov/study/NCT06064162"
+          "phase": "PHASE1",
+          "enrollment": "38",
+          "url": "https://clinicaltrials.gov/study/NCT01381354"
         },
         {
-          "nct_id": "NCT03500289",
-          "title": "Ketamine for Treatment of MS Fatigue",
-          "status": "COMPLETED",
+          "nct_id": "NCT03109288",
+          "title": "Targeting Residual Activity By Precision, Biomarker-Guided Combination Therapies of Multiple Sclerosis (TRAP-MS)",
+          "status": "RECRUITING",
           "phase": "PHASE1, PHASE2",
-          "enrollment": "18",
-          "url": "https://clinicaltrials.gov/study/NCT03500289"
-        },
-        {
-          "nct_id": "NCT05378100",
-          "title": "Ketamine for Multiple Sclerosis Fatigue",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "110",
-          "url": "https://clinicaltrials.gov/study/NCT05378100"
+          "enrollment": "250",
+          "url": "https://clinicaltrials.gov/study/NCT03109288"
         }
       ],
       "trial_phases": {
-        "EARLY_PHASE1": 1,
-        "PHASE1": 1,
-        "PHASE2": 2
+        "PHASE1": 2,
+        "PHASE2": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
-        "3 clinical trial(s) found on ClinicalTrials.gov",
-        "871 PubMed articles on this drug-disease pair",
-        "3 article(s) specifically mention repurposing/repositioning",
+        "2 clinical trial(s) found on ClinicalTrials.gov",
+        "782 PubMed articles on this drug-disease pair",
         "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 20 adverse event reports mention drug-disease co-occurrence",
-        "Supporting paper with 27 citations",
+        "Moderate FAERS signal: 830 adverse event reports mention drug-disease co-occurrence",
+        "Supporting paper with 29 citations",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.55)"
+        "Moderate genetic evidence supporting causality (MR score: 0.57)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D009103",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3701,7 +3274,388 @@
         "stage": 1
       },
       "ddi_warnings": {
-        "n_interactions": 1865,
+        "n_interactions": 845,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00331",
+            "drug_name": "Metformin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00338",
+            "drug_name": "Omeprazole",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (MTRR / rs1801394)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "MTRR",
+            "variant": "rs1801394",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183491035"
+          },
+          {
+            "gene": "MTHFR",
+            "variant": "rs1801131",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204525"
+          },
+          {
+            "gene": "TLR4",
+            "variant": "rs4986790",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043880467"
+          },
+          {
+            "gene": "MTHFR",
+            "variant": "rs1801133",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183491364"
+          },
+          {
+            "gene": "MTR",
+            "variant": "rs1805087",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451634907"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.365,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.472,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Brain - Cortex",
+          "Brain - Cerebellum"
+        ],
+        "n_genes": 9,
+        "n_expressed": 6,
+        "mean_tpm_in_tissue": 12.05,
+        "max_tpm_in_tissue": 33.87,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.95
+      },
+      "ensemble_prob": 0.1788,
+      "ensemble_features": {
+        "kg_score": 0.9827,
+        "degree_penalty": 0.7918,
+        "n_drug_targets": 6,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 5.2095
+      },
+      "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Indomethacin",
+      "drug_id": "DB00328",
+      "disease_name": "Multiple sclerosis",
+      "combined_score": 0.4638,
+      "pillars_hit": 4,
+      "transe_rank": 34,
+      "transe_score": -10.3375,
+      "pykeen_score": -11.7782,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.6380000114440918,
+      "proximity_distance": 1.4500000476837158,
+      "admet_score": 0.5619,
+      "admet_flags": "DILI=0.97",
+      "primekg_score": 0.2581,
+      "dti_score": 0.5403,
+      "dti_best_target": "KIF1B",
+      "kg_group_score": 0.4339,
+      "structural_group_score": 0.5403,
+      "network_group_score": 0.475600004196167,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.7166,
+      "admet_multiplier": 0.9124,
+      "efficacy_score": 0.5083,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 16,
+      "shared_targets": [
+        "ABCB1",
+        "ACE",
+        "CNR1",
+        "CRH",
+        "CTNNB1",
+        "FOS",
+        "GPR17",
+        "IL11",
+        "INS",
+        "KCNH2",
+        "MMP1",
+        "POMC",
+        "PPARA",
+        "PTGS1",
+        "PTGS2",
+        "SELL"
+      ],
+      "pubmed_total": 643,
+      "pubmed_treatment_total": 326,
+      "pubmed_repurposing_total": 1,
+      "key_papers": [
+        {
+          "pmid": "15285797",
+          "title": "PPARgamma, neuroinflammation, and disease.",
+          "authors": "Mrak RE, Landreth GE",
+          "journal": "Journal of neuroinflammation",
+          "year": "2004",
+          "abstract_snippet": "BACKGROUND: Peroxisome proliferator-activated receptors (PPARs) are a class of nuclear transcription factors that are activated by fatty acids and their derivatives. One of these, PPARgamma, regulates responsiveness to insulin in adipose cells, and PPARgamma-activating drugs such as pioglitazone are...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15285797/",
+          "total_results": 643
+        },
+        {
+          "pmid": "27038969",
+          "title": "Ice Pick Headache.",
+          "authors": "Chua AL, Nahas S",
+          "journal": "Current pain and headache reports",
+          "year": "2016",
+          "abstract_snippet": "Ice pick headache, also called idiopathic or primary stabbing headache, is a unique headache type associated with ultra-brief stabs of pain, most commonly in the frontal or temporal area. It occurs predominantly in women and is estimated to affect 2-35% of the population. Unlike other headache types...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/27038969/"
+        },
+        {
+          "pmid": "29524409",
+          "title": "Metabololipidomic profiling of functional immunoresolvent clusters and eicosanoids in mammalian tissues.",
+          "authors": "Norris PC, Serhan CN",
+          "journal": "Biochemical and biophysical research communications",
+          "year": "2018",
+          "abstract_snippet": "Metabolomics enables a systems approach to interrogate the bioactive mediators, their pathways and further metabolites involved in the physiology and pathophysiology of human and animal tissues. New metabololipidomic approaches with mass spectrometry presented in this brief review can now be utilize...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29524409/"
+        },
+        {
+          "pmid": "36741268",
+          "title": "Development and Characterization of Different Dosage Forms of Nifedipine/Indomethacin Fixed-Dose Combinations.",
+          "authors": "Althobaiti AA, Ashour EA, Almotairy A, et al.",
+          "journal": "Journal of drug delivery science and technology",
+          "year": "2023",
+          "abstract_snippet": "Studies have shown that 40 individuals out of 100,000 are diagnosed with rheumatoid arthritis (RA) yearly, with a total of 1.3 million in the United States. Furthermore, the impact of RA in some cases can extend to cardiovascular diseases (CVD), as the studies showed that 84% of RA patients are at r...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36741268/"
+        },
+        {
+          "pmid": "17224002",
+          "title": "Acute and chronic neuroendocrine effects of interferon-beta 1a in multiple sclerosis.",
+          "authors": "Then Bergh F, K\u00fcmpfel T, Yassouridis A, et al.",
+          "journal": "Clinical endocrinology",
+          "year": "2007",
+          "abstract_snippet": "OBJECTIVE: Treatment of multiple sclerosis with interferon-beta (IFN-beta) results in variable responses interindividually. Cytokine-hormone interactions may modulate the therapeutic effects of IFN-beta. Since hyperactivity of the hypothalamo-pituitary-adrenal (HPA) axis and other neuroendorine dist...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17224002/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "33688448",
+          "title": "Potential therapeutic and pharmacological strategies for SARS-CoV2.",
+          "authors": "Ghareeb DA, Saleh SR, Nofal MS, et al.",
+          "journal": "Journal of pharmaceutical investigation",
+          "year": "2021",
+          "abstract_snippet": "BACKGROUND: At the end of 2019, the new Coronavirus disease 2019 (COVID-19) strain causing severe acute respiratory syndrome swept the world. From November 2019 till February 2021, this virus infected nearly 104 million, with more than two million deaths and about 25 million active cases. This has p...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33688448/",
+          "total_results": 1
+        }
+      ],
+      "semantic_scholar_papers": [
+        {
+          "title": "Influence of prostaglandin E2 and indomethacin on interferon-\u03b3 production by cultured peripheral blood leukocytes of multiple sclerosis patients and healthy donors",
+          "year": 1985,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/2dfb75b9b9d99c369640fdab4b3f9951938a7506",
+          "authors": "G. Vervliet, H. Deckmyn, H. Carton"
+        },
+        {
+          "title": "[Negative results following use of indomethacin in treatment of multiple sclerosis].",
+          "year": 1973,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/1bfeb7a9e27aff282a615e2154f2d44ccf19ccfc",
+          "authors": "A. Niewodniczy, E. P\u00f3\u017aniak-Patewicz"
+        },
+        {
+          "title": "INTRATHECAL INTERFERON, INDOMETHACIN, AND MULTIPLE SCLEROSIS",
+          "year": 1987,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/e7b3d79612d61dbe809bdb0a295242a15619c094",
+          "authors": "M. Berenbaum, L. Jacobs"
+        },
+        {
+          "title": "Indomethacin, interferons, and multiple sclerosis",
+          "year": 1987,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/4861b109cb7f532314bdfaf5cfcc41976d91956c",
+          "authors": "T. Munsat, J. Mora"
+        },
+        {
+          "title": "Indomethacin, interferons, and multiple sclerosis",
+          "year": 1987,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/a6faf378e5240c0d70d08cad6ea4d3b8f1349576",
+          "authors": "H. Panitch"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Drug repurposing: a nexus of innovation, science, and potential",
+        "year": 2023,
+        "citations": 28,
+        "url": "https://www.semanticscholar.org/paper/8350e8a900b0f6eec2d84a0501ee8b27c11a0fc7",
+        "authors": "M. D. De Rosa, Rituraj Purohit, A. Garc\u00eda\u2010Sosa"
+      },
+      "max_citations": 28,
+      "faers_signal": "moderate",
+      "faers_total_reports": 12728,
+      "faers_cooccurrences": 56,
+      "faers_interpretation": "56 FAERS reports mention both Indomethacin and Multiple sclerosis-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "Salermide (1.472)",
+        "3194 (1.466)",
+        "3739601 (1.455)",
+        "S-8599 (1.449)",
+        "AS605240 (1.445)"
+      ],
+      "signature_interpretation": "Indomethacin was not found among the top 34 drugs that reverse the Multiple sclerosis gene signature. Top reversers: Salermide (1.472), 3194 (1.466), 3739601 (1.455)",
+      "ai_hypothesis": "of its anti-inflammatory properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.7166,
+      "mr_genetic_targets": 2,
+      "mechanistic_hypothesis": "Indomethacin \u2014[is a therapeutic for]\u2192 Multiple sclerosis",
+      "kg_paths_text": "\u2022 Indomethacin \u2014[is a therapeutic for]\u2192 Multiple sclerosis\n\u2022 Indomethacin \u2014[is agonized by]\u2192 gene-11251 \u2014[is an agonist of]\u2192 DB00917 \u2014[is a therapeutic for]\u2192 Multiple sclerosis\n\u2022 Indomethacin \u2014[is agonized by]\u2192 gene-11251 \u2014[is an agonist of]\u2192 DB00917 \u2014[is a therapeutic for]\u2192 Multiple sclerosis",
+      "validation_experiments": [],
+      "novelty_score": 0.362,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": true,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "643 PubMed articles on this drug-disease pair",
+        "1 article(s) specifically mention repurposing/repositioning",
+        "Supported by 4 independent AI pillars",
+        "Moderate FAERS signal: 56 adverse event reports mention drug-disease co-occurrence",
+        "Supporting paper with 28 citations",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.72, 2 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D009103",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 2093,
         "has_warnings": true,
         "top_interactions": [
           {
@@ -3725,6 +3679,11 @@
             "severity": "high"
           },
           {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
             "drug_id": "DB00758",
             "drug_name": "Clopidogrel",
             "severity": "high"
@@ -3745,45 +3704,53 @@
             "severity": "high"
           },
           {
-            "drug_id": "DB00783",
-            "drug_name": "Estradiol",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00502",
-            "drug_name": "Haloperidol",
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
             "severity": "high"
           }
         ]
       },
       "pharmacogenomics": {
         "has_flags": true,
-        "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (CYP2B6 / CYP2B6*1, CYP2B6*6)",
-        "cpic": [],
+        "highest_risk": "moderate",
+        "summary": "CPIC-C (CYP2C9) \u2022 PharmGKB-3 (CYP2C9 / CYP2C9*1, CYP2C9*3)",
+        "cpic": [
+          {
+            "gene": "CYP2C9",
+            "level": "C",
+            "guideline": "CYP2C9 and NSAIDs"
+          }
+        ],
         "pharmgkb": [
           {
-            "gene": "CYP2B6",
-            "variant": "CYP2B6*1, CYP2B6*6",
+            "gene": "CYP2C9",
+            "variant": "CYP2C9*1, CYP2C9*3",
             "level": "3",
-            "phenotype_category": "Metabolism/PK",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1446899303"
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451140140"
+          },
+          {
+            "gene": "LST1;LTA;TNF",
+            "variant": "rs1800629",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1452570052"
           }
         ]
       },
       "triangulation": {
-        "n_axes_agree": 2,
+        "n_axes_agree": 3,
         "axes": {
           "kg": true,
-          "docking": false,
+          "docking": true,
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.47,
-        "label": "multi-axis",
+        "triangulation_score": 0.601,
+        "label": "silver-standard",
         "axis_values": {
-          "kg": 0.469,
-          "docking": 0.353,
+          "kg": 0.464,
+          "docking": 0.797,
           "pharos": 0.0,
           "literature": 1.0
         }
@@ -3793,31 +3760,30 @@
           "Brain - Cortex",
           "Brain - Cerebellum"
         ],
-        "n_genes": 20,
-        "n_expressed": 17,
-        "mean_tpm_in_tissue": 36.6,
-        "max_tpm_in_tissue": 264.89,
-        "tissue_specificity": 0.261,
-        "context_modifier": 1.023
+        "n_genes": 16,
+        "n_expressed": 13,
+        "mean_tpm_in_tissue": 22.51,
+        "max_tpm_in_tissue": 165.57,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.973
       },
-      "disease_entity": "Disease::MESH:D009103",
+      "ensemble_prob": 0.9809,
+      "ensemble_features": {
+        "kg_score": 0.9989,
+        "degree_penalty": 0.7454,
+        "n_drug_targets": 53,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.5649
+      },
+      "ensemble_rank": 1,
       "docking": {
-        "kcal_per_mol": -4.23,
-        "target_symbol": "SCN4A",
+        "kcal_per_mol": -9.56,
+        "target_symbol": "PTGS1",
         "source": "chembl_bioactivity_proxy",
         "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
         "hit": true
       },
-      "ensemble_prob": 0.4004,
-      "ensemble_features": {
-        "kg_score": 0.9931,
-        "degree_penalty": 0.7535,
-        "n_drug_targets": 9,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 4.3041
-      },
-      "ensemble_rank": 3,
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -3827,11 +3793,11 @@
     }
   ],
   "disease_entity": "Disease::MESH:D009103",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
     "n_disease_genes": 683,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
-  },
-  "ensemble_version": "v5",
-  "ensemble_model_path": "data/models/ensemble_v5.pkl"
+  }
 }

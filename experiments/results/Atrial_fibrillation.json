@@ -1,8 +1,8 @@
 {
   "disease": "Atrial fibrillation",
   "status": "completed",
-  "timestamp": "2026-04-19T21:43:56.309429",
-  "elapsed_seconds": 679.8,
+  "timestamp": "2026-05-08T01:12:41.285601",
+  "elapsed_seconds": 202.0,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -36,7 +36,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2555,
       "dti_score": 1.0,
-      "dti_best_target": "IGF1",
+      "dti_best_target": "ITK",
       "kg_group_score": 0.3399,
       "structural_group_score": 1.0,
       "network_group_score": 0.5343000292778015,
@@ -175,8 +175,14 @@
       "faers_interpretation": "672 FAERS reports mention both Lidocaine and Atrial fibrillation-related terms. Limited but notable real-world signal.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
-      "signature_top_reversers": [],
-      "signature_interpretation": "Insufficient disease gene signature (0 up, 0 down genes)",
+      "signature_top_reversers": [
+        "FLUOROMETHOLONE (1.458)",
+        "GW405833 hydrochloride (1.419)",
+        "\"\"\"4-(4-hydroxy-2,6-dimethylheptan-4-yl)-N,N-diphenyl-1H-1,2,3-triazole-1-carboxamide\"\"\" (1.404)",
+        "GDC-0980 (1.404)",
+        "Dexamethasone (1.403)"
+      ],
+      "signature_interpretation": "Lidocaine was not found among the top 45 drugs that reverse the Atrial fibrillation gene signature. Top reversers: FLUOROMETHOLONE (1.458), GW405833 hydrochloride (1.419), \"\"\"4-(4-hydroxy-2,6-dimethylheptan-4-yl)-N,N-diphenyl-1H-1,2,3-triazole-1-carboxamide\"\"\" (1.404)",
       "ai_hypothesis": "of its antiarrhythmic properties.",
       "abstract_analyses": [
         {
@@ -207,16 +213,8 @@
       "novelty_score": 0.205,
       "novelty_level": "ESTABLISHED",
       "is_known_treatment": false,
-      "clinical_trials_total": 7,
+      "clinical_trials_total": 8,
       "clinical_trials": [
-        {
-          "nct_id": "NCT00840918",
-          "title": "Intravenous Lidocaine and Postoperative Outcomes After Cardiac Surgery",
-          "status": "TERMINATED",
-          "phase": "NA",
-          "enrollment": "123",
-          "url": "https://clinicaltrials.gov/study/NCT00840918"
-        },
         {
           "nct_id": "NCT03919786",
           "title": "Effects of Topical Local Anesthesia of Pulmonary Vein Combined With Vagus Nerve Block on the Incidence of Atrial Fibrillation After Thoracic Surgery",
@@ -234,29 +232,37 @@
           "url": "https://clinicaltrials.gov/study/NCT05753644"
         },
         {
-          "nct_id": "NCT06836999",
-          "title": "Deep Sedation in Catheter Ablation of Atrial Fibrillation",
-          "status": "NOT_YET_RECRUITING",
-          "phase": "NA",
-          "enrollment": "1334",
-          "url": "https://clinicaltrials.gov/study/NCT06836999"
+          "nct_id": "NCT04472299",
+          "title": "Paravertebral Block to Reduce the Incidence of New Onset Atrial Fibrillation After Cardiac Surgery",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "32",
+          "url": "https://clinicaltrials.gov/study/NCT04472299"
         },
         {
-          "nct_id": "NCT07354217",
-          "title": "Workflow Optimization During Pulse Field Ablation for Atrial Fibrillation",
-          "status": "NOT_YET_RECRUITING",
-          "phase": "PHASE4",
-          "enrollment": "60",
-          "url": "https://clinicaltrials.gov/study/NCT07354217"
+          "nct_id": "NCT05514652",
+          "title": "Anesthesia Standard Operating Procedure During On-pump Coronary Artery Bypass Grafting",
+          "status": "UNKNOWN",
+          "phase": "NA",
+          "enrollment": "120",
+          "url": "https://clinicaltrials.gov/study/NCT05514652"
+        },
+        {
+          "nct_id": "NCT00840918",
+          "title": "Intravenous Lidocaine and Postoperative Outcomes After Cardiac Surgery",
+          "status": "TERMINATED",
+          "phase": "NA",
+          "enrollment": "123",
+          "url": "https://clinicaltrials.gov/study/NCT00840918"
         }
       ],
       "trial_phases": {
-        "NA": 5,
+        "NA": 6,
         "PHASE4": 2
       },
       "confidence": "HIGH",
       "confidence_reasons": [
-        "7 clinical trial(s) found on ClinicalTrials.gov",
+        "8 clinical trial(s) found on ClinicalTrials.gov",
         "368 PubMed articles on this drug-disease pair",
         "1 article(s) specifically mention repurposing/repositioning",
         "Supported by 4 independent AI pillars",
@@ -265,6 +271,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.87, 4 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D001281",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -371,15 +378,7 @@
         "tissue_specificity": 0.298,
         "context_modifier": 0.992
       },
-      "docking": {
-        "kcal_per_mol": -7.78,
-        "target_symbol": "SCN4A",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D001281",
-      "ensemble_prob": 0.7767,
+      "ensemble_prob": 0.8314,
       "ensemble_features": {
         "kg_score": 0.9972,
         "degree_penalty": 0.7765,
@@ -389,6 +388,13 @@
         "transe_rank_log": 3.434
       },
       "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": -7.78,
+        "target_symbol": "SCN4A",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -419,8 +425,8 @@
       "admet_score": 0.7109,
       "admet_flags": "clean",
       "primekg_score": 0.255,
-      "dti_score": 0,
-      "dti_best_target": "",
+      "dti_score": 0.2943,
+      "dti_best_target": "HMGB1",
       "kg_group_score": 0.1935,
       "structural_group_score": 0.9337,
       "network_group_score": 0.6624,
@@ -608,20 +614,20 @@
       "clinical_trials_total": 2,
       "clinical_trials": [
         {
-          "nct_id": "NCT01143129",
-          "title": "Postoperative New-onset Atrial Fibrillation in Cardiac Surgery: DECS-PNAF Project",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "80",
-          "url": "https://clinicaltrials.gov/study/NCT01143129"
-        },
-        {
           "nct_id": "NCT05487508",
           "title": "Efficacy of Dexamethasone to Improve Clinical Outcomes in Coronary Artery Bypass Patients",
           "status": "COMPLETED",
           "phase": "PHASE4",
           "enrollment": "120",
           "url": "https://clinicaltrials.gov/study/NCT05487508"
+        },
+        {
+          "nct_id": "NCT01143129",
+          "title": "Postoperative New-onset Atrial Fibrillation in Cardiac Surgery: DECS-PNAF Project",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "80",
+          "url": "https://clinicaltrials.gov/study/NCT01143129"
         }
       ],
       "trial_phases": {
@@ -638,6 +644,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.84, 32 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D001281",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -774,15 +781,7 @@
         "tissue_specificity": 0.442,
         "context_modifier": 1.076
       },
-      "docking": {
-        "kcal_per_mol": -11.64,
-        "target_symbol": "NR3C1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D001281",
-      "ensemble_prob": 0.0627,
+      "ensemble_prob": 0.0746,
       "ensemble_features": {
         "kg_score": 0.982,
         "degree_penalty": 0.736,
@@ -792,6 +791,13 @@
         "transe_rank_log": 5.2523
       },
       "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": -11.64,
+        "target_symbol": "NR3C1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -822,8 +828,8 @@
       "admet_score": 0.7129,
       "admet_flags": "clean",
       "primekg_score": 0.2528,
-      "dti_score": 0,
-      "dti_best_target": "",
+      "dti_score": 0.1114,
+      "dti_best_target": "HMGB1",
       "kg_group_score": 0.2884,
       "structural_group_score": 0.9884,
       "network_group_score": 0.5496000051498413,
@@ -975,6 +981,22 @@
       "clinical_trials_total": 6,
       "clinical_trials": [
         {
+          "nct_id": "NCT00911508",
+          "title": "Catheter Ablation vs Anti-arrhythmic Drug Therapy for Atrial Fibrillation Trial",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "2204",
+          "url": "https://clinicaltrials.gov/study/NCT00911508"
+        },
+        {
+          "nct_id": "NCT04513509",
+          "title": "Rate Control in Patients With Atrial Fibrillation",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "13",
+          "url": "https://clinicaltrials.gov/study/NCT04513509"
+        },
+        {
           "nct_id": "NCT00589303",
           "title": "AV Node Ablation and Pacemaker Therapy Compared to Drug Therapy for Atrial Fibrillation - Pilot Study",
           "status": "TERMINATED",
@@ -991,33 +1013,17 @@
           "url": "https://clinicaltrials.gov/study/NCT00578617"
         },
         {
-          "nct_id": "NCT00911508",
-          "title": "Catheter Ablation vs Anti-arrhythmic Drug Therapy for Atrial Fibrillation Trial",
+          "nct_id": "NCT01719367",
+          "title": "Genetically Determined Response to Atenolol in Patients With Persistent Atrial Fibrillation",
           "status": "COMPLETED",
           "phase": "NA",
-          "enrollment": "2204",
-          "url": "https://clinicaltrials.gov/study/NCT00911508"
-        },
-        {
-          "nct_id": "NCT00438113",
-          "title": "Atrial Substrate Modification With Aggressive Blood Pressure Lowering to Prevent AF",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "184",
-          "url": "https://clinicaltrials.gov/study/NCT00438113"
-        },
-        {
-          "nct_id": "NCT04513509",
-          "title": "Rate Control in Patients With Atrial Fibrillation",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "13",
-          "url": "https://clinicaltrials.gov/study/NCT04513509"
+          "enrollment": "38",
+          "url": "https://clinicaltrials.gov/study/NCT01719367"
         }
       ],
       "trial_phases": {
-        "PHASE3": 1,
         "NA": 4,
+        "PHASE3": 1,
         "PHASE4": 1
       },
       "confidence": "HIGH",
@@ -1029,8 +1035,10 @@
         "High molecular similarity (0.65) to Esmolol",
         "Strong FAERS signal: 1987 adverse event reports link drug to disease (126816 total reports)",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.75, 1 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.75, 1 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D001281",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1188,15 +1196,7 @@
         "tissue_specificity": 0.028,
         "context_modifier": 0.92
       },
-      "docking": {
-        "kcal_per_mol": -9.12,
-        "target_symbol": "ADRB1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D001281",
-      "ensemble_prob": 0.9609,
+      "ensemble_prob": 0.9696,
       "ensemble_features": {
         "kg_score": 0.9991,
         "degree_penalty": 0.772,
@@ -1205,7 +1205,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.3026
       },
-      "ensemble_rank": 1,
+      "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": -9.12,
+        "target_symbol": "ADRB1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1237,7 +1244,7 @@
       "admet_flags": "hERG=0.76",
       "primekg_score": 0.2572,
       "dti_score": 1.0,
-      "dti_best_target": "TLR2",
+      "dti_best_target": "CAV1",
       "kg_group_score": 0.1115,
       "structural_group_score": 1.0,
       "network_group_score": 0.6366999745368958,
@@ -1470,8 +1477,10 @@
         "Supported by 4 independent AI pillars",
         "Strong FAERS signal: 10 adverse event reports link drug to disease (62 total reports)",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.94, 1 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.94, 1 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D001281",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "late-trial",
@@ -1572,15 +1581,7 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.111
       },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D001281",
-      "ensemble_prob": 0.3011,
+      "ensemble_prob": 0.279,
       "ensemble_features": {
         "kg_score": 0.9653,
         "degree_penalty": 0.849,
@@ -1589,7 +1590,419 @@
         "n_disease_genes": 0,
         "transe_rank_log": 5.9054
       },
-      "ensemble_rank": 7,
+      "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Propranolol",
+      "drug_id": "DB00571",
+      "disease_name": "Atrial fibrillation",
+      "combined_score": 0.5154,
+      "pillars_hit": 4,
+      "transe_rank": 2,
+      "transe_score": -9.5592,
+      "pykeen_score": -11.5209,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0.0255,
+      "gene_sig_rank": 28,
+      "proximity_score": 0.675000011920929,
+      "proximity_distance": 1.2999999523162842,
+      "admet_score": 0.5927,
+      "admet_flags": "hERG=0.78",
+      "primekg_score": 0.2472,
+      "dti_score": 0.7834,
+      "dti_best_target": "HMGB1",
+      "kg_group_score": 0.4557,
+      "structural_group_score": 0.7834,
+      "network_group_score": 0.504800021648407,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.7015,
+      "admet_multiplier": 0.9185,
+      "efficacy_score": 0.5611,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 16,
+      "shared_targets": [
+        "ACE",
+        "ADORA2A",
+        "ADORA3",
+        "ADRA1A",
+        "ADRA2A",
+        "ADRA2C",
+        "ADRB1",
+        "ADRB2",
+        "ADRB3",
+        "AGT",
+        "AGTR1",
+        "CACNA1C",
+        "F2",
+        "INS",
+        "KCNH2",
+        "SCN5A"
+      ],
+      "pubmed_total": 531,
+      "pubmed_treatment_total": 440,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "35057977",
+          "title": "Arrhythmias in Pregnancy.",
+          "authors": "Tamirisa KP, Elkayam U, Briller JE, et al.",
+          "journal": "JACC. Clinical electrophysiology",
+          "year": "2022",
+          "abstract_snippet": "Increasing maternal mortality and incidence of arrhythmias in pregnancy have been noted over the past 2 decades in the United States. Pregnancy is associated with a greater risk of arrhythmias, and patients with a history of arrhythmias are at significant risk of arrhythmia recurrence during pregnan...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35057977/",
+          "total_results": 531
+        },
+        {
+          "pmid": "31599871",
+          "title": "Drugs for atrial fibrillation.",
+          "authors": "",
+          "journal": "The Medical letter on drugs and therapeutics",
+          "year": "2019",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31599871/"
+        },
+        {
+          "pmid": "38180321",
+          "title": "Treatment of atrial fibrillation.",
+          "authors": "",
+          "journal": "The Medical letter on drugs and therapeutics",
+          "year": "2024",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38180321/"
+        },
+        {
+          "pmid": "1821070",
+          "title": "Cardiothyreosis.",
+          "authors": "Popovici D, Hertoghe J",
+          "journal": "Endocrinologie",
+          "year": "1991",
+          "abstract_snippet": "In the present study: (a) physiopathology, (b) clinics, and (c) therapy of cardiothyreosis are discussed. (a) The hyperkinetic syndrome, the earliest clinical sign in thyrotoxicosis (vasodilatation, increase in inotropism, automatism, etc.), is mediated by a two-fold increase in the number of beta-r...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/1821070/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Benefit and Preference of Propranolol Over Metoprolol in Thyrotoxicosis-Induced Atrial Fibrillation: A Case Report and Review of Literature",
+          "year": 2023,
+          "citations": 9,
+          "url": "https://www.semanticscholar.org/paper/18460af0f8a38721fb9951a9600b843128c59faa",
+          "authors": "Mukosolu F Obi, Vikhyath Namireddy, Yash Garg"
+        },
+        {
+          "title": "Effect of propranolol on atrial fibrillation in hyperthyrodism",
+          "year": 2016,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/33ec659ad179cc741f1e7fc019c4075410d8b972",
+          "authors": "C. Gao, Shasha Zhang, Yuping Zhang"
+        },
+        {
+          "title": "Cardiovascular Collapse Secondary to Beta-Blocker Administration in a Setting of Coexisting Thyroid Storm and Atrial Fibrillation: A Case Report",
+          "year": 2022,
+          "citations": 6,
+          "url": "https://www.semanticscholar.org/paper/5ae5819a2cb0a19a76077d7e984653724adcfafe",
+          "authors": "S. K. H. Bokhari, Humayun Sattar, Shaun Abid"
+        },
+        {
+          "title": "Challenges in the Management of Thyrotoxicosis Associated with Atrial Fibrillation and Heart Failure: Two Case Reports",
+          "year": 2021,
+          "citations": 9,
+          "url": "https://www.semanticscholar.org/paper/9e66f89cd7ab284c8b2f841afd684e0ce4db8a50",
+          "authors": "Abid M. Sadiq, Nyasatu G. Chamba"
+        },
+        {
+          "title": "Effects of occlusal disharmony on susceptibility to atrial fibrillation in mice",
+          "year": 2020,
+          "citations": 17,
+          "url": "https://www.semanticscholar.org/paper/990c8d8fa0a0d14b5ac0cf24c4df11e925472435",
+          "authors": "K. Suita, Yuka Yagisawa, Y. Ohnuki"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Effects of occlusal disharmony on susceptibility to atrial fibrillation in mice",
+        "year": 2020,
+        "citations": 17,
+        "url": "https://www.semanticscholar.org/paper/990c8d8fa0a0d14b5ac0cf24c4df11e925472435",
+        "authors": "K. Suita, Yuka Yagisawa, Y. Ohnuki"
+      },
+      "max_citations": 17,
+      "faers_signal": "moderate",
+      "faers_total_reports": 61033,
+      "faers_cooccurrences": 352,
+      "faers_interpretation": "352 FAERS reports mention both Propranolol and Atrial fibrillation-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "FLUOROMETHOLONE (1.458)",
+        "GW405833 hydrochloride (1.419)",
+        "\"\"\"4-(4-hydroxy-2,6-dimethylheptan-4-yl)-N,N-diphenyl-1H-1,2,3-triazole-1-carboxamide\"\"\" (1.404)",
+        "GDC-0980 (1.404)",
+        "Dexamethasone (1.403)"
+      ],
+      "signature_interpretation": "Propranolol was not found among the top 45 drugs that reverse the Atrial fibrillation gene signature. Top reversers: FLUOROMETHOLONE (1.458), GW405833 hydrochloride (1.419), \"\"\"4-(4-hydroxy-2,6-dimethylheptan-4-yl)-N,N-diphenyl-1H-1,2,3-triazole-1-carboxamide\"\"\" (1.404)",
+      "ai_hypothesis": "of its anti-arrhythmic properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.7015,
+      "mr_genetic_targets": 3,
+      "mechanistic_hypothesis": "Propranolol \u2014[treats]\u2192 Atrial fibrillation",
+      "kg_paths_text": "\u2022 Propranolol \u2014[treats]\u2192 Atrial fibrillation\n\u2022 Propranolol \u2014[treats]\u2192 Atrial fibrillation\n\u2022 Propranolol \u2014[is antagonized by]\u2192 gene-154 \u2014[antagonizes]\u2192 DB00489 \u2014[treats]\u2192 Atrial fibrillation",
+      "validation_experiments": [],
+      "novelty_score": 0.278,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": true,
+      "clinical_trials_total": 5,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT00911508",
+          "title": "Catheter Ablation vs Anti-arrhythmic Drug Therapy for Atrial Fibrillation Trial",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "2204",
+          "url": "https://clinicaltrials.gov/study/NCT00911508"
+        },
+        {
+          "nct_id": "NCT04513509",
+          "title": "Rate Control in Patients With Atrial Fibrillation",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "13",
+          "url": "https://clinicaltrials.gov/study/NCT04513509"
+        },
+        {
+          "nct_id": "NCT00654290",
+          "title": "Effect of Prophylaxy of Amiodarone and Propranolol and Amiodarone With Propranolol in Prevention of Atrial Fibrillation Post Coronary Artery Bypass Graft",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "240",
+          "url": "https://clinicaltrials.gov/study/NCT00654290"
+        },
+        {
+          "nct_id": "NCT00578617",
+          "title": "Ablation vs Drug Therapy for Atrial Fibrillation - Pilot Trial",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "60",
+          "url": "https://clinicaltrials.gov/study/NCT00578617"
+        },
+        {
+          "nct_id": "NCT01655303",
+          "title": "Rate Control in Atrial Fibrillation",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "90",
+          "url": "https://clinicaltrials.gov/study/NCT01655303"
+        }
+      ],
+      "trial_phases": {
+        "NA": 4,
+        "PHASE4": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "5 clinical trial(s) found on ClinicalTrials.gov",
+        "531 PubMed articles on this drug-disease pair",
+        "Supported by 4 independent AI pillars",
+        "Moderate FAERS signal: 352 adverse event reports mention drug-disease co-occurrence",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.70, 3 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D001281",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 2135,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "moderate",
+        "summary": "CPIC-C (ADRB2) \u2022 PharmGKB-3 (COMT / rs4680)",
+        "cpic": [
+          {
+            "gene": "ADRB2",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "ADRA2C",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "CYP2D6",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "ADRB1",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          },
+          {
+            "gene": "GRK4",
+            "level": "C",
+            "guideline": "CYP2D6, ADRB1, ADRB2, ADRA2C, GRK4, and GRK5 and Beta-Blockers"
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "COMT",
+            "variant": "rs4680",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451359886"
+          },
+          {
+            "gene": "CYP2D6",
+            "variant": "CYP2D6*1, CYP2D6*10",
+            "level": "4",
+            "phenotype_category": "Other",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183700477"
+          },
+          {
+            "gene": "ADRB2",
+            "variant": "rs1042713",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1447959515"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.68,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.515,
+          "docking": 1.0,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Heart - Atrial Appendage"
+        ],
+        "n_genes": 16,
+        "n_expressed": 12,
+        "mean_tpm_in_tissue": 16.16,
+        "max_tpm_in_tissue": 138.2,
+        "tissue_specificity": 0.559,
+        "context_modifier": 1.028
+      },
+      "ensemble_prob": 0.999,
+      "ensemble_features": {
+        "kg_score": 0.9999,
+        "degree_penalty": 0.7479,
+        "n_drug_targets": 55,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 0.6931
+      },
+      "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": -12.44,
+        "target_symbol": "ADRB2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1621,7 +2034,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2613,
       "dti_score": 1.0,
-      "dti_best_target": "IGF1",
+      "dti_best_target": "ITK",
       "kg_group_score": 0.1763,
       "structural_group_score": 1.0,
       "network_group_score": 0.5457000136375427,
@@ -1855,8 +2268,10 @@
         "Moderate FAERS signal: 504 adverse event reports mention drug-disease co-occurrence",
         "Supporting paper with 71 citations",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.76, 4 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.76, 4 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D001281",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1972,15 +2387,7 @@
         "tissue_specificity": 0.313,
         "context_modifier": 1.023
       },
-      "docking": {
-        "kcal_per_mol": -10.92,
-        "target_symbol": "ADRA2A",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D001281",
-      "ensemble_prob": 0.3518,
+      "ensemble_prob": 0.3644,
       "ensemble_features": {
         "kg_score": 0.9939,
         "degree_penalty": 0.7526,
@@ -1989,7 +2396,329 @@
         "n_disease_genes": 0,
         "transe_rank_log": 4.1744
       },
-      "ensemble_rank": 6,
+      "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": -10.92,
+        "target_symbol": "ADRA2A",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Encainide",
+      "drug_id": "DB01228",
+      "disease_name": "Atrial fibrillation",
+      "combined_score": 0.5076000094413757,
+      "pillars_hit": 4,
+      "transe_rank": 37,
+      "transe_score": -10.4546,
+      "pykeen_score": -12.119,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.875,
+      "proximity_distance": 0.5,
+      "admet_score": 0.6077,
+      "admet_flags": "hERG=0.94",
+      "primekg_score": 0.2453,
+      "dti_score": 0.5218,
+      "dti_best_target": "SERPINC1",
+      "kg_group_score": 0.2912,
+      "structural_group_score": 0.5218,
+      "network_group_score": 0.7182000279426575,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.9365,
+      "admet_multiplier": 0.9215,
+      "efficacy_score": 0.5508000254631042,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "SCN5A"
+      ],
+      "pubmed_total": 38,
+      "pubmed_treatment_total": 37,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "3107989",
+          "title": "Flecainide and encainide.",
+          "authors": "Furlanello F, Vergara G, Bettini R, et al.",
+          "journal": "European heart journal",
+          "year": "1987",
+          "abstract_snippet": "Flecainide and encainide (class IC) are presently under clinical evaluation in Italy. They prolong the duration of the QRS but not the period of ventricular repolarisation: the prolongation of QT is due solely to the prolongation of the Q-J. Flecainide and encainide are extremely powerful and are su...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/3107989/",
+          "total_results": 38
+        },
+        {
+          "pmid": "40289259",
+          "title": "Propafenone- vs. amiodarone-associated adverse cardiac outcomes in patients with atrial fibrillation and heart failure.",
+          "authors": "Lin YC, Chen BL, Hsu CY, et al.",
+          "journal": "British journal of clinical pharmacology",
+          "year": "2025",
+          "abstract_snippet": "AIMS: Clinical trials have shown an increased risk of death in patients with recent myocardial infarction who received antiarrhythmic drugs such as flecainide, encainide or moricizine, especially in the presence of associated structural heart disease such as cardiac dysfunction. This study aimed to ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40289259/"
+        },
+        {
+          "pmid": "1954691",
+          "title": "Operations for atrial fibrillation.",
+          "authors": "Cox JL, Boineau JP, Schuessler RB, et al.",
+          "journal": "Clinical cardiology",
+          "year": "1991",
+          "abstract_snippet": "Atrial fibrillation is the most common of all sustained cardiac arrhythmias, yet it has no effective medical or surgical therapy. During the past decade, multipoint computerized electrophysiological mapping systems were used to map both experimental and human atrial fibrillation. On the basis of the...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/1954691/"
+        },
+        {
+          "pmid": "3144164",
+          "title": "Encainide for atrial fibrillation associated with Wolff-Parkinson-White syndrome.",
+          "authors": "Rinkenberger RL, Naccarelli GV, Miles WM, et al.",
+          "journal": "The American journal of cardiology",
+          "year": "1988",
+          "abstract_snippet": "Thirty-six patients with a history of atrial fibrillation and Wolff-Parkinson-White syndrome were treated with oral encainide, 175 +/- 44 mg/day, after undergoing baseline drug-free electrophysiologic studies. The mean age was 38 +/- 15 years, with structural heart disease present in only 3 patients...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/3144164/"
+        },
+        {
+          "pmid": "36908162",
+          "title": "Flecainide in clinical practice.",
+          "authors": "Basza M, Maciejewski C, Bojanowicz W, et al.",
+          "journal": "Cardiology journal",
+          "year": "2023",
+          "abstract_snippet": "Flecainide, similar to encainide and propafenone, is IC class antiarrhythmic, inhibiting Nav1.5 sodium channels in heart muscle cells and modulates cardiac conduction. Despite its over 40-year presence in clinical practice, strong evidence and well-known safety profile, flecainide distribution in Eu...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36908162/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Propafenone\u2010 vs. amiodarone\u2010associated adverse cardiac outcomes in patients with atrial fibrillation and heart failure",
+          "year": 2025,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/62b46f203b0457f7564ca9c3659b28b3e82e2139",
+          "authors": "Yi-Cheng Lin, Bi-Li Chen, Chien-Yi Hsu"
+        },
+        {
+          "title": "Do class IC antiarrhythmics drugs need to be cast aside in atrial fibrillation patients with minimal coronary artery disease?",
+          "year": 2022,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/6ad6951c44f2fd0d1f11e85fe724c733d3bfc67a",
+          "authors": "G. Naccarelli, G. Burkman, Sarah K. Hussain"
+        },
+        {
+          "title": "Electrophysiologic and clinical effects of intravenous and oral encainide in patients with Wolff-Parkinson-White syndrome and paroxysmal atrial fibrillation.",
+          "year": 1987,
+          "citations": 8,
+          "url": "https://www.semanticscholar.org/paper/8cd8ebc14657bfd198915bf7f15045e62546a7aa",
+          "authors": "M. Chimienti, M. Moizi, J. Salerno"
+        },
+        {
+          "title": "Encainide for atrial fibrillation associated with Wolff-Parkinson-White syndrome.",
+          "year": 1988,
+          "citations": 6,
+          "url": "https://www.semanticscholar.org/paper/5a956971c7d7a86be8e571c34ea3080c2a4118c2",
+          "authors": "R. Rinkenberger, G. Naccarelli, W. Miles"
+        },
+        {
+          "title": "The use of encainide in atrial fibrillation",
+          "year": 1984,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/11fc601bf26e15dc7cfd669c19534489cdc4001f",
+          "authors": "S. Vlay, S. Vlay, P. R. Reid"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Electrophysiologic and clinical effects of intravenous and oral encainide in patients with Wolff-Parkinson-White syndrome and paroxysmal atrial fibrillation.",
+        "year": 1987,
+        "citations": 8,
+        "url": "https://www.semanticscholar.org/paper/8cd8ebc14657bfd198915bf7f15045e62546a7aa",
+        "authors": "M. Chimienti, M. Moizi, J. Salerno"
+      },
+      "max_citations": 8,
+      "faers_signal": "none",
+      "faers_total_reports": 3,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Encainide to Atrial fibrillation terms. Drug has 3 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "FLUOROMETHOLONE (1.458)",
+        "GW405833 hydrochloride (1.419)",
+        "\"\"\"4-(4-hydroxy-2,6-dimethylheptan-4-yl)-N,N-diphenyl-1H-1,2,3-triazole-1-carboxamide\"\"\" (1.404)",
+        "GDC-0980 (1.404)",
+        "Dexamethasone (1.403)"
+      ],
+      "signature_interpretation": "Encainide was not found among the top 45 drugs that reverse the Atrial fibrillation gene signature. Top reversers: FLUOROMETHOLONE (1.458), GW405833 hydrochloride (1.419), \"\"\"4-(4-hydroxy-2,6-dimethylheptan-4-yl)-N,N-diphenyl-1H-1,2,3-triazole-1-carboxamide\"\"\" (1.404)",
+      "ai_hypothesis": "of its unique mechanism of action.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.9365,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Encainide \u2014[is a therapeutic for]\u2192 Atrial fibrillation",
+      "kg_paths_text": "\u2022 Encainide \u2014[is a therapeutic for]\u2192 Atrial fibrillation\n\u2022 Encainide \u2014[is a therapeutic for]\u2192 MESH:D018879 \u2014[is treated by]\u2192 DB00612 \u2014[treats]\u2192 Atrial fibrillation\n\u2022 Encainide \u2014[is a therapeutic for]\u2192 MESH:D018879 \u2014[is treated by]\u2192 DB00612 \u2014[treats]\u2192 Atrial fibrillation",
+      "validation_experiments": [],
+      "novelty_score": 0.5180000066757202,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": true,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "MEDIUM",
+      "confidence_reasons": [
+        "38 PubMed articles found",
+        "Supported by 4 independent AI pillars",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.94, 1 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D001281",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 655,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00227",
+            "drug_name": "Lovastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00338",
+            "drug_name": "Omeprazole",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00641",
+            "drug_name": "Simvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB14068",
+            "drug_name": "(+)-Niguldipine",
+            "severity": "moderate"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.3160000145435333,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.5080000162124634,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.691
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Heart - Atrial Appendage"
+        ],
+        "n_genes": 1,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 36.13,
+        "max_tpm_in_tissue": 36.13,
+        "tissue_specificity": 1.0,
+        "context_modifier": 1.111
+      },
+      "ensemble_prob": 0.7315,
+      "ensemble_features": {
+        "kg_score": 0.9904,
+        "degree_penalty": 0.8208,
+        "n_drug_targets": 0,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.625
+      },
+      "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2020,8 +2749,8 @@
       "admet_score": 0.7128,
       "admet_flags": "clean",
       "primekg_score": 0.2543,
-      "dti_score": 0.103,
-      "dti_best_target": "TNF",
+      "dti_score": 0.1206,
+      "dti_best_target": "SERPINC1",
       "kg_group_score": 0.1938,
       "structural_group_score": 0.9602,
       "network_group_score": 0.5745000243186951,
@@ -2206,6 +2935,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.67)"
       ],
+      "disease_entity": "Disease::MESH:D001281",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2306,15 +3036,7 @@
         "tissue_specificity": 0.49,
         "context_modifier": 1.029
       },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D001281",
-      "ensemble_prob": 0.6757,
+      "ensemble_prob": 0.6515,
       "ensemble_features": {
         "kg_score": 0.9966,
         "degree_penalty": 0.766,
@@ -2323,7 +3045,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 3.6109
       },
-      "ensemble_rank": 4,
+      "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -2335,6 +3064,299 @@
           "Aliphatic_long_chain",
           "isolated_alkene"
         ]
+      }
+    },
+    {
+      "drug_name": "Enoximone",
+      "drug_id": "DB04880",
+      "disease_name": "Atrial fibrillation",
+      "combined_score": 0.5055999755859375,
+      "pillars_hit": 4,
+      "transe_rank": 141,
+      "transe_score": -10.8726,
+      "pykeen_score": -12.0782,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.5,
+      "proximity_distance": 2.0,
+      "admet_score": 0.5738,
+      "admet_flags": "DILI=0.92",
+      "primekg_score": 0.2538,
+      "dti_score": 1.0,
+      "dti_best_target": "SERPINC1",
+      "kg_group_score": 0.2857,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.5,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.6756,
+      "admet_multiplier": 0.9148,
+      "efficacy_score": 0.5526999831199646,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 0,
+      "shared_targets": [],
+      "pubmed_total": 5,
+      "pubmed_treatment_total": 4,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "8091823",
+          "title": "[Neurohumoral and hemodynamic effects in combination therapy of enoximone and dopamine].",
+          "authors": "Mitrovic V, Neuzner J, Opper H, et al.",
+          "journal": "Zeitschrift fur Kardiologie",
+          "year": "1994",
+          "abstract_snippet": "Twelve patients with severe heart failure (NYHA class III-IV) were investigated by intraindividual comparison for the hemodynamic and neurohumoral effects of dopamine (3 and 6 micrograms/kg/min), enoximone (8 micrograms/kg/min), and the combination of both medications (dopamine 3 micrograms/kg/min+e...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/8091823/",
+          "total_results": 5
+        },
+        {
+          "pmid": "2960699",
+          "title": "Is phosphodiesterase inhibition arrhythmogenic? Electrophysiologic effects in pithed rats and in normoxic and hypoxic rabbit atria of enoximone, a new cardiotonic agent.",
+          "authors": "Vaughan Williams EM",
+          "journal": "Journal of clinical pharmacology",
+          "year": "1987",
+          "abstract_snippet": "The positive inotropic and chronotropic actions of enoximone were confirmed. At concentrations within the clinical range, enoximone prolonged the chronotropic and hypotensive action of isoproterenol in pithed rats. Very high doses of both enoximone and isoproterenol caused ventricular fibrillation i...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/2960699/"
+        },
+        {
+          "pmid": "16227146",
+          "title": "Clinical trials update from the European Society of Cardiology meeting 2005: CARE-HF extension study, ESSENTIAL, CIBIS-III, S-ICD, ISSUE-2, STRIDE-2, SOFA, IMAGINE, PREAMI, SIRIUS-II and ACTIVE.",
+          "authors": "Cleland JG, Coletta AP, Lammiman M, et al.",
+          "journal": "European journal of heart failure",
+          "year": "2005",
+          "abstract_snippet": "This article provides information and a commentary on trials presented at the European Society of Cardiology meeting held in September 2005, relevant to the pathophysiology, prevention and treatment of heart failure. All reports should be considered as preliminary data, as analyses may change in the...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16227146/"
+        },
+        {
+          "pmid": "36341172",
+          "title": "Primary carnitine deficiency is a life-long disease.",
+          "authors": "Crefcoeur LL, Melles MC, Bruning TA, et al.",
+          "journal": "JIMD reports",
+          "year": "2022",
+          "abstract_snippet": "Primary carnitine deficiency is a rare autosomal recessive disease associated with acute hypoketotic hypoglycaemia, cardiomyopathy and sudden cardiac death. Effective treatment with carnitine supplementation is available. An 18\u2009months old boy, who presented with cardiomyopathy was diagnosed with pri...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36341172/"
+        },
+        {
+          "pmid": "15365919",
+          "title": "Perioperative enoximone infusion improves cardiac enzyme release after CABG.",
+          "authors": "Onorati F, Renzulli A, De Feo M, et al.",
+          "journal": "Journal of cardiothoracic and vascular anesthesia",
+          "year": "2004",
+          "abstract_snippet": "OBJECTIVE: To assess whether routine postoperative enoximone infusion compared with dobutamine improved clinical and biochemical results after coronary artery bypass grafting with cardiopulmonary bypass. DESIGN: Prospective nonrandomized study. Data collection was blinded to the choice of inotrope. ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15365919/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "The electrophysiologic effects of enoximone in patients with preexisting ventricular tachyarrhythmias.",
+          "year": 1989,
+          "citations": 13,
+          "url": "https://www.semanticscholar.org/paper/3e70f4c73d5754472c64c42223e3a4e9db1712de",
+          "authors": "W. Miles, J. Heger, J. D. Minardo"
+        },
+        {
+          "title": "Is Phosphodiesterase Inhibition Arrhythmogenic? Electrophysiologic Effects in Pithed Rats and in Normoxic and Hypoxic Rabbit Atria of Enoximone, a New Cardiotonic Agent",
+          "year": 1987,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/1cc2cc253fd18a8b689f6fe1bc77386bcde57bdc",
+          "authors": "E. Williams"
+        },
+        {
+          "title": "Is phosphodiesterase inhibition arrhythmogenic? Electrophysiologic effects in pithed rats and in normoxic and hypoxic rabbit atria of enoximone, a new cardiotonic agent.",
+          "year": 1987,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/26eae855f3f5aa8719cb7ae1e1e964fa7274673e",
+          "authors": "E. V. Vaughan Williams"
+        },
+        {
+          "title": "Primary carnitine deficiency is a life\u2010long disease",
+          "year": 2022,
+          "citations": 7,
+          "url": "https://www.semanticscholar.org/paper/8698c1a4b6e2903ae22adf2a6dac98c12d7d2100",
+          "authors": "Loek L Crefcoeur, Mireille C Melles, T. Bruning"
+        },
+        {
+          "title": "2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS)",
+          "year": 2021,
+          "citations": 5911,
+          "url": "https://www.semanticscholar.org/paper/6b6bb3821f69bb3aff278dc070c41b32e646d607",
+          "authors": "G. Hindricks, T. Potpara, N. Dagres"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS)",
+        "year": 2021,
+        "citations": 5911,
+        "url": "https://www.semanticscholar.org/paper/6b6bb3821f69bb3aff278dc070c41b32e646d607",
+        "authors": "G. Hindricks, T. Potpara, N. Dagres"
+      },
+      "max_citations": 5911,
+      "faers_signal": "none",
+      "faers_total_reports": 54,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Enoximone to Atrial fibrillation terms. Drug has 54 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "FLUOROMETHOLONE (1.458)",
+        "GW405833 hydrochloride (1.419)",
+        "\"\"\"4-(4-hydroxy-2,6-dimethylheptan-4-yl)-N,N-diphenyl-1H-1,2,3-triazole-1-carboxamide\"\"\" (1.404)",
+        "GDC-0980 (1.404)",
+        "Dexamethasone (1.403)"
+      ],
+      "signature_interpretation": "Enoximone was not found among the top 45 drugs that reverse the Atrial fibrillation gene signature. Top reversers: FLUOROMETHOLONE (1.458), GW405833 hydrochloride (1.419), \"\"\"4-(4-hydroxy-2,6-dimethylheptan-4-yl)-N,N-diphenyl-1H-1,2,3-triazole-1-carboxamide\"\"\" (1.404)",
+      "ai_hypothesis": "of its positive inotropic and chronotropic effects.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.6756,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Enoximone \u2014[is a therapeutic for]\u2192 MESH:D006976 \u2014[is treated by]\u2192 DB00343 \u2014[treats]\u2192 Atrial fibrillation",
+      "kg_paths_text": "\u2022 Enoximone \u2014[is a therapeutic for]\u2192 MESH:D006976 \u2014[is treated by]\u2192 DB00343 \u2014[treats]\u2192 Atrial fibrillation\n\u2022 Enoximone \u2014[is a therapeutic for]\u2192 MESH:D006976 \u2014[is treated by]\u2192 DB00343 \u2014[treats]\u2192 Atrial fibrillation\n\u2022 Enoximone \u2014[is a therapeutic for]\u2192 MESH:D006333 \u2014[is treated by]\u2192 DB00612 \u2014[treats]\u2192 Atrial fibrillation",
+      "validation_experiments": [],
+      "novelty_score": 0.48500001430511475,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "MEDIUM",
+      "confidence_reasons": [
+        "5 PubMed article(s) - limited literature",
+        "Supported by 4 independent AI pillars",
+        "Highly cited paper (5911 citations): \"2020 ESC Guidelines for the diagnosis and management of atri...\"",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.68)"
+      ],
+      "disease_entity": "Disease::MESH:D001281",
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "late-trial",
+        "confidence": "medium",
+        "rationale": "Phase-3 investigational \u2014 dose range established in Phase-2 pharmacokinetic studies; efficacy trials ongoing or recently completed.",
+        "chembl_phase": 3.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 6,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB01427",
+            "drug_name": "Amrinone",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB00261",
+            "drug_name": "Anagrelide",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB01166",
+            "drug_name": "Cilostazol",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB00235",
+            "drug_name": "Milrinone",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB13967",
+            "drug_name": "Patent Blue",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB08931",
+            "drug_name": "Riociguat",
+            "severity": "moderate"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.24500000476837158,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.5059999823570251,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.338
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Heart - Atrial Appendage"
+        ],
+        "n_genes": 318,
+        "n_expressed": 213,
+        "mean_tpm_in_tissue": 684.95,
+        "max_tpm_in_tissue": 54795.8,
+        "tissue_specificity": 0.731,
+        "context_modifier": 1.118
+      },
+      "ensemble_prob": 0.0043,
+      "ensemble_features": {
+        "kg_score": 0.8524,
+        "degree_penalty": 1.0,
+        "n_drug_targets": 5,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 7.3512
+      },
+      "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
       }
     },
     {
@@ -2360,8 +3382,8 @@
       "admet_score": 0.5969,
       "admet_flags": "clean",
       "primekg_score": 0.2486,
-      "dti_score": 0.4087,
-      "dti_best_target": "ZIC3",
+      "dti_score": 0.5711,
+      "dti_best_target": "HMGB1",
       "kg_group_score": 0.2524,
       "structural_group_score": 0.9183,
       "network_group_score": 0.5410000085830688,
@@ -2586,6 +3608,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.75, 1 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D001281",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2712,15 +3735,7 @@
         "tissue_specificity": 0.673,
         "context_modifier": 0.991
       },
-      "docking": {
-        "kcal_per_mol": -10.92,
-        "target_symbol": "ADRB1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D001281",
-      "ensemble_prob": 0.8879,
+      "ensemble_prob": 0.7951,
       "ensemble_features": {
         "kg_score": 0.9976,
         "degree_penalty": 0.7599,
@@ -2729,954 +3744,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 3.2581
       },
-      "ensemble_rank": 2,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Encainide",
-      "drug_id": "DB01228",
-      "disease_name": "Atrial fibrillation",
-      "combined_score": 0.5026000142097473,
-      "pillars_hit": 4,
-      "transe_rank": 37,
-      "transe_score": -10.4546,
-      "pykeen_score": -12.119,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.875,
-      "proximity_distance": 0.5,
-      "admet_score": 0.6077,
-      "admet_flags": "hERG=0.94",
-      "primekg_score": 0.2453,
-      "dti_score": 0.4916,
-      "dti_best_target": "UTS2",
-      "kg_group_score": 0.2912,
-      "structural_group_score": 0.4916,
-      "network_group_score": 0.7182000279426575,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.9365,
-      "admet_multiplier": 0.9215,
-      "efficacy_score": 0.5454000234603882,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 1,
-      "shared_targets": [
-        "SCN5A"
-      ],
-      "pubmed_total": 38,
-      "pubmed_treatment_total": 37,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "3107989",
-          "title": "Flecainide and encainide.",
-          "authors": "Furlanello F, Vergara G, Bettini R, et al.",
-          "journal": "European heart journal",
-          "year": "1987",
-          "abstract_snippet": "Flecainide and encainide (class IC) are presently under clinical evaluation in Italy. They prolong the duration of the QRS but not the period of ventricular repolarisation: the prolongation of QT is due solely to the prolongation of the Q-J. Flecainide and encainide are extremely powerful and are su...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/3107989/",
-          "total_results": 38
-        },
-        {
-          "pmid": "40289259",
-          "title": "Propafenone- vs. amiodarone-associated adverse cardiac outcomes in patients with atrial fibrillation and heart failure.",
-          "authors": "Lin YC, Chen BL, Hsu CY, et al.",
-          "journal": "British journal of clinical pharmacology",
-          "year": "2025",
-          "abstract_snippet": "AIMS: Clinical trials have shown an increased risk of death in patients with recent myocardial infarction who received antiarrhythmic drugs such as flecainide, encainide or moricizine, especially in the presence of associated structural heart disease such as cardiac dysfunction. This study aimed to ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40289259/"
-        },
-        {
-          "pmid": "1954691",
-          "title": "Operations for atrial fibrillation.",
-          "authors": "Cox JL, Boineau JP, Schuessler RB, et al.",
-          "journal": "Clinical cardiology",
-          "year": "1991",
-          "abstract_snippet": "Atrial fibrillation is the most common of all sustained cardiac arrhythmias, yet it has no effective medical or surgical therapy. During the past decade, multipoint computerized electrophysiological mapping systems were used to map both experimental and human atrial fibrillation. On the basis of the...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/1954691/"
-        },
-        {
-          "pmid": "3144164",
-          "title": "Encainide for atrial fibrillation associated with Wolff-Parkinson-White syndrome.",
-          "authors": "Rinkenberger RL, Naccarelli GV, Miles WM, et al.",
-          "journal": "The American journal of cardiology",
-          "year": "1988",
-          "abstract_snippet": "Thirty-six patients with a history of atrial fibrillation and Wolff-Parkinson-White syndrome were treated with oral encainide, 175 +/- 44 mg/day, after undergoing baseline drug-free electrophysiologic studies. The mean age was 38 +/- 15 years, with structural heart disease present in only 3 patients...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/3144164/"
-        },
-        {
-          "pmid": "36908162",
-          "title": "Flecainide in clinical practice.",
-          "authors": "Basza M, Maciejewski C, Bojanowicz W, et al.",
-          "journal": "Cardiology journal",
-          "year": "2023",
-          "abstract_snippet": "Flecainide, similar to encainide and propafenone, is IC class antiarrhythmic, inhibiting Nav1.5 sodium channels in heart muscle cells and modulates cardiac conduction. Despite its over 40-year presence in clinical practice, strong evidence and well-known safety profile, flecainide distribution in Eu...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36908162/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Propafenone\u2010 vs. amiodarone\u2010associated adverse cardiac outcomes in patients with atrial fibrillation and heart failure",
-          "year": 2025,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/62b46f203b0457f7564ca9c3659b28b3e82e2139",
-          "authors": "Yi-Cheng Lin, Bi-Li Chen, Chien-Yi Hsu"
-        },
-        {
-          "title": "Do class IC antiarrhythmics drugs need to be cast aside in atrial fibrillation patients with minimal coronary artery disease?",
-          "year": 2022,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/6ad6951c44f2fd0d1f11e85fe724c733d3bfc67a",
-          "authors": "G. Naccarelli, G. Burkman, Sarah K. Hussain"
-        },
-        {
-          "title": "Electrophysiologic and clinical effects of intravenous and oral encainide in patients with Wolff-Parkinson-White syndrome and paroxysmal atrial fibrillation.",
-          "year": 1987,
-          "citations": 8,
-          "url": "https://www.semanticscholar.org/paper/8cd8ebc14657bfd198915bf7f15045e62546a7aa",
-          "authors": "M. Chimienti, M. Moizi, J. Salerno"
-        },
-        {
-          "title": "Encainide for atrial fibrillation associated with Wolff-Parkinson-White syndrome.",
-          "year": 1988,
-          "citations": 6,
-          "url": "https://www.semanticscholar.org/paper/5a956971c7d7a86be8e571c34ea3080c2a4118c2",
-          "authors": "R. Rinkenberger, G. Naccarelli, W. Miles"
-        },
-        {
-          "title": "The use of encainide in atrial fibrillation",
-          "year": 1984,
-          "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/11fc601bf26e15dc7cfd669c19534489cdc4001f",
-          "authors": "S. Vlay, S. Vlay, P. R. Reid"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Electrophysiologic and clinical effects of intravenous and oral encainide in patients with Wolff-Parkinson-White syndrome and paroxysmal atrial fibrillation.",
-        "year": 1987,
-        "citations": 8,
-        "url": "https://www.semanticscholar.org/paper/8cd8ebc14657bfd198915bf7f15045e62546a7aa",
-        "authors": "M. Chimienti, M. Moizi, J. Salerno"
-      },
-      "max_citations": 8,
-      "faers_signal": "none",
-      "faers_total_reports": 3,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Encainide to Atrial fibrillation terms. Drug has 3 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "FLUOROMETHOLONE (1.458)",
-        "GW405833 hydrochloride (1.419)",
-        "\"\"\"4-(4-hydroxy-2,6-dimethylheptan-4-yl)-N,N-diphenyl-1H-1,2,3-triazole-1-carboxamide\"\"\" (1.404)",
-        "GDC-0980 (1.404)",
-        "Dexamethasone (1.403)"
-      ],
-      "signature_interpretation": "Encainide was not found among the top 45 drugs that reverse the Atrial fibrillation gene signature. Top reversers: FLUOROMETHOLONE (1.458), GW405833 hydrochloride (1.419), \"\"\"4-(4-hydroxy-2,6-dimethylheptan-4-yl)-N,N-diphenyl-1H-1,2,3-triazole-1-carboxamide\"\"\" (1.404)",
-      "ai_hypothesis": "of its unique mechanism of action.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.9365,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "Encainide \u2014[is a therapeutic for]\u2192 Atrial fibrillation",
-      "kg_paths_text": "\u2022 Encainide \u2014[is a therapeutic for]\u2192 Atrial fibrillation\n\u2022 Encainide \u2014[is a therapeutic for]\u2192 MESH:D018879 \u2014[is treated by]\u2192 DB00612 \u2014[treats]\u2192 Atrial fibrillation\n\u2022 Encainide \u2014[is a therapeutic for]\u2192 MESH:D018879 \u2014[is treated by]\u2192 DB00612 \u2014[treats]\u2192 Atrial fibrillation",
-      "validation_experiments": [],
-      "novelty_score": 0.5130000114440918,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": true,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "MEDIUM",
-      "confidence_reasons": [
-        "38 PubMed articles found",
-        "Supported by 4 independent AI pillars",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.94, 1 genetic targets)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 655,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00502",
-            "drug_name": "Haloperidol",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00227",
-            "drug_name": "Lovastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00338",
-            "drug_name": "Omeprazole",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00641",
-            "drug_name": "Simvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB14068",
-            "drug_name": "(+)-Niguldipine",
-            "severity": "moderate"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
-        "pharmgkb": []
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.3140000104904175,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.503000020980835,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.691
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Heart - Atrial Appendage"
-        ],
-        "n_genes": 1,
-        "n_expressed": 1,
-        "mean_tpm_in_tissue": 36.13,
-        "max_tpm_in_tissue": 36.13,
-        "tissue_specificity": 1.0,
-        "context_modifier": 1.111
-      },
+      "ensemble_rank": 4,
       "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D001281",
-      "ensemble_prob": 0.6551,
-      "ensemble_features": {
-        "kg_score": 0.9904,
-        "degree_penalty": 0.8208,
-        "n_drug_targets": 0,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 4.625
-      },
-      "ensemble_rank": 5,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Enoximone",
-      "drug_id": "DB04880",
-      "disease_name": "Atrial fibrillation",
-      "combined_score": 0.499099999666214,
-      "pillars_hit": 4,
-      "transe_rank": 141,
-      "transe_score": -10.8726,
-      "pykeen_score": -12.0782,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.5,
-      "proximity_distance": 2.0,
-      "admet_score": 0.5738,
-      "admet_flags": "DILI=0.92",
-      "primekg_score": 0.2538,
-      "dti_score": 0.9601,
-      "dti_best_target": "TLR2",
-      "kg_group_score": 0.2857,
-      "structural_group_score": 0.9601,
-      "network_group_score": 0.5,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.6756,
-      "admet_multiplier": 0.9148,
-      "efficacy_score": 0.5455999970436096,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 5,
-      "pubmed_treatment_total": 4,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "8091823",
-          "title": "[Neurohumoral and hemodynamic effects in combination therapy of enoximone and dopamine].",
-          "authors": "Mitrovic V, Neuzner J, Opper H, et al.",
-          "journal": "Zeitschrift fur Kardiologie",
-          "year": "1994",
-          "abstract_snippet": "Twelve patients with severe heart failure (NYHA class III-IV) were investigated by intraindividual comparison for the hemodynamic and neurohumoral effects of dopamine (3 and 6 micrograms/kg/min), enoximone (8 micrograms/kg/min), and the combination of both medications (dopamine 3 micrograms/kg/min+e...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/8091823/",
-          "total_results": 5
-        },
-        {
-          "pmid": "2960699",
-          "title": "Is phosphodiesterase inhibition arrhythmogenic? Electrophysiologic effects in pithed rats and in normoxic and hypoxic rabbit atria of enoximone, a new cardiotonic agent.",
-          "authors": "Vaughan Williams EM",
-          "journal": "Journal of clinical pharmacology",
-          "year": "1987",
-          "abstract_snippet": "The positive inotropic and chronotropic actions of enoximone were confirmed. At concentrations within the clinical range, enoximone prolonged the chronotropic and hypotensive action of isoproterenol in pithed rats. Very high doses of both enoximone and isoproterenol caused ventricular fibrillation i...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/2960699/"
-        },
-        {
-          "pmid": "16227146",
-          "title": "Clinical trials update from the European Society of Cardiology meeting 2005: CARE-HF extension study, ESSENTIAL, CIBIS-III, S-ICD, ISSUE-2, STRIDE-2, SOFA, IMAGINE, PREAMI, SIRIUS-II and ACTIVE.",
-          "authors": "Cleland JG, Coletta AP, Lammiman M, et al.",
-          "journal": "European journal of heart failure",
-          "year": "2005",
-          "abstract_snippet": "This article provides information and a commentary on trials presented at the European Society of Cardiology meeting held in September 2005, relevant to the pathophysiology, prevention and treatment of heart failure. All reports should be considered as preliminary data, as analyses may change in the...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/16227146/"
-        },
-        {
-          "pmid": "36341172",
-          "title": "Primary carnitine deficiency is a life-long disease.",
-          "authors": "Crefcoeur LL, Melles MC, Bruning TA, et al.",
-          "journal": "JIMD reports",
-          "year": "2022",
-          "abstract_snippet": "Primary carnitine deficiency is a rare autosomal recessive disease associated with acute hypoketotic hypoglycaemia, cardiomyopathy and sudden cardiac death. Effective treatment with carnitine supplementation is available. An 18\u2009months old boy, who presented with cardiomyopathy was diagnosed with pri...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36341172/"
-        },
-        {
-          "pmid": "15365919",
-          "title": "Perioperative enoximone infusion improves cardiac enzyme release after CABG.",
-          "authors": "Onorati F, Renzulli A, De Feo M, et al.",
-          "journal": "Journal of cardiothoracic and vascular anesthesia",
-          "year": "2004",
-          "abstract_snippet": "OBJECTIVE: To assess whether routine postoperative enoximone infusion compared with dobutamine improved clinical and biochemical results after coronary artery bypass grafting with cardiopulmonary bypass. DESIGN: Prospective nonrandomized study. Data collection was blinded to the choice of inotrope. ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/15365919/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "The electrophysiologic effects of enoximone in patients with preexisting ventricular tachyarrhythmias.",
-          "year": 1989,
-          "citations": 13,
-          "url": "https://www.semanticscholar.org/paper/3e70f4c73d5754472c64c42223e3a4e9db1712de",
-          "authors": "W. Miles, J. Heger, J. D. Minardo"
-        },
-        {
-          "title": "Is Phosphodiesterase Inhibition Arrhythmogenic? Electrophysiologic Effects in Pithed Rats and in Normoxic and Hypoxic Rabbit Atria of Enoximone, a New Cardiotonic Agent",
-          "year": 1987,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/1cc2cc253fd18a8b689f6fe1bc77386bcde57bdc",
-          "authors": "E. Williams"
-        },
-        {
-          "title": "Is phosphodiesterase inhibition arrhythmogenic? Electrophysiologic effects in pithed rats and in normoxic and hypoxic rabbit atria of enoximone, a new cardiotonic agent.",
-          "year": 1987,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/26eae855f3f5aa8719cb7ae1e1e964fa7274673e",
-          "authors": "E. V. Vaughan Williams"
-        },
-        {
-          "title": "Primary carnitine deficiency is a life\u2010long disease",
-          "year": 2022,
-          "citations": 7,
-          "url": "https://www.semanticscholar.org/paper/8698c1a4b6e2903ae22adf2a6dac98c12d7d2100",
-          "authors": "Loek L Crefcoeur, Mireille C Melles, T. Bruning"
-        },
-        {
-          "title": "2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS)",
-          "year": 2021,
-          "citations": 5911,
-          "url": "https://www.semanticscholar.org/paper/6b6bb3821f69bb3aff278dc070c41b32e646d607",
-          "authors": "G. Hindricks, T. Potpara, N. Dagres"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS)",
-        "year": 2021,
-        "citations": 5911,
-        "url": "https://www.semanticscholar.org/paper/6b6bb3821f69bb3aff278dc070c41b32e646d607",
-        "authors": "G. Hindricks, T. Potpara, N. Dagres"
-      },
-      "max_citations": 5911,
-      "faers_signal": "none",
-      "faers_total_reports": 54,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Enoximone to Atrial fibrillation terms. Drug has 54 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "FLUOROMETHOLONE (1.458)",
-        "GW405833 hydrochloride (1.419)",
-        "\"\"\"4-(4-hydroxy-2,6-dimethylheptan-4-yl)-N,N-diphenyl-1H-1,2,3-triazole-1-carboxamide\"\"\" (1.404)",
-        "GDC-0980 (1.404)",
-        "Dexamethasone (1.403)"
-      ],
-      "signature_interpretation": "Enoximone was not found among the top 45 drugs that reverse the Atrial fibrillation gene signature. Top reversers: FLUOROMETHOLONE (1.458), GW405833 hydrochloride (1.419), \"\"\"4-(4-hydroxy-2,6-dimethylheptan-4-yl)-N,N-diphenyl-1H-1,2,3-triazole-1-carboxamide\"\"\" (1.404)",
-      "ai_hypothesis": "of its positive inotropic and chronotropic effects.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.6756,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "Enoximone \u2014[is a therapeutic for]\u2192 MESH:D006976 \u2014[is treated by]\u2192 DB00343 \u2014[treats]\u2192 Atrial fibrillation",
-      "kg_paths_text": "\u2022 Enoximone \u2014[is a therapeutic for]\u2192 MESH:D006976 \u2014[is treated by]\u2192 DB00343 \u2014[treats]\u2192 Atrial fibrillation\n\u2022 Enoximone \u2014[is a therapeutic for]\u2192 MESH:D006976 \u2014[is treated by]\u2192 DB00343 \u2014[treats]\u2192 Atrial fibrillation\n\u2022 Enoximone \u2014[is a therapeutic for]\u2192 MESH:D006333 \u2014[is treated by]\u2192 DB00612 \u2014[treats]\u2192 Atrial fibrillation",
-      "validation_experiments": [],
-      "novelty_score": 0.4790000021457672,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "MEDIUM",
-      "confidence_reasons": [
-        "5 PubMed article(s) - limited literature",
-        "Supported by 4 independent AI pillars",
-        "Highly cited paper (5911 citations): \"2020 ESC Guidelines for the diagnosis and management of atri...\"",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.68)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "likely",
-        "dose_range": "late-trial",
-        "confidence": "medium",
-        "rationale": "Phase-3 investigational \u2014 dose range established in Phase-2 pharmacokinetic studies; efficacy trials ongoing or recently completed.",
-        "chembl_phase": 3.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 6,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB01427",
-            "drug_name": "Amrinone",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB00261",
-            "drug_name": "Anagrelide",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB01166",
-            "drug_name": "Cilostazol",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB00235",
-            "drug_name": "Milrinone",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB13967",
-            "drug_name": "Patent Blue",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB08931",
-            "drug_name": "Riociguat",
-            "severity": "moderate"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
-        "pharmgkb": []
-      },
-      "triangulation": {
-        "n_axes_agree": 1,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": false
-        },
-        "triangulation_score": 0.24199999868869781,
-        "label": "kg-only",
-        "axis_values": {
-          "kg": 0.49900001287460327,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.338
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Heart - Atrial Appendage"
-        ],
-        "n_genes": 318,
-        "n_expressed": 213,
-        "mean_tpm_in_tissue": 684.95,
-        "max_tpm_in_tissue": 54795.8,
-        "tissue_specificity": 0.731,
-        "context_modifier": 1.118
-      },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D001281",
-      "ensemble_prob": 0.0029,
-      "ensemble_features": {
-        "kg_score": 0.8524,
-        "degree_penalty": 1.0,
-        "n_drug_targets": 5,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 7.3512
-      },
-      "ensemble_rank": 10,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Testosterone",
-      "drug_id": "DB00624",
-      "disease_name": "Atrial fibrillation",
-      "combined_score": 0.4987,
-      "pillars_hit": 4,
-      "transe_rank": 167,
-      "transe_score": -10.9313,
-      "pykeen_score": 0,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0.9185,
-      "mol_emb_similar_to": "Ajmaline",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.625,
-      "proximity_distance": 1.5,
-      "admet_score": 0.7521,
-      "admet_flags": "clean",
-      "primekg_score": 0.25,
-      "dti_score": 0,
-      "dti_best_target": "",
-      "kg_group_score": 0.1502,
-      "structural_group_score": 0.9185,
-      "network_group_score": 0.46709999442100525,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.8559,
-      "admet_multiplier": 0.9504,
-      "efficacy_score": 0.5247,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 18,
-      "shared_targets": [
-        "ADIPOQ",
-        "CACNA1C",
-        "EGFR",
-        "ESR2",
-        "FBXO32",
-        "IGF1",
-        "IL10",
-        "INS",
-        "LEP",
-        "MIF",
-        "NR3C1",
-        "NR3C2",
-        "P2RY12",
-        "PPARG",
-        "SELENBP1",
-        "SULT2A1",
-        "TNF",
-        "TNFRSF11B"
-      ],
-      "pubmed_total": 307,
-      "pubmed_treatment_total": 147,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "37326322",
-          "title": "Cardiovascular Safety of Testosterone-Replacement Therapy.",
-          "authors": "Lincoff AM, Bhasin S, Flevaris P, et al.",
-          "journal": "The New England journal of medicine",
-          "year": "2023",
-          "abstract_snippet": "BACKGROUND: The cardiovascular safety of testosterone-replacement therapy in middle-aged and older men with hypogonadism has not been determined. METHODS: In a multicenter, randomized, double-blind, placebo-controlled, noninferiority trial, we enrolled 5246 men 45 to 80 years of age who had preexist...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37326322/",
-          "total_results": 307
-        },
-        {
-          "pmid": "39978846",
-          "title": "Benefits of Testosterone Replacement Therapy in Hypogonadal Males.",
-          "authors": "Blackwell KM, Buckingham H, Paul KK, et al.",
-          "journal": "Journal of the American Board of Family Medicine : JABFM",
-          "year": "2024",
-          "abstract_snippet": "IMPORTANCE: Hypogonadism is defined by consistently low serum testosterone levels in conjunction with clinical symptoms. Testosterone replacement therapy (TRT) can be used to achieve physiologic levels of testosterone. Testosterone deficiency is associated with increased mortality and poorer health ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39978846/"
-        },
-        {
-          "pmid": "27644703",
-          "title": "Klinefelter syndrome (KS): genetics, clinical phenotype and hypogonadism.",
-          "authors": "Bonomi M, Rochira V, Pasquali D, et al.",
-          "journal": "Journal of endocrinological investigation",
-          "year": "2017",
-          "abstract_snippet": "Klinefelter Syndrome (KS) is characterized by an extreme heterogeneity in its clinical and genetic presentation. The relationship between clinical phenotype and genetic background has been partially disclosed; nevertheless, physicians are aware that several aspects concerning this issue are far to b...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/27644703/"
-        },
-        {
-          "pmid": "39487489",
-          "title": "Association of testosterone replacement therapy with atrial fibrillation and acute kidney injury.",
-          "authors": "Greenberg DR, Kohn TP, Asanad K, et al.",
-          "journal": "The journal of sexual medicine",
-          "year": "2024",
-          "abstract_snippet": "BACKGROUND: Secondary analyses of the Testosterone Replacement Therapy for Assessment of Long-Term Vascular Events and Efficacy Response in Hypogonadal Men (TRAVERSE) trial revealed significantly higher rates of new-onset atrial fibrillation (AF) and acute kidney injury (AKI) in the testosterone rep...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39487489/"
-        },
-        {
-          "pmid": "29671886",
-          "title": "Serum androgens and risk of atrial fibrillation in older men: The Cardiovascular Health Study.",
-          "authors": "Rosenberg MA, Shores MM, Matsumoto AM, et al.",
-          "journal": "Clinical cardiology",
-          "year": "2018",
-          "abstract_snippet": "BACKGROUND: Decline in serum androgens is common among older men and has been associated with cardiovascular disease, although its role in risk of atrial fibrillation (AF) has not been well defined. HYPOTHESIS: Low serum androgens are associated with an increased risk of AF. METHODS: We examined the...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29671886/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Effect of estrogen and testosterone on cardiac electrophysiology and atrial fibrillation.",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/be9e4b1ba425a2e802be2249707eca71abf436a6",
-          "authors": "A. Venkatakrishnan, D. Srinivasan, Anneesa Malik"
-        },
-        {
-          "title": "Testosterone therapy and the risk of atrial fibrillation, venous thromboembolism and cardiovascular events in cis men with hypogonadism and trans men.",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/327b2dbdebfba40b07b45550be0c77fd2dc70458",
-          "authors": "F. Bonnet, Patricia Vaduva, B. Balkau"
-        },
-        {
-          "title": "SAT-703 The Intersection of Obesity, Testosterone Therapy, and Atrial Fibrillation: A Case Report",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/2b033a9fb6acbfe808ebd5d75da3c83314a71e17",
-          "authors": "M. Sheahan, Lalitha Ranga, Atieh D Ashkezari"
-        },
-        {
-          "title": "Testosterone and the risk of incident atrial fibrillation in older men: further analysis of the ASPREE study",
-          "year": 2024,
-          "citations": 12,
-          "url": "https://www.semanticscholar.org/paper/6150866dc5bb2bc3ad87b4965a50156c4746d208",
-          "authors": "C. Tran, B. Yeap, J. Ball"
-        },
-        {
-          "title": "Testosterone and atrial fibrillation: does the dose make the poison?",
-          "year": 2025,
-          "citations": 2,
-          "url": "https://www.semanticscholar.org/paper/ac023105c19530590a818d8bf362f29c555d18df",
-          "authors": "F. Mason, A. Liutkute, N. Voigt"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Testosterone and the risk of incident atrial fibrillation in older men: further analysis of the ASPREE study",
-        "year": 2024,
-        "citations": 12,
-        "url": "https://www.semanticscholar.org/paper/6150866dc5bb2bc3ad87b4965a50156c4746d208",
-        "authors": "C. Tran, B. Yeap, J. Ball"
-      },
-      "max_citations": 12,
-      "faers_signal": "strong",
-      "faers_total_reports": 30252,
-      "faers_cooccurrences": 361,
-      "faers_interpretation": "361 FAERS reports mention both Testosterone and Atrial fibrillation-related terms (1.2% of all Testosterone reports). This suggests real-world clinical association.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "FLUOROMETHOLONE (1.458)",
-        "GW405833 hydrochloride (1.419)",
-        "\"\"\"4-(4-hydroxy-2,6-dimethylheptan-4-yl)-N,N-diphenyl-1H-1,2,3-triazole-1-carboxamide\"\"\" (1.404)",
-        "GDC-0980 (1.404)",
-        "Dexamethasone (1.403)"
-      ],
-      "signature_interpretation": "Testosterone was not found among the top 45 drugs that reverse the Atrial fibrillation gene signature. Top reversers: FLUOROMETHOLONE (1.458), GW405833 hydrochloride (1.419), \"\"\"4-(4-hydroxy-2,6-dimethylheptan-4-yl)-N,N-diphenyl-1H-1,2,3-triazole-1-carboxamide\"\"\" (1.404)",
-      "ai_hypothesis": "of its anti-arrhythmic properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.8559,
-      "mr_genetic_targets": 6,
-      "mechanistic_hypothesis": "Testosterone \u2014[palliates]\u2192 DOID:1612 \u2014[is treated by]\u2192 DB00997 \u2014[is a therapeutic for]\u2192 Atrial fibrillation",
-      "kg_paths_text": "\u2022 Testosterone \u2014[palliates]\u2192 DOID:1612 \u2014[is treated by]\u2192 DB00997 \u2014[is a therapeutic for]\u2192 Atrial fibrillation\n\u2022 Testosterone \u2014[downregulates]\u2192 gene-5111 \u2014[is a target of]\u2192 DB00945 \u2014[is a therapeutic for]\u2192 Atrial fibrillation\n\u2022 Testosterone \u2014[downregulates]\u2192 gene-4609 \u2014[is a target of]\u2192 DB00945 \u2014[is a therapeutic for]\u2192 Atrial fibrillation",
-      "validation_experiments": [],
-      "novelty_score": 0.359,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "307 PubMed articles on this drug-disease pair",
-        "Supported by 4 independent AI pillars",
-        "Strong FAERS signal: 361 adverse event reports link drug to disease (30252 total reports)",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.86, 6 genetic targets)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1511,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (UGT1A4 / UGT1A4*1a, UGT1A4*3a)",
-        "cpic": [],
-        "pharmgkb": [
-          {
-            "gene": "UGT1A4",
-            "variant": "UGT1A4*1a, UGT1A4*3a",
-            "level": "3",
-            "phenotype_category": "Metabolism/PK",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1447980857"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 3,
-        "axes": {
-          "kg": true,
-          "docking": true,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.629,
-        "label": "silver-standard",
-        "axis_values": {
-          "kg": 0.499,
-          "docking": 0.847,
-          "pharos": 0.0,
-          "literature": 1.0
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Heart - Atrial Appendage"
-        ],
-        "n_genes": 18,
-        "n_expressed": 10,
-        "mean_tpm_in_tissue": 6.39,
-        "max_tpm_in_tissue": 37.23,
-        "tissue_specificity": 0.027,
-        "context_modifier": 0.931
-      },
-      "docking": {
-        "kcal_per_mol": -10.16,
-        "target_symbol": "CACNA1C",
+        "kcal_per_mol": -10.92,
+        "target_symbol": "ADRB1",
         "source": "chembl_bioactivity_proxy",
         "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
         "hit": true
       },
-      "disease_entity": "Disease::MESH:D001281",
-      "ensemble_prob": 0.065,
-      "ensemble_features": {
-        "kg_score": 0.9815,
-        "degree_penalty": 0.7473,
-        "n_drug_targets": 24,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 5.2781
-      },
-      "ensemble_rank": 8,
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -3685,12 +3760,12 @@
       }
     }
   ],
+  "disease_entity": "Disease::MESH:D001281",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
     "n_disease_genes": 326,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
-  },
-  "disease_entity": "Disease::MESH:D001281",
-  "ensemble_version": "v5",
-  "ensemble_model_path": "data/models/ensemble_v5.pkl"
+  }
 }

@@ -1,8 +1,8 @@
 {
   "disease": "Chronic kidney disease",
   "status": "completed",
-  "timestamp": "2026-04-19T22:45:17.196188",
-  "elapsed_seconds": 777.4,
+  "timestamp": "2026-05-08T01:22:44.059355",
+  "elapsed_seconds": 122.9,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -36,7 +36,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2579,
       "dti_score": 1.0,
-      "dti_best_target": "APOC3",
+      "dti_best_target": "ABCC3",
       "kg_group_score": 0.1029,
       "structural_group_score": 1.0,
       "network_group_score": 0.6187000274658203,
@@ -190,25 +190,25 @@
       "clinical_trials_total": 2,
       "clinical_trials": [
         {
-          "nct_id": "NCT02287272",
-          "title": "Drug-drug Interaction Study of CHF5993 With Cimetidine",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "25",
-          "url": "https://clinicaltrials.gov/study/NCT02287272"
-        },
-        {
           "nct_id": "NCT05391451",
           "title": "New Approach of Loco Regional Analgesia in Kidney Transplant",
           "status": "COMPLETED",
           "phase": "NA",
           "enrollment": "48",
           "url": "https://clinicaltrials.gov/study/NCT05391451"
+        },
+        {
+          "nct_id": "NCT02287272",
+          "title": "Drug-drug Interaction Study of CHF5993 With Cimetidine",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "25",
+          "url": "https://clinicaltrials.gov/study/NCT02287272"
         }
       ],
       "trial_phases": {
-        "PHASE1": 1,
-        "NA": 1
+        "NA": 1,
+        "PHASE1": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -220,14 +220,24 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.52)"
       ],
+      "disease_entity": "Disease::MESH:D051436",
       "dose_plausibility": {
-        "plausibility": "yes",
+        "plausibility": "uncertain",
         "dose_range": "clinical",
         "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect. HOWEVER, at typical plasma concentrations the drug does NOT reach inhibitory levels for ABCC3 (Cmax/IC50 = 0.01x; need \u22651x for any effect, \u226510x for confident target engagement).",
         "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
+        "target_affinity": {
+          "cmax_over_ic50_ratio": 0.01,
+          "median_ic50_nM": 133000.0,
+          "n_activities": 1,
+          "activity_types": [
+            "IC50"
+          ],
+          "mechanism_feasible": "no",
+          "cmax_source": "generic fallback 1000 nM (per-drug Cmax TBD)"
+        },
+        "stage": 2
       },
       "ddi_warnings": {
         "n_interactions": 1670,
@@ -321,8 +331,7 @@
         "tissue_specificity": 0.553,
         "context_modifier": 1.03
       },
-      "disease_entity": "Disease::MESH:D051436",
-      "ensemble_prob": 0.3903,
+      "ensemble_prob": 0.3566,
       "ensemble_features": {
         "kg_score": 0.9906,
         "degree_penalty": 0.7619,
@@ -381,8 +390,8 @@
       "admet_score": 1.0,
       "admet_flags": "hERG=0.92",
       "primekg_score": 0.2569,
-      "dti_score": 0.3001,
-      "dti_best_target": "NPHS1",
+      "dti_score": 0.3242,
+      "dti_best_target": "PGF",
       "kg_group_score": 0.1827,
       "structural_group_score": 0.9446,
       "network_group_score": 0.6908000111579895,
@@ -577,6 +586,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.73, 4 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D051436",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -678,8 +688,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.981
       },
-      "disease_entity": "Disease::MESH:D051436",
-      "ensemble_prob": 0.0608,
+      "ensemble_prob": 0.0711,
       "ensemble_features": {
         "kg_score": 0.9717,
         "degree_penalty": 0.7779,
@@ -732,8 +741,8 @@
       "admet_score": 0.7109,
       "admet_flags": "clean",
       "primekg_score": 0.2524,
-      "dti_score": 0.5448,
-      "dti_best_target": "NPHS1",
+      "dti_score": 0.5926,
+      "dti_best_target": "PGF",
       "kg_group_score": 0.3922,
       "structural_group_score": 0.9403,
       "network_group_score": 0.597599983215332,
@@ -910,20 +919,28 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT03213158",
-          "title": "Ixazomib for Desensitization",
+          "nct_id": "NCT00275509",
+          "title": "Induction Therapy Study in Live Donor Kidney Transplant Recipients With a Positive Crossmatch",
           "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "10",
-          "url": "https://clinicaltrials.gov/study/NCT03213158"
+          "phase": "PHASE3",
+          "enrollment": "56",
+          "url": "https://clinicaltrials.gov/study/NCT00275509"
         },
         {
-          "nct_id": "NCT02424851",
-          "title": "Optimising Renal Outcome in Myeloma Renal Failure",
+          "nct_id": "NCT06389617",
+          "title": "Different Doses of Intravenous Administered Dexamethasone Effecting Brachial Plexus Supraclavicular Block",
+          "status": "UNKNOWN",
+          "phase": "NA",
+          "enrollment": "50",
+          "url": "https://clinicaltrials.gov/study/NCT06389617"
+        },
+        {
+          "nct_id": "NCT00331162",
+          "title": "Study of Alemtuzumab Versus Anti-thymocyte Globulin to Help Prevent Rejection in Kidney and Pancreas Transplantation",
           "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "31",
-          "url": "https://clinicaltrials.gov/study/NCT02424851"
+          "phase": "PHASE4",
+          "enrollment": "222",
+          "url": "https://clinicaltrials.gov/study/NCT00331162"
         },
         {
           "nct_id": "NCT05568602",
@@ -940,22 +957,14 @@
           "phase": "PHASE3",
           "enrollment": "120",
           "url": "https://clinicaltrials.gov/study/NCT04654507"
-        },
-        {
-          "nct_id": "NCT06190158",
-          "title": "Subclinical Primary Aldosteronism in Diabetes At-Risk for Kidney Disease",
-          "status": "RECRUITING",
-          "phase": "EARLY_PHASE1",
-          "enrollment": "125",
-          "url": "https://clinicaltrials.gov/study/NCT06190158"
         }
       ],
       "trial_phases": {
-        "PHASE2": 2,
         "PHASE3": 3,
-        "EARLY_PHASE1": 1,
+        "NA": 1,
         "PHASE4": 2,
-        "NA": 1
+        "PHASE2": 2,
+        "EARLY_PHASE1": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -968,6 +977,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.69)"
       ],
+      "disease_entity": "Disease::MESH:D051436",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -1105,8 +1115,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.96
       },
-      "disease_entity": "Disease::MESH:D051436",
-      "ensemble_prob": 0.9624,
+      "ensemble_prob": 0.9914,
       "ensemble_features": {
         "kg_score": 0.9992,
         "degree_penalty": 0.736,
@@ -1154,7 +1163,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2639,
       "dti_score": 1.0,
-      "dti_best_target": "APOC3",
+      "dti_best_target": "ABCC3",
       "kg_group_score": 0.3157,
       "structural_group_score": 1.0,
       "network_group_score": 0.5720999836921692,
@@ -1384,6 +1393,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.54)"
       ],
+      "disease_entity": "Disease::MESH:D051436",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1547,8 +1557,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.984
       },
-      "disease_entity": "Disease::MESH:D051436",
-      "ensemble_prob": 0.0547,
+      "ensemble_prob": 0.0213,
       "ensemble_features": {
         "kg_score": 0.979,
         "degree_penalty": 0.7507,
@@ -1595,8 +1604,8 @@
       "admet_score": 1.0,
       "admet_flags": "clean",
       "primekg_score": 0.2515,
-      "dti_score": 0.3551,
-      "dti_best_target": "CYBB",
+      "dti_score": 0.4139,
+      "dti_best_target": "TKT",
       "kg_group_score": 0.2749,
       "structural_group_score": 0.7442,
       "network_group_score": 0.6431000232696533,
@@ -1742,22 +1751,6 @@
       "clinical_trials_total": 6,
       "clinical_trials": [
         {
-          "nct_id": "NCT07328113",
-          "title": "Interleukin-6 and Thyroid Dysfunction in Hemodialysis Patients",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "65",
-          "url": "https://clinicaltrials.gov/study/NCT07328113"
-        },
-        {
-          "nct_id": "NCT05451472",
-          "title": "Evluation of Thyroid Functions in Hemodialysis Childern in Sohag University Hospital",
-          "status": "UNKNOWN",
-          "phase": "NA",
-          "enrollment": "39",
-          "url": "https://clinicaltrials.gov/study/NCT05451472"
-        },
-        {
           "nct_id": "NCT06394544",
           "title": "Effects of Brazil Nut Supplementation in Patients With Chronic Kidney Disease Undergoing Conservative Treatment",
           "status": "NOT_YET_RECRUITING",
@@ -1774,12 +1767,28 @@
           "url": "https://clinicaltrials.gov/study/NCT07017556"
         },
         {
+          "nct_id": "NCT03579537",
+          "title": "Effects of Exercise on Physical Fitness Among Hemodialysis Patients With Chronic Kidney Disease",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "70",
+          "url": "https://clinicaltrials.gov/study/NCT03579537"
+        },
+        {
           "nct_id": "NCT04439747",
           "title": "Develop and Implement Methods for Diagnostic and Treatment of Hormonal Disorders in Patients With Chronic Kidney Disease",
           "status": "UNKNOWN",
           "phase": "N/A",
           "enrollment": "400",
           "url": "https://clinicaltrials.gov/study/NCT04439747"
+        },
+        {
+          "nct_id": "NCT05451472",
+          "title": "Evluation of Thyroid Functions in Hemodialysis Childern in Sohag University Hospital",
+          "status": "UNKNOWN",
+          "phase": "NA",
+          "enrollment": "39",
+          "url": "https://clinicaltrials.gov/study/NCT05451472"
         }
       ],
       "trial_phases": {
@@ -1796,6 +1805,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.58)"
       ],
+      "disease_entity": "Disease::MESH:D051436",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1905,8 +1915,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.899
       },
-      "disease_entity": "Disease::MESH:D051436",
-      "ensemble_prob": 0.94,
+      "ensemble_prob": 0.9806,
       "ensemble_features": {
         "kg_score": 0.999,
         "degree_penalty": 0.7795,
@@ -1959,8 +1968,8 @@
       "admet_score": 0.6133,
       "admet_flags": "clean",
       "primekg_score": 0.2622,
-      "dti_score": 0.7801,
-      "dti_best_target": "COL18A1",
+      "dti_score": 0.7871,
+      "dti_best_target": "TKT",
       "kg_group_score": 0.0946,
       "structural_group_score": 0.9982,
       "network_group_score": 0.6931999921798706,
@@ -2110,14 +2119,26 @@
       "mechanistic_hypothesis": "Trandolapril \u2014[is inhibited by]\u2192 gene-1636 \u2014[is linked to]\u2192 Chronic kidney disease",
       "kg_paths_text": "\u2022 Trandolapril \u2014[is inhibited by]\u2192 gene-1636 \u2014[is linked to]\u2192 Chronic kidney disease\n\u2022 Trandolapril \u2014[treats]\u2192 DOID:10763 \u2014[is treated by]\u2192 DB00381 \u2014[is a therapeutic for]\u2192 Chronic kidney disease\n\u2022 Trandolapril \u2014[treats]\u2192 DOID:10763 \u2014[is treated by]\u2192 DB00695 \u2014[is a therapeutic for]\u2192 Chronic kidney disease",
       "validation_experiments": [],
-      "novelty_score": 0.519,
-      "novelty_level": "NOVEL",
+      "novelty_score": 0.427,
+      "novelty_level": "KNOWN",
       "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
+      "clinical_trials_total": 1,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT07547878",
+          "title": "Simultaneous Starting of the 4 Guideline Directed CKD Therapies (RAPID-CKD)",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "phase": "PHASE4",
+          "enrollment": "64",
+          "url": "https://clinicaltrials.gov/study/NCT07547878"
+        }
+      ],
+      "trial_phases": {
+        "PHASE4": 1
+      },
       "confidence": "HIGH",
       "confidence_reasons": [
+        "1 clinical trial(s) found on ClinicalTrials.gov",
         "26 PubMed articles found",
         "Supported by 4 independent AI pillars",
         "High molecular similarity (0.96) to Ramipril",
@@ -2125,6 +2146,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.73, 2 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D051436",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2234,8 +2256,7 @@
         "tissue_specificity": 0.191,
         "context_modifier": 1.001
       },
-      "disease_entity": "Disease::MESH:D051436",
-      "ensemble_prob": 0.8507,
+      "ensemble_prob": 0.7951,
       "ensemble_features": {
         "kg_score": 0.9966,
         "degree_penalty": 0.7922,
@@ -2282,8 +2303,8 @@
       "admet_score": 0.7161,
       "admet_flags": "clean",
       "primekg_score": 0.2478,
-      "dti_score": 0.4449,
-      "dti_best_target": "NPHS1",
+      "dti_score": 0.4733,
+      "dti_best_target": "PGF",
       "kg_group_score": 0.1852,
       "structural_group_score": 0.9233,
       "network_group_score": 0.6588000059127808,
@@ -2448,28 +2469,20 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT00801632",
-          "title": "Combined Kidney and Bone Marrow Transplantation to Prevent Kidney Transplant Rejection",
+          "nct_id": "NCT02733510",
+          "title": "The Impact of Early Protocol Biopsy in Kidney Transplant",
+          "status": "UNKNOWN",
+          "phase": "N/A",
+          "enrollment": "200",
+          "url": "https://clinicaltrials.gov/study/NCT02733510"
+        },
+        {
+          "nct_id": "NCT00357084",
+          "title": "Methotrexate and Glucocorticoids in Treating Patients With Newly Diagnosed Acute Graft-Versus-Host Disease After Donor Stem Cell Transplant",
           "status": "COMPLETED",
           "phase": "PHASE2",
-          "enrollment": "5",
-          "url": "https://clinicaltrials.gov/study/NCT00801632"
-        },
-        {
-          "nct_id": "NCT02936505",
-          "title": "Clinical Study Evaluating Two Treatment Protocols for Immunosuppressive Drugs. Looking at 3-year Incidence of CLAD.",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "phase": "NA",
-          "enrollment": "249",
-          "url": "https://clinicaltrials.gov/study/NCT02936505"
-        },
-        {
-          "nct_id": "NCT01154387",
-          "title": "Evaluating Safety and Efficacy of TOL101 Induction Versus Anti-Thymocyte Globulin to Prevent Kidney Transplant Rejection",
-          "status": "UNKNOWN",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "85",
-          "url": "https://clinicaltrials.gov/study/NCT01154387"
+          "enrollment": "53",
+          "url": "https://clinicaltrials.gov/study/NCT00357084"
         },
         {
           "nct_id": "NCT01950819",
@@ -2480,25 +2493,31 @@
           "url": "https://clinicaltrials.gov/study/NCT01950819"
         },
         {
-          "nct_id": "NCT00533624",
-          "title": "Myfortic vs. Cellcept in Kidney Transplant Recipients",
+          "nct_id": "NCT00717379",
+          "title": "Study of Tacrolimus Immunosuppressive Therapy After Kidney Transplantation",
           "status": "COMPLETED",
-          "phase": "PHASE2, PHASE3",
-          "enrollment": "150",
-          "url": "https://clinicaltrials.gov/study/NCT00533624"
+          "phase": "PHASE4",
+          "enrollment": "50",
+          "url": "https://clinicaltrials.gov/study/NCT00717379"
+        },
+        {
+          "nct_id": "NCT07045467",
+          "title": "Remimazolam Infusion in Kidney Transplant Patients: A Multicenter Study",
+          "status": "RECRUITING",
+          "phase": "PHASE1",
+          "enrollment": "30",
+          "url": "https://clinicaltrials.gov/study/NCT07045467"
         }
       ],
       "trial_phases": {
-        "PHASE2": 5,
-        "NA": 2,
-        "PHASE1": 1,
+        "PHASE2": 2,
         "PHASE4": 3,
-        "PHASE3": 1
+        "PHASE1": 1,
+        "NA": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
         "10 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
         "331 PubMed articles on this drug-disease pair",
         "Supported by 4 independent AI pillars",
         "Moderate FAERS signal: 819 adverse event reports mention drug-disease co-occurrence",
@@ -2506,6 +2525,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.62)"
       ],
+      "disease_entity": "Disease::MESH:D051436",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2636,8 +2656,7 @@
         "tissue_specificity": 0.132,
         "context_modifier": 0.973
       },
-      "disease_entity": "Disease::MESH:D051436",
-      "ensemble_prob": 0.2779,
+      "ensemble_prob": 0.1728,
       "ensemble_features": {
         "kg_score": 0.9886,
         "degree_penalty": 0.7643,
@@ -2803,6 +2822,7 @@
         "Highly cited paper (6130 citations): \"Chronic kidney disease...\"",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D051436",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -2904,8 +2924,7 @@
         "tissue_specificity": 0.191,
         "context_modifier": 1.001
       },
-      "disease_entity": "Disease::MESH:D051436",
-      "ensemble_prob": 0.0003,
+      "ensemble_prob": 0.0005,
       "ensemble_features": {
         "kg_score": 0.7512,
         "degree_penalty": 0.8688,
@@ -2930,391 +2949,10 @@
       }
     },
     {
-      "drug_name": "Benazepril",
-      "drug_id": "DB00542",
-      "disease_name": "Chronic kidney disease",
-      "combined_score": 0.5016,
-      "pillars_hit": 4,
-      "transe_rank": 144,
-      "transe_score": -10.9783,
-      "pykeen_score": 0,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.9380000233650208,
-      "proximity_distance": 0.25,
-      "admet_score": 0.4898,
-      "admet_flags": "clean",
-      "primekg_score": 0.2483,
-      "dti_score": 0.9838,
-      "dti_best_target": "EDN1",
-      "kg_group_score": 0.0612,
-      "structural_group_score": 0.9838,
-      "network_group_score": 0.7440000176429749,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.7829,
-      "admet_multiplier": 0.898,
-      "efficacy_score": 0.5586,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 1,
-      "shared_targets": [
-        "INS"
-      ],
-      "pubmed_total": 65,
-      "pubmed_treatment_total": 62,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "34881414",
-          "title": "Treatments for Chronic Kidney Disease: A Systematic Literature Review of Randomized Controlled Trials.",
-          "authors": "Garcia Sanchez JJ, Thompson J, Scott DA, et al.",
-          "journal": "Advances in therapy",
-          "year": "2022",
-          "abstract_snippet": "Delaying disease progression and reducing the risk of mortality are key goals in the treatment of chronic kidney disease (CKD). New drug classes to augment renin-angiotensin-aldosterone system (RAAS) inhibitors as the standard of care have scarcely met their primary endpoints until recently. This sy...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34881414/",
-          "total_results": 65
-        },
-        {
-          "pmid": "40677356",
-          "title": "Safety of Drugs in Breastfeeding Women With CKD.",
-          "authors": "Parnizari P, Hladunewich MA, Zipursky J",
-          "journal": "Kidney international reports",
-          "year": "2025",
-          "abstract_snippet": "INTRODUCTION: The benefits of breastfeeding are widely recognized. Because of lack of evidence, women may forego breastfeeding or decline treatments that impact long-term renal survival. Therefore, we systematically reviewed the evidence on the breastfeeding safety of drugs commonly prescribed to wo...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40677356/"
-        },
-        {
-          "pmid": "22759229",
-          "title": "Blood pressure in renal disease: how to accomplish the goal?",
-          "authors": "Robles NR, Hernandez-Gallego R",
-          "journal": "Cardiovascular therapeutics",
-          "year": "2012",
-          "abstract_snippet": "The Avoiding Cardiovascular Events through Combination Therapy in Patients Living with Systolic Hypertension (ACCOMPLISH) trial showed that initial antihypertensive therapy with benazepril plus amlodipine was superior to benazepril plus hydrochlorothiazide in reducing progression of chronic kidney d...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/22759229/"
-        },
-        {
-          "pmid": "16407515",
-          "title": "Optimizing ACE-inhibitor therapy for chronic kidney disease.",
-          "authors": "Hebert LA",
-          "journal": "The New England journal of medicine",
-          "year": "2006",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/16407515/"
-        },
-        {
-          "pmid": "21714597",
-          "title": "Renoprotective effects of benazepril: current perspective.",
-          "authors": "Stomp\u00f3r T, Napora M, Olszewski A",
-          "journal": "Expert review of cardiovascular therapy",
-          "year": "2011",
-          "abstract_snippet": "Cardiovascular (CV) disease, its associated risk factors and continued progression run in parallel with renal deterioration (cardio-renal syndrome). Most guidelines promote early treatment, including the use of ACE inhibitors to control CV risk in patients with chronic renal failure. The renoprotect...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/21714597/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Benazepril Promotes the Proliferation and Differentiation of Urine-Derived Stem Cells from Children with Nephrotic Syndrome During the Chronic Kidney Disease Stage",
-          "year": 2025,
-          "citations": 2,
-          "url": "https://www.semanticscholar.org/paper/f61d9d95e838b5e4262535a172fc0e6d01863e6f",
-          "authors": "Chengqiang Huang, Yuan Yang, Cheng Li"
-        },
-        {
-          "title": "Benazepril induced acute kidney injury (AKI) in a patient with congestive heart failure (CHF) and moderate chronic kidney disease (CKD): A case report",
-          "year": 2019,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/9abc650238ca57636d2db3458438ad3c99cd9f9d",
-          "authors": "Huang Hn, Wang Dn, Zhu Lq"
-        },
-        {
-          "title": "Effects of Benazepril on Survival of Dogs with Chronic Kidney Disease: A Multicenter, Randomized, Blinded, Placebo\u2010Controlled Clinical Trial",
-          "year": 2017,
-          "citations": 12,
-          "url": "https://www.semanticscholar.org/paper/35f3dffc1e5b606cf0787c6a29ccdc9d4d8da37d",
-          "authors": "Jonathan N. King, A. Font, J. Rousselot"
-        },
-        {
-          "title": "Effect of phosphatase and tensin homolog-induced putative kinase 1/ E3 ubiquitin ligase Parkin mediated mitochondrial autophagy on chronic kidney disease myocardial injury and the intervention mechanism of Shenshuai recipe.",
-          "year": 2024,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/166b8d1c26defa8be4f138d2eebd7393999e55c4",
-          "authors": "Zhang Gedi, Gengxin Liu, Guo Min"
-        },
-        {
-          "title": "Qigui-Yishen decoction delays renal fibrosis in mice with chronic kidney disease by regulating TM and PAI-1.",
-          "year": 2024,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/d8450abafc62e749a068da168da436948356345b",
-          "authors": "Xun Lu, Xiao Wan"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Recycling existing drugs for cancer therapy: delivering low cost cancer care",
-        "year": 2014,
-        "citations": 17,
-        "url": "https://www.semanticscholar.org/paper/41cdaf7b1da4bbe6394a75af27847267b66ad831",
-        "authors": "P. Pantziarka, Linda Cairns"
-      },
-      "max_citations": 17,
-      "faers_signal": "strong",
-      "faers_total_reports": 20433,
-      "faers_cooccurrences": 659,
-      "faers_interpretation": "659 FAERS reports mention both Benazepril and Chronic kidney disease-related terms (3.2% of all Benazepril reports). This suggests real-world clinical association.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "TW 37 (1.476)",
-        "ON-01910 (1.464)",
-        "GW 843682X (1.438)",
-        "U 18666A (1.427)",
-        "PALDA (1.426)"
-      ],
-      "signature_interpretation": "Benazepril was not found among the top 39 drugs that reverse the Chronic kidney disease gene signature. Top reversers: TW 37 (1.476), ON-01910 (1.464), GW 843682X (1.438)",
-      "ai_hypothesis": "of its antihypertensive and antiproteinuric effects.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": true,
-      "failed_trial_phase": "Unknown",
-      "failed_trial_count": 3,
-      "failed_trial_penalty": 0.9,
-      "mr_score": 0.7829,
-      "mr_genetic_targets": 3,
-      "mechanistic_hypothesis": "Benazepril \u2014[is a therapeutic for]\u2192 Chronic kidney disease",
-      "kg_paths_text": "\u2022 Benazepril \u2014[is a therapeutic for]\u2192 Chronic kidney disease\n\u2022 Benazepril \u2014[is inhibited by]\u2192 gene-1636 \u2014[is linked to]\u2192 Chronic kidney disease\n\u2022 Benazepril \u2014[binds]\u2192 gene-4524 \u2014[is linked to]\u2192 Chronic kidney disease",
-      "validation_experiments": [],
-      "novelty_score": 0.361,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": true,
-      "clinical_trials_total": 3,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT00338091",
-          "title": "Long-Term Renoprotection of Optimal Antiproteinuric Doses of Benazepril and Losartan in Chronic Renal Insufficiency",
-          "status": "TERMINATED",
-          "phase": "NA",
-          "enrollment": "",
-          "url": "https://clinicaltrials.gov/study/NCT00338091"
-        },
-        {
-          "nct_id": "NCT00630708",
-          "title": "Safety of Dual Blockage of Rennin-angiotensin System in Patients With Advanced Renal Insufficiency",
-          "status": "TERMINATED",
-          "phase": "NA",
-          "enrollment": "309",
-          "url": "https://clinicaltrials.gov/study/NCT00630708"
-        },
-        {
-          "nct_id": "NCT00270426",
-          "title": "Benazepril for Advanced Chronic Renal Insufficiency",
-          "status": "TERMINATED",
-          "phase": "NA",
-          "enrollment": "",
-          "url": "https://clinicaltrials.gov/study/NCT00270426"
-        }
-      ],
-      "trial_phases": {
-        "NA": 3
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "3 clinical trial(s) found on ClinicalTrials.gov",
-        "65 PubMed articles on this drug-disease pair",
-        "Supported by 4 independent AI pillars",
-        "Note: Drug had early-phase trial failures for this disease",
-        "Strong FAERS signal: 659 adverse event reports link drug to disease (20433 total reports)",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.78, 3 genetic targets)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 939,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00331",
-            "drug_name": "Metformin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00338",
-            "drug_name": "Omeprazole",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00213",
-            "drug_name": "Pantoprazole",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB14068",
-            "drug_name": "(+)-Niguldipine",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB13762",
-            "drug_name": "(+)-Rabeprazole",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB06764",
-            "drug_name": "(+-)-Tetrahydrozoline",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB13398",
-            "drug_name": "(-)-Oxyfedrine",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB13139",
-            "drug_name": "(-)-Salbutamol",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB12093",
-            "drug_name": "(-)-Tetrahydropalmatine",
-            "severity": "moderate"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (CYP11B2 / rs1799998)",
-        "cpic": [],
-        "pharmgkb": [
-          {
-            "gene": "CYP11B2",
-            "variant": "rs1799998",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183614605"
-          },
-          {
-            "gene": "PRCP",
-            "variant": "rs2229437",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183615621"
-          },
-          {
-            "gene": "MTR",
-            "variant": "rs1805087",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183614466"
-          },
-          {
-            "gene": "ADRB2",
-            "variant": "rs1042713",
-            "level": "4",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183614850"
-          },
-          {
-            "gene": "ACE",
-            "variant": "rs1799752",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183614619"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.334,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.502,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.79
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Kidney - Cortex",
-          "Kidney - Medulla"
-        ],
-        "n_genes": 1,
-        "n_expressed": 0,
-        "mean_tpm_in_tissue": 0.13,
-        "max_tpm_in_tissue": 0.13,
-        "tissue_specificity": 0.0,
-        "context_modifier": 0.855
-      },
-      "disease_entity": "Disease::MESH:D051436",
-      "ensemble_prob": 0.9345,
-      "ensemble_features": {
-        "kg_score": 0.9973,
-        "degree_penalty": 0.7932,
-        "n_drug_targets": 2,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 3.4012
-      },
-      "ensemble_rank": 4,
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
       "drug_name": "Levothyroxine",
       "drug_id": "DB00451",
       "disease_name": "Chronic kidney disease",
-      "combined_score": 0.4989,
+      "combined_score": 0.5045,
       "pillars_hit": 4,
       "transe_rank": 26,
       "transe_score": -10.3987,
@@ -3333,15 +2971,15 @@
       "admet_score": 1.0,
       "admet_flags": "clean",
       "primekg_score": 0.2592,
-      "dti_score": 0.7015,
-      "dti_best_target": "CYBB",
+      "dti_score": 0.7323,
+      "dti_best_target": "PGF",
       "kg_group_score": 0.3339,
-      "structural_group_score": 0.7015,
+      "structural_group_score": 0.7323,
       "network_group_score": 0.5275999903678894,
       "txgnn_group_score": 0,
       "mr_group_score": 0.5577,
       "admet_multiplier": 1.0,
-      "efficacy_score": 0.4989,
+      "efficacy_score": 0.5045,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 7,
@@ -3492,11 +3130,19 @@
       "mechanistic_hypothesis": "Levothyroxine \u2014[is a therapeutic for]\u2192 Chronic kidney disease",
       "kg_paths_text": "\u2022 Levothyroxine \u2014[is a therapeutic for]\u2192 Chronic kidney disease\n\u2022 Levothyroxine \u2014[downregulates]\u2192 gene-2274 \u2014[activates]\u2192 gene-5465 \u2014[is linked to]\u2192 Chronic kidney disease\n\u2022 Levothyroxine \u2014[downregulates]\u2192 gene-2274 \u2014[activates]\u2192 gene-5465 \u2014[is linked to]\u2192 Chronic kidney disease",
       "validation_experiments": [],
-      "novelty_score": 0.359,
+      "novelty_score": 0.363,
       "novelty_level": "KNOWN",
       "is_known_treatment": true,
       "clinical_trials_total": 3,
       "clinical_trials": [
+        {
+          "nct_id": "NCT03191188",
+          "title": "A Pilot Feasibility Trial of Thyroid Hormone Replacement in Dialysis Patients",
+          "status": "UNKNOWN",
+          "phase": "NA",
+          "enrollment": "96",
+          "url": "https://clinicaltrials.gov/study/NCT03191188"
+        },
         {
           "nct_id": "NCT03898622",
           "title": "Supplementation of Thyroid Hormone for TSH Control in Patients With Chronic Kidney Disease Without TRR.",
@@ -3512,19 +3158,11 @@
           "phase": "NA",
           "enrollment": "39",
           "url": "https://clinicaltrials.gov/study/NCT05451472"
-        },
-        {
-          "nct_id": "NCT03191188",
-          "title": "A Pilot Feasibility Trial of Thyroid Hormone Replacement in Dialysis Patients",
-          "status": "UNKNOWN",
-          "phase": "NA",
-          "enrollment": "96",
-          "url": "https://clinicaltrials.gov/study/NCT03191188"
         }
       ],
       "trial_phases": {
-        "PHASE3": 1,
-        "NA": 2
+        "NA": 2,
+        "PHASE3": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -3534,8 +3172,10 @@
         "Supported by 4 independent AI pillars",
         "Strong FAERS signal: 3240 adverse event reports link drug to disease (290489 total reports)",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.56)"
+        "Moderate genetic evidence supporting causality (MR score: 0.56)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D051436",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3616,10 +3256,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.489,
+        "triangulation_score": 0.491,
         "label": "silver-standard",
         "axis_values": {
-          "kg": 0.499,
+          "kg": 0.504,
           "docking": 0.593,
           "pharos": 0.0,
           "literature": 0.681
@@ -3637,8 +3277,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.924
       },
-      "disease_entity": "Disease::MESH:D051436",
-      "ensemble_prob": 0.9942,
+      "ensemble_prob": 0.9967,
       "ensemble_features": {
         "kg_score": 1.0,
         "degree_penalty": 0.7817,
@@ -3666,6 +3305,397 @@
           "iodine",
           "gte_3_iodine"
         ]
+      }
+    },
+    {
+      "drug_name": "Benazepril",
+      "drug_id": "DB00542",
+      "disease_name": "Chronic kidney disease",
+      "combined_score": 0.5016,
+      "pillars_hit": 4,
+      "transe_rank": 144,
+      "transe_score": -10.9783,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.9380000233650208,
+      "proximity_distance": 0.25,
+      "admet_score": 0.4898,
+      "admet_flags": "clean",
+      "primekg_score": 0.2483,
+      "dti_score": 0.9836,
+      "dti_best_target": "ANGPT2",
+      "kg_group_score": 0.0612,
+      "structural_group_score": 0.9836,
+      "network_group_score": 0.7440000176429749,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.7829,
+      "admet_multiplier": 0.898,
+      "efficacy_score": 0.5586,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "INS"
+      ],
+      "pubmed_total": 65,
+      "pubmed_treatment_total": 62,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "34881414",
+          "title": "Treatments for Chronic Kidney Disease: A Systematic Literature Review of Randomized Controlled Trials.",
+          "authors": "Garcia Sanchez JJ, Thompson J, Scott DA, et al.",
+          "journal": "Advances in therapy",
+          "year": "2022",
+          "abstract_snippet": "Delaying disease progression and reducing the risk of mortality are key goals in the treatment of chronic kidney disease (CKD). New drug classes to augment renin-angiotensin-aldosterone system (RAAS) inhibitors as the standard of care have scarcely met their primary endpoints until recently. This sy...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34881414/",
+          "total_results": 65
+        },
+        {
+          "pmid": "40677356",
+          "title": "Safety of Drugs in Breastfeeding Women With CKD.",
+          "authors": "Parnizari P, Hladunewich MA, Zipursky J",
+          "journal": "Kidney international reports",
+          "year": "2025",
+          "abstract_snippet": "INTRODUCTION: The benefits of breastfeeding are widely recognized. Because of lack of evidence, women may forego breastfeeding or decline treatments that impact long-term renal survival. Therefore, we systematically reviewed the evidence on the breastfeeding safety of drugs commonly prescribed to wo...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40677356/"
+        },
+        {
+          "pmid": "22759229",
+          "title": "Blood pressure in renal disease: how to accomplish the goal?",
+          "authors": "Robles NR, Hernandez-Gallego R",
+          "journal": "Cardiovascular therapeutics",
+          "year": "2012",
+          "abstract_snippet": "The Avoiding Cardiovascular Events through Combination Therapy in Patients Living with Systolic Hypertension (ACCOMPLISH) trial showed that initial antihypertensive therapy with benazepril plus amlodipine was superior to benazepril plus hydrochlorothiazide in reducing progression of chronic kidney d...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22759229/"
+        },
+        {
+          "pmid": "16407515",
+          "title": "Optimizing ACE-inhibitor therapy for chronic kidney disease.",
+          "authors": "Hebert LA",
+          "journal": "The New England journal of medicine",
+          "year": "2006",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16407515/"
+        },
+        {
+          "pmid": "21714597",
+          "title": "Renoprotective effects of benazepril: current perspective.",
+          "authors": "Stomp\u00f3r T, Napora M, Olszewski A",
+          "journal": "Expert review of cardiovascular therapy",
+          "year": "2011",
+          "abstract_snippet": "Cardiovascular (CV) disease, its associated risk factors and continued progression run in parallel with renal deterioration (cardio-renal syndrome). Most guidelines promote early treatment, including the use of ACE inhibitors to control CV risk in patients with chronic renal failure. The renoprotect...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/21714597/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Benazepril Promotes the Proliferation and Differentiation of Urine-Derived Stem Cells from Children with Nephrotic Syndrome During the Chronic Kidney Disease Stage",
+          "year": 2025,
+          "citations": 2,
+          "url": "https://www.semanticscholar.org/paper/f61d9d95e838b5e4262535a172fc0e6d01863e6f",
+          "authors": "Chengqiang Huang, Yuan Yang, Cheng Li"
+        },
+        {
+          "title": "Benazepril induced acute kidney injury (AKI) in a patient with congestive heart failure (CHF) and moderate chronic kidney disease (CKD): A case report",
+          "year": 2019,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/9abc650238ca57636d2db3458438ad3c99cd9f9d",
+          "authors": "Huang Hn, Wang Dn, Zhu Lq"
+        },
+        {
+          "title": "Effects of Benazepril on Survival of Dogs with Chronic Kidney Disease: A Multicenter, Randomized, Blinded, Placebo\u2010Controlled Clinical Trial",
+          "year": 2017,
+          "citations": 12,
+          "url": "https://www.semanticscholar.org/paper/35f3dffc1e5b606cf0787c6a29ccdc9d4d8da37d",
+          "authors": "Jonathan N. King, A. Font, J. Rousselot"
+        },
+        {
+          "title": "Effect of phosphatase and tensin homolog-induced putative kinase 1/ E3 ubiquitin ligase Parkin mediated mitochondrial autophagy on chronic kidney disease myocardial injury and the intervention mechanism of Shenshuai recipe.",
+          "year": 2024,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/166b8d1c26defa8be4f138d2eebd7393999e55c4",
+          "authors": "Zhang Gedi, Gengxin Liu, Guo Min"
+        },
+        {
+          "title": "Qigui-Yishen decoction delays renal fibrosis in mice with chronic kidney disease by regulating TM and PAI-1.",
+          "year": 2024,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/d8450abafc62e749a068da168da436948356345b",
+          "authors": "Xun Lu, Xiao Wan"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Recycling existing drugs for cancer therapy: delivering low cost cancer care",
+        "year": 2014,
+        "citations": 17,
+        "url": "https://www.semanticscholar.org/paper/41cdaf7b1da4bbe6394a75af27847267b66ad831",
+        "authors": "P. Pantziarka, Linda Cairns"
+      },
+      "max_citations": 17,
+      "faers_signal": "strong",
+      "faers_total_reports": 20433,
+      "faers_cooccurrences": 659,
+      "faers_interpretation": "659 FAERS reports mention both Benazepril and Chronic kidney disease-related terms (3.2% of all Benazepril reports). This suggests real-world clinical association.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "TW 37 (1.476)",
+        "ON-01910 (1.464)",
+        "GW 843682X (1.438)",
+        "U 18666A (1.427)",
+        "PALDA (1.426)"
+      ],
+      "signature_interpretation": "Benazepril was not found among the top 39 drugs that reverse the Chronic kidney disease gene signature. Top reversers: TW 37 (1.476), ON-01910 (1.464), GW 843682X (1.438)",
+      "ai_hypothesis": "of its antihypertensive and antiproteinuric effects.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": true,
+      "failed_trial_phase": "Unknown",
+      "failed_trial_count": 3,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.7829,
+      "mr_genetic_targets": 3,
+      "mechanistic_hypothesis": "Benazepril \u2014[is a therapeutic for]\u2192 Chronic kidney disease",
+      "kg_paths_text": "\u2022 Benazepril \u2014[is a therapeutic for]\u2192 Chronic kidney disease\n\u2022 Benazepril \u2014[is inhibited by]\u2192 gene-1636 \u2014[is linked to]\u2192 Chronic kidney disease\n\u2022 Benazepril \u2014[binds]\u2192 gene-4524 \u2014[is linked to]\u2192 Chronic kidney disease",
+      "validation_experiments": [],
+      "novelty_score": 0.361,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": true,
+      "clinical_trials_total": 4,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT00630708",
+          "title": "Safety of Dual Blockage of Rennin-angiotensin System in Patients With Advanced Renal Insufficiency",
+          "status": "TERMINATED",
+          "phase": "NA",
+          "enrollment": "309",
+          "url": "https://clinicaltrials.gov/study/NCT00630708"
+        },
+        {
+          "nct_id": "NCT00338091",
+          "title": "Long-Term Renoprotection of Optimal Antiproteinuric Doses of Benazepril and Losartan in Chronic Renal Insufficiency",
+          "status": "TERMINATED",
+          "phase": "NA",
+          "enrollment": "",
+          "url": "https://clinicaltrials.gov/study/NCT00338091"
+        },
+        {
+          "nct_id": "NCT07547878",
+          "title": "Simultaneous Starting of the 4 Guideline Directed CKD Therapies (RAPID-CKD)",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "phase": "PHASE4",
+          "enrollment": "64",
+          "url": "https://clinicaltrials.gov/study/NCT07547878"
+        },
+        {
+          "nct_id": "NCT00270426",
+          "title": "Benazepril for Advanced Chronic Renal Insufficiency",
+          "status": "TERMINATED",
+          "phase": "NA",
+          "enrollment": "",
+          "url": "https://clinicaltrials.gov/study/NCT00270426"
+        }
+      ],
+      "trial_phases": {
+        "NA": 3,
+        "PHASE4": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "4 clinical trial(s) found on ClinicalTrials.gov",
+        "65 PubMed articles on this drug-disease pair",
+        "Supported by 4 independent AI pillars",
+        "Note: Drug had early-phase trial failures for this disease",
+        "Strong FAERS signal: 659 adverse event reports link drug to disease (20433 total reports)",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.78, 3 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D051436",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 939,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00331",
+            "drug_name": "Metformin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00338",
+            "drug_name": "Omeprazole",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00213",
+            "drug_name": "Pantoprazole",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB14068",
+            "drug_name": "(+)-Niguldipine",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB13762",
+            "drug_name": "(+)-Rabeprazole",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB06764",
+            "drug_name": "(+-)-Tetrahydrozoline",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB13398",
+            "drug_name": "(-)-Oxyfedrine",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB13139",
+            "drug_name": "(-)-Salbutamol",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB12093",
+            "drug_name": "(-)-Tetrahydropalmatine",
+            "severity": "moderate"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (CYP11B2 / rs1799998)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "CYP11B2",
+            "variant": "rs1799998",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183614605"
+          },
+          {
+            "gene": "PRCP",
+            "variant": "rs2229437",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183615621"
+          },
+          {
+            "gene": "MTR",
+            "variant": "rs1805087",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183614466"
+          },
+          {
+            "gene": "ADRB2",
+            "variant": "rs1042713",
+            "level": "4",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183614850"
+          },
+          {
+            "gene": "ACE",
+            "variant": "rs1799752",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183614619"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.334,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.502,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.79
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Kidney - Cortex",
+          "Kidney - Medulla"
+        ],
+        "n_genes": 1,
+        "n_expressed": 0,
+        "mean_tpm_in_tissue": 0.13,
+        "max_tpm_in_tissue": 0.13,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.855
+      },
+      "ensemble_prob": 0.8788,
+      "ensemble_features": {
+        "kg_score": 0.9973,
+        "degree_penalty": 0.7932,
+        "n_drug_targets": 2,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 3.4012
+      },
+      "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
       }
     }
   ],

@@ -1,8 +1,8 @@
 {
   "disease": "Huntington's disease",
   "status": "completed",
-  "timestamp": "2026-04-19T17:12:50.567619",
-  "elapsed_seconds": 953.0,
+  "timestamp": "2026-05-07T22:47:05.178111",
+  "elapsed_seconds": 144.9,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -17,7 +17,7 @@
       "drug_name": "Cimetidine",
       "drug_id": "DB00501",
       "disease_name": "Huntington's disease",
-      "combined_score": 0.49079999327659607,
+      "combined_score": 0.48890000581741333,
       "pillars_hit": 4,
       "transe_rank": 168,
       "transe_score": -11.2226,
@@ -36,15 +36,15 @@
       "admet_score": 0.5683,
       "admet_flags": "clean",
       "primekg_score": 0.2575,
-      "dti_score": 0.6869,
-      "dti_best_target": "CSF2",
+      "dti_score": 0.6752,
+      "dti_best_target": "PLXNA2",
       "kg_group_score": 0.0871,
-      "structural_group_score": 0.6869,
+      "structural_group_score": 0.6752,
       "network_group_score": 0.38100001215934753,
       "txgnn_group_score": 0.98,
       "mr_group_score": 0,
       "admet_multiplier": 0.9137,
-      "efficacy_score": 0.5371999740600586,
+      "efficacy_score": 0.535099983215332,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 2,
@@ -127,7 +127,7 @@
       "mechanistic_hypothesis": "Cimetidine \u2014[treats]\u2192 DOID:9970 \u2014[is treated by]\u2192 DB01156 \u2014[is a therapeutic for]\u2192 Huntington's disease",
       "kg_paths_text": "\u2022 Cimetidine \u2014[treats]\u2192 DOID:9970 \u2014[is treated by]\u2192 DB01156 \u2014[is a therapeutic for]\u2192 Huntington's disease\n\u2022 Cimetidine \u2014[is a therapeutic for]\u2192 MESH:D062787 \u2014[is treated by]\u2192 DB00818 \u2014[is a therapeutic for]\u2192 Huntington's disease\n\u2022 Cimetidine \u2014[is a therapeutic for]\u2192 MESH:D062787 \u2014[is treated by]\u2192 DB00987 \u2014[is a therapeutic for]\u2192 Huntington's disease",
       "validation_experiments": [],
-      "novelty_score": 0.4169999957084656,
+      "novelty_score": 0.41600000858306885,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -139,6 +139,7 @@
         "Highly cited paper (8392 citations): \"A novel gene containing a trinucleotide repeat that is expan...\"",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D006816",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -219,10 +220,10 @@
           "pharos": false,
           "literature": false
         },
-        "triangulation_score": 0.1720000058412552,
+        "triangulation_score": 0.17100000381469727,
         "label": "kg-only",
         "axis_values": {
-          "kg": 0.4909999966621399,
+          "kg": 0.48899999260902405,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 0.0
@@ -239,15 +240,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.88
       },
-      "disease_entity": "Disease::MESH:D006816",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.0434,
+      "ensemble_prob": 0.0673,
       "ensemble_features": {
         "kg_score": 0.9727,
         "degree_penalty": 0.7619,
@@ -257,6 +250,13 @@
         "transe_rank_log": 5.6664
       },
       "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -280,7 +280,7 @@
       "drug_name": "Valproic Acid",
       "drug_id": "DB00313",
       "disease_name": "Huntington's disease",
-      "combined_score": 0.42829999327659607,
+      "combined_score": 0.42820000648498535,
       "pillars_hit": 4,
       "transe_rank": 17,
       "transe_score": -10.3139,
@@ -299,15 +299,15 @@
       "admet_score": 0.8244,
       "admet_flags": "clean",
       "primekg_score": 0.2604,
-      "dti_score": 0.1905,
-      "dti_best_target": "CSF2",
+      "dti_score": 0.1898,
+      "dti_best_target": "HERPUD1",
       "kg_group_score": 0.4421,
-      "structural_group_score": 0.1905,
+      "structural_group_score": 0.1898,
       "network_group_score": 0.37540000677108765,
       "txgnn_group_score": 0,
       "mr_group_score": 0.8265,
       "admet_multiplier": 0.9649,
-      "efficacy_score": 0.4438999891281128,
+      "efficacy_score": 0.44369998574256897,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 3,
@@ -466,6 +466,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.83, 1 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D006816",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -628,15 +629,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.945
       },
-      "disease_entity": "Disease::MESH:D006816",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.9954,
+      "ensemble_prob": 0.8865,
       "ensemble_features": {
         "kg_score": 0.9997,
         "degree_penalty": 0.7507,
@@ -645,7 +638,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 1.3863
       },
-      "ensemble_rank": 2,
+      "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -657,7 +657,7 @@
       "drug_name": "Trehalose",
       "drug_id": "DB12310",
       "disease_name": "Huntington's disease",
-      "combined_score": 0.41769999265670776,
+      "combined_score": 0.4189000129699707,
       "pillars_hit": 3,
       "transe_rank": 9,
       "transe_score": -10.1842,
@@ -676,15 +676,15 @@
       "admet_score": 0.645,
       "admet_flags": "clean",
       "primekg_score": 0,
-      "dti_score": 0.9504,
-      "dti_best_target": "NFE2L2",
+      "dti_score": 0.9579,
+      "dti_best_target": "BCL6",
       "kg_group_score": 0.4389,
-      "structural_group_score": 0.9504,
+      "structural_group_score": 0.9579,
       "network_group_score": 0.593999981880188,
       "txgnn_group_score": 0,
       "mr_group_score": 0,
       "admet_multiplier": 0.929,
-      "efficacy_score": 0.4496000111103058,
+      "efficacy_score": 0.45089998841285706,
       "groups_hit": 3,
       "direct_relations": [],
       "shared_target_count": 0,
@@ -827,7 +827,7 @@
       "mechanistic_hypothesis": "Trehalose \u2014[is a therapeutic for]\u2192 Huntington's disease",
       "kg_paths_text": "\u2022 Trehalose \u2014[is a therapeutic for]\u2192 Huntington's disease\n\u2022 Trehalose \u2014[is a therapeutic for]\u2192 MESH:D000690 \u2014[is treated by]\u2192 DB00740 \u2014[is a therapeutic for]\u2192 Huntington's disease\n\u2022 Trehalose \u2014[is a therapeutic for]\u2192 MESH:D000690 \u2014[is treated by]\u2192 DB00740 \u2014[is a therapeutic for]\u2192 Huntington's disease",
       "validation_experiments": [],
-      "novelty_score": 0.31299999356269836,
+      "novelty_score": 0.3140000104904175,
       "novelty_level": "NOVEL",
       "is_known_treatment": true,
       "clinical_trials_total": 0,
@@ -838,8 +838,10 @@
         "22 PubMed articles found",
         "Supported by 3 independent AI pillars",
         "Highly cited paper (114 citations): \"Poly(trehalose) Nanoparticles Prevent Amyloid Aggregation an...\"",
-        "AI-generated hypothesis available"
+        "AI-generated hypothesis available",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D006816",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "late-trial",
@@ -869,10 +871,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.2639999985694885,
+        "triangulation_score": 0.26499998569488525,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.4180000126361847,
+          "kg": 0.4189999997615814,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 0.591
@@ -889,15 +891,7 @@
         "tissue_specificity": 0.359,
         "context_modifier": 1.035
       },
-      "disease_entity": "Disease::MESH:D006816",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.0003,
+      "ensemble_prob": 0.0012,
       "ensemble_features": {
         "kg_score": 0.8295,
         "degree_penalty": 1.0,
@@ -907,6 +901,13 @@
         "transe_rank_log": 7.4955
       },
       "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -942,7 +943,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2478,
       "dti_score": 1.0,
-      "dti_best_target": "HSPA4",
+      "dti_best_target": "NFE2L2",
       "kg_group_score": 0.116,
       "structural_group_score": 1.0,
       "network_group_score": 0.4223000109195709,
@@ -1044,6 +1045,7 @@
         "Supported by 4 independent AI pillars",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D006816",
       "dose_plausibility": {
         "plausibility": "unknown",
         "dose_range": "research",
@@ -1093,15 +1095,7 @@
         "tissue_specificity": 0.354,
         "context_modifier": 1.004
       },
-      "disease_entity": "Disease::MESH:D006816",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.0169,
+      "ensemble_prob": 0.0181,
       "ensemble_features": {
         "kg_score": 0.8723,
         "degree_penalty": 0.8655,
@@ -1111,6 +1105,13 @@
         "transe_rank_log": 7.2064
       },
       "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -1124,6 +1125,355 @@
           "quaternary_nitrogen_1",
           "gte_2_free_phos"
         ]
+      }
+    },
+    {
+      "drug_name": "Memantine",
+      "drug_id": "DB01043",
+      "disease_name": "Huntington's disease",
+      "combined_score": 0.39750000834465027,
+      "pillars_hit": 4,
+      "transe_rank": 30,
+      "transe_score": -10.5281,
+      "pykeen_score": -12.2075,
+      "pykeen_rank": 0,
+      "txgnn_score": 0.27,
+      "txgnn_rank": 73,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.5879999995231628,
+      "proximity_distance": 1.649999976158142,
+      "admet_score": 0.799,
+      "admet_flags": "clean",
+      "primekg_score": 0.2499,
+      "dti_score": 0.4818,
+      "dti_best_target": "ARHGEF40",
+      "kg_group_score": 0.3105,
+      "structural_group_score": 0.4818,
+      "network_group_score": 0.45210000872612,
+      "txgnn_group_score": 0.27,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.9598,
+      "efficacy_score": 0.4142000079154968,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 7,
+      "shared_targets": [
+        "ACHE",
+        "BDNF",
+        "DRD2",
+        "GRIN1",
+        "GRIN2A",
+        "GRIN2B",
+        "GRIN3A"
+      ],
+      "pubmed_total": 29,
+      "pubmed_treatment_total": 23,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "39969346",
+          "title": "A narrative review of phase III and IV clinical trials for the pharmacological treatment of Huntington's disease in adults.",
+          "authors": "Alharthi MS",
+          "journal": "Medicine",
+          "year": "2024",
+          "abstract_snippet": "Huntington disease (HD) is a hereditary neurodegenerative condition characterized by progression of motor, cognitive, and psychiatric abnormalities. Despite the lack of definitive medications, current research efforts are actively assessing novel pharmaceutical interventions through phase III and IV...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39969346/",
+          "total_results": 29
+        },
+        {
+          "pmid": "37840138",
+          "title": "Memantine administration prevented chorea movement in Huntington's disease: a case report.",
+          "authors": "Saigoh K, Hirano M, Mitsui Y, et al.",
+          "journal": "Journal of medical case reports",
+          "year": "2023",
+          "abstract_snippet": "BACKGROUND: Huntington's disease is an autosomal dominant inherited disorder characterized by personality changes (such as irritability and restlessness) and psychotic symptoms (such as hallucinations and delusions). When the personality changes become noticeable, involuntary movements (chorea) also...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37840138/"
+        },
+        {
+          "pmid": "37476323",
+          "title": "Memantine Use and Cognitive Decline in Huntington's Disease: An Enroll-HD Study.",
+          "authors": "Ogilvie AC, Schultz JL",
+          "journal": "Movement disorders clinical practice",
+          "year": "2023",
+          "abstract_snippet": "BACKGROUND: Memantine is an  OBJECTIVE: To assess the effectiveness of memantine on the trajectory of cognitive decline in individuals with manifest HD. METHODS: Using participants from the Enroll-HD study, the primary analysis compared trajectories in cognition over a 5-year period using linear mix...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37476323/"
+        },
+        {
+          "pmid": "25723022",
+          "title": "[Huntington's disease: cellular and molecular basis of pathology].",
+          "authors": "Korzhova VV, Artamonov DN, Vlasova OL, et al.",
+          "journal": "Zhurnal vysshei nervnoi deiatelnosti imeni I P Pavlova",
+          "year": "2014",
+          "abstract_snippet": "Huntington's disease (HD) is an inherited autosomal dominant neurodegenerative disorder caused by a polyQ expansion (>36 glutamine repeats) in Huntingtin (Htt) protein. It is believed that dysfunction of corticostriatal system is one of the main pathological events. Special attention is paid to syna...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25723022/"
+        },
+        {
+          "pmid": "16959224",
+          "title": "Memantine reduces striatal cell death with decreasing calpain level in 3-nitropropionic model of Huntington's disease.",
+          "authors": "Lee ST, Chu K, Park JE, et al.",
+          "journal": "Brain research",
+          "year": "2006",
+          "abstract_snippet": "Huntington's disease has an increase in the activated calpain, which is enhanced by the NMDA receptor activation. We investigated the neuroprotective effect of memantine in 3-nitropropionic acid (3NP)-induced striatal degeneration model. Either memantine (20 mg/kg/day) or PBS was intraperitoneally a...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16959224/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Memantine-induced delayed sleep phase in Huntington\u2019s disease: A case report",
+          "year": 2025,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/b00cf0c1c74ea1b5492d26ac53540866d03350df",
+          "authors": "Y. Fujita, T. Hamada, Satoshi Kubota"
+        },
+        {
+          "title": "Efficacy and safety of cholinesterase inhibitors and memantine for cognitive symptoms in patients with Huntington's disease: A systematic review",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/472dffd2bb8d6fcd1bc2f1918fe3495bd31e2571",
+          "authors": "Catarina Correia Rodrigues, V. Carvalho, F. Sotero"
+        },
+        {
+          "title": "Memantine Use and Cognitive Decline in Huntington's Disease: An Enroll\u2010HD Study",
+          "year": 2023,
+          "citations": 9,
+          "url": "https://www.semanticscholar.org/paper/d3c48b21772f036aab2e9b3541e824cd30e2e4c3",
+          "authors": "A. Ogilvie, J. Schultz"
+        },
+        {
+          "title": "Memantine administration prevented chorea movement in Huntington\u2019s disease: a case report",
+          "year": 2023,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/a23577d73dee7c20d761ec3a70c5bbdb980f7912",
+          "authors": "K. Saigoh, Makito Hirano, Y. Mitsui"
+        },
+        {
+          "title": "J018\u2005Efficacy and safety of cholinesterase inhibitors and memantine for cognitive symptoms in patients with Huntington\u2019s disease \u2013 a systematic review",
+          "year": 2024,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/c2a025fc2d7928b8757fac49acf525b0d9039b9b",
+          "authors": "Catarina Correia Rodrigues, Vanessa Carvalho, F. Sotero"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Memantine Use and Cognitive Decline in Huntington's Disease: An Enroll\u2010HD Study",
+        "year": 2023,
+        "citations": 9,
+        "url": "https://www.semanticscholar.org/paper/d3c48b21772f036aab2e9b3541e824cd30e2e4c3",
+        "authors": "A. Ogilvie, J. Schultz"
+      },
+      "max_citations": 9,
+      "faers_signal": "none",
+      "faers_total_reports": 16174,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Memantine to Huntington's disease terms. Drug has 16174 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "P5172 (1.560)",
+        "BMS-387032 (1.559)",
+        "WZ-4-145 (1.555)",
+        "SB590885 (1.544)",
+        "HY-50877 (1.540)"
+      ],
+      "signature_interpretation": "Memantine was not found among the top 47 drugs that reverse the Huntington's disease gene signature. Top reversers: P5172 (1.560), BMS-387032 (1.559), WZ-4-145 (1.555)",
+      "ai_hypothesis": "of its neuroprotective effects.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Memantine \u2014[is a therapeutic for]\u2192 Huntington's disease",
+      "kg_paths_text": "\u2022 Memantine \u2014[is a therapeutic for]\u2192 Huntington's disease\n\u2022 Memantine \u2014[is a therapeutic for]\u2192 MESH:D012559 \u2014[is treated by]\u2192 DB00502 \u2014[treats]\u2192 Huntington's disease\n\u2022 Memantine \u2014[is a therapeutic for]\u2192 MESH:D012559 \u2014[is treated by]\u2192 DB00502 \u2014[treats]\u2192 Huntington's disease",
+      "validation_experiments": [],
+      "novelty_score": 0.27799999713897705,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": true,
+      "clinical_trials_total": 2,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT00652457",
+          "title": "Study of Memantine to Treat Huntington's Disease",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "50",
+          "url": "https://clinicaltrials.gov/study/NCT00652457"
+        },
+        {
+          "nct_id": "NCT01458470",
+          "title": "A Trial of Memantine as Symptomatic Treatment for Early Huntington Disease",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "19",
+          "url": "https://clinicaltrials.gov/study/NCT01458470"
+        }
+      ],
+      "trial_phases": {
+        "PHASE4": 1,
+        "PHASE2": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "2 clinical trial(s) found on ClinicalTrials.gov",
+        "29 PubMed articles found",
+        "Supported by 4 independent AI pillars",
+        "AI-generated hypothesis available",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D006816",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1162,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00331",
+            "drug_name": "Metformin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00959",
+            "drug_name": "Methylprednisolone",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (NR1I2 / rs1523130)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "NR1I2",
+            "variant": "rs1523130",
+            "level": "3",
+            "phenotype_category": "Other",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183631460"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": false,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.551,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.398,
+          "docking": 0.946,
+          "pharos": 0.0,
+          "literature": 0.641
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 7,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 0.21,
+        "max_tpm_in_tissue": 1.29,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.857
+      },
+      "ensemble_prob": 0.9937,
+      "ensemble_features": {
+        "kg_score": 0.9998,
+        "degree_penalty": 0.7689,
+        "n_drug_targets": 7,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 1.0986
+      },
+      "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": -11.35,
+        "target_symbol": "ACHE",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
       }
     },
     {
@@ -1394,6 +1744,7 @@
         "Highly cited paper (1308 citations): \"Replication of the neurochemical characteristics of Huntingt...\"",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D006816",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1494,15 +1845,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.928
       },
-      "disease_entity": "Disease::MESH:D006816",
-      "docking": {
-        "kcal_per_mol": -11.02,
-        "target_symbol": "DRD3",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.9251,
+      "ensemble_prob": 0.9877,
       "ensemble_features": {
         "kg_score": 0.9989,
         "degree_penalty": 0.7619,
@@ -1511,7 +1854,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.5649
       },
-      "ensemble_rank": 3,
+      "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": -11.02,
+        "target_symbol": "DRD3",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -1522,354 +1872,6 @@
           "catechol_A(92)",
           "catechol"
         ]
-      }
-    },
-    {
-      "drug_name": "Memantine",
-      "drug_id": "DB01043",
-      "disease_name": "Huntington's disease",
-      "combined_score": 0.3961000144481659,
-      "pillars_hit": 4,
-      "transe_rank": 30,
-      "transe_score": -10.5281,
-      "pykeen_score": -12.2075,
-      "pykeen_rank": 0,
-      "txgnn_score": 0.27,
-      "txgnn_rank": 73,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.5879999995231628,
-      "proximity_distance": 1.649999976158142,
-      "admet_score": 0.799,
-      "admet_flags": "clean",
-      "primekg_score": 0.2499,
-      "dti_score": 0.4737,
-      "dti_best_target": "GDNF",
-      "kg_group_score": 0.3105,
-      "structural_group_score": 0.4737,
-      "network_group_score": 0.45210000872612,
-      "txgnn_group_score": 0.27,
-      "mr_group_score": 0,
-      "admet_multiplier": 0.9598,
-      "efficacy_score": 0.41269999742507935,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 7,
-      "shared_targets": [
-        "ACHE",
-        "BDNF",
-        "DRD2",
-        "GRIN1",
-        "GRIN2A",
-        "GRIN2B",
-        "GRIN3A"
-      ],
-      "pubmed_total": 29,
-      "pubmed_treatment_total": 23,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "39969346",
-          "title": "A narrative review of phase III and IV clinical trials for the pharmacological treatment of Huntington's disease in adults.",
-          "authors": "Alharthi MS",
-          "journal": "Medicine",
-          "year": "2024",
-          "abstract_snippet": "Huntington disease (HD) is a hereditary neurodegenerative condition characterized by progression of motor, cognitive, and psychiatric abnormalities. Despite the lack of definitive medications, current research efforts are actively assessing novel pharmaceutical interventions through phase III and IV...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39969346/",
-          "total_results": 29
-        },
-        {
-          "pmid": "37840138",
-          "title": "Memantine administration prevented chorea movement in Huntington's disease: a case report.",
-          "authors": "Saigoh K, Hirano M, Mitsui Y, et al.",
-          "journal": "Journal of medical case reports",
-          "year": "2023",
-          "abstract_snippet": "BACKGROUND: Huntington's disease is an autosomal dominant inherited disorder characterized by personality changes (such as irritability and restlessness) and psychotic symptoms (such as hallucinations and delusions). When the personality changes become noticeable, involuntary movements (chorea) also...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37840138/"
-        },
-        {
-          "pmid": "37476323",
-          "title": "Memantine Use and Cognitive Decline in Huntington's Disease: An Enroll-HD Study.",
-          "authors": "Ogilvie AC, Schultz JL",
-          "journal": "Movement disorders clinical practice",
-          "year": "2023",
-          "abstract_snippet": "BACKGROUND: Memantine is an  OBJECTIVE: To assess the effectiveness of memantine on the trajectory of cognitive decline in individuals with manifest HD. METHODS: Using participants from the Enroll-HD study, the primary analysis compared trajectories in cognition over a 5-year period using linear mix...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37476323/"
-        },
-        {
-          "pmid": "25723022",
-          "title": "[Huntington's disease: cellular and molecular basis of pathology].",
-          "authors": "Korzhova VV, Artamonov DN, Vlasova OL, et al.",
-          "journal": "Zhurnal vysshei nervnoi deiatelnosti imeni I P Pavlova",
-          "year": "2014",
-          "abstract_snippet": "Huntington's disease (HD) is an inherited autosomal dominant neurodegenerative disorder caused by a polyQ expansion (>36 glutamine repeats) in Huntingtin (Htt) protein. It is believed that dysfunction of corticostriatal system is one of the main pathological events. Special attention is paid to syna...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/25723022/"
-        },
-        {
-          "pmid": "16959224",
-          "title": "Memantine reduces striatal cell death with decreasing calpain level in 3-nitropropionic model of Huntington's disease.",
-          "authors": "Lee ST, Chu K, Park JE, et al.",
-          "journal": "Brain research",
-          "year": "2006",
-          "abstract_snippet": "Huntington's disease has an increase in the activated calpain, which is enhanced by the NMDA receptor activation. We investigated the neuroprotective effect of memantine in 3-nitropropionic acid (3NP)-induced striatal degeneration model. Either memantine (20 mg/kg/day) or PBS was intraperitoneally a...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/16959224/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Memantine-induced delayed sleep phase in Huntington\u2019s disease: A case report",
-          "year": 2025,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/b00cf0c1c74ea1b5492d26ac53540866d03350df",
-          "authors": "Y. Fujita, T. Hamada, Satoshi Kubota"
-        },
-        {
-          "title": "Efficacy and safety of cholinesterase inhibitors and memantine for cognitive symptoms in patients with Huntington's disease: A systematic review",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/472dffd2bb8d6fcd1bc2f1918fe3495bd31e2571",
-          "authors": "Catarina Correia Rodrigues, V. Carvalho, F. Sotero"
-        },
-        {
-          "title": "Memantine Use and Cognitive Decline in Huntington's Disease: An Enroll\u2010HD Study",
-          "year": 2023,
-          "citations": 9,
-          "url": "https://www.semanticscholar.org/paper/d3c48b21772f036aab2e9b3541e824cd30e2e4c3",
-          "authors": "A. Ogilvie, J. Schultz"
-        },
-        {
-          "title": "Memantine administration prevented chorea movement in Huntington\u2019s disease: a case report",
-          "year": 2023,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/a23577d73dee7c20d761ec3a70c5bbdb980f7912",
-          "authors": "K. Saigoh, Makito Hirano, Y. Mitsui"
-        },
-        {
-          "title": "J018\u2005Efficacy and safety of cholinesterase inhibitors and memantine for cognitive symptoms in patients with Huntington\u2019s disease \u2013 a systematic review",
-          "year": 2024,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/c2a025fc2d7928b8757fac49acf525b0d9039b9b",
-          "authors": "Catarina Correia Rodrigues, Vanessa Carvalho, F. Sotero"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Memantine Use and Cognitive Decline in Huntington's Disease: An Enroll\u2010HD Study",
-        "year": 2023,
-        "citations": 9,
-        "url": "https://www.semanticscholar.org/paper/d3c48b21772f036aab2e9b3541e824cd30e2e4c3",
-        "authors": "A. Ogilvie, J. Schultz"
-      },
-      "max_citations": 9,
-      "faers_signal": "none",
-      "faers_total_reports": 16174,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Memantine to Huntington's disease terms. Drug has 16174 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "P5172 (1.560)",
-        "BMS-387032 (1.559)",
-        "WZ-4-145 (1.555)",
-        "SB590885 (1.544)",
-        "HY-50877 (1.540)"
-      ],
-      "signature_interpretation": "Memantine was not found among the top 47 drugs that reverse the Huntington's disease gene signature. Top reversers: P5172 (1.560), BMS-387032 (1.559), WZ-4-145 (1.555)",
-      "ai_hypothesis": "of its neuroprotective effects.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "Memantine \u2014[is a therapeutic for]\u2192 Huntington's disease",
-      "kg_paths_text": "\u2022 Memantine \u2014[is a therapeutic for]\u2192 Huntington's disease\n\u2022 Memantine \u2014[is a therapeutic for]\u2192 MESH:D012559 \u2014[is treated by]\u2192 DB00502 \u2014[treats]\u2192 Huntington's disease\n\u2022 Memantine \u2014[is a therapeutic for]\u2192 MESH:D012559 \u2014[is treated by]\u2192 DB00502 \u2014[treats]\u2192 Huntington's disease",
-      "validation_experiments": [],
-      "novelty_score": 0.2770000100135803,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": true,
-      "clinical_trials_total": 2,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT00652457",
-          "title": "Study of Memantine to Treat Huntington's Disease",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "50",
-          "url": "https://clinicaltrials.gov/study/NCT00652457"
-        },
-        {
-          "nct_id": "NCT01458470",
-          "title": "A Trial of Memantine as Symptomatic Treatment for Early Huntington Disease",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "19",
-          "url": "https://clinicaltrials.gov/study/NCT01458470"
-        }
-      ],
-      "trial_phases": {
-        "PHASE4": 1,
-        "PHASE2": 1
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "2 clinical trial(s) found on ClinicalTrials.gov",
-        "29 PubMed articles found",
-        "Supported by 4 independent AI pillars",
-        "AI-generated hypothesis available"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1162,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00783",
-            "drug_name": "Estradiol",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00502",
-            "drug_name": "Haloperidol",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00331",
-            "drug_name": "Metformin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00563",
-            "drug_name": "Methotrexate",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00959",
-            "drug_name": "Methylprednisolone",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (NR1I2 / rs1523130)",
-        "cpic": [],
-        "pharmgkb": [
-          {
-            "gene": "NR1I2",
-            "variant": "rs1523130",
-            "level": "3",
-            "phenotype_category": "Other",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183631460"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": false,
-          "docking": true,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.551,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.396,
-          "docking": 0.946,
-          "pharos": 0.0,
-          "literature": 0.641
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Whole Blood"
-        ],
-        "n_genes": 7,
-        "n_expressed": 1,
-        "mean_tpm_in_tissue": 0.21,
-        "max_tpm_in_tissue": 1.29,
-        "tissue_specificity": 0.0,
-        "context_modifier": 0.857
-      },
-      "disease_entity": "Disease::MESH:D006816",
-      "docking": {
-        "kcal_per_mol": -11.35,
-        "target_symbol": "ACHE",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.9961,
-      "ensemble_features": {
-        "kg_score": 0.9998,
-        "degree_penalty": 0.7689,
-        "n_drug_targets": 7,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 1.0986
-      },
-      "ensemble_rank": 1,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
       }
     },
     {
@@ -1997,6 +1999,7 @@
         "Highly cited paper (8392 citations): \"A novel gene containing a trinucleotide repeat that is expan...\"",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D006816",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "late-trial",
@@ -2046,14 +2049,6 @@
         "tissue_specificity": 1.0,
         "context_modifier": 1.084
       },
-      "disease_entity": "Disease::MESH:D006816",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
       "ensemble_prob": 0.0,
       "ensemble_features": {
         "kg_score": 0.6578,
@@ -2064,6 +2059,13 @@
         "transe_rank_log": 8.1917
       },
       "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2193,6 +2195,7 @@
         "Supported by 3 independent AI pillars",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D006816",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2242,14 +2245,6 @@
         "tissue_specificity": 0.359,
         "context_modifier": 1.035
       },
-      "disease_entity": "Disease::MESH:D006816",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
       "ensemble_prob": 0.0,
       "ensemble_features": {
         "kg_score": 0.7355,
@@ -2260,6 +2255,13 @@
         "transe_rank_log": 7.9342
       },
       "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2390,6 +2392,7 @@
         "Highly cited paper (8392 citations): \"A novel gene containing a trinucleotide repeat that is expan...\"",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D006816",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2490,14 +2493,6 @@
         "tissue_specificity": 0.359,
         "context_modifier": 1.035
       },
-      "disease_entity": "Disease::MESH:D006816",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
       "ensemble_prob": 0.0,
       "ensemble_features": {
         "kg_score": 0.7076,
@@ -2508,6 +2503,13 @@
         "transe_rank_log": 8.0346
       },
       "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -2642,6 +2644,7 @@
         "Highly cited paper (8392 citations): \"A novel gene containing a trinucleotide repeat that is expan...\"",
         "AI-generated hypothesis available"
       ],
+      "disease_entity": "Disease::MESH:D006816",
       "dose_plausibility": {
         "plausibility": "unknown",
         "dose_range": "research",
@@ -2691,14 +2694,6 @@
         "tissue_specificity": 0.359,
         "context_modifier": 1.035
       },
-      "disease_entity": "Disease::MESH:D006816",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
       "ensemble_prob": 0.0,
       "ensemble_features": {
         "kg_score": 0.2062,
@@ -2709,6 +2704,13 @@
         "transe_rank_log": 9.0331
       },
       "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -2731,11 +2733,11 @@
     }
   ],
   "disease_entity": "Disease::MESH:D006816",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
     "n_disease_genes": 39,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
-  },
-  "ensemble_version": "v5",
-  "ensemble_model_path": "data/models/ensemble_v5.pkl"
+  }
 }

@@ -1,159 +1,161 @@
 {
   "disease": "Tuberculosis",
   "status": "completed",
-  "timestamp": "2026-04-19T12:44:31.478099",
-  "elapsed_seconds": 866.0,
-  "total_searched": 50,
-  "evidence_generated": 10,
+  "timestamp": "2026-05-07T14:35:53.323220",
+  "elapsed_seconds": 373.0,
+  "total_searched": 4,
+  "evidence_generated": 4,
   "confidence_counts": {
-    "MEDIUM": 4,
-    "HIGH": 3,
-    "LOW": 3
+    "HIGH": 2,
+    "LOW": 2
   },
   "pipeline_version": "v5",
   "data_manifest_hash": "2da2aa88f2457d1b",
   "candidates": [
     {
-      "drug_name": "Tacrolimus",
-      "drug_id": "DB00864",
+      "drug_name": "Digoxin",
+      "drug_id": "DB00390",
       "disease_name": "Tuberculosis",
-      "combined_score": 0.5353999733924866,
-      "pillars_hit": 4,
-      "transe_rank": 248,
-      "transe_score": -11.2021,
+      "combined_score": 0.237,
+      "pillars_hit": 2,
+      "transe_rank": 123,
+      "transe_score": -10.9233,
       "pykeen_score": 0,
       "pykeen_rank": 0,
-      "txgnn_score": 0.92,
-      "txgnn_rank": 8,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
-      "mol_emb_similarity": 0.9471,
-      "mol_emb_similar_to": "Rifampicin",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.7120000123977661,
-      "proximity_distance": 1.149999976158142,
-      "admet_score": 0.54,
-      "admet_flags": "hERG=0.83",
-      "primekg_score": 0.2579,
+      "mol_emb_similarity": 0.9356,
+      "mol_emb_similar_to": "Amikacin",
+      "gene_sig_score": 1.4757,
+      "gene_sig_rank": 20,
+      "proximity_score": 0,
+      "proximity_distance": 0,
+      "admet_score": 0.58,
+      "admet_flags": "hERG=0.74",
+      "primekg_score": 0,
       "dti_score": 0,
       "dti_best_target": "",
-      "kg_group_score": 0.041,
-      "structural_group_score": 0.9471,
-      "network_group_score": 0.5325000286102295,
-      "txgnn_group_score": 0.92,
+      "kg_group_score": -8.2186,
+      "structural_group_score": 0.9356,
+      "network_group_score": 0.4514,
+      "txgnn_group_score": 0,
       "mr_group_score": 0,
-      "admet_multiplier": 0.908,
-      "efficacy_score": 0.5896000266075134,
-      "groups_hit": 4,
+      "admet_multiplier": 0.916,
+      "efficacy_score": 0.2587,
+      "groups_hit": 2,
       "direct_relations": [],
-      "shared_target_count": 1,
+      "shared_target_count": 4,
       "shared_targets": [
-        "CYP3A4"
+        "CYP3A4",
+        "IL1B",
+        "IL6",
+        "JUN"
       ],
-      "pubmed_total": 108,
-      "pubmed_treatment_total": 98,
+      "pubmed_total": 24,
+      "pubmed_treatment_total": 21,
       "pubmed_repurposing_total": 0,
       "key_papers": [
         {
-          "pmid": "36795280",
-          "title": "The use of TNF-\u03b1 antagonists in tuberculosis to control severe paradoxical reaction or immune reconstitution inflammatory syndrome: a case series and literature review.",
-          "authors": "Armange L, Lacroix A, Petitgas P, et al.",
-          "journal": "European journal of clinical microbiology & infectious diseases : official publication of the European Society of Clinical Microbiology",
-          "year": "2023",
-          "abstract_snippet": "Paradoxical reaction (PR) and immune reconstitution inflammatory syndrome (IRIS) are common complications of tuberculosis treatment. Corticosteroids are first-line treatment for severe PR or IRIS, particularly neurological. We report four cases of severe PR or IRIS during tuberculosis treatment who ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36795280/",
-          "total_results": 108
+          "pmid": "2985676",
+          "title": "Pharmacokinetic interactions between digoxin and other drugs.",
+          "authors": "Marcus FI",
+          "journal": "Journal of the American College of Cardiology",
+          "year": "1985",
+          "abstract_snippet": "Drug interactions with digoxin are important because of this agent's narrow therapeutic index. Among the drugs that can decrease digoxin bioavailability are cholestyramine, antacid gels, kaolin-pectate, certain antimicrobial drugs and cancer chemotherapeutic agents. In selected patients, antibiotics...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/2985676/",
+          "total_results": 24
         },
         {
-          "pmid": "22852277",
-          "title": "Belatacept.",
-          "authors": "",
-          "journal": "Prescrire international",
-          "year": "2012",
-          "abstract_snippet": "Immunosuppressive therapy designed to prevent kidney graft rejection usually consists of a triple-drug combination including a corticosteroid, a calcineurin inhibitor (ciclosporin or tacrolimus) and a drug that inhibits cell proliferation (azathioprine or mycophenolate mofetil). Belatacept is closel...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/22852277/"
-        },
-        {
-          "pmid": "22372581",
-          "title": "Tacrolimus as a risk factor for tuberculosis and outcome of treatment with rifampicin in solid organ transplant recipients.",
-          "authors": "Ha YE, Joo EJ, Park SY, et al.",
-          "journal": "Transplant infectious disease : an official journal of the Transplantation Society",
-          "year": "2012",
-          "abstract_snippet": "BACKGROUND: The purpose of this study was to investigate the incidence, risk factors, and treatment outcome of tuberculosis (TB) in solid organ transplant (SOT) recipients treated with rifampicin. METHODS: The incidence density of TB was calculated by a retrospective cohort study. Risk factors for T...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/22372581/"
-        },
-        {
-          "pmid": "37158726",
-          "title": "Latent Tuberculosis Infection and Associated Factors in Patients with Systemic Lupus Erythematosus: a Multicenter, Cross-Sectional Study.",
-          "authors": "Zhang L, Ma Y, Jiang N, et al.",
-          "journal": "Microbiology spectrum",
-          "year": "2023",
-          "abstract_snippet": "The objectives of this study were to screen for latent tuberculosis infection (LTBI) among patients with systemic lupus erythematosus (SLE) using the T-SPOT.TB assay and to identify factors affecting the assay results. SLE patients were enrolled from 13 tertiary hospitals in eastern, central, and we...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37158726/"
-        },
-        {
-          "pmid": "31729747",
-          "title": "Early interaction between tacrolimus and rifampin.",
-          "authors": "Charfi R, Ben Sassi M, Ga\u00efes E, et al.",
-          "journal": "La Tunisie medicale",
+          "pmid": "29557724",
+          "title": "Drug targeted virtual screening and molecular dynamics of LipU protein of Mycobacterium tuberculosis and Mycobacterium leprae.",
+          "authors": "Kaur G, Pandey B, Kumar A, et al.",
+          "journal": "Journal of biomolecular structure & dynamics",
           "year": "2019",
-          "abstract_snippet": "Drug interactions are unavoidable and need to be proactively identified and managed, in particular, the inductive effect of rifampin on tacrolimus whose potency and duration data are limited. We report the case of a renal transplant patient who was prescribed tacrolimus with preserved tough blood le...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/31729747/"
+          "abstract_snippet": "The lipolytic protein LipU was conserved in mycobacterium sp. including M. tuberculosis (MTB LipU) and M. leprae (MLP LipU). The MTB LipU was identified in extracellular fraction and was reported to be essential for the survival of mycobacterium. Therefore to address the problem of drug resistance i...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29557724/"
+        },
+        {
+          "pmid": "39840156",
+          "title": "Acquired Dyschromatopsia and Its Link to Drug Toxicity.",
+          "authors": "Ageed A, Aslam MD, El Haouari S",
+          "journal": "Cureus",
+          "year": "2024",
+          "abstract_snippet": "Colour vision defects (CVDs) can be both congenital and acquired, with acquired dyschromatopsia often associated with medication toxicity. This review explores various standardised colour vision tests used to detect these defects, including the Ishihara plate test, Farnsworth-Munsell 100 hue test, a...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39840156/"
+        },
+        {
+          "pmid": "39793592",
+          "title": "Safety, bactericidal activity, and pharmacokinetics of the antituberculosis drug candidate BTZ-043 in South Africa (PanACEA-BTZ-043-02): an open-label, dose-expansion, randomised, controlled, phase 1b/2a trial.",
+          "authors": "Heinrich N, de Jager V, Dreisbach J, et al.",
+          "journal": "The Lancet. Microbe",
+          "year": "2025",
+          "abstract_snippet": "BACKGROUND: The broad use of bedaquiline and pretomanid as the mainstay of new regimens to combat tuberculosis is a risk due to increasing bedaquiline resistance. We aimed to assess the safety, bactericidal activity, and pharmacokinetics of BTZ-043, a first-in-class DprE1 inhibitor with strong bacte...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39793592/"
+        },
+        {
+          "pmid": "33294223",
+          "title": "Ion Transport Modulators as Antimycobacterial Agents.",
+          "authors": "Mitini-Nkhoma SC, Fernando N, Ishaka GKD, et al.",
+          "journal": "Tuberculosis research and treatment",
+          "year": "2020",
+          "abstract_snippet": "There is an urgent need for better and safer therapeutic interventions for tuberculosis (TB). We assessed the effects of FDA-approved ion transport modulators, namely, ambroxol HCl, amiloride HCl, diazoxide, digoxin, furosemide, hydrochlorothiazide (HCTZ), metformin, omeprazole, pantoprazole, phenyt...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33294223/"
         }
       ],
       "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "Therapeutic Drug Monitoring of Tacrolimus in Tunisian Renal Transplant Patients during the Tuberculosis Infection: A Retrospective, Observational, Single-centre Analysis.",
+          "title": "Drug interaction potential of high-dose rifampicin in patients with pulmonary tuberculosis",
+          "year": 2023,
+          "citations": 12,
+          "url": "https://www.semanticscholar.org/paper/62760b2f1472d9547830e26e7beb295256bdb3a6",
+          "authors": "R. Stemkens, V. Jager, R. Dawson"
+        },
+        {
+          "title": "PSORIASIFORM DRUG ERUPTION INDUCED BY ANTI-TUBERCULOSIS MEDICATION: A CASE REPORT",
+          "year": 2023,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/02d4ea4ef8a555760146edc7cd24fdc01991c8a8",
+          "authors": "N. Sindhu"
+        },
+        {
+          "title": "Medications Damaging Retinal Pigment Epithelium and Photoreceptor Complex-3: Pathogenesis, Diagnosis and Treatment (Clofazimine, Deferoxamine, Vitamin A Deficiency and Celiac Disease, Digoxin)",
           "year": 2022,
           "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/74bbe73bcd05698a9d56233f07060303415bd5c0",
-          "authors": "H. Ammar, M. B. Sassi, R. Charfi"
+          "url": "https://www.semanticscholar.org/paper/2e07b4b556a6d110d6d91c491fad843a6cd4a4dd",
+          "authors": ""
         },
         {
-          "title": "Whole genome sequencing confirms reactivation of Tuberculosis five years after initial infection despite adequate preventative therapy in a patient with profound immunosuppression.",
-          "year": 2025,
+          "title": "[Use of digoxin and nitrong in chronic cor pulmonale in patients with pulmonary tuberculosis].",
+          "year": 1990,
           "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/ee7851a7491edd47185bee183789d5679057a5e5",
-          "authors": "E. Mcnally, S. O\u2019Riordan, M. Fitzgibbon"
+          "url": "https://www.semanticscholar.org/paper/2e38da32e58d390e5ece733830c7ca4d440af5e0",
+          "authors": "A. Ershov, Iu A Evstraf'ev, V. Tikhonov"
         },
         {
-          "title": "Anti-MDA5 Antibody-Positive Dermatomyositis-Associated Interstitial Lung Disease With a False-Positive Tuberculosis-Targeted RNA Capture (TB-TRC) Result: A Multimodal Management",
-          "year": 2025,
+          "title": "Use of digoxin and nitrong in chronic cor pulmonale in patients with pulmonary tuberculosis",
+          "year": 1990,
           "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/b2ac012d55c993472894b71eb6677c3e890085a6",
-          "authors": "Miho Shibata, T. Yanagihara, Makoto Fujimoto"
-        },
-        {
-          "title": "New headache in heart transplant patient receiving tacrolimus",
-          "year": 2024,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/e19867478377c6f8ed01bc761763b08bd90a5dff",
-          "authors": "R. Londero"
-        },
-        {
-          "title": "Unilateral testicular tuberculosis in a kidney transplant recipient: a case report",
-          "year": 2024,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/533c7a5cb534a6fea94fda241d22444be9bb6e26",
-          "authors": "Jaeseok Yang, Yaerim Kim, W. Park"
+          "url": "https://www.semanticscholar.org/paper/c79a61d0d4d0ec4b83a15f6096bc4f3da1e4d3bd",
+          "authors": "Ershov Ai, Evstraf'ev IuA, Tikhonov Va"
         }
       ],
       "most_cited_paper": {
-        "title": "Unilateral testicular tuberculosis in a kidney transplant recipient: a case report",
-        "year": 2024,
-        "citations": 1,
-        "url": "https://www.semanticscholar.org/paper/533c7a5cb534a6fea94fda241d22444be9bb6e26",
-        "authors": "Jaeseok Yang, Yaerim Kim, W. Park"
+        "title": "Drug interaction potential of high-dose rifampicin in patients with pulmonary tuberculosis",
+        "year": 2023,
+        "citations": 12,
+        "url": "https://www.semanticscholar.org/paper/62760b2f1472d9547830e26e7beb295256bdb3a6",
+        "authors": "R. Stemkens, V. Jager, R. Dawson"
       },
-      "max_citations": 1,
+      "max_citations": 12,
       "faers_signal": "moderate",
-      "faers_total_reports": 124653,
-      "faers_cooccurrences": 886,
-      "faers_interpretation": "886 FAERS reports mention both Tacrolimus and Tuberculosis-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
+      "faers_total_reports": 63658,
+      "faers_cooccurrences": 44,
+      "faers_interpretation": "44 FAERS reports mention both Digoxin and Tuberculosis-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": true,
+      "signature_reversal_rank": 20,
       "signature_top_reversers": [
         "radicicol (1.661)",
         "radicicol (1.556)",
@@ -161,8 +163,8 @@
         "radicicol (1.521)",
         "JNK-9L (1.513)"
       ],
-      "signature_interpretation": "Tacrolimus was not found among the top 42 drugs that reverse the Tuberculosis gene signature. Top reversers: radicicol (1.661), radicicol (1.556), radicicol (1.524)",
-      "ai_hypothesis": "of its anti-inflammatory and immunosuppressive properties.",
+      "signature_interpretation": "Digoxin ranks #20 out of 42 drugs for reversing the Tuberculosis gene signature (30 up + 30 down genes). This suggests a mechanistic basis for treatment.",
+      "ai_hypothesis": "",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
@@ -186,22 +188,52 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0,
       "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "Tacrolimus \u2014[is inhibited by]\u2192 gene-2280 \u2014[is bound by]\u2192 DB00091 \u2014[is a therapeutic for]\u2192 Tuberculosis",
-      "kg_paths_text": "\u2022 Tacrolimus \u2014[is inhibited by]\u2192 gene-2280 \u2014[is bound by]\u2192 DB00091 \u2014[is a therapeutic for]\u2192 Tuberculosis\n\u2022 Tacrolimus \u2014[is inhibited by]\u2192 gene-2280 \u2014[is bound by]\u2192 DB00091 \u2014[is a therapeutic for]\u2192 Tuberculosis\n\u2022 Tacrolimus \u2014[binds]\u2192 gene-1551 \u2014[is bound by]\u2192 DB01201 \u2014[treats]\u2192 Tuberculosis",
+      "mechanistic_hypothesis": "Digoxin \u2014[downregulates]\u2192 gene-7298 \u2014[is a target of]\u2192 DB00440 \u2014[is a therapeutic for]\u2192 Tuberculosis",
+      "kg_paths_text": "\u2022 Digoxin \u2014[downregulates]\u2192 gene-7298 \u2014[is a target of]\u2192 DB00440 \u2014[is a therapeutic for]\u2192 Tuberculosis\n\u2022 Digoxin \u2014[downregulates]\u2192 gene-7298 \u2014[is a target of]\u2192 DB01643 \u2014[is a therapeutic for]\u2192 Tuberculosis\n\u2022 Digoxin \u2014[downregulates]\u2192 gene-7298 \u2014[is a target of]\u2192 DB01643 \u2014[is a therapeutic for]\u2192 Tuberculosis",
       "validation_experiments": [],
-      "novelty_score": 0.32100000977516174,
+      "novelty_score": 0.154,
       "novelty_level": "KNOWN",
       "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "MEDIUM",
-      "confidence_reasons": [
-        "108 PubMed articles on this drug-disease pair",
-        "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 886 adverse event reports mention drug-disease co-occurrence",
-        "AI-generated hypothesis available"
+      "clinical_trials_total": 3,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT04525235",
+          "title": "Phenotyping of High Dose Rifampicin",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "25",
+          "url": "https://clinicaltrials.gov/study/NCT04525235"
+        },
+        {
+          "nct_id": "NCT05526911",
+          "title": "A Phase 1, Drug-Drug Interaction Study of TBAJ-876 in Healthy Adults",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "28",
+          "url": "https://clinicaltrials.gov/study/NCT05526911"
+        },
+        {
+          "nct_id": "NCT04044001",
+          "title": "BTZ-043 - Multiple Ascending Dose (MAD) to Evaluate Safety, Tolerability and Early Bactericidal Activity (EBA)",
+          "status": "COMPLETED",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "77",
+          "url": "https://clinicaltrials.gov/study/NCT04044001"
+        }
       ],
+      "trial_phases": {
+        "PHASE1": 3,
+        "PHASE2": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "3 clinical trial(s) found on ClinicalTrials.gov",
+        "24 PubMed articles found",
+        "Supported by 2 independent AI pillars",
+        "Moderate FAERS signal: 44 adverse event reports mention drug-disease co-occurrence",
+        "Drug ranks #20 for reversing disease gene signature"
+      ],
+      "disease_entity": "Disease::MESH:D014376",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -212,7 +244,7 @@
         "stage": 1
       },
       "ddi_warnings": {
-        "n_interactions": 1995,
+        "n_interactions": 1711,
         "has_warnings": true,
         "top_interactions": [
           {
@@ -269,509 +301,68 @@
       },
       "pharmacogenomics": {
         "has_flags": true,
-        "highest_risk": "high_risk",
-        "summary": "CPIC-A (CYP3A5) \u2022 PharmGKB-3 (ABCB1 / rs1045642)",
+        "highest_risk": "moderate",
+        "summary": "CPIC-C (ABCB1) \u2022 PharmGKB-3 (NOS3 / rs1799983)",
         "cpic": [
           {
-            "gene": "CYP3A5",
-            "level": "A",
-            "guideline": "CYP3A5 and Tacrolimus"
-          },
-          {
-            "gene": "CYP3A4",
+            "gene": "ABCB1",
             "level": "C",
             "guideline": ""
           }
         ],
         "pharmgkb": [
           {
+            "gene": "NOS3",
+            "variant": "rs1799983",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1444700983"
+          },
+          {
             "gene": "ABCB1",
-            "variant": "rs1045642",
+            "variant": "rs2032582",
             "level": "3",
             "phenotype_category": "Other",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/655388022"
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981238108"
           },
           {
             "gene": "ABCB1",
-            "variant": "rs2032582",
+            "variant": "rs1128503",
             "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204116"
+            "phenotype_category": "Other",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183615535"
           },
-          {
-            "gene": "KCNJ11",
-            "variant": "rs5219",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1450376188"
-          },
-          {
-            "gene": "POR",
-            "variant": "rs1057868",
-            "level": "3",
-            "phenotype_category": "Metabolism/PK",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451257000"
-          },
-          {
-            "gene": "CYP3A4",
-            "variant": "rs2242480",
-            "level": "2A",
-            "phenotype_category": "Metabolism/PK",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451989360"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 3,
-        "axes": {
-          "kg": true,
-          "docking": true,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.572,
-        "label": "silver-standard",
-        "axis_values": {
-          "kg": 0.535,
-          "docking": 0.693,
-          "pharos": 0.0,
-          "literature": 0.885
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Lung",
-          "Whole Blood"
-        ],
-        "n_genes": 1,
-        "n_expressed": 0,
-        "mean_tpm_in_tissue": 0.13,
-        "max_tpm_in_tissue": 0.13,
-        "tissue_specificity": 0.0,
-        "context_modifier": 0.855
-      },
-      "ensemble_prob": 0.2422,
-      "ensemble_features": {
-        "kg_score": 0.9918,
-        "degree_penalty": 0.7479,
-        "n_drug_targets": 16,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 4.4773
-      },
-      "ensemble_rank": 6,
-      "docking": {
-        "kcal_per_mol": -8.32,
-        "target_symbol": "CYP3A4",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D014376",
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [
-          "DIKETO",
-          "ISOLATED"
-        ],
-        "n_alerts": 2,
-        "alert_names": [
-          "diketo_group",
-          "isolated_alkene"
-        ]
-      }
-    },
-    {
-      "drug_name": "Dexamethasone",
-      "drug_id": "DB01234",
-      "disease_name": "Tuberculosis",
-      "combined_score": 0.5037,
-      "pillars_hit": 4,
-      "transe_rank": 23,
-      "transe_score": -10.3639,
-      "pykeen_score": -12.15,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.699999988079071,
-      "proximity_distance": 1.2000000476837158,
-      "admet_score": 0.7109,
-      "admet_flags": "clean",
-      "primekg_score": 0.2594,
-      "dti_score": 1.0,
-      "dti_best_target": "SOCS1",
-      "kg_group_score": 0.4067,
-      "structural_group_score": 1.0,
-      "network_group_score": 0.5152000188827515,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.3326,
-      "admet_multiplier": 0.9422,
-      "efficacy_score": 0.5346,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 25,
-      "shared_targets": [
-        "ALOX5",
-        "CREB1",
-        "CYP3A4",
-        "DKK1",
-        "F2",
-        "FASLG",
-        "IL1A",
-        "IL1B",
-        "IL1RN",
-        "IL2",
-        "IL22",
-        "IL2RA",
-        "IL6",
-        "IL9",
-        "JUN",
-        "LEP",
-        "LYZ",
-        "MAPK1",
-        "MMP1",
-        "MMP9"
-      ],
-      "pubmed_total": 416,
-      "pubmed_treatment_total": 366,
-      "pubmed_repurposing_total": 1,
-      "key_papers": [
-        {
-          "pmid": "19643501",
-          "title": "British Infection Society guidelines for the diagnosis and treatment of tuberculosis of the central nervous system in adults and children.",
-          "authors": "Thwaites G, Fisher M, Hemingway C, et al.",
-          "journal": "The Journal of infection",
-          "year": "2009",
-          "abstract_snippet": "SUMMARY AND KEY RECOMMENDATIONS: The aim of these guidelines is to describe a practical but evidence-based approach to the diagnosis and treatment of central nervous system tuberculosis in children and adults. We have presented guidance on tuberculous meningitis (TBM), intra-cerebral tuberculoma wit...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/19643501/",
-          "total_results": 416
-        },
-        {
-          "pmid": "15496623",
-          "title": "Dexamethasone for the treatment of tuberculous meningitis in adolescents and adults.",
-          "authors": "Thwaites GE, Nguyen DB, Nguyen HD, et al.",
-          "journal": "The New England journal of medicine",
-          "year": "2004",
-          "abstract_snippet": "BACKGROUND: Tuberculous meningitis kills or disables more than half of those affected with the disease. Previous studies have been too small to determine whether adjunctive treatment with corticosteroids can reduce the risk of disability or death among adults with tuberculous meningitis, and the eff...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/15496623/"
-        },
-        {
-          "pmid": "27121755",
-          "title": "Corticosteroids for managing tuberculous meningitis.",
-          "authors": "Prasad K, Singh MB, Ryan H",
-          "journal": "The Cochrane database of systematic reviews",
-          "year": "2016",
-          "abstract_snippet": "BACKGROUND: Tuberculous meningitis is a serious form of tuberculosis (TB) that affects the meninges that cover a person's brain and spinal cord. It is associated with high death rates and with disability in people who survive. Corticosteroids have been used as an adjunct to antituberculous drugs to ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/27121755/"
-        },
-        {
-          "pmid": "37819954",
-          "title": "Adjunctive Dexamethasone for Tuberculous Meningitis in HIV-Positive Adults.",
-          "authors": "Donovan J, Bang ND, Imran D, et al.",
-          "journal": "The New England journal of medicine",
-          "year": "2023",
-          "abstract_snippet": "BACKGROUND: Adjunctive glucocorticoids are widely used to treat human immunodeficiency virus (HIV)-associated tuberculous meningitis despite limited data supporting their safety and efficacy. METHODS: We conducted a double-blind, randomized, placebo-controlled trial involving HIV-positive adults (\u22651...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37819954/"
-        },
-        {
-          "pmid": "36439353",
-          "title": "Effect of a recent parenteral dexamethasone and ketoprofen administration on the immunological diagnosis of tuberculosis in goats.",
-          "authors": "Ortega J, de Juan L, Sevilla IA, et al.",
-          "journal": "Frontiers in veterinary science",
-          "year": "2022",
-          "abstract_snippet": "Caprine tuberculosis (TB) is a zoonosis caused by members of the ",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36439353/"
-        }
-      ],
-      "repurposing_papers": [
-        {
-          "pmid": "37921134",
-          "title": "AI-driven Discovery of Celecoxib and Dexamethasone for Exploring their Mode of Action as Human Interleukin (IL-6) Inhibitors to Treat COVID-19-induced Cytokine Storm in Humans.",
-          "authors": "Shamkh IM, Elkazzaz M, Radwan ES, et al.",
-          "journal": "Current pharmaceutical design",
-          "year": "2023",
-          "abstract_snippet": "BACKGROUND: In the case of COVID-19 patients, it has been observed that the immune system of the infected person exhibits an extreme inflammatory response known as cytokine release syndrome (CRS) where the inflammatory cytokines are swiftly produced in quite large amounts in response to infective st...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37921134/",
-          "total_results": 1
-        }
-      ],
-      "semantic_scholar_papers": [
-        {
-          "title": "Dexamethasone inhibits Mycobacterium tuberculosis-induced glycolysis but preserves antimicrobial function in primary human macrophages",
-          "year": 2025,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/1267fa11f59053648609bc7f763be7505467443e",
-          "authors": "L. Thong, Olivia Sandby Thomas, Oisin \u00d3 Gallchobhair"
-        },
-        {
-          "title": "Pharmacokinetics of dexamethasone in tuberculosis meningitis",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/dbd5c67afe99c536a8140fbc621a824146d86427",
-          "authors": "J. M. Calderin, J. E. Res\u00e9ndiz-Galv\u00e1n, N. Abdelgawad"
-        },
-        {
-          "title": "Isolated nodular hepatic tuberculosis in an immunocompetent patient following dexamethasone treatment for COVID-19",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/9f0ada0f9e2a87a6d6cb84f8fd2d669d36b0d272",
-          "authors": "Jichang Seong, Egamberdiev Dilshod, Abdusattorov Ravshan"
-        },
-        {
-          "title": "Magic of Intravitreal Triamcinolone and Dexamethasone in a Patient with Uveitic Macular Edema with Treated Ocular Tuberculosis.",
-          "year": 2024,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/524d11d17684074eb0ea2335b17c68457701e090",
-          "authors": "A. Agrawal, R. Kharel Sitaula"
-        },
-        {
-          "title": "Towards Developing Steroids as Host-directed Therapy for Tuberculosis Pneumonia: Dexamethasone Reduces Glycolysis in Mycobacterium Tuberculosis Infected Human Alveolar Macrophages but Improves Bacillary Killing",
-          "year": 2024,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/1c75817b505d3cdac113754417e2a2c22f96771c",
-          "authors": "L. Thong, D. Cox, J. Keane"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Dexamethasone inhibits Mycobacterium tuberculosis-induced glycolysis but preserves antimicrobial function in primary human macrophages",
-        "year": 2025,
-        "citations": 3,
-        "url": "https://www.semanticscholar.org/paper/1267fa11f59053648609bc7f763be7505467443e",
-        "authors": "L. Thong, Olivia Sandby Thomas, Oisin \u00d3 Gallchobhair"
-      },
-      "max_citations": 3,
-      "faers_signal": "moderate",
-      "faers_total_reports": 312747,
-      "faers_cooccurrences": 525,
-      "faers_interpretation": "525 FAERS reports mention both Dexamethasone and Tuberculosis-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "radicicol (1.661)",
-        "radicicol (1.556)",
-        "radicicol (1.524)",
-        "radicicol (1.521)",
-        "JNK-9L (1.513)"
-      ],
-      "signature_interpretation": "Dexamethasone was not found among the top 42 drugs that reverse the Tuberculosis gene signature. Top reversers: radicicol (1.661), radicicol (1.556), radicicol (1.524)",
-      "ai_hypothesis": "of its anti-inflammatory properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "Phase 3",
-      "failed_trial_count": 1,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.3326,
-      "mr_genetic_targets": 4,
-      "mechanistic_hypothesis": "Dexamethasone \u2014[treats]\u2192 Tuberculosis",
-      "kg_paths_text": "\u2022 Dexamethasone \u2014[treats]\u2192 Tuberculosis\n\u2022 Dexamethasone \u2014[downregulates]\u2192 gene-831 \u2014[is a target of]\u2192 DB01373 \u2014[is a therapeutic for]\u2192 Tuberculosis\n\u2022 Dexamethasone \u2014[downregulates]\u2192 gene-5909 \u2014[is downregulated by]\u2192 DB00620 \u2014[treats]\u2192 Tuberculosis",
-      "validation_experiments": [],
-      "novelty_score": 0.151,
-      "novelty_level": "ESTABLISHED",
-      "is_known_treatment": true,
-      "clinical_trials_total": 10,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT06446245",
-          "title": "Adjunctive Doxycycline for Central Nervous System Tuberculosis",
-          "status": "RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "200",
-          "url": "https://clinicaltrials.gov/study/NCT06446245"
-        },
-        {
-          "nct_id": "NCT06811792",
-          "title": "Intrathecal Therapy for Adult Tuberculous Meningitis: Impact on Clinical Outcomes",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "837",
-          "url": "https://clinicaltrials.gov/study/NCT06811792"
-        },
-        {
-          "nct_id": "NCT02588196",
-          "title": "The Relationships Between Gene Polymorphisms of LTA4H and Dexamethasone Treatment for Tuberculous Meningitis",
-          "status": "UNKNOWN",
-          "phase": "PHASE4",
-          "enrollment": "200",
-          "url": "https://clinicaltrials.gov/study/NCT02588196"
-        },
-        {
-          "nct_id": "NCT03100786",
-          "title": "Leukotriene A4 Hydrolase Stratified Trial of Adjunctive Corticosteroids for HIV-uninfected Adults With Tuberculous Meningitis",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "702",
-          "url": "https://clinicaltrials.gov/study/NCT03100786"
-        },
-        {
-          "nct_id": "NCT01442428",
-          "title": "Paradoxical Tuberculosis Immune Reconstitution Inflammatory Syndrome (TB-IRIS) Treatment Trial",
-          "status": "WITHDRAWN",
-          "phase": "PHASE2, PHASE3",
-          "enrollment": "0",
-          "url": "https://clinicaltrials.gov/study/NCT01442428"
-        }
-      ],
-      "trial_phases": {
-        "PHASE2": 4,
-        "PHASE4": 1,
-        "PHASE3": 5
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "10 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
-        "416 PubMed articles on this drug-disease pair",
-        "1 article(s) specifically mention repurposing/repositioning",
-        "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 525 adverse event reports mention drug-disease co-occurrence",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.33)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "likely",
-        "dose_range": "trial",
-        "confidence": "medium",
-        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
-        "chembl_phase": 2.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1512,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (ABCB1 / rs1045642)",
-        "cpic": [],
-        "pharmgkb": [
           {
             "gene": "ABCB1",
             "variant": "rs1045642",
             "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204433"
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204372"
           },
           {
-            "gene": "ABCB1",
-            "variant": "rs2032582",
+            "gene": "ADRB2",
+            "variant": "rs1042713",
             "level": "3",
             "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981238041"
-          },
-          {
-            "gene": "CTLA4",
-            "variant": "rs4553808",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043880851"
-          },
-          {
-            "gene": "ABCB1",
-            "variant": "rs2229109",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449170621"
-          },
-          {
-            "gene": "GATA3",
-            "variant": "rs3824662",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1184512128"
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1447960179"
           }
         ]
       },
       "triangulation": {
-        "n_axes_agree": 2,
+        "n_axes_agree": 1,
         "axes": {
-          "kg": true,
+          "kg": false,
           "docking": false,
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.523,
-        "label": "multi-axis",
+        "triangulation_score": 0.351,
+        "label": "kg-only",
         "axis_values": {
-          "kg": 0.504,
+          "kg": 0.237,
           "docking": 0.489,
           "pharos": 0.0,
-          "literature": 1.0
+          "literature": 0.607
         }
       },
       "tissue_context": {
@@ -779,21 +370,21 @@
           "Lung",
           "Whole Blood"
         ],
-        "n_genes": 20,
-        "n_expressed": 14,
-        "mean_tpm_in_tissue": 152.69,
-        "max_tpm_in_tissue": 1687.39,
-        "tissue_specificity": 1.0,
-        "context_modifier": 1.15
+        "n_genes": 4,
+        "n_expressed": 3,
+        "mean_tpm_in_tissue": 96.99,
+        "max_tpm_in_tissue": 333.65,
+        "tissue_specificity": 0.55,
+        "context_modifier": 1.095
       },
-      "ensemble_prob": 0.6814,
+      "ensemble_prob": 0.2146,
       "ensemble_features": {
-        "kg_score": 0.9985,
-        "degree_penalty": 0.736,
-        "n_drug_targets": 24,
+        "kg_score": 0.9919,
+        "degree_penalty": 0.7524,
+        "n_drug_targets": 13,
         "is_fda_approved": 1,
         "n_disease_genes": 0,
-        "transe_rank_log": 2.8332
+        "transe_rank_log": 4.4543
       },
       "ensemble_rank": 2,
       "docking": {
@@ -803,155 +394,109 @@
         "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
         "hit": true
       },
-      "disease_entity": "Disease::MESH:D014376",
       "structural_alerts": {
         "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
+        "pains_families": [
+          "SAPONINE"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "saponine_derivative"
+        ]
       }
     },
     {
-      "drug_name": "Cimetidine",
-      "drug_id": "DB00501",
+      "drug_name": "Tacalcitol",
+      "drug_id": "DB13689",
       "disease_name": "Tuberculosis",
-      "combined_score": 0.44600000977516174,
-      "pillars_hit": 4,
-      "transe_rank": 109,
-      "transe_score": -10.8631,
+      "combined_score": 0.1904,
+      "pillars_hit": 2,
+      "transe_rank": 3216,
+      "transe_score": -13.1816,
       "pykeen_score": 0,
       "pykeen_rank": 0,
-      "txgnn_score": 0.99,
-      "txgnn_rank": 1,
-      "mol_similarity": 0,
-      "similar_to": "",
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0.6212,
+      "similar_to": "Cholecalciferol",
       "mol_emb_similarity": 0,
       "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.75,
-      "proximity_distance": 1.0,
-      "admet_score": 0.5683,
-      "admet_flags": "clean",
-      "primekg_score": 0.2633,
-      "dti_score": 0.1924,
-      "dti_best_target": "IGHE",
-      "kg_group_score": 0.0858,
-      "structural_group_score": 0.1924,
-      "network_group_score": 0.571399986743927,
-      "txgnn_group_score": 0.99,
+      "gene_sig_score": 0.0238,
+      "gene_sig_rank": 29,
+      "proximity_score": 0,
+      "proximity_distance": 0,
+      "admet_score": 1.0,
+      "admet_flags": "hERG=0.83",
+      "primekg_score": 0,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": -12.3294,
+      "structural_group_score": 0.6212,
+      "network_group_score": 0.3928,
+      "txgnn_group_score": 0,
       "mr_group_score": 0,
-      "admet_multiplier": 0.9137,
-      "efficacy_score": 0.48820000886917114,
-      "groups_hit": 4,
+      "admet_multiplier": 1.0,
+      "efficacy_score": 0.1904,
+      "groups_hit": 2,
       "direct_relations": [],
-      "shared_target_count": 3,
+      "shared_target_count": 1,
       "shared_targets": [
-        "CAT",
-        "CYP3A4",
-        "IL2"
+        "VDR"
       ],
-      "pubmed_total": 15,
-      "pubmed_treatment_total": 8,
+      "pubmed_total": 0,
+      "pubmed_treatment_total": 0,
       "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "29200713",
-          "title": "Gastroprotective and Ulcer Healing Effects of Camel Milk and Urine in HCl/EtOH, Non-steroidal Anti-inflammatory Drugs (Indomethacin), and Water-Restraint Stress-induced Ulcer in Rats.",
-          "authors": "Hu Z, Chang X, Pan Q, et al.",
-          "journal": "Pharmacognosy magazine",
-          "year": "2017",
-          "abstract_snippet": "BACKGROUND: Camel milk has been reportedly used to treat dropsy, jaundice, tuberculosis, and diabetes while camel urine is used to treat diarrhea and cancer. However, there is no scientific evidence on the antiulcer activity of camel milk and urine. Thus, the present is designed to investigate the g...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29200713/",
-          "total_results": 15
-        },
-        {
-          "pmid": "16476565",
-          "title": "The role of histamine in the intracellular survival of Mycobacterium bovis BCG.",
-          "authors": "Megyeri K, Buz\u00e1s K, Micz\u00e1k A, et al.",
-          "journal": "Microbes and infection",
-          "year": "2006",
-          "abstract_snippet": "The course and outcome of infection with mycobacteria are determined by a complex interplay between the immune system of the host and the survival mechanisms developed by the bacilli. Histamine plays an important role in various processes, including cell division, metabolism, and apoptosis, and it m...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/16476565/"
-        },
-        {
-          "pmid": "28223391",
-          "title": "Evaluation of ",
-          "authors": "Parvez MM, Shin HJ, Jung JA, et al.",
-          "journal": "Antimicrobial agents and chemotherapy",
-          "year": "2017",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/28223391/"
-        },
-        {
-          "pmid": "32068899",
-          "title": "LC-QToF-MS method for quantification of ethambutol, isoniazid, pyrazinamide and rifampicin in human plasma and its application.",
-          "authors": "Fachi MM, Vilhena RO, Boger B, et al.",
-          "journal": "Biomedical chromatography : BMC",
-          "year": "2020",
-          "abstract_snippet": "In this research, we developed and validated a liquid chromatography coupled to mass spectrometry (LC-QToF-MS) method for simultaneous quantification of the anti-tuberculosis drugs ethambutol, isoniazid, pyrazinamide and rifampicin in human plasma. Plasma samples spiked with cimetidine (internal sta...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/32068899/"
-        },
-        {
-          "pmid": "7054038",
-          "title": "Tuberculosis after cimetidine therapy: an adverse clinical immune effect?",
-          "authors": "Perry G, Pitlik S, Delpre G, et al.",
-          "journal": "Gastroenterology",
-          "year": "1982",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/7054038/"
-        }
-      ],
+      "key_papers": [],
       "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "Tuberculosis after cimetidine therapy: an adverse clinical immune effect?",
-          "year": 1982,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/8192b0187b5836354faa580d518a83b050cae05c",
-          "authors": "G. Perry, S. Pitlik, G. Delpr\u00e9"
-        },
-        {
-          "title": "The histamine H2-receptor antagonist, cimetidine, inhibits the articular osteopenia in rats with adjuvant-induced arthritis by suppressing the osteoclast differentiation induced by histamine.",
-          "year": 2003,
-          "citations": 43,
-          "url": "https://www.semanticscholar.org/paper/b24c3d47194246c08859004dbecd33c3c65e5cff",
-          "authors": "K. Yamaura, Taeko Yonekawa, Tomonori Nakamura"
-        },
-        {
-          "title": "Primary gastric tuberculosis presenting as pyloric outlet obstruction.",
-          "year": 1991,
-          "citations": 50,
-          "url": "https://www.semanticscholar.org/paper/e73f8adb93a96d33fa2b76d3fb49bb76344f4599",
-          "authors": "J. Tromba, R. Inglese, B. Rieders"
-        },
-        {
-          "title": "A possible case of brodalumab\u2010induced ichthyosis",
+          "title": "Evolution of tuberculosis diagnostics: From molecular strategies to nanodiagnostics",
           "year": 2023,
-          "citations": 7,
-          "url": "https://www.semanticscholar.org/paper/0b55735ebdc4bc8237c5d2828f95e31939481049",
-          "authors": "L. Mantovani, Cecilia Schenetti, E. Montinari"
+          "citations": 40,
+          "url": "https://www.semanticscholar.org/paper/157740e181b390d657dad4102dd3388e27219ea2",
+          "authors": "Srestha Mukherjee, Summaya Perveen, Anjali Negi"
         },
         {
-          "title": "Psoriasis in an HIV-positive patient treated with cimetidine.",
-          "year": 1995,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/580c583addb3484d44977d731913ba59c0833c16",
-          "authors": "A. Urrea, G. V\u00e9lez, A. Nogues"
+          "title": "An efficient deep learning-based framework for tuberculosis detection using chest X-ray images.",
+          "year": 2022,
+          "citations": 62,
+          "url": "https://www.semanticscholar.org/paper/41abeccb42896a79e09dff35121bc3710cd7ad8b",
+          "authors": "Ahmed Iqbal, Muhammad Usman, Zohair Ahmed"
+        },
+        {
+          "title": "Improving Tuberculosis Medication Adherence: The Potential of Integrating Digital Technology and Health Belief Model",
+          "year": 2022,
+          "citations": 65,
+          "url": "https://www.semanticscholar.org/paper/0a8eda5f5724670f49b437d50b2eebfbc6273a90",
+          "authors": "Mohd Fazeli Sazali, S. Rahim, Ahmad H. Mohammad"
+        },
+        {
+          "title": "A systemic review on tuberculosis.",
+          "year": 2020,
+          "citations": 305,
+          "url": "https://www.semanticscholar.org/paper/1c9658b66d1e4ec16aba3a5553183e10c813319a",
+          "authors": "A. Natarajan, P. Beena, Anushka V. Devnikar"
+        },
+        {
+          "title": "Immunologic and imaging signatures in post tuberculosis lung disease.",
+          "year": 2022,
+          "citations": 31,
+          "url": "https://www.semanticscholar.org/paper/4ed66ffc591dfd60c0566eb7c4367bc9224355a3",
+          "authors": "S. Singh, B. Allwood, T. L. Chiyaka"
         }
       ],
       "most_cited_paper": {
-        "title": "Primary gastric tuberculosis presenting as pyloric outlet obstruction.",
-        "year": 1991,
-        "citations": 50,
-        "url": "https://www.semanticscholar.org/paper/e73f8adb93a96d33fa2b76d3fb49bb76344f4599",
-        "authors": "J. Tromba, R. Inglese, B. Rieders"
+        "title": "A systemic review on tuberculosis.",
+        "year": 2020,
+        "citations": 305,
+        "url": "https://www.semanticscholar.org/paper/1c9658b66d1e4ec16aba3a5553183e10c813319a",
+        "authors": "A. Natarajan, P. Beena, Anushka V. Devnikar"
       },
-      "max_citations": 50,
-      "faers_signal": "moderate",
-      "faers_total_reports": 6461,
-      "faers_cooccurrences": 29,
-      "faers_interpretation": "29 FAERS reports mention both Cimetidine and Tuberculosis-related terms. Limited but notable real-world signal.",
+      "max_citations": 305,
+      "faers_signal": "none",
+      "faers_total_reports": 53,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Tacalcitol to Tuberculosis terms. Drug has 53 total reports.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -961,13 +506,304 @@
         "radicicol (1.521)",
         "JNK-9L (1.513)"
       ],
-      "signature_interpretation": "Cimetidine was not found among the top 42 drugs that reverse the Tuberculosis gene signature. Top reversers: radicicol (1.661), radicicol (1.556), radicicol (1.524)",
-      "ai_hypothesis": "of its anti-inflammatory properties.",
+      "signature_interpretation": "Tacalcitol was not found among the top 42 drugs that reverse the Tuberculosis gene signature. Top reversers: radicicol (1.661), radicicol (1.556), radicicol (1.524)",
+      "ai_hypothesis": "",
+      "abstract_analyses": [],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Tacalcitol \u2014[is agonized by]\u2192 gene-7421 \u2014[antagonizes]\u2192 DB00153 \u2014[is a therapeutic for]\u2192 Tuberculosis",
+      "kg_paths_text": "\u2022 Tacalcitol \u2014[is agonized by]\u2192 gene-7421 \u2014[antagonizes]\u2192 DB00153 \u2014[is a therapeutic for]\u2192 Tuberculosis\n\u2022 Tacalcitol \u2014[is agonized by]\u2192 gene-7421 \u2014[is an agonist of]\u2192 DB00169 \u2014[is a therapeutic for]\u2192 Tuberculosis\n\u2022 Tacalcitol \u2014[is agonized by]\u2192 gene-7421 \u2014[is a target of]\u2192 DB11094 \u2014[is a therapeutic for]\u2192 Tuberculosis",
+      "validation_experiments": [],
+      "novelty_score": 0.171,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "LOW",
+      "confidence_reasons": [
+        "Supported by 2 independent AI pillars",
+        "High molecular similarity (0.62) to Cholecalciferol",
+        "Highly cited paper (305 citations): \"A systemic review on tuberculosis....\""
+      ],
+      "disease_entity": "Disease::MESH:D014376",
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "late-trial",
+        "confidence": "medium",
+        "rationale": "Phase-3 investigational \u2014 dose range established in Phase-2 pharmacokinetic studies; efficacy trials ongoing or recently completed.",
+        "chembl_phase": 3.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 146,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00959",
+            "drug_name": "Methylprednisolone",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00860",
+            "drug_name": "Prednisolone",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB13142",
+            "drug_name": "(4-O-beta-D-Galactopyranosyl-D-gluconato-O1)(D-gluconato-O1)calcium",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB14652",
+            "drug_name": "(6alpha,11beta,16alpha)-21-(Acetyloxy)-9-chloro-6-fluoro-11-hydroxy-16-methylpregna-1,4-diene-3,20-dione",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB13097",
+            "drug_name": "1Alpha-Hydroxyvitamin D5",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB06117",
+            "drug_name": "1alpha,24S-Dihydroxyvitamin D2",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB00511",
+            "drug_name": "Acetyldigitoxin",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB04630",
+            "drug_name": "Aldosterone",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB01436",
+            "drug_name": "Alfacalcidol",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB13691",
+            "drug_name": "Alpha-acetyldigoxin",
+            "severity": "moderate"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": false,
+          "docking": true,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.345,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.19,
+          "docking": 0.928,
+          "pharos": 0.0,
+          "literature": 0.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Lung",
+          "Whole Blood"
+        ],
+        "n_genes": 1,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 12.37,
+        "max_tpm_in_tissue": 12.37,
+        "tissue_specificity": 0.766,
+        "context_modifier": 1.043
+      },
+      "ensemble_prob": 0.0,
+      "ensemble_features": {
+        "kg_score": 0.7399,
+        "degree_penalty": 0.9353,
+        "n_drug_targets": 1,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 7.9175
+      },
+      "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": -11.13,
+        "target_symbol": "VDR",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Calcipotriol",
+      "drug_id": "DB02300",
+      "disease_name": "Tuberculosis",
+      "combined_score": 0.189,
+      "pillars_hit": 2,
+      "transe_rank": 381,
+      "transe_score": -11.4058,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0.6119,
+      "similar_to": "Ergocalciferol",
+      "mol_emb_similarity": 0.9678,
+      "mol_emb_similar_to": "Ergocalciferol",
+      "gene_sig_score": 0.0238,
+      "gene_sig_rank": 29,
+      "proximity_score": 0,
+      "proximity_distance": 0,
+      "admet_score": 0.6373,
+      "admet_flags": "clean",
+      "primekg_score": 0,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": -10.7477,
+      "structural_group_score": 0.9678,
+      "network_group_score": 0.3958,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.7461,
+      "efficacy_score": 0.2534,
+      "groups_hit": 2,
+      "direct_relations": [],
+      "shared_target_count": 4,
+      "shared_targets": [
+        "IL1A",
+        "IL1B",
+        "MMP1",
+        "VDR"
+      ],
+      "pubmed_total": 3,
+      "pubmed_treatment_total": 2,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "39429290",
+          "title": "Psoriasiform Lupus Vulgaris: A Diagnostic Challenge.",
+          "authors": "Liyanage A, Bandara M, Liyanage T",
+          "journal": "Cureus",
+          "year": "2024",
+          "abstract_snippet": "Cutaneous tuberculosis is a rare and often overlooked manifestation of tuberculosis, frequently leading to delays from onset to diagnosis. This\u00a0case report describes the presentation of a 65-year-old male with an asymptomatic solitary plaque with silvery scales persisting for over five years, mimick...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39429290/",
+          "total_results": 3
+        },
+        {
+          "pmid": "24670691",
+          "title": "The effect of topical calcipotriol or zinc on tuberculin skin tests in hospitalised South African children.",
+          "authors": "Lala SG, Parbhoo KB, Verwey C, et al.",
+          "journal": "The international journal of tuberculosis and lung disease : the official journal of the International Union against Tuberculosis and Lung Disease",
+          "year": "2014",
+          "abstract_snippet": "BACKGROUND: The tuberculin skin test (TST) is used to help diagnose tuberculosis (TB) in acutely ill hospitalised children. OBJECTIVE To investigate the potential augmentative effect of topical calcipotriol (a vitamin D analogue) or zinc on TST induration. METHODS: Three TSTs were performed among 64...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24670691/"
+        },
+        {
+          "pmid": "41913338",
+          "title": "Dynamic Thymic Stromal Lymphopoietin and Its Receptor Complex Expression on Skin Langerhans Cells in Response to MC903-induced Skin Inflammation.",
+          "authors": "Gonz\u00e1lez-Rodr\u00edguez MI, Salomaa T, Cabalin C, et al.",
+          "journal": "European journal of immunology",
+          "year": "2026",
+          "abstract_snippet": "Thymic Stromal Lymphopoietin (TSLP) regulates the skin microenvironment during type 2 inflammation. Epidermal APCs, Langerhans cells (LCs), might be the target of TSLP, but whether LCs express CD127 needed for TSLP signaling has been unclear. We found that LCs express both receptor chains needed by ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41913338/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "The effect of topical calcipotriol or zinc on tuberculin skin tests in hospitalised South African children.",
+          "year": 2014,
+          "citations": 2,
+          "url": "https://www.semanticscholar.org/paper/42d0229c02be93faad0140efe0bf16852f571b04",
+          "authors": "S. Lala, Kiran Parbhoo, C. Verwey"
+        },
+        {
+          "title": "Psoriasiform Lupus Vulgaris: A Diagnostic Challenge",
+          "year": 2024,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/955af221e329a850ffc3d1b3f716880f7b42abf0",
+          "authors": "Achala Liyanage, Manuji Bandara, T. Liyanage"
+        },
+        {
+          "title": "Multiple drugs",
+          "year": 2023,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/1be77a174b08a14c02dd42adf1c67d619417c5fe",
+          "authors": ""
+        },
+        {
+          "title": "Impact of previous biologic use on efficacy and safety of brodalumab and ustekinumab in patients with moderate-to-severe plaque psoriasis: Integrated analysis of AMAGINE-2 and AMAGINE-3",
+          "year": 2018,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/166be35da297b53f3b4a86665cc6782066ebe7c3",
+          "authors": ""
+        },
+        {
+          "title": "A Case of Psoriasiform Sarcoidosis as Early Manifestation of Systemic Sarcoidosis",
+          "year": 2004,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/2624ccfe7e6c6b214631e57c649c74cbad30d51d",
+          "authors": "Mi Jung Lee, W. Lew, Seung-Hun Lee"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Impact of previous biologic use on efficacy and safety of brodalumab and ustekinumab in patients with moderate-to-severe plaque psoriasis: Integrated analysis of AMAGINE-2 and AMAGINE-3",
+        "year": 2018,
+        "citations": 3,
+        "url": "https://www.semanticscholar.org/paper/166be35da297b53f3b4a86665cc6782066ebe7c3",
+        "authors": ""
+      },
+      "max_citations": 3,
+      "faers_signal": "moderate",
+      "faers_total_reports": 1402,
+      "faers_cooccurrences": 8,
+      "faers_interpretation": "8 FAERS reports mention both Calcipotriol and Tuberculosis-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "radicicol (1.661)",
+        "radicicol (1.556)",
+        "radicicol (1.524)",
+        "radicicol (1.521)",
+        "JNK-9L (1.513)"
+      ],
+      "signature_interpretation": "Calcipotriol was not found among the top 42 drugs that reverse the Tuberculosis gene signature. Top reversers: radicicol (1.661), radicicol (1.556), radicicol (1.524)",
+      "ai_hypothesis": "",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
           "confidence": 0.0,
           "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 1,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": []
         },
         {
           "relation_type": "unclear",
@@ -981,85 +817,85 @@
       "failed_trial_penalty": 1.0,
       "mr_score": 0,
       "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "Cimetidine \u2014[binds]\u2192 gene-1576 \u2014[is a target of]\u2192 DB00951 \u2014[treats]\u2192 Tuberculosis",
-      "kg_paths_text": "\u2022 Cimetidine \u2014[binds]\u2192 gene-1576 \u2014[is a target of]\u2192 DB00951 \u2014[treats]\u2192 Tuberculosis\n\u2022 Cimetidine \u2014[binds]\u2192 gene-1576 \u2014[is a target of]\u2192 DB00951 \u2014[treats]\u2192 Tuberculosis\n\u2022 Cimetidine \u2014[binds]\u2192 gene-1576 \u2014[is a target of]\u2192 DB00951 \u2014[treats]\u2192 Tuberculosis",
+      "mechanistic_hypothesis": "Calcipotriol \u2014[downregulates]\u2192 gene-993 \u2014[is bound by]\u2192 DB00169 \u2014[is a therapeutic for]\u2192 Tuberculosis",
+      "kg_paths_text": "\u2022 Calcipotriol \u2014[downregulates]\u2192 gene-993 \u2014[is bound by]\u2192 DB00169 \u2014[is a therapeutic for]\u2192 Tuberculosis\n\u2022 Calcipotriol \u2014[downregulates]\u2192 gene-9928 \u2014[is downregulated by]\u2192 DB00860 \u2014[treats]\u2192 Tuberculosis\n\u2022 Calcipotriol \u2014[downregulates]\u2192 gene-9928 \u2014[is downregulated by]\u2192 DB00860 \u2014[treats]\u2192 Tuberculosis",
       "validation_experiments": [],
-      "novelty_score": 0.3569999933242798,
+      "novelty_score": 0.18,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
       "clinical_trials": [],
       "trial_phases": {},
-      "confidence": "MEDIUM",
+      "confidence": "LOW",
       "confidence_reasons": [
-        "15 PubMed articles found",
-        "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 29 adverse event reports mention drug-disease co-occurrence",
-        "Supporting paper with 50 citations",
-        "AI-generated hypothesis available"
+        "3 PubMed article(s) - limited literature",
+        "Supported by 2 independent AI pillars",
+        "High molecular similarity (0.61) to Ergocalciferol",
+        "Moderate FAERS signal: 8 adverse event reports mention drug-disease co-occurrence"
       ],
+      "disease_entity": "Disease::MESH:D014376",
       "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
+        "plausibility": "unknown",
+        "dose_range": "research",
+        "confidence": "low",
+        "rationale": "No ChEMBL clinical phase data available.",
+        "chembl_phase": null,
         "target_affinity": {},
         "stage": 1
       },
       "ddi_warnings": {
-        "n_interactions": 1670,
+        "n_interactions": 15,
         "has_warnings": true,
         "top_interactions": [
           {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
+            "drug_id": "DB13142",
+            "drug_name": "(4-O-beta-D-Galactopyranosyl-D-gluconato-O1)(D-gluconato-O1)calcium",
+            "severity": "moderate"
           },
           {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
+            "drug_id": "DB01373",
+            "drug_name": "Calcium",
+            "severity": "moderate"
           },
           {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
+            "drug_id": "DB00258",
+            "drug_name": "Calcium Acetate",
+            "severity": "moderate"
           },
           {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
+            "drug_id": "DB14577",
+            "drug_name": "Calcium Cation",
+            "severity": "moderate"
           },
           {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
+            "drug_id": "DB01164",
+            "drug_name": "Calcium Chloride",
+            "severity": "moderate"
           },
           {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
+            "drug_id": "DB00326",
+            "drug_name": "Calcium Gluceptate",
+            "severity": "moderate"
           },
           {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
+            "drug_id": "DB11126",
+            "drug_name": "Calcium Gluconate",
+            "severity": "moderate"
           },
           {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
+            "drug_id": "DB13231",
+            "drug_name": "Calcium Lactate",
+            "severity": "moderate"
           },
           {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
+            "drug_id": "DB06724",
+            "drug_name": "Calcium carbonate",
+            "severity": "moderate"
           },
           {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
+            "drug_id": "DB13590",
+            "drug_name": "Calcium pangamate",
+            "severity": "moderate"
           }
         ]
       },
@@ -1071,20 +907,20 @@
         "pharmgkb": []
       },
       "triangulation": {
-        "n_axes_agree": 2,
+        "n_axes_agree": 1,
         "axes": {
-          "kg": true,
-          "docking": false,
+          "kg": false,
+          "docking": true,
           "pharos": false,
-          "literature": true
+          "literature": false
         },
-        "triangulation_score": 0.428,
-        "label": "multi-axis",
+        "triangulation_score": 0.418,
+        "label": "kg-only",
         "axis_values": {
-          "kg": 0.446,
-          "docking": 0.557,
+          "kg": 0.189,
+          "docking": 1.0,
           "pharos": 0.0,
-          "literature": 0.523
+          "literature": 0.261
         }
       },
       "tissue_context": {
@@ -1092,898 +928,197 @@
           "Lung",
           "Whole Blood"
         ],
-        "n_genes": 3,
-        "n_expressed": 1,
-        "mean_tpm_in_tissue": 34.44,
-        "max_tpm_in_tissue": 102.9,
-        "tissue_specificity": 0.676,
-        "context_modifier": 1.07
+        "n_genes": 4,
+        "n_expressed": 4,
+        "mean_tpm_in_tissue": 10.22,
+        "max_tpm_in_tissue": 24.53,
+        "tissue_specificity": 0.984,
+        "context_modifier": 1.062
       },
-      "ensemble_prob": 0.0666,
+      "ensemble_prob": 0.0387,
       "ensemble_features": {
-        "kg_score": 0.9833,
-        "degree_penalty": 0.7619,
-        "n_drug_targets": 23,
-        "is_fda_approved": 1,
+        "kg_score": 0.8943,
+        "degree_penalty": 0.9423,
+        "n_drug_targets": 1,
+        "is_fda_approved": 0,
         "n_disease_genes": 0,
-        "transe_rank_log": 5.1761
+        "transe_rank_log": 7.0175
       },
-      "ensemble_rank": 8,
+      "ensemble_rank": 3,
       "docking": {
-        "kcal_per_mol": -6.69,
-        "target_symbol": "CYP3A4",
+        "kcal_per_mol": -12.98,
+        "target_symbol": "VDR",
         "source": "chembl_bioactivity_proxy",
         "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
         "hit": true
       },
-      "disease_entity": "Disease::MESH:D014376",
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
-          "ALIPHATIC",
-          "CYANATE",
-          "ENAMINE",
-          "IMIDAZOLE",
-          "IMINE"
-        ],
-        "n_alerts": 6,
-        "alert_names": [
-          "imidazole_B(2)",
-          "Aliphatic_long_chain",
-          "cyanate_/aminonitrile_/thiocyanate",
-          "enamine",
-          "imine_1"
-        ]
-      }
-    },
-    {
-      "drug_name": "Dapsone",
-      "drug_id": "DB00250",
-      "disease_name": "Tuberculosis",
-      "combined_score": 0.4336000084877014,
-      "pillars_hit": 4,
-      "transe_rank": 58,
-      "transe_score": -10.6276,
-      "pykeen_score": -12.2744,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.75,
-      "proximity_distance": 1.0,
-      "admet_score": 0.6158,
-      "admet_flags": "clean",
-      "primekg_score": 0.2635,
-      "dti_score": 0.3959,
-      "dti_best_target": "SOCS3",
-      "kg_group_score": 0.4216,
-      "structural_group_score": 0.3959,
-      "network_group_score": 0.60589998960495,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.4793,
-      "admet_multiplier": 0.9232,
-      "efficacy_score": 0.46970000863075256,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 2,
-      "shared_targets": [
-        "CYP3A4",
-        "NAT2"
-      ],
-      "pubmed_total": 199,
-      "pubmed_treatment_total": 169,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "36321557",
-          "title": "Folic acid supplementation and malaria susceptibility and severity among people taking antifolate antimalarial drugs in endemic areas.",
-          "authors": "Crider K, Williams J, Qi YP, et al.",
-          "journal": "The Cochrane database of systematic reviews",
-          "year": "2022",
-          "abstract_snippet": "BACKGROUND: Description of the condition Malaria, an infectious disease transmitted by the bite of female mosquitoes from several Anopheles species, occurs in 87 countries with ongoing transmission (WHO 2020). The World Health Organization (WHO) estimated that, in 2019, approximately 229 million cas...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36321557/",
-          "total_results": 199
-        },
-        {
-          "pmid": "31178102",
-          "title": "Cutaneous tuberculosis: A great imitator.",
-          "authors": "Chen Q, Chen W, Hao F",
-          "journal": "Clinics in dermatology",
-          "year": "2019",
-          "abstract_snippet": "Tuberculosis (TB) is still prevalent in many developing countries and can pose a new potential threat to global health due to international migration. As an uncommon form of extrapulmonary TB, cutaneous TB is complicated in its clinical manifestation, pathogenesis, and classification. Cutaneous TB c...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/31178102/"
-        },
-        {
-          "pmid": "30046638",
-          "title": "Tuberculosis and Leprosy Coinfection: A Perspective on Diagnosis and Treatment.",
-          "authors": "Mangum L, Kilpatrick D, Stryjewska B, et al.",
-          "journal": "Open forum infectious diseases",
-          "year": "2018",
-          "abstract_snippet": "Both leprosy and tuberculosis (TB) are known to have similar geographic endemicity. In the setting of coinfection, interferon-gamma release assays (IGRAs) to detect latent TB can be falsely positive. We report a case of leprosy with a positive IGRA and asymptomatic active pulmonary TB. Minocycline a...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30046638/"
-        },
-        {
-          "pmid": "10542185",
-          "title": "Cloning and expression of Mycobacterium tuberculosis and Mycobacterium leprae dihydropteroate synthase in Escherichia coli.",
-          "authors": "Nopponpunth V, Sirawaraporn W, Greene PJ, et al.",
-          "journal": "Journal of bacteriology",
-          "year": "1999",
-          "abstract_snippet": "The genes for dihydropteroate synthase of Mycobacterium tuberculosis and Mycobacterium leprae were isolated by hybridization with probes amplified from the genomic DNA libraries. DNA sequencing revealed an open reading frame of 840 bp encoding a protein of 280 amino acids for M. tuberculosis dihydro...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/10542185/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "When Treatment Imitates Tuberculosis: Dapsone induced hypersensitivity pneumonitis in a patient with Hansen's disease",
-          "year": 2026,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/99e43024bdca2d681c26548fb473b4d5c7cf69fe",
-          "authors": "P. Mrigpuri, Mridul Sarma, Sonam Spalgais"
-        },
-        {
-          "title": "Nano carrier mediated co-delivery of dapsone and clofazimine for improved therapeutic efficacy against tuberculosis in rats",
-          "year": 2017,
-          "citations": 8,
-          "url": "https://www.semanticscholar.org/paper/2de94bdaebdf32c7747a7e54b6fc9f25e8d9ef69",
-          "authors": "Hong-zhi Li, Shuli Ma, Hanwen Zhang"
-        },
-        {
-          "title": "Leprosy cases with respiratory infection \u2013 Rule out tuberculosis simultaneously with dapsone syndrome",
-          "year": 2018,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/41341f00ad1d75ef5b1a6879cfa1cebe2c017251",
-          "authors": "P. Thangaraju, S. Venkatesan"
-        },
-        {
-          "title": "Cholesterol-dependent activity of dapsone against non-replicating persistent mycobacteria.",
-          "year": 2022,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/45f989ef674f9dbd58337c1e9686ec0cd56aa672",
-          "authors": "S. Gibson, J. Harrison, Antonia Molloy"
-        },
-        {
-          "title": "Lagerstroemia speciosa (L.) Pers., ethanolic extract attenuates simultaneously administered isoniazid- and dapsone-induced hepatotoxicity in rats.",
-          "year": 2021,
-          "citations": 8,
-          "url": "https://www.semanticscholar.org/paper/a76cf364c42c6c8bc910cac25bedfafc72a96617",
-          "authors": "Thakur Rohit Singh, D. Ezhilarasan"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Nano carrier mediated co-delivery of dapsone and clofazimine for improved therapeutic efficacy against tuberculosis in rats",
-        "year": 2017,
-        "citations": 8,
-        "url": "https://www.semanticscholar.org/paper/2de94bdaebdf32c7747a7e54b6fc9f25e8d9ef69",
-        "authors": "Hong-zhi Li, Shuli Ma, Hanwen Zhang"
-      },
-      "max_citations": 8,
-      "faers_signal": "moderate",
-      "faers_total_reports": 9588,
-      "faers_cooccurrences": 35,
-      "faers_interpretation": "35 FAERS reports mention both Dapsone and Tuberculosis-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "radicicol (1.661)",
-        "radicicol (1.556)",
-        "radicicol (1.524)",
-        "radicicol (1.521)",
-        "JNK-9L (1.513)"
-      ],
-      "signature_interpretation": "Dapsone was not found among the top 42 drugs that reverse the Tuberculosis gene signature. Top reversers: radicicol (1.661), radicicol (1.556), radicicol (1.524)",
-      "ai_hypothesis": "of its anti-inflammatory and immunomodulatory properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.4793,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "Dapsone \u2014[is a therapeutic for]\u2192 Tuberculosis",
-      "kg_paths_text": "\u2022 Dapsone \u2014[is a therapeutic for]\u2192 Tuberculosis\n\u2022 Dapsone \u2014[binds]\u2192 gene-1576 \u2014[is a target of]\u2192 DB00951 \u2014[treats]\u2192 Tuberculosis\n\u2022 Dapsone \u2014[binds]\u2192 gene-1576 \u2014[is a target of]\u2192 DB00951 \u2014[treats]\u2192 Tuberculosis",
-      "validation_experiments": [],
-      "novelty_score": 0.21699999272823334,
-      "novelty_level": "KNOWN",
-      "is_known_treatment": true,
-      "clinical_trials_total": 1,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT01165840",
-          "title": "Effect of Weight and/or Obesity on Dapsone Drug Concentrations",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "37",
-          "url": "https://clinicaltrials.gov/study/NCT01165840"
-        }
-      ],
-      "trial_phases": {
-        "PHASE4": 1
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "1 clinical trial(s) found on ClinicalTrials.gov",
-        "199 PubMed articles on this drug-disease pair",
-        "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 35 adverse event reports mention drug-disease co-occurrence",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.48)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 632,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00783",
-            "drug_name": "Estradiol",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "high_risk",
-        "summary": "CPIC-A (G6PD) \u2022 PharmGKB-3 (HLA-B / HLA-B*15:02)",
-        "cpic": [
-          {
-            "gene": "G6PD",
-            "level": "A",
-            "guideline": "G6PD"
-          },
-          {
-            "gene": "HLA-B",
-            "level": "C",
-            "guideline": ""
-          }
-        ],
-        "pharmgkb": [
-          {
-            "gene": "HLA-B",
-            "variant": "HLA-B*15:02",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451240880"
-          },
-          {
-            "gene": "HLA-B",
-            "variant": "HLA-B*13:01",
-            "level": "2A",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183681792"
-          },
-          {
-            "gene": "HLA-DRB1",
-            "variant": "rs701829",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449752810"
-          },
-          {
-            "gene": "HLA-DRB1",
-            "variant": "rs17211071",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449752825"
-          },
-          {
-            "gene": "G6PD",
-            "variant": "rs1050828",
-            "level": "4",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981352141"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.35199999809265137,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.4339999854564667,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.999
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Lung",
-          "Whole Blood"
-        ],
-        "n_genes": 2,
-        "n_expressed": 0,
-        "mean_tpm_in_tissue": 0.2,
-        "max_tpm_in_tissue": 0.28,
-        "tissue_specificity": 0.0,
-        "context_modifier": 0.857
-      },
-      "ensemble_prob": 0.4176,
-      "ensemble_features": {
-        "kg_score": 0.9922,
-        "degree_penalty": 0.8079,
-        "n_drug_targets": 8,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 4.4188
-      },
-      "ensemble_rank": 4,
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D014376",
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [
-          "ANILINE"
+          "ISOLATED"
         ],
         "n_alerts": 1,
         "alert_names": [
-          "aniline"
+          "isolated_alkene"
         ]
       }
     },
     {
-      "drug_name": "Betamethasone",
-      "drug_id": "DB00443",
+      "drug_name": "Calcitriol",
+      "drug_id": "DB00136",
       "disease_name": "Tuberculosis",
-      "combined_score": 0.4256,
-      "pillars_hit": 4,
-      "transe_rank": 147,
-      "transe_score": -10.9806,
+      "combined_score": 0.1784,
+      "pillars_hit": 2,
+      "transe_rank": 92,
+      "transe_score": -10.807,
       "pykeen_score": 0,
       "pykeen_rank": 0,
       "txgnn_score": 0,
       "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0.9272,
-      "mol_emb_similar_to": "Streptomycin",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.7749999761581421,
-      "proximity_distance": 0.8999999761581421,
-      "admet_score": 0.7132,
-      "admet_flags": "clean",
-      "primekg_score": 0.2573,
-      "dti_score": 0.1743,
-      "dti_best_target": "PPIA",
-      "kg_group_score": 0.0922,
-      "structural_group_score": 0.9272,
-      "network_group_score": 0.5867999792098999,
+      "mol_similarity": 0.6418,
+      "similar_to": "Cholecalciferol",
+      "mol_emb_similarity": 0.9404,
+      "mol_emb_similar_to": "Cholecalciferol",
+      "gene_sig_score": 0.0238,
+      "gene_sig_rank": 29,
+      "proximity_score": 0,
+      "proximity_distance": 0,
+      "admet_score": 0.6429,
+      "admet_flags": "hERG=0.78",
+      "primekg_score": 0,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": -8.8279,
+      "structural_group_score": 0.9404,
+      "network_group_score": 0.3431,
       "txgnn_group_score": 0,
-      "mr_group_score": 0.2947,
-      "admet_multiplier": 0.9426,
-      "efficacy_score": 0.4515,
-      "groups_hit": 4,
+      "mr_group_score": 0,
+      "admet_multiplier": 0.75,
+      "efficacy_score": 0.2379,
+      "groups_hit": 2,
       "direct_relations": [],
       "shared_target_count": 7,
       "shared_targets": [
+        "ALOX5",
         "CYP3A4",
+        "GLI2",
+        "IL1A",
         "IL1B",
-        "JUN",
-        "LEP",
-        "PLA2G1B",
-        "SLPI",
-        "TIMP1"
+        "IL2",
+        "VDR"
       ],
-      "pubmed_total": 29,
-      "pubmed_treatment_total": 24,
+      "pubmed_total": 292,
+      "pubmed_treatment_total": 126,
       "pubmed_repurposing_total": 1,
       "key_papers": [
         {
-          "pmid": "30278434",
-          "title": "Micropapular Cutaneous Sarcoidosis Reviewed.",
-          "authors": "Labadie JG, Florek AG, VandenBoom T, et al.",
-          "journal": "Dermatology (Basel, Switzerland)",
-          "year": "2018",
-          "abstract_snippet": "BACKGROUND: Micropapular cutaneous sarcoidosis (MPCS) is a rare variant of sarcoidosis. Herein we review the literature and include a recent case of MPCS discussing pathogenesis, diagnosis, treatment, and prognosis. METHOD: A review was conducted using the terms \"micropapular sarcoidosis\" and \"micro...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30278434/",
-          "total_results": 29
+          "pmid": "38617600",
+          "title": "Comprehension of Calcitriol Levels in Pregnant Women With Latent Tuberculosis and Immune Function in their Newborns.",
+          "authors": "Meirina F, Sari DK, Lubis IND, et al.",
+          "journal": "ImmunoTargets and therapy",
+          "year": "2024",
+          "abstract_snippet": "BACKGROUND: Pregnant women with latent tuberculosis infection (LTBI) may develop active tuberculosis infection and could infect their neonates, which could impair the child's immune system due to infection-mediated immunological responses. In order to develop a preventative TB program in this study,...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38617600/",
+          "total_results": 292
         },
         {
-          "pmid": "29974124",
-          "title": "Tamsulosin-induced photosensitivity rash.",
-          "authors": "Tan CK, Yap KB",
-          "journal": "Singapore medical journal",
-          "year": "2018",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29974124/"
+          "pmid": "9005710",
+          "title": "[Tuberculosis and hypercalcemia].",
+          "authors": "Santos JM, Monteiro P, Fortes A, et al.",
+          "journal": "Acta medica portuguesa",
+          "year": "1996",
+          "abstract_snippet": "The authors present a case of disseminated tuberculosis in a patient under dialysis with endstage renal disease. Fever, nocturnal sweating, anorexia, asthenia, ascites, lymph node involvement and granulomatous involvement of the bone marrow were observed. In the twenty nine months of renal failure w...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/9005710/"
         },
         {
-          "pmid": "36919396",
-          "title": "Pityriasis Rosea after COVID-19 Infection.",
-          "authors": "Prtajin M, Ljubojevi\u0107 Had\u017eavdi\u0107 S",
-          "journal": "Acta dermatovenerologica Croatica : ADC",
+          "pmid": "35962268",
+          "title": "Preparation and Evaluation of Low-Dose Calcitriol Dry Powder Inhalation as Host-Directed Adjunct Therapy for Tuberculosis.",
+          "authors": "Reddy DVS, Shafi H, Bharti R, et al.",
+          "journal": "Pharmaceutical research",
           "year": "2022",
-          "abstract_snippet": "Dear Editor, Pityriasis rosea (PR) is a common, self-limited erythematous papulosquamous dermatosis that mainly affects young adults. It is believed to represent a delayed reaction to viral infections and is usually associated with endogenous systemic reactivation of human herpesvirus (HHV) 6 and / ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36919396/"
+          "abstract_snippet": "BACKGROUND: It is unclear whether Vitamin D is efficacious as a host-directed therapy (HDT) for patients of tuberculosis (TB). We investigated pulmonary delivery of the active metabolite of Vitamin D METHODS: We optimized a spray drying process to prepare a dry powder inhalation (DPI) of calcitriol ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35962268/"
         },
         {
-          "pmid": "38064397",
-          "title": "Undiagnosed tuberculosis associated with hemophagocytic lymphohistiocytosis due to improper use of corticosteroid.",
-          "authors": "Allahverdi Nazhand H, Sabeti S, Javandoust Gharehbagh F, et al.",
-          "journal": "Journal of infection in developing countries",
-          "year": "2023",
-          "abstract_snippet": "INTRODUCTION: Hemophagocytic lymphohistiocytosis (HLH) is a rare and life-threatening hematologic disease segregated into familial (primary) and acquired (secondary) subtypes. Hyperinflammation and HLH occur when the immune system fails to clear activated macrophages and histiocytes. Infections, mal...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38064397/"
+          "pmid": "38976934",
+          "title": "Macrophage-targeted versus free calcitriol as host-directed adjunct therapy against Mycobacterium tuberculosis infection in mice is bacteriostatic and mitigates tissue pathology.",
+          "authors": "Reddy DVS, Sofi HS, Roy T, et al.",
+          "journal": "Tuberculosis (Edinburgh, Scotland)",
+          "year": "2024",
+          "abstract_snippet": "Host-directed therapy (HDT) with vitamin D in tuberculosis (TB) is beneficial only if the subject is deficient in vitamin D. We investigated pulmonary delivery of 1,25-dihydroxy vitamin D",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38976934/"
         },
         {
-          "pmid": "51284",
-          "title": "Inhaled corticosteroids compared with oral prednisone in patients starting long-term corticosteroid therapy for asthma. A controlled trial by the British Thoracic and Tuberculosis Association.",
-          "authors": "",
-          "journal": "Lancet (London, England)",
-          "year": "1975",
-          "abstract_snippet": "Inhaled beclomethasone dipropionate and inhaled betamethasone valerate have been compared with oral prednisone in the treatment of 75 patients with asthma who were starting long-term corticosteroids for the first time. Both of the inhaled corticosteroids controlled asthma as well as did oral prednis...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/51284/"
+          "pmid": "38706548",
+          "title": "Pulmonary tuberculosis epidemiology and genetics in Kazakhstan.",
+          "authors": "Yerezhepov D, Gabdulkayum A, Akhmetova A, et al.",
+          "journal": "Frontiers in public health",
+          "year": "2024",
+          "abstract_snippet": "BACKGROUND: Tuberculosis (TB) is a major public health emergency in many countries, including Kazakhstan. Despite the decline in the incidence rate and having one of the highest treatment effectiveness in the world, the incidence rate of TB remains high in Kazakhstan. Social and environmental factor...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38706548/"
         }
       ],
       "repurposing_papers": [
         {
-          "pmid": "33131530",
-          "title": "Multi-omics-based identification of SARS-CoV-2 infection biology and candidate drugs against COVID-19.",
-          "authors": "Barh D, Tiwari S, Weener ME, et al.",
-          "journal": "Computers in biology and medicine",
-          "year": "2020",
-          "abstract_snippet": "SARS-CoV-2 has ushered a global pandemic with no effective drug being available at present. Although several FDA-approved drugs are currently under clinical trials for drug repositioning, there is an on-going global effort for new drug identification. In this paper, using multi-omics (interactome, p...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33131530/",
+          "pmid": "40501823",
+          "title": "Integrative transcriptome-based drug repurposing in tuberculosis.",
+          "authors": "Samart K, Buskirk L, Tonielli A, et al.",
+          "journal": "bioRxiv : the preprint server for biology",
+          "year": "2025",
+          "abstract_snippet": "Tuberculosis (TB) remains the second leading cause of infectious disease mortality worldwide, killing over one million people annually. Rising antibiotic resistance has created an urgent need for host-directed therapeutics (HDTs) - preferably by repurposing existing approved drugs - that modulate ho...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40501823/",
           "total_results": 1
         }
       ],
       "semantic_scholar_papers": [
         {
-          "title": "Undiagnosed tuberculosis associated with hemophagocytic lymphohistiocytosis due to improper use of corticosteroid.",
-          "year": 2023,
-          "citations": 2,
-          "url": "https://www.semanticscholar.org/paper/31223e7575f0f324f075617b97703acf546ee936",
-          "authors": "Hadi Allahverdi Nazhand, S. Sabeti, Farid Javandoust Gharehbagh"
-        },
-        {
-          "title": "Compound Betamethasone Acupoint Injection Combined with Oral Application Retinoid and Antituberculosis Drugs Treat 8 Cases of Tuberculosis Cutis",
-          "year": 2006,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/2d4acc382ccbca359b4380633f7881ec99a8da0f",
-          "authors": "Zhao Jiang-tao"
-        },
-        {
-          "title": "[Betamethasone. Its use in tuberculosis. Tolerance].",
-          "year": 1962,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/0a21674ff68fe2586a29115648434a0d6f5d6b90",
-          "authors": "C. Calvete, O. Escalante, D. Giordano"
-        },
-        {
-          "title": "Diagnosis of disseminated tuberculosis from a lesion in the oral cavity",
-          "year": 2022,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/9efcdde0b802da1f2dc4488f2652f79ace090355",
-          "authors": "Yonatan Armendariz Barrag\u00e1n, Felipe de Jes\u00fas Murillo Cerda, Marcela Hern\u00e1ndez Vera"
-        },
-        {
-          "title": "Rare Presentation of Disseminated Tuberculosis in the Present Era of Modern Tuberculosis Management",
-          "year": 2022,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/e1c8217939432330aa3e5bd33a9bb9a588271e42",
-          "authors": "A. Anilkumar, S. Manikandan, V. Sreenivasan"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Undiagnosed tuberculosis associated with hemophagocytic lymphohistiocytosis due to improper use of corticosteroid.",
-        "year": 2023,
-        "citations": 2,
-        "url": "https://www.semanticscholar.org/paper/31223e7575f0f324f075617b97703acf546ee936",
-        "authors": "Hadi Allahverdi Nazhand, S. Sabeti, Farid Javandoust Gharehbagh"
-      },
-      "max_citations": 2,
-      "faers_signal": "moderate",
-      "faers_total_reports": 32595,
-      "faers_cooccurrences": 89,
-      "faers_interpretation": "89 FAERS reports mention both Betamethasone and Tuberculosis-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "radicicol (1.661)",
-        "radicicol (1.556)",
-        "radicicol (1.524)",
-        "radicicol (1.521)",
-        "JNK-9L (1.513)"
-      ],
-      "signature_interpretation": "Betamethasone was not found among the top 42 drugs that reverse the Tuberculosis gene signature. Top reversers: radicicol (1.661), radicicol (1.556), radicicol (1.524)",
-      "ai_hypothesis": "of its anti-inflammatory and immunomodulatory properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.2947,
-      "mr_genetic_targets": 2,
-      "mechanistic_hypothesis": "Betamethasone \u2014[downregulates]\u2192 gene-831 \u2014[is a target of]\u2192 DB01373 \u2014[is a therapeutic for]\u2192 Tuberculosis",
-      "kg_paths_text": "\u2022 Betamethasone \u2014[downregulates]\u2192 gene-831 \u2014[is a target of]\u2192 DB01373 \u2014[is a therapeutic for]\u2192 Tuberculosis\n\u2022 Betamethasone \u2014[downregulates]\u2192 gene-211 \u2014[is downregulated by]\u2192 DB01234 \u2014[treats]\u2192 Tuberculosis\n\u2022 Betamethasone \u2014[downregulates]\u2192 gene-7043 \u2014[is downregulated by]\u2192 DB01234 \u2014[treats]\u2192 Tuberculosis",
-      "validation_experiments": [],
-      "novelty_score": 0.34,
-      "novelty_level": "EMERGING",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "MEDIUM",
-      "confidence_reasons": [
-        "29 PubMed articles found",
-        "1 article(s) specifically mention repurposing/repositioning",
-        "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 89 adverse event reports mention drug-disease co-occurrence",
-        "AI-generated hypothesis available"
-      ],
-      "dose_plausibility": {
-        "plausibility": "likely",
-        "dose_range": "trial",
-        "confidence": "medium",
-        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
-        "chembl_phase": 2.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1381,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
-        "pharmgkb": []
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.277,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.426,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.641
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Lung",
-          "Whole Blood"
-        ],
-        "n_genes": 7,
-        "n_expressed": 5,
-        "mean_tpm_in_tissue": 288.33,
-        "max_tpm_in_tissue": 879.62,
-        "tissue_specificity": 0.517,
-        "context_modifier": 1.092
-      },
-      "ensemble_prob": 0.5775,
-      "ensemble_features": {
-        "kg_score": 0.996,
-        "degree_penalty": 0.7572,
-        "n_drug_targets": 6,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 3.7612
-      },
-      "ensemble_rank": 3,
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D014376",
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Progesterone",
-      "drug_id": "DB00396",
-      "disease_name": "Tuberculosis",
-      "combined_score": 0.41839998960494995,
-      "pillars_hit": 4,
-      "transe_rank": 76,
-      "transe_score": -10.7226,
-      "pykeen_score": 0,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.6380000114440918,
-      "proximity_distance": 1.4500000476837158,
-      "admet_score": 0.7543,
-      "admet_flags": "clean",
-      "primekg_score": 0.2593,
-      "dti_score": 0.9031,
-      "dti_best_target": "TLR2",
-      "kg_group_score": 0.0897,
-      "structural_group_score": 0.9031,
-      "network_group_score": 0.4799000024795532,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.3932,
-      "admet_multiplier": 0.9509,
-      "efficacy_score": 0.4399999976158142,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 11,
-      "shared_targets": [
-        "CYP3A4",
-        "DKK1",
-        "IL17F",
-        "IL1A",
-        "IL1B",
-        "IL2",
-        "IL6",
-        "LEP",
-        "PLA2G1B",
-        "SLPI",
-        "WT1"
-      ],
-      "pubmed_total": 72,
-      "pubmed_treatment_total": 40,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "28561248",
-          "title": "Pulmonary Infections in Pregnancy.",
-          "authors": "Mathad JS, Gupta A",
-          "journal": "Seminars in respiratory and critical care medicine",
-          "year": "2017",
-          "abstract_snippet": "Pregnant women experience physiological and immunological changes that increase the risk or severity of certain pulmonary infections. These changes also affect drug disposition, which impacts treatment choices. In this article, we review the available data on (1) the physiological and immunological ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/28561248/",
-          "total_results": 72
-        },
-        {
-          "pmid": "41576611",
-          "title": "Sex hormones and tuberculosis: Implications for immune regulation, susceptibility, and disease pathogenesis.",
-          "authors": "Gebrie E, Baynes HW, Mulugeta B, et al.",
-          "journal": "Tuberculosis (Edinburgh, Scotland)",
-          "year": "2026",
-          "abstract_snippet": "Tuberculosis (TB), caused by Mycobacterium tuberculosis, exhibits pronounced sex differences in incidence and disease progression, with adult males disproportionately affected. Increasing evidence indicates that sex steroid hormones estrogen, progesterone, and testosterone modulate immune responses ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41576611/"
-        },
-        {
-          "pmid": "6087425",
-          "title": "Drug-pyridoxal phosphate interactions.",
-          "authors": "Ebadi M, Gessert CF, Al-Sayegh A",
-          "journal": "Quarterly reviews on drug metabolism and drug interactions",
-          "year": "1982",
-          "abstract_snippet": "In this review it has been pointed out that vitamin B6 and its vitamers can be involved in many interactions with a number of drugs, as well as with the actions of various endocrines and neurotransmitters. Nutritional deficiencies, especially of vitamins and proteins, can affect the manner in which ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/6087425/"
-        },
-        {
-          "pmid": "27086428",
-          "title": "RELATIONSHIP BETWEEN TUBERCULOSIS AND FEMALE HORMONE LEVELS IN POST-MENOPAUSAL WOMEN.",
-          "authors": "Erbay G, Senol G, Anar C, et al.",
-          "journal": "The Southeast Asian journal of tropical medicine and public health",
-          "year": "2016",
-          "abstract_snippet": "Tuberculosis (TB) is an intracellular infection controlled by T-lymphocyte. After menopause, T-lymphocyte cells counts increase suggesting a possible link between T-lymphocyte cell counts and estrogen and progesterone levels. In this study we compared post-menopausal women with and without TB to det...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/27086428/"
-        },
-        {
-          "pmid": "38821769",
-          "title": "Infectious and non-infectious precipitants of sarcoidosis.",
-          "authors": "Chioma OS, Wiggins Z, Rea S, et al.",
-          "journal": "Journal of autoimmunity",
-          "year": "2024",
-          "abstract_snippet": "Sarcoidosis is a chronic inflammatory disease that can affect any organ in the body. Its exact cause remains unknown, but it is believed to result from a combination of genetic and environmental factors. Some potential causes of sarcoidosis include genetics, environmental triggers, immune system dys...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38821769/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Assessment of Sex Hormones (FSH, LH, Prolactin, Estrogen, Progesterone and Testosterone) of Pulmonary Tuberculosis Patients",
+          "title": "Macrophage-targeted versus free calcitriol as host-directed adjunct therapy against Mycobacterium tuberculosis infection in mice is bacteriostatic and mitigates tissue pathology.",
           "year": 2024,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/2d6496fc8ee31e6c7dabe301b0721658d9687d20",
-          "authors": "Iyevhobu Kenneth Oshiokhayamhe"
-        },
-        {
-          "title": "Age associated level of estradiol (E2) and progesterone (4) influence IL-8 response to Mycobacterium tuberculosis (Mtb) antigens in women.",
-          "year": 2020,
           "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/8dd7763b4d631b982f7bf6055dff3a9917218227",
-          "authors": "Priscillia Virginie Liesse Mbourou Mensah, M. Leboueny, P. Essone"
+          "url": "https://www.semanticscholar.org/paper/26fa75da25a4720b47027fcae82a9431d4c6bf78",
+          "authors": "D. Reddy, Hasham S. Sofi, Trisha Roy"
         },
         {
-          "title": "Sex hormones and tuberculosis: Implications for immune regulation, susceptibility, and disease pathogenesis.",
-          "year": 2026,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/d8ea1e496e287603c0fbc2d402ad8cf466112b18",
-          "authors": "Eshet Gebrie, H. Baynes, Birhan Mulugeta"
+          "title": "Comprehension of Calcitriol Levels in Pregnant Women With Latent Tuberculosis and Immune Function in their Newborns",
+          "year": 2024,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/a30af27bca7ab587f795b6faa500f328754fcda0",
+          "authors": "Fathia Meirina, D. K. Sari, I. Lubis"
         },
         {
-          "title": "Sex hormone profiles and associated factors among adult tuberculosis patients at Gondar town, northwest Ethiopia: A comparative cross-sectional study",
-          "year": 2026,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/0d93fbd3aa5eb5e31402f9bb041b08ed74bbd4a8",
-          "authors": "Eshet Gebrie, H. Baynes, Berihun Agegn Mengistie"
-        },
-        {
-          "title": "Cytokine and hormone status of women of reproductive age with pulmonary tuberculosis",
+          "title": "Presentation of latent tuberculosis with elevated calcitriol as the first-presenting sign: A case report",
           "year": 2023,
           "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/01afd4debb33d1f22a8afc3cf7ce5fd50b145bbf",
-          "authors": "S. V. Goponiako"
+          "url": "https://www.semanticscholar.org/paper/ea67de0ab16d9acde56818f379c72f1f4b0c58c5",
+          "authors": "Salman J. Khan, Seemab Sheikh, Calvin Yee"
+        },
+        {
+          "title": "Calcitriol supplementation accelerates the recovery of patients with tuberculosis who have vitamin D deficiency: a randomized, single-blind, controlled clinical trial",
+          "year": 2022,
+          "citations": 12,
+          "url": "https://www.semanticscholar.org/paper/9da981ff462f15aac2a47a27daac1956f23c8363",
+          "authors": "Y. Wen, Lian Li, Z. Deng"
+        },
+        {
+          "title": "Preparation and Evaluation of Low-Dose Calcitriol Dry Powder Inhalation as Host-Directed Adjunct Therapy for Tuberculosis",
+          "year": 2022,
+          "citations": 6,
+          "url": "https://www.semanticscholar.org/paper/00d7c3fa253b592b62b1df22d2cf0278e8c3f3f0",
+          "authors": "D. Reddy, Hasham Shafi, Reena Bharti"
         }
       ],
       "most_cited_paper": {
-        "title": "Age associated level of estradiol (E2) and progesterone (4) influence IL-8 response to Mycobacterium tuberculosis (Mtb) antigens in women.",
-        "year": 2020,
-        "citations": 3,
-        "url": "https://www.semanticscholar.org/paper/8dd7763b4d631b982f7bf6055dff3a9917218227",
-        "authors": "Priscillia Virginie Liesse Mbourou Mensah, M. Leboueny, P. Essone"
+        "title": "Calcitriol supplementation accelerates the recovery of patients with tuberculosis who have vitamin D deficiency: a randomized, single-blind, controlled clinical trial",
+        "year": 2022,
+        "citations": 12,
+        "url": "https://www.semanticscholar.org/paper/9da981ff462f15aac2a47a27daac1956f23c8363",
+        "authors": "Y. Wen, Lian Li, Z. Deng"
       },
-      "max_citations": 3,
+      "max_citations": 12,
       "faers_signal": "moderate",
-      "faers_total_reports": 19292,
-      "faers_cooccurrences": 8,
-      "faers_interpretation": "8 FAERS reports mention both Progesterone and Tuberculosis-related terms. Limited but notable real-world signal.",
+      "faers_total_reports": 20342,
+      "faers_cooccurrences": 37,
+      "faers_interpretation": "37 FAERS reports mention both Calcitriol and Tuberculosis-related terms. Limited but notable real-world signal.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -1993,9 +1128,14 @@
         "radicicol (1.521)",
         "JNK-9L (1.513)"
       ],
-      "signature_interpretation": "Progesterone was not found among the top 42 drugs that reverse the Tuberculosis gene signature. Top reversers: radicicol (1.661), radicicol (1.556), radicicol (1.524)",
-      "ai_hypothesis": "of its anti-inflammatory and immunomodulatory properties.",
+      "signature_interpretation": "Calcitriol was not found among the top 42 drugs that reverse the Tuberculosis gene signature. Top reversers: radicicol (1.661), radicicol (1.556), radicicol (1.524)",
+      "ai_hypothesis": "",
       "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
         {
           "relation_type": "unclear",
           "confidence": 0.0,
@@ -2007,644 +1147,46 @@
           "positive_signals": 0,
           "negative_signals": 0,
           "mechanism_signals": 0,
-          "extracted_entities": [
-            {
-              "entity": "tuberculosis",
-              "entity_group": "Disease_disorder",
-              "score": 0.8429999947547913
-            },
-            {
-              "entity": "testosterone",
-              "entity_group": "Diagnostic_procedure",
-              "score": 0.7919999957084656
-            }
-          ]
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
+          "extracted_entities": []
         }
       ],
       "has_failed_trial": false,
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.3932,
-      "mr_genetic_targets": 1,
-      "mechanistic_hypothesis": "Progesterone \u2014[is agonized by]\u2192 gene-4306 \u2014[is an agonist of]\u2192 DB00860 \u2014[treats]\u2192 Tuberculosis",
-      "kg_paths_text": "\u2022 Progesterone \u2014[is agonized by]\u2192 gene-4306 \u2014[is an agonist of]\u2192 DB00860 \u2014[treats]\u2192 Tuberculosis\n\u2022 Progesterone \u2014[is agonized by]\u2192 gene-4306 \u2014[is an agonist of]\u2192 DB00860 \u2014[treats]\u2192 Tuberculosis\n\u2022 Progesterone \u2014[is agonized by]\u2192 gene-4306 \u2014[is an agonist of]\u2192 DB01234 \u2014[treats]\u2192 Tuberculosis",
+      "mr_score": 0,
+      "mr_genetic_targets": 0,
+      "mechanistic_hypothesis": "Calcitriol \u2014[upregulates]\u2192 gene-1066 \u2014[is a target of]\u2192 DB00382 \u2014[is a therapeutic for]\u2192 Tuberculosis",
+      "kg_paths_text": "\u2022 Calcitriol \u2014[upregulates]\u2192 gene-1066 \u2014[is a target of]\u2192 DB00382 \u2014[is a therapeutic for]\u2192 Tuberculosis\n\u2022 Calcitriol \u2014[downregulates]\u2192 gene-23076 \u2014[is upregulated by]\u2192 DB01234 \u2014[treats]\u2192 Tuberculosis\n\u2022 Calcitriol \u2014[downregulates]\u2192 gene-23659 \u2014[is upregulated by]\u2192 DB01234 \u2014[treats]\u2192 Tuberculosis",
       "validation_experiments": [],
-      "novelty_score": 0.35600000619888306,
-      "novelty_level": "NOVEL",
+      "novelty_score": 0.116,
+      "novelty_level": "KNOWN",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
       "clinical_trials": [],
       "trial_phases": {},
       "confidence": "HIGH",
       "confidence_reasons": [
-        "72 PubMed articles on this drug-disease pair",
-        "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 8 adverse event reports mention drug-disease co-occurrence",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.39)"
+        "292 PubMed articles on this drug-disease pair",
+        "1 article(s) specifically mention repurposing/repositioning",
+        "Supported by 2 independent AI pillars",
+        "High molecular similarity (0.64) to Cholecalciferol",
+        "Moderate FAERS signal: 37 adverse event reports mention drug-disease co-occurrence"
       ],
+      "disease_entity": "Disease::MESH:D014376",
       "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
+        "plausibility": "unknown",
+        "dose_range": "research",
+        "confidence": "low",
+        "rationale": "No ChEMBL clinical phase data available.",
+        "chembl_phase": null,
         "target_affinity": {},
         "stage": 1
       },
       "ddi_warnings": {
-        "n_interactions": 1310,
+        "n_interactions": 355,
         "has_warnings": true,
         "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (CYP2C19 / CYP2C19*1, CYP2C19*2, CYP2C19*17)",
-        "cpic": [],
-        "pharmgkb": [
-          {
-            "gene": "CYP2C19",
-            "variant": "CYP2C19*1, CYP2C19*2, CYP2C19*17",
-            "level": "3",
-            "phenotype_category": "Metabolism/PK",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451132040"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.30799999833106995,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.4180000126361847,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.809
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Lung",
-          "Whole Blood"
-        ],
-        "n_genes": 11,
-        "n_expressed": 6,
-        "mean_tpm_in_tissue": 86.3,
-        "max_tpm_in_tissue": 879.62,
-        "tissue_specificity": 0.329,
-        "context_modifier": 1.064
-      },
-      "ensemble_prob": 0.1077,
-      "ensemble_features": {
-        "kg_score": 0.9925,
-        "degree_penalty": 0.7522,
-        "n_drug_targets": 28,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 4.382
-      },
-      "ensemble_rank": 7,
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D014376",
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Rebamipide",
-      "drug_id": "DB11656",
-      "disease_name": "Tuberculosis",
-      "combined_score": 0.4133000075817108,
-      "pillars_hit": 3,
-      "transe_rank": 955,
-      "transe_score": -11.9073,
-      "pykeen_score": 0,
-      "pykeen_rank": 0,
-      "txgnn_score": 0.95,
-      "txgnn_rank": 5,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.8119999766349792,
-      "proximity_distance": 0.75,
-      "admet_score": 0.824,
-      "admet_flags": "DILI=0.91",
-      "primekg_score": 0.2615,
-      "dti_score": 0,
-      "dti_best_target": "",
-      "kg_group_score": 0.0278,
-      "structural_group_score": 0,
-      "network_group_score": 0.8119999766349792,
-      "txgnn_group_score": 0.95,
-      "mr_group_score": 0,
-      "admet_multiplier": 0.9648,
-      "efficacy_score": 0.42829999327659607,
-      "groups_hit": 3,
-      "direct_relations": [],
-      "shared_target_count": 1,
-      "shared_targets": [
-        "IL1B"
-      ],
-      "pubmed_total": 4,
-      "pubmed_treatment_total": 3,
-      "pubmed_repurposing_total": 2,
-      "key_papers": [
-        {
-          "pmid": "41308526",
-          "title": "Inhibition of mycobacteria proliferation in macrophages by diaryl ether derivatives of Dehydrozingerone compound and repurposed drugs (Rebamipide, Sofalcone) via NF-\u03baB pathway inhibition.",
-          "authors": "Mehraj S, Ali S, Kumar C, et al.",
-          "journal": "Tuberculosis (Edinburgh, Scotland)",
-          "year": "2025",
-          "abstract_snippet": "BACKGROUND: Chronic inflammation fuels tissue damage and morbidity in numerous diseases, including Tuberculosis, underscoring the vital need for Host-Directed Therapies to safely modulate the exaggerated host response. We investigated the immunomodulatory potential of Sofalcone and Rebamipide alongs...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41308526/",
-          "total_results": 4
-        },
-        {
-          "pmid": "41420985",
-          "title": "Corrigendum to \"Inhibition of mycobacteria proliferation in macrophages by diaryl ether derivatives of Dehydrozingerone compound and repurposed drugs (Rebamipide, Sofalcone) via NF-\u03baB pathway inhibition\" [Tuberculosis, 155(2025), 102706].",
-          "authors": "Mehraj S, Ali S, Kumar C, et al.",
-          "journal": "Tuberculosis (Edinburgh, Scotland)",
-          "year": "2026",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41420985/"
-        },
-        {
-          "pmid": "14672045",
-          "title": "[Agranulocytosis due to anti-tuberculosis drugs including isoniazid (INH) and rifampicin (RFP)--a report of four cases and review of the literature].",
-          "authors": "Shishido Y, Nagayama N, Masuda K, et al.",
-          "journal": "Kekkaku : [Tuberculosis]",
-          "year": "2003",
-          "abstract_snippet": "We experienced 4 cases of agranulocytosis due to anti-tuberculosis drugs (rifampicin [RFP], isoniazid [INH], ethambutol [EB], streptomycin [SM] or pyrazinamide [PZA]) among some 6,400 tuberculosis patients who underwent chemotherapy over the past 20 years from 1981 to 2002 in our hospital, and the i...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/14672045/"
-        },
-        {
-          "pmid": "36286974",
-          "title": "[Epithelial protective therapy in comorbid diseases. Practical Guidelines for Physicians].",
-          "authors": "Simanenkov VI, Maev IV, Tkacheva ON, et al.",
-          "journal": "Terapevticheskii arkhiv",
-          "year": "2022",
-          "abstract_snippet": "This document was produced with the support of the National Medical Association for the Study of Comorbidities (NAS\u0421). In 2021 the first multidisciplinary National Consensus on the pathophysiological and clinical aspects of Increased Epithelial Permeability Syndrome was published. The proposed guide...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36286974/"
-        }
-      ],
-      "repurposing_papers": [
-        {
-          "pmid": "41308526",
-          "title": "Inhibition of mycobacteria proliferation in macrophages by diaryl ether derivatives of Dehydrozingerone compound and repurposed drugs (Rebamipide, Sofalcone) via NF-\u03baB pathway inhibition.",
-          "authors": "Mehraj S, Ali S, Kumar C, et al.",
-          "journal": "Tuberculosis (Edinburgh, Scotland)",
-          "year": "2025",
-          "abstract_snippet": "BACKGROUND: Chronic inflammation fuels tissue damage and morbidity in numerous diseases, including Tuberculosis, underscoring the vital need for Host-Directed Therapies to safely modulate the exaggerated host response. We investigated the immunomodulatory potential of Sofalcone and Rebamipide alongs...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41308526/",
-          "total_results": 2
-        },
-        {
-          "pmid": "41420985",
-          "title": "Corrigendum to \"Inhibition of mycobacteria proliferation in macrophages by diaryl ether derivatives of Dehydrozingerone compound and repurposed drugs (Rebamipide, Sofalcone) via NF-\u03baB pathway inhibition\" [Tuberculosis, 155(2025), 102706].",
-          "authors": "Mehraj S, Ali S, Kumar C, et al.",
-          "journal": "Tuberculosis (Edinburgh, Scotland)",
-          "year": "2026",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41420985/"
-        }
-      ],
-      "semantic_scholar_papers": [
-        {
-          "title": "Corrigendum to \"Inhibition of mycobacteria proliferation in macrophages by diaryl ether derivatives of Dehydrozingerone compound and repurposed drugs (Rebamipide, Sofalcone) via NF-\u03baB pathway inhibition\" [Tuberculosis, 155(2025), 102706].",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/d4e94adf538abc43999f14f90e6283a7843ec068",
-          "authors": "Safiya Mehraj, Shazia Ali, Chetan Kumar"
-        },
-        {
-          "title": "Inhibition of mycobacteria proliferation in macrophages by diaryl ether derivatives of Dehydrozingerone compound and repurposed drugs (Rebamipide, Sofalcone) via NF-\u03baB pathway inhibition.",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/3e2847044b93951ad031fea922a2f536bd17c6f3",
-          "authors": "Safiya Mehraj, Shazia Ali, Chetan Kumar"
-        },
-        {
-          "title": "Evolution of tuberculosis diagnostics: From molecular strategies to nanodiagnostics",
-          "year": 2023,
-          "citations": 40,
-          "url": "https://www.semanticscholar.org/paper/157740e181b390d657dad4102dd3388e27219ea2",
-          "authors": "Srestha Mukherjee, Summaya Perveen, Anjali Negi"
-        },
-        {
-          "title": "An efficient deep learning-based framework for tuberculosis detection using chest X-ray images.",
-          "year": 2022,
-          "citations": 61,
-          "url": "https://www.semanticscholar.org/paper/41abeccb42896a79e09dff35121bc3710cd7ad8b",
-          "authors": "Ahmed Iqbal, Muhammad Usman, Zohair Ahmed"
-        },
-        {
-          "title": "Improving Tuberculosis Medication Adherence: The Potential of Integrating Digital Technology and Health Belief Model",
-          "year": 2022,
-          "citations": 63,
-          "url": "https://www.semanticscholar.org/paper/0a8eda5f5724670f49b437d50b2eebfbc6273a90",
-          "authors": "Mohd Fazeli Sazali, S. Rahim, Ahmad H. Mohammad"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Improving Tuberculosis Medication Adherence: The Potential of Integrating Digital Technology and Health Belief Model",
-        "year": 2022,
-        "citations": 63,
-        "url": "https://www.semanticscholar.org/paper/0a8eda5f5724670f49b437d50b2eebfbc6273a90",
-        "authors": "Mohd Fazeli Sazali, S. Rahim, Ahmad H. Mohammad"
-      },
-      "max_citations": 63,
-      "faers_signal": "moderate",
-      "faers_total_reports": 8548,
-      "faers_cooccurrences": 58,
-      "faers_interpretation": "58 FAERS reports mention both Rebamipide and Tuberculosis-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "radicicol (1.661)",
-        "radicicol (1.556)",
-        "radicicol (1.524)",
-        "radicicol (1.521)",
-        "JNK-9L (1.513)"
-      ],
-      "signature_interpretation": "Rebamipide was not found among the top 42 drugs that reverse the Tuberculosis gene signature. Top reversers: radicicol (1.661), radicicol (1.556), radicicol (1.524)",
-      "ai_hypothesis": "of its anti-inflammatory and antioxidant properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 1,
-          "negative_signals": 0,
-          "mechanism_signals": 0,
-          "extracted_entities": [
-            {
-              "entity": "tissue damage",
-              "entity_group": "Sign_symptom",
-              "score": 0.8069999814033508
-            },
-            {
-              "entity": "morbidity",
-              "entity_group": "Sign_symptom",
-              "score": 0.8709999918937683
-            },
-            {
-              "entity": "host - directed therapies",
-              "entity_group": "Therapeutic_procedure",
-              "score": 0.9150000214576721
-            },
-            {
-              "entity": "sofalcone",
-              "entity_group": "Medication",
-              "score": 0.871999979019165
-            },
-            {
-              "entity": "rebamipide",
-              "entity_group": "Medication",
-              "score": 0.843999981880188
-            }
-          ]
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "Rebamipide \u2014[is a therapeutic for]\u2192 MESH:D013280 \u2014[is treated by]\u2192 DB00620 \u2014[treats]\u2192 Tuberculosis",
-      "kg_paths_text": "\u2022 Rebamipide \u2014[is a therapeutic for]\u2192 MESH:D013280 \u2014[is treated by]\u2192 DB00620 \u2014[treats]\u2192 Tuberculosis\n\u2022 Rebamipide \u2014[is a therapeutic for]\u2192 MESH:D003093 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 Tuberculosis\n\u2022 Rebamipide \u2014[is a therapeutic for]\u2192 MESH:D003093 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 Tuberculosis",
-      "validation_experiments": [],
-      "novelty_score": 0.3720000088214874,
-      "novelty_level": "EMERGING",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "MEDIUM",
-      "confidence_reasons": [
-        "4 PubMed article(s) - limited literature",
-        "2 article(s) specifically mention repurposing/repositioning",
-        "Supported by 3 independent AI pillars",
-        "Moderate FAERS signal: 58 adverse event reports mention drug-disease co-occurrence",
-        "Supporting paper with 63 citations",
-        "AI-generated hypothesis available"
-      ],
-      "dose_plausibility": {
-        "plausibility": "likely",
-        "dose_range": "late-trial",
-        "confidence": "medium",
-        "rationale": "Phase-3 investigational \u2014 dose range established in Phase-2 pharmacokinetic studies; efficacy trials ongoing or recently completed.",
-        "chembl_phase": 3.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 0,
-        "has_warnings": false,
-        "top_interactions": []
-      },
-      "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
-        "pharmgkb": []
-      },
-      "triangulation": {
-        "n_axes_agree": 1,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": false
-        },
-        "triangulation_score": 0.20499999821186066,
-        "label": "kg-only",
-        "axis_values": {
-          "kg": 0.4129999876022339,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.303
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Lung",
-          "Whole Blood"
-        ],
-        "n_genes": 1,
-        "n_expressed": 1,
-        "mean_tpm_in_tissue": 24.53,
-        "max_tpm_in_tissue": 24.53,
-        "tissue_specificity": 1.0,
-        "context_modifier": 1.096
-      },
-      "ensemble_prob": 0.0,
-      "ensemble_features": {
-        "kg_score": 0.682,
-        "degree_penalty": 1.0,
-        "n_drug_targets": 0,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 8.1185
-      },
-      "ensemble_rank": 10,
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D014376",
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Fluocinolone Acetonide",
-      "drug_id": "DB00591",
-      "disease_name": "Tuberculosis",
-      "combined_score": 0.4072,
-      "pillars_hit": 4,
-      "transe_rank": 162,
-      "transe_score": -11.023,
-      "pykeen_score": 0,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0.9604,
-      "mol_emb_similar_to": "Dehydroepiandrosterone",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.625,
-      "proximity_distance": 1.5,
-      "admet_score": 0.658,
-      "admet_flags": "clean",
-      "primekg_score": 0.2538,
-      "dti_score": 0.5694,
-      "dti_best_target": "FASLG",
-      "kg_group_score": 0.0834,
-      "structural_group_score": 0.9604,
-      "network_group_score": 0.48010000586509705,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.3156,
-      "admet_multiplier": 0.9316,
-      "efficacy_score": 0.4371,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 1,
-      "shared_targets": [
-        "CYP3A4"
-      ],
-      "pubmed_total": 1,
-      "pubmed_treatment_total": 1,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "6033000",
-          "title": "Atypical (annular) necrobiosis lipoidica of the face and scalp. A report of the clinical and histological features of 7 cases.",
-          "authors": "Dowling GB, Jones EW",
-          "journal": "Dermatologica",
-          "year": "1967",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/6033000/",
-          "total_results": 1
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "What have we learned from a decade treating patients with diabetic macular oedema with 0.19\u2009mg fluocinolone acetonide intravitreal implant?",
-          "year": 2025,
-          "citations": 4,
-          "url": "https://www.semanticscholar.org/paper/fe801c5b45165687aa4c2732bc8b877b738e2bde",
-          "authors": "L. Kodjikian, Lilianne Duarte, Pankaj Singh"
-        },
-        {
-          "title": "Transdermal fluocinolone acetonide loaded decorated hyalurosomes cellulose acetate/polycaprolactone nanofibers mitigated Freund\u2019s adjuvant-induced rheumatoid arthritis in rats",
-          "year": 2024,
-          "citations": 33,
-          "url": "https://www.semanticscholar.org/paper/285d92a754eed7be306f7f3f33f3c525df6aaaaa",
-          "authors": "S. F. Elhabal, M. EL-NABARAWI, S. Hassanin"
-        },
-        {
-          "title": "Real-World Clinical Outcomes After Sustained Delivery of the 0.19 mg Fluocinolone Acetonide Implant for Treatment of Diabetic Macular Edema",
-          "year": 2025,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/3952c8023c9574c83323efdaa2e93845e3583346",
-          "authors": "Sarah Godel, D. Oncel, Richard Donkor"
-        },
-        {
-          "title": "Long-acting release of fluocinolone acetonide microspheres using electrospray technology for noninfectious uveitis therapy",
-          "year": 2025,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/30f2b6abdf0ab4965c74caa5fcbf0f10003e74c0",
-          "authors": "Jiayu Xie, Ke Li, Lusi Chen"
-        },
-        {
-          "title": "Intrascleral Tunnel Clamping of Fluocinolone Acetonide Implant: A Novel Scleral Fixation Technique",
-          "year": 2025,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/e00ac5a4c81c790eb8701925142118ba7fba9461",
-          "authors": "L. Sejournet, L. Kodjikian, T. Mathis"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Transdermal fluocinolone acetonide loaded decorated hyalurosomes cellulose acetate/polycaprolactone nanofibers mitigated Freund\u2019s adjuvant-induced rheumatoid arthritis in rats",
-        "year": 2024,
-        "citations": 33,
-        "url": "https://www.semanticscholar.org/paper/285d92a754eed7be306f7f3f33f3c525df6aaaaa",
-        "authors": "S. F. Elhabal, M. EL-NABARAWI, S. Hassanin"
-      },
-      "max_citations": 33,
-      "faers_signal": "weak",
-      "faers_total_reports": 1864,
-      "faers_cooccurrences": 2,
-      "faers_interpretation": "2 FAERS report(s) mention both Fluocinolone Acetonide and Tuberculosis-related terms. Minimal real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "radicicol (1.661)",
-        "radicicol (1.556)",
-        "radicicol (1.524)",
-        "radicicol (1.521)",
-        "JNK-9L (1.513)"
-      ],
-      "signature_interpretation": "Fluocinolone Acetonide was not found among the top 42 drugs that reverse the Tuberculosis gene signature. Top reversers: radicicol (1.661), radicicol (1.556), radicicol (1.524)",
-      "ai_hypothesis": "of its anti-inflammatory properties.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.3156,
-      "mr_genetic_targets": 2,
-      "mechanistic_hypothesis": "Fluocinolone Acetonide \u2014[downregulates]\u2192 gene-1027 \u2014[is downregulated by]\u2192 DB00860 \u2014[treats]\u2192 Tuberculosis",
-      "kg_paths_text": "\u2022 Fluocinolone Acetonide \u2014[downregulates]\u2192 gene-1027 \u2014[is downregulated by]\u2192 DB00860 \u2014[treats]\u2192 Tuberculosis\n\u2022 Fluocinolone Acetonide \u2014[downregulates]\u2192 gene-1027 \u2014[is downregulated by]\u2192 DB00860 \u2014[treats]\u2192 Tuberculosis\n\u2022 Fluocinolone Acetonide \u2014[downregulates]\u2192 gene-6192 \u2014[is downregulated by]\u2192 DB00860 \u2014[treats]\u2192 Tuberculosis",
-      "validation_experiments": [],
-      "novelty_score": 0.387,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "1 PubMed article(s) - limited literature",
-        "Supported by 4 independent AI pillars",
-        "Supporting paper with 33 citations",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.32)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1449,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
           {
             "drug_id": "DB00564",
             "drug_name": "Carbamazepine",
@@ -2653,11 +1195,6 @@
           {
             "drug_id": "DB01264",
             "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
             "severity": "high"
           },
           {
@@ -2668,257 +1205,11 @@
           {
             "drug_id": "DB00783",
             "drug_name": "Estradiol",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00773",
-            "drug_name": "Etoposide",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00502",
-            "drug_name": "Haloperidol",
             "severity": "high"
           },
           {
             "drug_id": "DB00227",
             "drug_name": "Lovastatin",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
-        "pharmgkb": []
-      },
-      "triangulation": {
-        "n_axes_agree": 1,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": false
-        },
-        "triangulation_score": 0.169,
-        "label": "kg-only",
-        "axis_values": {
-          "kg": 0.407,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.131
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Lung",
-          "Whole Blood"
-        ],
-        "n_genes": 1,
-        "n_expressed": 0,
-        "mean_tpm_in_tissue": 0.13,
-        "max_tpm_in_tissue": 0.13,
-        "tissue_specificity": 0.0,
-        "context_modifier": 0.855
-      },
-      "ensemble_prob": 0.7325,
-      "ensemble_features": {
-        "kg_score": 0.9969,
-        "degree_penalty": 0.7682,
-        "n_drug_targets": 2,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 3.5264
-      },
-      "ensemble_rank": 1,
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D014376",
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
-      "drug_name": "Rolitetracycline",
-      "drug_id": "DB01301",
-      "disease_name": "Tuberculosis",
-      "combined_score": 0.4032000005245209,
-      "pillars_hit": 3,
-      "transe_rank": 582,
-      "transe_score": -11.6246,
-      "pykeen_score": 0,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0.9421,
-      "mol_emb_similar_to": "Rifabutin",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 1.0,
-      "proximity_distance": 0.0,
-      "admet_score": 1.0,
-      "admet_flags": "clean",
-      "primekg_score": 0.2511,
-      "dti_score": 0,
-      "dti_best_target": "",
-      "kg_group_score": 0.0231,
-      "structural_group_score": 0.9421,
-      "network_group_score": 0.8889999985694885,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0,
-      "admet_multiplier": 1.0,
-      "efficacy_score": 0.4032000005245209,
-      "groups_hit": 3,
-      "direct_relations": [],
-      "shared_target_count": 1,
-      "shared_targets": [
-        "CYP3A4"
-      ],
-      "pubmed_total": 3,
-      "pubmed_treatment_total": 3,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "5608824",
-          "title": "[Clinical observations on the use of the chloramphenicol succinate of pyrrolidin methyl-tetracycline in pulmonary pathology].",
-          "authors": "Comoli G",
-          "journal": "La Clinica terapeutica",
-          "year": "1967",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/5608824/",
-          "total_results": 3
-        },
-        {
-          "pmid": "14242825",
-          "title": "[PYRROLIDINE-METHYL-TETRACYCLINE IN THE ANTIBIOTIC PROPHYLAXIS OF THORACO-PULMONARY SURGERY OF TUBERCULOSIS (4 YEARS OF EXPERIENCE)].",
-          "authors": "ZUCCALI G, TOZZI M, FESTA R",
-          "journal": "Gazzetta internazionale di medicina e chirurgia",
-          "year": "1964",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/14242825/"
-        },
-        {
-          "pmid": "5396388",
-          "title": "[Combination of chloramphenicol succinate of pyrrolidine methyl-tetracycline, guaiacol glyceryl ether and beta-hydroxypropyl-theophylline in the therapy of diseases of the respiratory tract in aged patients].",
-          "authors": "Michetti A, Barbieri R",
-          "journal": "Giornale di gerontologia",
-          "year": "1969",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/5396388/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Evolution of tuberculosis diagnostics: From molecular strategies to nanodiagnostics",
-          "year": 2023,
-          "citations": 40,
-          "url": "https://www.semanticscholar.org/paper/157740e181b390d657dad4102dd3388e27219ea2",
-          "authors": "Srestha Mukherjee, Summaya Perveen, Anjali Negi"
-        },
-        {
-          "title": "An efficient deep learning-based framework for tuberculosis detection using chest X-ray images.",
-          "year": 2022,
-          "citations": 61,
-          "url": "https://www.semanticscholar.org/paper/41abeccb42896a79e09dff35121bc3710cd7ad8b",
-          "authors": "Ahmed Iqbal, Muhammad Usman, Zohair Ahmed"
-        },
-        {
-          "title": "Improving Tuberculosis Medication Adherence: The Potential of Integrating Digital Technology and Health Belief Model",
-          "year": 2022,
-          "citations": 63,
-          "url": "https://www.semanticscholar.org/paper/0a8eda5f5724670f49b437d50b2eebfbc6273a90",
-          "authors": "Mohd Fazeli Sazali, S. Rahim, Ahmad H. Mohammad"
-        },
-        {
-          "title": "A systemic review on tuberculosis.",
-          "year": 2020,
-          "citations": 302,
-          "url": "https://www.semanticscholar.org/paper/1c9658b66d1e4ec16aba3a5553183e10c813319a",
-          "authors": "A. Natarajan, P. Beena, Anushka V. Devnikar"
-        },
-        {
-          "title": "Immunologic and imaging signatures in post tuberculosis lung disease.",
-          "year": 2022,
-          "citations": 30,
-          "url": "https://www.semanticscholar.org/paper/4ed66ffc591dfd60c0566eb7c4367bc9224355a3",
-          "authors": "S. Singh, B. Allwood, T. L. Chiyaka"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "A systemic review on tuberculosis.",
-        "year": 2020,
-        "citations": 302,
-        "url": "https://www.semanticscholar.org/paper/1c9658b66d1e4ec16aba3a5553183e10c813319a",
-        "authors": "A. Natarajan, P. Beena, Anushka V. Devnikar"
-      },
-      "max_citations": 302,
-      "faers_signal": "none",
-      "faers_total_reports": 1,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Rolitetracycline to Tuberculosis terms. Drug has 1 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "radicicol (1.661)",
-        "radicicol (1.556)",
-        "radicicol (1.524)",
-        "radicicol (1.521)",
-        "JNK-9L (1.513)"
-      ],
-      "signature_interpretation": "Rolitetracycline was not found among the top 42 drugs that reverse the Tuberculosis gene signature. Top reversers: radicicol (1.661), radicicol (1.556), radicicol (1.524)",
-      "ai_hypothesis": "of its high activity against M.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "Rolitetracycline \u2014[targets]\u2192 gene-drugbank:BE0004799 \u2014[is a target of]\u2192 DB01082 \u2014[treats]\u2192 Tuberculosis",
-      "kg_paths_text": "\u2022 Rolitetracycline \u2014[targets]\u2192 gene-drugbank:BE0004799 \u2014[is a target of]\u2192 DB01082 \u2014[treats]\u2192 Tuberculosis\n\u2022 Rolitetracycline \u2014[targets]\u2192 gene-drugbank:BE0004799 \u2014[is a target of]\u2192 DB01082 \u2014[treats]\u2192 Tuberculosis\n\u2022 Rolitetracycline \u2014[binds]\u2192 gene-1576 \u2014[is a target of]\u2192 DB00951 \u2014[treats]\u2192 Tuberculosis",
-      "validation_experiments": [],
-      "novelty_score": 0.34299999475479126,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "3 PubMed article(s) - limited literature",
-        "Supported by 3 independent AI pillars",
-        "Highly cited paper (302 citations): \"A systemic review on tuberculosis....\"",
-        "AI-generated hypothesis available"
-      ],
-      "dose_plausibility": {
-        "plausibility": "likely",
-        "dose_range": "trial",
-        "confidence": "medium",
-        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
-        "chembl_phase": 2.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 244,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00783",
-            "drug_name": "Estradiol",
             "severity": "high"
           },
           {
@@ -2927,44 +1218,24 @@
             "severity": "high"
           },
           {
-            "drug_id": "DB00682",
-            "drug_name": "Warfarin",
+            "drug_id": "DB00959",
+            "drug_name": "Methylprednisolone",
             "severity": "high"
           },
           {
-            "drug_id": "DB08496",
-            "drug_name": "(R)-Warfarin",
-            "severity": "moderate"
+            "drug_id": "DB00860",
+            "drug_name": "Prednisolone",
+            "severity": "high"
           },
           {
-            "drug_id": "DB14055",
-            "drug_name": "(S)-Warfarin",
-            "severity": "moderate"
+            "drug_id": "DB01098",
+            "drug_name": "Rosuvastatin",
+            "severity": "high"
           },
           {
-            "drug_id": "DB14570",
-            "drug_name": "17-Hydroxyprogesterone",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB04665",
-            "drug_name": "2H-1-BENZOPYRAN-2-ONE",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB02699",
-            "drug_name": "4-Oxoretinol",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB03410",
-            "drug_name": "4-hydroxycoumarin",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB05830",
-            "drug_name": "7a-methyl-19-nortestosterone",
-            "severity": "moderate"
+            "drug_id": "DB00641",
+            "drug_name": "Simvastatin",
+            "severity": "high"
           }
         ]
       },
@@ -2976,278 +1247,20 @@
         "pharmgkb": []
       },
       "triangulation": {
-        "n_axes_agree": 1,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": false
-        },
-        "triangulation_score": 0.19300000369548798,
-        "label": "kg-only",
-        "axis_values": {
-          "kg": 0.40299999713897705,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.261
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Lung",
-          "Whole Blood"
-        ],
-        "n_genes": 1,
-        "n_expressed": 0,
-        "mean_tpm_in_tissue": 0.13,
-        "max_tpm_in_tissue": 0.13,
-        "tissue_specificity": 0.0,
-        "context_modifier": 0.855
-      },
-      "ensemble_prob": 0.2719,
-      "ensemble_features": {
-        "kg_score": 0.9729,
-        "degree_penalty": 0.889,
-        "n_drug_targets": 3,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 5.6595
-      },
-      "ensemble_rank": 5,
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D014376",
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [
-          "MICHAEL",
-          "NON"
-        ],
-        "n_alerts": 2,
-        "alert_names": [
-          "Michael_acceptor_4",
-          "non_ring_CH2O_acetal"
-        ]
-      }
-    },
-    {
-      "drug_name": "Chlortetracycline",
-      "drug_id": "DB09093",
-      "disease_name": "Tuberculosis",
-      "combined_score": 0.40139999985694885,
-      "pillars_hit": 3,
-      "transe_rank": 24,
-      "transe_score": -10.3862,
-      "pykeen_score": 0,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.75,
-      "proximity_distance": 1.0,
-      "admet_score": 0.7003,
-      "admet_flags": "clean",
-      "primekg_score": 0.259,
-      "dti_score": 1.0,
-      "dti_best_target": "SOCS1",
-      "kg_group_score": 0.1882,
-      "structural_group_score": 1.0,
-      "network_group_score": 0.75,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0,
-      "admet_multiplier": 0.9401,
-      "efficacy_score": 0.4269999861717224,
-      "groups_hit": 3,
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 36,
-      "pubmed_treatment_total": 23,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "4580101",
-          "title": "Tetracyclines.",
-          "authors": "Abou-Zeid AZ",
-          "journal": "Zentralblatt fur Bakteriologie, Parasitenkunde, Infektionskrankheiten und Hygiene. Zweite naturwissenschaftliche Abt.: Allgemeine, landwirtschaftliche und technische Mikrobiologie",
-          "year": "1973",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/4580101/",
-          "total_results": 36
-        },
-        {
-          "pmid": "41351180",
-          "title": "Biochemical, Biophysical, and Mechanistic Insights on a Putative Oxidoreductase From Mycobacterium tuberculosis That Shares Structural Homology With Tetracycline Destructase.",
-          "authors": "Shiraz M, Biswas D, Priyanka G, et al.",
-          "journal": "Proteins",
-          "year": "2026",
-          "abstract_snippet": "Mycobacterium tuberculosis (Mtb) is the causative agent of tuberculosis. The emergence of Mtb's multidrug-resistant and extremely drug-resistant strains has imposed a great challenge for TB treatment. Hence, there is always a demand to explore new targets that may be crucial for the survival and pat...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41351180/"
-        },
-        {
-          "pmid": "4987506",
-          "title": "[A trial of treatment for pulmonary tuberculosis patients showing multiple resistance to anti-tuberculosis drugs. 1. A fundamental experiment of MIC of demethyl-chlortetracycline (LM) to M. tuberculosis and other mycobacteria].",
-          "authors": "Takenaka T, Tsukamura M",
-          "journal": "Kekkaku : [Tuberculosis]",
-          "year": "1970",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/4987506/"
-        },
-        {
-          "pmid": "4106441",
-          "title": "[Intravenous chemotherapy of pulmonary tuberculosis and tuberculous meningitis in children and adolescents].",
-          "authors": "Kibrik BL, Efimova VM",
-          "journal": "Sovetskoe zdravookhranenie Kirgizii",
-          "year": "1971",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/4106441/"
-        },
-        {
-          "pmid": "14771854",
-          "title": "Diseases of the respiratory system.",
-          "authors": "SINGER JJ",
-          "journal": "Annual review of medicine",
-          "year": "1950",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/14771854/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "[A trial of treatment for pulmonary tuberculosis patients showing multiple resistance to anti-tuberculosis drugs. 1. A fundamental experiment of MIC of demethyl-chlortetracycline (LM) to M. tuberculosis and other mycobacteria].",
-          "year": 1970,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/1967a23ad27944afafde5ad9c0030316398bbe2a",
-          "authors": "T. Takenaka, M. Tsukamura"
-        },
-        {
-          "title": "Exploring the impact of biochar on antibiotics and antibiotics resistance genes in pig manure aerobic composting through untargeted metabolomics and metagenomics.",
-          "year": 2022,
-          "citations": 46,
-          "url": "https://www.semanticscholar.org/paper/7c23e6b246dc1b14dd69d9e5a894553cc14a0cf9",
-          "authors": "Xueqin He, Jinpeng Xiong, Zengling Yang"
-        },
-        {
-          "title": "Metabolites of p-Aminobenzoic Acid I. ISOLATION, BIOLOGICAL AND CHEMICAL PROPERTIES OF TWO CRYSTALLINE COMPOUNDS METABOLICALLY DERIVED FROM p-AMINOBENZOIC ACID",
-          "year": 1961,
-          "citations": 11,
-          "url": "https://www.semanticscholar.org/paper/af999192d74700e98e1cb5863e4db5cb6d16ebfe",
-          "authors": "N. Sloane"
-        },
-        {
-          "title": "Rheumatic Diseases, Rheumatism and Arthritis.",
-          "year": 1958,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/b1f34b800614d4d6996013bd7e3850a481633051",
-          "authors": "B. Kagan"
-        },
-        {
-          "title": "Experimental intrabronchial administration of neomycin in man and animals.",
-          "year": 1961,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/8373bef0f3486ed59afdb3b96631b5ad52f2efe0",
-          "authors": "V. Lorian"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Exploring the impact of biochar on antibiotics and antibiotics resistance genes in pig manure aerobic composting through untargeted metabolomics and metagenomics.",
-        "year": 2022,
-        "citations": 46,
-        "url": "https://www.semanticscholar.org/paper/7c23e6b246dc1b14dd69d9e5a894553cc14a0cf9",
-        "authors": "Xueqin He, Jinpeng Xiong, Zengling Yang"
-      },
-      "max_citations": 46,
-      "faers_signal": "none",
-      "faers_total_reports": 75,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Chlortetracycline to Tuberculosis terms. Drug has 75 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "radicicol (1.661)",
-        "radicicol (1.556)",
-        "radicicol (1.524)",
-        "radicicol (1.521)",
-        "JNK-9L (1.513)"
-      ],
-      "signature_interpretation": "Chlortetracycline was not found among the top 42 drugs that reverse the Tuberculosis gene signature. Top reversers: radicicol (1.661), radicicol (1.556), radicicol (1.524)",
-      "ai_hypothesis": "of its antimicrobial properties.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "Chlortetracycline \u2014[is a therapeutic for]\u2192 MESH:D014552 \u2014[is treated by]\u2192 DB01082 \u2014[treats]\u2192 Tuberculosis",
-      "kg_paths_text": "\u2022 Chlortetracycline \u2014[is a therapeutic for]\u2192 MESH:D014552 \u2014[is treated by]\u2192 DB01082 \u2014[treats]\u2192 Tuberculosis\n\u2022 Chlortetracycline \u2014[is a therapeutic for]\u2192 MESH:D014552 \u2014[is treated by]\u2192 DB01082 \u2014[treats]\u2192 Tuberculosis\n\u2022 Chlortetracycline \u2014[is a therapeutic for]\u2192 MESH:D014406 \u2014[is treated by]\u2192 DB01082 \u2014[treats]\u2192 Tuberculosis",
-      "validation_experiments": [],
-      "novelty_score": 0.3409999907016754,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "36 PubMed articles found",
-        "Supported by 3 independent AI pillars",
-        "Supporting paper with 46 citations",
-        "AI-generated hypothesis available"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 0,
-        "has_warnings": false,
-        "top_interactions": []
-      },
-      "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
-        "pharmgkb": []
-      },
-      "triangulation": {
         "n_axes_agree": 2,
         "axes": {
-          "kg": true,
-          "docking": false,
+          "kg": false,
+          "docking": true,
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.2770000100135803,
+        "triangulation_score": 0.562,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.4009999930858612,
-          "docking": 0.0,
+          "kg": 0.178,
+          "docking": 1.0,
           "pharos": 0.0,
-          "literature": 0.681
+          "literature": 1.0
         }
       },
       "tissue_context": {
@@ -3255,49 +1268,44 @@
           "Lung",
           "Whole Blood"
         ],
-        "n_genes": 104,
-        "n_expressed": 87,
-        "mean_tpm_in_tissue": 186.56,
-        "max_tpm_in_tissue": 3282.17,
-        "tissue_specificity": 0.781,
-        "context_modifier": 1.124
+        "n_genes": 7,
+        "n_expressed": 5,
+        "mean_tpm_in_tissue": 46.75,
+        "max_tpm_in_tissue": 284.29,
+        "tissue_specificity": 1.0,
+        "context_modifier": 1.121
       },
-      "ensemble_prob": 0.0018,
+      "ensemble_prob": 0.2291,
       "ensemble_features": {
-        "kg_score": 0.8393,
-        "degree_penalty": 1.0,
-        "n_drug_targets": 3,
-        "is_fda_approved": 1,
+        "kg_score": 0.9835,
+        "degree_penalty": 0.8169,
+        "n_drug_targets": 10,
+        "is_fda_approved": 0,
         "n_disease_genes": 0,
-        "transe_rank_log": 7.436
+        "transe_rank_log": 5.1648
       },
-      "ensemble_rank": 9,
+      "ensemble_rank": 1,
       "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
+        "kcal_per_mol": -12.29,
+        "target_symbol": "VDR",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
       },
-      "disease_entity": "Disease::MESH:D014376",
       "structural_alerts": {
         "has_pains": false,
-        "pains_families": [
-          "MICHAEL"
-        ],
-        "n_alerts": 1,
-        "alert_names": [
-          "Michael_acceptor_4"
-        ]
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
       }
     }
   ],
+  "disease_entity": "Disease::MESH:D014376",
   "ensemble_version": "v5",
   "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
     "n_disease_genes": 104,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
-  },
-  "disease_entity": "Disease::MESH:D014376"
+  }
 }

@@ -1,13 +1,12 @@
 {
   "disease": "Leukemia",
   "status": "completed",
-  "timestamp": "2026-04-19T20:39:47.407006",
-  "elapsed_seconds": 757.2,
+  "timestamp": "2026-05-07T23:35:28.466417",
+  "elapsed_seconds": 220.6,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
-    "HIGH": 9,
-    "LOW": 1
+    "HIGH": 10
   },
   "pipeline_version": "v5",
   "data_manifest_hash": "2da2aa88f2457d1b",
@@ -35,8 +34,8 @@
       "admet_score": 0.7109,
       "admet_flags": "clean",
       "primekg_score": 0.2556,
-      "dti_score": 0.6483,
-      "dti_best_target": "FLT1",
+      "dti_score": 0.5677,
+      "dti_best_target": "ETS1",
       "kg_group_score": 0.4028,
       "structural_group_score": 0.9641,
       "network_group_score": 0.5703999996185303,
@@ -228,7 +227,7 @@
         }
       ],
       "has_failed_trial": false,
-      "failed_trial_phase": "Phase 3",
+      "failed_trial_phase": "Phase 2",
       "failed_trial_count": 10,
       "failed_trial_penalty": 1.0,
       "mr_score": 0.8032,
@@ -242,51 +241,51 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
+          "nct_id": "NCT01009931",
+          "title": "Phase II Study of TPA Plus Dexamethasone & CMT in Hematologic Malignancies",
+          "status": "TERMINATED",
+          "phase": "PHASE2",
+          "enrollment": "1",
+          "url": "https://clinicaltrials.gov/study/NCT01009931"
+        },
+        {
+          "nct_id": "NCT07175415",
+          "title": "HEM-iSMART E: Capivasertib + Venetoclax + Dexamethasone in Pediatric Patients With Relapsed or Refractory Hematological Malignancies",
+          "status": "NOT_YET_RECRUITING",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "42",
+          "url": "https://clinicaltrials.gov/study/NCT07175415"
+        },
+        {
+          "nct_id": "NCT00006240",
+          "title": "Phenylbutyrate, Dexamethasone, and Sargramostim in Treating Patients With Refractory or Relapsed Acute Myeloid Leukemia",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "",
+          "url": "https://clinicaltrials.gov/study/NCT00006240"
+        },
+        {
+          "nct_id": "NCT06207123",
+          "title": "A Study to Investigate LP-118, Ponatinib, Vincristine and Dexamethasone in Relapsed/Refractory Acute Lymphoblastic Leukemia (ALL) or Lymphoblastic Lymphoma (LBL)",
+          "status": "RECRUITING",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "15",
+          "url": "https://clinicaltrials.gov/study/NCT06207123"
+        },
+        {
           "nct_id": "NCT01246557",
           "title": "Study Assessing Safety and Efficiency of the Lenalidomide and Dexamethasone Combination in Patients With Chronic Lymphatic Leukemia (CLL) Relapsing or Resistant to Treatment",
           "status": "COMPLETED",
           "phase": "PHASE1, PHASE2",
           "enrollment": "20",
           "url": "https://clinicaltrials.gov/study/NCT01246557"
-        },
-        {
-          "nct_id": "NCT04747912",
-          "title": "Study of Chemotherapy-Free Induction Regimen for Ph+ Acute Lymphoblastic Leukemia With Inotuzumab Ozogamicin (InO)",
-          "status": "SUSPENDED",
-          "phase": "PHASE2",
-          "enrollment": "25",
-          "url": "https://clinicaltrials.gov/study/NCT04747912"
-        },
-        {
-          "nct_id": "NCT05292664",
-          "title": "Venetoclax Basket Trial for High Risk Hematologic Malignancies",
-          "status": "RECRUITING",
-          "phase": "PHASE1",
-          "enrollment": "30",
-          "url": "https://clinicaltrials.gov/study/NCT05292664"
-        },
-        {
-          "nct_id": "NCT00199004",
-          "title": "Trial for Treatment of Adult Patients With Standard Risk Acute Lymphoblastic Leukemia With Chemotherapy and Rituximab",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "60",
-          "url": "https://clinicaltrials.gov/study/NCT00199004"
-        },
-        {
-          "nct_id": "NCT00526305",
-          "title": "LAL-Ph-2000: Treatment of Acute Lymphoblastic Leukemia Chromosome Philadelphia Positive",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "100",
-          "url": "https://clinicaltrials.gov/study/NCT00526305"
         }
       ],
       "trial_phases": {
-        "PHASE1": 3,
-        "PHASE2": 4,
-        "PHASE4": 3,
-        "PHASE3": 2
+        "PHASE2": 7,
+        "PHASE1": 4,
+        "PHASE3": 1,
+        "PHASE4": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -300,6 +299,7 @@
         "Strong causal genetic evidence (MR score: 0.80, 10 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D007938",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -436,15 +436,7 @@
         "tissue_specificity": 0.789,
         "context_modifier": 1.104
       },
-      "disease_entity": "Disease::MESH:D007938",
-      "docking": {
-        "kcal_per_mol": -11.64,
-        "target_symbol": "NR3C1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.8068,
+      "ensemble_prob": 0.901,
       "ensemble_features": {
         "kg_score": 0.998,
         "degree_penalty": 0.736,
@@ -454,6 +446,13 @@
         "transe_rank_log": 3.091
       },
       "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": -11.64,
+        "target_symbol": "NR3C1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -484,8 +483,8 @@
       "admet_score": 0.4686,
       "admet_flags": "hERG=0.96",
       "primekg_score": 0.2625,
-      "dti_score": 0.4241,
-      "dti_best_target": "FLT1",
+      "dti_score": 0.3714,
+      "dti_best_target": "SALL4",
       "kg_group_score": 0.4004,
       "structural_group_score": 0.9993,
       "network_group_score": 0.6351000070571899,
@@ -691,12 +690,28 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT04747912",
-          "title": "Study of Chemotherapy-Free Induction Regimen for Ph+ Acute Lymphoblastic Leukemia With Inotuzumab Ozogamicin (InO)",
-          "status": "SUSPENDED",
-          "phase": "PHASE2",
-          "enrollment": "25",
-          "url": "https://clinicaltrials.gov/study/NCT04747912"
+          "nct_id": "NCT00019409",
+          "title": "Radiation Therapy to the Head or Intrathecal Chemotherapy Plus High Dose Cytarabine in Preventing CNS Disease in Children With Acute Lymphoblastic Leukemia",
+          "status": "WITHDRAWN",
+          "phase": "PHASE3",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT00019409"
+        },
+        {
+          "nct_id": "NCT06207123",
+          "title": "A Study to Investigate LP-118, Ponatinib, Vincristine and Dexamethasone in Relapsed/Refractory Acute Lymphoblastic Leukemia (ALL) or Lymphoblastic Lymphoma (LBL)",
+          "status": "RECRUITING",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "15",
+          "url": "https://clinicaltrials.gov/study/NCT06207123"
+        },
+        {
+          "nct_id": "NCT03150693",
+          "title": "Inotuzumab Ozogamicin and Frontline Chemotherapy in Treating Young Adults With Newly Diagnosed B Acute Lymphoblastic Leukemia",
+          "status": "RECRUITING",
+          "phase": "PHASE3",
+          "enrollment": "310",
+          "url": "https://clinicaltrials.gov/study/NCT03150693"
         },
         {
           "nct_id": "NCT05292664",
@@ -707,39 +722,24 @@
           "url": "https://clinicaltrials.gov/study/NCT05292664"
         },
         {
-          "nct_id": "NCT00199004",
-          "title": "Trial for Treatment of Adult Patients With Standard Risk Acute Lymphoblastic Leukemia With Chemotherapy and Rituximab",
+          "nct_id": "NCT01724879",
+          "title": "Study of Frontline Dasatinib Plus Chemotherapy in Philadelphia Chromosome Positive Acute Lymphoblastic Leukemia (PH+ALL)",
           "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "60",
-          "url": "https://clinicaltrials.gov/study/NCT00199004"
-        },
-        {
-          "nct_id": "NCT05761171",
-          "title": "A Study of Revumenib in Combination With Chemotherapy for Patients Diagnosed With Relapsed or Refractory Leukemia",
-          "status": "ACTIVE_NOT_RECRUITING",
           "phase": "PHASE2",
-          "enrollment": "78",
-          "url": "https://clinicaltrials.gov/study/NCT05761171"
-        },
-        {
-          "nct_id": "NCT05326984",
-          "title": "Effect of Metformin on ABCB1 and AMPK Expression in Adolescents With Newly Diagnosed Acute Lymphoblastic Leukemia",
-          "status": "UNKNOWN",
-          "phase": "NA",
-          "enrollment": "20",
-          "url": "https://clinicaltrials.gov/study/NCT05326984"
+          "enrollment": "19",
+          "url": "https://clinicaltrials.gov/study/NCT01724879"
         }
       ],
       "trial_phases": {
-        "PHASE2": 4,
-        "PHASE1": 3,
-        "PHASE4": 2,
-        "NA": 1
+        "PHASE3": 3,
+        "PHASE1": 2,
+        "PHASE2": 5,
+        "PHASE4": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
         "10 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
         "6796 PubMed articles on this drug-disease pair",
         "11 article(s) specifically mention repurposing/repositioning",
         "Supported by 4 independent AI pillars",
@@ -750,6 +750,7 @@
         "Strong causal genetic evidence (MR score: 0.79, 7 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D007938",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -886,15 +887,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.921
       },
-      "disease_entity": "Disease::MESH:D007938",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.9861,
+      "ensemble_prob": 0.999,
       "ensemble_features": {
         "kg_score": 1.0,
         "degree_penalty": 0.7698,
@@ -904,6 +897,13 @@
         "transe_rank_log": 0.0
       },
       "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -917,459 +917,6 @@
           "aldehyde",
           "isolated_alkene"
         ]
-      }
-    },
-    {
-      "drug_name": "Fluorouracil",
-      "drug_id": "DB00544",
-      "disease_name": "Leukemia",
-      "combined_score": 0.5523,
-      "pillars_hit": 4,
-      "transe_rank": 14,
-      "transe_score": -9.8786,
-      "pykeen_score": -11.7061,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.7749999761581421,
-      "proximity_distance": 0.8999999761581421,
-      "admet_score": 0.7145,
-      "admet_flags": "clean",
-      "primekg_score": 0.2638,
-      "dti_score": 0.9033,
-      "dti_best_target": "FLT1",
-      "kg_group_score": 0.4248,
-      "structural_group_score": 0.9033,
-      "network_group_score": 0.5932999849319458,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.6549,
-      "admet_multiplier": 0.9429,
-      "efficacy_score": 0.5857,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 42,
-      "shared_targets": [
-        "ABCB1",
-        "ABCC3",
-        "ABCG2",
-        "AKT1",
-        "ANPEP",
-        "BAX",
-        "BCL2",
-        "CASP3",
-        "CASP8",
-        "CCNA2",
-        "CDKN1A",
-        "CHEK1",
-        "CSF2",
-        "CTNNB1",
-        "DHFR",
-        "EGR1",
-        "FANCC",
-        "H3P16",
-        "HSPA5",
-        "HSPB1"
-      ],
-      "pubmed_total": 1255,
-      "pubmed_treatment_total": 1015,
-      "pubmed_repurposing_total": 1,
-      "key_papers": [
-        {
-          "pmid": "33434505",
-          "title": "R-2-hydroxyglutarate attenuates aerobic glycolysis in leukemia by targeting the FTO/m",
-          "authors": "Qing Y, Dong L, Gao L, et al.",
-          "journal": "Molecular cell",
-          "year": "2021",
-          "abstract_snippet": "R-2-hydroxyglutarate (R-2HG), a metabolite produced by mutant isocitrate dehydrogenases (IDHs), was recently reported to exhibit anti-tumor activity. However, its effect on cancer metabolism remains largely elusive. Here we show that R-2HG effectively attenuates aerobic glycolysis, a hallmark of can...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33434505/",
-          "total_results": 1255
-        },
-        {
-          "pmid": "40148810",
-          "title": "5-FU@HFn combined with decitabine induces pyroptosis and enhances antitumor immunotherapy for chronic myeloid leukemia.",
-          "authors": "Yuan Z, Jiang G, Yuan Y, et al.",
-          "journal": "Journal of nanobiotechnology",
-          "year": "2025",
-          "abstract_snippet": "BACKGROUND: Tyrosine kinase inhibitors (TKIs) constitute the primary treatment for chronic myeloid leukemia (CML). However, resistance to TKIs often leads to treatment failure. Pyroptosis, a form of programmed cell death, has emerged as a promising strategy in cancer therapy due to its ability to el...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40148810/"
-        },
-        {
-          "pmid": "41235031",
-          "title": "The role of SLC22A4 in Acute Myeloid Leukaemia.",
-          "authors": "Li Y, Li Y, Cheng W",
-          "journal": "Mediterranean journal of hematology and infectious diseases",
-          "year": "2025",
-          "abstract_snippet": "BACKGROUND: This study aimed to explore the role of SLC22A4 (encoding the organic cation transporter OCTN1) in acute myeloid leukaemia (AML) prognosis and therapy. Methods: RNA-sequencing data from 151 TCGA-AML samples and six Gene Expression Omnibus datasets (62 normal bone marrow and 520 AML sampl...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41235031/"
-        },
-        {
-          "pmid": "19465957",
-          "title": "Capecitabine-induced acute myeloid leukaemia.",
-          "authors": "Tansley S, Gibbons S",
-          "journal": "The New Zealand medical journal",
-          "year": "2009",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/19465957/"
-        },
-        {
-          "pmid": "37593318",
-          "title": "Therapy-Related Acute Promyelocytic Leukemia: A Case Report and a Review of Literature.",
-          "authors": "Foster D, Nair HK, Robbins K, et al.",
-          "journal": "Cureus",
-          "year": "2023",
-          "abstract_snippet": "Acute promyelocytic leukemia (APL) is a subgroup of acute myeloid leukemia (AML), and while not a common form of cancer, it does make up a modest portion of acute leukemia.\u00a0The genetic hallmark of APL is the t(15;17)(q24.1;q21.2) promyelocytic leukemia/retinoic acid receptor alpha (PML/RARA) protein...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37593318/"
-        }
-      ],
-      "repurposing_papers": [
-        {
-          "pmid": "28794285",
-          "title": "Preventing chemotherapy-induced myelosuppression by repurposing the FLT3 inhibitor quizartinib.",
-          "authors": "Taylor SJ, Duyvestyn JM, Dagger SA, et al.",
-          "journal": "Science translational medicine",
-          "year": "2017",
-          "abstract_snippet": "We describe an approach to inhibit chemotherapy-induced myelosuppression. We found that short-term exposure of mice to the FLT3 inhibitor quizartinib induced the transient quiescence of multipotent progenitors (MPPs). This property of quizartinib conferred marked protection to MPPs in mice receiving...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/28794285/",
-          "total_results": 1
-        }
-      ],
-      "semantic_scholar_papers": [
-        {
-          "title": "Combinational treatment of 5-fluorouracil and casticin induces apoptosis in mouse leukemia WEHI-3 cells in vitro.",
-          "year": 2020,
-          "citations": 9,
-          "url": "https://www.semanticscholar.org/paper/c7cad140d1dab44c70697ad2e4b6e943551aeb6a",
-          "authors": "Zheng-Yu Cheng, F. Chueh, Shu\u2010Fen Peng"
-        },
-        {
-          "title": "New uracil analog U-332 is an inhibitor of NF-\u03baB in 5-fluorouracil-resistant human leukemia HL-60 cell line",
-          "year": 2020,
-          "citations": 7,
-          "url": "https://www.semanticscholar.org/paper/1c045831fd224569e28af60f2aefe208c081eefa",
-          "authors": "Angelika D\u0142ugosz-Pokorska, Marlena Pi\u0119ta, Jacek K\u0119dzia"
-        },
-        {
-          "title": "New uracil analogs as downregulators of ABC transporters in 5-fluorouracil-resistant human leukemia HL-60 cell line",
-          "year": 2019,
-          "citations": 12,
-          "url": "https://www.semanticscholar.org/paper/7412598c9a26d1917037d920bf8e0465d54b0c37",
-          "authors": "Angelika D\u0142ugosz-Pokorska, Marlena Pi\u0119ta, T. Janecki"
-        },
-        {
-          "title": "Increase of PRPP enhances chemosensitivity of PRPS1 mutant acute lymphoblastic leukemia cells to 5\u2010Fluorouracil",
-          "year": 2018,
-          "citations": 15,
-          "url": "https://www.semanticscholar.org/paper/e8a52f9bea974c886742866b93d82c3f3a9e7160",
-          "authors": "Dan Wang, Yao Chen, Houshun Fang"
-        },
-        {
-          "title": "Dietary polyphenols influence antimetabolite agents: methotrexate, 6-mercaptopurine and 5-fluorouracil in leukemia cell lines",
-          "year": 2017,
-          "citations": 15,
-          "url": "https://www.semanticscholar.org/paper/19cd009b2739c2ed82671fecd64e87293c5bd022",
-          "authors": "Amani A Mahbub, C. L. Le Maitre, S. Haywood-Small"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Increase of PRPP enhances chemosensitivity of PRPS1 mutant acute lymphoblastic leukemia cells to 5\u2010Fluorouracil",
-        "year": 2018,
-        "citations": 15,
-        "url": "https://www.semanticscholar.org/paper/e8a52f9bea974c886742866b93d82c3f3a9e7160",
-        "authors": "Dan Wang, Yao Chen, Houshun Fang"
-      },
-      "max_citations": 15,
-      "faers_signal": "strong",
-      "faers_total_reports": 85326,
-      "faers_cooccurrences": 1169,
-      "faers_interpretation": "1169 FAERS reports mention both Fluorouracil and Leukemia-related terms (1.4% of all Fluorouracil reports). This suggests real-world clinical association.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "mitoxantrone (1.456)",
-        "HG-5-113-01 (1.444)",
-        "trichostatin A (1.436)",
-        "AG14361 (1.432)",
-        "HDAC6 inhibitor ISOX (1.427)"
-      ],
-      "signature_interpretation": "Fluorouracil was not found among the top 34 drugs that reverse the Leukemia gene signature. Top reversers: mitoxantrone (1.456), HG-5-113-01 (1.444), trichostatin A (1.436)",
-      "ai_hypothesis": "of its ability to inhibit the proliferation of leukemic cells.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "Phase 1",
-      "failed_trial_count": 2,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.6549,
-      "mr_genetic_targets": 8,
-      "mechanistic_hypothesis": "Fluorouracil \u2014[is a therapeutic for]\u2192 Leukemia",
-      "kg_paths_text": "\u2022 Fluorouracil \u2014[is a therapeutic for]\u2192 Leukemia\n\u2022 Fluorouracil \u2014[downregulates]\u2192 gene-347902 \u2014[is downregulated by]\u2192 DB01234 \u2014[treats]\u2192 Leukemia\n\u2022 Fluorouracil \u2014[downregulates]\u2192 gene-347902 \u2014[is downregulated by]\u2192 DB00741 \u2014[treats]\u2192 Leukemia",
-      "validation_experiments": [],
-      "novelty_score": 0.133,
-      "novelty_level": "ESTABLISHED",
-      "is_known_treatment": true,
-      "clinical_trials_total": 6,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT00019513",
-          "title": "Combination Chemotherapy in Treating Patients With Recurrent, Refractory, or Metastatic Solid Tumors or Lymphomas",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "108",
-          "url": "https://clinicaltrials.gov/study/NCT00019513"
-        },
-        {
-          "nct_id": "NCT03878524",
-          "title": "Serial Measurements of Molecular and Architectural Responses to Therapy (SMMART) PRIME Trial",
-          "status": "TERMINATED",
-          "phase": "PHASE1",
-          "enrollment": "2",
-          "url": "https://clinicaltrials.gov/study/NCT03878524"
-        },
-        {
-          "nct_id": "NCT00003331",
-          "title": "Combination Chemotherapy in Treating Patients With Advanced Cancer",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "30",
-          "url": "https://clinicaltrials.gov/study/NCT00003331"
-        },
-        {
-          "nct_id": "NCT01158274",
-          "title": "RO4929097 and Capecitabine in Treating Patients With Refractory Solid Tumors",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "30",
-          "url": "https://clinicaltrials.gov/study/NCT01158274"
-        },
-        {
-          "nct_id": "NCT04553692",
-          "title": "Phase 1a/1b Study of Aplitabart (IGM-8444) Alone or in Combination in Participants with Relapsed, Refractory, or Newly Diagnosed Cancers",
-          "status": "TERMINATED",
-          "phase": "PHASE1",
-          "enrollment": "272",
-          "url": "https://clinicaltrials.gov/study/NCT04553692"
-        }
-      ],
-      "trial_phases": {
-        "PHASE1": 6
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "6 clinical trial(s) found on ClinicalTrials.gov",
-        "1255 PubMed articles on this drug-disease pair",
-        "1 article(s) specifically mention repurposing/repositioning",
-        "Supported by 4 independent AI pillars",
-        "Strong FAERS signal: 1169 adverse event reports link drug to disease (85326 total reports)",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.65)",
-        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 1216,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00783",
-            "drug_name": "Estradiol",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "high_risk",
-        "summary": "CPIC-A (DPYD) \u2022 PharmGKB-3 (GSTP1 / rs1695)",
-        "cpic": [
-          {
-            "gene": "DPYD",
-            "level": "A",
-            "guideline": "DPYD and Fluoropyrimidines"
-          },
-          {
-            "gene": "MTHFR",
-            "level": "C",
-            "guideline": ""
-          },
-          {
-            "gene": "GSTP1",
-            "level": "D",
-            "guideline": ""
-          },
-          {
-            "gene": "NQO1",
-            "level": "D",
-            "guideline": ""
-          },
-          {
-            "gene": "TYMS",
-            "level": "D",
-            "guideline": ""
-          }
-        ],
-        "pharmgkb": [
-          {
-            "gene": "GSTP1",
-            "variant": "rs1695",
-            "level": "3",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/769171387"
-          },
-          {
-            "gene": "DPYD",
-            "variant": "rs2297595",
-            "level": "1A",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981201535"
-          },
-          {
-            "gene": "DPYD",
-            "variant": "rs1801265",
-            "level": "1A",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981201981"
-          },
-          {
-            "gene": "MTHFR",
-            "variant": "rs1801133",
-            "level": "4",
-            "phenotype_category": "Toxicity",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204912"
-          },
-          {
-            "gene": "LGR5",
-            "variant": "rs17109924",
-            "level": "3",
-            "phenotype_category": "Efficacy",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1446903310"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 2,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.526,
-        "label": "multi-axis",
-        "axis_values": {
-          "kg": 0.552,
-          "docking": 0.441,
-          "pharos": 0.0,
-          "literature": 1.0
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Whole Blood"
-        ],
-        "n_genes": 19,
-        "n_expressed": 15,
-        "mean_tpm_in_tissue": 28.74,
-        "max_tpm_in_tissue": 158.98,
-        "tissue_specificity": 0.001,
-        "context_modifier": 0.982
-      },
-      "disease_entity": "Disease::MESH:D007938",
-      "docking": {
-        "kcal_per_mol": -5.29,
-        "target_symbol": "ABCC3",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.9244,
-      "ensemble_features": {
-        "kg_score": 0.9983,
-        "degree_penalty": 0.7655,
-        "n_drug_targets": 7,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 2.9444
-      },
-      "ensemble_rank": 2,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
       }
     },
     {
@@ -1396,7 +943,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2577,
       "dti_score": 1.0,
-      "dti_best_target": "ELANE",
+      "dti_best_target": "ABCC3",
       "kg_group_score": 0.2551,
       "structural_group_score": 1.0,
       "network_group_score": 0.6399000287055969,
@@ -1602,6 +1149,22 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
+          "nct_id": "NCT05258799",
+          "title": "Dual Growth Factor (rhTPO + G-CSF) and Chemotherapy Combination Regimen for Elderly Patients With Acute Myeloid Leukemia: A Phase II Single-Arm Multicenter Study",
+          "status": "UNKNOWN",
+          "phase": "NA",
+          "enrollment": "130",
+          "url": "https://clinicaltrials.gov/study/NCT05258799"
+        },
+        {
+          "nct_id": "NCT07108530",
+          "title": "Efficacy of Integrated Induction-Consolidation Chemotherapy and Transplantation for Adult Acute Myeloid Leukemia: Multicenter Study",
+          "status": "RECRUITING",
+          "phase": "PHASE2",
+          "enrollment": "50",
+          "url": "https://clinicaltrials.gov/study/NCT07108530"
+        },
+        {
           "nct_id": "NCT06345365",
           "title": "MA+AZA Regimen for the Treatment of Newly Diagnosed Acute Myeloid Leukemia (AML)",
           "status": "RECRUITING",
@@ -1610,43 +1173,27 @@
           "url": "https://clinicaltrials.gov/study/NCT06345365"
         },
         {
-          "nct_id": "NCT06713837",
-          "title": "IMPACT-AML: A Randomized Pragmatic Clinical Trial for Relapsed or Refractory Acute Myeloid Leukemia.",
-          "status": "RECRUITING",
-          "phase": "PHASE3",
-          "enrollment": "339",
-          "url": "https://clinicaltrials.gov/study/NCT06713837"
-        },
-        {
-          "nct_id": "NCT03303339",
-          "title": "Onvansertib in Combination With Either Low-dose Cytarabine or Decitabine in Adult Patients With Acute Myeloid Leukemia (AML)",
-          "status": "COMPLETED",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "72",
-          "url": "https://clinicaltrials.gov/study/NCT03303339"
-        },
-        {
-          "nct_id": "NCT00054431",
-          "title": "Imatinib Mesylate and Decitabine in Treating Patients With Chronic Myelogenous Leukemia",
-          "status": "COMPLETED",
+          "nct_id": "NCT04905407",
+          "title": "Tamibarotene Plus Venetoclax/Azacitidine in Participants With Newly Diagnosed Acute Myeloid Leukemia (AML)",
+          "status": "TERMINATED",
           "phase": "PHASE2",
-          "enrollment": "80",
-          "url": "https://clinicaltrials.gov/study/NCT00054431"
+          "enrollment": "66",
+          "url": "https://clinicaltrials.gov/study/NCT04905407"
         },
         {
-          "nct_id": "NCT00895934",
-          "title": "Vorinostat, Azacitidine, and Gemtuzumab Ozogamicin for Older Patients With Relapsed or Refractory AML",
-          "status": "COMPLETED",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "52",
-          "url": "https://clinicaltrials.gov/study/NCT00895934"
+          "nct_id": "NCT03404193",
+          "title": "Venetoclax and Decitabine in Treating Participants With Relapsed/Refractory Acute Myeloid Leukemia or Relapsed High-Risk Myelodysplastic Syndrome",
+          "status": "TERMINATED",
+          "phase": "PHASE2",
+          "enrollment": "235",
+          "url": "https://clinicaltrials.gov/study/NCT03404193"
         }
       ],
       "trial_phases": {
+        "NA": 1,
+        "PHASE2": 7,
         "PHASE3": 2,
-        "PHASE1": 5,
-        "PHASE2": 6,
-        "NA": 1
+        "PHASE1": 2
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -1661,6 +1208,7 @@
         "Strong causal genetic evidence (MR score: 0.82, 10 genetic targets)",
         "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D007938",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1761,15 +1309,7 @@
         "tissue_specificity": 0.158,
         "context_modifier": 1.018
       },
-      "disease_entity": "Disease::MESH:D007938",
-      "docking": {
-        "kcal_per_mol": -8.91,
-        "target_symbol": "DNMT1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.8293,
+      "ensemble_prob": 0.9743,
       "ensemble_features": {
         "kg_score": 0.9987,
         "degree_penalty": 0.7636,
@@ -1778,7 +1318,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.7081
       },
-      "ensemble_rank": 3,
+      "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": -8.91,
+        "target_symbol": "DNMT1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1810,7 +1357,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2516,
       "dti_score": 1.0,
-      "dti_best_target": "ELANE",
+      "dti_best_target": "ABCC3",
       "kg_group_score": 0.1196,
       "structural_group_score": 1.0,
       "network_group_score": 0.6132000088691711,
@@ -2077,6 +1624,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.72, 7 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D007938",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2227,15 +1775,7 @@
         "tissue_specificity": 0.56,
         "context_modifier": 1.049
       },
-      "disease_entity": "Disease::MESH:D007938",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.0944,
+      "ensemble_prob": 0.1056,
       "ensemble_features": {
         "kg_score": 0.9728,
         "degree_penalty": 0.7782,
@@ -2244,7 +1784,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 5.663
       },
-      "ensemble_rank": 6,
+      "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2276,7 +1823,7 @@
       "admet_flags": "DILI=0.90",
       "primekg_score": 0.2529,
       "dti_score": 1.0,
-      "dti_best_target": "ELANE",
+      "dti_best_target": "FLT3LG",
       "kg_group_score": 0.1278,
       "structural_group_score": 1.0,
       "network_group_score": 0.51419997215271,
@@ -2477,6 +2024,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.78, 4 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D007938",
       "dose_plausibility": {
         "plausibility": "unknown",
         "dose_range": "research",
@@ -2577,15 +2125,7 @@
         "tissue_specificity": 0.705,
         "context_modifier": 1.09
       },
-      "disease_entity": "Disease::MESH:D007938",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.0558,
+      "ensemble_prob": 0.0482,
       "ensemble_features": {
         "kg_score": 0.9418,
         "degree_penalty": 0.791,
@@ -2595,6 +2135,13 @@
         "transe_rank_log": 6.4216
       },
       "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -2603,233 +2150,6 @@
         "n_alerts": 1,
         "alert_names": [
           "phosphor"
-        ]
-      }
-    },
-    {
-      "drug_name": "2'-Monophosphoadenosine 5'-Diphosphoribose",
-      "drug_id": "DB03461",
-      "disease_name": "Leukemia",
-      "combined_score": 0.5262,
-      "pillars_hit": 4,
-      "transe_rank": 156,
-      "transe_score": -10.6865,
-      "pykeen_score": 0,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.7379999756813049,
-      "proximity_distance": 1.0499999523162842,
-      "admet_score": 1.0,
-      "admet_flags": "clean",
-      "primekg_score": 0.2534,
-      "dti_score": 1.0,
-      "dti_best_target": "FLT1",
-      "kg_group_score": 0.0635,
-      "structural_group_score": 1.0,
-      "network_group_score": 0.638700008392334,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.6839,
-      "admet_multiplier": 1.0,
-      "efficacy_score": 0.5262,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 21,
-      "shared_targets": [
-        "AKR1B1",
-        "AKR1C3",
-        "CD33",
-        "CXCL8",
-        "CYBB",
-        "DHFR",
-        "GSR",
-        "IFNG",
-        "IL1B",
-        "INS",
-        "MAPK8",
-        "MPO",
-        "NFE2L2",
-        "NFKB1",
-        "PLA2G1B",
-        "PRKAA2",
-        "RAC2",
-        "SRC",
-        "TNF",
-        "TXNRD1"
-      ],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "DIHYDROFOLATE REDUCTASE (E.C.1.5.1.3) COMPLEXED WITH 5,10-DIDEAZATETRAHYDROFOLATE AND 2'-MONOPHOSPHOADENOSINE 5'-DIPHOSPHORIBOSE",
-          "year": 1997,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/cc1ebfe37f658e269b7e4f2fbe185ea76e2f7d70",
-          "authors": "M. Sawaya"
-        },
-        {
-          "title": "DIHYDROFOLATE REDUCTASE COMPLEXED WITH FOLATE AND 2-MONOPHOSPHOADENOSINE 5'-DIPHOSPHORIBOSE",
-          "year": 1997,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/067ce80ca66b3f917528cf4e64d5b85869b286b0",
-          "authors": "M. Sawaya, J. Kraut"
-        },
-        {
-          "title": "A 11 Patent Number : 45 ) Date of Patent : 5 , 482 , 975 Jan . 9 , 1996 54 ADENOSINE DIPHOSPHORIBOSE POLYMERASE BINDING NITROSO AROMATIC COMPOUNDS USEFULAS RETROVIRAL INACTIVATING AGENTS",
-          "year": 2017,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/d1e3ceec9b75c29b3d36a473b24eaad294ff556c",
-          "authors": ""
-        },
-        {
-          "title": "Association of ferredoxin-NADP oxidoreductase with the chloroplastic pyridine nucleotide dehydrogenase complex in barley leaves",
-          "year": 1998,
-          "citations": 76,
-          "url": "https://www.semanticscholar.org/paper/edc7b83a409ed2970f1b849e4be9d58804ded42c",
-          "authors": "M. J. Quiles, J. Cuello"
-        },
-        {
-          "title": "Involvement of serine 96 in the catalytic mechanism of ferredoxin-NADP+ reductase: structure--function relationship as studied by site-directed mutagenesis and X-ray crystallography.",
-          "year": 1995,
-          "citations": 61,
-          "url": "https://www.semanticscholar.org/paper/99cd4dcc8d75e74aa2205500e2d46907165a43a6",
-          "authors": "A. Aliverti, C. M. Bruns, V. Pandini"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Association of ferredoxin-NADP oxidoreductase with the chloroplastic pyridine nucleotide dehydrogenase complex in barley leaves",
-        "year": 1998,
-        "citations": 76,
-        "url": "https://www.semanticscholar.org/paper/edc7b83a409ed2970f1b849e4be9d58804ded42c",
-        "authors": "M. J. Quiles, J. Cuello"
-      },
-      "max_citations": 76,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for 2'-Monophosphoadenosine 5'-Diphosphoribose",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "mitoxantrone (1.456)",
-        "HG-5-113-01 (1.444)",
-        "trichostatin A (1.436)",
-        "AG14361 (1.432)",
-        "HDAC6 inhibitor ISOX (1.427)"
-      ],
-      "signature_interpretation": "2'-Monophosphoadenosine 5'-Diphosphoribose was not found among the top 34 drugs that reverse the Leukemia gene signature. Top reversers: mitoxantrone (1.456), HG-5-113-01 (1.444), trichostatin A (1.436)",
-      "ai_hypothesis": "of its ability to inhibit the activity of the enzyme, adenosine deaminase.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.6839,
-      "mr_genetic_targets": 2,
-      "mechanistic_hypothesis": "2'-Monophosphoadenosine 5'-Diphosphoribose \u2014[is a therapeutic for]\u2192 MESH:D019966 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 Leukemia",
-      "kg_paths_text": "\u2022 2'-Monophosphoadenosine 5'-Diphosphoribose \u2014[is a therapeutic for]\u2192 MESH:D019966 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 Leukemia\n\u2022 2'-Monophosphoadenosine 5'-Diphosphoribose \u2014[is a therapeutic for]\u2192 MESH:D019966 \u2014[is treated by]\u2192 DB00860 \u2014[treats]\u2192 Leukemia\n\u2022 2'-Monophosphoadenosine 5'-Diphosphoribose \u2014[is a therapeutic for]\u2192 MESH:D002544 \u2014[is treated by]\u2192 DB00635 \u2014[treats]\u2192 Leukemia",
-      "validation_experiments": [],
-      "novelty_score": 0.631,
-      "novelty_level": "BREAKTHROUGH",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "Supported by 4 independent AI pillars",
-        "Supporting paper with 76 citations",
-        "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.68)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "unknown",
-        "dose_range": "research",
-        "confidence": "low",
-        "rationale": "No ChEMBL clinical phase data available.",
-        "chembl_phase": null,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 0,
-        "has_warnings": false,
-        "top_interactions": []
-      },
-      "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
-        "pharmgkb": []
-      },
-      "triangulation": {
-        "n_axes_agree": 1,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": false
-        },
-        "triangulation_score": 0.184,
-        "label": "kg-only",
-        "axis_values": {
-          "kg": 0.526,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.0
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Whole Blood"
-        ],
-        "n_genes": 20,
-        "n_expressed": 17,
-        "mean_tpm_in_tissue": 63.61,
-        "max_tpm_in_tissue": 960.39,
-        "tissue_specificity": 0.721,
-        "context_modifier": 1.099
-      },
-      "disease_entity": "Disease::MESH:D007938",
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "ensemble_prob": 0.0123,
-      "ensemble_features": {
-        "kg_score": 0.8623,
-        "degree_penalty": 0.8655,
-        "n_drug_targets": 1,
-        "is_fda_approved": 0,
-        "n_disease_genes": 0,
-        "transe_rank_log": 7.2821
-      },
-      "ensemble_rank": 9,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [
-          "GTE",
-          "PHOSPHOR",
-          "QUATERNARY"
-        ],
-        "n_alerts": 3,
-        "alert_names": [
-          "phosphor",
-          "quaternary_nitrogen_1",
-          "gte_2_free_phos"
         ]
       }
     },
@@ -2857,7 +2177,7 @@
       "admet_flags": "DILI=0.97",
       "primekg_score": 0.2529,
       "dti_score": 1.0,
-      "dti_best_target": "ELANE",
+      "dti_best_target": "ABCC3",
       "kg_group_score": 0.2356,
       "structural_group_score": 1.0,
       "network_group_score": 0.6410999894142151,
@@ -3043,30 +2363,6 @@
       "clinical_trials_total": 8,
       "clinical_trials": [
         {
-          "nct_id": "NCT00003567",
-          "title": "Gene Therapy and Chemotherapy in Treating Patients With Advanced Solid Tumors or Non-Hodgkin's Lymphoma",
-          "status": "TERMINATED",
-          "phase": "PHASE1",
-          "enrollment": "8",
-          "url": "https://clinicaltrials.gov/study/NCT00003567"
-        },
-        {
-          "nct_id": "NCT00083070",
-          "title": "Temozolomide in Treating Young Patients With Refractory or Recurrent Leukemia",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "16",
-          "url": "https://clinicaltrials.gov/study/NCT00083070"
-        },
-        {
-          "nct_id": "NCT01550224",
-          "title": "Temozolomide Plus Vorinostat in Relapse/Refractory Acute Myeloid Leukemia (AML)",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "23",
-          "url": "https://clinicaltrials.gov/study/NCT01550224"
-        },
-        {
           "nct_id": "NCT00611247",
           "title": "Phase 2 Study of Temozolomide to Treat Poor Risk / Refractory Acute Myeloid Leukemia",
           "status": "COMPLETED",
@@ -3075,17 +2371,41 @@
           "url": "https://clinicaltrials.gov/study/NCT00611247"
         },
         {
-          "nct_id": "NCT00098436",
-          "title": "Temozolomide and VNP40101M in Treating Patients With Relapsed or Refractory Leukemias",
+          "nct_id": "NCT00003567",
+          "title": "Gene Therapy and Chemotherapy in Treating Patients With Advanced Solid Tumors or Non-Hodgkin's Lymphoma",
+          "status": "TERMINATED",
+          "phase": "PHASE1",
+          "enrollment": "8",
+          "url": "https://clinicaltrials.gov/study/NCT00003567"
+        },
+        {
+          "nct_id": "NCT00687323",
+          "title": "Study of Temozolomide in Previously Untreated Acute Myeloid Leukemia (AML) and Myelodysplastic Syndrome (MDS) Participants With Low O6-Methylguanine Methyltransferase (MGMT) Expression (P05052)",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "47",
+          "url": "https://clinicaltrials.gov/study/NCT00687323"
+        },
+        {
+          "nct_id": "NCT01139970",
+          "title": "Veliparib and Temozolomide in Treating Patients With Acute Leukemia",
           "status": "COMPLETED",
           "phase": "PHASE1",
-          "enrollment": "25",
-          "url": "https://clinicaltrials.gov/study/NCT00098436"
+          "enrollment": "66",
+          "url": "https://clinicaltrials.gov/study/NCT01139970"
+        },
+        {
+          "nct_id": "NCT01550224",
+          "title": "Temozolomide Plus Vorinostat in Relapse/Refractory Acute Myeloid Leukemia (AML)",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "23",
+          "url": "https://clinicaltrials.gov/study/NCT01550224"
         }
       ],
       "trial_phases": {
-        "PHASE1": 5,
-        "PHASE2": 4
+        "PHASE2": 4,
+        "PHASE1": 5
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -3097,14 +2417,24 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.66)"
       ],
+      "disease_entity": "Disease::MESH:D007938",
       "dose_plausibility": {
-        "plausibility": "yes",
+        "plausibility": "uncertain",
         "dose_range": "clinical",
         "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect. HOWEVER, at typical plasma concentrations the drug does NOT reach inhibitory levels for ABCC3 (Cmax/IC50 = 0.01x; need \u22651x for any effect, \u226510x for confident target engagement).",
         "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
+        "target_affinity": {
+          "cmax_over_ic50_ratio": 0.01,
+          "median_ic50_nM": 133000.0,
+          "n_activities": 1,
+          "activity_types": [
+            "IC50"
+          ],
+          "mechanism_feasible": "no",
+          "cmax_source": "generic fallback 1000 nM (per-drug Cmax TBD)"
+        },
+        "stage": 2
       },
       "ddi_warnings": {
         "n_interactions": 1118,
@@ -3212,15 +2542,7 @@
         "tissue_specificity": 0.139,
         "context_modifier": 0.974
       },
-      "disease_entity": "Disease::MESH:D007938",
-      "docking": {
-        "kcal_per_mol": -5.29,
-        "target_symbol": "ABCC3",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.7641,
+      "ensemble_prob": 0.7598,
       "ensemble_features": {
         "kg_score": 0.9976,
         "degree_penalty": 0.777,
@@ -3229,7 +2551,476 @@
         "n_disease_genes": 0,
         "transe_rank_log": 3.2581
       },
+      "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": -5.29,
+        "target_symbol": "ABCC3",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Fluorouracil",
+      "drug_id": "DB00544",
+      "disease_name": "Leukemia",
+      "combined_score": 0.5163,
+      "pillars_hit": 4,
+      "transe_rank": 14,
+      "transe_score": -9.8786,
+      "pykeen_score": -11.7061,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.7749999761581421,
+      "proximity_distance": 0.8999999761581421,
+      "admet_score": 0.7145,
+      "admet_flags": "clean",
+      "primekg_score": 0.2638,
+      "dti_score": 0.6913,
+      "dti_best_target": "ABCC3",
+      "kg_group_score": 0.4248,
+      "structural_group_score": 0.6913,
+      "network_group_score": 0.5932999849319458,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.6549,
+      "admet_multiplier": 0.9429,
+      "efficacy_score": 0.5475,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 42,
+      "shared_targets": [
+        "ABCB1",
+        "ABCC3",
+        "ABCG2",
+        "AKT1",
+        "ANPEP",
+        "BAX",
+        "BCL2",
+        "CASP3",
+        "CASP8",
+        "CCNA2",
+        "CDKN1A",
+        "CHEK1",
+        "CSF2",
+        "CTNNB1",
+        "DHFR",
+        "EGR1",
+        "FANCC",
+        "H3P16",
+        "HSPA5",
+        "HSPB1"
+      ],
+      "pubmed_total": 1255,
+      "pubmed_treatment_total": 1015,
+      "pubmed_repurposing_total": 1,
+      "key_papers": [
+        {
+          "pmid": "33434505",
+          "title": "R-2-hydroxyglutarate attenuates aerobic glycolysis in leukemia by targeting the FTO/m",
+          "authors": "Qing Y, Dong L, Gao L, et al.",
+          "journal": "Molecular cell",
+          "year": "2021",
+          "abstract_snippet": "R-2-hydroxyglutarate (R-2HG), a metabolite produced by mutant isocitrate dehydrogenases (IDHs), was recently reported to exhibit anti-tumor activity. However, its effect on cancer metabolism remains largely elusive. Here we show that R-2HG effectively attenuates aerobic glycolysis, a hallmark of can...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33434505/",
+          "total_results": 1255
+        },
+        {
+          "pmid": "40148810",
+          "title": "5-FU@HFn combined with decitabine induces pyroptosis and enhances antitumor immunotherapy for chronic myeloid leukemia.",
+          "authors": "Yuan Z, Jiang G, Yuan Y, et al.",
+          "journal": "Journal of nanobiotechnology",
+          "year": "2025",
+          "abstract_snippet": "BACKGROUND: Tyrosine kinase inhibitors (TKIs) constitute the primary treatment for chronic myeloid leukemia (CML). However, resistance to TKIs often leads to treatment failure. Pyroptosis, a form of programmed cell death, has emerged as a promising strategy in cancer therapy due to its ability to el...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40148810/"
+        },
+        {
+          "pmid": "41235031",
+          "title": "The role of SLC22A4 in Acute Myeloid Leukaemia.",
+          "authors": "Li Y, Li Y, Cheng W",
+          "journal": "Mediterranean journal of hematology and infectious diseases",
+          "year": "2025",
+          "abstract_snippet": "BACKGROUND: This study aimed to explore the role of SLC22A4 (encoding the organic cation transporter OCTN1) in acute myeloid leukaemia (AML) prognosis and therapy. Methods: RNA-sequencing data from 151 TCGA-AML samples and six Gene Expression Omnibus datasets (62 normal bone marrow and 520 AML sampl...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41235031/"
+        },
+        {
+          "pmid": "19465957",
+          "title": "Capecitabine-induced acute myeloid leukaemia.",
+          "authors": "Tansley S, Gibbons S",
+          "journal": "The New Zealand medical journal",
+          "year": "2009",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19465957/"
+        },
+        {
+          "pmid": "37593318",
+          "title": "Therapy-Related Acute Promyelocytic Leukemia: A Case Report and a Review of Literature.",
+          "authors": "Foster D, Nair HK, Robbins K, et al.",
+          "journal": "Cureus",
+          "year": "2023",
+          "abstract_snippet": "Acute promyelocytic leukemia (APL) is a subgroup of acute myeloid leukemia (AML), and while not a common form of cancer, it does make up a modest portion of acute leukemia.\u00a0The genetic hallmark of APL is the t(15;17)(q24.1;q21.2) promyelocytic leukemia/retinoic acid receptor alpha (PML/RARA) protein...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37593318/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "28794285",
+          "title": "Preventing chemotherapy-induced myelosuppression by repurposing the FLT3 inhibitor quizartinib.",
+          "authors": "Taylor SJ, Duyvestyn JM, Dagger SA, et al.",
+          "journal": "Science translational medicine",
+          "year": "2017",
+          "abstract_snippet": "We describe an approach to inhibit chemotherapy-induced myelosuppression. We found that short-term exposure of mice to the FLT3 inhibitor quizartinib induced the transient quiescence of multipotent progenitors (MPPs). This property of quizartinib conferred marked protection to MPPs in mice receiving...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28794285/",
+          "total_results": 1
+        }
+      ],
+      "semantic_scholar_papers": [
+        {
+          "title": "Combinational treatment of 5-fluorouracil and casticin induces apoptosis in mouse leukemia WEHI-3 cells in vitro.",
+          "year": 2020,
+          "citations": 9,
+          "url": "https://www.semanticscholar.org/paper/c7cad140d1dab44c70697ad2e4b6e943551aeb6a",
+          "authors": "Zheng-Yu Cheng, F. Chueh, Shu\u2010Fen Peng"
+        },
+        {
+          "title": "New uracil analog U-332 is an inhibitor of NF-\u03baB in 5-fluorouracil-resistant human leukemia HL-60 cell line",
+          "year": 2020,
+          "citations": 7,
+          "url": "https://www.semanticscholar.org/paper/1c045831fd224569e28af60f2aefe208c081eefa",
+          "authors": "Angelika D\u0142ugosz-Pokorska, Marlena Pi\u0119ta, Jacek K\u0119dzia"
+        },
+        {
+          "title": "New uracil analogs as downregulators of ABC transporters in 5-fluorouracil-resistant human leukemia HL-60 cell line",
+          "year": 2019,
+          "citations": 12,
+          "url": "https://www.semanticscholar.org/paper/7412598c9a26d1917037d920bf8e0465d54b0c37",
+          "authors": "Angelika D\u0142ugosz-Pokorska, Marlena Pi\u0119ta, T. Janecki"
+        },
+        {
+          "title": "Increase of PRPP enhances chemosensitivity of PRPS1 mutant acute lymphoblastic leukemia cells to 5\u2010Fluorouracil",
+          "year": 2018,
+          "citations": 15,
+          "url": "https://www.semanticscholar.org/paper/e8a52f9bea974c886742866b93d82c3f3a9e7160",
+          "authors": "Dan Wang, Yao Chen, Houshun Fang"
+        },
+        {
+          "title": "Dietary polyphenols influence antimetabolite agents: methotrexate, 6-mercaptopurine and 5-fluorouracil in leukemia cell lines",
+          "year": 2017,
+          "citations": 15,
+          "url": "https://www.semanticscholar.org/paper/19cd009b2739c2ed82671fecd64e87293c5bd022",
+          "authors": "Amani A Mahbub, C. L. Le Maitre, S. Haywood-Small"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Increase of PRPP enhances chemosensitivity of PRPS1 mutant acute lymphoblastic leukemia cells to 5\u2010Fluorouracil",
+        "year": 2018,
+        "citations": 15,
+        "url": "https://www.semanticscholar.org/paper/e8a52f9bea974c886742866b93d82c3f3a9e7160",
+        "authors": "Dan Wang, Yao Chen, Houshun Fang"
+      },
+      "max_citations": 15,
+      "faers_signal": "strong",
+      "faers_total_reports": 85326,
+      "faers_cooccurrences": 1169,
+      "faers_interpretation": "1169 FAERS reports mention both Fluorouracil and Leukemia-related terms (1.4% of all Fluorouracil reports). This suggests real-world clinical association.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "mitoxantrone (1.456)",
+        "HG-5-113-01 (1.444)",
+        "trichostatin A (1.436)",
+        "AG14361 (1.432)",
+        "HDAC6 inhibitor ISOX (1.427)"
+      ],
+      "signature_interpretation": "Fluorouracil was not found among the top 34 drugs that reverse the Leukemia gene signature. Top reversers: mitoxantrone (1.456), HG-5-113-01 (1.444), trichostatin A (1.436)",
+      "ai_hypothesis": "of its ability to inhibit the proliferation of leukemic cells.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "Phase 1",
+      "failed_trial_count": 2,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.6549,
+      "mr_genetic_targets": 8,
+      "mechanistic_hypothesis": "Fluorouracil \u2014[is a therapeutic for]\u2192 Leukemia",
+      "kg_paths_text": "\u2022 Fluorouracil \u2014[is a therapeutic for]\u2192 Leukemia\n\u2022 Fluorouracil \u2014[downregulates]\u2192 gene-347902 \u2014[is downregulated by]\u2192 DB01234 \u2014[treats]\u2192 Leukemia\n\u2022 Fluorouracil \u2014[downregulates]\u2192 gene-347902 \u2014[is downregulated by]\u2192 DB00741 \u2014[treats]\u2192 Leukemia",
+      "validation_experiments": [],
+      "novelty_score": 0.124,
+      "novelty_level": "ESTABLISHED",
+      "is_known_treatment": true,
+      "clinical_trials_total": 6,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT00003956",
+          "title": "Combination Chemotherapy in Treating Patients With Advanced Cancer",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "25",
+          "url": "https://clinicaltrials.gov/study/NCT00003956"
+        },
+        {
+          "nct_id": "NCT03878524",
+          "title": "Serial Measurements of Molecular and Architectural Responses to Therapy (SMMART) PRIME Trial",
+          "status": "TERMINATED",
+          "phase": "PHASE1",
+          "enrollment": "2",
+          "url": "https://clinicaltrials.gov/study/NCT03878524"
+        },
+        {
+          "nct_id": "NCT00003331",
+          "title": "Combination Chemotherapy in Treating Patients With Advanced Cancer",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "30",
+          "url": "https://clinicaltrials.gov/study/NCT00003331"
+        },
+        {
+          "nct_id": "NCT00019513",
+          "title": "Combination Chemotherapy in Treating Patients With Recurrent, Refractory, or Metastatic Solid Tumors or Lymphomas",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "108",
+          "url": "https://clinicaltrials.gov/study/NCT00019513"
+        },
+        {
+          "nct_id": "NCT04553692",
+          "title": "Phase 1a/1b Study of Aplitabart (IGM-8444) Alone or in Combination in Participants with Relapsed, Refractory, or Newly Diagnosed Cancers",
+          "status": "TERMINATED",
+          "phase": "PHASE1",
+          "enrollment": "272",
+          "url": "https://clinicaltrials.gov/study/NCT04553692"
+        }
+      ],
+      "trial_phases": {
+        "PHASE1": 6
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "6 clinical trial(s) found on ClinicalTrials.gov",
+        "1255 PubMed articles on this drug-disease pair",
+        "1 article(s) specifically mention repurposing/repositioning",
+        "Supported by 4 independent AI pillars",
+        "Strong FAERS signal: 1169 adverse event reports link drug to disease (85326 total reports)",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.65)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D007938",
+      "dose_plausibility": {
+        "plausibility": "uncertain",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect. HOWEVER, at typical plasma concentrations the drug does NOT reach inhibitory levels for ABCC3 (Cmax/IC50 = 0.01x; need \u22651x for any effect, \u226510x for confident target engagement).",
+        "chembl_phase": 4.0,
+        "target_affinity": {
+          "cmax_over_ic50_ratio": 0.01,
+          "median_ic50_nM": 133000.0,
+          "n_activities": 1,
+          "activity_types": [
+            "IC50"
+          ],
+          "mechanism_feasible": "no",
+          "cmax_source": "generic fallback 1000 nM (per-drug Cmax TBD)"
+        },
+        "stage": 2
+      },
+      "ddi_warnings": {
+        "n_interactions": 1216,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "high_risk",
+        "summary": "CPIC-A (DPYD) \u2022 PharmGKB-3 (GSTP1 / rs1695)",
+        "cpic": [
+          {
+            "gene": "DPYD",
+            "level": "A",
+            "guideline": "DPYD and Fluoropyrimidines"
+          },
+          {
+            "gene": "MTHFR",
+            "level": "C",
+            "guideline": ""
+          },
+          {
+            "gene": "GSTP1",
+            "level": "D",
+            "guideline": ""
+          },
+          {
+            "gene": "NQO1",
+            "level": "D",
+            "guideline": ""
+          },
+          {
+            "gene": "TYMS",
+            "level": "D",
+            "guideline": ""
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "GSTP1",
+            "variant": "rs1695",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/769171387"
+          },
+          {
+            "gene": "DPYD",
+            "variant": "rs2297595",
+            "level": "1A",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981201535"
+          },
+          {
+            "gene": "DPYD",
+            "variant": "rs1801265",
+            "level": "1A",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981201981"
+          },
+          {
+            "gene": "MTHFR",
+            "variant": "rs1801133",
+            "level": "4",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204912"
+          },
+          {
+            "gene": "LGR5",
+            "variant": "rs17109924",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1446903310"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.513,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.516,
+          "docking": 0.441,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 19,
+        "n_expressed": 15,
+        "mean_tpm_in_tissue": 28.74,
+        "max_tpm_in_tissue": 158.98,
+        "tissue_specificity": 0.001,
+        "context_modifier": 0.982
+      },
+      "ensemble_prob": 0.7679,
+      "ensemble_features": {
+        "kg_score": 0.9983,
+        "degree_penalty": 0.7655,
+        "n_drug_targets": 7,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.9444
+      },
       "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": -5.29,
+        "target_symbol": "ABCC3",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -3261,7 +3052,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2509,
       "dti_score": 1.0,
-      "dti_best_target": "ELANE",
+      "dti_best_target": "ABCC3",
       "kg_group_score": 0.2198,
       "structural_group_score": 1.0,
       "network_group_score": 0.6176000237464905,
@@ -3458,14 +3249,24 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.67)"
       ],
+      "disease_entity": "Disease::MESH:D007938",
       "dose_plausibility": {
-        "plausibility": "yes",
+        "plausibility": "uncertain",
         "dose_range": "clinical",
         "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect. HOWEVER, at typical plasma concentrations the drug does NOT reach inhibitory levels for ABCC3 (Cmax/IC50 = 0.01x; need \u22651x for any effect, \u226510x for confident target engagement).",
         "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
+        "target_affinity": {
+          "cmax_over_ic50_ratio": 0.01,
+          "median_ic50_nM": 133000.0,
+          "n_activities": 1,
+          "activity_types": [
+            "IC50"
+          ],
+          "mechanism_feasible": "no",
+          "cmax_source": "generic fallback 1000 nM (per-drug Cmax TBD)"
+        },
+        "stage": 2
       },
       "ddi_warnings": {
         "n_interactions": 1241,
@@ -3558,15 +3359,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.989
       },
-      "disease_entity": "Disease::MESH:D007938",
-      "docking": {
-        "kcal_per_mol": -7.54,
-        "target_symbol": "MPO",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.0105,
+      "ensemble_prob": 0.0171,
       "ensemble_features": {
         "kg_score": 0.9421,
         "degree_penalty": 0.7607,
@@ -3576,6 +3369,13 @@
         "transe_rank_log": 6.4167
       },
       "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": -7.54,
+        "target_symbol": "MPO",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -3813,6 +3613,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.60)"
       ],
+      "disease_entity": "Disease::MESH:D007938",
       "dose_plausibility": {
         "plausibility": "unknown",
         "dose_range": "research",
@@ -3913,15 +3714,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.974
       },
-      "disease_entity": "Disease::MESH:D007938",
-      "docking": {
-        "kcal_per_mol": -8.11,
-        "target_symbol": "STAT3",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.0565,
+      "ensemble_prob": 0.0482,
       "ensemble_features": {
         "kg_score": 0.9685,
         "degree_penalty": 0.7895,
@@ -3930,7 +3723,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 5.8081
       },
-      "ensemble_rank": 7,
+      "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": -8.11,
+        "target_symbol": "STAT3",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -3943,14 +3743,405 @@
           "gte_7_aliphatic_OH"
         ]
       }
+    },
+    {
+      "drug_name": "Vinblastine",
+      "drug_id": "DB00570",
+      "disease_name": "Leukemia",
+      "combined_score": 0.4958,
+      "pillars_hit": 4,
+      "transe_rank": 93,
+      "transe_score": -10.4729,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0.8462,
+      "similar_to": "Vindesine",
+      "mol_emb_similarity": 0.9994,
+      "mol_emb_similar_to": "Vindesine",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.6880000233650208,
+      "proximity_distance": 1.25,
+      "admet_score": 0.4736,
+      "admet_flags": "hERG=0.98",
+      "primekg_score": 0.2585,
+      "dti_score": 0.8602,
+      "dti_best_target": "FAT1",
+      "kg_group_score": 0.198,
+      "structural_group_score": 0.9994,
+      "network_group_score": 0.5257999897003174,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.7971,
+      "admet_multiplier": 0.8947,
+      "efficacy_score": 0.5541,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 54,
+      "shared_targets": [
+        "ABCB1",
+        "ABCC1",
+        "AKR1C3",
+        "AURKA",
+        "AXL",
+        "BAX",
+        "CAT",
+        "CDK2",
+        "CDKN1A",
+        "CXCR4",
+        "DNMT1",
+        "EIF2AK2",
+        "EPHA2",
+        "ETS1",
+        "EZH2",
+        "EZR",
+        "F3",
+        "FANCG",
+        "HCFC1",
+        "HSPB1"
+      ],
+      "pubmed_total": 1121,
+      "pubmed_treatment_total": 902,
+      "pubmed_repurposing_total": 2,
+      "key_papers": [
+        {
+          "pmid": "34576326",
+          "title": "Multiplex Screening for Interacting Compounds in Paediatric Acute Myeloid Leukaemia.",
+          "authors": "Cairns LV, Lappin KM, Mutch A, et al.",
+          "journal": "International journal of molecular sciences",
+          "year": "2021",
+          "abstract_snippet": "Paediatric acute myeloid leukaemia (AML) is a heterogeneous disease characterised by the malignant transformation of myeloid precursor cells with impaired differentiation. Standard therapy for paediatric AML has remained largely unchanged for over four decades and, combined with inadequate understan...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34576326/",
+          "total_results": 1121
+        },
+        {
+          "pmid": "36651981",
+          "title": "Vinblastine as a bridge to 7\u2009+\u20093 in acute myeloid leukaemia.",
+          "authors": "De la Garza-Salazar F, G\u00f3mez-De Le\u00f3n A, G\u00f3mez-Almaguer D, et al.",
+          "journal": "Annals of hematology",
+          "year": "2023",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36651981/"
+        },
+        {
+          "pmid": "9825571",
+          "title": "Hodgkin's disease and the risk of acute leukemia in successfully treated patients.",
+          "authors": "Valagussa P, Bonadonna G",
+          "journal": "Haematologica",
+          "year": "1998",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/9825571/"
+        },
+        {
+          "pmid": "35749723",
+          "title": "Novel insights on [1,2]oxazolo[5,4-e]isoindoles on multidrug resistant acute myeloid leukemia cell line.",
+          "authors": "Labbozzetta M, Barreca M, Span\u00f2 V, et al.",
+          "journal": "Drug development research",
+          "year": "2022",
+          "abstract_snippet": "A series of [1,2]oxazolo[5,4-e]isoindole derivatives was evaluated against HL-60 cell line and its multidrug resistance\u00a0(MDR) variant, HL-60R, resistant to doxorubicin and to other P-gp substrates by overexpressing the efflux pump. They displayed antiproliferative activities, with IC",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35749723/"
+        },
+        {
+          "pmid": "39120434",
+          "title": "The evolution and history of Vinca alkaloids: From the Big Bang to the treatment of pediatric acute leukemia.",
+          "authors": "Taub JW, Buck SA, Xavier AC, et al.",
+          "journal": "Pediatric blood & cancer",
+          "year": "2024",
+          "abstract_snippet": "An attractive flower from the island of Madagascar has in part saved the lives of thousands of children with acute lymphoblastic leukemia (ALL). Random mutations and alterations to the genome led to the evolution of genes encoding enzymes, which would provide the periwinkle flower an arsenal of seco...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39120434/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "34576326",
+          "title": "Multiplex Screening for Interacting Compounds in Paediatric Acute Myeloid Leukaemia.",
+          "authors": "Cairns LV, Lappin KM, Mutch A, et al.",
+          "journal": "International journal of molecular sciences",
+          "year": "2021",
+          "abstract_snippet": "Paediatric acute myeloid leukaemia (AML) is a heterogeneous disease characterised by the malignant transformation of myeloid precursor cells with impaired differentiation. Standard therapy for paediatric AML has remained largely unchanged for over four decades and, combined with inadequate understan...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34576326/",
+          "total_results": 2
+        },
+        {
+          "pmid": "20348394",
+          "title": "The antihelmintic flubendazole inhibits microtubule function through a mechanism distinct from Vinca alkaloids and displays preclinical activity in leukemia and myeloma.",
+          "authors": "Spagnuolo PA, Hu J, Hurren R, et al.",
+          "journal": "Blood",
+          "year": "2010",
+          "abstract_snippet": "On-patent and off-patent drugs with previously unrecognized anticancer activity could be rapidly repurposed for this new indication given their prior toxicity testing. To identify such compounds, we conducted chemical screens and identified the antihelmintic flubendazole. Flubendazole induced cell d...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20348394/"
+        }
+      ],
+      "semantic_scholar_papers": [
+        {
+          "title": "The Leukoreductive Power of Vinblastine in Acute Myeloid Leukemia with Hyperleukocytosis: A Pilot Study",
+          "year": 2020,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/b583afddd68ebafb535d4a997f4d7d9c0440a3d7",
+          "authors": "F. D. L. Garza, P. C. Pedraza, Andr\u00e9s G\u00f3mez-de Le\u00f3n"
+        },
+        {
+          "title": "The evolution and history of Vinca alkaloids: From the Big Bang to the treatment of pediatric acute leukemia",
+          "year": 2024,
+          "citations": 17,
+          "url": "https://www.semanticscholar.org/paper/7bf4355300cff59c8cdfb42258eac53544db557e",
+          "authors": "J. Taub, Steven A Buck, Ana C Xavier"
+        },
+        {
+          "title": "Overcoming of vincristine resistance in P388 leukemia in vivo and in vitro through enhanced cytotoxicity of vincristine and vinblastine by verapamil.",
+          "year": 1981,
+          "citations": 1524,
+          "url": "https://www.semanticscholar.org/paper/bba85b459bdb281f7eaa48018bd37872b80df899",
+          "authors": "T. Tsuruo, H. Iida, S. Tsukagoshi"
+        },
+        {
+          "title": "Southwest Oncology Group S0008: a phase III trial of high-dose interferon Alfa-2b versus cisplatin, vinblastine, and dacarbazine, plus interleukin-2 and interferon in patients with high-risk melanoma--an intergroup study of cancer and leukemia Group B, Children's Oncology Group, Eastern Cooperative ",
+          "year": 2014,
+          "citations": 92,
+          "url": "https://www.semanticscholar.org/paper/f9a16eb355581d0ea7bb90cf37a7d84505a73096",
+          "authors": "L. Flaherty, M. Othus, M. Atkins"
+        },
+        {
+          "title": "Vinblastine Rapidly Induces NOXA and Acutely Sensitizes Primary Chronic Lymphocytic Leukemia Cells to ABT-737",
+          "year": 2013,
+          "citations": 40,
+          "url": "https://www.semanticscholar.org/paper/a146b47db49c9801c5474fdea3c8b3fca3cb7923",
+          "authors": "Darcy J. P. Bates, A. Danilov, C. Lowrey"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Overcoming of vincristine resistance in P388 leukemia in vivo and in vitro through enhanced cytotoxicity of vincristine and vinblastine by verapamil.",
+        "year": 1981,
+        "citations": 1524,
+        "url": "https://www.semanticscholar.org/paper/bba85b459bdb281f7eaa48018bd37872b80df899",
+        "authors": "T. Tsuruo, H. Iida, S. Tsukagoshi"
+      },
+      "max_citations": 1524,
+      "faers_signal": "strong",
+      "faers_total_reports": 7672,
+      "faers_cooccurrences": 509,
+      "faers_interpretation": "509 FAERS reports mention both Vinblastine and Leukemia-related terms (6.6% of all Vinblastine reports). This suggests real-world clinical association.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "mitoxantrone (1.456)",
+        "HG-5-113-01 (1.444)",
+        "trichostatin A (1.436)",
+        "AG14361 (1.432)",
+        "HDAC6 inhibitor ISOX (1.427)"
+      ],
+      "signature_interpretation": "Vinblastine was not found among the top 34 drugs that reverse the Leukemia gene signature. Top reversers: mitoxantrone (1.456), HG-5-113-01 (1.444), trichostatin A (1.436)",
+      "ai_hypothesis": "of its ability to induce apoptosis and to inhibit the proliferation of leukemic cells.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "Phase 3",
+      "failed_trial_count": 1,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.7971,
+      "mr_genetic_targets": 7,
+      "mechanistic_hypothesis": "Vinblastine \u2014[downregulates]\u2192 gene-664 \u2014[is upregulated by]\u2192 DB00443 \u2014[treats]\u2192 Leukemia",
+      "kg_paths_text": "\u2022 Vinblastine \u2014[downregulates]\u2192 gene-664 \u2014[is upregulated by]\u2192 DB00443 \u2014[treats]\u2192 Leukemia\n\u2022 Vinblastine \u2014[downregulates]\u2192 gene-664 \u2014[is upregulated by]\u2192 DB01234 \u2014[treats]\u2192 Leukemia\n\u2022 Vinblastine \u2014[downregulates]\u2192 gene-5111 \u2014[is downregulated by]\u2192 DB00620 \u2014[treats]\u2192 Leukemia",
+      "validation_experiments": [],
+      "novelty_score": 0.119,
+      "novelty_level": "ESTABLISHED",
+      "is_known_treatment": false,
+      "clinical_trials_total": 3,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT01700946",
+          "title": "Therapy for Pediatric Relapsed or Refractory Precursor B-Cell Acute Lymphoblastic Leukemia and Lymphoma",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "80",
+          "url": "https://clinicaltrials.gov/study/NCT01700946"
+        },
+        {
+          "nct_id": "NCT00186875",
+          "title": "Therapy for Pediatric Relapsed or Refractory Acute Lymphoblastic Leukemia",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "47",
+          "url": "https://clinicaltrials.gov/study/NCT00186875"
+        },
+        {
+          "nct_id": "NCT00488605",
+          "title": "H-9926-LCH III: Treatment Protocol of the Third International Study for Langerhans Cell Histiocytosis",
+          "status": "WITHDRAWN",
+          "phase": "PHASE3",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT00488605"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 2,
+        "PHASE3": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "3 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "1121 PubMed articles on this drug-disease pair",
+        "2 article(s) specifically mention repurposing/repositioning",
+        "Supported by 4 independent AI pillars",
+        "High molecular similarity (0.85) to Vindesine",
+        "Strong FAERS signal: 509 adverse event reports link drug to disease (7672 total reports)",
+        "Highly cited paper (1524 citations): \"Overcoming of vincristine resistance in P388 leukemia in viv...\"",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.80, 7 genetic targets)"
+      ],
+      "disease_entity": "Disease::MESH:D007938",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1186,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (GSTM1 / GSTM1 non-null, GSTM1 null)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "GSTM1",
+            "variant": "GSTM1 non-null, GSTM1 null",
+            "level": "3",
+            "phenotype_category": "Efficacy;Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1444607870"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.536,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.496,
+          "docking": 0.541,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 20,
+        "n_expressed": 17,
+        "mean_tpm_in_tissue": 39.62,
+        "max_tpm_in_tissue": 419.87,
+        "tissue_specificity": 0.193,
+        "context_modifier": 1.018
+      },
+      "ensemble_prob": 0.9086,
+      "ensemble_features": {
+        "kg_score": 0.9988,
+        "degree_penalty": 0.7642,
+        "n_drug_targets": 14,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.6391
+      },
+      "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": -6.49,
+        "target_symbol": "ABCB1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          ">",
+          "ISOLATED"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          ">_2_ester_groups",
+          "isolated_alkene"
+        ]
+      }
     }
   ],
   "disease_entity": "Disease::MESH:D007938",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
     "n_disease_genes": 519,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
-  },
-  "ensemble_version": "v5",
-  "ensemble_model_path": "data/models/ensemble_v5.pkl"
+  }
 }

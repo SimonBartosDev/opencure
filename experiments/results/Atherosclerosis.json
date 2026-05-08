@@ -1,8 +1,8 @@
 {
   "disease": "Atherosclerosis",
   "status": "completed",
-  "timestamp": "2026-04-19T22:10:33.763175",
-  "elapsed_seconds": 748.6,
+  "timestamp": "2026-05-08T01:16:37.887407",
+  "elapsed_seconds": 116.4,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -221,12 +221,12 @@
           "url": "https://clinicaltrials.gov/study/NCT01983449"
         },
         {
-          "nct_id": "NCT03942601",
-          "title": "Temsirolimus Alone or Paired With Dexamethasone Delivered to the Adventitia to eNhance Clinical Efficacy After Femoropopliteal Revascularization",
-          "status": "TERMINATED",
-          "phase": "PHASE2",
-          "enrollment": "10",
-          "url": "https://clinicaltrials.gov/study/NCT03942601"
+          "nct_id": "NCT01507558",
+          "title": "Dexamethasone Infusion to the Adventitia to Enhance Clinical Efficacy After Femoropopliteal Revascularization",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "22",
+          "url": "https://clinicaltrials.gov/study/NCT01507558"
         },
         {
           "nct_id": "NCT02807779",
@@ -237,18 +237,18 @@
           "url": "https://clinicaltrials.gov/study/NCT02807779"
         },
         {
-          "nct_id": "NCT01507558",
-          "title": "Dexamethasone Infusion to the Adventitia to Enhance Clinical Efficacy After Femoropopliteal Revascularization",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "22",
-          "url": "https://clinicaltrials.gov/study/NCT01507558"
+          "nct_id": "NCT03942601",
+          "title": "Temsirolimus Alone or Paired With Dexamethasone Delivered to the Adventitia to eNhance Clinical Efficacy After Femoropopliteal Revascularization",
+          "status": "TERMINATED",
+          "phase": "PHASE2",
+          "enrollment": "10",
+          "url": "https://clinicaltrials.gov/study/NCT03942601"
         }
       ],
       "trial_phases": {
         "PHASE4": 2,
-        "PHASE2": 1,
-        "NA": 1
+        "NA": 1,
+        "PHASE2": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -259,6 +259,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.71, 24 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D050197",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -396,15 +397,7 @@
         "tissue_specificity": 0.355,
         "context_modifier": 1.049
       },
-      "docking": {
-        "kcal_per_mol": -11.64,
-        "target_symbol": "NR3C1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D050197",
-      "ensemble_prob": 0.8478,
+      "ensemble_prob": 0.9852,
       "ensemble_features": {
         "kg_score": 0.9988,
         "degree_penalty": 0.736,
@@ -413,7 +406,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.6391
       },
-      "ensemble_rank": 3,
+      "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": -11.64,
+        "target_symbol": "NR3C1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -445,7 +445,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2511,
       "dti_score": 1.0,
-      "dti_best_target": "MTOR",
+      "dti_best_target": "PGF",
       "kg_group_score": 0.2082,
       "structural_group_score": 1.0,
       "network_group_score": 0.6786999702453613,
@@ -666,20 +666,20 @@
       "clinical_trials_total": 2,
       "clinical_trials": [
         {
-          "nct_id": "NCT01601106",
-          "title": "Silencing Inflammatory Activity by Injecting Nanocort in Patients at Risk for Atherosclerotic Disease",
-          "status": "UNKNOWN",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "30",
-          "url": "https://clinicaltrials.gov/study/NCT01601106"
-        },
-        {
           "nct_id": "NCT01647685",
           "title": "A Proof of Concept Study to Determine the Local Delivery and Efficacy of Nanocort",
           "status": "UNKNOWN",
           "phase": "PHASE1, PHASE2",
           "enrollment": "21",
           "url": "https://clinicaltrials.gov/study/NCT01647685"
+        },
+        {
+          "nct_id": "NCT01601106",
+          "title": "Silencing Inflammatory Activity by Injecting Nanocort in Patients at Risk for Atherosclerotic Disease",
+          "status": "UNKNOWN",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "30",
+          "url": "https://clinicaltrials.gov/study/NCT01601106"
         }
       ],
       "trial_phases": {
@@ -696,6 +696,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.70, 2 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D050197",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -826,15 +827,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.929
       },
-      "docking": {
-        "kcal_per_mol": -11.44,
-        "target_symbol": "IL6",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D050197",
-      "ensemble_prob": 0.4781,
+      "ensemble_prob": 0.279,
       "ensemble_features": {
         "kg_score": 0.9914,
         "degree_penalty": 0.7643,
@@ -844,6 +837,283 @@
         "transe_rank_log": 4.5218
       },
       "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": -11.44,
+        "target_symbol": "IL6",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "histamine dihydrochloride",
+      "drug_id": "DB05381",
+      "disease_name": "Atherosclerosis",
+      "combined_score": 0.5344,
+      "pillars_hit": 4,
+      "transe_rank": 45,
+      "transe_score": -10.4562,
+      "pykeen_score": -12.006,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.6000000238418579,
+      "proximity_distance": 1.600000023841858,
+      "admet_score": 0.6862,
+      "admet_flags": "clean",
+      "primekg_score": 0.274,
+      "dti_score": 0.8106,
+      "dti_best_target": "PPARG",
+      "kg_group_score": 0.459,
+      "structural_group_score": 0.8106,
+      "network_group_score": 0.49619999527931213,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.7354,
+      "admet_multiplier": 0.9372,
+      "efficacy_score": 0.5702,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 29,
+      "shared_targets": [
+        "AGT",
+        "APOA1",
+        "C3",
+        "C5AR1",
+        "CCL22",
+        "CCL5",
+        "EGFR",
+        "GUSB",
+        "HMGB1",
+        "IGHE",
+        "IL4",
+        "IL6",
+        "INS",
+        "JUN",
+        "KNG1",
+        "MAPK14",
+        "MMP1",
+        "MT-CO2",
+        "NOS3",
+        "PCLAF"
+      ],
+      "pubmed_total": 0,
+      "pubmed_treatment_total": 0,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Histamine dihydrochloride and low-dose interleukin-2 in an emerging landscape of relapse prevention in acute myeloid leukemia",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/3a87e04f5575c48b981a23c622739f9167d2d175",
+          "authors": "M. Nilsson, A. Martner, L. Wennstr\u00f6m"
+        },
+        {
+          "title": "Relapse Prevention in Acute Myeloid Leukemia: The Role of Immunotherapy with Histamine Dihydrochloride and Low-Dose Interleukin-2",
+          "year": 2024,
+          "citations": 2,
+          "url": "https://www.semanticscholar.org/paper/356f4302dd91e322588f98c128d2ad024619d0fb",
+          "authors": "P. Montesinos, F. Buccisano, T. Cluzeau"
+        },
+        {
+          "title": "Consistency of the efficacy of immunotherapy with histamine dihydrochloride and low-dose interleukin-2 for relapse prevention in acute myeloid leukemia",
+          "year": 2024,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/981353dae667e4d985b71775ff3d9e7557558c3d",
+          "authors": "M. Nilsson, A. Martner, L. Wennstr\u00f6m"
+        },
+        {
+          "title": "Histamine dihydrochloride and low-dose interleukin-2 has anti-leukemic efficacy in NPM1-mutated and myelomonocytic/monocytic acute myeloid leukemia",
+          "year": 2024,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/58891cd32570e143df15f30ef7fdc6e64c28ce13",
+          "authors": "M. Nilsson, Michael Fiegl, Wolfgang Hiddemann"
+        },
+        {
+          "title": "The Utility of Betahistine Dihydrochloride, a Structural Analog of Histamine, in Clozapine-associated Daytime Sedation: A Case Series",
+          "year": 2024,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/57f253b4848f81bdea3606d216602e31d0f24a30",
+          "authors": "Shikha Agarwal, Deepak Charan, Ravikant Kumar"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Histamine dihydrochloride and low-dose interleukin-2 has anti-leukemic efficacy in NPM1-mutated and myelomonocytic/monocytic acute myeloid leukemia",
+        "year": 2024,
+        "citations": 3,
+        "url": "https://www.semanticscholar.org/paper/58891cd32570e143df15f30ef7fdc6e64c28ce13",
+        "authors": "M. Nilsson, Michael Fiegl, Wolfgang Hiddemann"
+      },
+      "max_citations": 3,
+      "faers_signal": "none",
+      "faers_total_reports": 15,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking histamine dihydrochloride to Atherosclerosis terms. Drug has 15 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "BMS-387032 (1.477)",
+        "NCGC00183244-01 (1.454)",
+        "Lansoprazole (1.449)",
+        "GSK-429286A (1.426)",
+        "PRIMAQUINE DIPHOSPHATE (1.426)"
+      ],
+      "signature_interpretation": "histamine dihydrochloride was not found among the top 39 drugs that reverse the Atherosclerosis gene signature. Top reversers: BMS-387032 (1.477), NCGC00183244-01 (1.454), Lansoprazole (1.449)",
+      "ai_hypothesis": "of its ability to inhibit the formation of foam cells.",
+      "abstract_analyses": [],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.7354,
+      "mr_genetic_targets": 5,
+      "mechanistic_hypothesis": "histamine dihydrochloride \u2014[is a therapeutic for]\u2192 MESH:D051437 \u2014[is treated by]\u2192 DB00627 \u2014[treats]\u2192 Atherosclerosis",
+      "kg_paths_text": "\u2022 histamine dihydrochloride \u2014[is a therapeutic for]\u2192 MESH:D051437 \u2014[is treated by]\u2192 DB00627 \u2014[treats]\u2192 Atherosclerosis\n\u2022 histamine dihydrochloride \u2014[is a therapeutic for]\u2192 MESH:D051437 \u2014[is treated by]\u2192 DB00627 \u2014[treats]\u2192 Atherosclerosis\n\u2022 histamine dihydrochloride \u2014[is a therapeutic for]\u2192 MESH:D030342 \u2014[is treated by]\u2192 DB00627 \u2014[treats]\u2192 Atherosclerosis",
+      "validation_experiments": [],
+      "novelty_score": 0.641,
+      "novelty_level": "BREAKTHROUGH",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "MEDIUM",
+      "confidence_reasons": [
+        "Supported by 4 independent AI pillars",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.74, 5 genetic targets)"
+      ],
+      "disease_entity": "Disease::MESH:D050197",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 96,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00331",
+            "drug_name": "Metformin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01032",
+            "drug_name": "Probenecid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00787",
+            "drug_name": "Aciclovir",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB08838",
+            "drug_name": "Agmatine",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB00915",
+            "drug_name": "Amantadine",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB00594",
+            "drug_name": "Amiloride",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB00345",
+            "drug_name": "Aminohippurate",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB01118",
+            "drug_name": "Amiodarone",
+            "severity": "moderate"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.187,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.534,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Artery - Aorta",
+          "Artery - Coronary"
+        ],
+        "n_genes": 20,
+        "n_expressed": 13,
+        "mean_tpm_in_tissue": 1049.74,
+        "max_tpm_in_tissue": 19888.1,
+        "tissue_specificity": 0.114,
+        "context_modifier": 1.044
+      },
+      "ensemble_prob": 0.0118,
+      "ensemble_features": {
+        "kg_score": 0.8722,
+        "degree_penalty": 0.8269,
+        "n_drug_targets": 13,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 7.2071
+      },
+      "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -874,8 +1144,8 @@
       "admet_score": 0.6973,
       "admet_flags": "Skin_Reaction=0.85",
       "primekg_score": 0,
-      "dti_score": 0.2898,
-      "dti_best_target": "MTOR",
+      "dti_score": 0.3087,
+      "dti_best_target": "PPARG",
       "kg_group_score": 0.2276,
       "structural_group_score": 1.0,
       "network_group_score": 0.925000011920929,
@@ -1069,14 +1339,24 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.30)"
       ],
+      "disease_entity": "Disease::MESH:D050197",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
         "confidence": "medium",
         "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
         "chembl_phase": 2.0,
-        "target_affinity": {},
-        "stage": 1
+        "target_affinity": {
+          "cmax_over_ic50_ratio": 0.16,
+          "median_ic50_nM": 6200.0,
+          "n_activities": 1,
+          "activity_types": [
+            "IC50"
+          ],
+          "mechanism_feasible": "no",
+          "cmax_source": "generic fallback 1000 nM (per-drug Cmax TBD)"
+        },
+        "stage": 2
       },
       "ddi_warnings": {
         "n_interactions": 0,
@@ -1119,15 +1399,7 @@
         "tissue_specificity": 0.445,
         "context_modifier": 1.082
       },
-      "docking": {
-        "kcal_per_mol": -8.14,
-        "target_symbol": "PPARA",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D050197",
-      "ensemble_prob": 0.1711,
+      "ensemble_prob": 0.2023,
       "ensemble_features": {
         "kg_score": 0.8886,
         "degree_penalty": 1.0,
@@ -1137,6 +1409,13 @@
         "transe_rank_log": 7.0699
       },
       "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": -8.14,
+        "target_symbol": "PPARA",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -1147,6 +1426,218 @@
         "alert_names": [
           "Aliphatic_long_chain",
           "isolated_alkene"
+        ]
+      }
+    },
+    {
+      "drug_name": "Aceneuramic Acid",
+      "drug_id": "DB11797",
+      "disease_name": "Atherosclerosis",
+      "combined_score": 0.5295,
+      "pillars_hit": 4,
+      "transe_rank": 23,
+      "transe_score": -10.2185,
+      "pykeen_score": -12.2473,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.800000011920929,
+      "proximity_distance": 0.800000011920929,
+      "admet_score": 1.0,
+      "admet_flags": "clean",
+      "primekg_score": 0,
+      "dti_score": 0.3519,
+      "dti_best_target": "HMGB1",
+      "kg_group_score": 0.3279,
+      "structural_group_score": 0.3519,
+      "network_group_score": 0.7907000184059143,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.8405,
+      "admet_multiplier": 1.0,
+      "efficacy_score": 0.5295,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 7,
+      "shared_targets": [
+        "APOE",
+        "CRP",
+        "FGB",
+        "HEBP1",
+        "TF",
+        "TNF",
+        "VWF"
+      ],
+      "pubmed_total": 0,
+      "pubmed_treatment_total": 0,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Safety and efficacy of aceneuramic acid in GNE myopathy: open-label extension study",
+          "year": 2024,
+          "citations": 6,
+          "url": "https://www.semanticscholar.org/paper/31e6afeb0302a14d89b772dc6e03dfd398c24cac",
+          "authors": "N. Suzuki, M. Mori-Yoshimura, M. Katsuno"
+        },
+        {
+          "title": "Efficacy confirmation study of aceneuramic acid administration for GNE myopathy in Japan",
+          "year": 2023,
+          "citations": 14,
+          "url": "https://www.semanticscholar.org/paper/831795b5506379d266d6c932bd63f3acada2d57b",
+          "authors": "M. Mori-Yoshimura, N. Suzuki, M. Katsuno"
+        },
+        {
+          "title": "Phase II/III Study of Aceneuramic Acid Administration for GNE Myopathy in Japan",
+          "year": 2023,
+          "citations": 15,
+          "url": "https://www.semanticscholar.org/paper/d40955d40c8297abe206cfe8653c14c86bc58b01",
+          "authors": "N. Suzuki, M. Mori-Yoshimura, M. Katsuno"
+        },
+        {
+          "title": "Ascorbic acid and calcitriol in improving endothelial dysfunction through inhibition of free radical in type 2 diabetes melitus: In vivo study in atherosclerosis rat model",
+          "year": 2024,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/4599aa3d9d9133525668167c9586c9ec81d62a93",
+          "authors": "T. F. Hadi, T. Heriansyah, M. Mudatsir"
+        },
+        {
+          "title": "The Egyptian association of vascular biology and atherosclerosis (EAVA) position statement on the usage of Bempedoic acid",
+          "year": 2024,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/56300f923d87d91b3506d813a7363871152a6b8b",
+          "authors": "A. Reda, A. Elserafy, A. Elbahry"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Phase II/III Study of Aceneuramic Acid Administration for GNE Myopathy in Japan",
+        "year": 2023,
+        "citations": 15,
+        "url": "https://www.semanticscholar.org/paper/d40955d40c8297abe206cfe8653c14c86bc58b01",
+        "authors": "N. Suzuki, M. Mori-Yoshimura, M. Katsuno"
+      },
+      "max_citations": 15,
+      "faers_signal": "none",
+      "faers_total_reports": 0,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found for Aceneuramic Acid",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "BMS-387032 (1.477)",
+        "NCGC00183244-01 (1.454)",
+        "Lansoprazole (1.449)",
+        "GSK-429286A (1.426)",
+        "PRIMAQUINE DIPHOSPHATE (1.426)"
+      ],
+      "signature_interpretation": "Aceneuramic Acid was not found among the top 39 drugs that reverse the Atherosclerosis gene signature. Top reversers: BMS-387032 (1.477), NCGC00183244-01 (1.454), Lansoprazole (1.449)",
+      "ai_hypothesis": "of its anti-inflammatory and anti-oxidative properties.",
+      "abstract_analyses": [],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.8405,
+      "mr_genetic_targets": 3,
+      "mechanistic_hypothesis": "Aceneuramic Acid \u2014[is a therapeutic for]\u2192 MESH:D014376 \u2014[is treated by]\u2192 DB00627 \u2014[treats]\u2192 Atherosclerosis",
+      "kg_paths_text": "\u2022 Aceneuramic Acid \u2014[is a therapeutic for]\u2192 MESH:D014376 \u2014[is treated by]\u2192 DB00627 \u2014[treats]\u2192 Atherosclerosis\n\u2022 Aceneuramic Acid \u2014[is a therapeutic for]\u2192 MESH:D014376 \u2014[is treated by]\u2192 DB00627 \u2014[treats]\u2192 Atherosclerosis\n\u2022 Aceneuramic Acid \u2014[is a therapeutic for]\u2192 MESH:D056486 \u2014[is treated by]\u2192 DB00806 \u2014[is a therapeutic for]\u2192 Atherosclerosis",
+      "validation_experiments": [],
+      "novelty_score": 0.635,
+      "novelty_level": "BREAKTHROUGH",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "MEDIUM",
+      "confidence_reasons": [
+        "Supported by 4 independent AI pillars",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.84, 3 genetic targets)"
+      ],
+      "disease_entity": "Disease::MESH:D050197",
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "late-trial",
+        "confidence": "medium",
+        "rationale": "Phase-3 investigational \u2014 dose range established in Phase-2 pharmacokinetic studies; efficacy trials ongoing or recently completed.",
+        "chembl_phase": 3.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 0,
+        "has_warnings": false,
+        "top_interactions": []
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.185,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.53,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Artery - Aorta",
+          "Artery - Coronary"
+        ],
+        "n_genes": 7,
+        "n_expressed": 4,
+        "mean_tpm_in_tissue": 52.16,
+        "max_tpm_in_tissue": 207.32,
+        "tissue_specificity": 0.0,
+        "context_modifier": 1.005
+      },
+      "ensemble_prob": 0.0,
+      "ensemble_features": {
+        "kg_score": 0.7632,
+        "degree_penalty": 0.9884,
+        "n_drug_targets": 0,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 7.8236
+      },
+      "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "ALPHA",
+          "DIKETO"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "diketo_group",
+          "alpha_dicarbonyl"
         ]
       }
     },
@@ -1174,7 +1665,7 @@
       "admet_flags": "DILI=0.97",
       "primekg_score": 0.2615,
       "dti_score": 1.0,
-      "dti_best_target": "CD4",
+      "dti_best_target": "PGF",
       "kg_group_score": 0.3431,
       "structural_group_score": 1.0,
       "network_group_score": 0.5680000185966492,
@@ -1360,6 +1851,7 @@
         "AI-generated hypothesis available",
         "Moderate genetic evidence supporting causality (MR score: 0.67)"
       ],
+      "disease_entity": "Disease::MESH:D050197",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1482,15 +1974,7 @@
         "tissue_specificity": 0.11,
         "context_modifier": 1.043
       },
-      "docking": {
-        "kcal_per_mol": -9.56,
-        "target_symbol": "PTGS1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D050197",
-      "ensemble_prob": 0.894,
+      "ensemble_prob": 0.9809,
       "ensemble_features": {
         "kg_score": 0.9989,
         "degree_penalty": 0.7454,
@@ -1500,6 +1984,13 @@
         "transe_rank_log": 2.5649
       },
       "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": -9.56,
+        "target_symbol": "PTGS1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1531,7 +2022,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2467,
       "dti_score": 1.0,
-      "dti_best_target": "CD4",
+      "dti_best_target": "IL1B",
       "kg_group_score": 0.276,
       "structural_group_score": 1.0,
       "network_group_score": 0.7272999882698059,
@@ -1716,6 +2207,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.70, 7 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D050197",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "late-trial",
@@ -1766,15 +2258,7 @@
         "tissue_specificity": 0.112,
         "context_modifier": 1.043
       },
-      "docking": {
-        "kcal_per_mol": -8.87,
-        "target_symbol": "MTOR",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D050197",
-      "ensemble_prob": 0.0003,
+      "ensemble_prob": 0.0068,
       "ensemble_features": {
         "kg_score": 0.848,
         "degree_penalty": 0.8816,
@@ -1784,6 +2268,13 @@
         "transe_rank_log": 7.3809
       },
       "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": -8.87,
+        "target_symbol": "MTOR",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -1796,276 +2287,6 @@
           "catechol",
           "gte_5_phenolic_OH"
         ]
-      }
-    },
-    {
-      "drug_name": "histamine dihydrochloride",
-      "drug_id": "DB05381",
-      "disease_name": "Atherosclerosis",
-      "combined_score": 0.5272,
-      "pillars_hit": 4,
-      "transe_rank": 45,
-      "transe_score": -10.4562,
-      "pykeen_score": -12.006,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.6000000238418579,
-      "proximity_distance": 1.600000023841858,
-      "admet_score": 0.6862,
-      "admet_flags": "clean",
-      "primekg_score": 0.274,
-      "dti_score": 0.7679,
-      "dti_best_target": "CD151",
-      "kg_group_score": 0.459,
-      "structural_group_score": 0.7679,
-      "network_group_score": 0.49619999527931213,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.7354,
-      "admet_multiplier": 0.9372,
-      "efficacy_score": 0.5625,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 29,
-      "shared_targets": [
-        "AGT",
-        "APOA1",
-        "C3",
-        "C5AR1",
-        "CCL22",
-        "CCL5",
-        "EGFR",
-        "GUSB",
-        "HMGB1",
-        "IGHE",
-        "IL4",
-        "IL6",
-        "INS",
-        "JUN",
-        "KNG1",
-        "MAPK14",
-        "MMP1",
-        "MT-CO2",
-        "NOS3",
-        "PCLAF"
-      ],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Histamine dihydrochloride and low-dose interleukin-2 in an emerging landscape of relapse prevention in acute myeloid leukemia",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/3a87e04f5575c48b981a23c622739f9167d2d175",
-          "authors": "M. Nilsson, A. Martner, L. Wennstr\u00f6m"
-        },
-        {
-          "title": "Relapse Prevention in Acute Myeloid Leukemia: The Role of Immunotherapy with Histamine Dihydrochloride and Low-Dose Interleukin-2",
-          "year": 2024,
-          "citations": 2,
-          "url": "https://www.semanticscholar.org/paper/356f4302dd91e322588f98c128d2ad024619d0fb",
-          "authors": "P. Montesinos, F. Buccisano, T. Cluzeau"
-        },
-        {
-          "title": "Consistency of the efficacy of immunotherapy with histamine dihydrochloride and low-dose interleukin-2 for relapse prevention in acute myeloid leukemia",
-          "year": 2024,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/981353dae667e4d985b71775ff3d9e7557558c3d",
-          "authors": "M. Nilsson, A. Martner, L. Wennstr\u00f6m"
-        },
-        {
-          "title": "Histamine dihydrochloride and low-dose interleukin-2 has anti-leukemic efficacy in NPM1-mutated and myelomonocytic/monocytic acute myeloid leukemia",
-          "year": 2024,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/58891cd32570e143df15f30ef7fdc6e64c28ce13",
-          "authors": "M. Nilsson, Michael Fiegl, Wolfgang Hiddemann"
-        },
-        {
-          "title": "The Utility of Betahistine Dihydrochloride, a Structural Analog of Histamine, in Clozapine-associated Daytime Sedation: A Case Series",
-          "year": 2024,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/57f253b4848f81bdea3606d216602e31d0f24a30",
-          "authors": "Shikha Agarwal, Deepak Charan, Ravikant Kumar"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Histamine dihydrochloride and low-dose interleukin-2 has anti-leukemic efficacy in NPM1-mutated and myelomonocytic/monocytic acute myeloid leukemia",
-        "year": 2024,
-        "citations": 3,
-        "url": "https://www.semanticscholar.org/paper/58891cd32570e143df15f30ef7fdc6e64c28ce13",
-        "authors": "M. Nilsson, Michael Fiegl, Wolfgang Hiddemann"
-      },
-      "max_citations": 3,
-      "faers_signal": "none",
-      "faers_total_reports": 15,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking histamine dihydrochloride to Atherosclerosis terms. Drug has 15 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "BMS-387032 (1.477)",
-        "NCGC00183244-01 (1.454)",
-        "Lansoprazole (1.449)",
-        "GSK-429286A (1.426)",
-        "PRIMAQUINE DIPHOSPHATE (1.426)"
-      ],
-      "signature_interpretation": "histamine dihydrochloride was not found among the top 39 drugs that reverse the Atherosclerosis gene signature. Top reversers: BMS-387032 (1.477), NCGC00183244-01 (1.454), Lansoprazole (1.449)",
-      "ai_hypothesis": "of its ability to inhibit the formation of foam cells.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.7354,
-      "mr_genetic_targets": 5,
-      "mechanistic_hypothesis": "histamine dihydrochloride \u2014[is a therapeutic for]\u2192 MESH:D051437 \u2014[is treated by]\u2192 DB00627 \u2014[treats]\u2192 Atherosclerosis",
-      "kg_paths_text": "\u2022 histamine dihydrochloride \u2014[is a therapeutic for]\u2192 MESH:D051437 \u2014[is treated by]\u2192 DB00627 \u2014[treats]\u2192 Atherosclerosis\n\u2022 histamine dihydrochloride \u2014[is a therapeutic for]\u2192 MESH:D051437 \u2014[is treated by]\u2192 DB00627 \u2014[treats]\u2192 Atherosclerosis\n\u2022 histamine dihydrochloride \u2014[is a therapeutic for]\u2192 MESH:D030342 \u2014[is treated by]\u2192 DB00627 \u2014[treats]\u2192 Atherosclerosis",
-      "validation_experiments": [],
-      "novelty_score": 0.633,
-      "novelty_level": "BREAKTHROUGH",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "MEDIUM",
-      "confidence_reasons": [
-        "Supported by 4 independent AI pillars",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.74, 5 genetic targets)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 96,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00783",
-            "drug_name": "Estradiol",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00331",
-            "drug_name": "Metformin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01032",
-            "drug_name": "Probenecid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00787",
-            "drug_name": "Aciclovir",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB08838",
-            "drug_name": "Agmatine",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB00915",
-            "drug_name": "Amantadine",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB00594",
-            "drug_name": "Amiloride",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB00345",
-            "drug_name": "Aminohippurate",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB01118",
-            "drug_name": "Amiodarone",
-            "severity": "moderate"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
-        "pharmgkb": []
-      },
-      "triangulation": {
-        "n_axes_agree": 1,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": false
-        },
-        "triangulation_score": 0.185,
-        "label": "kg-only",
-        "axis_values": {
-          "kg": 0.527,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.0
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Artery - Aorta",
-          "Artery - Coronary"
-        ],
-        "n_genes": 20,
-        "n_expressed": 13,
-        "mean_tpm_in_tissue": 1049.74,
-        "max_tpm_in_tissue": 19888.1,
-        "tissue_specificity": 0.114,
-        "context_modifier": 1.044
-      },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D050197",
-      "ensemble_prob": 0.007,
-      "ensemble_features": {
-        "kg_score": 0.8722,
-        "degree_penalty": 0.8269,
-        "n_drug_targets": 13,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 7.2071
-      },
-      "ensemble_rank": 8,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
       }
     },
     {
@@ -2091,8 +2312,8 @@
       "admet_score": 0.7128,
       "admet_flags": "clean",
       "primekg_score": 0.2555,
-      "dti_score": 0.3142,
-      "dti_best_target": "GSTM1",
+      "dti_score": 0.3577,
+      "dti_best_target": "HMGB1",
       "kg_group_score": 0.1766,
       "structural_group_score": 0.9211,
       "network_group_score": 0.670199990272522,
@@ -2255,6 +2476,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.73, 1 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D050197",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2356,15 +2578,7 @@
         "tissue_specificity": 0.11,
         "context_modifier": 1.043
       },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D050197",
-      "ensemble_prob": 0.9433,
+      "ensemble_prob": 0.7877,
       "ensemble_features": {
         "kg_score": 0.9983,
         "degree_penalty": 0.766,
@@ -2373,7 +2587,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.9444
       },
-      "ensemble_rank": 1,
+      "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -2411,7 +2632,7 @@
       "admet_flags": "Skin_Reaction=0.82",
       "primekg_score": 0.2518,
       "dti_score": 1.0,
-      "dti_best_target": "MTOR",
+      "dti_best_target": "PGF",
       "kg_group_score": 0.3462,
       "structural_group_score": 1.0,
       "network_group_score": 0.5838000178337097,
@@ -2618,8 +2839,10 @@
         "Supported by 4 independent AI pillars",
         "Supporting paper with 35 citations",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.71, 12 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.71, 12 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D050197",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "late-trial",
@@ -2729,15 +2952,7 @@
         "tissue_specificity": 0.787,
         "context_modifier": 1.124
       },
-      "docking": {
-        "kcal_per_mol": -6.91,
-        "target_symbol": "EGFR",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D050197",
-      "ensemble_prob": 0.4176,
+      "ensemble_prob": 0.2402,
       "ensemble_features": {
         "kg_score": 0.9904,
         "degree_penalty": 0.7784,
@@ -2747,6 +2962,13 @@
         "transe_rank_log": 4.625
       },
       "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": -6.91,
+        "target_symbol": "EGFR",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -2986,6 +3208,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.72, 11 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D050197",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3095,15 +3318,7 @@
         "tissue_specificity": 0.081,
         "context_modifier": 1.01
       },
-      "docking": {
-        "kcal_per_mol": -10.16,
-        "target_symbol": "CACNA1C",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "disease_entity": "Disease::MESH:D050197",
-      "ensemble_prob": 0.6457,
+      "ensemble_prob": 0.5156,
       "ensemble_features": {
         "kg_score": 0.9963,
         "degree_penalty": 0.7473,
@@ -3113,232 +3328,27 @@
         "transe_rank_log": 3.6889
       },
       "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": -10.16,
+        "target_symbol": "CACNA1C",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
         "n_alerts": 0,
         "alert_names": []
       }
-    },
-    {
-      "drug_name": "Aceneuramic Acid",
-      "drug_id": "DB11797",
-      "disease_name": "Atherosclerosis",
-      "combined_score": 0.5127,
-      "pillars_hit": 4,
-      "transe_rank": 23,
-      "transe_score": -10.2185,
-      "pykeen_score": -12.2473,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.800000011920929,
-      "proximity_distance": 0.800000011920929,
-      "admet_score": 1.0,
-      "admet_flags": "clean",
-      "primekg_score": 0,
-      "dti_score": 0.2584,
-      "dti_best_target": "CD151",
-      "kg_group_score": 0.3279,
-      "structural_group_score": 0.2584,
-      "network_group_score": 0.7907000184059143,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.8405,
-      "admet_multiplier": 1.0,
-      "efficacy_score": 0.5127,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 7,
-      "shared_targets": [
-        "APOE",
-        "CRP",
-        "FGB",
-        "HEBP1",
-        "TF",
-        "TNF",
-        "VWF"
-      ],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Safety and efficacy of aceneuramic acid in GNE myopathy: open-label extension study",
-          "year": 2024,
-          "citations": 6,
-          "url": "https://www.semanticscholar.org/paper/31e6afeb0302a14d89b772dc6e03dfd398c24cac",
-          "authors": "N. Suzuki, M. Mori-Yoshimura, M. Katsuno"
-        },
-        {
-          "title": "Efficacy confirmation study of aceneuramic acid administration for GNE myopathy in Japan",
-          "year": 2023,
-          "citations": 14,
-          "url": "https://www.semanticscholar.org/paper/831795b5506379d266d6c932bd63f3acada2d57b",
-          "authors": "M. Mori-Yoshimura, N. Suzuki, M. Katsuno"
-        },
-        {
-          "title": "Phase II/III Study of Aceneuramic Acid Administration for GNE Myopathy in Japan",
-          "year": 2023,
-          "citations": 15,
-          "url": "https://www.semanticscholar.org/paper/d40955d40c8297abe206cfe8653c14c86bc58b01",
-          "authors": "N. Suzuki, M. Mori-Yoshimura, M. Katsuno"
-        },
-        {
-          "title": "Ascorbic acid and calcitriol in improving endothelial dysfunction through inhibition of free radical in type 2 diabetes melitus: In vivo study in atherosclerosis rat model",
-          "year": 2024,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/4599aa3d9d9133525668167c9586c9ec81d62a93",
-          "authors": "T. F. Hadi, T. Heriansyah, M. Mudatsir"
-        },
-        {
-          "title": "The Egyptian association of vascular biology and atherosclerosis (EAVA) position statement on the usage of Bempedoic acid",
-          "year": 2024,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/56300f923d87d91b3506d813a7363871152a6b8b",
-          "authors": "A. Reda, A. Elserafy, A. Elbahry"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Phase II/III Study of Aceneuramic Acid Administration for GNE Myopathy in Japan",
-        "year": 2023,
-        "citations": 15,
-        "url": "https://www.semanticscholar.org/paper/d40955d40c8297abe206cfe8653c14c86bc58b01",
-        "authors": "N. Suzuki, M. Mori-Yoshimura, M. Katsuno"
-      },
-      "max_citations": 15,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Aceneuramic Acid",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "BMS-387032 (1.477)",
-        "NCGC00183244-01 (1.454)",
-        "Lansoprazole (1.449)",
-        "GSK-429286A (1.426)",
-        "PRIMAQUINE DIPHOSPHATE (1.426)"
-      ],
-      "signature_interpretation": "Aceneuramic Acid was not found among the top 39 drugs that reverse the Atherosclerosis gene signature. Top reversers: BMS-387032 (1.477), NCGC00183244-01 (1.454), Lansoprazole (1.449)",
-      "ai_hypothesis": "of its anti-inflammatory and anti-oxidative properties.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.8405,
-      "mr_genetic_targets": 3,
-      "mechanistic_hypothesis": "Aceneuramic Acid \u2014[is a therapeutic for]\u2192 MESH:D014376 \u2014[is treated by]\u2192 DB00627 \u2014[treats]\u2192 Atherosclerosis",
-      "kg_paths_text": "\u2022 Aceneuramic Acid \u2014[is a therapeutic for]\u2192 MESH:D014376 \u2014[is treated by]\u2192 DB00627 \u2014[treats]\u2192 Atherosclerosis\n\u2022 Aceneuramic Acid \u2014[is a therapeutic for]\u2192 MESH:D014376 \u2014[is treated by]\u2192 DB00627 \u2014[treats]\u2192 Atherosclerosis\n\u2022 Aceneuramic Acid \u2014[is a therapeutic for]\u2192 MESH:D056486 \u2014[is treated by]\u2192 DB00806 \u2014[is a therapeutic for]\u2192 Atherosclerosis",
-      "validation_experiments": [],
-      "novelty_score": 0.615,
-      "novelty_level": "BREAKTHROUGH",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "MEDIUM",
-      "confidence_reasons": [
-        "Supported by 4 independent AI pillars",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.84, 3 genetic targets)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "likely",
-        "dose_range": "late-trial",
-        "confidence": "medium",
-        "rationale": "Phase-3 investigational \u2014 dose range established in Phase-2 pharmacokinetic studies; efficacy trials ongoing or recently completed.",
-        "chembl_phase": 3.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 0,
-        "has_warnings": false,
-        "top_interactions": []
-      },
-      "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
-        "pharmgkb": []
-      },
-      "triangulation": {
-        "n_axes_agree": 1,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": false
-        },
-        "triangulation_score": 0.179,
-        "label": "kg-only",
-        "axis_values": {
-          "kg": 0.513,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.0
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Artery - Aorta",
-          "Artery - Coronary"
-        ],
-        "n_genes": 7,
-        "n_expressed": 4,
-        "mean_tpm_in_tissue": 52.16,
-        "max_tpm_in_tissue": 207.32,
-        "tissue_specificity": 0.0,
-        "context_modifier": 1.005
-      },
-      "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
-      },
-      "disease_entity": "Disease::MESH:D050197",
-      "ensemble_prob": 0.0,
-      "ensemble_features": {
-        "kg_score": 0.7632,
-        "degree_penalty": 0.9884,
-        "n_drug_targets": 0,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 7.8236
-      },
-      "ensemble_rank": 10,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [
-          "ALPHA",
-          "DIKETO"
-        ],
-        "n_alerts": 2,
-        "alert_names": [
-          "diketo_group",
-          "alpha_dicarbonyl"
-        ]
-      }
     }
   ],
+  "disease_entity": "Disease::MESH:D050197",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
     "n_disease_genes": 273,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
-  },
-  "disease_entity": "Disease::MESH:D050197",
-  "ensemble_version": "v5",
-  "ensemble_model_path": "data/models/ensemble_v5.pkl"
+  }
 }

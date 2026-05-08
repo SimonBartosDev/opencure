@@ -1,8 +1,8 @@
 {
   "disease": "Ovarian cancer",
   "status": "completed",
-  "timestamp": "2026-04-19T19:58:02.917981",
-  "elapsed_seconds": 619.2,
+  "timestamp": "2026-05-07T23:24:59.915039",
+  "elapsed_seconds": 201.0,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -16,7 +16,7 @@
       "drug_name": "Tamoxifen",
       "drug_id": "DB00675",
       "disease_name": "Ovarian cancer",
-      "combined_score": 0.5793,
+      "combined_score": 0.5807,
       "pillars_hit": 4,
       "transe_rank": 6,
       "transe_score": -9.8035,
@@ -35,15 +35,15 @@
       "admet_score": 0.5915,
       "admet_flags": "hERG=0.95",
       "primekg_score": 0.2725,
-      "dti_score": 0.9345,
-      "dti_best_target": "ILK",
+      "dti_score": 0.9428,
+      "dti_best_target": "ETS1",
       "kg_group_score": 0.4383,
-      "structural_group_score": 0.9345,
+      "structural_group_score": 0.9428,
       "network_group_score": 0.661899983882904,
       "txgnn_group_score": 0,
       "mr_group_score": 0.8044,
       "admet_multiplier": 0.9183,
-      "efficacy_score": 0.6308,
+      "efficacy_score": 0.6323,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 93,
@@ -221,7 +221,7 @@
       ],
       "has_failed_trial": false,
       "failed_trial_phase": "Phase 2",
-      "failed_trial_count": 3,
+      "failed_trial_count": 4,
       "failed_trial_penalty": 1.0,
       "mr_score": 0.8044,
       "mr_genetic_targets": 17,
@@ -234,6 +234,30 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
+          "nct_id": "NCT01712893",
+          "title": "Simultaneous Versus Sequential Use of Adjuvant Chemotherapy and GnRHa in Treating ER+,Premenopausal Breast Cancer",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "216",
+          "url": "https://clinicaltrials.gov/study/NCT01712893"
+        },
+        {
+          "nct_id": "NCT02728622",
+          "title": "Chemotherapy vs Hormonal Treatment in Platinum-resistant Ovarian Cancer Resistant or Refractory to Platinum and Taxane",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "241",
+          "url": "https://clinicaltrials.gov/study/NCT02728622"
+        },
+        {
+          "nct_id": "NCT02890082",
+          "title": "Preservation of Fertility by Ovarian Stimulation Associated With Tamoxifen, Prior Chemotherapy for Breast Cancer",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "phase": "PHASE2",
+          "enrollment": "102",
+          "url": "https://clinicaltrials.gov/study/NCT02890082"
+        },
+        {
           "nct_id": "NCT00427700",
           "title": "Induction of Ovulation With Raloxifene or Clomiphene Citrate in Polycystic Ovarian Syndrome",
           "status": "COMPLETED",
@@ -242,41 +266,18 @@
           "url": "https://clinicaltrials.gov/study/NCT00427700"
         },
         {
-          "nct_id": "NCT05669768",
-          "title": "Study on the Efficacy and Toxicity of Pamiparib Combined With Tamoxifen in the Treatment of Epithelial Ovarian Cancer Patients With Biochemical Recurrence During First-line PARPi Maintenance Therapy",
-          "status": "UNKNOWN",
-          "phase": "PHASE2",
-          "enrollment": "46",
-          "url": "https://clinicaltrials.gov/study/NCT05669768"
-        },
-        {
-          "nct_id": "NCT02584465",
-          "title": "REGorafenib vsTamoxifen in Patients With Platinum-sensitive OVARian Carcinoma and Isolated Biological Progression",
+          "nct_id": "NCT02344550",
+          "title": "Study of GnRH-A [Leuprorelin(Lorelin Depot] Plus Leterozole +/- Everolimus for Premenopausal Women With Metastatic Breast Cancer",
           "status": "COMPLETED",
           "phase": "PHASE2",
-          "enrollment": "68",
-          "url": "https://clinicaltrials.gov/study/NCT02584465"
-        },
-        {
-          "nct_id": "NCT04906395",
-          "title": "Ovarian Suppression Evaluating Subcutaneous Leuprolide Acetate in Breast Cancer",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "phase": "PHASE3",
-          "enrollment": "250",
-          "url": "https://clinicaltrials.gov/study/NCT04906395"
-        },
-        {
-          "nct_id": "NCT00253539",
-          "title": "Arzoxifene or Tamoxifen in Preventing Breast Cancer in Premenopausal Women at High Risk for Breast Cancer",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "3",
-          "url": "https://clinicaltrials.gov/study/NCT00253539"
+          "enrollment": "137",
+          "url": "https://clinicaltrials.gov/study/NCT02344550"
         }
       ],
       "trial_phases": {
-        "PHASE3": 6,
-        "PHASE2": 3
+        "PHASE3": 5,
+        "PHASE2": 3,
+        "PHASE1": 2
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -288,8 +289,10 @@
         "Moderate FAERS signal: 92 adverse event reports mention drug-disease co-occurrence",
         "Highly cited paper (185 citations): \"Aromatase inhibitors versus tamoxifen in premenopausal women...\"",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.80, 17 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.80, 17 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D010051",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -415,7 +418,7 @@
         "triangulation_score": 0.642,
         "label": "silver-standard",
         "axis_values": {
-          "kg": 0.579,
+          "kg": 0.581,
           "docking": 0.797,
           "pharos": 0.0,
           "literature": 1.0
@@ -432,15 +435,7 @@
         "tissue_specificity": 0.507,
         "context_modifier": 1.034
       },
-      "disease_entity": "Disease::MESH:D010051",
-      "docking": {
-        "kcal_per_mol": -9.56,
-        "target_symbol": "ESR1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.9731,
+      "ensemble_prob": 0.989,
       "ensemble_features": {
         "kg_score": 0.9991,
         "degree_penalty": 0.7565,
@@ -450,6 +445,13 @@
         "transe_rank_log": 2.3026
       },
       "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": -9.56,
+        "target_symbol": "ESR1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -465,7 +467,7 @@
       "drug_name": "Leucovorin",
       "drug_id": "DB00650",
       "disease_name": "Ovarian cancer",
-      "combined_score": 0.5755,
+      "combined_score": 0.5802,
       "pillars_hit": 4,
       "transe_rank": 56,
       "transe_score": -10.2958,
@@ -484,15 +486,15 @@
       "admet_score": 1.0,
       "admet_flags": "clean",
       "primekg_score": 0.2646,
-      "dti_score": 0.7847,
-      "dti_best_target": "GPR31",
+      "dti_score": 0.8105,
+      "dti_best_target": "ETS1",
       "kg_group_score": 0.3723,
-      "structural_group_score": 0.7847,
+      "structural_group_score": 0.8105,
       "network_group_score": 0.7588000297546387,
       "txgnn_group_score": 0,
       "mr_group_score": 0.5963,
       "admet_multiplier": 1.0,
-      "efficacy_score": 0.5755,
+      "efficacy_score": 0.5802,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 4,
@@ -640,55 +642,55 @@
       "mechanistic_hypothesis": "Leucovorin \u2014[is a therapeutic for]\u2192 Ovarian cancer",
       "kg_paths_text": "\u2022 Leucovorin \u2014[is a therapeutic for]\u2192 Ovarian cancer\n\u2022 Leucovorin \u2014[binds]\u2192 gene-7298 \u2014[is linked to]\u2192 Ovarian cancer\n\u2022 Leucovorin \u2014[binds]\u2192 gene-7298 \u2014[is linked to]\u2192 Ovarian cancer",
       "validation_experiments": [],
-      "novelty_score": 0.38,
+      "novelty_score": 0.383,
       "novelty_level": "KNOWN",
       "is_known_treatment": true,
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT06607185",
-          "title": "A Study of the Pan-KRAS Inhibitor LY4066434 in Participants With KRAS Mutant Solid Tumors",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "phase": "PHASE1",
-          "enrollment": "750",
-          "url": "https://clinicaltrials.gov/study/NCT06607185"
-        },
-        {
-          "nct_id": "NCT05665023",
-          "title": "Bevacizumab Plus Modiifed FOLFIRINOX in Ovarian, Fallopian Tube, or Primary Peritoneal Mucinous Carcinoma",
-          "status": "UNKNOWN",
-          "phase": "PHASE2",
-          "enrollment": "37",
-          "url": "https://clinicaltrials.gov/study/NCT05665023"
-        },
-        {
-          "nct_id": "NCT00959647",
-          "title": "A Study of Vismodegib (GDC-0449) in Patients Treated With Vismodegib in a Previous Genentech-sponsored Phase I or II Cancer Study",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "19",
-          "url": "https://clinicaltrials.gov/study/NCT00959647"
-        },
-        {
-          "nct_id": "NCT04847063",
-          "title": "Individual Response to Hyperthermic Intraperitoneal Chemotherapy (HIPEC) Treatment of Peritoneal Carcinomatosis From Peritoneal Mesothelioma or Atypical Mesothelial Proliferation or From Ovarian, Colorectal, or Appendiceal Histologies",
+          "nct_id": "NCT05564377",
+          "title": "Targeted Therapy Directed by Genetic Testing in Treating Patients With Locally Advanced or Advanced Solid Tumors, The ComboMATCH Screening Trial",
           "status": "RECRUITING",
-          "phase": "PHASE1",
-          "enrollment": "60",
-          "url": "https://clinicaltrials.gov/study/NCT04847063"
+          "phase": "PHASE2",
+          "enrollment": "2900",
+          "url": "https://clinicaltrials.gov/study/NCT05564377"
         },
         {
-          "nct_id": "NCT00957905",
-          "title": "Alvocidib and Oxaliplatin With or Without Fluorouracil and Leucovorin Calcium in Treating Patients With Relapsed or Refractory Germ Cell Tumors",
+          "nct_id": "NCT00002489",
+          "title": "Combination Chemotherapy in Treating Children With Non-testicular Malignant Germ Cell Tumors",
           "status": "COMPLETED",
           "phase": "PHASE2",
-          "enrollment": "36",
-          "url": "https://clinicaltrials.gov/study/NCT00957905"
+          "enrollment": "",
+          "url": "https://clinicaltrials.gov/study/NCT00002489"
+        },
+        {
+          "nct_id": "NCT03197584",
+          "title": "QUILT-3.051: NANT Ovarian Cancer Vaccine: Combination Immunotherapy in Subjects With Epithelial Ovarian Cancer Who Have Progressed on or After Standard-of-care (SoC) Therapy",
+          "status": "WITHDRAWN",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT03197584"
+        },
+        {
+          "nct_id": "NCT02658214",
+          "title": "Durvalumab and Tremelimumab in Combination With First-Line Chemotherapy in Advanced Solid Tumors",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "32",
+          "url": "https://clinicaltrials.gov/study/NCT02658214"
+        },
+        {
+          "nct_id": "NCT02419495",
+          "title": "Phase IB Study to Evaluate the Safety of Selinexor (KPT-330) in Combination With Multiple Standard Chemotherapy or Immunotherapy Agents in Patients With Advanced Malignancies",
+          "status": "TERMINATED",
+          "phase": "PHASE1",
+          "enrollment": "221",
+          "url": "https://clinicaltrials.gov/study/NCT02419495"
         }
       ],
       "trial_phases": {
-        "PHASE1": 6,
-        "PHASE2": 5
+        "PHASE2": 4,
+        "PHASE1": 7
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -698,8 +700,10 @@
         "Moderate FAERS signal: 7 adverse event reports mention drug-disease co-occurrence",
         "Supporting paper with 54 citations",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.60)"
+        "Moderate genetic evidence supporting causality (MR score: 0.60)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D010051",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -822,10 +826,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.552,
+        "triangulation_score": 0.554,
         "label": "silver-standard",
         "axis_values": {
-          "kg": 0.576,
+          "kg": 0.58,
           "docking": 0.64,
           "pharos": 0.0,
           "literature": 0.793
@@ -842,15 +846,7 @@
         "tissue_specificity": 0.382,
         "context_modifier": 0.982
       },
-      "disease_entity": "Disease::MESH:D010051",
-      "docking": {
-        "kcal_per_mol": -7.68,
-        "target_symbol": "DHFR",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.9433,
+      "ensemble_prob": 0.8568,
       "ensemble_features": {
         "kg_score": 0.9958,
         "degree_penalty": 0.8813,
@@ -860,6 +856,13 @@
         "transe_rank_log": 3.8067
       },
       "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": -7.68,
+        "target_symbol": "DHFR",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
@@ -875,7 +878,7 @@
       "drug_name": "(2R)-2-(7-carbamoyl-1H-benzimidazol-2-yl)-2-methylpyrrolidinium",
       "drug_id": "DB07232",
       "disease_name": "Ovarian cancer",
-      "combined_score": 0.5681,
+      "combined_score": 0.5764,
       "pillars_hit": 4,
       "transe_rank": 133,
       "transe_score": -10.6466,
@@ -894,15 +897,15 @@
       "admet_score": 1.0,
       "admet_flags": "clean",
       "primekg_score": 0.2715,
-      "dti_score": 0.7212,
-      "dti_best_target": "JAG1",
+      "dti_score": 0.7674,
+      "dti_best_target": "ETS1",
       "kg_group_score": 0.1164,
-      "structural_group_score": 0.7212,
+      "structural_group_score": 0.7674,
       "network_group_score": 0.8999999761581421,
       "txgnn_group_score": 0,
       "mr_group_score": 0.861,
       "admet_multiplier": 1.0,
-      "efficacy_score": 0.5681,
+      "efficacy_score": 0.5764,
       "groups_hit": 4,
       "direct_relations": [],
       "shared_target_count": 5,
@@ -981,7 +984,7 @@
       "mechanistic_hypothesis": "(2R)-2-(7-carbamoyl-1H-benzimidazol-2-yl)-2-methylpyrrolidinium \u2014[is a therapeutic for]\u2192 MESH:D015179 \u2014[upregulates]\u2192 gene-10195 \u2014[is downregulated by]\u2192 Ovarian cancer",
       "kg_paths_text": "\u2022 (2R)-2-(7-carbamoyl-1H-benzimidazol-2-yl)-2-methylpyrrolidinium \u2014[is a therapeutic for]\u2192 MESH:D015179 \u2014[upregulates]\u2192 gene-10195 \u2014[is downregulated by]\u2192 Ovarian cancer\n\u2022 (2R)-2-(7-carbamoyl-1H-benzimidazol-2-yl)-2-methylpyrrolidinium \u2014[is a therapeutic for]\u2192 MESH:D015179 \u2014[upregulates]\u2192 gene-4053 \u2014[is downregulated by]\u2192 Ovarian cancer\n\u2022 (2R)-2-(7-carbamoyl-1H-benzimidazol-2-yl)-2-methylpyrrolidinium \u2014[is a therapeutic for]\u2192 MESH:D015179 \u2014[upregulates]\u2192 gene-92140 \u2014[is downregulated by]\u2192 Ovarian cancer",
       "validation_experiments": [],
-      "novelty_score": 0.614,
+      "novelty_score": 0.623,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
@@ -994,6 +997,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.86, 5 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D010051",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -1044,10 +1048,10 @@
           "pharos": false,
           "literature": false
         },
-        "triangulation_score": 0.482,
+        "triangulation_score": 0.484,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.568,
+          "kg": 0.576,
           "docking": 0.943,
           "pharos": 0.0,
           "literature": 0.0
@@ -1064,15 +1068,7 @@
         "tissue_specificity": 0.595,
         "context_modifier": 1.045
       },
-      "disease_entity": "Disease::MESH:D010051",
-      "docking": {
-        "kcal_per_mol": -11.31,
-        "target_symbol": "PARP1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.1021,
+      "ensemble_prob": 0.0746,
       "ensemble_features": {
         "kg_score": 0.9243,
         "degree_penalty": 1.0,
@@ -1082,6 +1078,359 @@
         "transe_rank_log": 6.6846
       },
       "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": -11.31,
+        "target_symbol": "PARP1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "MGI-114",
+      "drug_id": "DB05786",
+      "disease_name": "Ovarian cancer",
+      "combined_score": 0.565,
+      "pillars_hit": 4,
+      "transe_rank": 19,
+      "transe_score": -10.0255,
+      "pykeen_score": -12.1678,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 1.0,
+      "proximity_distance": 0.0,
+      "admet_score": 0.6436,
+      "admet_flags": "clean",
+      "primekg_score": 0.251,
+      "dti_score": 0.4792,
+      "dti_best_target": "DDR1",
+      "kg_group_score": 0.3337,
+      "structural_group_score": 0.4792,
+      "network_group_score": 1.0,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.9247,
+      "admet_multiplier": 0.9287,
+      "efficacy_score": 0.6084,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 2,
+      "shared_targets": [
+        "ATM",
+        "FUBP1"
+      ],
+      "pubmed_total": 6,
+      "pubmed_treatment_total": 6,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "11524550",
+          "title": "Ovarian cancer.",
+          "authors": "Seiden MV",
+          "journal": "The oncologist",
+          "year": "2001",
+          "abstract_snippet": "Ovarian cancer remains the most lethal gynecologic malignancy in women in the United States. Studies from this year's American Society of Clinical Oncology more clearly defined the role of chemotherapy in women with early stage disease and now suggest that essentially all women with invasive disease...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11524550/",
+          "total_results": 6
+        },
+        {
+          "pmid": "15361190",
+          "title": "Antitumor activity of irofulven against human ovarian cancer cell lines, human tumor colony-forming units, and xenografts.",
+          "authors": "van Laar ES, Izbicka E, Weitman S, et al.",
+          "journal": "International journal of gynecological cancer : official journal of the International Gynecological Cancer Society",
+          "year": "2004",
+          "abstract_snippet": "The objective of this study was to investigate the cytotoxic activity of irofulven (HMAF, MGI 114), a unique chemotherapeutic agent currently under clinical investigation, in various preclinical models of ovarian cancer. Antiproliferative effects of irofulven in ovarian cancer cell lines and ovarian...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15361190/"
+        },
+        {
+          "pmid": "16260029",
+          "title": "A phase II study of irofulven in women with recurrent and heavily pretreated ovarian cancer.",
+          "authors": "Seiden MV, Gordon AN, Bodurka DC, et al.",
+          "journal": "Gynecologic oncology",
+          "year": "2006",
+          "abstract_snippet": "OBJECTIVE: To determine the safety and efficacy of a novel illudin S derivative, irofulven (MGI-114), in patients with recurrent ovarian cancer who had received extensive prior chemotherapy. METHODS: The trial was an open label phase II study. Patients initially enrolled in this study were treated e...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16260029/"
+        },
+        {
+          "pmid": "17229870",
+          "title": "BRCA1 contributes to cell cycle arrest and chemoresistance in response to the anticancer agent irofulven.",
+          "authors": "Wiltshire T, Senft J, Wang Y, et al.",
+          "journal": "Molecular pharmacology",
+          "year": "2007",
+          "abstract_snippet": "Tumor suppressor gene BRCA1 is frequently mutated in familial breast and ovarian cancer. BRCA1 plays pivotal roles in maintaining genomic stability by interacting with numerous proteins in cell cycle control and DNA repair. Irofulven (6-hydroxymethylacylfulvene, HMAF, MGI 114, NSC 683863) is one of ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17229870/"
+        },
+        {
+          "pmid": "14532976",
+          "title": "Enhanced antitumor activity of irofulven in combination with 5-fluorouracil and cisplatin in human colon and ovarian carcinoma cells.",
+          "authors": "Poindessous V, Koeppel F, Raymond E, et al.",
+          "journal": "International journal of oncology",
+          "year": "2003",
+          "abstract_snippet": "Irofulven (6-hydroxymethylacylfulvene, MGI-114, NSC 683863) is a semisynthetic derivative of illudin S, a natural product obtained from the Omphalotus mushroom. Irofulven has demonstrated potent activity against a broad range of solid tumors in both cellular and xenograft models and has shown promis...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/14532976/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "A phase II study of irofulven in women with recurrent and heavily pretreated ovarian cancer.",
+          "year": 2006,
+          "citations": 31,
+          "url": "https://www.semanticscholar.org/paper/5ccf90137906e0f5680b4354ae2d6d82ad91552d",
+          "authors": "M. Seiden, A. Gordon, D. Bodurka"
+        },
+        {
+          "title": "Antitumor activity of irofulven against human ovarian cancer cell lines, human tumor colony\u2010forming units, and xenografts",
+          "year": 2004,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/76c319e47d9afaa0f8772e502714ba148c0fa00a",
+          "authors": "E. V. Laar, Elzbieta Izbicka, Steven D. Weitman"
+        },
+        {
+          "title": "Ovarian cancer.",
+          "year": 2001,
+          "citations": 2,
+          "url": "https://www.semanticscholar.org/paper/8578330a9adbf467f1f6a15baf729e1b8e3135de",
+          "authors": "M. Seiden"
+        },
+        {
+          "title": "Antitumor activity of irofulven against human ovarian cancer cell lines, human tumor colony-forming units, and xenografts",
+          "year": 2003,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/4ce1351f0473efb0c51e9b20c5f860f9c9284562",
+          "authors": "E. V. Van Laar, E. Izbicka, S. Weitman"
+        },
+        {
+          "title": "ATM-dependent CHK2 Activation Induced by Anticancer Agent, Irofulven*",
+          "year": 2004,
+          "citations": 40,
+          "url": "https://www.semanticscholar.org/paper/b459efc209b03464146ad3d1d6fcc0f31ac5efdc",
+          "authors": "Jian Wang, T. Wiltshire, Yutian Wang"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "ATM-dependent CHK2 Activation Induced by Anticancer Agent, Irofulven*",
+        "year": 2004,
+        "citations": 40,
+        "url": "https://www.semanticscholar.org/paper/b459efc209b03464146ad3d1d6fcc0f31ac5efdc",
+        "authors": "Jian Wang, T. Wiltshire, Yutian Wang"
+      },
+      "max_citations": 40,
+      "faers_signal": "none",
+      "faers_total_reports": 0,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found for MGI-114",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "HY-11005 (1.555)",
+        "CYT997 (1.490)",
+        "BRL 37344, sodium salt (1.482)",
+        "CGP 57380 (1.479)",
+        "S1297 (1.466)"
+      ],
+      "signature_interpretation": "MGI-114 was not found among the top 40 drugs that reverse the Ovarian cancer gene signature. Top reversers: HY-11005 (1.555), CYT997 (1.490), BRL 37344, sodium salt (1.482)",
+      "ai_hypothesis": "of its ability to inhibit the growth of cancer cells.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 1,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "ill",
+              "entity_group": "Medication",
+              "score": 1.0
+            },
+            {
+              "entity": "##udin s",
+              "entity_group": "Medication",
+              "score": 0.9110000133514404
+            },
+            {
+              "entity": "ir",
+              "entity_group": "Medication",
+              "score": 1.0
+            },
+            {
+              "entity": "##ulven",
+              "entity_group": "Medication",
+              "score": 0.9139999747276306
+            },
+            {
+              "entity": "rec",
+              "entity_group": "Detailed_description",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "o",
+              "entity_group": "Biological_structure",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "##varian",
+              "entity_group": "Biological_structure",
+              "score": 0.9480000138282776
+            }
+          ]
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.9247,
+      "mr_genetic_targets": 2,
+      "mechanistic_hypothesis": "MGI-114 \u2014[is a therapeutic for]\u2192 Ovarian cancer",
+      "kg_paths_text": "\u2022 MGI-114 \u2014[is a therapeutic for]\u2192 Ovarian cancer\n\u2022 MGI-114 \u2014[is a therapeutic for]\u2192 MESH:D002292 \u2014[is linked to]\u2192 gene-92140 \u2014[is downregulated by]\u2192 Ovarian cancer\n\u2022 MGI-114 \u2014[is a therapeutic for]\u2192 MESH:D002292 \u2014[is linked to]\u2192 gene-92140 \u2014[is downregulated by]\u2192 Ovarian cancer",
+      "validation_experiments": [],
+      "novelty_score": 0.542,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": true,
+      "clinical_trials_total": 2,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT00019552",
+          "title": "Irofulven in Treating Patients With Recurrent or Persistent Ovarian, Fallopian Tube, or Peritoneal Cancer",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "",
+          "url": "https://clinicaltrials.gov/study/NCT00019552"
+        },
+        {
+          "nct_id": "NCT00053365",
+          "title": "Irofulven in Treating Patients With Recurrent or Persistent Ovarian Epithelial or Primary Peritoneal Cancer",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "61",
+          "url": "https://clinicaltrials.gov/study/NCT00053365"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 2
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "2 clinical trial(s) found on ClinicalTrials.gov",
+        "6 PubMed article(s) - limited literature",
+        "Supported by 4 independent AI pillars",
+        "Supporting paper with 40 citations",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.92, 2 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D010051",
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "late-trial",
+        "confidence": "medium",
+        "rationale": "Phase-3 investigational \u2014 dose range established in Phase-2 pharmacokinetic studies; efficacy trials ongoing or recently completed.",
+        "chembl_phase": 3.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 4,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00012",
+            "drug_name": "Darbepoetin alfa",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB00016",
+            "drug_name": "Epoetin alfa",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB09107",
+            "drug_name": "Methoxy PEG-epoetin beta",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB08894",
+            "drug_name": "Peginesatide",
+            "severity": "moderate"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.271,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.565,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.367
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Ovary"
+        ],
+        "n_genes": 2,
+        "n_expressed": 2,
+        "mean_tpm_in_tissue": 56.09,
+        "max_tpm_in_tissue": 93.91,
+        "tissue_specificity": 0.92,
+        "context_modifier": 1.118
+      },
+      "ensemble_prob": 0.2116,
+      "ensemble_features": {
+        "kg_score": 0.965,
+        "degree_penalty": 1.0,
+        "n_drug_targets": 1,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 5.9135
+      },
+      "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1113,7 +1462,7 @@
       "admet_flags": "DILI=0.97",
       "primekg_score": 0.2608,
       "dti_score": 1.0,
-      "dti_best_target": "G0S2",
+      "dti_best_target": "URGCP",
       "kg_group_score": 0.2276,
       "structural_group_score": 1.0,
       "network_group_score": 0.7475000023841858,
@@ -1316,28 +1665,36 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT01113957",
-          "title": "A Trial of ABT-888 in Combination With Temozolomide Versus Pegylated Liposomal Doxorubicin Alone in Ovarian Cancer",
+          "nct_id": "NCT02836028",
+          "title": "A Study Evaluating Talazoparib in Relapsed Ovarian, Fallopian Tube, and Peritoneal Cancer",
+          "status": "WITHDRAWN",
+          "phase": "PHASE2",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT02836028"
+        },
+        {
+          "nct_id": "NCT06617923",
+          "title": "Study of Senaparib in Combination With Temozolomide in ARID1A Mutation Associated Ovarian Cancer",
+          "status": "RECRUITING",
+          "phase": "PHASE2",
+          "enrollment": "18",
+          "url": "https://clinicaltrials.gov/study/NCT06617923"
+        },
+        {
+          "nct_id": "NCT00006043",
+          "title": "Temozolomide in Treating Patients With Metastatic Germ Cell Tumors That Have Not Responded to Cisplatin",
           "status": "COMPLETED",
           "phase": "PHASE2",
-          "enrollment": "168",
-          "url": "https://clinicaltrials.gov/study/NCT01113957"
+          "enrollment": "",
+          "url": "https://clinicaltrials.gov/study/NCT00006043"
         },
         {
-          "nct_id": "NCT04430842",
-          "title": "Dose Escalation Study to Assess the Safety, Tolerability, Pharmacokinetics, and Pharmacodynamics of QBS10072S",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "15",
-          "url": "https://clinicaltrials.gov/study/NCT04430842"
-        },
-        {
-          "nct_id": "NCT00005952",
-          "title": "Temozolomide Plus Peripheral Stem Cell Transplantation in Treating Children With Newly Diagnosed Malignant Glioma or Recurrent CNS or Other Solid Tumors",
+          "nct_id": "NCT01618136",
+          "title": "An Open-Label, Multicenter, Phase 1/2 Study of Poly(ADP-Ribose) Polymerase (PARP) Inhibitor E7449 as Single Agent in Subjects With Advanced Solid Tumors or With B-cell Malignancies and in Combination With Temozolomide (TMZ) or With Carboplatin and Paclitaxel in Subjects With Advanced Solid Tumors",
           "status": "COMPLETED",
           "phase": "PHASE1, PHASE2",
-          "enrollment": "30",
-          "url": "https://clinicaltrials.gov/study/NCT00005952"
+          "enrollment": "41",
+          "url": "https://clinicaltrials.gov/study/NCT01618136"
         },
         {
           "nct_id": "NCT05417594",
@@ -1346,19 +1703,11 @@
           "phase": "PHASE1, PHASE2",
           "enrollment": "695",
           "url": "https://clinicaltrials.gov/study/NCT05417594"
-        },
-        {
-          "nct_id": "NCT04851834",
-          "title": "NTX-301 Monotherapy in Advanced Solid Tumours and in Combination With Platinum-based Chemotherapy in Advanced Ovarian & Bladder Cancer and in Combination With Temozolomide in High-grade Glioma",
-          "status": "TERMINATED",
-          "phase": "PHASE1, PHASE2",
-          "enrollment": "12",
-          "url": "https://clinicaltrials.gov/study/NCT04851834"
         }
       ],
       "trial_phases": {
-        "PHASE2": 6,
-        "PHASE1": 7
+        "PHASE2": 7,
+        "PHASE1": 6
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -1371,6 +1720,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.84, 9 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D010051",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1486,15 +1836,7 @@
         "tissue_specificity": 0.547,
         "context_modifier": 1.054
       },
-      "disease_entity": "Disease::MESH:D010051",
-      "docking": {
-        "kcal_per_mol": -5.87,
-        "target_symbol": "CA9",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.8762,
+      "ensemble_prob": 0.8447,
       "ensemble_features": {
         "kg_score": 0.9983,
         "degree_penalty": 0.777,
@@ -1503,7 +1845,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.9444
       },
-      "ensemble_rank": 4,
+      "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": -5.87,
+        "target_symbol": "CA9",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1534,8 +1883,8 @@
       "admet_score": 1.0,
       "admet_flags": "DILI=0.99",
       "primekg_score": 0.2644,
-      "dti_score": 0.1773,
-      "dti_best_target": "G0S2",
+      "dti_score": 0.3048,
+      "dti_best_target": "DDR1",
       "kg_group_score": 0.1759,
       "structural_group_score": 0.9476,
       "network_group_score": 0.6430000066757202,
@@ -1702,49 +2051,51 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT05887609",
-          "title": "An Evaluation of Maintenance Therapy Combination Mirvetuximab Soravtansine and Olaparib",
-          "status": "RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "53",
-          "url": "https://clinicaltrials.gov/study/NCT05887609"
-        },
-        {
-          "nct_id": "NCT00019136",
-          "title": "Gene Therapy and Biological Therapy in Treating Patients With Ovarian Epithelial Cancer",
-          "status": "COMPLETED",
+          "nct_id": "NCT05215496",
+          "title": "[18F]Fluoro-PEG-folate PET/CT Imaging in Epithelial Ovarian Cancer",
+          "status": "TERMINATED",
           "phase": "PHASE1",
-          "enrollment": "",
-          "url": "https://clinicaltrials.gov/study/NCT00019136"
+          "enrollment": "5",
+          "url": "https://clinicaltrials.gov/study/NCT05215496"
         },
         {
-          "nct_id": "NCT03242993",
-          "title": "[18F]-AZAFOL AS POSITRON EMISSION TOMOGRAPHY (PET) TRACER in FR Positive Cancer Imaging",
+          "nct_id": "NCT01360996",
+          "title": "Low Dose OC Therapy in Women With Polycystic Ovary Syndrome (PCOS): Impact of BMI on Hyperandrogenism",
           "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "15",
-          "url": "https://clinicaltrials.gov/study/NCT03242993"
+          "phase": "PHASE4",
+          "enrollment": "64",
+          "url": "https://clinicaltrials.gov/study/NCT01360996"
         },
         {
-          "nct_id": "NCT01188876",
-          "title": "Carboplatin/Pralatrexate in Recurrent Platinum-Sensitive Ovarian, Fallopian or Primary Peritoneal Cancer",
+          "nct_id": "NCT02651636",
+          "title": "Combined Therapy With Myo-inositol and Alpha-Lipoic Acid in PCOS Women",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "40",
+          "url": "https://clinicaltrials.gov/study/NCT02651636"
+        },
+        {
+          "nct_id": "NCT04024254",
+          "title": "A Study of Serum Folate Levels in Patients Treated With Olaparib",
+          "status": "COMPLETED",
+          "phase": "PHASE4",
+          "enrollment": "10",
+          "url": "https://clinicaltrials.gov/study/NCT04024254"
+        },
+        {
+          "nct_id": "NCT01580696",
+          "title": "Phase I/IIa Trial of Folate Binding Protein Vaccine in Ovarian Cancer",
           "status": "COMPLETED",
           "phase": "PHASE1, PHASE2",
-          "enrollment": "50",
-          "url": "https://clinicaltrials.gov/study/NCT01188876"
-        },
-        {
-          "nct_id": "NCT06607185",
-          "title": "A Study of the Pan-KRAS Inhibitor LY4066434 in Participants With KRAS Mutant Solid Tumors",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "phase": "PHASE1",
-          "enrollment": "750",
-          "url": "https://clinicaltrials.gov/study/NCT06607185"
+          "enrollment": "51",
+          "url": "https://clinicaltrials.gov/study/NCT01580696"
         }
       ],
       "trial_phases": {
-        "PHASE2": 5,
-        "PHASE1": 5,
+        "PHASE1": 4,
+        "PHASE4": 2,
+        "NA": 3,
+        "PHASE2": 1,
         "PHASE3": 1
       },
       "confidence": "HIGH",
@@ -1757,6 +2108,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.80, 4 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D010051",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1893,15 +2245,7 @@
         "tissue_specificity": 0.553,
         "context_modifier": 1.031
       },
-      "disease_entity": "Disease::MESH:D010051",
-      "docking": {
-        "kcal_per_mol": -5.16,
-        "target_symbol": "TYMS",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.3383,
+      "ensemble_prob": 0.279,
       "ensemble_features": {
         "kg_score": 0.9861,
         "degree_penalty": 0.7918,
@@ -1910,7 +2254,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 4.9972
       },
-      "ensemble_rank": 7,
+      "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": -5.16,
+        "target_symbol": "TYMS",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -1942,7 +2293,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2667,
       "dti_score": 1.0,
-      "dti_best_target": "G0S2",
+      "dti_best_target": "URGCP",
       "kg_group_score": 0.1924,
       "structural_group_score": 1.0,
       "network_group_score": 0.6901999711990356,
@@ -2129,6 +2480,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.80, 3 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D010051",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2209,15 +2561,7 @@
         "tissue_specificity": 0.685,
         "context_modifier": 1.098
       },
-      "disease_entity": "Disease::MESH:D010051",
-      "docking": {
-        "kcal_per_mol": -4.24,
-        "target_symbol": "SLC15A1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.1272,
+      "ensemble_prob": 0.3202,
       "ensemble_features": {
         "kg_score": 0.9739,
         "degree_penalty": 0.9058,
@@ -2226,352 +2570,14 @@
         "n_disease_genes": 0,
         "transe_rank_log": 5.6204
       },
-      "ensemble_rank": 9,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
-      }
-    },
-    {
-      "drug_name": "MGI-114",
-      "drug_id": "DB05786",
-      "disease_name": "Ovarian cancer",
-      "combined_score": 0.5508,
-      "pillars_hit": 4,
-      "transe_rank": 19,
-      "transe_score": -10.0255,
-      "pykeen_score": -12.1678,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0,
-      "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 1.0,
-      "proximity_distance": 0.0,
-      "admet_score": 0.6436,
-      "admet_flags": "clean",
-      "primekg_score": 0.251,
-      "dti_score": 0.3942,
-      "dti_best_target": "JAG1",
-      "kg_group_score": 0.3337,
-      "structural_group_score": 0.3942,
-      "network_group_score": 1.0,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.9247,
-      "admet_multiplier": 0.9287,
-      "efficacy_score": 0.5931,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 2,
-      "shared_targets": [
-        "ATM",
-        "FUBP1"
-      ],
-      "pubmed_total": 6,
-      "pubmed_treatment_total": 6,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "11524550",
-          "title": "Ovarian cancer.",
-          "authors": "Seiden MV",
-          "journal": "The oncologist",
-          "year": "2001",
-          "abstract_snippet": "Ovarian cancer remains the most lethal gynecologic malignancy in women in the United States. Studies from this year's American Society of Clinical Oncology more clearly defined the role of chemotherapy in women with early stage disease and now suggest that essentially all women with invasive disease...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/11524550/",
-          "total_results": 6
-        },
-        {
-          "pmid": "15361190",
-          "title": "Antitumor activity of irofulven against human ovarian cancer cell lines, human tumor colony-forming units, and xenografts.",
-          "authors": "van Laar ES, Izbicka E, Weitman S, et al.",
-          "journal": "International journal of gynecological cancer : official journal of the International Gynecological Cancer Society",
-          "year": "2004",
-          "abstract_snippet": "The objective of this study was to investigate the cytotoxic activity of irofulven (HMAF, MGI 114), a unique chemotherapeutic agent currently under clinical investigation, in various preclinical models of ovarian cancer. Antiproliferative effects of irofulven in ovarian cancer cell lines and ovarian...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/15361190/"
-        },
-        {
-          "pmid": "16260029",
-          "title": "A phase II study of irofulven in women with recurrent and heavily pretreated ovarian cancer.",
-          "authors": "Seiden MV, Gordon AN, Bodurka DC, et al.",
-          "journal": "Gynecologic oncology",
-          "year": "2006",
-          "abstract_snippet": "OBJECTIVE: To determine the safety and efficacy of a novel illudin S derivative, irofulven (MGI-114), in patients with recurrent ovarian cancer who had received extensive prior chemotherapy. METHODS: The trial was an open label phase II study. Patients initially enrolled in this study were treated e...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/16260029/"
-        },
-        {
-          "pmid": "17229870",
-          "title": "BRCA1 contributes to cell cycle arrest and chemoresistance in response to the anticancer agent irofulven.",
-          "authors": "Wiltshire T, Senft J, Wang Y, et al.",
-          "journal": "Molecular pharmacology",
-          "year": "2007",
-          "abstract_snippet": "Tumor suppressor gene BRCA1 is frequently mutated in familial breast and ovarian cancer. BRCA1 plays pivotal roles in maintaining genomic stability by interacting with numerous proteins in cell cycle control and DNA repair. Irofulven (6-hydroxymethylacylfulvene, HMAF, MGI 114, NSC 683863) is one of ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/17229870/"
-        },
-        {
-          "pmid": "14532976",
-          "title": "Enhanced antitumor activity of irofulven in combination with 5-fluorouracil and cisplatin in human colon and ovarian carcinoma cells.",
-          "authors": "Poindessous V, Koeppel F, Raymond E, et al.",
-          "journal": "International journal of oncology",
-          "year": "2003",
-          "abstract_snippet": "Irofulven (6-hydroxymethylacylfulvene, MGI-114, NSC 683863) is a semisynthetic derivative of illudin S, a natural product obtained from the Omphalotus mushroom. Irofulven has demonstrated potent activity against a broad range of solid tumors in both cellular and xenograft models and has shown promis...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/14532976/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "A phase II study of irofulven in women with recurrent and heavily pretreated ovarian cancer.",
-          "year": 2006,
-          "citations": 31,
-          "url": "https://www.semanticscholar.org/paper/5ccf90137906e0f5680b4354ae2d6d82ad91552d",
-          "authors": "M. Seiden, A. Gordon, D. Bodurka"
-        },
-        {
-          "title": "Antitumor activity of irofulven against human ovarian cancer cell lines, human tumor colony\u2010forming units, and xenografts",
-          "year": 2004,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/76c319e47d9afaa0f8772e502714ba148c0fa00a",
-          "authors": "E. V. Laar, Elzbieta Izbicka, Steven D. Weitman"
-        },
-        {
-          "title": "Ovarian cancer.",
-          "year": 2001,
-          "citations": 2,
-          "url": "https://www.semanticscholar.org/paper/8578330a9adbf467f1f6a15baf729e1b8e3135de",
-          "authors": "M. Seiden"
-        },
-        {
-          "title": "Antitumor activity of irofulven against human ovarian cancer cell lines, human tumor colony-forming units, and xenografts",
-          "year": 2003,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/4ce1351f0473efb0c51e9b20c5f860f9c9284562",
-          "authors": "E. V. Van Laar, E. Izbicka, S. Weitman"
-        },
-        {
-          "title": "ATM-dependent CHK2 Activation Induced by Anticancer Agent, Irofulven*",
-          "year": 2004,
-          "citations": 40,
-          "url": "https://www.semanticscholar.org/paper/b459efc209b03464146ad3d1d6fcc0f31ac5efdc",
-          "authors": "Jian Wang, T. Wiltshire, Yutian Wang"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "ATM-dependent CHK2 Activation Induced by Anticancer Agent, Irofulven*",
-        "year": 2004,
-        "citations": 40,
-        "url": "https://www.semanticscholar.org/paper/b459efc209b03464146ad3d1d6fcc0f31ac5efdc",
-        "authors": "Jian Wang, T. Wiltshire, Yutian Wang"
-      },
-      "max_citations": 40,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for MGI-114",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "HY-11005 (1.555)",
-        "CYT997 (1.490)",
-        "BRL 37344, sodium salt (1.482)",
-        "CGP 57380 (1.479)",
-        "S1297 (1.466)"
-      ],
-      "signature_interpretation": "MGI-114 was not found among the top 40 drugs that reverse the Ovarian cancer gene signature. Top reversers: HY-11005 (1.555), CYT997 (1.490), BRL 37344, sodium salt (1.482)",
-      "ai_hypothesis": "of its ability to inhibit the growth of cancer cells.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.3,
-          "positive_signals": 1,
-          "negative_signals": 0,
-          "mechanism_signals": 0,
-          "extracted_entities": [
-            {
-              "entity": "ill",
-              "entity_group": "Medication",
-              "score": 1.0
-            },
-            {
-              "entity": "##udin s",
-              "entity_group": "Medication",
-              "score": 0.9110000133514404
-            },
-            {
-              "entity": "ir",
-              "entity_group": "Medication",
-              "score": 1.0
-            },
-            {
-              "entity": "##ulven",
-              "entity_group": "Medication",
-              "score": 0.9139999747276306
-            },
-            {
-              "entity": "rec",
-              "entity_group": "Detailed_description",
-              "score": 0.9990000128746033
-            },
-            {
-              "entity": "o",
-              "entity_group": "Biological_structure",
-              "score": 0.9990000128746033
-            },
-            {
-              "entity": "##varian",
-              "entity_group": "Biological_structure",
-              "score": 0.9480000138282776
-            }
-          ]
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.9247,
-      "mr_genetic_targets": 2,
-      "mechanistic_hypothesis": "MGI-114 \u2014[is a therapeutic for]\u2192 Ovarian cancer",
-      "kg_paths_text": "\u2022 MGI-114 \u2014[is a therapeutic for]\u2192 Ovarian cancer\n\u2022 MGI-114 \u2014[is a therapeutic for]\u2192 MESH:D002292 \u2014[is linked to]\u2192 gene-92140 \u2014[is downregulated by]\u2192 Ovarian cancer\n\u2022 MGI-114 \u2014[is a therapeutic for]\u2192 MESH:D002292 \u2014[is linked to]\u2192 gene-92140 \u2014[is downregulated by]\u2192 Ovarian cancer",
-      "validation_experiments": [],
-      "novelty_score": 0.529,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": true,
-      "clinical_trials_total": 2,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT00053365",
-          "title": "Irofulven in Treating Patients With Recurrent or Persistent Ovarian Epithelial or Primary Peritoneal Cancer",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "61",
-          "url": "https://clinicaltrials.gov/study/NCT00053365"
-        },
-        {
-          "nct_id": "NCT00019552",
-          "title": "Irofulven in Treating Patients With Recurrent or Persistent Ovarian, Fallopian Tube, or Peritoneal Cancer",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "",
-          "url": "https://clinicaltrials.gov/study/NCT00019552"
-        }
-      ],
-      "trial_phases": {
-        "PHASE2": 2
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "2 clinical trial(s) found on ClinicalTrials.gov",
-        "6 PubMed article(s) - limited literature",
-        "Supported by 4 independent AI pillars",
-        "Supporting paper with 40 citations",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.92, 2 genetic targets)"
-      ],
-      "dose_plausibility": {
-        "plausibility": "likely",
-        "dose_range": "late-trial",
-        "confidence": "medium",
-        "rationale": "Phase-3 investigational \u2014 dose range established in Phase-2 pharmacokinetic studies; efficacy trials ongoing or recently completed.",
-        "chembl_phase": 3.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 4,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00012",
-            "drug_name": "Darbepoetin alfa",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB00016",
-            "drug_name": "Epoetin alfa",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB09107",
-            "drug_name": "Methoxy PEG-epoetin beta",
-            "severity": "moderate"
-          },
-          {
-            "drug_id": "DB08894",
-            "drug_name": "Peginesatide",
-            "severity": "moderate"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": false,
-        "highest_risk": "",
-        "summary": "",
-        "cpic": [],
-        "pharmgkb": []
-      },
-      "triangulation": {
-        "n_axes_agree": 1,
-        "axes": {
-          "kg": true,
-          "docking": false,
-          "pharos": false,
-          "literature": false
-        },
-        "triangulation_score": 0.266,
-        "label": "kg-only",
-        "axis_values": {
-          "kg": 0.551,
-          "docking": 0.0,
-          "pharos": 0.0,
-          "literature": 0.367
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Ovary"
-        ],
-        "n_genes": 2,
-        "n_expressed": 2,
-        "mean_tpm_in_tissue": 56.09,
-        "max_tpm_in_tissue": 93.91,
-        "tissue_specificity": 0.92,
-        "context_modifier": 1.118
-      },
-      "disease_entity": "Disease::MESH:D010051",
+      "ensemble_rank": 7,
       "docking": {
-        "kcal_per_mol": null,
-        "target_symbol": null,
-        "source": "not_wired",
-        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
-        "hit": false
+        "kcal_per_mol": -4.24,
+        "target_symbol": "SLC15A1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
       },
-      "ensemble_prob": 0.1601,
-      "ensemble_features": {
-        "kg_score": 0.965,
-        "degree_penalty": 1.0,
-        "n_drug_targets": 1,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 5.9135
-      },
-      "ensemble_rank": 8,
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2602,8 +2608,8 @@
       "admet_score": 0.7521,
       "admet_flags": "clean",
       "primekg_score": 0.2628,
-      "dti_score": 0.4741,
-      "dti_best_target": "G0S2",
+      "dti_score": 0.4736,
+      "dti_best_target": "SEC22B",
       "kg_group_score": 0.2868,
       "structural_group_score": 0.9524,
       "network_group_score": 0.5978999733924866,
@@ -2780,36 +2786,28 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT02611128",
-          "title": "Urinary DENND1A.V2 as a Predictor of Pubertal Hyperandrogenemia",
-          "status": "SUSPENDED",
-          "phase": "N/A",
-          "enrollment": "65",
-          "url": "https://clinicaltrials.gov/study/NCT02611128"
+          "nct_id": "NCT05246865",
+          "title": "Impact of 11-oxygenated Androgens on Metabolic Dysfunction of Women With Polycystic Ovary Syndrome",
+          "status": "UNKNOWN",
+          "phase": "NA",
+          "enrollment": "100",
+          "url": "https://clinicaltrials.gov/study/NCT05246865"
         },
         {
-          "nct_id": "NCT01376349",
-          "title": "Prasterone (Dehydroepiandrosterone) in Treating Postmenopausal Cancer Survivors With Vaginal Symptoms",
+          "nct_id": "NCT04493788",
+          "title": "Molecular Basis of PCOS in Oocytes and Surrounding Cells",
+          "status": "UNKNOWN",
+          "phase": "N/A",
+          "enrollment": "30",
+          "url": "https://clinicaltrials.gov/study/NCT04493788"
+        },
+        {
+          "nct_id": "NCT04942366",
+          "title": "High-Intensity Interval Training On Women With Polycystic Ovary Syndrome.",
           "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "464",
-          "url": "https://clinicaltrials.gov/study/NCT01376349"
-        },
-        {
-          "nct_id": "NCT04327934",
-          "title": "Mechanisms of Hypertension in Women With Polycystic Ovary Syndrome",
-          "status": "TERMINATED",
-          "phase": "EARLY_PHASE1",
-          "enrollment": "28",
-          "url": "https://clinicaltrials.gov/study/NCT04327934"
-        },
-        {
-          "nct_id": "NCT05555680",
-          "title": "Effect of Hyperandrogenism on IVF Outcomes in PCOS Patients",
-          "status": "TERMINATED",
-          "phase": "N/A",
-          "enrollment": "32",
-          "url": "https://clinicaltrials.gov/study/NCT05555680"
+          "phase": "NA",
+          "enrollment": "50",
+          "url": "https://clinicaltrials.gov/study/NCT04942366"
         },
         {
           "nct_id": "NCT07027332",
@@ -2818,18 +2816,22 @@
           "phase": "N/A",
           "enrollment": "36",
           "url": "https://clinicaltrials.gov/study/NCT07027332"
+        },
+        {
+          "nct_id": "NCT00365638",
+          "title": "Simvastatin Therapy in Women With Polycystic Ovary Syndrome.",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "",
+          "url": "https://clinicaltrials.gov/study/NCT00365638"
         }
       ],
       "trial_phases": {
-        "PHASE3": 1,
-        "EARLY_PHASE1": 1,
-        "PHASE2": 2,
-        "NA": 1
+        "NA": 4
       },
       "confidence": "HIGH",
       "confidence_reasons": [
         "10 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
         "158 PubMed articles on this drug-disease pair",
         "Supported by 4 independent AI pillars",
         "Moderate FAERS signal: 17 adverse event reports mention drug-disease co-occurrence",
@@ -2837,6 +2839,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.76, 8 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D010051",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2945,15 +2948,7 @@
         "tissue_specificity": 0.262,
         "context_modifier": 0.983
       },
-      "disease_entity": "Disease::MESH:D010051",
-      "docking": {
-        "kcal_per_mol": -11.61,
-        "target_symbol": "AR",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.8281,
+      "ensemble_prob": 0.6677,
       "ensemble_features": {
         "kg_score": 0.9974,
         "degree_penalty": 0.7473,
@@ -2963,6 +2958,13 @@
         "transe_rank_log": 3.3322
       },
       "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": -11.61,
+        "target_symbol": "AR",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [],
@@ -2971,14 +2973,14 @@
       }
     },
     {
-      "drug_name": "Topotecan",
-      "drug_id": "DB01030",
+      "drug_name": "Niraparib",
+      "drug_id": "DB11793",
       "disease_name": "Ovarian cancer",
-      "combined_score": 0.545,
+      "combined_score": 0.5483,
       "pillars_hit": 4,
-      "transe_rank": 87,
-      "transe_score": -10.4737,
-      "pykeen_score": -12.1942,
+      "transe_rank": 101,
+      "transe_score": -10.5417,
+      "pykeen_score": -12.342,
       "pykeen_rank": 0,
       "txgnn_score": 0,
       "txgnn_rank": 0,
@@ -2986,148 +2988,144 @@
       "similar_to": "",
       "mol_emb_similarity": 0,
       "mol_emb_similar_to": "",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.925000011920929,
-      "proximity_distance": 0.30000001192092896,
-      "admet_score": 0.9136,
-      "admet_flags": "AMES=0.87",
-      "primekg_score": 0.2645,
-      "dti_score": 0.7923,
-      "dti_best_target": "GPR31",
-      "kg_group_score": 0.2121,
-      "structural_group_score": 0.7923,
-      "network_group_score": 0.6983000040054321,
+      "gene_sig_score": 0.0553,
+      "gene_sig_rank": 15,
+      "proximity_score": 0.8330000042915344,
+      "proximity_distance": 0.6700000166893005,
+      "admet_score": 0.5733,
+      "admet_flags": "hERG=0.72",
+      "primekg_score": 0.2644,
+      "dti_score": 0.8125,
+      "dti_best_target": "DDR1",
+      "kg_group_score": 0.205,
+      "structural_group_score": 0.8125,
+      "network_group_score": 0.8330000042915344,
       "txgnn_group_score": 0,
-      "mr_group_score": 0.7953,
-      "admet_multiplier": 0.9827,
-      "efficacy_score": 0.5546,
+      "mr_group_score": 0.9023,
+      "admet_multiplier": 0.9147,
+      "efficacy_score": 0.5995,
       "groups_hit": 4,
       "direct_relations": [],
-      "shared_target_count": 88,
+      "shared_target_count": 5,
       "shared_targets": [
-        "ABCB1",
-        "ABCG2",
-        "ABL1",
-        "AKT1",
-        "ALDH5A1",
-        "AURKA",
-        "BAG3",
-        "BIRC2",
-        "BLM",
-        "BRCA1",
-        "CADM1",
-        "CCL2",
-        "CCNA1",
-        "CCNA2",
-        "CD46",
-        "CDC25A",
-        "CDH1",
-        "CDK1",
-        "CDKN1A",
-        "COL11A1"
+        "GSK3B",
+        "PARP1",
+        "PARP2",
+        "PARP3",
+        "TNKS"
       ],
-      "pubmed_total": 698,
-      "pubmed_treatment_total": 672,
-      "pubmed_repurposing_total": 0,
+      "pubmed_total": 551,
+      "pubmed_treatment_total": 528,
+      "pubmed_repurposing_total": 1,
       "key_papers": [
         {
-          "pmid": "24637997",
-          "title": "Bevacizumab combined with chemotherapy for platinum-resistant recurrent ovarian cancer: The AURELIA open-label randomized phase III trial.",
-          "authors": "Pujade-Lauraine E, Hilpert F, Weber B, et al.",
-          "journal": "Journal of clinical oncology : official journal of the American Society of Clinical Oncology",
-          "year": "2014",
-          "abstract_snippet": "PURPOSE: In platinum-resistant ovarian cancer (OC), single-agent chemotherapy is standard. Bevacizumab is active alone and in combination. AURELIA is the first randomized phase III trial to our knowledge combining bevacizumab with chemotherapy in platinum-resistant OC. PATIENTS AND METHODS: Eligible...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/24637997/",
-          "total_results": 698
+          "pmid": "39284381",
+          "title": "Niraparib first-line maintenance therapy in patients with newly diagnosed advanced ovarian cancer: final overall survival results from the PRIMA/ENGOT-OV26/GOG-3012 trial.",
+          "authors": "Monk BJ, Barretina-Ginesta MP, Pothuri B, et al.",
+          "journal": "Annals of oncology : official journal of the European Society for Medical Oncology",
+          "year": "2024",
+          "abstract_snippet": "BACKGROUND: The phase III PRIMA/ENGOT-OV26/GOG-3012 trial met its primary endpoint. Niraparib first-line maintenance significantly prolonged progression-free survival (PFS) among patients with newly diagnosed advanced ovarian cancer that responded to first-line platinum-based chemotherapy, regardles...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39284381/",
+          "total_results": 551
         },
         {
-          "pmid": "18425923",
-          "title": "Topotecan for ovarian cancer.",
-          "authors": "Lihua P, Chen XY, Wu TX",
-          "journal": "The Cochrane database of systematic reviews",
-          "year": "2008",
-          "abstract_snippet": "BACKGROUND: Chemotherapeutic agents such as topotecan can be used to treat ovarian cancer. The effects of using topotecan as a therapeutic agent have not been previously been systematically reviewed. OBJECTIVES: To systematically evaluate the effectiveness and safety of topotecan for the treatment o...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/18425923/"
+          "pmid": "38971151",
+          "title": "Neoadjuvant PARPi or chemotherapy in ovarian cancer informs targeting effector Treg cells for homologous-recombination-deficient tumors.",
+          "authors": "Luo Y, Xia Y, Liu D, et al.",
+          "journal": "Cell",
+          "year": "2024",
+          "abstract_snippet": "Homologous recombination deficiency (HRD) is prevalent in cancer, sensitizing tumor cells to poly (ADP-ribose) polymerase (PARP) inhibition. However, the impact of HRD and related therapies on the tumor microenvironment (TME) remains elusive. Our study generates single-cell gene expression and T\u00a0cel...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38971151/"
         },
         {
-          "pmid": "12057076",
-          "title": "Epithelial ovarian cancer.",
-          "authors": "Hensley ML",
-          "journal": "Current treatment options in oncology",
-          "year": "2002",
-          "abstract_snippet": "Epithelial ovarian cancer is the most lethal of all gynecologic malignancies. Most women have advanced stage disease. Access to appropriate initial surgical management by a gynecologic oncologist is important because treatment and survival are affected by appropriate surgical staging and debulking o...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/12057076/"
+          "pmid": "31562799",
+          "title": "Niraparib in Patients with Newly Diagnosed Advanced Ovarian Cancer.",
+          "authors": "Gonz\u00e1lez-Mart\u00edn A, Pothuri B, Vergote I, et al.",
+          "journal": "The New England journal of medicine",
+          "year": "2019",
+          "abstract_snippet": "BACKGROUND: Niraparib, an inhibitor of poly(adenosine diphosphate [ADP]-ribose) polymerase (PARP), has been associated with significantly increased progression-free survival among patients with recurrent ovarian cancer after platinum-based chemotherapy, regardless of the presence or absence of  METH...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31562799/"
         },
         {
-          "pmid": "9806112",
-          "title": "Topotecan. A review of its potential in advanced ovarian cancer.",
-          "authors": "Brogden RN, Wiseman LR",
-          "journal": "Drugs",
-          "year": "1998",
-          "abstract_snippet": "The topoisomerase I inhibitor topotecan has shown antitumour activity against a variety of tumour types in vitro and in vivo. Topotecan in combination with drugs that induce DNA damage generally results in synergistic killing of tumour cells in vitro. As the activity of topotecan is related to expos...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/9806112/"
+          "pmid": "40102876",
+          "title": "Lactate accumulation induces H4K12la to activate super-enhancer-driven RAD23A expression and promote niraparib resistance in ovarian cancer.",
+          "authors": "Lu B, Chen S, Guan X, et al.",
+          "journal": "Molecular cancer",
+          "year": "2025",
+          "abstract_snippet": "Ovarian cancer is a gynecological malignancy with the highest recurrence and mortality rates. Although niraparib can effectively affect its progression, the challenge of drug resistance remains. Herein, niraparib-resistant ovarian cancer cell lines were constructed to identify the abnormally activat...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40102876/"
         },
         {
-          "pmid": "26282651",
-          "title": "Bevacizumab Combined With Weekly Paclitaxel, Pegylated Liposomal Doxorubicin, or Topotecan in Platinum-Resistant Recurrent Ovarian Cancer: Analysis by Chemotherapy Cohort of the Randomized Phase III AURELIA Trial.",
-          "authors": "Poveda AM, Selle F, Hilpert F, et al.",
-          "journal": "Journal of clinical oncology : official journal of the American Society of Clinical Oncology",
-          "year": "2015",
-          "abstract_snippet": "",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/26282651/"
+          "pmid": "27717299",
+          "title": "Niraparib Maintenance Therapy in Platinum-Sensitive, Recurrent Ovarian Cancer.",
+          "authors": "Mirza MR, Monk BJ, Herrstedt J, et al.",
+          "journal": "The New England journal of medicine",
+          "year": "2016",
+          "abstract_snippet": "BACKGROUND: Niraparib is an oral poly(adenosine diphosphate [ADP]-ribose) polymerase (PARP) 1/2 inhibitor that has shown clinical activity in patients with ovarian cancer. We sought to evaluate the efficacy of niraparib versus placebo as maintenance treatment for patients with platinum-sensitive, re...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/27717299/"
         }
       ],
-      "repurposing_papers": [],
+      "repurposing_papers": [
+        {
+          "pmid": "36230543",
+          "title": "Targeting Homologous Recombination Deficiency in Ovarian Cancer with PARP Inhibitors: Synthetic Lethal Strategies That Impact Overall Survival.",
+          "authors": "Xie T, Dickson KA, Yee C, et al.",
+          "journal": "Cancers",
+          "year": "2022",
+          "abstract_snippet": "The advent of molecular targeted therapies has made a significant impact on survival of women with ovarian cancer who have defects in homologous recombination repair (HRR). High-grade serous ovarian cancer (HGSOC) is the most common histological subtype of ovarian cancer, with over 50% displaying de...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36230543/",
+          "total_results": 1
+        }
+      ],
       "semantic_scholar_papers": [
         {
-          "title": "Doxorubicin and topotecan resistance in ovarian cancer: Gene expression and microenvironment analysis in 2D and 3D models.",
+          "title": "Lactate accumulation induces H4K12la to activate super-enhancer-driven RAD23A expression and promote niraparib resistance in ovarian cancer",
           "year": 2025,
-          "citations": 11,
-          "url": "https://www.semanticscholar.org/paper/9c3c4eaff23ae3471792fb1d9e76b69d13e52771",
-          "authors": "M. \u015awierczewska, M. Nowacka, Piotr Stasiak"
+          "citations": 46,
+          "url": "https://www.semanticscholar.org/paper/cbc71feb4042b1be1eb55b8f5783dc80d51eaf99",
+          "authors": "Bing-feng Lu, Shuo Chen, Xue Guan"
         },
         {
-          "title": "Synergistic antitumor effect of liposomal-based formulations of olaparib and topotecan in primary epithelial ovarian cancer cells",
+          "title": "Niraparib Maintenance Therapy in Platinum-Sensitive, Recurrent Ovarian Cancer.",
+          "year": 2016,
+          "citations": 2073,
+          "url": "https://www.semanticscholar.org/paper/fca3e29f05d432bc0db0f1a240014589939ecb5c",
+          "authors": "M. Mirza, B. Monk, J. Herrstedt"
+        },
+        {
+          "title": "Niraparib in Patients with Newly Diagnosed Advanced Ovarian Cancer.",
+          "year": 2019,
+          "citations": 1680,
+          "url": "https://www.semanticscholar.org/paper/eb19aba158eba6b4ab54e76eeabe7c5ca0b09e52",
+          "authors": "A. Gonz\u00e1lez-Mart\u00edn, B. Pothuri, I. Vergote"
+        },
+        {
+          "title": "Dostarlimab and niraparib in primary advanced ovarian cancer.",
+          "year": 2025,
+          "citations": 12,
+          "url": "https://www.semanticscholar.org/paper/6b4cb03ce58ea48bfc5b527f85b56cc56f4143c8",
+          "authors": "A. Hardy-Bessard, E. Pujade-Lauraine, R. Moore"
+        },
+        {
+          "title": "Niraparib first-line maintenance therapy in patients with newly diagnosed advanced ovarian cancer: final overall survival results from PRIMA/ENGOT-OV26/GOG-3012 trial.",
           "year": 2024,
-          "citations": 7,
-          "url": "https://www.semanticscholar.org/paper/2874be48f3b95a511000779489a0b47882a8462a",
-          "authors": "Aleksandra Romaniuk-Drapa\u0142a, Paulina Skupin-Mrugalska, O. Garbuzenko"
-        },
-        {
-          "title": "Metronomic Chemotherapy Based on Topotecan or Topotecan and Cyclophosphamide Combination (CyTo) in Advanced, Pretreated Ovarian Cancer",
-          "year": 2023,
-          "citations": 15,
-          "url": "https://www.semanticscholar.org/paper/efe01e524b391b5ea565bcffe25da410a376add7",
-          "authors": "P. Wysocki, M. \u0141obacz, P. Potocki"
-        },
-        {
-          "title": "Pazopanib with Topotecan weekly for patients with platinum-resistant or intermediate-sensitive recurrent ovarian cancer: results of a multicentre, open label phase I/II study (TOPAZ)",
-          "year": 2023,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/c97875aaac22c4a3f91984b5ba8c14b974dbd569",
-          "authors": "R. Chekerov, Tjadina Arndt, K. Pietzner"
-        },
-        {
-          "title": "The TGFBI gene and protein expression in topotecan resistant ovarian cancer cell lines.",
-          "year": 2023,
-          "citations": 2,
-          "url": "https://www.semanticscholar.org/paper/8dd94a3c331afa712b6120fdc537f23f9b1a815a",
-          "authors": "K. Wojtowicz, M. \u015awierczewska, Micha\u0142 Nowicki"
+          "citations": 132,
+          "url": "https://www.semanticscholar.org/paper/fa59568c8d6a3747ec2e6e5f88b82a8c06c7eef0",
+          "authors": "B. Monk, M. Barretina-Ginesta, B. Pothuri"
         }
       ],
       "most_cited_paper": {
-        "title": "Current state and outlook for drug repositioning anticipated in the field of ovarian cancer",
-        "year": 2018,
-        "citations": 36,
-        "url": "https://www.semanticscholar.org/paper/7219938897a1b2a16238272904535fb930aebeae",
-        "authors": "Yusuke Kobayashi, K. Banno, Haruko Kunitomi"
+        "title": "Niraparib Maintenance Therapy in Platinum-Sensitive, Recurrent Ovarian Cancer.",
+        "year": 2016,
+        "citations": 2073,
+        "url": "https://www.semanticscholar.org/paper/fca3e29f05d432bc0db0f1a240014589939ecb5c",
+        "authors": "M. Mirza, B. Monk, J. Herrstedt"
       },
-      "max_citations": 36,
+      "max_citations": 2073,
       "faers_signal": "strong",
-      "faers_total_reports": 5510,
-      "faers_cooccurrences": 81,
-      "faers_interpretation": "81 FAERS reports mention both Topotecan and Ovarian cancer-related terms (1.5% of all Topotecan reports). This suggests real-world clinical association.",
+      "faers_total_reports": 6610,
+      "faers_cooccurrences": 142,
+      "faers_interpretation": "142 FAERS reports mention both Niraparib and Ovarian cancer-related terms (2.1% of all Niraparib reports). This suggests real-world clinical association.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -3137,8 +3135,477 @@
         "CGP 57380 (1.479)",
         "S1297 (1.466)"
       ],
-      "signature_interpretation": "Topotecan was not found among the top 40 drugs that reverse the Ovarian cancer gene signature. Top reversers: HY-11005 (1.555), CYT997 (1.490), BRL 37344, sodium salt (1.482)",
-      "ai_hypothesis": "of its ability to induce apoptosis and inhibit angiogenesis.",
+      "signature_interpretation": "Niraparib was not found among the top 40 drugs that reverse the Ovarian cancer gene signature. Top reversers: HY-11005 (1.555), CYT997 (1.490), BRL 37344, sodium salt (1.482)",
+      "ai_hypothesis": "of its ability to inhibit PARP-1.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 0,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "prima",
+              "entity_group": "Detailed_description",
+              "score": 0.8619999885559082
+            },
+            {
+              "entity": "ni",
+              "entity_group": "Medication",
+              "score": 1.0
+            },
+            {
+              "entity": "##ra",
+              "entity_group": "Medication",
+              "score": 0.9670000076293945
+            },
+            {
+              "entity": "##parib",
+              "entity_group": "Medication",
+              "score": 0.8980000019073486
+            },
+            {
+              "entity": "prolonged",
+              "entity_group": "Lab_value",
+              "score": 1.0
+            },
+            {
+              "entity": "- free survival",
+              "entity_group": "Lab_value",
+              "score": 0.9100000262260437
+            },
+            {
+              "entity": "p",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.906000018119812
+            },
+            {
+              "entity": "advanced",
+              "entity_group": "Severity",
+              "score": 0.9950000047683716
+            },
+            {
+              "entity": "o",
+              "entity_group": "Biological_structure",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "##varian",
+              "entity_group": "Biological_structure",
+              "score": 0.9129999876022339
+            }
+          ]
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 1,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "ni",
+              "entity_group": "Medication",
+              "score": 1.0
+            },
+            {
+              "entity": "##ra",
+              "entity_group": "Medication",
+              "score": 0.996999979019165
+            },
+            {
+              "entity": "##parib",
+              "entity_group": "Medication",
+              "score": 0.9929999709129333
+            },
+            {
+              "entity": "progression - free",
+              "entity_group": "Sign_symptom",
+              "score": 0.7609999775886536
+            },
+            {
+              "entity": "rec",
+              "entity_group": "Detailed_description",
+              "score": 0.9879999756813049
+            },
+            {
+              "entity": "##varian cancer",
+              "entity_group": "Disease_disorder",
+              "score": 0.8550000190734863
+            }
+          ]
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "Phase 3",
+      "failed_trial_count": 10,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.9023,
+      "mr_genetic_targets": 4,
+      "mechanistic_hypothesis": "Niraparib \u2014[is a therapeutic for]\u2192 Ovarian cancer",
+      "kg_paths_text": "\u2022 Niraparib \u2014[is a therapeutic for]\u2192 Ovarian cancer\n\u2022 Niraparib \u2014[is a therapeutic for]\u2192 MESH:D064420 \u2014[is treated by]\u2192 DB00488 \u2014[treats]\u2192 Ovarian cancer\n\u2022 Niraparib \u2014[is a therapeutic for]\u2192 MESH:D064420 \u2014[is treated by]\u2192 DB00488 \u2014[treats]\u2192 Ovarian cancer",
+      "validation_experiments": [],
+      "novelty_score": 0.099,
+      "novelty_level": "ESTABLISHED",
+      "is_known_treatment": true,
+      "clinical_trials_total": 10,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT06141265",
+          "title": "Niraparib Maintenance in HRD-Positive Advanced Ovarian Cancer Following Front-Line Chemotherapy + Bevacizumab",
+          "status": "RECRUITING",
+          "phase": "PHASE2",
+          "enrollment": "116",
+          "url": "https://clinicaltrials.gov/study/NCT06141265"
+        },
+        {
+          "nct_id": "NCT03944902",
+          "title": "CB-839 in Combination With Niraparib in Platinum Resistant BRCA -Wild-type Ovarian Cancer Patients",
+          "status": "TERMINATED",
+          "phase": "PHASE1",
+          "enrollment": "1",
+          "url": "https://clinicaltrials.gov/study/NCT03944902"
+        },
+        {
+          "nct_id": "NCT03891576",
+          "title": "Newton Study (NEW Dosing MainTenance Therapy Ovarian CaNcer)",
+          "status": "TERMINATED",
+          "phase": "PHASE2",
+          "enrollment": "83",
+          "url": "https://clinicaltrials.gov/study/NCT03891576"
+        },
+        {
+          "nct_id": "NCT06037213",
+          "title": "A Real-World Patient-Reported Outcomes Study in Patients With Long-Term Use of Niraparib",
+          "status": "UNKNOWN",
+          "phase": "N/A",
+          "enrollment": "500",
+          "url": "https://clinicaltrials.gov/study/NCT06037213"
+        },
+        {
+          "nct_id": "NCT03895788",
+          "title": "A Study of Niraparib in Combination With Brivanib in Recurrent Ovarian Cancer",
+          "status": "UNKNOWN",
+          "phase": "PHASE1",
+          "enrollment": "24",
+          "url": "https://clinicaltrials.gov/study/NCT03895788"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 5,
+        "PHASE1": 3
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "10 clinical trial(s) found on ClinicalTrials.gov",
+        "551 PubMed articles on this drug-disease pair",
+        "1 article(s) specifically mention repurposing/repositioning",
+        "Supported by 4 independent AI pillars",
+        "Strong FAERS signal: 142 adverse event reports link drug to disease (6610 total reports)",
+        "Highly cited paper (2073 citations): \"Niraparib Maintenance Therapy in Platinum-Sensitive, Recurre...\"",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.90, 4 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D010051",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 4,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00012",
+            "drug_name": "Darbepoetin alfa",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB00016",
+            "drug_name": "Epoetin alfa",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB09107",
+            "drug_name": "Methoxy PEG-epoetin beta",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB08894",
+            "drug_name": "Peginesatide",
+            "severity": "moderate"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.665,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.548,
+          "docking": 0.912,
+          "pharos": 0.0,
+          "literature": 1.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Ovary"
+        ],
+        "n_genes": 5,
+        "n_expressed": 5,
+        "mean_tpm_in_tissue": 25.74,
+        "max_tpm_in_tissue": 43.36,
+        "tissue_specificity": 0.586,
+        "context_modifier": 1.049
+      },
+      "ensemble_prob": 0.8406,
+      "ensemble_features": {
+        "kg_score": 0.9868,
+        "degree_penalty": 1.0,
+        "n_drug_targets": 23,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.9416
+      },
+      "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": -10.94,
+        "target_symbol": "PARP2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Metformin",
+      "drug_id": "DB00331",
+      "disease_name": "Ovarian cancer",
+      "combined_score": 0.5482,
+      "pillars_hit": 4,
+      "transe_rank": 90,
+      "transe_score": -10.5083,
+      "pykeen_score": -12.0943,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.8379999995231628,
+      "proximity_distance": 0.6499999761581421,
+      "admet_score": 0.9006,
+      "admet_flags": "Skin_Reaction=0.84",
+      "primekg_score": 0.2673,
+      "dti_score": 0.7743,
+      "dti_best_target": "DDR1",
+      "kg_group_score": 0.2766,
+      "structural_group_score": 0.7743,
+      "network_group_score": 0.6396999955177307,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.819,
+      "admet_multiplier": 0.9801,
+      "efficacy_score": 0.5593,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 77,
+      "shared_targets": [
+        "ABCB1",
+        "ABCC3",
+        "ACE",
+        "AHR",
+        "AKT1",
+        "AR",
+        "ATM",
+        "AXL",
+        "BCL2",
+        "BRCA1",
+        "CASP3",
+        "CCL2",
+        "CCND1",
+        "CD24",
+        "CDH2",
+        "CDKN1A",
+        "CTNNB1",
+        "CXCL8",
+        "CYP19A1",
+        "CYP2B6"
+      ],
+      "pubmed_total": 243,
+      "pubmed_treatment_total": 223,
+      "pubmed_repurposing_total": 32,
+      "key_papers": [
+        {
+          "pmid": "41339350",
+          "title": "Letrozole, abemaciclib and metformin in endometrial cancer: a non-randomized phase 2 trial.",
+          "authors": "Konstantinopoulos PA, Zhou N, Penson RT, et al.",
+          "journal": "Nature communications",
+          "year": "2025",
+          "abstract_snippet": "Based on preclinical studies showing synergism with simultaneous inhibition of the estrogen receptor (ER), CDK4/6 and PI3K pathways and based on window of opportunity studies showing that metformin suppresses PI3K/mTOR signaling in endometrial cancer (EC), we conduct a non-randomized phase 2 study o...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41339350/",
+          "total_results": 243
+        },
+        {
+          "pmid": "34753372",
+          "title": "Perspectives of metformin use in endometrial cancer and other gynaecological malignancies.",
+          "authors": "Barczy\u0144ski B, Fr\u0105szczak K, Kotarski J",
+          "journal": "Journal of drug targeting",
+          "year": "2022",
+          "abstract_snippet": "Insulin resistance and hyperinsulinemia play a key role in type 1 endometrial cancer pathogenesis. Most of these cancers develop on a background of overweight or type 2 diabetes mellitus (T2DM). One of the medications widely used in the treatment of T2DM is biguanide derivative, metformin, which exe...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34753372/"
+        },
+        {
+          "pmid": "33490223",
+          "title": "Metformin and ovarian cancer: the evidence.",
+          "authors": "Urpilainen E, Puistola U, Boussios S, et al.",
+          "journal": "Annals of translational medicine",
+          "year": "2020",
+          "abstract_snippet": "In recent decades, great interest in the off-label use of metformin has arisen as a result of its broad effects on different signaling pathways, with only a few side effects, and low cost. Metformin has been shown to have multiple, dose-dependent preclinical anticancer effects, which can be roughly ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33490223/"
+        },
+        {
+          "pmid": "38967919",
+          "title": "Glucagon-Like Peptide 1 Receptor Agonists and 13 Obesity-Associated Cancers in Patients With Type 2 Diabetes.",
+          "authors": "Wang L, Xu R, Kaelber DC, et al.",
+          "journal": "JAMA network open",
+          "year": "2024",
+          "abstract_snippet": "IMPORTANCE: Thirteen human malignant neoplasms have been identified as obesity-associated cancers (OACs), ie, the presence of excess body fat is associated with increased risk of developing cancer and worse prognosis in patients with these specific tumors. The glucagon-like peptide receptor agonist ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38967919/"
+        },
+        {
+          "pmid": "35898873",
+          "title": "Association Between Metformin Use and the Risk, Prognosis of Gynecologic Cancer.",
+          "authors": "Yao K, Zheng H, Li T",
+          "journal": "Frontiers in oncology",
+          "year": "2022",
+          "abstract_snippet": "BACKGROUND: For gynecological cancer patients, the beneficial effect of metformin use remains controversial due to inconsistent results of published articles. By conducting a meta-analysis, we aimed to evaluate the effect of metformin in reducing the risk and improving the survival of gynecological ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35898873/"
+        }
+      ],
+      "repurposing_papers": [
+        {
+          "pmid": "38367265",
+          "title": "Drug Repositioning for Ovarian Cancer Treatment: An Update.",
+          "authors": "Cavalluzzi MM, Viale M, Rotondo NP, et al.",
+          "journal": "Anti-cancer agents in medicinal chemistry",
+          "year": "2024",
+          "abstract_snippet": "Ovarian cancer (OC) is one of the most prevalent malignancies in female reproductive organs, and its 5-year survival is below 45%. Despite the advances in surgical and chemotherapeutic options, OC treatment is still a challenge, and new anticancer agents are urgently needed. Drug repositioning has g...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38367265/",
+          "total_results": 32
+        },
+        {
+          "pmid": "38203494",
+          "title": "Enhancing Immunotherapy in Ovarian Cancer: The Emerging Role of Metformin and Statins.",
+          "authors": "Almeida-Nunes DL, Silvestre R, Dinis-Oliveira RJ, et al.",
+          "journal": "International journal of molecular sciences",
+          "year": "2023",
+          "abstract_snippet": "Ovarian cancer metastization is accompanied by the development of malignant ascites, which are associated with poor prognosis. The acellular fraction of this ascitic fluid contains tumor-promoting soluble factors, bioactive lipids, cytokines, and extracellular vesicles, all of which communicate with...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38203494/"
+        },
+        {
+          "pmid": "33092251",
+          "title": "Recycling the Purpose of Old Drugs to Treat Ovarian Cancer.",
+          "authors": "Nunes M, Henriques Abreu M, Bartosch C, et al.",
+          "journal": "International journal of molecular sciences",
+          "year": "2020",
+          "abstract_snippet": "The main challenge in ovarian cancer treatment is the management of recurrences. Facing this scenario, therapy selection is based on multiple factors to define the best treatment sequence. Target therapies, such as bevacizumab and polymerase (PARP) inhibitors, improved patient survival. However, des...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33092251/"
+        }
+      ],
+      "semantic_scholar_papers": [
+        {
+          "title": "Metformin Induces Apoptosis and Ferroptosis of Ovarian Cancer Cells Under Energy Stress Conditions",
+          "year": 2025,
+          "citations": 13,
+          "url": "https://www.semanticscholar.org/paper/eb5cdbb7ae2cfea35953e2a2900dca09c904f909",
+          "authors": "Yulun Wu, Ziying Zhang, Minhui Ren"
+        },
+        {
+          "title": "Metformin combined with CB-839 specifically inhibits KRAS-mutant ovarian cancer",
+          "year": 2025,
+          "citations": 13,
+          "url": "https://www.semanticscholar.org/paper/be418cf325c7818de3b175b79a6ad1e61ab0ba5c",
+          "authors": "Han Wu, Jialin Zhang, Qiujie Wang"
+        },
+        {
+          "title": "Targeting Cancer Stem Cells and Hedgehog Pathway: Enhancing Cisplatin Efficacy in Ovarian Cancer With Metformin",
+          "year": 2025,
+          "citations": 10,
+          "url": "https://www.semanticscholar.org/paper/70b4d1c6a2d02179b6739cf0a1cb26ab45917c08",
+          "authors": "Emad Jafarzadeh, Vahideh Montazeri, Shima Aliebrahimi"
+        },
+        {
+          "title": "Metformin for patients with advanced stage ovarian cancer: A randomized phase II placebo-controlled trial.",
+          "year": 2025,
+          "citations": 7,
+          "url": "https://www.semanticscholar.org/paper/0dfb5012a50ecfb38b97852005b7cc13d1ef6d6f",
+          "authors": "Iris L. Romero, Ernst Lengyel, A. W. Wahner Hendrickson"
+        },
+        {
+          "title": "Metformin Enhances PD\u2010L1 Inhibitor Efficacy in Ovarian Cancer by Modulating the Immune Microenvironment and RBMS3 Expression",
+          "year": 2025,
+          "citations": 8,
+          "url": "https://www.semanticscholar.org/paper/5a61622576e4d8e3d1bffe3e17e9053a149ff652",
+          "authors": "Qingsong Zhang, Shuqi Han, Xinyi Zhang"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Metformin Induces Apoptosis and Ferroptosis of Ovarian Cancer Cells Under Energy Stress Conditions",
+        "year": 2025,
+        "citations": 13,
+        "url": "https://www.semanticscholar.org/paper/eb5cdbb7ae2cfea35953e2a2900dca09c904f909",
+        "authors": "Yulun Wu, Ziying Zhang, Minhui Ren"
+      },
+      "max_citations": 13,
+      "faers_signal": "moderate",
+      "faers_total_reports": 425807,
+      "faers_cooccurrences": 94,
+      "faers_interpretation": "94 FAERS reports mention both Metformin and Ovarian cancer-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "HY-11005 (1.555)",
+        "CYT997 (1.490)",
+        "BRL 37344, sodium salt (1.482)",
+        "CGP 57380 (1.479)",
+        "S1297 (1.466)"
+      ],
+      "signature_interpretation": "Metformin was not found among the top 40 drugs that reverse the Ovarian cancer gene signature. Top reversers: HY-11005 (1.555), CYT997 (1.490), BRL 37344, sodium salt (1.482)",
+      "ai_hypothesis": "of its anti-proliferative and anti-angiogenic properties.",
       "abstract_analyses": [
         {
           "relation_type": "unclear",
@@ -3146,28 +3613,9 @@
           "reason": "Drug or disease not mentioned in abstract"
         },
         {
-          "relation_type": "treats",
-          "confidence": 0.8,
-          "positive_signals": 3,
-          "negative_signals": 0,
-          "mechanism_signals": 0,
-          "extracted_entities": [
-            {
-              "entity": "che",
-              "entity_group": "Medication",
-              "score": 0.9890000224113464
-            },
-            {
-              "entity": "##motherapeutic agents",
-              "entity_group": "Medication",
-              "score": 0.9819999933242798
-            },
-            {
-              "entity": "topotecan",
-              "entity_group": "Medication",
-              "score": 0.9959999918937683
-            }
-          ]
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
         },
         {
           "relation_type": "unclear",
@@ -3179,75 +3627,76 @@
       "failed_trial_phase": "Phase 3",
       "failed_trial_count": 10,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0.7953,
-      "mr_genetic_targets": 18,
-      "mechanistic_hypothesis": "Topotecan \u2014[is a therapeutic for]\u2192 Ovarian cancer",
-      "kg_paths_text": "\u2022 Topotecan \u2014[is a therapeutic for]\u2192 Ovarian cancer\n\u2022 Topotecan \u2014[downregulates]\u2192 gene-10733 \u2014[is bound by]\u2192 DB06589 \u2014[is a therapeutic for]\u2192 Ovarian cancer\n\u2022 Topotecan \u2014[downregulates]\u2192 gene-5525 \u2014[activates]\u2192 gene-3796 \u2014[is upregulated by]\u2192 Ovarian cancer",
+      "mr_score": 0.819,
+      "mr_genetic_targets": 17,
+      "mechanistic_hypothesis": "Metformin \u2014[downregulates]\u2192 gene-5699 \u2014[is downregulated by]\u2192 DB00675 \u2014[treats]\u2192 Ovarian cancer",
+      "kg_paths_text": "\u2022 Metformin \u2014[downregulates]\u2192 gene-5699 \u2014[is downregulated by]\u2192 DB00675 \u2014[treats]\u2192 Ovarian cancer\n\u2022 Metformin \u2014[downregulates]\u2192 gene-5699 \u2014[is downregulated by]\u2192 DB00675 \u2014[treats]\u2192 Ovarian cancer\n\u2022 Metformin \u2014[downregulates]\u2192 gene-5699 \u2014[is upregulated by]\u2192 DB00997 \u2014[treats]\u2192 Ovarian cancer",
       "validation_experiments": [],
-      "novelty_score": 0.229,
+      "novelty_score": 0.23,
       "novelty_level": "ESTABLISHED",
-      "is_known_treatment": true,
+      "is_known_treatment": false,
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT00327171",
-          "title": "Study of AVE0005 (VEGF Trap) in Patients With Chemoresistant Advanced Ovarian Cancer",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "218",
-          "url": "https://clinicaltrials.gov/study/NCT00327171"
-        },
-        {
-          "nct_id": "NCT00072267",
-          "title": "UCN-01 and Topotecan in Treating Patients With Recurrent, Persistent, or Progressive Advanced Ovarian Epithelial, Primary Peritoneal, or Fallopian Tube Cancer",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "",
-          "url": "https://clinicaltrials.gov/study/NCT00072267"
-        },
-        {
-          "nct_id": "NCT07218809",
-          "title": "AZD5335 vs. Mirvetuximab Soravtansine in FR\u03b1-high and AZD5335 vs. Chemotherapy in FR\u03b1-low Platinum-resistant Ovarian Cancer",
+          "nct_id": "NCT06896981",
+          "title": "Semaglutide in Women With Polycystic Ovary Syndrome and Obesity",
           "status": "RECRUITING",
-          "phase": "PHASE3",
-          "enrollment": "1100",
-          "url": "https://clinicaltrials.gov/study/NCT07218809"
+          "phase": "PHASE2, PHASE3",
+          "enrollment": "30",
+          "url": "https://clinicaltrials.gov/study/NCT06896981"
         },
         {
-          "nct_id": "NCT01684878",
-          "title": "Pertuzumab in Platinum-Resistant Low Human Epidermal Growth Factor Receptor 3 (HER3) Messenger Ribonucleic Acid (mRNA) Epithelial Ovarian Cancer (PENELOPE)",
+          "nct_id": "NCT04973891",
+          "title": "CANA/Met in Non-diabetic Women With PCOS",
           "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "208",
-          "url": "https://clinicaltrials.gov/study/NCT01684878"
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "52",
+          "url": "https://clinicaltrials.gov/study/NCT04973891"
         },
         {
-          "nct_id": "NCT02282020",
-          "title": "Olaparib Treatment in Relapsed Germline Breast Cancer Susceptibility Gene (BRCA) Mutated Ovarian Cancer Patients Who Have Progressed at Least 6 Months After Last Platinum Treatment and Have Received at Least 2 Prior Platinum Treatments",
+          "nct_id": "NCT00647023",
+          "title": "Incretin Secretion in Women With Polycystic Ovary Syndrome (PCOS)",
+          "status": "TERMINATED",
+          "phase": "NA",
+          "enrollment": "66",
+          "url": "https://clinicaltrials.gov/study/NCT00647023"
+        },
+        {
+          "nct_id": "NCT05394142",
+          "title": "A Clinical Trial to Evaluate the Efficacy, Tolerability, and Safety of a Fixed Dose Combination of Spironolactone, Pioglitazone & Metformin (SPIOMET) in Polycystic Ovary Syndrome (PCOS)",
+          "status": "UNKNOWN",
+          "phase": "PHASE2",
+          "enrollment": "364",
+          "url": "https://clinicaltrials.gov/study/NCT05394142"
+        },
+        {
+          "nct_id": "NCT04043221",
+          "title": "Long Term Metformin in Women With Polycystic Ovary Syndrome",
           "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "266",
-          "url": "https://clinicaltrials.gov/study/NCT02282020"
+          "phase": "N/A",
+          "enrollment": "180",
+          "url": "https://clinicaltrials.gov/study/NCT04043221"
         }
       ],
       "trial_phases": {
-        "PHASE2": 4,
-        "PHASE3": 5,
-        "PHASE1": 2
+        "PHASE2": 3,
+        "PHASE3": 3,
+        "PHASE1": 2,
+        "NA": 2,
+        "PHASE4": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
         "10 clinical trial(s) found on ClinicalTrials.gov",
         "Phase 3 trial exists",
-        "698 PubMed articles on this drug-disease pair",
+        "243 PubMed articles on this drug-disease pair",
+        "32 article(s) specifically mention repurposing/repositioning",
         "Supported by 4 independent AI pillars",
-        "Strong FAERS signal: 81 adverse event reports link drug to disease (5510 total reports)",
-        "Supporting paper with 36 citations",
-        "AI analysis of 1 abstract(s) found positive treatment signals",
+        "Moderate FAERS signal: 94 adverse event reports mention drug-disease co-occurrence",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.80, 18 genetic targets)",
-        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+        "Strong causal genetic evidence (MR score: 0.82, 17 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D010051",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3258,14 +3707,9 @@
         "stage": 1
       },
       "ddi_warnings": {
-        "n_interactions": 1577,
+        "n_interactions": 1266,
         "has_warnings": true,
         "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
           {
             "drug_id": "DB00945",
             "drug_name": "Acetylsalicylic acid",
@@ -3279,11 +3723,6 @@
           {
             "drug_id": "DB00564",
             "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
             "severity": "high"
           },
           {
@@ -3302,13 +3741,23 @@
             "severity": "high"
           },
           {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
             "severity": "high"
           },
           {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00227",
+            "drug_name": "Lovastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
             "severity": "high"
           }
         ]
@@ -3316,31 +3765,70 @@
       "pharmacogenomics": {
         "has_flags": true,
         "highest_risk": "advisory",
-        "summary": "PharmGKB-3 (ABCG2 / rs4148157)",
-        "cpic": [],
+        "summary": "CPIC-D (C11orf65) \u2022 PharmGKB-3 (SLC22A1 / rs622342)",
+        "cpic": [
+          {
+            "gene": "C11orf65",
+            "level": "D",
+            "guideline": ""
+          },
+          {
+            "gene": "SLC47A2",
+            "level": "D",
+            "guideline": ""
+          }
+        ],
         "pharmgkb": [
           {
-            "gene": "ABCG2",
-            "variant": "rs4148157",
+            "gene": "SLC22A1",
+            "variant": "rs622342",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/655384809"
+          },
+          {
+            "gene": "KCNJ11",
+            "variant": "rs5219",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981238910"
+          },
+          {
+            "gene": "SLC22A1",
+            "variant": "rs2282143",
             "level": "3",
             "phenotype_category": "Metabolism/PK",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1447981313"
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183697747"
+          },
+          {
+            "gene": "SLC22A2",
+            "variant": "rs316019",
+            "level": "3",
+            "phenotype_category": "Other",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183697752"
+          },
+          {
+            "gene": "SLC47A2",
+            "variant": "rs12943590",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183680560"
           }
         ]
       },
       "triangulation": {
-        "n_axes_agree": 3,
+        "n_axes_agree": 2,
         "axes": {
           "kg": true,
-          "docking": true,
+          "docking": false,
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.637,
-        "label": "silver-standard",
+        "triangulation_score": 0.547,
+        "label": "multi-axis",
         "axis_values": {
-          "kg": 0.545,
-          "docking": 0.822,
+          "kg": 0.548,
+          "docking": 0.517,
           "pharos": 0.0,
           "literature": 1.0
         }
@@ -3350,441 +3838,48 @@
           "Ovary"
         ],
         "n_genes": 20,
-        "n_expressed": 17,
-        "mean_tpm_in_tissue": 31.99,
+        "n_expressed": 18,
+        "mean_tpm_in_tissue": 33.69,
         "max_tpm_in_tissue": 261.29,
-        "tissue_specificity": 0.641,
-        "context_modifier": 1.063
+        "tissue_specificity": 0.567,
+        "context_modifier": 1.056
       },
-      "disease_entity": "Disease::MESH:D010051",
+      "ensemble_prob": 0.3297,
+      "ensemble_features": {
+        "kg_score": 0.992,
+        "degree_penalty": 0.7634,
+        "n_drug_targets": 6,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.4427
+      },
+      "ensemble_rank": 6,
       "docking": {
-        "kcal_per_mol": -9.86,
-        "target_symbol": "HIF1A",
+        "kcal_per_mol": -6.2,
+        "target_symbol": "DPP4",
         "source": "chembl_bioactivity_proxy",
         "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
         "hit": true
       },
-      "ensemble_prob": 0.9341,
-      "ensemble_features": {
-        "kg_score": 0.9981,
-        "degree_penalty": 0.7549,
-        "n_drug_targets": 8,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 3.0445
-      },
-      "ensemble_rank": 3,
       "structural_alerts": {
         "has_pains": false,
         "pains_families": [
-          "MANNICH"
+          "IMINE"
         ],
-        "n_alerts": 1,
+        "n_alerts": 2,
         "alert_names": [
-          "mannich_A(296)"
+          "imine_1",
+          "imine_2"
         ]
-      }
-    },
-    {
-      "drug_name": "Estradiol",
-      "drug_id": "DB00783",
-      "disease_name": "Ovarian cancer",
-      "combined_score": 0.5401,
-      "pillars_hit": 4,
-      "transe_rank": 47,
-      "transe_score": -10.225,
-      "pykeen_score": -11.4235,
-      "pykeen_rank": 0,
-      "txgnn_score": 0,
-      "txgnn_rank": 0,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "mol_emb_similarity": 0.9808,
-      "mol_emb_similar_to": "Ethinyl Estradiol",
-      "gene_sig_score": 0,
-      "gene_sig_rank": 0,
-      "proximity_score": 0.7620000243186951,
-      "proximity_distance": 0.949999988079071,
-      "admet_score": 0.6574,
-      "admet_flags": "clean",
-      "primekg_score": 0.2686,
-      "dti_score": 0.2506,
-      "dti_best_target": "BARD1",
-      "kg_group_score": 0.2978,
-      "structural_group_score": 0.9808,
-      "network_group_score": 0.5594000220298767,
-      "txgnn_group_score": 0,
-      "mr_group_score": 0.7796,
-      "admet_multiplier": 0.9315,
-      "efficacy_score": 0.5798,
-      "groups_hit": 4,
-      "direct_relations": [],
-      "shared_target_count": 131,
-      "shared_targets": [
-        "ABCB1",
-        "ABCC3",
-        "ABCG2",
-        "ACE",
-        "AGR2",
-        "AGT",
-        "AHR",
-        "AKT1",
-        "ALOX15",
-        "ANG",
-        "APP",
-        "AR",
-        "BCL2",
-        "BECN1",
-        "BIRC2",
-        "BMI1",
-        "BRCA1",
-        "BUB1B",
-        "CALR",
-        "CASP3"
-      ],
-      "pubmed_total": 544,
-      "pubmed_treatment_total": 333,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [
-        {
-          "pmid": "41193244",
-          "title": "Mutant p53 binds and controls estrogen receptor activity to drive endocrine resistance in ovarian cancer.",
-          "authors": "Shao C, Indeglia A, Foster M, et al.",
-          "journal": "Genes & development",
-          "year": "2026",
-          "abstract_snippet": "High-grade serous ovarian cancer (HGSOC) is a highly lethal gynecologic malignancy in women. Women diagnosed with HGSOC initially respond to chemotherapy, but there is a >80% rate of relapse. There is thus a significant unmet need for new therapeutic targets for HGSOC. Estrogen receptor \u03b1 (ER\u03b1) is a...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41193244/",
-          "total_results": 544
-        },
-        {
-          "pmid": "37778413",
-          "title": "MiR-206 inhibits estrogen signaling and ovarian cancer cell migration without affecting GPER.",
-          "authors": "Boscaro C, Ramaschi GE, Trevisi L, et al.",
-          "journal": "Life sciences",
-          "year": "2023",
-          "abstract_snippet": "AIMS: Estrogen-regulated pathways are involved in the etiology and progression of epithelial ovarian cancer (EOC), but the relative contribution of estrogen receptor isoforms is unclear. Only a subset of patients responds to antiestrogens including tamoxifen. Based on our previous evidence that miR-...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37778413/"
-        },
-        {
-          "pmid": "31954537",
-          "title": "Hormone receptor expression and outcomes in low-grade serous ovarian carcinoma.",
-          "authors": "Llaurado Fernandez M, Dawson A, Kim H, et al.",
-          "journal": "Gynecologic oncology",
-          "year": "2020",
-          "abstract_snippet": "OBJECTIVE: Low-grade serous ovarian carcinomas (LGSC) are frequently ER/PR positive, though the mechanisms by which ER/PR regulate prognosis or anti-estrogen treatment efficacy are poorly understood. We studied ER/PR expression in LGSC tumors and cell lines to evaluate patient outcomes and cellular ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/31954537/"
-        },
-        {
-          "pmid": "26223889",
-          "title": "Urinary melatonin and risk of ovarian cancer.",
-          "authors": "Poole EM, Schernhammer E, Mills L, et al.",
-          "journal": "Cancer causes & control : CCC",
-          "year": "2015",
-          "abstract_snippet": "PURPOSE: Melatonin has anti-carcinogenic properties, including modulation of estradiol production, cell cycle regulation, and promotion of apoptosis. Urinary melatonin has been inversely associated with breast cancer in some studies, but the association with ovarian cancer has not been investigated....",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/26223889/"
-        },
-        {
-          "pmid": "27255147",
-          "title": "17\u03b2-Estradiol Reverses Leptin-Inducing Ovarian Cancer Cell Migration by the PI3K/Akt Signaling Pathway.",
-          "authors": "Hoffmann M, Fiedor E, Ptak A",
-          "journal": "Reproductive sciences (Thousand Oaks, Calif.)",
-          "year": "2016",
-          "abstract_snippet": "Accumulating evidence suggests that leptin is expressed at higher levels in obese women and stimulates cell migration in epithelial cancers. However, the biology of ovarian cancer is different from others, mainly due to the production of estrogens because of the involvement of ovarian tissue, which ...",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/27255147/"
-        }
-      ],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Photoelectrochemical Biosensor Based on TiO2/P5FIn with a Cascade Amplification Strategy for Simultaneous Detection of GSH and E2 Analytes of Ovarian Cancer.",
-          "year": 2025,
-          "citations": 28,
-          "url": "https://www.semanticscholar.org/paper/8e80a34d834d0300edc714f0c52ee87aa23590b9",
-          "authors": "Lu Zhang, Dandan Liu, Aoze Wang"
-        },
-        {
-          "title": "Investigating the Effect of Estradiol Levels on the Risk of Breast, Endometrial, and Ovarian Cancer",
-          "year": 2022,
-          "citations": 35,
-          "url": "https://www.semanticscholar.org/paper/b0e0bf2009c8889f4017faac2994082476eb3fb4",
-          "authors": "\u00c5. Johansson, D. Schmitz, Julia H\u00f6glund"
-        },
-        {
-          "title": "The Influence of Interaction between Cadmium with 17\u03b2-Estradiol, 2-Methoxyestradiol and 16\u03b1-Hydroxyestrone on Viability and p-Glycoprotein in Ovarian Cancer Cell Line",
-          "year": 2022,
-          "citations": 9,
-          "url": "https://www.semanticscholar.org/paper/ad5f9961ba128c896060ab90953d1b1b9b25cda0",
-          "authors": "E. Sawicka, J. Saczko, J. Kulbacka"
-        },
-        {
-          "title": "Electrochemotherapy with Calcium Chloride and 17\u03b2-Estradiol Modulated Viability and Apoptosis Pathway in Human Ovarian Cancer",
-          "year": 2020,
-          "citations": 13,
-          "url": "https://www.semanticscholar.org/paper/8311d7adcdbd31f4ca4230afcbb3d59b5969884b",
-          "authors": "Zofia \u0141api\u0144ska, M. D\u0119bi\u0144ski, A. Szewczyk"
-        },
-        {
-          "title": "17\u03b2\u2010Estradiol via Orai1 activates calcium mobilization to induce cell proliferation in epithelial ovarian cancer",
-          "year": 2020,
-          "citations": 10,
-          "url": "https://www.semanticscholar.org/paper/fac8a7e17d2eedb075ee793e1b29a65546ac661b",
-          "authors": "Xiaoyu Lv, Chun-lei Miao, Mengyang Liu"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Current state and outlook for drug repositioning anticipated in the field of ovarian cancer",
-        "year": 2018,
-        "citations": 36,
-        "url": "https://www.semanticscholar.org/paper/7219938897a1b2a16238272904535fb930aebeae",
-        "authors": "Yusuke Kobayashi, K. Banno, Haruko Kunitomi"
-      },
-      "max_citations": 36,
-      "faers_signal": "moderate",
-      "faers_total_reports": 75392,
-      "faers_cooccurrences": 91,
-      "faers_interpretation": "91 FAERS reports mention both Estradiol and Ovarian cancer-related terms. Limited but notable real-world signal.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "HY-11005 (1.555)",
-        "CYT997 (1.490)",
-        "BRL 37344, sodium salt (1.482)",
-        "CGP 57380 (1.479)",
-        "S1297 (1.466)"
-      ],
-      "signature_interpretation": "Estradiol was not found among the top 40 drugs that reverse the Ovarian cancer gene signature. Top reversers: HY-11005 (1.555), CYT997 (1.490), BRL 37344, sodium salt (1.482)",
-      "ai_hypothesis": "of its anti-proliferative and pro-apoptotic effects.",
-      "abstract_analyses": [
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        },
-        {
-          "relation_type": "unclear",
-          "confidence": 0.0,
-          "reason": "Drug or disease not mentioned in abstract"
-        }
-      ],
-      "has_failed_trial": false,
-      "failed_trial_phase": "Phase 2",
-      "failed_trial_count": 10,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0.7796,
-      "mr_genetic_targets": 24,
-      "mechanistic_hypothesis": "Estradiol \u2014[downregulates]\u2192 gene-847 \u2014[activates]\u2192 gene-207 \u2014[is linked to]\u2192 Ovarian cancer",
-      "kg_paths_text": "\u2022 Estradiol \u2014[downregulates]\u2192 gene-847 \u2014[activates]\u2192 gene-207 \u2014[is linked to]\u2192 Ovarian cancer\n\u2022 Estradiol \u2014[downregulates]\u2192 gene-847 \u2014[activates]\u2192 gene-207 \u2014[is linked to]\u2192 Ovarian cancer\n\u2022 Estradiol \u2014[downregulates]\u2192 gene-847 \u2014[activates]\u2192 gene-207 \u2014[is linked to]\u2192 Ovarian cancer",
-      "validation_experiments": [],
-      "novelty_score": 0.227,
-      "novelty_level": "ESTABLISHED",
-      "is_known_treatment": true,
-      "clinical_trials_total": 10,
-      "clinical_trials": [
-        {
-          "nct_id": "NCT03819140",
-          "title": "Continuous Versus Cyclical OCP Use in PCOS",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "51",
-          "url": "https://clinicaltrials.gov/study/NCT03819140"
-        },
-        {
-          "nct_id": "NCT00593294",
-          "title": "Oral Contraceptive and Cardiovascular Risk in PCOS",
-          "status": "COMPLETED",
-          "phase": "PHASE4",
-          "enrollment": "150",
-          "url": "https://clinicaltrials.gov/study/NCT00593294"
-        },
-        {
-          "nct_id": "NCT05168865",
-          "title": "Letrozole Versus Hormonal Preparation in Frozen Cycles of PCOS Patients.",
-          "status": "WITHDRAWN",
-          "phase": "PHASE4",
-          "enrollment": "0",
-          "url": "https://clinicaltrials.gov/study/NCT05168865"
-        },
-        {
-          "nct_id": "NCT06257264",
-          "title": "A Study to Examine the Safety of Different Doses of BG-68501 Given to Participants With Advanced-Stage Tumors",
-          "status": "RECRUITING",
-          "phase": "PHASE1",
-          "enrollment": "258",
-          "url": "https://clinicaltrials.gov/study/NCT06257264"
-        },
-        {
-          "nct_id": "NCT05021861",
-          "title": "Evaluation of Periodontal Status and hsCRP Levels in Females With PCOS on CPA/EE Combination Drug Regimen",
-          "status": "UNKNOWN",
-          "phase": "N/A",
-          "enrollment": "150",
-          "url": "https://clinicaltrials.gov/study/NCT05021861"
-        }
-      ],
-      "trial_phases": {
-        "PHASE4": 4,
-        "PHASE1": 2,
-        "NA": 1,
-        "PHASE3": 1,
-        "PHASE2": 1
-      },
-      "confidence": "HIGH",
-      "confidence_reasons": [
-        "10 clinical trial(s) found on ClinicalTrials.gov",
-        "Phase 3 trial exists",
-        "544 PubMed articles on this drug-disease pair",
-        "Supported by 4 independent AI pillars",
-        "Moderate FAERS signal: 91 adverse event reports mention drug-disease co-occurrence",
-        "Supporting paper with 36 citations",
-        "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.78, 24 genetic targets)",
-        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
-      ],
-      "dose_plausibility": {
-        "plausibility": "yes",
-        "dose_range": "clinical",
-        "confidence": "high",
-        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
-        "chembl_phase": 4.0,
-        "target_affinity": {},
-        "stage": 1
-      },
-      "ddi_warnings": {
-        "n_interactions": 2120,
-        "has_warnings": true,
-        "top_interactions": [
-          {
-            "drug_id": "DB00316",
-            "drug_name": "Acetaminophen",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00945",
-            "drug_name": "Acetylsalicylic acid",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01076",
-            "drug_name": "Atorvastatin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00564",
-            "drug_name": "Carbamazepine",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01211",
-            "drug_name": "Clarithromycin",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00758",
-            "drug_name": "Clopidogrel",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB01264",
-            "drug_name": "Darunavir",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00829",
-            "drug_name": "Diazepam",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00530",
-            "drug_name": "Erlotinib",
-            "severity": "high"
-          },
-          {
-            "drug_id": "DB00199",
-            "drug_name": "Erythromycin",
-            "severity": "high"
-          }
-        ]
-      },
-      "pharmacogenomics": {
-        "has_flags": true,
-        "highest_risk": "advisory",
-        "summary": "PharmGKB-3 ( / rs11849538)",
-        "cpic": [],
-        "pharmgkb": [
-          {
-            "gene": "",
-            "variant": "rs11849538",
-            "level": "3",
-            "phenotype_category": "Other",
-            "url": "https://www.pharmgkb.org/clinicalAnnotation/1444704861"
-          }
-        ]
-      },
-      "triangulation": {
-        "n_axes_agree": 3,
-        "axes": {
-          "kg": true,
-          "docking": true,
-          "pharos": false,
-          "literature": true
-        },
-        "triangulation_score": 0.689,
-        "label": "silver-standard",
-        "axis_values": {
-          "kg": 0.54,
-          "docking": 1.0,
-          "pharos": 0.0,
-          "literature": 1.0
-        }
-      },
-      "tissue_context": {
-        "tissues": [
-          "Ovary"
-        ],
-        "n_genes": 20,
-        "n_expressed": 17,
-        "mean_tpm_in_tissue": 59.71,
-        "max_tpm_in_tissue": 562.64,
-        "tissue_specificity": 0.584,
-        "context_modifier": 1.08
-      },
-      "disease_entity": "Disease::MESH:D010051",
-      "docking": {
-        "kcal_per_mol": -12.23,
-        "target_symbol": "ESR1",
-        "source": "chembl_bioactivity_proxy",
-        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
-        "hit": true
-      },
-      "ensemble_prob": 0.8011,
-      "ensemble_features": {
-        "kg_score": 0.998,
-        "degree_penalty": 0.7341,
-        "n_drug_targets": 36,
-        "is_fda_approved": 1,
-        "n_disease_genes": 0,
-        "transe_rank_log": 3.091
-      },
-      "ensemble_rank": 6,
-      "structural_alerts": {
-        "has_pains": false,
-        "pains_families": [],
-        "n_alerts": 0,
-        "alert_names": []
       }
     }
   ],
   "disease_entity": "Disease::MESH:D010051",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
   "docking_axis": {
     "source": "chembl_bioactivity_proxy + not_wired fallback",
     "n_disease_genes": 1254,
     "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
-  },
-  "ensemble_version": "v5",
-  "ensemble_model_path": "data/models/ensemble_v5.pkl"
+  }
 }

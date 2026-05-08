@@ -1,0 +1,39 @@
+{
+  "snapshot_timestamp": "2026-05-08T001725Z",
+  "git_commit": "7dd52b3ce878",
+  "pipeline_version": "v5",
+  "n_pillars": 12,
+  "diseases_covered": 84,
+  "total_predictions": 710,
+  "top_k_per_disease": 10,
+  "knowledge_graph_sources": [
+    "DRKG (5.87M triples, 2020)",
+    "PrimeKG (8.10M triples, 2022)",
+    "OpenTargets 24.09 (83k triples derived)"
+  ],
+  "filter_stack": [
+    "SMILES validity + >=4 heavy atoms + MW >=60",
+    "Metabolite blacklist (96 curated)",
+    "IUPAC / research-chemical heuristic",
+    "ChEMBL phase >=1 (fail-open for missing)",
+    "Critical ADMET (hERG/AMES/DILI/Skin)",
+    "Phase-4 bypass for FDA-approved drugs"
+  ],
+  "scoring_features": [
+    "TransE/RotatE/PrimeKG/Unified-KG (RRF fusion)",
+    "TxGNN (pre-computed)",
+    "Molecular fingerprints + ChemBERTa + DTI (max pool)",
+    "Network proximity + gene signatures (max pool)",
+    "Mendelian randomization",
+    "ADMET two-stage multiplier",
+    "Hub-degree normalization",
+    "R-GCN heterogeneous GNN (v5)",
+    "Tissue-context weighting (v5)"
+  ],
+  "clinical_layer": [
+    "Dose plausibility (ChEMBL phase)",
+    "DDI warnings (1.4M DRKG ddi edges)",
+    "Pharmacogenomic flags (CPIC + PharmGKB)",
+    "Triangulation (KG + docking + Pharos + literature)"
+  ]
+}

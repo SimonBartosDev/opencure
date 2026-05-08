@@ -1,8 +1,8 @@
 {
   "disease": "Psoriasis",
   "status": "completed",
-  "timestamp": "2026-04-19T23:50:03.211134",
-  "elapsed_seconds": 847.4,
+  "timestamp": "2026-05-08T01:36:05.636960",
+  "elapsed_seconds": 120.0,
   "total_searched": 50,
   "evidence_generated": 10,
   "confidence_counts": {
@@ -15,7 +15,7 @@
       "drug_name": "Urea",
       "drug_id": "DB03904",
       "disease_name": "Psoriasis",
-      "combined_score": 0.7045999765396118,
+      "combined_score": 0.7027999758720398,
       "pillars_hit": 5,
       "transe_rank": 79,
       "transe_score": -10.5505,
@@ -34,15 +34,15 @@
       "admet_score": 0.7639,
       "admet_flags": "clean",
       "primekg_score": 0.2627,
-      "dti_score": 0.858,
-      "dti_best_target": "SOCS1",
+      "dti_score": 0.8477,
+      "dti_best_target": "ADAMDEC1",
       "kg_group_score": 0.1115,
-      "structural_group_score": 0.858,
+      "structural_group_score": 0.8477,
       "network_group_score": 0.7328000068664551,
       "txgnn_group_score": 0.62,
       "mr_group_score": 0.8283,
       "admet_multiplier": 0.9528,
-      "efficacy_score": 0.7394999861717224,
+      "efficacy_score": 0.7376999855041504,
       "groups_hit": 5,
       "direct_relations": [],
       "shared_target_count": 6,
@@ -201,42 +201,18 @@
       "mechanistic_hypothesis": "Urea \u2014[is a therapeutic for]\u2192 Psoriasis",
       "kg_paths_text": "\u2022 Urea \u2014[is a therapeutic for]\u2192 Psoriasis\n\u2022 Urea \u2014[is a therapeutic for]\u2192 MESH:D012871 \u2014[is treated by]\u2192 DB00591 \u2014[treats]\u2192 Psoriasis\n\u2022 Urea \u2014[is a therapeutic for]\u2192 MESH:D012871 \u2014[is treated by]\u2192 DB00591 \u2014[treats]\u2192 Psoriasis",
       "validation_experiments": [],
-      "novelty_score": 0.29600000381469727,
+      "novelty_score": 0.29499998688697815,
       "novelty_level": "ESTABLISHED",
       "is_known_treatment": true,
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT07138898",
-          "title": "Immunosuppressant Management in Rheumatology Patients Undergoing Elective Total Shoulder Arthroplasty",
+          "nct_id": "NCT07546032",
+          "title": "Clinical Study on the Medical Device PROXERA PSOMED 30 for the Treatment of Nail Psoriasis: Evaluation of Safety and Efficacy",
           "status": "NOT_YET_RECRUITING",
-          "phase": "PHASE2",
-          "enrollment": "80",
-          "url": "https://clinicaltrials.gov/study/NCT07138898"
-        },
-        {
-          "nct_id": "NCT00509678",
-          "title": "Rituxan With or Without Methotrexate in Psoriatic Arthritis",
-          "status": "COMPLETED",
-          "phase": "PHASE1",
-          "enrollment": "6",
-          "url": "https://clinicaltrials.gov/study/NCT00509678"
-        },
-        {
-          "nct_id": "NCT03496831",
-          "title": "Predicting Hospitalized Infection in Patients With Chronic Inflammatory Arthritis Treated With Biological Drugs",
-          "status": "COMPLETED",
-          "phase": "N/A",
-          "enrollment": "7500",
-          "url": "https://clinicaltrials.gov/study/NCT03496831"
-        },
-        {
-          "nct_id": "NCT01991197",
-          "title": "Dipeptidyl Peptidase-4 Inhibition in Psoriasis Patients With Diabetes (DIP): A Randomized Clinical Trial.",
-          "status": "COMPLETED",
-          "phase": "PHASE2",
-          "enrollment": "20",
-          "url": "https://clinicaltrials.gov/study/NCT01991197"
+          "phase": "NA",
+          "enrollment": "21",
+          "url": "https://clinicaltrials.gov/study/NCT07546032"
         },
         {
           "nct_id": "NCT04994951",
@@ -245,13 +221,37 @@
           "phase": "PHASE2",
           "enrollment": "200",
           "url": "https://clinicaltrials.gov/study/NCT04994951"
+        },
+        {
+          "nct_id": "NCT05105139",
+          "title": "Study to Evaluate the Safety of Sebryl\u00ae and Sebryl Plus\u00ae in Seborrheic Dermatitis and Psoriasis of Scalp",
+          "status": "COMPLETED",
+          "phase": "N/A",
+          "enrollment": "90",
+          "url": "https://clinicaltrials.gov/study/NCT05105139"
+        },
+        {
+          "nct_id": "NCT02191007",
+          "title": "Efficacy and Safety Study of Calcipotriol Betamethasone Plus Calcipotriol in Sequential Therapy to Psoriasis",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "230",
+          "url": "https://clinicaltrials.gov/study/NCT02191007"
+        },
+        {
+          "nct_id": "NCT01965132",
+          "title": "Korean College of Rheumatology Biologics and Targeted Therapy Registry",
+          "status": "RECRUITING",
+          "phase": "N/A",
+          "enrollment": "10000",
+          "url": "https://clinicaltrials.gov/study/NCT01965132"
         }
       ],
       "trial_phases": {
+        "NA": 3,
         "PHASE2": 3,
-        "PHASE1": 2,
-        "PHASE3": 1,
-        "NA": 1
+        "PHASE1": 1,
+        "PHASE3": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -261,8 +261,10 @@
         "Supported by 5 independent AI pillars",
         "Strong FAERS signal: 64 adverse event reports link drug to disease (3034 total reports)",
         "AI-generated hypothesis available",
-        "Strong causal genetic evidence (MR score: 0.83, 1 genetic targets)"
+        "Strong causal genetic evidence (MR score: 0.83, 1 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D011565",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -292,10 +294,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.4440000057220459,
+        "triangulation_score": 0.4429999887943268,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.7049999833106995,
+          "kg": 0.703000009059906,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 0.986
@@ -313,8 +315,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.97
       },
-      "disease_entity": "Disease::MESH:D011565",
-      "ensemble_prob": 0.0003,
+      "ensemble_prob": 0.0043,
       "ensemble_features": {
         "kg_score": 0.8318,
         "degree_penalty": 0.916,
@@ -362,7 +363,7 @@
       "admet_flags": "hERG=0.83",
       "primekg_score": 0.2569,
       "dti_score": 1.0,
-      "dti_best_target": "MTOR",
+      "dti_best_target": "SRGAP2",
       "kg_group_score": 0.2041,
       "structural_group_score": 1.0,
       "network_group_score": 0.5519999861717224,
@@ -577,12 +578,36 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT07138898",
-          "title": "Immunosuppressant Management in Rheumatology Patients Undergoing Elective Total Shoulder Arthroplasty",
-          "status": "NOT_YET_RECRUITING",
+          "nct_id": "NCT00134394",
+          "title": "Etanercept With Tacrolimus for Psoriasis",
+          "status": "COMPLETED",
           "phase": "PHASE2",
-          "enrollment": "80",
-          "url": "https://clinicaltrials.gov/study/NCT07138898"
+          "enrollment": "20",
+          "url": "https://clinicaltrials.gov/study/NCT00134394"
+        },
+        {
+          "nct_id": "NCT00293891",
+          "title": "A Study to Assess the Safety and Effectiveness of Tacrolimus Cream in the Treatment of Psoriasis",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "658",
+          "url": "https://clinicaltrials.gov/study/NCT00293891"
+        },
+        {
+          "nct_id": "NCT00293930",
+          "title": "A Study to Assess the Safety and Effectiveness of Tacrolimus Cream in the Treatment of Psoriasis",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "645",
+          "url": "https://clinicaltrials.gov/study/NCT00293930"
+        },
+        {
+          "nct_id": "NCT06203470",
+          "title": "Botox Versus Tacrolimus in Psoriasis Vulgaris",
+          "status": "NOT_YET_RECRUITING",
+          "phase": "PHASE4",
+          "enrollment": "60",
+          "url": "https://clinicaltrials.gov/study/NCT06203470"
         },
         {
           "nct_id": "NCT00762658",
@@ -591,39 +616,15 @@
           "phase": "PHASE1",
           "enrollment": "12",
           "url": "https://clinicaltrials.gov/study/NCT00762658"
-        },
-        {
-          "nct_id": "NCT03626714",
-          "title": "Safety and Pharmacokinetics of Sustained-release Depot Tacrolimus: A First-in-human Study",
-          "status": "COMPLETED",
-          "phase": "EARLY_PHASE1",
-          "enrollment": "8",
-          "url": "https://clinicaltrials.gov/study/NCT03626714"
-        },
-        {
-          "nct_id": "NCT07352566",
-          "title": "Utilization of a Microdevice for Psoriasis and Atopic Dermatitis",
-          "status": "NOT_YET_RECRUITING",
-          "phase": "PHASE4",
-          "enrollment": "10",
-          "url": "https://clinicaltrials.gov/study/NCT07352566"
-        },
-        {
-          "nct_id": "NCT00234728",
-          "title": "Study of a New Dressing for Use With Topical Medications",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "120",
-          "url": "https://clinicaltrials.gov/study/NCT00234728"
         }
       ],
       "trial_phases": {
-        "PHASE2": 1,
+        "PHASE2": 2,
+        "PHASE3": 3,
+        "PHASE4": 2,
         "PHASE1": 1,
         "EARLY_PHASE1": 1,
-        "PHASE4": 2,
-        "NA": 2,
-        "PHASE3": 3
+        "NA": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -634,25 +635,18 @@
         "High molecular similarity (0.79) to Pimecrolimus",
         "Moderate FAERS signal: 442 adverse event reports mention drug-disease co-occurrence",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.58)"
+        "Moderate genetic evidence supporting causality (MR score: 0.58)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D011565",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
         "confidence": "high",
         "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
         "chembl_phase": 4.0,
-        "target_affinity": {
-          "cmax_over_ic50_ratio": 486.38,
-          "median_ic50_nM": 2.056,
-          "n_activities": 2,
-          "activity_types": [
-            "IC50"
-          ],
-          "mechanism_feasible": "yes",
-          "cmax_source": "generic fallback 1000 nM (per-drug Cmax TBD)"
-        },
-        "stage": 2
+        "target_affinity": {},
+        "stage": 1
       },
       "ddi_warnings": {
         "n_interactions": 1995,
@@ -793,8 +787,7 @@
         "tissue_specificity": 0.428,
         "context_modifier": 1.053
       },
-      "disease_entity": "Disease::MESH:D011565",
-      "ensemble_prob": 0.9146,
+      "ensemble_prob": 0.9437,
       "ensemble_features": {
         "kg_score": 0.9987,
         "degree_penalty": 0.7479,
@@ -828,7 +821,7 @@
       "drug_name": "Cimetidine",
       "drug_id": "DB00501",
       "disease_name": "Psoriasis",
-      "combined_score": 0.6049,
+      "combined_score": 0.6077,
       "pillars_hit": 5,
       "transe_rank": 88,
       "transe_score": -10.5977,
@@ -847,15 +840,15 @@
       "admet_score": 0.5683,
       "admet_flags": "clean",
       "primekg_score": 0.2629,
-      "dti_score": 0.597,
-      "dti_best_target": "SLC2A1",
+      "dti_score": 0.614,
+      "dti_best_target": "HPSE",
       "kg_group_score": 0.0882,
-      "structural_group_score": 0.597,
+      "structural_group_score": 0.614,
       "network_group_score": 0.5523999929428101,
       "txgnn_group_score": 0.99,
       "mr_group_score": 0.362,
       "admet_multiplier": 0.9137,
-      "efficacy_score": 0.6621,
+      "efficacy_score": 0.6651,
       "groups_hit": 5,
       "direct_relations": [],
       "shared_target_count": 4,
@@ -1047,7 +1040,7 @@
       "mechanistic_hypothesis": "Cimetidine \u2014[is a therapeutic for]\u2192 Psoriasis",
       "kg_paths_text": "\u2022 Cimetidine \u2014[is a therapeutic for]\u2192 Psoriasis\n\u2022 Cimetidine \u2014[binds]\u2192 gene-8647 \u2014[is a target of]\u2192 DB00845 \u2014[is a therapeutic for]\u2192 Psoriasis\n\u2022 Cimetidine \u2014[binds]\u2192 gene-8647 \u2014[is a target of]\u2192 DB00845 \u2014[is a therapeutic for]\u2192 Psoriasis",
       "validation_experiments": [],
-      "novelty_score": 0.484,
+      "novelty_score": 0.486,
       "novelty_level": "NOVEL",
       "is_known_treatment": true,
       "clinical_trials_total": 0,
@@ -1061,8 +1054,10 @@
         "Supporting paper with 24 citations",
         "AI analysis of 1 abstract(s) found positive treatment signals",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.36)"
+        "Moderate genetic evidence supporting causality (MR score: 0.36)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D011565",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -1143,10 +1138,10 @@
           "pharos": false,
           "literature": true
         },
-        "triangulation_score": 0.316,
+        "triangulation_score": 0.317,
         "label": "multi-axis",
         "axis_values": {
-          "kg": 0.605,
+          "kg": 0.608,
           "docking": 0.0,
           "pharos": 0.0,
           "literature": 0.523
@@ -1164,8 +1159,7 @@
         "tissue_specificity": 0.0,
         "context_modifier": 0.864
       },
-      "disease_entity": "Disease::MESH:D011565",
-      "ensemble_prob": 0.0722,
+      "ensemble_prob": 0.0835,
       "ensemble_features": {
         "kg_score": 0.9846,
         "degree_penalty": 0.7619,
@@ -1224,8 +1218,8 @@
       "admet_score": 0.7109,
       "admet_flags": "clean",
       "primekg_score": 0.2593,
-      "dti_score": 0.773,
-      "dti_best_target": "ELANE",
+      "dti_score": 0.7665,
+      "dti_best_target": "ADAMDEC1",
       "kg_group_score": 0.4555,
       "structural_group_score": 1.0,
       "network_group_score": 0.5430999994277954,
@@ -1402,12 +1396,12 @@
       "clinical_trials_total": 8,
       "clinical_trials": [
         {
-          "nct_id": "NCT01043393",
-          "title": "Desoximetasone Spray 0.25%, Hypothalamic Pituitary Adrenal (HPA) Axis Study",
+          "nct_id": "NCT03050294",
+          "title": "Evaluating Treatment Resistant Dermatitis TaroIIR",
           "status": "COMPLETED",
-          "phase": "PHASE2",
+          "phase": "PHASE4",
           "enrollment": "24",
-          "url": "https://clinicaltrials.gov/study/NCT01043393"
+          "url": "https://clinicaltrials.gov/study/NCT03050294"
         },
         {
           "nct_id": "NCT01018134",
@@ -1418,20 +1412,12 @@
           "url": "https://clinicaltrials.gov/study/NCT01018134"
         },
         {
-          "nct_id": "NCT03979664",
-          "title": "Iontophoresis in Psoriasis",
-          "status": "WITHDRAWN",
-          "phase": "EARLY_PHASE1",
-          "enrollment": "0",
-          "url": "https://clinicaltrials.gov/study/NCT03979664"
-        },
-        {
-          "nct_id": "NCT01206387",
-          "title": "Effects of Desoximetasone Spray 0.25% on Moderate to Severe Plaque Psoriasis",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "120",
-          "url": "https://clinicaltrials.gov/study/NCT01206387"
+          "nct_id": "NCT06842316",
+          "title": "Effects of Phytocannabinoids on Immune Response and Autophagy During Chronic Immune-mediated Inflammatory Diseases",
+          "status": "RECRUITING",
+          "phase": "N/A",
+          "enrollment": "100",
+          "url": "https://clinicaltrials.gov/study/NCT06842316"
         },
         {
           "nct_id": "NCT02340169",
@@ -1440,13 +1426,21 @@
           "phase": "PHASE4",
           "enrollment": "129",
           "url": "https://clinicaltrials.gov/study/NCT02340169"
+        },
+        {
+          "nct_id": "NCT02749656",
+          "title": "Efficacy and Safety of 0.25% Desoximetasone Cream (Topoxy\u00ae) in the Treatment of Scalp Psoriasis",
+          "status": "UNKNOWN",
+          "phase": "PHASE3",
+          "enrollment": "105",
+          "url": "https://clinicaltrials.gov/study/NCT02749656"
         }
       ],
       "trial_phases": {
+        "PHASE4": 2,
         "PHASE2": 2,
-        "EARLY_PHASE1": 1,
         "PHASE3": 2,
-        "PHASE4": 2
+        "EARLY_PHASE1": 1
       },
       "confidence": "HIGH",
       "confidence_reasons": [
@@ -1459,6 +1453,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.76, 34 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D011565",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -1596,8 +1591,7 @@
         "tissue_specificity": 0.312,
         "context_modifier": 1.06
       },
-      "disease_entity": "Disease::MESH:D011565",
-      "ensemble_prob": 0.9779,
+      "ensemble_prob": 0.999,
       "ensemble_features": {
         "kg_score": 0.9999,
         "degree_penalty": 0.736,
@@ -1606,7 +1600,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 0.6931
       },
-      "ensemble_rank": 3,
+      "ensemble_rank": 1,
       "docking": {
         "kcal_per_mol": -11.64,
         "target_symbol": "NR3C1",
@@ -1645,7 +1639,7 @@
       "admet_flags": "clean",
       "primekg_score": 0.2666,
       "dti_score": 1.0,
-      "dti_best_target": "MTOR",
+      "dti_best_target": "SRGAP2",
       "kg_group_score": 0.4201,
       "structural_group_score": 1.0,
       "network_group_score": 0.555899977684021,
@@ -1833,20 +1827,12 @@
       "clinical_trials_total": 10,
       "clinical_trials": [
         {
-          "nct_id": "NCT05203315",
-          "title": "Investigator Initiated Trial to Study Duobrii\u00ae Lotion in the Treatment of Mild Plaque Psoriasis in Adults",
+          "nct_id": "NCT00704262",
+          "title": "Effect of Calcipotriol Plus Hydrocortisone Ointment on the Adrenal Hormone Balance and Calcium Metabolism in Patients With Psoriasis Vulgaris on the Face and Skin Folds",
           "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "21",
-          "url": "https://clinicaltrials.gov/study/NCT05203315"
-        },
-        {
-          "nct_id": "NCT00234728",
-          "title": "Study of a New Dressing for Use With Topical Medications",
-          "status": "COMPLETED",
-          "phase": "NA",
-          "enrollment": "120",
-          "url": "https://clinicaltrials.gov/study/NCT00234728"
+          "phase": "PHASE2",
+          "enrollment": "33",
+          "url": "https://clinicaltrials.gov/study/NCT00704262"
         },
         {
           "nct_id": "NCT07158125",
@@ -1857,25 +1843,34 @@
           "url": "https://clinicaltrials.gov/study/NCT07158125"
         },
         {
+          "nct_id": "NCT06842316",
+          "title": "Effects of Phytocannabinoids on Immune Response and Autophagy During Chronic Immune-mediated Inflammatory Diseases",
+          "status": "RECRUITING",
+          "phase": "N/A",
+          "enrollment": "100",
+          "url": "https://clinicaltrials.gov/study/NCT06842316"
+        },
+        {
+          "nct_id": "NCT06691763",
+          "title": "Pythagorean Self-Awareness Intervention on Psoriasis Patients.",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "21",
+          "url": "https://clinicaltrials.gov/study/NCT06691763"
+        },
+        {
           "nct_id": "NCT01313221",
           "title": "Efficacy and Safety of Etanercept 50 mg Once Weekly Plus As Needed Topical Agent in Moderate to Severe Plaque Psoriasis",
           "status": "COMPLETED",
           "phase": "PHASE3",
           "enrollment": "310",
           "url": "https://clinicaltrials.gov/study/NCT01313221"
-        },
-        {
-          "nct_id": "NCT00640822",
-          "title": "Efficacy and Safety of Calcipotriol Plus Hydrocortisone Ointment Compared With Tacalcitol Ointment in Patients With Psoriasis on the Face and Skin Folds",
-          "status": "COMPLETED",
-          "phase": "PHASE3",
-          "enrollment": "782",
-          "url": "https://clinicaltrials.gov/study/NCT00640822"
         }
       ],
       "trial_phases": {
+        "PHASE2": 1,
+        "NA": 1,
         "PHASE3": 4,
-        "NA": 2,
         "PHASE4": 1,
         "PHASE1": 1
       },
@@ -1892,6 +1887,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.70, 9 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D011565",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -1993,8 +1989,7 @@
         "tissue_specificity": 0.071,
         "context_modifier": 1.007
       },
-      "disease_entity": "Disease::MESH:D011565",
-      "ensemble_prob": 0.9904,
+      "ensemble_prob": 0.9912,
       "ensemble_features": {
         "kg_score": 0.9993,
         "degree_penalty": 0.7532,
@@ -2041,8 +2036,8 @@
       "admet_score": 0.7161,
       "admet_flags": "clean",
       "primekg_score": 0.2546,
-      "dti_score": 0.3536,
-      "dti_best_target": "AFF1",
+      "dti_score": 0.34,
+      "dti_best_target": "ADAMDEC1",
       "kg_group_score": 0.3787,
       "structural_group_score": 0.9558,
       "network_group_score": 0.6496999859809875,
@@ -2206,20 +2201,20 @@
       "clinical_trials_total": 5,
       "clinical_trials": [
         {
-          "nct_id": "NCT02719314",
-          "title": "Glucocorticoid-induced Osteoporosis in Patients With Chronic Inflammatory Rheumatic Diseases or Psoriasis",
-          "status": "RECRUITING",
-          "phase": "N/A",
-          "enrollment": "10000",
-          "url": "https://clinicaltrials.gov/study/NCT02719314"
-        },
-        {
           "nct_id": "NCT04610476",
           "title": "Impact of Tapering Immunosuppressants on Maintaining Minimal Disease Activity in Adult Subjects With Psoriatic Arthritis",
           "status": "UNKNOWN",
           "phase": "PHASE3",
           "enrollment": "270",
           "url": "https://clinicaltrials.gov/study/NCT04610476"
+        },
+        {
+          "nct_id": "NCT02719314",
+          "title": "Glucocorticoid-induced Osteoporosis in Patients With Chronic Inflammatory Rheumatic Diseases or Psoriasis",
+          "status": "RECRUITING",
+          "phase": "N/A",
+          "enrollment": "10000",
+          "url": "https://clinicaltrials.gov/study/NCT02719314"
         },
         {
           "nct_id": "NCT03797872",
@@ -2230,20 +2225,20 @@
           "url": "https://clinicaltrials.gov/study/NCT03797872"
         },
         {
-          "nct_id": "NCT01011621",
-          "title": "Efficacy and Tolerability of Prednisolone Acetate 0.5% Cream Versus Betamethasone Valerate 0.1% Cream in Cortisosensitive Dermatosis",
-          "status": "UNKNOWN",
-          "phase": "PHASE3",
-          "enrollment": "170",
-          "url": "https://clinicaltrials.gov/study/NCT01011621"
-        },
-        {
           "nct_id": "NCT00236171",
           "title": "Evaluation of Topical Antipsoriatics in the Psoriasis Plaque Test",
           "status": "COMPLETED",
           "phase": "NA",
           "enrollment": "14",
           "url": "https://clinicaltrials.gov/study/NCT00236171"
+        },
+        {
+          "nct_id": "NCT01011621",
+          "title": "Efficacy and Tolerability of Prednisolone Acetate 0.5% Cream Versus Betamethasone Valerate 0.1% Cream in Cortisosensitive Dermatosis",
+          "status": "UNKNOWN",
+          "phase": "PHASE3",
+          "enrollment": "170",
+          "url": "https://clinicaltrials.gov/study/NCT01011621"
         }
       ],
       "trial_phases": {
@@ -2261,6 +2256,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.71, 5 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D011565",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -2391,8 +2387,7 @@
         "tissue_specificity": 0.81,
         "context_modifier": 1.112
       },
-      "disease_entity": "Disease::MESH:D011565",
-      "ensemble_prob": 0.8358,
+      "ensemble_prob": 0.9187,
       "ensemble_features": {
         "kg_score": 0.9988,
         "degree_penalty": 0.7643,
@@ -2401,7 +2396,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.6391
       },
-      "ensemble_rank": 6,
+      "ensemble_rank": 5,
       "docking": {
         "kcal_per_mol": -11.07,
         "target_symbol": "NR3C1",
@@ -2656,20 +2651,20 @@
       "clinical_trials_total": 5,
       "clinical_trials": [
         {
-          "nct_id": "NCT02719314",
-          "title": "Glucocorticoid-induced Osteoporosis in Patients With Chronic Inflammatory Rheumatic Diseases or Psoriasis",
-          "status": "RECRUITING",
-          "phase": "N/A",
-          "enrollment": "10000",
-          "url": "https://clinicaltrials.gov/study/NCT02719314"
-        },
-        {
           "nct_id": "NCT04610476",
           "title": "Impact of Tapering Immunosuppressants on Maintaining Minimal Disease Activity in Adult Subjects With Psoriatic Arthritis",
           "status": "UNKNOWN",
           "phase": "PHASE3",
           "enrollment": "270",
           "url": "https://clinicaltrials.gov/study/NCT04610476"
+        },
+        {
+          "nct_id": "NCT02719314",
+          "title": "Glucocorticoid-induced Osteoporosis in Patients With Chronic Inflammatory Rheumatic Diseases or Psoriasis",
+          "status": "RECRUITING",
+          "phase": "N/A",
+          "enrollment": "10000",
+          "url": "https://clinicaltrials.gov/study/NCT02719314"
         },
         {
           "nct_id": "NCT03797872",
@@ -2680,20 +2675,20 @@
           "url": "https://clinicaltrials.gov/study/NCT03797872"
         },
         {
-          "nct_id": "NCT01011621",
-          "title": "Efficacy and Tolerability of Prednisolone Acetate 0.5% Cream Versus Betamethasone Valerate 0.1% Cream in Cortisosensitive Dermatosis",
-          "status": "UNKNOWN",
-          "phase": "PHASE3",
-          "enrollment": "170",
-          "url": "https://clinicaltrials.gov/study/NCT01011621"
-        },
-        {
           "nct_id": "NCT00236171",
           "title": "Evaluation of Topical Antipsoriatics in the Psoriasis Plaque Test",
           "status": "COMPLETED",
           "phase": "NA",
           "enrollment": "14",
           "url": "https://clinicaltrials.gov/study/NCT00236171"
+        },
+        {
+          "nct_id": "NCT01011621",
+          "title": "Efficacy and Tolerability of Prednisolone Acetate 0.5% Cream Versus Betamethasone Valerate 0.1% Cream in Cortisosensitive Dermatosis",
+          "status": "UNKNOWN",
+          "phase": "PHASE3",
+          "enrollment": "170",
+          "url": "https://clinicaltrials.gov/study/NCT01011621"
         }
       ],
       "trial_phases": {
@@ -2711,6 +2706,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.71, 4 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D011565",
       "dose_plausibility": {
         "plausibility": "likely",
         "dose_range": "trial",
@@ -2820,8 +2816,7 @@
         "tissue_specificity": 0.771,
         "context_modifier": 1.119
       },
-      "disease_entity": "Disease::MESH:D011565",
-      "ensemble_prob": 0.9049,
+      "ensemble_prob": 0.8514,
       "ensemble_features": {
         "kg_score": 0.9983,
         "degree_penalty": 0.7636,
@@ -2830,7 +2825,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 2.9444
       },
-      "ensemble_rank": 5,
+      "ensemble_rank": 6,
       "docking": {
         "kcal_per_mol": -11.05,
         "target_symbol": "NR3C1",
@@ -2868,8 +2863,8 @@
       "admet_score": 0.6427,
       "admet_flags": "clean",
       "primekg_score": 0.2585,
-      "dti_score": 0.6172,
-      "dti_best_target": "AFF1",
+      "dti_score": 0.5851,
+      "dti_best_target": "PRSS53",
       "kg_group_score": 0.3291,
       "structural_group_score": 0.9703,
       "network_group_score": 0.5641000270843506,
@@ -3186,6 +3181,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.75, 9 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D011565",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3308,8 +3304,7 @@
         "tissue_specificity": 0.676,
         "context_modifier": 1.109
       },
-      "disease_entity": "Disease::MESH:D011565",
-      "ensemble_prob": 0.9954,
+      "ensemble_prob": 0.9767,
       "ensemble_features": {
         "kg_score": 0.9997,
         "degree_penalty": 0.7521,
@@ -3318,7 +3313,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 1.3863
       },
-      "ensemble_rank": 1,
+      "ensemble_rank": 3,
       "docking": {
         "kcal_per_mol": -11.87,
         "target_symbol": "NR3C1",
@@ -3357,7 +3352,7 @@
       "admet_flags": "DILI=0.97",
       "primekg_score": 0.2648,
       "dti_score": 1.0,
-      "dti_best_target": "MTOR",
+      "dti_best_target": "SRGAP2",
       "kg_group_score": 0.4224,
       "structural_group_score": 1.0,
       "network_group_score": 0.5307000279426575,
@@ -3536,8 +3531,10 @@
         "Strong FAERS signal: 185 adverse event reports link drug to disease (12621 total reports)",
         "Supporting paper with 93 citations",
         "AI-generated hypothesis available",
-        "Moderate genetic evidence supporting causality (MR score: 0.66)"
+        "Moderate genetic evidence supporting causality (MR score: 0.66)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
       ],
+      "disease_entity": "Disease::MESH:D011565",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -3660,8 +3657,7 @@
         "tissue_specificity": 0.019,
         "context_modifier": 0.98
       },
-      "disease_entity": "Disease::MESH:D011565",
-      "ensemble_prob": 0.6575,
+      "ensemble_prob": 0.6877,
       "ensemble_features": {
         "kg_score": 0.9973,
         "degree_penalty": 0.7454,
@@ -3670,7 +3666,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 3.3673
       },
-      "ensemble_rank": 8,
+      "ensemble_rank": 7,
       "docking": {
         "kcal_per_mol": -9.97,
         "target_symbol": "CXCL8",
@@ -3708,8 +3704,8 @@
       "admet_score": 0.7521,
       "admet_flags": "clean",
       "primekg_score": 0.2543,
-      "dti_score": 0.4955,
-      "dti_best_target": "AFF1",
+      "dti_score": 0.5034,
+      "dti_best_target": "ADAMDEC1",
       "kg_group_score": 0.3084,
       "structural_group_score": 0.951,
       "network_group_score": 0.51419997215271,
@@ -3952,6 +3948,7 @@
         "AI-generated hypothesis available",
         "Strong causal genetic evidence (MR score: 0.73, 9 genetic targets)"
       ],
+      "disease_entity": "Disease::MESH:D011565",
       "dose_plausibility": {
         "plausibility": "yes",
         "dose_range": "clinical",
@@ -4061,8 +4058,7 @@
         "tissue_specificity": 0.027,
         "context_modifier": 0.996
       },
-      "disease_entity": "Disease::MESH:D011565",
-      "ensemble_prob": 0.6962,
+      "ensemble_prob": 0.5576,
       "ensemble_features": {
         "kg_score": 0.9966,
         "degree_penalty": 0.7473,
@@ -4071,7 +4067,7 @@
         "n_disease_genes": 0,
         "transe_rank_log": 3.6109
       },
-      "ensemble_rank": 7,
+      "ensemble_rank": 8,
       "docking": {
         "kcal_per_mol": -7.69,
         "target_symbol": "NR3C1",
