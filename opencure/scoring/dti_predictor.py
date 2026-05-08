@@ -1,13 +1,15 @@
 """
 Drug-Target Interaction prediction using ESM-2 protein embeddings
-+ ChemBERTa drug embeddings.
++ chemistry embeddings (MoLFormer-XL preferred, ChemBERTa fallback).
 
 ESM-2 (Meta): Protein language model that generates embeddings from
 amino acid sequences. These embeddings encode protein structure,
 function, and evolutionary relationships.
 
-Combined with ChemBERTa drug embeddings, we can predict whether a drug
-interacts with a protein target - without needing 3D structures.
+v7 default: ESM-2 150M (``esm2_t30_150M_UR50D``, 640-dim). Runs on M4 Max
+MPS in ~4–6 h for the full DRKG protein set; the older 8M variant stays
+available behind a flag for very-low-resource environments. The 650M
+variant is supported as an opt-in for CUDA users.
 """
 
 import numpy as np
@@ -20,17 +22,48 @@ from opencure.config import DATA_DIR
 
 MODELS_DIR = DATA_DIR.parent / "models"
 DTI_MODEL_PATH = MODELS_DIR / "dti_predictor.pt"
-PROTEIN_EMB_CACHE = DATA_DIR / "embeddings" / "protein_embeddings.npz"
+
+# Versioned caches keyed by model. ``load_best_protein_embeddings()`` picks
+# the strongest one currently on disk so DTI scoring auto-upgrades when a
+# bigger ESM variant gets precomputed.
+PROTEIN_EMB_CACHE = DATA_DIR / "embeddings" / "protein_embeddings.npz"  # legacy 8M
+PROTEIN_EMB_CACHE_150M = DATA_DIR / "embeddings" / "protein_embeddings_esm2_150M.npz"
+PROTEIN_EMB_CACHE_650M = DATA_DIR / "embeddings" / "protein_embeddings_esm2_650M.npz"
+
+# ESM-2 model variants with their output dimensions.
+ESM2_VARIANTS: dict[str, tuple[str, int]] = {
+    "8M": ("facebook/esm2_t6_8M_UR50D", 320),
+    "150M": ("facebook/esm2_t30_150M_UR50D", 640),
+    "650M": ("facebook/esm2_t33_650M_UR50D", 1280),
+}
+
+
+def _default_device() -> str:
+    """Pick the fastest available torch device. CUDA → MPS → CPU."""
+    try:
+        if torch.cuda.is_available():
+            return "cuda"
+        if getattr(torch.backends, "mps", None) is not None and torch.backends.mps.is_available():
+            return "mps"
+    except Exception:
+        pass
+    return "cpu"
 
 
 class DTIPredictor(nn.Module):
     """
     Simple MLP that predicts drug-target interaction from
     concatenated drug + protein embeddings.
+
+    v7: ``protein_dim`` defaults to 640 (ESM-2 150M). The drug side
+    defaults to 768 (ChemBERTa); MoLFormer-XL also outputs 768 so the
+    swap is dim-compatible.
     """
 
-    def __init__(self, drug_dim: int = 768, protein_dim: int = 320, hidden_dim: int = 512):
+    def __init__(self, drug_dim: int = 768, protein_dim: int = 640, hidden_dim: int = 512):
         super().__init__()
+        self.drug_dim = drug_dim
+        self.protein_dim = protein_dim
         self.net = nn.Sequential(
             nn.Linear(drug_dim + protein_dim, hidden_dim),
             nn.ReLU(),
@@ -49,9 +82,9 @@ class DTIPredictor(nn.Module):
 
 def get_esm2_embeddings(
     sequences: list[str],
-    model_name: str = "facebook/esm2_t6_8M_UR50D",
+    model_name: str = "facebook/esm2_t30_150M_UR50D",
     batch_size: int = 8,
-    device: str = "cpu",
+    device: Optional[str] = None,
 ) -> np.ndarray:
     """
     Compute protein embeddings using ESM-2.
@@ -63,12 +96,15 @@ def get_esm2_embeddings(
         sequences: List of amino acid sequences
         model_name: ESM-2 model variant
         batch_size: Batch size
-        device: 'cpu' or 'cuda'
+        device: ``'cpu'``/``'cuda'``/``'mps'``; ``None`` auto-detects.
 
     Returns:
         np.ndarray of shape (len(sequences), embedding_dim)
     """
     from transformers import AutoTokenizer, AutoModel
+
+    if device is None:
+        device = _default_device()
 
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModel.from_pretrained(model_name).to(device)
@@ -96,19 +132,56 @@ def get_esm2_embeddings(
     return np.vstack(all_embeddings)
 
 
-def load_protein_embeddings() -> tuple[Optional[np.ndarray], Optional[list[str]]]:
-    """Load cached protein embeddings."""
-    if PROTEIN_EMB_CACHE.exists():
-        data = np.load(str(PROTEIN_EMB_CACHE), allow_pickle=True)
+def _cache_path_for(variant: str) -> Path:
+    return {
+        "8M": PROTEIN_EMB_CACHE,
+        "150M": PROTEIN_EMB_CACHE_150M,
+        "650M": PROTEIN_EMB_CACHE_650M,
+    }[variant]
+
+
+def load_protein_embeddings(
+    variant: str = "8M",
+) -> tuple[Optional[np.ndarray], Optional[list[str]]]:
+    """Load cached protein embeddings for a specific ESM-2 variant."""
+    cache_path = _cache_path_for(variant)
+    if cache_path.exists():
+        data = np.load(str(cache_path), allow_pickle=True)
         return data["embeddings"], data["gene_ids"].tolist()
     return None, None
 
 
-def save_protein_embeddings(embeddings: np.ndarray, gene_ids: list[str]):
-    """Save protein embeddings to cache."""
-    PROTEIN_EMB_CACHE.parent.mkdir(parents=True, exist_ok=True)
+def load_best_protein_embeddings() -> tuple[
+    Optional[np.ndarray], Optional[list[str]], Optional[str]
+]:
+    """Return the strongest ESM-2 cache currently on disk.
+
+    Order of preference: 650M → 150M → 8M → none. Mirrors
+    ``molecular_embeddings.load_best_molecular_embeddings`` so DTI
+    scoring auto-upgrades the moment a better variant is precomputed,
+    without anyone having to flip a flag.
+    """
+    for variant in ("650M", "150M", "8M"):
+        emb, ids = load_protein_embeddings(variant)
+        if emb is not None:
+            return emb, ids, variant
+    return None, None, None
+
+
+def save_protein_embeddings(
+    embeddings: np.ndarray,
+    gene_ids: list[str],
+    variant: str = "150M",
+):
+    """Save protein embeddings to a variant-specific cache.
+
+    v7 default writes the 150M cache so callers don't accidentally
+    clobber a 650M artifact when running the smaller default variant.
+    """
+    cache_path = _cache_path_for(variant)
+    cache_path.parent.mkdir(parents=True, exist_ok=True)
     np.savez_compressed(
-        str(PROTEIN_EMB_CACHE),
+        str(cache_path),
         embeddings=embeddings,
         gene_ids=np.array(gene_ids),
     )

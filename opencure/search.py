@@ -55,8 +55,15 @@ def _get_data():
         # Try loading PyKEEN model (Pillar 3 upgrade)
         pykeen_model, pykeen_tf = _load_pykeen()
 
-        # Try loading ChemBERTa embeddings (Pillar 1 upgrade)
-        chemberta_emb, chemberta_entities = _load_chemberta()
+        # Try loading molecular embeddings (v7: prefer MoLFormer-XL,
+        # fall back to ChemBERTa). Single chemistry-embedding pillar; the
+        # model tag flows downstream so logs say which one is active.
+        mol_emb, mol_emb_entities, mol_emb_model = _load_mol_embeddings()
+
+        # Try loading ESM-2 protein embeddings (v7). Currently consumed
+        # only by future ESM-2-based DTI heads; stays in the data dict
+        # so any pillar can pick it up without re-loading.
+        prot_emb, prot_emb_genes, prot_emb_variant = _load_protein_embeddings()
 
         # v4 Phase 5: unified-KG TransE (DRKG+PrimeKG+OpenTargets)
         unified_model, unified_tf = _load_unified_kg()
@@ -75,8 +82,12 @@ def _get_data():
                 "smiles_map": smiles_map,
                 "pykeen_model": pykeen_model,
                 "pykeen_tf": pykeen_tf,
-                "chemberta_emb": chemberta_emb,
-                "chemberta_entities": chemberta_entities,
+                "mol_emb": mol_emb,
+                "mol_emb_entities": mol_emb_entities,
+                "mol_emb_model": mol_emb_model,
+                "prot_emb": prot_emb,
+                "prot_emb_genes": prot_emb_genes,
+                "prot_emb_variant": prot_emb_variant,
                 "unified_model": unified_model,
                 "unified_tf": unified_tf,
             }
@@ -119,16 +130,41 @@ def _load_pykeen():
         return None, None
 
 
-def _load_chemberta():
-    """Load precomputed ChemBERTa embeddings if available."""
+def _load_mol_embeddings():
+    """Load the strongest available chemistry embedding cache.
+
+    v7: prefers MoLFormer-XL (IBM, 1.1B compounds) over ChemBERTa.
+    Returns ``(emb, entities, model_tag)``; tag is ``None`` when nothing
+    is cached so the molecular-similarity pillar fails open.
+    """
     try:
-        from opencure.scoring.molecular_embeddings import load_cached_embeddings
-        emb, entities = load_cached_embeddings("chemberta")
+        from opencure.scoring.molecular_embeddings import load_best_molecular_embeddings
+        emb, entities, model_tag = load_best_molecular_embeddings()
         if emb is not None:
-            print(f"  {len(entities):,} ChemBERTa embeddings loaded")
-        return emb, entities
+            label = {"molformer": "MoLFormer-XL", "chemberta": "ChemBERTa"}.get(
+                model_tag, model_tag
+            )
+            print(f"  {len(entities):,} {label} embeddings loaded")
+        return emb, entities, model_tag
     except Exception:
-        return None, None
+        return None, None, None
+
+
+def _load_protein_embeddings():
+    """Load the strongest available ESM-2 protein embedding cache.
+
+    v7: prefers 650M → 150M → 8M. Returns ``(emb, genes, variant)``;
+    variant is ``None`` when nothing is cached. Optional — DTI scoring
+    has its own fallback path.
+    """
+    try:
+        from opencure.scoring.dti_predictor import load_best_protein_embeddings
+        emb, genes, variant = load_best_protein_embeddings()
+        if emb is not None:
+            print(f"  {len(genes):,} ESM-2 {variant} protein embeddings loaded")
+        return emb, genes, variant
+    except Exception:
+        return None, None, None
 
 
 def _load_unified_kg():
@@ -279,10 +315,15 @@ def search(
         if mol_sim_scores:
             print(f"  Found {len(mol_sim_scores)} compounds with fingerprint similarity")
 
-    # Step 3b: Pillar 1b - ChemBERTa learned molecular similarity
+    # Step 3b: Pillar 1b - learned molecular similarity (MoLFormer-XL preferred,
+    # ChemBERTa fallback). The model tag tells logs which one ran.
     mol_emb_scores = {}
-    if use_molecular_similarity and data.get("chemberta_emb") is not None:
-        print("[Pillar 1b] ChemBERTa learned molecular similarity...")
+    if use_molecular_similarity and data.get("mol_emb") is not None:
+        model_tag = data.get("mol_emb_model") or "ChemBERTa"
+        label = {"molformer": "MoLFormer-XL", "chemberta": "ChemBERTa"}.get(
+            model_tag, model_tag
+        )
+        print(f"[Pillar 1b] {label} learned molecular similarity...")
         from opencure.scoring.molecular_embeddings import score_by_learned_similarity
 
         for disease_entity, _ in disease_matches:
@@ -290,8 +331,8 @@ def search(
                 disease_entity=disease_entity,
                 triplets=data["triplets"],
                 all_compounds=data["compounds"],
-                embeddings=data["chemberta_emb"],
-                embedding_entities=data["chemberta_entities"],
+                embeddings=data["mol_emb"],
+                embedding_entities=data["mol_emb_entities"],
                 top_k=top_k * 5,
             )
             for compound, sim, similar_to in sim_results:

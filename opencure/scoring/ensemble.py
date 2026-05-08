@@ -9,6 +9,16 @@ the live search pipeline and the post-processor
 
 Pre-v5 heuristic and XGBoost-native loaders were removed in the v5.1
 cleanup; history is in git.
+
+v7 note: the 6-feature contract below is KG-only — the structural,
+network, TxGNN, MR, and ADMET signals do *not* feed the ensemble; they
+feed ``grouped_combiner.combined_score``. So the v7 chemistry/protein
+foundation-model swaps (MoLFormer-XL, ESM-2 150M) lift the
+*combined_score* without invalidating the existing ensemble pickle, and
+no retrain is required at the foundation-model layer. The ensemble is
+re-trained when (and only when) the feature contract itself expands
+(e.g. when the per-class heads in A2 land, or when structural-group
+score becomes a feature of its own).
 """
 from __future__ import annotations
 
