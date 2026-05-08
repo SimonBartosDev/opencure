@@ -39,7 +39,9 @@ PILLAR_FIELDS: tuple[str, ...] = (
     "admet_flags",
     "dti_score",           # DeepPurpose (0-1)
     "dti_best_target",
-    "rgcn_score",          # v5 heterogeneous GNN (trained model required)
+    "rgcn_score",          # v6.1 heterogeneous GNN (trained model required)
+    "rgcn_rank",           # rank under R-GCN scoring
+    "rgcn_relation",       # which treats-relation gave the best DistMult score
 )
 
 
@@ -245,6 +247,10 @@ RESULT_TOP_LEVEL: frozenset[str] = frozenset({
     # optional (added by post-processors / finalize)
     "ensemble_version", "ensemble_model_path", "docking_axis",
     "disease_entity",
+    # failure mode: when systematic_screening.py can't resolve the disease
+    # name to a DRKG entity, it writes status="failed" + error="...". The
+    # validator should accept this without rejecting the whole record.
+    "error",
 })
 
 

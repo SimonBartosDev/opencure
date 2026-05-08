@@ -315,6 +315,30 @@ def search(
     except Exception:
         pass
 
+    # Step 2e: R-GCN heterogeneous-GNN scoring — 12th pillar.
+    # Loads the trained model from data/models/rgcn_v5/ when present;
+    # fail-open (empty dict) when absent or untrained.
+    rgcn_scores = {}
+    try:
+        from opencure.scoring.rgcn_scorer import (
+            load_rgcn_model, score_drugs_for_disease_rgcn,
+        )
+        rgcn_state = load_rgcn_model()
+        if rgcn_state is not None:
+            print("[Pillar 12] R-GCN (heterogeneous GNN)...")
+            for disease_entity, _ in disease_matches:
+                scored = score_drugs_for_disease_rgcn(
+                    disease_entity, data["compounds"], rgcn_state, top_k=500,
+                )
+                # Merge across disease matches (max score per compound)
+                for compound, val in scored.items():
+                    if compound not in rgcn_scores or val[0] > rgcn_scores[compound][0]:
+                        rgcn_scores[compound] = val
+            if rgcn_scores:
+                print(f"  Scored {len(rgcn_scores)} compounds via R-GCN DistMult head")
+    except Exception as exc:
+        print(f"  [INFO] R-GCN skipped: {exc}")
+
     # Step 2d: Mendelian Randomization (causal evidence)
     mr_scores = {}
     try:
@@ -344,6 +368,8 @@ def search(
         active_pillars.append("ChemBERTa")
     if mr_scores:
         active_pillars.append("Mendelian Randomization")
+    if rgcn_scores:
+        active_pillars.append("R-GCN")
 
     # Step 4b: Gene signature reversal pillar (if enabled)
     gene_sig_scores = {}
@@ -509,7 +535,7 @@ def search(
     admet_cache = load_cached_predictions()
     all_compounds = (
         set(transe_scores) | set(pykeen_scores) | set(primekg_scores)
-        | set(unified_scores)
+        | set(unified_scores) | set(rgcn_scores)
         | set(mol_sim_scores) | set(mol_emb_scores) | set(dti_scores)
         | set(proximity_scores) | set(gene_sig_scores) | set(mr_scores)
         | set(admet_scores) | set(txgnn_scores)
@@ -529,8 +555,9 @@ def search(
         print(f"  Filtered {sum(rejections.values())} non-therapeutic compounds: {rejections}")
     kept_set = set(kept)
 
-    # Group correlated pillars
-    kg_group = group_kg_scores(transe_scores, pykeen_scores, primekg_scores, unified_scores)
+    # Group correlated pillars (RRF fusion across all KG embeddings + R-GCN)
+    kg_group = group_kg_scores(transe_scores, pykeen_scores, primekg_scores,
+                               unified_scores, rgcn_scores)
     structural_group = group_structural_scores(mol_sim_scores, mol_emb_scores, dti_scores)
     network_group = group_network_scores(proximity_scores, gene_sig_scores)
 
@@ -566,6 +593,11 @@ def search(
             norm, rk, rel = unified_scores[compound]
             scores["unified_score"] = norm
             scores["unified_rank"] = rk
+        if compound in rgcn_scores:
+            rgcn_norm, rgcn_rank, rgcn_rel = rgcn_scores[compound]
+            scores["rgcn_score"] = rgcn_norm
+            scores["rgcn_rank"] = rgcn_rank
+            scores["rgcn_relation"] = rgcn_rel
         if compound in txgnn_scores:
             raw, rank = txgnn_scores[compound]
             # grouped_combiner already set txgnn_score as rank-normalized [0,1].
@@ -689,6 +721,12 @@ def search(
         if "dti_score" in scores:
             result["dti_score"] = round(scores["dti_score"], 4)
             result["dti_best_target"] = scores.get("dti_best_target", "")
+
+        # Pillar 12: R-GCN heterogeneous GNN (DistMult head)
+        if "rgcn_score" in scores:
+            result["rgcn_score"] = round(scores["rgcn_score"], 4)
+            result["rgcn_rank"] = scores.get("rgcn_rank", 0)
+            result["rgcn_relation"] = scores.get("rgcn_relation", "")
 
         # Add graph evidence if requested
         if use_evidence:

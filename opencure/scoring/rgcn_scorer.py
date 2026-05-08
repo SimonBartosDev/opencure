@@ -31,85 +31,113 @@ RGCN_MODEL_DIR = Path("data/models/rgcn_v5")
 UNIFIED_KG_PATH = Path("data/unified_kg/unified.tsv")
 
 
-def load_rgcn_model():
-    """Load a trained R-GCN + node embeddings.
+TREATS_RELATIONS = (
+    "DRUGBANK::treats::Compound:Disease",
+    "OT::treats::Compound:Disease",
+    "PRIMEKG::indication",
+    "Hetionet::CtD::Compound:Disease",
+)
 
-    Returns (model, node_embeddings, relation_embeddings, entity_to_id)
-    or (None, None, None, None) if not trained yet.
+
+def load_rgcn_model():
+    """Load a trained R-GCN + node/relation embeddings.
+
+    Returns dict:
+        {
+          "node_emb":         FloatTensor [num_entities, dim],
+          "rel_emb":          FloatTensor [num_relations, dim],
+          "entity_to_id":     dict[str, int],
+          "relation_to_id":   dict[str, int],
+        }
+    or None if model file is absent / unreadable.
     """
     try:
         import torch
-        from torch_geometric.nn import RGCNConv  # noqa: F401
     except ImportError:
-        return None, None, None, None
+        return None
 
-    if not (RGCN_MODEL_DIR / "trained_model.pt").exists():
-        return None, None, None, None
-
+    path = RGCN_MODEL_DIR / "trained_model.pt"
+    if not path.exists():
+        return None
     try:
-        import torch
-        state = torch.load(RGCN_MODEL_DIR / "trained_model.pt", map_location="cpu")
-        return state["model"], state["node_emb"], state["rel_emb"], state["entity_to_id"]
-    except Exception as e:
-        print(f"  [WARN] R-GCN load failed: {e}")
-        return None, None, None, None
+        state = torch.load(path, map_location="cpu", weights_only=False)
+        # Validate shape — must contain everything DistMult needs
+        for k in ("node_emb", "rel_emb", "entity_to_id", "relation_to_id"):
+            if k not in state:
+                return None
+        return {
+            "node_emb": state["node_emb"],
+            "rel_emb": state["rel_emb"],
+            "entity_to_id": state["entity_to_id"],
+            "relation_to_id": state["relation_to_id"],
+        }
+    except Exception as exc:
+        print(f"  [WARN] R-GCN load failed: {exc}")
+        return None
 
 
 def score_drugs_for_disease_rgcn(
     disease_entity: str,
     compound_entities: list[str],
-    model=None,
-    node_emb=None,
-    rel_emb=None,
-    entity_to_id=None,
+    rgcn_state: dict | None = None,
     top_k: int = 500,
 ) -> dict[str, tuple[float, int, str]]:
-    """
-    Score compounds against a disease via R-GCN DistMult head.
+    """Score compounds against a disease via DistMult on R-GCN embeddings.
 
-    Uses DistMult scoring on top of R-GCN node embeddings:
-        score(h, r, t) = <h_emb, r_emb, t_emb>  (tensor dot product)
-    summed over all "treats-like" relations.
+    DistMult scoring head:  score(h, r, t) = <h_emb, r_emb, t_emb> over the
+    relevant relation. We score each compound against the disease for every
+    treats-like relation that exists in the model's vocabulary, then take
+    the maximum score per compound (best-relation evidence).
 
-    Returns dict[compound] -> (score_norm_0_to_1, rank, best_relation).
-    If model not loaded, returns empty dict (fail-open).
+    Returns dict[compound] -> (rank_normalized_score, rank, best_relation).
+    Empty dict on any failure (fail-open).
     """
-    if model is None or node_emb is None or entity_to_id is None:
+    if rgcn_state is None or disease_entity not in rgcn_state["entity_to_id"]:
         return {}
-
     try:
         import torch
     except ImportError:
         return {}
 
-    if disease_entity not in entity_to_id:
-        return {}
-    dis_id = entity_to_id[disease_entity]
+    ent2id = rgcn_state["entity_to_id"]
+    rel2id = rgcn_state["relation_to_id"]
+    node_emb = rgcn_state["node_emb"]      # [E, dim]
+    rel_emb = rgcn_state["rel_emb"]        # [R, dim]
 
-    # Find usable compounds
-    valid: list[tuple[str, int]] = [
-        (c, entity_to_id[c]) for c in compound_entities if c in entity_to_id
-    ]
+    # Pick the relations that exist in the trained vocab
+    treats_rel_ids = [rel2id[r] for r in TREATS_RELATIONS if r in rel2id]
+    if not treats_rel_ids:
+        return {}
+
+    valid = [(c, ent2id[c]) for c in compound_entities if c in ent2id]
     if not valid:
         return {}
 
-    # Treats-like relation IDs — we'd look these up in the relation_to_id
-    # mapping; deferred to the actual trained-model version.
-    # Placeholder: rank compounds by cosine similarity to disease embedding
-    # (a weak baseline that's still better than nothing if the R-GCN
-    # embeddings are trained).
-    comp_ids = torch.tensor([v[1] for v in valid])
-    h_emb = node_emb[comp_ids]
-    t_emb = node_emb[dis_id]
-    # cosine
-    scores = torch.nn.functional.cosine_similarity(h_emb, t_emb.unsqueeze(0))
-    scores = scores.numpy()
+    dis_id = ent2id[disease_entity]
+    t_emb = node_emb[dis_id]                                # [dim]
+    comp_ids = torch.tensor([v[1] for v in valid], dtype=torch.long)
+    h_emb = node_emb[comp_ids]                              # [N, dim]
 
-    ranked = sorted(zip([v[0] for v in valid], scores),
-                    key=lambda kv: -kv[1])
-    n = min(top_k, len(ranked))
+    # DistMult: score = sum( h * r * t ).  Compute over all treats-rels and
+    # take the max per compound.
+    best_scores = torch.full((len(valid),), -float("inf"))
+    best_rel_per_compound = ["rgcn"] * len(valid)
+    id_to_rel = {v: k for k, v in rel2id.items()}
+    for rid in treats_rel_ids:
+        r_emb = rel_emb[rid]                                # [dim]
+        scores = (h_emb * r_emb.unsqueeze(0) * t_emb.unsqueeze(0)).sum(dim=-1)
+        improved = scores > best_scores
+        best_scores = torch.where(improved, scores, best_scores)
+        for i, did_improve in enumerate(improved.tolist()):
+            if did_improve:
+                best_rel_per_compound[i] = id_to_rel[rid]
+
+    # Rank descending; emit rank-normalized score in [0, 1] (1 = top)
+    order = best_scores.argsort(descending=True).tolist()
+    n_emit = min(top_k, len(order))
     out: dict[str, tuple[float, int, str]] = {}
-    for i, (comp, _) in enumerate(ranked[:n]):
-        norm_score = 1.0 - (i / max(n - 1, 1))
-        out[comp] = (norm_score, i + 1, "rgcn")
+    for rank_i, idx in enumerate(order[:n_emit]):
+        comp = valid[idx][0]
+        norm_score = 1.0 - rank_i / max(n_emit - 1, 1)
+        out[comp] = (round(norm_score, 4), rank_i + 1, best_rel_per_compound[idx])
     return out

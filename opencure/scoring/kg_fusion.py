@@ -19,6 +19,7 @@ def fuse_kg_scores(
     pykeen_scores: dict | None = None,
     primekg_scores: dict | None = None,
     unified_scores: dict | None = None,
+    rgcn_scores: dict | None = None,
 ) -> dict:
     """Combine multiple KG score dicts using Reciprocal Rank Fusion.
 
@@ -26,8 +27,9 @@ def fuse_kg_scores(
       - transe_scores:   DRKG TransE
       - pykeen_scores:   DRKG RotatE (PyKEEN-trained)
       - primekg_scores:  PrimeKG TransE
-      - unified_scores:  (optional, v4 Phase 5) RotatE on unified
-                         DRKG+PrimeKG+OpenTargets graph
+      - unified_scores:  RotatE on unified DRKG+PrimeKG+OpenTargets graph
+      - rgcn_scores:     R-GCN heterogeneous GNN (12th pillar) — when the
+                         trained model exists at data/models/rgcn_v5/
 
     Each input is dict[compound] -> (score, metadata...).
     Returns dict[compound] -> (fused_score, num_kgs, "kg_fused").
@@ -44,6 +46,8 @@ def fuse_kg_scores(
         kg_dicts["primekg"] = primekg_scores
     if unified_scores:
         kg_dicts["unified"] = unified_scores
+    if rgcn_scores:
+        kg_dicts["rgcn"] = rgcn_scores
 
     if not kg_dicts:
         return {}

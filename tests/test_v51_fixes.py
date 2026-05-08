@@ -144,6 +144,60 @@ def test_pgx_flags_is_forbidden() -> None:
     assert "pgx_flags" in LEGACY_FIELDS
 
 
+# ---- v6.1: R-GCN 12th pillar wired into search.py + KG fusion ----
+
+def test_rgcn_score_in_canonical_schema() -> None:
+    from opencure.scoring.common import CANDIDATE_FIELDS
+    assert "rgcn_score" in CANDIDATE_FIELDS
+    assert "rgcn_rank" in CANDIDATE_FIELDS
+    assert "rgcn_relation" in CANDIDATE_FIELDS
+
+
+def test_kg_fusion_accepts_rgcn() -> None:
+    """RRF must accept rgcn_scores as the 5th input source."""
+    from opencure.scoring.kg_fusion import fuse_kg_scores
+    # Empty rgcn → falls back to other KGs without crashing
+    out = fuse_kg_scores(
+        transe_scores={"Compound::A": (0.9, "rel", "Disease::X")},
+        rgcn_scores={"Compound::A": (0.8, 1, "treats")},
+    )
+    assert "Compound::A" in out
+    # When only rgcn is given, pass-through
+    out2 = fuse_kg_scores(
+        rgcn_scores={"Compound::A": (0.8, 1, "treats")},
+    )
+    assert "Compound::A" in out2
+
+
+def test_pillar_groups_kg_passes_rgcn_through() -> None:
+    """group_kg_scores signature must include rgcn_scores."""
+    from opencure.scoring.pillar_groups import group_kg_scores
+    out = group_kg_scores(
+        transe_scores=None, pykeen_scores=None, primekg_scores=None,
+        unified_scores=None,
+        rgcn_scores={"Compound::DB1": (0.9, 1, "rgcn"),
+                     "Compound::DB2": (0.5, 2, "rgcn")},
+    )
+    assert "Compound::DB1" in out
+    assert "Compound::DB2" in out
+
+
+def test_rgcn_load_and_score_when_model_missing() -> None:
+    """Scorer must fail-open (return empty dict) when model file is absent."""
+    from opencure.scoring.rgcn_scorer import score_drugs_for_disease_rgcn
+    # Pass None state → empty
+    assert score_drugs_for_disease_rgcn(
+        "Disease::MESH:D012552", ["Compound::DB00001"], rgcn_state=None,
+    ) == {}
+
+
+def test_rgcn_search_imports_clean() -> None:
+    """opencure.search must import without error after R-GCN wire-up."""
+    import importlib
+    import opencure.search as s
+    assert hasattr(s, "search")
+
+
 # ---- Regression: aggregate-file filter shared across post-processors -----
 
 def test_aggregate_files_constant_covers_all_known_aggregates() -> None:
