@@ -23,6 +23,7 @@ from pathlib import Path
 
 from opencure.data.drkg import load_embeddings, get_compound_entities
 from opencure.scoring.common import AGGREGATE_RESULT_FILES
+from opencure.scoring.conformal import ConformalCalibrator
 from opencure.scoring.ensemble import (
     MODEL_PATH,
     build_features,
@@ -30,6 +31,7 @@ from opencure.scoring.ensemble import (
     score as score_candidate,
 )
 from opencure.scoring.hub_normalize import degree_penalty
+from opencure.scoring.per_class_ensemble import score_with_routing
 from opencure.scoring.transe import score_drugs_for_disease_vectorized
 
 
@@ -85,6 +87,7 @@ def count_disease_associated_genes() -> dict[str, int]:
 def score_file(
     path: Path, model, feature_keys, ent_emb, rel_emb, ent2id, rel2id,
     compounds, drug_n_targets, chembl_phase, disease_gene_counts,
+    conformal: ConformalCalibrator | None = None,
 ) -> int:
     data = json.load(path.open())
     candidates = data.get("candidates") or data.get("top_candidates") or []
@@ -132,10 +135,25 @@ def score_file(
             disease_gene_counts={disease_entity: n_disease_genes},
             degree_penalty_fn=degree_penalty,
         )
-        p = score_candidate(model, feature_keys, feats)
+        # v7: route through per-class head when available; falls back to
+        # the shared head with head_used = "shared". Tag is recorded so
+        # downstream consumers know which head produced each prediction.
+        p, head_used = score_with_routing(
+            data.get("disease", path.stem.replace("_", " ")),
+            feats,
+            shared_model=model,
+            shared_feature_keys=feature_keys,
+        )
         cand["ensemble_prob"] = round(p, 4)
+        cand["ensemble_head"] = head_used
         cand["ensemble_features"] = {k: round(v, 4) if isinstance(v, float) else v
                                      for k, v in feats.items()}
+        # v7: attach conformal interval when calibrator is present.
+        if conformal is not None:
+            interval = conformal.predict_with_interval(p)
+            cand["ensemble_prob_lower"] = round(interval["ensemble_prob_lower"], 4)
+            cand["ensemble_prob_upper"] = round(interval["ensemble_prob_upper"], 4)
+            cand["prediction_set_at_90"] = interval["prediction_set_at_90"]
         probs.append((cand, p))
 
     # Stable secondary rank by ensemble_prob (does not re-sort existing output)
@@ -157,6 +175,16 @@ def main() -> None:
         sys.exit(str(exc))
     print(f"Model: {MODEL_PATH}")
     print(f"Features: {feature_keys}")
+
+    # v7: load conformal calibrator if present. Fail-open — script still
+    # attaches ensemble_prob even when the calibrator hasn't been fit yet.
+    conformal = ConformalCalibrator.load()
+    if conformal is not None:
+        print(f"Conformal calibrator: q_alpha={conformal.q_alpha:.4f} "
+              f"(n={conformal.cal_size}, alpha={conformal.alpha:.2f})")
+    else:
+        print("Conformal calibrator: not present "
+              "(run scripts/calibrate_conformal.py to enable interval emission)")
 
     print("Loading DRKG embeddings...")
     ent_emb, rel_emb, ent2id, id2ent, rel2id = load_embeddings()
@@ -180,7 +208,8 @@ def main() -> None:
             print(f"  [skip] {f.name} not found")
             continue
         n = score_file(f, model, feature_keys, ent_emb, rel_emb, ent2id, rel2id,
-                       compounds, drug_n_targets, chembl_phase, disease_gene_counts)
+                       compounds, drug_n_targets, chembl_phase, disease_gene_counts,
+                       conformal=conformal)
         print(f"  {f.name}: {n} candidates scored")
         total += n
     print(f"\nDone. {total} candidates across {len(files)} files carry ensemble_prob.")

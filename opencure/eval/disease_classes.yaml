@@ -1,0 +1,133 @@
+# OpenCure v7 disease-class taxonomy.
+#
+# Maps each of the 93 screened diseases to one of six ensemble classes.
+# The per-class ensemble heads (data/models/ensemble_v7_<class>.pkl)
+# specialise on the dominant repurposing mechanism of each class so a
+# single shared head doesn't average across mechanism-incompatible
+# diseases.
+#
+# Classes were chosen by grouping by *therapeutic mechanism* rather
+# than ICD chapter:
+#   - parasitic       → anti-helminthic / anti-protozoal
+#   - viral           → antiviral / immune-modulator
+#   - bacterial       → antibiotic / cell-envelope target
+#   - oncology        → anti-proliferative / immune-checkpoint
+#   - rare_metabolic  → enzyme replacement / lipid / hormonal / genetic
+#   - chronic_systemic → CNS, autoimmune, cardio, respiratory, neuropsych
+#
+# Diseases not listed below fall back to the shared ensemble head
+# (data/models/ensemble_v5.pkl) — so the platform is always operational
+# even when the taxonomy hasn't been updated for new entries.
+
+parasitic:
+  - Malaria
+  - Schistosomiasis
+  - Chagas disease
+  - Leishmaniasis
+  - Visceral leishmaniasis
+  - Cutaneous leishmaniasis
+  - African trypanosomiasis
+  - Onchocerciasis
+  - Lymphatic filariasis
+  - Echinococcosis
+  - Cysticercosis
+  - Scabies
+  - Ascariasis
+  - Hookworm infection
+
+viral:
+  - HIV
+  - Hepatitis C
+  - Dengue
+  - COVID-19
+  - Rabies
+
+bacterial:
+  - Tuberculosis
+  - Leprosy
+  - Buruli ulcer
+  - Trachoma
+
+oncology:
+  - Breast cancer
+  - Lung cancer
+  - Colorectal cancer
+  - Pancreatic cancer
+  - Prostate cancer
+  - Ovarian cancer
+  - Melanoma
+  - Glioblastoma
+  - Leukemia
+  - Lymphoma
+  - Multiple myeloma
+  - Neuroblastoma
+  - Retinoblastoma
+  - Wilms tumor
+  - Medulloblastoma
+  - Rhabdomyosarcoma
+  - Ewing sarcoma
+  - Osteosarcoma
+
+rare_metabolic:
+  # Lysosomal storage + genetic + metabolic
+  - Sickle cell disease
+  - Duchenne muscular dystrophy
+  - Neurofibromatosis
+  - Marfan syndrome
+  - Ehlers-Danlos syndrome
+  - Gaucher disease
+  - Fabry disease
+  - Hunter syndrome
+  - Pompe disease
+  - Niemann-Pick disease
+  - Tay-Sachs disease
+  - Wilson's disease
+  - Phenylketonuria
+  - Acromegaly
+  # Cardiovascular & metabolic (similar mechanism flavour: lipid,
+  # hormonal, enzyme-driven)
+  - Type 2 diabetes
+  - Obesity
+  - Atherosclerosis
+  - Liver cirrhosis
+  - Chronic kidney disease
+
+chronic_systemic:
+  # Neurological + Neurodegenerative
+  - Alzheimer's disease
+  - Parkinson's disease
+  - Huntington's disease
+  - Amyotrophic lateral sclerosis
+  - Multiple sclerosis
+  - Fragile X syndrome
+  - Spinal muscular atrophy
+  - Friedreich's ataxia
+  - Rett syndrome
+  - Spinocerebellar ataxia
+  # Neuropsychiatric
+  - Depression
+  - Schizophrenia
+  - Bipolar disorder
+  - Epilepsy
+  - Anxiety
+  # Autoimmune / inflammatory
+  - Rheumatoid arthritis
+  - Crohn's disease
+  - Ulcerative colitis
+  - Psoriasis
+  - Lupus
+  - Inflammatory bowel disease
+  # Cardiovascular (chronic)
+  - Heart failure
+  - Coronary artery disease
+  - Atrial fibrillation
+  - Hypertension
+  # Respiratory + other
+  - Asthma
+  - COPD
+  - Idiopathic pulmonary fibrosis
+  - Cystic fibrosis
+  - Pulmonary hypertension
+  - Sepsis
+  - Osteoporosis
+  - Endometriosis

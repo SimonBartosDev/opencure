@@ -201,9 +201,23 @@ V51_FIELDS: tuple[str, ...] = (
     "structural_alerts",
 )
 
+# v7 post-processor outputs.
+# - conformal interval: ensemble_prob_lower / _upper (90% coverage by default)
+# - prediction_set_at_90: list[int] of conformally-consistent labels
+#   ([1] = confident positive, [0,1] = uncertain, [0] = confident negative)
+# - ensemble_head: which per-class head scored this candidate
+#   ("parasitic", "viral", "bacterial", "oncology", "rare_metabolic",
+#   "chronic_systemic", or "shared" when no per-class head matched).
+V7_FIELDS: tuple[str, ...] = (
+    "ensemble_prob_lower",
+    "ensemble_prob_upper",
+    "prediction_set_at_90",
+    "ensemble_head",
+)
+
 CANDIDATE_FIELDS: frozenset[str] = frozenset(
     IDENTITY_FIELDS + PILLAR_FIELDS + GROUP_FIELDS + FINAL_FIELDS
-    + EVIDENCE_FIELDS + LABEL_FIELDS + CLINICAL_FIELDS + V51_FIELDS
+    + EVIDENCE_FIELDS + LABEL_FIELDS + CLINICAL_FIELDS + V51_FIELDS + V7_FIELDS
 )
 
 # Fields required on every candidate (missing = schema violation).

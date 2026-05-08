@@ -1,0 +1,235 @@
+# OpenCure v7 negative-control suite.
+#
+# For each disease, a curated list of compounds that should rank below
+# the per-disease median across all pillars and the final ensemble.
+# These are drugs with no plausible mechanistic link to the disease —
+# if they rank near the top, the platform is hallucinating.
+#
+# Coverage strategy:
+# - The four lead diseases (Schistosomiasis, Chagas, Sickle Cell,
+#   Niemann-Pick) get a hand-curated set of >=3 controls each, with
+#   short rationales.
+# - Twelve more high-priority diseases (NTDs + rare) get curated
+#   controls for breadth.
+# - The remaining ~75 diseases use the ATC-class-mismatch heuristic
+#   (see `opencure.eval.negative_control.synthesize_controls`) at
+#   verification time — auto-sampled from non-overlapping therapeutic
+#   classes. Hand-curate as we get more clinical input.
+#
+# Schema:
+#   <disease_key>:
+#     drugs:
+#       - id: <DrugBank ID>
+#         name: <human readable>
+#         rationale: <one-sentence why this is a negative>
+
+universal_hubs:
+  # Should rank below median for EVERY disease — these are metabolites /
+  # ubiquitous biomolecules that DRKG is densely connected to but that
+  # nobody prescribes.
+  drugs:
+    - id: DB00143
+      name: Glutathione
+      rationale: Ubiquitous endogenous antioxidant, hub artifact in DRKG; not a therapeutic.
+    - id: DB14288
+      name: Uric acid
+      rationale: Endogenous metabolite, not a therapeutic.
+    - id: DB12515
+      name: Cordycepin
+      rationale: Research compound / mushroom metabolite; not an approved drug.
+
+# ---- Lead diseases (deepest curation) -----------------------------------
+
+Schistosomiasis:
+  drugs:
+    - id: DB00030
+      name: Insulin human
+      rationale: Endocrine peptide for diabetes; no anti-helminthic mechanism, no Schistosoma exposure.
+    - id: DB00451
+      name: Levothyroxine
+      rationale: Thyroid hormone replacement; no parasiticide activity.
+    - id: DB00682
+      name: Warfarin
+      rationale: Vitamin K antagonist anticoagulant; no anti-Schistosoma mechanism.
+
+Chagas_disease:
+  drugs:
+    - id: DB01001
+      name: Salbutamol
+      rationale: Beta-2 agonist bronchodilator; no anti-Trypanosoma cruzi activity.
+    - id: DB01222
+      name: Budesonide
+      rationale: Inhaled corticosteroid; no protozoacidal mechanism.
+    - id: DB00682
+      name: Warfarin
+      rationale: Anticoagulant; not relevant to T. cruzi pathology.
+
+Sickle_cell_disease:
+  drugs:
+    - id: DB01076
+      name: Atorvastatin
+      rationale: HMG-CoA reductase inhibitor (lipids); does not modulate hemoglobin polymerization.
+    - id: DB00338
+      name: Omeprazole
+      rationale: Proton pump inhibitor; no hematological mechanism.
+    - id: DB00722
+      name: Lisinopril
+      rationale: ACE inhibitor; no relevance to HbS or RBC sickling.
+
+Niemann-Pick_disease:
+  drugs:
+    - id: DB00341
+      name: Cetirizine
+      rationale: H1 antihistamine; no lysosomal storage mechanism.
+    - id: DB00455
+      name: Loratadine
+      rationale: H1 antihistamine; no NPC1/NPC2 or sphingolipid relevance.
+    - id: DB00852
+      name: Pseudoephedrine
+      rationale: Sympathomimetic decongestant; no relevance to lysosomal cholesterol trafficking.
+
+# ---- Additional NTD / rare-disease curated controls --------------------
+
+Leishmaniasis:
+  drugs:
+    - id: DB01076
+      name: Atorvastatin
+      rationale: Statin, no anti-leishmanial mechanism.
+    - id: DB00682
+      name: Warfarin
+      rationale: Anticoagulant, no anti-protozoal activity.
+    - id: DB00477
+      name: Chlorpromazine
+      rationale: Antipsychotic; no validated anti-Leishmania mechanism (despite hub-rich receptor binding).
+
+Tuberculosis:
+  drugs:
+    - id: DB00030
+      name: Insulin human
+      rationale: Endocrine peptide; no anti-mycobacterial activity.
+    - id: DB00451
+      name: Levothyroxine
+      rationale: Thyroid replacement; not relevant to M. tuberculosis.
+    - id: DB00341
+      name: Cetirizine
+      rationale: H1 antihistamine; no anti-bacterial mechanism.
+
+Buruli_ulcer:
+  drugs:
+    - id: DB00682
+      name: Warfarin
+      rationale: Anticoagulant; not relevant to M. ulcerans skin infection.
+    - id: DB00455
+      name: Loratadine
+      rationale: H1 antihistamine; no anti-mycobacterial activity.
+    - id: DB00722
+      name: Lisinopril
+      rationale: ACE inhibitor; no relevance to Buruli pathology.
+
+Dengue:
+  drugs:
+    - id: DB01076
+      name: Atorvastatin
+      rationale: Statin; no antiviral activity against dengue virus.
+    - id: DB00722
+      name: Lisinopril
+      rationale: ACE inhibitor; no relevance to flavivirus replication.
+    - id: DB00682
+      name: Warfarin
+      rationale: Anticoagulant; contraindicated in dengue (bleeding risk), not a therapeutic.
+
+Lymphatic_filariasis:
+  drugs:
+    - id: DB00338
+      name: Omeprazole
+      rationale: PPI; no anti-filarial activity.
+    - id: DB01076
+      name: Atorvastatin
+      rationale: Statin; no anti-helminthic mechanism.
+    - id: DB00455
+      name: Loratadine
+      rationale: H1 antihistamine; no relevance to W. bancrofti.
+
+Onchocerciasis:
+  drugs:
+    - id: DB00338
+      name: Omeprazole
+      rationale: PPI; no anti-filarial activity.
+    - id: DB00682
+      name: Warfarin
+      rationale: Anticoagulant; not relevant to O. volvulus.
+    - id: DB00722
+      name: Lisinopril
+      rationale: ACE inhibitor; no anti-helminthic mechanism.
+
+Gaucher_disease:
+  drugs:
+    - id: DB00341
+      name: Cetirizine
+      rationale: H1 antihistamine; no relevance to glucocerebrosidase deficiency.
+    - id: DB00852
+      name: Pseudoephedrine
+      rationale: Sympathomimetic; no lysosomal mechanism.
+    - id: DB00722
+      name: Lisinopril
+      rationale: ACE inhibitor; no relevance to GBA1.
+
+Pompe_disease:
+  drugs:
+    - id: DB00455
+      name: Loratadine
+      rationale: H1 antihistamine; no relevance to acid alpha-glucosidase deficiency.
+    - id: DB00682
+      name: Warfarin
+      rationale: Anticoagulant; not relevant to Pompe pathology.
+    - id: DB00338
+      name: Omeprazole
+      rationale: PPI; no relevance to glycogen storage.
+
+Cystic_fibrosis:
+  drugs:
+    - id: DB00682
+      name: Warfarin
+      rationale: Anticoagulant; not relevant to CFTR.
+    - id: DB00341
+      name: Cetirizine
+      rationale: H1 antihistamine; no CFTR-modulator mechanism.
+    - id: DB00455
+      name: Loratadine
+      rationale: H1 antihistamine; no relevance to chloride channel function.
+
+Huntington_disease:
+  drugs:
+    - id: DB00030
+      name: Insulin human
+      rationale: Endocrine peptide; no relevance to HTT polyglutamine pathology.
+    - id: DB00682
+      name: Warfarin
+      rationale: Anticoagulant; not a CNS drug.
+    - id: DB00455
+      name: Loratadine
+      rationale: H1 antihistamine; no neurodegenerative mechanism.
+
+Spinal_muscular_atrophy:
+  drugs:
+    - id: DB00338
+      name: Omeprazole
+      rationale: PPI; no relevance to SMN1/SMN2 splicing.
+    - id: DB00455
+      name: Loratadine
+      rationale: H1 antihistamine; no neurological mechanism.
+    - id: DB00682
+      name: Warfarin
+      rationale: Anticoagulant; not relevant to motor neuron biology.
+
+Duchenne_muscular_dystrophy:
+  drugs:
+    - id: DB00338
+      name: Omeprazole
+      rationale: PPI; no relevance to dystrophin biology.
+    - id: DB00682
+      name: Warfarin
+      rationale: Anticoagulant; not relevant to DMD pathology.
+    - id: DB00341
+      name: Cetirizine
+      rationale: H1 antihistamine; no relevance to muscular dystrophy.

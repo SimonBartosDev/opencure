@@ -155,7 +155,7 @@ def main() -> None:
     print("\nExtracting features...")
     t0 = time.time()
     rels = ["DRUGBANK::treats::Compound:Disease"]
-    X, y = [], []
+    X, y, row_diseases = [], [], []  # row_diseases parallels X/y for per-class slicing
     for i, (dis, pairs) in enumerate(by_dis.items()):
         try:
             ranked = score_drugs_for_disease_vectorized(
@@ -184,6 +184,7 @@ def main() -> None:
                 np.log1p(rk),
             ])
             y.append(label)
+            row_diseases.append(dis)
         if (i + 1) % 500 == 0:
             print(f"  {i + 1}/{len(by_dis)} diseases processed "
                   f"({len(X):,} rows, {time.time()-t0:.0f}s)")
@@ -270,6 +271,32 @@ def main() -> None:
     for k, v in sorted(importances.items(), key=lambda kv: -kv[1]):
         bar = "█" * int(v * 30)
         print(f"  {k:<22s} {v:.4f}  {bar}")
+
+    # ---- v7: per-class heads on top of the shared ensemble --------------
+    # Each class gets a small logistic head so the routing layer
+    # (opencure/scoring/per_class_ensemble.py) can pick a specialised
+    # model when scoring a disease. Skips classes with too few positives.
+    print("\nTraining per-class heads (v7)...")
+    try:
+        from opencure.scoring.per_class_train import (
+            collect_disease_names, train_per_class_heads,
+        )
+    except Exception as exc:
+        print(f"  [INFO] Per-class training unavailable: {exc}")
+    else:
+        entity_to_name = collect_disease_names(ent2id)
+        if not entity_to_name:
+            print("  [INFO] No disease entity → name map; skipping per-class heads")
+        else:
+            summary = train_per_class_heads(
+                X, y, row_diseases,
+                entity_to_name=entity_to_name,
+                feature_keys=FEATURE_KEYS,
+                seed=SEED,
+            )
+            for cls, info in summary.items():
+                print(f"  saved {info['path']} "
+                      f"({info['n_pos']} pos / {info['n_neg']} neg)")
 
 
 if __name__ == "__main__":
