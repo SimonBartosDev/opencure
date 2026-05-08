@@ -66,6 +66,8 @@ STEPS: list[Step] = [
          ["python3", "scripts/add_docking_proxy_axis.py"], timeout=600),
     Step("pains",        "Annotating structural alerts (PAINS/Brenk/NIH)",
          ["python3", "scripts/annotate_structural_alerts.py"], timeout=300),
+    Step("red_team",     "v7: adversarial red-team critique per top-K candidate",
+         ["python3", "scripts/red_team_v7.py"], timeout=900),
     Step("clusters",     "Recomputing cross-disease mechanism clusters",
          ["python3", "-m", "opencure.scoring.mechanism_cluster", "experiments/results"]),
     Step("database",     "Generating dashboard database JSON",
@@ -74,6 +76,8 @@ STEPS: list[Step] = [
          ["python3", "scripts/build_explorer.py"]),
     Step("snapshot",     "Writing content-hashed prospective snapshot",
          ["python3", "scripts/snapshot_predictions.py"]),
+    Step("briefs",       "v7: per-disease wet-lab briefs (top-5 each)",
+         ["python3", "scripts/generate_wetlab_briefs.py"], timeout=600),
     Step("scoring",      "Running honest-scoring report",
          ["python3", "scripts/honest_scoring.py"]),
 ]

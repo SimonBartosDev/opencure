@@ -1,0 +1,35 @@
+# GitHub Pages config for the OpenCure dashboard.
+#
+# Set this repo's Pages source in Settings → Pages to "Deploy from a
+# branch" → branch `main`, folder `/docs`. The dashboard at
+# `docs/index.html` is the entry point; about / methods / outreach
+# briefs are served from the same folder as Markdown auto-rendered
+# by Jekyll.
+
+title: "OpenCure"
+description: "Open multi-pillar drug-repurposing platform with prospective validation"
+url: "https://simonbartosdev.github.io"
+baseurl: "/opencure"
+
+theme: jekyll-theme-cayman
+
+# Render Markdown files (about.md, methods_paper_draft.md,
+# lab_outreach_briefs.md, etc.) as HTML pages alongside the dashboard.
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Avoid Jekyll trying to process the wet-lab briefs directory if it
+# ever gets exported here; the briefs are best served as raw Markdown.
+exclude:
+  - history/
+  - "*.tex"
+  - vendor/
+  - Gemfile
+  - Gemfile.lock
+
+# Keep history files (older release notes) under git but out of the
+# rendered site.
+include:
+  - .nojekyll
