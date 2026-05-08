@@ -198,6 +198,34 @@ def test_rgcn_search_imports_clean() -> None:
     assert hasattr(s, "search")
 
 
+# ---- v6.1: TxGNN drug-name matching (salt-form handling) ----
+
+def test_txgnn_salt_stripping_matches_drugbank_names() -> None:
+    """TxGNN's name → entity lookup must match DRKG's salt-form drug
+    names (e.g. 'Metformin Hydrochloride') against TxGNN's parent-form
+    predictions (e.g. 'metformin')."""
+    from opencure.scoring.txgnn_scorer import score_drugs_for_disease_txgnn
+    # Inject a fake prediction set + drug map. We don't need the real
+    # data file for this unit test; just monkey-patch the loader.
+    from unittest.mock import patch
+    fake_preds = {"alzheimer disease": [("metformin", 0.99), ("aspirin", 0.5)]}
+    drug_names = {
+        "Compound::DB00331": "Metformin Hydrochloride",   # salt form
+        "Compound::DB00945": "Aspirin",                    # exact form
+        "Compound::DBXXXXX": "Some other drug",
+    }
+    compound_set = list(drug_names)
+    with patch("opencure.scoring.txgnn_scorer.load_txgnn_predictions",
+               return_value=fake_preds):
+        result = score_drugs_for_disease_txgnn(
+            "Alzheimer's disease", compound_set, drug_names,
+        )
+    # Both should match — salt-stripping picks up Metformin Hydrochloride
+    assert "Compound::DB00331" in result, "salt-stripping failed"
+    assert "Compound::DB00945" in result, "exact name match failed"
+    assert "Compound::DBXXXXX" not in result, "unrelated drug shouldn't match"
+
+
 # ---- Regression: aggregate-file filter shared across post-processors -----
 
 def test_aggregate_files_constant_covers_all_known_aggregates() -> None:

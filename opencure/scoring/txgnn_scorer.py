@@ -90,18 +90,37 @@ def score_drugs_for_disease_txgnn(
 
     txgnn_drugs = predictions[matched_disease]
 
-    # Build reverse map: drug name → entity
-    name_to_entity = {}
+    # Build name → entity map. TxGNN trained on PrimeKG uses parent-compound
+    # names ("metformin"); DRKG/DrugBank stores salt forms ("metformin
+    # hydrochloride"). Augment the lookup with salt-stripped aliases — same
+    # approach as gene_signatures.py — to lift the match rate.
+    SALT_SUFFIXES = (
+        " hydrochloride", " sulfate", " sodium", " maleate", " citrate",
+        " tartrate", " fumarate", " acetate", " phosphate", " chloride",
+        " bromide", " succinate", " mesylate", " besylate", " tosylate",
+        " nitrate", " hydrobromide", " calcium", " potassium", " disodium",
+    )
+    name_to_entity: dict[str, str] = {}
     for entity, name in drug_names.items():
-        name_to_entity[name.lower()] = entity
+        low = name.lower().strip()
+        if low and low not in name_to_entity:
+            name_to_entity[low] = entity
+        for suffix in SALT_SUFFIXES:
+            if low.endswith(suffix):
+                stripped = low[: -len(suffix)].strip()
+                # First hit wins — canonical full names beat salt-stripped aliases.
+                name_to_entity.setdefault(stripped, entity)
 
-    # Match TxGNN drug names to our compound entities
-    results = {}
+    candidate_set = set(compound_entities)
+    results: dict[str, tuple[float, int]] = {}
     for rank, (drug_name, score) in enumerate(txgnn_drugs, 1):
-        drug_lower = drug_name.lower()
-        if drug_lower in name_to_entity:
-            entity = name_to_entity[drug_lower]
-            if entity in set(compound_entities):
+        drug_lower = drug_name.lower().strip()
+        entity = name_to_entity.get(drug_lower)
+        if entity and entity in candidate_set:
+            # Keep the best (smallest) rank if the same entity matches
+            # multiple alternate names.
+            existing = results.get(entity)
+            if existing is None or rank < existing[1]:
                 results[entity] = (score, rank)
 
     return results
