@@ -211,11 +211,28 @@ V51_FIELDS: tuple[str, ...] = (
 # - ensemble_head: which per-class head scored this candidate
 #   ("parasitic", "viral", "bacterial", "oncology", "rare_metabolic",
 #   "chronic_systemic", or "shared" when no per-class head matched).
+# - selectivity_*: off-target panel — high selectivity = drug binds few targets;
+#   promiscuous binders get combined_score dampened.
+# - target_essentiality / essentiality_warning: DepMap CRISPR essentiality
+#   flag for the candidate's primary target — high-essentiality genes
+#   are druggable in oncology but risky elsewhere.
+# - mechanism_confidence: how well-known the disease's molecular biology
+#   is. Low confidence → every prediction tagged speculative in the
+#   wet-lab brief.
+# - red_team_assessment: short adversarial critique per candidate.
 V7_FIELDS: tuple[str, ...] = (
     "ensemble_prob_lower",
     "ensemble_prob_upper",
     "prediction_set_at_90",
     "ensemble_head",
+    "selectivity_score",
+    "n_off_targets",
+    "primary_target",
+    "primary_nM",
+    "target_essentiality",
+    "essentiality_warning",
+    "mechanism_confidence",
+    "red_team_assessment",
 )
 
 CANDIDATE_FIELDS: frozenset[str] = frozenset(
