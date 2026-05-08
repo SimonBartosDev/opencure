@@ -91,6 +91,15 @@ image = (
         "requests",
         "matplotlib",
         "pyyaml",
+        # v7: MoLFormer-XL, ESM-2 (HuggingFace transformers + tokenizers).
+        # transformers must be <4.49 — MoLFormer-XL's HuggingFace
+        # configuration_molformer.py imports transformers.onnx, which was
+        # removed in 4.49.0. ESM-2 is compatible with 4.48.x as well.
+        "transformers==4.48.3",
+        "tokenizers",
+        "sentencepiece",
+        # v7: optional acceleration for the MoLFormer-XL precompute
+        "accelerate",
     )
     # Bake the local repo into the image (everything except heavy data dirs).
     # Re-baked automatically when local code changes.
@@ -647,3 +656,286 @@ def full_chain() -> None:
     print(f"  Cancel:      modal app stop opencure-v6-retrain")
     print(f"  Pull artifacts when done:  "
           f"modal run scripts/modal_app.py::download_artifacts")
+
+
+# ---------------------------------------------------------------------------
+# v7 functions — foundation-model precomputes + post-processors
+# ---------------------------------------------------------------------------
+# Each function is small, self-contained, and idempotent. The cheap ones
+# (CPU-only) total <$1; the foundation-model precomputes (GPU) total ~$13
+# and fit comfortably in a single month of Modal's $30 free tier. The
+# orchestrator ``v7_precomputes_cheap`` runs the foundation-model precomputes
+# in sequence so a single ``modal run`` produces the whole v7 artifact set.
+
+
+@app.function(
+    image=image, gpu=GPU_LIGHT,                     # A10G ~$1.10/h
+    volumes={VOLUME_ROOT: volume},
+    timeout=3 * 3600,                                # 3h cap; typical 1-2h
+)
+def precompute_molformer_xl() -> None:
+    """v7 Phase A1 — MoLFormer-XL embeddings for ~10K DRKG compounds.
+
+    Output: ``data/drkg/embeddings/molformer_embeddings.npz``.
+    Cost: ~$2 on A10G. ~1-2h wall-clock at batch_size 32.
+    """
+    _bootstrap()
+    _run([
+        "python3", "scripts/precompute_embeddings.py", "molformer",
+    ], "molformer_xl")
+    _commit_volume()
+
+
+@app.function(
+    image=image, gpu=GPU_TRAIN,                     # A100 40GB
+    volumes={VOLUME_ROOT: volume},
+    timeout=8 * 3600,                                # 8h cap; typical 4-6h
+)
+def precompute_esm2_150m() -> None:
+    """v7 Phase A1 — ESM-2 150M protein embeddings for every DRKG Gene::.
+
+    Network-bound first leg (UniProt sequence fetch ~100 min) then
+    GPU-bound inference (~4-6h). Saves to
+    ``data/drkg/embeddings/protein_embeddings_esm2_150M.npz``.
+    Cost: ~$11 on A100 40GB.
+    """
+    _bootstrap()
+    _run([
+        "python3", "scripts/precompute_esm2_embeddings.py",
+        "--variant", "150M",
+    ], "esm2_150m")
+    _commit_volume()
+
+
+@app.function(
+    image=image,                                    # CPU-only
+    cpu=4, memory=8192,
+    volumes={VOLUME_ROOT: volume},
+    timeout=2 * 3600,
+)
+def precompute_jump_cp_smoke() -> None:
+    """v7 Phase A3 — JUMP-CP smoke artifact (8 synthetic profiles).
+
+    The full ingest needs the consortium's ~10 GB profile parquet;
+    this entry-point produces the smoke-test artifact so the rest of
+    the v7 pipeline runs end-to-end. Replace by re-running with
+    ``--features <real_path>`` once the real download is staged.
+    Cost: ~$0.20 (CPU-only).
+    """
+    _bootstrap()
+    _run([
+        "python3", "scripts/precompute_jump_cp.py", "--smoke",
+    ], "jump_cp_smoke")
+    _commit_volume()
+
+
+@app.function(
+    image=image,                                    # CPU-only
+    cpu=4, memory=8192,
+    volumes={VOLUME_ROOT: volume},
+    timeout=2 * 3600,
+)
+def precompute_depmap_smoke() -> None:
+    """v7 Phase A4 — DepMap smoke artifact (10 hand-picked genes).
+
+    Production ingest needs the consortium's CRISPRGeneEffect.csv
+    (~2 GB). The smoke artifact carries the canonical pan-essential
+    (RPL5, POLR2A, RPS6) and safe (EGFR, CFTR, HBB, GBA, NPC1) genes
+    so candidate-target lookups light up correctly during testing.
+    Cost: ~$0.10 (CPU-only).
+    """
+    _bootstrap()
+    _run([
+        "python3", "scripts/precompute_depmap.py", "--smoke",
+    ], "depmap_smoke")
+    _commit_volume()
+
+
+@app.function(
+    image=image,                                    # CPU-only
+    cpu=4, memory=8192,
+    volumes={VOLUME_ROOT: volume},
+    timeout=2 * 3600,
+)
+def calibrate_conformal_v7() -> None:
+    """v7 Phase A2 — fit conformal calibrator on the held-out set.
+
+    Reads the ensemble + held-out positives/sampled-negatives, computes
+    the conformal quantile, and saves to ``data/models/conformal_v7.npz``.
+    Required before ``score_ensemble_v5`` will emit
+    ``ensemble_prob_lower``/``_upper`` fields.
+    """
+    _bootstrap()
+    _run([
+        "python3", "scripts/calibrate_conformal.py",
+    ], "calibrate_conformal_v7")
+    _commit_volume()
+
+
+@app.function(
+    image=image,                                    # CPU-only
+    cpu=4, memory=8192,
+    volumes={VOLUME_ROOT: volume},
+    timeout=2 * 3600,
+)
+def red_team_v7_pass() -> None:
+    """v7 Phase A5 — adversarial critique on top-K of every result JSON.
+
+    Deterministic critic (no LLM dependency); attaches
+    ``red_team_assessment`` to each candidate. Re-runnable safely.
+    """
+    _bootstrap()
+    _run([
+        "python3", "scripts/red_team_v7.py",
+    ], "red_team_v7")
+    _commit_volume()
+
+
+@app.function(
+    image=image,                                    # CPU-only
+    cpu=4, memory=8192,
+    volumes={VOLUME_ROOT: volume},
+    timeout=2 * 3600,
+)
+def generate_briefs_v7() -> None:
+    """v7 Phase A5 — wet-lab briefs for top-5 of every disease.
+
+    Writes ``experiments/results/briefs/<disease>_top5.md`` per disease.
+    """
+    _bootstrap()
+    _run([
+        "python3", "scripts/generate_wetlab_briefs.py",
+    ], "generate_briefs_v7")
+    _commit_volume()
+
+
+@app.function(
+    image=image,                                    # CPU-only (PubMed API)
+    cpu=4, memory=8192,
+    volumes={VOLUME_ROOT: volume},
+    timeout=4 * 3600,                                # PubMed rate-limited
+)
+def retrospective_prospective_v7() -> None:
+    """v7 Phase B3 — query 2024-2025 PubMed for every top-K prediction.
+
+    Output:
+      experiments/prospective_v7_2024_2025.md
+      data/prospective/retrospective_v7.jsonl
+    """
+    _bootstrap()
+    _run([
+        "python3", "scripts/retrospective_prospective.py",
+    ], "retrospective_prospective_v7")
+    _commit_volume()
+
+
+# ---------------------------------------------------------------------------
+# v7 orchestrators
+# ---------------------------------------------------------------------------
+
+@app.function(
+    image=image,                                    # CPU-only orchestrator
+    cpu=2, memory=2048,
+    volumes={VOLUME_ROOT: volume},
+    timeout=12 * 3600,
+)
+def chain_v7_precomputes_cheap() -> None:
+    """v7 cheap precomputes — fits in one month of $30 free tier.
+
+    Sequence (rough cost):
+      precompute_molformer_xl       (A10G,    ~1-2h, ~$2)
+      precompute_esm2_150m          (A100-40, ~4-6h, ~$11)
+      precompute_jump_cp_smoke      (CPU,     <1h,   ~$0.20)
+      precompute_depmap_smoke       (CPU,     <1h,   ~$0.10)
+      calibrate_conformal_v7        (CPU,     <1h,   ~$0.20)
+
+    Total: ~$13. Leaves $17 of the free tier for the 93-disease screen
+    and finalize tail in a second invocation (or in month two).
+    """
+    import time
+
+    steps: list[tuple[str, modal.Function]] = [
+        ("molformer_xl",          precompute_molformer_xl),
+        ("esm2_150m",             precompute_esm2_150m),
+        ("jump_cp_smoke",         precompute_jump_cp_smoke),
+        ("depmap_smoke",          precompute_depmap_smoke),
+        ("calibrate_conformal",   calibrate_conformal_v7),
+    ]
+    t0 = time.time()
+    for name, fn in steps:
+        print(f"\n{'=' * 64}\n▶ v7 cheap-precompute: {name}\n{'=' * 64}", flush=True)
+        s0 = time.time()
+        try:
+            fn.remote()
+            print(f"  ✓ {name} done in {time.time() - s0:.0f}s", flush=True)
+        except Exception as exc:
+            print(f"  ✗ {name} FAILED after {time.time() - s0:.0f}s: {exc}",
+                  flush=True)
+            print(f"  Resume just this step: "
+                  f"modal run scripts/modal_app.py::{name}", flush=True)
+            raise
+    print(f"\n{'=' * 64}\n✓ v7 cheap-precompute chain done in "
+          f"{(time.time()-t0)/3600:.2f}h\n{'=' * 64}", flush=True)
+
+
+@app.function(
+    image=image,                                    # CPU-only orchestrator
+    cpu=2, memory=2048,
+    volumes={VOLUME_ROOT: volume},
+    timeout=12 * 3600,
+)
+def chain_v7_post_screen() -> None:
+    """v7 post-screen tail — runs after the 93-disease screen completes.
+
+    Sequence (rough cost):
+      train_ensemble                (CPU,     ~5min, ~$0.10) — refits per-class heads too
+      red_team_v7_pass              (CPU,     <1h,   ~$0.20)
+      generate_briefs_v7            (CPU,     <1h,   ~$0.10)
+      retrospective_prospective_v7  (CPU,     ~3h,   ~$1)
+      finalize                      (CPU,     <1h,   ~$0.20)
+
+    Total: ~$2. Run after ``rescreen`` lands the per-disease JSONs.
+    """
+    import time
+
+    steps: list[tuple[str, modal.Function]] = [
+        ("train_ensemble",            train_ensemble),
+        ("red_team_v7",               red_team_v7_pass),
+        ("generate_briefs_v7",        generate_briefs_v7),
+        ("retrospective_prospective", retrospective_prospective_v7),
+        ("finalize",                  finalize),
+    ]
+    t0 = time.time()
+    for name, fn in steps:
+        print(f"\n{'=' * 64}\n▶ v7 post-screen: {name}\n{'=' * 64}", flush=True)
+        s0 = time.time()
+        try:
+            fn.remote()
+            print(f"  ✓ {name} done in {time.time() - s0:.0f}s", flush=True)
+        except Exception as exc:
+            print(f"  ✗ {name} FAILED after {time.time() - s0:.0f}s: {exc}",
+                  flush=True)
+            raise
+    print(f"\n{'=' * 64}\n✓ v7 post-screen chain done in "
+          f"{(time.time()-t0)/60:.1f}m\n{'=' * 64}", flush=True)
+
+
+@app.local_entrypoint()
+def v7_precomputes_cheap() -> None:
+    """Spawn the cheap v7 precomputes on Modal (~$13, fits in free tier)."""
+    handle = chain_v7_precomputes_cheap.spawn()
+    print(f"✓ v7 cheap precomputes spawned — call id: {handle.object_id}")
+    print(f"  Watch live:  modal app logs opencure-v6-retrain")
+    print(f"  Cancel:      modal app stop opencure-v6-retrain")
+    print(f"  Estimated cost: ~$13 (MoLFormer + ESM-2 + JUMP-smoke + DepMap-smoke)")
+    print(f"  Wall-clock:     ~6-8h end-to-end")
+
+
+@app.local_entrypoint()
+def v7_post_screen_tail() -> None:
+    """Spawn the v7 post-screen tail on Modal (~$2, after rescreen lands)."""
+    handle = chain_v7_post_screen.spawn()
+    print(f"✓ v7 post-screen tail spawned — call id: {handle.object_id}")
+    print(f"  Watch live:  modal app logs opencure-v6-retrain")
+    print(f"  Estimated cost: ~$2")
+    print(f"  Wall-clock:     ~4-5h end-to-end (PubMed-bound)")
