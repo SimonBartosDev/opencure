@@ -112,7 +112,19 @@ def get_esm2_embeddings(
 
     all_embeddings = []
 
-    for i in range(0, len(sequences), batch_size):
+    # tqdm progress bar so long CPU runs aren't a black box. ``flush=True``
+    # at the end of each batch's print is implicit via tqdm.
+    try:
+        from tqdm import tqdm as _tqdm
+        iterator = _tqdm(
+            range(0, len(sequences), batch_size),
+            desc=f"esm2-{model_name.split('_')[1]}",
+            unit="batch",
+        )
+    except ImportError:
+        iterator = range(0, len(sequences), batch_size)
+
+    for i in iterator:
         batch = sequences[i:i + batch_size]
         # Truncate long sequences
         batch = [s[:1022] for s in batch]

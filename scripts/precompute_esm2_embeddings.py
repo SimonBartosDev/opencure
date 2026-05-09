@@ -255,10 +255,20 @@ def main() -> None:
                         help="Only resolve sequences; skip ESM-2 inference.")
     parser.add_argument("--no-batch", action="store_true",
                         help="Disable UniProt batch ID-mapping; use slow per-gene fetch.")
+    parser.add_argument("--device", choices=("cpu", "mps", "cuda", "auto"),
+                        default="auto",
+                        help="Force a torch device. ESM-2 on Apple MPS hits a "
+                             "PyTorch hang in the rotary-embedding kernel; use "
+                             "'cpu' for reliable local inference (~4h for 30K "
+                             "sequences). Default 'auto' picks the fastest "
+                             "available device.")
     args = parser.parse_args()
 
     model_name, dim = ESM2_VARIANTS[args.variant]
-    device = _default_device()
+    device = args.device if args.device != "auto" else _default_device()
+    if device == "mps":
+        print("[warn] ESM-2 on Apple MPS hangs in PyTorch's rotary-embedding "
+              "kernel — pass --device cpu if you see no progress within 5 min.")
     print(f"ESM-2 {args.variant} ({model_name}, {dim}-dim) on {device}")
 
     # --- Step 1: enumerate DRKG genes ---------------------------------
@@ -334,21 +344,79 @@ def main() -> None:
         print("--fetch-only set; skipping ESM-2 embedding step.")
         return
 
-    # --- Step 3: ESM-2 inference --------------------------------------
-    gene_ids, sequences = zip(*resolved)
-    print(f"\nComputing ESM-2 {args.variant} embeddings for {len(sequences)} proteins...")
-    start = time.time()
-    embeddings = get_esm2_embeddings(
-        list(sequences),
-        model_name=model_name,
-        batch_size=args.batch_size,
-        device=device,
+    # --- Step 3: ESM-2 inference, in resumable chunks ----------------
+    # Each chunk persists immediately so a kill at hour 3 still leaves
+    # everything-up-to-now on disk. The next run picks up where this
+    # one left off via the chunk-progress sentinel.
+    from opencure.scoring.dti_predictor import (
+        get_esm2_embeddings, _cache_path_for, save_protein_embeddings,
     )
-    print(f"  {embeddings.shape} in {time.time() - start:.1f}s")
 
-    # --- Step 4: save -------------------------------------------------
-    save_protein_embeddings(embeddings, list(gene_ids), variant=args.variant)
-    print(f"Saved to {DATA_DIR}/embeddings/protein_embeddings_esm2_{args.variant}.npz")
+    gene_ids, sequences = zip(*resolved)
+    gene_ids = list(gene_ids)
+    sequences = list(sequences)
+    print(f"\nComputing ESM-2 {args.variant} embeddings for {len(sequences)} proteins "
+          f"(chunked, resumable)...", flush=True)
+
+    final_npz = _cache_path_for(args.variant)
+    progress_npz = final_npz.with_suffix(".partial.npz")
+
+    # Resume: if a partial NPZ exists, load it and skip those gene_ids.
+    done_genes: set[str] = set()
+    chunk_arrays: list[np.ndarray] = []
+    chunk_genes: list[str] = []
+    if progress_npz.exists():
+        try:
+            partial = np.load(str(progress_npz), allow_pickle=True)
+            chunk_arrays.append(partial["embeddings"])
+            chunk_genes.extend(partial["gene_ids"].tolist())
+            done_genes = set(chunk_genes)
+            print(f"  resuming from {len(done_genes)} previously-embedded proteins",
+                  flush=True)
+        except Exception as exc:
+            print(f"  [warn] could not load partial NPZ ({exc}); starting fresh",
+                  flush=True)
+
+    chunk_size = 500  # ~10 batches of 8 worth of work between saves
+    total = len(sequences)
+    pending = [(g, s) for g, s in zip(gene_ids, sequences) if g not in done_genes]
+    print(f"  pending: {len(pending)} (already done: {len(done_genes)})",
+          flush=True)
+
+    start = time.time()
+    for ci in range(0, len(pending), chunk_size):
+        chunk = pending[ci : ci + chunk_size]
+        c_genes, c_seqs = zip(*chunk)
+        chunk_emb = get_esm2_embeddings(
+            list(c_seqs),
+            model_name=model_name,
+            batch_size=args.batch_size,
+            device=device,
+        )
+        chunk_arrays.append(chunk_emb)
+        chunk_genes.extend(c_genes)
+
+        # Persist progress after every chunk.
+        merged = np.vstack(chunk_arrays)
+        np.savez_compressed(
+            str(progress_npz),
+            embeddings=merged,
+            gene_ids=np.array(chunk_genes),
+        )
+        elapsed = time.time() - start
+        done = len(chunk_genes) - len(done_genes)
+        eta_min = (elapsed / max(done, 1)) * (len(pending) - done) / 60
+        print(f"  chunk {ci // chunk_size + 1}: total={len(chunk_genes)} "
+              f"({100 * len(chunk_genes) / total:.1f}% of {total}); "
+              f"ETA {eta_min:.1f}m", flush=True)
+
+    # --- Step 4: finalize -----------------------------------------------
+    embeddings = np.vstack(chunk_arrays)
+    print(f"  {embeddings.shape} in {time.time() - start:.1f}s", flush=True)
+    save_protein_embeddings(embeddings, chunk_genes, variant=args.variant)
+    if progress_npz.exists():
+        progress_npz.unlink()
+    print(f"Saved to {final_npz}", flush=True)
 
 
 if __name__ == "__main__":
