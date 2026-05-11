@@ -61,7 +61,9 @@ def _sample_negatives(
     # Treats edges from triplets (broad — any TREATMENT_RELATIONS-style relation).
     treats_pairs: set[tuple[str, str]] = set()
     if triplets is not None:
-        for h, _r, t in zip(triplets["head"], triplets["rel"], triplets["tail"]):
+        # Column convention is ``relation`` (not ``rel``) everywhere else
+        # in the codebase; see opencure/scoring/molecular.py and friends.
+        for h, _r, t in zip(triplets["head"], triplets["relation"], triplets["tail"]):
             if str(h).startswith("Compound::") and str(t).startswith("Disease::"):
                 treats_pairs.add((str(h), str(t)))
 
