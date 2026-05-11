@@ -170,21 +170,22 @@ def main() -> None:
     print(f"  {len(positives)} positives + {len(negatives)} negatives")
 
     rank_maps: dict[str, dict[str, int]] = {}
-    n_compounds = sum(1 for e in entity_to_id if e.startswith("Compound::"))
+    # Full compound list for the vectorized scorer (DRUGBANK only — matches
+    # the convention used by scripts/score_ensemble_v5.py).
+    from opencure.data.drkg import get_compound_entities
+    compounds = get_compound_entities(entity_to_id, drugbank_only=True)
+    n_compounds = len(compounds)
     pairs = [(c, d, 1) for c, d in positives] + [(c, d, 0) for c, d in negatives]
     diseases_needed = sorted({d for _, d, _ in pairs})
 
-    print(f"Pre-scoring {len(diseases_needed)} unique diseases...")
+    print(f"Pre-scoring {len(diseases_needed)} unique diseases against "
+          f"{n_compounds} compounds...")
     for disease in diseases_needed:
         if disease not in entity_to_id:
             continue
         scored = score_drugs_for_disease_vectorized(
-            disease_entity=disease,
-            entity_emb=entity_emb,
-            relation_emb=relation_emb,
-            entity_to_id=entity_to_id,
-            relation_to_id=relation_to_id,
-            top_k=999_999,
+            disease, entity_emb, relation_emb, entity_to_id, relation_to_id,
+            compounds, ["DRUGBANK::treats::Compound:Disease"],
         )
         rank_maps[disease] = {c: r for r, (c, _, _) in enumerate(scored, start=1)}
 
