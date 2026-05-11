@@ -137,26 +137,37 @@ def train_per_class_heads(
 
 
 def collect_disease_names(entity_to_id: dict[str, int]) -> dict[str, str]:
-    """Best-effort entity → human name map from DRKG side data.
+    """Best-effort entity → human name map for the 93 screened diseases.
 
-    Used by ``train_per_class_heads`` to convert the disease entity in
-    each training row to a class name. Falls back to the entity ID
-    string when no human name is available — those rows then resolve to
-    ``None`` and are excluded from per-class training.
+    ``data/disease_pool.json`` carries only ``entity`` IDs, not human
+    names. We derive the reverse mapping by running
+    ``find_disease_entities`` on every name in
+    ``experiments.systematic_screening.TARGET_DISEASES`` — that's the
+    canonical name → entity resolver the platform uses. Each match
+    becomes an ``entity → name`` row; collisions (multiple names mapping
+    to the same entity) keep the first hit, which is deterministic
+    because TARGET_DISEASES iterates in module-defined order.
+
+    Returns an empty dict if neither the disease list nor the resolver
+    is available (e.g. minimal test env) — caller falls back to the
+    shared ensemble head.
     """
-    # The mapping logic lives in opencure.data.drkg already; we re-use it.
     try:
-        from opencure.data.drkg import load_disease_pool
-        pool = load_disease_pool()
+        from experiments.systematic_screening import TARGET_DISEASES
+        from opencure.data.drkg import find_disease_entities
     except Exception:
         return {}
+
     out: dict[str, str] = {}
-    for entry in pool:
-        # disease_pool entries vary in shape; tolerate both list-of-dict
-        # and dict-of-list forms.
-        if isinstance(entry, dict):
-            ent = entry.get("entity") or entry.get("disease_entity")
-            name = entry.get("name") or entry.get("disease_name")
-            if ent and name:
-                out[ent] = name
+    for _category, diseases in TARGET_DISEASES.items():
+        for name in diseases:
+            try:
+                matches = find_disease_entities(entity_to_id, name)
+            except Exception:
+                continue
+            for entity, _score in matches:
+                # First name to claim an entity wins. Subsequent matches
+                # (synonyms, sub-types) don't overwrite the canonical
+                # name from TARGET_DISEASES.
+                out.setdefault(entity, name)
     return out

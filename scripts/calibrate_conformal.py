@@ -135,13 +135,23 @@ def main() -> None:
     chembl_phase = json.loads(Path("data/drkg/chembl_phase.json").read_text()) \
         if Path("data/drkg/chembl_phase.json").exists() else {}
 
-    # Disease-gene counts cache
+    # Disease-gene counts cache.
+    # ``disease_gene_index.json`` ships in two formats over the project's
+    # history: legacy nested ``{disease: {"genes": [...]}}`` and the v5+
+    # flat ``{disease: [gene, ...]}``. Handle both so the script runs
+    # against either snapshot without a re-ingest.
     disease_gene_index_path = Path("data/disease_gene_index.json")
     disease_gene_counts: dict[str, int] = {}
     if disease_gene_index_path.exists():
         idx = json.loads(disease_gene_index_path.read_text())
-        for disease_entity, info in idx.items():
-            disease_gene_counts[disease_entity] = len(info.get("genes", []))
+        for disease_entity, payload in idx.items():
+            if isinstance(payload, dict):
+                genes = payload.get("genes", [])
+            elif isinstance(payload, list):
+                genes = payload
+            else:
+                genes = []
+            disease_gene_counts[disease_entity] = len(genes)
 
     # Drug target counts (from drug_target_activities.json, when present)
     drug_n_targets: dict[str, int] = {}
