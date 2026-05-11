@@ -347,6 +347,28 @@ Each pillar disabled in turn, ensemble re-trained, AUROC reported on
 the time-sliced split. Pillars whose ablation drops AUROC by ≥ 0.005
 are reported as load-bearing.
 
+### 5.9 Head-to-head vs single-pillar baselines
+
+Method: re-rank every disease's v7 candidate list by each baseline's
+score column in isolation, then evaluate against the same time-sliced
+held-out set. Differences between baselines isolate the contribution
+of pillar fusion vs each pillar alone.
+
+> **Note (v7.0 status):** the benchmark code at
+> `scripts/head_to_head_benchmark.py` is functional but currently
+> data-starved — the v6.1 result JSONs contain too few candidates per
+> disease (1-10 typical) for the re-ranking to discriminate baselines.
+> All baselines tie on the 19-of-993 matched pairs in the v6.1
+> snapshot. Re-running the benchmark against v7 rescreen results
+> (which produce ~50-100 candidates per disease across all 93) is
+> expected to surface the real differentiation. Final §5.9 numbers
+> land after Phase B2 (v7 rescreen) completes.
+
+The expected delta pattern in §4.5 has the v7 ensemble outperforming
+each single-pillar baseline by ≥ 5 percentage points on Hit@10 and
+~0.05 on MRR — that is the threshold at which we will defensibly claim
+"calibrated multi-pillar fusion beats any single-pillar approach".
+
 ## 6. Discussion
 
 **Limitations** (v7).

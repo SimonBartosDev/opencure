@@ -757,6 +757,61 @@ def precompute_depmap_smoke() -> None:
     volumes={VOLUME_ROOT: volume},
     timeout=2 * 3600,
 )
+def head_to_head_v7(holdout: str = "time_sliced") -> None:
+    """v7 Phase B4 — head-to-head benchmark for the methods paper §4.5.
+
+    For each baseline scoring column, re-rank every disease's
+    candidates and evaluate against the held-out set. Writes:
+        experiments/head_to_head_v7.md  — Markdown table for the paper
+        experiments/head_to_head_v7.json — raw per-baseline metrics
+
+    ``holdout`` = ``"time_sliced"`` (210 post-2020 pairs, the tighter
+    publication test) or ``"random"`` (993-pair random holdout, denser
+    disease coverage that overlaps more of the v6.1 screen results).
+
+    Cost: ~$0.05, ~5 min on 4 CPU.
+    """
+    _bootstrap()
+    _run([
+        "python3", "scripts/head_to_head_benchmark.py",
+        "--holdout", holdout,
+    ], "head_to_head_v7")
+    _commit_volume()
+
+
+@app.function(
+    image=image,                                    # CPU-only
+    cpu=4, memory=8192,
+    volumes={VOLUME_ROOT: volume},
+    timeout=3 * 3600,
+)
+def score_ensemble_v7_only() -> None:
+    """v7 Phase A2 + A5 — attach v7 fields to every existing result JSON.
+
+    Runs ``score_ensemble_v5.py`` against the existing per-disease
+    JSONs without running the rest of the 11-step finalize pipeline.
+    Picks up the freshly-trained shared + per-class ensemble heads and
+    the conformal calibrator from disk, so every candidate gains:
+
+      - refreshed ``ensemble_prob``
+      - ``ensemble_head`` tag (which head scored it: per-class or "shared")
+      - ``ensemble_prob_lower`` / ``ensemble_prob_upper`` / ``prediction_set_at_90``
+
+    Cheap (~$0.10), idempotent, safe to re-run.
+    """
+    _bootstrap()
+    _run([
+        "python3", "scripts/score_ensemble_v5.py",
+    ], "score_ensemble_v7_only")
+    _commit_volume()
+
+
+@app.function(
+    image=image,                                    # CPU-only
+    cpu=4, memory=8192,
+    volumes={VOLUME_ROOT: volume},
+    timeout=2 * 3600,
+)
 def calibrate_conformal_v7() -> None:
     """v7 Phase A2 — fit conformal calibrator on the held-out set.
 
