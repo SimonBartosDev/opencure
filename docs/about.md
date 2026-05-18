@@ -5,6 +5,8 @@ description: Mission, ethics, and current state of the OpenCure platform.
 
 # About OpenCure
 
+🌐 **English** · [Slovenčina](about.sk.html)
+
 **[← Live dashboard](index.html)** · [How it works (architecture)](architecture.html) · [Methods paper](https://github.com/SimonBartosDev/opencure/blob/main/docs/methods_paper_draft.md) · [GitHub](https://github.com/SimonBartosDev/opencure)
 
 ## Mission
