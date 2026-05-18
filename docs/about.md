@@ -1,4 +1,11 @@
+---
+title: About OpenCure
+description: Mission, ethics, and current state of the OpenCure platform.
+---
+
 # About OpenCure
+
+**[← Live dashboard](index.html)** · [How it works (architecture)](architecture.html) · [Methods paper](https://github.com/SimonBartosDev/opencure/blob/main/docs/methods_paper_draft.md) · [GitHub](https://github.com/SimonBartosDev/opencure)
 
 ## Mission
 
@@ -37,7 +44,7 @@ ungrouped per-disease-class signals. Every top-K candidate ships with:
   pan-essentiality flag from DepMap, mechanism-confidence score from
   the OpenTargets gene-association density.
 
-See the [methodology paper draft](methods_paper_draft.md) for the
+See the [methodology paper draft](https://github.com/SimonBartosDev/opencure/blob/main/docs/methods_paper_draft.md) for the
 full architecture description and validation strategy.
 
 ## Current state
@@ -65,7 +72,7 @@ mechanistic narratives, suggested assays, and target lab affiliations:
 - **Niemann-Pick disease** — Ara Parseghian Medical Research
   Foundation, NPUK.
 
-See [`lab_outreach_briefs.md`](lab_outreach_briefs.md) for the per-disease
+See [`lab_outreach_briefs.md`](https://github.com/SimonBartosDev/opencure/blob/main/docs/lab_outreach_briefs.md) for the per-disease
 briefs (40 NTD + rare-disease briefs in total).
 
 ## Team & contact

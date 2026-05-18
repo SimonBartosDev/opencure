@@ -179,7 +179,7 @@ def build_html(candidates, cross_disease, stats):
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OpenCure Explorer - AI Drug Repurposing Dashboard</title>
-<meta name="description" content="Interactive dashboard for 245 AI-predicted drug repurposing candidates across 25 neglected and rare diseases.">
+<meta name="description" content="OpenCure v7 — interactive dashboard for AI-predicted drug-repurposing candidates across 93 neglected, rare, and underserved diseases, scored by 13 fused pillars with calibrated uncertainty.">
 <style>{CSS}</style>
 </head>
 <body>
@@ -205,18 +205,20 @@ def build_html(candidates, cross_disease, stats):
   <a href="#cross-disease">Cross-Disease</a>
   <a href="#breakthroughs">Breakthroughs</a>
   <a href="#methodology">Methods</a>
+  <a href="architecture.html">Architecture</a>
+  <a href="about.html">About</a>
   <a href="https://github.com/SimonBartosDev/opencure/blob/main/docs/methods_paper_draft.md" target="_blank" rel="noopener">Paper</a>
-  <a href="https://github.com/SimonBartosDev/opencure/blob/main/docs/RELEASE_v5.md" target="_blank" rel="noopener">v5 Release</a>
   <a href="https://github.com/SimonBartosDev/opencure" target="_blank" rel="noopener">GitHub</a>
 </nav>
 
 <div class="v5-banner">
   <div class="v5-banner-inner">
-    <span class="v5-badge">v5</span>
-    <strong>Clinical-guardrails release.</strong>
-    Every top prediction carries dose plausibility, DDI warnings,
+    <span class="v5-badge">v7</span>
+    <strong>13-pillar release with calibrated uncertainty.</strong>
+    Every top prediction carries a 90%-coverage conformal interval, an
+    adversarial red-team critique, dose plausibility, DDI warnings,
     pharmacogenomic flags, a mechanism path, and a 4-axis triangulation score.
-    <a href="https://github.com/SimonBartosDev/opencure/blob/main/docs/RELEASE_v5.md" target="_blank" rel="noopener">Release notes →</a>
+    <a href="architecture.html">Full architecture →</a>
   </div>
 </div>
 
