@@ -60,6 +60,8 @@ STEPS: list[Step] = [
          ["python3", "scripts/backfill_shared_targets.py"], timeout=600),
     Step("ensemble",     "Attaching ensemble_v5 probabilities",
          ["python3", "scripts/score_ensemble_v5.py"], timeout=900),
+    Step("novelty_rank", "v7: re-ranking — demote known treatments below repurposing leads",
+         ["python3", "scripts/apply_novelty_ranking.py"], timeout=300),
     Step("tissue",       "Populating tissue_context (GTEx)",
          ["python3", "scripts/wire_tissue_context.py"], timeout=600),
     Step("docking",      "Populating docking axis (ChEMBL proxy)",
