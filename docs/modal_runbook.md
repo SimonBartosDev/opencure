@@ -1,8 +1,15 @@
-# OpenCure v6 retrain on Modal
+# OpenCure retrain on Modal
 
 Step-by-step for running the GPU retrain via Modal's serverless GPUs
-using the $30 free credit. Total wall-clock ~9h, total cost ~$15-17
-(comfortably inside the credit).
+using the $30 free credit. The core v6 chain is ~9h wall-clock,
+~$15-17. The v7 additions (foundation-model precomputes, conformal
+calibration, per-class heads, post-screen tail) add ~$15-25 — see the
+**v7 jobs** section below.
+
+> Cost-efficient pattern: run the network-bound and CPU-only v7 steps
+> on your own M4 Max (the ESM-2 sequence fetch + embedding both run
+> locally at $0), and reserve Modal for the genuinely GPU-bound jobs
+> (KG retrain, R-GCN, the 93-disease rescreen).
 
 ## Why Modal vs RunPod / Vast
 
@@ -225,3 +232,61 @@ Worst case — if the run goes long for some reason:
 - If you blow through the $30 credit before finishing: the volume is
   preserved. Add billing, re-run the chain — it picks up from the
   latest checkpoint.
+
+---
+
+## v7 jobs
+
+v7 adds standalone Modal entrypoints alongside the core v6 chain. Each
+is idempotent and writes to the same persistent volume.
+
+### Foundation-model precomputes
+
+```bash
+modal run --detach scripts/modal_app.py::precompute_molformer_xl   # A10G, ~$2, ~40s-2h
+modal run --detach scripts/modal_app.py::precompute_esm2_150m      # A100, ~$5-11, 4-6h
+modal run --detach scripts/modal_app.py::precompute_jump_cp_smoke  # CPU, ~$0.20
+modal run --detach scripts/modal_app.py::precompute_depmap_smoke   # CPU, ~$0.10
+```
+
+> ESM-2 note: on Apple MPS the embedding step hangs in PyTorch's
+> rotary-embedding kernel — run it locally with `--device cpu`
+> (`scripts/precompute_esm2_embeddings.py`, ~6h, $0) or on Modal A100.
+> The UniProt sequence fetch uses a batch ID-mapping endpoint (~5 min
+> for 39K genes) and is cheap to run anywhere.
+
+### Calibration + per-class heads + post-processors
+
+```bash
+modal run scripts/modal_app.py::train_ensemble          # shared + 6 per-class heads, CPU, ~$0.10
+modal run scripts/modal_app.py::calibrate_conformal_v7  # 90%-coverage calibrator, CPU, ~$0.20
+modal run scripts/modal_app.py::score_ensemble_v7_only  # attach v7 fields to existing JSONs, CPU, ~$0.10
+modal run scripts/modal_app.py::head_to_head_v7         # §5.9 benchmark, CPU, ~$0.05
+                                                        # (--holdout time_sliced|random)
+```
+
+### v7 orchestrators
+
+```bash
+# Cheap precomputes chained (~$13, fits the free tier)
+modal run --detach scripts/modal_app.py::v7_precomputes_cheap
+
+# Post-screen tail: red-team + briefs + retrospective-prospective + finalize (~$2)
+modal run --detach scripts/modal_app.py::v7_post_screen_tail
+```
+
+### Full v7 cycle cost
+
+| Group | Cost |
+|---|---|
+| Foundation-model precomputes | ~$8-14 (or ~$0.30 if ESM-2 done locally) |
+| Calibration + per-class heads + post-processors | ~$0.50 |
+| Core retrain (`train_kg` + `train_rgcn`) | ~$27 |
+| 93-disease rescreen | ~$11 |
+| Post-screen tail | ~$2 |
+| **Total first-time v7 push** | **~$40-55** |
+
+This exceeds the $30 free tier — either split across two billing
+months, skip the R-GCN retrain (reuse the v6.1 model, saves ~$10), or
+apply for Modal's research/nonprofit credits (drafts in
+`docs/nonprofit_credits_email.md`).

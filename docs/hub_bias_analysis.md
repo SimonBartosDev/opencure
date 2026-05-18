@@ -1,7 +1,13 @@
 # The hub-drug bias in OpenCure: observation, mitigation, limits
 
-**Status:** v5 mitigation active (degree penalty); bias partially persists
-**Last updated:** 2026-04-19 after live v5 re-screen observations
+**Status:** degree-penalty mitigation active and unchanged through v7;
+bias partially persists. v7 adds two further damping signals — the
+hub-bias check is now one of the seven failure modes the adversarial
+red-team agent flags per candidate, and the negative-control suite
+(`tests/data/negative_controls.yaml`) includes a universal-hubs set
+that must rank below the per-disease median in CI.
+**Last updated:** v5 re-screen observations (2026-04-19); v7 mitigation
+notes added 2026-05-11.
 
 ## The observation
 

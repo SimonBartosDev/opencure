@@ -26,18 +26,23 @@ triangulating single candidates across external evidence sources?
 ## Slide 2 — What OpenCure is
 
 **The only fully open-source drug repurposing platform with integrated
-clinical guardrails and prospective validation.**
+clinical guardrails, calibrated uncertainty, and prospective
+validation.**
 
-- 11 independent scoring pillars (KG embeddings, GNN, structural,
-  network, genetic, transcriptomic, ADMET, DTI)
+- 13 independent scoring pillars (KG embeddings ×4, R-GCN, TxGNN,
+  structural ×2, DTI, network, genetic, transcriptomic, and JUMP Cell
+  Painting image-based phenotypic screening)
 - Screens ~10,500 approved + investigational compounds against any
   disease
-- Every top-10 prediction auto-populated with:
+- Every top-K prediction auto-populated with:
+  - Calibrated 90 %-coverage conformal interval + prediction set
+  - Adversarial red-team critique (seven failure modes checked)
   - Dose plausibility (Cmax/IC50 against predicted target)
   - DDI warnings (from 1.4M DrugBank edges)
   - Pharmacogenomic flags (CPIC + PharmGKB)
   - Mechanism path (graph-native natural-language explanation)
   - 4-axis triangulation score (KG + docking + Pharos TDL + literature)
+  - Selectivity panel + DepMap pan-essentiality flag
 
 **Apache 2.0**. No rate limits. No vendor lock-in. Patent grant
 applies to pharmaceutical and biotech uses.
@@ -46,10 +51,13 @@ applies to pharmaceutical and biotech uses.
 
 ## Slide 3 — How it's different from the closed tools
 
-| | PandaOmics | BenevolentAI | TxGNN (academic) | **OpenCure v5** |
+| | PandaOmics | BenevolentAI | TxGNN (academic) | **OpenCure v7** |
 |---|---|---|---|---|
 | Open-source | ✗ | ✗ | ✓ (code) | ✓ (code + data + models) |
+| Scoring pillars | proprietary | proprietary | 1 (GNN) | 13 fused + calibrated ensemble |
+| Calibrated uncertainty | ✗ | ✗ | ✗ | ✓ (90 %-coverage conformal interval) |
 | Clinical guardrails bundled | partial | partial | ✗ | ✓ (dose/DDI/PGx/triangulation) |
+| Adversarial red-team pass | ✗ | ✗ | ✗ | ✓ (per top-K candidate) |
 | Prospective validation registry | ✗ | ✗ | ✗ | ✓ (content-hashed, Zenodo DOI) |
 | Time-sliced benchmark | ✗ | ✗ | ✓ | ✓ (210 post-2020 indications) |
 | Mechanism-path explanations | partial | ✓ | ✗ | ✓ (graph-native, every prediction) |
@@ -61,8 +69,15 @@ applies to pharmaceutical and biotech uses.
 
 **14M-triple unified knowledge graph** (DRKG + PrimeKG + Open Targets 24.09)
 
-**172 automated tests** on 5 test modules + GitHub Actions CI
+**357 automated tests** across 13 test modules + GitHub Actions CI
 → the class of bugs you'd find in internal tools is gone
+
+**Foundation models** — MoLFormer-XL (chemistry) + ESM-2 150M
+(proteins) + JUMP Cell Painting morphological profiles
+→ current-generation embeddings, not 2021-era ones
+
+**Conformal calibration** — empirical 90.1 % coverage at the nominal
+90 % target → every score ships with an honest uncertainty interval
 
 **Evidence cache** with 4,174× verified speedup on repeat queries
 → screen a new disease in minutes, not hours
@@ -75,8 +90,9 @@ hash of every source file that produced it
 → the only repurposing platform that makes claims you can verify
 against future literature
 
-**Current status:** 61-disease systematic screen running; full run
-produces ~610 candidates with clinical guardrails attached.
+**Current status:** 93-disease systematic screen; v7 architecture
+complete (13 pillars + calibration + red-team + per-class heads),
+v7 rescreen gated on a GPU retrain cycle.
 
 ---
 
@@ -85,24 +101,26 @@ produces ~610 candidates with clinical guardrails attached.
 We don't oversell. Known limits disclosed publicly:
 
 **What we're good at**
-- Multi-pillar ensemble AUC-ROC 0.9968 on 23,814 held-out pairs
-- Evidence-triangulated predictions (v5.2, live n=610 across 61
-  diseases): 90% of candidates have ≥1 external validation axis,
-  70% have ≥2, **35% reach silver-standard** (≥3 axes agree)
-- Clinical-actionability coverage (live, n=610): dose 100%, DDI 85%,
-  PGx 53%, mechanism path 95%, ensemble probability 100% of top
-  candidates
+- Multi-pillar ensemble AUC-ROC 0.997 on 23,814 held-out pairs
+- Conformal calibration: empirical 90.1 % coverage at the 90 % target
+- Evidence-triangulated, clinically-annotated predictions — dose, DDI,
+  PGx, mechanism path, conformal interval, and red-team critique on
+  every top candidate
+- 357 automated tests, GitHub Actions CI green
 
 **What we're not (yet) good at**
-- Clean time-sliced Hit@10 on 2020-era KG retrieval: blocked on a
-  CUDA GPU retrain (~$30 cloud spend). KG-memorization-dependent
-  benchmarks are marked as such.
+- v7 rescreen numbers: the v7 *architecture* is complete and merged,
+  but the v7 93-disease *numbers* await a GPU retrain cycle. The
+  head-to-head benchmark (§5.9) and final methods-paper Results land
+  with that rescreen.
+- Clean time-sliced Hit@10 on 2020-era KG retrieval: KG-memorization-
+  dependent benchmarks are marked as such.
 - Wet-lab validation — zero confirmed predictions yet. This is where
   partnership with your lab adds value.
 - Peer review — bioRxiv pending; methods paper drafted.
 
-Full honesty report: `docs/RELEASE_v5.md` and
-`experiments/eval/v5_honest_score.txt`.
+Full honesty disclosure: `docs/methods_paper_draft.md` §6 and the
+eval reports under `experiments/eval/`.
 
 ---
 
@@ -136,18 +154,18 @@ Full honesty report: `docs/RELEASE_v5.md` and
 
 ## Slide 7 — The specific ask for neglected-tropical partners
 
-We have 5 lab outreach briefs ready for WHO-priority diseases
-(`docs/lab_outreach_briefs.md`):
+We have **40 lab outreach briefs** ready for NTD + rare diseases
+(`docs/lab_outreach_briefs.md` + `docs/outreach/`), with deep curation
+for four lead diseases:
 
-- Schistosomiasis — Oxamniquine self-rediscovery validates pipeline;
-  novel candidates surface via MMP-inhibitor mechanistic reversal
-- Chagas — Cimetidine + Tacrolimus top-ranked (hub bias disclosed);
-  genuinely-novel top-10 candidates need validation
-- Leishmaniasis — Azithromycin rediscovered (known repurposing lit);
-  novel candidates from ChemBERTa structural similarity
-- Sickle Cell — Senicapoc rediscovered (failed Phase 3 2011; correct
-  disease-specificity signal)
-- Gaucher Disease — SRT/ERT-compatible candidates
+- **Schistosomiasis** — DNDi / Conor Caffrey lab (UC San Diego) /
+  Imperial-Wellcome SCI Foundation
+- **Chagas** — DNDi Chagas cluster / Fundação Oswaldo Cruz
+- **Sickle Cell** — CureSCi consortium / Doris Duke Foundation
+- **Niemann-Pick** — Ara Parseghian Medical Research Foundation / NPUK
+
+Each brief carries top predictions, a suggested assay matched to the
+disease class, a concentration range, and named target labs.
 
 **Ask for these partners:** screen 1-5 compounds from our top-10 in
 your validated assay. We pay compound cost. You publish the outcome
@@ -183,22 +201,23 @@ incentives are weakest.
 
 - 3 wet-lab partnerships from Tier 2 or Tier 3 track for
   neglected-tropical indications
-- Cloud GPU credits for unified-KG RotatE retrain (~$30-50, one-time)
+- GPU compute for the v7 retrain cycle (~$40-55 one-time, or
+  research-credit grant)
 - One pharma citation of OpenCure in a preprint or patent filing
 
 **Medium-term (6-12 months)**
 
-- 2024-native KG retrain (Open Targets 24.09 as primary, not addendum)
+- v7 93-disease rescreen + bioRxiv methods paper (target: Nature
+  Machine Intelligence or Bioinformatics)
 - First wet-lab confirmed prediction published as co-authored preprint
-- bioRxiv methods paper accepted (target: Nature Machine Intelligence
-  or Bioinformatics)
 - Zenodo DOI series with published rolling precision@K
 
-**Long-term (2+ years)**
+**Long-term (2+ years) — the v8 roadmap**
 
-- Cell-type-resolved target scoring (CellxGene / Tabula Sapiens
-  integration)
-- Patient-subtype-stratified predictions
+- JUMP Cell Painting raw-image foundation-model rerank
+- Real molecular docking (Boltz-1 / Gnina over AlphaFold-3 structures)
+- Drug-combination scoring + active-learning loop
+- Cell-type-resolved target scoring (CellxGene / Tabula Sapiens)
 - FDA-referenceable prospective precision@K (requires 12+ months of
   prospective-registry calendar time)
 
@@ -208,11 +227,11 @@ incentives are weakest.
 
 **GitHub:** github.com/SimonBartosDev/opencure
 **Dashboard:** simonbartosdev.github.io/opencure
-**Email:** opencure.research@gmail.com
-**Zenodo DOI series:** [registered at v5 release]
+**Email:** imon.bartos@gmail.com
+**Zenodo DOI series:** content-hashed snapshots at `data/prospective/snapshots/`
 
-**Repo status:** v5 release, 172 tests passing, CI green, data manifest
-hash `2da2aa88f2457d1b`.
+**Repo status:** v7 — 13 pillars + calibration + red-team, 357 tests
+passing, CI green.
 
 **License:** Apache 2.0 with patent grant.
 
@@ -220,8 +239,10 @@ hash `2da2aa88f2457d1b`.
 
 ## Appendix A — Selected predictions (examples for credibility)
 
-*Note: these are computational predictions, not wet-lab validated.
-Triangulation score indicates independent-evidence agreement.*
+*Note: these are computational predictions, not wet-lab validated, and
+are v5-vintage — they will be refreshed with v7 conformal intervals
+after the v7 rescreen. Triangulation score indicates
+independent-evidence agreement.*
 
 | Disease | Drug | Combined score | Triangulation axes | Status |
 |---|---|---|---|---|
