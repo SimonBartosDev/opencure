@@ -39,12 +39,32 @@ predikcie farmaceutickým firmám. Platforma je postavená tak, aby ju
 doktorand v Nairobi alebo São Paule dokázal citovať, auditovať
 a rozširovať rovnako ľahko ako výskumná skupina na MIT.
 
+## Čo OpenCure je — a čo nie je
+
+OpenCure je **nástroj na generovanie a triedenie hypotéz**. Hodnotí,
+adverzálne kritizuje a dokumentuje hypotézy o preúčelovaní liečiv, každú
+s explicitným intervalom neistoty, aby sa experimentálny vedec mohol
+rozhodnúť, čo sa oplatí testovať.
+
+**Nie je to overený prediktor.** Nezverejňujeme **žiadne číslo presnosti**
+a netvrdíme, ako často je najvyššie hodnotený kandidát správny. Čestné
+retrospektívne porovnanie bez úniku dát momentálne nie je možné — znalostný
+graf je staršieho dáta než preúčelovania, ktoré by boli potrebné na jeho
+otestovanie — takže prediktívna presnosť platformy je **nepreukázaná**,
+čestne uvedená, nie skrytá za číslom. Skoršie uvádzané číslo ensemble
+(„AUC-ROC 0,997“) bolo artefaktom úniku dát a bolo stiahnuté.
+
+Každý výstup OpenCure je štruktúrovaná, transparentná hypotéza na posúdenie
+odborníkom — nikdy nie odporúčanie a nikdy nie náhrada za experimentálne
+overenie.
+
 ## Čo prináša verzia v7
 
-Trinásť ortogonálnych hodnotiacich pilierov spojených do troch
-ortogonálnych skupín (znalostný graf, štruktúra/fenotyp, sieť) plus
-šesť samostatných signálov podľa triedy choroby. Každý kandidát
-z popredných priečok prichádza s:
+Trinásť hodnotiacich pilierov spojených do troch skupín (znalostný graf,
+štruktúra/fenotyp, sieť) plus šesť samostatných signálov podľa triedy
+choroby. Piliere znalostného grafu sú korelované embeddingy prekrývajúcich
+sa grafov, nie nezávislé signály. Každý kandidát z popredných priečok
+prichádza s:
 
 - **Kalibrovanou neistotou.** Konformný interval s 90 % pokrytím
   a binárna predikčná množina (`{0}`, `{1}` alebo `{0,1}`).

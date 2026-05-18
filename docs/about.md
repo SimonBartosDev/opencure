@@ -32,11 +32,33 @@ API key, and will not sell predictions to pharma. The platform is
 built so that a graduate student in Nairobi or São Paulo can cite,
 audit, and extend it as easily as a research group at MIT.
 
+## What OpenCure is — and is not
+
+OpenCure is a **hypothesis-generation and triage tool**. It ranks,
+adversarially critiques, and documents drug-repurposing hypotheses, each
+with an explicit uncertainty interval, so a wet-lab scientist can decide
+what is worth testing.
+
+It is **not a validated predictor.** We publish **no benchmark accuracy
+figure** and make no claim about how often a top-ranked candidate is
+correct. A leak-free retrospective benchmark is not currently possible —
+the knowledge graph predates the repurposing events that would be needed
+to test it — so the platform's predictive accuracy is **unestablished**,
+honestly stated rather than hidden behind a number. An earlier reported
+ensemble figure ("AUC-ROC 0.997") was an artefact of data leakage and has
+been withdrawn.
+
+Every OpenCure output is a structured, transparent hypothesis for expert
+review — never a recommendation, and never a substitute for experimental
+validation.
+
 ## What's in v7
 
-Thirteen orthogonal scoring pillars combined into three orthogonal
-groups (knowledge graph, structural / phenotype, network) plus six
-ungrouped per-disease-class signals. Every top-K candidate ships with:
+Thirteen scoring pillars combined into three groups (knowledge graph,
+structural / phenotype, network) plus six ungrouped per-disease-class
+signals. The knowledge-graph pillars are correlated embeddings of
+overlapping graphs, not independent signals. Every top-K candidate ships
+with:
 
 - **Calibrated uncertainty.** A 90 %-coverage conformal interval and
   a binary prediction set (`{0}`, `{1}`, or `{0,1}`).

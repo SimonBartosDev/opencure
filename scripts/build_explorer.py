@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the OpenCure Explorer v2 — world-class biomedical dashboard.
+"""Generate the OpenCure Explorer v2 — interactive biomedical dashboard.
 
 Reads disease JSON files + database JSON, merges rich evidence data, and
 produces docs/index.html: a self-contained interactive dashboard with
@@ -194,7 +194,7 @@ def build_html(candidates, cross_disease, stats):
     <div class="hero-text">
       <h1>Open<span class="accent">Cure</span> Explorer</h1>
       <p class="subtitle">AI Drug Repurposing Dashboard</p>
-      <p class="tagline">Multi-pillar computational predictions for 25 underserved diseases &middot; Updated {generated}</p>
+      <p class="tagline">Multi-pillar computational repurposing hypotheses for underserved diseases &middot; Updated {generated}</p>
     </div>
     <div class="stats-row">
       <div class="stat-card"><div class="stat-num">{stats['total']}</div><div class="stat-label">Candidates</div></div>
@@ -219,27 +219,28 @@ def build_html(candidates, cross_disease, stats):
 <div class="v5-banner">
   <div class="v5-banner-inner">
     <span class="v5-badge">v7</span>
-    <strong>13-pillar release with calibrated uncertainty.</strong>
-    Every top prediction carries a 90%-coverage conformal interval, an
-    adversarial red-team critique, dose plausibility, DDI warnings,
-    pharmacogenomic flags, a mechanism path, and a 4-axis triangulation score.
-    <a href="architecture.html">Full architecture →</a>
+    <strong>A hypothesis-generation &amp; triage tool — not a validated predictor.</strong>
+    OpenCure ranks and stress-tests repurposing hypotheses; it publishes
+    <em>no</em> benchmark accuracy figure and its predictive accuracy is
+    unestablished. Every candidate is a hypothesis for expert review, shipped
+    with a conformal uncertainty interval and an adversarial red-team critique.
+    <a href="architecture.html">Honest evaluation &amp; architecture →</a>
   </div>
 </div>
 
 <div class="guide-toggle" id="guide-toggle">
   <button onclick="document.getElementById('guide-box').classList.toggle('open')">How to read this dashboard</button>
   <div class="guide-box" id="guide-box">
-    <p><strong>Ranking:</strong> Candidates are ranked by <strong>pure computational score</strong> — the AI has no access to published literature when scoring. Literature is tracked separately as validation.</p>
+    <p><strong>Ranking:</strong> Candidates are ranked by <strong>pure computational score</strong> — the pipeline has no access to published literature when scoring. Literature is tracked separately, as context. Ranking is a triage aid, not a prediction of success.</p>
     <p><strong>Evidence Status column</strong> shows how much human research already exists (independent of the AI ranking):</p>
     <p style="margin-left:1rem">🆕 <strong>NEW</strong> — zero prior literature (true novel prediction, worth testing)</p>
     <p style="margin-left:1rem">📖 <strong>EMERGING</strong> — minimal research (1-9 papers)</p>
     <p style="margin-left:1rem">📚 <strong>RESEARCHED</strong> — active research (10+ papers)</p>
     <p style="margin-left:1rem">🧪 <strong>IN TRIALS</strong> — existing clinical trials</p>
     <p style="margin-left:1rem">✅ <strong>ESTABLISHED</strong> — well-known treatment (500+ papers OR 5+ trials)</p>
-    <p><strong>Why this matters:</strong> If the AI ranks a drug in the top 10 AND it already has published research, that's <em>validation</em> — it rediscovered something we know works. If it's NEW in the top 10, that's a <em>genuine novel prediction</em> worth experimental testing.</p>
+    <p><strong>How to read this:</strong> A top-ranked drug that <em>already</em> has supporting research is a reassuring sanity check (the pipeline surfaced something plausible) — but it is not proof the pipeline predicts well, since the pipeline did not see that literature. A NEW drug in the top ranks is an untested hypothesis worth a wet lab's consideration — not a discovery. OpenCure's predictive accuracy is unestablished; treat ranks as triage, not verdicts.</p>
     <p><strong>Confidence</strong>: HIGH = multiple evidence types agree; MEDIUM = some support; LOW = computational-only.</p>
-    <p><strong>Pillars</strong>: How many of the 11 independent AI methods support this prediction.</p>
+    <p><strong>Pillars</strong>: How many of the 13 scoring methods support this candidate. (The knowledge-graph pillars are correlated, not independent.)</p>
     <p><strong>MR Score</strong>: Causal genetic evidence from human GWAS (0-1).</p>
     <p>Click any row to see full evidence: papers, trials, molecular data, and genetic support.</p>
   </div>
@@ -301,13 +302,13 @@ def build_html(candidates, cross_disease, stats):
 
 <section id="cross-disease" class="section">
   <h2>Cross-Disease Drug Network</h2>
-  <p class="section-desc">Drugs predicted as novel candidates for <strong>multiple diseases</strong> — cross-disease convergence from independent AI pillars suggests shared biological mechanisms and increases prediction confidence.</p>
+  <p class="section-desc">Drugs surfaced as candidates for <strong>multiple diseases</strong> — cross-disease convergence may point to shared biological mechanisms worth investigating. Convergence is a hypothesis-prioritisation cue, not a measure of correctness.</p>
   <div id="cross-cards" class="cross-grid"></div>
 </section>
 
 <section id="breakthroughs" class="section">
-  <h2>Top Breakthrough Predictions</h2>
-  <p class="section-desc">Highest-scoring predictions with <strong>no prior published evidence</strong> — genuinely novel computational discoveries. Click any card for full evidence.</p>
+  <h2>Top Breakthrough Hypotheses</h2>
+  <p class="section-desc">Highest-scoring candidates with <strong>no prior published evidence</strong> — untested computational hypotheses, not discoveries. Click any card for full evidence.</p>
   <div id="bt-cards" class="bt-grid"></div>
 </section>
 
@@ -550,7 +551,7 @@ function showDiseaseHeader(disease){
   const all=DATA.filter(c=>c.disease===disease);
   const top10=all.sort((a,b)=>b.combined_score-a.combined_score).slice(0,10);
 
-  // Validation story: of top 10 computational predictions, how many have prior evidence?
+  // Sanity-check snapshot: of top 10 candidates, how many have prior evidence?
   const hasEvidence = top10.filter(c => c.evidence_status !== 'NEW').length;
   const newPredictions = 10 - hasEvidence;
 
@@ -565,12 +566,12 @@ function showDiseaseHeader(disease){
   dh.innerHTML=`<div>
     <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.5rem">
       <strong style="font-size:1.2rem">${esc(disease)}</strong>
-      <span style="font-size:.85rem;color:var(--text2)">${all.length} computational predictions</span>
+      <span style="font-size:.85rem;color:var(--text2)">${all.length} computational hypotheses</span>
     </div>
     <div style="margin-top:.6rem;padding:.6rem;background:#f8fafc;border-radius:6px;font-size:.88rem">
-      <strong>Validation snapshot (top 10 by pure computational score):</strong><br>
-      <span style="color:var(--green);font-weight:600">${hasEvidence}/10 have prior research evidence</span> ✓ validates the AI methodology<br>
-      <span style="color:var(--accent);font-weight:600">${neu}/10 are novel predictions</span> 🆕 worth experimental testing<br>
+      <strong>Sanity-check snapshot (top 10 by pure computational score):</strong><br>
+      <span style="color:var(--green);font-weight:600">${hasEvidence}/10 have prior research evidence</span> — a plausibility check, not a measure of accuracy<br>
+      <span style="color:var(--accent);font-weight:600">${neu}/10 are untested hypotheses</span> 🆕 worth a wet lab's consideration<br>
       <div style="margin-top:.4rem;font-size:.8rem;color:var(--text3)">
         ${established} Established · ${inTrials} In Trials · ${researched} Researched · ${emerging} Emerging · ${neu} New
       </div>

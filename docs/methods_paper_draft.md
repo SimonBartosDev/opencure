@@ -1,7 +1,29 @@
 # OpenCure: An Open Multi-Pillar Drug Repurposing Platform with Prospective Validation
 
-*Draft methods paper for submission to Nature Machine Intelligence, Nature
-Digital Medicine, or Bioinformatics.*
+> ## ⚠ STATUS: SHELVED — DO NOT CITE OR SUBMIT
+>
+> This draft is **on indefinite hold** and **must not be submitted** in its
+> current form. It is structured as a results paper claiming benchmark
+> performance, but the central performance figures are **not valid**:
+>
+> - The reported ensemble **"AUC-ROC 0.997"** was an artefact of **data
+>   leakage** — knowledge-graph features were scored from a graph that still
+>   contained the test edges. The figure has been **withdrawn**.
+> - A **leak-free** retrain scores far lower (CV AUROC ≈ 0.72 with hard
+>   negatives) and, on a fair *temporal* repurposing test, performs **at or
+>   below chance**.
+> - There is currently **no honest retrospective benchmark** that measures
+>   prospective repurposing accuracy (the knowledge graph predates the
+>   repurposing events needed to test it).
+>
+> OpenCure is therefore presented publicly as a **hypothesis-generation and
+> triage tool**, not a validated predictor. The honest evaluation discussion
+> lives in [`architecture.md`](architecture.md) (§5). This draft is retained
+> only as a historical record; every `Hit@10`, `AUROC`, and `_TBD_` figure
+> below is **unvalidated and not for citation**. Publication will be
+> revisited only if a genuine leak-free validation becomes possible.
+
+*Draft methods paper — SHELVED (see status box above).*
 
 ---
 

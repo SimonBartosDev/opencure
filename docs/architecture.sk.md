@@ -166,11 +166,31 @@ a aké skreslenie pretrváva, je v súbore
 
 ## 5. Ensemble — a hlavy podľa triedy choroby
 
-Zoskupené skóre vstupuje do **kalibrovaného ensemble s gradientovým
-boostingom** (XGBoost + izotonická kalibrácia). Je natrénovaný na
-23 814 pároch liek – choroba a v 5-násobnej krížovej validácii dosahuje
-AUC-ROC ≈ 0,997. Izotonická kalibrácia znamená, že nahlásené
-`skóre = 0,7` zodpovedá približne 70 % empirickej presnosti.
+Zoskupené skóre vstupuje do ensemble s gradientovým boostingom
+(XGBoost + izotonická kalibrácia).
+
+> **Čestné vyhodnotenie — prečítajte si toto.** Staršia verzia OpenCure
+> uvádzala tento ensemble na hodnote „AUC-ROC ≈ 0,997“ v 5-násobnej
+> krížovej validácii. Toto číslo bolo **únikom dát** (data leakage):
+> dominantné príznaky (`transe_rank_log`, `kg_score`, ~90 % rozhodnutia
+> modelu) sa počítali zo znalostného grafu, ktorý stále obsahoval práve tie
+> hrany `treats`, ktoré sa použili ako testovacie značky. Model bol
+> hodnotený za zapamätanie si vlastného trénovacieho grafu.
+>
+> Pretrénovanie bez úniku (`scripts/train_ensemble_v7.py`) — príznaky KG
+> počítané z modelu so zmazanými hranami, trénované a testované len na
+> pároch, ktoré model nikdy nevidel — dáva úplne iný obraz: CV AUROC ≈
+> **0,72** s ťažkými negatívami a pri čestnom *časovom* teste (skutočné
+> preúčelovania liečiv po roku 2020) je ensemble **na úrovni náhody alebo
+> pod ňou**. Šesť jednoduchých príznakov zachytáva, ako etablovaný je liek,
+> čo je v protiklade s tým, či je dané použitie skutočne *nové*.
+>
+> Čestný záver: **tento ensemble nepredpovedá prospektívne preúčelovanie
+> liečiv.** Ponechaný je ako jeden z viacerých vstupov do hodnotenia, nie
+> ako overený klasifikátor. OpenCure nezverejňuje **žiadne číslo presnosti**
+> — pozri sekciu o obmedzeniach. Izotonická kalibrácia stále robí *relatívne*
+> poradie skóre monotónnym, ale číselné `skóre` sa nemá čítať ako
+> pravdepodobnosť úspechu.
 
 Verzia v7 pridáva **ensemble hlavy podľa triedy choroby**. 93 chorôb je
 zoskupených do šiestich terapeutických tried — *parazitárne, vírusové,
