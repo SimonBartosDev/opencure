@@ -209,6 +209,7 @@ def build_html(candidates, cross_disease, stats):
   <a href="about.html">About</a>
   <a href="https://github.com/SimonBartosDev/opencure/blob/main/docs/methods_paper_draft.md" target="_blank" rel="noopener">Paper</a>
   <a href="https://github.com/SimonBartosDev/opencure" target="_blank" rel="noopener">GitHub</a>
+  <a href="architecture.sk.html" title="Slovenská verzia">🌐 SK</a>
 </nav>
 
 <div class="v5-banner">

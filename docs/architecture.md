@@ -5,6 +5,8 @@ description: How the OpenCure drug-repurposing platform works, end to end.
 
 # OpenCure v7 — How it works
 
+🌐 **English** · [Slovenčina](architecture.sk.html)
+
 **[← Live dashboard](index.html)** · [About & mission](about.html) · [Methods paper](https://github.com/SimonBartosDev/opencure/blob/main/docs/methods_paper_draft.md) · [GitHub](https://github.com/SimonBartosDev/opencure)
 
 OpenCure is an open-source, mission-locked platform that ranks existing
