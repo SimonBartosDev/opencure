@@ -1,0 +1,3819 @@
+{
+  "disease": "Ewing sarcoma",
+  "status": "completed",
+  "timestamp": "2026-05-08T00:53:33.311803",
+  "elapsed_seconds": 923.2,
+  "total_searched": 50,
+  "evidence_generated": 10,
+  "confidence_counts": {
+    "HIGH": 6,
+    "LOW": 3,
+    "MEDIUM": 1
+  },
+  "pipeline_version": "v5",
+  "data_manifest_hash": "2da2aa88f2457d1b",
+  "candidates": [
+    {
+      "drug_name": "Gemcitabine",
+      "drug_id": "DB00441",
+      "disease_name": "Ewing sarcoma",
+      "combined_score": 0.5083000063896179,
+      "pillars_hit": 4,
+      "transe_rank": 22,
+      "transe_score": -10.6639,
+      "pykeen_score": -12.0739,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.6380000114440918,
+      "proximity_distance": 1.4500000476837158,
+      "admet_score": 0.6272,
+      "admet_flags": "clean",
+      "primekg_score": 0.2627,
+      "dti_score": 1.0,
+      "dti_best_target": "CAV1",
+      "kg_group_score": 0.4299,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.4805000126361847,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.4377,
+      "admet_multiplier": 0.9254,
+      "efficacy_score": 0.5491999983787537,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 16,
+      "shared_targets": [
+        "BCL2",
+        "CAV1",
+        "CHEK1",
+        "EPHA2",
+        "ERBB2",
+        "EZH2",
+        "IGF1R",
+        "KIT",
+        "LIF",
+        "MAPK8",
+        "NFKB1",
+        "PLK1",
+        "PTGS2",
+        "TOP2A",
+        "TP53",
+        "VEGFA"
+      ],
+      "pubmed_total": 21,
+      "pubmed_treatment_total": 20,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "32386107",
+          "title": "Phase II trial of gemcitabine and nab-paclitaxel in patients with recurrent Ewing sarcoma: A report from the National Pediatric Cancer Foundation.",
+          "authors": "Oesterheld JE, Reed DR, Setty BA, et al.",
+          "journal": "Pediatric blood & cancer",
+          "year": "2020",
+          "abstract_snippet": "BACKGROUND: The combination of gemcitabine and docetaxel is often used to treat patients with recurrent sarcoma. Nab-paclitaxel is a taxane modified to improve drug exposure and increase intratumoral accumulation and, in combination with gemcitabine, is standard therapy for pancreatic cancer. Applyi...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32386107/",
+          "total_results": 21
+        },
+        {
+          "pmid": "39201282",
+          "title": "EWS-FLI1 and Activator Protein-1 (AP-1) Reciprocally Regulate Extracellular-Matrix Proteins in Ewing sarcoma Cells.",
+          "authors": "Croushore EE, Stipp CS, Gordon DJ",
+          "journal": "International journal of molecular sciences",
+          "year": "2024",
+          "abstract_snippet": "Ribonucleotide reductase (RNR) is the rate-limiting enzyme in the synthesis of deoxyribonucleotides and the target of multiple chemotherapy drugs, including gemcitabine. We previously identified that inhibition of RNR in Ewing sarcoma tumors upregulates the expression levels of multiple members of t...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39201282/"
+        },
+        {
+          "pmid": "35023660",
+          "title": "Primary spinal multifocal intradural-extramedullary Ewing sarcoma in children: presentation of a case and review of the literature.",
+          "authors": "M\u00fcngen E, Kurucu N, Kutluk T, et al.",
+          "journal": "The Turkish journal of pediatrics",
+          "year": "2021",
+          "abstract_snippet": "BACKGROUND: Primary spinal, intradural, extramedullary Ewing sarcoma (PSIEES) is exceptionally uncommon. Here, we present an interesting pediatric case with a PSIEES diagnosis confirmed by the presence of a specific fusion protein in the tumor tissue and who then developed a cerebellar recurrence. W...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35023660/"
+        },
+        {
+          "pmid": "29152060",
+          "title": "Inhibition of CHK1 sensitizes Ewing sarcoma cells to the ribonucleotide reductase inhibitor gemcitabine.",
+          "authors": "Goss KL, Koppenhafer SL, Harmoney KM, et al.",
+          "journal": "Oncotarget",
+          "year": "2017",
+          "abstract_snippet": "Ewing sarcoma is a bone and soft tissue sarcoma that occurs in children and young adults. The EWS-FLI1 gene fusion is the driver mutation in most Ewing sarcoma tumors and functions, in part, as an aberrant transcription factor. We recently identified that Ewing sarcoma cells are sensitive to inhibit...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29152060/"
+        },
+        {
+          "pmid": "28787430",
+          "title": "GEIS-21: a multicentric phase II study of intensive chemotherapy including gemcitabine and docetaxel for the treatment of Ewing sarcoma of children and adults: a report from the Spanish sarcoma group (GEIS).",
+          "authors": "Mora J, Casta\u00f1eda A, Perez-Jaume S, et al.",
+          "journal": "British journal of cancer",
+          "year": "2017",
+          "abstract_snippet": "BACKGROUND: First Spanish trial of Ewing sarcoma (ES) including adults and children with the aim to test the efficacy of Gemcitabine and Docetaxel (G/D) in newly diagnosed high-risk (HR) patients. METHODS: This was a prospective, multicentric, non-randomised, open study for patients \u2a7d40 years with n...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28787430/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Efficacy and Safety of the Topotecan\u2013Cyclophosphamide Regimen in Adult Metastatic Ewing Sarcoma: A Large, Multicenter, Real-World Study",
+          "year": 2025,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/4b44da1be87b5f4e194675ed6175f221b75793a5",
+          "authors": "S. Tunbekici, H. C. Yuksel, Caner Acar"
+        },
+        {
+          "title": "Possibility of using the combination of everolimus/sorafenib medications in the treatment of children and adolescents with refractory osteosarcoma and Ewing sarcoma.",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/7642cfa9b5d25f5f62dd465d93b62f0809212d64",
+          "authors": "N. K. Asamedinov, Jamila Polatova, K. Abdikarimov"
+        },
+        {
+          "title": "Phase II assessment of carboplatin with etoposide and high-dose ifosfamide in rEECur, an international randomised controlled trial of chemotherapy for the treatment of recurrent and primary refractory Ewing sarcoma (RR-ES).",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/86460140778e5b609f4588b1c33cf9e5e1844e73",
+          "authors": "Martin G McCabe, Laura Kirton, Maria Khan"
+        },
+        {
+          "title": "EWS-FLI1 and Activator Protein-1 (AP-1) Reciprocally Regulate Extracellular-Matrix Proteins in Ewing sarcoma Cells",
+          "year": 2024,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/148c371a5d44babec08a5e7cb94162d6dd501679",
+          "authors": "Emma E Croushore, Christopher S. Stipp, David J. Gordon"
+        },
+        {
+          "title": "Phase II trial of gemcitabine and nab\u2010paclitaxel in patients with recurrent Ewing sarcoma: A report from the National Pediatric Cancer Foundation",
+          "year": 2020,
+          "citations": 20,
+          "url": "https://www.semanticscholar.org/paper/274dbfa9953f5d1f25573d7fb85bd4cee47316e5",
+          "authors": "J. Oesterheld, D. Reed, B. Setty"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Phase II trial of gemcitabine and nab\u2010paclitaxel in patients with recurrent Ewing sarcoma: A report from the National Pediatric Cancer Foundation",
+        "year": 2020,
+        "citations": 20,
+        "url": "https://www.semanticscholar.org/paper/274dbfa9953f5d1f25573d7fb85bd4cee47316e5",
+        "authors": "J. Oesterheld, D. Reed, B. Setty"
+      },
+      "max_citations": 20,
+      "faers_signal": "none",
+      "faers_total_reports": 56395,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Gemcitabine to Ewing sarcoma terms. Drug has 56395 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "VU0365118-1 (1.513)",
+        "T8902 (1.483)",
+        "TL_HRAS24 BRD-K93060291 (1.472)",
+        "7706-0139 (1.465)",
+        "5353451 (1.462)"
+      ],
+      "signature_interpretation": "Gemcitabine was not found among the top 37 drugs that reverse the Ewing sarcoma gene signature. Top reversers: VU0365118-1 (1.513), T8902 (1.483), TL_HRAS24 BRD-K93060291 (1.472)",
+      "ai_hypothesis": "of its unique mechanism of action and its ability to target the tumor vasculature.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "mechanism_related",
+          "confidence": 0.5,
+          "positive_signals": 1,
+          "negative_signals": 0,
+          "mechanism_signals": 2,
+          "extracted_entities": [
+            {
+              "entity": "ribonucleotide reductase",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9879999756813049
+            },
+            {
+              "entity": "rnr",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.8349999785423279
+            },
+            {
+              "entity": "deoxyribonucleotides",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9480000138282776
+            },
+            {
+              "entity": "chemotherapy",
+              "entity_group": "Medication",
+              "score": 1.0
+            },
+            {
+              "entity": "gem",
+              "entity_group": "Medication",
+              "score": 1.0
+            },
+            {
+              "entity": "##cit",
+              "entity_group": "Medication",
+              "score": 0.9160000085830688
+            },
+            {
+              "entity": "ewing sarcoma tumors",
+              "entity_group": "Disease_disorder",
+              "score": 0.996999979019165
+            },
+            {
+              "entity": "up",
+              "entity_group": "Lab_value",
+              "score": 0.9980000257492065
+            },
+            {
+              "entity": "expression levels",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9670000076293945
+            },
+            {
+              "entity": "multiple members",
+              "entity_group": "Detailed_description",
+              "score": 0.9980000257492065
+            }
+          ]
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "Phase 2",
+      "failed_trial_count": 2,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.4377,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Gemcitabine \u2014[is a therapeutic for]\u2192 Ewing sarcoma",
+      "kg_paths_text": "\u2022 Gemcitabine \u2014[is a therapeutic for]\u2192 Ewing sarcoma\n\u2022 Gemcitabine \u2014[downregulates]\u2192 gene-6790 \u2014[is bound by]\u2192 DB00997 \u2014[is a therapeutic for]\u2192 Ewing sarcoma\n\u2022 Gemcitabine \u2014[downregulates]\u2192 gene-6790 \u2014[is bound by]\u2192 DB00997 \u2014[is a therapeutic for]\u2192 Ewing sarcoma",
+      "validation_experiments": [],
+      "novelty_score": 0.2800000011920929,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": true,
+      "clinical_trials_total": 10,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT00073983",
+          "title": "Gemcitabine and Docetaxel in Treating Patients With Recurrent Osteosarcoma (Closed to Accrual as of 12/21/06) or Ewing's Sarcoma or Unresectable or Locally Recurrent Chondrosarcoma",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "54",
+          "url": "https://clinicaltrials.gov/study/NCT00073983"
+        },
+        {
+          "nct_id": "NCT05093322",
+          "title": "A Study of Surufatinib in Combination With Gemcitabine in Pediatric, Adolescent, and Young Adult Patients With Recurrent or Refractory Solid Tumors",
+          "status": "COMPLETED",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "13",
+          "url": "https://clinicaltrials.gov/study/NCT05093322"
+        },
+        {
+          "nct_id": "NCT02945800",
+          "title": "Nab-Paclitaxel and Gemcitabine for Recurrent/Refractory Sarcoma",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "59",
+          "url": "https://clinicaltrials.gov/study/NCT02945800"
+        },
+        {
+          "nct_id": "NCT05116800",
+          "title": "Phase 2 Study of 9-ING-41 With Chemotherapy in Sarcoma",
+          "status": "WITHDRAWN",
+          "phase": "PHASE2",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT05116800"
+        },
+        {
+          "nct_id": "NCT03507491",
+          "title": "Nab-paclitaxel in Combination with Gemcitabine for Pediatric Relapsed and Refractory Solid Tumors",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "24",
+          "url": "https://clinicaltrials.gov/study/NCT03507491"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 7,
+        "PHASE1": 3,
+        "NA": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "10 clinical trial(s) found on ClinicalTrials.gov",
+        "21 PubMed articles found",
+        "Supported by 4 independent AI pillars",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.44)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D012512",
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1408,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "CPIC-D (NT5C2) \u2022 PharmGKB-3 (CDA / rs60369023)",
+        "cpic": [
+          {
+            "gene": "NT5C2",
+            "level": "D",
+            "guideline": ""
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "CDA",
+            "variant": "rs60369023",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/655386830"
+          },
+          {
+            "gene": "ERCC2;KLC3",
+            "variant": "rs13181",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449004739"
+          },
+          {
+            "gene": "ERCC1;POLR1G;PPP1R13L",
+            "variant": "rs3212986",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449004745"
+          },
+          {
+            "gene": "C6orf15",
+            "variant": "rs2233980",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451125500"
+          },
+          {
+            "gene": "SERPINC1",
+            "variant": "rs5877",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451125506"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.2939999997615814,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.5080000162124634,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.583
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 16,
+        "n_expressed": 11,
+        "mean_tpm_in_tissue": 4.23,
+        "max_tpm_in_tissue": 19.68,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.915
+      },
+      "ensemble_prob": 0.9847,
+      "ensemble_features": {
+        "kg_score": 0.9993,
+        "degree_penalty": 0.7532,
+        "n_drug_targets": 1,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.0794
+      },
+      "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Tamoxifen",
+      "drug_id": "DB00675",
+      "disease_name": "Ewing sarcoma",
+      "combined_score": 0.4975999891757965,
+      "pillars_hit": 4,
+      "transe_rank": 26,
+      "transe_score": -10.7165,
+      "pykeen_score": -12.8089,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.6380000114440918,
+      "proximity_distance": 1.4500000476837158,
+      "admet_score": 0.5915,
+      "admet_flags": "hERG=0.95",
+      "primekg_score": 0.2711,
+      "dti_score": 1.0,
+      "dti_best_target": "CAV1",
+      "kg_group_score": 0.3329,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.482699990272522,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.5471,
+      "admet_multiplier": 0.9183,
+      "efficacy_score": 0.5418000221252441,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 12,
+      "shared_targets": [
+        "BCL2",
+        "CCND1",
+        "ERBB2",
+        "EZH2",
+        "FDPS",
+        "IFI27",
+        "IGF1",
+        "IGF1R",
+        "MAPK8",
+        "TNF",
+        "TP53",
+        "VEGFA"
+      ],
+      "pubmed_total": 4,
+      "pubmed_treatment_total": 3,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "20962673",
+          "title": "Establishment, characterization, and drug sensitivity of a new Ewing sarcoma cell line (SS-ES-1).",
+          "authors": "Rajabalian S, Hajializadeh Z, Pooraboli I, et al.",
+          "journal": "Journal of pediatric hematology/oncology",
+          "year": "2010",
+          "abstract_snippet": "Ewing sarcoma (ES) is one of the most malignant tumors in children and young adults. We present here a new ES cell line, SS-ES-1, established from the left thoracic tumor of a 16-year-old female patient. The SS-ES-1 cells retained genotype, morphology, and growth rate for over 150 passages. Immunocy...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20962673/",
+          "total_results": 4
+        },
+        {
+          "pmid": "20143210",
+          "title": "Results of RS-99 protocol for childhood solid tumors.",
+          "authors": "Cai JY, Tang JY, Pan C, et al.",
+          "journal": "World journal of pediatrics : WJP",
+          "year": "2010",
+          "abstract_snippet": "BACKGROUND: Little was known about the therapeutic result of rhabdomyosarcomas (RMSs) and other malignant tumors until the end of the last century in China. Very few prospective clinical research results have been reported. We designed a RS-99 protocol under close cooperation of a multidisciplinary ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20143210/"
+        },
+        {
+          "pmid": "31242978",
+          "title": "Retrospective Analysis of Outcomes of Patients with Relapsed, Refractory and Metastatic Sarcomas who have received Metronomic Chemotherapy.",
+          "authors": "Devadas SK, Banavali S",
+          "journal": "The Gulf journal of oncology",
+          "year": "2019",
+          "abstract_snippet": "INTRODUCTION: Paediatric soft tissue sarcoma treatments and outcomes have improved significantly in the last few decades. However, a significant number of patients still succumb to the disease. In low-middle income countries there are dual problems of advanced disease at presentation and financial b...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31242978/"
+        },
+        {
+          "pmid": "20103643",
+          "title": "EWS/FLI1 oncogene activates caspase 3 transcription and triggers apoptosis in vivo.",
+          "authors": "Sohn EJ, Li H, Reidy K, et al.",
+          "journal": "Cancer research",
+          "year": "2010",
+          "abstract_snippet": "EWS/FLI1 is a fusion gene product generated by a chromosomal translocation t(11;22)(q24;q12) found in Ewing sarcoma. EWS/FLI1 encodes an aberrant transcription factor with oncogenic properties in vitro. Paradoxically, expression of EWS/FLI1 in nontransformed primary cells results in apoptosis, but t...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20103643/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Real Time PCR analysis of Ewing's Sarcoma Cell Lines in Response to Chemotherapeutic Treatment.",
+          "year": 2018,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/898a864aa0bdcd13dd6e389e55952a2d00f6fc39",
+          "authors": "S. Pitz\u00e9n, A. Kruchten"
+        },
+        {
+          "title": "\"Spindle Cell Sarcoma of Uterine Cervix\"- A Rare Case Report",
+          "year": 2014,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/51040e7b9de08955fa546300467aa7e76592a07a",
+          "authors": "Sanjay Singh, A. Nigam"
+        },
+        {
+          "title": "Retrospective Analysis of Outcomes of Patients with Relapsed, Refractory and Metastatic Sarcomas who have received Metronomic Chemotherapy.",
+          "year": 2019,
+          "citations": 13,
+          "url": "https://www.semanticscholar.org/paper/c3b7c872d1e096a2b51b2a538d48a15948eb3efa",
+          "authors": "S. Devadas, S. Banavali"
+        },
+        {
+          "title": "Flavonoids-induced death in malignant cells through inhibition of IGF-1R",
+          "year": 2004,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/9e93079eefa300721a6b9cefdb87608fe8a862b4",
+          "authors": "A. Girnita, L. Girnita, A. Magnus"
+        },
+        {
+          "title": "Updates on WHO classification for small round cell tumors: Ewing Sarcoma vs. Everything Else.",
+          "year": 2024,
+          "citations": 51,
+          "url": "https://www.semanticscholar.org/paper/c82c2b0fc31d415100126b7011afff3b2a43b06d",
+          "authors": "Carina A. Dehner, A. Lazar, John S. A. Chrisinger"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Updates on WHO classification for small round cell tumors: Ewing Sarcoma vs. Everything Else.",
+        "year": 2024,
+        "citations": 51,
+        "url": "https://www.semanticscholar.org/paper/c82c2b0fc31d415100126b7011afff3b2a43b06d",
+        "authors": "Carina A. Dehner, A. Lazar, John S. A. Chrisinger"
+      },
+      "max_citations": 51,
+      "faers_signal": "none",
+      "faers_total_reports": 22463,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Tamoxifen to Ewing sarcoma terms. Drug has 22463 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "VU0365118-1 (1.513)",
+        "T8902 (1.483)",
+        "TL_HRAS24 BRD-K93060291 (1.472)",
+        "7706-0139 (1.465)",
+        "5353451 (1.462)"
+      ],
+      "signature_interpretation": "Tamoxifen was not found among the top 37 drugs that reverse the Ewing sarcoma gene signature. Top reversers: VU0365118-1 (1.513), T8902 (1.483), TL_HRAS24 BRD-K93060291 (1.472)",
+      "ai_hypothesis": "of its ability to inhibit the growth of Ewing sarcoma cells.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.5471,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Tamoxifen \u2014[downregulates]\u2192 gene-993 \u2014[is downregulated by]\u2192 DB01030 \u2014[treats]\u2192 Ewing sarcoma",
+      "kg_paths_text": "\u2022 Tamoxifen \u2014[downregulates]\u2192 gene-993 \u2014[is downregulated by]\u2192 DB01030 \u2014[treats]\u2192 Ewing sarcoma\n\u2022 Tamoxifen \u2014[downregulates]\u2192 gene-993 \u2014[is downregulated by]\u2192 DB00970 \u2014[treats]\u2192 Ewing sarcoma\n\u2022 Tamoxifen \u2014[downregulates]\u2192 gene-6182 \u2014[is downregulated by]\u2192 DB00970 \u2014[treats]\u2192 Ewing sarcoma",
+      "validation_experiments": [],
+      "novelty_score": 0.5669999718666077,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "LOW",
+      "confidence_reasons": [
+        "4 PubMed article(s) - limited literature",
+        "Supported by 4 independent AI pillars",
+        "Supporting paper with 51 citations",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.55)"
+      ],
+      "disease_entity": "Disease::MESH:D012512",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1405,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "high_risk",
+        "summary": "CPIC-A (CYP2D6) \u2022 PharmGKB-3 (ESR1 / rs9340799)",
+        "cpic": [
+          {
+            "gene": "CYP2D6",
+            "level": "A",
+            "guideline": "CYP2D6 and Tamoxifen"
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "ESR1",
+            "variant": "rs9340799",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/655385154"
+          },
+          {
+            "gene": "CYP2D6",
+            "variant": "CYP2D6*1, CYP2D6*2, CYP2D6*3, CYP2D6*4, CYP2D6*5, CYP2D6*6, CYP2D6*7, CYP2D6*9, CYP2D6*10, CYP2D6*10x2, CYP2D6*11, CYP2D6*17, CYP2D6*21, CYP2D6*36, CYP2D6*41",
+            "level": "1A",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451285240"
+          },
+          {
+            "gene": "CYP2D6",
+            "variant": "CYP2D6*1, CYP2D6*2, CYP2D6*3, CYP2D6*4, CYP2D6*5, CYP2D6*6, CYP2D6*10, CYP2D6*17, CYP2D6*29, CYP2D6*35, CYP2D6*41",
+            "level": "1A",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/982029857"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs1045642",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183697570"
+          },
+          {
+            "gene": "",
+            "variant": "rs10030044",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043858877"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.424,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.498,
+          "docking": 0.629,
+          "pharos": 0.0,
+          "literature": 0.303
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 12,
+        "n_expressed": 10,
+        "mean_tpm_in_tissue": 6.46,
+        "max_tpm_in_tissue": 29.11,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.928
+      },
+      "ensemble_prob": 0.3989,
+      "ensemble_features": {
+        "kg_score": 0.9953,
+        "degree_penalty": 0.7565,
+        "n_drug_targets": 72,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 3.9318
+      },
+      "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": -7.55,
+        "target_symbol": "ERBB2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "STILBENE"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "stilbene"
+        ]
+      }
+    },
+    {
+      "drug_name": "Dexamethasone",
+      "drug_id": "DB01234",
+      "disease_name": "Ewing sarcoma",
+      "combined_score": 0.4557,
+      "pillars_hit": 4,
+      "transe_rank": 15,
+      "transe_score": -10.5666,
+      "pykeen_score": -13.1251,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0.9244,
+      "mol_emb_similar_to": "Doxorubicin",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.675000011920929,
+      "proximity_distance": 1.2999999523162842,
+      "admet_score": 0.7109,
+      "admet_flags": "clean",
+      "primekg_score": 0.2622,
+      "dti_score": 0.6268,
+      "dti_best_target": "ETS1",
+      "kg_group_score": 0.3359,
+      "structural_group_score": 0.9244,
+      "network_group_score": 0.4968000054359436,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.2261,
+      "admet_multiplier": 0.9422,
+      "efficacy_score": 0.4836,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 17,
+      "shared_targets": [
+        "CAV1",
+        "CDK6",
+        "CEBPB",
+        "CFLAR",
+        "CHGA",
+        "CSF3",
+        "CXCR4",
+        "ETS1",
+        "GJA1",
+        "IGF1",
+        "MAPK8",
+        "NFKB1",
+        "NR0B1",
+        "PTGS2",
+        "TNF",
+        "TP53",
+        "VEGFA"
+      ],
+      "pubmed_total": 14,
+      "pubmed_treatment_total": 12,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "28735378",
+          "title": "A phase I/II trial and pharmacokinetic study of mithramycin in children and adults with refractory Ewing sarcoma and EWS-FLI1 fusion transcript.",
+          "authors": "Grohar PJ, Glod J, Peer CJ, et al.",
+          "journal": "Cancer chemotherapy and pharmacology",
+          "year": "2017",
+          "abstract_snippet": "PURPOSE: In a preclinical drug screen, mithramycin was identified as a potent inhibitor of the Ewing sarcoma EWS-FLI1 transcription factor. We conducted a phase I/II trial to determine the dose-limiting toxicities (DLT), maximum tolerated dose (MTD), and pharmacokinetics (PK) of mithramycin in child...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28735378/",
+          "total_results": 14
+        },
+        {
+          "pmid": "36193025",
+          "title": "A case report on non-metastatic Ewing sarcoma of the lumbar spine in a young patient.",
+          "authors": "Mandal S, Baniya S, Rohita DK, et al.",
+          "journal": "Cancer reports (Hoboken, N.J.)",
+          "year": "2022",
+          "abstract_snippet": "BACKGROUND: Ewing sarcoma (ES), the second most common malignant bone tumor after osteosarcoma in the second decade, occurs in 0.9% of cases as the primary non-sacral form. CASE: A 20-years-old male presented with acute paraparesis of bilateral lower limb and numbness following initial back pain for...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36193025/"
+        },
+        {
+          "pmid": "35131789",
+          "title": "Rare case of renal Ewing sarcoma presenting as ectopic Cushing syndrome in a 12-year-old girl.",
+          "authors": "Karguppikar MB, Oza CM, Khadilkar V, et al.",
+          "journal": "BMJ case reports",
+          "year": "2022",
+          "abstract_snippet": "We present a 12-year-old girl with recent onset weight gain and purple striae over the abdomen. Examination revealed her to be hypertensive. On evaluation for Cushing syndrome (CS), her cortisol and adrenocorticotropic hormone (ACTH) were found to be high. MRI brain showed a suspicious lesion (thoug...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35131789/"
+        },
+        {
+          "pmid": "40963034",
+          "title": "Pediatric primary intracranial Ewing's sarcoma involving cavernous sinus: an untamed evil.",
+          "authors": "Kumar A, Rao RN, Raiyani V, et al.",
+          "journal": "Child's nervous system : ChNS : official journal of the International Society for Pediatric Neurosurgery",
+          "year": "2025",
+          "abstract_snippet": "Pediatric cavernous sinus Ewing's sarcoma (CS-ES) is an exceptionally rare and aggressive form of primary intracranial Ewing's sarcoma. Primary intracranial ES itself accounts for less than 1% of all childhood ES, with ES representing less than 1% of all childhood malignancies. CS-ES poses significa...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40963034/"
+        },
+        {
+          "pmid": "41466962",
+          "title": "Extraskeletal Ewing Sarcoma Mimicking Benign Soft Tissue Tumors: A Rare Case.",
+          "authors": "Aldabbas MA, Alshorman MM, Albudour LN, et al.",
+          "journal": "Cureus",
+          "year": "2025",
+          "abstract_snippet": "Extraskeletal Ewing sarcoma (EES) is a rare subtype within the Ewing sarcoma family of tumors (ESFT), typically presenting as a large soft tissue mass. Imaging features of EES are generally non-specific and vary depending on the tumor's location and the tissues involved. Magnetic resonance imaging (...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41466962/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Pediatric primary intracranial Ewing\u2019s sarcoma involving cavernous sinus: an untamed evil",
+          "year": 2025,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/0d3fb5b3329564c02396212cdd5783dd1a08ca30",
+          "authors": "Ashutosh Kumar, Ramnaval Rao, Vandan Raiyani"
+        },
+        {
+          "title": "Rare case of renal Ewing sarcoma presenting as ectopic Cushing syndrome in a 12-year-old girl",
+          "year": 2022,
+          "citations": 2,
+          "url": "https://www.semanticscholar.org/paper/51478d94c75fabb5a70b11e0c20f92aab7ab2cfd",
+          "authors": "M. Karguppikar, Chirantap Oza, V. Khadilkar"
+        },
+        {
+          "title": "Rapidly Fatal Ectopic Adrenocorticotropic Hormone Syndrome in a 9-Year-Old Girl With Ewing Sarcoma",
+          "year": 2021,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/2d8fc4517c7cc5b9b53390bf4dc200a0b21b30e1",
+          "authors": "J. Varghese, Mythili Ayyagari, Sagar S.L. Reddy"
+        },
+        {
+          "title": "A phase I/II trial and pharmacokinetic study of mithramycin in children and adults with refractory Ewing sarcoma and EWS\u2013FLI1 fusion transcript",
+          "year": 2017,
+          "citations": 64,
+          "url": "https://www.semanticscholar.org/paper/5979738f63c5034530a815547fc1854d2da62482",
+          "authors": "P. Grohar, J. Glod, C. Peer"
+        },
+        {
+          "title": "Adjuvant hypofractionated partial-brain radiation therapy for pediatric Ewing sarcoma brain metastases: case report.",
+          "year": 2016,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/bd50a1071129e7bff814de65e372db7b27531f0a",
+          "authors": "R. van Dams, Henry S. Park, A. Alomari"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "A phase I/II trial and pharmacokinetic study of mithramycin in children and adults with refractory Ewing sarcoma and EWS\u2013FLI1 fusion transcript",
+        "year": 2017,
+        "citations": 64,
+        "url": "https://www.semanticscholar.org/paper/5979738f63c5034530a815547fc1854d2da62482",
+        "authors": "P. Grohar, J. Glod, C. Peer"
+      },
+      "max_citations": 64,
+      "faers_signal": "none",
+      "faers_total_reports": 317707,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Dexamethasone to Ewing sarcoma terms. Drug has 317707 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "VU0365118-1 (1.513)",
+        "T8902 (1.483)",
+        "TL_HRAS24 BRD-K93060291 (1.472)",
+        "7706-0139 (1.465)",
+        "5353451 (1.462)"
+      ],
+      "signature_interpretation": "Dexamethasone was not found among the top 37 drugs that reverse the Ewing sarcoma gene signature. Top reversers: VU0365118-1 (1.513), T8902 (1.483), TL_HRAS24 BRD-K93060291 (1.472)",
+      "ai_hypothesis": "of its anti-inflammatory properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.2261,
+      "mr_genetic_targets": 2,
+      "mechanistic_hypothesis": "Dexamethasone \u2014[downregulates]\u2192 gene-2697 \u2014[is linked to]\u2192 Ewing sarcoma",
+      "kg_paths_text": "\u2022 Dexamethasone \u2014[downregulates]\u2192 gene-2697 \u2014[is linked to]\u2192 Ewing sarcoma\n\u2022 Dexamethasone \u2014[downregulates]\u2192 gene-1454 \u2014[is upregulated by]\u2192 DB00541 \u2014[treats]\u2192 Ewing sarcoma\n\u2022 Dexamethasone \u2014[downregulates]\u2192 gene-1454 \u2014[is upregulated by]\u2192 DB00541 \u2014[treats]\u2192 Ewing sarcoma",
+      "validation_experiments": [],
+      "novelty_score": 0.319,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": false,
+      "clinical_trials_total": 2,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT00445965",
+          "title": "Iodine I 131 Monoclonal Antibody 3F8 in Treating Patients With Central Nervous System Cancer or Leptomeningeal Cancer",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "78",
+          "url": "https://clinicaltrials.gov/study/NCT00445965"
+        },
+        {
+          "nct_id": "NCT05131386",
+          "title": "Multicohort Trial of Trabectedin and Low-dose Radiation Therapy in Advanced/Metastatic Sarcomas",
+          "status": "UNKNOWN",
+          "phase": "PHASE2",
+          "enrollment": "85",
+          "url": "https://clinicaltrials.gov/study/NCT05131386"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 2
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "2 clinical trial(s) found on ClinicalTrials.gov",
+        "14 PubMed articles found",
+        "Supported by 4 independent AI pillars",
+        "Supporting paper with 64 citations",
+        "AI-generated hypothesis available"
+      ],
+      "disease_entity": "Disease::MESH:D012512",
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1512,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (ABCB1 / rs1045642)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "ABCB1",
+            "variant": "rs1045642",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204433"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs2032582",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981238041"
+          },
+          {
+            "gene": "CTLA4",
+            "variant": "rs4553808",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043880851"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs2229109",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449170621"
+          },
+          {
+            "gene": "GATA3",
+            "variant": "rs3824662",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1184512128"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.262,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.456,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.511
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 17,
+        "n_expressed": 11,
+        "mean_tpm_in_tissue": 53.47,
+        "max_tpm_in_tissue": 419.87,
+        "tissue_specificity": 0.652,
+        "context_modifier": 1.084
+      },
+      "ensemble_prob": 0.3791,
+      "ensemble_features": {
+        "kg_score": 0.9934,
+        "degree_penalty": 0.736,
+        "n_drug_targets": 24,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.2627
+      },
+      "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Paclitaxel",
+      "drug_id": "DB01229",
+      "disease_name": "Ewing sarcoma",
+      "combined_score": 0.4519999921321869,
+      "pillars_hit": 4,
+      "transe_rank": 2,
+      "transe_score": -10.1185,
+      "pykeen_score": -12.0265,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0.9297,
+      "mol_emb_similar_to": "Doxorubicin",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.625,
+      "proximity_distance": 1.5,
+      "admet_score": 0.4859,
+      "admet_flags": "hERG=0.85",
+      "primekg_score": 0.2673,
+      "dti_score": 0.6094,
+      "dti_best_target": "KIT",
+      "kg_group_score": 0.455,
+      "structural_group_score": 0.9297,
+      "network_group_score": 0.4677000045776367,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.1945,
+      "admet_multiplier": 0.8972,
+      "efficacy_score": 0.5037999749183655,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 12,
+      "shared_targets": [
+        "BCL2",
+        "CFLAR",
+        "COL11A2",
+        "CSF3",
+        "ERBB2",
+        "NFKB1",
+        "PLK1",
+        "PTGS2",
+        "TNF",
+        "TOP2A",
+        "TP53",
+        "VEGFA"
+      ],
+      "pubmed_total": 18,
+      "pubmed_treatment_total": 18,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "36603685",
+          "title": "Low Bcl-2 is a robust biomarker of sensitivity to nab-paclitaxel in Ewing sarcoma.",
+          "authors": "Pascual-Pasto G, Resa-Pares C, Castillo-Ecija H, et al.",
+          "journal": "Biochemical pharmacology",
+          "year": "2023",
+          "abstract_snippet": "Nanoparticle albumin-bound paclitaxel (nab-paclitaxel) shows potent preclinical anticancer activity in pediatric solid tumors such as Ewing sarcoma, rhabdomyosarcoma and neuroblastoma, but responses in clinical trials have been modest. In this work, we aimed to discover a rational biomarker-based ap...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36603685/",
+          "total_results": 18
+        },
+        {
+          "pmid": "32386107",
+          "title": "Phase II trial of gemcitabine and nab-paclitaxel in patients with recurrent Ewing sarcoma: A report from the National Pediatric Cancer Foundation.",
+          "authors": "Oesterheld JE, Reed DR, Setty BA, et al.",
+          "journal": "Pediatric blood & cancer",
+          "year": "2020",
+          "abstract_snippet": "BACKGROUND: The combination of gemcitabine and docetaxel is often used to treat patients with recurrent sarcoma. Nab-paclitaxel is a taxane modified to improve drug exposure and increase intratumoral accumulation and, in combination with gemcitabine, is standard therapy for pancreatic cancer. Applyi...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32386107/"
+        },
+        {
+          "pmid": "16889724",
+          "title": "[Preliminary report of combination chemotherapy including Arsenic trioxide for stage III osteosarcoma and Ewing sarcoma].",
+          "authors": "Guo W, Tang XD, Tang S, et al.",
+          "journal": "Zhonghua wai ke za zhi [Chinese journal of surgery]",
+          "year": "2006",
+          "abstract_snippet": "OBJECTIVE: To determine the efficacy of Arsenic trioxide combined with other chemo agents in patients with metastatic osteosarcoma and Ewing sarcoma. METHODS: From December 2002 to June 2005, 32 patients with metastatic osteosarcoma and Ewing sarcoma were treated with chemotherapy comprised Arsenic ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16889724/"
+        },
+        {
+          "pmid": "24753077",
+          "title": "Preclinical evaluation of nanoparticle albumin-bound paclitaxel for treatment of pediatric bone sarcoma.",
+          "authors": "Wagner LM, Yin H, Eaves D, et al.",
+          "journal": "Pediatric blood & cancer",
+          "year": "2014",
+          "abstract_snippet": "The combination of docetaxel and gemcitabine is frequently used to treat recurrent bone sarcoma. Nanoparticle albumin-bound paclitaxel (nab-paclitaxel) is less toxic and more active than docetaxel or paclitaxel for breast cancer patients. The combination of nab-paclitaxel and gemcitabine has preclin...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24753077/"
+        },
+        {
+          "pmid": "33070764",
+          "title": "Chemoimmunotherapy for the salvage treatment of Ewing sarcoma: A case report.",
+          "authors": "Guven DC, Kilickap S, Yildirim HC, et al.",
+          "journal": "Journal of oncology pharmacy practice : official publication of the International Society of Oncology Pharmacy Practitioners",
+          "year": "2021",
+          "abstract_snippet": "INTRODUCTION: Although, immune check-point inhibitors changed the course of many cancers, the outcomes in sarcomas were rather disappointing with less than 10% response rates. Ewing sarcoma is a poorly differentiated and aggressive tumor mostly seen in the children and adolescents. It's a distinct t...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33070764/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Low Bcl-2 is a robust biomarker of sensitivity to nab-paclitaxel in Ewing sarcoma.",
+          "year": 2023,
+          "citations": 9,
+          "url": "https://www.semanticscholar.org/paper/c48e28d4bf599eda8fa092db0f6f70085b48b68d",
+          "authors": "Guillem Pascual-Pasto, Claudia Resa-Pares, H. Castillo-Ecija"
+        },
+        {
+          "title": "Abstract 6249: Low Bcl-2 is a robust biomarker of sensitivity to nab-paclitaxel in Ewing sarcoma",
+          "year": 2023,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/f348267bc93334c1867aec903a6be983781ebff9",
+          "authors": "Guillem Pascual-Pasto, Claudia Resa-Pares, A. Carcaboso"
+        },
+        {
+          "title": "Phase II trial of gemcitabine and nab\u2010paclitaxel in patients with recurrent Ewing sarcoma: A report from the National Pediatric Cancer Foundation",
+          "year": 2020,
+          "citations": 20,
+          "url": "https://www.semanticscholar.org/paper/274dbfa9953f5d1f25573d7fb85bd4cee47316e5",
+          "authors": "J. Oesterheld, D. Reed, B. Setty"
+        },
+        {
+          "title": "GEIS 39: Phase II trial of nabpaclitaxel for the treatment of patient with multiply relapsed/refractory desmoplastic small round cell tumor (DSRCT) and Ewing sarcoma (EwS).",
+          "year": 2021,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/ea17468887a5d23973c5fe33e54429f6099a4508",
+          "authors": "J. Mora, M. Su\u00f1ol, N. Hindi"
+        },
+        {
+          "title": "Chemoimmunotherapy for the salvage treatment of Ewing sarcoma: A case report",
+          "year": 2020,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/79f4edabb08d662f7a78abfa67e8cd9da4cbca59",
+          "authors": "D. Guven, S. K\u0131l\u0131\u00e7kap, H. Y\u0131ld\u0131r\u0131m"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Phase II trial of gemcitabine and nab\u2010paclitaxel in patients with recurrent Ewing sarcoma: A report from the National Pediatric Cancer Foundation",
+        "year": 2020,
+        "citations": 20,
+        "url": "https://www.semanticscholar.org/paper/274dbfa9953f5d1f25573d7fb85bd4cee47316e5",
+        "authors": "J. Oesterheld, D. Reed, B. Setty"
+      },
+      "max_citations": 20,
+      "faers_signal": "none",
+      "faers_total_reports": 88666,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Paclitaxel to Ewing sarcoma terms. Drug has 88666 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "VU0365118-1 (1.513)",
+        "T8902 (1.483)",
+        "TL_HRAS24 BRD-K93060291 (1.472)",
+        "7706-0139 (1.465)",
+        "5353451 (1.462)"
+      ],
+      "signature_interpretation": "Paclitaxel was not found among the top 37 drugs that reverse the Ewing sarcoma gene signature. Top reversers: VU0365118-1 (1.513), T8902 (1.483), TL_HRAS24 BRD-K93060291 (1.472)",
+      "ai_hypothesis": "of its ability to induce apoptosis and inhibit cell proliferation.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 1,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "##ticle album",
+              "entity_group": "Detailed_description",
+              "score": 0.7979999780654907
+            },
+            {
+              "entity": "pac",
+              "entity_group": "Medication",
+              "score": 0.9789999723434448
+            },
+            {
+              "entity": "##litaxel",
+              "entity_group": "Medication",
+              "score": 0.8019999861717224
+            },
+            {
+              "entity": "anti",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9020000100135803
+            },
+            {
+              "entity": "##cancer",
+              "entity_group": "Lab_value",
+              "score": 0.8939999938011169
+            },
+            {
+              "entity": "solid tumors",
+              "entity_group": "Disease_disorder",
+              "score": 0.8339999914169312
+            },
+            {
+              "entity": "sarcom",
+              "entity_group": "Disease_disorder",
+              "score": 0.8640000224113464
+            },
+            {
+              "entity": "rhabdomyosarcoma",
+              "entity_group": "Disease_disorder",
+              "score": 0.8970000147819519
+            },
+            {
+              "entity": "##mark",
+              "entity_group": "Detailed_description",
+              "score": 0.7160000205039978
+            }
+          ]
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.1945,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Paclitaxel \u2014[is is related to by]\u2192 gene-7153 \u2014[is a target of]\u2192 DB00970 \u2014[treats]\u2192 Ewing sarcoma",
+      "kg_paths_text": "\u2022 Paclitaxel \u2014[is is related to by]\u2192 gene-7153 \u2014[is a target of]\u2192 DB00970 \u2014[treats]\u2192 Ewing sarcoma\n\u2022 Paclitaxel \u2014[is is related to by]\u2192 gene-7153 \u2014[inhibits]\u2192 DB00773 \u2014[treats]\u2192 Ewing sarcoma\n\u2022 Paclitaxel \u2014[is is related to by]\u2192 gene-7153 \u2014[inhibits]\u2192 DB00773 \u2014[treats]\u2192 Ewing sarcoma",
+      "validation_experiments": [],
+      "novelty_score": 0.3160000145435333,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": false,
+      "clinical_trials_total": 5,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT03275818",
+          "title": "Trial of Nab-paclitaxel in Patients With Desmoid Tumors and Multiply Relapsed/Refractory Desmoplastic Small Round Cell Tumors and Ewing Sarcoma",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "69",
+          "url": "https://clinicaltrials.gov/study/NCT03275818"
+        },
+        {
+          "nct_id": "NCT02945800",
+          "title": "Nab-Paclitaxel and Gemcitabine for Recurrent/Refractory Sarcoma",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "59",
+          "url": "https://clinicaltrials.gov/study/NCT02945800"
+        },
+        {
+          "nct_id": "NCT03507491",
+          "title": "Nab-paclitaxel in Combination with Gemcitabine for Pediatric Relapsed and Refractory Solid Tumors",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "24",
+          "url": "https://clinicaltrials.gov/study/NCT03507491"
+        },
+        {
+          "nct_id": "NCT01962103",
+          "title": "Study to Find a Safe Dose and Show Early Clinical Activity of Weekly Nab-paclitaxel in Pediatric Patients With Recurrent/ Refractory Solid Tumors",
+          "status": "COMPLETED",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "107",
+          "url": "https://clinicaltrials.gov/study/NCT01962103"
+        },
+        {
+          "nct_id": "NCT00002854",
+          "title": "High-Dose Combination Chemotherapy Plus Peripheral Stem Cell Transplantation in Treating Patients With Advanced Cancer",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "33",
+          "url": "https://clinicaltrials.gov/study/NCT00002854"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 3,
+        "PHASE1": 3
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "5 clinical trial(s) found on ClinicalTrials.gov",
+        "18 PubMed articles found",
+        "Supported by 4 independent AI pillars",
+        "AI-generated hypothesis available"
+      ],
+      "disease_entity": "Disease::MESH:D012512",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1533,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (ABCB1 / rs2032582)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "ABCB1",
+            "variant": "rs2032582",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/655385856"
+          },
+          {
+            "gene": "CYP2C8",
+            "variant": "rs1113129",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/699639328"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs1045642",
+            "level": "4",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204258"
+          },
+          {
+            "gene": "FGD4",
+            "variant": "rs10771973",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1444700958"
+          },
+          {
+            "gene": "ERCC1",
+            "variant": "rs3212986",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1445401847"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.438,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.452,
+          "docking": 0.563,
+          "pharos": 0.0,
+          "literature": 0.555
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 12,
+        "n_expressed": 10,
+        "mean_tpm_in_tissue": 8.41,
+        "max_tpm_in_tissue": 42.88,
+        "tissue_specificity": 0.135,
+        "context_modifier": 0.954
+      },
+      "ensemble_prob": 0.9915,
+      "ensemble_features": {
+        "kg_score": 0.9997,
+        "degree_penalty": 0.7483,
+        "n_drug_targets": 25,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 1.3863
+      },
+      "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": -6.76,
+        "target_symbol": "ERBB2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          ">",
+          "ISOLATED"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          ">_2_ester_groups",
+          "isolated_alkene"
+        ]
+      }
+    },
+    {
+      "drug_name": "Vinblastine",
+      "drug_id": "DB00570",
+      "disease_name": "Ewing sarcoma",
+      "combined_score": 0.4507,
+      "pillars_hit": 4,
+      "transe_rank": 129,
+      "transe_score": -11.2736,
+      "pykeen_score": -12.98,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0.8835,
+      "similar_to": "Vincristine",
+      "mol_emb_similarity": 0.9996,
+      "mol_emb_similar_to": "Vincristine",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.574999988079071,
+      "proximity_distance": 1.7000000476837158,
+      "admet_score": 0.4736,
+      "admet_flags": "hERG=0.98",
+      "primekg_score": 0.2675,
+      "dti_score": 0.4554,
+      "dti_best_target": "KIT",
+      "kg_group_score": 0.3,
+      "structural_group_score": 0.9996,
+      "network_group_score": 0.43939998745918274,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.4061,
+      "admet_multiplier": 0.8947,
+      "efficacy_score": 0.5037,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 10,
+      "shared_targets": [
+        "CFLAR",
+        "CXCR4",
+        "EPHA2",
+        "ETS1",
+        "EZH2",
+        "EZR",
+        "ID2",
+        "NFKB1",
+        "TNF",
+        "TOP2A"
+      ],
+      "pubmed_total": 9,
+      "pubmed_treatment_total": 9,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "34089219",
+          "title": "Extraskeletal Ewing sarcoma in children, adolescents, and young adults. An analysis of three prospective studies of the Cooperative Weichteilsarkomstudiengruppe (CWS).",
+          "authors": "Koscielniak E, Sparber-Sauer M, Scheer M, et al.",
+          "journal": "Pediatric blood & cancer",
+          "year": "2021",
+          "abstract_snippet": "BACKGROUND: We have analyzed the outcome of patients with localized extraskeletal Ewing sarcoma (EES) treated in three consecutive Cooperative Weichteilsarkomstudiengruppe (CWS) soft tissue sarcoma (STS) studies: CWS-91, CWS-96, and CWS-2002P. METHODS: Patients were treated in CWS-91 with four- (vin...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34089219/",
+          "total_results": 9
+        },
+        {
+          "pmid": "40223183",
+          "title": "Results of the Latin American Pediatric Oncology Group (GALOP) Trial for Patients With Metastatic Ewing Sarcoma: Multicentric Study of Interval-Compressed Multiagent and Metronomic Chemotherapy.",
+          "authors": "Rose A, Gregianin LJ, Boldrini E, et al.",
+          "journal": "Pediatric blood & cancer",
+          "year": "2025",
+          "abstract_snippet": "BACKGROUND: GALOP investigators developed a multicenter protocol to standardize treatment for newly diagnosed metastatic Ewing sarcoma (ES) in South America. METHODS: Prospective trial. Induction chemotherapy consisted of 9 alternating interval-compressed cycles (every 14 days) of vincristine, doxor...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40223183/"
+        },
+        {
+          "pmid": "26260582",
+          "title": "Synergistic induction of apoptosis by a polo-like kinase 1 inhibitor and microtubule-interfering drugs in Ewing sarcoma cells.",
+          "authors": "Wei\u00df LM, Hugle M, Romero S, et al.",
+          "journal": "International journal of cancer",
+          "year": "2016",
+          "abstract_snippet": "Since polo-like kinase 1 (PLK1) is highly expressed in Ewing sarcoma (ES), we evaluated the therapeutic potential of the PLK1 inhibitor BI 6727. Here, we identify a synergistic induction of apoptosis by BI 6727 and several microtubule-interfering drugs in ES cells, including vincristine (VCR), vinbl...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26260582/"
+        },
+        {
+          "pmid": "39838616",
+          "title": "Results of the Latin American Pediatric Oncology Group (GALOP-2011) Trial for Patients With Localized Ewing Sarcoma: A Multicentric Study of Interval-Compressed Multiagent Chemotherapy.",
+          "authors": "Gregianin LJ, Rose A, Villarroel M, et al.",
+          "journal": "Pediatric blood & cancer",
+          "year": "2025",
+          "abstract_snippet": "BACKGROUND: GALOP investigators developed a prospective cooperative protocol for localized Ewing sarcoma (ES) incorporating interval-compressed chemotherapy (VDC/IE, vincristine, doxorubicin, cyclophosphamide/ifosfamide and etoposide). After completing conventional treatment, patients were randomize...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39838616/"
+        },
+        {
+          "pmid": "37637411",
+          "title": "Chemotherapeutic drugs for soft tissue sarcomas: a review.",
+          "authors": "Tian Z, Yao W",
+          "journal": "Frontiers in pharmacology",
+          "year": "2023",
+          "abstract_snippet": "Despite the low incidence of soft tissue sarcomas (STSs), hundreds of thousands of new STS cases are diagnosed annually worldwide, and approximately half of them eventually progress to advanced stages. Currently, chemotherapy is the first-line treatment for advanced STSs. There are difficulties in s...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37637411/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Results of the Latin American Pediatric Oncology Group (GALOP\u20102011) Trial for Patients With Localized Ewing Sarcoma: A Multicentric Study of Interval\u2010Compressed Multiagent Chemotherapy",
+          "year": 2025,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/113c445bab75e59b29fbec12d94b807e1396f4de",
+          "authors": "L. Gregianin, A. Ros\u00e9, Milena Villarroel"
+        },
+        {
+          "title": "Case report: Extraskeletal Ewing sarcoma with a germline pathogenic variant of SMARCA4",
+          "year": 2024,
+          "citations": 2,
+          "url": "https://www.semanticscholar.org/paper/afc561e7a8c6bde469c0579592f44c043f6c736a",
+          "authors": "Min-Chae Kang, Sun-Young Kong, Sang-Yoon Park"
+        },
+        {
+          "title": "Synergistic induction of apoptosis by a polo\u2010like kinase 1 inhibitor and microtubule\u2010interfering drugs in Ewing sarcoma cells",
+          "year": 2016,
+          "citations": 31,
+          "url": "https://www.semanticscholar.org/paper/1117e59b358a739257a5eae1ae769e4a462645ee",
+          "authors": "Lilly Magdalena Wei\u00df, Manuela Hugle, Sara Romero"
+        },
+        {
+          "title": "Chemotherapeutic drugs for soft tissue sarcomas: a review",
+          "year": 2023,
+          "citations": 39,
+          "url": "https://www.semanticscholar.org/paper/621e9640533bdd4298c33f77220e0afdf5199088",
+          "authors": "Z. Tian, Weitao Yao"
+        },
+        {
+          "title": "Effect of desacetyl vinblastine amide (DVA) against human sarcomas heterotransplanted in nude mice.",
+          "year": 1980,
+          "citations": 6,
+          "url": "https://www.semanticscholar.org/paper/7d31fc7df8971436cb5e30f3d816522bb7fa6be9",
+          "authors": "P. Sordillo, S. Hajdu, G. Magill"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Chemotherapeutic drugs for soft tissue sarcomas: a review",
+        "year": 2023,
+        "citations": 39,
+        "url": "https://www.semanticscholar.org/paper/621e9640533bdd4298c33f77220e0afdf5199088",
+        "authors": "Z. Tian, Weitao Yao"
+      },
+      "max_citations": 39,
+      "faers_signal": "none",
+      "faers_total_reports": 7672,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Vinblastine to Ewing sarcoma terms. Drug has 7672 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "VU0365118-1 (1.513)",
+        "T8902 (1.483)",
+        "TL_HRAS24 BRD-K93060291 (1.472)",
+        "7706-0139 (1.465)",
+        "5353451 (1.462)"
+      ],
+      "signature_interpretation": "Vinblastine was not found among the top 37 drugs that reverse the Ewing sarcoma gene signature. Top reversers: VU0365118-1 (1.513), T8902 (1.483), TL_HRAS24 BRD-K93060291 (1.472)",
+      "ai_hypothesis": "of its ability to induce apoptosis and inhibit cell proliferation.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.4061,
+      "mr_genetic_targets": 2,
+      "mechanistic_hypothesis": "Vinblastine \u2014[downregulates]\u2192 gene-23077 \u2014[is downregulated by]\u2192 DB00762 \u2014[treats]\u2192 Ewing sarcoma",
+      "kg_paths_text": "\u2022 Vinblastine \u2014[downregulates]\u2192 gene-23077 \u2014[is downregulated by]\u2192 DB00762 \u2014[treats]\u2192 Ewing sarcoma\n\u2022 Vinblastine \u2014[downregulates]\u2192 gene-9837 \u2014[is downregulated by]\u2192 DB00541 \u2014[treats]\u2192 Ewing sarcoma\n\u2022 Vinblastine \u2014[downregulates]\u2192 gene-9837 \u2014[is downregulated by]\u2192 DB00541 \u2014[treats]\u2192 Ewing sarcoma",
+      "validation_experiments": [],
+      "novelty_score": 0.361,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 2,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT00061893",
+          "title": "Vinblastine, Celecoxib, and Combination Chemotherapy in Treating Patients With Newly-Diagnosed Metastatic Ewing's Sarcoma Family of Tumors",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "38",
+          "url": "https://clinicaltrials.gov/study/NCT00061893"
+        },
+        {
+          "nct_id": "NCT03011528",
+          "title": "First-line Treatment of Ewing Tumours With Primary Extrapulmonary Dissemination in Patients From 2 to 50 Years (CombinaiR3)",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "45",
+          "url": "https://clinicaltrials.gov/study/NCT03011528"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 2
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "2 clinical trial(s) found on ClinicalTrials.gov",
+        "9 PubMed article(s) - limited literature",
+        "Supported by 4 independent AI pillars",
+        "High molecular similarity (0.88) to Vincristine",
+        "Supporting paper with 39 citations",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.41)"
+      ],
+      "disease_entity": "Disease::MESH:D012512",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1186,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (GSTM1 / GSTM1 non-null, GSTM1 null)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "GSTM1",
+            "variant": "GSTM1 non-null, GSTM1 null",
+            "level": "3",
+            "phenotype_category": "Efficacy;Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1444607870"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.245,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.451,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.434
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 10,
+        "n_expressed": 9,
+        "mean_tpm_in_tissue": 60.77,
+        "max_tpm_in_tissue": 419.87,
+        "tissue_specificity": 0.761,
+        "context_modifier": 1.102
+      },
+      "ensemble_prob": 0.9032,
+      "ensemble_features": {
+        "kg_score": 0.9989,
+        "degree_penalty": 0.7642,
+        "n_drug_targets": 14,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.5649
+      },
+      "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          ">",
+          "ISOLATED"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          ">_2_ester_groups",
+          "isolated_alkene"
+        ]
+      }
+    },
+    {
+      "drug_name": "Docetaxel",
+      "drug_id": "DB01248",
+      "disease_name": "Ewing sarcoma",
+      "combined_score": 0.4415000081062317,
+      "pillars_hit": 4,
+      "transe_rank": 9,
+      "transe_score": -10.4582,
+      "pykeen_score": -12.534,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0.9248,
+      "mol_emb_similar_to": "Doxorubicin",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.5879999995231628,
+      "proximity_distance": 1.649999976158142,
+      "admet_score": 0.512,
+      "admet_flags": "hERG=0.83",
+      "primekg_score": 0.2582,
+      "dti_score": 0.2527,
+      "dti_best_target": "KIT",
+      "kg_group_score": 0.4094,
+      "structural_group_score": 0.9248,
+      "network_group_score": 0.4562000036239624,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.1945,
+      "admet_multiplier": 0.9024,
+      "efficacy_score": 0.48919999599456787,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 2,
+      "shared_targets": [
+        "BCL2",
+        "TOP2A"
+      ],
+      "pubmed_total": 19,
+      "pubmed_treatment_total": 19,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "35023660",
+          "title": "Primary spinal multifocal intradural-extramedullary Ewing sarcoma in children: presentation of a case and review of the literature.",
+          "authors": "M\u00fcngen E, Kurucu N, Kutluk T, et al.",
+          "journal": "The Turkish journal of pediatrics",
+          "year": "2021",
+          "abstract_snippet": "BACKGROUND: Primary spinal, intradural, extramedullary Ewing sarcoma (PSIEES) is exceptionally uncommon. Here, we present an interesting pediatric case with a PSIEES diagnosis confirmed by the presence of a specific fusion protein in the tumor tissue and who then developed a cerebellar recurrence. W...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35023660/",
+          "total_results": 19
+        },
+        {
+          "pmid": "32386107",
+          "title": "Phase II trial of gemcitabine and nab-paclitaxel in patients with recurrent Ewing sarcoma: A report from the National Pediatric Cancer Foundation.",
+          "authors": "Oesterheld JE, Reed DR, Setty BA, et al.",
+          "journal": "Pediatric blood & cancer",
+          "year": "2020",
+          "abstract_snippet": "BACKGROUND: The combination of gemcitabine and docetaxel is often used to treat patients with recurrent sarcoma. Nab-paclitaxel is a taxane modified to improve drug exposure and increase intratumoral accumulation and, in combination with gemcitabine, is standard therapy for pancreatic cancer. Applyi...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32386107/"
+        },
+        {
+          "pmid": "28787430",
+          "title": "GEIS-21: a multicentric phase II study of intensive chemotherapy including gemcitabine and docetaxel for the treatment of Ewing sarcoma of children and adults: a report from the Spanish sarcoma group (GEIS).",
+          "authors": "Mora J, Casta\u00f1eda A, Perez-Jaume S, et al.",
+          "journal": "British journal of cancer",
+          "year": "2017",
+          "abstract_snippet": "BACKGROUND: First Spanish trial of Ewing sarcoma (ES) including adults and children with the aim to test the efficacy of Gemcitabine and Docetaxel (G/D) in newly diagnosed high-risk (HR) patients. METHODS: This was a prospective, multicentric, non-randomised, open study for patients \u2a7d40 years with n...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28787430/"
+        },
+        {
+          "pmid": "18484657",
+          "title": "Combination of gemcitabine and docetaxel in the treatment of children and young adults with refractory bone sarcoma.",
+          "authors": "Navid F, Willert JR, McCarville MB, et al.",
+          "journal": "Cancer",
+          "year": "2008",
+          "abstract_snippet": "BACKGROUND: The combination of gemcitabine and docetaxel has demonstrated promise in sarcomas diagnosed in adults. In the current study, the toxicity and efficacy of this combination were evaluated in pediatric sarcomas. METHODS: A retrospective case review of 22 patients with recurrent or refractor...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18484657/"
+        },
+        {
+          "pmid": "25164234",
+          "title": "A study of docetaxel and irinotecan in children and young adults with recurrent or refractory Ewing sarcoma family of tumors.",
+          "authors": "Yoon JH, Kwon MM, Park HJ, et al.",
+          "journal": "BMC cancer",
+          "year": "2014",
+          "abstract_snippet": "BACKGROUND: Patients with Ewing sarcoma family of tumors (ESFT) who are resistant even to salvage chemotherapy, have dismal prognoses and few therapeutic options. Because the docetaxel/irinotecan (DI) combination has not been previously evaluated in ESFT, we prospectively evaluated its use in patien...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25164234/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Efficacy and Safety of the Topotecan\u2013Cyclophosphamide Regimen in Adult Metastatic Ewing Sarcoma: A Large, Multicenter, Real-World Study",
+          "year": 2025,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/4b44da1be87b5f4e194675ed6175f221b75793a5",
+          "authors": "S. Tunbekici, H. C. Yuksel, Caner Acar"
+        },
+        {
+          "title": "Possibility of using the combination of everolimus/sorafenib medications in the treatment of children and adolescents with refractory osteosarcoma and Ewing sarcoma.",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/7642cfa9b5d25f5f62dd465d93b62f0809212d64",
+          "authors": "N. K. Asamedinov, Jamila Polatova, K. Abdikarimov"
+        },
+        {
+          "title": "Phase II assessment of carboplatin with etoposide and high-dose ifosfamide in rEECur, an international randomised controlled trial of chemotherapy for the treatment of recurrent and primary refractory Ewing sarcoma (RR-ES).",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/86460140778e5b609f4588b1c33cf9e5e1844e73",
+          "authors": "Martin G McCabe, Laura Kirton, Maria Khan"
+        },
+        {
+          "title": "GEIS-21: a multicentric phase II study of intensive chemotherapy including gemcitabine and docetaxel for the treatment of Ewing sarcoma of children and adults: a report from the Spanish sarcoma group (GEIS)",
+          "year": 2017,
+          "citations": 26,
+          "url": "https://www.semanticscholar.org/paper/bec0a97c971fa635f1231ee6449a34801961dd56",
+          "authors": "J. Mora, A. Casta\u00f1eda, S. Perez-Jaume"
+        },
+        {
+          "title": "Recurrent Ewing\u2019s Sarcoma of the Chest Wall in an Adolescent Male Patient: A Complex Multimodal Management and Progressive Disease Course",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/3962961539c71044e4bdc3f84489c656b3a61923",
+          "authors": "Asmaa Alrefaie, Salma H. Almarwani, Renad Alshaikh"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "GEIS-21: a multicentric phase II study of intensive chemotherapy including gemcitabine and docetaxel for the treatment of Ewing sarcoma of children and adults: a report from the Spanish sarcoma group (GEIS)",
+        "year": 2017,
+        "citations": 26,
+        "url": "https://www.semanticscholar.org/paper/bec0a97c971fa635f1231ee6449a34801961dd56",
+        "authors": "J. Mora, A. Casta\u00f1eda, S. Perez-Jaume"
+      },
+      "max_citations": 26,
+      "faers_signal": "none",
+      "faers_total_reports": 70031,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Docetaxel to Ewing sarcoma terms. Drug has 70031 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "VU0365118-1 (1.513)",
+        "T8902 (1.483)",
+        "TL_HRAS24 BRD-K93060291 (1.472)",
+        "7706-0139 (1.465)",
+        "5353451 (1.462)"
+      ],
+      "signature_interpretation": "Docetaxel was not found among the top 37 drugs that reverse the Ewing sarcoma gene signature. Top reversers: VU0365118-1 (1.513), T8902 (1.483), TL_HRAS24 BRD-K93060291 (1.472)",
+      "ai_hypothesis": "of its unique mechanism of action.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 1,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "ewing sarcoma (",
+              "entity_group": "Disease_disorder",
+              "score": 0.9860000014305115
+            },
+            {
+              "entity": "es",
+              "entity_group": "Disease_disorder",
+              "score": 1.0
+            },
+            {
+              "entity": "adults",
+              "entity_group": "Subject",
+              "score": 0.9259999990463257
+            },
+            {
+              "entity": "children",
+              "entity_group": "Subject",
+              "score": 0.8669999837875366
+            },
+            {
+              "entity": "gem",
+              "entity_group": "Medication",
+              "score": 1.0
+            },
+            {
+              "entity": "##citabine",
+              "entity_group": "Medication",
+              "score": 0.9890000224113464
+            },
+            {
+              "entity": "docetaxel",
+              "entity_group": "Medication",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "multicentric",
+              "entity_group": "Detailed_description",
+              "score": 0.9879999756813049
+            },
+            {
+              "entity": "non - random",
+              "entity_group": "Detailed_description",
+              "score": 0.9800000190734863
+            },
+            {
+              "entity": "open",
+              "entity_group": "Detailed_description",
+              "score": 0.9990000128746033
+            }
+          ]
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "Phase 2",
+      "failed_trial_count": 2,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.1945,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Docetaxel \u2014[treats]\u2192 Ewing sarcoma",
+      "kg_paths_text": "\u2022 Docetaxel \u2014[treats]\u2192 Ewing sarcoma\n\u2022 Docetaxel \u2014[downregulates]\u2192 gene-7298 \u2014[is a target of]\u2192 DB00441 \u2014[is a therapeutic for]\u2192 Ewing sarcoma\n\u2022 Docetaxel \u2014[downregulates]\u2192 gene-7298 \u2014[is a target of]\u2192 DB00441 \u2014[is a therapeutic for]\u2192 Ewing sarcoma",
+      "validation_experiments": [],
+      "novelty_score": 0.24300000071525574,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": true,
+      "clinical_trials_total": 10,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT00073983",
+          "title": "Gemcitabine and Docetaxel in Treating Patients With Recurrent Osteosarcoma (Closed to Accrual as of 12/21/06) or Ewing's Sarcoma or Unresectable or Locally Recurrent Chondrosarcoma",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "54",
+          "url": "https://clinicaltrials.gov/study/NCT00073983"
+        },
+        {
+          "nct_id": "NCT00049296",
+          "title": "Thalidomide and Docetaxel in Treating Patients With Advanced Cancer",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "26",
+          "url": "https://clinicaltrials.gov/study/NCT00049296"
+        },
+        {
+          "nct_id": "NCT05116800",
+          "title": "Phase 2 Study of 9-ING-41 With Chemotherapy in Sarcoma",
+          "status": "WITHDRAWN",
+          "phase": "PHASE2",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT05116800"
+        },
+        {
+          "nct_id": "NCT03491371",
+          "title": "Apatinib for Advanced Sarcoma: Results From Multiple Institutions' Off-label Use",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "56",
+          "url": "https://clinicaltrials.gov/study/NCT03491371"
+        },
+        {
+          "nct_id": "NCT04183062",
+          "title": "BIO-11006 for Osteosarcoma and Ewing's Sarcoma Lung Metastases",
+          "status": "WITHDRAWN",
+          "phase": "PHASE2",
+          "enrollment": "0",
+          "url": "https://clinicaltrials.gov/study/NCT04183062"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 7,
+        "PHASE1": 2,
+        "NA": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "10 clinical trial(s) found on ClinicalTrials.gov",
+        "19 PubMed articles found",
+        "Supported by 4 independent AI pillars",
+        "Supporting paper with 26 citations",
+        "AI-generated hypothesis available",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D012512",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1048,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (NAT2 / rs1799931)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "NAT2",
+            "variant": "rs1799931",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/655386176"
+          },
+          {
+            "gene": "SULT1C4",
+            "variant": "rs1402467",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/655386181"
+          },
+          {
+            "gene": "RPL13;SNORD68;SPG7",
+            "variant": "rs12960",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/655386186"
+          },
+          {
+            "gene": "CHST3",
+            "variant": "rs12418",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/655386191"
+          },
+          {
+            "gene": "PIK3CA",
+            "variant": "rs870995",
+            "level": "3",
+            "phenotype_category": "Dosage",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/655386310"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.2680000066757202,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.44200000166893005,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.565
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 2,
+        "n_expressed": 2,
+        "mean_tpm_in_tissue": 1.47,
+        "max_tpm_in_tissue": 1.83,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.885
+      },
+      "ensemble_prob": 0.9777,
+      "ensemble_features": {
+        "kg_score": 0.9991,
+        "degree_penalty": 0.7759,
+        "n_drug_targets": 5,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.3979
+      },
+      "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          ">",
+          "ISOLATED"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          ">_2_ester_groups",
+          "isolated_alkene"
+        ]
+      }
+    },
+    {
+      "drug_name": "Topotecan",
+      "drug_id": "DB01030",
+      "disease_name": "Ewing sarcoma",
+      "combined_score": 0.4309,
+      "pillars_hit": 4,
+      "transe_rank": 44,
+      "transe_score": -10.9218,
+      "pykeen_score": -12.5998,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.7120000123977661,
+      "proximity_distance": 1.149999976158142,
+      "admet_score": 0.9136,
+      "admet_flags": "AMES=0.87",
+      "primekg_score": 0.2688,
+      "dti_score": 0.5029,
+      "dti_best_target": "KIT",
+      "kg_group_score": 0.3103,
+      "structural_group_score": 0.5029,
+      "network_group_score": 0.5375000238418579,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.4188,
+      "admet_multiplier": 0.9827,
+      "efficacy_score": 0.4384,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 12,
+      "shared_targets": [
+        "ABHD6",
+        "CSF3",
+        "CXCR4",
+        "ERBB2",
+        "EZH2",
+        "ID2",
+        "IGF1R",
+        "KIT",
+        "PLK1",
+        "PTGS2",
+        "TOP2A",
+        "TP53"
+      ],
+      "pubmed_total": 29,
+      "pubmed_treatment_total": 29,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "30988632",
+          "title": "Management of recurrent Ewing sarcoma: challenges and approaches.",
+          "authors": "Van Mater D, Wagner L",
+          "journal": "OncoTargets and therapy",
+          "year": "2019",
+          "abstract_snippet": "Although many patients with newly diagnosed Ewing sarcoma can become long-term survivors, relapse remains an important clinical problem for which there is no standard approach. Several prognostic factors have been identified, and these may help guide patient counseling and therapy decisions. A varie...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30988632/",
+          "total_results": 29
+        },
+        {
+          "pmid": "25993235",
+          "title": "Systemic therapy for osteosarcoma and Ewing sarcoma.",
+          "authors": "Meyers PA",
+          "journal": "American Society of Clinical Oncology educational book. American Society of Clinical Oncology. Annual Meeting",
+          "year": "2015",
+          "abstract_snippet": "Curative therapy for both osteosarcoma and Ewing sarcoma requires the combination of effective systemic therapy and local control of all macroscopic tumors. Systemic therapy for osteosarcoma consists of multiagent chemotherapy. The most common regimen uses cisplatin, doxorubicin, and high-dose metho...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25993235/"
+        },
+        {
+          "pmid": "40216575",
+          "title": "[Recurrent or refractory Osteosarcoma and Ewing sarcoma-French guidelines from the FSG/NETSARC and GroupOs groups].",
+          "authors": "Brahmi M, Toulmonde M, Winter S, et al.",
+          "journal": "Bulletin du cancer",
+          "year": "2025",
+          "abstract_snippet": "Osteosarcoma (OS) and Ewing Sarcoma (ES) are the two most frequent malignant bone tumors in children, adolescents and young adults. In case of disease recurrence, both are characterized by an aggressive behaviour and a relatively poor overall survival rate, with approximately a third of patients hav...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40216575/"
+        },
+        {
+          "pmid": "37715723",
+          "title": "Phase 1 study of cabozantinib in combination with topotecan-cyclophosphamide for patients with relapsed Ewing sarcoma or osteosarcoma.",
+          "authors": "Campbell K, Posner A, Chen N, et al.",
+          "journal": "Pediatric blood & cancer",
+          "year": "2023",
+          "abstract_snippet": "PURPOSE: Phase 1 study assessing the safety and toxicity of cabozantinib in combination with topotecan and cyclophosphamide for relapsed osteosarcoma and Ewing sarcoma. METHODS: Oral cabozantinib (25\u00a0mg/m RESULTS: Twelve patients with a median age of 15 (12.9-33.2) years were enrolled (seven with Ew...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37715723/"
+        },
+        {
+          "pmid": "39941915",
+          "title": "Efficacy and Safety of the Topotecan-Cyclophosphamide Regimen in Adult Metastatic Ewing Sarcoma: A Large, Multicenter, Real-World Study.",
+          "authors": "Tunbekici S, Yuksel HC, Acar C, et al.",
+          "journal": "Cancers",
+          "year": "2025",
+          "abstract_snippet": "BACKGROUND/OBJECTIVES: There is an unmet need to improve outcomes in patients with metastatic Ewing sarcoma (ES). This retrospective, multicenter study aimed to evaluate the efficacy and safety of the topotecan-cyclophosphamide (TC) regimen in adult patients with metastatic ES who had previously bee...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39941915/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Efficacy and Safety of the Topotecan\u2013Cyclophosphamide Regimen in Adult Metastatic Ewing Sarcoma: A Large, Multicenter, Real-World Study",
+          "year": 2025,
+          "citations": 1,
+          "url": "https://www.semanticscholar.org/paper/4b44da1be87b5f4e194675ed6175f221b75793a5",
+          "authors": "S. Tunbekici, H. C. Yuksel, Caner Acar"
+        },
+        {
+          "title": "Phase 1 study of cabozantinib in combination with topotecan\u2013cyclophosphamide for patients with relapsed Ewing sarcoma or osteosarcoma",
+          "year": 2023,
+          "citations": 6,
+          "url": "https://www.semanticscholar.org/paper/cbe1bd42c73475e1a2a74346e8271119621797c0",
+          "authors": "Kevin Campbell, Andrew Posner, Nan Chen"
+        },
+        {
+          "title": "Phase III Trial Adding Vincristine-Topotecan-Cyclophosphamide to the Initial Treatment of Patients With Nonmetastatic Ewing Sarcoma: A Children's Oncology Group Report",
+          "year": 2021,
+          "citations": 72,
+          "url": "https://www.semanticscholar.org/paper/63c9276fe19312a619aefe4a17a6627c5ec18573",
+          "authors": "P. Leavey, N. Laack, M. Krailo"
+        },
+        {
+          "title": "[Recurrent or refractory Osteosarcoma and Ewing sarcoma-French guidelines from the FSG/NETSARC and GroupOs groups].",
+          "year": 2025,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/42c6e6a61399cad697195ee2a407b479941fcac4",
+          "authors": "Mehdi Brahmi, M. Toulmonde, Sarah Winter"
+        },
+        {
+          "title": "Phase II assessment of carboplatin with etoposide and high-dose ifosfamide in rEECur, an international randomised controlled trial of chemotherapy for the treatment of recurrent and primary refractory Ewing sarcoma (RR-ES).",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/86460140778e5b609f4588b1c33cf9e5e1844e73",
+          "authors": "Martin G McCabe, Laura Kirton, Maria Khan"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Phase III Trial Adding Vincristine-Topotecan-Cyclophosphamide to the Initial Treatment of Patients With Nonmetastatic Ewing Sarcoma: A Children's Oncology Group Report",
+        "year": 2021,
+        "citations": 72,
+        "url": "https://www.semanticscholar.org/paper/63c9276fe19312a619aefe4a17a6627c5ec18573",
+        "authors": "P. Leavey, N. Laack, M. Krailo"
+      },
+      "max_citations": 72,
+      "faers_signal": "none",
+      "faers_total_reports": 5565,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Topotecan to Ewing sarcoma terms. Drug has 5565 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "VU0365118-1 (1.513)",
+        "T8902 (1.483)",
+        "TL_HRAS24 BRD-K93060291 (1.472)",
+        "7706-0139 (1.465)",
+        "5353451 (1.462)"
+      ],
+      "signature_interpretation": "Topotecan was not found among the top 37 drugs that reverse the Ewing sarcoma gene signature. Top reversers: VU0365118-1 (1.513), T8902 (1.483), TL_HRAS24 BRD-K93060291 (1.472)",
+      "ai_hypothesis": "of its activity in this disease.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "Phase 3",
+      "failed_trial_count": 2,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.4188,
+      "mr_genetic_targets": 4,
+      "mechanistic_hypothesis": "Topotecan \u2014[treats]\u2192 Ewing sarcoma",
+      "kg_paths_text": "\u2022 Topotecan \u2014[treats]\u2192 Ewing sarcoma\n\u2022 Topotecan \u2014[downregulates]\u2192 gene-10733 \u2014[is bound by]\u2192 DB06589 \u2014[is a therapeutic for]\u2192 Ewing sarcoma\n\u2022 Topotecan \u2014[downregulates]\u2192 gene-3480 \u2014[is linked to]\u2192 Ewing sarcoma",
+      "validation_experiments": [],
+      "novelty_score": 0.237,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": true,
+      "clinical_trials_total": 10,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT07194044",
+          "title": "Metastatic Ewing's Trial Testing Schedule Enhancement to Improve Outcomes",
+          "status": "RECRUITING",
+          "phase": "PHASE1",
+          "enrollment": "15",
+          "url": "https://clinicaltrials.gov/study/NCT07194044"
+        },
+        {
+          "nct_id": "NCT00618813",
+          "title": "Two Regimens of Combination Chemotherapy in Treating Younger Patients With Newly Diagnosed Localized Ewing Sarcoma Family of Tumors",
+          "status": "COMPLETED",
+          "phase": "NA",
+          "enrollment": "35",
+          "url": "https://clinicaltrials.gov/study/NCT00618813"
+        },
+        {
+          "nct_id": "NCT00002515",
+          "title": "Combination Chemotherapy Followed by Bone Marrow Transplantation in Treating Patients With Rare Cancer",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "",
+          "url": "https://clinicaltrials.gov/study/NCT00002515"
+        },
+        {
+          "nct_id": "NCT01492673",
+          "title": "Cyclophosphamide, Topotecan, and Bevacizumab (CTB) in Patients With Relapsed/Refractory Ewing's Sarcoma and Neuroblastoma",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "9",
+          "url": "https://clinicaltrials.gov/study/NCT01492673"
+        },
+        {
+          "nct_id": "NCT03709680",
+          "title": "Study Of Palbociclib Combined With Chemotherapy In Pediatric Patients With Recurrent/Refractory Solid Tumors",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "phase": "PHASE2",
+          "enrollment": "128",
+          "url": "https://clinicaltrials.gov/study/NCT03709680"
+        }
+      ],
+      "trial_phases": {
+        "PHASE1": 4,
+        "NA": 2,
+        "PHASE2": 5
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "10 clinical trial(s) found on ClinicalTrials.gov",
+        "29 PubMed articles found",
+        "Supported by 4 independent AI pillars",
+        "Supporting paper with 72 citations",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.42)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D012512",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1577,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (ABCG2 / rs4148157)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "ABCG2",
+            "variant": "rs4148157",
+            "level": "3",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1447981313"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.279,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.431,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.641
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 12,
+        "n_expressed": 10,
+        "mean_tpm_in_tissue": 40.71,
+        "max_tpm_in_tissue": 419.87,
+        "tissue_specificity": 0.826,
+        "context_modifier": 1.095
+      },
+      "ensemble_prob": 0.9912,
+      "ensemble_features": {
+        "kg_score": 0.9994,
+        "degree_penalty": 0.7549,
+        "n_drug_targets": 8,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 1.9459
+      },
+      "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "MANNICH"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "mannich_A(296)"
+        ]
+      }
+    },
+    {
+      "drug_name": "Azacitidine",
+      "drug_id": "DB00928",
+      "disease_name": "Ewing sarcoma",
+      "combined_score": 0.4117000102996826,
+      "pillars_hit": 4,
+      "transe_rank": 158,
+      "transe_score": -11.3488,
+      "pykeen_score": -13.1322,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0.6444,
+      "similar_to": "Cytarabine",
+      "mol_emb_similarity": 0.8772,
+      "mol_emb_similar_to": "Gemcitabine",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.675000011920929,
+      "proximity_distance": 1.2999999523162842,
+      "admet_score": 0.6372,
+      "admet_flags": "clean",
+      "primekg_score": 0.2676,
+      "dti_score": 0.2401,
+      "dti_best_target": "CAV1",
+      "kg_group_score": 0.1833,
+      "structural_group_score": 0.8772,
+      "network_group_score": 0.5153999924659729,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.2471,
+      "admet_multiplier": 0.9274,
+      "efficacy_score": 0.4438999891281128,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 6,
+      "shared_targets": [
+        "CCND1",
+        "CDK6",
+        "ETS1",
+        "PTEN",
+        "PTGS2",
+        "TOP2A"
+      ],
+      "pubmed_total": 5,
+      "pubmed_treatment_total": 4,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "7507075",
+          "title": "Long-range restriction map of human chromosome 22q11-22q12 between the lambda immunoglobulin locus and the Ewing sarcoma breakpoint.",
+          "authors": "McDermid HE, Budarf ML, Emanuel BS",
+          "journal": "Genomics",
+          "year": "1993",
+          "abstract_snippet": "A long-range restriction map of the region between the immunoglobulin lambda locus and the Ewing sarcoma breakpoint has been constructed using the rare-cutting enzymes NotI, NruI, AscI, and BsiWI. The map spans approximately 11,000 kb and represents about one-fifth of the long arm of chromosome 22. ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/7507075/",
+          "total_results": 5
+        },
+        {
+          "pmid": "26573141",
+          "title": "Promoter Methylation Analysis Reveals That KCNA5 Ion Channel Silencing Supports Ewing Sarcoma Cell Proliferation.",
+          "authors": "Ryland KE, Hawkins AG, Weisenberger DJ, et al.",
+          "journal": "Molecular cancer research : MCR",
+          "year": "2016",
+          "abstract_snippet": "UNLABELLED: Polycomb proteins are essential regulators of gene expression in stem cells and development. They function to reversibly repress gene transcription via posttranslational modification of histones and chromatin compaction. In many human cancers, genes that are repressed by polycomb in stem...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26573141/"
+        },
+        {
+          "pmid": "12881716",
+          "title": "UQCRH gene encoding mitochondrial Hinge protein is interrupted by a translocation in a soft-tissue sarcoma and epigenetically inactivated in some cancer cell lines.",
+          "authors": "Modena P, Testi MA, Facchinetti F, et al.",
+          "journal": "Oncogene",
+          "year": "2003",
+          "abstract_snippet": "We previously reported the identification of a novel zinc-finger gene, designated ZSG, fused to Ewing sarcoma gene (EWS) by a submicroscopic paracentric inversion of 22q12 in a small round cell sarcoma presenting a translocation t(1;22)(p34;q12). We report here the molecular cloning and characteriza...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/12881716/"
+        },
+        {
+          "pmid": "23508900",
+          "title": "Pharmacologic inhibition of epigenetic modification reveals targets of aberrant promoter methylation in Ewing sarcoma.",
+          "authors": "Nestheide S, Bridge JA, Barnes M, et al.",
+          "journal": "Pediatric blood & cancer",
+          "year": "2013",
+          "abstract_snippet": "BACKGROUND: Ewing sarcoma (ES), a highly aggressive tumor of children and young adults, is characterized most commonly by an 11;22 chromosomal translocation that fuses EWSR1 located at 22q12 with FLI1, coding for a member of the ETS family of transcription factors. Although genetic changes in ES hav...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23508900/"
+        },
+        {
+          "pmid": "23887284",
+          "title": "RASSF2 methylation is a strong prognostic marker in younger age patients with Ewing sarcoma.",
+          "authors": "Gharanei S, Brini AT, Vaiyapuri S, et al.",
+          "journal": "Epigenetics",
+          "year": "2013",
+          "abstract_snippet": "Ras-association domain family of genes consist of 10 members (RASSF1-RASSF10), all containing a Ras-association (RA) domain in either the C- or the N-terminus. Several members of this gene family are frequently methylated in common sporadic cancers; however, the role of the RASSF gene family in rare...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23887284/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "A Sudden Expansion: Acute Subdural Hematoma From Extramedullary Acute Myeloid Leukemia",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/6bf63840cdec1c6d0595499510f436f0ed489f77",
+          "authors": "Soumajit Kundu, Brittany Ewing, Matthew Bower"
+        },
+        {
+          "title": "Updates on WHO classification for small round cell tumors: Ewing Sarcoma vs. Everything Else.",
+          "year": 2024,
+          "citations": 51,
+          "url": "https://www.semanticscholar.org/paper/c82c2b0fc31d415100126b7011afff3b2a43b06d",
+          "authors": "Carina A. Dehner, A. Lazar, John S. A. Chrisinger"
+        },
+        {
+          "title": "Emerging therapies in Ewing sarcoma",
+          "year": 2024,
+          "citations": 23,
+          "url": "https://www.semanticscholar.org/paper/c631e8b201d3904af703ea0a9549df315facea69",
+          "authors": "Sandra J Strauss, P. Berlanga, Martin G McCabe"
+        },
+        {
+          "title": "Randomized Phase III Trial of Ganitumab With Interval-Compressed Chemotherapy for Patients With Newly Diagnosed Metastatic Ewing Sarcoma: A Report From the Children's Oncology Group",
+          "year": 2023,
+          "citations": 54,
+          "url": "https://www.semanticscholar.org/paper/7b5c818b35eed8288a3b7c85d2ed88dbeda85690",
+          "authors": "S. DuBois, M. Krailo, Julia L. Glade-Bender"
+        },
+        {
+          "title": "DNA Methylation Profiling Distinguishes Adamantinoma-like Ewing Sarcoma from Conventional Ewing Sarcoma.",
+          "year": 2023,
+          "citations": 32,
+          "url": "https://www.semanticscholar.org/paper/d825b6413ec1b38265dbd2183dda49e37a991f0f",
+          "authors": "K. Fritchie, Baptiste Ameline, Vanghelita Andrei"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Randomized Phase III Trial of Ganitumab With Interval-Compressed Chemotherapy for Patients With Newly Diagnosed Metastatic Ewing Sarcoma: A Report From the Children's Oncology Group",
+        "year": 2023,
+        "citations": 54,
+        "url": "https://www.semanticscholar.org/paper/7b5c818b35eed8288a3b7c85d2ed88dbeda85690",
+        "authors": "S. DuBois, M. Krailo, Julia L. Glade-Bender"
+      },
+      "max_citations": 54,
+      "faers_signal": "none",
+      "faers_total_reports": 18861,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Azacitidine to Ewing sarcoma terms. Drug has 18861 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "VU0365118-1 (1.513)",
+        "T8902 (1.483)",
+        "TL_HRAS24 BRD-K93060291 (1.472)",
+        "7706-0139 (1.465)",
+        "5353451 (1.462)"
+      ],
+      "signature_interpretation": "Azacitidine was not found among the top 37 drugs that reverse the Ewing sarcoma gene signature. Top reversers: VU0365118-1 (1.513), T8902 (1.483), TL_HRAS24 BRD-K93060291 (1.472)",
+      "ai_hypothesis": "of its ability to induce apoptosis and inhibit cell proliferation.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.2471,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Azacitidine \u2014[downregulates]\u2192 gene-6240 \u2014[inhibits]\u2192 DB00441 \u2014[is a therapeutic for]\u2192 Ewing sarcoma",
+      "kg_paths_text": "\u2022 Azacitidine \u2014[downregulates]\u2192 gene-6240 \u2014[inhibits]\u2192 DB00441 \u2014[is a therapeutic for]\u2192 Ewing sarcoma\n\u2022 Azacitidine \u2014[downregulates]\u2192 gene-6240 \u2014[inhibits]\u2192 DB00441 \u2014[is a therapeutic for]\u2192 Ewing sarcoma\n\u2022 Azacitidine \u2014[downregulates]\u2192 gene-6240 \u2014[inhibits]\u2192 DB00441 \u2014[is a therapeutic for]\u2192 Ewing sarcoma",
+      "validation_experiments": [],
+      "novelty_score": 0.32899999618530273,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 1,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT01241162",
+          "title": "Decitabine Followed by a Cancer Antigen Vaccine for Patients With Neuroblastoma and Sarcoma",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "19",
+          "url": "https://clinicaltrials.gov/study/NCT01241162"
+        }
+      ],
+      "trial_phases": {
+        "PHASE1": 1
+      },
+      "confidence": "MEDIUM",
+      "confidence_reasons": [
+        "1 clinical trial(s) found on ClinicalTrials.gov",
+        "5 PubMed article(s) - limited literature",
+        "Supported by 4 independent AI pillars",
+        "High molecular similarity (0.64) to Cytarabine",
+        "Supporting paper with 54 citations",
+        "AI-generated hypothesis available"
+      ],
+      "disease_entity": "Disease::MESH:D012512",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1116,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00773",
+            "drug_name": "Etoposide",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00502",
+            "drug_name": "Haloperidol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00331",
+            "drug_name": "Metformin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.21199999749660492,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.41200000047683716,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.338
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 6,
+        "n_expressed": 5,
+        "mean_tpm_in_tissue": 11.89,
+        "max_tpm_in_tissue": 40.27,
+        "tissue_specificity": 0.297,
+        "context_modifier": 0.985
+      },
+      "ensemble_prob": 0.6389,
+      "ensemble_features": {
+        "kg_score": 0.9959,
+        "degree_penalty": 0.7636,
+        "n_drug_targets": 3,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 3.7842
+      },
+      "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Tretinoin",
+      "drug_id": "DB00755",
+      "disease_name": "Ewing sarcoma",
+      "combined_score": 0.40939998626708984,
+      "pillars_hit": 4,
+      "transe_rank": 16,
+      "transe_score": -10.5708,
+      "pykeen_score": -13.1261,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.6380000114440918,
+      "proximity_distance": 1.4500000476837158,
+      "admet_score": 0.5917,
+      "admet_flags": "Skin_Reaction=0.85",
+      "primekg_score": 0.2608,
+      "dti_score": 0.5606,
+      "dti_best_target": "VEGFA",
+      "kg_group_score": 0.2743,
+      "structural_group_score": 0.5606,
+      "network_group_score": 0.4794999957084656,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.5365,
+      "admet_multiplier": 0.9183,
+      "efficacy_score": 0.4458000063896179,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 14,
+      "shared_targets": [
+        "BCL2",
+        "CCND1",
+        "CEBPB",
+        "CSF3",
+        "GJA1",
+        "GNAS",
+        "ID2",
+        "IGF1",
+        "MAPK8",
+        "NR0B1",
+        "SP1",
+        "TNF",
+        "TP53",
+        "VEGFA"
+      ],
+      "pubmed_total": 3,
+      "pubmed_treatment_total": 2,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "9533545",
+          "title": "Synergistic effects of 8-chlorocyclic-AMP and retinoic acid on induction of apoptosis in Ewing's sarcoma CHP-100 cells.",
+          "authors": "Srivastava RK, Srivastava AR, Cho-Chung YS",
+          "journal": "Clinical cancer research : an official journal of the American Association for Cancer Research",
+          "year": "1998",
+          "abstract_snippet": "The enhanced expression of the regulatory subunit of cyclic AMP (cAMP)-dependent protein kinase type I, RIalpha, has been correlated with cancer cell growth. Retinoic acid (RA) has been shown to play an important role in the regulation of proliferation and differentiation in neoplastic cells. In the...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/9533545/",
+          "total_results": 3
+        },
+        {
+          "pmid": "11135229",
+          "title": "All-trans retinoic acid and interferon-alpha in the treatment of a patient with resistant metastatic osteosarcoma.",
+          "authors": "Todesco A, Carli M, Iacona I, et al.",
+          "journal": "Cancer",
+          "year": "2000",
+          "abstract_snippet": "BACKGROUND: A boy age 14 years who was in complete remission from Stage IIB small cell osteosarcoma, which was misdiagnosed as Ewing sarcoma and consequently was treated, developed inoperable lung metastases when he was off therapy. He received second-line treatment for recurrent Ewing sarcoma, incl...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11135229/"
+        },
+        {
+          "pmid": "9619634",
+          "title": "Contrasting levels of p21ras activation and expression of neurofibromin in peripheral primitive neuroectodermal tumour and neuroblastoma cells, and their response to retinoic acid.",
+          "authors": "Burchill SA, Berry PA, Bradbury FM, et al.",
+          "journal": "Journal of the neurological sciences",
+          "year": "1998",
+          "abstract_snippet": "Ras protooncogenes encode small guanine nucleotide binding proteins (p21ras) activated by phosphorylation. Phosphorylation of p21ras is predominantly regulated by the GTPase activating proteins type 1 GAP120 and neurofibromin. Increased levels of p21ras-GTP (active) have been associated with increas...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/9619634/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Updates on WHO classification for small round cell tumors: Ewing Sarcoma vs. Everything Else.",
+          "year": 2024,
+          "citations": 51,
+          "url": "https://www.semanticscholar.org/paper/c82c2b0fc31d415100126b7011afff3b2a43b06d",
+          "authors": "Carina A. Dehner, A. Lazar, John S. A. Chrisinger"
+        },
+        {
+          "title": "Emerging therapies in Ewing sarcoma",
+          "year": 2024,
+          "citations": 23,
+          "url": "https://www.semanticscholar.org/paper/c631e8b201d3904af703ea0a9549df315facea69",
+          "authors": "Sandra J Strauss, P. Berlanga, Martin G McCabe"
+        },
+        {
+          "title": "Randomized Phase III Trial of Ganitumab With Interval-Compressed Chemotherapy for Patients With Newly Diagnosed Metastatic Ewing Sarcoma: A Report From the Children's Oncology Group",
+          "year": 2023,
+          "citations": 54,
+          "url": "https://www.semanticscholar.org/paper/7b5c818b35eed8288a3b7c85d2ed88dbeda85690",
+          "authors": "S. DuBois, M. Krailo, Julia L. Glade-Bender"
+        },
+        {
+          "title": "DNA Methylation Profiling Distinguishes Adamantinoma-like Ewing Sarcoma from Conventional Ewing Sarcoma.",
+          "year": 2023,
+          "citations": 32,
+          "url": "https://www.semanticscholar.org/paper/d825b6413ec1b38265dbd2183dda49e37a991f0f",
+          "authors": "K. Fritchie, Baptiste Ameline, Vanghelita Andrei"
+        },
+        {
+          "title": "Comparison of two chemotherapy regimens in patients with newly diagnosed Ewing sarcoma (EE2012): an open-label, randomised, phase 3 trial.",
+          "year": 2022,
+          "citations": 78,
+          "url": "https://www.semanticscholar.org/paper/9a90d333a4fbe77e49a3a8f0d3a7479f0053491d",
+          "authors": "B. Brennan, Laura Kirton, P. Marec-Berard"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Comparison of two chemotherapy regimens in patients with newly diagnosed Ewing sarcoma (EE2012): an open-label, randomised, phase 3 trial.",
+        "year": 2022,
+        "citations": 78,
+        "url": "https://www.semanticscholar.org/paper/9a90d333a4fbe77e49a3a8f0d3a7479f0053491d",
+        "authors": "B. Brennan, Laura Kirton, P. Marec-Berard"
+      },
+      "max_citations": 78,
+      "faers_signal": "none",
+      "faers_total_reports": 6835,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Tretinoin to Ewing sarcoma terms. Drug has 6835 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "VU0365118-1 (1.513)",
+        "T8902 (1.483)",
+        "TL_HRAS24 BRD-K93060291 (1.472)",
+        "7706-0139 (1.465)",
+        "5353451 (1.462)"
+      ],
+      "signature_interpretation": "Tretinoin was not found among the top 37 drugs that reverse the Ewing sarcoma gene signature. Top reversers: VU0365118-1 (1.513), T8902 (1.483), TL_HRAS24 BRD-K93060291 (1.472)",
+      "ai_hypothesis": "of its anti-angiogenic properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.5365,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Tretinoin \u2014[is is related to by]\u2192 gene-596 \u2014[is a target of]\u2192 DB01248 \u2014[treats]\u2192 Ewing sarcoma",
+      "kg_paths_text": "\u2022 Tretinoin \u2014[is is related to by]\u2192 gene-596 \u2014[is a target of]\u2192 DB01248 \u2014[treats]\u2192 Ewing sarcoma\n\u2022 Tretinoin \u2014[is is related to by]\u2192 gene-596 \u2014[is a target of]\u2192 DB01248 \u2014[treats]\u2192 Ewing sarcoma\n\u2022 Tretinoin \u2014[is is related to by]\u2192 gene-596 \u2014[is a target of]\u2192 DB01248 \u2014[treats]\u2192 Ewing sarcoma",
+      "validation_experiments": [],
+      "novelty_score": 0.46700000762939453,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "LOW",
+      "confidence_reasons": [
+        "3 PubMed article(s) - limited literature",
+        "Supported by 4 independent AI pillars",
+        "Supporting paper with 78 citations",
+        "AI-generated hypothesis available",
+        "Moderate genetic evidence supporting causality (MR score: 0.54)"
+      ],
+      "disease_entity": "Disease::MESH:D012512",
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1092,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.19599999487400055,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.4090000092983246,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.261
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 14,
+        "n_expressed": 9,
+        "mean_tpm_in_tissue": 46.89,
+        "max_tpm_in_tissue": 367.16,
+        "tissue_specificity": 0.411,
+        "context_modifier": 1.05
+      },
+      "ensemble_prob": 0.6484,
+      "ensemble_features": {
+        "kg_score": 0.9969,
+        "degree_penalty": 0.7515,
+        "n_drug_targets": 32,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 3.5264
+      },
+      "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "MICHAEL",
+          "POLYENE"
+        ],
+        "n_alerts": 3,
+        "alert_names": [
+          "Michael_acceptor_1",
+          "polyene",
+          "polyene"
+        ]
+      }
+    },
+    {
+      "drug_name": "Ouabain",
+      "drug_id": "DB01092",
+      "disease_name": "Ewing sarcoma",
+      "combined_score": 0.4090000092983246,
+      "pillars_hit": 4,
+      "transe_rank": 98,
+      "transe_score": -11.1514,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0.9511,
+      "mol_emb_similar_to": "Vincristine",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.5379999876022339,
+      "proximity_distance": 1.850000023841858,
+      "admet_score": 0.9582,
+      "admet_flags": "clean",
+      "primekg_score": 0.2582,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": 0.1126,
+      "structural_group_score": 0.9511,
+      "network_group_score": 0.424699991941452,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.2471,
+      "admet_multiplier": 0.9707,
+      "efficacy_score": 0.4214000105857849,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 7,
+      "shared_targets": [
+        "AQP4",
+        "CDK6",
+        "CFLAR",
+        "ERBB2",
+        "MAPK8",
+        "PLK1",
+        "PTGS2"
+      ],
+      "pubmed_total": 0,
+      "pubmed_treatment_total": 0,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Updates on WHO classification for small round cell tumors: Ewing Sarcoma vs. Everything Else.",
+          "year": 2024,
+          "citations": 51,
+          "url": "https://www.semanticscholar.org/paper/c82c2b0fc31d415100126b7011afff3b2a43b06d",
+          "authors": "Carina A. Dehner, A. Lazar, John S. A. Chrisinger"
+        },
+        {
+          "title": "Emerging therapies in Ewing sarcoma",
+          "year": 2024,
+          "citations": 23,
+          "url": "https://www.semanticscholar.org/paper/c631e8b201d3904af703ea0a9549df315facea69",
+          "authors": "Sandra J Strauss, P. Berlanga, Martin G McCabe"
+        },
+        {
+          "title": "Randomized Phase III Trial of Ganitumab With Interval-Compressed Chemotherapy for Patients With Newly Diagnosed Metastatic Ewing Sarcoma: A Report From the Children's Oncology Group",
+          "year": 2023,
+          "citations": 54,
+          "url": "https://www.semanticscholar.org/paper/7b5c818b35eed8288a3b7c85d2ed88dbeda85690",
+          "authors": "S. DuBois, M. Krailo, Julia L. Glade-Bender"
+        },
+        {
+          "title": "DNA Methylation Profiling Distinguishes Adamantinoma-like Ewing Sarcoma from Conventional Ewing Sarcoma.",
+          "year": 2023,
+          "citations": 32,
+          "url": "https://www.semanticscholar.org/paper/d825b6413ec1b38265dbd2183dda49e37a991f0f",
+          "authors": "K. Fritchie, Baptiste Ameline, Vanghelita Andrei"
+        },
+        {
+          "title": "Comparison of two chemotherapy regimens in patients with newly diagnosed Ewing sarcoma (EE2012): an open-label, randomised, phase 3 trial.",
+          "year": 2022,
+          "citations": 78,
+          "url": "https://www.semanticscholar.org/paper/9a90d333a4fbe77e49a3a8f0d3a7479f0053491d",
+          "authors": "B. Brennan, Laura Kirton, P. Marec-Berard"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Comparison of two chemotherapy regimens in patients with newly diagnosed Ewing sarcoma (EE2012): an open-label, randomised, phase 3 trial.",
+        "year": 2022,
+        "citations": 78,
+        "url": "https://www.semanticscholar.org/paper/9a90d333a4fbe77e49a3a8f0d3a7479f0053491d",
+        "authors": "B. Brennan, Laura Kirton, P. Marec-Berard"
+      },
+      "max_citations": 78,
+      "faers_signal": "none",
+      "faers_total_reports": 2,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Ouabain to Ewing sarcoma terms. Drug has 2 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "VU0365118-1 (1.513)",
+        "T8902 (1.483)",
+        "TL_HRAS24 BRD-K93060291 (1.472)",
+        "7706-0139 (1.465)",
+        "5353451 (1.462)"
+      ],
+      "signature_interpretation": "Ouabain was not found among the top 37 drugs that reverse the Ewing sarcoma gene signature. Top reversers: VU0365118-1 (1.513), T8902 (1.483), TL_HRAS24 BRD-K93060291 (1.472)",
+      "ai_hypothesis": "it inhibits the Na +, K + -ATPase and the Na +, K +, 2Cl- cotransporter.",
+      "abstract_analyses": [],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.2471,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Ouabain \u2014[downregulates]\u2192 gene-91782 \u2014[is downregulated by]\u2192 DB00970 \u2014[treats]\u2192 Ewing sarcoma",
+      "kg_paths_text": "\u2022 Ouabain \u2014[downregulates]\u2192 gene-91782 \u2014[is downregulated by]\u2192 DB00970 \u2014[treats]\u2192 Ewing sarcoma\n\u2022 Ouabain \u2014[downregulates]\u2192 gene-23588 \u2014[is downregulated by]\u2192 DB01030 \u2014[treats]\u2192 Ewing sarcoma\n\u2022 Ouabain \u2014[downregulates]\u2192 gene-23588 \u2014[is downregulated by]\u2192 DB00541 \u2014[treats]\u2192 Ewing sarcoma",
+      "validation_experiments": [],
+      "novelty_score": 0.4090000092983246,
+      "novelty_level": "BREAKTHROUGH",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "LOW",
+      "confidence_reasons": [
+        "Supported by 4 independent AI pillars",
+        "Supporting paper with 78 citations",
+        "AI-generated hypothesis available"
+      ],
+      "disease_entity": "Disease::MESH:D012512",
+      "dose_plausibility": {
+        "plausibility": "unknown",
+        "dose_range": "research",
+        "confidence": "low",
+        "rationale": "No ChEMBL clinical phase data available.",
+        "chembl_phase": null,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 545,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00773",
+            "drug_name": "Etoposide",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00227",
+            "drug_name": "Lovastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00213",
+            "drug_name": "Pantoprazole",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.14300000667572021,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.4090000092983246,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.0
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 7,
+        "n_expressed": 6,
+        "mean_tpm_in_tissue": 7.69,
+        "max_tpm_in_tissue": 42.88,
+        "tissue_specificity": 0.199,
+        "context_modifier": 0.958
+      },
+      "ensemble_prob": 0.0268,
+      "ensemble_features": {
+        "kg_score": 0.953,
+        "degree_penalty": 0.7895,
+        "n_drug_targets": 6,
+        "is_fda_approved": 0,
+        "n_disease_genes": 0,
+        "transe_rank_log": 6.2086
+      },
+      "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "GTE",
+          "SAPONINE"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          "saponine_derivative",
+          "gte_7_aliphatic_OH"
+        ]
+      }
+    }
+  ],
+  "disease_entity": "Disease::MESH:D012512",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
+  "docking_axis": {
+    "source": "chembl_bioactivity_proxy + not_wired fallback",
+    "n_disease_genes": 75,
+    "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
+  }
+}

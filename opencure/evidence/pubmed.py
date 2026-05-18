@@ -10,6 +10,8 @@ import time
 import requests
 import xml.etree.ElementTree as ET
 
+from opencure.evidence.cache import disk_cached
+
 ESEARCH_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
 ESUMMARY_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi"
 EFETCH_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
@@ -221,6 +223,7 @@ def _build_disease_query(disease_name: str) -> str:
     return "(" + " OR ".join(terms) + ")"
 
 
+@disk_cached(namespace="pubmed_drug_disease", ttl_days=30)
 def search_drug_disease_evidence(
     drug_name: str,
     disease_name: str,
@@ -235,6 +238,8 @@ def search_drug_disease_evidence(
     3. Drug + disease + "treatment" or "therapy"
 
     Returns dict with: total_articles, articles, repurposing_articles, query_used
+
+    Cached to data/evidence_cache/pubmed_drug_disease/ with 30-day TTL.
     """
     # Clean names for search
     drug_clean = drug_name.replace("'", "").strip()

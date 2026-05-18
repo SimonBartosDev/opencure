@@ -1,460 +1,156 @@
 {
   "disease": "Neurofibromatosis",
   "status": "completed",
-  "timestamp": "2026-04-17T13:12:39.228236",
-  "elapsed_seconds": 583.3,
-  "total_searched": 50,
-  "evidence_generated": 9,
+  "timestamp": "2026-05-07T17:56:49.132577",
+  "elapsed_seconds": 24.5,
+  "total_searched": 1,
+  "evidence_generated": 1,
   "confidence_counts": {
-    "LOW": 9,
-    "UNRESOLVED": 1
+    "MEDIUM": 1
   },
+  "pipeline_version": "v5",
+  "data_manifest_hash": "2da2aa88f2457d1b",
   "candidates": [
     {
-      "drug_name": "Darinaparsin",
-      "drug_id": "DB06179",
+      "drug_name": "Tamoxifen",
+      "drug_id": "DB00675",
       "disease_name": "Neurofibromatosis",
-      "combined_score": 1.035,
-      "transe_rank": 223,
+      "combined_score": 0.2343,
       "pillars_hit": 2,
+      "transe_rank": 74,
+      "transe_score": -13.8753,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
       "mol_similarity": 0,
       "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0.0577,
+      "gene_sig_rank": 14,
+      "proximity_score": 0,
+      "proximity_distance": 0,
+      "admet_score": 0.5915,
+      "admet_flags": "hERG=0.95",
+      "primekg_score": 0,
+      "dti_score": 0,
+      "dti_best_target": "",
+      "kg_group_score": -10.4969,
+      "structural_group_score": 0,
+      "network_group_score": 0.5447,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.9745,
+      "admet_multiplier": 0.9183,
+      "efficacy_score": 0.2551,
+      "groups_hit": 2,
       "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
+      "shared_target_count": 2,
+      "shared_targets": [
+        "SLC6A2",
+        "SLC6A3"
+      ],
+      "pubmed_total": 27,
+      "pubmed_treatment_total": 19,
       "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
+      "key_papers": [
         {
-          "title": "Incidence and prevalence of neurofibromatosis type 1 and 2: a systematic review and meta-analysis",
-          "year": 2023,
-          "citations": 86,
-          "url": "https://www.semanticscholar.org/paper/6423a179edf9dac0c9680ae09e5116530af587a4",
-          "authors": "Tin-Suet Joan Lee, M. Chopra, Raymond H. Kim"
+          "pmid": "21551249",
+          "title": "Perinatal or adult Nf1 inactivation using tamoxifen-inducible PlpCre each cause neurofibroma formation.",
+          "authors": "Mayes DA, Rizvi TA, Cancelas JA, et al.",
+          "journal": "Cancer research",
+          "year": "2011",
+          "abstract_snippet": "Plexiform neurofibromas are peripheral nerve sheath tumors initiated by biallelic mutation of the NF1 tumor suppressor gene in the Schwann cell lineage. To understand whether neurofibroma formation is possible after birth, we induced Nf1 loss of function with an inducible proteolipid protein Cre all...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/21551249/",
+          "total_results": 27
         },
         {
-          "title": "Revised diagnostic criteria for neurofibromatosis type 1 and Legius syndrome: an international consensus recommendation",
-          "year": 2021,
-          "citations": 583,
-          "url": "https://www.semanticscholar.org/paper/15ade2510ef9037261fc2f8db0b5fdf277798c2f",
-          "authors": "E. Legius, L. Messiaen, P. Wolkenstein"
+          "pmid": "39804140",
+          "title": "Loss of NF1 Accelerates Uveal and Intradermal Melanoma Tumorigenesis, and Oncogenic GNAQ Transforms Schwann Cells.",
+          "authors": "Longakit AN, Urtatiz O, Luty A, et al.",
+          "journal": "Cancer research communications",
+          "year": "2025",
+          "abstract_snippet": "ABSTRACT: NF1 encodes the multifunctional tumor suppressor protein, neurofibromin, which is best known for its causative role in neurofibromatosis type 1 and in regulating MAPK signaling. Neurofibromin, in a context-specific manner, is involved in various tumorigenic processes, including those in me...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39804140/"
         },
         {
-          "title": "Neurofibromatosis Type 1: Pediatric Aspects and Review of Genotype\u2013Phenotype Correlations",
-          "year": 2023,
-          "citations": 42,
-          "url": "https://www.semanticscholar.org/paper/1c7d269ca1b37547bf29ea727afcd9c9940a1f65",
-          "authors": "Cristina Peduto, Mariateresa Zanobio, V. Nigro"
+          "pmid": "28608929",
+          "title": "High-grade serous carcinomas arise in the mouse oviduct via defects linked to the human disease.",
+          "authors": "Zhai Y, Wu R, Kuick R, et al.",
+          "journal": "The Journal of pathology",
+          "year": "2017",
+          "abstract_snippet": "Recent studies have suggested that the most common and lethal type of 'ovarian' cancer, i.e. high-grade serous carcinoma (HGSC), usually arises from epithelium on the fallopian tube fimbriae, and not from the ovarian surface epithelium. We have developed Ovgp1-iCreER",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28608929/"
         },
         {
-          "title": "Darinaparsin in patients with relapsed or refractory peripheral T-cell lymphoma: results of an Asian phase 2 study",
-          "year": 2023,
-          "citations": 8,
-          "url": "https://www.semanticscholar.org/paper/6b75c5af81a0f443c2717e6ef6d4d4fcc58d013c",
-          "authors": "W. Kim, N. Fukuhara, D. Yoon"
+          "pmid": "31013682",
+          "title": "The ERK MAPK Pathway Is Essential for Skeletal Development and Homeostasis.",
+          "authors": "Kim JM, Yang YS, Park KH, et al.",
+          "journal": "International journal of molecular sciences",
+          "year": "2019",
+          "abstract_snippet": "Mitogen-activated protein kinases (MAPKs) are a family of protein kinases that function as key signal transducers of a wide spectrum of extracellular stimuli, including growth factors and pro-inflammatory cytokines. Dysregulation of the extracellular signal-regulated kinase (ERK) MAPK pathway is ass...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31013682/"
         },
         {
-          "title": "Updated diagnostic criteria and nomenclature for neurofibromatosis type 2 and schwannomatosis: An international consensus recommendation.",
-          "year": 2022,
-          "citations": 207,
-          "url": "https://www.semanticscholar.org/paper/1544fee93d084b7df2ef84d55c962f9cec956277",
-          "authors": "S. Plotkin, L. Messiaen, E. Legius"
+          "pmid": "25289889",
+          "title": "Combinatorial therapy with tamoxifen and trifluoperazine effectively inhibits malignant peripheral nerve sheath tumor growth by targeting complementary signaling cascades.",
+          "authors": "Brosius SN, Turk AN, Byer SJ, et al.",
+          "journal": "Journal of neuropathology and experimental neurology",
+          "year": "2014",
+          "abstract_snippet": "Chemotherapeutic agents effective against malignant peripheral nerve sheath tumors (MPNSTs) are urgently needed. We recently found that tamoxifen potently impedes xenograft growth. In vitro, tamoxifen inhibits MPNST proliferation and survival in an estrogen receptor-independent manner; these effects...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25289889/"
         }
       ],
-      "most_cited_paper": {
-        "title": "Revised diagnostic criteria for neurofibromatosis type 1 and Legius syndrome: an international consensus recommendation",
-        "year": 2021,
-        "citations": 583,
-        "url": "https://www.semanticscholar.org/paper/15ade2510ef9037261fc2f8db0b5fdf277798c2f",
-        "authors": "E. Legius, L. Messiaen, P. Wolkenstein"
-      },
-      "max_citations": 583,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Darinaparsin",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "BMS-387032 (1.473)",
-        "budesonide (1.461)",
-        "NCGC00187945-01 (1.459)",
-        "GSK-3 Inhibitor II (1.425)",
-        "Dorsomorphin dihydrochloride (1.418)"
-      ],
-      "signature_interpretation": "Darinaparsin was not found among the top 39 drugs that reverse the Neurofibromatosis gene signature. Top reversers: BMS-387032 (1.473), budesonide (1.461), NCGC00187945-01 (1.459)",
-      "ai_hypothesis": "of its ability to inhibit the proliferation of tumor cells.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.85,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "Supported by 2 independent AI pillars",
-        "Highly cited paper (583 citations): \"Revised diagnostic criteria for neurofibromatosis type 1 and...\"",
-        "AI-generated hypothesis available"
-      ]
-    },
-    {
-      "drug_name": "Cyclo-Hepta-Amylose",
-      "drug_id": "DB03995",
-      "disease_name": "Neurofibromatosis",
-      "combined_score": 1.0333,
-      "transe_rank": 248,
-      "pillars_hit": 2,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
       "repurposing_papers": [],
       "semantic_scholar_papers": [
         {
-          "title": "Methylated cycloamyloses (cyclodextrins) and their inclusion properties",
-          "year": 1979,
-          "citations": 86,
-          "url": "https://www.semanticscholar.org/paper/9a949d889902d187c0c7cb3887c3abd5d2e7d489",
-          "authors": "B. Casu*, M. Reggiani, G. R. Sanderson"
-        },
-        {
-          "title": "The enzymic synthesis, by transglucosylation of a homologous series of glycosidically substituted malto-oligosaccharides, and their use as amylase substrates",
-          "year": 1978,
-          "citations": 81,
-          "url": "https://www.semanticscholar.org/paper/df4b61d41e84c7cab287b6a06ff0e48794c407cc",
-          "authors": "K. Wallenfels, P. F\u00f6ldi, H. Niermann"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Methylated cycloamyloses (cyclodextrins) and their inclusion properties",
-        "year": 1979,
-        "citations": 86,
-        "url": "https://www.semanticscholar.org/paper/9a949d889902d187c0c7cb3887c3abd5d2e7d489",
-        "authors": "B. Casu*, M. Reggiani, G. R. Sanderson"
-      },
-      "max_citations": 86,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Cyclo-Hepta-Amylose",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "BMS-387032 (1.473)",
-        "budesonide (1.461)",
-        "NCGC00187945-01 (1.459)",
-        "GSK-3 Inhibitor II (1.425)",
-        "Dorsomorphin dihydrochloride (1.418)"
-      ],
-      "signature_interpretation": "Cyclo-Hepta-Amylose was not found among the top 39 drugs that reverse the Neurofibromatosis gene signature. Top reversers: BMS-387032 (1.473), budesonide (1.461), NCGC00187945-01 (1.459)",
-      "ai_hypothesis": "of its low cost and ease of use.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 1.0,
-      "novelty_level": "BREAKTHROUGH",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "Supported by 2 independent AI pillars",
-        "Supporting paper with 86 citations",
-        "AI-generated hypothesis available"
-      ]
-    },
-    {
-      "drug_name": "Cibinetide",
-      "drug_id": "DB13006",
-      "disease_name": "Neurofibromatosis",
-      "combined_score": 1.0285,
-      "transe_rank": 318,
-      "pillars_hit": 2,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Incidence and prevalence of neurofibromatosis type 1 and 2: a systematic review and meta-analysis",
-          "year": 2023,
-          "citations": 86,
-          "url": "https://www.semanticscholar.org/paper/6423a179edf9dac0c9680ae09e5116530af587a4",
-          "authors": "Tin-Suet Joan Lee, M. Chopra, Raymond H. Kim"
-        },
-        {
-          "title": "Revised diagnostic criteria for neurofibromatosis type 1 and Legius syndrome: an international consensus recommendation",
-          "year": 2021,
-          "citations": 583,
-          "url": "https://www.semanticscholar.org/paper/15ade2510ef9037261fc2f8db0b5fdf277798c2f",
-          "authors": "E. Legius, L. Messiaen, P. Wolkenstein"
-        },
-        {
-          "title": "Neurofibromatosis Type 1: Pediatric Aspects and Review of Genotype\u2013Phenotype Correlations",
-          "year": 2023,
-          "citations": 42,
-          "url": "https://www.semanticscholar.org/paper/1c7d269ca1b37547bf29ea727afcd9c9940a1f65",
-          "authors": "Cristina Peduto, Mariateresa Zanobio, V. Nigro"
-        },
-        {
-          "title": "Updated diagnostic criteria and nomenclature for neurofibromatosis type 2 and schwannomatosis: An international consensus recommendation.",
-          "year": 2022,
-          "citations": 207,
-          "url": "https://www.semanticscholar.org/paper/1544fee93d084b7df2ef84d55c962f9cec956277",
-          "authors": "S. Plotkin, L. Messiaen, E. Legius"
-        },
-        {
-          "title": "MEK Inhibitors for Neurofibromatosis Type 1 Manifestations: Clinical Evidence and Consensus.",
-          "year": 2022,
-          "citations": 72,
-          "url": "https://www.semanticscholar.org/paper/dee42016a11cc9fb73086a126add03e8f08d54a0",
-          "authors": "P. D. de Blank, A. Gross, S. Akshintala"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Revised diagnostic criteria for neurofibromatosis type 1 and Legius syndrome: an international consensus recommendation",
-        "year": 2021,
-        "citations": 583,
-        "url": "https://www.semanticscholar.org/paper/15ade2510ef9037261fc2f8db0b5fdf277798c2f",
-        "authors": "E. Legius, L. Messiaen, P. Wolkenstein"
-      },
-      "max_citations": 583,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Cibinetide",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "BMS-387032 (1.473)",
-        "budesonide (1.461)",
-        "NCGC00187945-01 (1.459)",
-        "GSK-3 Inhibitor II (1.425)",
-        "Dorsomorphin dihydrochloride (1.418)"
-      ],
-      "signature_interpretation": "Cibinetide was not found among the top 39 drugs that reverse the Neurofibromatosis gene signature. Top reversers: BMS-387032 (1.473), budesonide (1.461), NCGC00187945-01 (1.459)",
-      "ai_hypothesis": "of its ability to inhibit the proliferation of neurofibroma cells.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.85,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "Supported by 2 independent AI pillars",
-        "Highly cited paper (583 citations): \"Revised diagnostic criteria for neurofibromatosis type 1 and...\"",
-        "AI-generated hypothesis available"
-      ]
-    },
-    {
-      "drug_name": "Allosamidin",
-      "drug_id": "DB04628",
-      "disease_name": "Neurofibromatosis",
-      "combined_score": 1.0122,
-      "transe_rank": 560,
-      "pillars_hit": 2,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Incidence and prevalence of neurofibromatosis type 1 and 2: a systematic review and meta-analysis",
-          "year": 2023,
-          "citations": 86,
-          "url": "https://www.semanticscholar.org/paper/6423a179edf9dac0c9680ae09e5116530af587a4",
-          "authors": "Tin-Suet Joan Lee, M. Chopra, Raymond H. Kim"
-        },
-        {
-          "title": "Revised diagnostic criteria for neurofibromatosis type 1 and Legius syndrome: an international consensus recommendation",
-          "year": 2021,
-          "citations": 583,
-          "url": "https://www.semanticscholar.org/paper/15ade2510ef9037261fc2f8db0b5fdf277798c2f",
-          "authors": "E. Legius, L. Messiaen, P. Wolkenstein"
-        },
-        {
-          "title": "Updated diagnostic criteria and nomenclature for neurofibromatosis type 2 and schwannomatosis: An international consensus recommendation.",
-          "year": 2022,
-          "citations": 207,
-          "url": "https://www.semanticscholar.org/paper/1544fee93d084b7df2ef84d55c962f9cec956277",
-          "authors": "S. Plotkin, L. Messiaen, E. Legius"
-        },
-        {
-          "title": "MEK Inhibitors for Neurofibromatosis Type 1 Manifestations: Clinical Evidence and Consensus.",
-          "year": 2022,
-          "citations": 72,
-          "url": "https://www.semanticscholar.org/paper/dee42016a11cc9fb73086a126add03e8f08d54a0",
-          "authors": "P. D. de Blank, A. Gross, S. Akshintala"
-        },
-        {
-          "title": "Current Understanding of Neurofibromatosis Type 1, 2, and Schwannomatosis",
-          "year": 2021,
-          "citations": 178,
-          "url": "https://www.semanticscholar.org/paper/823cd2cfe8757fa5474c4e92fcc962c1da255a94",
-          "authors": "R. Tamura"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Revised diagnostic criteria for neurofibromatosis type 1 and Legius syndrome: an international consensus recommendation",
-        "year": 2021,
-        "citations": 583,
-        "url": "https://www.semanticscholar.org/paper/15ade2510ef9037261fc2f8db0b5fdf277798c2f",
-        "authors": "E. Legius, L. Messiaen, P. Wolkenstein"
-      },
-      "max_citations": 583,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Allosamidin",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "BMS-387032 (1.473)",
-        "budesonide (1.461)",
-        "NCGC00187945-01 (1.459)",
-        "GSK-3 Inhibitor II (1.425)",
-        "Dorsomorphin dihydrochloride (1.418)"
-      ],
-      "signature_interpretation": "Allosamidin was not found among the top 39 drugs that reverse the Neurofibromatosis gene signature. Top reversers: BMS-387032 (1.473), budesonide (1.461), NCGC00187945-01 (1.459)",
-      "ai_hypothesis": "of its ability to inhibit the proliferation of neurofibroma cells.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.85,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "Supported by 2 independent AI pillars",
-        "Highly cited paper (583 citations): \"Revised diagnostic criteria for neurofibromatosis type 1 and...\"",
-        "AI-generated hypothesis available"
-      ]
-    },
-    {
-      "drug_name": "Thymopentine [French]",
-      "drug_id": "DB11996",
-      "disease_name": "Neurofibromatosis",
-      "combined_score": 0.9988,
-      "transe_rank": 758,
-      "pillars_hit": 2,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "1761P Clinical description and development of a prognosis score for neurofibromatosis type 1 (NF1) associated GISTs in the RECKGIST cohort: A retrospective study from the French NETSARC+ network",
-          "year": 2024,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/f69ee8440b064ed85b869aff2e2d93f3f31771ae",
-          "authors": "C. Cuvelier, M. Brahmi, I. Sobhani"
-        },
-        {
-          "title": "1760P Impact of adjuvant imatinib on recurrence for neurofibromatosis type 1 (NF1) associated GISTs: An analysis of the RECKGIST cohort from the French NETSARC+ network",
-          "year": 2024,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/bf7f35b10c836144571598b7fa847902427630b1",
-          "authors": "V. Hautefeuille, C. Cuvelier, I. Sobhani"
-        },
-        {
-          "title": "French cohort of children and adolescents with neurofibromatosis type 1 and symptomatic inoperable plexiform neurofibromas: CASSIOPEA study.",
-          "year": 2023,
+          "title": "Breast carcinoma in a patient with neurofibromatosis type 1 and huge plexiform neurofibroma of the contralateral breast: a case report",
+          "year": 2025,
           "citations": 2,
-          "url": "https://www.semanticscholar.org/paper/9668405c290a26f615f2de7e98c8ca4a8b11ce3b",
-          "authors": "P. Wolkenstein, Y. Chaix, N. Entz Werle"
+          "url": "https://www.semanticscholar.org/paper/4e0d09bf09c389697a0acda6520ed39b1671c264",
+          "authors": "A. Kouli, A. Alayoubi, Mousa Alali"
         },
         {
-          "title": "Neurofibromatosis 1 French national guidelines based on an extensive literature review since 1966",
-          "year": 2020,
-          "citations": 143,
-          "url": "https://www.semanticscholar.org/paper/7425926131497af8a2d30bd096fbd63d228a24ab",
-          "authors": "C. Bergqvist, A. Servy, L. Valeyrie\u2010Allanore"
+          "title": "Neurofibromatosis type I with breast cancer: not only for women!",
+          "year": 2014,
+          "citations": 16,
+          "url": "https://www.semanticscholar.org/paper/9184a5be6be35adfc9a9eb8112f420b22b33fc51",
+          "authors": "K. Lakshmaiah, Anil N Kumar, S. Purohit"
         },
         {
-          "title": "[Neurofibromatosis type 1: recent advances].",
+          "title": "Combinatorial Therapy With Tamoxifen and Trifluoperazine Effectively Inhibits Malignant Peripheral Nerve Sheath Tumor Growth by Targeting Complementary Signaling Cascades",
+          "year": 2014,
+          "citations": 21,
+          "url": "https://www.semanticscholar.org/paper/fa43df17a6612559e8ccf307112d6e028683300d",
+          "authors": "S. Brosius, A. N. Turk, S. Byer"
+        },
+        {
+          "title": "Loss of NF1 Accelerates Uveal and Intradermal Melanoma Tumorigenesis, and Oncogenic GNAQ Transforms Schwann Cells",
           "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/f75a2d56d71e42faf2544a2fa9ca6d978749fec5",
-          "authors": "L. Fertitta, P. Wolkenstein"
+          "citations": 2,
+          "url": "https://www.semanticscholar.org/paper/c06c0a5d4ebc83e8fc3805c8200c70b6351aaf89",
+          "authors": "A. Longakit, O. Urtatiz, Amy Luty"
+        },
+        {
+          "title": "Tamoxifen inhibits malignant peripheral nerve sheath tumor growth in an estrogen receptor-independent manner.",
+          "year": 2011,
+          "citations": 41,
+          "url": "https://www.semanticscholar.org/paper/e3ad2709b9a31e8c924d4e9b13fdde615d011fd5",
+          "authors": "S. Byer, Jenell M Eckert, N. Brossier"
         }
       ],
       "most_cited_paper": {
-        "title": "Neurofibromatosis 1 French national guidelines based on an extensive literature review since 1966",
-        "year": 2020,
-        "citations": 143,
-        "url": "https://www.semanticscholar.org/paper/7425926131497af8a2d30bd096fbd63d228a24ab",
-        "authors": "C. Bergqvist, A. Servy, L. Valeyrie\u2010Allanore"
+        "title": "Tamoxifen inhibits malignant peripheral nerve sheath tumor growth in an estrogen receptor-independent manner.",
+        "year": 2011,
+        "citations": 41,
+        "url": "https://www.semanticscholar.org/paper/e3ad2709b9a31e8c924d4e9b13fdde615d011fd5",
+        "authors": "S. Byer, Jenell M Eckert, N. Brossier"
       },
-      "max_citations": 143,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Thymopentine [French]",
+      "max_citations": 41,
+      "faers_signal": "weak",
+      "faers_total_reports": 22221,
+      "faers_cooccurrences": 1,
+      "faers_interpretation": "1 FAERS report(s) mention both Tamoxifen and Neurofibromatosis-related terms. Minimal real-world signal.",
       "signature_reversal_found": false,
       "signature_reversal_rank": 0,
       "signature_top_reversers": [
@@ -464,437 +160,226 @@
         "GSK-3 Inhibitor II (1.425)",
         "Dorsomorphin dihydrochloride (1.418)"
       ],
-      "signature_interpretation": "Thymopentine [French] was not found among the top 39 drugs that reverse the Neurofibromatosis gene signature. Top reversers: BMS-387032 (1.473), budesonide (1.461), NCGC00187945-01 (1.459)",
-      "ai_hypothesis": "of its antiproliferative effects on the proliferating cells.",
-      "abstract_analyses": [],
+      "signature_interpretation": "Tamoxifen was not found among the top 39 drugs that reverse the Neurofibromatosis gene signature. Top reversers: BMS-387032 (1.473), budesonide (1.461), NCGC00187945-01 (1.459)",
+      "ai_hypothesis": "",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
       "has_failed_trial": false,
       "failed_trial_phase": "",
       "failed_trial_count": 0,
       "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
+      "mr_score": 0.9745,
+      "mr_genetic_targets": 1,
       "mechanistic_hypothesis": "",
       "kg_paths_text": "",
       "validation_experiments": [],
-      "novelty_score": 0.899,
+      "novelty_score": 0.239,
       "novelty_level": "NOVEL",
       "is_known_treatment": false,
       "clinical_trials_total": 0,
       "clinical_trials": [],
       "trial_phases": {},
-      "confidence": "LOW",
+      "confidence": "MEDIUM",
       "confidence_reasons": [
+        "27 PubMed articles found",
         "Supported by 2 independent AI pillars",
-        "Highly cited paper (143 citations): \"Neurofibromatosis 1 French national guidelines based on an e...\"",
-        "AI-generated hypothesis available"
-      ]
-    },
-    {
-      "drug_name": "Perflubron emulsion",
-      "drug_id": "DB05791",
-      "disease_name": "Neurofibromatosis",
-      "combined_score": 0.9965,
-      "transe_rank": 1075,
-      "pillars_hit": 3,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "ANTIOXDANT AND A PERFLUBRON EMULSION FOR TREATMENT OF VIRAL DISEASE BACKGROUND OF THE INVENTION",
-          "year": 2017,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/f2f40b82773783220bfbf69500e73bb2459ed069",
-          "authors": ""
-        },
-        {
-          "title": "Perflubron emulsion delays blood transfusions in orthopedic surgery. European Perflubron Emulsion Study Group.",
-          "year": 1999,
-          "citations": 168,
-          "url": "https://www.semanticscholar.org/paper/1cd062692847d3bb30c44fe6edd564a857283b76",
-          "authors": "D. Spahn, R. V. Brempt, G. Theilmeier"
-        },
-        {
-          "title": "A Pilot Study of the Effects of a Perflubron Emulsion, AF 0104, on Mixed Venous Oxygen Tension in Anesthetized Surgical Patients",
-          "year": 1996,
-          "citations": 90,
-          "url": "https://www.semanticscholar.org/paper/9dbab899639ad2094821aaaf8966e4fec613ae4c",
-          "authors": "J. Wahr, A. Trouwborst, R. Spence"
-        },
-        {
-          "title": "Use of Perflubron Emulsion to Decrease Allogeneic Blood Transfusion in High-blood-loss Non-Cardiac Surgery: Results of a European Phase 3 Study",
-          "year": 2002,
-          "citations": 157,
-          "url": "https://www.semanticscholar.org/paper/9968907762ebc96f0c7371d43e06b94655e64c08",
-          "authors": "D. Spahn, K. Waschke, T. Standl"
-        },
-        {
-          "title": "Randomized safety studies of intravenous perflubron emulsion. II. Effects on immune function in healthy volunteers.",
-          "year": 2000,
-          "citations": 57,
-          "url": "https://www.semanticscholar.org/paper/ac43391abe086bf7ab4bf157261f021d87e4306c",
-          "authors": "Robert J. Noveck, E. Shannon, P. Leese"
-        }
+        "Supporting paper with 41 citations",
+        "Strong causal genetic evidence (MR score: 0.97, 1 genetic targets)"
       ],
-      "most_cited_paper": {
-        "title": "Perflubron emulsion delays blood transfusions in orthopedic surgery. European Perflubron Emulsion Study Group.",
-        "year": 1999,
-        "citations": 168,
-        "url": "https://www.semanticscholar.org/paper/1cd062692847d3bb30c44fe6edd564a857283b76",
-        "authors": "D. Spahn, R. V. Brempt, G. Theilmeier"
+      "disease_entity": "Disease::MESH:D009456",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
       },
-      "max_citations": 168,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Perflubron emulsion",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "BMS-387032 (1.473)",
-        "budesonide (1.461)",
-        "NCGC00187945-01 (1.459)",
-        "GSK-3 Inhibitor II (1.425)",
-        "Dorsomorphin dihydrochloride (1.418)"
-      ],
-      "signature_interpretation": "Perflubron emulsion was not found among the top 39 drugs that reverse the Neurofibromatosis gene signature. Top reversers: BMS-387032 (1.473), budesonide (1.461), NCGC00187945-01 (1.459)",
-      "ai_hypothesis": "of its low toxicity and its ability to reduce the risk of tumor growth.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.897,
-      "novelty_level": "NOVEL",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "Supported by 3 independent AI pillars",
-        "Highly cited paper (168 citations): \"Perflubron emulsion delays blood transfusions in orthopedic ...\"",
-        "AI-generated hypothesis available"
-      ]
-    },
-    {
-      "drug_name": "Phosphonoacetic Acid",
-      "drug_id": "DB02823",
-      "disease_name": "Neurofibromatosis",
-      "combined_score": 0.9885,
-      "transe_rank": 909,
-      "pillars_hit": 2,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Protein\u2010tags and their fragments as potent inhibitors of enzymes: Structure of the ternary complex of phosphopantetheine adenylyltransferase from Enterobacter spp. with tag\u2010peptides and phosphonoacetic acid at 2.20\u2009\u00c5 resolution",
-          "year": 2025,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/90f7f30d22d54986cb3b00f673b73fdae9655822",
-          "authors": "N. Ahmad, Virender Kumar, V. K. Goel"
-        },
-        {
-          "title": "Metabolic fingerprinting to elucidate the biodegradation of phosphonoacetic acid and its impact on Penicillium metabolism",
-          "year": 2025,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/710b494fa55b291d9ee5e8e2c8557a42ac0f644b",
-          "authors": "N. Zielonka, A. Z\u0105bek, K. Mielko-Nizia\u0142ek"
-        },
-        {
-          "title": "NEW POSSIBILITIES FOR THE SYNTHESIS AND PHOSPHORYLATION OF PHOSPHONOACETIC ACID ESTERS",
-          "year": 2026,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/87d52ed5a8fe008f3a9005fd53e7fde9431f43fb",
-          "authors": "A. A. Zhortarova, L. Salkeyeva, Ye.V. Minayeva"
-        },
-        {
-          "title": "Phosphonoacetic Acid",
-          "year": 2020,
-          "citations": 1,
-          "url": "https://www.semanticscholar.org/paper/f52976a177924d61fa66c6f80f4786b0bc7d78ed",
-          "authors": ""
-        },
-        {
-          "title": "Corrosion inhibition effect of 2-Hydroxy Phosphonoacetic Acid and Pyrophosfate on Q235 steel, Electrochemical Noise and EIS analysis",
-          "year": 2019,
-          "citations": 9,
-          "url": "https://www.semanticscholar.org/paper/1044e191c050afa9d2eea122b30422abb995c5fd",
-          "authors": "C. Yi"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Corrosion inhibition effect of 2-Hydroxy Phosphonoacetic Acid and Pyrophosfate on Q235 steel, Electrochemical Noise and EIS analysis",
-        "year": 2019,
-        "citations": 9,
-        "url": "https://www.semanticscholar.org/paper/1044e191c050afa9d2eea122b30422abb995c5fd",
-        "authors": "C. Yi"
+      "ddi_warnings": {
+        "n_interactions": 1405,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
       },
-      "max_citations": 9,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Phosphonoacetic Acid",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "BMS-387032 (1.473)",
-        "budesonide (1.461)",
-        "NCGC00187945-01 (1.459)",
-        "GSK-3 Inhibitor II (1.425)",
-        "Dorsomorphin dihydrochloride (1.418)"
-      ],
-      "signature_interpretation": "Phosphonoacetic Acid was not found among the top 39 drugs that reverse the Neurofibromatosis gene signature. Top reversers: BMS-387032 (1.473), budesonide (1.461), NCGC00187945-01 (1.459)",
-      "ai_hypothesis": "it inhibits the activity of the enzyme that catalyzes the formation of the precursor of the tumor-promoting second messenger, cyclic AMP.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.989,
-      "novelty_level": "BREAKTHROUGH",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "Supported by 2 independent AI pillars",
-        "AI-generated hypothesis available"
-      ]
-    },
-    {
-      "drug_name": "Samarium (153sm) lexidronam",
-      "drug_id": "DB05273",
-      "disease_name": "Neurofibromatosis",
-      "combined_score": 0.982,
-      "transe_rank": 550,
-      "pillars_hit": 2,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "Samarium 153Sm Lexidronam",
-          "year": 1997,
-          "citations": 28,
-          "url": "https://www.semanticscholar.org/paper/b19da19cb5f224fdb800d9834deee6b88c35e756",
-          "authors": "H. Lamb, D. Faulds"
-        },
-        {
-          "title": "Samarium 153Sm lexidronam: effective pain relief for bone metastases",
-          "year": 1998,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/05a50b69acdb20a993855aca239ac0bc567fffb6",
-          "authors": ""
-        },
-        {
-          "title": "Samarium 153Sm Lexidronam",
-          "year": 1997,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/64df2e314266987d9c48e8bd7e4948e17d4ce9ac",
-          "authors": "E. Silberstein"
-        },
-        {
-          "title": "Samarium 153Sm Lexidronam",
-          "year": 1997,
-          "citations": 0,
-          "url": "https://www.semanticscholar.org/paper/2b9aaa612e90fb92d87bf7b0f30f48e28b7d486e",
-          "authors": "V. Lewington"
-        },
-        {
-          "title": "Phase I study of bortezomib and 153Sm-lexidronam combination for refractory and relapsed multiple myeloma",
-          "year": 2006,
-          "citations": 3,
-          "url": "https://www.semanticscholar.org/paper/040a6616de6f288f7a48e8a88eb9de256411bcd7",
-          "authors": "H. Yeh, R. Swift, D. Ferretti"
-        }
-      ],
-      "most_cited_paper": {
-        "title": "Samarium 153Sm Lexidronam",
-        "year": 1997,
-        "citations": 28,
-        "url": "https://www.semanticscholar.org/paper/b19da19cb5f224fdb800d9834deee6b88c35e756",
-        "authors": "H. Lamb, D. Faulds"
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "high_risk",
+        "summary": "CPIC-A (CYP2D6) \u2022 PharmGKB-3 (ESR1 / rs9340799)",
+        "cpic": [
+          {
+            "gene": "CYP2D6",
+            "level": "A",
+            "guideline": "CYP2D6 and Tamoxifen"
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "ESR1",
+            "variant": "rs9340799",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/655385154"
+          },
+          {
+            "gene": "CYP2D6",
+            "variant": "CYP2D6*1, CYP2D6*2, CYP2D6*3, CYP2D6*4, CYP2D6*5, CYP2D6*6, CYP2D6*7, CYP2D6*9, CYP2D6*10, CYP2D6*10x2, CYP2D6*11, CYP2D6*17, CYP2D6*21, CYP2D6*36, CYP2D6*41",
+            "level": "1A",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451285240"
+          },
+          {
+            "gene": "CYP2D6",
+            "variant": "CYP2D6*1, CYP2D6*2, CYP2D6*3, CYP2D6*4, CYP2D6*5, CYP2D6*6, CYP2D6*10, CYP2D6*17, CYP2D6*29, CYP2D6*35, CYP2D6*41",
+            "level": "1A",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/982029857"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs1045642",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183697570"
+          },
+          {
+            "gene": "",
+            "variant": "rs10030044",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043858877"
+          }
+        ]
       },
-      "max_citations": 28,
-      "faers_signal": "none",
-      "faers_total_reports": 1,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found linking Samarium (153sm) lexidronam to Neurofibromatosis terms. Drug has 1 total reports.",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "BMS-387032 (1.473)",
-        "budesonide (1.461)",
-        "NCGC00187945-01 (1.459)",
-        "GSK-3 Inhibitor II (1.425)",
-        "Dorsomorphin dihydrochloride (1.418)"
-      ],
-      "signature_interpretation": "Samarium (153sm) lexidronam was not found among the top 39 drugs that reverse the Neurofibromatosis gene signature. Top reversers: BMS-387032 (1.473), budesonide (1.461), NCGC00187945-01 (1.459)",
-      "ai_hypothesis": "of its high affinity for the tumor-associated receptor.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.982,
-      "novelty_level": "BREAKTHROUGH",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "Supported by 2 independent AI pillars",
-        "Supporting paper with 28 citations",
-        "AI-generated hypothesis available"
-      ]
-    },
-    {
-      "rank": 9,
-      "drug_name": "DB11074",
-      "drug_id": "DB11074",
-      "combined_score": 0.9804,
-      "confidence": "UNRESOLVED",
-      "evidence_skipped": true
-    },
-    {
-      "drug_name": "Methylmalonic Acid",
-      "drug_id": "DB04183",
-      "disease_name": "Neurofibromatosis",
-      "combined_score": 0.9717,
-      "transe_rank": 1158,
-      "pillars_hit": 2,
-      "mol_similarity": 0,
-      "similar_to": "",
-      "direct_relations": [],
-      "shared_target_count": 0,
-      "shared_targets": [],
-      "pubmed_total": 0,
-      "pubmed_treatment_total": 0,
-      "pubmed_repurposing_total": 0,
-      "key_papers": [],
-      "repurposing_papers": [],
-      "semantic_scholar_papers": [
-        {
-          "title": "The emerging role of dysregulated propionate metabolism and methylmalonic acid in metabolic disease, aging, and cancer.",
-          "year": 2025,
-          "citations": 18,
-          "url": "https://www.semanticscholar.org/paper/fc979b6a0e96435f081184b5b8ce1159630ed801",
-          "authors": "Moniquetta Shafer, V. Low, Zhongchi Li"
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": false,
+          "docking": true,
+          "pharos": false,
+          "literature": true
         },
-        {
-          "title": "Mitochondria-derived methylmalonic acid aggravates ischemia\u2013reperfusion injury by activating reactive oxygen species-dependent ferroptosis",
-          "year": 2024,
-          "citations": 35,
-          "url": "https://www.semanticscholar.org/paper/4990116d8a29c18abdf131ddc79dc8262160e066",
-          "authors": "Junchen Guo, Shanjie Wang, Xin Wan"
-        },
-        {
-          "title": "Methylmalonic acid induces metabolic abnormalities and exhaustion in CD8+ T cells to suppress anti-tumor immunity",
-          "year": 2024,
-          "citations": 12,
-          "url": "https://www.semanticscholar.org/paper/433276410399d231b2414cddfcb2b4ef689860bc",
-          "authors": "Joanne D Tejero, Rebecca S. Hesterberg, S. Dr\u00e1pela"
-        },
-        {
-          "title": "Associations of methylmalonic acid and depressive symptoms with mortality: a population-based study",
-          "year": 2024,
-          "citations": 8,
-          "url": "https://www.semanticscholar.org/paper/dd17826921f2540f31b7a243f11b529f3716dc62",
-          "authors": "Bing Cao, Yefei Xiao, Dan Liu"
-        },
-        {
-          "title": "Aging-associated Metabolite Methylmalonic Acid Increases Susceptibility to Pulmonary Fibrosis.",
-          "year": 2024,
-          "citations": 5,
-          "url": "https://www.semanticscholar.org/paper/81f26cff795d053b9934aa8587ad3d9b7a0cd881",
-          "authors": "Kai Xu, Linke Ding, Wenwen Li"
+        "triangulation_score": 0.407,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.234,
+          "docking": 0.664,
+          "pharos": 0.0,
+          "literature": 0.628
         }
-      ],
-      "most_cited_paper": {
-        "title": "Mitochondria-derived methylmalonic acid aggravates ischemia\u2013reperfusion injury by activating reactive oxygen species-dependent ferroptosis",
-        "year": 2024,
-        "citations": 35,
-        "url": "https://www.semanticscholar.org/paper/4990116d8a29c18abdf131ddc79dc8262160e066",
-        "authors": "Junchen Guo, Shanjie Wang, Xin Wan"
       },
-      "max_citations": 35,
-      "faers_signal": "none",
-      "faers_total_reports": 0,
-      "faers_cooccurrences": 0,
-      "faers_interpretation": "No FAERS reports found for Methylmalonic Acid",
-      "signature_reversal_found": false,
-      "signature_reversal_rank": 0,
-      "signature_top_reversers": [
-        "BMS-387032 (1.473)",
-        "budesonide (1.461)",
-        "NCGC00187945-01 (1.459)",
-        "GSK-3 Inhibitor II (1.425)",
-        "Dorsomorphin dihydrochloride (1.418)"
-      ],
-      "signature_interpretation": "Methylmalonic Acid was not found among the top 39 drugs that reverse the Neurofibromatosis gene signature. Top reversers: BMS-387032 (1.473), budesonide (1.461), NCGC00187945-01 (1.459)",
-      "ai_hypothesis": "it is a competitive inhibitor of the enzyme methylmalonyl-CoA mutase.",
-      "abstract_analyses": [],
-      "has_failed_trial": false,
-      "failed_trial_phase": "",
-      "failed_trial_count": 0,
-      "failed_trial_penalty": 1.0,
-      "mr_score": 0,
-      "mr_genetic_targets": 0,
-      "mechanistic_hypothesis": "",
-      "kg_paths_text": "",
-      "validation_experiments": [],
-      "novelty_score": 0.972,
-      "novelty_level": "BREAKTHROUGH",
-      "is_known_treatment": false,
-      "clinical_trials_total": 0,
-      "clinical_trials": [],
-      "trial_phases": {},
-      "confidence": "LOW",
-      "confidence_reasons": [
-        "Supported by 2 independent AI pillars",
-        "Supporting paper with 35 citations",
-        "AI-generated hypothesis available"
-      ]
+      "tissue_context": {
+        "tissues": [
+          "Brain - Cortex",
+          "Nerve - Tibial"
+        ],
+        "n_genes": 2,
+        "n_expressed": 0,
+        "mean_tpm_in_tissue": 0.3,
+        "max_tpm_in_tissue": 0.39,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.86
+      },
+      "ensemble_prob": 0.8825,
+      "ensemble_features": {
+        "kg_score": 0.998,
+        "degree_penalty": 0.7565,
+        "n_drug_targets": 72,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 3.091
+      },
+      "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": -7.97,
+        "target_symbol": "SLC6A2",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "STILBENE"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "stilbene"
+        ]
+      }
     }
-  ]
+  ],
+  "disease_entity": "Disease::MESH:D009456",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
+  "docking_axis": {
+    "source": "chembl_bioactivity_proxy + not_wired fallback",
+    "n_disease_genes": 14,
+    "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
+  }
 }

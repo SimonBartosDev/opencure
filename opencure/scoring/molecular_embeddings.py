@@ -4,6 +4,10 @@ Molecular embeddings using transformer models (ChemBERTa, MoLFormer).
 These learned representations capture molecular properties that traditional
 fingerprints miss: functional group interactions, 3D conformational effects,
 and subtle structure-activity relationships learned from millions of molecules.
+
+v7 swap: MoLFormer-XL (IBM, 1.1B compounds) replaces ChemBERTa as the canonical
+chemistry-embedding pillar. ChemBERTa stays as a fallback when MoLFormer hasn't
+been precomputed yet — so the codebase always loads the best embedding it has.
 """
 
 import warnings
@@ -18,11 +22,28 @@ CHEMBERTA_CACHE = EMBEDDINGS_DIR / "chemberta_embeddings.npz"
 MOLFORMER_CACHE = EMBEDDINGS_DIR / "molformer_embeddings.npz"
 
 
+def _default_device() -> str:
+    """Pick the fastest available torch device.
+
+    Order: CUDA → Apple MPS → CPU. Used by every embedding function so
+    M4 Max users get MPS acceleration without flipping a flag.
+    """
+    try:
+        import torch
+        if torch.cuda.is_available():
+            return "cuda"
+        if getattr(torch.backends, "mps", None) is not None and torch.backends.mps.is_available():
+            return "mps"
+    except Exception:
+        pass
+    return "cpu"
+
+
 def get_chemberta_embeddings(
     smiles_list: list[str],
     model_name: str = "seyonec/ChemBERTa-zinc-base-v1",
     batch_size: int = 64,
-    device: str = "cpu",
+    device: Optional[str] = None,
 ) -> np.ndarray:
     """
     Compute molecular embeddings using ChemBERTa.
@@ -38,6 +59,9 @@ def get_chemberta_embeddings(
     """
     from transformers import AutoTokenizer, AutoModel
     import torch
+
+    if device is None:
+        device = _default_device()
 
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModel.from_pretrained(model_name).to(device)
@@ -64,7 +88,7 @@ def get_molformer_embeddings(
     smiles_list: list[str],
     model_name: str = "ibm/MoLFormer-XL-both-10pct",
     batch_size: int = 32,
-    device: str = "cpu",
+    device: Optional[str] = None,
 ) -> np.ndarray:
     """
     Compute molecular embeddings using MoLFormer (IBM).
@@ -81,6 +105,9 @@ def get_molformer_embeddings(
     """
     from transformers import AutoTokenizer, AutoModel
     import torch
+
+    if device is None:
+        device = _default_device()
 
     tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
     model = AutoModel.from_pretrained(model_name, trust_remote_code=True).to(device)
@@ -139,6 +166,27 @@ def load_cached_embeddings(model_type: str = "chemberta") -> tuple[Optional[np.n
         data = np.load(str(cache_path), allow_pickle=True)
         return data["embeddings"], data["entities"].tolist()
     return None, None
+
+
+def load_best_molecular_embeddings() -> tuple[Optional[np.ndarray], Optional[list[str]], Optional[str]]:
+    """Return the best chemistry embedding currently on disk.
+
+    Order of preference: MoLFormer-XL → ChemBERTa → none. The third return
+    is the model tag (``"molformer"`` / ``"chemberta"`` / ``None``) so callers
+    can log which one is active.
+
+    This is the v7 canonical loader. Existing call sites that ask for a
+    specific model can still go through ``load_cached_embeddings(name)``;
+    new code should prefer this function so the codebase always picks up
+    the strongest available pillar.
+    """
+    emb, entities = load_cached_embeddings("molformer")
+    if emb is not None:
+        return emb, entities, "molformer"
+    emb, entities = load_cached_embeddings("chemberta")
+    if emb is not None:
+        return emb, entities, "chemberta"
+    return None, None, None
 
 
 def save_cached_embeddings(

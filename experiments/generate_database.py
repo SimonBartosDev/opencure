@@ -44,14 +44,23 @@ EXCLUDED_COMPOUNDS = {
 def load_all_results() -> list[dict]:
     """Load all per-disease result files."""
     all_results = []
+    AGGREGATE_FILES = {
+        "screening_summary.json", "opencure_database.json",
+        "novel_candidates.json", "chagas_report.json",
+        "mechanism_clusters.json",
+    }
     for f in sorted(RESULTS_DIR.glob("*.json")):
-        if f.name in ("screening_summary.json", "opencure_database.json",
-                       "novel_candidates.json", "chagas_report.json"):
+        if f.name in AGGREGATE_FILES:
             continue
         with open(f) as fh:
             data = json.load(fh)
-            if data.get("status") == "completed":
-                all_results.append(data)
+        # Per-disease result JSONs are dicts with a "status" field. Any
+        # other shape is an aggregate file emitted by a post-processor —
+        # skip so we don't crash with AttributeError on a list.
+        if not isinstance(data, dict):
+            continue
+        if data.get("status") == "completed":
+            all_results.append(data)
     return all_results
 
 

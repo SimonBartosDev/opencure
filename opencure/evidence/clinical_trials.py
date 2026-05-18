@@ -7,8 +7,10 @@ Uses the ClinicalTrials.gov API v2 (free, no auth needed).
 import requests
 
 from opencure.config import CLINICALTRIALS_URL
+from opencure.evidence.cache import disk_cached
 
 
+@disk_cached(namespace="clinical_trials_drug_disease", ttl_days=14)
 def search_trials(
     drug_name: str,
     disease_name: str,
@@ -18,6 +20,8 @@ def search_trials(
     Search ClinicalTrials.gov for trials involving a drug-disease pair.
 
     Returns dict with: total_trials, trials (list), phases breakdown
+
+    Cached 14 days (trials update more frequently than lit review).
     """
     params = {
         "query.intr": drug_name,

@@ -55,8 +55,18 @@ def _get_data():
         # Try loading PyKEEN model (Pillar 3 upgrade)
         pykeen_model, pykeen_tf = _load_pykeen()
 
-        # Try loading ChemBERTa embeddings (Pillar 1 upgrade)
-        chemberta_emb, chemberta_entities = _load_chemberta()
+        # Try loading molecular embeddings (v7: prefer MoLFormer-XL,
+        # fall back to ChemBERTa). Single chemistry-embedding pillar; the
+        # model tag flows downstream so logs say which one is active.
+        mol_emb, mol_emb_entities, mol_emb_model = _load_mol_embeddings()
+
+        # Try loading ESM-2 protein embeddings (v7). Currently consumed
+        # only by future ESM-2-based DTI heads; stays in the data dict
+        # so any pillar can pick it up without re-loading.
+        prot_emb, prot_emb_genes, prot_emb_variant = _load_protein_embeddings()
+
+        # v4 Phase 5: unified-KG TransE (DRKG+PrimeKG+OpenTargets)
+        unified_model, unified_tf = _load_unified_kg()
 
         _cache.update(
             {
@@ -72,8 +82,14 @@ def _get_data():
                 "smiles_map": smiles_map,
                 "pykeen_model": pykeen_model,
                 "pykeen_tf": pykeen_tf,
-                "chemberta_emb": chemberta_emb,
-                "chemberta_entities": chemberta_entities,
+                "mol_emb": mol_emb,
+                "mol_emb_entities": mol_emb_entities,
+                "mol_emb_model": mol_emb_model,
+                "prot_emb": prot_emb,
+                "prot_emb_genes": prot_emb_genes,
+                "prot_emb_variant": prot_emb_variant,
+                "unified_model": unified_model,
+                "unified_tf": unified_tf,
             }
         )
     return _cache
@@ -114,14 +130,48 @@ def _load_pykeen():
         return None, None
 
 
-def _load_chemberta():
-    """Load precomputed ChemBERTa embeddings if available."""
+def _load_mol_embeddings():
+    """Load the strongest available chemistry embedding cache.
+
+    v7: prefers MoLFormer-XL (IBM, 1.1B compounds) over ChemBERTa.
+    Returns ``(emb, entities, model_tag)``; tag is ``None`` when nothing
+    is cached so the molecular-similarity pillar fails open.
+    """
     try:
-        from opencure.scoring.molecular_embeddings import load_cached_embeddings
-        emb, entities = load_cached_embeddings("chemberta")
+        from opencure.scoring.molecular_embeddings import load_best_molecular_embeddings
+        emb, entities, model_tag = load_best_molecular_embeddings()
         if emb is not None:
-            print(f"  {len(entities):,} ChemBERTa embeddings loaded")
-        return emb, entities
+            label = {"molformer": "MoLFormer-XL", "chemberta": "ChemBERTa"}.get(
+                model_tag, model_tag
+            )
+            print(f"  {len(entities):,} {label} embeddings loaded")
+        return emb, entities, model_tag
+    except Exception:
+        return None, None, None
+
+
+def _load_protein_embeddings():
+    """Load the strongest available ESM-2 protein embedding cache.
+
+    v7: prefers 650M → 150M → 8M. Returns ``(emb, genes, variant)``;
+    variant is ``None`` when nothing is cached. Optional — DTI scoring
+    has its own fallback path.
+    """
+    try:
+        from opencure.scoring.dti_predictor import load_best_protein_embeddings
+        emb, genes, variant = load_best_protein_embeddings()
+        if emb is not None:
+            print(f"  {len(genes):,} ESM-2 {variant} protein embeddings loaded")
+        return emb, genes, variant
+    except Exception:
+        return None, None, None
+
+
+def _load_unified_kg():
+    """Load unified-KG TransE model (v4 Phase 5) if trained."""
+    try:
+        from opencure.scoring.unified_kg_scorer import load_unified_model
+        return load_unified_model()
     except Exception:
         return None, None
 
@@ -222,6 +272,28 @@ def search(
     except Exception as e:
         print(f"  [WARN] PrimeKG scoring failed: {e}")
 
+    # Step 2d: v4 Phase 5 — unified-KG scorer (DRKG+PrimeKG+OpenTargets TransE)
+    unified_scores: dict = {}
+    if data.get("unified_model") is not None:
+        try:
+            from opencure.scoring.unified_kg_scorer import score_drugs_for_disease_unified
+            print("[Pillar 2b] Unified-KG TransE (DRKG+PrimeKG+OT)...")
+            for de, _ in disease_matches:
+                out = score_drugs_for_disease_unified(
+                    disease_entity=de,
+                    model=data["unified_model"],
+                    triples_factory=data["unified_tf"],
+                    compound_entities=data["compounds"],
+                    top_k=500,
+                )
+                for compound, score_tuple in out.items():
+                    if compound not in unified_scores or score_tuple[0] > unified_scores[compound][0]:
+                        unified_scores[compound] = score_tuple
+            if unified_scores:
+                print(f"  Scored {len(unified_scores)} compounds with unified-KG TransE")
+        except Exception as e:
+            print(f"  [WARN] unified-KG scoring failed: {e}")
+
     # Step 3a: Pillar 1a - Fingerprint molecular similarity
     mol_sim_scores = {}
     if use_molecular_similarity and data["smiles_map"]:
@@ -243,10 +315,15 @@ def search(
         if mol_sim_scores:
             print(f"  Found {len(mol_sim_scores)} compounds with fingerprint similarity")
 
-    # Step 3b: Pillar 1b - ChemBERTa learned molecular similarity
+    # Step 3b: Pillar 1b - learned molecular similarity (MoLFormer-XL preferred,
+    # ChemBERTa fallback). The model tag tells logs which one ran.
     mol_emb_scores = {}
-    if use_molecular_similarity and data.get("chemberta_emb") is not None:
-        print("[Pillar 1b] ChemBERTa learned molecular similarity...")
+    if use_molecular_similarity and data.get("mol_emb") is not None:
+        model_tag = data.get("mol_emb_model") or "ChemBERTa"
+        label = {"molformer": "MoLFormer-XL", "chemberta": "ChemBERTa"}.get(
+            model_tag, model_tag
+        )
+        print(f"[Pillar 1b] {label} learned molecular similarity...")
         from opencure.scoring.molecular_embeddings import score_by_learned_similarity
 
         for disease_entity, _ in disease_matches:
@@ -254,8 +331,8 @@ def search(
                 disease_entity=disease_entity,
                 triplets=data["triplets"],
                 all_compounds=data["compounds"],
-                embeddings=data["chemberta_emb"],
-                embedding_entities=data["chemberta_entities"],
+                embeddings=data["mol_emb"],
+                embedding_entities=data["mol_emb_entities"],
                 top_k=top_k * 5,
             )
             for compound, sim, similar_to in sim_results:
@@ -278,6 +355,58 @@ def search(
                 print(f"  Matched {len(txgnn_scores)} drugs from TxGNN predictions")
     except Exception:
         pass
+
+    # Step 2f: JUMP Cell Painting morphological similarity — 13th pillar (v7).
+    # Phenotype-space anchored similarity to known treatments. Requires the
+    # JUMP-CP artifact at data/jump_cp/; fail-open when absent.
+    jump_scores = {}
+    try:
+        from opencure.scoring.jump_cell_painting import (
+            load_jump_features, score_drugs_for_disease_jump,
+        )
+        jump_emb, jump_entities = load_jump_features()
+        if jump_emb is not None:
+            print("[Pillar 13] JUMP Cell Painting (morphological similarity)...")
+            for disease_entity, _ in disease_matches:
+                scored = score_drugs_for_disease_jump(
+                    disease_entity,
+                    triplets=data["triplets"],
+                    compound_set=data["compounds"],
+                    embeddings=jump_emb,
+                    embedding_entities=jump_entities,
+                    top_k=top_k * 5,
+                )
+                for compound, val in scored.items():
+                    if compound not in jump_scores or val[0] > jump_scores[compound][0]:
+                        jump_scores[compound] = val
+            if jump_scores:
+                print(f"  {len(jump_scores)} compounds with morphological similarity")
+    except Exception as exc:
+        print(f"  [INFO] JUMP-CP skipped: {exc}")
+
+    # Step 2e: R-GCN heterogeneous-GNN scoring — 12th pillar.
+    # Loads the trained model from data/models/rgcn_v5/ when present;
+    # fail-open (empty dict) when absent or untrained.
+    rgcn_scores = {}
+    try:
+        from opencure.scoring.rgcn_scorer import (
+            load_rgcn_model, score_drugs_for_disease_rgcn,
+        )
+        rgcn_state = load_rgcn_model()
+        if rgcn_state is not None:
+            print("[Pillar 12] R-GCN (heterogeneous GNN)...")
+            for disease_entity, _ in disease_matches:
+                scored = score_drugs_for_disease_rgcn(
+                    disease_entity, data["compounds"], rgcn_state, top_k=500,
+                )
+                # Merge across disease matches (max score per compound)
+                for compound, val in scored.items():
+                    if compound not in rgcn_scores or val[0] > rgcn_scores[compound][0]:
+                        rgcn_scores[compound] = val
+            if rgcn_scores:
+                print(f"  Scored {len(rgcn_scores)} compounds via R-GCN DistMult head")
+    except Exception as exc:
+        print(f"  [INFO] R-GCN skipped: {exc}")
 
     # Step 2d: Mendelian Randomization (causal evidence)
     mr_scores = {}
@@ -308,6 +437,10 @@ def search(
         active_pillars.append("ChemBERTa")
     if mr_scores:
         active_pillars.append("Mendelian Randomization")
+    if rgcn_scores:
+        active_pillars.append("R-GCN")
+    if jump_scores:
+        active_pillars.append("JUMP-CP")
 
     # Step 4b: Gene signature reversal pillar (if enabled)
     gene_sig_scores = {}
@@ -363,6 +496,36 @@ def search(
                         print(f"  Matched {len(gene_sig_scores)} drugs to L1000CDS2 reversers")
         except Exception:
             pass
+
+    # v5 supplementary pillar 4b: mechanistic signature reversal
+    # Supplements L1000CDS2 (which typically matches <10 DrugBank drugs per
+    # disease). Uses OT disease-gene associations + ChEMBL bioactivities to
+    # score every drug that pharmacologically modulates disease-associated
+    # genes. Coverage: ~thousands of drugs/disease vs ~5-10 from L1000CDS2.
+    try:
+        from opencure.scoring.mechanistic_reversal import score_mechanistic_reversal
+        disease_entity_list = [de for de, _ in disease_matches]
+        mech_scores = score_mechanistic_reversal(
+            disease_entity_list, data["compounds"], top_k=500,
+        )
+        if mech_scores:
+            # Merge into gene_sig_scores if the drug isn't already there from
+            # L1000CDS2 (L1000 takes precedence because it's direct expression
+            # evidence; mechanistic_reversal is a pharmacological proxy).
+            added = 0
+            for compound, (score, n_hits, best_gene) in mech_scores.items():
+                if compound in gene_sig_scores:
+                    continue
+                # Convert our [0,1] score to a pseudo-rank (1 = best)
+                pseudo_rank = max(1, int(1 / (score + 0.01)))
+                gene_sig_scores[compound] = (score, pseudo_rank)
+                added += 1
+            if added:
+                if "Gene Signatures" not in active_pillars:
+                    active_pillars.append("Gene Signatures")
+                print(f"  + {added} mechanistic reversers (OT genes × ChEMBL activities)")
+    except Exception as e:
+        print(f"  [INFO] mechanistic reversal skipped: {e}")
 
     # Step 4c: Network proximity pillar (if STRING data available)
     proximity_scores = {}
@@ -429,111 +592,136 @@ def search(
     print(f"\nCombining {len(active_pillars)} active pillars: {', '.join(active_pillars)}")
 
     # v3 pipeline: grouped scoring with hard filters
-    try:
-        from opencure.scoring.pillar_groups import (
-            group_kg_scores, group_structural_scores, group_network_scores, build_feature_matrix
-        )
-        from opencure.scoring.grouped_combiner import combine_grouped_scores
-        from opencure.filters.drug_filter import filter_compounds
-        from opencure.scoring.admet_filter import load_cached_predictions
+    # v5 canonical scoring: grouped combiner only. No legacy fallback —
+    # pillar_groups + grouped_combiner are core modules, their absence is
+    # a broken install, not a runtime branch.
+    from opencure.scoring.pillar_groups import (
+        group_kg_scores, group_structural_scores, group_network_scores, build_feature_matrix
+    )
+    from opencure.scoring.grouped_combiner import combine_grouped_scores
+    from opencure.filters.drug_filter import filter_compounds
+    from opencure.scoring.admet_filter import load_cached_predictions
 
-        # Hard filter BEFORE combining — reject non-therapeutic compounds
-        admet_cache = load_cached_predictions()
-        all_compounds = (
-            set(transe_scores) | set(pykeen_scores) | set(primekg_scores)
-            | set(mol_sim_scores) | set(mol_emb_scores) | set(dti_scores)
-            | set(proximity_scores) | set(gene_sig_scores) | set(mr_scores)
-            | set(admet_scores) | set(txgnn_scores)
-        )
-        all_compounds -= admet_toxic  # legacy ADMET filter
+    # Hard filter BEFORE combining — reject non-therapeutic compounds
+    admet_cache = load_cached_predictions()
+    all_compounds = (
+        set(transe_scores) | set(pykeen_scores) | set(primekg_scores)
+        | set(unified_scores) | set(rgcn_scores)
+        | set(mol_sim_scores) | set(mol_emb_scores) | set(dti_scores)
+        | set(proximity_scores) | set(gene_sig_scores) | set(mr_scores)
+        | set(admet_scores) | set(txgnn_scores) | set(jump_scores)
+    )
+    all_compounds -= admet_toxic  # legacy ADMET filter
 
-        # Apply v3 hard filter (SMILES rules + ChEMBL phase + critical ADMET)
-        kept, rejections = filter_compounds(
-            list(all_compounds),
-            data["smiles_map"],
-            admet_cache=admet_cache,
-            check_chembl=True,
-        )
-        if rejections:
-            print(f"  Filtered {sum(rejections.values())} non-therapeutic compounds: {rejections}")
-        kept_set = set(kept)
+    # v5 hard filter: SMILES rules + metabolite/IUPAC heuristics +
+    # ChEMBL phase + critical ADMET (FDA-approved bypass per stage).
+    kept, rejections = filter_compounds(
+        list(all_compounds),
+        data["smiles_map"],
+        admet_cache=admet_cache,
+        check_chembl=True,
+        name_map=data.get("drug_names"),
+    )
+    if rejections:
+        print(f"  Filtered {sum(rejections.values())} non-therapeutic compounds: {rejections}")
+    kept_set = set(kept)
 
-        # Group correlated pillars
-        kg_group = group_kg_scores(transe_scores, pykeen_scores, primekg_scores)
-        structural_group = group_structural_scores(mol_sim_scores, mol_emb_scores, dti_scores)
-        network_group = group_network_scores(proximity_scores, gene_sig_scores)
+    # Group correlated pillars (RRF fusion across all KG embeddings + R-GCN)
+    kg_group = group_kg_scores(transe_scores, pykeen_scores, primekg_scores,
+                               unified_scores, rgcn_scores)
+    structural_group = group_structural_scores(
+        mol_sim_scores, mol_emb_scores, dti_scores, jump_scores,
+    )
+    network_group = group_network_scores(proximity_scores, gene_sig_scores)
 
-        # Build grouped feature matrix (only for kept compounds)
-        features = build_feature_matrix(
-            kg_group, structural_group, network_group,
-            txgnn_scores, mr_scores, admet_scores,
-            kept_set,
-        )
+    # Build grouped feature matrix (only for kept compounds)
+    features = build_feature_matrix(
+        kg_group, structural_group, network_group,
+        txgnn_scores, mr_scores, admet_scores,
+        kept_set,
+    )
 
-        # Combine with grouped combiner
-        combined = combine_grouped_scores(features)
+    # Combine with grouped combiner
+    combined = combine_grouped_scores(features)
 
-        # Attach legacy pillar-level scores for transparency (used by downstream)
-        for compound, scores in combined.items():
-            if compound in transe_scores:
-                raw, rel, disease_entity = transe_scores[compound]
-                scores["transe_score"] = raw
-                scores["transe_rank"] = 0  # filled below
-                scores["transe_relation"] = rel
-                scores["disease_entity"] = disease_entity
-            if compound in pykeen_scores:
-                raw, rel, de = pykeen_scores[compound]
-                scores["pykeen_score"] = raw
-            if compound in primekg_scores:
-                raw, rel, de = primekg_scores[compound]
-                scores["primekg_score"] = raw
-            if compound in txgnn_scores:
-                raw, rank = txgnn_scores[compound]
-                scores["txgnn_raw_score"] = raw
-                scores["txgnn_rank"] = rank
-            if compound in mol_sim_scores:
-                sim, similar_to = mol_sim_scores[compound]
-                scores["mol_similarity"] = sim
-                scores["similar_to"] = similar_to
-            if compound in mol_emb_scores:
-                sim, similar_to = mol_emb_scores[compound]
-                scores["mol_emb_similarity"] = sim
-                scores["mol_emb_similar_to"] = similar_to
-            if compound in proximity_scores:
-                ps, pd = proximity_scores[compound]
-                scores["proximity_raw_score"] = ps
-                scores["proximity_distance"] = pd
-            if compound in gene_sig_scores:
-                sig_score, sig_rank = gene_sig_scores[compound]
-                scores["gene_sig_rank"] = sig_rank
-            if compound in mr_scores:
-                mr_s, mr_t = mr_scores[compound]
-                scores["mr_score_raw"] = mr_s
-                scores["mr_genetic_targets"] = mr_t
-            if compound in dti_scores:
-                dti_s, dti_t, _ = dti_scores[compound]
-                scores["dti_score_raw"] = dti_s
-                scores["dti_best_target"] = dti_t
-            if compound in admet_scores:
-                admet_s, admet_f, _ = admet_scores[compound]
-                scores["admet_score_raw"] = admet_s
-                scores["admet_flags"] = admet_f
+    # Attach per-pillar scores using ONE canonical field name per concept.
+    # See opencure/scoring/common.py::PILLAR_FIELDS for the full list.
+    # grouped_combiner already emits group-level: kg_score, structural_score,
+    # network_score, txgnn_score, mr_score, admet_score.  Here we surface the
+    # individual pillar-level scores too, using canonical names.
+    for compound, scores in combined.items():
+        if compound in transe_scores:
+            raw, rel, disease_entity = transe_scores[compound]
+            scores["transe_score"] = raw
+            scores["transe_rank"] = 0  # filled below
+            scores["transe_relation"] = rel
+            scores["disease_entity"] = disease_entity
+        if compound in pykeen_scores:
+            raw, rel, de = pykeen_scores[compound]
+            scores["pykeen_score"] = raw
+        if compound in primekg_scores:
+            raw, rel, de = primekg_scores[compound]
+            scores["primekg_score"] = raw
+        if compound in unified_scores:
+            norm, rk, rel = unified_scores[compound]
+            scores["unified_score"] = norm
+            scores["unified_rank"] = rk
+        if compound in rgcn_scores:
+            rgcn_norm, rgcn_rank, rgcn_rel = rgcn_scores[compound]
+            scores["rgcn_score"] = rgcn_norm
+            scores["rgcn_rank"] = rgcn_rank
+            scores["rgcn_relation"] = rgcn_rel
+        if compound in txgnn_scores:
+            raw, rank = txgnn_scores[compound]
+            # grouped_combiner already set txgnn_score as rank-normalized [0,1].
+            # Preserve the rank but DO NOT overwrite the combiner's normalized
+            # version.  Raw probability is available in txgnn_scores dict for
+            # anyone who needs it (not persisted to JSON).
+            scores["txgnn_rank"] = rank
+        if compound in mol_sim_scores:
+            sim, similar_to = mol_sim_scores[compound]
+            scores["mol_similarity"] = sim
+            scores["similar_to"] = similar_to
+        if compound in mol_emb_scores:
+            sim, similar_to = mol_emb_scores[compound]
+            scores["mol_emb_similarity"] = sim
+            scores["mol_emb_similar_to"] = similar_to
+        if compound in proximity_scores:
+            ps, pd = proximity_scores[compound]
+            scores["proximity_score"] = ps
+            scores["proximity_distance"] = pd
+        if compound in gene_sig_scores:
+            sig_score, sig_rank = gene_sig_scores[compound]
+            scores["gene_sig_score"] = sig_score
+            scores["gene_sig_rank"] = sig_rank
+        if compound in mr_scores:
+            mr_s, mr_t = mr_scores[compound]
+            # grouped_combiner sets mr_score already; we keep mr_genetic_targets
+            scores["mr_genetic_targets"] = mr_t
+        if compound in dti_scores:
+            dti_s, dti_t, _ = dti_scores[compound]
+            scores["dti_score"] = dti_s
+            scores["dti_best_target"] = dti_t
+        if compound in admet_scores:
+            admet_s, admet_f, _ = admet_scores[compound]
+            # grouped_combiner sets admet_score; we keep flags
+            scores["admet_flags"] = admet_f
+        if compound in jump_scores:
+            jump_sim, similar_to = jump_scores[compound]
+            scores["jump_score"] = jump_sim
+            scores["jump_similar_to"] = similar_to
 
-        # Fill transe_rank from percentile rank
-        sorted_transe = sorted(transe_scores.keys(), key=lambda c: -transe_scores[c][0])
-        for i, c in enumerate(sorted_transe):
-            if c in combined:
-                combined[c]["transe_rank"] = i + 1
+    # v7: jump_rank — per-disease ranking by morphological similarity.
+    sorted_jump = sorted(jump_scores.keys(), key=lambda c: -jump_scores[c][0])
+    for i, c in enumerate(sorted_jump, 1):
+        if c in combined:
+            combined[c]["jump_rank"] = i
 
-    except ImportError as e:
-        # Fallback to legacy combiner if v3 modules unavailable
-        print(f"  [INFO] v3 combiner unavailable ({e}), falling back to v2")
-        combined = _combine_scores_v2(
-            transe_scores, pykeen_scores, mol_sim_scores, mol_emb_scores,
-            data["compounds"], gene_sig_scores, proximity_scores,
-            txgnn_scores, mr_scores, admet_scores, admet_toxic,
-            primekg_scores, dti_scores,
-        )
+    # Fill transe_rank from percentile rank
+    sorted_transe = sorted(transe_scores.keys(), key=lambda c: -transe_scores[c][0])
+    for i, c in enumerate(sorted_transe):
+        if c in combined:
+            combined[c]["transe_rank"] = i + 1
 
     # Step 5: Build results with evidence
     ranked = sorted(combined.items(), key=lambda x: -x[1]["combined_score"])[:top_k]
@@ -617,6 +805,12 @@ def search(
             result["dti_score"] = round(scores["dti_score"], 4)
             result["dti_best_target"] = scores.get("dti_best_target", "")
 
+        # Pillar 12: R-GCN heterogeneous GNN (DistMult head)
+        if "rgcn_score" in scores:
+            result["rgcn_score"] = round(scores["rgcn_score"], 4)
+            result["rgcn_rank"] = scores.get("rgcn_rank", 0)
+            result["rgcn_relation"] = scores.get("rgcn_relation", "")
+
         # Add graph evidence if requested
         if use_evidence:
             evidence = _get_graph_evidence(compound, scores.get("disease_entity", ""), data)
@@ -626,255 +820,6 @@ def search(
 
     return results
 
-
-def _combine_scores_v2(
-    transe_scores: dict,
-    pykeen_scores: dict,
-    mol_sim_scores: dict,
-    mol_emb_scores: dict,
-    all_compounds: list[str],
-    gene_sig_scores: dict | None = None,
-    proximity_scores: dict | None = None,
-    txgnn_scores: dict | None = None,
-    mr_scores: dict | None = None,
-    admet_scores: dict | None = None,
-    toxic_compounds: set | None = None,
-    primekg_scores: dict | None = None,
-    dti_scores: dict | None = None,
-) -> dict:
-    """
-    Combine scores from multiple pillars into a unified ranking.
-
-    Strategy:
-    - Normalize each pillar's scores to [0, 1] via percentile rank
-    - Assign base weights per pillar type
-    - Dynamically redistribute weights from inactive pillars to active ones
-    - Weights ALWAYS sum to 1.0 for active pillars
-    - Additive convergence bonus: +0.05 per extra pillar beyond 1
-    """
-    if gene_sig_scores is None:
-        gene_sig_scores = {}
-    if proximity_scores is None:
-        proximity_scores = {}
-    if txgnn_scores is None:
-        txgnn_scores = {}
-    if mr_scores is None:
-        mr_scores = {}
-    if admet_scores is None:
-        admet_scores = {}
-    if toxic_compounds is None:
-        toxic_compounds = set()
-    if primekg_scores is None:
-        primekg_scores = {}
-    if dti_scores is None:
-        dti_scores = {}
-
-    # Helper: compute percentile ranks for a score dict
-    def percentile_rank(score_dict):
-        if not score_dict:
-            return {}, {}
-        sorted_comps = sorted(score_dict.keys(), key=lambda c: -score_dict[c][0])
-        total = len(sorted_comps)
-        pcts = {}
-        ranks = {}
-        for i, comp in enumerate(sorted_comps):
-            pcts[comp] = 1.0 - (i / total)
-            ranks[comp] = i + 1
-        return pcts, ranks
-
-    transe_pct, transe_ranks = percentile_rank(transe_scores)
-    pykeen_pct, pykeen_ranks = percentile_rank(pykeen_scores)
-
-    # Base weights for each pillar (ideal when all active)
-    base_weights = {
-        "transe": 0.10,
-        "pykeen": 0.10,
-        "txgnn": 0.20,      # State-of-the-art GNN
-        "mol_fp": 0.05,
-        "mol_emb": 0.08,
-        "gene_sig": 0.12,
-        "proximity": 0.15,  # Validated approach (Barabási lab)
-        "mr": 0.15,         # Mendelian randomization (CAUSAL evidence)
-        "docking": 0.05,    # Structure-based docking (future)
-        "admet": 0.04,      # ADMET drug-likeness
-        "primekg": 0.10,    # PrimeKG knowledge graph (independent from DRKG)
-        "dti": 0.08,        # DeepPurpose drug-target interaction
-    }
-
-    # Determine which pillars are active
-    active = {}
-    if transe_scores:
-        active["transe"] = base_weights["transe"]
-    if pykeen_scores:
-        active["pykeen"] = base_weights["pykeen"]
-    if mol_sim_scores:
-        active["mol_fp"] = base_weights["mol_fp"]
-    if mol_emb_scores:
-        active["mol_emb"] = base_weights["mol_emb"]
-    if txgnn_scores:
-        active["txgnn"] = base_weights["txgnn"]
-    if gene_sig_scores:
-        active["gene_sig"] = base_weights["gene_sig"]
-    if proximity_scores:
-        active["proximity"] = base_weights["proximity"]
-    if admet_scores:
-        active["admet"] = base_weights["admet"]
-    if primekg_scores:
-        active["primekg"] = base_weights["primekg"]
-    if dti_scores:
-        active["dti"] = base_weights["dti"]
-    # MR is handled as a bonus, not a weighted pillar
-
-    # Redistribute: normalize active weights to sum to 1.0
-    total_weight = sum(active.values())
-    if total_weight > 0:
-        weights = {k: v / total_weight for k, v in active.items()}
-    else:
-        weights = {}
-
-    combined = {}
-    all_scored = (
-        set(transe_scores.keys()) | set(pykeen_scores.keys()) |
-        set(txgnn_scores.keys()) | set(mol_sim_scores.keys()) |
-        set(mol_emb_scores.keys()) | set(gene_sig_scores.keys()) |
-        set(proximity_scores.keys()) | set(admet_scores.keys()) |
-        set(primekg_scores.keys()) | set(dti_scores.keys())
-    )
-
-    # Filter out toxic compounds
-    if toxic_compounds:
-        all_scored -= toxic_compounds
-
-    for compound in all_scored:
-        scores = {}
-        pillars_hit = 0
-
-        # Collect per-drug pillar contributions: (base_weight, normalized_score)
-        drug_pillars = []
-
-        # Pillar 3a: TransE
-        if compound in transe_scores:
-            raw_score, relation, disease_entity = transe_scores[compound]
-            pct = transe_pct.get(compound, 0)
-            scores["transe_score"] = raw_score
-            scores["transe_percentile"] = pct
-            scores["transe_rank"] = transe_ranks.get(compound, 0)
-            scores["transe_relation"] = relation
-            scores["disease_entity"] = disease_entity
-            drug_pillars.append((base_weights["transe"], pct))
-            pillars_hit += 1
-
-        # Pillar 3b: PyKEEN RotatE
-        if compound in pykeen_scores:
-            raw_score, relation, disease_entity = pykeen_scores[compound]
-            pct = pykeen_pct.get(compound, 0)
-            scores["pykeen_score"] = raw_score
-            scores["pykeen_percentile"] = pct
-            scores["pykeen_rank"] = pykeen_ranks.get(compound, 0)
-            if "disease_entity" not in scores:
-                scores["disease_entity"] = disease_entity
-                scores["transe_relation"] = relation
-            drug_pillars.append((base_weights["pykeen"], pct))
-            pillars_hit += 1
-
-        # Pillar 6: TxGNN
-        if compound in txgnn_scores:
-            txgnn_score, txgnn_rank = txgnn_scores[compound]
-            scores["txgnn_score"] = txgnn_score
-            scores["txgnn_rank"] = txgnn_rank
-            # Normalize: rank 1 = 1.0, rank 100 = 0.0
-            txgnn_pct = max(0, 1.0 - (txgnn_rank / 100.0)) if txgnn_rank > 0 else 0
-            drug_pillars.append((base_weights["txgnn"], txgnn_pct))
-            pillars_hit += 1
-
-        # Pillar 1a: Fingerprint similarity
-        if compound in mol_sim_scores:
-            sim, similar_to = mol_sim_scores[compound]
-            scores["mol_similarity"] = sim
-            scores["similar_to"] = similar_to
-            drug_pillars.append((base_weights["mol_fp"], sim))
-            pillars_hit += 1
-
-        # Pillar 1b: ChemBERTa learned similarity
-        if compound in mol_emb_scores:
-            sim, similar_to = mol_emb_scores[compound]
-            scores["mol_emb_similarity"] = sim
-            scores["mol_emb_similar_to"] = similar_to
-            drug_pillars.append((base_weights["mol_emb"], sim))
-            pillars_hit += 1
-
-        # Pillar 4: Gene signature reversal
-        if compound in gene_sig_scores:
-            sig_score, sig_rank = gene_sig_scores[compound]
-            scores["gene_sig_score"] = sig_score
-            scores["gene_sig_rank"] = sig_rank
-            # Normalize: rank 1 = 1.0, rank 50 = 0.0
-            sig_pct = max(0, 1.0 - (sig_rank / 50.0)) if sig_rank > 0 else 0
-            drug_pillars.append((base_weights["gene_sig"], sig_pct))
-            pillars_hit += 1
-
-        # Pillar 5: Network proximity (STRING PPI)
-        if compound in proximity_scores:
-            prox_score, prox_dist = proximity_scores[compound]
-            scores["proximity_score"] = prox_score
-            scores["proximity_distance"] = prox_dist
-            drug_pillars.append((base_weights["proximity"], prox_score))
-            pillars_hit += 1
-
-        # Pillar 11: DeepPurpose DTI
-        if compound in dti_scores:
-            dti_score, dti_target, _ = dti_scores[compound]
-            scores["dti_score"] = dti_score
-            scores["dti_best_target"] = dti_target
-            drug_pillars.append((base_weights["dti"], dti_score))
-            pillars_hit += 1
-
-        # Pillar 10: PrimeKG knowledge graph
-        if compound in primekg_scores:
-            primekg_score, primekg_rel, primekg_disease = primekg_scores[compound]
-            scores["primekg_score"] = primekg_score
-            scores["primekg_relation"] = primekg_rel
-            drug_pillars.append((base_weights["primekg"], primekg_score))
-            pillars_hit += 1
-
-        # Pillar 9: ADMET drug-likeness
-        if compound in admet_scores:
-            admet_score, admet_flags, _ = admet_scores[compound]
-            scores["admet_score"] = admet_score
-            scores["admet_flags"] = admet_flags
-            drug_pillars.append((base_weights["admet"], admet_score))
-            pillars_hit += 1
-
-        # Pillar 7: Mendelian Randomization (causal evidence)
-        # MR acts as a BONUS rather than weighted pillar — it boosts drugs
-        # with genetic evidence rather than introducing new candidates.
-        mr_bonus = 0.0
-        if compound in mr_scores:
-            mr_score, mr_hits = mr_scores[compound]
-            scores["mr_score"] = mr_score
-            scores["mr_genetic_targets"] = mr_hits
-            # Additive bonus: up to +0.15 for strong genetic evidence
-            mr_bonus = 0.15 * mr_score
-            pillars_hit += 1
-
-        # Per-drug dynamic weighting: normalize weights for pillars that
-        # actually scored THIS drug (not the global active set).
-        # This prevents penalizing drugs missing from a pillar's coverage.
-        drug_weight_total = sum(w for w, _ in drug_pillars)
-        if drug_weight_total > 0:
-            weighted_sum = sum((w / drug_weight_total) * s for w, s in drug_pillars)
-        else:
-            weighted_sum = 0.0
-
-        # Convergence bonus: additive, +0.05 per extra pillar beyond 1
-        convergence_bonus = 0.05 * max(0, pillars_hit - 1)
-        final_score = weighted_sum + convergence_bonus + mr_bonus
-
-        scores["combined_score"] = final_score
-        scores["pillars_hit"] = pillars_hit
-        combined[compound] = scores
-
-    return combined
 
 
 def _get_graph_evidence(compound: str, disease_entity: str, data: dict) -> list[str]:

@@ -26,21 +26,35 @@ def group_kg_scores(
     transe_scores: dict | None = None,
     pykeen_scores: dict | None = None,
     primekg_scores: dict | None = None,
+    unified_scores: dict | None = None,
+    rgcn_scores: dict | None = None,
 ) -> dict:
     """Fuse knowledge-graph pillars via Reciprocal Rank Fusion.
+
+    unified_scores (v4 Phase 5) is the RotatE embedding trained on the
+    DRKG+PrimeKG+OpenTargets unified graph.
+    rgcn_scores (v6.1) is the heterogeneous-GNN R-GCN 12th pillar.
+    Both are optional; the function passes through with whatever is given.
 
     Returns dict[compound] -> (fused_score, num_kgs_contributing, "kg_group").
     """
     from opencure.scoring.kg_fusion import fuse_kg_scores
-    return fuse_kg_scores(transe_scores, pykeen_scores, primekg_scores)
+    return fuse_kg_scores(transe_scores, pykeen_scores, primekg_scores,
+                          unified_scores, rgcn_scores)
 
 
 def group_structural_scores(
     mol_fp_scores: dict | None = None,
     mol_emb_scores: dict | None = None,
     dti_scores: dict | None = None,
+    jump_scores: dict | None = None,
 ) -> dict:
-    """Combine molecular-similarity + drug-target-interaction pillars.
+    """Combine molecular-similarity + drug-target-interaction + morphology pillars.
+
+    v7 adds ``jump_scores`` (JUMP Cell Painting morphological similarity)
+    to the structural group: a compound that produces the same cellular
+    phenotype as a known treatment carries structural-mechanism signal
+    even when its 2D fingerprint is dissimilar.
 
     Takes max score across pillars per compound (most optimistic signal).
     Returns dict[compound] -> (max_score, best_pillar, "structural_group").
@@ -52,6 +66,8 @@ def group_structural_scores(
         dicts["mol_emb"] = mol_emb_scores
     if dti_scores:
         dicts["dti"] = dti_scores
+    if jump_scores:
+        dicts["jump"] = jump_scores
 
     if not dicts:
         return {}
@@ -159,6 +175,8 @@ def build_feature_matrix(
     txgnn_normalized = normalize_txgnn(txgnn_scores)
     features = {}
 
+    from opencure.scoring.hub_normalize import degree_penalty
+
     for compound in all_compounds:
         kg = kg_group.get(compound, (0, 0, ""))[0]
         structural = structural_group.get(compound, (0, "", ""))[0]
@@ -166,6 +184,14 @@ def build_feature_matrix(
         txgnn = txgnn_normalized.get(compound, (0, 0, ""))[0]
         mr = mr_scores.get(compound, (0, 0))[0] if compound in mr_scores else 0
         admet = admet_scores.get(compound, (0, "", ""))[0] if compound in admet_scores else 0
+
+        # Hub-degree damping: drugs connected to ~everything in DRKG (Dex, Cimetidine,
+        # Calcium, Glutathione) get mechanically high KG/network scores regardless of
+        # disease-specific biology. Damp these topology-driven pillars. Structural,
+        # MR, TxGNN, ADMET are chemistry/genetics/GNN-based and stay un-damped.
+        penalty = degree_penalty(compound)
+        kg = kg * penalty
+        network = network * penalty
 
         groups_hit = sum(1 for x in [kg, structural, network, txgnn, mr, admet] if x > 0)
 
@@ -177,6 +203,7 @@ def build_feature_matrix(
             "mr_score": mr,
             "admet_score": admet,
             "groups_hit": groups_hit,
+            "degree_penalty": penalty,
         }
 
     return features

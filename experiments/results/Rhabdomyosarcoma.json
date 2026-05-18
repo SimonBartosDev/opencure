@@ -1,0 +1,3847 @@
+{
+  "disease": "Rhabdomyosarcoma",
+  "status": "completed",
+  "timestamp": "2026-05-08T00:38:08.087810",
+  "elapsed_seconds": 550.4,
+  "total_searched": 50,
+  "evidence_generated": 10,
+  "confidence_counts": {
+    "HIGH": 6,
+    "MEDIUM": 4
+  },
+  "pipeline_version": "v5",
+  "data_manifest_hash": "2da2aa88f2457d1b",
+  "candidates": [
+    {
+      "drug_name": "Topotecan",
+      "drug_id": "DB01030",
+      "disease_name": "Rhabdomyosarcoma",
+      "combined_score": 0.563,
+      "pillars_hit": 4,
+      "transe_rank": 55,
+      "transe_score": -10.839,
+      "pykeen_score": -12.9925,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.7749999761581421,
+      "proximity_distance": 0.8999999761581421,
+      "admet_score": 0.9136,
+      "admet_flags": "AMES=0.87",
+      "primekg_score": 0.2508,
+      "dti_score": 1.0,
+      "dti_best_target": "MYOD1",
+      "kg_group_score": 0.2665,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.585099995136261,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.728,
+      "admet_multiplier": 0.9827,
+      "efficacy_score": 0.5729,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 14,
+      "shared_targets": [
+        "ABCB1",
+        "BRCA1",
+        "CXCR4",
+        "EZH2",
+        "ICAM1",
+        "IGF1R",
+        "KIT",
+        "MSH6",
+        "PIK3CA",
+        "PTGS2",
+        "TDP1",
+        "TOP1MT",
+        "TOP2A",
+        "TP53"
+      ],
+      "pubmed_total": 71,
+      "pubmed_treatment_total": 70,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "19770373",
+          "title": "Vincristine, actinomycin, and cyclophosphamide compared with vincristine, actinomycin, and cyclophosphamide alternating with vincristine, topotecan, and cyclophosphamide for intermediate-risk rhabdomyosarcoma: children's oncology group study D9803.",
+          "authors": "Arndt CA, Stoner JA, Hawkins DS, et al.",
+          "journal": "Journal of clinical oncology : official journal of the American Society of Clinical Oncology",
+          "year": "2009",
+          "abstract_snippet": "PURPOSE: The purpose of this study was to compare the outcome of patients with intermediate-risk rhabdomyosarcoma (RMS) treated with standard VAC (vincristine, dactinomycin, and cyclophosphamide) chemotherapy to that of patients treated with VAC alternating with vincristine, topotecan, and cyclophos...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19770373/",
+          "total_results": 71
+        },
+        {
+          "pmid": "18679836",
+          "title": "Efficacy of topotecan plus vincristine and doxorubicin in children with recurrent/refractory rhabdomyosarcoma.",
+          "authors": "Meazza C, Casanova M, Zaffignani E, et al.",
+          "journal": "Medical oncology (Northwood, London, England)",
+          "year": "2009",
+          "abstract_snippet": "BACKGROUND: This study investigates the efficacy and the feasibility of a chemotherapy regimen with topotecan plus vincristine and doxorubicin (TVD) given on an individually tailored basis to patients with refractory/recurrent rhabdomyosarcoma (RMS). PATIENTS AND METHODS: Nine patients received TVD ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18679836/"
+        },
+        {
+          "pmid": "26719428",
+          "title": "Combined Antitumor Therapy with Metronomic Topotecan and Hypoxia-Activated Prodrug, Evofosfamide, in Neuroblastoma and Rhabdomyosarcoma Preclinical Models.",
+          "authors": "Zhang L, Marrano P, Wu B, et al.",
+          "journal": "Clinical cancer research : an official journal of the American Association for Cancer Research",
+          "year": "2016",
+          "abstract_snippet": "PURPOSE: Tumor cells residing in tumor hypoxic zones are a major cause of drug resistance and tumor relapse. In this study, we investigated the efficacy of evofosfamide, a hypoxia-activated prodrug, and its combination with topotecan in neuroblastoma and rhabdomyosarcoma preclinical models. EXPERIME...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26719428/"
+        },
+        {
+          "pmid": "10754991",
+          "title": "Progress in the diagnosis and treatment of rhabdomyosarcoma and related soft tissue sarcomas.",
+          "authors": "Ruymann FB, Grovas AC",
+          "journal": "Cancer investigation",
+          "year": "2000",
+          "abstract_snippet": "Advances in the diagnosis and treatment of rhabdomyosarcoma and related soft tissue sarcomas continue in the Intergroup Rhabdomyosarcoma Study Group (IRSG) and European cooperative groups. The use of molecular biology techniques in soft tissue sarcomas are redefining the classic pathology of these s...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10754991/"
+        },
+        {
+          "pmid": "11134215",
+          "title": "Up-front window trial of topotecan in previously untreated children and adolescents with metastatic rhabdomyosarcoma: an intergroup rhabdomyosarcoma study.",
+          "authors": "Pappo AS, Lyden E, Breneman J, et al.",
+          "journal": "Journal of clinical oncology : official journal of the American Society of Clinical Oncology",
+          "year": "2001",
+          "abstract_snippet": "PURPOSE: To investigate the antitumor activity and toxicity of topotecan, used alone and in combination with conventional therapy, in patients with metastatic rhabdomyosarcoma (RMS). PATIENTS AND METHODS: Forty-eight patients younger than 21 years of age with newly diagnosed metastatic RMS received ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11134215/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Topotecan/carboplatin regimen for refractory/recurrent rhabdomyosarcoma in children: Report from the AIEOP Soft Tissue Sarcoma Committee",
+          "year": 2018,
+          "citations": 14,
+          "url": "https://www.semanticscholar.org/paper/5a3be3b0df3bc7c4b82b46e7cc71e332879fb58a",
+          "authors": "A. Compostella, M. Affinita, M. Casanova"
+        },
+        {
+          "title": "Faculty Opinions recommendation of Topotecan/carboplatin regimen for refractory/recurrent rhabdomyosarcoma in children: Report from the AIEOP Soft Tissue Sarcoma Committee.",
+          "year": 2020,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/b064c9279bb06c3bbe2a6e04d937dc7412344bdb",
+          "authors": "A. Pappo"
+        },
+        {
+          "title": "Combined Antitumor Therapy with Metronomic Topotecan and Hypoxia-Activated Prodrug, Evofosfamide, in Neuroblastoma and Rhabdomyosarcoma Preclinical Models",
+          "year": 2015,
+          "citations": 30,
+          "url": "https://www.semanticscholar.org/paper/b1d47096e3de4c770674ba1649be428e07cfc32f",
+          "authors": "Libo Zhang, P. Marrano, Bing Wu"
+        },
+        {
+          "title": "Abstract 5333: TH-302 potentiates the antitumor activity of topotecan in neuroblastoma and rhabdomyosarcoma preclinical models",
+          "year": 2015,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/b3babf1b0db04e29207f1b54c224160c423f39b1",
+          "authors": "Libo Zhang, Bing Wu, P. Marrano"
+        },
+        {
+          "title": "Cyclophosphamide and Topotecan in Relapsed and Refractory Pediatric Extracranial Solid Tumors: A Retrospective Analysis.",
+          "year": 2026,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/38412c7b752e8e30bf97d63a84a3389d361cb29a",
+          "authors": "Pragadeesh Thamaraiselvan, G. Das, Prasanth Srinivasan"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Combined Antitumor Therapy with Metronomic Topotecan and Hypoxia-Activated Prodrug, Evofosfamide, in Neuroblastoma and Rhabdomyosarcoma Preclinical Models",
+        "year": 2015,
+        "citations": 30,
+        "url": "https://www.semanticscholar.org/paper/b1d47096e3de4c770674ba1649be428e07cfc32f",
+        "authors": "Libo Zhang, P. Marrano, Bing Wu"
+      },
+      "max_citations": 30,
+      "faers_signal": "moderate",
+      "faers_total_reports": 5565,
+      "faers_cooccurrences": 22,
+      "faers_interpretation": "22 FAERS reports mention both Topotecan and Rhabdomyosarcoma-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "BI-2536 (1.565)",
+        "manumycin A (1.526)",
+        "withaferin-a (1.523)",
+        "Chemistry 2804 (1.519)",
+        "2-Chloro-N-heptyl-N-m-tolyl-acetamide (1.514)"
+      ],
+      "signature_interpretation": "Topotecan was not found among the top 39 drugs that reverse the Rhabdomyosarcoma gene signature. Top reversers: BI-2536 (1.565), manumycin A (1.526), withaferin-a (1.523)",
+      "ai_hypothesis": "of its ability to induce apoptosis and inhibit cell proliferation.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 0,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "rhabdomyosarcoma (",
+              "entity_group": "Disease_disorder",
+              "score": 0.996999979019165
+            },
+            {
+              "entity": "rms",
+              "entity_group": "Disease_disorder",
+              "score": 1.0
+            },
+            {
+              "entity": "standard",
+              "entity_group": "Detailed_description",
+              "score": 0.9760000109672546
+            },
+            {
+              "entity": "vin",
+              "entity_group": "Medication",
+              "score": 0.9300000071525574
+            },
+            {
+              "entity": "da",
+              "entity_group": "Medication",
+              "score": 0.8600000143051147
+            },
+            {
+              "entity": "chemotherapy",
+              "entity_group": "Medication",
+              "score": 1.0
+            },
+            {
+              "entity": "va",
+              "entity_group": "Disease_disorder",
+              "score": 1.0
+            },
+            {
+              "entity": "##c",
+              "entity_group": "Disease_disorder",
+              "score": 0.9259999990463257
+            }
+          ]
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 1,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "chemotherapy",
+              "entity_group": "Medication",
+              "score": 1.0
+            },
+            {
+              "entity": "top",
+              "entity_group": "Medication",
+              "score": 1.0
+            },
+            {
+              "entity": "##ote",
+              "entity_group": "Medication",
+              "score": 0.9929999709129333
+            },
+            {
+              "entity": "##can",
+              "entity_group": "Medication",
+              "score": 0.9639999866485596
+            },
+            {
+              "entity": "vincristine",
+              "entity_group": "Medication",
+              "score": 0.9279999732971191
+            },
+            {
+              "entity": "do",
+              "entity_group": "Medication",
+              "score": 1.0
+            },
+            {
+              "entity": "##xorubicin",
+              "entity_group": "Medication",
+              "score": 0.9120000004768372
+            },
+            {
+              "entity": "tv",
+              "entity_group": "Medication",
+              "score": 0.9940000176429749
+            },
+            {
+              "entity": "individually tailored basis",
+              "entity_group": "Detailed_description",
+              "score": 0.9570000171661377
+            },
+            {
+              "entity": "ref",
+              "entity_group": "Detailed_description",
+              "score": 1.0
+            }
+          ]
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 1,
+          "negative_signals": 0,
+          "mechanism_signals": 0,
+          "extracted_entities": [
+            {
+              "entity": "tumor cells",
+              "entity_group": "Sign_symptom",
+              "score": 0.9089999794960022
+            },
+            {
+              "entity": "tumor",
+              "entity_group": "Sign_symptom",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "hypoxic zones",
+              "entity_group": "Sign_symptom",
+              "score": 0.828000009059906
+            },
+            {
+              "entity": "ev",
+              "entity_group": "Medication",
+              "score": 1.0
+            },
+            {
+              "entity": "##of",
+              "entity_group": "Medication",
+              "score": 1.0
+            },
+            {
+              "entity": "##os",
+              "entity_group": "Medication",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "##fa",
+              "entity_group": "Medication",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "top",
+              "entity_group": "Medication",
+              "score": 0.9990000128746033
+            },
+            {
+              "entity": "##otecan",
+              "entity_group": "Medication",
+              "score": 0.9710000157356262
+            },
+            {
+              "entity": "r",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.7609999775886536
+            }
+          ]
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "Phase 1",
+      "failed_trial_count": 1,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.728,
+      "mr_genetic_targets": 5,
+      "mechanistic_hypothesis": "Topotecan \u2014[is a therapeutic for]\u2192 Rhabdomyosarcoma",
+      "kg_paths_text": "\u2022 Topotecan \u2014[is a therapeutic for]\u2192 Rhabdomyosarcoma\n\u2022 Topotecan \u2014[downregulates]\u2192 gene-3480 \u2014[is linked to]\u2192 Rhabdomyosarcoma\n\u2022 Topotecan \u2014[downregulates]\u2192 gene-51031 \u2014[is downregulated by]\u2192 DB00970 \u2014[treats]\u2192 Rhabdomyosarcoma",
+      "validation_experiments": [],
+      "novelty_score": 0.338,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": true,
+      "clinical_trials_total": 10,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT00002515",
+          "title": "Combination Chemotherapy Followed by Bone Marrow Transplantation in Treating Patients With Rare Cancer",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "",
+          "url": "https://clinicaltrials.gov/study/NCT00002515"
+        },
+        {
+          "nct_id": "NCT03709680",
+          "title": "Study Of Palbociclib Combined With Chemotherapy In Pediatric Patients With Recurrent/Refractory Solid Tumors",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "phase": "PHASE2",
+          "enrollment": "128",
+          "url": "https://clinicaltrials.gov/study/NCT03709680"
+        },
+        {
+          "nct_id": "NCT00003958",
+          "title": "Combination Chemotherapy in Treating Patients With Previously Untreated Rhabdomyosarcoma",
+          "status": "COMPLETED",
+          "phase": "PHASE3",
+          "enrollment": "702",
+          "url": "https://clinicaltrials.gov/study/NCT00003958"
+        },
+        {
+          "nct_id": "NCT06669013",
+          "title": "Chemo-immunotherapy in Patients Under 18 Years of Age With Bone and Soft Tissue Sarcomas",
+          "status": "RECRUITING",
+          "phase": "PHASE3",
+          "enrollment": "40",
+          "url": "https://clinicaltrials.gov/study/NCT06669013"
+        },
+        {
+          "nct_id": "NCT02390843",
+          "title": "Simvastatin With Topotecan and Cyclophosphamide in Relapsed and/or Refractory Pediatric Solid and CNS Tumors",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "13",
+          "url": "https://clinicaltrials.gov/study/NCT02390843"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 4,
+        "PHASE3": 3,
+        "PHASE1": 3
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "10 clinical trial(s) found on ClinicalTrials.gov",
+        "Phase 3 trial exists",
+        "71 PubMed articles on this drug-disease pair",
+        "Supported by 4 independent AI pillars",
+        "Moderate FAERS signal: 22 adverse event reports mention drug-disease co-occurrence",
+        "Supporting paper with 30 citations",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.73, 5 genetic targets)",
+        "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
+      ],
+      "disease_entity": "Disease::MESH:D012208",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1577,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (ABCG2 / rs4148157)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "ABCG2",
+            "variant": "rs4148157",
+            "level": "3",
+            "phenotype_category": "Metabolism/PK",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1447981313"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.358,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.563,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.806
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 14,
+        "n_expressed": 12,
+        "mean_tpm_in_tissue": 34.07,
+        "max_tpm_in_tissue": 419.87,
+        "tissue_specificity": 0.991,
+        "context_modifier": 1.108
+      },
+      "ensemble_prob": 0.9809,
+      "ensemble_features": {
+        "kg_score": 0.9991,
+        "degree_penalty": 0.7549,
+        "n_drug_targets": 8,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.3026
+      },
+      "ensemble_rank": 3,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "MANNICH"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "mannich_A(296)"
+        ]
+      }
+    },
+    {
+      "drug_name": "Dexamethasone",
+      "drug_id": "DB01234",
+      "disease_name": "Rhabdomyosarcoma",
+      "combined_score": 0.5523999929428101,
+      "pillars_hit": 4,
+      "transe_rank": 23,
+      "transe_score": -10.5153,
+      "pykeen_score": -13.1558,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0.9455,
+      "mol_emb_similar_to": "Etoposide",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.6880000233650208,
+      "proximity_distance": 1.25,
+      "admet_score": 0.7109,
+      "admet_flags": "clean",
+      "primekg_score": 0.2526,
+      "dti_score": 0.7824,
+      "dti_best_target": "KIT",
+      "kg_group_score": 0.353,
+      "structural_group_score": 0.9455,
+      "network_group_score": 0.5062999725341797,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.8441,
+      "admet_multiplier": 0.9422,
+      "efficacy_score": 0.5863000154495239,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 22,
+      "shared_targets": [
+        "ABCB1",
+        "CCN2",
+        "CTNNB1",
+        "CXCR4",
+        "F2",
+        "FGF2",
+        "GJA1",
+        "ICAM1",
+        "MEST",
+        "MGMT",
+        "MIF",
+        "MMP2",
+        "MTOR",
+        "MYC",
+        "NR0B1",
+        "NR4A1",
+        "PTGS2",
+        "PTH",
+        "STAT3",
+        "TGFB1"
+      ],
+      "pubmed_total": 29,
+      "pubmed_treatment_total": 27,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "8471424",
+          "title": "Uncoupling of growth inhibition and differentiation in dexamethasone-treated human rhabdomyosarcoma cells.",
+          "authors": "De Giovanni C, Lollini PL, Dolcetti R, et al.",
+          "journal": "British journal of cancer",
+          "year": "1993",
+          "abstract_snippet": "The effects of dexamethasone, a synthetic glucocorticoid, and of N,N-dimethylformamide on in vitro growth and differentiation and on proto-oncogene expression of human rhabdomyosarcoma cells were studied. RD/18 clone cells (derived from the embryonal rhabdomyosarcoma cell line RD) treated with 100 n...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/8471424/",
+          "total_results": 29
+        },
+        {
+          "pmid": "3312510",
+          "title": "Primary intracranial rhabdomyosarcoma: case report and review of the literature.",
+          "authors": "Dropcho EJ, Allen JC",
+          "journal": "Journal of neuro-oncology",
+          "year": "1987",
+          "abstract_snippet": "Invasion of the meninges is a relatively common complication of head and neck rhabdomyosarcoma (RMS), while RMS arising primarily within the brain or meninges is rare. We report the case of an 11-year old child with a primary \"primitive\" frontal lobe tumor, subsequent leptomeningeal spread and fatal...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/3312510/"
+        },
+        {
+          "pmid": "31403527",
+          "title": "Cenegermin in Pediatric Neurotrophic Keratopathy.",
+          "authors": "Pedrotti E, Bonetto J, Cozzini T, et al.",
+          "journal": "Cornea",
+          "year": "2019",
+          "abstract_snippet": "PURPOSE: We report a case of neurotrophic keratopathy (NK) arising after surgery for rhabdomyosarcoma of the jaw successfully treated with Cenegermin eye drops (Oxervate; Domp\u00e9 Farmaceutici, Milan, Italy) in a 3-year-old boy. METHODS: At the age of 1 year, the boy underwent surgery for rhabdomyosarc...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31403527/"
+        },
+        {
+          "pmid": "40343148",
+          "title": "Rhabdomyosarcoma in adults with severe thrombocytopenia: Challenges in clinical management and therapeutic complications.",
+          "authors": "Estela-Zape JL, Sanclemente-Cardoza V, Arzayus-Pati\u00f1o L, et al.",
+          "journal": "Respiratory medicine case reports",
+          "year": "2025",
+          "abstract_snippet": "Alveolar rhabdomyosarcoma (ARMS) in adults is a rare condition with a poor prognosis compared to other subtypes. The management of this pathology is complex due to the lack of standardized guidelines and the limited response to multimodal treatments, including chemotherapy, radiotherapy, and surgery...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40343148/"
+        },
+        {
+          "pmid": "41952471",
+          "title": "Dexamethasone for Chemotherapy-Induced Nausea and Vomiting Prevention in Pediatric Patients: International Consensus.",
+          "authors": "Shavandi N, Robinson PD, Jacobs S, et al.",
+          "journal": "Pediatric blood & cancer",
+          "year": "2026",
+          "abstract_snippet": "BACKGROUND: An international Delphi panel of experts developed consensus statements to delineate the circumstances where the risks of dexamethasone as an antiemetic do and do not outweigh its benefits. PROCEDURE: Experts in supportive care of pediatric patients were invited to participate. Using Del...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41952471/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Rhabdomyosarcoma in adults with severe thrombocytopenia: Challenges in clinical management and therapeutic complications",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/40a98edec03eea43a14c3c629bb5137250c39ad5",
+          "authors": "Jos\u00e9 Luis Estela-Zape, Valeria Sanclemente-Cardoza, Leonardo Arzayus-Pati\u00f1o"
+        },
+        {
+          "title": "Uncoupling of growth inhibition and differentiation in dexamethasone-treated human rhabdomyosarcoma cells.",
+          "year": 1993,
+          "citations": 27,
+          "url": "https://www.semanticscholar.org/paper/efbc0872d1d163efef65c6991def8349f58412fa",
+          "authors": "C. De Giovanni, P. Lollini, R. Dolcetti"
+        },
+        {
+          "title": "ADVL1522: A phase 2 study of IMGN901 (lorvotuzumab mertansine; IND# 126953, NSC# 783609) in children with relapsed or refractory Wilms tumor, rhabdomyosarcoma, neuroblastoma, pleuropulmonary blastoma, malignant peripheral nerve sheath tumor (MPNST), and synovial sarcoma: A Children's Oncology Group ",
+          "year": 2017,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/15cd06a7ccc838efa08ca44ebc7b216736876fa7",
+          "authors": "J. Geller, J. Pressey, Malcolm A. Smith"
+        },
+        {
+          "title": "Selective sensitization to DNA-damaging agents in a human rhabdomyosarcoma cell line with inducible wild-type p53 overexpression.",
+          "year": 1998,
+          "citations": 22,
+          "url": "https://www.semanticscholar.org/paper/b14904be008d8b132db2970c5f17dcff59aa360a",
+          "authors": "A. Gibson, F. G. Harwood, D. Tillman"
+        },
+        {
+          "title": "Dexamethasone induces partial resistance to cisplatinum in C6 glioma cells.",
+          "year": 1996,
+          "citations": 38,
+          "url": "https://www.semanticscholar.org/paper/84acb6681dcefa0a40bc065af279e688cbe9a6ad",
+          "authors": "J. Wolff, J. Denecke, H. J\u00fcrgens"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Dexamethasone induces partial resistance to cisplatinum in C6 glioma cells.",
+        "year": 1996,
+        "citations": 38,
+        "url": "https://www.semanticscholar.org/paper/84acb6681dcefa0a40bc065af279e688cbe9a6ad",
+        "authors": "J. Wolff, J. Denecke, H. J\u00fcrgens"
+      },
+      "max_citations": 38,
+      "faers_signal": "moderate",
+      "faers_total_reports": 317707,
+      "faers_cooccurrences": 10,
+      "faers_interpretation": "10 FAERS reports mention both Dexamethasone and Rhabdomyosarcoma-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "BI-2536 (1.565)",
+        "manumycin A (1.526)",
+        "withaferin-a (1.523)",
+        "Chemistry 2804 (1.519)",
+        "2-Chloro-N-heptyl-N-m-tolyl-acetamide (1.514)"
+      ],
+      "signature_interpretation": "Dexamethasone was not found among the top 39 drugs that reverse the Rhabdomyosarcoma gene signature. Top reversers: BI-2536 (1.565), manumycin A (1.526), withaferin-a (1.523)",
+      "ai_hypothesis": "of its anti-inflammatory and anti-apoptotic properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 0,
+          "negative_signals": 0,
+          "mechanism_signals": 1,
+          "extracted_entities": [
+            {
+              "entity": "dex",
+              "entity_group": "Medication",
+              "score": 1.0
+            },
+            {
+              "entity": "##ame",
+              "entity_group": "Medication",
+              "score": 0.9980000257492065
+            },
+            {
+              "entity": "##thason",
+              "entity_group": "Medication",
+              "score": 0.7710000276565552
+            },
+            {
+              "entity": "synthetic gluco",
+              "entity_group": "Medication",
+              "score": 0.781000018119812
+            },
+            {
+              "entity": "n,",
+              "entity_group": "Medication",
+              "score": 0.9919999837875366
+            },
+            {
+              "entity": "n - dimethylformamide",
+              "entity_group": "Medication",
+              "score": 0.996999979019165
+            },
+            {
+              "entity": "in vitro",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.7239999771118164
+            },
+            {
+              "entity": "growth and differentiation",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9309999942779541
+            },
+            {
+              "entity": "proto",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.8939999938011169
+            },
+            {
+              "entity": "oncogene",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9940000176429749
+            }
+          ]
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.8441,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Dexamethasone \u2014[downregulates]\u2192 gene-2697 \u2014[is linked to]\u2192 Rhabdomyosarcoma",
+      "kg_paths_text": "\u2022 Dexamethasone \u2014[downregulates]\u2192 gene-2697 \u2014[is linked to]\u2192 Rhabdomyosarcoma\n\u2022 Dexamethasone \u2014[downregulates]\u2192 gene-1454 \u2014[is upregulated by]\u2192 DB00541 \u2014[treats]\u2192 Rhabdomyosarcoma\n\u2022 Dexamethasone \u2014[downregulates]\u2192 gene-1454 \u2014[is upregulated by]\u2192 DB00541 \u2014[treats]\u2192 Rhabdomyosarcoma",
+      "validation_experiments": [],
+      "novelty_score": 0.46399998664855957,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": false,
+      "clinical_trials_total": 3,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT06023641",
+          "title": "Treatment of Newly Diagnosed Rhabdomyosarcoma Using Molecular Risk Stratification and Liposomal Irinotecan Based Therapy in Children With Intermediate and High Risk Disease",
+          "status": "RECRUITING",
+          "phase": "PHASE2",
+          "enrollment": "135",
+          "url": "https://clinicaltrials.gov/study/NCT06023641"
+        },
+        {
+          "nct_id": "NCT00445965",
+          "title": "Iodine I 131 Monoclonal Antibody 3F8 in Treating Patients With Central Nervous System Cancer or Leptomeningeal Cancer",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "78",
+          "url": "https://clinicaltrials.gov/study/NCT00445965"
+        },
+        {
+          "nct_id": "NCT05131386",
+          "title": "Multicohort Trial of Trabectedin and Low-dose Radiation Therapy in Advanced/Metastatic Sarcomas",
+          "status": "UNKNOWN",
+          "phase": "PHASE2",
+          "enrollment": "85",
+          "url": "https://clinicaltrials.gov/study/NCT05131386"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 3
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "3 clinical trial(s) found on ClinicalTrials.gov",
+        "29 PubMed articles found",
+        "Supported by 4 independent AI pillars",
+        "Moderate FAERS signal: 10 adverse event reports mention drug-disease co-occurrence",
+        "Supporting paper with 38 citations",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.84, 1 genetic targets)"
+      ],
+      "disease_entity": "Disease::MESH:D012208",
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1512,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (ABCB1 / rs1045642)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "ABCB1",
+            "variant": "rs1045642",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204433"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs2032582",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981238041"
+          },
+          {
+            "gene": "CTLA4",
+            "variant": "rs4553808",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1043880851"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs2229109",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449170621"
+          },
+          {
+            "gene": "GATA3",
+            "variant": "rs3824662",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1184512128"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.468,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.552,
+          "docking": 0.489,
+          "pharos": 0.0,
+          "literature": 0.641
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 19,
+        "n_expressed": 11,
+        "mean_tpm_in_tissue": 47.33,
+        "max_tpm_in_tissue": 419.87,
+        "tissue_specificity": 0.514,
+        "context_modifier": 1.063
+      },
+      "ensemble_prob": 0.3903,
+      "ensemble_features": {
+        "kg_score": 0.9939,
+        "degree_penalty": 0.736,
+        "n_drug_targets": 24,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.1744
+      },
+      "ensemble_rank": 6,
+      "docking": {
+        "kcal_per_mol": -5.87,
+        "target_symbol": "ABCB1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Hydroxyurea",
+      "drug_id": "DB01005",
+      "disease_name": "Rhabdomyosarcoma",
+      "combined_score": 0.5503,
+      "pillars_hit": 4,
+      "transe_rank": 45,
+      "transe_score": -10.7647,
+      "pykeen_score": -12.9878,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.7250000238418579,
+      "proximity_distance": 1.100000023841858,
+      "admet_score": 0.6749,
+      "admet_flags": "AMES=0.83",
+      "primekg_score": 0.2562,
+      "dti_score": 1.0,
+      "dti_best_target": "MYOD1",
+      "kg_group_score": 0.3104,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.5698999762535095,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.78,
+      "admet_multiplier": 0.935,
+      "efficacy_score": 0.5886,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "TP53"
+      ],
+      "pubmed_total": 5,
+      "pubmed_treatment_total": 4,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "5060528",
+          "title": "Combined hydroxyurea and radiotherapy: a new dosage schedule.",
+          "authors": "Hussey DH, Samuels ML",
+          "journal": "Southern medical journal",
+          "year": "1972",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/5060528/",
+          "total_results": 5
+        },
+        {
+          "pmid": "2790794",
+          "title": "Drug-induced DNA hypermethylation and drug resistance in human tumors.",
+          "authors": "Nyce J",
+          "journal": "Cancer research",
+          "year": "1989",
+          "abstract_snippet": "Drug-induced DNA hypermethylation was observed to constitute one component of the response of human tumor cells to toxic concentrations of commonly used cancer chemotherapy agents. In both human lung adenocarcinoma cells (HTB-54) and human rhabdomyosarcoma cells (CCl-136), pulse exposures to the top...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/2790794/"
+        },
+        {
+          "pmid": "7549905",
+          "title": "Cellular effects of olomoucine, an inhibitor of cyclin-dependent kinases.",
+          "authors": "Abraham RT, Acquarone M, Andersen A, et al.",
+          "journal": "Biology of the cell",
+          "year": "1995",
+          "abstract_snippet": "Olomoucine (2-(2-hydroxyethylamino)-6-benzylamino-9-methylpurine) has been recently described as a competitive inhibitor (ATP-binding site) of the cell cycle regulating p34cdc2/cyclin B, p33cdk2/cyclin A and p33cdk2/cyclin E kinases, the brain p33cdk5/p35 kinase and the ERK1/MAP-kinase. The unusual ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/7549905/"
+        },
+        {
+          "pmid": "3730256",
+          "title": "Chemosensitivity of human head and neck cancer xenografts in the clonogenic assay and in nude mice.",
+          "authors": "Boerrigter GH, Heinerman EC, Braakhuis BJ, et al.",
+          "journal": "British journal of cancer",
+          "year": "1986",
+          "abstract_snippet": "The potential use of human head and neck (H & N) tumours, growing in athymic nude mice, for preclinical assessment of cytostatic drug sensitivity in a soft agar cloning system was examined. Of 20 H & N tumour xenografts, obtained from 6 different xenograft lines, 17 demonstrated sufficient colony gr...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/3730256/"
+        },
+        {
+          "pmid": "6250333",
+          "title": "Higher leukocyte nadirs with lithium carbonate after chemotherapy.",
+          "authors": "Steinherz PG, Rosen G, Ghavimi F, et al.",
+          "journal": "Advances in experimental medicine and biology",
+          "year": "1980",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/6250333/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Drug-induced DNA hypermethylation and drug resistance in human tumors.",
+          "year": 1989,
+          "citations": 128,
+          "url": "https://www.semanticscholar.org/paper/bd70425faacf1f2a60c549e43ac4bd5c51b2dec1",
+          "authors": "J. Nyce"
+        },
+        {
+          "title": "Abstract 2535: Regulation of Chk1 by the mTOR pathway is essential for cancer cells to complete DNA replication in response to replication stress",
+          "year": 2012,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/5bdea498885623a8474f74455530c1bfb9b356df",
+          "authors": "Changxian Shen, G. Goto, D. Oswald"
+        },
+        {
+          "title": "Rhabdomyosarcoma: Current Therapy, Challenges, and Future Approaches to Treatment Strategies",
+          "year": 2023,
+          "citations": 63,
+          "url": "https://www.semanticscholar.org/paper/318bfa76560a40d7f837a028dc5f9245926383a2",
+          "authors": "A. Zarrabi, D. Perrin, Mahboubeh Kavoosi"
+        },
+        {
+          "title": "A randomized phase 3 trial of interferon-\u03b1 vs hydroxyurea in polycythemia vera and essential thrombocythemia",
+          "year": 2022,
+          "citations": 113,
+          "url": "https://www.semanticscholar.org/paper/845f5da1582010c4c421cd7ffb206430a7332830",
+          "authors": "J. Mascarenhas, H. Kosiorek, J. Prchal"
+        },
+        {
+          "title": "Simulating Relative Infant Hydroxyurea Dose Through Breastfeeding Using a Semi-Mechanistic Population PK Model",
+          "year": 2026,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/00457a6a6cfb03791594709a40003ea2f93f662c",
+          "authors": "Anhar Hosawi, Irie Kei, M. Dong"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Drug-induced DNA hypermethylation and drug resistance in human tumors.",
+        "year": 1989,
+        "citations": 128,
+        "url": "https://www.semanticscholar.org/paper/bd70425faacf1f2a60c549e43ac4bd5c51b2dec1",
+        "authors": "J. Nyce"
+      },
+      "max_citations": 128,
+      "faers_signal": "none",
+      "faers_total_reports": 14594,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Hydroxyurea to Rhabdomyosarcoma terms. Drug has 14594 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "BI-2536 (1.565)",
+        "manumycin A (1.526)",
+        "withaferin-a (1.523)",
+        "Chemistry 2804 (1.519)",
+        "2-Chloro-N-heptyl-N-m-tolyl-acetamide (1.514)"
+      ],
+      "signature_interpretation": "Hydroxyurea was not found among the top 39 drugs that reverse the Rhabdomyosarcoma gene signature. Top reversers: BI-2536 (1.565), manumycin A (1.526), withaferin-a (1.523)",
+      "ai_hypothesis": "of its ability to induce apoptosis and inhibit proliferation.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.78,
+      "mr_genetic_targets": 2,
+      "mechanistic_hypothesis": "Hydroxyurea \u2014[treats]\u2192 DOID:2531 \u2014[is treated by]\u2192 DB00762 \u2014[treats]\u2192 Rhabdomyosarcoma",
+      "kg_paths_text": "\u2022 Hydroxyurea \u2014[treats]\u2192 DOID:2531 \u2014[is treated by]\u2192 DB00762 \u2014[treats]\u2192 Rhabdomyosarcoma\n\u2022 Hydroxyurea \u2014[treats]\u2192 DOID:2531 \u2014[is treated by]\u2192 DB00541 \u2014[treats]\u2192 Rhabdomyosarcoma\n\u2022 Hydroxyurea \u2014[treats]\u2192 DOID:2531 \u2014[is treated by]\u2192 DB00541 \u2014[treats]\u2192 Rhabdomyosarcoma",
+      "validation_experiments": [],
+      "novelty_score": 0.561,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "MEDIUM",
+      "confidence_reasons": [
+        "5 PubMed article(s) - limited literature",
+        "Supported by 4 independent AI pillars",
+        "Highly cited paper (128 citations): \"Drug-induced DNA hypermethylation and drug resistance in hum...\"",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.78, 2 genetic targets)"
+      ],
+      "disease_entity": "Disease::MESH:D012208",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 984,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (MAP3K5 / rs9376230)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "MAP3K5",
+            "variant": "rs9376230",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/982030998"
+          },
+          {
+            "gene": "MAP3K5",
+            "variant": "rs9483947",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/982030990"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.26,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.55,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.338
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 1,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 7.7,
+        "max_tpm_in_tissue": 7.7,
+        "tissue_specificity": 0.144,
+        "context_modifier": 0.952
+      },
+      "ensemble_prob": 0.8788,
+      "ensemble_features": {
+        "kg_score": 0.9982,
+        "degree_penalty": 0.7861,
+        "n_drug_targets": 9,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 2.9957
+      },
+      "ensemble_rank": 4,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "HYDROXAMATE",
+          "HYDROXAMIC",
+          "OXYGEN-NITROGEN"
+        ],
+        "n_alerts": 3,
+        "alert_names": [
+          "hydroxamic_acid",
+          "Oxygen-nitrogen_single_bond",
+          "hydroxamate_warhead"
+        ]
+      }
+    },
+    {
+      "drug_name": "Paclitaxel",
+      "drug_id": "DB01229",
+      "disease_name": "Rhabdomyosarcoma",
+      "combined_score": 0.5362,
+      "pillars_hit": 4,
+      "transe_rank": 13,
+      "transe_score": -10.3832,
+      "pykeen_score": -12.7754,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0.9297,
+      "mol_emb_similar_to": "Doxorubicin",
+      "gene_sig_score": 0.0244,
+      "gene_sig_rank": 29,
+      "proximity_score": 0.699999988079071,
+      "proximity_distance": 1.2000000476837158,
+      "admet_score": 0.4859,
+      "admet_flags": "hERG=0.85",
+      "primekg_score": 0.2565,
+      "dti_score": 1.0,
+      "dti_best_target": "KIT",
+      "kg_group_score": 0.3912,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.5238000154495239,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.7675,
+      "admet_multiplier": 0.8972,
+      "efficacy_score": 0.5977,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 23,
+      "shared_targets": [
+        "ABCB1",
+        "BCL2",
+        "BRCA1",
+        "CDK4",
+        "FOXM1",
+        "FOXO1",
+        "MSH6",
+        "MYC",
+        "PTGS2",
+        "STAT3",
+        "TGFB1",
+        "TOP2A",
+        "TP53",
+        "TUBB",
+        "TUBB1",
+        "TUBB2A",
+        "TUBB2B",
+        "TUBB3",
+        "TUBB4A",
+        "TUBB4B"
+      ],
+      "pubmed_total": 37,
+      "pubmed_treatment_total": 36,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "34115181",
+          "title": "The fetal outcomes after neoadjuvant platinum and paclitaxel chemotherapy during pregnancy: analysis of three cases and review of the literature.",
+          "authors": "Wang M, Yin Z, Miao J, et al.",
+          "journal": "Archives of gynecology and obstetrics",
+          "year": "2022",
+          "abstract_snippet": "OBJECTIVE: Data on the outcomes of fetus who are exposed to neoadjuvant platinum and paclitaxel chemotherapy during pregnancy are lacking. METHODS: Relevant data were abstracted from patients in our institution, PubMed, Embase and Cochrane Library databases. The primary assessment was the frequency ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34115181/",
+          "total_results": 37
+        },
+        {
+          "pmid": "35022029",
+          "title": "Nanoparticle albumin-bound paclitaxel and PD-1 inhibitor (sintilimab) combination therapy for soft tissue sarcoma: a retrospective study.",
+          "authors": "Tian Z, Dong S, Yang Y, et al.",
+          "journal": "BMC cancer",
+          "year": "2022",
+          "abstract_snippet": "BACKGROUND: There is increasing evidence that combination therapy with nanoparticle albumin-bound paclitaxel (nab-paclitaxel) and programmed cell death protein 1 (PD-1) inhibitor is safe and efficacious in treating many types of malignant tumors. However, clinical data demonstrating the effect of th...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35022029/"
+        },
+        {
+          "pmid": "27005608",
+          "title": "Synthesis and Selective Cytotoxic Activities on Rhabdomyosarcoma and Noncancerous Cells of Some Heterocyclic Chalcones.",
+          "authors": "Do TH, Nguyen DM, Truong VD, et al.",
+          "journal": "Molecules (Basel, Switzerland)",
+          "year": "2016",
+          "abstract_snippet": "Chemically diverse heterocyclic chalcones were prepared and evaluated for cytotoxicity, aiming to push forward potency and selectivity. They were tested against rhabdomyosarcoma (RMS) and noncancerous cell line (LLC-PK1). The influence of heteroaryl patterns on rings A and B was studied. Heterocycle...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/27005608/"
+        },
+        {
+          "pmid": "34974029",
+          "title": "SPARC-mediated long-term retention of nab-paclitaxel in pediatric sarcomas.",
+          "authors": "Pascual-Pasto G, Castillo-Ecija H, Unceta N, et al.",
+          "journal": "Journal of controlled release : official journal of the Controlled Release Society",
+          "year": "2022",
+          "abstract_snippet": "Secreted protein acidic and rich in cysteine (SPARC) is a matricellular glycoprotein overexpressed by several cancers. Because SPARC shows high binding affinity to albumin, we reasoned that pediatric sarcoma xenografts expressing SPARC would show enhanced uptake and accumulation of nanoparticle albu...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34974029/"
+        },
+        {
+          "pmid": "32554315",
+          "title": "Phase II results from a phase I/II study to assess the safety and efficacy of weekly nab-paclitaxel in paediatric patients with recurrent or refractory solid tumours: A collaboration with the European Innovative Therapies for Children with Cancer Network.",
+          "authors": "Amoroso L, Castel V, Bisogno G, et al.",
+          "journal": "European journal of cancer (Oxford, England : 1990)",
+          "year": "2020",
+          "abstract_snippet": "BACKGROUND: The phase I component of a phase I/II study defined the recommended phase II dose and established the tolerability of nab-paclitaxel monotherapy in paediatric patients with recurrent or refractory solid tumours. The activity and safety of nab-paclitaxel monotherapy was further investigat...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32554315/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "The role of magnetic resonance imaging in cervical embryonal rhabdomyosarcoma: the first reported case in an Indonesian adolescent",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/519798fd8c93e3b14a316bd0f8ef9498a1977927",
+          "authors": "V. N. Tarigan, I. K. Effendi, Nungky Kusumaningtyas"
+        },
+        {
+          "title": "Low Bcl-2 is a robust biomarker of sensitivity to nab-paclitaxel in Ewing sarcoma.",
+          "year": 2023,
+          "citations": 9,
+          "url": "https://www.semanticscholar.org/paper/c48e28d4bf599eda8fa092db0f6f70085b48b68d",
+          "authors": "Guillem Pascual-Pasto, Claudia Resa-Pares, H. Castillo-Ecija"
+        },
+        {
+          "title": "Abstract 6249: Low Bcl-2 is a robust biomarker of sensitivity to nab-paclitaxel in Ewing sarcoma",
+          "year": 2023,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/f348267bc93334c1867aec903a6be983781ebff9",
+          "authors": "Guillem Pascual-Pasto, Claudia Resa-Pares, A. Carcaboso"
+        },
+        {
+          "title": "SPARC-mediated long-term retention of nab-paclitaxel in pediatric sarcomas.",
+          "year": 2021,
+          "citations": 32,
+          "url": "https://www.semanticscholar.org/paper/284be8f05e01c48fdac4374b843b6af87f0577d1",
+          "authors": "Guillem Pascual-Pasto, H. Castillo-Ecija, N. Unceta"
+        },
+        {
+          "title": "Paclitaxel/sintilimab",
+          "year": 2022,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/3ab325222d91e88a950f9f648a9d2a88c356409a",
+          "authors": ""
+        }
+      ],
+      "most_cited_paper": {
+        "title": "SPARC-mediated long-term retention of nab-paclitaxel in pediatric sarcomas.",
+        "year": 2021,
+        "citations": 32,
+        "url": "https://www.semanticscholar.org/paper/284be8f05e01c48fdac4374b843b6af87f0577d1",
+        "authors": "Guillem Pascual-Pasto, H. Castillo-Ecija, N. Unceta"
+      },
+      "max_citations": 32,
+      "faers_signal": "moderate",
+      "faers_total_reports": 88666,
+      "faers_cooccurrences": 9,
+      "faers_interpretation": "9 FAERS reports mention both Paclitaxel and Rhabdomyosarcoma-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "BI-2536 (1.565)",
+        "manumycin A (1.526)",
+        "withaferin-a (1.523)",
+        "Chemistry 2804 (1.519)",
+        "2-Chloro-N-heptyl-N-m-tolyl-acetamide (1.514)"
+      ],
+      "signature_interpretation": "Paclitaxel was not found among the top 39 drugs that reverse the Rhabdomyosarcoma gene signature. Top reversers: BI-2536 (1.565), manumycin A (1.526), withaferin-a (1.523)",
+      "ai_hypothesis": "of its ability to induce apoptosis and inhibit cell proliferation.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.7675,
+      "mr_genetic_targets": 5,
+      "mechanistic_hypothesis": "Paclitaxel \u2014[is is related to by]\u2192 gene-7153 \u2014[is a target of]\u2192 DB00970 \u2014[treats]\u2192 Rhabdomyosarcoma",
+      "kg_paths_text": "\u2022 Paclitaxel \u2014[is is related to by]\u2192 gene-7153 \u2014[is a target of]\u2192 DB00970 \u2014[treats]\u2192 Rhabdomyosarcoma\n\u2022 Paclitaxel \u2014[is is related to by]\u2192 gene-7153 \u2014[is a target of]\u2192 DB00970 \u2014[treats]\u2192 Rhabdomyosarcoma\n\u2022 Paclitaxel \u2014[is is related to by]\u2192 gene-7153 \u2014[is a target of]\u2192 DB00970 \u2014[treats]\u2192 Rhabdomyosarcoma",
+      "validation_experiments": [],
+      "novelty_score": 0.354,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": false,
+      "clinical_trials_total": 8,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT06684327",
+          "title": "Multi-cohort, Single-arm Phase II Study of Albumin-paclitaxel, Ifosfamide, and Cisplatin in the Treatment of Rare Advanced Tumors",
+          "status": "RECRUITING",
+          "phase": "PHASE2",
+          "enrollment": "100",
+          "url": "https://clinicaltrials.gov/study/NCT06684327"
+        },
+        {
+          "nct_id": "NCT02945800",
+          "title": "Nab-Paclitaxel and Gemcitabine for Recurrent/Refractory Sarcoma",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "59",
+          "url": "https://clinicaltrials.gov/study/NCT02945800"
+        },
+        {
+          "nct_id": "NCT01816412",
+          "title": "LEVANT Japan Clinical Trial",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "110",
+          "url": "https://clinicaltrials.gov/study/NCT01816412"
+        },
+        {
+          "nct_id": "NCT03507491",
+          "title": "Nab-paclitaxel in Combination with Gemcitabine for Pediatric Relapsed and Refractory Solid Tumors",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "24",
+          "url": "https://clinicaltrials.gov/study/NCT03507491"
+        },
+        {
+          "nct_id": "NCT01962103",
+          "title": "Study to Find a Safe Dose and Show Early Clinical Activity of Weekly Nab-paclitaxel in Pediatric Patients With Recurrent/ Refractory Solid Tumors",
+          "status": "COMPLETED",
+          "phase": "PHASE1, PHASE2",
+          "enrollment": "107",
+          "url": "https://clinicaltrials.gov/study/NCT01962103"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 5,
+        "PHASE1": 2,
+        "NA": 2
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "8 clinical trial(s) found on ClinicalTrials.gov",
+        "37 PubMed articles found",
+        "Supported by 4 independent AI pillars",
+        "Moderate FAERS signal: 9 adverse event reports mention drug-disease co-occurrence",
+        "Supporting paper with 32 citations",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.77, 5 genetic targets)"
+      ],
+      "disease_entity": "Disease::MESH:D012208",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1533,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (ABCB1 / rs2032582)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "ABCB1",
+            "variant": "rs2032582",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/655385856"
+          },
+          {
+            "gene": "CYP2C8",
+            "variant": "rs1113129",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/699639328"
+          },
+          {
+            "gene": "ABCB1",
+            "variant": "rs1045642",
+            "level": "4",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/981204258"
+          },
+          {
+            "gene": "FGD4",
+            "variant": "rs10771973",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1444700958"
+          },
+          {
+            "gene": "ERCC1",
+            "variant": "rs3212986",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1445401847"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 3,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.602,
+        "label": "silver-standard",
+        "axis_values": {
+          "kg": 0.536,
+          "docking": 0.923,
+          "pharos": 0.0,
+          "literature": 0.686
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 20,
+        "n_expressed": 16,
+        "mean_tpm_in_tissue": 32.45,
+        "max_tpm_in_tissue": 306.45,
+        "tissue_specificity": 0.278,
+        "context_modifier": 1.02
+      },
+      "ensemble_prob": 0.986,
+      "ensemble_features": {
+        "kg_score": 0.9994,
+        "degree_penalty": 0.7483,
+        "n_drug_targets": 25,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 1.9459
+      },
+      "ensemble_rank": 2,
+      "docking": {
+        "kcal_per_mol": -11.08,
+        "target_symbol": "TUBB3",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          ">",
+          "ISOLATED"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          ">_2_ester_groups",
+          "isolated_alkene"
+        ]
+      }
+    },
+    {
+      "drug_name": "Cyclic Adenosine Monophosphate",
+      "drug_id": "DB02527",
+      "disease_name": "Rhabdomyosarcoma",
+      "combined_score": 0.5346999764442444,
+      "pillars_hit": 4,
+      "transe_rank": 53,
+      "transe_score": -10.8151,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.6380000114440918,
+      "proximity_distance": 1.4500000476837158,
+      "admet_score": 1.0,
+      "admet_flags": "DILI=0.90",
+      "primekg_score": 0.2479,
+      "dti_score": 1.0,
+      "dti_best_target": "MYOD1",
+      "kg_group_score": 0.1085,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.5047000050544739,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.8441,
+      "admet_multiplier": 1.0,
+      "efficacy_score": 0.5346999764442444,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 21,
+      "shared_targets": [
+        "BCL2",
+        "CCND1",
+        "CDK4",
+        "CXCR4",
+        "F2",
+        "FGF2",
+        "FOXO1",
+        "GJA1",
+        "MIF",
+        "MMP2",
+        "MTOR",
+        "MYC",
+        "MYH14",
+        "NR4A1",
+        "PTGS2",
+        "PTH",
+        "TGFB1",
+        "TH",
+        "TP53",
+        "VEGFA"
+      ],
+      "pubmed_total": 2,
+      "pubmed_treatment_total": 1,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "1706306",
+          "title": "Characterization of a cell line derived from rhabdoid tumor of kidney.",
+          "authors": "Gansler T, Gerald W, Anderson G, et al.",
+          "journal": "Human pathology",
+          "year": "1991",
+          "abstract_snippet": "Rhabdoid tumor of kidney (RTK) is a rare, highly malignant childhood neoplasm of uncertain histogenesis. Several recent studies have described considerable histochemical heterogeneity among cases of RTK, with confusing combinations of epithelial, mesenchymal, myogenous, and neuroepithelial markers i...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/1706306/",
+          "total_results": 2
+        },
+        {
+          "pmid": "7707048",
+          "title": "A human glial hybrid cell line differentially expressing genes subserving oligodendrocyte and astrocyte phenotype.",
+          "authors": "McLaurin J, Trudel GC, Shaw IT, et al.",
+          "journal": "Journal of neurobiology",
+          "year": "1995",
+          "abstract_snippet": "We have developed a series of immortal human-human hybrid cell lines that express phenotypic characteristics of primary oligodendrocytes, by fusing a 6-thioguanine-resistant mutant of the human rhabdomyosarcoma RD with adult human oligodendrocytes by a lectin-enhanced polyethylene glycol procedure. ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/7707048/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Limitation of multinucleation by dibutyryl adenosine 3',5'-cyclic monophosphate in tumor cells treated with cytochalasin B.",
+          "year": 1976,
+          "citations": 4,
+          "url": "https://www.semanticscholar.org/paper/f6dfc00c663c8b8797fa2b709cb57cf35b7e7622",
+          "authors": "F. O'Neill"
+        },
+        {
+          "title": "A human glial hybrid cell line differentially expressing genes subserving oligodendrocyte and astrocyte phenotype.",
+          "year": 1995,
+          "citations": 111,
+          "url": "https://www.semanticscholar.org/paper/be4a50b1e055e5e8126bf91747936db8d456bdca",
+          "authors": "J. McLaurin, G. Trudel, I. Shaw"
+        },
+        {
+          "title": "Smart Liposomal Nanocarrier Enhanced the Treatment of Ischemic Stroke through Neutrophil Extracellular Traps and Cyclic Guanosine Monophosphate-Adenosine Monophosphate Synthase-Stimulator of Interferon Genes (cGAS-STING) Pathway Inhibition of Ischemic Penumbra.",
+          "year": 2023,
+          "citations": 95,
+          "url": "https://www.semanticscholar.org/paper/be32580c8984dd2a9e8cc294fa70148cd52cddbd",
+          "authors": "Shanbo Sun, Wei Lv, Shengnan Li"
+        },
+        {
+          "title": "The role of bacterial cyclic di-adenosine monophosphate in the host immune response",
+          "year": 2022,
+          "citations": 20,
+          "url": "https://www.semanticscholar.org/paper/f7571648271a57d1e0b4042f399d5b56afc8bc68",
+          "authors": "Xingqun Cheng, J. Ning, Xin Xu"
+        },
+        {
+          "title": "Arbutin effectively ameliorates the symptoms of Parkinson\u2019s disease: the role of adenosine receptors and cyclic adenosine monophosphate",
+          "year": 2021,
+          "citations": 23,
+          "url": "https://www.semanticscholar.org/paper/3dfc037968daaf4a28596d2db08351c27e33483b",
+          "authors": "Jie Zhao, Manish Kumar, J. Sharma"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "A human glial hybrid cell line differentially expressing genes subserving oligodendrocyte and astrocyte phenotype.",
+        "year": 1995,
+        "citations": 111,
+        "url": "https://www.semanticscholar.org/paper/be4a50b1e055e5e8126bf91747936db8d456bdca",
+        "authors": "J. McLaurin, G. Trudel, I. Shaw"
+      },
+      "max_citations": 111,
+      "faers_signal": "none",
+      "faers_total_reports": 2,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Cyclic Adenosine Monophosphate to Rhabdomyosarcoma terms. Drug has 2 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "BI-2536 (1.565)",
+        "manumycin A (1.526)",
+        "withaferin-a (1.523)",
+        "Chemistry 2804 (1.519)",
+        "2-Chloro-N-heptyl-N-m-tolyl-acetamide (1.514)"
+      ],
+      "signature_interpretation": "Cyclic Adenosine Monophosphate was not found among the top 39 drugs that reverse the Rhabdomyosarcoma gene signature. Top reversers: BI-2536 (1.565), manumycin A (1.526), withaferin-a (1.523)",
+      "ai_hypothesis": "of its ability to induce apoptosis and inhibit proliferation.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.8441,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Cyclic Adenosine Monophosphate \u2014[is a therapeutic for]\u2192 MESH:D010673 \u2014[is treated by]\u2192 DB00541 \u2014[treats]\u2192 Rhabdomyosarcoma",
+      "kg_paths_text": "\u2022 Cyclic Adenosine Monophosphate \u2014[is a therapeutic for]\u2192 MESH:D010673 \u2014[is treated by]\u2192 DB00541 \u2014[treats]\u2192 Rhabdomyosarcoma\n\u2022 Cyclic Adenosine Monophosphate \u2014[is a therapeutic for]\u2192 MESH:D010673 \u2014[is treated by]\u2192 DB00541 \u2014[treats]\u2192 Rhabdomyosarcoma\n\u2022 Cyclic Adenosine Monophosphate \u2014[is a therapeutic for]\u2192 MESH:D010673 \u2014[is treated by]\u2192 DB00531 \u2014[treats]\u2192 Rhabdomyosarcoma",
+      "validation_experiments": [],
+      "novelty_score": 0.5450000166893005,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "MEDIUM",
+      "confidence_reasons": [
+        "2 PubMed article(s) - limited literature",
+        "Supported by 4 independent AI pillars",
+        "Highly cited paper (111 citations): \"A human glial hybrid cell line differentially expressing gen...\"",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.84, 1 genetic targets)"
+      ],
+      "disease_entity": "Disease::MESH:D012208",
+      "dose_plausibility": {
+        "plausibility": "unknown",
+        "dose_range": "research",
+        "confidence": "low",
+        "rationale": "No ChEMBL clinical phase data available.",
+        "chembl_phase": null,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 143,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00563",
+            "drug_name": "Methotrexate",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00213",
+            "drug_name": "Pantoprazole",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00175",
+            "drug_name": "Pravastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01032",
+            "drug_name": "Probenecid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01098",
+            "drug_name": "Rosuvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01685",
+            "drug_name": "4-[5-Pyridin-4-Yl-1h-[1,2,4]Triazol-3-Yl]-Pyridine-2-Carbonitrile",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB00819",
+            "drug_name": "Acetazolamide",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB00787",
+            "drug_name": "Aciclovir",
+            "severity": "moderate"
+          },
+          {
+            "drug_id": "DB00718",
+            "drug_name": "Adefovir Dipivoxil",
+            "severity": "moderate"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.2290000021457672,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.5350000262260437,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.207
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 20,
+        "n_expressed": 11,
+        "mean_tpm_in_tissue": 39.54,
+        "max_tpm_in_tissue": 419.87,
+        "tissue_specificity": 0.456,
+        "context_modifier": 1.049
+      },
+      "ensemble_prob": 0.0213,
+      "ensemble_features": {
+        "kg_score": 0.8938,
+        "degree_penalty": 0.791,
+        "n_drug_targets": 2,
+        "is_fda_approved": 0,
+        "n_disease_genes": 0,
+        "transe_rank_log": 7.022
+      },
+      "ensemble_rank": 9,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "PHOSPHOR"
+        ],
+        "n_alerts": 1,
+        "alert_names": [
+          "phosphor"
+        ]
+      }
+    },
+    {
+      "drug_name": "Methylprednisolone",
+      "drug_id": "DB00959",
+      "disease_name": "Rhabdomyosarcoma",
+      "combined_score": 0.5091000199317932,
+      "pillars_hit": 4,
+      "transe_rank": 74,
+      "transe_score": -10.9555,
+      "pykeen_score": -13.4066,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0.9394,
+      "mol_emb_similar_to": "Etoposide",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.675000011920929,
+      "proximity_distance": 1.2999999523162842,
+      "admet_score": 0.7065,
+      "admet_flags": "clean",
+      "primekg_score": 0.2504,
+      "dti_score": 0.4198,
+      "dti_best_target": "KIT",
+      "kg_group_score": 0.168,
+      "structural_group_score": 0.9394,
+      "network_group_score": 0.5153999924659729,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.8441,
+      "admet_multiplier": 0.9413,
+      "efficacy_score": 0.5407999753952026,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 1,
+      "shared_targets": [
+        "ABCB1"
+      ],
+      "pubmed_total": 4,
+      "pubmed_treatment_total": 4,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "20963677",
+          "title": "[Idiopathic orbital inflammation syndrome in childhood--case report and literature review].",
+          "authors": "Bau V, R\u00f6pke E, Marquardt L",
+          "journal": "Klinische Monatsblatter fur Augenheilkunde",
+          "year": "2010",
+          "abstract_snippet": "BACKGROUND: Idiopathic orbital inflammation syndrome (IOIS) is a rare disease in childhood. There are only ca. 70 case reports in the scientific literature. METHOD: We present a case report and review of literature. CASE REPORT: A 6-year-old girl developed within one week beginning with a discrete, ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20963677/",
+          "total_results": 4
+        },
+        {
+          "pmid": "19054920",
+          "title": "Treatment with high-dose methylprednisolone for hepatic veno-occlusive disease in a child with rhabdomyosarcoma.",
+          "authors": "Chen IL, Yang SN, Hsiao CC, et al.",
+          "journal": "Pediatrics and neonatology",
+          "year": "2008",
+          "abstract_snippet": "Hepatic veno-occlusive disease (VOD), also called sinusoidal obstruction syndrome, is rapidly progressing and involves life-threatening complications that can occur in patients receiving chemotherapy and/or bone marrow transplantation. No completely satisfactory treatmentstrategies have yet been est...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19054920/"
+        },
+        {
+          "pmid": "18376280",
+          "title": "Secondary myelofibrosis in children.",
+          "authors": "Naithani R, Tyagi S, Choudhry VP",
+          "journal": "Journal of pediatric hematology/oncology",
+          "year": "2008",
+          "abstract_snippet": "Myelofibrosis is a rare childhood myeloproliferative disorder. It has been reported as an associated complication of certain hematologic malignancies or as an isolated idiopathic process. We describe clinical course of 6 children diagnosed over 6 years. One child each responded well to steroid and t...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18376280/"
+        },
+        {
+          "pmid": "13648966",
+          "title": "The treatment of alopecia universalis with methyl prednisolone (medrol); associated with vitiligo involving arms, forearms, neck, and thigh.",
+          "authors": "LUBOWE II",
+          "journal": "A.M.A. archives of dermatology",
+          "year": "1959",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/13648966/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Treatment with high-dose methylprednisolone for hepatic veno-occlusive disease in a child with rhabdomyosarcoma.",
+          "year": 2008,
+          "citations": 11,
+          "url": "https://www.semanticscholar.org/paper/2dfd119e6b1e83b8e20c829d6ade11e1eff033d0",
+          "authors": "I. Chen, San-Nan Yang, C. Hsiao"
+        },
+        {
+          "title": "A Rare Case of Small Cell Lung Carcinoma Combined with Rhabdomyosarcoma",
+          "year": 2017,
+          "citations": 2,
+          "url": "https://www.semanticscholar.org/paper/683b16cf05c30ede488384378da67acd450996e7",
+          "authors": "Mayu Yamane, T. Otani, Yojiro Onari"
+        },
+        {
+          "title": "Rhabdomyosarcoma: Current Therapy, Challenges, and Future Approaches to Treatment Strategies",
+          "year": 2023,
+          "citations": 63,
+          "url": "https://www.semanticscholar.org/paper/318bfa76560a40d7f837a028dc5f9245926383a2",
+          "authors": "A. Zarrabi, D. Perrin, Mahboubeh Kavoosi"
+        },
+        {
+          "title": "Effect of Oral Methylprednisolone on Decline in Kidney Function or Kidney Failure in Patients With IgA Nephropathy: The TESTING Randomized Clinical Trial.",
+          "year": 2022,
+          "citations": 261,
+          "url": "https://www.semanticscholar.org/paper/69b4740980f52a462441a67c0376a8dbb2c66129",
+          "authors": "J. Lv, M. Wong, M. Hladunewich"
+        },
+        {
+          "title": "P20\u2005Methylprednisolone in the treatment of severe alcoholic hepatitis not responding to standard corticosteroid therapy",
+          "year": 2025,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/3baed08739d50f3e1e350d98c8a6308d9a85724e",
+          "authors": "Mohamed Elnagar, Tiffany Upton, Claire Grant"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Effect of Oral Methylprednisolone on Decline in Kidney Function or Kidney Failure in Patients With IgA Nephropathy: The TESTING Randomized Clinical Trial.",
+        "year": 2022,
+        "citations": 261,
+        "url": "https://www.semanticscholar.org/paper/69b4740980f52a462441a67c0376a8dbb2c66129",
+        "authors": "J. Lv, M. Wong, M. Hladunewich"
+      },
+      "max_citations": 261,
+      "faers_signal": "moderate",
+      "faers_total_reports": 127868,
+      "faers_cooccurrences": 4,
+      "faers_interpretation": "4 FAERS reports mention both Methylprednisolone and Rhabdomyosarcoma-related terms. Limited but notable real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "BI-2536 (1.565)",
+        "manumycin A (1.526)",
+        "withaferin-a (1.523)",
+        "Chemistry 2804 (1.519)",
+        "2-Chloro-N-heptyl-N-m-tolyl-acetamide (1.514)"
+      ],
+      "signature_interpretation": "Methylprednisolone was not found among the top 39 drugs that reverse the Rhabdomyosarcoma gene signature. Top reversers: BI-2536 (1.565), manumycin A (1.526), withaferin-a (1.523)",
+      "ai_hypothesis": "of its anti-inflammatory and anti-apoptotic properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.8441,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Methylprednisolone \u2014[treats]\u2192 DOID:2377 \u2014[is treated by]\u2192 DB00563 \u2014[is a therapeutic for]\u2192 Rhabdomyosarcoma",
+      "kg_paths_text": "\u2022 Methylprednisolone \u2014[treats]\u2192 DOID:2377 \u2014[is treated by]\u2192 DB00563 \u2014[is a therapeutic for]\u2192 Rhabdomyosarcoma\n\u2022 Methylprednisolone \u2014[treats]\u2192 DOID:9074 \u2014[is treated by]\u2192 DB00563 \u2014[is a therapeutic for]\u2192 Rhabdomyosarcoma\n\u2022 Methylprednisolone \u2014[treats]\u2192 DOID:9008 \u2014[is treated by]\u2192 DB00563 \u2014[is a therapeutic for]\u2192 Rhabdomyosarcoma",
+      "validation_experiments": [],
+      "novelty_score": 0.42800000309944153,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": false,
+      "clinical_trials_total": 4,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT00112645",
+          "title": "Donor Stem Cell Transplant in Treating Young Patients With Relapsed or Refractory Solid Tumors",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "10",
+          "url": "https://clinicaltrials.gov/study/NCT00112645"
+        },
+        {
+          "nct_id": "NCT00357084",
+          "title": "Methotrexate and Glucocorticoids in Treating Patients With Newly Diagnosed Acute Graft-Versus-Host Disease After Donor Stem Cell Transplant",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "53",
+          "url": "https://clinicaltrials.gov/study/NCT00357084"
+        },
+        {
+          "nct_id": "NCT00309907",
+          "title": "Etanercept in Treating Young Patients With Idiopathic Pneumonia Syndrome After Undergoing a Donor Stem Cell Transplant",
+          "status": "COMPLETED",
+          "phase": "PHASE2",
+          "enrollment": "39",
+          "url": "https://clinicaltrials.gov/study/NCT00309907"
+        },
+        {
+          "nct_id": "NCT00084695",
+          "title": "Umbilical Cord Blood for Stem Cell Transplantation in Treating Young Patients With Malignant or Nonmalignant Diseases",
+          "status": "UNKNOWN",
+          "phase": "PHASE2",
+          "enrollment": "25",
+          "url": "https://clinicaltrials.gov/study/NCT00084695"
+        }
+      ],
+      "trial_phases": {
+        "PHASE1": 1,
+        "PHASE2": 3
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "4 clinical trial(s) found on ClinicalTrials.gov",
+        "4 PubMed article(s) - limited literature",
+        "Supported by 4 independent AI pillars",
+        "Moderate FAERS signal: 4 adverse event reports mention drug-disease co-occurrence",
+        "Highly cited paper (261 citations): \"Effect of Oral Methylprednisolone on Decline in Kidney Funct...\"",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.84, 1 genetic targets)"
+      ],
+      "disease_entity": "Disease::MESH:D012208",
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1299,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (ABCB1 / rs1045642)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "ABCB1",
+            "variant": "rs1045642",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1444704881"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 1,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.23899999260902405,
+        "label": "kg-only",
+        "axis_values": {
+          "kg": 0.5090000033378601,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.303
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 1,
+        "n_expressed": 1,
+        "mean_tpm_in_tissue": 1.02,
+        "max_tpm_in_tissue": 1.02,
+        "tissue_specificity": 0.0,
+        "context_modifier": 0.877
+      },
+      "ensemble_prob": 0.4415,
+      "ensemble_features": {
+        "kg_score": 0.9941,
+        "degree_penalty": 0.7636,
+        "n_drug_targets": 8,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.1431
+      },
+      "ensemble_rank": 5,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    },
+    {
+      "drug_name": "Epigallocatechin gallate",
+      "drug_id": "DB12116",
+      "disease_name": "Rhabdomyosarcoma",
+      "combined_score": 0.508899986743927,
+      "pillars_hit": 4,
+      "transe_rank": 26,
+      "transe_score": -10.602,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0.0173,
+      "gene_sig_rank": 36,
+      "proximity_score": 0.75,
+      "proximity_distance": 1.0,
+      "admet_score": 0.3992,
+      "admet_flags": "clean",
+      "primekg_score": 0.2492,
+      "dti_score": 1.0,
+      "dti_best_target": "KIT",
+      "kg_group_score": 0.1584,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.6611999869346619,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.8441,
+      "admet_multiplier": 0.8798,
+      "efficacy_score": 0.5784000158309937,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 20,
+      "shared_targets": [
+        "ABCB1",
+        "BCL2",
+        "CCN2",
+        "CCND1",
+        "CNR1",
+        "CTNNB1",
+        "DYRK1B",
+        "GJA1",
+        "ICAM1",
+        "IGF1R",
+        "MET",
+        "MGMT",
+        "MMP2",
+        "MTOR",
+        "PIK3CA",
+        "PTGS2",
+        "STAT3",
+        "TGFB1",
+        "TP53",
+        "VEGFA"
+      ],
+      "pubmed_total": 2,
+      "pubmed_treatment_total": 2,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "36854509",
+          "title": "Epigallocatechin Gallate Inhibits Cell Growth and Hedgehog Signalling in Human Rhabdomyosarcoma Cell Lines.",
+          "authors": "Mayer BFB, Stagno MJ, Fuchs J, et al.",
+          "journal": "Anticancer research",
+          "year": "2023",
+          "abstract_snippet": "BACKGROUND/AIM: Epigallocatechin gallate (EGCG), a major polyphenol of green tea, has been shown to inhibit cancer cell proliferation. In this study the effect of EGCG on cell metabolism and the human hedgehog signalling pathway (HH) in human rhabdomyosarcoma (RMS) cells was investigated. MATERIALS ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36854509/",
+          "total_results": 2
+        },
+        {
+          "pmid": "24190483",
+          "title": "In vitro modulation of MMP-2 and MMP-9 in pediatric human sarcoma cell lines by cytokines, inducers and inhibitors.",
+          "authors": "Roomi MW, Kalinovsky T, Rath M, et al.",
+          "journal": "International journal of oncology",
+          "year": "2014",
+          "abstract_snippet": "The highly aggressive pediatric sarcomas are characterized by high levels of matrix metalloproteinase (MMP)-2 and MMP-9, which play crucial roles in tumor invasion and metastasis by degradation of the extracellular membrane leading to cancer cell spread to distal organs. We examined the effects of c...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24190483/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Epigallocatechin Gallate Inhibits Cell Growth and Hedgehog Signalling in Human Rhabdomyosarcoma Cell Lines",
+          "year": 2023,
+          "citations": 5,
+          "url": "https://www.semanticscholar.org/paper/f979d34d3ec54f2a4a0619e3b31ed7def150f1d1",
+          "authors": "B. Mayer, M. J. Stagno, J. Fuchs"
+        },
+        {
+          "title": "Alternations of NF-\u03baB Signaling by Natural Compounds in Muscle-Derived Cancers",
+          "year": 2023,
+          "citations": 16,
+          "url": "https://www.semanticscholar.org/paper/193d48ffda02b973e817c039dd0d957c0f5dd5f1",
+          "authors": "Justyna Radzka, Zofia \u0141api\u0144ska, Urszula Szwedowicz"
+        },
+        {
+          "title": "Information Of Lung Tumorigenesis By Tea",
+          "year": 2004,
+          "citations": 37,
+          "url": "https://www.semanticscholar.org/paper/927586cfe1842a56a3a39745dc3232656e37c1d5",
+          "authors": "Chung S. Yang, J. Liao, Guang-Yu Yang"
+        },
+        {
+          "title": "Epigallocatechin Gallate (EGCG): Pharmacological Properties, Biological Activities and Therapeutic Potential",
+          "year": 2025,
+          "citations": 138,
+          "url": "https://www.semanticscholar.org/paper/507c74da598b38fb5568b6753a503220c5685f2d",
+          "authors": "Lucia Capasso, L. De Masi, Carmina Sirignano"
+        },
+        {
+          "title": "Targeting Cancer Hallmarks with Epigallocatechin Gallate (EGCG): Mechanistic Basis and Therapeutic Targets",
+          "year": 2024,
+          "citations": 79,
+          "url": "https://www.semanticscholar.org/paper/15fe30182938f7774778f6e83d5dc72697d56298",
+          "authors": "Wamidh H. Talib, Dima Awajan, A. Alqudah"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Epigallocatechin Gallate (EGCG): Pharmacological Properties, Biological Activities and Therapeutic Potential",
+        "year": 2025,
+        "citations": 138,
+        "url": "https://www.semanticscholar.org/paper/507c74da598b38fb5568b6753a503220c5685f2d",
+        "authors": "Lucia Capasso, L. De Masi, Carmina Sirignano"
+      },
+      "max_citations": 138,
+      "faers_signal": "none",
+      "faers_total_reports": 19,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Epigallocatechin gallate to Rhabdomyosarcoma terms. Drug has 19 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "BI-2536 (1.565)",
+        "manumycin A (1.526)",
+        "withaferin-a (1.523)",
+        "Chemistry 2804 (1.519)",
+        "2-Chloro-N-heptyl-N-m-tolyl-acetamide (1.514)"
+      ],
+      "signature_interpretation": "Epigallocatechin gallate was not found among the top 39 drugs that reverse the Rhabdomyosarcoma gene signature. Top reversers: BI-2536 (1.565), manumycin A (1.526), withaferin-a (1.523)",
+      "ai_hypothesis": "of its ability to inhibit the proliferation of cancer cells.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.3,
+          "positive_signals": 1,
+          "negative_signals": 0,
+          "mechanism_signals": 1,
+          "extracted_entities": [
+            {
+              "entity": "ep",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9919999837875366
+            },
+            {
+              "entity": "##iga",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.8399999737739563
+            },
+            {
+              "entity": "##llo",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.7170000076293945
+            },
+            {
+              "entity": "##chin gallate",
+              "entity_group": "Medication",
+              "score": 0.8100000023841858
+            },
+            {
+              "entity": "e",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9819999933242798
+            },
+            {
+              "entity": "##gc",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9169999957084656
+            },
+            {
+              "entity": "metabolism",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9549999833106995
+            },
+            {
+              "entity": "hedgehog signalling pathway (",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.9390000104904175
+            },
+            {
+              "entity": "hh",
+              "entity_group": "Diagnostic_procedure",
+              "score": 0.7730000019073486
+            },
+            {
+              "entity": "human rhabdomyosarcoma",
+              "entity_group": "Biological_structure",
+              "score": 0.9990000128746033
+            }
+          ]
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.8441,
+      "mr_genetic_targets": 1,
+      "mechanistic_hypothesis": "Epigallocatechin gallate \u2014[is a therapeutic for]\u2192 MESH:D001943 \u2014[is treated by]\u2192 DB00531 \u2014[treats]\u2192 Rhabdomyosarcoma",
+      "kg_paths_text": "\u2022 Epigallocatechin gallate \u2014[is a therapeutic for]\u2192 MESH:D001943 \u2014[is treated by]\u2192 DB00531 \u2014[treats]\u2192 Rhabdomyosarcoma\n\u2022 Epigallocatechin gallate \u2014[is a therapeutic for]\u2192 MESH:D015470 \u2014[is treated by]\u2192 DB00531 \u2014[treats]\u2192 Rhabdomyosarcoma\n\u2022 Epigallocatechin gallate \u2014[is a therapeutic for]\u2192 MESH:D011471 \u2014[is treated by]\u2192 DB00773 \u2014[is a therapeutic for]\u2192 Rhabdomyosarcoma",
+      "validation_experiments": [],
+      "novelty_score": 0.5189999938011169,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "MEDIUM",
+      "confidence_reasons": [
+        "2 PubMed article(s) - limited literature",
+        "Supported by 4 independent AI pillars",
+        "Highly cited paper (138 citations): \"Epigallocatechin Gallate (EGCG): Pharmacological Properties,...\"",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.84, 1 genetic targets)"
+      ],
+      "disease_entity": "Disease::MESH:D012208",
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "late-trial",
+        "confidence": "medium",
+        "rationale": "Phase-3 investigational \u2014 dose range established in Phase-2 pharmacokinetic studies; efficacy trials ongoing or recently completed.",
+        "chembl_phase": 3.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 0,
+        "has_warnings": false,
+        "top_interactions": []
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": true,
+          "pharos": false,
+          "literature": false
+        },
+        "triangulation_score": 0.455,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.509,
+          "docking": 0.786,
+          "pharos": 0.0,
+          "literature": 0.207
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 19,
+        "n_expressed": 14,
+        "mean_tpm_in_tissue": 26.76,
+        "max_tpm_in_tissue": 306.45,
+        "tissue_specificity": 0.269,
+        "context_modifier": 1.012
+      },
+      "ensemble_prob": 0.0043,
+      "ensemble_features": {
+        "kg_score": 0.8409,
+        "degree_penalty": 0.8816,
+        "n_drug_targets": 70,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 7.4265
+      },
+      "ensemble_rank": 10,
+      "docking": {
+        "kcal_per_mol": -9.43,
+        "target_symbol": "ABCB1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "CATECHOL",
+          "GTE"
+        ],
+        "n_alerts": 3,
+        "alert_names": [
+          "catechol_A(92)",
+          "catechol",
+          "gte_5_phenolic_OH"
+        ]
+      }
+    },
+    {
+      "drug_name": "Vinblastine",
+      "drug_id": "DB00570",
+      "disease_name": "Rhabdomyosarcoma",
+      "combined_score": 0.5012,
+      "pillars_hit": 4,
+      "transe_rank": 48,
+      "transe_score": -10.7862,
+      "pykeen_score": -12.9473,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0.8835,
+      "similar_to": "Vincristine",
+      "mol_emb_similarity": 0.9996,
+      "mol_emb_similar_to": "Vincristine",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.574999988079071,
+      "proximity_distance": 1.7000000476837158,
+      "admet_score": 0.4736,
+      "admet_flags": "hERG=0.98",
+      "primekg_score": 0.2573,
+      "dti_score": 0.6845,
+      "dti_best_target": "KIT",
+      "kg_group_score": 0.3235,
+      "structural_group_score": 0.9996,
+      "network_group_score": 0.43939998745918274,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.7433,
+      "admet_multiplier": 0.8947,
+      "efficacy_score": 0.5602,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 21,
+      "shared_targets": [
+        "ABCB1",
+        "BRCA1",
+        "CDK4",
+        "CXCR4",
+        "ERBB3",
+        "EZH2",
+        "FGFR4",
+        "ICAM1",
+        "MSH2",
+        "MSH6",
+        "TOP2A",
+        "TUBB",
+        "TUBB1",
+        "TUBB2A",
+        "TUBB2B",
+        "TUBB3",
+        "TUBB4A",
+        "TUBB4B",
+        "TUBB6",
+        "TUBB8"
+      ],
+      "pubmed_total": 49,
+      "pubmed_treatment_total": 45,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "38050209",
+          "title": "Perianal rhabdomyosarcoma in an adult: A case report and review of the literature.",
+          "authors": "Yang N, Kong D, Wang X, et al.",
+          "journal": "Medicine",
+          "year": "2023",
+          "abstract_snippet": "Perianal/perineal rhabdomyosarcomas (PRMS) is rare, and the outcome is poor. A 29-year-old female presented with perineal rhabdomyosarcomas revealed metastases to inguinal lymph nodes on the bilateral side. Disease progression was discovered when the patient got adjuvant epirubicin, ifosfamide, and ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38050209/",
+          "total_results": 49
+        },
+        {
+          "pmid": "41216926",
+          "title": "Children and Adolescents With Localised Non-Rhabdomyosarcoma Soft Tissue Sarcoma: Results of the CWS-96 and CWS-2002P Prospective Trials With Reclassification of the Trial Data Incorporating the Recent Soft Tissue Sarcoma Registry.",
+          "authors": "Heinz AT, Sch\u00f6nstein A, Koscielniak E, et al.",
+          "journal": "Pediatric blood & cancer",
+          "year": "2026",
+          "abstract_snippet": "BACKGROUND: Here we report the results of the first comprehensive European trials for all soft tissue sarcoma entities, which aimed to develop a new risk stratification system, limit radiotherapy and chemotherapy for low-/standard-risk patients, and evaluate different chemotherapy regimens for high-...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41216926/"
+        },
+        {
+          "pmid": "2417460",
+          "title": "[Combination chemotherapy with cis-diamminedichloroplatinum, vinblastine and bleomycin for a rhabdomyosarcoma of the prostate in a child: report of a case].",
+          "authors": "Matsumiya K, Yamaguchi S, Osafune M, et al.",
+          "journal": "Hinyokika kiyo. Acta urologica Japonica",
+          "year": "1985",
+          "abstract_snippet": "A case of prostatic rhabdomyosarcoma in a 5-year-old boy is reported. He was brought to our clinic on Apr. 1, 1982 with complaints of pollakisuria and urethral pain. X-ray examinations revealed a huge intrapelvic tumor, and it was histopathologically diagnosed as embryonal rhabdomyosarcoma with a sp...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/2417460/"
+        },
+        {
+          "pmid": "35205646",
+          "title": "Long-Term Clinical Outcome and Prognostic Factors of Children and Adolescents with Localized Rhabdomyosarcoma Treated on the CWS-2002P Protocol.",
+          "authors": "Koscielniak E, Blank B, Vokuhl C, et al.",
+          "journal": "Cancers",
+          "year": "2022",
+          "abstract_snippet": "We report here the results of the prospective, non-randomized, historically controlled CWS-2002P study in patients \u2264 21 years with localized RMS developed with the aim to improve the long-term outcome by adapting the burden of therapy to risk profile and to investigate the feasibility and relation t...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35205646/"
+        },
+        {
+          "pmid": "37637411",
+          "title": "Chemotherapeutic drugs for soft tissue sarcomas: a review.",
+          "authors": "Tian Z, Yao W",
+          "journal": "Frontiers in pharmacology",
+          "year": "2023",
+          "abstract_snippet": "Despite the low incidence of soft tissue sarcomas (STSs), hundreds of thousands of new STS cases are diagnosed annually worldwide, and approximately half of them eventually progress to advanced stages. Currently, chemotherapy is the first-line treatment for advanced STSs. There are difficulties in s...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37637411/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Perianal rhabdomyosarcoma in an adult: A case report and review of the literature",
+          "year": 2023,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/4ab68859c4082abe5b283bf4b95d5e2b06c05f87",
+          "authors": "Ning Yang, Dexian Kong, X. Wang"
+        },
+        {
+          "title": "[Combination chemotherapy with cis-diamminedichloroplatinum, vinblastine and bleomycin for a rhabdomyosarcoma of the prostate in a child: report of a case].",
+          "year": 1985,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/9fea7fe59e680fdf6e620ec215bb4fa45189fee1",
+          "authors": "K. Matsumiya, S. Yamaguchi, M. Osafune"
+        },
+        {
+          "title": "[Rhabdomyosarcoma of the urinary bladder: complete remission induced by vinblastine, cis-platinum, and bleomycin].",
+          "year": 1982,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/2953a9515680b412cf5d69a558cb0ee4e73cc40b",
+          "authors": "A. Tawa, R. Yabuta, K. Yuumura"
+        },
+        {
+          "title": "Therapeutic Effect of Supercritical CO2 Extracts of Curcuma Species with Cancer Drugs in Rhabdomyosarcoma Cell Lines",
+          "year": 2015,
+          "citations": 18,
+          "url": "https://www.semanticscholar.org/paper/0cead9c1bce1e8307e173bc69be2838d9b95bbe1",
+          "authors": "C. Ramachandran, K. Quirin, E. Escalon"
+        },
+        {
+          "title": "Chemotherapeutic drugs for soft tissue sarcomas: a review",
+          "year": 2023,
+          "citations": 39,
+          "url": "https://www.semanticscholar.org/paper/621e9640533bdd4298c33f77220e0afdf5199088",
+          "authors": "Z. Tian, Weitao Yao"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Chemotherapeutic drugs for soft tissue sarcomas: a review",
+        "year": 2023,
+        "citations": 39,
+        "url": "https://www.semanticscholar.org/paper/621e9640533bdd4298c33f77220e0afdf5199088",
+        "authors": "Z. Tian, Weitao Yao"
+      },
+      "max_citations": 39,
+      "faers_signal": "weak",
+      "faers_total_reports": 7672,
+      "faers_cooccurrences": 2,
+      "faers_interpretation": "2 FAERS report(s) mention both Vinblastine and Rhabdomyosarcoma-related terms. Minimal real-world signal.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "BI-2536 (1.565)",
+        "manumycin A (1.526)",
+        "withaferin-a (1.523)",
+        "Chemistry 2804 (1.519)",
+        "2-Chloro-N-heptyl-N-m-tolyl-acetamide (1.514)"
+      ],
+      "signature_interpretation": "Vinblastine was not found among the top 39 drugs that reverse the Rhabdomyosarcoma gene signature. Top reversers: BI-2536 (1.565), manumycin A (1.526), withaferin-a (1.523)",
+      "ai_hypothesis": "of its ability to induce apoptosis and inhibit cell proliferation.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.7433,
+      "mr_genetic_targets": 4,
+      "mechanistic_hypothesis": "Vinblastine \u2014[downregulates]\u2192 gene-23077 \u2014[is downregulated by]\u2192 DB00762 \u2014[treats]\u2192 Rhabdomyosarcoma",
+      "kg_paths_text": "\u2022 Vinblastine \u2014[downregulates]\u2192 gene-23077 \u2014[is downregulated by]\u2192 DB00762 \u2014[treats]\u2192 Rhabdomyosarcoma\n\u2022 Vinblastine \u2014[downregulates]\u2192 gene-9837 \u2014[is downregulated by]\u2192 DB00541 \u2014[treats]\u2192 Rhabdomyosarcoma\n\u2022 Vinblastine \u2014[downregulates]\u2192 gene-9837 \u2014[is downregulated by]\u2192 DB00541 \u2014[treats]\u2192 Rhabdomyosarcoma",
+      "validation_experiments": [],
+      "novelty_score": 0.511,
+      "novelty_level": "NOVEL",
+      "is_known_treatment": false,
+      "clinical_trials_total": 0,
+      "clinical_trials": [],
+      "trial_phases": {},
+      "confidence": "MEDIUM",
+      "confidence_reasons": [
+        "49 PubMed articles found",
+        "Supported by 4 independent AI pillars",
+        "High molecular similarity (0.88) to Vincristine",
+        "Supporting paper with 39 citations",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.74, 4 genetic targets)"
+      ],
+      "disease_entity": "Disease::MESH:D012208",
+      "dose_plausibility": {
+        "plausibility": "yes",
+        "dose_range": "clinical",
+        "confidence": "high",
+        "rationale": "FDA/EMA-approved drug \u2014 standard clinical dose is known to be tolerable in humans and produce measurable pharmacological effect.",
+        "chembl_phase": 4.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1186,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "advisory",
+        "summary": "PharmGKB-3 (GSTM1 / GSTM1 non-null, GSTM1 null)",
+        "cpic": [],
+        "pharmgkb": [
+          {
+            "gene": "GSTM1",
+            "variant": "GSTM1 non-null, GSTM1 null",
+            "level": "3",
+            "phenotype_category": "Efficacy;Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1444607870"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.485,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.501,
+          "docking": 0.541,
+          "pharos": 0.0,
+          "literature": 0.738
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 20,
+        "n_expressed": 13,
+        "mean_tpm_in_tissue": 32.94,
+        "max_tpm_in_tissue": 419.87,
+        "tissue_specificity": 0.325,
+        "context_modifier": 1.026
+      },
+      "ensemble_prob": 0.9915,
+      "ensemble_features": {
+        "kg_score": 0.9998,
+        "degree_penalty": 0.7642,
+        "n_drug_targets": 14,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 1.0986
+      },
+      "ensemble_rank": 1,
+      "docking": {
+        "kcal_per_mol": -6.49,
+        "target_symbol": "ABCB1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          ">",
+          "ISOLATED"
+        ],
+        "n_alerts": 2,
+        "alert_names": [
+          ">_2_ester_groups",
+          "isolated_alkene"
+        ]
+      }
+    },
+    {
+      "drug_name": "Tretinoin",
+      "drug_id": "DB00755",
+      "disease_name": "Rhabdomyosarcoma",
+      "combined_score": 0.4996,
+      "pillars_hit": 4,
+      "transe_rank": 59,
+      "transe_score": -10.8774,
+      "pykeen_score": -13.3751,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.6380000114440918,
+      "proximity_distance": 1.4500000476837158,
+      "admet_score": 0.5917,
+      "admet_flags": "Skin_Reaction=0.85",
+      "primekg_score": 0.2506,
+      "dti_score": 1.0,
+      "dti_best_target": "MYOD1",
+      "kg_group_score": 0.2342,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.4794999957084656,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.7308,
+      "admet_multiplier": 0.9183,
+      "efficacy_score": 0.5441,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 20,
+      "shared_targets": [
+        "ABCB1",
+        "BCL2",
+        "BRCA1",
+        "CCND1",
+        "CDKN2A",
+        "CTNNB1",
+        "FGF2",
+        "GJA1",
+        "ICAM1",
+        "IGF2",
+        "MMP2",
+        "MYC",
+        "MYCN",
+        "MYOD1",
+        "NR0B1",
+        "PTH",
+        "TGFB1",
+        "TP53",
+        "TUBB6",
+        "VEGFA"
+      ],
+      "pubmed_total": 31,
+      "pubmed_treatment_total": 15,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "37858275",
+          "title": "Pharmacological EZH2 inhibition combined with retinoic acid treatment promotes differentiation and apoptosis in rhabdomyosarcoma cells.",
+          "authors": "O'Brien E, Tse C, Tracy I, et al.",
+          "journal": "Clinical epigenetics",
+          "year": "2023",
+          "abstract_snippet": "BACKGROUND: Rhabdomyosarcomas (RMS) are predominantly paediatric sarcomas thought to originate from muscle precursor cells due to impaired myogenic differentiation. Despite intensive treatment, 5-year survival for patients with advanced disease remains low (<\u200930%), highlighting a need for novel ther...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37858275/",
+          "total_results": 31
+        },
+        {
+          "pmid": "8463182",
+          "title": "Synergistic inhibition of human rhabdomyosarcoma cells by sodium phenylacetate and Tretinoin.",
+          "authors": "G\u00f3rski GK, McMorrow LE, Donaldson MH",
+          "journal": "In vitro cellular & developmental biology : journal of the Tissue Culture Association",
+          "year": "1993",
+          "abstract_snippet": "",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/8463182/"
+        },
+        {
+          "pmid": "2108933",
+          "title": "Enhanced expression of the proto-oncogenes fos and raf in the rhabdomyosarcoma cell line BA-HAN-1C after differentiation induction with retinoic acid and N-methylformamide.",
+          "authors": "Gabbert HE, Gerharz CD, Ramp U, et al.",
+          "journal": "International journal of cancer",
+          "year": "1990",
+          "abstract_snippet": "BA-HAN-IC is a clonal rat rhabdomyosarcoma cell line consisting of proliferating mononuclear tumor cells, some of which spontaneously fuse to form terminally differentiated post-mitotic myotubes. Exposure of BA-HAN-IC cells to retinoic acid (RA) or N-methylformamide (NMF) resulted in a significant i...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/2108933/"
+        },
+        {
+          "pmid": "2757924",
+          "title": "Fetal calf serum and retinoic acid affect proliferation and terminal differentiation of a rat rhabdomyosarcoma cell line (BA-HAN-1C).",
+          "authors": "Gerharz CD, Gabbert HE, Biesalski HK, et al.",
+          "journal": "British journal of cancer",
+          "year": "1989",
+          "abstract_snippet": "We report on the establishment of a model for differentiation induction in sarcomas, using the clonal rhabdomyosarcoma cell line BA-HAN-1C. This rhabdomyosarcoma cell line is composed of morphologically undifferentiated mononuclear stem cells, some of which spontaneously fuse to form terminally diff...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/2757924/"
+        },
+        {
+          "pmid": "16116481",
+          "title": "Vascular endothelial growth factor acts in an autocrine manner in rhabdomyosarcoma cell lines and can be inhibited with all-trans-retinoic acid.",
+          "authors": "Gee MF, Tsuchida R, Eichler-Jonsson C, et al.",
+          "journal": "Oncogene",
+          "year": "2005",
+          "abstract_snippet": "Vascular endothelial growth factor (VEGF) is a potent signalling molecule that acts through two tyrosine kinase receptors, VEGFR1 and VEGFR2. The upregulation of VEGF and its receptors is important in tumour-associated angiogenesis; however, recent studies suggest that several tumour cells express V...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16116481/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Synergistic inhibition of human rhabdomyosarcoma cells by sodium phenylacetate and tretinoin",
+          "year": 1993,
+          "citations": 2,
+          "url": "https://www.semanticscholar.org/paper/21a8df6c1ccd2580fd12f450ea47f9edfb4dea1b",
+          "authors": "G. Gorski, M. Donaldson, L. McMorrow"
+        },
+        {
+          "title": "Comparing Tretinoin to Other Topical Therapies in the Treatment of Skin Photoaging: A Systematic Review",
+          "year": 2024,
+          "citations": 21,
+          "url": "https://www.semanticscholar.org/paper/2b4ef0ca6a3f400fdbd83d0d1c541e9cc92a7ae5",
+          "authors": "Zoya Siddiqui, Alina Zufall, Marissa Nash"
+        },
+        {
+          "title": "Rhabdomyosarcoma: Current Therapy, Challenges, and Future Approaches to Treatment Strategies",
+          "year": 2023,
+          "citations": 63,
+          "url": "https://www.semanticscholar.org/paper/318bfa76560a40d7f837a028dc5f9245926383a2",
+          "authors": "A. Zarrabi, D. Perrin, Mahboubeh Kavoosi"
+        },
+        {
+          "title": "Rhabdomyosarcoma: Updates on classification and the necessity of molecular testing beyond immunohistochemistry.",
+          "year": 2023,
+          "citations": 40,
+          "url": "https://www.semanticscholar.org/paper/daa16436f0f417568c96a40707673b0c961b13bd",
+          "authors": "Carina A. Dehner, E. Rudzinski, Jessica L. Davis"
+        },
+        {
+          "title": "Rhabdomyosarcoma",
+          "year": 2019,
+          "citations": 600,
+          "url": "https://www.semanticscholar.org/paper/ff32673e9a31fa2779f64f843cf2d7bc54504472",
+          "authors": "S. Skapek, A. Ferrari, Abha A. Gupta"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Rhabdomyosarcoma",
+        "year": 2019,
+        "citations": 600,
+        "url": "https://www.semanticscholar.org/paper/ff32673e9a31fa2779f64f843cf2d7bc54504472",
+        "authors": "S. Skapek, A. Ferrari, Abha A. Gupta"
+      },
+      "max_citations": 600,
+      "faers_signal": "none",
+      "faers_total_reports": 6835,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Tretinoin to Rhabdomyosarcoma terms. Drug has 6835 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "BI-2536 (1.565)",
+        "manumycin A (1.526)",
+        "withaferin-a (1.523)",
+        "Chemistry 2804 (1.519)",
+        "2-Chloro-N-heptyl-N-m-tolyl-acetamide (1.514)"
+      ],
+      "signature_interpretation": "Tretinoin was not found among the top 39 drugs that reverse the Rhabdomyosarcoma gene signature. Top reversers: BI-2536 (1.565), manumycin A (1.526), withaferin-a (1.523)",
+      "ai_hypothesis": "of its anti-proliferative and anti-angiogenic properties.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.7308,
+      "mr_genetic_targets": 3,
+      "mechanistic_hypothesis": "Tretinoin \u2014[downregulates]\u2192 gene-27338 \u2014[is downregulated by]\u2192 DB00970 \u2014[treats]\u2192 Rhabdomyosarcoma",
+      "kg_paths_text": "\u2022 Tretinoin \u2014[downregulates]\u2192 gene-27338 \u2014[is downregulated by]\u2192 DB00970 \u2014[treats]\u2192 Rhabdomyosarcoma\n\u2022 Tretinoin \u2014[downregulates]\u2192 gene-27338 \u2014[is downregulated by]\u2192 DB00970 \u2014[treats]\u2192 Rhabdomyosarcoma\n\u2022 Tretinoin \u2014[downregulates]\u2192 gene-7982 \u2014[is downregulated by]\u2192 DB00762 \u2014[treats]\u2192 Rhabdomyosarcoma",
+      "validation_experiments": [],
+      "novelty_score": 0.33,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": false,
+      "clinical_trials_total": 1,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT07355855",
+          "title": "A Clinical Study on the Efficacy and Safety of All-trans Retinoic Acid Combined With VAC Regimen in the Treatment of Intermediate-to-high-risk Rhabdomyosarcoma",
+          "status": "NOT_YET_RECRUITING",
+          "phase": "PHASE2",
+          "enrollment": "106",
+          "url": "https://clinicaltrials.gov/study/NCT07355855"
+        }
+      ],
+      "trial_phases": {
+        "PHASE2": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "1 clinical trial(s) found on ClinicalTrials.gov",
+        "31 PubMed articles found",
+        "Supported by 4 independent AI pillars",
+        "Highly cited paper (600 citations): \"Rhabdomyosarcoma...\"",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.73, 3 genetic targets)"
+      ],
+      "disease_entity": "Disease::MESH:D012208",
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1092,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00783",
+            "drug_name": "Estradiol",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": false,
+        "highest_risk": "",
+        "summary": "",
+        "cpic": [],
+        "pharmgkb": []
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.306,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.5,
+          "docking": 0.0,
+          "pharos": 0.0,
+          "literature": 0.654
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 20,
+        "n_expressed": 9,
+        "mean_tpm_in_tissue": 19.78,
+        "max_tpm_in_tissue": 306.45,
+        "tissue_specificity": 0.158,
+        "context_modifier": 0.987
+      },
+      "ensemble_prob": 0.2291,
+      "ensemble_features": {
+        "kg_score": 0.9946,
+        "degree_penalty": 0.7515,
+        "n_drug_targets": 32,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 4.0604
+      },
+      "ensemble_rank": 7,
+      "docking": {
+        "kcal_per_mol": null,
+        "target_symbol": null,
+        "source": "not_wired",
+        "note": "AutoDock Vina not yet integrated; proxy found no ChEMBL-measured overlap between drug targets and OT-associated disease genes.",
+        "hit": false
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [
+          "MICHAEL",
+          "POLYENE"
+        ],
+        "n_alerts": 3,
+        "alert_names": [
+          "Michael_acceptor_1",
+          "polyene",
+          "polyene"
+        ]
+      }
+    },
+    {
+      "drug_name": "Simvastatin",
+      "drug_id": "DB00641",
+      "disease_name": "Rhabdomyosarcoma",
+      "combined_score": 0.4953,
+      "pillars_hit": 4,
+      "transe_rank": 40,
+      "transe_score": -10.7352,
+      "pykeen_score": 0,
+      "pykeen_rank": 0,
+      "txgnn_score": 0,
+      "txgnn_rank": 0,
+      "mol_similarity": 0,
+      "similar_to": "",
+      "mol_emb_similarity": 0,
+      "mol_emb_similar_to": "",
+      "gene_sig_score": 0,
+      "gene_sig_rank": 0,
+      "proximity_score": 0.6380000114440918,
+      "proximity_distance": 1.4500000476837158,
+      "admet_score": 0.6065,
+      "admet_flags": "hERG=0.71",
+      "primekg_score": 0.2511,
+      "dti_score": 1.0,
+      "dti_best_target": "MYOD1",
+      "kg_group_score": 0.1918,
+      "structural_group_score": 1.0,
+      "network_group_score": 0.4837000072002411,
+      "txgnn_group_score": 0,
+      "mr_group_score": 0.7527,
+      "admet_multiplier": 0.9213,
+      "efficacy_score": 0.5376,
+      "groups_hit": 4,
+      "direct_relations": [],
+      "shared_target_count": 19,
+      "shared_targets": [
+        "ABCB1",
+        "BCL2",
+        "CCN2",
+        "CCND1",
+        "ERBB3",
+        "EZH2",
+        "F2",
+        "HRAS",
+        "ICAM1",
+        "MMP2",
+        "MTOR",
+        "MYC",
+        "PTEN",
+        "PTGS2",
+        "TGFB1",
+        "TOP2A",
+        "TP53",
+        "TUBB6",
+        "VEGFA"
+      ],
+      "pubmed_total": 17,
+      "pubmed_treatment_total": 15,
+      "pubmed_repurposing_total": 0,
+      "key_papers": [
+        {
+          "pmid": "39706565",
+          "title": "Synthetic inhibition of SREBP2 and the mevalonate pathway blocks rhabdomyosarcoma tumor growth in\u00a0vitro and in\u00a0vivo and promotes chemosensitization.",
+          "authors": "Codenotti S, Asperti M, Poli M, et al.",
+          "journal": "Molecular metabolism",
+          "year": "2025",
+          "abstract_snippet": "OBJECTIVE: The aim of the present study was to investigate the effects of targeting the mevalonate pathway (MVP) in rhabdomyosarcoma (RMS), a soft tissue tumor with a prevalence in young people. METHODS: In silico analyses of RNA datasets were performed to correlate MVP with RMS patient survival. Th...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39706565/",
+          "total_results": 17
+        },
+        {
+          "pmid": "23564041",
+          "title": "Simvastatin-induced compartmentalisation of doxorubicin sharpens up nuclear topoisomerase II inhibition in human rhabdomyosarcoma cells.",
+          "authors": "Werner M, Atil B, Sieczkowski E, et al.",
+          "journal": "Naunyn-Schmiedeberg's archives of pharmacology",
+          "year": "2013",
+          "abstract_snippet": "Tumours, which are initially sensitive to cytotoxic agents, often develop resistance to a broad spectrum of structurally unrelated drugs. The 3-hydroxy-3-methylglutaryl coenzyme A (HMG-CoA) reductase inhibitors have been shown to inhibit ATP-binding cassette (ABC) transporters but have also impact o...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23564041/"
+        },
+        {
+          "pmid": "23624330",
+          "title": "Ubiquinol rescues simvastatin-suppression of mitochondrial content, function and metabolism: implications for statin-induced rhabdomyolysis.",
+          "authors": "Vaughan RA, Garcia-Smith R, Bisoffi M, et al.",
+          "journal": "European journal of pharmacology",
+          "year": "2013",
+          "abstract_snippet": "Statin medications diminish cholesterol biosynthesis and are commonly prescribed to reduce cardiovascular disease. Statins also reduce production of ubiquinol, a vital component of mitochondrial energy production; ubiquinol reduction may contribute to rhabdomyolysis. Human rhabdomyosarcoma cells wer...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23624330/"
+        },
+        {
+          "pmid": "26319048",
+          "title": "In vitro and in vivo downregulation of the ATP binding cassette transporter B1 by the HMG-CoA reductase inhibitor simvastatin.",
+          "authors": "Atil B, Berger-Sieczkowski E, Bardy J, et al.",
+          "journal": "Naunyn-Schmiedeberg's archives of pharmacology",
+          "year": "2016",
+          "abstract_snippet": "Extrusion of chemotherapeutics by ATP-binding cassette (ABC) transporters like ABCB1 (P-glycoprotein) represents a crucial mechanism of multidrug resistance in cancer therapy. We have previously shown that the 3-hydroxy-3-methylglutaryl coenzyme A (HMG-CoA) reductase inhibitor simvastatin directly i...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26319048/"
+        },
+        {
+          "pmid": "15289292",
+          "title": "Mutual amplification of apoptosis by statin-induced mitochondrial stress and doxorubicin toxicity in human rhabdomyosarcoma cells.",
+          "authors": "Werner M, Sacher J, Hohenegger M",
+          "journal": "British journal of pharmacology",
+          "year": "2004",
+          "abstract_snippet": "Besides their cholesterol-lowering effect, 3-hydroxy-3-methyl-glutaryl-CoA reductase inhibitors (statins) show antiproliferative behaviour, which has been suggested as a promising anticancer strategy. However, the signalling cascades leading to statin-induced death of cancer cells are poorly charact...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15289292/"
+        }
+      ],
+      "repurposing_papers": [],
+      "semantic_scholar_papers": [
+        {
+          "title": "Simvastatin-induced compartmentalisation of doxorubicin sharpens up nuclear topoisomerase II inhibition in human rhabdomyosarcoma cells",
+          "year": 2013,
+          "citations": 20,
+          "url": "https://www.semanticscholar.org/paper/33d3eebaf2c1feb85ec0338eb8fbbfe52d7b6cec",
+          "authors": "M. Werner, Bihter Atil, Evelyn Sieczkowski"
+        },
+        {
+          "title": "Simvastatin-induced compartmentalisation of doxorubicin sharpens up nuclear topoisomerase II inhibition in human rhabdomyosarcoma cells",
+          "year": 2013,
+          "citations": 3,
+          "url": "https://www.semanticscholar.org/paper/5aacd109da4ae9722e6384cd6370bf6b3b021439",
+          "authors": "M. Werner, Bihter Atil, Evelyn Sieczkowski"
+        },
+        {
+          "title": "Protein acetylation in human rhabdomyosarcoma and neuroblastoma cells induced by simvastatin",
+          "year": 2013,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/bfdc08b08ce5f2a7737d4e835000efc1579d57a8",
+          "authors": "M. Kulaksiz"
+        },
+        {
+          "title": "Long-term regulation of ATP-binding cassette transporters on mRNA and protein level by simvastatin in human rhabdomyosarcoma and neuroblastoma cells",
+          "year": 2010,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/f8f8e1f6316a3c55f67935e8a1b206ed628e1f8a",
+          "authors": "Bihter Atil, M. Werner, Evelyn Sieczkowski"
+        },
+        {
+          "title": "In vitro and in vivo profiling of P-glycoprotein in human neuroblastoma and rhabdomyosarcoma cells under simvastatin exposure",
+          "year": 2009,
+          "citations": 0,
+          "url": "https://www.semanticscholar.org/paper/43612bc86bdef105ede3b5d04b397bf381852593",
+          "authors": "Evelyn Sieczkowski, P. Ambros, M. Hohenegger"
+        }
+      ],
+      "most_cited_paper": {
+        "title": "Simvastatin-induced compartmentalisation of doxorubicin sharpens up nuclear topoisomerase II inhibition in human rhabdomyosarcoma cells",
+        "year": 2013,
+        "citations": 20,
+        "url": "https://www.semanticscholar.org/paper/33d3eebaf2c1feb85ec0338eb8fbbfe52d7b6cec",
+        "authors": "M. Werner, Bihter Atil, Evelyn Sieczkowski"
+      },
+      "max_citations": 20,
+      "faers_signal": "none",
+      "faers_total_reports": 211559,
+      "faers_cooccurrences": 0,
+      "faers_interpretation": "No FAERS reports found linking Simvastatin to Rhabdomyosarcoma terms. Drug has 211559 total reports.",
+      "signature_reversal_found": false,
+      "signature_reversal_rank": 0,
+      "signature_top_reversers": [
+        "BI-2536 (1.565)",
+        "manumycin A (1.526)",
+        "withaferin-a (1.523)",
+        "Chemistry 2804 (1.519)",
+        "2-Chloro-N-heptyl-N-m-tolyl-acetamide (1.514)"
+      ],
+      "signature_interpretation": "Simvastatin was not found among the top 39 drugs that reverse the Rhabdomyosarcoma gene signature. Top reversers: BI-2536 (1.565), manumycin A (1.526), withaferin-a (1.523)",
+      "ai_hypothesis": "of its ability to inhibit the mevalonate pathway.",
+      "abstract_analyses": [
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        },
+        {
+          "relation_type": "unclear",
+          "confidence": 0.0,
+          "reason": "Drug or disease not mentioned in abstract"
+        }
+      ],
+      "has_failed_trial": false,
+      "failed_trial_phase": "",
+      "failed_trial_count": 0,
+      "failed_trial_penalty": 1.0,
+      "mr_score": 0.7527,
+      "mr_genetic_targets": 3,
+      "mechanistic_hypothesis": "Simvastatin \u2014[downregulates]\u2192 gene-84617 \u2014[is bound by]\u2192 DB00541 \u2014[treats]\u2192 Rhabdomyosarcoma",
+      "kg_paths_text": "\u2022 Simvastatin \u2014[downregulates]\u2192 gene-84617 \u2014[is bound by]\u2192 DB00541 \u2014[treats]\u2192 Rhabdomyosarcoma\n\u2022 Simvastatin \u2014[downregulates]\u2192 gene-84617 \u2014[is bound by]\u2192 DB00541 \u2014[treats]\u2192 Rhabdomyosarcoma\n\u2022 Simvastatin \u2014[downregulates]\u2192 gene-84617 \u2014[is bound by]\u2192 DB00541 \u2014[treats]\u2192 Rhabdomyosarcoma",
+      "validation_experiments": [],
+      "novelty_score": 0.416,
+      "novelty_level": "KNOWN",
+      "is_known_treatment": false,
+      "clinical_trials_total": 1,
+      "clinical_trials": [
+        {
+          "nct_id": "NCT02390843",
+          "title": "Simvastatin With Topotecan and Cyclophosphamide in Relapsed and/or Refractory Pediatric Solid and CNS Tumors",
+          "status": "COMPLETED",
+          "phase": "PHASE1",
+          "enrollment": "13",
+          "url": "https://clinicaltrials.gov/study/NCT02390843"
+        }
+      ],
+      "trial_phases": {
+        "PHASE1": 1
+      },
+      "confidence": "HIGH",
+      "confidence_reasons": [
+        "1 clinical trial(s) found on ClinicalTrials.gov",
+        "17 PubMed articles found",
+        "Supported by 4 independent AI pillars",
+        "AI-generated hypothesis available",
+        "Strong causal genetic evidence (MR score: 0.75, 3 genetic targets)"
+      ],
+      "disease_entity": "Disease::MESH:D012208",
+      "dose_plausibility": {
+        "plausibility": "likely",
+        "dose_range": "trial",
+        "confidence": "medium",
+        "rationale": "Phase-2 investigational \u2014 preliminary efficacy signal at tested doses; pharmacokinetics from Phase 1 informs dose estimate.",
+        "chembl_phase": 2.0,
+        "target_affinity": {},
+        "stage": 1
+      },
+      "ddi_warnings": {
+        "n_interactions": 1139,
+        "has_warnings": true,
+        "top_interactions": [
+          {
+            "drug_id": "DB00316",
+            "drug_name": "Acetaminophen",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00945",
+            "drug_name": "Acetylsalicylic acid",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01076",
+            "drug_name": "Atorvastatin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00564",
+            "drug_name": "Carbamazepine",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01211",
+            "drug_name": "Clarithromycin",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00758",
+            "drug_name": "Clopidogrel",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB01264",
+            "drug_name": "Darunavir",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00829",
+            "drug_name": "Diazepam",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00530",
+            "drug_name": "Erlotinib",
+            "severity": "high"
+          },
+          {
+            "drug_id": "DB00199",
+            "drug_name": "Erythromycin",
+            "severity": "high"
+          }
+        ]
+      },
+      "pharmacogenomics": {
+        "has_flags": true,
+        "highest_risk": "high_risk",
+        "summary": "CPIC-A (SLCO1B1) \u2022 PharmGKB-3 (HMGCR / rs17238540)",
+        "cpic": [
+          {
+            "gene": "SLCO1B1",
+            "level": "A",
+            "guideline": "SLCO1B1, ABCG2, CYP2C9, and Statins"
+          },
+          {
+            "gene": "ABCB1",
+            "level": "C",
+            "guideline": ""
+          },
+          {
+            "gene": "CYP3A4",
+            "level": "C",
+            "guideline": "SLCO1B1, ABCG2, CYP2C9, and Statins"
+          },
+          {
+            "gene": "CYP3A5",
+            "level": "C",
+            "guideline": "SLCO1B1, ABCG2, CYP2C9, and Statins"
+          },
+          {
+            "gene": "CETP",
+            "level": "D",
+            "guideline": ""
+          }
+        ],
+        "pharmgkb": [
+          {
+            "gene": "HMGCR",
+            "variant": "rs17238540",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183491617"
+          },
+          {
+            "gene": "HMGCR",
+            "variant": "rs17244841",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1183491741"
+          },
+          {
+            "gene": "RYR2",
+            "variant": "rs2819742",
+            "level": "3",
+            "phenotype_category": "Toxicity",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1447987124"
+          },
+          {
+            "gene": "KIF6",
+            "variant": "rs20455",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1449748187"
+          },
+          {
+            "gene": "SLCO1B1",
+            "variant": "rs4149056",
+            "level": "3",
+            "phenotype_category": "Efficacy",
+            "url": "https://www.pharmgkb.org/clinicalAnnotation/1451356520"
+          }
+        ]
+      },
+      "triangulation": {
+        "n_axes_agree": 2,
+        "axes": {
+          "kg": true,
+          "docking": false,
+          "pharos": false,
+          "literature": true
+        },
+        "triangulation_score": 0.439,
+        "label": "multi-axis",
+        "axis_values": {
+          "kg": 0.495,
+          "docking": 0.522,
+          "pharos": 0.0,
+          "literature": 0.545
+        }
+      },
+      "tissue_context": {
+        "tissues": [
+          "Whole Blood"
+        ],
+        "n_genes": 18,
+        "n_expressed": 14,
+        "mean_tpm_in_tissue": 23.6,
+        "max_tpm_in_tissue": 306.45,
+        "tissue_specificity": 0.288,
+        "context_modifier": 1.01
+      },
+      "ensemble_prob": 0.096,
+      "ensemble_features": {
+        "kg_score": 0.9836,
+        "degree_penalty": 0.7582,
+        "n_drug_targets": 19,
+        "is_fda_approved": 1,
+        "n_disease_genes": 0,
+        "transe_rank_log": 5.1591
+      },
+      "ensemble_rank": 8,
+      "docking": {
+        "kcal_per_mol": -6.26,
+        "target_symbol": "ABCB1",
+        "source": "chembl_bioactivity_proxy",
+        "note": "Proxy: ChEMBL-measured IC50/Ki nM \u2192 pseudo-kcal/mol; drug hits a gene associated with this disease in OT.",
+        "hit": true
+      },
+      "structural_alerts": {
+        "has_pains": false,
+        "pains_families": [],
+        "n_alerts": 0,
+        "alert_names": []
+      }
+    }
+  ],
+  "disease_entity": "Disease::MESH:D012208",
+  "ensemble_version": "v5",
+  "ensemble_model_path": "data/models/ensemble_v5.pkl",
+  "docking_axis": {
+    "source": "chembl_bioactivity_proxy + not_wired fallback",
+    "n_disease_genes": 112,
+    "note": "Docking axis uses ChEMBL-measured potency as a proxy for pose energy when drug-disease target overlap exists. True AutoDock Vina integration is v6 work."
+  }
+}

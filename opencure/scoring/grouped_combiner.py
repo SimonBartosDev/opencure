@@ -36,6 +36,23 @@ CONVERGENCE_BONUS_PER_GROUP = 0.05
 CONVERGENCE_START = 3  # Bonus kicks in at 3rd group
 
 
+def _is_fda_approved(compound: str) -> bool:
+    """Check whether compound has ChEMBL max_phase >= 2 (proven in humans)."""
+    try:
+        from opencure.filters.drug_filter import _load_chembl_phase
+        cache = _load_chembl_phase()
+    except Exception:
+        return False
+    if not cache:
+        return False
+    db_id = compound.split("::", 1)[1] if "::" in compound else compound
+    phase = cache.get(db_id)
+    try:
+        return phase is not None and float(phase) >= 2.0
+    except (TypeError, ValueError):
+        return False
+
+
 def combine_grouped_scores(features: dict) -> dict:
     """
     Combine per-compound group features into final score.
@@ -72,12 +89,20 @@ def combine_grouped_scores(features: dict) -> dict:
         # Convergence bonus for multi-group agreement
         convergence_bonus = max(0, groups_hit - CONVERGENCE_START + 1) * CONVERGENCE_BONUS_PER_GROUP
 
-        # ADMET as multiplier (drug-likeness scales the score)
-        # - admet=1.0 → full score
-        # - admet=0.5 → half score
-        # - admet=0 (missing) → pass through (0.7 default)
+        # ADMET as two-stage multiplier:
+        #   - FDA-approved drugs (ChEMBL phase >= 2): gentle penalty [0.8, 1.0]
+        #     (real-world human data trumps predicted toxicity)
+        #   - Non-FDA compounds: harsher penalty [0.3, 1.0] (research chemicals
+        #     with poor predicted ADMET should lose more of their score)
         admet_score = feats.get("admet_score", 0)
-        admet_multiplier = (0.5 + admet_score * 0.5) if admet_score > 0 else 0.7
+        is_approved = _is_fda_approved(compound)
+        if admet_score > 0:
+            if is_approved:
+                admet_multiplier = 0.8 + 0.2 * admet_score
+            else:
+                admet_multiplier = 0.3 + 0.7 * admet_score
+        else:
+            admet_multiplier = 0.85 if is_approved else 0.6  # missing data fallback
 
         efficacy_score = base_weighted_sum + convergence_bonus
         final_score = efficacy_score * admet_multiplier

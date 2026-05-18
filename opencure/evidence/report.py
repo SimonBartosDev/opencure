@@ -144,6 +144,13 @@ class EvidenceReport:
     confidence: str = ""  # HIGH, MEDIUM, LOW, NOVEL
     confidence_reasons: list = field(default_factory=list)
 
+    # v5 clinical layer
+    dose_plausibility: dict = field(default_factory=dict)
+    ddi_warnings: dict = field(default_factory=dict)
+    pharmacogenomics: dict = field(default_factory=dict)
+    triangulation: dict = field(default_factory=dict)
+    tissue_context: dict = field(default_factory=dict)
+
     def to_dict(self) -> dict:
         return {
             "drug_name": self.drug_name,
@@ -218,6 +225,13 @@ class EvidenceReport:
             "trial_phases": self.trial_phases,
             "confidence": self.confidence,
             "confidence_reasons": self.confidence_reasons,
+            "disease_entity": self.disease_entity,
+            # v5 clinical layer
+            "dose_plausibility": self.dose_plausibility,
+            "ddi_warnings": self.ddi_warnings,
+            "pharmacogenomics": self.pharmacogenomics,
+            "triangulation": self.triangulation,
+            "tissue_context": self.tissue_context,
         }
 
 
@@ -428,6 +442,95 @@ def generate_evidence_report(
         report.confidence_reasons.append(
             "NOTE: This appears to be an already-approved treatment, not a repurposing candidate"
         )
+
+    # Mechanism paths (v4): render up to 3 shortest KG paths drug→disease.
+    # Best-effort — failure here must not break the evidence pipeline.
+    try:
+        from opencure.evidence.path_explainer import explain_path, graph_ready
+        drug_entity = f"Compound::{report.drug_id}" if not report.drug_id.startswith("Compound::") else report.drug_id
+        dis_entity = report.disease_entity
+        if dis_entity and graph_ready():
+            name_map = {drug_entity: report.drug_name, dis_entity: report.disease_name}
+            paths = explain_path(
+                drug_entity, dis_entity,
+                max_paths=3, cutoff=3,
+                entity_name_map=name_map,
+            )
+            if paths:
+                report.kg_paths_text = "\n".join(f"• {p['narration']}" for p in paths)
+                # Top path becomes the mechanistic hypothesis
+                report.mechanistic_hypothesis = paths[0]["narration"]
+    except Exception:
+        pass
+
+    # v5 clinical layer — best-effort; failures don't break evidence pipeline
+    try:
+        from opencure.evidence.dose_plausibility import get_dose_plausibility
+        # Pass the best-known target symbol so stage-2 (Cmax vs IC50) engages
+        target_sym = report.dti_best_target or None
+        if not target_sym and report.shared_targets:
+            # Fallback: first shared target's gene symbol, if we can resolve
+            # via the HGNC map used by tissue_context
+            try:
+                from opencure.scoring.tissue_context import _load_entrez_to_symbol
+                ent_to_sym = _load_entrez_to_symbol()
+                for g in report.shared_targets:
+                    if g and g in ent_to_sym:
+                        target_sym = ent_to_sym[g]
+                        break
+            except Exception:
+                pass
+        report.dose_plausibility = get_dose_plausibility(report.drug_id, target_symbol=target_sym)
+    except Exception:
+        pass
+
+    try:
+        from opencure.evidence.ddi_warnings import get_ddi_warnings
+        report.ddi_warnings = get_ddi_warnings(report.drug_id, top_k=10)
+    except Exception:
+        pass
+
+    try:
+        from opencure.evidence.pharmacogenomics import get_pharmacogenomic_flags
+        report.pharmacogenomics = get_pharmacogenomic_flags(report.drug_name)
+    except Exception:
+        pass
+
+    try:
+        from opencure.evidence.triangulation import compute_triangulation_score, get_pharos_tdl
+        # Best available target symbol for Pharos lookup
+        tdl = ""
+        if report.dti_best_target:
+            tdl = get_pharos_tdl(report.dti_best_target)
+        report.triangulation = compute_triangulation_score(
+            kg_score=report.combined_score,
+            docking_score=None,  # populated when docking pillar runs
+            pharos_tdl=tdl,
+            pubmed_total=report.pubmed_total,
+        )
+    except Exception:
+        pass
+
+    try:
+        from opencure.scoring.tissue_context import score_tissue_context
+        # Prefer shared drug-disease targets; fall back to disease-associated
+        # genes so the field always populates with the disease's tissue map
+        # even when drug-target overlap is empty. Context modifier stays 1.0
+        # in that fallback — the field becomes informative, not a score shift.
+        gene_set: set[str] = set()
+        if report.shared_targets:
+            gene_set = {f"Gene::{g}" for g in report.shared_targets if g}
+        else:
+            # Best-effort: disease-associated genes from OT, if available.
+            try:
+                from opencure.data.opentargets import get_disease_targets
+                tgts = get_disease_targets(disease_name) or []
+                gene_set = {f"Gene::{g}" for g in tgts[:50] if g}
+            except Exception:
+                gene_set = set()
+        report.tissue_context = score_tissue_context(disease_name, gene_set)
+    except Exception:
+        pass
 
     return report
 

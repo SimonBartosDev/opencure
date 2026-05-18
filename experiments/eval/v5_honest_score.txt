@@ -1,0 +1,108 @@
+OpenCure v5 honest-scoring run — 2026-04-19 08:30 UTC
+
+==============================================================================
+1. PILLAR FIRE RATES (saved disease JSONs)
+==============================================================================
+
+Scanned 140 candidates across 14 diseases
+
+Pillar                 fire-rate (of 140)
+----------------------------------------------------------------------
+1. TransE               140  100.0%  ████████████████████
+2. RotatE                70   50.0%  ██████████
+3. TxGNN                 27   19.3%  ███
+4. MolFP                 27   19.3%  ███
+5. ChemBERTa             68   48.6%  █████████
+6. Gene Sig               0    0.0%  
+7. Proximity              0    0.0%  
+8. MR                    44   31.4%  ██████
+9. ADMET                140  100.0%  ████████████████████
+10. PrimeKG             137   97.9%  ███████████████████
+11. DTI                   0    0.0%  
+
+Metabolite leaks detected: 8
+  Chagas_disease / Uric Acid
+  Ehlers-Danlos_syndrome / Creatinine
+  Ehlers-Danlos_syndrome / Uric Acid
+  HIV / Cordycepin Triphosphate
+  HIV / 16,17-Androstene-3-Ol
+  Leishmaniasis / Creatinine
+  Malaria / Glutathione
+  Sickle_cell_disease / Creatinine
+
+==============================================================================
+2. HELD-OUT KG-SCORER METRICS
+==============================================================================
+
+drkg_transE_clean:
+      random_holdout  Hit@10 =   3.33%  MRR = 0.0174  median = 537
+         time_sliced  Hit@10 =    0.0%  MRR = 0.0005  median = 5512
+
+unified_transE_contaminated:
+      random_holdout  Hit@10 =    0.6%  MRR = 0.0049  median = 924
+         time_sliced  Hit@10 =    0.0%  MRR = 0.0041  median = 2733
+
+unified_transE_clean:
+      random_holdout  Hit@10 =   1.03%  MRR = 0.0069  median = 1040
+         time_sliced  Hit@10 =    0.0%  MRR = 0.0011  median = 2850
+
+==============================================================================
+3. CLINICAL LAYER COVERAGE
+==============================================================================
+
+Scanned 140 candidates
+  dose_plausibility          0    0.0%  
+  ddi_warnings               0    0.0%  
+  pharmacogenomics           0    0.0%  
+  triangulation              0    0.0%  
+  tissue_context             0    0.0%  
+
+NOTE: none populated — rerun v5 screening to update
+
+==============================================================================
+4. REGRESSION TEST SUITE
+==============================================================================
+
+79 passed, 16 deselected in 0.45s  (runtime 0.8s)
+
+==============================================================================
+5. RECENT V5 COMMITS
+==============================================================================
+
+e067621 scripts/honest_scoring.py: single runner for the v5 report
+9cb08ff v5 Phase B followup: mechanistic_reversal regression test added
+c6b2100 Phase C scaffold: ensemble training-data builder (stub until retrain lands)
+92484f1 v5 hardening polish: eval script auto-detects models + Phase C trainer scaffold
+aa4ac9d v5 held-out eval results: unified TransE undertrained on MPS
+c5a356e v5 Phase E: data manifest provenance (docking deferred)
+3a23d6b v5 Phase D-1: structured logging + timing metrics
+31db8a4 v5 Phase B: pytest suite + CI (91 tests, 1.7s)
+a57d5d3 v5 Phase A: refactor search.py, unify field names, remove dead v2 combiner
+ed8b320 v5 hardening plan: 5 phases, 5 days, 7 \u2192 8.5/10
+a46c378 v5: mechanistic reversal pillar + tighten metabolite blacklist
+b8d02c0 v5 BUGFIX: 3 pillars (gene_sig, proximity, DTI) were silently zero in final JSONs
+42c3282 v5: ChEMBL 34 stage-2 dose + Zenodo upload + dashboard guardrails tab
+85614ed v5 wire-up: clinical layer populated in EvidenceReport + R-GCN scaffold
+6c4d354 v5 C2+F1+F2+G1+G2: tissue context + mass screen + API + paper + briefs
+
+
+==============================================================================
+FINAL HONEST SCORECARD
+==============================================================================
+
+ Code quality       : 8/11 pillars firing in saved JSONs
+ Tests              : 79 passed, 16 deselected in 0.45s
+ Metabolite filter  : 8 leak(s) (target: 0)
+ KG scorer          : drkg_transE_clean → Hit@10 = 3.33%
+ Clinical layer     : NOT populated in current JSONs — re-screen to activate
+
+The full 11-pillar + clinical-layer output surfaces only in FRESH v5
+searches (re-runs post-refactor).  Old disease JSONs on disk pre-date
+the v5 bugfixes and clinical-layer wiring.
+
+Ready for the public phase when:
+  • drkg_transE_clean Hit@10 > 40% on random-holdout (clean baseline)
+  • a fresh v5 re-screen regenerates all 61 disease JSONs
+  • Zenodo upload of the prospective-snapshot folder
+  • bioRxiv submission with these held-out numbers filled in
+

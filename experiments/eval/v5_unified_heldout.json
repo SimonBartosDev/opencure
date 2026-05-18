@@ -1,0 +1,63 @@
+{
+  "evaluated_at": "2026-04-28T07:55:20Z",
+  "drkg_transE_clean": {
+    "random_holdout": {
+      "pairs_evaluated": 960,
+      "pairs_total": 993,
+      "candidate_pool": 24313,
+      "hit_at": {
+        "10": 3.33,
+        "50": 10.94,
+        "100": 17.4,
+        "500": 47.92
+      },
+      "mrr": 0.0174,
+      "median_rank": 537,
+      "mean_rank": 1026.9
+    },
+    "time_sliced": {
+      "pairs_evaluated": 160,
+      "pairs_total": 210,
+      "candidate_pool": 24313,
+      "hit_at": {
+        "10": 0.0,
+        "50": 0.0,
+        "100": 0.0,
+        "500": 1.88
+      },
+      "mrr": 0.0005,
+      "median_rank": 5512,
+      "mean_rank": 6829.6
+    }
+  },
+  "unified_transE_contaminated": {
+    "random_holdout": {
+      "pairs_evaluated": 993,
+      "pairs_total": 993,
+      "candidate_pool": 24747,
+      "hit_at": {
+        "10": 0.6,
+        "50": 3.73,
+        "100": 10.37,
+        "500": 34.24
+      },
+      "mrr": 0.0049,
+      "median_rank": 924,
+      "mean_rank": 2045.3
+    },
+    "time_sliced": {
+      "pairs_evaluated": 210,
+      "pairs_total": 210,
+      "candidate_pool": 24747,
+      "hit_at": {
+        "10": 0.0,
+        "50": 6.67,
+        "100": 9.52,
+        "500": 26.19
+      },
+      "mrr": 0.0041,
+      "median_rank": 2733,
+      "mean_rank": 4231.7
+    }
+  }
+}

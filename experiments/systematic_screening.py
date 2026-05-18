@@ -32,6 +32,7 @@ RESULTS_DIR = Path("experiments/results")
 # Target diseases organized by category
 TARGET_DISEASES = {
     "Neglected Tropical": [
+        # Original 8
         "Malaria",
         "Tuberculosis",
         "Dengue",
@@ -40,8 +41,24 @@ TARGET_DISEASES = {
         "Schistosomiasis",
         "HIV",
         "Hepatitis C",
+        # v5.3 expansion: WHO neglected-tropical priority list
+        "African trypanosomiasis",
+        "Onchocerciasis",
+        "Lymphatic filariasis",
+        "Leprosy",
+        "Buruli ulcer",
+        "Trachoma",
+        "Echinococcosis",
+        "Cysticercosis",
+        "Rabies",
+        "Scabies",
+        "Ascariasis",
+        "Hookworm infection",
+        "Visceral leishmaniasis",
+        "Cutaneous leishmaniasis",
     ],
     "Rare Diseases": [
+        # Original 8
         "Sickle cell disease",
         "Fragile X syndrome",
         "Duchenne muscular dystrophy",
@@ -50,6 +67,18 @@ TARGET_DISEASES = {
         "Ehlers-Danlos syndrome",
         "Gaucher disease",
         "Fabry disease",
+        # v5.3 expansion: high-need rare diseases (genetic, lysosomal, neurological)
+        "Spinal muscular atrophy",
+        "Friedreich's ataxia",
+        "Hunter syndrome",
+        "Pompe disease",
+        "Niemann-Pick disease",
+        "Rett syndrome",
+        "Tay-Sachs disease",
+        "Wilson's disease",
+        "Phenylketonuria",
+        "Spinocerebellar ataxia",
+        "Acromegaly",
     ],
     "Neurodegenerative": [
         "Alzheimer's disease",
@@ -65,6 +94,7 @@ TARGET_DISEASES = {
         "Sepsis",
     ],
     "Cancer": [
+        # Original 11 (mostly adult)
         "Breast cancer",
         "Lung cancer",
         "Colorectal cancer",
@@ -76,6 +106,14 @@ TARGET_DISEASES = {
         "Leukemia",
         "Lymphoma",
         "Multiple myeloma",
+        # v5.3 expansion: pediatric cancers (mission-critical, low commercial-incentive)
+        "Neuroblastoma",
+        "Retinoblastoma",
+        "Wilms tumor",
+        "Medulloblastoma",
+        "Rhabdomyosarcoma",
+        "Ewing sarcoma",
+        "Osteosarcoma",
     ],
     "Cardiovascular & Metabolic": [
         "Heart failure",
@@ -181,6 +219,16 @@ def screen_disease(disease_name: str, top_k: int = 50, evidence_top_k: int = 10)
         conf = c.get("confidence", "UNKNOWN")
         confidence_counts[conf] = confidence_counts.get(conf, 0) + 1
 
+    # v5 provenance: record the exact data-manifest hash that produced this
+    # screen, so every prediction is tied to an immutable data version.
+    manifest_hash = ""
+    try:
+        import json as _json
+        _m = _json.loads(Path("data/manifest.json").read_text())
+        manifest_hash = _m.get("manifest_hash", "")
+    except Exception:
+        pass
+
     return {
         "disease": disease_name,
         "status": "completed",
@@ -189,6 +237,8 @@ def screen_disease(disease_name: str, top_k: int = 50, evidence_top_k: int = 10)
         "total_searched": len(results),
         "evidence_generated": len([c for c in candidates if not c.get("evidence_skipped")]),
         "confidence_counts": confidence_counts,
+        "pipeline_version": "v5",
+        "data_manifest_hash": manifest_hash,
         "candidates": candidates,
     }
 
