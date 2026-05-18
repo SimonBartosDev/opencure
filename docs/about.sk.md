@@ -3,9 +3,12 @@ title: O projekte OpenCure
 description: Poslanie, etika a aktuálny stav platformy OpenCure.
 ---
 
-# O projekte OpenCure
+<div style="position:fixed;top:14px;right:14px;z-index:9999;display:flex;font:700 13px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;border:1px solid #d0d7de;border-radius:8px;overflow:hidden;box-shadow:0 1px 5px rgba(0,0,0,.2)">
+<a href="about.html" style="padding:7px 14px;text-decoration:none;background:#fff;color:#57606a">EN</a>
+<a href="about.sk.html" style="padding:7px 14px;text-decoration:none;background:#2563eb;color:#fff" aria-current="page">SK</a>
+</div>
 
-🌐 [English](about.html) · **Slovenčina**
+# O projekte OpenCure
 
 **[← Živý dashboard](index.html)** · [Ako to funguje (architektúra)](architecture.sk.html) · [Metodická štúdia](https://github.com/SimonBartosDev/opencure/blob/main/docs/methods_paper_draft.md) · [GitHub](https://github.com/SimonBartosDev/opencure)
 

@@ -3,9 +3,12 @@ title: OpenCure v7 — Architektúra
 description: Ako funguje platforma OpenCure na preúčelovanie liečiv, od začiatku do konca.
 ---
 
-# OpenCure v7 — Ako to funguje
+<div style="position:fixed;top:14px;right:14px;z-index:9999;display:flex;font:700 13px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;border:1px solid #d0d7de;border-radius:8px;overflow:hidden;box-shadow:0 1px 5px rgba(0,0,0,.2)">
+<a href="architecture.html" style="padding:7px 14px;text-decoration:none;background:#fff;color:#57606a">EN</a>
+<a href="architecture.sk.html" style="padding:7px 14px;text-decoration:none;background:#2563eb;color:#fff" aria-current="page">SK</a>
+</div>
 
-🌐 [English](architecture.html) · **Slovenčina**
+# OpenCure v7 — Ako to funguje
 
 **[← Živý dashboard](index.html)** · [O projekte a poslaní](about.sk.html) · [Metodická štúdia](https://github.com/SimonBartosDev/opencure/blob/main/docs/methods_paper_draft.md) · [GitHub](https://github.com/SimonBartosDev/opencure)
 
