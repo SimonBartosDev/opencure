@@ -3,9 +3,12 @@ title: OpenCure v7 — Architecture
 description: How the OpenCure drug-repurposing platform works, end to end.
 ---
 
-# OpenCure v7 — How it works
+<div style="position:fixed;top:14px;right:14px;z-index:9999;display:flex;font:700 13px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;border:1px solid #d0d7de;border-radius:8px;overflow:hidden;box-shadow:0 1px 5px rgba(0,0,0,.2)">
+<a href="architecture.html" style="padding:7px 14px;text-decoration:none;background:#2563eb;color:#fff" aria-current="page">EN</a>
+<a href="architecture.sk.html" style="padding:7px 14px;text-decoration:none;background:#fff;color:#57606a">SK</a>
+</div>
 
-🌐 **English** · [Slovenčina](architecture.sk.html)
+# OpenCure v7 — How it works
 
 **[← Live dashboard](index.html)** · [About & mission](about.html) · [Methods paper](https://github.com/SimonBartosDev/opencure/blob/main/docs/methods_paper_draft.md) · [GitHub](https://github.com/SimonBartosDev/opencure)
 
