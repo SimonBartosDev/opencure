@@ -1,0 +1,67 @@
+{
+  "description": "Genetics-anchored target-based ranker. Score(drug, disease) = max over the drug's ChEMBL mechanism target genes of the Open Targets genetic_association score of that gene for that disease. Ranks are tie-aware mid-ranks against the full DRKG compound pool, identical methodology to leakfree_benchmark.py.",
+  "leak_control": "Leak-free by construction: inputs are disease-gene genetic associations and drug-target mechanism only; no treats/indication edge is read.",
+  "tier2_direction": "NOT implemented \u2014 see script footer.",
+  "n_heldout_pairs": 993,
+  "results": {
+    "genetics_anchored (OT genetic_association)": {
+      "evaluable": 581,
+      "n_pairs": 993,
+      "hit_at_10": 1.5,
+      "hit_at_30": 2.9,
+      "hit_at_100": 7.2,
+      "mrr": 0.0063,
+      "median_rank": 12170,
+      "unevaluable": {
+        "disease_unmapped": 249,
+        "disease_no_gene_scores": 163,
+        "drug_not_in_pool": 0,
+        "drug_no_mechanism_target": 238,
+        "drug_target_no_genetic_assoc": 281
+      }
+    },
+    "popularity_baseline (DRKG degree, same pool)": {
+      "evaluable": 581,
+      "n_pairs": 993,
+      "hit_at_10": 3.3,
+      "hit_at_30": 5.5,
+      "hit_at_100": 15.5,
+      "mrr": 0.0156,
+      "median_rank": 894
+    },
+    "genetics_anchored (OT overall score, comparison)": {
+      "evaluable": 737,
+      "n_pairs": 993,
+      "hit_at_10": 6.2,
+      "hit_at_30": 19.5,
+      "hit_at_100": 33.8,
+      "mrr": 0.0257,
+      "median_rank": 12157,
+      "unevaluable": {
+        "disease_unmapped": 249,
+        "disease_no_gene_scores": 7,
+        "drug_not_in_pool": 0,
+        "drug_no_mechanism_target": 334,
+        "drug_target_no_genetic_assoc": 49
+      }
+    },
+    "genetics_anchored (subset: true drug has genetic signal)": {
+      "evaluable": 62,
+      "n_pairs": 993,
+      "hit_at_10": 14.5,
+      "hit_at_30": 27.4,
+      "hit_at_100": 67.7,
+      "mrr": 0.058,
+      "median_rank": 64
+    },
+    "popularity_baseline (same signal subset)": {
+      "evaluable": 62,
+      "n_pairs": 993,
+      "hit_at_10": 3.2,
+      "hit_at_30": 4.8,
+      "hit_at_100": 27.4,
+      "mrr": 0.0118,
+      "median_rank": 461
+    }
+  }
+}

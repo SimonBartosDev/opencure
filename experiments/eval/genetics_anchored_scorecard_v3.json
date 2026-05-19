@@ -1,0 +1,114 @@
+{
+  "description": "Phase 3 \u2014 genetics-anchored target-based ranker with expanded coverage. Score(drug, disease) = max over the drug's target genes of the Open Targets genetics-datasource association score of that gene for that disease. Tie-aware mid-ranks vs the full DRKG compound pool, identical methodology to leakfree_benchmark.py.",
+  "leak_control": "Leak-free by construction and HONORED. Disease side: only genetics datasources used (['clingen', 'eva', 'eva_somatic', 'gene_burden', 'genomics_england', 'gwas_credible_sets', 'orphanet', 'ot_genetics_portal', 'uniprot_variants']); chembl (known-drug), europepmc/uniprot_literature (literature), expression_atlas/reactome/slapenrich (non-genetic) and impc (animal model) datasources are EXCLUDED. Drug side: ChEMBL drug_mechanism targets + potent measured bioactivity (<1000 nM binding) \u2014 drug-intrinsic biochemistry only. No treats/indication edge is read.",
+  "phase3_coverage_expansion": {
+    "axis1_mesh_efo": "matched MESH: and MSH: dbXRef variants; 394/539 held-out diseases mapped",
+    "axis2_genetics_datasources": [
+      "clingen",
+      "eva",
+      "eva_somatic",
+      "gene_burden",
+      "genomics_england",
+      "gwas_credible_sets",
+      "orphanet",
+      "ot_genetics_portal",
+      "uniprot_variants"
+    ],
+    "axis3_bioactivity": "potent measured targets (<1000 nM) for 3020 DrugBank drugs"
+  },
+  "n_heldout_pairs": 993,
+  "results": {
+    "genetics_anchored MECH-only (datasource genetics, expanded MeSH)": {
+      "evaluable": 576,
+      "n_pairs": 993,
+      "hit_at_10": 1.9,
+      "hit_at_30": 2.6,
+      "hit_at_100": 6.4,
+      "mrr": 0.0065,
+      "median_rank": 12171,
+      "unevaluable": {
+        "disease_unmapped": 249,
+        "disease_no_gene_scores": 168,
+        "drug_not_in_pool": 0,
+        "drug_no_target": 241,
+        "drug_target_no_genetic_assoc": 282
+      }
+    },
+    "popularity_baseline (MECH-only pool)": {
+      "evaluable": 576,
+      "n_pairs": 993,
+      "hit_at_10": 3.3,
+      "hit_at_30": 5.6,
+      "hit_at_100": 15.3,
+      "mrr": 0.0157,
+      "median_rank": 909
+    },
+    "genetics_anchored MECH-only \u2014 genetic-signal subset": {
+      "evaluable": 53,
+      "n_pairs": 993,
+      "hit_at_10": 20.8,
+      "hit_at_30": 28.3,
+      "hit_at_100": 69.8,
+      "mrr": 0.0699,
+      "median_rank": 64
+    },
+    "popularity_baseline (MECH-only signal subset)": {
+      "evaluable": 53,
+      "n_pairs": 993,
+      "hit_at_10": 3.8,
+      "hit_at_30": 5.7,
+      "hit_at_100": 28.3,
+      "mrr": 0.0129,
+      "median_rank": 499
+    },
+    "genetics_anchored FULL (mechanism + potent bioactivity targets)": {
+      "evaluable": 576,
+      "n_pairs": 993,
+      "hit_at_10": 1.2,
+      "hit_at_30": 2.8,
+      "hit_at_100": 4.7,
+      "mrr": 0.0044,
+      "median_rank": 12190,
+      "unevaluable": {
+        "disease_unmapped": 249,
+        "disease_no_gene_scores": 168,
+        "drug_not_in_pool": 0,
+        "drug_no_target": 201,
+        "drug_target_no_genetic_assoc": 311
+      }
+    },
+    "popularity_baseline (FULL pool)": {
+      "evaluable": 576,
+      "n_pairs": 993,
+      "hit_at_10": 3.3,
+      "hit_at_30": 5.6,
+      "hit_at_100": 15.3,
+      "mrr": 0.0157,
+      "median_rank": 909
+    },
+    "genetics_anchored FULL \u2014 genetic-signal subset": {
+      "evaluable": 64,
+      "n_pairs": 993,
+      "hit_at_10": 10.9,
+      "hit_at_30": 25.0,
+      "hit_at_100": 42.2,
+      "mrr": 0.0387,
+      "median_rank": 131
+    },
+    "popularity_baseline (FULL signal subset)": {
+      "evaluable": 64,
+      "n_pairs": 993,
+      "hit_at_10": 6.2,
+      "hit_at_30": 9.4,
+      "hit_at_100": 28.1,
+      "mrr": 0.0158,
+      "median_rank": 441
+    }
+  },
+  "honest_verdict": {
+    "a_beats_popularity_overall": "NO. With expanded coverage the ranker still loses to the popularity baseline OVERALL (MECH-only Hit@10 1.9% vs 3.3%; FULL 1.2% vs 3.3% on 576 evaluable pairs). Broader coverage did not flip the overall result.",
+    "b_subset_signal_holds": "YES for the mechanism-target ranker. On the genetic-signal subset (53 pairs, up from 62 in Phase 2 \u2014 note the subset is defined on a different, datasource-level score so it is not strictly nested) the MECH-only ranker beats popularity ~5x (Hit@10 20.8% vs 3.8%, median rank 64 vs 499). The 2.6x-genetics signal is intact and if anything sharper than Phase 2.",
+    "c_bioactivity_supplement": "Adding potent measured-bioactivity targets (axis 3) GROWS the genetic-signal subset (53 -> 64 pairs) but DILUTES precision: FULL-pool signal-subset Hit@10 falls to 10.9% (vs 20.8% MECH-only). Cause: measured bioactivity targets are promiscuous, so many non-true candidates also pick up a genetic hit, inflating competitor scores and pushing the true drug down. Bioactivity widens coverage but is too noisy as an unfiltered drug-target source for a max-over-targets ranker. MECH-only remains the honest high-precision configuration.",
+    "bottom_line": "The honest product is NOT a universal ranker. It is a high-precision triage tool scoped to the genetics-covered subset: diseases with Open Targets genetics evidence AND drugs with a curated ChEMBL mechanism target. Within that scope it outperforms popularity ~5x leak-free. Outside it (the majority of held-out pairs) it has no signal and should not be used. Coverage \u2014 not signal quality \u2014 remains the binding constraint: 145/539 diseases have no MeSH dbXRef in the Open Targets ontology snapshot, and 100 more mapped diseases have no genetics-datasource evidence."
+  }
+}

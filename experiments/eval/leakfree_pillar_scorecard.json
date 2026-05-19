@@ -1,11 +1,6 @@
 {
-  "description": "Leak-free per-pillar held-out benchmark. Held-out treatment edges stripped from anchor sets; ranks are tie-aware mid-ranks against the full candidate pool.",
+  "description": "Leak-free per-pillar held-out benchmark. Held-out treatment edges stripped from anchor sets; ranks are tie-aware mid-ranks against the full candidate pool. A pillar earns its place only by beating the popularity baseline on its own candidate pool.",
   "n_heldout_pairs": 993,
-  "leak_control": "stripped 330 held-out TREATMENT_RELATIONS edges",
-  "unevaluable": {
-    "no_anchor": 159,
-    "drug_no_embedding": 203
-  },
   "pillars": {
     "molecular_embedding (chemberta)": {
       "evaluable": 631,
@@ -14,9 +9,13 @@
       "hit_at_30": 11.6,
       "hit_at_100": 21.7,
       "mrr": 0.0218,
-      "median_rank": 473
+      "median_rank": 473,
+      "unevaluable": {
+        "no_anchor": 159,
+        "drug_no_embedding": 203
+      }
     },
-    "popularity_baseline (DRKG degree)": {
+    "popularity_baseline (vs molecular pool)": {
       "evaluable": 631,
       "n_pairs": 993,
       "hit_at_10": 3.8,
@@ -24,6 +23,28 @@
       "hit_at_100": 23.1,
       "mrr": 0.0197,
       "median_rank": 407
+    },
+    "jump_cell_painting": {
+      "evaluable": 496,
+      "n_pairs": 993,
+      "hit_at_10": 2.8,
+      "hit_at_30": 5.0,
+      "hit_at_100": 8.9,
+      "mrr": 0.009,
+      "median_rank": 1293,
+      "unevaluable": {
+        "no_anchor": 180,
+        "drug_no_embedding": 317
+      }
+    },
+    "popularity_baseline (vs JUMP pool)": {
+      "evaluable": 496,
+      "n_pairs": 993,
+      "hit_at_10": 3.0,
+      "hit_at_30": 8.5,
+      "hit_at_100": 22.4,
+      "mrr": 0.0183,
+      "median_rank": 397
     }
   }
 }
