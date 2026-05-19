@@ -220,6 +220,9 @@ V51_FIELDS: tuple[str, ...] = (
 #   is. Low confidence → every prediction tagged speculative in the
 #   wet-lab brief.
 # - red_team_assessment: short adversarial critique per candidate.
+# - is_repurposing_candidate: False when the drug is already an established
+#   treatment for this disease (demoted below the surfaced top-K by
+#   scripts/apply_novelty_ranking.py); True for genuine repurposing leads.
 V7_FIELDS: tuple[str, ...] = (
     "ensemble_prob_lower",
     "ensemble_prob_upper",
@@ -233,6 +236,7 @@ V7_FIELDS: tuple[str, ...] = (
     "essentiality_warning",
     "mechanism_confidence",
     "red_team_assessment",
+    "is_repurposing_candidate",
 )
 
 CANDIDATE_FIELDS: frozenset[str] = frozenset(

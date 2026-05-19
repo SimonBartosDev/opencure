@@ -159,11 +159,30 @@ persists — is in [`hub_bias_analysis.md`](https://github.com/SimonBartosDev/op
 
 ## 5. The ensemble — and per-disease-class heads
 
-The grouped scores feed a **calibrated gradient-boosted ensemble**
-(XGBoost + isotonic calibration). It is trained on 23,814 drug–disease
-pairs and reaches AUC-ROC ≈ 0.997 in 5-fold cross-validation. Isotonic
-calibration means a reported `score = 0.7` corresponds to roughly 70 %
-empirical precision.
+The grouped scores feed a gradient-boosted ensemble (XGBoost + isotonic
+calibration).
+
+> **Honest evaluation — read this.** An earlier version of OpenCure
+> reported this ensemble at "AUC-ROC ≈ 0.997" on 5-fold cross-validation.
+> That figure was **data leakage**: the dominant features (`transe_rank_log`,
+> `kg_score`, ~90 % of the model's decision) were scored from a knowledge
+> graph that still contained the very `treats` edges used as test labels.
+> The model was graded on memorising its own training graph.
+>
+> A leak-free retrain (`scripts/train_ensemble_v7.py`) — KG features scored
+> from an edge-stripped model, trained and tested only on held-out pairs the
+> model never saw — gives a very different picture: CV AUROC ≈ **0.72** with
+> hard negatives, and on a fair *temporal* test (real post-2020 repurposing
+> events) the ensemble is **at or below chance**. The six simple features
+> encode how well-established a drug is, which is anti-correlated with
+> whether a use is genuinely *new*.
+>
+> The honest conclusion: **this ensemble does not predict prospective
+> repurposing.** It is retained as one ranking input among the pillars, not
+> as a validated classifier. OpenCure publishes **no benchmark accuracy
+> figure** — see the limitations section. Isotonic calibration still makes
+> the *relative* ordering of scores monotone, but a numeric `score` should
+> not be read as a probability of success.
 
 v7 adds **per-disease-class ensemble heads**. The 93 diseases are
 grouped into six therapeutic classes — *parasitic, viral, bacterial,

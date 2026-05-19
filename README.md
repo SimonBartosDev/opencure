@@ -16,7 +16,7 @@
 
 ## What OpenCure does
 
-OpenCure screens ~10,500 FDA-approved and investigational drugs against any disease using **13 independent AI scoring pillars**, then layers **clinical guardrails**, **calibrated uncertainty**, and an **adversarial red-team pass** on every top prediction so results are actionable and honest — not just ranked.
+OpenCure screens ~10,500 FDA-approved and investigational drugs against any disease using **13 complementary AI scoring pillars**, then layers **clinical guardrails**, **calibrated uncertainty**, and an **adversarial red-team pass** on every top prediction so results are actionable and honest — not just ranked.
 
 Every top-K prediction surfaces:
 - **Calibrated uncertainty** (v7) — a 90 %-coverage conformal interval `[ensemble_prob_lower, ensemble_prob_upper]` plus a binary prediction set (`{1}` confident-positive, `{0,1}` genuinely uncertain, `{0}` confident-negative)
@@ -33,11 +33,35 @@ Every prediction is **content-fingerprinted** (SHA-256) and traceable to an immu
 
 **[Browse live predictions →](https://simonbartosdev.github.io/opencure/)**
 
+## What OpenCure is — and is not
+
+OpenCure is a **hypothesis-generation and triage tool**. It systematically
+ranks, critiques, documents, and uncertainty-annotates drug-repurposing
+hypotheses so a wet-lab scientist can decide what is worth testing.
+
+It is **not a validated predictor.** We publish **no benchmark accuracy
+figure**, and we make no claim about how often a top-ranked candidate is
+correct. A leak-free retrospective benchmark is not currently possible: the
+knowledge graph (DRKG, 2020-vintage) predates the repurposing events that
+would be needed to test it, and the only post-2020 repurposing examples
+available are too few to constitute a benchmark. The platform's predictive
+accuracy is therefore **unestablished** — honestly stated rather than
+hidden behind a number.
+
+> An earlier version of this README reported an ensemble "AUC-ROC 0.997".
+> That figure was an artefact of **data leakage** — the knowledge-graph
+> features were scored from a graph that still contained the test edges —
+> and has been **withdrawn**. See [docs/architecture.md](docs/architecture.md)
+> for the full honest evaluation discussion.
+
+Treat every output as a structured, transparent, adversarially-critiqued
+hypothesis for expert review — not a recommendation.
+
 ## Why this matters
 
 Drug development takes 10-15 years and costs >$2B. Repurposing approved drugs skips most of safety testing because the drugs are already proven tolerable in humans. The blocker has been: which drugs to test for which diseases, out of tens of millions of possibilities?
 
-OpenCure's answer: screen them all computationally with 13 orthogonal methods, surface the predictions where methods converge, calibrate the uncertainty honestly, adversarially critique each call, and give clinicians/researchers the clinical context they need to decide whether a prediction is worth testing in their lab.
+OpenCure's answer: screen them all computationally with 13 complementary methods, surface the candidates where independent methods converge, state the uncertainty honestly, adversarially critique each call, and give clinicians/researchers the clinical context they need to decide whether a hypothesis is worth testing in their lab. OpenCure narrows the search space for human experts — it does not replace experimental validation.
 
 ## The 13 scoring pillars
 
@@ -57,7 +81,15 @@ OpenCure's answer: screen them all computationally with 13 orthogonal methods, s
 | 12 | **R-GCN** | Heterogeneous GNN with DistMult head | trained on DRKG; v6.1+ |
 | 13 | **JUMP Cell Painting** (v7) | Morphological-similarity to known treatments in phenotype space | JUMP-CP consortium |
 
-ADMET (Chemprop drug-likeness / toxicity) runs as an orthogonal multiplier, not a pillar. Pillars are **grouped before combining** to avoid double-counting (KG-group via RRF; structural-group via max — now including JUMP morphological similarity; network-group via max), then weighted by a calibrated XGBoost ensemble (AUC-ROC 0.997 on held-out pairs; isotonic-calibrated so `score=0.7` ≈ 70% precision). v7 adds **per-disease-class ensemble heads** (six classes) and a **split conformal-prediction wrapper** for 90 %-coverage uncertainty intervals.
+ADMET (Chemprop drug-likeness / toxicity) runs as a multiplier, not a pillar. Several pillars (TransE, RotatE, Unified-KG, PrimeKG, TxGNN, R-GCN) are knowledge-graph embeddings of largely overlapping graphs and are **correlated, not independent**; they are **grouped before combining** to limit double-counting (KG-group via RRF; structural-group via max — including JUMP morphological similarity; network-group via max), then weighted by an XGBoost ensemble with isotonic-calibrated outputs.
+
+> **No accuracy figure is attached to the ensemble.** A leak-free retrain of
+> the ensemble scores far below the withdrawn 0.997, and on a fair temporal
+> test it is at chance — the simple ensemble does not predict prospective
+> repurposing. It is retained only as one ranking input among many. See
+> [docs/architecture.md](docs/architecture.md) for the honest evaluation.
+
+v7 adds **per-disease-class ensemble heads** (six classes) and a **split conformal-prediction wrapper** for 90 %-coverage uncertainty intervals.
 
 ## Clinical guardrails
 

@@ -98,28 +98,32 @@ v7 rescreen gated on a GPU retrain cycle.
 
 ## Slide 5 — Honest scoring
 
-We don't oversell. Known limits disclosed publicly:
+We don't oversell. OpenCure is a **hypothesis-generation and triage tool**,
+not a validated predictor. Known limits disclosed publicly:
 
-**What we're good at**
-- Multi-pillar ensemble AUC-ROC 0.997 on 23,814 held-out pairs
-- Conformal calibration: empirical 90.1 % coverage at the 90 % target
-- Evidence-triangulated, clinically-annotated predictions — dose, DDI,
-  PGx, mechanism path, conformal interval, and red-team critique on
-  every top candidate
-- 357 automated tests, GitHub Actions CI green
+**What we genuinely offer**
+- A systematic, reproducible pipeline that ranks, critiques, and documents
+  repurposing hypotheses across 13 scoring methods
+- Conformal calibration: empirical 90.1 % coverage at the 90 % target —
+  honest uncertainty intervals on every top candidate
+- Evidence-triangulated, clinically-annotated output — dose, DDI, PGx,
+  mechanism path, and an adversarial red-team critique on every candidate
+- Full reproducibility — content-hashed manifests, open Apache-2.0 code,
+  368 automated tests
 
-**What we're not (yet) good at**
-- v7 rescreen numbers: the v7 *architecture* is complete and merged,
-  but the v7 93-disease *numbers* await a GPU retrain cycle. The
-  head-to-head benchmark (§5.9) and final methods-paper Results land
-  with that rescreen.
-- Clean time-sliced Hit@10 on 2020-era KG retrieval: KG-memorization-
-  dependent benchmarks are marked as such.
-- Wet-lab validation — zero confirmed predictions yet. This is where
-  partnership with your lab adds value.
-- Peer review — bioRxiv pending; methods paper drafted.
+**What we do NOT claim — and why**
+- **No benchmark accuracy figure.** An earlier "AUC-ROC 0.997" was found to
+  be data leakage (KG features scored from a graph containing the test
+  edges) and has been withdrawn. A leak-free retrain scores far lower, and
+  on a fair temporal test the ensemble is at chance.
+- **Predictive accuracy is unestablished.** A leak-free retrospective
+  benchmark is not currently possible — the 2020-vintage knowledge graph
+  predates the repurposing events needed to test it. We do not know, and do
+  not claim, how often a top candidate is correct.
+- **Zero wet-lab-confirmed predictions.** Experimental validation is exactly
+  what a lab partnership provides — and the honest reason to collaborate.
 
-Full honesty disclosure: `docs/methods_paper_draft.md` §6 and the
+Full disclosure: `docs/architecture.md` (honest evaluation section) and the
 eval reports under `experiments/eval/`.
 
 ---
