@@ -1,0 +1,1074 @@
+{
+  "summary": {
+    "n_genetics_tier_concordant": 80,
+    "by_class": {
+      "non_oncology|activator": 30,
+      "non_oncology|inhibitor": 9,
+      "oncology|activator": 2,
+      "oncology|inhibitor": 39
+    },
+    "n_inhibitor": 48,
+    "n_activator": 32,
+    "winning_direction_source_freq": {
+      "cancer_gene_census": 45,
+      "impc": 29,
+      "eva": 17,
+      "intogen": 15,
+      "gene_burden": 5
+    },
+    "n_backed_by_clean_disease_specific_source": 5,
+    "n_gwas_credible_sets_winning_directions": 0,
+    "n_conflicting_vote_leads": 11,
+    "interpretation": "Direction that justifies concordance is dominated by cancer-gene catalogs (cancer_gene_census, intogen) and Mendelian/mouse sources (eva, impc). gwas_credible_sets \u2014 the disease-specific common-variant source \u2014 supplies ZERO winning directions. The method is direction-correct for oncology (oncogene GoF -> inhibitor, well catalogued) but there yields precision-oncology rediscoveries / in-trials matches; outside oncology the only available direction is Mendelian/mouse and inverts vs the complex-disease direction (e.g. TLR7->lupus activator, KCNJ11->T2D opener). Barrier (a) is relocated, not dissolved."
+  },
+  "clean_source_leads": [
+    {
+      "disease": "Obesity",
+      "drug": "BREMELANOTIDE ACETATE",
+      "gene": "MC4R",
+      "direction": "activator",
+      "winning_sources": [
+        "eva",
+        "gene_burden",
+        "impc"
+      ]
+    },
+    {
+      "disease": "Type 2 diabetes",
+      "drug": "TROGLITAZONE",
+      "gene": "PPARG",
+      "direction": "activator",
+      "winning_sources": [
+        "eva",
+        "gene_burden",
+        "impc"
+      ]
+    },
+    {
+      "disease": "Type 2 diabetes",
+      "drug": "MESALAMINE",
+      "gene": "PPARG",
+      "direction": "activator",
+      "winning_sources": [
+        "eva",
+        "gene_burden",
+        "impc"
+      ]
+    },
+    {
+      "disease": "Type 2 diabetes",
+      "drug": "BALSALAZIDE DISODIUM",
+      "gene": "PPARG",
+      "direction": "activator",
+      "winning_sources": [
+        "eva",
+        "gene_burden",
+        "impc"
+      ]
+    },
+    {
+      "disease": "Type 2 diabetes",
+      "drug": "OLSALAZINE SODIUM",
+      "gene": "PPARG",
+      "direction": "activator",
+      "winning_sources": [
+        "eva",
+        "gene_burden",
+        "impc"
+      ]
+    }
+  ],
+  "leads": [
+    {
+      "disease": "Breast cancer",
+      "drug": "INFIGRATINIB PHOSPHATE",
+      "gene": "FGFR2",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Breast cancer",
+      "drug": "NINTEDANIB ESYLATE",
+      "gene": "FGFR2",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Cystic fibrosis",
+      "drug": "STREPTOKINASE",
+      "gene": "PLG",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "impc"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Cystic fibrosis",
+      "drug": "ANISTREPLASE",
+      "gene": "PLG",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "impc"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Cystic fibrosis",
+      "drug": "DEFIBROTIDE SODIUM",
+      "gene": "PLG",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "impc"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Lung cancer",
+      "drug": "LAPATINIB DITOSYLATE",
+      "gene": "EGFR",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": true
+    },
+    {
+      "disease": "Lung cancer",
+      "drug": "NECITUMUMAB",
+      "gene": "EGFR",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": true
+    },
+    {
+      "disease": "Lung cancer",
+      "drug": "AFATINIB DIMALEATE",
+      "gene": "EGFR",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": true
+    },
+    {
+      "disease": "Lung cancer",
+      "drug": "BRIGATINIB",
+      "gene": "EGFR",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": true
+    },
+    {
+      "disease": "Lung cancer",
+      "drug": "NERATINIB MALEATE",
+      "gene": "EGFR",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": true
+    },
+    {
+      "disease": "Lung cancer",
+      "drug": "AMIVANTAMAB",
+      "gene": "EGFR",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": true
+    },
+    {
+      "disease": "Lung cancer",
+      "drug": "MOBOCERTINIB",
+      "gene": "EGFR",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": true
+    },
+    {
+      "disease": "Lung cancer",
+      "drug": "MOBOCERTINIB SUCCINATE",
+      "gene": "EGFR",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": true
+    },
+    {
+      "disease": "Lupus",
+      "drug": "IMIQUIMOD",
+      "gene": "TLR7",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "impc"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Lymphoma",
+      "drug": "REGORAFENIB",
+      "gene": "BRAF",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "intogen"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Lymphoma",
+      "drug": "DABRAFENIB MESYLATE",
+      "gene": "BRAF",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "intogen"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Lymphoma",
+      "drug": "ENCORAFENIB",
+      "gene": "BRAF",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "intogen"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Melanoma",
+      "drug": "RIBOCICLIB SUCCINATE",
+      "gene": "CDK4",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": true
+    },
+    {
+      "disease": "Melanoma",
+      "drug": "TRILACICLIB DIHYDROCHLORIDE",
+      "gene": "CDK4",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": true
+    },
+    {
+      "disease": "Multiple myeloma",
+      "drug": "SOTORASIB",
+      "gene": "KRAS",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census",
+        "intogen"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Multiple myeloma",
+      "drug": "ADAGRASIB",
+      "gene": "KRAS",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census",
+        "intogen"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Multiple myeloma",
+      "drug": "PAZOPANIB HYDROCHLORIDE",
+      "gene": "FGFR3",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census",
+        "intogen"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Multiple myeloma",
+      "drug": "INFIGRATINIB PHOSPHATE",
+      "gene": "FGFR3",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census",
+        "intogen"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Multiple myeloma",
+      "drug": "INFIGRATINIB",
+      "gene": "FGFR3",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census",
+        "intogen"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Multiple myeloma",
+      "drug": "NINTEDANIB ESYLATE",
+      "gene": "FGFR3",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census",
+        "intogen"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Multiple myeloma",
+      "drug": "FUTIBATINIB",
+      "gene": "FGFR3",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census",
+        "intogen"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Multiple myeloma",
+      "drug": "PEMIGATINIB",
+      "gene": "FGFR3",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census",
+        "intogen"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Neuroblastoma",
+      "drug": "CRIZOTINIB",
+      "gene": "ALK",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census",
+        "intogen"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Neuroblastoma",
+      "drug": "ENTRECTINIB",
+      "gene": "ALK",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census",
+        "intogen"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Neuroblastoma",
+      "drug": "BRIGATINIB",
+      "gene": "ALK",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census",
+        "intogen"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Neuroblastoma",
+      "drug": "ALECTINIB HYDROCHLORIDE",
+      "gene": "ALK",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census",
+        "intogen"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Obesity",
+      "drug": "BREMELANOTIDE ACETATE",
+      "gene": "MC4R",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "eva",
+        "gene_burden",
+        "impc"
+      ],
+      "winning_source_class": "clean_disease_specific",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Obesity",
+      "drug": "TROGLITAZONE",
+      "gene": "PPARG",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "eva",
+        "impc"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Obesity",
+      "drug": "MESALAMINE",
+      "gene": "PPARG",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "eva",
+        "impc"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Obesity",
+      "drug": "BEZAFIBRATE",
+      "gene": "PPARG",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "eva",
+        "impc"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Obesity",
+      "drug": "ROSIGLITAZONE MALEATE",
+      "gene": "PPARG",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "eva",
+        "impc"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Obesity",
+      "drug": "PIOGLITAZONE HYDROCHLORIDE",
+      "gene": "PPARG",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "eva",
+        "impc"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Obesity",
+      "drug": "BALSALAZIDE DISODIUM",
+      "gene": "PPARG",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "eva",
+        "impc"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Obesity",
+      "drug": "OLSALAZINE SODIUM",
+      "gene": "PPARG",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "eva",
+        "impc"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Osteoporosis",
+      "drug": "DIETHYLSTILBESTROL",
+      "gene": "ESR1",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "impc"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Osteoporosis",
+      "drug": "ESTRADIOL VALERATE",
+      "gene": "ESR1",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "impc"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Osteoporosis",
+      "drug": "ESTRADIOL ACETATE",
+      "gene": "ESR1",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "impc"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Osteoporosis",
+      "drug": "DIETHYLSTILBESTROL DIPHOSPHATE",
+      "gene": "ESR1",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "impc"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Osteoporosis",
+      "drug": "POLYESTRADIOL PHOSPHATE",
+      "gene": "ESR1",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "impc"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Osteoporosis",
+      "drug": "ESTROGENS, CONJUGATED SYNTHETIC A",
+      "gene": "ESR1",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "impc"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Osteoporosis",
+      "drug": "ESTROGENS, ESTERIFIED",
+      "gene": "ESR1",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "impc"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Osteoporosis",
+      "drug": "SYNTHETIC CONJUGATED ESTROGENS, B",
+      "gene": "ESR1",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "impc"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Osteoporosis",
+      "drug": "ESTETROL",
+      "gene": "ESR1",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "impc"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Ovarian cancer",
+      "drug": "COPANLISIB",
+      "gene": "PIK3CA",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Ovarian cancer",
+      "drug": "COPANLISIB HYDROCHLORIDE",
+      "gene": "PIK3CA",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Pancreatic cancer",
+      "drug": "DASIGLUCAGON HYDROCHLORIDE",
+      "gene": "GCGR",
+      "direction": "activator",
+      "oncology": true,
+      "winning_sources": [
+        "impc"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Pancreatic cancer",
+      "drug": "GLUCAGON",
+      "gene": "GCGR",
+      "direction": "activator",
+      "oncology": true,
+      "winning_sources": [
+        "impc"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Pancreatic cancer",
+      "drug": "INFIGRATINIB PHOSPHATE",
+      "gene": "FGFR2",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Pancreatic cancer",
+      "drug": "NINTEDANIB ESYLATE",
+      "gene": "FGFR2",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Prostate cancer",
+      "drug": "CLASCOTERONE",
+      "gene": "AR",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": true
+    },
+    {
+      "disease": "Prostate cancer",
+      "drug": "INFIGRATINIB PHOSPHATE",
+      "gene": "FGFR2",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Prostate cancer",
+      "drug": "NINTEDANIB ESYLATE",
+      "gene": "FGFR2",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Pulmonary hypertension",
+      "drug": "EPTOTERMIN ALFA",
+      "gene": "BMPR2",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "eva",
+        "impc"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Pulmonary hypertension",
+      "drug": "DIBOTERMIN ALFA",
+      "gene": "BMPR2",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "eva",
+        "impc"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Pulmonary hypertension",
+      "drug": "CARGLUMIC ACID",
+      "gene": "CPS1",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "eva"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Type 2 diabetes",
+      "drug": "MINOXIDIL",
+      "gene": "KCNJ11",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "eva"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Type 2 diabetes",
+      "drug": "PINACIDIL",
+      "gene": "KCNJ11",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "eva"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Type 2 diabetes",
+      "drug": "TROGLITAZONE",
+      "gene": "PPARG",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "eva",
+        "gene_burden",
+        "impc"
+      ],
+      "winning_source_class": "clean_disease_specific",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Type 2 diabetes",
+      "drug": "MESALAMINE",
+      "gene": "PPARG",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "eva",
+        "gene_burden",
+        "impc"
+      ],
+      "winning_source_class": "clean_disease_specific",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Type 2 diabetes",
+      "drug": "BALSALAZIDE DISODIUM",
+      "gene": "PPARG",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "eva",
+        "gene_burden",
+        "impc"
+      ],
+      "winning_source_class": "clean_disease_specific",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Type 2 diabetes",
+      "drug": "OLSALAZINE SODIUM",
+      "gene": "PPARG",
+      "direction": "activator",
+      "oncology": false,
+      "winning_sources": [
+        "eva",
+        "gene_burden",
+        "impc"
+      ],
+      "winning_source_class": "clean_disease_specific",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Ulcerative colitis",
+      "drug": "FEDRATINIB",
+      "gene": "JAK2",
+      "direction": "inhibitor",
+      "oncology": false,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Ulcerative colitis",
+      "drug": "RUXOLITINIB PHOSPHATE",
+      "gene": "JAK2",
+      "direction": "inhibitor",
+      "oncology": false,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Ulcerative colitis",
+      "drug": "PACRITINIB",
+      "gene": "JAK2",
+      "direction": "inhibitor",
+      "oncology": false,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Ulcerative colitis",
+      "drug": "TOFACITINIB CITRATE",
+      "gene": "JAK2",
+      "direction": "inhibitor",
+      "oncology": false,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Ulcerative colitis",
+      "drug": "BARICITINIB",
+      "gene": "JAK2",
+      "direction": "inhibitor",
+      "oncology": false,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Ulcerative colitis",
+      "drug": "FEDRATINIB HYDROCHLORIDE",
+      "gene": "JAK2",
+      "direction": "inhibitor",
+      "oncology": false,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Ulcerative colitis",
+      "drug": "FILGOTINIB MALEATE",
+      "gene": "JAK2",
+      "direction": "inhibitor",
+      "oncology": false,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Ulcerative colitis",
+      "drug": "PACRITINIB CITRATE",
+      "gene": "JAK2",
+      "direction": "inhibitor",
+      "oncology": false,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Ulcerative colitis",
+      "drug": "UPADACITINIB HEMIHYDRATE",
+      "gene": "JAK2",
+      "direction": "inhibitor",
+      "oncology": false,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Wilms tumor",
+      "drug": "SORAFENIB TOSYLATE",
+      "gene": "BRAF",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Wilms tumor",
+      "drug": "VEMURAFENIB",
+      "gene": "BRAF",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Wilms tumor",
+      "drug": "REGORAFENIB",
+      "gene": "BRAF",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Wilms tumor",
+      "drug": "DABRAFENIB MESYLATE",
+      "gene": "BRAF",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    },
+    {
+      "disease": "Wilms tumor",
+      "drug": "ENCORAFENIB",
+      "gene": "BRAF",
+      "direction": "inhibitor",
+      "oncology": true,
+      "winning_sources": [
+        "cancer_gene_census"
+      ],
+      "winning_source_class": "mendelian_or_mouse",
+      "conflicting_votes": false
+    }
+  ]
+}

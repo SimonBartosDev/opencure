@@ -3,6 +3,9 @@ data/drkg/drkg.tsv
 data/drkg/embed/*.npy
 data/drkg/entity2src.tsv
 data/drkg/embeddings/
+# Derived runtime artifact (9.5 MB ChEMBL activity index; regenerate with
+# scripts/build_drug_target_activities.py). Consumed by the leak-free benchmark.
+data/drkg/drug_target_activities.json
 data/models/
 data/string/
 data/txgnn_data/

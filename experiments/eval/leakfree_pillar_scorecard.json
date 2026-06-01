@@ -45,6 +45,52 @@
       "hit_at_100": 22.4,
       "mrr": 0.0183,
       "median_rank": 397
+    },
+    "mechanistic_reversal (all-datasource, leak-suspect)": {
+      "evaluable": 589,
+      "n_pairs": 993,
+      "hit_at_10": 3.6,
+      "hit_at_30": 11.0,
+      "hit_at_100": 21.6,
+      "mrr": 0.0141,
+      "median_rank": 12192,
+      "unevaluable": {
+        "disease_no_score": 404,
+        "drug_not_in_pool": 0
+      },
+      "pool_coverage_pct": 0.82
+    },
+    "popularity_baseline (vs mechanistic_reversal (all-datasource, leak-suspect))": {
+      "evaluable": 589,
+      "n_pairs": 993,
+      "hit_at_10": 3.4,
+      "hit_at_30": 6.6,
+      "hit_at_100": 17.7,
+      "mrr": 0.0167,
+      "median_rank": 802
+    },
+    "mechanistic_reversal (genetics-filtered, leak-clean)": {
+      "evaluable": 509,
+      "n_pairs": 993,
+      "hit_at_10": 0.6,
+      "hit_at_30": 3.3,
+      "hit_at_100": 6.7,
+      "mrr": 0.0046,
+      "median_rank": 12211,
+      "unevaluable": {
+        "disease_no_score": 484,
+        "drug_not_in_pool": 0
+      },
+      "pool_coverage_pct": 0.83
+    },
+    "popularity_baseline (vs mechanistic_reversal (genetics-filtered, leak-clean))": {
+      "evaluable": 509,
+      "n_pairs": 993,
+      "hit_at_10": 3.3,
+      "hit_at_30": 5.7,
+      "hit_at_100": 14.7,
+      "mrr": 0.0152,
+      "median_rank": 909
     }
   }
 }

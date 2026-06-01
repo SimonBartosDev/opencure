@@ -38,6 +38,25 @@ benchmarks are common:
    so concordant drugs must be **activators** — a class that barely exists
    among approved small molecules. A clean direction layer is **necessary but
    not sufficient.**
+6. A **non-anchored, target-based** pillar — which asks not "is this drug
+   *similar* to known treatments" but "does this drug's **measured** ChEMBL
+   bioactivity pharmacologically *hit the disease's causal genes*" — had never
+   been benchmarked. Measured leak-free, it **also loses to popularity** (Hit@10
+   0.6% vs 3.3%; median rank 12,211 vs 909), for a coverage reason: for ~99% of
+   held-out pairs the true drug has no high-affinity measured activity on its
+   disease's causal genes.
+7. Replacing the constraint proxy with **Open Targets' own disease-specific
+   direction of effect** (fully populating its cache) breaks the loss-of-function
+   asymmetry — **80 direction-concordant leads, 48 of them inhibitor-class**, and
+   it *fixes* the showcase inversion (prostate cancer's AR lead flips from the
+   constraint layer's harmful **testosterone** to the correct **anti-androgen**).
+   But a datasource audit dissolves the optimism: the leak-free direction that
+   exists at scale is **cancer-gene catalogs + Mendelian/mouse knockouts**;
+   `gwas_credible_sets` — the disease-specific common-variant source — supplies
+   **zero** directional votes. So the method is direction-correct only for
+   **oncology** (where it merely **rediscovers** precision-oncology matches) and
+   **inverts** outside it (a TLR7 *activator* for lupus, a KCNJ11 *opener* for
+   diabetes). **Barrier (a) is relocated, not dissolved.**
 
 **Conclusion: every honest discovery angle was exhausted, each with a clear,
 understood reason for failing. In computational drug repurposing, honest
@@ -83,6 +102,8 @@ full candidate pool. The honest comparator is a **popularity baseline**
 | Cell-morphology (JUMP Cell Painting) | 2.8% | 8.9% | 1293 | **loses** |
 | Popularity baseline (same pool) | 3.0% | 22.4% | 397 | — |
 | Knowledge-graph (edge-stripped) | — | — | — | at/below baseline |
+| Target-based reversal (genetics-filtered, leak-clean) | 0.6% | 6.7% | 12,211 | **loses (~5×)** |
+| Popularity baseline (same pool) | 3.3% | 14.7% | 909 | — |
 
 Three independent signal families — graph, chemistry, phenotype — none beats
 popularity. The diagnosis: all three score a drug by *similarity to a disease's
@@ -90,6 +111,20 @@ known treatments*, and a disease's treatments are mechanistically heterogeneous
 (hypertension is treated by beta-blockers, diuretics, ACE inhibitors — unalike
 by every measure). "Be similar to that set" is an incoherent target that
 rewards only being a well-connected, popular drug.
+
+We then tested the obvious alternative, which the instrument had never measured:
+a **non-anchored, target-based** pillar that asks "does this drug's *measured*
+ChEMBL bioactivity (IC50/Ki) pharmacologically hit the disease's causal genes?"
+— a coherent target, unlike similarity. Leak-free (disease genes restricted to
+genetics datasources; no drug-derived edge ever read), it loses to popularity
+even more decisively (last two rows above). The cause is **coverage**: for
+roughly 99% of held-out pairs the true drug has no high-affinity measured
+activity against its disease's *genetically-causal* genes — most repurposing
+acts through mechanisms not captured as a curated potency on the causal gene —
+so the true drug scores zero and sinks into the pool. (A predicted-binding
+variant via a DTI model was dropped before benchmarking: the repository's DTI
+network has no trained weights, and the only leak-clean alternative is a
+*predicted* proxy of the *measured* signal that had just failed.)
 
 ## 5. Results — what works, with a caveat
 
@@ -165,6 +200,57 @@ harmful direction — but it cannot, on its own, certify a credible novel lead,
 because it cannot distinguish a gene's Mendelian dosage mechanism from its
 complex-disease role.
 
+## 7b. Real disease-specific direction — the barrier is relocated, not dissolved
+
+The constraint layer's two failures are artifacts of its *source*, so we
+replaced it with **Open Targets' own disease-specific direction of effect**
+(`directionOnTarget` / `directionOnTrait`), and fully populated its evidence
+cache for every implicated gene–disease pair (124 → 366 cached queries; the
+original §6 "0 concordant" was an *under-populated cache*, not a data void).
+
+The corrected four-filter run looks, at first, like a breakthrough. Against the
+constraint layer's "40 leads, all activators," it returns **80 direction-
+concordant leads, 48 of them inhibitor-class** — the abundant approved class the
+constraint layer structurally could never reach (barrier (b) broken). It even
+*fixes* the showcase inversion: prostate cancer's *AR* lead flips from the
+constraint layer's harmful **testosterone** (activator) to the correct
+**anti-androgen** (inhibitor, *clascoterone*).
+
+Then a datasource audit of *what justified each concordant call* dissolves the
+optimism (`experiments/eval/cross_indication_triage.json`). The leak-free
+direction that exists at scale is **cancer-gene catalogs** (`cancer_gene_census`
+45×, `intogen` 15×) and **Mendelian / mouse-knockout** sources (ClinVar/`eva`
+17×, `impc` 29×). The disease-specific common-variant source,
+`gwas_credible_sets`, supplies **zero** directional votes — every GWAS row is
+direction-free. The 80 leads therefore split along a hard line:
+
+- **39 are oncology + inhibitor.** Direction-correct, because an oncogene's sense
+  is unambiguous and well-catalogued (gain-of-function → inhibitor) — but these
+  are **precision-oncology rediscoveries or already in basket trials** (EGFR →
+  lung, BRAF → melanoma/lymphoma, FGFR → several carcinomas, KRAS → myeloma,
+  ALK → neuroblastoma, AR → prostate). Not novel.
+- **30 are non-oncology + activator**, resting on Mendelian/mouse direction that
+  **inverts** against the complex-disease direction — dangerous false positives:
+  a *TLR7 activator* (imiquimod) for lupus, where TLR7 **gain**-of-function
+  *drives* lupus; a *KCNJ11 opener* (minoxidil/pinacidil) for type-2 diabetes,
+  which would *suppress* insulin. Eleven of the 80 calls rested on conflicting
+  votes (AR's correct call was a 1-vs-1 tie resolved by chance). Only **five**
+  leads were backed by a genuinely disease-specific source (rare-variant
+  `gene_burden`) — all activator rediscoveries (PPARG, MC4R).
+
+So even *real* disease-specific direction is **necessary but not sufficient**,
+and for a sharper reason than the constraint layer's: the leak-free direction
+that is actually *available* is cancer-driver and Mendelian/mouse — not the
+disease-specific common-variant signal a complex disease needs. **Barrier (a) is
+relocated, not dissolved.** The method works only where a gene's direction is
+unambiguous (oncology), and there it merely rediscovers; everywhere a novel
+common-disease lead would live, the direction either does not exist (GWAS) or
+inverts (Mendelian). The genuinely missing instrument is **directional GWAS** —
+GWAS-eQTL colocalization with sign — which, as of this release, exists neither
+in Open Targets nor as a clean bulk download (the published Genetic Priority
+Score's directional layer is portal-only, and its score is itself drug-trained,
+hence leak-prone).
+
 ## 8. Honest conclusions
 
 - Most of a multi-pillar architecture's apparent power can be evaluation
@@ -181,10 +267,26 @@ complex-disease role.
   with directional integration — a substantially harder data problem.
 - The loss-of-function asymmetry of human constraint means genetics-anchored
   repurposing is structurally biased toward needing *activator* drugs, which
-  are scarce — a fundamental, not incidental, limit.
+  are scarce — a fundamental, not incidental, limit. Real disease-specific
+  direction (Open Targets `directionOnTrait`) lifts this asymmetry — 48 of 80
+  concordant leads become inhibitor-class — confirming the limit was the
+  *source*, not the concept.
+- But real direction only *relocates* the disease-specificity gap. The leak-free
+  direction available at scale is cancer-gene-catalog and Mendelian/mouse;
+  `gwas_credible_sets` carries none. So target-based repurposing is
+  direction-trustworthy only in **oncology** — where it rediscovers known
+  precision matches — and inverts on common disease. The decisive missing
+  instrument is **directional GWAS** (GWAS-eQTL colocalization with sign), which
+  is not yet available leak-free in bulk.
+- A *non-anchored* target pillar (does a drug's measured bioactivity hit the
+  disease's causal genes?) is a coherent question but fails on **coverage**: the
+  true repurposing drug almost never has a curated high-affinity potency on its
+  disease's genetically-causal gene. Measured pharmacology is too sparse, and a
+  predicted-binding proxy is both weaker and unavailable (no trained DTI model).
 - We did not find a novel, credible, wet-lab-ready repurposing lead, across
-  every angle attempted. We report this plainly rather than dress curation up
-  as discovery.
+  every angle attempted — now including non-anchored target scoring and real
+  disease-specific direction of effect. We report this plainly rather than dress
+  curation up as discovery.
 
 ## 9. Limitations
 
@@ -197,8 +299,11 @@ weaknesses inflate the headline conclusions; several make the leak-free numbers
 
 ## 10. Availability
 
-All code, the leak-free instrument, per-pillar scorecards, the genetics-
-anchored scorer, the clean direction-of-effect layer, and the per-disease
-results are in the repository under `scripts/`, `opencure/scoring/`,
-`data/genetics/`, and `experiments/eval/`. Nothing in this report depends on a
-closed model or private data.
+All code, the leak-free instrument (now scoring non-anchored target pillars as
+well as anchored-similarity ones), per-pillar scorecards, the genetics-anchored
+scorer, the constraint and Open Targets direction-of-effect layers, the
+concordant-lead triage (`scripts/triage_cross_indication.py` →
+`experiments/eval/cross_indication_triage.json`), and the per-disease results
+are in the repository under `scripts/`, `opencure/scoring/`, `data/genetics/`,
+and `experiments/eval/`. Nothing in this report depends on a closed model or
+private data.

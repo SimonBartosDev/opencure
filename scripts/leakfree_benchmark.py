@@ -108,6 +108,50 @@ def score_anchored_pillar(embeddings, entities, by_disease, stripped_triplets,
     return pillar_ranks, pop_ranks, unevaluable
 
 
+def score_absolute_pillar(score_fn, by_disease, all_compounds, degree):
+    """Leak-free ranking of a held-out drug by an ABSOLUTE per-(drug,disease)
+    score (not anchored similarity).
+
+    Unlike `score_anchored_pillar`, an absolute pillar scores a (drug, disease)
+    pair directly — it does NOT read a disease's known-treatment anchor set, so
+    there is no anchor to strip. Leak control for these pillars is by
+    construction of their inputs (drug->gene and gene->disease only; never a
+    treats/indication edge), argued at each call site.
+
+    For each held-out (drug, disease): score EVERY candidate in `all_compounds`
+    via `score_fn(disease, all_compounds) -> {entity: float}`, give unscored
+    candidates 0.0 (so the pillar pays honestly for its coverage gap), then
+    tie-aware mid-rank the held-out drug. Pair each pillar rank with the
+    popularity rank on the SAME pool.
+
+    Returns (pillar_ranks, pop_ranks, unevaluable, pool_coverage_pct).
+    """
+    cand_deg = np.array([degree.get(c, 0) for c in all_compounds], dtype=float)
+    pos = {c: i for i, c in enumerate(all_compounds)}
+    pillar_ranks: list[float] = []
+    pop_ranks: list[float] = []
+    unevaluable = {"disease_no_score": 0, "drug_not_in_pool": 0}
+    coverage_fracs: list[float] = []
+
+    for dis, drugs in by_disease.items():
+        scores_map = score_fn(dis, all_compounds)
+        if not scores_map:
+            unevaluable["disease_no_score"] += len(drugs)
+            continue
+        cand_scores = np.array([scores_map.get(c, 0.0) for c in all_compounds],
+                               dtype=float)
+        coverage_fracs.append(float(np.mean(cand_scores > 0)))
+        for drug in drugs:
+            if drug not in pos:
+                unevaluable["drug_not_in_pool"] += 1
+                continue
+            i = pos[drug]
+            pillar_ranks.append(midrank(cand_scores, cand_scores[i]))
+            pop_ranks.append(midrank(cand_deg, cand_deg[i]))
+    cov = round(100 * float(np.mean(coverage_fracs)), 2) if coverage_fracs else 0.0
+    return pillar_ranks, pop_ranks, unevaluable, cov
+
+
 def main() -> None:
     from opencure.config import TREATMENT_RELATIONS
     from opencure.data.drkg import load_triplets
@@ -166,6 +210,44 @@ def main() -> None:
         print(f"jump_cell_painting: {len(jump_ents)} compounds, {len(pr)} evaluable")
     else:
         print(f"jump_cell_painting: SKIPPED — {JUMP_NPZ} not built")
+
+    # ---- pillars 3-4: mechanistic_reversal (non-anchored, ABSOLUTE) -----
+    # These pillars score a (drug, disease) pair as the affinity-weighted
+    # overlap between the drug's measured ChEMBL bioactivity (drug->gene) and
+    # the disease's causal genes (gene->disease). They never read a
+    # treats/indication edge, so there is no known-treatment anchor to strip —
+    # leak control is by construction of the inputs. Two configs:
+    #   * all-datasource : disease genes from OT associationByOverallDirect,
+    #     which MIXES chembl/known_drug -> leak-SUSPECT (reported for contrast).
+    #   * genetics-filtered : disease genes from OT GENETICS datasources only
+    #     (GWAS / rare-variant / clinical-genetics) -> leak-CLEAN. Only this
+    #     number is claimable.
+    from opencure.scoring.mechanistic_reversal import (
+        score_mechanistic_reversal,
+        score_mechanistic_reversal_genetics,
+    )
+
+    all_compounds_full = sorted(c for c in degree if c.startswith("Compound::"))
+    print(f"Full DRKG compound pool: {len(all_compounds_full)}")
+
+    def _mr_adaptor(fn):
+        def inner(dis, cands):
+            return {c: v[0] for c, v in fn([dis], cands, top_k=len(cands)).items()}
+        return inner
+
+    for label, fn in [
+        ("mechanistic_reversal (all-datasource, leak-suspect)",
+         score_mechanistic_reversal),
+        ("mechanistic_reversal (genetics-filtered, leak-clean)",
+         score_mechanistic_reversal_genetics),
+    ]:
+        pr, pop, un, cov = score_absolute_pillar(
+            _mr_adaptor(fn), by_disease, all_compounds_full, degree)
+        pillars[label] = summarise(pr, len(heldout))
+        pillars[label]["unevaluable"] = un
+        pillars[label]["pool_coverage_pct"] = cov
+        pillars[f"popularity_baseline (vs {label})"] = summarise(pop, len(heldout))
+        print(f"{label}: {len(pr)} evaluable, pool_coverage={cov}%")
 
     scorecard = {
         "description": "Leak-free per-pillar held-out benchmark. Held-out "
