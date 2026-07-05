@@ -3,8 +3,19 @@
 Step-by-step for running the GPU retrain via Modal's serverless GPUs
 using the $30 free credit. The core v6 chain is ~9h wall-clock,
 ~$15-17. The v7 additions (foundation-model precomputes, conformal
-calibration, per-class heads, post-screen tail) add ~$15-25 — see the
-**v7 jobs** section below.
+interval fitting, per-class heads, post-screen tail) add ~$15-25 — see
+the **v7 jobs** section below.
+
+> What this pipeline retrains (honesty note): the chain rebuilds all 13
+> implemented pillars, but under leak-free, popularity-baselined
+> evaluation the KG-embedding, chemical-structure, and cell-morphology
+> pillars do **not** beat a trivial popularity baseline, and neither
+> does the fused multi-pillar score. The one component that beats
+> baseline is genetics-anchored target prioritization (~5× popularity on
+> the genetics-covered subset, leak-free, temporally validated, honest
+> temporal Hit@10 ~10%) — and it is rediscovery-leaning and covers only
+> part of diseases. Retraining these pillars is an evaluation/triage
+> exercise, not a path to validated accuracy.
 
 > Cost-efficient pattern: run the network-bound and CPU-only v7 steps
 > on your own M4 Max (the ESM-2 sequence fetch + embedding both run
@@ -95,7 +106,9 @@ The chain runs sequentially:
 2. **train_kg** (~5–6h, A100) — Unified RotatE 400-dim, 400 epochs
 3. **train_rgcn** (~3–4h, A100) — R-GCN 12th pillar, 50 epochs
 4. **eval** (~10 min, A10G) — held-out Hit@10 metrics
-5. **ensemble** (~5 min, CPU) — XGBoost + isotonic calibration
+5. **ensemble** (~5 min, CPU) — XGBoost + isotonic rescaling (produces
+   a conformal interval with nominal coverage on the calibration split,
+   NOT a validated probability that a candidate is correct)
 6. **rescreen** (~30 min, A10G) — full 93-disease re-screen
 7. **finalize** (~10 min, CPU) — manifest + dashboard + snapshot
 
@@ -259,7 +272,7 @@ modal run --detach scripts/modal_app.py::precompute_depmap_smoke   # CPU, ~$0.10
 
 ```bash
 modal run scripts/modal_app.py::train_ensemble          # shared + 6 per-class heads, CPU, ~$0.10
-modal run scripts/modal_app.py::calibrate_conformal_v7  # 90%-coverage calibrator, CPU, ~$0.20
+modal run scripts/modal_app.py::calibrate_conformal_v7  # conformal interval, nominal 90% coverage on the calibration split only — NOT a validated probability of correctness, CPU, ~$0.20
 modal run scripts/modal_app.py::score_ensemble_v7_only  # attach v7 fields to existing JSONs, CPU, ~$0.10
 modal run scripts/modal_app.py::head_to_head_v7         # §5.9 benchmark, CPU, ~$0.05
                                                         # (--holdout time_sliced|random)
@@ -271,7 +284,10 @@ modal run scripts/modal_app.py::head_to_head_v7         # §5.9 benchmark, CPU, 
 # Cheap precomputes chained (~$13, fits the free tier)
 modal run --detach scripts/modal_app.py::v7_precomputes_cheap
 
-# Post-screen tail: red-team + briefs + retrospective-prospective + finalize (~$2)
+# Post-screen tail: red-team + triage-hypothesis briefs for expert review
+# (no prediction is wet-lab confirmed; no novel credible lead was found) +
+# prospective TIMESTAMPING (records predictions for future checking — it has
+# produced no validated outcome and is not evidence of accuracy) + finalize (~$2)
 modal run --detach scripts/modal_app.py::v7_post_screen_tail
 ```
 

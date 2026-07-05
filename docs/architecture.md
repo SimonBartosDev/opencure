@@ -19,8 +19,24 @@ This page explains the whole architecture — every pillar, every fusion
 step, and every honesty layer — in one place.
 
 The design principle throughout: **no single method is trusted alone,
-every prediction ships with calibrated uncertainty, and every output is
-adversarially critiqued before a human sees it.**
+every prediction ships with a conformal interval (nominal coverage on
+the calibration split — not a validated probability that a candidate is
+correct), and every output is adversarially critiqued before a human
+sees it.**
+
+> **Honest framing — read this first.** Under leak-free,
+> popularity-baselined evaluation, most of these pillars do *not* beat a
+> trivial popularity baseline: the knowledge-graph-embedding,
+> chemical-structure, and cell-morphology families all fail, and the
+> fused multi-pillar score does not beat popularity either. The **one**
+> component that beats baseline is **genetics-anchored target
+> prioritization** — ~5× popularity on the genetics-covered subset
+> (Hit@10 20.8% vs 3.8%; median rank 64), leak-free and temporally
+> validated (honest temporal Hit@10 ~10%). It is a **triage /
+> prioritizer**, is rediscovery-leaning, and covers only part of the
+> disease space. OpenCure has **zero** wet-lab-confirmed predictions and
+> found **no** novel, credible, wet-lab-ready lead. See
+> [`honest_evaluation.md`](honest_evaluation.html) for the full account.
 
 ---
 
@@ -33,9 +49,14 @@ it is *credible* ideas: which of tens of millions of drug–disease pairs
 are worth a wet-lab experiment?
 
 OpenCure's answer is to score every pair with 13 independent methods,
-fuse them, calibrate the uncertainty honestly, adversarially critique
-each surviving candidate, and hand a wet-lab scientist a one-page brief
-they can act on.
+fuse them, wrap each prediction in a conformal interval (nominal
+coverage on the calibration split — not a validated probability of
+success), adversarially critique each surviving candidate, and hand an
+expert reviewer a one-page **triage brief** of hypotheses for review.
+Honest caveat: under leak-free evaluation the multi-pillar fusion does
+not beat a popularity baseline; only the genetics-anchored component
+does, and it prioritizes rather than discovers (see §3 and the
+limitations section).
 
 ---
 
@@ -56,9 +77,12 @@ Disease name
   │     Structural group = max(fingerprints, MoLFormer-XL, DTI, JUMP Cell Painting)
   │     Network group    = max(STRING proximity, gene-signature reversal)
   │
-  ▼  Calibrated ensemble  (XGBoost + isotonic; per-disease-class head routing)
+  ▼  Ensemble  (XGBoost + isotonic; per-disease-class head routing — a ranking
+  │             input, not a validated classifier; leak-free it is at/below chance)
   │
-  ▼  Conformal-prediction wrapper  (90%-coverage interval + binary prediction set)
+  ▼  Conformal-prediction wrapper  (interval with nominal coverage on the
+  │                                  calibration split — NOT a validated
+  │                                  probability of correctness — + prediction set)
   │
   ▼  Evidence gathering  (PubMed + ClinicalTrials.gov + FAERS + Semantic Scholar; cached)
   │
@@ -68,7 +92,8 @@ Disease name
   │
   ▼  Adversarial red-team critique  (seven failure modes checked per candidate)
   │
-  ▼  Wet-lab brief generation  (one-page Markdown per disease)
+  ▼  Triage-brief generation  (one-page Markdown per disease — hypotheses
+  │                            for expert review, not wet-lab-confirmed leads)
   │
   ▼  Dashboard + JSON + CSV + content-hashed prospective snapshot
 ```
@@ -87,6 +112,17 @@ disease?", built on a different kind of evidence. They are deliberately
 *orthogonal* — knowledge-graph topology, chemical structure, protein
 binding, network biology, genetics, transcriptomics, and cell
 morphology are different windows onto the same question.
+
+> **What actually beats baseline.** Under leak-free, popularity-baselined
+> evaluation the KG-embedding pillars (1–5, 12), the chemical-structure
+> pillars (6–8), and the cell-morphology pillar (13) do **not** beat a
+> trivial popularity baseline, and neither does their fusion. The only
+> component that beats popularity is **genetics-anchored target
+> prioritization** (built on pillars 9–11) — ~5× on the genetics-covered
+> subset, leak-free and temporally validated, but rediscovery-leaning and
+> covering only part of the diseases. Read the rest of this table as a
+> catalogue of *inputs to a triage tool*, not a list of validated
+> predictors.
 
 | # | Pillar | What signal it captures | Data source |
 |---|--------|-------------------------|-------------|
@@ -196,27 +232,27 @@ fail-safe, never fail-closed.
 
 ---
 
-## 6. Conformal prediction — honest uncertainty
+## 6. Conformal prediction — an interval, not a validated probability
 
-A calibrated probability tells you that, *across all* predictions of
-0.7, about 70 % are correct. It does *not* tell you how sure the
-platform is about *this specific* 0.7 — it could secretly be a 0.5.
-
-v7 closes that gap with **split conformal prediction**. A held-out
+v7 wraps each prediction in **split conformal prediction**. A held-out
 calibration set yields an empirical residual quantile; every prediction
 then ships with:
 
 - a **distribution-free interval** `[ensemble_prob_lower,
-  ensemble_prob_upper]` that contains the true label with ≥ 90 %
-  probability, and
-- a **binary prediction set**: `{1}` (confidently positive), `{0}`
-  (confidently negative), or `{0, 1}` (the platform genuinely cannot
-  tell).
+  ensemble_prob_upper]` with **nominal coverage on the calibration
+  split** — **not** a validated probability that a candidate is correct,
+  and
+- a **binary prediction set**: `{1}`, `{0}`, or `{0, 1}` (the platform
+  genuinely cannot tell).
 
-Measured empirical coverage is **90.1 %** against the nominal 90 %
-target. A wet-lab partner reading `prob 0.7 [0.39–1.00], set {0,1}`
-knows the platform is saying "probably, but I am not certain" — which
-is the truthful answer, and far more useful than false precision.
+Empirical coverage on the calibration split is **90.1 %** against the
+nominal 90 % target. This is a statement about the interval's coverage on
+that split, **not** evidence that a `prob 0.7` candidate succeeds 70 % of
+the time — the underlying ensemble score is not a validated probability
+of success (see §5: leak-free, the ensemble is at or below chance on a
+fair temporal test). A reviewer reading `prob 0.7 [0.39–1.00], set {0,1}`
+should read it as "the model cannot commit," not as a calibrated
+success probability.
 
 ---
 
@@ -272,17 +308,26 @@ platform's own failure modes before a human is misled.
 
 ---
 
-## 9. The output — wet-lab briefs
+## 9. The output — triage briefs
 
 The platform's final artifact is not a leaderboard; it is a **one-page
-wet-lab brief** per disease. For each top-5 candidate the brief states
+triage brief** per disease — a set of **hypotheses for expert review**,
+not wet-lab-confirmed leads. For each top-5 candidate the brief states
 the mechanistic hypothesis (cite-grounded), a suggested assay matched
 to the disease class, a concentration range derived from the primary
 target's potency, the red-team critique, and explicit caveats. Forty
 NTD and rare-disease briefs are published under
 [`docs/outreach/`](https://github.com/SimonBartosDev/opencure/tree/main/docs/outreach);
-the four lead diseases — Schistosomiasis, Chagas, Sickle Cell, and
+four diseases — Schistosomiasis, Chagas, Sickle Cell, and
 Niemann-Pick — carry deep curation with named target labs.
+
+**To be explicit:** zero of these predictions are wet-lab confirmed, and
+no novel, credible, wet-lab-ready lead was found. The briefs are a
+starting point for expert triage — most candidates on the one part of
+the pipeline that beats baseline (genetics-anchored prioritization) are
+rediscoveries of a disease's existing drug, and pathogen-driven NTDs
+(Chagas, schistosomiasis) have no human genetics and are not assessed by
+that component at all.
 
 ---
 
@@ -314,13 +359,17 @@ Niemann-Pick — carry deep curation with named target labs.
 - **Edge-stripped retraining** — test-set edges are removed from
   DRKG + PrimeKG + OpenTargets before a clean model is trained, so
   retrieval numbers are not inflated by memorisation.
-- **Conformal coverage** — empirical 90.1 % at the 90 % nominal target.
+- **Conformal coverage** — empirical 90.1 % against the 90 % nominal
+  target *on the calibration split*; a coverage property of the interval,
+  not a validated probability that a candidate is correct.
 - **Negative-control suite** — the CI gate described in §8.
 - **Head-to-head benchmark** — each disease's candidates re-ranked by
   every single-pillar baseline versus the fused ensemble.
-- **Retrospective-prospective validation** — predictions made against
-  pre-2024 data are checked against 2024–2025 publications the model
-  never saw.
+- **Prospective timestamping** — predictions are recorded (content-hashed,
+  timestamped) so they can be checked against future literature. This has
+  produced **no validated outcome** and is **not** evidence of accuracy;
+  any precision@K-style figure against later publications is a
+  co-occurrence / later-mention rate, not accuracy.
 - **357 automated tests** across filters, scoring, evidence, conformal,
   negative-control, per-class, JUMP-CP, selectivity, DepMap, red-team,
   and regression suites, run on every commit via GitHub Actions.
@@ -332,9 +381,11 @@ Niemann-Pick — carry deep curation with named target labs.
 Every result file carries a `data_manifest_hash` — a SHA-256
 fingerprint of every input-data file that produced it. Every model
 checkpoint is content-hashed. Predictions are written to immutable,
-timestamped **prospective snapshots** with Zenodo DOI registration, so
-a claim made today can be verified against future literature. The
-pipeline version is stamped on every output.
+timestamped **prospective snapshots** with Zenodo DOI registration —
+this is prospective *timestamping* (it records predictions for future
+checking), not prospective validation; it has produced no validated
+outcome and is not evidence of accuracy. The pipeline version is stamped
+on every output.
 
 ---
 
@@ -342,6 +393,23 @@ pipeline version is stamped on every output.
 
 OpenCure is, by design, candid about what it cannot do:
 
+- **No validated benchmark accuracy; zero confirmed predictions.** The
+  earlier "AUC-ROC 0.997" headline was **data leakage** and has been
+  **withdrawn** — it is not a result, a metric, or a baseline to beat.
+  Under leak-free, popularity-baselined evaluation the KG-embedding,
+  chemical-structure and cell-morphology pillars — and the fused
+  multi-pillar score — do **not** beat popularity. No prediction is
+  wet-lab confirmed, and no novel, credible, wet-lab-ready lead was
+  found.
+- **What does work.** The one component that beats baseline is
+  **genetics-anchored target prioritization** — ~5× a popularity baseline
+  on the genetics-covered subset (Hit@10 20.8% vs 3.8%; median rank 64),
+  leak-free and temporally validated (honest temporal Hit@10 ~10% with
+  genetics frozen at Feb 2020). But it is **rediscovery-leaning** (it
+  mostly re-surfaces a disease's existing drug), and it covers only
+  **part** of the diseases (~69 of 93; pathogen-driven NTDs have no human
+  genetics and are *not assessed*). It is a **triage / prioritizer**, not
+  a discovery engine.
 - **No proprietary phenotypic-screen data.** Closed platforms
   (Recursion, Insitro) train on billions of in-house cell images.
   OpenCure cannot replicate that and does not claim to.

@@ -141,49 +141,29 @@ def _load_entrez_to_symbol() -> dict[str, str]:
     return m
 
 
-def score_mechanistic_reversal(
-    disease_entities: list[str],
+def _score_over_genes(
+    gene_weight: dict[str, float],
     compound_entities: list[str],
-    top_k: int = 500,
+    top_k: int,
+    activities: dict[str, dict[str, float]],
 ) -> dict[str, tuple[float, int, str]]:
+    """Shared scoring core for both disease-gene variants.
+
+    `gene_weight` maps gene SYMBOL -> weight; `activities` is the flattened
+    {drugbank_id: {symbol: median_nM}} index. Each compound's score is the
+    affinity-weighted overlap with the gene set, normalised to [0, 1] (a drug
+    hitting every disease gene at <=100 nM scores 1.0). Returns
+    {compound_entity: (score, n_targeted, best_gene)} sorted desc, capped top_k.
     """
-    Score each compound on pharmacological overlap with disease genes.
-
-    Returns dict[compound_entity] -> (score_0_to_1, n_targeted, best_gene)
-    sorted by score desc, capped at top_k.
-    """
-    d2g = _load_disease_gene_map()
-    activities = _load_activity_index()
-    ent_to_sym = _load_entrez_to_symbol()
-    if not d2g or not activities or not ent_to_sym:
-        return {}
-
-    # Collect disease gene symbols (union across disease aliases)
-    disease_genes: list[tuple[str, float]] = []
-    for de in disease_entities:
-        for gene_id, weight in d2g.get(de, []):
-            sym = ent_to_sym.get(gene_id)
-            if sym:
-                disease_genes.append((sym, weight))
-    if not disease_genes:
-        return {}
-
-    # Deduplicate genes (keep max weight)
-    gene_weight: dict[str, float] = {}
-    for sym, w in disease_genes:
-        if sym not in gene_weight or w > gene_weight[sym]:
-            gene_weight[sym] = w
     total_weight = sum(gene_weight.values())
     if total_weight <= 0:
         return {}
-
     results: dict[str, tuple[float, int, str]] = {}
     for compound in compound_entities:
         db_id = compound.split("::", 1)[1] if "::" in compound else compound
         drug_activities = activities.get(db_id)
         if not drug_activities:
             continue
-
         matched_score = 0.0
         n_matched = 0
         best_signal = 0.0
@@ -195,23 +175,131 @@ def score_mechanistic_reversal(
             sig = _affinity_to_signal(median_nm)
             if sig <= 0:
                 continue
-            contribution = sig * w
-            matched_score += contribution
+            matched_score += sig * w
             n_matched += 1
             if sig > best_signal:
                 best_signal = sig
                 best_gene = sym
-
         if n_matched == 0:
             continue
-
-        # Normalize to [0, 1]: drug hitting every disease gene at 100nM → 1.0
-        norm_score = matched_score / total_weight
-        results[compound] = (round(norm_score, 4), n_matched, best_gene)
-
-    # Sort + cap
+        results[compound] = (round(matched_score / total_weight, 4),
+                             n_matched, best_gene)
     ranked = sorted(results.items(), key=lambda kv: -kv[1][0])[:top_k]
     return dict(ranked)
+
+
+def score_mechanistic_reversal(
+    disease_entities: list[str],
+    compound_entities: list[str],
+    top_k: int = 500,
+) -> dict[str, tuple[float, int, str]]:
+    """
+    Score each compound on pharmacological overlap with disease genes.
+
+    Disease genes come from Open Targets ``associationByOverallDirect`` (ALL
+    datasources, via ot_triplets.tsv). That association mixes datasources
+    INCLUDING ``chembl``/``known_drug``, so against a treats-edge held-out
+    benchmark this all-datasource variant is leak-SUSPECT — use
+    ``score_mechanistic_reversal_genetics`` for a leak-clean measurement.
+
+    Returns dict[compound_entity] -> (score_0_to_1, n_targeted, best_gene)
+    sorted by score desc, capped at top_k.
+    """
+    d2g = _load_disease_gene_map()
+    activities = _load_activity_index()
+    ent_to_sym = _load_entrez_to_symbol()
+    if not d2g or not activities or not ent_to_sym:
+        return {}
+
+    # Collect disease gene symbols (union across disease aliases, max weight).
+    gene_weight: dict[str, float] = {}
+    for de in disease_entities:
+        for gene_id, weight in d2g.get(de, []):
+            sym = ent_to_sym.get(gene_id)
+            if sym and weight > gene_weight.get(sym, 0.0):
+                gene_weight[sym] = weight
+    if not gene_weight:
+        return {}
+    return _score_over_genes(gene_weight, compound_entities, top_k, activities)
+
+
+@lru_cache(maxsize=1)
+def _load_disease_gene_map_genetics() -> dict[str, dict[str, float]]:
+    """Leak-clean disease->gene map: Open Targets GENETICS datasources only.
+
+    The all-datasource ``_load_disease_gene_map`` mixes ``chembl``/``known_drug``
+    evidence — a path through which a held-out treats edge could leak. This
+    variant restricts disease->gene edges to GENETICS datasources (GWAS /
+    rare-variant / clinical-genetics), reusing the exact leak-control machinery
+    already validated in ``genetics_anchored``:
+
+      * the GENETICS-only association caches (already filtered to GENETICS_USE
+        at build time — no chembl/known_drug/literature),
+      * ``_ot_disease_index`` (MeSH -> Open Targets id crosswalk),
+      * ``_gene_crosswalk`` (Ensembl -> approved symbol).
+
+    Offline (cache-only): diseases absent from the genetics caches are simply
+    not scorable here — an honest coverage gap, not a silent fallback.
+
+    Returns {disease_entity ("Disease::MESH:D...."): {gene_symbol: score}}.
+    """
+    from opencure.scoring.genetics_anchored import (
+        _gene_crosswalk,
+        _load_detail_cache,
+        _load_score_cache,
+        _ot_disease_index,
+    )
+
+    mesh2ot, _, _ = _ot_disease_index()
+    ens2sym = _gene_crosswalk()
+    detail = _load_detail_cache()   # {ot_id: {gene: {score, datasources}}}
+    score = _load_score_cache()     # {ot_id: {gene: score}}  (legacy, genetics-only)
+
+    def _genes_for(oid: str) -> dict[str, float]:
+        if oid in detail:
+            return {g: float(info.get("score", 0.0))
+                    for g, info in detail[oid].items()}
+        if oid in score:
+            return {g: float(s) for g, s in score[oid].items()}
+        return {}
+
+    out: dict[str, dict[str, float]] = {}
+    for mesh, ot_ids in mesh2ot.items():
+        gw: dict[str, float] = {}
+        for oid in ot_ids:
+            for ens, s in _genes_for(oid).items():
+                sym = ens2sym.get(ens)
+                if sym and s > gw.get(sym, 0.0):
+                    gw[sym] = s
+        if gw:
+            out[f"Disease::MESH:{mesh}"] = gw
+    return out
+
+
+def score_mechanistic_reversal_genetics(
+    disease_entities: list[str],
+    compound_entities: list[str],
+    top_k: int = 500,
+) -> dict[str, tuple[float, int, str]]:
+    """Leak-clean variant of :func:`score_mechanistic_reversal`.
+
+    Identical pharmacological scoring, but the disease gene set is restricted to
+    Open Targets GENETICS datasources (no chembl/known_drug/literature), so a
+    held-out treats edge cannot leak through the disease->gene side. This is the
+    configuration whose benchmark number can be honestly claimed.
+    """
+    activities = _load_activity_index()
+    d2g = _load_disease_gene_map_genetics()
+    if not activities or not d2g:
+        return {}
+    gene_weight: dict[str, float] = {}
+    for de in disease_entities:
+        for sym, w in d2g.get(de, {}).items():
+            if w > gene_weight.get(sym, 0.0):
+                gene_weight[sym] = w
+    if not gene_weight:
+        return {}
+    return _score_over_genes(gene_weight, compound_entities, top_k, activities)
 
 
 if __name__ == "__main__":

@@ -21,14 +21,20 @@ OpenCure je otvorená platforma s natrvalo ukotveným poslaním, určená na
 preúčelovanie liečiv (drug repurposing). Hodnotíme existujúce liečivá
 schválené úradom FDA a liečivá v klinickom vývoji oproti zanedbávaným
 tropickým chorobám, zriedkavým genetickým ochoreniam a ďalším
-nedostatočne pokrytým indikáciám — a vytvárame predikcie, ktoré dokáže
-experimentálne laboratórium overiť.
+nedostatočne pokrytým indikáciám — a vytvárame **triediace hypotézy na
+posúdenie odborníkom**. Žiadna predikcia nie je overená v laboratóriu
+a nebola nájdená žiadna nová, dôveryhodná stopa pripravená na laboratórne
+testovanie.
 
-Platforma existuje preto, aby **zachraňovala životy zmenšovaním
-priepasti medzi výpočtovou predikciou a laboratórnym testom**. Každá
-predikcia prichádza s kalibrovanou neistotou, adverzálnou kritikou
-a jednostranovým prehľadom, ktorý dokáže vedúci výskumník posúdiť za
-menej než 10 minút.
+Platforma existuje preto, aby **zmenšovala priepasť medzi výpočtovou
+predikciou a laboratórnym testom**. Jediná zložka, ktorá prekonáva
+triviálny popularitný základ, je **priorizácia cieľov ukotvená v genetike**
+(~5× oproti popularite na podmnožine chorôb pokrytých genetikou, bez úniku
+dát, časovo validovaná, čestný časový Hit@10 ~10 %); je však náchylná
+skôr k znovuobjaveniu existujúceho liečiva choroby než k objaveniu nového
+a pokrýva len časť chorôb. Každá hypotéza prichádza s intervalom neistoty,
+adverzálnou kritikou a jednostranovým prehľadom, ktorý dokáže vedúci
+výskumník posúdiť za menej než 10 minút.
 
 Sme **nezisková iniciatíva s otvoreným zdrojovým kódom**. Celý kód je
 pod licenciou Apache 2.0. Všetky natrénované modely sú uložené
@@ -63,17 +69,23 @@ overenie.
 Trinásť hodnotiacich pilierov spojených do troch skupín (znalostný graf,
 štruktúra/fenotyp, sieť) plus šesť samostatných signálov podľa triedy
 choroby. Piliere znalostného grafu sú korelované embeddingy prekrývajúcich
-sa grafov, nie nezávislé signály. Každý kandidát z popredných priečok
-prichádza s:
+sa grafov, nie nezávislé signály. **Pri hodnotení bez úniku dát
+a s popularitným základom piliere embeddingov znalostného grafu,
+chemickej štruktúry a bunkovej morfológie neprekonávajú triviálny
+popularitný základ a ani spojené viacpilierové skóre ho neprekonáva;
+jediná zložka, ktorá ho prekonáva, je priorizácia cieľov ukotvená
+v genetike.** Každý kandidát z popredných priečok prichádza s:
 
-- **Kalibrovanou neistotou.** Konformný interval s 90 % pokrytím
+- **Intervalom neistoty.** Konformný interval s nominálnym pokrytím na
+  kalibračnej vzorke — nie overená pravdepodobnosť, že kandidát je správny —
   a binárna predikčná množina (`{0}`, `{1}` alebo `{0,1}`).
 - **Adverzálnou kritikou.** Sedem režimov zlyhania sa kontroluje
   automaticky pri každej predikcii; voliteľný lokálny jazykový model
   prerozpráva deterministickú kritiku do textu.
-- **Prehľadom pre experimentálne laboratórium.** Jednostranové zhrnutie
-  vrátane navrhovaného testu (assay), koncentračného rozsahu,
-  mechanistickej hypotézy a upozornení.
+- **Prehľadom pre posúdenie odborníkom.** Jednostranové zhrnutie triediacej
+  hypotézy vrátane navrhovaného testu (assay), koncentračného rozsahu,
+  mechanistickej hypotézy a upozornení; nejde o stopu pripravenú na
+  laboratórium — žiadna predikcia nie je overená v laboratóriu.
 - **Príznakmi selektivity a esenciálnosti.** Skóre selektivity
   z databázy ChEMBL, príznak pan-esenciálnosti z DepMap a skóre dôvery
   v mechanizmus z hustoty génových asociácií OpenTargets.
@@ -83,10 +95,13 @@ prichádza s:
 
 ## Aktuálny stav
 
-- **Architektúra:** v7 — 13 aktívnych pilierov, kalibrovaná neistota,
+- **Architektúra:** v7 — 13 aktívnych pilierov (bez úniku dát piliere
+  embeddingov znalostného grafu, chemickej štruktúry a bunkovej morfológie
+  neprekonávajú popularitný základ; prekonáva ho len priorizácia cieľov
+  ukotvená v genetike), konformné intervaly neistoty s nominálnym pokrytím,
   ensemble hlavy podľa triedy choroby, fenotypová podobnosť na základe
   obrazu, vrstvy selektivity/esenciálnosti/neistoty mechanizmu,
-  adverzálny red-team agent a generátor prehľadov pre laboratóriá.
+  adverzálny red-team agent a generátor prehľadov na posúdenie odborníkom.
 - **Skrínované choroby:** 93 (22 zanedbávaných tropických chorôb,
   19 zriedkavých chorôb, 18 onkologických, 9 kardiovaskulárnych
   a metabolických, 6 autoimunitných, 5 respiračných,

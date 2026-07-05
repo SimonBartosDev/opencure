@@ -4,7 +4,7 @@ Two emails to send before paying out-of-pocket for the v7 push:
 
 1. **Modal** — covers compute (~$53 for the full first-time push, ~$50/quarter for retraining).
 2. **Anthropic** — covers Claude API tokens for the LLM-narrated layers
-   (red-team prose + wet-lab brief mechanism paragraphs). Optional —
+   (red-team prose + triage-hypothesis brief mechanism paragraphs). Optional —
    the deterministic fallbacks always run, but Claude makes the briefs
    readable for cold outreach.
 
@@ -37,8 +37,24 @@ pillars (KG embeddings, MoLFormer-XL chemistry embeddings, ESM-2
 protein embeddings, JUMP Cell Painting morphological similarity,
 DeepPurpose DTI, gene-signature reversal, network proximity, R-GCN
 heterogeneous GNN, Mendelian Randomization, ADMET, etc.) combined
-into a calibrated ensemble with conformal prediction intervals,
-adversarial red-team critiques, and per-disease wet-lab briefs.
+into an ensemble with conformal prediction intervals (nominal
+coverage on the calibration split — not a validated probability
+that a candidate is correct), adversarial red-team critiques, and
+per-disease triage-hypothesis briefs for expert review.
+
+In the interest of scientific honesty: under leak-free,
+popularity-baselined evaluation, the KG-embedding, chemical-structure
+and cell-morphology pillars do NOT beat a trivial popularity baseline,
+and neither does the fused multi-pillar score. The one component that
+does is genetics-anchored target prioritization — it beats a
+popularity baseline ~5x on the genetics-covered subset (leak-free and
+temporally validated; honest temporal Hit@10 ~10%), but it is
+rediscovery-leaning and covers only part of diseases (~69 of 93;
+pathogen-driven NTDs have no human genetics and are not assessed).
+No prediction is wet-lab confirmed and no novel credible lead has yet
+been found; the outputs are triage hypotheses for expert review, not
+wet-lab-ready leads. (Our earlier "AUC-ROC 0.997" figure was data
+leakage and has been withdrawn.)
 
 Modal already runs our v6 GPU retrain (RotatE, R-GCN, 93-disease
 screen) — typical cost ~$15/cycle. The v7 push adds:
@@ -92,13 +108,15 @@ of API credit to:
   1. Generate adversarial "red-team" critiques per top-K prediction
      across 93 screened diseases. Output: a structured 3-risk
      argument-against-the-prediction string attached to each
-     candidate, forming part of the per-disease wet-lab briefs.
+     candidate, forming part of the per-disease triage-hypothesis
+     briefs for expert review.
      Estimated tokens: ~5K output × 93 diseases × 20 candidates =
      ~9M output tokens. Using Haiku 4.5 batch API (50% off):
      ~$22.
 
   2. Generate mechanism-of-action paragraphs for the per-disease
-     wet-lab briefs handed to academic / nonprofit lab partners
+     triage-hypothesis briefs (for expert review) handed to academic /
+     nonprofit lab partners
      (DNDi, MMV, FIND, CureSCi, NPUK). One paragraph per top-5
      candidate × 41 diseases (NTDs + rare): ~10M tokens, ~$25 with
      Haiku batch.
@@ -109,6 +127,8 @@ of API credit to:
 We have local-Llama-3.1-8B-via-MLX fallbacks for both red-team and
 brief generation, so Claude is not on the critical path — but the
 brief quality difference matters for cold-outreach to wet-lab PIs.
+(To be clear on what these briefs are: triage hypotheses for expert
+review, not wet-lab-ready leads — no prediction is wet-lab confirmed.)
 
 Happy to attribute Claude in the methods paper and the per-disease
 brief footer ("LLM-narrated mechanism paragraph generated using

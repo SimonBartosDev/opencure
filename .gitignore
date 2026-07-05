@@ -3,6 +3,9 @@ data/drkg/drkg.tsv
 data/drkg/embed/*.npy
 data/drkg/entity2src.tsv
 data/drkg/embeddings/
+# Derived runtime artifact (9.5 MB ChEMBL activity index; regenerate with
+# scripts/build_drug_target_activities.py). Consumed by the leak-free benchmark.
+data/drkg/drug_target_activities.json
 data/models/
 data/string/
 data/txgnn_data/
@@ -84,3 +87,11 @@ experiments/train_unified.log
 data/sources_2024/
 data/drkg/ddi_adjacency.pkl
 data/unified_kg/
+
+# JUMP Cell Painting raw data (re-downloadable; parquet is 2.6 GB)
+data/jump_cp/compound_profiles.parquet
+data/jump_cp/*.csv.gz
+
+# Genetics raw downloads (re-downloadable; derived gene_direction.tsv is tracked)
+data/genetics/gnomad_constraint.txt.bgz
+data/genetics/clingen_dosage.tsv

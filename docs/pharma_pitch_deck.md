@@ -25,17 +25,22 @@ triangulating single candidates across external evidence sources?
 
 ## Slide 2 — What OpenCure is
 
-**The only fully open-source drug repurposing platform with integrated
-clinical guardrails, calibrated uncertainty, and prospective
-validation.**
+**A fully open-source drug repurposing platform: an honest,
+leak-controlled evaluation instrument plus a narrow genetics-anchored
+triage tool, with integrated clinical guardrails.**
 
 - 13 independent scoring pillars (KG embeddings ×4, R-GCN, TxGNN,
   structural ×2, DTI, network, genetic, transcriptomic, and JUMP Cell
-  Painting image-based phenotypic screening)
+  Painting image-based phenotypic screening). **Honest caveat:** under
+  leak-free, popularity-baselined evaluation the KG-embedding,
+  chemical-structure and cell-morphology pillars do **not** beat a
+  trivial popularity baseline; the only component that does is
+  genetics-anchored target prioritization.
 - Screens ~10,500 approved + investigational compounds against any
   disease
 - Every top-K prediction auto-populated with:
-  - Calibrated 90 %-coverage conformal interval + prediction set
+  - A conformal interval with nominal 90 % coverage on the calibration
+    split — **not** a validated probability that a candidate is correct
   - Adversarial red-team critique (seven failure modes checked)
   - Dose plausibility (Cmax/IC50 against predicted target)
   - DDI warnings (from 1.4M DrugBank edges)
@@ -54,11 +59,11 @@ applies to pharmaceutical and biotech uses.
 | | PandaOmics | BenevolentAI | TxGNN (academic) | **OpenCure v7** |
 |---|---|---|---|---|
 | Open-source | ✗ | ✗ | ✓ (code) | ✓ (code + data + models) |
-| Scoring pillars | proprietary | proprietary | 1 (GNN) | 13 fused + calibrated ensemble |
-| Calibrated uncertainty | ✗ | ✗ | ✗ | ✓ (90 %-coverage conformal interval) |
+| Scoring pillars | proprietary | proprietary | 1 (GNN) | 13 fused (leak-free: only the genetics-anchored one beats a popularity baseline) |
+| Conformal interval | ✗ | ✗ | ✗ | ✓ (nominal 90 % coverage on the calibration split — not a validated correctness probability) |
 | Clinical guardrails bundled | partial | partial | ✗ | ✓ (dose/DDI/PGx/triangulation) |
 | Adversarial red-team pass | ✗ | ✗ | ✗ | ✓ (per top-K candidate) |
-| Prospective validation registry | ✗ | ✗ | ✗ | ✓ (content-hashed, Zenodo DOI) |
+| Prospective timestamping registry | ✗ | ✗ | ✗ | ✓ (content-hashed, Zenodo DOI; records predictions for future checking — no validated outcome yet) |
 | Time-sliced benchmark | ✗ | ✗ | ✓ | ✓ (210 post-2020 indications) |
 | Mechanism-path explanations | partial | ✓ | ✗ | ✓ (graph-native, every prediction) |
 | Cost to test | $$ enterprise | $$$ enterprise | free | free |
@@ -76,8 +81,10 @@ applies to pharmaceutical and biotech uses.
 (proteins) + JUMP Cell Painting morphological profiles
 → current-generation embeddings, not 2021-era ones
 
-**Conformal calibration** — empirical 90.1 % coverage at the nominal
-90 % target → every score ships with an honest uncertainty interval
+**Conformal interval** — empirical 90.1 % coverage at the nominal
+90 % target on the calibration split → every score ships with an
+interval of nominal coverage, **not** a validated probability that the
+candidate is correct
 
 **Evidence cache** with 4,174× verified speedup on repeat queries
 → screen a new disease in minutes, not hours
@@ -86,13 +93,22 @@ applies to pharmaceutical and biotech uses.
 hash of every source file that produced it
 → reproducible 5 years from now, even if we update DRKG
 
-**Immutable prospective snapshots** with Zenodo DOI registration
-→ the only repurposing platform that makes claims you can verify
-against future literature
+**Immutable prospective timestamping** with Zenodo DOI registration
+→ records predictions so they can be checked against future literature.
+This is timestamping, not validation: it has produced no validated
+outcome and is not evidence of accuracy.
 
 **Current status:** 93-disease systematic screen; v7 architecture
-complete (13 pillars + calibration + red-team + per-class heads),
-v7 rescreen gated on a GPU retrain cycle.
+complete (13 pillars + conformal intervals + red-team + per-class
+heads), v7 rescreen gated on a GPU retrain cycle. **What actually
+beats baseline:** under leak-free evaluation the KG-embedding,
+chemical-structure and cell-morphology pillars do not beat a
+popularity baseline; the one component that does is genetics-anchored
+target prioritization — ~5× popularity on the genetics-covered subset
+(Hit@10 20.8 % vs 3.8 %, median rank 64), leak-free and temporally
+validated (honest post-2020 Hit@10 ~10 %). It is rediscovery-leaning
+and covers only part of diseases (~69 of 93; pathogen-driven NTDs have
+no human genetics and are not assessed).
 
 ---
 
@@ -103,9 +119,18 @@ not a validated predictor. Known limits disclosed publicly:
 
 **What we genuinely offer**
 - A systematic, reproducible pipeline that ranks, critiques, and documents
-  repurposing hypotheses across 13 scoring methods
-- Conformal calibration: empirical 90.1 % coverage at the 90 % target —
-  honest uncertainty intervals on every top candidate
+  **triage hypotheses for expert review** across 13 scoring methods.
+  Under leak-free, popularity-baselined evaluation, the KG-embedding,
+  chemical-structure and cell-morphology pillars do **not** beat a
+  popularity baseline; the one component that does is genetics-anchored
+  target prioritization (~5× popularity on the genetics-covered subset:
+  Hit@10 20.8 % vs 3.8 %, median rank 64), leak-free and temporally
+  validated (honest post-2020 Hit@10 ~10 %) — but it is rediscovery-leaning
+  and covers only part of diseases (~69 of 93; pathogen-driven NTDs have
+  no human genetics and are not assessed)
+- A conformal interval with nominal 90 % coverage on the calibration split
+  on every top candidate — **not** a validated probability that the
+  candidate is correct
 - Evidence-triangulated, clinically-annotated output — dose, DDI, PGx,
   mechanism path, and an adversarial red-team critique on every candidate
 - Full reproducibility — content-hashed manifests, open Apache-2.0 code,
@@ -141,7 +166,8 @@ eval reports under `experiments/eval/`.
 
 - Supply anonymized assay results on predictions you tested
 - OpenCure credits your contribution in the public prospective
-  registry (your brand gets published precision@K)
+  registry (your brand gets a published precision@K — a
+  co-occurrence / later-mention rate, not a validated accuracy figure)
 - You get early access to the re-calibrated model trained on your
   real-world data
 
@@ -171,10 +197,14 @@ for four lead diseases:
 Each brief carries top predictions, a suggested assay matched to the
 disease class, a concentration range, and named target labs.
 
-**Ask for these partners:** screen 1-5 compounds from our top-10 in
-your validated assay. We pay compound cost. You publish the outcome
-regardless of result. OpenCure logs it as a prospective-validation
-data point.
+**Ask for these partners:** screen 1-5 compounds from our top-10
+triage hypotheses in your validated assay. We pay compound cost. You
+publish the outcome regardless of result. OpenCure timestamps it in
+the prospective registry (recorded for future checking — not itself
+evidence of accuracy). *These are triage hypotheses for expert review;
+zero OpenCure predictions are wet-lab confirmed and no novel credible
+lead has been found — experimental validation is exactly what this
+partnership provides.*
 
 ---
 
@@ -214,7 +244,8 @@ incentives are weakest.
 - v7 93-disease rescreen + bioRxiv methods paper (target: Nature
   Machine Intelligence or Bioinformatics)
 - First wet-lab confirmed prediction published as co-authored preprint
-- Zenodo DOI series with published rolling precision@K
+- Zenodo DOI series with published rolling precision@K (a
+  co-occurrence / later-mention rate, not a validated accuracy figure)
 
 **Long-term (2+ years) — the v8 roadmap**
 
@@ -222,8 +253,9 @@ incentives are weakest.
 - Real molecular docking (Boltz-1 / Gnina over AlphaFold-3 structures)
 - Drug-combination scoring + active-learning loop
 - Cell-type-resolved target scoring (CellxGene / Tabula Sapiens)
-- FDA-referenceable prospective precision@K (requires 12+ months of
-  prospective-registry calendar time)
+- Prospective precision@K accumulated over 12+ months of registry
+  calendar time (a co-occurrence / later-mention rate, not a validated
+  accuracy figure)
 
 ---
 
@@ -234,8 +266,9 @@ incentives are weakest.
 **Email:** imon.bartos@gmail.com
 **Zenodo DOI series:** content-hashed snapshots at `data/prospective/snapshots/`
 
-**Repo status:** v7 — 13 pillars + calibration + red-team, 357 tests
-passing, CI green.
+**Repo status:** v7 — 13 pillars + conformal intervals + red-team, 357
+tests passing, CI green. Under leak-free evaluation only the
+genetics-anchored pillar beats a popularity baseline.
 
 **License:** Apache 2.0 with patent grant.
 
