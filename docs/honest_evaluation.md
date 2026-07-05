@@ -307,3 +307,24 @@ concordant-lead triage (`scripts/triage_cross_indication.py` →
 are in the repository under `scripts/`, `opencure/scoring/`, `data/genetics/`,
 and `experiments/eval/`. Nothing in this report depends on a closed model or
 private data.
+
+## 11. Addendum (June 2026): conditional-lift and temporal validation
+
+The one signal that beats baseline — genetics-anchored target prioritization —
+was subsequently tested for *incremental* lift over popularity, not just
+side-by-side ranking, and against a leak-clean popularity baseline (degree from
+`drkg_stripped.tsv`, not the full graph that still held the held-out edges). The
+genetics signal is **independent of popularity** — it wins in the *low*-degree
+quartiles where popularity scores 0% and loses only among high-degree hubs — and
+it **survives a temporal post-2020 holdout** — and, decisively, survives it
+using genetics frozen at **Feb 2020** (Open Targets 20.02), which provably
+predates every test approval: the ranker still beats popularity on 38/40 pairs
+(90% CI [0.90, 1.0]) where popularity scores 0%. The headline temporal Hit@10 is
+honestly *deflated* by removing posterior-contamination (32.6% with current
+genetics → **10.0%** with provably-pre-2020 genetics), but the prospective
+*lift over popularity* is genuine. This confirms the genetics-anchored ranker as
+a genuine **prioritizer** in the genetics-covered regime, not a popularity
+artifact — while leaving every novel-discovery conclusion above intact (a
+directioned-survivor audit found no novel, non-oncology, credibly-directioned
+lead). Full numbers and method: [`docs/conditional_lift_validation.md`](conditional_lift_validation.md);
+instrument: `scripts/popularity_residualized_lift.py`.

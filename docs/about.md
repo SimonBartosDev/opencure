@@ -17,12 +17,15 @@ description: Mission, ethics, and current state of the OpenCure platform.
 OpenCure is an open, mission-locked drug-repurposing platform. We rank
 existing FDA-approved and clinically-staged compounds against neglected
 tropical diseases, rare diseases, and other under-served indications,
-producing predictions a wet lab can act on.
+producing triage hypotheses for expert review. Zero predictions are
+wet-lab confirmed, and no novel credible lead has been found.
 
 The platform exists to **save lives by collapsing the gap between
 computational prediction and laboratory test**. Every prediction
-ships with calibrated uncertainty, an adversarial critique, and a
-1-page brief a PI can review in under 10 minutes.
+ships with a conformal interval (nominal coverage on the calibration
+split — not a validated probability that a candidate is correct), an
+adversarial critique, and a 1-page brief a PI can review in under 10
+minutes.
 
 We are **non-profit and open source**. All code is Apache 2.0. All
 trained models are deposited to Zenodo with a content hash and DOI.
@@ -48,6 +51,12 @@ honestly stated rather than hidden behind a number. An earlier reported
 ensemble figure ("AUC-ROC 0.997") was an artefact of data leakage and has
 been withdrawn.
 
+One component does beat baseline: **genetics-anchored target
+prioritization beats a popularity baseline ~5× on the genetics-covered
+subset** (leak-free, temporally validated, honest temporal Hit@10 ~10 %).
+It is rediscovery-leaning — it mostly re-finds a disease's existing drug —
+and it covers only part of the diseases screened.
+
 Every OpenCure output is a structured, transparent hypothesis for expert
 review — never a recommendation, and never a substitute for experimental
 validation.
@@ -57,16 +66,22 @@ validation.
 Thirteen scoring pillars combined into three groups (knowledge graph,
 structural / phenotype, network) plus six ungrouped per-disease-class
 signals. The knowledge-graph pillars are correlated embeddings of
-overlapping graphs, not independent signals. Every top-K candidate ships
-with:
+overlapping graphs, not independent signals. Under leak-free,
+popularity-baselined evaluation the KG-embedding, chemical-structure and
+cell-morphology pillars do **not** beat a trivial popularity baseline, and
+the fused multi-pillar score does not either; the only component that beats
+baseline is genetics-anchored target prioritization. Every top-K candidate
+ships with:
 
-- **Calibrated uncertainty.** A 90 %-coverage conformal interval and
-  a binary prediction set (`{0}`, `{1}`, or `{0,1}`).
+- **Conformal interval.** A conformal interval with nominal coverage on
+  the calibration split — **not** a validated probability that a candidate
+  is correct — and a binary prediction set (`{0}`, `{1}`, or `{0,1}`).
 - **Adversarial critique.** Seven failure modes are checked
   automatically for every prediction; an optional local LLM narrates
   the deterministic critique into prose.
-- **Wet-lab brief.** A 1-page Markdown summary including suggested
-  assay, concentration range, mechanistic hypothesis, and caveats.
+- **Triage brief.** A 1-page Markdown summary — a triage hypothesis for
+  expert review, not a wet-lab-confirmed lead — including suggested assay,
+  concentration range, mechanistic hypothesis, and caveats.
 - **Off-target & essentiality flags.** Selectivity score from ChEMBL,
   pan-essentiality flag from DepMap, mechanism-confidence score from
   the OpenTargets gene-association density.
@@ -76,10 +91,13 @@ full architecture description and validation strategy.
 
 ## Current state
 
-- **Architecture:** v7 (13 active pillars, calibrated uncertainty, per-
+- **Architecture:** v7 (13 active pillars, conformal-interval layer, per-
   disease-class ensemble heads, image-based phenotypic similarity,
   selectivity / essentiality / mechanism-uncertainty layers,
-  adversarial red-team agent, wet-lab brief generator).
+  adversarial red-team agent, triage-brief generator). Under leak-free
+  evaluation only the genetics-anchored target-prioritization component
+  beats a popularity baseline; the KG-embedding, chemical-structure and
+  cell-morphology pillars do not.
 - **Diseases screened:** 93 (22 NTDs, 19 rare diseases, 18 cancers,
   9 cardiovascular/metabolic, 6 autoimmune, 5 respiratory,
   5 neuropsychiatric, 5 neurodegenerative, 4 other under-served).

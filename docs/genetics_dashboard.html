@@ -94,10 +94,7 @@ font-size:.78rem;color:var(--text3);border-top:1px solid var(--border)}
   multi-pillar similarity scores (knowledge-graph, structure, morphology)
   were shown by leak-free evaluation not to beat a popularity baseline and
   are not used here.</p>
-  <div class="claim">Leak-free-validated: ~5&times; a popularity baseline on
-  the genetics-covered disease subset (Hit@10 ~21%, median rank 64 of
-  ~8000 candidates). This is a triage tool, not a predictor of clinical
-  efficacy.</div>
+  <div class="claim">Leak-free: ~5&times; a popularity baseline on the genetics-covered disease subset (random-split Hit@10 20.8% vs 3.8%, median rank 64 of ~8000 candidates). It survives a temporal holdout using genetics frozen at Feb&nbsp;2020 (beats popularity on 38/40 post-2020 pairs), though the honest prospective Hit@10 is a modest ~10%. These leads mostly <b>rediscover</b> a disease&rsquo;s existing mechanism-matched drugs. This is a triage / prioritization tool, not a predictor of clinical efficacy, and no prediction has been wet-lab confirmed.</div>
   <div class="stats">
     <div class="stat"><div class="n">93</div>
       <div class="l">Diseases screened</div></div>

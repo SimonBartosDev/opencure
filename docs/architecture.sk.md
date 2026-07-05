@@ -23,8 +23,24 @@ indikáciám. Táto stránka vysvetľuje celú architektúru — každý pilier,
 každý krok fúzie a každú vrstvu poctivosti — na jednom mieste.
 
 Hlavná zásada návrhu: **žiadnej jednej metóde sa nedôveruje samostatne,
-každá predikcia prichádza s kalibrovanou neistotou a každý výstup je
-adverzálne kritizovaný ešte predtým, než ho uvidí človek.**
+každá predikcia prichádza s konformným intervalom (nominálne pokrytie
+na kalibračnom rozdelení — nie overená pravdepodobnosť, že kandidát je
+správny) a každý výstup je adverzálne kritizovaný ešte predtým, než ho
+uvidí človek.**
+
+> **Čo pod čestným, leak-free hodnotením naozaj funguje.** Z 13 pilierov
+> rodiny *podobnostných* pilierov — embeddingy znalostného grafu, chemická
+> štruktúra (ChemBERTa/MoLFormer) aj morfológia buniek (JUMP Cell
+> Painting) — **neprekonajú triviálnu popularitnú základňu** a ani spojené
+> viacpilierové skóre popularitu neprekoná. Jediná zložka, ktorá základňu
+> prekonáva, je **prioritizácia cieľov ukotvená v genetike**: ~5× oproti
+> popularite na podmnožine chorôb pokrytej genetikou (leak-free, časovo
+> validované, Hit@10 ≈ 20,8 % vs 3,8 %, medián poradia 64; čestný časový
+> Hit@10 ≈ 10 %). Je to však **triediaci/prioritizačný nástroj, ktorý
+> prevažne znovuobjavuje** existujúci liek choroby, pokrýva len *časť*
+> chorôb (~69 z 93; patogénmi poháňané NTD nemajú ľudskú genetiku a sú
+> „nevyhodnotené“) — nie objaviteľský stroj. **Žiadna predikcia nie je
+> potvrdená v laboratóriu; nenašiel sa žiadny nový dôveryhodný kandidát.**
 
 ---
 
@@ -37,9 +53,13 @@ nie sú *nápady*, ale *dôveryhodné* nápady: ktorý z desiatok miliónov
 párov liek – choroba je hodný experimentu v laboratóriu?
 
 Odpoveďou OpenCure je ohodnotiť každý pár 13 nezávislými metódami,
-spojiť ich, poctivo kalibrovať neistotu, adverzálne kritizovať každého
-kandidáta, ktorý prejde, a podať laboratórnemu vedcovi jednostranový
-prehľad, podľa ktorého môže konať.
+spojiť ich, pripojiť konformný interval neistoty, adverzálne kritizovať
+každého kandidáta, ktorý prejde, a podať laboratórnemu vedcovi
+jednostranový prehľad — nie ako „hotový kandidát pre laboratórium“, ale
+ako **triediacu hypotézu na odborné posúdenie**. Pod čestným, leak-free
+hodnotením podobnostné piliere popularitnú základňu neprekonávajú;
+jediná zložka, ktorá ju prekonáva (~5×), je genetikou ukotvená
+prioritizácia cieľov na genetikou pokrytej podmnožine chorôb.
 
 ---
 
@@ -62,7 +82,7 @@ Názov choroby
   │
   ▼  Kalibrovaný ensemble  (XGBoost + izotonická kalibrácia; smerovanie podľa triedy choroby)
   │
-  ▼  Obal konformnej predikcie  (interval s 90 % pokrytím + binárna predikčná množina)
+  ▼  Obal konformnej predikcie  (interval s nominálnym pokrytím na kalibračnom rozdelení + binárna predikčná množina)
   │
   ▼  Zber dôkazov  (PubMed + ClinicalTrials.gov + FAERS + Semantic Scholar; vyrovnávacia pamäť)
   │
@@ -73,9 +93,9 @@ Názov choroby
   │
   ▼  Adverzálna red-team kritika  (sedem režimov zlyhania pre každého kandidáta)
   │
-  ▼  Generovanie prehľadu pre laboratórium  (jednostranový Markdown pre každú chorobu)
+  ▼  Generovanie prehľadu pre laboratórium  (jednostranový Markdown pre každú chorobu — triediace hypotézy na odborné posúdenie)
   │
-  ▼  Dashboard + JSON + CSV + prospektívny snímok s obsahovým odtlačkom
+  ▼  Dashboard + JSON + CSV + prospektívny snímok s časovou pečiatkou (záznam predikcií na budúcu kontrolu, nie dôkaz presnosti)
 ```
 
 Každá fáza je **bezpečná pri zlyhaní** (fail-open): ak nejaký artefakt
@@ -92,6 +112,15 @@ postavený na inom druhu dôkazu. Sú zámerne *ortogonálne* — topológia
 znalostného grafu, chemická štruktúra, väzba na proteín, sieťová
 biológia, genetika, transkriptomika a morfológia buniek sú rôzne okná
 do tej istej otázky.
+
+> **Dôležité upozornenie k 13 pilierom.** Pod čestným, leak-free
+> hodnotením s popularitnou základňou piliere embeddingov znalostného
+> grafu (1 – 5), chemickej štruktúry (6 – 8) a morfológie buniek (13)
+> **neprekonajú triviálnu popularitnú základňu** a ani ich fúzia nie.
+> Jediná zložka, ktorá základňu prekonáva (~5× na genetikou pokrytej
+> podmnožine), je genetikou ukotvená prioritizácia cieľov (piliere 10,
+> 11 a triangulácia). Ostatné piliere ponechávame ako vstupy do
+> triedenia, nie ako overené prediktory.
 
 | # | Pilier | Aký signál zachytáva | Zdroj dát |
 |---|--------|----------------------|-----------|
@@ -125,11 +154,12 @@ Niekoľko pilierov si zaslúži poznámku:
   zlúčenín — päťkanálové fluorescenčné snímky buniek ovplyvnených
   každou zlúčeninou, zhustené do vektora príznakov. OpenCure hodnotí
   kandidáta podľa toho, ako blízko je jeho morfologický profil
-  *ťažisku* známych liečieb danej choroby. Liek, ktorý je štruktúrne
-  nový, no vyvoláva rovnaký bunkový fenotyp ako známa liečba, je presne
-  ten cenný signál, ktorý preúčelovanie hľadá — a je to zároveň
-  najväčšie zmenšenie odstupu od uzavretých platforiem so skríningom
-  na základe obrazu.
+  *ťažisku* známych liečieb danej choroby. Zámerom bolo zachytiť liek,
+  ktorý je štruktúrne nový, no vyvoláva rovnaký bunkový fenotyp ako
+  známa liečba. **Pod čestným, leak-free hodnotením však tento
+  morfologický pilier popularitnú základňu neprekonáva** — patrí medzi
+  podobnostné piliere, ktoré v honest-eval režime zlyhali. Ponechávame
+  ho ako vstup do triedenia, nie ako overený signál.
 
 ---
 
@@ -207,33 +237,38 @@ sa neuzavrie.
 
 ## 6. Konformná predikcia — poctivá neistota
 
-Kalibrovaná pravdepodobnosť hovorí, že *naprieč všetkými* predikciami
-s hodnotou 0,7 je správnych približne 70 %. *Nehovorí* však, aká istá
-si je platforma týmto *konkrétnym* 0,7 — v skutočnosti to môže byť 0,5.
+Skóre ensemble by pri naivnom čítaní naznačovalo, že *naprieč všetkými*
+predikciami s hodnotou 0,7 je správnych približne 70 %. To však **nie je
+overená pravdepodobnosť, že kandidát je správny** — je to nanajvýš
+monotónne relatívne poradie. A ani nehovorí, aká istá si je platforma
+týmto *konkrétnym* 0,7.
 
 Verzia v7 túto medzeru uzatvára **rozdeľovacou konformnou predikciou**
 (split conformal prediction). Vyčlenená kalibračná množina poskytne
 empirický kvantil rezíduí; každá predikcia potom prichádza s:
 
 - **intervalom nezávislým od rozdelenia** `[ensemble_prob_lower,
-  ensemble_prob_upper]`, ktorý obsahuje skutočnú značku
-  s pravdepodobnosťou ≥ 90 %, a
+  ensemble_prob_upper]` s **nominálnym pokrytím na kalibračnom
+  rozdelení** — nie je to overená pravdepodobnosť, že daný kandidát je
+  správny, a
 - **binárnou predikčnou množinou**: `{1}` (s istotou pozitívne), `{0}`
   (s istotou negatívne) alebo `{0, 1}` (platforma to naozaj nevie
   rozhodnúť).
 
-Nameraná empirická miera pokrytia je **90,1 %** voči nominálnemu cieľu
-90 %. Partner z laboratória, ktorý číta `prob 0,7 [0,39 – 1,00],
-množina {0,1}`, vie, že platforma hovorí „pravdepodobne, ale nie som si
-istá“ — čo je pravdivá odpoveď a oveľa užitočnejšia než falošná
-presnosť.
+Empirická miera pokrytia na kalibračnom rozdelení je **90,1 %** voči
+nominálnemu cieľu 90 % — je to nominálne pokrytie na kalibračnej vzorke,
+nie overená pravdepodobnosť, že konkrétny kandidát je správny. Partner
+z laboratória, ktorý číta `prob 0,7 [0,39 – 1,00], množina {0,1}`, vie,
+že platforma hovorí „pravdepodobne, ale nie som si istá“ — čo je
+pravdivá odpoveď a oveľa užitočnejšia než falošná presnosť.
 
 ---
 
 ## 7. Klinické poistky
 
-To, čo odlišuje OpenCure od čistého radiaceho stroja: každá popredná
-predikcia je *uskutočniteľná*. Každá nesie:
+To, čím OpenCure dopĺňa surové poradie: každá popredná predikcia je
+*triediaca hypotéza na odborné posúdenie*, obalená klinickým kontextom.
+Každá nesie:
 
 - **Uskutočniteľnosť dávky** — je klinické plazmatické Cmax lieku dosť
   vysoké na zasiahnutie predikovaného cieľa podľa dát o bioaktivite
@@ -288,7 +323,10 @@ zachytili vlastné režimy zlyhania platformy skôr, než zavedú človeka.
 ## 9. Výstup — prehľady pre laboratórium
 
 Konečným artefaktom platformy nie je rebríček, ale **jednostranový
-prehľad pre experimentálne laboratórium** pre každú chorobu. Pre každého
+prehľad pre experimentálne laboratórium** pre každú chorobu — nejde
+o „hotové kandidáty pre laboratórium“, ale o **triediace hypotézy na
+odborné posúdenie**. Žiadna z týchto predikcií nie je potvrdená
+v laboratóriu a nenašiel sa žiadny nový dôveryhodný kandidát. Pre každého
 z piatich najlepších kandidátov prehľad uvádza mechanistickú hypotézu
 (podloženú citáciami), navrhovaný test prispôsobený triede choroby,
 koncentračný rozsah odvodený z účinnosti primárneho cieľa, red-team
@@ -330,14 +368,16 @@ s konkrétne menovanými cieľovými laboratóriami.
 - **Pretrénovanie s odstránenými hranami** — testovacie hrany sú
   odstránené z DRKG + PrimeKG + OpenTargets pred trénovaním čistého
   modelu, aby čísla vyhľadávania neboli nadhodnotené memorovaním.
-- **Konformné pokrytie** — empirických 90,1 % voči nominálnemu cieľu
-  90 %.
+- **Konformné pokrytie** — empirických 90,1 % na kalibračnom rozdelení
+  voči nominálnemu cieľu 90 % (nominálne pokrytie na kalibračnej vzorke,
+  nie overená pravdepodobnosť správnosti kandidáta).
 - **Sada negatívnych kontrol** — brána CI opísaná v časti 8.
 - **Priame porovnanie** — kandidáti každej choroby preradení podľa
   každého jednopilierového základu oproti spojenému ensemble.
-- **Retrospektívno-prospektívna validácia** — predikcie vytvorené
-  oproti dátam spred roku 2024 sú porovnané s publikáciami z rokov
-  2024 – 2025, ktoré model nikdy nevidel.
+- **Prospektívne časové označkovanie** — predikcie sa zaznamenávajú na
+  budúcu kontrolu; porovnanie s publikáciami z rokov 2024 – 2025 meria
+  mieru neskoršej zmienky/spoluvýskytu, nie presnosť, a zatiaľ
+  neprinieslo žiadny overený výsledok. Nie je to dôkaz presnosti.
 - **357 automatizovaných testov** naprieč filtrami, hodnotením,
   dôkazmi, konformnou predikciou, negatívnymi kontrolami, triedami,
   JUMP-CP, selektivitou, DepMap, red-teamom a regresnými sadami,
@@ -351,8 +391,9 @@ Každý výsledkový súbor nesie `data_manifest_hash` — odtlačok SHA-256
 každého vstupného dátového súboru, ktorý ho vytvoril. Každý kontrolný
 bod modelu má obsahový odtlačok. Predikcie sa zapisujú do nemenných,
 časovo označených **prospektívnych snímkov** s registráciou DOI cez
-Zenodo, takže tvrdenie vyslovené dnes možno overiť oproti budúcej
-literatúre. Verzia pipeline je vyznačená na každom výstupe.
+Zenodo — ide o prospektívne *časové označkovanie* (záznam predikcií na
+budúcu kontrolu), ktoré zatiaľ neprinieslo žiadny overený výsledok a nie
+je dôkazom presnosti. Verzia pipeline je vyznačená na každom výstupe.
 
 ---
 
@@ -388,7 +429,8 @@ Plán, ktorý sa týmto venuje, je v súbore
 - **[Návrh metodickej štúdie](https://github.com/SimonBartosDev/opencure/blob/main/docs/methods_paper_draft.md)**
   — text na úrovni recenzovaného článku.
 - **[Prehľady pre laboratóriá](https://github.com/SimonBartosDev/opencure/blob/main/docs/lab_outreach_briefs.md)**
-  — 40 prehľadov chorôb pripravených na partnerstvo.
+  — 40 prehľadov chorôb ako triediace hypotézy na odborné posúdenie
+  (žiadna nie je potvrdená v laboratóriu).
 - **[GitHub repozitár](https://github.com/SimonBartosDev/opencure)** —
   celý kód, licencia Apache 2.0.
 

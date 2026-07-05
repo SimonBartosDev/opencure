@@ -1,8 +1,15 @@
-# Prospective validation monitor — scheduling
+# Prospective timestamping monitor — scheduling
 
-The monitor (`scripts/prospective_monitor.py`) re-queries PubMed and
-ClinicalTrials.gov for evidence published **after** each snapshot date
-and updates `data/prospective/summary.json` with rolling precision@K.
+This is **prospective timestamping** (it records predictions with a snapshot
+date for future checking), **not** prospective validation as a selling point:
+it has produced no validated outcome and is not evidence of accuracy. The
+monitor (`scripts/prospective_monitor.py`) re-queries PubMed and
+ClinicalTrials.gov for evidence published **after** each snapshot date and
+updates `data/prospective/summary.json` with a rolling "precision@K" figure —
+but that figure is a **co-occurrence / later-mention rate** (did a paper or
+trial for a predicted pair appear later?), **not** an accuracy metric. Zero
+predictions are wet-lab confirmed; no novel, credible repurposing lead was
+found. Treat the monitor's outputs as triage hypotheses for expert review.
 
 It's idempotent; running it more often than monthly is fine but wastes
 API calls. The recommended cadence is **monthly on the 1st**.
@@ -68,7 +75,7 @@ Add to `crontab -e`:
 `.github/workflows/prospective.yml`:
 
 ```yaml
-name: Prospective validation monitor
+name: Prospective timestamping monitor
 on:
   schedule:
     - cron: "0 3 1 * *"     # 03:00 UTC on day 1 of each month
@@ -85,12 +92,13 @@ jobs:
       - run: python3 scripts/prospective_monitor.py
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "prospective monitor: monthly precision@K update"
+          commit_message: "prospective monitor: monthly later-mention rate update"
           file_pattern: "data/prospective/**"
 ```
 
 Uses the same monthly cadence; runs even when your laptop is off; commits
-the updated `data/prospective/summary.json` automatically.
+the updated `data/prospective/summary.json` automatically. Note the committed
+`rolling_precision_at_10` is a later-mention rate, not a validated accuracy.
 
 ## What the output looks like
 
@@ -106,10 +114,14 @@ After one month with the monitor running:
   "rolling_precision_at_10": 0.067,
   "last_updated": "2026-05-01T03:00:15Z",
   "method": "PubMed + ClinicalTrials.gov re-query after snapshot date",
-  "notes": "Hits = new papers or trials published after snapshot date "
-           "for (drug, disease) pairs we predicted."
+  "notes": "rolling_precision_at_10 is a later-mention / co-occurrence rate, "
+           "NOT a validated accuracy. Hits = new papers or trials published "
+           "after snapshot date for (drug, disease) pairs we predicted — a "
+           "later mention is not confirmation the prediction was correct."
 }
 ```
 
-The first meaningful report lands after predictions age 90 days; see
-`docs/methods_paper_draft.md` §4.4.
+The first later-mention numbers land after predictions age 90 days; see
+`docs/methods_paper_draft.md` §4.4. This monitor timestamps predictions for
+future checking — it produces co-occurrence/later-mention rates, not evidence
+of accuracy, and no prediction has been wet-lab confirmed.

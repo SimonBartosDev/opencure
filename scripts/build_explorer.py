@@ -2,7 +2,7 @@
 """Generate the OpenCure Explorer v2 — interactive biomedical dashboard.
 
 Reads disease JSON files + database JSON, merges rich evidence data, and
-produces docs/index.html: a self-contained interactive dashboard with
+produces docs/explorer.html: a self-contained interactive dashboard with
 tabbed evidence panels, clickable PubMed links, clinical trial details,
 pillar strength bars, cross-disease network, and CSV export.
 """
@@ -16,7 +16,7 @@ from datetime import datetime
 
 DB_PATH = Path("experiments/results/opencure_database.json")
 RESULTS_DIR = Path("experiments/results")
-OUT_PATH = Path("docs/index.html")
+OUT_PATH = Path("docs/explorer.html")  # NOTE: index.html is the hand-maintained honest landing; this exploratory, non-validated explorer builds to explorer.html so a rebuild never clobbers it.
 
 
 def load_data():
@@ -178,11 +178,13 @@ def build_html(candidates, cross_disease, stats):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OpenCure Explorer - AI Drug Repurposing Dashboard</title>
-<meta name="description" content="OpenCure v7 — interactive dashboard for AI-predicted drug-repurposing candidates across 93 neglected, rare, and underserved diseases, scored by 13 fused pillars with calibrated uncertainty.">
+<title>OpenCure Explorer (exploratory, not validated) — AI Drug Repurposing</title>
+<meta name="description" content="Exploratory multi-pillar drug-repurposing rankings across underserved diseases. NOT validated predictions: under leak-free evaluation the fused multi-pillar score does not beat a popularity baseline; only a narrow genetics-anchored signal is leak-free-validated. See the honest evaluation.">
 <style>{CSS}</style>
 </head>
 <body>
+
+<div style="background:#fef3c7;border-bottom:2px solid #d97706;color:#7c2d12;padding:12px 18px;font:14px/1.5 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;text-align:center">⚠ <strong>Exploratory — not a validated predictor.</strong> These fused-pillar scores, "confidence" values and BREAKTHROUGH/NOVEL labels are not validated: under leak-free evaluation the multi-pillar score does not beat a popularity baseline. Only a narrow <a href="genetics_dashboard.html" style="color:#7c2d12;font-weight:600">genetics-anchored signal</a> is leak-free-validated. See the <a href="index.html" style="color:#7c2d12;font-weight:600">honest overview</a>.</div>
 
 <div style="position:fixed;top:14px;right:14px;z-index:9999;display:flex;font:700 13px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;border:1px solid #d0d7de;border-radius:8px;overflow:hidden;box-shadow:0 1px 5px rgba(0,0,0,.2)">
 <a href="index.html" style="padding:7px 14px;text-decoration:none;background:#2563eb;color:#fff" aria-current="page">EN</a>
@@ -193,14 +195,14 @@ def build_html(candidates, cross_disease, stats):
   <div class="hero-inner">
     <div class="hero-text">
       <h1>Open<span class="accent">Cure</span> Explorer</h1>
-      <p class="subtitle">AI Drug Repurposing Dashboard</p>
-      <p class="tagline">Multi-pillar computational repurposing hypotheses for underserved diseases &middot; Updated {generated}</p>
+      <p class="subtitle">Exploratory multi-pillar rankings &middot; not a validated predictor</p>
+      <p class="tagline">Exploratory computational repurposing hypotheses (fused score does not beat a popularity baseline leak-free) &middot; Updated {generated}</p>
     </div>
     <div class="stats-row">
       <div class="stat-card"><div class="stat-num">{stats['total']}</div><div class="stat-label">Candidates</div></div>
       <div class="stat-card"><div class="stat-num">{stats['diseases']}</div><div class="stat-label">Diseases</div></div>
-      <div class="stat-card hl"><div class="stat-num">{stats['breakthrough']}</div><div class="stat-label">Breakthroughs</div></div>
-      <div class="stat-card"><div class="stat-num">{stats['high_confidence']}</div><div class="stat-label">High Confidence</div></div>
+      <div class="stat-card"><div class="stat-num">{stats['breakthrough']}</div><div class="stat-label">Not-in-KG flags*</div></div>
+      <div class="stat-card"><div class="stat-num">{stats['high_confidence']}</div><div class="stat-label">Multi-source support*</div></div>
     </div>
   </div>
 </header>

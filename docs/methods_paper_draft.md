@@ -1,4 +1,4 @@
-# OpenCure: An Open Multi-Pillar Drug Repurposing Platform with Prospective Validation
+# OpenCure: An Open Multi-Pillar Drug Repurposing Platform with Prospective Timestamping
 
 > ## ⚠ STATUS: SHELVED — DO NOT CITE OR SUBMIT
 >
@@ -32,22 +32,29 @@
 Drug repurposing — identifying new therapeutic uses for approved medicines —
 remains bottlenecked by the difficulty of integrating heterogeneous biomedical
 evidence (knowledge graphs, molecular structure, transcriptomic signatures,
-human genetics, clinical data) into a single, calibrated, interpretable
-prediction. Existing platforms either rely on a single evidence type (shallow
+human genetics, clinical data) into a single, interpretable prediction.
+Existing platforms either rely on a single evidence type (shallow
 KG embeddings) or are closed-source (PandaOmics, DeepPurpose Pro). We present
-**OpenCure**, an open-source platform that fuses **11 active evidence
-pillars**, applies curated filtering for metabolite and research-chemical
+**OpenCure**, an open-source platform that fuses **13 active evidence
+pillars** — though under leak-free, popularity-baselined evaluation the
+KG-embedding, chemical-structure and cell-morphology pillars do **not** beat a
+trivial popularity baseline, and the only component that does is
+genetics-anchored target prioritization — applies curated filtering for
+metabolite and research-chemical
 artifacts, surfaces graph-path mechanism explanations for every prediction,
 identifies cross-disease polypharmacology clusters, and layers clinical
 guardrails (dose plausibility, drug-drug interactions, pharmacogenomic flags,
 triangulation with external databases). We benchmark on two held-out sets:
 (1) a 993-pair random split of DrugBank-curated indications, and (2) a
 **time-sliced test of 210 drug-disease pairs approved 2020-2024** while
-training on pre-2020 biology. OpenCure achieves Hit@10 = [X] on time-sliced
-and MRR = [Y], comparable to or exceeding published systems. A unique
-prospective-registry mechanism timestamps predictions at Zenodo for
-longitudinal precision@K tracking. All code, data, and trained models are
-Apache-2.0 open-source.
+training on pre-2020 biology. The one component that beats a popularity
+baseline is genetics-anchored target prioritization: ~5× popularity on the
+genetics-covered subset (leak-free, temporally validated; honest temporal
+Hit@10 ≈ 10%), though it is rediscovery-leaning and covers only part of
+diseases. A prospective-registry mechanism **timestamps** predictions at
+Zenodo (records them for future checking — it has produced no validated
+outcome and is not evidence of accuracy). All code, data, and trained models
+are Apache-2.0 open-source.
 
 ## 1. Introduction
 
@@ -186,29 +193,37 @@ on A10; ~$30 cloud spend). Time-sliced 0.0% across all three models
 confirms the **stale biology** limitation — DRKG is 2020-era and cannot
 retrieve post-2020 approved indications without a refreshed KG.
 
-The KG-embedding pillar is one of 11; ensemble scoring combines it with
-network, structural, genetic, transcriptomic, and clinical signals so
-the final OpenCure score does not collapse when any single pillar is
-weak.
+The KG-embedding pillar is one of 13; ensemble scoring combines it with
+network, structural, genetic, transcriptomic, and clinical signals. Note,
+however, that under leak-free, popularity-baselined evaluation the
+KG-embedding, chemical-structure and cell-morphology pillars do **not** beat
+a trivial popularity baseline, and neither does the fused multi-pillar
+score — the only component that does is genetics-anchored target
+prioritization.
 
 ### 4.2 Ensemble-level validation (v5)
 
-A calibrated XGBoost ensemble was trained on 23,814 pairs (3,969 DRKG
+An XGBoost ensemble was trained on 23,814 pairs (3,969 DRKG
 treats positives not held-out + 19,845 5× random-sampled negatives)
 with 5-fold stratified CV:
 
-- **AUC-ROC: 0.9968 ± 0.0004**
-- **Average precision: 0.9837**
+- **AUC-ROC: 0.9968 ± 0.0004** — **WITHDRAWN: data leakage.** KG features
+  were scored from a graph that still contained the test edges; this is not
+  a validated accuracy figure and must not be presented as a result or a
+  baseline-to-beat.
+- Average precision: 0.9837 — **WITHDRAWN (same leakage).**
 - Feature importances: `transe_rank_log` (56.6%), `kg_score` (34.8%),
   `degree_penalty` (3.5%), `n_disease_genes` (2.7%), `n_drug_targets`
   (1.2%), `is_fda_approved` (1.2%)
 
 Honest caveat: the KG features (91% combined importance) come from the
-training-contaminated 2020 DGL-KE TransE, so AUC mainly reflects KG
-memorization. On a properly-clean KG this AUC will be lower and the
-ensemble will lean on richer features (proximity, MR, TxGNN). The
-calibrated model gives isotonic probabilities — score=0.7 corresponds
-to ~70% precision in 5-fold CV.
+training-contaminated 2020 DGL-KE TransE, so the AUC reflects KG
+memorization (data leakage), not repurposing accuracy — the figure is
+withdrawn. On a properly-clean KG this AUC is far lower and, on a fair
+temporal test, at or below chance; the fused multi-pillar score does not
+beat a popularity baseline. The isotonic-transformed score is a
+CV-fitted mapping, **not** a validated probability that a candidate is
+correct.
 
 ### 4.3 Held-out edge stripping
 
@@ -233,15 +248,18 @@ Predictions are serialized to `data/prospective/snapshots/<ISO-8601>/`
 with SHA-256 content fingerprints and a Zenodo-ready metadata JSON.
 Monthly `prospective_monitor.py` re-queries PubMed and
 ClinicalTrials.gov for evidence published **after** each snapshot
-date and computes rolling precision@K on predictions ≥90 days old.
+date and computes rolling precision@K on predictions ≥90 days old. This
+precision@K is a later-mention / co-occurrence rate, **not** an accuracy
+measure.
 
 First snapshot: `2026-04-18T164121Z` with fingerprint persisted in the
 snapshot README. DOI registration planned via Zenodo API at v5 release.
 
-This is the single strongest efficacy claim a repurposing platform can
-make and requires calendar time (90+ days) to produce meaningful
-numbers. The registry is running continuously; first meaningful
-precision@10 report expected 2026-07.
+This is prospective **timestamping** — it records predictions for future
+checking; it has produced no validated outcome and is not, by itself,
+evidence of accuracy. It requires calendar time (90+ days) to produce any
+numbers, and those numbers are later-mention rates, not accuracy. The
+registry is running continuously; first precision@10 report expected 2026-07.
 
 ### 4.5 Head-to-head vs published baselines
 
@@ -260,10 +278,12 @@ never break the pipeline.
 
 **Conformal prediction wrapper** (`opencure/scoring/conformal.py`).
 Split conformal calibrator fit on the held-out positive set augmented
-with matched random negatives. Each candidate ships with a 90 %-coverage
-interval `[ensemble_prob_lower, ensemble_prob_upper]` and a binary
-prediction set `{0}`, `{1}`, or `{0,1}` — a candidate whose set is
-`{0,1}` is one the platform genuinely cannot adjudicate.
+with matched random negatives. Each candidate ships with a conformal
+interval `[ensemble_prob_lower, ensemble_prob_upper]` carrying nominal
+coverage on the calibration split — **not** a validated probability that
+a candidate is correct — and a binary prediction set `{0}`, `{1}`, or
+`{0,1}` — a candidate whose set is `{0,1}` is one the platform genuinely
+cannot adjudicate.
 
 **93-disease negative-control suite**
 (`tests/data/negative_controls.yaml` + `opencure/eval/negative_control.py`).
@@ -300,7 +320,9 @@ Every disease's top-5 candidates emit a 1-page Markdown brief: header
 with conformal interval, mechanistic hypothesis, suggested assay
 (routed by disease class), concentration range derived from primary-
 target potency, red-team summary, and disease-/candidate-level
-caveats. Designed for direct use in wet-lab partnership conversations.
+caveats. These are **triage hypotheses for expert review**, not
+wet-lab-ready leads: zero OpenCure predictions are wet-lab confirmed and
+no novel, credible lead has been found.
 
 ## 5. Results
 
@@ -316,9 +338,12 @@ below is fixed so re-runs slot in cleanly.
 | Hit@10 (random 993)        | _TBD_ | _TBD_ |
 | Hit@10 (time-sliced 210)   | _TBD_ | _TBD_ |
 | MRR (time-sliced)          | _TBD_ | _TBD_ |
-| AUROC (ensemble, 5-fold CV)| 0.997 | _TBD_ |
+| AUROC (ensemble, 5-fold CV)| ~~0.997~~ WITHDRAWN — data leakage | _TBD_ |
 
 ### 5.2 Conformal-prediction coverage
+
+The coverage target is nominal coverage on the calibration split, **not** a
+validated probability that a candidate is correct.
 
 | Coverage target | Calibration set | Empirical coverage on time-sliced |
 |----------------:|----------------:|-----------------------------------:|
@@ -347,13 +372,13 @@ disease pass rates reported separately.
 For each of the six classes, AUROC on the held-out class-stratified
 test split, compared with the shared head's AUROC on the same split.
 
-### 5.6 Retrospective-prospective validation (2024-2025)
+### 5.6 Retrospective-prospective timestamping (2024-2025)
 
-`scripts/retrospective_prospective.py` summary:
+`scripts/retrospective_prospective.py` summary. A later-mention count is a
+co-occurrence rate, **not** an accuracy measure:
 
-> Of N v7 predictions made against pre-2024 KG data, M were
-> independently corroborated by 2024-2025 publications, K were refuted,
-> J remain untested.
+> Of N v7 predictions made against pre-2024 KG data, M were later
+> co-mentioned in 2024-2025 publications, K were refuted, J remain untested.
 
 Per-disease confirmation counts in supplementary table.
 
@@ -386,10 +411,16 @@ of pillar fusion vs each pillar alone.
 > expected to surface the real differentiation. Final §5.9 numbers
 > land after Phase B2 (v7 rescreen) completes.
 
-The expected delta pattern in §4.5 has the v7 ensemble outperforming
-each single-pillar baseline by ≥ 5 percentage points on Hit@10 and
-~0.05 on MRR — that is the threshold at which we will defensibly claim
-"calibrated multi-pillar fusion beats any single-pillar approach".
+This is a template awaiting v7 numbers, **not** a result. Under leak-free,
+popularity-baselined evaluation to date, the KG-embedding,
+chemical-structure and cell-morphology pillars do not beat a popularity
+baseline, and neither does the fused multi-pillar score. The one component
+that does is genetics-anchored target prioritization: ~5× popularity on the
+genetics-covered subset (leak-free, temporally validated; honest temporal
+Hit@10 ≈ 10%), though it is rediscovery-leaning and covers only part of
+diseases (~69 of 93; pathogen-driven NTDs have no human genetics and are
+not assessed). No claim that multi-pillar fusion beats a single-pillar
+approach is currently supported by evidence.
 
 ## 6. Discussion
 
@@ -416,7 +447,8 @@ each single-pillar baseline by ≥ 5 percentage points on Hit@10 and
 
   - Foundation-model swap from ChemBERTa to MoLFormer-XL (chemistry) and
     from 8M ESM-2 to 150M ESM-2 (proteins).
-  - Honest uncertainty quantification via split conformal prediction.
+  - Split conformal prediction intervals carrying nominal coverage on the
+    calibration split (not a validated probability of correctness).
   - 93-disease negative-control suite as a CI gate.
   - Per-class ensemble heads replace the single shared head.
   - JUMP Cell Painting as a 13th, phenotype-space pillar.

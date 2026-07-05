@@ -1,0 +1,137 @@
+{
+  "purpose": "Popularity-residualized conditional-lift test. The ONLY change vs genetics_anchored_benchmark_v3.py is a leak-clean popularity baseline (degree from drkg_stripped.tsv, not the full graph) and a conditional metric. Ranker leak control is inherited unchanged.",
+  "baseline_correction": {
+    "issue": "Phase-3 popularity degree was built from the FULL DRKG graph (drkg.tsv) which still contains the 999 held-out treats edges, inflating the comparator by the answers.",
+    "fix": "degree recomputed from data/drkg/drkg_stripped.tsv.",
+    "held_out_treats_edges_removed": 999
+  },
+  "n_evaluable_heldout_positives": 441,
+  "n_genetics_covered": 40,
+  "A_corrected_ranking": {
+    "overall": {
+      "genetics": {
+        "n": 441,
+        "hit_at_10": 1.1,
+        "hit_at_30": 1.8,
+        "hit_at_100": 5.0,
+        "median_rank": 12203,
+        "mrr": 0.0033
+      },
+      "popularity_CLEAN_stripped": {
+        "n": 441,
+        "hit_at_10": 2.7,
+        "hit_at_30": 5.4,
+        "hit_at_100": 15.9,
+        "median_rank": 882,
+        "mrr": 0.0147
+      },
+      "popularity_INFLATED_full": {
+        "n": 441,
+        "hit_at_10": 2.7,
+        "hit_at_30": 5.4,
+        "hit_at_100": 15.9,
+        "median_rank": 875,
+        "mrr": 0.0148
+      }
+    },
+    "genetics_covered_subset": {
+      "genetics": {
+        "n": 40,
+        "hit_at_10": 12.5,
+        "hit_at_30": 20.0,
+        "hit_at_100": 55.0,
+        "median_rank": 90,
+        "mrr": 0.0357
+      },
+      "popularity_CLEAN_stripped": {
+        "n": 40,
+        "hit_at_10": 2.5,
+        "hit_at_30": 5.0,
+        "hit_at_100": 22.5,
+        "median_rank": 499,
+        "mrr": 0.0228
+      },
+      "popularity_INFLATED_full": {
+        "n": 40,
+        "hit_at_10": 2.5,
+        "hit_at_30": 5.0,
+        "hit_at_100": 22.5,
+        "median_rank": 499,
+        "mrr": 0.0228
+      }
+    }
+  },
+  "B_degree_stratified_hit_at_10_covered": {
+    "degree_q1": {
+      "n": 10,
+      "degree_range": [
+        368.0,
+        1098.0
+      ],
+      "genetics_hit_at_10": 20.0,
+      "popularity_hit_at_10": 0.0,
+      "genetics_median": 128,
+      "popularity_median": 2099
+    },
+    "degree_q2": {
+      "n": 10,
+      "degree_range": [
+        1229.0,
+        1490.0
+      ],
+      "genetics_hit_at_10": 20.0,
+      "popularity_hit_at_10": 0.0,
+      "genetics_median": 30,
+      "popularity_median": 708
+    },
+    "degree_q3": {
+      "n": 10,
+      "degree_range": [
+        1562.0,
+        2128.0
+      ],
+      "genetics_hit_at_10": 10.0,
+      "popularity_hit_at_10": 0.0,
+      "genetics_median": 86,
+      "popularity_median": 379
+    },
+    "degree_q4": {
+      "n": 10,
+      "degree_range": [
+        2158.0,
+        3683.0
+      ],
+      "genetics_hit_at_10": 0.0,
+      "popularity_hit_at_10": 10.0,
+      "genetics_median": 98,
+      "popularity_median": 56
+    }
+  },
+  "C_conditional_lift": {
+    "paired_head_to_head_covered": {
+      "n": 40,
+      "genetics_better_than_popularity": 30,
+      "ties": 0,
+      "win_fraction": 0.75,
+      "win_fraction_90ci_bootstrap_over_diseases": [
+        0.621,
+        0.857
+      ],
+      "interpretation": "Fraction of covered held-out positives where genetics ranks the true drug strictly better than the CLEAN popularity baseline. >0.5 with CI excluding 0.5 = genetics adds lift over popularity head-to-head."
+    },
+    "logistic_partial_coefficient": {
+      "available": true,
+      "engine": "sklearn (unpenalized) + cluster bootstrap",
+      "n_rows": 534886,
+      "n_positives": 85,
+      "standardized_coef_log_degree": 0.745,
+      "standardized_coef_genetics_score": 0.26,
+      "genetics_score_90ci_bootstrap_over_diseases": [
+        0.1841,
+        0.3461
+      ],
+      "n_bootstrap_fits": 200,
+      "note": "Standardized coefficients (comparable units). A positive genetics coefficient with CI excluding 0 means genetics adds signal beyond popularity. Extreme class imbalance (one true drug per disease vs the full pool) makes the magnitude less interpretable than the sign and the degree-stratified table."
+    }
+  }
+}

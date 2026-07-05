@@ -97,8 +97,15 @@ For researchers using OpenCure predictions:
 
 1. **If a hub drug ranks #1, look at its pillar breakdown**, not just
    the combined score. If only KG/proximity pillars fire, the
-   prediction is suspect. If 4+ pillars agree including structural and
-   MR, the prediction may be genuine.
+   prediction is suspect. Note the strong caveat, though: under
+   leak-free, popularity-baselined evaluation the KG-embedding,
+   chemical-structure (ChemBERTa) and cell-morphology pillars do **not**
+   beat a trivial popularity baseline, so "4+ pillars agree" is weak
+   evidence of a genuine prediction — the only component that beats
+   popularity is genetics-anchored target prioritization. Treat any
+   top-ranked hit as a triage hypothesis for expert review, not a
+   validated lead: zero OpenCure predictions are wet-lab confirmed and
+   no novel credible lead has been found.
 
 2. **Cross-reference the mechanism path**. v5 surfaces natural-language
    paths. If Cimetidine → targets → gene-X → is bound by → KnownDrug →
@@ -130,12 +137,19 @@ data curation or a per-disease training step that's on the v6 roadmap.
 
 The v5 hub-degree penalty reduces but does not eliminate hub-drug
 dominance. Per-drug inspection (pillar breakdown, mechanism path,
-triangulation) remains necessary for actionable interpretation.
+triangulation) remains necessary before treating any candidate as a
+triage hypothesis for expert review.
 Cimetidine-for-infectious-diseases is the clearest remaining case;
 the other three (Dex, Tac, Octreotide) are mostly resolved.
 
-Full transparency: OpenCure predictions are **ranking candidates for
-human review**, not point-estimates of therapeutic probability. Hub
-bias is disclosed here so that reviewers and collaborators can apply
+Full transparency: OpenCure predictions are **triage hypotheses for
+expert review**, not point-estimates of therapeutic probability. Under
+leak-free evaluation the KG-embedding, chemical-structure and
+cell-morphology pillars do not beat a popularity baseline; the single
+component that does is **genetics-anchored target prioritization** —
+it beats a popularity baseline ~5× on the genetics-covered subset
+(leak-free, temporally validated, honest temporal Hit@10 ~10%), but it
+is rediscovery-leaning and covers only part of diseases. Hub bias is
+disclosed here so that reviewers and collaborators can apply
 appropriate skepticism when top-ranked predictions share the hub
 signature.
