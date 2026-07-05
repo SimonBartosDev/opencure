@@ -10,7 +10,7 @@ description: Poslanie, etika a aktuálny stav platformy OpenCure.
 
 # O projekte OpenCure
 
-**[← Živý dashboard](index.html)** · [Ako to funguje (architektúra)](architecture.sk.html) · [Metodická štúdia](https://github.com/SimonBartosDev/opencure/blob/main/docs/methods_paper_draft.md) · [GitHub](https://github.com/SimonBartosDev/opencure)
+**[← Domov](index.html)** · [Ako to funguje (architektúra)](architecture.sk.html) · [Metodická štúdia](https://github.com/SimonBartosDev/opencure/blob/main/docs/methods_paper_draft.md) · [GitHub](https://github.com/SimonBartosDev/opencure)
 
 > Toto je slovenský preklad. Zdrojové výpočty, kód a dáta sú v angličtine;
 > v prípade rozporu je rozhodujúca [anglická verzia](about.html).
@@ -125,7 +125,7 @@ laboratórií:
 - **Niemannova-Pickova choroba** — Ara Parseghian Medical Research
   Foundation, NPUK.
 
-Jednotlivé prehľady pre 40 zanedbávaných tropických a zriedkavých
+Jednotlivé prehľady pre 41 zanedbávaných tropických a zriedkavých
 chorôb nájdete v súbore
 [`lab_outreach_briefs.md`](https://github.com/SimonBartosDev/opencure/blob/main/docs/lab_outreach_briefs.md).
 

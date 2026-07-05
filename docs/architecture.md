@@ -10,7 +10,7 @@ description: How the OpenCure drug-repurposing platform works, end to end.
 
 # OpenCure v7 — How it works
 
-**[← Live dashboard](index.html)** · [About & mission](about.html) · [Methods paper](https://github.com/SimonBartosDev/opencure/blob/main/docs/methods_paper_draft.md) · [GitHub](https://github.com/SimonBartosDev/opencure)
+**[← Home](index.html)** · [About & mission](about.html) · [Methods paper](https://github.com/SimonBartosDev/opencure/blob/main/docs/methods_paper_draft.md) · [GitHub](https://github.com/SimonBartosDev/opencure)
 
 OpenCure is an open-source, mission-locked platform that ranks existing
 FDA-approved and clinically-staged drugs against neglected tropical
@@ -353,7 +353,7 @@ that component at all.
 ## 11. Validation strategy
 
 - **Held-out random split** — 993 DrugBank treats-pairs held out,
-  scored against the full 10,551-compound pool.
+  scored against the full DRKG compound universe (~24,313 compounds).
 - **Time-sliced benchmark** — 210 drug–disease pairs approved *after*
   2020, to test generalisation beyond the 2020-vintage knowledge graph.
 - **Edge-stripped retraining** — test-set edges are removed from
@@ -429,7 +429,7 @@ The roadmap that addresses these is in
 
 ## 14. Where to go next
 
-- **[Live dashboard](index.html)** — browse predictions across 93 diseases.
+- **[Genetics triage dashboard](genetics_dashboard.html)** — browse the genetics-anchored leads for the covered diseases.
 - **[About & mission](about.html)** — why OpenCure is non-profit and mission-locked.
 - **[Methods paper draft](https://github.com/SimonBartosDev/opencure/blob/main/docs/methods_paper_draft.md)** — the peer-review-grade writeup.
 - **[Lab outreach briefs](https://github.com/SimonBartosDev/opencure/blob/main/docs/lab_outreach_briefs.md)** — 40 partnership-ready disease briefs.

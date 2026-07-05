@@ -46,7 +46,7 @@ identifies cross-disease polypharmacology clusters, and layers clinical
 guardrails (dose plausibility, drug-drug interactions, pharmacogenomic flags,
 triangulation with external databases). We benchmark on two held-out sets:
 (1) a 993-pair random split of DrugBank-curated indications, and (2) a
-**time-sliced test of 210 drug-disease pairs approved 2020-2024** while
+**time-sliced test of 210 drug-disease pairs approved 2020-2023** while
 training on pre-2020 biology. The one component that beats a popularity
 baseline is genetics-anchored target prioritization: ~5× popularity on the
 genetics-covered subset (leak-free, temporally validated; honest temporal

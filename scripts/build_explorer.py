@@ -16,7 +16,7 @@ from datetime import datetime
 
 DB_PATH = Path("experiments/results/opencure_database.json")
 RESULTS_DIR = Path("experiments/results")
-OUT_PATH = Path("docs/explorer.html")  # NOTE: index.html is the hand-maintained honest landing; this exploratory, non-validated explorer builds to explorer.html so a rebuild never clobbers it.
+OUT_PATH = Path("docs/explorer.html")  # NOTE: the fused-pillar explorer is NO LONGER PUBLISHED (its scores lose to a popularity baseline leak-free). index.html is the hand-maintained honest landing; the honest interactive tool is genetics_dashboard.html. This script is retained for local inspection only — its output is not deployed.
 
 
 def load_data():

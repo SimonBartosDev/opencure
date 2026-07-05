@@ -107,7 +107,7 @@ After one month with the monitor running:
 ```json
 // data/prospective/summary.json
 {
-  "snapshot_date": "2026-04-18T164121Z",
+  "snapshot_date": "2026-04-20T063801Z",
   "predictions_tracked": 610,
   "predictions_aged_90d": 61,
   "validation_hits": 4,
