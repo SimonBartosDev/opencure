@@ -102,7 +102,7 @@ full candidate pool. The honest comparator is a **popularity baseline**
 | Cell-morphology (JUMP Cell Painting) | 2.8% | 8.9% | 1293 | **loses** |
 | Popularity baseline (same pool) | 3.0% | 22.4% | 397 | — |
 | Knowledge-graph (edge-stripped) | — | — | — | at/below baseline |
-| Target-based reversal (genetics-filtered, leak-clean) | 0.6% | 6.7% | 12,211 | **loses (~5×)** |
+| Target-based reversal (genetics-filtered, leak-clean) | 0.6% | 6.7% | 12,211 | **loses** |
 | Popularity baseline (same pool) | 3.3% | 14.7% | 909 | — |
 
 Three independent signal families — graph, chemistry, phenotype — none beats

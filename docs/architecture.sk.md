@@ -10,7 +10,7 @@ description: Ako funguje platforma OpenCure na preúčelovanie liečiv, od zači
 
 # OpenCure v7 — Ako to funguje
 
-**[← Živý dashboard](index.html)** · [O projekte a poslaní](about.sk.html) · [Metodická štúdia](https://github.com/SimonBartosDev/opencure/blob/main/docs/methods_paper_draft.md) · [GitHub](https://github.com/SimonBartosDev/opencure)
+**[← Domov](index.html)** · [O projekte a poslaní](about.sk.html) · [Metodická štúdia](https://github.com/SimonBartosDev/opencure/blob/main/docs/methods_paper_draft.md) · [GitHub](https://github.com/SimonBartosDev/opencure)
 
 > Toto je slovenský preklad. Zdrojový kód, dáta a výpočty sú v angličtine;
 > v prípade rozporu je rozhodujúca [anglická verzia](architecture.html).
@@ -115,11 +115,11 @@ do tej istej otázky.
 
 > **Dôležité upozornenie k 13 pilierom.** Pod čestným, leak-free
 > hodnotením s popularitnou základňou piliere embeddingov znalostného
-> grafu (1 – 5), chemickej štruktúry (6 – 8) a morfológie buniek (13)
+> grafu (1 – 5, 12), chemickej štruktúry (6 – 8) a morfológie buniek (13)
 > **neprekonajú triviálnu popularitnú základňu** a ani ich fúzia nie.
 > Jediná zložka, ktorá základňu prekonáva (~5× na genetikou pokrytej
-> podmnožine), je genetikou ukotvená prioritizácia cieľov (piliere 10,
-> 11 a triangulácia). Ostatné piliere ponechávame ako vstupy do
+> podmnožine), je genetikou ukotvená prioritizácia cieľov (piliere
+> 9 – 11). Ostatné piliere ponechávame ako vstupy do
 > triedenia, nie ako overené prediktory.
 
 | # | Pilier | Aký signál zachytáva | Zdroj dát |
@@ -361,7 +361,7 @@ s konkrétne menovanými cieľovými laboratóriami.
 ## 11. Stratégia validácie
 
 - **Vyčlenené náhodné rozdelenie** — 993 párov „treats“ z DrugBank
-  vyčlenených a hodnotených oproti celej množine 10 551 zlúčenín.
+  vyčlenených a hodnotených oproti celej množine zlúčenín DRKG (~24 313 zlúčenín).
 - **Časovo rozdelený benchmark** — 210 párov liek – choroba schválených
   *po* roku 2020, na test zovšeobecnenia za rámec znalostného grafu
   z roku 2020.
@@ -422,8 +422,8 @@ Plán, ktorý sa týmto venuje, je v súbore
 
 ## 14. Kam ďalej
 
-- **[Živý dashboard](index.html)** — prehliadajte predikcie naprieč
-  93 chorobami.
+- **[Genetický triážny dashboard](genetics_dashboard.html)** — prehliadajte
+  geneticky ukotvené kandidáty pre pokryté choroby.
 - **[O projekte a poslaní](about.sk.html)** — prečo je OpenCure
   neziskový a má ukotvené poslanie.
 - **[Návrh metodickej štúdie](https://github.com/SimonBartosDev/opencure/blob/main/docs/methods_paper_draft.md)**

@@ -10,7 +10,7 @@ description: Mission, ethics, and current state of the OpenCure platform.
 
 # About OpenCure
 
-**[← Live dashboard](index.html)** · [How it works (architecture)](architecture.html) · [Methods paper](https://github.com/SimonBartosDev/opencure/blob/main/docs/methods_paper_draft.md) · [GitHub](https://github.com/SimonBartosDev/opencure)
+**[← Home](index.html)** · [How it works (architecture)](architecture.html) · [Methods paper](https://github.com/SimonBartosDev/opencure/blob/main/docs/methods_paper_draft.md) · [GitHub](https://github.com/SimonBartosDev/opencure)
 
 ## Mission
 
@@ -118,7 +118,7 @@ mechanistic narratives, suggested assays, and target lab affiliations:
   Foundation, NPUK.
 
 See [`lab_outreach_briefs.md`](https://github.com/SimonBartosDev/opencure/blob/main/docs/lab_outreach_briefs.md) for the per-disease
-briefs (40 NTD + rare-disease briefs in total).
+briefs (41 NTD + rare-disease briefs in total).
 
 ## Team & contact
 

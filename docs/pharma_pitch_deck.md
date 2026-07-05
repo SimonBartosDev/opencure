@@ -134,7 +134,7 @@ not a validated predictor. Known limits disclosed publicly:
 - Evidence-triangulated, clinically-annotated output — dose, DDI, PGx,
   mechanism path, and an adversarial red-team critique on every candidate
 - Full reproducibility — content-hashed manifests, open Apache-2.0 code,
-  368 automated tests
+  357 automated tests
 
 **What we do NOT claim — and why**
 - **No benchmark accuracy figure.** An earlier "AUC-ROC 0.997" was found to
