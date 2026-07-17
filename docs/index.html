@@ -82,7 +82,7 @@ footer .wrap>p{max-width:75ch}
 <div class="wrap">
   <div class="stats">
     <div class="stat red"><div class="num">0.997&nbsp;→&nbsp;✗</div><div class="lab">Original headline AUC was <strong>data leakage</strong> — withdrawn</div></div>
-    <div class="stat orange"><div class="num">3 / 3 fail</div><div class="lab">Similarity signal families all <strong>lose to a popularity baseline</strong></div></div>
+    <div class="stat orange"><div class="num">3 / 3 fail</div><div class="lab">Similarity signal families all <strong>fail to beat a popularity baseline</strong></div></div>
     <div class="stat green"><div class="num">~5×</div><div class="lab">Genetics-anchored lift over popularity (covered subset, leak-free)</div></div>
     <div class="stat accent"><div class="num">0</div><div class="lab">Novel, wet-lab-ready repurposing leads found</div></div>
   </div>
@@ -126,11 +126,30 @@ footer .wrap>p{max-width:75ch}
     temporal test. The number has been withdrawn from all materials.</p>
   </div>
   <div class="finding fail">
-    <h3>Three similarity families all lose to popularity</h3>
+    <h3>We measured the leakage: it was ~50 points</h3>
+    <p>Our best-evidenced result (<span class="n">n=960</span>). Holding the candidate pool
+    (24,313), the degree baseline, the rank convention, the scorer and the query relations
+    all <em>fixed</em>, and changing only whether the embeddings saw the held-out
+    <span class="n">treats</span> edges in training: a knowledge-graph model scores Hit@10
+    <span class="n">52.8%</span> contaminated (median rank <span class="n">8</span>) and
+    <span class="n">3.1%</span> retrained leak-free (median <span class="n">538</span>) —
+    against a popularity baseline of <span class="n">2.7%</span>.
+    <strong>Contamination accounted for 49.7 points.</strong> It was not a small-pool
+    artifact: re-measured on the honest pool, the contaminated model still scores 52.8%.
+    This is ~18× more evidence than our one positive result rests on.
+    <a href="https://github.com/SimonBartosDev/opencure/blob/main/experiments/eval/leakfree_kg_scorecard.json">Scorecard →</a></p>
+  </div>
+  <div class="finding fail">
+    <h3>No similarity family beats popularity</h3>
     <p>Knowledge-graph embeddings, chemical-structure similarity (ChemBERTa), and
     cell-morphology similarity (JUMP Cell Painting) each fail to beat the popularity
-    baseline. "Be similar to a disease's known treatments" is an incoherent target —
-    a disease's treatments are mechanistically unalike.</p>
+    baseline. To be precise: only morphology is strictly <em>worse</em> (Hit@10
+    <span class="n">2.8%</span> vs <span class="n">3.0%</span>); chemistry and the
+    knowledge graph merely <em>tie</em> — nominally a hair higher at Hit@10
+    (<span class="n">4.4%</span> vs <span class="n">3.8%</span>) while worse on median
+    rank and Hit@100. None demonstrates a real gain. "Be similar to a disease's known
+    treatments" is an incoherent target — a disease's treatments are mechanistically
+    unalike.</p>
   </div>
   <div class="finding works">
     <h3>One signal beats the baseline: human genetics</h3>
