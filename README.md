@@ -1,289 +1,269 @@
 <p align="center">
   <h1 align="center">OpenCure</h1>
   <p align="center">
-    <strong>Open-source multi-pillar AI platform for drug repurposing with integrated clinical guardrails</strong>
+    <strong>An open, leak-controlled evaluation instrument for computational drug repurposing — and the one narrow triage tool that survived it</strong>
   </p>
   <p align="center">
     <a href="https://github.com/SimonBartosDev/opencure/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="License"></a>
     <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/Python-3.11+-green.svg" alt="Python"></a>
-    <a href="https://simonbartosdev.github.io/opencure/"><img src="https://img.shields.io/badge/Explorer-Live_Dashboard-orange.svg" alt="Dashboard"></a>
-    <img src="https://img.shields.io/badge/Tests-357%2Fpassing-brightgreen.svg" alt="Tests">
-    <img src="https://img.shields.io/badge/Version-v7-purple.svg" alt="Version">
+    <a href="https://simonbartosdev.github.io/opencure/"><img src="https://img.shields.io/badge/Docs-Findings_%26_methods-blue.svg" alt="Docs"></a>
+    <img src="https://img.shields.io/badge/Regression_tests-357_passing-brightgreen.svg" alt="Regression tests">
+    <img src="https://img.shields.io/badge/Wet--lab_confirmed_predictions-0-lightgrey.svg" alt="Wet-lab confirmed">
   </p>
 </p>
 
 ---
 
-## What OpenCure does
+We built a multi-pillar repurposing platform, then evaluated it under strict
+leakage control. Most of its apparent power was leakage or popularity. One
+signal — human genetics — carried real, leak-free lift. This README reports
+both, and ships the tool that works.
 
-OpenCure screens ~10,500 FDA-approved and investigational drugs against any disease using **13 complementary AI scoring pillars**, then layers **clinical guardrails**, **calibrated uncertainty**, and an **adversarial red-team pass** on every top prediction so results are actionable and honest — not just ranked.
+**[Read the honest findings →](https://simonbartosdev.github.io/opencure/)**
 
-Every top-K prediction surfaces:
-- **Calibrated uncertainty** (v7) — a 90 %-coverage conformal interval `[ensemble_prob_lower, ensemble_prob_upper]` plus a binary prediction set (`{1}` confident-positive, `{0,1}` genuinely uncertain, `{0}` confident-negative)
-- **Adversarial red-team critique** (v7) — seven failure modes checked automatically per candidate (single-pillar artifact, low selectivity, pan-essential target, hub-bias, low mechanism confidence, evidence shortage, failed-trial history)
-- **Dose plausibility** — is the drug's clinical plasma Cmax high enough to engage the predicted target? (stage-2 ChEMBL 34 bioactivities)
-- **Drug-drug interactions** — top 10 dangerous co-prescriptions from 1.4M DrugBank DDI edges
-- **Pharmacogenomic flags** — CPIC/PharmGKB variant warnings (HLA, CYP, VKORC1, etc.)
-- **Mechanism path** — natural-language graph path `Drug →[inhibits]→ Target →[linked to]→ Disease`
-- **Triangulation score** — agreement across 4 independent axes (KG + docking + Pharos target-development-level + literature)
-- **Selectivity + essentiality flags** (v7) — ChEMBL off-target panel + DepMap pan-essentiality warning on the primary target
-- **Tissue context** — GTEx tissue-specific expression modifier
+## What works: genetics-anchored triage
 
-Every prediction is **content-fingerprinted** (SHA-256) and traceable to an immutable `data_manifest_hash` covering the source files that produced it — critical for reproducibility in peer review.
+The one validated tool. It asks a single, coherent question:
 
-**[Browse live predictions →](https://simonbartosdev.github.io/opencure/)**
+> disease → human-genetics causal gene → drug with a curated ChEMBL mechanism on that gene
+
+On the genetics-covered subset of held-out pairs (n=53), leak-free, it ranks the
+true drug at **Hit@10 20.8% vs a popularity baseline's 3.8%** (~5×), median rank
+**64**. Its lift over popularity is CI-backed (paired win-fraction 0.698, 90% CI
+[0.589, 0.804]), and it **survives a temporal holdout** with genetics frozen at
+Feb 2020 (Open Targets 20.02, provably predating the 2020–2023 test approvals):
+still better than popularity on **38 / 40** post-2020 pairs.
+
+```bash
+python scripts/screen_genetics_anchored.py "type 2 diabetes mellitus" --top 6 --offline
+python scripts/screen_genetics_anchored.py Disease::MESH:D003924
+python scripts/screen_genetics_anchored.py "Crohn disease" --json
+```
+
+Accepts a disease name, DRKG entity, MeSH id, or OT id. Flags: `--top N`
+(default 20), `--offline` (caches only, no OT API), `--json`. Python API:
+`from opencure.scoring.genetics_anchored import score_disease`.
+
+**It refuses when it has no signal.** This is the property we care about most.
+Real output for Chagas disease:
+
+```
+Disease query : Chagas disease
+Verdict       : NOT_ASSESSED
+
+  NOT ASSESSED — no genetics-datasource associations for this disease (it maps
+  to Open Targets but has no GWAS / rare-variant / clinical-genetics gene evidence)
+
+  OpenCure has no genetic signal for this disease and will not
+  emit a ranking it cannot support.
+```
+
+A repurposing tool that declines to answer when it doesn't know is the
+differentiator. It never fabricates a ranking to fill the space.
+
+**[Genetics triage dashboard →](https://simonbartosdev.github.io/opencure/genetics_dashboard.html)**
+
+## What we found
+
+Leak-controlled evaluation against a held-out set, with a trivial popularity
+(knowledge-graph node-degree) baseline as the comparator. A method earns its
+place only by beating that baseline.
+
+| Signal family | Hit@10 | median rank | Popularity baseline | Verdict |
+|---|---|---|---|---|
+| **Genetics-anchored** (covered subset, n=53) | **20.8%** | **64** | 3.8% / rank 499 | **~5× — works** |
+| Knowledge-graph embedding, leak-free TransE (n=960) | 3.1% | 538 | 2.7% / rank 871 | no useful lift |
+| Chemical structure (ChemBERTa) | 4.4% | 473 | 3.8% / rank 407 | ties / no gain |
+| Cell morphology (JUMP Cell Painting) | 2.8% | 1293 | 3.0% / rank 397 | loses |
+| Fused multi-pillar score | *no accuracy figure* | — | — | does not beat popularity |
+
+Three independent similarity families — graph, chemistry, phenotype — and none
+beats popularity. The diagnosis: each scores a drug by *similarity to a
+disease's known treatments*, but a disease's treatments are mechanistically
+unalike (hypertension is treated by beta-blockers, diuretics, ACE inhibitors).
+"Be similar to that set" is an incoherent target that rewards only being a
+well-connected, popular drug.
+
+### The KG contamination result (n=960)
+
+The project's best-evidenced result. At **fixed pool** (24,313), **fixed degree
+baseline** (from the stripped graph), **fixed tie-aware mid-rank**, **fixed
+scorer** and **fixed query relations** — so the only difference between arms is
+whether the embeddings saw the held-out edges in training:
+
+| Arm | Hit@10 | median rank |
+|---|---|---|
+| TransE trained on the full graph (contaminated) | **52.8%** | 8 |
+| The SAME model retrained leak-free | **3.1%** | 538 |
+| Popularity (node-degree) baseline | 2.7% | 871 |
+
+**Contamination = 49.7pp.** The original 57.2% headline was overwhelmingly
+*leakage*, not a small-pool artifact — re-measured on the honest 24,313 pool it
+is still 52.8%. Clean TransE does not usefully beat degree: its edge is 4 pairs
+in the top 10 out of 960, and it scores 0.0% under a different but equally
+defensible relation config. Artifact:
+[`experiments/eval/leakfree_kg_scorecard.json`](experiments/eval/leakfree_kg_scorecard.json).
+
+> An earlier version of this README reported an ensemble **"AUC-ROC 0.997"**.
+> That figure was an artefact of **data leakage** — the knowledge-graph features
+> were scored from a graph that still contained the test edges — and has been
+> **withdrawn**. There is no validated benchmark accuracy figure for the
+> multi-pillar score.
+
+### And it rediscovers
+
+Where genetics is strong, drug development usually already happened, so the top
+genetics-anchored lead is typically the disease's existing drug. **Across every
+angle tested, no novel, credible, wet-lab-ready lead was found. Zero predictions
+are wet-lab confirmed.** The honest prospective Hit@10 under the temporal
+holdout is a modest **~10%** (an uncorrected 32.6% was ~2/3 posterior-inflated).
+See [docs/conditional_lift_validation.md](docs/conditional_lift_validation.md).
 
 ## What OpenCure is — and is not
 
-OpenCure is a **hypothesis-generation and triage tool**. It systematically
-ranks, critiques, documents, and uncertainty-annotates drug-repurposing
-hypotheses so a wet-lab scientist can decide what is worth testing.
+**It is:**
+- An open, leak-honest **evaluation instrument** that measures how much apparent
+  repurposing signal is really leakage or popularity.
+- A narrow **genetics-anchored triage tool** for diseases where human genetics
+  implicates a causal target — which refuses when it has none.
+- A generator of transparent, reproducible hypotheses for expert review.
 
-It is **not a validated predictor.** We publish **no benchmark accuracy
-figure**, and we make no claim about how often a top-ranked candidate is
-correct. A leak-free retrospective benchmark is not currently possible: the
-knowledge graph (DRKG, 2020-vintage) predates the repurposing events that
-would be needed to test it, and the only post-2020 repurposing examples
-available are too few to constitute a benchmark. The platform's predictive
-accuracy is therefore **unestablished** — honestly stated rather than
-hidden behind a number.
+**It is not:**
+- **Not a validated predictor.** No trustworthy benchmark accuracy figure exists;
+  the fused multi-pillar score does not beat a trivial popularity baseline.
+- **Not a discovery engine.** Where the genetics signal works, it largely
+  rediscovers a disease's existing drug.
+- **Not wet-lab validated.** Zero predictions have experimental confirmation.
 
-> An earlier version of this README reported an ensemble "AUC-ROC 0.997".
-> That figure was an artefact of **data leakage** — the knowledge-graph
-> features were scored from a graph that still contained the test edges —
-> and has been **withdrawn**. See [docs/architecture.md](docs/architecture.md)
-> for the full honest evaluation discussion.
+Treat every output as a structured, transparent hypothesis for expert review —
+not a recommendation.
 
-Treat every output as a structured, transparent, adversarially-critiqued
-hypothesis for expert review — not a recommendation.
+## Reproduce the results
 
-## Why this matters
+Every number above is reproducible from this repository.
 
-Drug development takes 10-15 years and costs >$2B. Repurposing approved drugs skips most of safety testing because the drugs are already proven tolerable in humans. The blocker has been: which drugs to test for which diseases, out of tens of millions of possibilities?
+```bash
+# Leak-free per-pillar benchmark (similarity families vs popularity)
+python scripts/leakfree_benchmark.py
 
-OpenCure's answer: screen them all computationally with 13 complementary methods, surface the candidates where independent methods converge, state the uncertainty honestly, adversarially critique each call, and give clinicians/researchers the clinical context they need to decide whether a hypothesis is worth testing in their lab. OpenCure narrows the search space for human experts — it does not replace experimental validation.
+# KG contamination result (contaminated vs leak-free TransE vs popularity)
+python scripts/leakfree_kg_benchmark.py
 
-## The 13 scoring pillars
+# Genetics conditional lift over popularity
+python scripts/popularity_residualized_lift.py
 
-| # | Pillar | Signal | Source |
-|---|---|---|---|
-| 1 | **TransE** | Knowledge graph embedding | DRKG 5.87M edges |
-| 2 | **RotatE** (PyKEEN) | KG embedding with relation rotations | DRKG |
-| 3 | **Unified-KG TransE** | KG embedding on the DRKG+PrimeKG+OT union | 14M-edge unified graph |
-| 4 | **PrimeKG** | Independent KG scoring | Harvard 8.1M edges |
-| 5 | **TxGNN** | Graph neural network (Harvard) | pre-computed; v7 salt-form drug-name matching |
-| 6 | **Molecular fingerprints** | Morgan/ECFP structural similarity | RDKit |
-| 7 | **MoLFormer-XL** (v7 swap from ChemBERTa) | Transformer embedding of SMILES (IBM, 1.1B-compound pretrain) | HuggingFace |
-| 8 | **DeepPurpose DTI** | Drug-target binding affinity; v7 adds ESM-2 150M protein embeddings | BindingDB / ESM-2 |
-| 9 | **Network proximity** | Shortest-path on PPI | STRING v12 (473K high-confidence edges) |
-| 10 | **Gene signatures** | Disease expression reversal | L1000 + OT × ChEMBL mechanistic reversal |
-| 11 | **Mendelian randomization** | Genetic causal evidence | Open Targets GraphQL |
-| 12 | **R-GCN** | Heterogeneous GNN with DistMult head | trained on DRKG; v6.1+ |
-| 13 | **JUMP Cell Painting** (v7) | Morphological-similarity to known treatments in phenotype space | JUMP-CP consortium |
-
-ADMET (Chemprop drug-likeness / toxicity) runs as a multiplier, not a pillar. Several pillars (TransE, RotatE, Unified-KG, PrimeKG, TxGNN, R-GCN) are knowledge-graph embeddings of largely overlapping graphs and are **correlated, not independent**; they are **grouped before combining** to limit double-counting (KG-group via RRF; structural-group via max — including JUMP morphological similarity; network-group via max), then weighted by an XGBoost ensemble with isotonic-calibrated outputs.
-
-> **No accuracy figure is attached to the ensemble.** A leak-free retrain of
-> the ensemble scores far below the withdrawn 0.997, and on a fair temporal
-> test it is at chance — the simple ensemble does not predict prospective
-> repurposing. It is retained only as one ranking input among many. See
-> [docs/architecture.md](docs/architecture.md) for the honest evaluation.
-
-v7 adds **per-disease-class ensemble heads** (six classes) and a **split conformal-prediction wrapper** for 90 %-coverage uncertainty intervals.
-
-## Clinical guardrails
-
-What separates OpenCure from pure-ranking repurposing platforms: every prediction is actionable. Per-candidate fields include:
-
-```json
-"dose_plausibility": {
-  "plausibility": "yes",
-  "confidence": "high",
-  "target_affinity": {"median_ic50_nM": 17.76, "cmax_over_ic50_ratio": 56.3}
-},
-"ddi_warnings": {
-  "n_interactions": 1477,
-  "top_interactions": [{"drug": "Warfarin", "severity": "high"}, ...]
-},
-"pharmacogenomics": {
-  "highest_risk": "high_risk",
-  "summary": "CPIC-A (CYP2D6) • PharmGKB-1A (CYP2D6 CYP2D6*1/*2)"
-},
-"triangulation": {
-  "n_axes_agree": 3,
-  "label": "silver-standard",
-  "axes": {"kg": true, "docking": false, "pharos": true, "literature": true}
-},
-"mechanistic_hypothesis": "Donepezil —[treats]→ Alzheimer's disease",
-"ensemble_prob": 0.81,
-"ensemble_prob_lower": 0.50, "ensemble_prob_upper": 1.00,
-"prediction_set_at_90": [1],
-"ensemble_head": "chronic_systemic",
-"selectivity_score": 0.78, "n_off_targets": 6,
-"target_essentiality": 0.04, "essentiality_warning": false,
-"red_team_assessment": "No structural red flags detected."
+# Temporal holdout with genetics frozen at Feb 2020
+python scripts/popularity_residualized_lift.py \
+  data/eval/time_sliced_test.jsonl _temporal_pre2020 \
+  data/open_targets/genetics_pre2020_efo.json
 ```
 
-## v7 — calibration, honesty, and image-based screening
+Artifacts land in `experiments/eval/` — `leakfree_kg_scorecard.json`,
+`leakfree_pillar_scorecard.json`, `conditional_lift_report*.json`.
 
-v7 adds five orthogonal layers on top of the pillar stack, each fail-open
-(a missing artifact degrades gracefully, never breaks the pipeline):
+## Coverage and scope
 
-- **Conformal prediction** — split-conformal calibrator (`opencure/scoring/conformal.py`); every candidate ships with a 90 %-coverage interval. Empirical coverage measured at 90.1 % on the held-out calibration set.
-- **93-disease negative-control suite** — `tests/data/negative_controls.yaml` lists clinically implausible compounds per disease; a CI gate (`scripts/verify_negative_controls.py`) asserts they rank below the per-disease median.
-- **Per-disease-class ensemble heads** — six logistic heads (parasitic, viral, bacterial, oncology, rare_metabolic, chronic_systemic) specialise on each class's dominant repurposing mechanism; routing falls back to the shared head when a class has too few training positives.
-- **JUMP Cell Painting** — the 13th pillar; morphological-profile similarity in phenotype space, the largest single closure of the gap to closed-platform image-based screening.
-- **Adversarial red-team + wet-lab briefs** — every top-K candidate is critiqued by a deterministic adversarial pass (optionally narrated by a local Llama-3.1-8B); every disease gets a 1-page Markdown wet-lab brief with suggested assay, concentration range, and caveats.
+**69 of 93** screened diseases are genetics-covered. The other 24 are returned
+as `not_assessed`: 14 with no genetics associations, 8 with no mechanism drug,
+2 with no EFO mapping.
 
-## Validation
+Pathogen-driven neglected tropical diseases (Chagas, leishmaniasis,
+schistosomiasis) have **no human-genetic causal architecture** and are
+structurally out of scope for this approach. OpenCure says so rather than
+guessing.
 
-- **Held-out random split**: 993 DrugBank treats pairs held out, scored against the full 10,551-compound candidate pool
-- **Time-sliced benchmark**: 210 post-2020 approved drug-disease pairs (drugs with `yearOfFirstApproval >= 2020` from OT 24.09), for testing generalization beyond the 2020-era knowledge graph
-- **Edge-stripped retraining**: `scripts/strip_heldout_edges.py` removes test-set edges from DRKG+PrimeKG+OT before training a clean model
-- **Conformal coverage**: empirical 90.1 % at the nominal 90 % target on the held-out calibration set
-- **Negative-control suite**: per-disease CI gate that catches hub-bias and hallucinated predictions
-- **Head-to-head benchmark**: `scripts/head_to_head_benchmark.py` re-ranks each disease's candidates by every single-pillar baseline vs the v7 ensemble (methods paper §5.9)
-- **357 automated tests** across filters, scoring, evidence, conformal, negative-control, per-class, JUMP-CP, selectivity, DepMap, red-team, and regression suites
-- **Continuous integration** via GitHub Actions on Python 3.11 and 3.12
-- **Prospective validation infrastructure**: `scripts/snapshot_predictions.py` takes timestamped immutable snapshots; `scripts/prospective_monitor.py` re-queries PubMed/CT.gov monthly to compute rolling precision@K on predictions older than 90 days; `scripts/retrospective_prospective.py` scores predictions against 2024-2025 publications the model never saw
-
-Honest disclosure of the KG retrieval numbers is maintained in the eval reports — we report both the training-contaminated upper bound and the clean edge-stripped number so reviewers can assess both.
-
-## Quick start
+## Install
 
 ```bash
 pip install -r requirements.txt
-bash setup_data.sh                          # Downloads DRKG, STRING, embeddings (~3GB)
-
-# Single disease search
-python -m opencure.cli "Alzheimer's disease"
-
-# Full 93-disease screening (~6 hours cold, ~3-4 hours with evidence cache warm)
-python experiments/systematic_screening.py
-
-# After screening: ensemble + conformal + red-team + briefs + dashboard + snapshot
-python scripts/finalize_v5.py
-
-# Honest status report anytime
-python scripts/honest_scoring.py
-
-# v7 negative-control CI gate
-python scripts/verify_negative_controls.py
+bash setup_data.sh    # Downloads DRKG, STRING, embeddings (~3GB)
 ```
 
-GPU-heavy retraining (KG embeddings, R-GCN, foundation-model precomputes,
-93-disease rescreen) runs on Modal — see `docs/modal_runbook.md`.
+The genetics-anchored CLI above is the shipped entry point. The multi-pillar
+pipeline is retained for transparency — it is what the evaluation instrument
+measured, and it is **not a validated ranker**:
 
-## Data integrations (2024)
-
-- **Open Targets 24.09** — 83K derived triplets covering drug-target mechanism, gene-disease association, clinical indication
-- **ChEMBL 34** (Nov 2024) — 94,717 DrugBank-mapped drug-target bioactivities (median IC50/Ki in nM)
-- **CPIC** + **PharmGKB** (2025-07) — pharmacogenomic annotations
-- **GTEx v8** — median TPM expression for 54 tissues × ~56K genes
-- **STRING v12** — 473K high-confidence protein-protein interactions
-- **HGNC complete set** — Ensembl↔Entrez↔symbol mapping for 41K+ genes
-
-## Disease coverage
-
-93 curated diseases currently — 22 neglected tropical (Chagas, Dengue, HIV, Malaria, Leishmaniasis, Schistosomiasis, TB, Hepatitis C, African trypanosomiasis, Onchocerciasis, Lymphatic filariasis, Leprosy, Buruli ulcer, and more), 19 rare (Sickle Cell, Gaucher, Fabry, Duchenne MD, Niemann-Pick, Pompe, Hunter syndrome, Spinal muscular atrophy, and more), plus neurodegenerative, cancer (incl. pediatric), cardiovascular, metabolic, autoimmune, respiratory, and neuropsychiatric.
-
-Pool of **2,507 MeSH-indexed diseases** with ≥5 gene associations available for cloud-scale screening via `scripts/mass_screen.py`.
-
-40 of the NTD + rare diseases carry partnership-ready outreach briefs at `docs/outreach/` — the four lead diseases (Schistosomiasis, Chagas, Sickle Cell, Niemann-Pick) get deep curation with named labs and suggested assays.
-
-## Architecture
-
+```bash
+python -m opencure.cli "Alzheimer's disease"      # multi-pillar; unvalidated
+python experiments/systematic_screening.py         # full 93-disease screen
 ```
-Disease name
-  ▼ Find disease entities (DRKG + PrimeKG + OT alias resolution)
-  ▼ 13 scoring pillars run in parallel
-  ▼ Hard filters
-      SMILES rules → metabolite blacklist → IUPAC heuristic
-      → ChEMBL phase → critical ADMET (FDA-bypass per stage)
-  ▼ Pillar grouping + hub-degree normalization
-      KG group (RRF of TransE + RotatE + PrimeKG + unified + R-GCN)
-      Structural group (max of fingerprints + MoLFormer-XL + DTI + JUMP-CP)
-      Network group (max of proximity + gene signatures)
-  ▼ Grouped combiner + calibrated XGBoost ensemble
-      per-disease-class head routing (6 classes) → shared-head fallback
-  ▼ Conformal-prediction wrapper (90%-coverage interval + prediction set)
-  ▼ Evidence gathering (cached, 4,000× speedup on repeat queries)
-      PubMed + ClinicalTrials.gov + FAERS + Semantic Scholar
-  ▼ Clinical guardrails layer
-      Dose plausibility + DDI + pharmacogenomics + triangulation + tissue
-  ▼ v7 surfacing layer
-      selectivity panel + DepMap essentiality + mechanism-uncertainty
-  ▼ Mechanism path resolution (bounded BFS on filtered DRKG subgraph)
-  ▼ Adversarial red-team critique per top-K candidate
-  ▼ Confidence + novelty assessment
-  ▼ Wet-lab brief generation (1-page Markdown per disease)
-  ▼ Dashboard + JSON + CSV exports
-  ▼ Immutable snapshot with content hash + manifest_hash provenance
-```
+
+GPU-heavy retraining runs on Modal — see [docs/modal_runbook.md](docs/modal_runbook.md).
 
 ## Repository structure
 
 ```
 opencure/
-  eval/                  Held-out + time-sliced benchmarks, negative-control suite, disease classes
-  filters/               Hard filters (metabolite blacklist, name heuristics)
-  scoring/               13 pillars + common types + grouped combiner + hub normalize +
-                         conformal + per-class ensemble + selectivity + DepMap + JUMP-CP + red-team + wet-lab brief
-  evidence/              PubMed/CT.gov/FAERS/Semantic Scholar + DDI + PGx + dose + triangulation +
-                         tissue + mechanism-uncertainty + cache
-  data/                  DRKG + PrimeKG + Open Targets loaders
-  web/                   FastAPI app + crowd validation endpoint
-  log_setup.py           Structured logging + timing metrics
-tests/                   357 tests (unit + integration + regression + schema + v7 suites)
-experiments/
-  systematic_screening.py  Full 93-disease pipeline
-  eval/                    Held-out metric reports
-  results/                 Per-disease JSON + briefs/ + aggregated database
+  scoring/genetics_anchored.py   The shipped genetics-anchored scorer
+  scoring/                       Multi-pillar scorers (retained, unvalidated)
+  eval/                          Held-out + time-sliced benchmarks, disease classes
+  filters/                       Hard filters (metabolite blacklist, name heuristics)
+  evidence/                      PubMed/CT.gov/FAERS + DDI + PGx + dose + cache
+  data/                          DRKG + PrimeKG + Open Targets loaders
+  web/                           FastAPI app
+tests/                           357 software regression tests — they check
+                                 pipeline correctness, NOT predictive accuracy
 scripts/
-  finalize_v5.py           Post-rescreen regeneration (ensemble + conformal + red-team + briefs + dashboard + snapshot)
-  phase_c_pipeline.py      XGBoost ensemble + per-class head training
-  calibrate_conformal.py   Fit the conformal calibrator
-  verify_negative_controls.py  Negative-control CI gate
-  head_to_head_benchmark.py    Single-pillar vs ensemble benchmark
-  precompute_embeddings.py / precompute_esm2_embeddings.py / precompute_jump_cp.py / precompute_depmap.py
-  red_team_v7.py / generate_wetlab_briefs.py / generate_outreach_briefs.py
-  retrospective_prospective.py  2024-2025 publication validation
-  modal_app.py             Modal serverless GPU orchestration
-  snapshot_predictions.py / zenodo_upload.py / honest_scoring.py / compute_data_manifest.py / mass_screen.py
-data/
-  manifest.json            Provenance hash of every tracked source
-  prospective/snapshots/   Content-fingerprinted prediction archives
+  screen_genetics_anchored.py    CLI for the shipped tool
+  leakfree_kg_benchmark.py       KG contamination scorecard
+  leakfree_benchmark.py          Leak-free per-pillar benchmark
+  popularity_residualized_lift.py  Conditional lift + temporal holdout
+  build_genetics_dashboard.py    Genetics triage dashboard
+  build_pre2020_genetics.py      Freezes genetics at OT 20.02 for the temporal test
+experiments/
+  eval/                          Scorecards and lift reports (the artifacts above)
+  results/                       Per-disease JSON + aggregated database
 docs/
-  index.html               Live dashboard
-  methods_paper_draft.md   Peer-review-ready methods writeup
-  about.md                 Mission, ethics, current state
-  modal_runbook.md         Modal GPU retrain runbook
-  output_schema.md         Canonical result-JSON schema
-  lab_outreach_briefs.md   Index of the 40 per-disease outreach briefs
-  outreach/                40 per-disease partnership briefs
+  index.html                     Honest landing page
+  genetics_dashboard.html        Genetics-anchored triage dashboard
+  honest_evaluation.md           Full findings: what fails, what works, why
+  conditional_lift_validation.md Conditional-lift + temporal validation
+  architecture.md                Pillars, fusion, and the evaluation instrument
+  about.md                       Mission, ethics, current state
 .github/workflows/
-  tests.yml                CI on every push (Python 3.11 + 3.12)
+  tests.yml                      CI on every push (Python 3.11 + 3.12)
 ```
+
+## Data integrations
+
+- **Open Targets 24.09** — drug-target mechanism, gene-disease association,
+  clinical indication (plus **OT 20.02** frozen for the temporal holdout)
+- **ChEMBL 34** — DrugBank-mapped drug-target bioactivities
+- **DRKG** — 5.87M-edge knowledge graph, plus `drkg_stripped.tsv` with all
+  held-out edges removed for leak-free training
+- **STRING v12**, **GTEx v8**, **CPIC** + **PharmGKB**, **HGNC**
+
+## Mission
+
+OpenCure is an open-source, mission-locked, **nonprofit** drug-repurposing
+project. We publish negative results as plainly as positive ones: most of a
+multi-pillar architecture's apparent power was evaluation leakage, only human
+genetics carried leak-free signal, and we found no novel wet-lab-ready lead. We
+release the leak-free instrument so others can hold their own tools to the same
+standard.
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). Highest-impact contributions: (1) wet-lab validation of top-ranked predictions, (2) JUMP Cell Painting raw-image foundation-model rerank, (3) allosteric-pocket prediction over AlphaFold-3 structures, (4) cell-type-resolved expression integration.
+See [CONTRIBUTING.md](CONTRIBUTING.md). Highest-impact contributions:
+(1) closing the direction-of-effect data gap with drug-independent sources,
+(2) genetics coverage for diseases currently returned `not_assessed`,
+(3) independent replication of the leak-free benchmarks.
 
 ## License
 
-Apache 2.0 — free for academic, commercial, and nonprofit use. Patent grant applies for pharmaceutical and biotech applications.
+Apache 2.0 — free for academic, commercial, and nonprofit use. Patent grant
+applies for pharmaceutical and biotech applications.
 
 ## Citation
 
 ```bibtex
 @misc{bartos2026opencure,
-  title  = {OpenCure: An Open 13-Pillar Drug Repurposing Platform with
-            Calibrated Uncertainty, Adversarial Red-Teaming, and
-            Prospective Validation},
+  title  = {OpenCure: A Leak-Controlled Evaluation of Computational Drug
+            Repurposing, and a Genetics-Anchored Triage Tool},
   author = {Bartos, Simon},
   year   = {2026},
-  version = {v7},
   url    = {https://github.com/SimonBartosDev/opencure},
-  note   = {Zenodo DOI pending; snapshot fingerprints available at data/prospective/snapshots/}
+  note   = {Reports negative results; no wet-lab-confirmed predictions.}
 }
 ```
+</content>

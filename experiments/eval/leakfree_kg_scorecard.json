@@ -1,0 +1,464 @@
+{
+  "purpose": "Apples-to-apples KG-embedding scorecard. Contaminated TransE, leak-free retrained TransE and a popularity baseline scored on ONE candidate pool with ONE degree baseline (from the stripped graph) and ONE tie-aware mid-rank, so the contaminated-vs-clean gap measures contamination rather than pool/baseline/rank differences.",
+  "pre_registered_criterion": "Clean TransE must beat the popularity baseline on the same pool at Hit@10 AND have a paired win-fraction 90% CI excluding 0.5. Prior expectation: it ties or loses. Report either way.",
+  "verdict": {
+    "passed": true,
+    "primary_relation_config": "treats_relations",
+    "primary": {
+      "passed": true,
+      "clean_hit_at_10": 3.1,
+      "popularity_hit_at_10": 2.7,
+      "clean_beats_popularity_at_hit_at_10": true,
+      "paired_win_fraction": 0.581,
+      "paired_win_fraction_90ci": [
+        0.549,
+        0.615
+      ],
+      "ci_excludes_0.5_from_above": true,
+      "n_pairs": 960
+    },
+    "per_relation_config": {
+      "treats_relations": {
+        "passed": true,
+        "clean_hit_at_10": 3.1,
+        "popularity_hit_at_10": 2.7,
+        "clean_beats_popularity_at_hit_at_10": true,
+        "paired_win_fraction": 0.581,
+        "paired_win_fraction_90ci": [
+          0.549,
+          0.615
+        ],
+        "ci_excludes_0.5_from_above": true,
+        "n_pairs": 960
+      },
+      "canonical_treatment_relations": {
+        "passed": false,
+        "clean_hit_at_10": 0.0,
+        "popularity_hit_at_10": 2.7,
+        "clean_beats_popularity_at_hit_at_10": false,
+        "paired_win_fraction": 0.331,
+        "paired_win_fraction_90ci": [
+          0.302,
+          0.361
+        ],
+        "ci_excludes_0.5_from_above": false,
+        "n_pairs": 960
+      }
+    },
+    "invariant_across_relation_configs": false,
+    "how_to_read_this": "The criterion is a conjunction of an un-quantified point comparison (Hit@10) and a CI test (paired win-fraction). Under the primary config the Hit@10 clause is carried by 30 vs 26 hits out of 960 \u2014 a 0.42 pp gap whose post-hoc 90% CI is [-0.9, 1.8] pp. Read the verdict with that in mind; and note that even a PASS here means ~3% Hit@10, i.e. statistically detectable lift over degree, NOT a practically useful ranker.",
+    "evaluated_on": "pairs evaluable in all three arms (the common set), so the Hit@10 comparison and the paired win-fraction are computed on the same rows",
+    "conclusion": "PASS \u2014 clean TransE beats popularity at Hit@10 and its paired win-fraction CI excludes 0.5 from above. WARNING: the verdict DIFFERS between relation configs \u2014 treat it as unresolved and read the per-config numbers."
+  },
+  "pool": {
+    "size": 24313,
+    "definition": "sorted(c for c in degree if c.startswith('Compound::'))",
+    "degree_source": "data/drkg/drkg_stripped.tsv",
+    "note": "Degree is built from the STRIPPED graph. The full graph still contains the held-out treats edges, each of which adds +1 degree to exactly the drug being predicted \u2014 that inflates the baseline with the answers. Identical pool and identical degree vector for all arms (asserted)."
+  },
+  "n_heldout_pairs": 993,
+  "n_heldout_diseases": 539,
+  "arms_own_evaluable_set": {
+    "popularity": {
+      "evaluable": 993,
+      "n_pairs": 993,
+      "hit_at_10": 2.8,
+      "hit_at_30": 5.9,
+      "hit_at_100": 15.9,
+      "mrr": 0.0136,
+      "median_rank": 882,
+      "pool_coverage_pct": 100.0,
+      "unevaluable": {
+        "disease_no_score": 0,
+        "drug_not_in_pool": 0
+      },
+      "runtime_sec": 1.9
+    },
+    "transe_contaminated [treats_relations]": {
+      "evaluable": 993,
+      "n_pairs": 993,
+      "hit_at_10": 54.4,
+      "hit_at_30": 75.0,
+      "hit_at_100": 88.8,
+      "mrr": 0.2197,
+      "median_rank": 8,
+      "pool_coverage_pct": 100.0,
+      "unevaluable": {
+        "disease_no_score": 0,
+        "drug_not_in_pool": 0
+      },
+      "runtime_sec": 22.9
+    },
+    "transe_clean [treats_relations]": {
+      "evaluable": 960,
+      "n_pairs": 993,
+      "hit_at_10": 3.1,
+      "hit_at_30": 7.6,
+      "hit_at_100": 17.2,
+      "mrr": 0.0149,
+      "median_rank": 538,
+      "pool_coverage_pct": 100.0,
+      "unevaluable": {
+        "disease_no_score": 33,
+        "drug_not_in_pool": 0
+      },
+      "runtime_sec": 10.3
+    },
+    "transe_contaminated [canonical_treatment_relations]": {
+      "evaluable": 993,
+      "n_pairs": 993,
+      "hit_at_10": 31.6,
+      "hit_at_30": 51.9,
+      "hit_at_100": 69.0,
+      "mrr": 0.1201,
+      "median_rank": 26,
+      "pool_coverage_pct": 100.0,
+      "unevaluable": {
+        "disease_no_score": 0,
+        "drug_not_in_pool": 0
+      },
+      "runtime_sec": 52.4
+    },
+    "transe_clean [canonical_treatment_relations]": {
+      "evaluable": 960,
+      "n_pairs": 993,
+      "hit_at_10": 0.0,
+      "hit_at_30": 0.2,
+      "hit_at_100": 0.8,
+      "mrr": 0.0016,
+      "median_rank": 1106,
+      "pool_coverage_pct": 100.0,
+      "unevaluable": {
+        "disease_no_score": 33,
+        "drug_not_in_pool": 0
+      },
+      "runtime_sec": 16.4
+    }
+  },
+  "results_by_relation_config": {
+    "treats_relations": {
+      "relations_used": [
+        "DRUGBANK::treats::Compound:Disease",
+        "Hetionet::CtD::Compound:Disease"
+      ],
+      "rationale": "The natural query relation for 'drug treats disease', and what scripts/run_unified_heldout_eval.py used to produce the previously-reported clean 3.33%. Leak-free for the clean arm: strip_heldout_edges.py removed the held-out edges from this relation before training, the relation itself survives. PRIMARY because it is the config most favourable to clean TransE.",
+      "is_primary": true,
+      "n_pairs_evaluable_in_all_arms": 960,
+      "arms_common_evaluable_set": {
+        "transe_clean": {
+          "evaluable": 960,
+          "n_pairs": 960,
+          "hit_at_10": 3.1,
+          "hit_at_30": 7.6,
+          "hit_at_100": 17.2,
+          "mrr": 0.0149,
+          "median_rank": 538
+        },
+        "transe_contaminated": {
+          "evaluable": 960,
+          "n_pairs": 960,
+          "hit_at_10": 52.8,
+          "hit_at_30": 74.2,
+          "hit_at_100": 88.4,
+          "mrr": 0.2046,
+          "median_rank": 8
+        },
+        "popularity": {
+          "evaluable": 960,
+          "n_pairs": 960,
+          "hit_at_10": 2.7,
+          "hit_at_30": 5.8,
+          "hit_at_100": 15.9,
+          "mrr": 0.0133,
+          "median_rank": 871
+        }
+      },
+      "contamination_effect": {
+        "hit_at_10_contaminated": 52.8,
+        "hit_at_10_clean": 3.1,
+        "hit_at_10_popularity": 2.7,
+        "contamination_inflation_pp": 49.7,
+        "interpretation": "Both TransE arms use the SAME pool, SAME degree baseline, SAME mid-rank, SAME scoring function and SAME query relations. The only difference is whether the embeddings saw the held-out treats edges in training, so the gap is attributable to contamination \u2014 unlike the original 57.2%-vs-3.33% comparison, which also varied pool, baseline and rank convention."
+      },
+      "degree_stratified_hit_at_10_common_set": {
+        "degree_q1": {
+          "n": 240,
+          "degree_range": [
+            1.0,
+            739.0
+          ],
+          "transe_clean_hit_at_10": 6.2,
+          "transe_contaminated_hit_at_10": 46.7,
+          "popularity_hit_at_10": 0.0,
+          "transe_clean_median": 1367,
+          "popularity_median": 2964
+        },
+        "degree_q2": {
+          "n": 240,
+          "degree_range": [
+            744.0,
+            1247.0
+          ],
+          "transe_clean_hit_at_10": 0.8,
+          "transe_contaminated_hit_at_10": 46.2,
+          "popularity_hit_at_10": 0.0,
+          "transe_clean_median": 639,
+          "popularity_median": 1226
+        },
+        "degree_q3": {
+          "n": 240,
+          "degree_range": [
+            1248.0,
+            1842.0
+          ],
+          "transe_clean_hit_at_10": 2.5,
+          "transe_contaminated_hit_at_10": 52.5,
+          "popularity_hit_at_10": 0.0,
+          "transe_clean_median": 389,
+          "popularity_median": 484
+        },
+        "degree_q4": {
+          "n": 240,
+          "degree_range": [
+            1863.0,
+            3683.0
+          ],
+          "transe_clean_hit_at_10": 2.9,
+          "transe_contaminated_hit_at_10": 65.8,
+          "popularity_hit_at_10": 10.8,
+          "transe_clean_median": 331,
+          "popularity_median": 78
+        }
+      },
+      "paired_conditional_lift": {
+        "transe_clean_vs_popularity": {
+          "n": 960,
+          "wins": 558,
+          "ties": 0,
+          "losses": 402,
+          "win_fraction": 0.581,
+          "win_fraction_90ci_bootstrap_over_diseases": [
+            0.549,
+            0.615
+          ],
+          "n_bootstrap_iters": 2000,
+          "n_disease_clusters": 507
+        },
+        "transe_contaminated_vs_popularity": {
+          "n": 960,
+          "wins": 924,
+          "ties": 1,
+          "losses": 35,
+          "win_fraction": 0.963,
+          "win_fraction_90ci_bootstrap_over_diseases": [
+            0.951,
+            0.973
+          ],
+          "n_bootstrap_iters": 2000,
+          "n_disease_clusters": 507
+        }
+      },
+      "posthoc_hit10_diff_clean_vs_popularity": {
+        "hit_at_10_diff_pp": 0.42,
+        "hit_at_10_diff_90ci_pp": [
+          -0.9,
+          1.8
+        ],
+        "diff_ci_excludes_zero": false,
+        "n_hits_a": 30,
+        "n_hits_b": 26,
+        "note": "Post-hoc diagnostic, NOT part of the pre-registered criterion. If this CI straddles 0 the Hit@10 clause was cleared by noise."
+      },
+      "verdict": {
+        "passed": true,
+        "clean_hit_at_10": 3.1,
+        "popularity_hit_at_10": 2.7,
+        "clean_beats_popularity_at_hit_at_10": true,
+        "paired_win_fraction": 0.581,
+        "paired_win_fraction_90ci": [
+          0.549,
+          0.615
+        ],
+        "ci_excludes_0.5_from_above": true,
+        "n_pairs": 960
+      }
+    },
+    "canonical_treatment_relations": {
+      "relations_used": [
+        "GNBR::T::Compound:Disease",
+        "Hetionet::CtD::Compound:Disease",
+        "GNBR::C::Compound:Disease",
+        "GNBR::Pa::Compound:Disease",
+        "GNBR::J::Compound:Disease",
+        "GNBR::Mp::Compound:Disease"
+      ],
+      "rationale": "opencure/config.py::TREATMENT_RELATIONS, the project's canonical set and the default of score_drugs_for_disease_vectorized. Deliberately EXCLUDES DRUGBANK::treats, which config.py reserves for labeling and forbids from feeding scoring.",
+      "is_primary": false,
+      "n_pairs_evaluable_in_all_arms": 960,
+      "arms_common_evaluable_set": {
+        "transe_clean": {
+          "evaluable": 960,
+          "n_pairs": 960,
+          "hit_at_10": 0.0,
+          "hit_at_30": 0.2,
+          "hit_at_100": 0.8,
+          "mrr": 0.0016,
+          "median_rank": 1106
+        },
+        "transe_contaminated": {
+          "evaluable": 960,
+          "n_pairs": 960,
+          "hit_at_10": 29.3,
+          "hit_at_30": 50.2,
+          "hit_at_100": 67.9,
+          "mrr": 0.1045,
+          "median_rank": 29
+        },
+        "popularity": {
+          "evaluable": 960,
+          "n_pairs": 960,
+          "hit_at_10": 2.7,
+          "hit_at_30": 5.8,
+          "hit_at_100": 15.9,
+          "mrr": 0.0133,
+          "median_rank": 871
+        }
+      },
+      "contamination_effect": {
+        "hit_at_10_contaminated": 29.3,
+        "hit_at_10_clean": 0.0,
+        "hit_at_10_popularity": 2.7,
+        "contamination_inflation_pp": 29.3,
+        "interpretation": "Both TransE arms use the SAME pool, SAME degree baseline, SAME mid-rank, SAME scoring function and SAME query relations. The only difference is whether the embeddings saw the held-out treats edges in training, so the gap is attributable to contamination \u2014 unlike the original 57.2%-vs-3.33% comparison, which also varied pool, baseline and rank convention."
+      },
+      "degree_stratified_hit_at_10_common_set": {
+        "degree_q1": {
+          "n": 240,
+          "degree_range": [
+            1.0,
+            739.0
+          ],
+          "transe_clean_hit_at_10": 0.0,
+          "transe_contaminated_hit_at_10": 25.0,
+          "popularity_hit_at_10": 0.0,
+          "transe_clean_median": 1805,
+          "popularity_median": 2964
+        },
+        "degree_q2": {
+          "n": 240,
+          "degree_range": [
+            744.0,
+            1247.0
+          ],
+          "transe_clean_hit_at_10": 0.0,
+          "transe_contaminated_hit_at_10": 19.6,
+          "popularity_hit_at_10": 0.0,
+          "transe_clean_median": 1431,
+          "popularity_median": 1226
+        },
+        "degree_q3": {
+          "n": 240,
+          "degree_range": [
+            1248.0,
+            1842.0
+          ],
+          "transe_clean_hit_at_10": 0.0,
+          "transe_contaminated_hit_at_10": 32.9,
+          "popularity_hit_at_10": 0.0,
+          "transe_clean_median": 978,
+          "popularity_median": 484
+        },
+        "degree_q4": {
+          "n": 240,
+          "degree_range": [
+            1863.0,
+            3683.0
+          ],
+          "transe_clean_hit_at_10": 0.0,
+          "transe_contaminated_hit_at_10": 39.6,
+          "popularity_hit_at_10": 10.8,
+          "transe_clean_median": 747,
+          "popularity_median": 78
+        }
+      },
+      "paired_conditional_lift": {
+        "transe_clean_vs_popularity": {
+          "n": 960,
+          "wins": 318,
+          "ties": 0,
+          "losses": 642,
+          "win_fraction": 0.331,
+          "win_fraction_90ci_bootstrap_over_diseases": [
+            0.302,
+            0.361
+          ],
+          "n_bootstrap_iters": 2000,
+          "n_disease_clusters": 507
+        },
+        "transe_contaminated_vs_popularity": {
+          "n": 960,
+          "wins": 843,
+          "ties": 3,
+          "losses": 114,
+          "win_fraction": 0.878,
+          "win_fraction_90ci_bootstrap_over_diseases": [
+            0.857,
+            0.9
+          ],
+          "n_bootstrap_iters": 2000,
+          "n_disease_clusters": 507
+        }
+      },
+      "posthoc_hit10_diff_clean_vs_popularity": {
+        "hit_at_10_diff_pp": -2.71,
+        "hit_at_10_diff_90ci_pp": [
+          -3.63,
+          -1.85
+        ],
+        "diff_ci_excludes_zero": true,
+        "n_hits_a": 0,
+        "n_hits_b": 26,
+        "note": "Post-hoc diagnostic, NOT part of the pre-registered criterion. If this CI straddles 0 the Hit@10 clause was cleared by noise."
+      },
+      "verdict": {
+        "passed": false,
+        "clean_hit_at_10": 0.0,
+        "popularity_hit_at_10": 2.7,
+        "clean_beats_popularity_at_hit_at_10": false,
+        "paired_win_fraction": 0.331,
+        "paired_win_fraction_90ci": [
+          0.302,
+          0.361
+        ],
+        "ci_excludes_0.5_from_above": false,
+        "n_pairs": 960
+      }
+    }
+  },
+  "reconciliation_with_prior_reports": {
+    "transe_heldout.json (57.2%)": "scripts/run_heldout_eval.py: contaminated pretrained TransE, the single DRUGBANK::treats relation, a DrugBank-ONLY pool of 10,551, optimistic rank. Re-measured here on the honest 24,313 pool under treats_relations it is 54.4% (own set) / 52.8% (common set). So widening the pool costs only ~3-5 pp: that headline was NOT mainly a small-pool artifact, it was overwhelmingly CONTAMINATION \u2014 the same setup retrained leak-free scores 3.1%.",
+    "v5_unified_heldout.json (3.33%)": "scripts/run_unified_heldout_eval.py: drkg_transE_clean scored with {DRUGBANK::treats, Hetionet::CtD} (its other two listed relations do not exist in this vocab) and an optimistic rank (sum(score > target)+1). Reproduced here to 3.1% under the treats_relations config; the small residual is that rank convention vs this script's tie-aware mid-rank. Its 960/993 evaluable count and 24,313 pool match exactly, confirming it is the same model and the same eval subset.",
+    "why_they_were_never_comparable": "57.2% used 1 relation on a 10,551 DrugBank-only pool; 3.33% used 2 relations on a 24,313 pool; neither shared a baseline or a rank convention. Held at fixed pool/baseline/rank/relations, the honest contrast is 52.8% vs 3.1%."
+  },
+  "leak_audit_of_the_clean_arm": {
+    "heldout_pairs_surviving_in_drkg_stripped_under_any_relation": 1,
+    "of_n_heldout_pairs": 993,
+    "detail": "Verified directly against data/drkg/drkg_stripped.tsv: the strip removed all 993 held-out DRUGBANK::treats edges and all 329 held-out GNBR::T edges (1,360 edges total incl. the time-sliced set). Exactly one held-out pair survives, under GNBR::Pa (palliates). No held-out pair had a Hetionet::CtD edge. The clean arm is therefore genuinely leak-free, so its scores under the treats_relations config are honest rather than recovering a surviving edge under another relation name."
+  },
+  "methodology_notes": [
+    "SIGN TRAP CLOSED: TransE scores are negative (-||h+r-t||_2) while score_absolute_pillar fills unscored candidates with 0.0. Raw TransE scores (measured range -17.6..-9.9) would put every out-of-vocab candidate above every scored one and invert the result. Scores are mapped to sim = 1/(1 - transe_score), strictly monotone increasing (in-vocab ranking preserved exactly) and in (0,1] (so the 0.0 fill lands last).",
+    "NO SILENT PRE-FILTERING: adaptors return only in-vocab compounds; out-of-vocab candidates fall through to the 0.0 fill so each arm pays for its own coverage gap. See pool_coverage_pct per arm \u2014 it is 100% for every arm here, so none of these numbers is a coverage artifact.",
+    "Both TransE arms are scored by the SAME function (opencure/scoring/transe.py::score_drugs_for_disease_vectorized) with the SAME query relations. The clean PyKEEN model is TransE with p=2 / power_norm=False, so its native score_hrt is exactly the -||h+r-t||_2 the vectorized scorer computes; asserted at load and verified numerically (agreement <1e-4).",
+    "EVALUABILITY ASYMMETRY (important): the clean model has 97,206 entities vs the full graph's 97,238. The 32 missing nodes are disease nodes whose ONLY edges were the held-out treats edges \u2014 stripping the edge deleted the node, taking 33 held-out pairs with it. Those diseases are unevaluable for the clean arm but evaluable for the contaminated arm, which can only 'know' them because of the leak. Metrics are reported both per-arm (own evaluable set) and on the common set; the verdict uses the common set.",
+    "RELATION-SET SENSITIVITY: the criterion does not name a query relation set and the choice straddles the popularity baseline (~0.0% vs ~3.1% Hit@10 for clean TransE). Both configs are therefore run and the verdict recorded under each rather than one being picked silently."
+  ],
+  "runtime_sec": 111.4,
+  "analyst_interpretation": {
+    "by": "Fable (advisor), 2026-07-17 \u2014 recorded WITHOUT altering the pre-registered `verdict` field above, which is preserved as the mechanical audit trail.",
+    "headline": "The KG negative is CONFIRMED and is now rigorous at n=960. At fixed pool (24,313), fixed degree baseline (stripped graph), fixed tie-aware mid-rank, fixed scorer and fixed query relations, contamination accounts for 49.7pp: 52.8% -> 3.1% Hit@10. The original 57.2% headline was overwhelmingly LEAKAGE, not a small-pool artifact (re-measured on the honest pool it is still 52.8%).",
+    "on_the_passed_verdict": "The pre-registered criterion technically PASSED under the primary config, but it MUST NOT be reported as 'clean TransE beats popularity'. The pass rests on 30 vs 26 top-10 hits \u2014 a 4-pair edge out of 960 (3.1% vs 2.7%) \u2014 and it inverts to 0.0% under the equally-defensible canonical_treatment_relations config. This is a letter-of-the-law pass on noise.",
+    "criterion_was_under_specified": "Author error (Fable): the criterion did not name a query-relation set, and that free choice straddles the baseline (3.1% vs 0.0%). The implementing agent correctly ran BOTH configs and reported each rather than silently selecting the favourable one. LESSON: future pre-registrations must fix every free choice (relation set, pool, rank convention) before the run.",
+    "what_clean_transe_actually_retains": "A weak but CI-backed ORDERING edge over degree (paired win-fraction 0.581, 90% CI [0.549, 0.615]; median rank 538 vs 871), concentrated in the low-degree quartiles where popularity scores 0.0% (q1: 6.2% vs 0.0%) \u2014 structurally the SAME pattern as the genetics signal. But it does not convert into top-10 retrieval, which is what a shortlist requires.",
+    "verdict": "KG embedding on DRKG does not USEFULLY beat node degree once leakage is removed. Phase 2B (400-dim/400-epoch clean RotatE, pre-registered bar Hit@10 >= 6.6%) remains the capacity control before this is stated as final."
+  }
+}
